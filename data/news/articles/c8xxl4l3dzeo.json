@@ -27,19 +27,33 @@
                                   "text": "Royal wedding flowers given to Hackney hospice",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "2b309a59",
@@ -69,19 +83,37 @@
                                         "text": "Former embroider Pauline Clayton described the gift as \"lovely\"",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "0fbdf036",
@@ -106,19 +138,37 @@
                                         "text": "Pauline Clayton",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "f30a8fcb",
@@ -130,11 +180,16 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "ST JOSEPH'S HOSPICE"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "7bff386c",
@@ -143,7 +198,9 @@
                 "firstPublished": 1549555082735,
                 "lastPublished": 1549555082735
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "b634dbba",
@@ -163,11 +220,18 @@
                             "text": "Patients at an east London hospice were \"thrilled\" to be handed bouquets of flowers from the royal wedding of Prince Harry and Meghan Markle.",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   },
                   {
                     "id": "5abbd56e",
@@ -182,11 +246,18 @@
                             "text": "The flowers, which had adorned St George's Chapel at Windsor Castle, were delivered to St Joseph's Hospice in Hackney on Sunday.",
                             "attributes": []
                           },
-                          "position": [4, 2, 1]
+                          "position": [
+                            4,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 2]
+                    "position": [
+                      4,
+                      2
+                    ]
                   },
                   {
                     "id": "66ce4f93",
@@ -201,11 +272,18 @@
                             "text": "Designed by Philippa Craddock, the arrangements were hand-tied into bouquets for the hospice residents.",
                             "attributes": []
                           },
-                          "position": [4, 3, 1]
+                          "position": [
+                            4,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 3]
+                    "position": [
+                      4,
+                      3
+                    ]
                   },
                   {
                     "id": "155f1fa3",
@@ -220,7 +298,11 @@
                             "text": "Meghan's own bouquet was ",
                             "attributes": []
                           },
-                          "position": [4, 4, 1]
+                          "position": [
+                            4,
+                            4,
+                            1
+                          ]
                         },
                         {
                           "id": "fa659fa5",
@@ -235,13 +317,22 @@
                                   "text": "placed on the tomb of the unknown warrior",
                                   "attributes": []
                                 },
-                                "position": [4, 4, 2, 1]
+                                "position": [
+                                  4,
+                                  4,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.com/news/articles/c5ll353v7y9o",
                             "isExternal": false
                           },
-                          "position": [4, 4, 2]
+                          "position": [
+                            4,
+                            4,
+                            2
+                          ]
                         },
                         {
                           "id": "1c4f4510",
@@ -250,11 +341,18 @@
                             "text": " at Westminster Abbey, following royal tradition.",
                             "attributes": []
                           },
-                          "position": [4, 4, 3]
+                          "position": [
+                            4,
+                            4,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 4]
+                    "position": [
+                      4,
+                      4
+                    ]
                   },
                   {
                     "id": "90545a23",
@@ -269,11 +367,18 @@
                             "text": "\"We are so honoured to receive this wonderful gift,\" the hospice said.",
                             "attributes": []
                           },
-                          "position": [4, 5, 1]
+                          "position": [
+                            4,
+                            5,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 5]
+                    "position": [
+                      4,
+                      5
+                    ]
                   },
                   {
                     "id": "5d1b4f40",
@@ -288,15 +393,24 @@
                             "text": "Respite patient Pauline Clayton, 89, was especially pleased with the gift. At the age of 19 she worked for royal dressmaker Norman Hartnell and helped to embroider the 15ft (4.5m) Botticelli-inspired train of Queen Elizabeth II's wedding dress.",
                             "attributes": []
                           },
-                          "position": [4, 6, 1]
+                          "position": [
+                            4,
+                            6,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 6]
+                    "position": [
+                      4,
+                      6
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "b3520567",
@@ -326,19 +440,37 @@
                                         "text": "The flowers had adorned the chapel at Windsor Castle",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "3587399c",
@@ -363,19 +495,37 @@
                                         "text": "Royal wedding",
                                         "attributes": []
                                       },
-                                      "position": [5, 2, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 1, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   },
                   {
                     "id": "142e7002",
@@ -387,11 +537,16 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "EPA"
                     },
-                    "position": [5, 3]
+                    "position": [
+                      5,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "95980a22",
@@ -421,19 +576,37 @@
                                         "text": "Philippa Craddock directed a team to create the wedding displays\n\n",
                                         "attributes": []
                                       },
-                                      "position": [6, 1, 1, 1, 1]
+                                      "position": [
+                                        6,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   },
                   {
                     "id": "1c28c732",
@@ -458,19 +631,37 @@
                                         "text": "Flowers adorning the chapel at Windsor Castle",
                                         "attributes": []
                                       },
-                                      "position": [6, 2, 1, 1, 1]
+                                      "position": [
+                                        6,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [6, 2, 1, 1]
+                                "position": [
+                                  6,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 2, 1]
+                          "position": [
+                            6,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 2]
+                    "position": [
+                      6,
+                      2
+                    ]
                   },
                   {
                     "id": "97ad3e92",
@@ -482,11 +673,16 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "Reuters"
                     },
-                    "position": [6, 3]
+                    "position": [
+                      6,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "6e6836bb",
@@ -506,11 +702,18 @@
                             "text": "\"We were on rationing then so we weren't allowed to sew on any embellishments so the train was embroidered,\" she said.",
                             "attributes": []
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "6213899e",
@@ -525,15 +728,24 @@
                             "text": "\"There were four of us girls working on it and we earned 49-and-a-half hours overtime doing that.\"",
                             "attributes": []
                           },
-                          "position": [7, 2, 1]
+                          "position": [
+                            7,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "803a12c4",
@@ -563,19 +775,37 @@
                                         "text": "Pauline Clayton helped to embroider the train of Queen Elizabeth II's wedding dress",
                                         "attributes": []
                                       },
-                                      "position": [8, 1, 1, 1, 1]
+                                      "position": [
+                                        8,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [8, 1, 1, 1]
+                                "position": [
+                                  8,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   },
                   {
                     "id": "51a3b42c",
@@ -600,19 +830,37 @@
                                         "text": "The Queen and Prince Philip pose for an official photograph on their wedding day",
                                         "attributes": []
                                       },
-                                      "position": [8, 2, 1, 1, 1]
+                                      "position": [
+                                        8,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [8, 2, 1, 1]
+                                "position": [
+                                  8,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [8, 2, 1]
+                          "position": [
+                            8,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 2]
+                    "position": [
+                      8,
+                      2
+                    ]
                   },
                   {
                     "id": "1760a554",
@@ -624,11 +872,16 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "PA"
                     },
-                    "position": [8, 3]
+                    "position": [
+                      8,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
             {
               "id": "882da43d",
@@ -648,11 +901,18 @@
                             "text": "\"I really liked working for the Queen Mother and I helped to make many of her dresses during my 20-year career with Norman Hartnell.",
                             "attributes": []
                           },
-                          "position": [9, 1, 1]
+                          "position": [
+                            9,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 1]
+                    "position": [
+                      9,
+                      1
+                    ]
                   },
                   {
                     "id": "4abae0c7",
@@ -667,15 +927,24 @@
                             "text": "\"With my royal connections it's such a lovely coincidence to be at St Joseph's and receive these wedding flowers. They are beautiful and very special.\"",
                             "attributes": []
                           },
-                          "position": [9, 2, 1]
+                          "position": [
+                            9,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 2]
+                    "position": [
+                      9,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [9]
+              "position": [
+                9
+              ]
             },
             {
               "id": "21a2c0ae",
@@ -705,19 +974,37 @@
                                         "text": "The floral displays in St George's Chapel were created using locally sourced foliage",
                                         "attributes": []
                                       },
-                                      "position": [10, 1, 1, 1, 1]
+                                      "position": [
+                                        10,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 1, 1, 1]
+                                "position": [
+                                  10,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 1, 1]
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 1]
+                    "position": [
+                      10,
+                      1
+                    ]
                   },
                   {
                     "id": "aeb938f9",
@@ -742,19 +1029,37 @@
                                         "text": "St George's Chapel, Windsor",
                                         "attributes": []
                                       },
-                                      "position": [10, 2, 1, 1, 1]
+                                      "position": [
+                                        10,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [10, 2, 1, 1]
+                                "position": [
+                                  10,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [10, 2, 1]
+                          "position": [
+                            10,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 2]
+                    "position": [
+                      10,
+                      2
+                    ]
                   },
                   {
                     "id": "b4624684",
@@ -766,11 +1071,16 @@
                       "originCode": "cpsprodpb",
                       "copyrightHolder": "EPA"
                     },
-                    "position": [10, 3]
+                    "position": [
+                      10,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [10]
+              "position": [
+                10
+              ]
             },
             {
               "id": "68f35449",
@@ -790,11 +1100,18 @@
                             "text": "Nigel Harding, chief executive of the hospice, said the flowers were \"simply stunning\".",
                             "attributes": []
                           },
-                          "position": [11, 1, 1]
+                          "position": [
+                            11,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 1]
+                    "position": [
+                      11,
+                      1
+                    ]
                   },
                   {
                     "id": "0cd4fd2c",
@@ -809,11 +1126,18 @@
                             "text": "\"Our patients were both surprised and delighted to receive them. A huge thank-you to Philippa Craddock and her team - and of course to the royal bride and groom.\"",
                             "attributes": []
                           },
-                          "position": [11, 2, 1]
+                          "position": [
+                            11,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 2]
+                    "position": [
+                      11,
+                      2
+                    ]
                   },
                   {
                     "id": "a6f39bf0",
@@ -828,15 +1152,24 @@
                             "text": "Flowers from gardens and parklands of The Crown Estate and Windsor Great Park were used to make the bouquets, and included branches of beech, birch and hornbeam as well as foxgloves and peonies.",
                             "attributes": []
                           },
-                          "position": [11, 3, 1]
+                          "position": [
+                            11,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [11, 3]
+                    "position": [
+                      11,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [11]
+              "position": [
+                11
+              ]
             }
           ]
         }
@@ -844,16 +1177,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c8xxl4l3dzeo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c8xxl4l3dzeo",
-          "canonicalUrl": "https://www.bbc.com/news/articles/c8xxl4l3dzeo"
+          "optimoUrn": "urn:bbc:optimo:asset:c8xxl4l3dzeo"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
-        "lastUpdated": 1646744185434,
         "firstPublished": 1549555082735,
         "lastPublished": 1549555082735,
-        "timestamp": 1549555082735,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c8xxl4l3dzeo",
@@ -863,8 +1193,6 @@
         "passport": {
           "language": "en-gb",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "locator": "urn:bbc:optimo:asset:c8xxl4l3dzeo",
-          "availability": "AVAILABLE",
           "taggings": [
             {
               "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
@@ -875,8 +1203,6 @@
               "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
             }
           ],
-          "schemaVersion": "1.2.0",
-          "publishedState": "PUBLISHED",
           "predicates": {
             "editorialSensitivity": [
               {
@@ -893,7 +1219,6 @@
           }
         },
         "tags": {},
-        "version": "v1.4.2",
         "blockTypes": [
           "headline",
           "text",
@@ -905,18 +1230,10 @@
           "rawImage",
           "urlLink"
         ],
-        "suitableForSyndication": false,
-        "readTime": 2,
         "allowAdvertising": false
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c8xxl4l3dzeo",
-          "canonicalUrl": "https://www.bbc.com/news/articles/c8xxl4l3dzeo"
-        },
-        "timestamp": 1549555082735,
-        "suitableForSyndication": false,
-        "language": "en-gb",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Royal wedding 2018: Flowers given to Hackney hospice",
           "promoHeadline": {
@@ -1033,7 +1350,10 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": { "text": "", "attributes": [] }
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
                         }
                       ]
                     }
@@ -1043,49 +1363,7 @@
             }
           ]
         },
-        "passport": {
-          "language": "en-gb",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "locator": "urn:bbc:optimo:asset:c8xxl4l3dzeo",
-          "availability": "AVAILABLE",
-          "taggings": [
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
-              "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-            }
-          ],
-          "schemaVersion": "1.2.0",
-          "publishedState": "PUBLISHED",
-          "predicates": {
-            "editorialSensitivity": [
-              {
-                "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id",
-                "type": "editorialSensitivity"
-              }
-            ],
-            "infoClass": [
-              {
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                "type": "infoClass"
-              }
-            ]
-          }
-        },
-        "id": "urn:bbc:ares::article:c8xxl4l3dzeo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "News",
-          "uri": "/news",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -1107,7 +1385,12 @@
           "byline": {
             "name": "By Jasmine Andersson",
             "title": "BBC News",
-            "persons": [{ "name": "Jasmine Andersson", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Jasmine Andersson",
+                "function": "BBC News"
+              }
+            ]
           },
           "passport": {
             "category": {
@@ -1189,7 +1472,10 @@
             }
           },
           "isLive": true,
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -1246,7 +1532,10 @@
             }
           },
           "isLive": true,
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -1304,7 +1593,10 @@
             "originCode": "cpsprodpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "UK",
@@ -1332,7 +1624,10 @@
             "name": "By Riyah Collins",
             "title": "Newsbeat reporter",
             "persons": [
-              { "name": "Riyah Collins", "function": "Newsbeat reporter" }
+              {
+                "name": "Riyah Collins",
+                "function": "Newsbeat reporter"
+              }
             ]
           },
           "cpsType": "STY",
@@ -1402,11 +1697,16 @@
             "versions": [
               {
                 "versionId": "p0dnyf0q",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 60,
                 "durationISO8601": "PT1M",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1670950895000
               }
             ],
@@ -1425,7 +1725,10 @@
             "copyrightHolder": "DFTB Skin Deep",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Health",
@@ -1474,14 +1777,19 @@
             "versions": [
               {
                 "versionId": "p0dnwhf1",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 188,
                 "durationISO8601": "PT3M8S",
                 "warnings": {
                   "short": "Contains upsetting scenes.",
                   "long": "Contains scenes which some viewers may find upsetting."
                 },
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1670936444000
               }
             ],
@@ -1499,7 +1807,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Middle East",
@@ -1528,8 +1839,14 @@
             "name": "By Jane Wilkinson & Daniel O'Donoghue",
             "title": "BBC News",
             "persons": [
-              { "name": "Jane Wilkinson", "function": "BBC News" },
-              { "name": "Daniel O'Donoghue", "function": "BBC News" }
+              {
+                "name": "Jane Wilkinson",
+                "function": "BBC News"
+              },
+              {
+                "name": "Daniel O'Donoghue",
+                "function": "BBC News"
+              }
             ]
           },
           "passport": {
@@ -1553,7 +1870,10 @@
             "originCode": "cpsprodpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Manchester",
@@ -1582,7 +1902,10 @@
             "name": "By Rachel Schraer",
             "title": "BBC 100 Women",
             "persons": [
-              { "name": "Rachel Schraer", "function": "BBC 100 Women" }
+              {
+                "name": "Rachel Schraer",
+                "function": "BBC 100 Women"
+              }
             ]
           },
           "passport": {
@@ -1605,7 +1928,10 @@
             "originCode": "cpsprodpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Health",
@@ -1634,7 +1960,10 @@
             "name": "By Riyah Collins",
             "title": "Newsbeat reporter",
             "persons": [
-              { "name": "Riyah Collins", "function": "Newsbeat reporter" }
+              {
+                "name": "Riyah Collins",
+                "function": "Newsbeat reporter"
+              }
             ]
           },
           "cpsType": "STY",
@@ -1742,7 +2071,12 @@
           "byline": {
             "name": "By Chris Vallance",
             "title": "Technology reporter",
-            "persons": [{ "name": "Chris Vallance", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Chris Vallance",
+                "function": "BBC News"
+              }
+            ]
           },
           "passport": {
             "category": {
@@ -1810,7 +2144,10 @@
                 "name": "By Jasmine Andersson",
                 "title": "BBC News",
                 "persons": [
-                  { "name": "Jasmine Andersson", "function": "BBC News" }
+                  {
+                    "name": "Jasmine Andersson",
+                    "function": "BBC News"
+                  }
                 ]
               },
               "passport": {
@@ -1885,7 +2222,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2028,7 +2368,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2065,7 +2408,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2077456/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2077456/"
+                      ],
                       "thingEnglishLabel": "Australia",
                       "type": "about"
                     }
@@ -2113,7 +2458,10 @@
                 "name": "By Max Matza",
                 "title": "BBC News, Seattle",
                 "persons": [
-                  { "name": "Max Matza", "function": "BBC News, Seattle" }
+                  {
+                    "name": "Max Matza",
+                    "function": "BBC News, Seattle"
+                  }
                 ]
               },
               "passport": {
@@ -2186,7 +2534,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2224,7 +2575,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/6252001/"
+                      ],
                       "thingEnglishLabel": "United States",
                       "type": "about"
                     },
@@ -2380,7 +2733,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2521,7 +2877,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2689,7 +3048,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2709,7 +3071,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1149361/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1149361/"
+                      ],
                       "thingEnglishLabel": "Afghanistan",
                       "type": "about"
                     },
@@ -2742,7 +3106,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1140043/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1140043/"
+                      ],
                       "thingEnglishLabel": "Helmand",
                       "type": "about"
                     },
@@ -2756,7 +3122,9 @@
                         "core:Place",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1138336/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1138336/"
+                      ],
                       "thingEnglishLabel": "Kandahar",
                       "type": "about"
                     },
@@ -2808,7 +3176,9 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Military"
+                      ],
                       "thingEnglishLabel": "Military",
                       "type": "about"
                     },
@@ -2834,7 +3204,10 @@
                       "thingLabel": "UK troops in Afghanistan",
                       "thingUri": "http://www.bbc.co.uk/things/f556c346-e7c8-423b-9698-aad82a87000f#id",
                       "thingId": "f556c346-e7c8-423b-9698-aad82a87000f",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "UK troops in Afghanistan",
                       "type": "about"
@@ -2881,7 +3254,12 @@
               "byline": {
                 "name": "By Steve Mather and PA Media",
                 "title": "BBC News",
-                "persons": [{ "name": "Steve Mather", "function": "BBC Sport" }]
+                "persons": [
+                  {
+                    "name": "Steve Mather",
+                    "function": "BBC Sport"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -2953,7 +3331,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2973,7 +3354,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2653261/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2653261/"
+                      ],
                       "thingEnglishLabel": "Cheltenham",
                       "type": "about"
                     },
@@ -3143,7 +3526,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3163,7 +3549,9 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2637546/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2637546/"
+                      ],
                       "thingEnglishLabel": "Solihull",
                       "type": "about"
                     },
@@ -3177,7 +3565,9 @@
                         "core:Place",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/6698373/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/6698373/"
+                      ],
                       "thingEnglishLabel": "Chelmsley Wood",
                       "type": "about"
                     },
@@ -3242,8 +3632,14 @@
                 "name": "By Branwen Jeffreys and Sallie George",
                 "title": "BBC News",
                 "persons": [
-                  { "name": "Branwen Jeffreys", "function": "BBC News" },
-                  { "name": "Sallie George", "function": "BBC News" }
+                  {
+                    "name": "Branwen Jeffreys",
+                    "function": "BBC News"
+                  },
+                  {
+                    "name": "Sallie George",
+                    "function": "BBC News"
+                  }
                 ]
               },
               "passport": {
@@ -3332,7 +3728,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3496,7 +3895,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3553,7 +3955,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Norfolk"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Norfolk"
+                      ],
                       "thingEnglishLabel": "Norfolk",
                       "type": "about"
                     },
@@ -3640,7 +4044,10 @@
                 "name": "By Philippa Roxby",
                 "title": "Health reporter",
                 "persons": [
-                  { "name": "Philippa Roxby", "function": "Health reporter" }
+                  {
+                    "name": "Philippa Roxby",
+                    "function": "Health reporter"
+                  }
                 ]
               },
               "passport": {
@@ -3705,7 +4112,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3793,7 +4203,12 @@
               "byline": {
                 "name": "By Max Matza",
                 "title": "BBC News",
-                "persons": [{ "name": "Max Matza", "function": "BBC News" }]
+                "persons": [
+                  {
+                    "name": "Max Matza",
+                    "function": "BBC News"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -3865,7 +4280,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3887,7 +4305,9 @@
                         "core:Person",
                         "tagging:AmbiguousTerm"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Joe_Biden"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Joe_Biden"
+                      ],
                       "thingEnglishLabel": "Joe Biden",
                       "type": "about"
                     },
@@ -3919,7 +4339,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/6252001/"
+                      ],
                       "thingEnglishLabel": "United States",
                       "type": "about"
                     },
@@ -4036,7 +4458,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4196,7 +4621,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4250,7 +4678,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2017370/"
+                      ],
                       "thingEnglishLabel": "Russia",
                       "type": "about"
                     },
@@ -4264,7 +4694,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/130758/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/130758/"
+                      ],
                       "thingEnglishLabel": "Iran",
                       "type": "about"
                     },
@@ -4299,7 +4731,9 @@
                         "core:Place",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/703448/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/703448/"
+                      ],
                       "thingEnglishLabel": "Kyiv",
                       "type": "about"
                     },
@@ -4364,8 +4798,14 @@
                 "name": "By Jane Wilkinson & Daniel O'Donoghue",
                 "title": "BBC News",
                 "persons": [
-                  { "name": "Jane Wilkinson", "function": "BBC News" },
-                  { "name": "Daniel O'Donoghue", "function": "BBC News" }
+                  {
+                    "name": "Jane Wilkinson",
+                    "function": "BBC News"
+                  },
+                  {
+                    "name": "Daniel O'Donoghue",
+                    "function": "BBC News"
+                  }
                 ]
               },
               "passport": {
@@ -4434,7 +4874,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4491,7 +4934,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2655237/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2655237/"
+                      ],
                       "thingEnglishLabel": "Bolton",
                       "type": "about"
                     }
@@ -4613,7 +5058,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4650,7 +5098,9 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2643743/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2643743/"
+                      ],
                       "thingEnglishLabel": "London",
                       "type": "about"
                     },
@@ -4872,7 +5322,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4981,7 +5434,9 @@
                         "core:Theme",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Company"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Company"
+                      ],
                       "thingEnglishLabel": "Companies",
                       "type": "about"
                     },
@@ -5062,7 +5517,10 @@
                 "name": "By Chris Vallance",
                 "title": "Technology reporter",
                 "persons": [
-                  { "name": "Chris Vallance", "function": "BBC News" }
+                  {
+                    "name": "Chris Vallance",
+                    "function": "BBC News"
+                  }
                 ]
               },
               "passport": {
@@ -5159,7 +5617,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -5196,7 +5657,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/444187/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/444187/"
+                      ],
                       "thingEnglishLabel": "Tigray Region",
                       "type": "about"
                     },
@@ -5260,7 +5723,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/192950/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/192950/"
+                      ],
                       "thingEnglishLabel": "Kenya",
                       "type": "about"
                     },
@@ -5293,7 +5758,9 @@
                         "core:Thing",
                         "tagging:AmbiguousTerm"
                       ],
-                      "thingSameAs": ["http://www.wikidata.org/entity/Q380"],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q380"
+                      ],
                       "thingEnglishLabel": "Meta",
                       "type": "about"
                     },
@@ -5307,7 +5774,9 @@
                         "tagging:TagConcept",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/337996/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/337996/"
+                      ],
                       "thingEnglishLabel": "Ethiopia",
                       "type": "about"
                     }
@@ -5353,7 +5822,12 @@
               "byline": {
                 "name": "By Frances Mao",
                 "title": "BBC News",
-                "persons": [{ "name": "Frances Mao", "function": "BBC News" }]
+                "persons": [
+                  {
+                    "name": "Frances Mao",
+                    "function": "BBC News"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -5417,7 +5891,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -5437,7 +5914,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2077456/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2077456/"
+                      ],
                       "thingEnglishLabel": "Australia",
                       "type": "about"
                     },
@@ -5580,7 +6059,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -5636,7 +6118,9 @@
                         "core:Theme",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Company"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Company"
+                      ],
                       "thingEnglishLabel": "Companies",
                       "type": "about"
                     },

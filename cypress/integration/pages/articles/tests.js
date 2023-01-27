@@ -236,7 +236,8 @@ export const testsThatFollowSmokeTestConfig = ({
                     .within(() => {
                       if (
                         socialMediaProviderName === 'YouTube' ||
-                        socialMediaProviderName === 'TikTok'
+                        socialMediaProviderName === 'TikTok' ||
+                        socialMediaProviderName === 'Twitter'
                       ) {
                         cy.get(`[data-testid="consentBanner"]`).should('exist');
                         cy.get(`iframe`).should('not.exist');

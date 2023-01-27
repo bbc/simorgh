@@ -27,19 +27,33 @@
                                   "text": "Mundo Twitter Test ",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "9497aa7e",
@@ -48,7 +62,9 @@
                 "firstPublished": 1624964861434,
                 "lastPublished": 1624964861434
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "eb8eadc4",
@@ -73,19 +89,33 @@
                                   "text": "Hola Mundo!",
                                   "attributes": []
                                 },
-                                "position": [3, 1, 1, 1]
+                                "position": [
+                                  3,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "18a3bb55",
@@ -115,15 +145,24 @@
                               "indexOfType": 0
                             }
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "c07e0ece",
@@ -143,15 +182,24 @@
                             "text": "Comes estas? ",
                             "attributes": []
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "c4e577b0",
@@ -181,15 +229,24 @@
                               "indexOfType": 1
                             }
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "4510cd4d",
@@ -209,15 +266,24 @@
                             "text": "Noticias del mundo ",
                             "attributes": []
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "37651a9c",
@@ -247,33 +313,46 @@
                               "indexOfType": 2
                             }
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "620db851", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "620db851",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c20myn5q195o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c20myn5q195o",
-          "canonicalUrl": "https://www.bbc.com/mundo/articles/c20myn5q195o"
+          "optimoUrn": "urn:bbc:optimo:asset:c20myn5q195o"
         },
         "type": "article",
         "createdBy": "Mundo",
         "language": "es",
-        "lastUpdated": 1645646125050,
         "firstPublished": 1624964861434,
         "lastPublished": 1624964861434,
-        "timestamp": 1624964861434,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c20myn5q195o",
@@ -283,16 +362,12 @@
         "passport": {
           "language": "es",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
-          "locator": "urn:bbc:optimo:asset:c20myn5q195o",
-          "availability": "AVAILABLE",
           "taggings": [
             {
               "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
               "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
             }
           ],
-          "schemaVersion": "1.3.0",
-          "publishedState": "PUBLISHED",
           "predicates": {
             "editorialSensitivity": [
               {
@@ -303,7 +378,6 @@
           }
         },
         "tags": {},
-        "version": "v1.4.5",
         "blockTypes": [
           "headline",
           "text",
@@ -314,18 +388,10 @@
           "renditions",
           "aresOEmbed"
         ],
-        "suitableForSyndication": true,
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c20myn5q195o",
-          "canonicalUrl": "https://www.bbc.com/mundo/articles/c20myn5q195o"
-        },
-        "timestamp": 1624964861434,
-        "suitableForSyndication": true,
-        "language": "es",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Mundo Twitter Test ",
           "promoHeadline": {
@@ -369,7 +435,10 @@
                       "blocks": [
                         {
                           "type": "fragment",
-                          "model": { "text": "Twitter test", "attributes": [] }
+                          "model": {
+                            "text": "Twitter test",
+                            "attributes": []
+                          }
                         }
                       ]
                     }
@@ -379,39 +448,7 @@
             }
           ]
         },
-        "passport": {
-          "language": "es",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
-          "locator": "urn:bbc:optimo:asset:c20myn5q195o",
-          "availability": "AVAILABLE",
-          "taggings": [
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
-              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
-            }
-          ],
-          "schemaVersion": "1.3.0",
-          "publishedState": "PUBLISHED",
-          "predicates": {
-            "editorialSensitivity": [
-              {
-                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
-                "type": "editorialSensitivity"
-              }
-            ]
-          }
-        },
-        "id": "urn:bbc:ares::article:c20myn5q195o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Mundo",
-          "uri": "/mundo",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -444,7 +481,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -499,7 +539,9 @@
             "subType": "clip",
             "format": "audio",
             "title": "CPS Audio clip",
-            "synopses": { "short": "Please do not edit this asset" },
+            "synopses": {
+              "short": "Please do not edit this asset"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hnn31.jpg",
             "embedding": true,
             "advertising": true,
@@ -507,11 +549,16 @@
             "versions": [
               {
                 "versionId": "p01hnn2d",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 16,
                 "durationISO8601": "PT16S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1526050744000
               }
             ],
@@ -530,7 +577,10 @@
             "copyrightHolder": "Alamy",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -568,7 +618,10 @@
             "name": "Aled Scourfield",
             "title": "BBC News, Wales",
             "persons": [
-              { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+              {
+                "name": "Aled Scourfield",
+                "function": "BBC News, Wales"
+              }
             ]
           },
           "cpsType": "STY",
@@ -585,7 +638,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:mundo/internacional-23038380",
           "type": "cps"
         },
@@ -608,7 +664,10 @@
             "name": "Aled Scourfield",
             "title": "BBC News, Wales",
             "persons": [
-              { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+              {
+                "name": "Aled Scourfield",
+                "function": "BBC News, Wales"
+              }
             ]
           },
           "cpsType": "STY",
@@ -624,7 +683,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:mundo/vert-cap-23038373",
           "type": "cps"
         }
@@ -767,7 +829,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -788,7 +853,9 @@
                         "tagging:TagConcept",
                         "tagging:Genre"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Health"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health"
+                      ],
                       "thingEnglishLabel": "Health",
                       "type": "about"
                     }
@@ -1070,7 +1137,10 @@
                 "name": "Aled Scourfield",
                 "title": "BBC News, Wales",
                 "persons": [
-                  { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+                  {
+                    "name": "Aled Scourfield",
+                    "function": "BBC News, Wales"
+                  }
                 ]
               },
               "passport": {
@@ -1161,7 +1231,12 @@
               "byline": {
                 "name": "BBC Reporter",
                 "title": "Damascus",
-                "persons": [{ "name": "BBC Reporter", "function": "Damascus" }]
+                "persons": [
+                  {
+                    "name": "BBC Reporter",
+                    "function": "Damascus"
+                  }
+                ]
               },
               "indexImage": {
                 "id": "63487915",
@@ -1295,7 +1370,10 @@
                 "name": "Aled Scourfield",
                 "title": "BBC News, Wales",
                 "persons": [
-                  { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+                  {
+                    "name": "Aled Scourfield",
+                    "function": "BBC News, Wales"
+                  }
                 ]
               },
               "passport": {
@@ -1343,7 +1421,10 @@
                 "name": "Stefania  Gozzer",
                 "title": "Reportera",
                 "persons": [
-                  { "name": "Stefania Gozzer", "function": "Reportera" }
+                  {
+                    "name": "Stefania Gozzer",
+                    "function": "Reportera"
+                  }
                 ]
               },
               "passport": {
@@ -1484,7 +1565,10 @@
                 "name": "Aled Scourfield",
                 "title": "BBC News, Wales",
                 "persons": [
-                  { "name": "Aled Scourfield", "function": "BBC News, Wales" }
+                  {
+                    "name": "Aled Scourfield",
+                    "function": "BBC News, Wales"
+                  }
                 ]
               },
               "passport": {

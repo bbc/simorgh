@@ -27,19 +27,33 @@
                                   "text": "Бул сыноо макалада сөздүү кабарында",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "ecbbbc70",
@@ -69,19 +83,37 @@
                                         "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "b7904db5",
@@ -106,19 +138,37 @@
                                         "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "217e06d1",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "3e4306ec",
@@ -143,7 +198,9 @@
                 "firstPublished": 1562941862686,
                 "lastPublished": 1562941862686
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "3092cbae",
@@ -159,8 +216,15 @@
                         {
                           "id": "82a870de",
                           "type": "fragment",
-                          "model": { "text": "Бул ", "attributes": [] },
-                          "position": [4, 1, 1]
+                          "model": {
+                            "text": "Бул ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "a21b5367",
@@ -175,13 +239,22 @@
                                   "text": "Би-Би-Си ырайы башкы",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         },
                         {
                           "id": "2bd6aad5",
@@ -190,15 +263,24 @@
                             "text": " бир нускага шилтемени камтыган текст бөлүгү болуп саналат.",
                             "attributes": []
                           },
-                          "position": [4, 1, 3]
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "7e7e2e87",
@@ -229,19 +311,37 @@
                                         "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "5833aab4",
@@ -268,7 +368,9 @@
                             "versions": [
                               {
                                 "versionId": "p019dx68",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 45,
                                 "durationISO8601": "PT45S",
                                 "warnings": {},
@@ -279,10 +381,16 @@
                                 "availableFrom": 1491823686000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "d848cd01",
@@ -296,19 +404,33 @@
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
                                   "originCode": "mpv"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "d194d95c",
@@ -333,19 +455,33 @@
                                   "text": "Бул subheadline болуп саналат",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "fa2ff534",
@@ -375,19 +511,37 @@
                                         "text": "Бул subheadline болуп саналат",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "1b834441",
@@ -399,11 +553,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "0e01da71",
@@ -423,33 +582,46 @@
                             "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "db85d04f", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "db85d04f",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
-          "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c3xd4xg3rm9o"
+          "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o"
         },
         "type": "article",
         "createdBy": "Kyrgyz",
         "language": "ky",
-        "lastUpdated": 1598599636934,
         "firstPublished": 1562941862686,
         "lastPublished": 1562941862686,
-        "timestamp": 1562941862686,
         "options": {},
         "analyticsLabels": {
           "producer": "Kyrgyz",
@@ -458,12 +630,9 @@
         "passport": {
           "language": "ky",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-          "locator": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -478,39 +647,15 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
-          "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c3xd4xg3rm9o"
-        },
-        "timestamp": 1562941862686,
-        "suitableForSyndication": false,
-        "language": "ky",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Интернет жылдызына айланган таксист опера ырчысы болду"
         },
         "images": {},
-        "passport": {
-          "language": "ky",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-          "locator": "urn:bbc:optimo:asset:c3xd4xg3rm9o",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c3xd4xg3rm9o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Kyrgyz",
-          "uri": "/kyrgyz",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -614,7 +759,10 @@
             "copyrightHolder": "AP",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "maximum",
           "section": {
             "subType": "IDX",
@@ -654,7 +802,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087521",
           "type": "cps"
         },
@@ -685,7 +836,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087520",
           "type": "cps"
         },
@@ -716,7 +870,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Атайын репортаж",
@@ -753,7 +910,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:kyrgyz/entertainment-23087489",
           "type": "cps"
         }
