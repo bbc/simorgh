@@ -5,6 +5,7 @@ import SocialEmbedContainer from '.';
 import {
   render,
   screen,
+  fireEvent,
 } from '../../../components/react-testing-library-with-providers';
 
 import {
@@ -61,6 +62,10 @@ describe('SocialEmbedContainer', () => {
         { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
 
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
+
       expect(container.firstChild).toMatchSnapshot();
       expect(
         document.querySelector(
@@ -112,6 +117,10 @@ describe('SocialEmbedContainer', () => {
         { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
 
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
+
       expect(container.firstChild).toMatchSnapshot();
       expect(
         document.querySelector(
@@ -134,6 +143,10 @@ describe('SocialEmbedContainer', () => {
         />,
         { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
+
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
 
       expect(container.firstChild).toMatchSnapshot();
       expect(
