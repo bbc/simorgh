@@ -26,12 +26,12 @@ const BANNER_URLS: BannerUrls = {
   cookiesUrl: {
     youtube: 'https://policies.google.com/technologies/cookies',
     tiktok: 'https://www.tiktok.com/legal/cookie-policy',
-    twitter: 'https://help.twitter.com/rules-and-policies/twitter-cookies',
+    twitter: 'https://help.twitter.com/en/rules-and-policies/twitter-cookies',
   },
   privacyUrl: {
     youtube: 'https://policies.google.com/privacy',
     tiktok: 'https://www.tiktok.com/legal/privacy-policy',
-    twitter: 'https://twitter.com/privacy',
+    twitter: 'https://twitter.com/en/privacy',
   },
 };
 
