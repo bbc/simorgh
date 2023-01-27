@@ -28,12 +28,14 @@ const BANNER_URLS: BannerUrls = {
     tiktok: 'https://www.tiktok.com/legal/cookie-policy',
     facebook: 'https://www.facebook.com/privacy/policies/cookies',
     instagram: 'https://privacycenter.instagram.com/policies/cookies/',
+    twitter: 'https://help.twitter.com/en/rules-and-policies/twitter-cookies',
   },
   privacyUrl: {
     youtube: 'https://policies.google.com/privacy',
     tiktok: 'https://www.tiktok.com/legal/privacy-policy',
     facebook: 'https://www.facebook.com/privacy/policy/',
     instagram: 'https://privacycenter.instagram.com/policy',
+    twitter: 'https://twitter.com/en/privacy',
   },
 };
 
@@ -49,6 +51,7 @@ const getProviderName = (provider: ConsentBannerProviders) => {
     tiktok: 'TikTok',
     facebook: 'Facebook',
     instagram: 'Instagram',
+    twitter: 'Twitter',
   }[provider];
 };
 
@@ -87,10 +90,8 @@ const getTranslations = (
     providerNameDelimiter,
     providerName,
   );
-
   const linkTextElements =
     bodyText?.match(/(\[link]|\[\/link])(.*?)(\[\/link]|\[link])/g) || [];
-
   if (!linkTextElements.length) {
     return {
       heading: headerText,

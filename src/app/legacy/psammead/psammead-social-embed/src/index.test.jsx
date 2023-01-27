@@ -134,6 +134,10 @@ describe('CanonicalSocialEmbed', () => {
     );
     it('should render correctly for Twitter', async () => {
       const { container, unmount } = render(twitterSocialEmbed);
+
+      const button = screen.getByTestId('banner-button');
+      fireEvent.click(button);
+
       expect(container.firstChild).toMatchSnapshot();
       expect(
         document.querySelector(
@@ -156,6 +160,8 @@ describe('CanonicalSocialEmbed', () => {
       };
 
       render(twitterSocialEmbed);
+      const button = screen.getByTestId('banner-button');
+      fireEvent.click(button);
 
       await waitFor(() => {
         expect(global.twttr.widgets.load).toHaveBeenCalled();
@@ -176,6 +182,8 @@ describe('CanonicalSocialEmbed', () => {
       global.twttr.ready = cb => cb(global.twttr);
 
       render(twitterSocialEmbed);
+      const button = screen.getByTestId('banner-button');
+      fireEvent.click(button);
 
       await waitFor(() => {
         expect(global.twttr.widgets.load).toHaveBeenCalled();

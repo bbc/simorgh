@@ -39,6 +39,9 @@ describe('SocialEmbedContainer', () => {
         { service: 'news', isAmp: false, pageType: ARTICLE_PAGE },
       );
 
+      const button = screen.getByTestId('banner-button');
+      fireEvent.click(button);
+
       expect(container.firstChild).toMatchSnapshot();
       expect(
         document.querySelector(
