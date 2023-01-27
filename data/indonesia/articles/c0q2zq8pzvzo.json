@@ -27,19 +27,33 @@
                                   "text": "Ini adalah judul artikel tes ini",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "d6d445b2",
@@ -69,19 +83,37 @@
                                         "text": "Gambar uji ini, hak cipta BBC, menunjukkan peta Prancis. Gambar berada di tiga blok pertama dan memiliki teks ini.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "a98a412c",
@@ -106,19 +138,37 @@
                                         "text": "Peta Prancis menunjukkan Paris dan Cognac",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "f6b5e8c6",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "9aacec16",
@@ -143,7 +198,9 @@
                 "firstPublished": 1562941587903,
                 "lastPublished": 1562941587903
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "2573f226",
@@ -163,7 +220,11 @@
                             "text": "Ini adalah blok teks, yang berisi tautan url ke ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "e4e87304",
@@ -178,21 +239,35 @@
                                   "text": "beranda BBC Weather.",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.com/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "8ce92654",
@@ -223,19 +298,37 @@
                                         "text": "Ini adalah blok video yang berisi video tentang semut",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "d76f09aa",
@@ -261,7 +354,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -275,10 +370,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "880ecb35",
@@ -295,7 +396,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "2da9770d",
@@ -321,32 +427,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "9d37b063",
@@ -371,19 +510,33 @@
                                   "text": "Ini adalah blok subjudul",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "618d9e44",
@@ -413,19 +566,37 @@
                                         "text": "\rPesepakbola setelah pertandingan",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "03fc0ef7",
@@ -437,11 +608,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "8f676ecb",
@@ -461,33 +637,46 @@
                             "text": "Artikel pengujian ini telah dibuat sehingga kami dapat menjalankan tes end-to-end otomatis di situs web kami.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "d0ccd3d7", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "d0ccd3d7",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c0q2zq8pzvzo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo",
-          "canonicalUrl": "https://www.bbc.com/indonesia/articles/c0q2zq8pzvzo"
+          "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo"
         },
         "type": "article",
         "createdBy": "Indonesia",
         "language": "id",
-        "lastUpdated": 1598599633556,
         "firstPublished": 1562941587903,
         "lastPublished": 1562941587903,
-        "timestamp": 1562941587903,
         "options": {},
         "analyticsLabels": {
           "producer": "Indonesian",
@@ -496,12 +685,9 @@
         "passport": {
           "language": "id",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
-          "locator": "urn:bbc:optimo:asset:c0q2zq8pzvzo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -516,45 +702,23 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo",
-          "canonicalUrl": "https://www.bbc.com/indonesia/articles/c0q2zq8pzvzo"
-        },
-        "timestamp": 1562941587903,
-        "suitableForSyndication": false,
-        "language": "id",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Ini adalah judul SEO dari artikel tes ini"
         },
         "images": {},
-        "passport": {
-          "language": "id",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
-          "locator": "urn:bbc:optimo:asset:c0q2zq8pzvzo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c0q2zq8pzvzo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Indonesia",
-          "uri": "/indonesia",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Storms, floods hit central Yangon" },
+          "headlines": {
+            "headline": "Storms, floods hit central Yangon"
+          },
           "locators": {
             "assetUri": "/indonesia/indonesia-23130787",
             "cpsUrn": "urn:bbc:content:assetUri:indonesia/indonesia-23130787",
@@ -572,7 +736,10 @@
                 "function": "BBC News, Damascus",
                 "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/53048000/jpg/_53048763_50850069.jpg"
               },
-              { "name": "Mayuri Mei Lin", "function": "BBC Indonesia" }
+              {
+                "name": "Mayuri Mei Lin",
+                "function": "BBC Indonesia"
+              }
             ]
           },
           "cpsType": "STY",
@@ -588,14 +755,19 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:indonesia/indonesia-23130787",
           "type": "cps"
         }
       ],
       "features": [
         {
-          "headlines": { "headline": "18 Beli tiket pesawat demi iPhone?" },
+          "headlines": {
+            "headline": "18 Beli tiket pesawat demi iPhone?"
+          },
           "locators": {
             "assetUri": "/indonesia/23077181",
             "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077181",
@@ -630,7 +802,10 @@
             "copyrightHolder": "iStock",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Berita",
@@ -675,7 +850,9 @@
           "type": "link"
         },
         {
-          "headlines": { "headline": "20 Beli tiket pesawat demi iPhone?" },
+          "headlines": {
+            "headline": "20 Beli tiket pesawat demi iPhone?"
+          },
           "locators": {
             "assetUri": "/indonesia/23077183",
             "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077183",
@@ -710,7 +887,10 @@
             "copyrightHolder": "iStock",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Berita",
@@ -721,7 +901,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "21 Beli tiket pesawat demi iPhone?" },
+          "headlines": {
+            "headline": "21 Beli tiket pesawat demi iPhone?"
+          },
           "locators": {
             "assetUri": "/indonesia/23077184",
             "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077184",
@@ -756,7 +938,10 @@
             "copyrightHolder": "iStock",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Berita",
@@ -767,7 +952,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "22 Beli tiket pesawat demi iPhone?" },
+          "headlines": {
+            "headline": "22 Beli tiket pesawat demi iPhone?"
+          },
           "locators": {
             "assetUri": "/indonesia/23077185",
             "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077185",
@@ -802,7 +989,10 @@
             "copyrightHolder": "iStock",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Berita",
@@ -813,7 +1003,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "23 Beli tiket pesawat demi iPhone?" },
+          "headlines": {
+            "headline": "23 Beli tiket pesawat demi iPhone?"
+          },
           "locators": {
             "assetUri": "/indonesia/23077186",
             "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077186",
@@ -848,7 +1040,10 @@
             "copyrightHolder": "iStock",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Berita",

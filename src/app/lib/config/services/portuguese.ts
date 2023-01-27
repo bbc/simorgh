@@ -380,10 +380,6 @@ export const service: DefaultServiceConfig = {
         title: 'Vídeos',
         url: '/portuguese/topics/c9y2j35dn2zt',
       },
-      {
-        title: 'Copa do Mundo',
-        url: '/portuguese/topics/c5qvpqjz43dt',
-      },
     ],
   },
 };

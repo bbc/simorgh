@@ -1187,9 +1187,12 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       allow="autoplay"
                       allowfullscreen=""
                       class="emotion-13 emotion-14"
+                      height="362.953125"
+                      loading="lazy"
                       scrolling="no"
                       src="/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
+                      width="645.25"
                     />
                     <div
                       class="emotion-15 emotion-16"
@@ -3672,9 +3675,12 @@ exports[`Media Asset Page should render component 1`] = `
                       allow="autoplay"
                       allowfullscreen=""
                       class="emotion-13 emotion-14"
+                      height="362.953125"
+                      loading="lazy"
                       scrolling="no"
                       src="/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
+                      width="645.25"
                     />
                     <div
                       class="emotion-15 emotion-16"

@@ -603,16 +603,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c0l79lr39qyo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c0l79lr39qyo",
-          "canonicalUrl": "https://www.bbc.com/punjabi/articles/c0l79lr39qyo"
+          "optimoUrn": "urn:bbc:optimo:asset:c0l79lr39qyo"
         },
         "type": "article",
         "createdBy": "Punjabi",
         "language": "pa",
-        "lastUpdated": 1598599646788,
         "firstPublished": 1562942877468,
         "lastPublished": 1562942877468,
-        "timestamp": 1562942877468,
         "options": {},
         "analyticsLabels": {
           "producer": "Punjabi",
@@ -621,12 +618,9 @@
         "passport": {
           "language": "pa",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Punjabi",
-          "locator": "urn:bbc:optimo:asset:c0l79lr39qyo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -641,39 +635,15 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c0l79lr39qyo",
-          "canonicalUrl": "https://www.bbc.com/punjabi/articles/c0l79lr39qyo"
-        },
-        "timestamp": 1562942877468,
-        "suitableForSyndication": false,
-        "language": "pa",
+        "locators": {},
         "headlines": {
           "seoHeadline": "ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ"
         },
         "images": {},
-        "passport": {
-          "language": "pa",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Punjabi",
-          "locator": "urn:bbc:optimo:asset:c0l79lr39qyo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c0l79lr39qyo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Punjabi",
-          "uri": "/punjabi",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
