@@ -11,6 +11,9 @@ import { UserContextProvider } from '#contexts/UserContext';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import defaultTopic from '#data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzTopicWithMessageBanners from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
+import persianTopicWithMessageBanners from '#data/persian/topics/cyy2zqnqn67t.json';
+import arabicTopicWithMessageBanners from '#data/arabic/topics/cng9qem66p5t.json';
+import tamilTopicWithMessageBanners from '#data/tamil/topics/c03dm2xmzzpt.json';
 import mundoTopicWithMessageBannerVariations from '#data/mundo/topics/cw90edn9kw4t.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import Page from './TopicPage';
@@ -66,10 +69,22 @@ export default {
 
 export const Example = Component;
 
-export const MundoWithBannerVariations = props => (
+export const MundoWithMessageBanners = props => (
   <Component service={'mundo'} {...props} fixture={mundoTopicWithMessageBannerVariations} />
 );
 
 export const KyrgyzWithMessageBanners = props => (
   <Component service={'kyrgyz'} {...props} fixture={kyrgyzTopicWithMessageBanners} />
+);
+
+export const PersianWithMessageBanners = props => (
+  <Component service={'persian'} {...props} fixture={persianTopicWithMessageBanners} />
+);
+
+export const ArabicWithMessageBanners = props => (
+  <Component service={'arabic'} {...props} fixture={arabicTopicWithMessageBanners} />
+);
+
+export const TamilWithMessageBanners = props => (
+  <Component service={'tamil'} {...props} fixture={tamilTopicWithMessageBanners} />
 );
