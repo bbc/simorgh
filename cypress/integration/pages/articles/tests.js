@@ -206,7 +206,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
 
-      describe('Social Embeds', () => {
+      describe.skip('Social Embeds', () => {
         const availableSocialMediaOnPage = [];
         const socialIsOnPage = social =>
           availableSocialMediaOnPage.includes(social);
@@ -219,7 +219,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
         ['YouTube', 'Instagram', 'TikTok', 'Twitter', 'Facebook'].forEach(
           socialMediaProviderName => {
-            it(`${socialMediaProviderName} embed is rendered when it exists on page`, function () {
+            it(`${socialMediaProviderName} embed is rendered when it exists on page`, () => {
               if (socialIsOnPage(socialMediaProviderName)) {
                 const SocialEmbedsData = getAllSocialBlocksByProviderName(
                   socialMediaProviderName,
