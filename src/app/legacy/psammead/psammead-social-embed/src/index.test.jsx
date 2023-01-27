@@ -179,7 +179,7 @@ describe('CanonicalSocialEmbed', () => {
       render(twitterSocialEmbed);
       const button = screen.getByTestId('banner-button');
       fireEvent.click(button);
-      
+
       await waitFor(() => {
         expect(global.twttr.widgets.load).toHaveBeenCalled();
         expect(global.twttr.events.bind).toHaveBeenCalledWith(
