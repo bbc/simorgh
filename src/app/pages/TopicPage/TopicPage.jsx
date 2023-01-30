@@ -96,20 +96,16 @@ const TopicPage = ({ pageData }) => {
             {description && <TopicDescription>{description}</TopicDescription>}
           </div>
           {curations.map(
-            (
-              {
-                visualProminence,
-                summaries,
-                curationId,
-                title: curationTitle,
-                link,
-                position,
-                visualStyle,
-              },
-              index,
-            ) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <React.Fragment key={`${curationId} ${index}`}>
+            ({
+              visualProminence,
+              summaries,
+              curationId,
+              title: curationTitle,
+              link,
+              position,
+              visualStyle,
+            }) => (
+              <React.Fragment key={`${curationId}-${position}`}>
                 {shouldRenderMessageBanner(visualStyle, visualProminence) ? (
                   <MessageBanner
                     title={curationTitle}
