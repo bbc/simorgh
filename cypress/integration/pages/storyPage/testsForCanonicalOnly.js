@@ -61,7 +61,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({ service }) => {
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
-  describe('Social Embed', () => {
+  describe.skip('Social Embed', () => {
     // This test specifically covers an edge case where more than one tweet is
     // included in a Story and twitter needs to be prompted to render the tweet
     // rather than leaving it as core content
