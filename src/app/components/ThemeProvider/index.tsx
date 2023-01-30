@@ -1,27 +1,35 @@
-import loadable, { LoadableComponent } from '@loadable/component';
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Services, Variants } from '../../models/types/global';
 import defaultServiceVariants from './defaultServiceVariants';
+import themes from './themes/loadableConfig';
 
 interface Props {
   service: Services;
-  variant: Variants;
+  variant?: Variants | null;
 }
 
-const getPathToTheme = (props: Props) => {
-  const variant = props.variant || defaultServiceVariants[props.service];
+export const ThemeProvider = ({
+  children,
+  service,
+  variant,
+}: PropsWithChildren<Props>) => {
+  let LoadableContextProvider;
 
-  if (variant === 'default' || !variant) {
-    return props.service;
+  const serviceVariant: Variants = variant || defaultServiceVariants[service];
+
+  if (serviceVariant === 'default' || !serviceVariant) {
+    LoadableContextProvider = themes[service];
+  } else {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore - TODO: come back to this
+    LoadableContextProvider = themes[service][serviceVariant];
   }
 
-  return `${props.service}/${variant}`;
+  if (!LoadableContextProvider) {
+    return null;
+  }
+
+  return <LoadableContextProvider>{children}</LoadableContextProvider>;
 };
-
-const loadTheme = /* #__LOADABLE__ */ (props: Props) =>
-  import(`./themes/${getPathToTheme(props)}`);
-
-const ThemeProvider: LoadableComponent<PropsWithChildren<Props>> =
-  loadable(loadTheme);
 
 export default ThemeProvider;

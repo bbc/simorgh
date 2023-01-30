@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const appDirectory = fs.realpathSync(process.cwd());
+
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
@@ -48,6 +49,6 @@ module.exports = {
       ['#testHelpers', './src/testHelpers'],
       ['#server', './src/server'],
     ],
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },
 };

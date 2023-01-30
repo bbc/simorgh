@@ -11,6 +11,14 @@ const blocksWithHeadlineAndText = blockValues => {
   return [
     blockContainingText('headline', headlineText, 1),
     singleTextBlock(paragraphText, 2),
+    {
+      id: 'ef3a6bbd',
+      type: 'wsoj',
+      model: {
+        type: 'recommendations',
+      },
+      position: [9],
+    },
   ];
 };
 
@@ -1357,5 +1365,228 @@ export const bylineWithAllData = [
         },
       ],
     },
+  },
+];
+
+export const sampleRecommendations = [
+  {
+    locators: {
+      optimoUrn: 'urn:bbc:optimo:asset:sample_1',
+      canonicalUrl: 'https://www.bbc.com/turkce/articles/sample_1',
+    },
+    timestamp: 1673623343213,
+    language: 'tr',
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'SAMPLE RECOMMENDATION 1 - HEADLINE',
+                    blocks: [
+                      {
+                        type: 'fragment',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 1 - HEADLINE',
+                          attributes: [],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    images: {
+      defaultPromoImage: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 1',
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: 'SAMPLE RECOMMENDATION 1',
+                                attributes: [],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              width: 1024,
+              height: 576,
+              locator: '536b/live/62a1ce50-92c4-11ed-af5e-49f6c6402e4d.jpg',
+              originCode: 'cpsprodpb',
+              copyrightHolder: 'Getty Images',
+              suitableForSyndication: true,
+            },
+          },
+        ],
+      },
+    },
+    summary: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'SAMPLE RECOMMENDATION 1 - IMAGE TEXT',
+                  blocks: [
+                    {
+                      type: 'fragment',
+                      model: {
+                        text: 'SAMPLE RECOMMENDATION 1 - IMAGE TEXT',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+    id: 'urn:bbc:ares::article:sample_1',
+    type: 'optimo',
+  },
+  {
+    locators: {
+      optimoUrn: 'urn:bbc:optimo:asset:sample_2',
+      canonicalUrl: 'https://www.bbc.com/turkce/articles/sample_2',
+    },
+    timestamp: 1673623343213,
+    language: 'tr',
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'SAMPLE RECOMMENDATION 2 - HEADLINE',
+                    blocks: [
+                      {
+                        type: 'fragment',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 2 - HEADLINE',
+                          attributes: [],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    images: {
+      defaultPromoImage: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: 'SAMPLE RECOMMENDATION 2',
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: 'SAMPLE RECOMMENDATION 2',
+                                attributes: [],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              width: 1024,
+              height: 576,
+              locator: '536b/live/62a1ce50-92c4-11ed-af5e-49f6c6402e4d.jpg',
+              originCode: 'cpsprodpb',
+              copyrightHolder: 'Getty Images',
+              suitableForSyndication: true,
+            },
+          },
+        ],
+      },
+    },
+    summary: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'SAMPLE RECOMMENDATION 2 - IMAGE TEXT',
+                  blocks: [
+                    {
+                      type: 'fragment',
+                      model: {
+                        text: 'SAMPLE RECOMMENDATION 2 - IMAGE TEXT',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+    id: 'urn:bbc:ares::article:sample_2',
+    type: 'optimo',
   },
 ];

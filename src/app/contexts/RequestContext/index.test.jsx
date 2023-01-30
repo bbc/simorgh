@@ -62,6 +62,7 @@ const expectedOutput = {
   origin: 'origin',
   pageType: input.pageType,
   isAmp: true,
+  isNextJs: false,
   platform: 'amp',
   variant: 'simp',
   timeOnServer: null,

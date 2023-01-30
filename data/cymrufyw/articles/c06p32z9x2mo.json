@@ -27,19 +27,33 @@
                                   "text": "Dyma bennawd yr erthygl brawf yma",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "90e30bc3",
@@ -69,19 +83,37 @@
                                         "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "b640156a",
@@ -106,19 +138,37 @@
                                         "text": "Map o Ffrainc yn dangos Paris a Cognac",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "bee4430a",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "bce1399e",
@@ -143,7 +198,9 @@
                 "firstPublished": 1563022049359,
                 "lastPublished": 1570805332046
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "1724bbfb",
@@ -163,7 +220,11 @@
                             "text": "Dyma flwch prawf, sy’n cynnwys dolen url i dudalen ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "24c4bee5",
@@ -178,21 +239,35 @@
                                   "text": "dywydd y BBC",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "252bde60",
@@ -223,19 +298,37 @@
                                         "text": "Dyma flwch fideo sy’n cynnwys fideo am forgrug",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "29c5f603",
@@ -261,7 +354,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -275,10 +370,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "adbe7486",
@@ -295,7 +396,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "83cbb9de",
@@ -321,32 +427,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "c8413ee5",
@@ -371,19 +510,33 @@
                                   "text": "Dyma flwch ar gyfer is-bennawd",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "1cb14258",
@@ -413,19 +566,37 @@
                                         "text": "Pêl-droedwyr ar ôl y gêm",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "92b267bc",
@@ -437,11 +608,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "b6787a7c",
@@ -461,33 +637,46 @@
                             "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "cd8fc67b", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "cd8fc67b",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c06p32z9x2mo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo",
-          "canonicalUrl": "https://www.bbc.com/cymrufyw/erthyglau/c06p32z9x2mo"
+          "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo"
         },
         "type": "article",
         "createdBy": "Cymrufyw",
         "language": "cy",
-        "lastUpdated": 1645628585557,
         "firstPublished": 1563022049359,
         "lastPublished": 1570805332046,
-        "timestamp": 1570805332046,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c06p32z9x2mo",
@@ -497,12 +686,9 @@
         "passport": {
           "language": "cy",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw",
-          "locator": "urn:bbc:optimo:asset:c06p32z9x2mo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.4",
         "blockTypes": [
           "headline",
           "text",
@@ -517,40 +703,22 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo",
-          "canonicalUrl": "https://www.bbc.com/cymrufyw/erthyglau/c06p32z9x2mo"
+        "locators": {},
+        "headlines": {
+          "seoHeadline": "Dyma bennawd SEO yr erthygl brawf yma"
         },
-        "timestamp": 1570805332046,
-        "suitableForSyndication": false,
-        "language": "cy",
-        "headlines": { "seoHeadline": "Dyma bennawd SEO yr erthygl brawf yma" },
         "images": {},
-        "passport": {
-          "language": "cy",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw",
-          "locator": "urn:bbc:optimo:asset:c06p32z9x2mo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c06p32z9x2mo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Cymrufyw",
-          "uri": "/cymrufyw",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
-    "secondaryData": { "topStories": null, "features": null, "mostRead": null }
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null
+    }
   },
   "contentType": "application/json; charset=utf-8"
 }
