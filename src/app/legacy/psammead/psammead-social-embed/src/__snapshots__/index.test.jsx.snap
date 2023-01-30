@@ -384,6 +384,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
         This article contains content provided by Facebook.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Facebook 
         <a
           aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
           href="https://www.facebook.com/privacy/policies/cookies"
         >
           cookie policy
@@ -391,6 +392,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
          and 
         <a
           aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
           href="https://www.facebook.com/privacy/policy/"
         >
           privacy policy
@@ -650,6 +652,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
         This article contains content provided by Instagram.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Instagram 
         <a
           aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
           href="https://privacycenter.instagram.com/policies/cookies/"
         >
           cookie policy
@@ -657,6 +660,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
          and 
         <a
           aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
           href="https://privacycenter.instagram.com/policy"
         >
           privacy policy
