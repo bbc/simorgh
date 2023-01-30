@@ -101,7 +101,7 @@ export default async ({
     try {
       const bffResponse = await bffFetch({
         getAgent,
-        path: `${pathname}?renderer_env=live`,
+        path: pathname,
         service,
         variant,
         pageType,

@@ -26,7 +26,7 @@ const getEnvironment = (pathname: string) => {
     return 'live';
   }
   if (pathname.includes('renderer_env=caf')) {
-    return 'caf';
+    return 'live';
   }
 
   return process.env.SIMORGH_APP_ENV;
@@ -60,7 +60,7 @@ export default async ({
 }: Props) => {
   try {
     const env = getEnvironment(pathname);
-    const isLocal = false;
+    const isLocal = env === 'local';
 
     const agent = !isLocal ? await getAgent() : null;
     const id = getId(pageType)(pathname);
@@ -90,7 +90,7 @@ export default async ({
     // @ts-ignore - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
-      // ...(!isLocal && { agent, optHeaders }),
+      // ...{ agent, optHeaders },
     });
 
     const wsojURL = getRecommendationsUrl({
@@ -101,9 +101,10 @@ export default async ({
 
     let wsojData = [];
     try {
+      // @ts-ignore - Ignore fetchPageData argument types
       const { json: wsojJson = [] } = await fetchPageData({
         path: wsojURL,
-        ...({ agent, optHeaders } as any),
+        ...{ agent, optHeaders },
       });
       wsojData = wsojJson;
     } catch (error) {
