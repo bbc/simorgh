@@ -376,6 +376,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
             This article contains content provided by Twitter.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Twitter 
             <a
               aria-label="cookie policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://help.twitter.com/en/rules-and-policies/twitter-cookies"
             >
               cookie policy
@@ -383,6 +384,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
              and 
             <a
               aria-label="privacy policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://twitter.com/en/privacy"
             >
               privacy policy

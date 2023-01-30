@@ -47,6 +47,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
+.emotion-4 a:focus,
 .emotion-4 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -213,12 +214,8 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   }
 }
 
+.emotion-12 button:focus,
 .emotion-12 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
-}
-
-.emotion-12 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }
@@ -1280,6 +1277,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
+.emotion-4 a:focus,
 .emotion-4 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -1446,12 +1444,8 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 }
 
+.emotion-12 button:focus,
 .emotion-12 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
-}
-
-.emotion-12 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }
@@ -2513,6 +2507,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border-bottom: solid 0.0625rem #AEAEB5;
 }
 
+.emotion-4 a:focus,
 .emotion-4 a:hover {
   color: #222222;
   background-color: #F6A21D;
@@ -2679,12 +2674,8 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   }
 }
 
+.emotion-12 button:focus,
 .emotion-12 button:hover {
-  color: #222222;
-  background-color: #F6A21D;
-}
-
-.emotion-12 button:focus {
   color: #222222;
   background-color: #F6A21D;
 }

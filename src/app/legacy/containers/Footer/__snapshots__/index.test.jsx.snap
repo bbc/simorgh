@@ -318,6 +318,10 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   padding: 1rem 0;
 }
 
+.emotion-51 a {
+  padding: 0;
+}
+
 .emotion-53 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
