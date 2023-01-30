@@ -27,19 +27,33 @@
                                   "text": "历史：英国近代的五位知名华人",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "c4833494",
@@ -48,7 +62,9 @@
                 "firstPublished": 1562943210269,
                 "lastPublished": 1562943210269
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "40742ee4",
@@ -68,11 +84,18 @@
                             "text": "华人世界每谈及英中关系话题，想到的往往不是19世纪的鸦片战争、香港殖民地，便是21世纪的经贸交流和留学潮。",
                             "attributes": []
                           },
-                          "position": [3, 1, 1]
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 1]
+                    "position": [
+                      3,
+                      1
+                    ]
                   },
                   {
                     "id": "8373e199",
@@ -87,30 +110,46 @@
                             "text": "其实，在过去三百年的近现代史上，英中交流远远不止上述这些地缘政治大格局。从人与人的交流层面讲，谁是第一位抵达英国的中国人？谁是第一个在英国作画或著书的中国人？这些在英中交流历史上创造了众多第一的华人，他们因何而来，又有何事迹？历史纷繁复杂，许多故事也许并不为大众所知……",
                             "attributes": []
                           },
-                          "position": [3, 2, 1]
+                          "position": [
+                            3,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [3, 2]
+                    "position": [
+                      3,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "8e49d0fb", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "8e49d0fb",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c0e8weny66ko",
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:c0e8weny66ko" },
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c0e8weny66ko"
+        },
         "type": "article",
         "createdBy": "Ukchina",
         "language": "zh-hans",
-        "lastUpdated": 1645628370409,
         "firstPublished": 1562943210269,
         "lastPublished": 1562943210269,
-        "timestamp": 1562943210269,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c0e8weny66ko",
@@ -122,34 +161,21 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.0",
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
-        "readTime": 1,
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment"
+        ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:c0e8weny66ko" },
-        "timestamp": 1562943210269,
-        "suitableForSyndication": false,
-        "language": "zh-hans",
-        "headlines": { "seoHeadline": "历史：英国近代的五位知名华人" },
+        "locators": {},
+        "headlines": {
+          "seoHeadline": "历史：英国近代的五位知名华人"
+        },
         "images": {},
-        "passport": {
-          "language": "zh-hans",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/UKChina",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c0e8weny66ko",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Ukchina",
-          "uri": "/ukchina",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -192,7 +218,10 @@
             "copyrightHolder": "Reuters",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "主頁",
@@ -205,7 +234,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "誰是獵殺孟加拉虎的真正元兇？ 08" },
+          "headlines": {
+            "headline": "誰是獵殺孟加拉虎的真正元兇？ 08"
+          },
           "locators": {
             "assetUri": "/ukchina/trad/life-in-uk-23093639",
             "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/life-in-uk-23093639",
@@ -227,12 +258,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:ukchina/trad/life-in-uk-23093639",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "誰是獵殺孟加拉虎的真正元兇？ 07" },
+          "headlines": {
+            "headline": "誰是獵殺孟加拉虎的真正元兇？ 07"
+          },
           "locators": {
             "assetUri": "/ukchina/trad/britain-focus-23093638",
             "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/britain-focus-23093638",
@@ -254,12 +290,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:ukchina/trad/britain-focus-23093638",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "誰是獵殺孟加拉虎的真正元兇？ 06" },
+          "headlines": {
+            "headline": "誰是獵殺孟加拉虎的真正元兇？ 06"
+          },
           "locators": {
             "assetUri": "/ukchina/trad/vert-tra-23093637",
             "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/vert-tra-23093637",
@@ -281,12 +322,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:ukchina/trad/vert-tra-23093637",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "誰是獵殺孟加拉虎的真正元兇？ 05" },
+          "headlines": {
+            "headline": "誰是獵殺孟加拉虎的真正元兇？ 05"
+          },
           "locators": {
             "assetUri": "/ukchina/trad/vert-fut-23093636",
             "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/vert-fut-23093636",
@@ -308,12 +354,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:ukchina/trad/vert-fut-23093636",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "誰是獵殺孟加拉虎的真正元兇？ 04" },
+          "headlines": {
+            "headline": "誰是獵殺孟加拉虎的真正元兇？ 04"
+          },
           "locators": {
             "assetUri": "/ukchina/trad/vert-earth-23093635",
             "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/vert-earth-23093635",
@@ -335,12 +386,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:ukchina/trad/vert-earth-23093635",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "誰是獵殺孟加拉虎的真正元兇？ 03" },
+          "headlines": {
+            "headline": "誰是獵殺孟加拉虎的真正元兇？ 03"
+          },
           "locators": {
             "assetUri": "/ukchina/trad/vert-cul-23093634",
             "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/vert-cul-23093634",
@@ -362,12 +418,17 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "id": "urn:bbc:ares::asset:ukchina/trad/vert-cul-23093634",
           "type": "cps"
         },
         {
-          "headlines": { "headline": "騙子是如何營造“真相錯覺” 的 4" },
+          "headlines": {
+            "headline": "騙子是如何營造“真相錯覺” 的 4"
+          },
           "locators": {
             "assetUri": "/ukchina/trad/sport-23091956",
             "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/sport-23091956",
@@ -402,7 +463,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "英國體壇",
@@ -413,7 +477,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "騙子是如何營造“真相錯覺” 的 5" },
+          "headlines": {
+            "headline": "騙子是如何營造“真相錯覺” 的 5"
+          },
           "locators": {
             "assetUri": "/ukchina/trad/sport-23091957",
             "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/sport-23091957",
@@ -448,7 +514,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "英國體壇",
@@ -459,7 +528,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "騙子是如何營造“真相錯覺” 的 6" },
+          "headlines": {
+            "headline": "騙子是如何營造“真相錯覺” 的 6"
+          },
           "locators": {
             "assetUri": "/ukchina/trad/sport-23091958",
             "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/sport-23091958",
@@ -494,7 +565,10 @@
             "copyrightHolder": "Getty Images",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "英國體壇",

@@ -126,7 +126,7 @@ describe('getAdditionalPageData', () => {
 
   describe('Optimizely Experiments', () => {
     describe('004_brasil_recommendations_experiment', () => {
-      it('should recommendations data from camino, unirecs content and unirecs hybrid engine', async () => {
+      it('should get recommendations data from unirecs content and unirecs hybrid engine', async () => {
         const expectedOutput = {
           recommendations: recommendationsJson,
           datalabContentRecommendations: recommendationsJson,
@@ -136,7 +136,7 @@ describe('getAdditionalPageData', () => {
         hasRecommendations.mockImplementationOnce(() => true);
 
         fetchMock.mock(
-          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_camino',
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab',
           recommendationsJson,
         );
         fetchMock.mock(

@@ -850,16 +850,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c70970g2251o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c70970g2251o",
-          "canonicalUrl": "https://www.bbc.com/pashto/articles/c70970g2251o"
+          "optimoUrn": "urn:bbc:optimo:asset:c70970g2251o"
         },
         "type": "article",
         "createdBy": "Pashto",
         "language": "ps",
-        "lastUpdated": 1646742769733,
         "firstPublished": 1564571039363,
         "lastPublished": 1564571039363,
-        "timestamp": 1564571039363,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c70970g2251o",
@@ -872,7 +869,6 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.2",
         "blockTypes": [
           "headline",
           "text",
@@ -884,37 +880,15 @@
           "altText",
           "rawImage"
         ],
-        "readTime": 2,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c70970g2251o",
-          "canonicalUrl": "https://www.bbc.com/pashto/articles/c70970g2251o"
-        },
-        "timestamp": 1564571039363,
-        "suitableForSyndication": false,
-        "language": "ps",
+        "locators": {},
         "headlines": {
           "seoHeadline": "په روسي تلویزیون کې روباټ خبرونه وړاندې کوي"
         },
         "images": {},
-        "passport": {
-          "language": "ps",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c70970g2251o",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Pashto",
-          "uri": "/pashto",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
