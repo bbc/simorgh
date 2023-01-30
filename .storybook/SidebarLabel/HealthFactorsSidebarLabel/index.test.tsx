@@ -1,6 +1,6 @@
 import React from 'react';
-import HealthFactorsSidebarLabel from '.';
 import { render, screen, act } from '@testing-library/react';
+import HealthFactorsSidebarLabel from '.';
 
 describe('Storybook Sidebar Labels', () => {
   it('should render story title correctly', async () => {
@@ -24,6 +24,7 @@ describe('Storybook Sidebar Labels', () => {
     });
 
     const title = screen.getByText('test_name');
+    expect(title).toBeInTheDocument();
   });
 
   it('should render correct hidden text for completed health factors', async () => {

@@ -1,5 +1,4 @@
 import React from 'react';
-import VisuallyHiddenText from '../../../src/app/legacy/psammead/psammead-visually-hidden-text/src';
 /** @jsx jsx */ import { jsx } from '@emotion/core';
 import styles from './index.styles';
 import {
@@ -9,6 +8,7 @@ import {
 } from '../../DocsDecorator/HealthFactors/Icons/icons';
 import ThemeProvider from '../../../src/app/components/ThemeProvider';
 import { getActionCount } from '../../helpers/healthFactors';
+import VisuallyHiddenText from '../../../src/app/legacy/psammead/psammead-visually-hidden-text/src';
 
 const HealthFactorsSidebarLabel = ({ metadata, name }) => {
   const actionCount = getActionCount(metadata);

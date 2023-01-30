@@ -30,7 +30,7 @@ export const CompletedSidebar = () => (
         done: true,
       },
     }}
-    name={'test_name'}
+    name="test_name"
   />
 );
 
@@ -47,10 +47,10 @@ export const OutstandingActionsSidebar = () => (
         done: false,
       },
     }}
-    name={'test_name'}
+    name="test_name"
   />
 );
 
 export const missingSidebar = () => (
-  <HealthFactorsSidebarLabel metadata={null} name={'test_name'} />
+  <HealthFactorsSidebarLabel metadata={null} name="test_name" />
 );

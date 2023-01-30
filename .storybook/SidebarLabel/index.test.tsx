@@ -1,7 +1,7 @@
 import React from 'react';
-import SidebarLabel from '.';
 import { render, screen, act } from '@testing-library/react';
 import * as api from '@storybook/api';
+import SidebarLabel from '.';
 
 describe('Storybook Sidebar Labels', () => {
   beforeEach(() => {
