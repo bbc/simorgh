@@ -1,8 +1,8 @@
 import { Agent } from 'https';
+import * as getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
-
 import getInitialData from '.';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
@@ -98,6 +98,52 @@ describe('Articles - BFF Fetching', () => {
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
       path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article',
+      agent,
+      optHeaders: {
+        'ctx-service-env': 'live',
+      },
+    });
+  });
+
+  it('should request WSOJ data.', async () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    const recommendData = [{ type: 'TEST_RECOMMEND_DATA' }];
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    const getRecommendationsSpy = jest.spyOn(getRecommendationsUrl, 'default');
+
+    fetchDataSpy
+      .mockReturnValueOnce(
+        Promise.resolve({
+          status: 200,
+          json: JSON.stringify(bffArticleJson),
+        }),
+      )
+      .mockReturnValueOnce(
+        Promise.resolve({
+          status: 200,
+          json: JSON.stringify(recommendData),
+        }),
+      );
+
+    getRecommendationsSpy.mockReturnValueOnce(
+      '/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab',
+    );
+
+    await getInitialData({
+      path: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
+      getAgent,
+      service: 'kyrgyz',
+    });
+
+    expect(getRecommendationsSpy).toBeCalledWith({
+      assetUri: '/kyrgyz/articles/c0000000000o',
+      engine: 'unirecs_datalab',
+      engineVariant: '',
+    });
+
+    expect(fetchDataSpy).toHaveBeenNthCalledWith(2, {
+      path: '/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',
