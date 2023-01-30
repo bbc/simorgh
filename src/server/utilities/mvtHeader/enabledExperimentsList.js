@@ -1,14 +1,12 @@
-const enabledExperimentList = [
-  {
-    name: 'simorgh_dark_mode',
-    services: ['pidgin', 'mundo'],
-    pageTypes: ['STY', 'IDX'],
-  },
-  {
-    name: 'test_2',
-    services: ['pidgin'],
-    pageTypes: ['article'],
-  },
-];
+/* 
+This is a maintained list of experiments that we are running.
+Add enabled experiments objects inside this array in this format:
+{
+  name: '',
+  services: [],
+  pageTypes: [],
+}
+*/
+const enabledExperimentList = [];
 
 export default enabledExperimentList;
