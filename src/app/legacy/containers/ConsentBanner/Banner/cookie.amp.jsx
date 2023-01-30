@@ -194,6 +194,7 @@ const AmpCookieBanner = ({
   translations,
   accept,
   reject,
+  hide,
   hidden,
   script,
   service,
@@ -237,6 +238,9 @@ const AmpCookieBanner = ({
                 {initial.manage}
               </button>
             </OptionsItem>
+            <OptionsItem script={script} service={service}>
+              {hide}
+            </OptionsItem>
           </OptionsList>
         </BannerPage>
         <BannerPage
@@ -274,6 +278,9 @@ const AmpCookieBanner = ({
             </OptionsItem>
             <OptionsItem script={script} service={service}>
               {reject}
+            </OptionsItem>
+            <OptionsItem script={script} service={service}>
+              {hide}
             </OptionsItem>
           </OptionsList>
         </BannerPage>

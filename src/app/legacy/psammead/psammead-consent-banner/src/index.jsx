@@ -189,6 +189,7 @@ export const ConsentBanner = ({
   text,
   accept,
   reject,
+  hide,
   id,
   hidden,
   script,
@@ -208,6 +209,11 @@ export const ConsentBanner = ({
         <ListItem dir={dir} script={script}>
           <span>{reject}</span>
         </ListItem>
+        {hide && (
+          <ListItem dir={dir} script={script}>
+            <span>{hide}</span>
+          </ListItem>
+        )}
       </Options>
     </CenterWrapper>
   </Wrapper>

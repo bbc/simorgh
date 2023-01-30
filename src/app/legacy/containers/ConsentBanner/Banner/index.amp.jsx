@@ -22,6 +22,7 @@ const AmpConsentBannerContainer = ({
   type,
   acceptAction,
   rejectAction,
+  hideAction,
   promptId,
   hidden,
 }) => {
@@ -46,6 +47,7 @@ const AmpConsentBannerContainer = ({
         rejectAction,
         dataAttribute('reject'),
       )}
+      hide={Button('Hide', hideAction, dataAttribute('hide'))}
       hidden={hidden}
       script={script}
       service={service}
@@ -67,6 +69,7 @@ const AmpConsentBannerContainer = ({
         rejectAction,
         dataAttribute('reject'),
       )}
+      hide={Button('Hide', hideAction, dataAttribute('hide'))}
       hidden={hidden}
       script={script}
       service={service}
