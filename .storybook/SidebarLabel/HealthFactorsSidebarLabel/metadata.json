@@ -1,18 +1,18 @@
 {
   "lastUpdated": {
-    "day": 1,
-    "month": "December",
-    "year": 2022
+    "day": 30,
+    "month": "January",
+    "year": 2023
   },
   "uxAccessibilityDoc": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "https://paper.dropbox.com/doc/Health-check-and-Health-check-summary-Screen-reader-UX--BuAOCrYE_8ZZvAuOT8zngPaAAg-y8T4oXU2Qe0ZjeQiwwnSE",
       "label": "Documented screen reader UX"
     }
   },
   "acceptanceCriteria": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "https://paper.dropbox.com/doc/Health-check-Health-check-summary-AAC--BTgPGZnrl~p5Fe0NhAfxYfTsAg-zxLRZFPMHGB5SQOtDB6NQ",
       "label": "Accessibility acceptance criteria"
@@ -22,7 +22,7 @@
     "done": false,
     "reference": {
       "url": "",
-      "label": "Accessibility swarm results"
+      "label": ""
     }
   }
 }

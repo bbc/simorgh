@@ -6,14 +6,9 @@ import HealthFactorsSidebarLabel from './HealthFactorsSidebarLabel';
 
 const SidebarLabel = ({ item }) => {
   const api = useStorybookApi();
-  const { type, parameters, name, children } = item;
+  const { isRoot, parameters, name, children } = item;
   const { docsOnly } = parameters ?? {};
-  if (
-    ['root', 'group'].includes(type) ||
-    docsOnly ||
-    !children ||
-    children.length === 0
-  ) {
+  if (isRoot || docsOnly || !children || children.length === 0) {
     return name;
   }
 
