@@ -94,9 +94,6 @@ const styles = {
       },
       '&:focus': {
         backgroundColor: '#F6F6F6',
-        outline: `${pixelsToRem(3)}rem solid ${palette.WHITE}`,
-        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.BLACK}`,
-        outlineOffset: `${pixelsToRem(3)}rem`,
         textDecoration: 'underline',
         color: palette.BLACK,
       },
