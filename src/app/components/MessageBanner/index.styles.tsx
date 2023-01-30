@@ -1,5 +1,4 @@
 import { css, Theme } from '@emotion/react';
-import pixelsToRem from '../../utilities/pixelsToRem';
 
 const styles = {
   container: () =>
@@ -49,13 +48,7 @@ const styles = {
   imageLtr: ({ mq }: Theme) =>
     css({
       maxWidth: '184px',
-      [mq.GROUP_3_ONLY]: {
-        maxWidth: '224px',
-        bottom: 0,
-        right: 0,
-        position: 'absolute',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         maxWidth: '224px',
         bottom: 0,
         right: 0,
@@ -66,13 +59,7 @@ const styles = {
   imageRtl: ({ mq }: Theme) =>
     css({
       maxWidth: '184px',
-      [mq.GROUP_3_ONLY]: {
-        maxWidth: '224px',
-        bottom: 0,
-        left: 0,
-        position: 'absolute',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         maxWidth: '224px',
         bottom: 0,
         left: 0,
@@ -97,13 +84,7 @@ const styles = {
         textDecoration: 'underline',
         color: palette.BLACK,
       },
-      [mq.GROUP_3_ONLY]: {
-        width: 'auto',
-        maxWidth: 'calc(100% - 240px)',
-        margin: '0 0 1.5rem 0',
-        paddingBottom: '1rem',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         width: 'auto',
         maxWidth: 'calc(100% - 240px)',
         margin: '0 0 1.5rem 0',
@@ -143,14 +124,7 @@ const styles = {
       display: 'flex',
       flexDirection: 'column-reverse',
       alignItems: 'center',
-      [mq.GROUP_3_ONLY]: {
-        display: 'flex',
-        flexDirection: 'row-reverse',
-        justifyContent: 'start',
-        alignItems: 'flex-end',
-        position: 'relative',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         display: 'flex',
         flexDirection: 'row-reverse',
         justifyContent: 'start',
