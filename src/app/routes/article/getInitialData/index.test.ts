@@ -137,6 +137,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(getRecommendationsSpy).toBeCalledWith({
