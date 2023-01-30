@@ -13,16 +13,12 @@ const styles = {
         'radial-gradient(circle at 20% 90%, #A20219, #180109 60%, #500115 90%)',
       paddingLeft: '1rem',
       paddingRight: '1rem',
-      [mq.GROUP_3_ONLY]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         background:
           'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
       },
       [mq.HIGH_CONTRAST]: {
         border: '0.1875rem solid transparent',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        background:
-          'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
       },
     }),
   textWrap: ({ mq }: Theme) =>
@@ -54,6 +50,7 @@ const styles = {
         right: 0,
         position: 'absolute',
       },
+
       img: { objectPosition: 'top' },
     }),
   imageRtl: ({ mq }: Theme) =>
