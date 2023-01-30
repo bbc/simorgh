@@ -30,6 +30,8 @@ import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCo
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
+import bffFetch from '../../article/getInitialData';
+
 export const only =
   (pageTypes, transformer) =>
   (pageData, ...args) => {
@@ -91,7 +93,29 @@ export default async ({
   variant,
   pageType,
   toggles,
+  getAgent,
 }) => {
+  const isCaf = pathname.includes('renderer_env=caf');
+
+  if (isCaf) {
+    try {
+      const bffResponse = await bffFetch({
+        getAgent,
+        path: `${pathname}?renderer_env=live`,
+        service,
+        variant,
+        pageType,
+      });
+
+      return {
+        ...bffResponse,
+        isCaf: true,
+      };
+    } catch ({ message, status = getErrorStatusCode() }) {
+      return { error: message, status };
+    }
+  }
+
   try {
     const env = pathname.includes('renderer_env=live')
       ? 'live'

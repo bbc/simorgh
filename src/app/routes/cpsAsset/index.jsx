@@ -8,7 +8,7 @@ import {
   FeatureIdxPage,
   ArticlePage,
 } from '#pages';
-import getInitialData from '../article/getInitialData';
+import getInitialData from './getInitialData';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,
@@ -22,9 +22,10 @@ import {
 // CPS Asset Mapping to PageType
 const CpsAsset = props => {
   const type = path(['pageData', 'metadata', 'type'], props);
+  const isCaf = path(['isCaf'], props);
 
   const PageType = {
-    [STORY_PAGE]: ArticlePage,
+    [STORY_PAGE]: isCaf ? ArticlePage : StoryPage,
     [CORRESPONDENT_STORY_PAGE]: StoryPage,
     [PHOTO_GALLERY_PAGE]: PhotoGalleryPage,
     [MEDIA_ASSET_PAGE]: MediaAssetPage,

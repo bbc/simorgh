@@ -25,6 +25,9 @@ const getEnvironment = (pathname: string) => {
   if (pathname.includes('renderer_env=live')) {
     return 'live';
   }
+  if (pathname.includes('renderer_env=caf')) {
+    return 'caf';
+  }
 
   return process.env.SIMORGH_APP_ENV;
 };
@@ -57,21 +60,24 @@ export default async ({
 }: Props) => {
   try {
     const env = getEnvironment(pathname);
-    const isLocal = env === 'local';
+    const isLocal = false;
 
     const agent = !isLocal ? await getAgent() : null;
     const id = getId(pageType)(pathname);
 
     if (!id) throw handleError('Article ID is invalid', 500);
 
-    let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
-      id,
-      service,
-      ...(variant && {
-        variant,
-      }),
-      pageType: 'article',
-    });
+    let fetchUrl = Url('http://localhost:3210/module/simorgh-bff?').set(
+      'query',
+      {
+        id,
+        service,
+        ...(variant && {
+          variant,
+        }),
+        pageType,
+      },
+    );
 
     const optHeaders = { 'ctx-service-env': env };
 
@@ -84,11 +90,11 @@ export default async ({
     // @ts-ignore - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
-      ...(!isLocal && { agent, optHeaders }),
+      // ...(!isLocal && { agent, optHeaders }),
     });
 
     const wsojURL = getRecommendationsUrl({
-      assetUri: pathname,
+      assetUri: pathname.replace(/(\.|\?).*/g, ''),
       engine: 'unirecs_datalab',
       engineVariant: '',
     });
