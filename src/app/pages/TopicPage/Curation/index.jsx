@@ -8,6 +8,7 @@ import Subheading from './Subhead';
 
 export const VISUAL_STYLE = {
   NONE: 'NONE',
+  LINKS: 'LINKS',
 };
 
 export const VISUAL_PROMINANCE = {
