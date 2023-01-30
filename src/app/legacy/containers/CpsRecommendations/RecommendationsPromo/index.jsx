@@ -13,12 +13,15 @@ import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import { getPica } from '#psammead/gel-foundations/src/typography';
 import {
   C_METAL,
+  C_GREY_2,
   C_GREY_10,
   C_GHOST,
 } from '#psammead/psammead-styles/src/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import { optimoStoryItem, storyItem } from '#models/propTypes/storyItem';
 
+import { ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
+import { RequestContext } from '../../../../contexts/RequestContext';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import Grid from '../../../components/Grid';
 import RecommendationsImage from '../RecommendationsPromoImage';
@@ -29,7 +32,7 @@ const StyledPromoWrapper = styled.div`
   position: relative;
   padding: ${GEL_SPACING};
   margin-top: ${GEL_SPACING};
-  background-color: ${C_GHOST};
+  background-color: ${props => (props.isArticlePage ? C_GHOST : C_GREY_2)};
 `;
 
 const ImageWrapper = styled.div`
@@ -107,6 +110,9 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
 
   const { headline, url, indexImage } = extractPromoData({ promo });
 
+  const { pageType } = useContext(RequestContext);
+  const isArticle = pageType === ARTICLE_PAGE;
+
   return (
     <Grid
       columns={{
@@ -119,7 +125,10 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
       }}
       enableGelGutters
     >
-      <StyledPromoWrapper data-e2e="story-promo-wrapper">
+      <StyledPromoWrapper
+        data-e2e="story-promo-wrapper"
+        isArticlePage={isArticle}
+      >
         <ImageWrapper>
           <RecommendationsImage indexImage={indexImage} lazyLoad />
         </ImageWrapper>
