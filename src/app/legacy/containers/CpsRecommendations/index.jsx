@@ -8,7 +8,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import { C_GHOST, C_GREY_2 } from '#psammead/psammead-styles/src/colours';
+import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -20,15 +20,13 @@ import { storyItem, optimoStoryItem } from '#models/propTypes/storyItem';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#components/Grid';
 
-import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
-import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import RecommendationsPromoList from './RecommendationsPromoList';
 import RecommendationsPromo from './RecommendationsPromo';
 import ErrorBoundary from './ErrorBoundary';
 
 const RecommendationsWrapper = styled.div`
-  background-color: ${props => (props.isArticlePage ? C_GREY_2 : C_GHOST)};
+  background-color: ${C_GREY_2};
   margin: ${GEL_SPACING_TRPL} 0;
   padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -52,9 +50,9 @@ const LabelComponent = styled(SectionLabel)`
 const CpsRecommendations = ({ items }) => {
   const { recommendations, translations, script, service, dir } =
     useContext(ServiceContext);
-  const { pageType } = useContext(RequestContext);
+
   const { enabled } = useToggle('cpsRecommendations');
-  const isArticlePage = pageType === ARTICLE_PAGE;
+
   const labelId = 'recommendations-heading';
   const a11yAttributes = {
     as: 'section',
@@ -90,11 +88,7 @@ const CpsRecommendations = ({ items }) => {
   return (
     <ErrorBoundary recommendations={items}>
       <GridItemMediumNoMargin>
-        <RecommendationsWrapper
-          data-e2e={labelId}
-          {...a11yAttributes}
-          isArticlePage={isArticlePage}
-        >
+        <RecommendationsWrapper data-e2e={labelId} {...a11yAttributes}>
           <SkipLinkWrapper service={service} {...skipLink}>
             {title ? (
               <LabelComponent
@@ -106,7 +100,7 @@ const CpsRecommendations = ({ items }) => {
                 mobileDivider={false}
                 overrideHeadingAs="strong"
                 bar={false}
-                backgroundColor={isArticlePage ? C_GREY_2 : C_GHOST}
+                backgroundColor={C_GREY_2}
               >
                 {title}
               </LabelComponent>
