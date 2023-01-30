@@ -27,19 +27,33 @@
                                   "text": "Seo an ceann-naidheachd don artaigil deuchainn",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "cc861ff4",
@@ -69,19 +83,37 @@
                                         "text": "‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "65ceb74e",
@@ -106,19 +138,37 @@
                                         "text": "Mapa na Frainge a’ sealltainn Paris agus Cognac",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
                     "id": "3a35bf4c",
@@ -130,11 +180,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "BBC"
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "a4ea7b97",
@@ -143,7 +198,9 @@
                 "firstPublished": 1563022114054,
                 "lastPublished": 1570805527001
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "c4b7927a",
@@ -163,7 +220,11 @@
                             "text": "‘S e bloc teacsa a tha seo, anns a bheil url do làraich ",
                             "attributes": []
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "2fa14c25",
@@ -178,21 +239,35 @@
                                   "text": "Aimisire a’ BhBC",
                                   "attributes": []
                                 },
-                                "position": [4, 1, 2, 1]
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
                               }
                             ],
                             "locator": "https://www.bbc.co.uk/weather",
                             "isExternal": false
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
               "id": "35021e81",
@@ -223,19 +298,37 @@
                                         "text": "‘S e bloc bhidio a tha seo anns a bheil bhidio mu sheangan",
                                         "attributes": []
                                       },
-                                      "position": [5, 1, 1, 1, 1]
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 1, 1, 1]
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   },
                   {
                     "id": "508ab011",
@@ -261,7 +354,9 @@
                             "versions": [
                               {
                                 "versionId": "p01k6msp",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 191,
                                 "durationISO8601": "PT3M11S",
                                 "warnings": {
@@ -275,10 +370,16 @@
                                 "availableFrom": 1540218932000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [5, 2, 1]
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "50d1269a",
@@ -295,7 +396,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "BBC"
                                 },
-                                "position": [5, 2, 2, 1]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "ca1728a5",
@@ -321,32 +427,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5, 2, 2, 2, 1, 1, 1
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [5, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [5, 2, 2, 2, 1]
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [5, 2, 2, 2]
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [5, 2, 2]
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 2]
+                    "position": [
+                      5,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
               "id": "01c434e8",
@@ -371,19 +510,33 @@
                                   "text": "'S e bloc fo-cheann-naidheachd a tha seo",
                                   "attributes": []
                                 },
-                                "position": [6, 1, 1, 1]
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "8083157d",
@@ -413,19 +566,37 @@
                                         "text": "Cluicheadairean bhuill-coise às dèidh gheama",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "06886f45",
@@ -437,11 +608,16 @@
                       "originCode": "cpsdevpb",
                       "copyrightHolder": "Getty Images"
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "41cbd9bb",
@@ -461,33 +637,46 @@
                             "text": "Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
-            { "id": "8fe2b3c3", "type": "mpu", "model": {}, "position": [9] }
+            {
+              "id": "8fe2b3c3",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c18q7nedn2ko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c18q7nedn2ko",
-          "canonicalUrl": "https://www.bbc.com/naidheachdan/sgeulachdan/c18q7nedn2ko"
+          "optimoUrn": "urn:bbc:optimo:asset:c18q7nedn2ko"
         },
         "type": "article",
         "createdBy": "Naidheachdan",
         "language": "gd",
-        "lastUpdated": 1645628585629,
         "firstPublished": 1563022114054,
         "lastPublished": 1570805527001,
-        "timestamp": 1570805527001,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c18q7nedn2ko",
@@ -497,12 +686,9 @@
         "passport": {
           "language": "gd",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Naidheachdan",
-          "locator": "urn:bbc:optimo:asset:c18q7nedn2ko",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.4",
         "blockTypes": [
           "headline",
           "text",
@@ -517,45 +703,23 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c18q7nedn2ko",
-          "canonicalUrl": "https://www.bbc.com/naidheachdan/sgeulachdan/c18q7nedn2ko"
-        },
-        "timestamp": 1570805527001,
-        "suitableForSyndication": false,
-        "language": "gd",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Seo an ceann-naidheachd SEO ‘son an artaigil seo"
         },
         "images": {},
-        "passport": {
-          "language": "gd",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Naidheachdan",
-          "locator": "urn:bbc:optimo:asset:c18q7nedn2ko",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c18q7nedn2ko",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Naidheachdan",
-          "uri": "/naidheachdan",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Taighean ùra an Steòrnabhagh" },
+          "headlines": {
+            "headline": "Taighean ùra an Steòrnabhagh"
+          },
           "locators": {
             "assetUri": "/naidheachdan/23262318",
             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/23262318",
@@ -578,7 +742,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -589,7 +756,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "20 oifis Comhairle a' falbh" },
+          "headlines": {
+            "headline": "20 oifis Comhairle a' falbh"
+          },
           "locators": {
             "assetUri": "/naidheachdan/19818991",
             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19818991",
@@ -623,7 +792,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -660,7 +832,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": true, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": true,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -673,7 +848,9 @@
       ],
       "features": [
         {
-          "headlines": { "headline": "Dàil air fastadh ceannard-sgoile" },
+          "headlines": {
+            "headline": "Dàil air fastadh ceannard-sgoile"
+          },
           "locators": {
             "assetUri": "/naidheachdan/19842248",
             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19842248",
@@ -707,7 +884,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -718,7 +898,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Ospadal Sgitheanach fhathast dùinte" },
+          "headlines": {
+            "headline": "Ospadal Sgitheanach fhathast dùinte"
+          },
           "locators": {
             "assetUri": "/naidheachdan/19828243",
             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19828243",
@@ -752,7 +934,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -799,7 +984,10 @@
             "copyrightHolder": "PA",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -810,7 +998,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Mion-sgrùdadh: Òran ùr do Loch Iall" },
+          "headlines": {
+            "headline": "Mion-sgrùdadh: Òran ùr do Loch Iall"
+          },
           "locators": {
             "assetUri": "/naidheachdan/23263089",
             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/23263089",
@@ -833,7 +1023,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -844,7 +1037,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Naidheachdan 11:00m" },
+          "headlines": {
+            "headline": "Naidheachdan 11:00m"
+          },
           "locators": {
             "assetUri": "/naidheachdan/23263091",
             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/23263091",
@@ -889,7 +1084,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -900,7 +1098,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Coille sa Gheamhradh" },
+          "headlines": {
+            "headline": "Coille sa Gheamhradh"
+          },
           "locators": {
             "assetUri": "/naidheachdan/23262688",
             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/23262688",
@@ -916,7 +1116,9 @@
             "subType": "clip",
             "format": "video",
             "title": "Coille sa Gheamhradh",
-            "synopses": { "short": "Coille sa Gheamhradh" },
+            "synopses": {
+              "short": "Coille sa Gheamhradh"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01q5457.jpg",
             "embedding": true,
             "advertising": true,
@@ -924,11 +1126,16 @@
             "versions": [
               {
                 "versionId": "p01q544x",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 19,
                 "durationISO8601": "PT19S",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1579857563000
               }
             ],
@@ -948,7 +1155,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -977,7 +1187,9 @@
             "subType": "clip",
             "format": "video",
             "title": "Mark Steel still talking about Freud and Dreams",
-            "synopses": { "short": "A video about dreams and stuff" },
+            "synopses": {
+              "short": "A video about dreams and stuff"
+            },
             "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01dpb9m.jpg",
             "embedding": true,
             "advertising": false,
@@ -985,14 +1197,19 @@
             "versions": [
               {
                 "versionId": "p01dpb8w",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 338,
                 "durationISO8601": "PT5M38S",
                 "warnings": {
                   "short": "Contains adult humour and some sexual content.",
                   "long": "Contains adult humour and some scenes of a sexual nature."
                 },
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1507896381000
               }
             ],
@@ -1011,7 +1228,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -1022,7 +1242,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Poilis a' sireadh fiosrachaidh" },
+          "headlines": {
+            "headline": "Poilis a' sireadh fiosrachaidh"
+          },
           "locators": {
             "assetUri": "/naidheachdan/19815193",
             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19815193",
@@ -1056,7 +1278,10 @@
             "copyrightHolder": "Other",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",
@@ -1067,7 +1292,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Stailc Chal Mac air a chur dheth" },
+          "headlines": {
+            "headline": "Stailc Chal Mac air a chur dheth"
+          },
           "locators": {
             "assetUri": "/naidheachdan/19812360",
             "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/19812360",
@@ -1101,7 +1328,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Dachaigh",

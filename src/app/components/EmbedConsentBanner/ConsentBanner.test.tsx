@@ -95,6 +95,26 @@ describe('Embed Consent Banner - Content', () => {
     );
   });
 
+  it('should render a Twitter consent banner with correct content for Mundo service', () => {
+    render(
+      <ConsentBanner
+        provider="twitter"
+        clickHandler={mockCanonicalClickHandler}
+      />,
+      {
+        service: 'mundo',
+      },
+    );
+
+    const heading = screen.getByTestId('banner-heading');
+    const body = screen.getByTestId('banner-body');
+
+    expect(heading.textContent).toEqual('¿Permitir el contenido de Twitter?');
+    expect(body.textContent).toEqual(
+      "Este artículo contiene contenido proporcionado por Twitter. Solicitamos tu permiso antes de que algo  se cargue, ya que ese sitio  puede estar usando cookies y otras tecnologías. Es posible que quieras leer política de cookies y política de privacidad de Twitter antes de aceptar. Para ver este contenido, selecciona 'aceptar y continuar'.",
+    );
+  });
+
   describe('Event tracking - Embed Consent Banner - Content', () => {
     afterEach(() => {
       jest.clearAllMocks();
@@ -151,7 +171,17 @@ describe('Embed Consent Banner - Content', () => {
         },
       );
 
-      expect(viewTrackerSpy).toHaveBeenCalledTimes(3);
+      render(
+        <ConsentBanner
+          provider="twitter"
+          clickHandler={mockCanonicalClickHandler}
+        />,
+        {
+          service: 'mundo',
+        },
+      );
+
+      expect(viewTrackerSpy).toHaveBeenCalledTimes(4);
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'social-consent-banner-youtube',
@@ -163,6 +193,10 @@ describe('Embed Consent Banner - Content', () => {
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'social-consent-banner-tiktok',
+      });
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'social-consent-banner-twitter',
       });
     });
 

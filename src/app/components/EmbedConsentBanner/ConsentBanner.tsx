@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import { useContext, MouseEvent } from 'react';
@@ -25,10 +26,12 @@ const BANNER_URLS: BannerUrls = {
   cookiesUrl: {
     youtube: 'https://policies.google.com/technologies/cookies',
     tiktok: 'https://www.tiktok.com/legal/cookie-policy',
+    twitter: 'https://help.twitter.com/en/rules-and-policies/twitter-cookies',
   },
   privacyUrl: {
     youtube: 'https://policies.google.com/privacy',
     tiktok: 'https://www.tiktok.com/legal/privacy-policy',
+    twitter: 'https://twitter.com/en/privacy',
   },
 };
 
@@ -42,6 +45,7 @@ const getProviderName = (provider: ConsentBannerProviders) => {
   return {
     youtube: 'Google YouTube',
     tiktok: 'TikTok',
+    twitter: 'Twitter',
   }[provider];
 };
 
@@ -80,10 +84,8 @@ const getTranslations = (
     providerNameDelimiter,
     providerName,
   );
-
   const linkTextElements =
     bodyText?.match(/(\[link]|\[\/link])(.*?)(\[\/link]|\[link])/g) || [];
-
   if (!linkTextElements.length) {
     return {
       heading: headerText,
@@ -101,13 +103,13 @@ const getTranslations = (
         href={cookiesUrl}
         className="focusIndicatorReducedWidth"
         aria-label={`${linkTextElements[0]
-          .replaceAll('[link]', '')
+          ?.replaceAll('[link]', '')
           .replaceAll('[/link]', '')
           .trim()}${externalLinkText}`}
         key={cookiesUrl}
       >
         {linkTextElements[0]
-          .replaceAll('[link]', '')
+          ?.replaceAll('[link]', '')
           .replaceAll('[/link]', '')
           .trim()}
       </a>

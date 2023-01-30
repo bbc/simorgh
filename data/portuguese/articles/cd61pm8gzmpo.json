@@ -679,16 +679,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cd61pm8gzmpo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cd61pm8gzmpo",
-          "canonicalUrl": "https://www.bbc.com/portuguese/articles/cd61pm8gzmpo"
+          "optimoUrn": "urn:bbc:optimo:asset:cd61pm8gzmpo"
         },
         "type": "article",
         "createdBy": "Brasil",
         "language": "pt-br",
-        "lastUpdated": 1598599645187,
         "firstPublished": 1570187186382,
         "lastPublished": 1570187186382,
-        "timestamp": 1570187186382,
         "options": {},
         "analyticsLabels": {
           "producer": "Brasil",
@@ -697,12 +694,9 @@
         "passport": {
           "language": "pt-br",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
-          "locator": "urn:bbc:optimo:asset:cd61pm8gzmpo",
-          "availability": "AVAILABLE",
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.3",
         "blockTypes": [
           "headline",
           "text",
@@ -717,39 +711,15 @@
           "subheadline",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cd61pm8gzmpo",
-          "canonicalUrl": "https://www.bbc.com/portuguese/articles/cd61pm8gzmpo"
-        },
-        "timestamp": 1570187186382,
-        "suitableForSyndication": false,
-        "language": "pt-br",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados"
         },
         "images": {},
-        "passport": {
-          "language": "pt-br",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
-          "locator": "urn:bbc:optimo:asset:cd61pm8gzmpo",
-          "availability": "AVAILABLE",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cd61pm8gzmpo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Brasil",
-          "uri": "/brasil",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
