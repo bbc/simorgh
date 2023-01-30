@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import loggerMock from '#testHelpers/loggerMock';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import CpsSocialEmbedContainer from '.';
 import withContexts from '../common/testHelper';
 import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
@@ -74,15 +73,22 @@ describe('CpsSocialEmbedContainer', () => {
   });
 
   describe('AMP', () => {
-    shouldMatchSnapshot(
-      'should render correctly',
-      withContexts(CpsSocialEmbedContainer, {
-        isAmp: true,
-        isEnabled: true,
-      })({
-        blocks: [cpsTwitterBlock],
-        source: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
-      }),
-    );
+    it('should render correctly', async () => {
+      let ampContainer;
+      let ampUnmount;
+      await act(async () => {
+        ({ container: ampContainer, unmount: ampUnmount } = render(
+          withContexts(CpsSocialEmbedContainer, {
+            isAmp: true,
+            isEnabled: true,
+          })({
+            blocks: [cpsTwitterBlock],
+            source: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
+          }),
+        ));
+      });
+      expect(ampContainer.firstChild).toMatchSnapshot();
+      ampUnmount();
+    });
   });
 });
