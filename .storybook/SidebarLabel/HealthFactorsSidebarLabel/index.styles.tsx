@@ -13,13 +13,15 @@ const styles = {
   recommendIcon: {
     width: `${pixelsToRem(12)}rem`,
     height: `${pixelsToRem(12)}rem`,
-    fill: '#0A7B0A',
+    color: '#0A7B0A',
+    fill: 'currentcolor',
   },
 
   activityIcon: {
     width: `${pixelsToRem(12)}rem`,
     height: `${pixelsToRem(12)}rem`,
-    fill: '#3f3f42',
+    color: '#3f3f42',
+    fill: 'currentcolor',
   },
 
   labelWrapper: {
@@ -30,7 +32,8 @@ const styles = {
   warningIcon: {
     width: `${pixelsToRem(12)}rem`,
     height: `${pixelsToRem(12)}rem`,
-    fill: '#c64f00',
+    color: '#c64f00',
+    fill: 'currentcolor',
   },
 };
 
