@@ -24,30 +24,13 @@ const logger = nodeLogger(__filename);
 // 004_brasil_recommendations_experiment
 const getRecommendations = (service, assetUri) => {
   if (service !== 'portuguese') {
-    const UNIRECS_ALLOW_LIST = [
-      'afrique',
-      'bengali',
-      'indonesia',
-      'korean',
-      'marathi',
-      'mundo',
-      'persian',
-      'pidgin',
-      'tamil',
-      'thai',
-      'turkce',
-      'Vietnamese',
-    ];
-
     return [
       {
         name: 'recommendations',
         attachAgent: true,
         path: getRecommendationsUrl({
           assetUri,
-          ...(UNIRECS_ALLOW_LIST.includes(service) && {
-            engine: 'unirecs_datalab',
-          }),
+          engine: 'unirecs_datalab',
         }),
         assetUri,
         api: 'recommendations',
@@ -62,7 +45,7 @@ const getRecommendations = (service, assetUri) => {
       attachAgent: true,
       path: getRecommendationsUrl({
         assetUri,
-        engine: 'unirecs_camino',
+        engine: 'unirecs_datalab',
       }),
       assetUri,
       api: 'recommendations',

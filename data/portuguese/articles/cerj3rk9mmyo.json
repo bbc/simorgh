@@ -279,16 +279,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cerj3rk9mmyo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cerj3rk9mmyo",
-          "canonicalUrl": "https://www.bbc.com/portuguese/articles/cerj3rk9mmyo"
+          "optimoUrn": "urn:bbc:optimo:asset:cerj3rk9mmyo"
         },
         "type": "article",
         "createdBy": "Brasil",
         "language": "pt-br",
-        "lastUpdated": 1669739235158,
         "firstPublished": 1562941526269,
         "lastPublished": 1562941526269,
-        "timestamp": 1562941526269,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cerj3rk9mmyo",
@@ -301,47 +298,24 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.10",
         "blockTypes": [
           "headline",
           "text",
           "paragraph",
           "fragment"
         ],
-        "readTime": 1,
         "consumableAsSFV": false,
         "allowAdvertising": true,
         "consumableOnRedButton": false,
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cerj3rk9mmyo",
-          "canonicalUrl": "https://www.bbc.com/portuguese/articles/cerj3rk9mmyo"
-        },
-        "timestamp": 1562941526269,
-        "suitableForSyndication": false,
-        "language": "pt-br",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Homófonos: O que são e qual a sua relevância em inglês?"
         },
         "images": {},
-        "passport": {
-          "language": "pt-br",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cerj3rk9mmyo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Brasil",
-          "uri": "/brasil",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {

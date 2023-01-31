@@ -2,6 +2,7 @@
 import { Agent } from 'https';
 import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
+import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import nodeLogger from '../../../lib/logger.node';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -82,6 +83,23 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
+    const wsojURL = getRecommendationsUrl({
+      assetUri: pathname.replace(/(\.|\?).*/g, ''),
+      engine: 'unirecs_datalab',
+      engineVariant: '',
+    });
+
+    let wsojData = [];
+    try {
+      const { json: wsojJson = [] } = await fetchPageData({
+        path: wsojURL,
+        ...({ agent, optHeaders } as any),
+      });
+      wsojData = wsojJson;
+    } catch (error) {
+      logger.error('Recommendations JSON malformed', error);
+    }
+
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
     }
@@ -95,6 +113,7 @@ export default async ({
       pageData: {
         ...article,
         secondaryColumn: secondaryData,
+        recommendations: wsojData,
       },
     };
   } catch ({ message, status }) {
