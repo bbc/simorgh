@@ -53,6 +53,7 @@ const advertisingDirectives = {
     'https://bbc.gscontxt.net',
     'https://sb.scorecardresearch.com',
     'https://*.imrworldwide.com',
+    'https://cdn.privacy-mgmt.com',
     ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.googlesyndication.com'],
