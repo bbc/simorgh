@@ -25,6 +25,7 @@ const advertisingDirectives = {
     'https://*.googlesyndication.com',
     'https://*.gstatic.com',
     'https://*.imrworldwide.com',
+    'https://cdn.privacy-mgmt.com',
   ],
   frameSrc: [
     'https://*.doubleclick.net',

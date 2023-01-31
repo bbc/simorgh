@@ -64,6 +64,7 @@ describe('cspHeader', () => {
         'https://*.imrworldwide.com',
         'https://*.twitter.com',
         'https://connect.facebook.net',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
@@ -141,6 +142,7 @@ describe('cspHeader', () => {
         'https://*.imrworldwide.com',
         'https://*.optimizely.com',
         'https://*.wearehearken.eu',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
@@ -254,6 +256,7 @@ describe('cspHeader', () => {
         'https://*.googlesyndication.com',
         'https://*.gstatic.com',
         'https://*.imrworldwide.com',
+        'https://cdn.privacy-mgmt.com',
         'https://*.twitter.com',
         'https://connect.facebook.net',
         "'self'",
@@ -336,6 +339,7 @@ describe('cspHeader', () => {
         'https://*.imrworldwide.com',
         'https://*.optimizely.com',
         'https://*.wearehearken.eu',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
