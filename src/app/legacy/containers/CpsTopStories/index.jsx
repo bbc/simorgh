@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import React, { useContext } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
@@ -6,6 +7,17 @@ import {
   StoryPromoLi,
   StoryPromoUl,
 } from '#psammead/psammead-story-promo-list/src';
+
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '#psammead/gel-foundations/src/spacings';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '#psammead/gel-foundations/src/breakpoints';
 
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
@@ -51,10 +63,41 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
 
+  // StoryPromo
+  const TestStoryPromoLi = styled(StoryPromoLi)`
+    border-bottom: 0.0625rem solid #f2f2f2;
+    padding-bottom: 16px !important;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:first-child {
+      h3 {
+        @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+          // padding-top: 0;
+          background-color: red;
+        }
+      }
+    }
+
+    h3 {
+      @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+        // padding-top: 0;
+        background-color: yellow;
+      }
+
+      @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+        // padding-top: 8px;
+        background-color: blue;
+      }
+    }
+  `;
+
   return (
     <StoryPromoUl>
       {promoItems.map(item => (
-        <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
+        <TestStoryPromoLi key={item.id || item.uri} ref={viewRef}>
           <StoryPromo
             item={item}
             dir={dir}
@@ -64,7 +107,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
             eventTrackingData={eventTrackingData}
             sectionType="top-stories"
           />
-        </StoryPromoLi>
+        </TestStoryPromoLi>
       ))}
     </StoryPromoUl>
   );
