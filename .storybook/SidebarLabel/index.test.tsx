@@ -44,9 +44,9 @@ describe('Storybook Sidebar Labels', () => {
               'components-healthfactors--health-factors-with-invalid-data',
               'components-healthfactors--health-factors-with-no-data',
             ],
-            isComponent: true,
+            isComponent: false,
             isLeaf: false,
-            isRoot: false,
+            isRoot: true,
           }}
         />,
       );
@@ -56,7 +56,7 @@ describe('Storybook Sidebar Labels', () => {
     expect(text).toBeInTheDocument();
   });
 
-  it('should return name when type is group', async () => {
+  it('should return Sidebar component when type is group', async () => {
     await act(async () => {
       render(
         <SidebarLabel
@@ -72,16 +72,15 @@ describe('Storybook Sidebar Labels', () => {
               'components-healthfactors--health-factors-with-invalid-data',
               'components-healthfactors--health-factors-with-no-data',
             ],
-            isComponent: true,
+            isComponent: false,
             isLeaf: false,
             isRoot: false,
           }}
         />,
       );
-
-      const text = screen.getByText('HealthFactors');
-      expect(text).toBeInTheDocument();
     });
+    const text = screen.getByText(', Component Health: incomplete');
+    expect(text).toBeInTheDocument();
   });
 
   it('should return SideBar component when type is component', async () => {
