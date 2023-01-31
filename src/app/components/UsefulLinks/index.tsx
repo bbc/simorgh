@@ -24,8 +24,11 @@ const UsefulLinks = ({
   title,
   visualProminence,
 }: UsefulLinksProps) => {
-  // const { dir } = useContext(ServiceContext);
-  // const isRtl = dir === 'rtl';
+  const { dir } = useContext(ServiceContext);
+  const isRtl = dir === 'rtl';
+
+  // eslint-disable-next-line no-console
+  console.log({ isRtl });
 
   // Do not render on live yet - only local + test
   if (isLive()) {
