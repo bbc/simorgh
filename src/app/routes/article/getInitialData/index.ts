@@ -26,7 +26,9 @@ const getEnvironment = (pathname: string) => {
     return 'live';
   }
   if (pathname.includes('renderer_env=caf')) {
-    return 'live';
+    return process.env.SIMORGH_APP_ENV !== 'local'
+      ? process.env.SIMORGH_APP_ENV
+      : 'live';
   }
 
   return process.env.SIMORGH_APP_ENV;
@@ -67,17 +69,14 @@ export default async ({
 
     if (!id) throw handleError('Article ID is invalid', 500);
 
-    let fetchUrl = Url('http://localhost:3210/module/simorgh-bff?').set(
-      'query',
-      {
-        id,
-        service,
-        ...(variant && {
-          variant,
-        }),
-        pageType,
-      },
-    );
+    let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
+      id,
+      service,
+      ...(variant && {
+        variant,
+      }),
+      pageType,
+    });
 
     const optHeaders = { 'ctx-service-env': env };
 
@@ -90,7 +89,7 @@ export default async ({
     // @ts-ignore - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
-      // ...{ agent, optHeaders },
+      ...(!isLocal && { agent, optHeaders }),
     });
 
     const wsojURL = getRecommendationsUrl({
