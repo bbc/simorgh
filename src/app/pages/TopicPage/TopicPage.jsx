@@ -109,7 +109,6 @@ const TopicPage = ({ pageData }) => {
               title: curationTitle,
               link,
               position,
-              visualStyle,
             }) => (
               <React.Fragment key={`${curationId}-${position}`}>
                 {shouldRenderUsefulLinks(visualStyle) && (
