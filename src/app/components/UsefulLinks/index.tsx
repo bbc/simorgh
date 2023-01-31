@@ -6,7 +6,12 @@ import InlineLink from '../InlineLink';
 import Heading from '../Heading';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const UsefulLinks = (position: number, title: string) => {
+interface UsefulLinksProps {
+  position: number;
+  title: string;
+}
+
+const UsefulLinks = ({ position, title }: UsefulLinksProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
