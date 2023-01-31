@@ -29,7 +29,6 @@ const UsefulLinks = ({ position, title }: UsefulLinksProps) => {
       >
         {title}
       </Heading>
-      ;
     </section>
   );
   //   <div css={styles.card}>
