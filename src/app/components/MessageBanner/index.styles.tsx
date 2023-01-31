@@ -1,5 +1,4 @@
 import { css, Theme } from '@emotion/react';
-import pixelsToRem from '../../utilities/pixelsToRem';
 
 const styles = {
   container: () =>
@@ -14,16 +13,12 @@ const styles = {
         'radial-gradient(circle at 20% 90%, #A20219, #180109 60%, #500115 90%)',
       paddingLeft: '1rem',
       paddingRight: '1rem',
-      [mq.GROUP_3_ONLY]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         background:
           'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
       },
       [mq.HIGH_CONTRAST]: {
         border: '0.1875rem solid transparent',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        background:
-          'linear-gradient(-120deg, #A20219 0%, #180109 54%, #180109 90%)',
       },
     }),
   textWrap: ({ mq }: Theme) =>
@@ -49,30 +44,19 @@ const styles = {
   imageLtr: ({ mq }: Theme) =>
     css({
       maxWidth: '184px',
-      [mq.GROUP_3_ONLY]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         maxWidth: '224px',
         bottom: 0,
         right: 0,
         position: 'absolute',
       },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        maxWidth: '224px',
-        bottom: 0,
-        right: 0,
-        position: 'absolute',
-      },
+
       img: { objectPosition: 'top' },
     }),
   imageRtl: ({ mq }: Theme) =>
     css({
       maxWidth: '184px',
-      [mq.GROUP_3_ONLY]: {
-        maxWidth: '224px',
-        bottom: 0,
-        left: 0,
-        position: 'absolute',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         maxWidth: '224px',
         bottom: 0,
         left: 0,
@@ -97,13 +81,7 @@ const styles = {
         textDecoration: 'underline',
         color: palette.BLACK,
       },
-      [mq.GROUP_3_ONLY]: {
-        width: 'auto',
-        maxWidth: 'calc(100% - 240px)',
-        margin: '0 0 1.5rem 0',
-        paddingBottom: '1rem',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         width: 'auto',
         maxWidth: 'calc(100% - 240px)',
         margin: '0 0 1.5rem 0',
@@ -143,14 +121,7 @@ const styles = {
       display: 'flex',
       flexDirection: 'column-reverse',
       alignItems: 'center',
-      [mq.GROUP_3_ONLY]: {
-        display: 'flex',
-        flexDirection: 'row-reverse',
-        justifyContent: 'start',
-        alignItems: 'flex-end',
-        position: 'relative',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         display: 'flex',
         flexDirection: 'row-reverse',
         justifyContent: 'start',
