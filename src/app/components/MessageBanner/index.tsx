@@ -2,7 +2,7 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import { MessageBanner } from '#app/models/types/promos';
+import { Summary } from '#app/models/types/promoData';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
@@ -11,7 +11,13 @@ import { LeftChevron, RightChevron } from '../icons';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const MessageBanner = ({ summaries, title, position }: MessageBanner) => {
+interface MessageBannerProps {
+  summaries: Summary[];
+  title: string;
+  position: number;
+}
+
+const MessageBanner = ({ summaries, title, position }: MessageBannerProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
