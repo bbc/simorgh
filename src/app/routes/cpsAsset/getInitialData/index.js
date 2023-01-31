@@ -95,10 +95,11 @@ export default async ({
   toggles,
   getAgent,
 }) => {
-  const isCaf = pathname.includes('renderer_env=caf');
+  try {
+    /* TODO: Remove after CAF testing */
+    const isCaf = pathname.includes('renderer_env=caf');
 
-  if (isCaf) {
-    try {
+    if (isCaf) {
       const bffResponse = await bffFetch({
         getAgent,
         path: pathname,
@@ -111,12 +112,9 @@ export default async ({
         ...bffResponse,
         isCaf: true,
       };
-    } catch ({ message, status = getErrorStatusCode() }) {
-      return { error: message, status };
     }
-  }
+    /* TODO: Remove after CAF testing */
 
-  try {
     const env = pathname.includes('renderer_env=live')
       ? 'live'
       : process.env.SIMORGH_APP_ENV;
