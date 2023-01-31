@@ -3,12 +3,35 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 import InlineLink from '../InlineLink';
+import Heading from '../Heading';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const UsefulLinks = () => {
+const UsefulLinks = (position: number, title: string) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
-  return <div>Hi, I am a Useful Links component</div>;
+  return (
+    <section
+      // css={styles.container}
+      role="region"
+      aria-labelledby={`useful-links-${position}`}
+    >
+      <Heading
+        level={2}
+        size="paragon"
+        // css={styles.heading}
+        id={`useful-links-${position}`}
+      >
+        {title}
+      </Heading>
+      ;
+    </section>
+  );
+  //   <div css={styles.card}>
+  //     {summaries.map(summary => {
+  //       return (
+  //         <React.Fragment key={summary.id}>
+  //           <div css={styles.textWrap}>
 };
+
 export default UsefulLinks;
