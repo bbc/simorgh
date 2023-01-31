@@ -163,6 +163,26 @@ describe('Embed Consent Banner - Content', () => {
 
       render(
         <ConsentBanner
+          provider="facebook"
+          clickHandler={mockCanonicalClickHandler}
+        />,
+        {
+          service: 'mundo',
+        },
+      );
+
+      render(
+        <ConsentBanner
+          provider="instagram"
+          clickHandler={mockCanonicalClickHandler}
+        />,
+        {
+          service: 'mundo',
+        },
+      );
+
+      render(
+        <ConsentBanner
           provider="tiktok"
           clickHandler={mockCanonicalClickHandler}
         />,
@@ -181,10 +201,18 @@ describe('Embed Consent Banner - Content', () => {
         },
       );
 
-      expect(viewTrackerSpy).toHaveBeenCalledTimes(4);
+      expect(viewTrackerSpy).toHaveBeenCalledTimes(6);
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'social-consent-banner-youtube',
+      });
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'social-consent-banner-facebook',
+      });
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'social-consent-banner-instagram',
       });
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({

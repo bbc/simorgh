@@ -55,6 +55,11 @@ describe('CanonicalSocialEmbed', () => {
       const { unmount } = render(facebookSocialEmbed, {
         pageType: ARTICLE_PAGE,
       });
+
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
+
       expect(
         document.querySelector(
           'head script[src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0"]',
@@ -215,6 +220,11 @@ describe('CanonicalSocialEmbed', () => {
 
     it('should render correctly for Instagram', async () => {
       const { container, unmount } = render(instagramEmbed);
+
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
+
       expect(container.firstChild).toMatchSnapshot();
       expect(
         document.querySelector(
@@ -238,6 +248,10 @@ describe('CanonicalSocialEmbed', () => {
 
       render(instagramEmbed);
 
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
+
       await waitFor(() => {
         expect(global.instgrm.Embeds.process).toHaveBeenCalled();
       });
@@ -246,6 +260,10 @@ describe('CanonicalSocialEmbed', () => {
     it('should not invoke the onRender prop and should log an error', async () => {
       useScriptSpy.mockReturnValueOnce(true);
       render(instagramEmbed);
+
+      const button = screen.getByTestId('banner-button');
+
+      fireEvent.click(button);
 
       expect(console.error).toHaveBeenCalledWith(
         'onRender callback function not implemented for Instagram',
@@ -383,6 +401,16 @@ describe('AmpSocialEmbed', () => {
           caption={caption}
         />,
       );
+
+      const hasConsentBanner =
+        embed.oembed.provider_name === 'youtube' ||
+        embed.oembed.provider_name === 'facebook' ||
+        embed.oembed.provider_name === 'instagram';
+
+      if (hasConsentBanner) {
+        const button = screen.getByTestId('banner-button');
+        fireEvent.click(button);
+      }
 
       expect(container).toMatchSnapshot();
     });
