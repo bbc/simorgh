@@ -36,7 +36,7 @@ const Curation = ({
   position,
   curationLength,
 }) => {
-  if (visualStyle === VISUAL_STYLE.BANNER) return null;
+  if (visualStyle !== VISUAL_STYLE.NONE) return null;
   if (!promos.length) return null;
   const Component = pathOr(
     CurationGrid,
