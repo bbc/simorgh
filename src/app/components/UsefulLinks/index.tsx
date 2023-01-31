@@ -24,8 +24,8 @@ const UsefulLinks = ({
   title,
   visualProminence,
 }: UsefulLinksProps) => {
-  const { dir } = useContext(ServiceContext);
-  const isRtl = dir === 'rtl';
+  // const { dir } = useContext(ServiceContext);
+  // const isRtl = dir === 'rtl';
 
   // Do not render on live yet - only local + test
   if (isLive()) {
