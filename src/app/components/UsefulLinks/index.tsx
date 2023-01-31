@@ -3,24 +3,18 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 // import InlineLink from '../InlineLink';
+import { Summary } from '#app/models/types/promoData';
 import InlineLink from '#psammead/psammead-inline-link/src';
+import { VISUAL_PROMINANCE } from '#app/pages/TopicPage/Curation';
 import Image from '../Image';
 import Heading from '../Heading';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { VISUAL_PROMINANCE } from '#app/pages/TopicPage/Curation';
 
 interface UsefulLinksProps {
   position: number;
   title: string;
   visualProminence: string;
-  summaries: {
-    imageUrl?: string;
-    link: string;
-    imageAlt?: string;
-    description?: string;
-    title: string;
-    id: string;
-  }[];
+  summaries: Summary[];
 }
 
 const UsefulLinks = ({
