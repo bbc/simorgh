@@ -25,15 +25,15 @@ describe('create srcset', () => {
       summary: 'should return null with pips originCode',
     },
     {
-      originCode: 'test',
+      originCode: 'cpsdevpb',
       locator: 'testland',
       width: 640,
       expected: {
         primarySrcset:
-          'https://ichef.bbci.co.uk/news/240/test/testland 240w, https://ichef.bbci.co.uk/news/320/test/testland 320w, https://ichef.bbci.co.uk/news/480/test/testland 480w, https://ichef.bbci.co.uk/news/624/test/testland 624w, https://ichef.bbci.co.uk/news/640/test/testland 640w',
-        primaryMimeType: null,
+          'https://ichef.bbci.co.uk/news/240/cpsdevpb/testland.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/testland.webp 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/testland.webp 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/testland.webp 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/testland.webp 640w',
+        primaryMimeType: 'image/webp',
         fallbackSrcset:
-          'https://ichef.bbci.co.uk/news/240/test/testland 240w, https://ichef.bbci.co.uk/news/320/test/testland 320w, https://ichef.bbci.co.uk/news/480/test/testland 480w, https://ichef.bbci.co.uk/news/624/test/testland 624w, https://ichef.bbci.co.uk/news/640/test/testland 640w',
+          'https://ichef.bbci.co.uk/news/240/cpsdevpb/testland 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/testland 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/testland 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/testland 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/testland 640w',
         fallbackMimeType: null,
       },
       summary:
