@@ -3,13 +3,16 @@
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
 // import InlineLink from '../InlineLink';
+import InlineLink from '#psammead/psammead-inline-link/src';
+import Image from '../Image';
 import Heading from '../Heading';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import InlineLink from '#psammead/psammead-inline-link/src';
+import { VISUAL_PROMINANCE } from '#app/pages/TopicPage/Curation';
 
 interface UsefulLinksProps {
   position: number;
   title: string;
+  visualProminence: string;
   summaries: {
     imageUrl?: string;
     link: string;
@@ -20,7 +23,12 @@ interface UsefulLinksProps {
   }[];
 }
 
-const UsefulLinks = ({ summaries, position, title }: UsefulLinksProps) => {
+const UsefulLinks = ({
+  summaries,
+  position,
+  title,
+  visualProminence,
+}: UsefulLinksProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
@@ -43,6 +51,15 @@ const UsefulLinks = ({ summaries, position, title }: UsefulLinksProps) => {
           {summaries.map(summary => {
             return (
               <li>
+                {summary.imageUrl &&
+                  visualProminence === VISUAL_PROMINANCE.NORMAL && (
+                    <Image
+                      alt=""
+                      src={summary.imageUrl.replace('{width}', 'raw')}
+                      placeholder={false}
+                    />
+                  )}
+
                 <InlineLink href={summary.link}>{summary.title}</InlineLink>
               </li>
             );
