@@ -6,6 +6,7 @@ import { jsx } from '@emotion/react';
 import { Summary } from '#app/models/types/promoData';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import { VISUAL_PROMINANCE } from '#app/pages/TopicPage/Curation';
+import isLive from '#lib/utilities/isLive';
 import Image from '../Image';
 import Heading from '../Heading';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -25,6 +26,11 @@ const UsefulLinks = ({
 }: UsefulLinksProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
+
+  // Do not render on live yet - only local + test
+  if (isLive()) {
+    return null;
+  }
 
   return (
     <section
