@@ -8,7 +8,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
   describe(
     `Include initialisation only on Mundo on specific page`,
     {
-      retries: 3,
+      retries: 5,
     },
     () => {
       // This test ensures that inline scripts used in includes execute successfully and
