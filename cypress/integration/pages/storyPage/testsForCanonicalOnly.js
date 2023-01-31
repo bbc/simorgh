@@ -19,7 +19,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
       // This test specifically is targeted at this test asset: '/mundo/23263889'
 
       it('should load the eclipse VJ include successfully', () => {
-        cy.window().then(win => {
+        cy.window({ timeout: 20000 }).then(win => {
           if (win.location.pathname.includes('/mundo/23263889')) {
             cy.get('.bbc-news-vj-shadow-dom', {
               includeShadowDom: true,
@@ -31,7 +31,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
         });
       });
       it('Hearken include is visible on the page - only /mundo/23263889', () => {
-        cy.window().then(win => {
+        cy.window({ timeout: 20000 }).then(win => {
           if (win.location.pathname.includes('/mundo/23263889')) {
             cy.get(`div[id="hearken-curiosity-14838"] > div`).within(() => {
               cy.get('div[id*="hearken-embed-module"]').within(() => {
@@ -42,7 +42,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
         });
       });
       it('Riddle include is visible on the page - only /mundo/23263889', () => {
-        cy.window().then(win => {
+        cy.window({ timeout: 20000 }).then(win => {
           if (win.location.pathname.includes('/mundo/23263889')) {
             cy.get(`div[class="riddle-target-initialised"] > iframe`)
               .its('0.contentDocument')
