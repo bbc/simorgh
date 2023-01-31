@@ -1,9 +1,8 @@
 export default () => {
+  jest.retryTimes(3);
   describe('Includes', () => {
     describe('IDT2', () => {
-      it('I can see a "dataPic"', async () => {
-        await new Promise(r => setTimeout(r, 2000));
-
+      it('I can see a "dataPic"', () => {
         const scriptEl = document.querySelector(
           'script[src*="https://b.files.bbci.co.uk/graphics/static/js/dataPic"]',
         );

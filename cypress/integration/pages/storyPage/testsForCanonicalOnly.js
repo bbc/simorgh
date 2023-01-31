@@ -39,9 +39,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
     it('Riddle include is visible on the page - only /mundo/23263889', () => {
       cy.window().then(win => {
         if (win.location.pathname.includes('/mundo/23263889')) {
-          cy.get(`div[class="riddle-target-initialised"] > iframe`, {
-            timeout: 10000,
-          })
+          cy.get(`div[class="riddle-target-initialised"] > iframe`)
             .its('0.contentDocument')
             .within(() => {
               cy.get('body[ng-controller="RiddleEmbedController"]')
