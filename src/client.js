@@ -3,7 +3,7 @@ import React from 'react';
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { loadableReady } from '@loadable/component';
-import { hydrateRoot } from 'react-dom/client';
+import { hydrate } from 'react-dom';
 import { template, templateStyles } from '#lib/joinUsTemplate';
 import loggerNode from '#lib/logger.node';
 import { ClientApp } from './app/legacy/containers/App';
@@ -24,11 +24,11 @@ if (window.SIMORGH_DATA.path === window.location.pathname) {
     () => {
       const cache = createCache({ key: 'bbc' });
 
-      hydrateRoot(
-        root,
+      hydrate(
         <CacheProvider value={cache}>
           <ClientApp data={data} routes={routes} />
         </CacheProvider>,
+        root,
       );
     },
     {

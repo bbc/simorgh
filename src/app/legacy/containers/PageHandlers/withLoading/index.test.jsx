@@ -28,9 +28,11 @@ describe('withLoading HOC', () => {
 
   describe(`and the loading indicator`, () => {
     it(`should not show the loading indicator before a set amount of time`, async () => {
-      const { queryByTestId } = render(<LoadingHOC loading />);
+      let queryByTestId;
 
       await act(async () => {
+        ({ queryByTestId } = render(<LoadingHOC loading />));
+
         await wait(400);
       });
 
@@ -38,9 +40,11 @@ describe('withLoading HOC', () => {
     });
 
     it(`should show the loading indicator after a set amount of time`, async () => {
-      const { queryByTestId } = render(<LoadingHOC loading />);
+      let queryByTestId;
 
       await act(async () => {
+        ({ queryByTestId } = render(<LoadingHOC loading />));
+
         await wait(600);
       });
 
@@ -48,9 +52,11 @@ describe('withLoading HOC', () => {
     });
 
     it(`should not show the loading indicator if loading is false (even after a set amount of time)`, async () => {
-      const { queryByTestId } = render(<LoadingHOC loading={false} />);
+      let queryByTestId;
 
       await act(async () => {
+        ({ queryByTestId } = render(<LoadingHOC loading={false} />));
+
         await wait(600);
       });
 

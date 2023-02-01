@@ -1,12 +1,12 @@
 import React from 'react';
-import * as reactDom from 'react-dom/client';
+import * as reactDom from 'react-dom';
 import {
   resetWindowValue,
   setWindowValue,
 } from '#psammead/psammead-test-helpers/src';
 import '#testHelpers/loggerMock';
 
-jest.mock('react-dom/client');
+jest.mock('react-dom');
 
 jest.mock('react-router-dom');
 
@@ -54,7 +54,7 @@ describe('Client', () => {
       jest.isolateModules(async () => {
         await import('./client');
 
-        expect(reactDom.hydrateRoot).toHaveBeenCalled();
+        expect(reactDom.hydrate).toHaveBeenCalled();
         resolve();
       });
     });
@@ -67,7 +67,7 @@ describe('Client', () => {
       jest.isolateModules(async () => {
         await import('./client');
 
-        expect(reactDom.hydrateRoot).not.toHaveBeenCalled();
+        expect(reactDom.hydrate).not.toHaveBeenCalled();
         resolve();
       });
     });

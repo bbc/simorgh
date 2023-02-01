@@ -70,9 +70,9 @@ describe('WebVitals', () => {
         personalisationEnabled: true,
       };
       /* eslint-disable no-console */
-      const { warn } = console.error;
+      const { error } = console.error;
 
-      console.warn = jest.fn();
+      console.error = jest.fn();
 
       render(<WebVitalsWithContext {...testConfig} />);
 
@@ -81,11 +81,11 @@ describe('WebVitals', () => {
         reportingEndpoint: 'endpoint',
         sampleRate: 20,
       });
-      expect(console.warn).toHaveBeenCalledWith(
-        'Web Vitals warning: No page type to report.',
+      expect(console.error).toHaveBeenCalledWith(
+        'Web Vitals error: No page type to report.',
       );
 
-      console.warn = warn;
+      console.error = error;
       /* eslint-enable no-console */
     });
   });

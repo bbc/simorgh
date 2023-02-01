@@ -28,7 +28,7 @@ const useOptimizelyScrollDepth = () => {
 
   useEffect(() => {
     if (!sendScrollEvents) {
-      return () => undefined;
+      return null;
     }
 
     if (scrollDepth >= 25 && !scrollTwentyFive) {
