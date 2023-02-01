@@ -2,13 +2,10 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import { Summary } from '#app/models/types/promoData';
 import { VISUAL_PROMINANCE } from '#app/pages/TopicPage/Curation';
 import isLive from '#lib/utilities/isLive';
+import { Summary } from '#app/models/types/promoData';
 import InlineLink from '../InlineLink';
-
-// import InlineLink from '#psammead/psammead-inline-link/src';
-
 import Image from '../Image';
 import Heading from '../Heading';
 import { ServiceContext } from '../../contexts/ServiceContext';
