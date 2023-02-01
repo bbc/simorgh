@@ -11,7 +11,7 @@ const styles = {
     css({
       paddingTop: '1.5rem',
       paddingBottom: '0.5rem',
-      color: palette.POSTBOX,
+      color: palette.BLACK,
     }),
 
   imageLtr: ({ mq }: Theme) =>
@@ -55,7 +55,7 @@ const styles = {
 
   unorderedList: () =>
     css({
-      // columnCount: 2,
+      columnCount: 2,
 
       listStyleType: 'none',
     }),

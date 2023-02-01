@@ -5,6 +5,7 @@ import { jsx } from '@emotion/react';
 import { VISUAL_PROMINANCE } from '#app/pages/TopicPage/Curation';
 import isLive from '#lib/utilities/isLive';
 import { Summary } from '#app/models/types/promoData';
+import styles from './index.styles';
 import InlineLink from '../InlineLink';
 import Image from '../Image';
 import Heading from '../Heading';
@@ -36,7 +37,7 @@ const UsefulLinks = ({
 
   return (
     <section
-      // css={styles.container}
+      css={styles.container}
       role="region"
       aria-labelledby={`useful-links-${position}`}
     >
@@ -44,12 +45,12 @@ const UsefulLinks = ({
         <Heading
           level={2}
           size="doublePica"
-          // css={styles.heading}
+          css={styles.heading}
           id={`useful-links-${position}`}
         >
           {title}
         </Heading>
-        <ul>
+        <ul css={styles.unorderedList}>
           {summaries.map(summary => {
             return (
               <li>
