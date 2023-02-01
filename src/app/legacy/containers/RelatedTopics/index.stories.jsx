@@ -12,7 +12,7 @@ import ThemeProvider from '../../../components/ThemeProvider';
 
 const WithContexts = ({ children, variant, service = 'mundo' }) => {
   return (
-    <ThemeProvider service="news">
+    <ThemeProvider service={service}>
       <ToggleContextProvider
         toggles={{
           eventTracking: {

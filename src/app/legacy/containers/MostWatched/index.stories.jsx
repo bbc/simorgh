@@ -14,7 +14,7 @@ const promos = mostWatchedData.records.slice(0, 5).map(item => item.promo);
 // eslint-disable-next-line react/prop-types
 const Component = ({ service }) => {
   return (
-    <ThemeProvider service="news">
+    <ThemeProvider service={service}>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
