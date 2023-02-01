@@ -35,6 +35,8 @@ const UsefulLinks = ({
     return null;
   }
 
+  const shouldDisplayImages = visualProminence === VISUAL_PROMINANCE.NORMAL;
+
   return (
     <section
       css={styles.container}
@@ -54,14 +56,13 @@ const UsefulLinks = ({
           {summaries.map(summary => {
             return (
               <li>
-                {summary.imageUrl &&
-                  visualProminence === VISUAL_PROMINANCE.NORMAL && (
-                    <Image
-                      alt=""
-                      src={summary.imageUrl.replace('{width}', 'raw')}
-                      placeholder={false}
-                    />
-                  )}
+                {summary.imageUrl && shouldDisplayImages && (
+                  <Image
+                    alt=""
+                    src={summary.imageUrl.replace('{width}', 'raw')}
+                    placeholder={false}
+                  />
+                )}
 
                 <InlineLink
                   to={summary.link}
