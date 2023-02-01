@@ -24,10 +24,10 @@ import { getPica } from '#psammead/gel-foundations/src/typography';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
+import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px
 const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px
-const focusIndicatorThickness = '0.1875rem'; // 3px
 
 const NavWrapper = styled.div`
   position: relative;

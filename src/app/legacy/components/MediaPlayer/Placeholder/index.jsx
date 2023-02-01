@@ -9,8 +9,7 @@ import {
   C_WHITE,
 } from '#psammead/psammead-styles/src/colours';
 import Guidance from '../Guidance';
-
-const focusIndicatorThickness = '0.1875rem'; // 3px
+import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 const placeholderOutline = `
   content: '';

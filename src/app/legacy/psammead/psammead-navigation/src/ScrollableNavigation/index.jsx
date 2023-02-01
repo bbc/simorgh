@@ -7,6 +7,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { C_WHITE, C_BLACK } from '#psammead/psammead-styles/src/colours';
+import { focusIndicatorThickness } from '../../../../../components/ThemeProvider/focusIndicator';
 
 // Because IE11 can't handle 8-digit hex, need to convert to rgba
 const hexToRGB = (hex, alpha = 1) => {
@@ -15,8 +16,6 @@ const hexToRGB = (hex, alpha = 1) => {
   const b = parseInt(hex.slice(5, 7), 16);
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
-
-const focusIndicatorThickness = '0.1875rem'; // 3px
 
 const scrollableNavOutline = `
   content: '';

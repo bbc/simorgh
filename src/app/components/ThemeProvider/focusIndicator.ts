@@ -1,13 +1,15 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
+export const focusIndicatorThickness = `${pixelsToRem(3)}rem`; // 3px
+
 const focusIndicator = ({ palette }: Theme) => css`
   // Adds focus indicator styling to all a and button elements by default.
   a:focus-visible,
   button:focus-visible {
-    outline: ${pixelsToRem(3)}rem solid ${palette.BLACK};
-    box-shadow: 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE};
-    outline-offset: ${pixelsToRem(3)}rem;
+    outline: ${focusIndicatorThickness} solid ${palette.BLACK};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${palette.WHITE};
+    outline-offset: ${focusIndicatorThickness};
   }
 
   // Reverts focus indicator styling, so to display default browser styling
@@ -50,16 +52,16 @@ const focusIndicator = ({ palette }: Theme) => css`
 
   // Overrides focus indicator styles with just a black outline. Used when a red border is already applied. E.g. Pagination.
   a.focusIndicatorOutlineBlack:focus-visible {
-    outline: ${pixelsToRem(3)}rem solid ${palette.BLACK};
+    outline: ${focusIndicatorThickness} solid ${palette.BLACK};
     box-shadow: none;
     outline-offset: 0;
   }
 
   // Overrides focus indicator styles with inverted colours. Used on a dark background page. E.g. Episode lists.
   a.focusIndicatorInvert:focus-visible {
-    outline: ${pixelsToRem(3)}rem solid ${palette.WHITE};
-    box-shadow: 0 0 0 ${pixelsToRem(3)}rem ${palette.BLACK};
-    outline-offset: ${pixelsToRem(3)}rem;
+    outline: ${focusIndicatorThickness} solid ${palette.WHITE};
+    box-shadow: 0 0 0 ${focusIndicatorThickness} ${palette.BLACK};
+    outline-offset: ${focusIndicatorThickness};
   }
 `;
 
