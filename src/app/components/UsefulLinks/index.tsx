@@ -43,7 +43,7 @@ const UsefulLinks = ({
       <>
         <Heading
           level={2}
-          size="paragon"
+          size="doublePica"
           // css={styles.heading}
           id={`useful-links-${position}`}
         >
@@ -62,7 +62,12 @@ const UsefulLinks = ({
                     />
                   )}
 
-                <InlineLink to={summary.link} text={summary.title} />
+                <InlineLink
+                  to={summary.link}
+                  text={summary.title}
+                  size="pica"
+                  fontVariant="sansBold"
+                />
               </li>
             );
           })}
