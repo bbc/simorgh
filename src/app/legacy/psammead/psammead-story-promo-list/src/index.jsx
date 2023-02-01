@@ -4,7 +4,6 @@ import { C_LUNAR } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -64,16 +63,6 @@ export const StoryPromoLi = styled(StoryPromoLiBase)`
 
   &:last-child {
     padding-bottom: 0;
-  }
-
-  h3 {
-    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      padding-top: 0;
-    }
-
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-top: ${GEL_SPACING};
-    }
   }
 
   &:first-child {

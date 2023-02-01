@@ -1,4 +1,3 @@
-import styled from '@emotion/styled';
 import React, { useContext } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
@@ -7,15 +6,6 @@ import {
   StoryPromoLi,
   StoryPromoUl,
 } from '#psammead/psammead-story-promo-list/src';
-
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
@@ -60,33 +50,6 @@ PromoComponent.defaultProps = {
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
-
-  // // StoryPromo
-  // const TestStoryPromoLi = styled(StoryPromoLi)`
-  //   border-bottom: 0.0625rem solid #f2f2f2;
-  //   padding-bottom: ${GEL_SPACING_DBL};
-
-  //   &:last-child {
-  //     border: none;
-  //     padding-bottom: 0;
-  //   }
-
-  //   h3 {
-  //     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-  //       padding-top: 0;
-  //     }
-
-  //     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-  //       padding-top: ${GEL_SPACING};
-  //     }
-  //   }
-
-  //   &:first-child {
-  //     h3 {
-  //       padding-top: 0;
-  //     }
-  //   }
-  // `;
 
   return (
     <StoryPromoUl>

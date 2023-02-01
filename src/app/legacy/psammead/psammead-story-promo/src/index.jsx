@@ -135,6 +135,14 @@ export const Headline = styled.h3`
   ${({ promoHasImage }) =>
     !promoHasImage &&
     `display: inline-block;`} /* Needed for aligning Media Indicator with Headline */
+
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding-top: 0;
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-top: ${GEL_SPACING};
+  }
 `;
 
 Headline.propTypes = {
