@@ -69,6 +69,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'বিজ্ঞাপন',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'সবগুলো খবর দেখুন',
       home: 'মূলপাতা',
       currentPage: 'বর্তমান পেজ',
@@ -279,7 +280,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'স্থিতিকাল %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
