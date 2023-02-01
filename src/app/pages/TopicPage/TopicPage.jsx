@@ -106,6 +106,7 @@ const TopicPage = ({ pageData }) => {
                     summaries={summaries}
                     position={position}
                     title={curationTitle}
+                    visualProminence={visualProminence}
                   />
                 ) : (
                   <Curation

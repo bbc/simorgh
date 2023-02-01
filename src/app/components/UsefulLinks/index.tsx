@@ -2,12 +2,12 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
-// import InlineLink from '../InlineLink';
-import InlineLink from '#psammead/psammead-inline-link/src';
+import { VISUAL_PROMINANCE } from '#app/pages/TopicPage/Curation';
+import InlineLink from '../InlineLink';
+// import InlineLink from '#psammead/psammead-inline-link/src';
 import Image from '../Image';
 import Heading from '../Heading';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { VISUAL_PROMINANCE } from '#app/pages/TopicPage/Curation';
 
 interface UsefulLinksProps {
   position: number;
@@ -60,7 +60,7 @@ const UsefulLinks = ({
                     />
                   )}
 
-                <InlineLink href={summary.link}>{summary.title}</InlineLink>
+                <InlineLink to={summary.link} text={summary.title} />
               </li>
             );
           })}
