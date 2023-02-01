@@ -61,37 +61,37 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
 
-  // StoryPromo
-  const TestStoryPromoLi = styled(StoryPromoLi)`
-    border-bottom: 0.0625rem solid #f2f2f2;
-    padding-bottom: ${GEL_SPACING_DBL};
+  // // StoryPromo
+  // const TestStoryPromoLi = styled(StoryPromoLi)`
+  //   border-bottom: 0.0625rem solid #f2f2f2;
+  //   padding-bottom: ${GEL_SPACING_DBL};
 
-    &:last-child {
-      border: none;
-      padding-bottom: 0;
-    }
+  //   &:last-child {
+  //     border: none;
+  //     padding-bottom: 0;
+  //   }
 
-    h3 {
-      @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-        padding-top: 0;
-      }
+  //   h3 {
+  //     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+  //       padding-top: 0;
+  //     }
 
-      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-        padding-top: ${GEL_SPACING};
-      }
-    }
+  //     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+  //       padding-top: ${GEL_SPACING};
+  //     }
+  //   }
 
-    &:first-child {
-      h3 {
-        padding-top: 0;
-      }
-    }
-  `;
+  //   &:first-child {
+  //     h3 {
+  //       padding-top: 0;
+  //     }
+  //   }
+  // `;
 
   return (
     <StoryPromoUl>
       {promoItems.map(item => (
-        <TestStoryPromoLi key={item.id || item.uri} ref={viewRef}>
+        <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
           <StoryPromo
             item={item}
             dir={dir}
@@ -101,7 +101,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
             eventTrackingData={eventTrackingData}
             sectionType="top-stories"
           />
-        </TestStoryPromoLi>
+        </StoryPromoLi>
       ))}
     </StoryPromoUl>
   );
