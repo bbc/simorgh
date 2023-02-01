@@ -32,7 +32,7 @@ const getPageData = (url, service, variant, pageType) => {
 };
 
 export default (service, variant, pageType) => {
-  cy.url().then(async url => {
+  cy.url().then(url => {
     const urlForData = url.replace('.amp', '');
 
     const firstVisitedPage = url;
@@ -94,33 +94,5 @@ export default (service, variant, pageType) => {
         cy.log('No topic tags in json');
       }
     });
-    // const env = Cypress.env('APP_ENV');
-
-    // if (env !== 'local' && pageType === 'article') {
-    //   const articleId =
-    //     Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
-
-    //   const bffUrl = `https://web-cdn.${
-    //     env === 'live' ? '' : `${env}.`
-    //   }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${
-    //     variant ? `&variant=${variant}` : ''
-    //   }`;
-
-    //   cy.log(bffUrl);
-    //   await cy
-    //     .request({
-    //       url: bffUrl,
-    //       headers: { 'ctx-service-env': env },
-    //     })
-    //     .then(({ body }) => {
-    //       pageBody = body;
-    //     });
-    // } else {
-    //   console.log('hit else');
-    //   cy.request(getDataUrl(urlForData)).then(({ body }) => {
-    //     pageBody = body;
-    //     console.log('request', body);
-    //   });
-    // }
   });
 };
