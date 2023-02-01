@@ -27,11 +27,13 @@ const shouldOverrideMorphEnv = (queryString, type) => {
 
 const isDev = () => process.env.SIMORGH_APP_ENV === 'local';
 
-const getBaseUrl = isAmp => {
+const getBaseUrl = (queryString, isAmp) => {
   // In some scenarios, we use the same base URL as the parent
   const relativeBaseUrl = '';
-
   switch (true) {
+    // TODO: Remove after testing with CAF is complete
+    case queryString && queryString.includes('renderer_env=caf'):
+      return isAmp ? LIVE_AMP_URL : LIVE_BASE_URL;
     case isLive():
       return isAmp ? LIVE_AMP_URL : relativeBaseUrl;
     case isDev():
@@ -46,7 +48,7 @@ export default ({ type, mediaId, isAmp = false, queryString }) => {
     ? '?morph_env=live'
     : '';
   const ampSection = isAmp ? '/amp' : '';
-  const baseUrl = getBaseUrl(isAmp);
+  const baseUrl = getBaseUrl(queryString, isAmp);
   const url = `${baseUrl}/${AV_ROUTE}/${type}/${mediaId}`;
 
   return `${url}${ampSection}${morphEnvOverride}`;

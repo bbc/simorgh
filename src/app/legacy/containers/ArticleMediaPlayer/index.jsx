@@ -7,15 +7,20 @@ import {
 } from '#models/propTypes';
 import MediaPlayerContainer from '../MediaPlayer';
 
+const pageTypeMap = {
+  article: 'articles',
+  STY: 'cps',
+};
+
 const ArticleMediaPlayerContainer = ({ blocks }) => {
-  const { id } = useContext(RequestContext);
+  const { id, pathname, pageType } = useContext(RequestContext);
 
   return (
     <GridItemMediumNoMargin>
       <MediaPlayerContainer
         blocks={blocks}
-        assetId={id}
-        assetType="articles"
+        assetId={id || pathname.substr(1)}
+        assetType={pageTypeMap[pageType]}
         showPlaceholder
       />
     </GridItemMediumNoMargin>
