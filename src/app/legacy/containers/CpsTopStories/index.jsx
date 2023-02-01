@@ -64,11 +64,11 @@ const PromoListComponent = ({ promoItems, dir }) => {
   // StoryPromo
   const TestStoryPromoLi = styled(StoryPromoLi)`
     border-bottom: 0.0625rem solid #f2f2f2;
-    padding-bottom: ${GEL_SPACING_DBL} !important;
+    padding-bottom: ${GEL_SPACING_DBL};
 
     &:last-child {
       border: none;
-      padding-bottom: 0 !important;
+      padding-bottom: 0;
     }
 
     h3 {
