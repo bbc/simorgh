@@ -2,9 +2,13 @@
 /* @jsxFrag React.Fragment */
 import React, { useContext } from 'react';
 import { jsx } from '@emotion/react';
+import { Summary } from '#app/models/types/promoData';
 import { VISUAL_PROMINANCE } from '#app/pages/TopicPage/Curation';
+import isLive from '#lib/utilities/isLive';
 import InlineLink from '../InlineLink';
+
 // import InlineLink from '#psammead/psammead-inline-link/src';
+
 import Image from '../Image';
 import Heading from '../Heading';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -13,14 +17,7 @@ interface UsefulLinksProps {
   position: number;
   title: string;
   visualProminence: string;
-  summaries: {
-    imageUrl?: string;
-    link: string;
-    imageAlt?: string;
-    description?: string;
-    title: string;
-    id: string;
-  }[];
+  summaries: Summary[];
 }
 
 const UsefulLinks = ({
@@ -31,6 +28,14 @@ const UsefulLinks = ({
 }: UsefulLinksProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
+
+  // eslint-disable-next-line no-console
+  console.log({ isRtl });
+
+  // Do not render on live yet - only local + test
+  if (isLive()) {
+    return null;
+  }
 
   return (
     <section
