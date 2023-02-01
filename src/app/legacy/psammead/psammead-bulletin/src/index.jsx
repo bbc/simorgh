@@ -208,7 +208,11 @@ const Bulletin = ({
           bulletinType={bulletinType}
           dir={dir}
         >
-          <Link href={ctaLink} aria-labelledby={`bulletin-${sanitisedAriaId}`}>
+          <Link
+            className="focusIndicatorDisplayBlock"
+            href={ctaLink}
+            aria-labelledby={`bulletin-${sanitisedAriaId}`}
+          >
             {isLive ? (
               <LiveLabel
                 service={service}

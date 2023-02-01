@@ -40,7 +40,7 @@ const parseLocation = (location: string) =>
 
 const InlineLink: FC<Props> = ({
   allowCSR = false,
-  className,
+  className = 'focusIndicatorReducedWidth',
   fontVariant,
   size,
   text,

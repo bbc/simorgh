@@ -257,6 +257,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         >
           We use 
           <a
+            class="focusIndicatorReducedWidth"
             href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
             cookies
@@ -556,6 +557,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         >
           نستخدم 
           <a
+            class="focusIndicatorReducedWidth"
             href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
             ملفات ارتباط

@@ -84,6 +84,17 @@ exports[`BrandContainer should render correctly 1`] = `
   margin-bottom: -0.25rem;
 }
 
+.emotion-5:focus-visible::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0.1875rem;
+  bottom: 0;
+  right: -0.1875rem;
+  border-top: 0.25rem solid #FFFFFF;
+  outline: 0.25rem solid #FFFFFF;
+}
+
 .emotion-7 {
   box-sizing: content-box;
   color: #FFFFFF;
@@ -128,7 +139,7 @@ exports[`BrandContainer should render correctly 1`] = `
   >
     <a
       aria-labelledby="BrandLink-null"
-      class="emotion-5 emotion-6"
+      class="focusIndicatorRemove emotion-5 emotion-6"
       href="/news"
     >
       <svg

@@ -5,6 +5,7 @@ import { withKnobs, text, number } from '@storybook/addon-knobs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 import Promo from '.';
 import {
@@ -16,17 +17,19 @@ import {
 // eslint-disable-next-line react/prop-types
 const Wrappers = ({ service, variant, children }) => {
   return (
-    <ServiceContextProvider service={service} variant={variant}>
-      <RequestContextProvider isAmp={false} service={service}>
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: false },
-          }}
-        >
-          {children}
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>
+    <ThemeProvider service={service}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <RequestContextProvider isAmp={false} service={service}>
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: { enabled: false },
+            }}
+          >
+            {children}
+          </ToggleContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 

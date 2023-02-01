@@ -8,6 +8,7 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { topStoryColumns } from './storyColumns';
 import { TopRow, LeadingRow, RegularRow } from '.';
 import getNumberPromoFixtures from './testHelpers';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const TopRowStory = ({ dir, displayImages }) => (
@@ -44,26 +45,28 @@ const selectDir = () => {
 // eslint-disable-next-line react/prop-types
 const Component = ({ RowType, displayImages = true }) => {
   return (
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pathname="/pathname"
-        pageType={ARTICLE_PAGE}
-        service="news"
-      >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: false },
-          }}
+    <ThemeProvider service="news">
+      <ServiceContextProvider service="news">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
+          pathname="/pathname"
+          pageType={ARTICLE_PAGE}
+          service="news"
         >
-          <Grid enableGelGutters columns={topStoryColumns}>
-            <RowType dir={selectDir()} displayImages={displayImages} />
-          </Grid>
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: { enabled: false },
+            }}
+          >
+            <Grid enableGelGutters columns={topStoryColumns}>
+              <RowType dir={selectDir()} displayImages={displayImages} />
+            </Grid>
+          </ToggleContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
 
@@ -31,15 +32,17 @@ const serviceContextMock = {
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ inline = false }) => (
-  <ToggleContextProvider
-    toggles={{
-      eventTracking: { enabled: true },
-    }}
-  >
-    <ServiceContext.Provider value={serviceContextMock}>
-      {inline ? <InlinePodcastPromo /> : <SecondaryColumnPodcastPromo />}
-    </ServiceContext.Provider>
-  </ToggleContextProvider>
+  <ThemeProvider service="news">
+    <ToggleContextProvider
+      toggles={{
+        eventTracking: { enabled: true },
+      }}
+    >
+      <ServiceContext.Provider value={serviceContextMock}>
+        {inline ? <InlinePodcastPromo /> : <SecondaryColumnPodcastPromo />}
+      </ServiceContext.Provider>
+    </ToggleContextProvider>
+  </ThemeProvider>
 );
 
 export default {

@@ -3,12 +3,15 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import FooterComponent from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service }) => (
-  <ServiceContextProvider service={service}>
-    <FooterComponent />
-  </ServiceContextProvider>
+  <ThemeProvider service={service}>
+    <ServiceContextProvider service={service}>
+      <FooterComponent />
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 export default {

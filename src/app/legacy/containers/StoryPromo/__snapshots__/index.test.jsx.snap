@@ -388,7 +388,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-21 emotion-22"
+          class="focusIndicatorDisplayBlock emotion-21 emotion-22"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -821,7 +821,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-22 emotion-23"
+          class="focusIndicatorDisplayBlock emotion-22 emotion-23"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -1208,7 +1208,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -1697,7 +1697,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-21 emotion-22"
+          class="focusIndicatorDisplayBlock emotion-21 emotion-22"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -2114,7 +2114,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-19 emotion-20"
+          class="focusIndicatorDisplayBlock emotion-19 emotion-20"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -2532,7 +2532,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-20 emotion-21"
+          class="focusIndicatorDisplayBlock emotion-20 emotion-21"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -2910,7 +2910,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -3378,7 +3378,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-19 emotion-20"
+          class="focusIndicatorDisplayBlock emotion-19 emotion-20"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -3706,7 +3706,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
       >
         <a
           aria-labelledby="promo-azeri-feature-1"
-          class="emotion-13 emotion-14"
+          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
           href="/azeri"
         >
           <span
@@ -4032,7 +4032,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
       >
         <a
           aria-labelledby="promo-azeri-feature-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="/azeri"
         >
           <span
@@ -4345,7 +4345,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
       >
         <a
           aria-labelledby="promo-azeri-feature-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="/azeri"
         >
           <span
@@ -4694,7 +4694,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
       >
         <a
           aria-labelledby="promo-azeri-feature-1"
-          class="emotion-13 emotion-14"
+          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
           href="/azeri"
         >
           <span
@@ -5020,7 +5020,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -5352,7 +5352,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-15 emotion-16"
+          class="focusIndicatorDisplayBlock emotion-15 emotion-16"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -5661,7 +5661,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -5970,7 +5970,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -6284,7 +6284,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -6610,7 +6610,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -6915,7 +6915,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-13 emotion-14"
+          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -7229,7 +7229,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -7530,7 +7530,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -7867,7 +7867,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-13 emotion-14"
+          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -8311,7 +8311,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -8351,7 +8351,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
           >
             <a
               aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-              class="emotion-28 emotion-29"
+              class="focusIndicatorDisplayInlineBlock emotion-28 emotion-29"
               href="/hausa/labarai-48916590"
             >
               <div
@@ -8397,7 +8397,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             role="listitem"
           >
             <a
-              class="emotion-28 emotion-29"
+              class="focusIndicatorDisplayInlineBlock emotion-28 emotion-29"
               href="/hausa/labarai-42837051"
             >
               <span>
@@ -8410,7 +8410,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             role="listitem"
           >
             <a
-              class="emotion-28 emotion-29"
+              class="focusIndicatorDisplayInlineBlock emotion-28 emotion-29"
               href="https://www.bbc.com/persian"
             >
               <span>
@@ -8684,7 +8684,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="/indonesia/media-45640737"
         >
           <span
@@ -8963,7 +8963,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="/indonesia/media-45640737"
         >
           <span
@@ -9247,7 +9247,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="/indonesia/media-45640737"
         >
           <span
@@ -9543,7 +9543,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="/indonesia/media-45640737"
         >
           <span
@@ -9857,7 +9857,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-13 emotion-14"
+          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -10183,7 +10183,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -10496,7 +10496,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -10845,7 +10845,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-13 emotion-14"
+          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -11165,7 +11165,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
       >
         <a
           aria-labelledby="promo-azeri-text-1"
-          class="emotion-13 emotion-14"
+          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
           href="/azeri"
         >
           <span
@@ -11491,7 +11491,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
       >
         <a
           aria-labelledby="promo-azeri-text-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="/azeri"
         >
           <span
@@ -11804,7 +11804,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
       >
         <a
           aria-labelledby="promo-azeri-text-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="/azeri"
         >
           <span
@@ -12153,7 +12153,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
       >
         <a
           aria-labelledby="promo-azeri-text-1"
-          class="emotion-13 emotion-14"
+          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
           href="/azeri"
         >
           <span
@@ -12473,7 +12473,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-13 emotion-14"
+          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -12799,7 +12799,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-14 emotion-15"
+          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -13112,7 +13112,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -13461,7 +13461,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-13 emotion-14"
+          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -13872,7 +13872,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-21 emotion-22"
+          class="focusIndicatorDisplayBlock emotion-21 emotion-22"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -14302,7 +14302,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-22 emotion-23"
+          class="focusIndicatorDisplayBlock emotion-22 emotion-23"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -14689,7 +14689,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -15172,7 +15172,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="emotion-21 emotion-22"
+          class="focusIndicatorDisplayBlock emotion-21 emotion-22"
           href="https://www.bbc.co.uk"
         >
           <span

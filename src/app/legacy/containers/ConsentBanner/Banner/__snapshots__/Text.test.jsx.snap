@@ -114,6 +114,7 @@ exports[`Consent Banner Text should correctly render banner text with a link in 
   >
     Some text 
     <a
+      class="focusIndicatorReducedWidth"
       href="https://www.bbc.co.uk"
     >
       with a link
@@ -159,6 +160,7 @@ exports[`Consent Banner Text should correctly render banner text with a link out
   >
     Some international text
     <a
+      class="focusIndicatorReducedWidth"
       href="https://www.bbc.com"
     >
       with an international link

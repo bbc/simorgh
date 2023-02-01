@@ -508,7 +508,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
         dir="ltr"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
         >
           Could a computer ever create better art than a human?
@@ -539,7 +539,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
         dir="ltr"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
         >
           Could a computer ever create better art than a human?
@@ -570,7 +570,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
         dir="ltr"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
         >
           Could a computer ever create better art than a human?
@@ -601,7 +601,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
         dir="ltr"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
         >
           Could a computer ever create better art than a human?
@@ -632,7 +632,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
         dir="ltr"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
         >
           Could a computer ever create better art than a human?
@@ -663,7 +663,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
         dir="ltr"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
         >
           Could a computer ever create better art than a human?
@@ -694,7 +694,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
         dir="ltr"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
         >
           Could a computer ever create better art than a human?
@@ -725,7 +725,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
         dir="ltr"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
         >
           Could a computer ever create better art than a human?
@@ -756,7 +756,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
         dir="ltr"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
         >
           Could a computer ever create better art than a human?
@@ -787,7 +787,7 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
         dir="ltr"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
         >
           Could a computer ever create better art than a human?
@@ -1306,7 +1306,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
         dir="rtl"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1337,7 +1337,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
         dir="rtl"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1368,7 +1368,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
         dir="rtl"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1399,7 +1399,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
         dir="rtl"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1430,7 +1430,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
         dir="rtl"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1461,7 +1461,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
         dir="rtl"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1492,7 +1492,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
         dir="rtl"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1523,7 +1523,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
         dir="rtl"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1554,7 +1554,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
         dir="rtl"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1585,7 +1585,7 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
         dir="rtl"
       >
         <a
-          class="emotion-11 emotion-12"
+          class="focusIndicatorDisplayTableCell emotion-11 emotion-12"
           href="https://www.bbc.com/persian/articles/cej3lzd5e0go"
         >
           در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد
@@ -1681,7 +1681,7 @@ exports[`MostReadLink should render ltr correctly 1`] = `
     dir="ltr"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorDisplayTableCell emotion-2 emotion-3"
       href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
     >
       Could a computer ever create better art than a human?
@@ -1775,7 +1775,7 @@ exports[`MostReadLink should render rtl correctly 1`] = `
     dir="rtl"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorDisplayTableCell emotion-2 emotion-3"
       href="https://www.bbc.com/arabic/articles/c1er5mjnznzo"
     >
       لماذا يخجل البعض من اسم قريته في مصر؟
@@ -1897,7 +1897,7 @@ exports[`MostReadLink should render with last updated date correctly 1`] = `
     dir="ltr"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorDisplayTableCell emotion-2 emotion-3"
       href="https://www.bbc.com/news/articles/cn7k01xp8kxo"
     >
       Could a computer ever create better art than a human?

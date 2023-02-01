@@ -4,7 +4,6 @@ import { C_LUNAR } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -44,14 +43,16 @@ StoryPromoLiBase.defaultProps = {
 
 export const StoryPromoLi = styled(StoryPromoLiBase)`
   padding: ${GEL_SPACING} 0 ${GEL_SPACING_DBL};
+  border-bottom: 0.0625rem solid #f2f2f2;
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: 0 0 ${GEL_SPACING_TRPL};
+    padding: 0 0 ${GEL_SPACING_DBL};
   }
+
   &:first-child {
     padding-top: 0;
 
@@ -62,6 +63,12 @@ export const StoryPromoLi = styled(StoryPromoLiBase)`
 
   &:last-child {
     padding-bottom: 0;
+  }
+
+  &:first-child {
+    h3 {
+      padding-top: 0;
+    }
   }
 `;
 

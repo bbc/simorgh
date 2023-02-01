@@ -10,25 +10,28 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import IndexPageSection from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, data, isAmp = false }) => (
-  <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.com"
-      isAmp={isAmp}
-      pageType={FRONT_PAGE}
-      service={service}
-    >
-      <ToggleContextProvider
-        toggles={{
-          eventTracking: { enabled: false },
-        }}
+  <ThemeProvider service={service}>
+    <ServiceContextProvider service={service}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.com"
+        isAmp={isAmp}
+        pageType={FRONT_PAGE}
+        service={service}
       >
-        <IndexPageSection group={data} sectionNumber={1} />
-      </ToggleContextProvider>
-    </RequestContextProvider>
-  </ServiceContextProvider>
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: false },
+          }}
+        >
+          <IndexPageSection group={data} sectionNumber={1} />
+        </ToggleContextProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 export default {

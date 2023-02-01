@@ -19,7 +19,13 @@ const StyledLink = styled.a`
 `;
 
 const Link = ({ service, text, href, inline, lang }) => (
-  <StyledLink service={service} lang={lang} inline={inline} href={href}>
+  <StyledLink
+    service={service}
+    lang={lang}
+    inline={inline}
+    href={href}
+    className="focusIndicatorInvert"
+  >
     {text}
   </StyledLink>
 );

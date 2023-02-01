@@ -7,6 +7,7 @@ import featuresRtl from './fixturesRtl.json';
 import features from './fixtures.json';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import FeaturesAnalysis from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 /* eslint-disable react/prop-types */
 const Component = ({
@@ -17,24 +18,26 @@ const Component = ({
 }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
-    <ServiceContextProvider service={service}>
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.com"
-        isAmp={isAmp}
-        pageType={STORY_PAGE}
-        pathname="/"
-        service={service}
-      >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: false },
-            frostedPromo: { enabled: true, value: 1 },
-          }}
+    <ThemeProvider service={service}>
+      <ServiceContextProvider service={service}>
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.com"
+          isAmp={isAmp}
+          pageType={STORY_PAGE}
+          pathname="/"
+          service={service}
         >
-          <FeaturesAnalysis content={data} />
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: { enabled: false },
+              frostedPromo: { enabled: true, value: 1 },
+            }}
+          >
+            <FeaturesAnalysis content={data} />
+          </ToggleContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>
   </div>
 );
 

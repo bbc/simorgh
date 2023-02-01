@@ -134,7 +134,15 @@ export const Headline = styled.h3`
   ${({ script, promoType }) => script && headlineTypography(script)[promoType]}
   ${({ promoHasImage }) =>
     !promoHasImage &&
-    `display: inline;`} /* Needed for aligning Media Indicator with Headline */
+    `display: inline-block;`} /* Needed for aligning Media Indicator with Headline */
+
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding-top: 0;
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-top: ${GEL_SPACING};
+  }
 `;
 
 Headline.propTypes = {
