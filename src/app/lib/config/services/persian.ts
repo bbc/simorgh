@@ -324,7 +324,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% المدة الزمنية',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
