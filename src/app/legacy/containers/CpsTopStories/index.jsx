@@ -11,10 +11,8 @@ import {
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
@@ -66,30 +64,26 @@ const PromoListComponent = ({ promoItems, dir }) => {
   // StoryPromo
   const TestStoryPromoLi = styled(StoryPromoLi)`
     border-bottom: 0.0625rem solid #f2f2f2;
-    padding-bottom: 16px !important;
+    padding-bottom: ${GEL_SPACING_DBL} !important;
 
     &:last-child {
       border: none;
+      padding-bottom: 0 !important;
+    }
+
+    h3 {
+      @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+        padding-top: 0;
+      }
+
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+        padding-top: ${GEL_SPACING};
+      }
     }
 
     &:first-child {
       h3 {
-        @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-          // padding-top: 0;
-          background-color: red;
-        }
-      }
-    }
-
-    h3 {
-      @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-        // padding-top: 0;
-        background-color: yellow;
-      }
-
-      @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-        // padding-top: 8px;
-        background-color: blue;
+        padding-top: 0;
       }
     }
   `;
