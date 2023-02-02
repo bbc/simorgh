@@ -9,11 +9,11 @@ import {
 describe('MessageBanner', () => {
   describe('One summary', () => {
     const { summaries } = kyrgyzMessageBannerOnePromo;
-    const [summary] = summaries;
+    const summary = summaries[0];
     it('should render a section with role region', () => {
       render(
         <MessageBanner
-          summaries={summaries}
+          summary={summary}
           title={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
         />,
@@ -25,7 +25,7 @@ describe('MessageBanner', () => {
     it('should have a heading with an id which matches the aria-labelledby attribute', () => {
       const { getByRole } = render(
         <MessageBanner
-          summaries={summaries}
+          summary={summary}
           title={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
         />,
@@ -40,7 +40,7 @@ describe('MessageBanner', () => {
     it('should display the banner title correctly as an H2', () => {
       render(
         <MessageBanner
-          summaries={summaries}
+          summary={summary}
           title={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
         />,
@@ -53,7 +53,7 @@ describe('MessageBanner', () => {
     it('should display the banner subtext correctly as a Paragraph', () => {
       render(
         <MessageBanner
-          summaries={summaries}
+          summary={summary}
           title={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
         />,
@@ -64,7 +64,7 @@ describe('MessageBanner', () => {
     it('should display link text correctly as an Anchor', () => {
       render(
         <MessageBanner
-          summaries={summaries}
+          summary={summary}
           title={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
         />,
@@ -77,7 +77,7 @@ describe('MessageBanner', () => {
     it('should render an image with the correct image src', () => {
       render(
         <MessageBanner
-          summaries={summaries}
+          summary={summary}
           title={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
         />,
@@ -91,7 +91,7 @@ describe('MessageBanner', () => {
     it('should have an image with an empty alt text', () => {
       render(
         <MessageBanner
-          summaries={summaries}
+          summary={summary}
           title={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
         />,
@@ -105,7 +105,7 @@ describe('MessageBanner', () => {
     it('should only render one banner per curation', () => {
       render(
         <MessageBanner
-          summaries={summaries}
+          summary={summaries[0]}
           title={kyrgyzMessageBannerTwoPromos.title}
           position={kyrgyzMessageBannerTwoPromos.position}
         />,

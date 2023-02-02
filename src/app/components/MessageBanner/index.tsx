@@ -12,12 +12,12 @@ import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface MessageBannerProps {
-  summaries: Summary[];
+  summary: Summary;
   title: string;
   position: number;
 }
 
-const MessageBanner = ({ summaries, title, position }: MessageBannerProps) => {
+const MessageBanner = ({ summary, title, position }: MessageBannerProps) => {
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
@@ -28,48 +28,46 @@ const MessageBanner = ({ summaries, title, position }: MessageBannerProps) => {
       aria-labelledby={`message-banner-${position}`}
     >
       <div css={styles.card}>
-        {summaries.map(summary => {
-          return (
-            <React.Fragment key={summary.id}>
-              <div css={styles.textWrap}>
-                <Heading
-                  level={2}
-                  size="paragon"
-                  css={styles.heading}
-                  id={`message-banner-${position}`}
-                >
-                  {title}
-                </Heading>
-                <Paragraph size="longPrimer" css={styles.paragraph}>
-                  {summary.description}
-                </Paragraph>
+        return (
+        <React.Fragment key={summary.id}>
+          <div css={styles.textWrap}>
+            <Heading
+              level={2}
+              size="paragon"
+              css={styles.heading}
+              id={`message-banner-${position}`}
+            >
+              {title}
+            </Heading>
+            <Paragraph size="longPrimer" css={styles.paragraph}>
+              {summary.description}
+            </Paragraph>
+          </div>
+          <div css={styles.flex}>
+            <a href={summary.link} css={styles.linkBackground}>
+              <div css={styles.linkAndChevron}>
+                <Text size="pica" fontVariant="sansBold" css={styles.link}>
+                  {summary.title}
+                  {isRtl ? (
+                    <LeftChevron css={styles.chevron} />
+                  ) : (
+                    <RightChevron css={styles.chevron} />
+                  )}
+                </Text>
               </div>
-              <div css={styles.flex}>
-                <a href={summary.link} css={styles.linkBackground}>
-                  <div css={styles.linkAndChevron}>
-                    <Text size="pica" fontVariant="sansBold" css={styles.link}>
-                      {summary.title}
-                      {isRtl ? (
-                        <LeftChevron css={styles.chevron} />
-                      ) : (
-                        <RightChevron css={styles.chevron} />
-                      )}
-                    </Text>
-                  </div>
-                </a>
-                {summary.imageUrl && (
-                  <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
-                    <Image
-                      alt=""
-                      src={summary.imageUrl.replace('{width}', 'raw')}
-                      placeholder={false}
-                    />
-                  </div>
-                )}
+            </a>
+            {summary.imageUrl && (
+              <div css={isRtl ? styles.imageRtl : styles.imageLtr}>
+                <Image
+                  alt=""
+                  src={summary.imageUrl.replace('{width}', 'raw')}
+                  placeholder={false}
+                />
               </div>
-            </React.Fragment>
-          );
-        })}
+            )}
+          </div>
+        </React.Fragment>
+        ); )
       </div>
     </section>
   );
