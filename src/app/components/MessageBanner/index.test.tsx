@@ -1,9 +1,12 @@
 import React from 'react';
 import { render, screen } from '../react-testing-library-with-providers';
 import MessageBanner from '.';
-import kyrgyzBanner from './fixtures';
+import {
+  kyrgyzMessageBannerOnePromo,
+  kyrgyzMessageBannerTwoPromos,
+} from './fixtures';
 
-const { summaries } = kyrgyzBanner;
+const { summaries } = kyrgyzMessageBannerOnePromo;
 const [summary] = summaries;
 
 describe('MessageBanner', () => {
@@ -11,8 +14,8 @@ describe('MessageBanner', () => {
     render(
       <MessageBanner
         summaries={summaries}
-        title={kyrgyzBanner.title}
-        position={kyrgyzBanner.position}
+        title={kyrgyzMessageBannerOnePromo.title}
+        position={kyrgyzMessageBannerOnePromo.position}
       />,
     );
     const region = screen.getByRole('region');
@@ -23,11 +26,11 @@ describe('MessageBanner', () => {
     const { getByRole } = render(
       <MessageBanner
         summaries={summaries}
-        title={kyrgyzBanner.title}
-        position={kyrgyzBanner.position}
+        title={kyrgyzMessageBannerOnePromo.title}
+        position={kyrgyzMessageBannerOnePromo.position}
       />,
     );
-    const heading = screen.getByText(kyrgyzBanner.title);
+    const heading = screen.getByText(kyrgyzMessageBannerOnePromo.title);
     const messageBannerEl = getByRole('region');
     expect(messageBannerEl.getAttribute('aria-labelledby')).toBe(
       heading.getAttribute('id'),
@@ -38,19 +41,21 @@ describe('MessageBanner', () => {
     render(
       <MessageBanner
         summaries={summaries}
-        title={kyrgyzBanner.title}
-        position={kyrgyzBanner.position}
+        title={kyrgyzMessageBannerOnePromo.title}
+        position={kyrgyzMessageBannerOnePromo.position}
       />,
     );
-    expect(screen.getByText(kyrgyzBanner.title).nodeName).toBe('H2');
+    expect(screen.getByText(kyrgyzMessageBannerOnePromo.title).nodeName).toBe(
+      'H2',
+    );
   });
 
   it('should display the banner subtext correctly as a Paragraph', () => {
     render(
       <MessageBanner
         summaries={summaries}
-        title={kyrgyzBanner.title}
-        position={kyrgyzBanner.position}
+        title={kyrgyzMessageBannerOnePromo.title}
+        position={kyrgyzMessageBannerOnePromo.position}
       />,
     );
     expect(screen.getByText(summary.description).nodeName).toBe('P');
@@ -60,8 +65,8 @@ describe('MessageBanner', () => {
     render(
       <MessageBanner
         summaries={summaries}
-        title={kyrgyzBanner.title}
-        position={kyrgyzBanner.position}
+        title={kyrgyzMessageBannerOnePromo.title}
+        position={kyrgyzMessageBannerOnePromo.position}
       />,
     );
     const ctaLink = screen.getByRole('link');
@@ -73,8 +78,8 @@ describe('MessageBanner', () => {
     render(
       <MessageBanner
         summaries={summaries}
-        title={kyrgyzBanner.title}
-        position={kyrgyzBanner.position}
+        title={kyrgyzMessageBannerOnePromo.title}
+        position={kyrgyzMessageBannerOnePromo.position}
       />,
     );
     const image = screen.getByAltText('');
@@ -87,8 +92,8 @@ describe('MessageBanner', () => {
     render(
       <MessageBanner
         summaries={summaries}
-        title={kyrgyzBanner.title}
-        position={kyrgyzBanner.position}
+        title={kyrgyzMessageBannerOnePromo.title}
+        position={kyrgyzMessageBannerOnePromo.position}
       />,
     );
     const image = screen.getByAltText('');
