@@ -61,6 +61,7 @@ jobs:
           --data '{
             "state": "success",
             "context": "Storybook Permalink (branch)",
+            "description": "View Storybook for the latest changes on this PR"
             "target_url": "https://${{ github.event.pull_request.head.ref }}--5d28eb3fe163f6002046d6fa.chromatic.com"
             }' \
           --fail
