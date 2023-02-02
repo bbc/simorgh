@@ -38,6 +38,7 @@ const StyledIndexAlsosLink = styled.a`
   ${({ service }) => getSerifMedium(service)}
   color: ${C_EBON};
   text-decoration: none;
+  display: inline-block;
 
   &:hover,
   &:focus {

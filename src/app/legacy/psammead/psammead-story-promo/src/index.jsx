@@ -203,6 +203,7 @@ export const Link = styled.a`
   color: ${C_EBON};
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block; // fixes firefox forced colour mode bug
 
   &:before {
     bottom: 0;

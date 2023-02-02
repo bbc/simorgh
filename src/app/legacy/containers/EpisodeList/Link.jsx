@@ -17,6 +17,8 @@ const MediaIndicatorWrapper = styled.div`
 `;
 
 const StyledAnchor = styled.a`
+  display: block; // fixes firefox chrome bug
+
   :before {
     position: absolute;
     top: 0;

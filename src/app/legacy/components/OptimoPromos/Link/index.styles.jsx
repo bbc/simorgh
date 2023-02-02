@@ -6,6 +6,7 @@ const Link = styled.a`
   color: ${C_EBON};
   text-decoration: none;
   overflow-wrap: anywhere;
+  display: inline-block; // fixes chrome firefox issue
 
   &:hover,
   &:focus {
