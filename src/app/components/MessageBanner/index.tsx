@@ -28,7 +28,6 @@ const MessageBanner = ({ summary, title, position }: MessageBannerProps) => {
       aria-labelledby={`message-banner-${position}`}
     >
       <div css={styles.card}>
-        return (
         <React.Fragment key={summary.id}>
           <div css={styles.textWrap}>
             <Heading
@@ -67,7 +66,6 @@ const MessageBanner = ({ summary, title, position }: MessageBannerProps) => {
             )}
           </div>
         </React.Fragment>
-        ); )
       </div>
     </section>
   );

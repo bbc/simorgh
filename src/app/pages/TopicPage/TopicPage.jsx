@@ -109,7 +109,7 @@ const TopicPage = ({ pageData }) => {
                 {shouldRenderMessageBanner(visualStyle, visualProminence) ? (
                   <MessageBanner
                     title={curationTitle}
-                    summaries={summaries}
+                    summary={summaries[0]}
                     position={position}
                   />
                 ) : (
