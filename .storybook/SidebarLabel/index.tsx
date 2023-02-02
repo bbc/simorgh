@@ -6,19 +6,26 @@ import HealthFactorsSidebarLabel from './HealthFactorsSidebarLabel';
 
 const SidebarLabel = ({ item }) => {
   const api = useStorybookApi();
-  const { isRoot, parameters, name, children } = item;
+  const { isRoot, parameters, name, children, isComponent } = item;
   const { docsOnly } = parameters ?? {};
-  if (isRoot || docsOnly || !children || children.length === 0) {
+  console.log(item);
+  if (
+    !children ||
+    children.length === 0 ||
+    isRoot ||
+    docsOnly ||
+    (!isComponent && children.length !== 1)
+  ) {
     return name;
   }
 
-  const basicChild =
-    children.find(child => child.match(/--basic$/)) ?? children[0];
-  if (!basicChild) {
+  console.log(children);
+  const hasChild = children[0];
+  if (!hasChild) {
     return name;
   }
 
-  const story = api.getData(basicChild);
+  const story = api.getData(hasChild);
 
   if (!story || isExempt(story)) {
     return name;
