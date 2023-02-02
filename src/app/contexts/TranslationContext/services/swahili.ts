@@ -1,4 +1,7 @@
-const swahili = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const swahili: Translations = {
   default: {
     pagination: {
       page: 'Ukurasa',
@@ -213,4 +216,4 @@ const swahili = {
   },
 };
 
-export default swahili;
+export default withContext(swahili);

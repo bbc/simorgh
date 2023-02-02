@@ -1,4 +1,7 @@
-const vietnamese = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const vietnamese: Translations = {
   default: {
     pagination: {
       previousPage: 'Quay Lại',
@@ -201,4 +204,4 @@ const vietnamese = {
   },
 };
 
-export default vietnamese;
+export default withContext(vietnamese);

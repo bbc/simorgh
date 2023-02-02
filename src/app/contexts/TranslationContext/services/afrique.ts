@@ -1,4 +1,7 @@
-const afrique = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const afrique: Translations = {
   default: {
     pagination: {
       page: 'Page',
@@ -212,4 +215,4 @@ const afrique = {
   },
 };
 
-export default afrique;
+export default withContext(afrique);

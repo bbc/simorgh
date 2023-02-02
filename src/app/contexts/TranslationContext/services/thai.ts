@@ -1,4 +1,7 @@
-const thai = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const thai: Translations = {
   default: {
     pagination: {
       previousPage: 'ก่อนหน้านี้',
@@ -193,4 +196,4 @@ const thai = {
   },
 };
 
-export default thai;
+export default withContext(thai);

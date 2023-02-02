@@ -1,4 +1,7 @@
-const serbian = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const serbian: Translations = {
   default: {
     pagination: {
       page: 'Stranica',
@@ -208,4 +211,4 @@ const serbian = {
   },
 };
 
-export default serbian;
+export default withContext(serbian);

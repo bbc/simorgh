@@ -1,4 +1,7 @@
-const bengali = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const bengali: Translations = {
   default: {
     pagination: {
       page: 'পৃষ্ঠা',
@@ -203,4 +206,4 @@ const bengali = {
   },
 };
 
-export default bengali;
+export default withContext(bengali);

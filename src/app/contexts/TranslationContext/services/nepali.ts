@@ -1,4 +1,7 @@
-const nepali = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const nepali: Translations = {
   default: {
     pagination: {
       page: 'पेज',
@@ -203,4 +206,4 @@ const nepali = {
   },
 };
 
-export default nepali;
+export default withContext(nepali);

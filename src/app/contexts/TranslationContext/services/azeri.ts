@@ -1,4 +1,7 @@
-const azeri = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const azeri: Translations = {
   default: {
     pagination: {
       page: 'səhifə',
@@ -205,4 +208,4 @@ const azeri = {
   },
 };
 
-export default azeri;
+export default withContext(azeri);

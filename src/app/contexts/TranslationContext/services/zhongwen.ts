@@ -1,5 +1,8 @@
-const zhongwen = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const zhongwen: Translations = {
   default: {},
 };
 
-export default zhongwen;
+export default withContext(zhongwen);

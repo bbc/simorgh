@@ -1,4 +1,7 @@
-const turkce = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const turkce: Translations = {
   default: {
     pagination: {
       previousPage: 'Önceki',
@@ -207,4 +210,4 @@ const turkce = {
   },
 };
 
-export default turkce;
+export default withContext(turkce);

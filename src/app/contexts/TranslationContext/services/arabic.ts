@@ -1,4 +1,7 @@
-const arabic = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const arabic: Translations = {
   default: {
     pagination: {
       page: 'صفحة',
@@ -205,4 +208,4 @@ const arabic = {
   },
 };
 
-export default arabic;
+export default withContext(arabic);

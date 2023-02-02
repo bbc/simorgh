@@ -1,4 +1,7 @@
-const cymrufyw = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const cymrufyw: Translations = {
   default: {
     ads: {
       advertisementLabel: 'Advertisement',
@@ -160,4 +163,4 @@ const cymrufyw = {
   },
 };
 
-export default cymrufyw;
+export default withContext(cymrufyw);

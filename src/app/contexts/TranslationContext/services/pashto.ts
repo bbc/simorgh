@@ -1,4 +1,7 @@
-const pashto = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const pashto: Translations = {
   default: {
     pagination: {
       page: 'پاڼه',
@@ -214,4 +217,4 @@ const pashto = {
   },
 };
 
-export default pashto;
+export default withContext(pashto);

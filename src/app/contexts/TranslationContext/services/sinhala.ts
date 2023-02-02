@@ -1,4 +1,7 @@
-const sinhala = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const sinhala: Translations = {
   default: {
     pagination: {
       page: 'පිටුව',
@@ -204,4 +207,4 @@ const sinhala = {
   },
 };
 
-export default sinhala;
+export default withContext(sinhala);

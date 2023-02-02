@@ -1,4 +1,7 @@
-const amharic = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const amharic: Translations = {
   default: {
     pagination: {
       page: 'ገፁ',
@@ -197,4 +200,4 @@ const amharic = {
   },
 };
 
-export default amharic;
+export default withContext(amharic);

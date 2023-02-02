@@ -1,5 +1,8 @@
-const ukrainian = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const ukrainian: Translations = {
   default: {},
 };
 
-export default ukrainian;
+export default withContext(ukrainian);

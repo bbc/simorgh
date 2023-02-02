@@ -1,4 +1,7 @@
-const tigrinya = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const tigrinya: Translations = {
   default: {
     pagination: {
       previousPage: 'ናይ ሕሉፍ',
@@ -186,4 +189,4 @@ const tigrinya = {
   },
 };
 
-export default tigrinya;
+export default withContext(tigrinya);

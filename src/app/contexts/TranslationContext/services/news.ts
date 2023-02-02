@@ -1,4 +1,7 @@
-const news = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const news: Translations = {
   default: {
     ads: {
       advertisementLabel: 'Advertisement',
@@ -157,4 +160,4 @@ const news = {
   },
 };
 
-export default news;
+export default withContext(news);

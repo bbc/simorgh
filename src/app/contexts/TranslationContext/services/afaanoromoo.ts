@@ -1,4 +1,7 @@
-const afaanoromoo = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const afaanoromoo: Translations = {
   default: {
     pagination: {
       previousPage: 'Kan duraa',
@@ -208,4 +211,4 @@ const afaanoromoo = {
   },
 };
 
-export default afaanoromoo;
+export default withContext(afaanoromoo);

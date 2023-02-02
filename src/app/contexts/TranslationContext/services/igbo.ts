@@ -1,4 +1,7 @@
-const igbo = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const igbo: Translations = {
   default: {
     pagination: {
       previousPage: 'Ikpeazụ',
@@ -209,4 +212,4 @@ const igbo = {
   },
 };
 
-export default igbo;
+export default withContext(igbo);

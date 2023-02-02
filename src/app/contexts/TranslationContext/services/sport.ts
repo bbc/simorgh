@@ -1,4 +1,7 @@
-const sport = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const sport: Translations = {
   default: {
     ads: {
       advertisementLabel: 'Advertisement',
@@ -156,4 +159,4 @@ const sport = {
   },
 };
 
-export default sport;
+export default withContext(sport);

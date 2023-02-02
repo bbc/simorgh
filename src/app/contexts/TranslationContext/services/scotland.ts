@@ -1,4 +1,7 @@
-const scotland = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const scotland: Translations = {
   default: {
     ads: {
       advertisementLabel: 'Advertisement',
@@ -153,4 +156,4 @@ const scotland = {
   },
 };
 
-export default scotland;
+export default withContext(scotland);

@@ -1,4 +1,7 @@
-const naidheachdan = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const naidheachdan: Translations = {
   default: {
     ads: {
       advertisementLabel: 'Advertisement',
@@ -164,4 +167,4 @@ const naidheachdan = {
   },
 };
 
-export default naidheachdan;
+export default withContext(naidheachdan);

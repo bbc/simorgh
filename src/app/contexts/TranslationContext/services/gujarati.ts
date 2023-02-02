@@ -1,4 +1,7 @@
-const gujarati = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const gujarati: Translations = {
   default: {
     pagination: {
       previousPage: 'આ પહેલાં',
@@ -207,4 +210,4 @@ const gujarati = {
   },
 };
 
-export default gujarati;
+export default withContext(gujarati);

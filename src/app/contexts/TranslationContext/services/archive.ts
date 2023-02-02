@@ -1,4 +1,7 @@
-const archive = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const archive: Translations = {
   default: {
     ads: {
       advertisementLabel: 'Advertisement',
@@ -153,4 +156,4 @@ const archive = {
   },
 };
 
-export default archive;
+export default withContext(archive);

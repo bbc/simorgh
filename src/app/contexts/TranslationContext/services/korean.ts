@@ -1,4 +1,7 @@
-const korean = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const korean: Translations = {
   default: {
     pagination: {
       previousPage: '이전',
@@ -204,4 +207,4 @@ const korean = {
   },
 };
 
-export default korean;
+export default withContext(korean);

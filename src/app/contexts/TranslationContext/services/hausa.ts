@@ -1,4 +1,7 @@
-const hausa = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const hausa: Translations = {
   default: {
     pagination: {
       previousPage: 'Koma baya',
@@ -215,4 +218,4 @@ const hausa = {
   },
 };
 
-export default hausa;
+export default withContext(hausa);

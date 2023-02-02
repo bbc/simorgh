@@ -1,4 +1,7 @@
-const telegu = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const telegu: Translations = {
   default: {
     pagination: {
       previousPage: 'మునుపటి',
@@ -210,4 +213,4 @@ const telegu = {
   },
 };
 
-export default telegu;
+export default withContext(telegu);

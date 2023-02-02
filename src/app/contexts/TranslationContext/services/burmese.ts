@@ -1,4 +1,7 @@
-const burmese = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const burmese: Translations = {
   default: {
     pagination: {
       page: 'စာမျက်နှာ',
@@ -223,4 +226,4 @@ const burmese = {
   },
 };
 
-export default burmese;
+export default withContext(burmese);

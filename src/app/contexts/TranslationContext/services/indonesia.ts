@@ -1,4 +1,7 @@
-const indonesia = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const indonesia: Translations = {
   default: {
     pagination: {
       previousPage: 'Sebelum',
@@ -210,4 +213,4 @@ const indonesia = {
   },
 };
 
-export default indonesia;
+export default withContext(indonesia);

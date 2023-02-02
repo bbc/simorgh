@@ -1,4 +1,7 @@
-const gahuza = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const gahuza: Translations = {
   default: {
     pagination: {
       previousPage: 'Subira inyuma',
@@ -211,4 +214,4 @@ const gahuza = {
   },
 };
 
-export default gahuza;
+export default withContext(gahuza);

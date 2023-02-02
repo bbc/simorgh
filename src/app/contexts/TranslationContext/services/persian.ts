@@ -1,4 +1,7 @@
-const persian = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const persian: Translations = {
   default: {
     pagination: {
       page: 'صفحه',
@@ -224,4 +227,4 @@ const persian = {
   },
 };
 
-export default persian;
+export default withContext(persian);

@@ -1,3 +1,6 @@
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
 // Translations used in the header and footer elements of the page
 const headerFooterTranslations = {
   home: 'Главная',
@@ -225,8 +228,8 @@ export const mainTranslations = {
   infoBannerLabel: 'Информация',
 };
 
-const russian = {
+const russian: Translations = {
   default: { ...mainTranslations, ...headerFooterTranslations },
 };
 
-export default russian;
+export default withContext(russian);

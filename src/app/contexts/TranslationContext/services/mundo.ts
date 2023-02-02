@@ -1,4 +1,7 @@
-const mundo = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const mundo: Translations = {
   default: {
     pagination: {
       page: 'Página',
@@ -204,4 +207,4 @@ const mundo = {
   },
 };
 
-export default mundo;
+export default withContext(mundo);

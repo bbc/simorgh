@@ -1,4 +1,7 @@
-const punjabi = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const punjabi: Translations = {
   default: {
     pagination: {
       previousPage: 'ਪਿੱਛੇ',
@@ -203,4 +206,4 @@ const punjabi = {
   },
 };
 
-export default punjabi;
+export default withContext(punjabi);

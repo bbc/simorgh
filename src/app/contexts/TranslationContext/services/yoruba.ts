@@ -1,4 +1,7 @@
-const yoruba = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const yoruba: Translations = {
   default: {
     pagination: {
       previousPage: 'Ìṣájú',
@@ -194,4 +197,4 @@ const yoruba = {
   },
 };
 
-export default yoruba;
+export default withContext(yoruba);

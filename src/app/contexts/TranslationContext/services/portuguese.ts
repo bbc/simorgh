@@ -1,4 +1,7 @@
-const portuguese = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const portuguese: Translations = {
   default: {
     pagination: {
       page: 'Página',
@@ -207,4 +210,4 @@ const portuguese = {
   },
 };
 
-export default portuguese;
+export default withContext(portuguese);

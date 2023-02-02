@@ -1,4 +1,7 @@
-const ukchina = {
+import withContext from '../../utils/withContext';
+import { Translations } from '../../../models/types/translations';
+
+const ukchina: Translations = {
   default: {
     pagination: {
       previousPage: '前页',
@@ -179,4 +182,4 @@ const ukchina = {
   },
 };
 
-export default ukchina;
+export default withContext(ukchina);
