@@ -38,7 +38,7 @@ const StyledIndexAlsosLink = styled.a`
   ${({ service }) => getSerifMedium(service)}
   color: ${C_EBON};
   text-decoration: none;
-  display: inline-block;
+  display: inline-block; // fixes firefox forced colour bug
 
   &:hover,
   &:focus {
