@@ -12,7 +12,7 @@ const OptimizelyPageViewTracking = () => {
   const [pageViewSent, setPageViewSent] = useState(false);
 
   const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
-  const mvtVariation = useOptimizelyMvtVariation(OPTIMIZELY_CONFIG.featureId);
+  const mvtVariation = useOptimizelyMvtVariation('full_stack_test');
 
   const hasVariationKey = promoVariation !== null || mvtVariation != null;
 
