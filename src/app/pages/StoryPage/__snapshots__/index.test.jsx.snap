@@ -1953,7 +1953,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
