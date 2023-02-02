@@ -3691,7 +3691,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: ['/kyrgyz/topics/cvpv9djp9qqt?renderer_env=test'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/kyrgyz/topics/cvpv9djp9qqt?renderer_env=test'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
