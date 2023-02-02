@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
+import envConfig from '../../../support/config/envs';
 
 export const getTopicPageUrl = currentPath => {
-  // Temporarily use bbc.com to construct the url
-  const url = new URL(`https://www.bbc.com${currentPath}`);
+  const url = new URL(`${envConfig.baseUrl}${currentPath}`);
   const params = new URLSearchParams(url.search);
 
   /**
@@ -13,6 +13,7 @@ export const getTopicPageUrl = currentPath => {
   if (!params.get('renderer_env')) {
     params.append('renderer_env', 'live');
   }
+
   params.append('page', 1);
 
   return `${url.pathname}?${params.toString()}`;
