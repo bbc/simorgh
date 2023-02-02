@@ -9,6 +9,7 @@ import {
   C_GREY_10,
   C_GREY_3,
 } from '#psammead/psammead-styles/src/colours';
+import { BLACK } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -219,8 +220,7 @@ const MenuButton = styled(Button)`
     box-shadow: inset 0 0 0 ${GEL_SPACING_HLF} ${C_WHITE};
     ::after {
       ${iconBorderPosition};
-      ${({ theme: { palette } }) =>
-        `border: ${GEL_SPACING_HLF} solid ${palette.BLACK};`}
+      border: ${GEL_SPACING_HLF} solid ${BLACK};
     }
   }
 

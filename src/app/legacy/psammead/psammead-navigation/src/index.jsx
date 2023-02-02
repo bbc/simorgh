@@ -9,6 +9,7 @@ import {
   C_GREY_3,
   C_POSTBOX,
 } from '#psammead/psammead-styles/src/colours';
+import { BLACK } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -91,8 +92,7 @@ const StyledLink = styled.a`
     ${({ brandHighlightColour }) =>
       `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
     top: 0;
-    ${({ theme: { palette } }) =>
-      `border: ${focusIndicatorThickness} solid ${palette.BLACK};`}
+    border: ${focusIndicatorThickness} solid ${BLACK};
   }
 
   // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
@@ -101,8 +101,7 @@ const StyledLink = styled.a`
     ${({ brandHighlightColour }) =>
       `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
     top: 0;
-    ${({ theme: { palette } }) =>
-      `border: ${focusIndicatorThickness} solid ${palette.BLACK};`}
+    border: ${focusIndicatorThickness} solid ${BLACK};
   }
 `;
 
