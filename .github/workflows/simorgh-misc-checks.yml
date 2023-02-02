@@ -41,14 +41,6 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Chromatic UI Tests
-        uses: chromaui/action@v1
-        if: github.ref != 'refs/heads/latest' && github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on latest or not a fork.
-        with:
-          token: ${{ secrets.SIMORGH_DEV_STORYBOOK_RELEASE }}
-          projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
-          buildScriptName: 'build:storybook'
-          exitOnceUploaded: true
       
       - name: Publish Storybook Branch Permalink
         if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
@@ -58,7 +50,7 @@ jobs:
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           --header 'Accept: application/vnd.github+json' \
           --header 'X-GitHub-Api-Version: 2022-11-28' \
-          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_commit.id }} \
+          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.pull_request.head.sha }} \
           --data '{
             "state": "success",
             "context": "Storybook Permalink",
@@ -66,6 +58,15 @@ jobs:
             "target_url": "https://${{ github.event.pull_request.head.ref }}--5d28eb3fe163f6002046d6fa.chromatic.com"
             }' \
           --fail
+
+      - name: Chromatic UI Tests
+        uses: chromaui/action@v1
+        if: github.ref != 'refs/heads/latest' && github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on latest or not a fork.
+        with:
+          token: ${{ secrets.SIMORGH_DEV_STORYBOOK_RELEASE }}
+          projectToken: ${{ secrets.CHROMATIC_APP_CODE }}
+          buildScriptName: 'build:storybook'
+          exitOnceUploaded: true
 
       - name: Chromatic UI Tests - Latest
         uses: chromaui/action@v1
