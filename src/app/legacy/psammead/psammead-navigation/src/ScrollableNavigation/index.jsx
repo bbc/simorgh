@@ -6,7 +6,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { C_WHITE, C_BLACK } from '#psammead/psammead-styles/src/colours';
+import { C_WHITE } from '#psammead/psammead-styles/src/colours';
 import { focusIndicatorThickness } from '../../../../../components/ThemeProvider/focusIndicator';
 
 // Because IE11 can't handle 8-digit hex, need to convert to rgba
@@ -45,7 +45,8 @@ const StyledScrollableNav = styled.div`
 
   // Change default focus indicator on Firefox to be inline with new focus indicator styling.
   &:focus-visible::after {
-    outline: ${focusIndicatorThickness} solid ${C_BLACK};
+    ${({ theme: { palette } }) =>
+      `outline: ${focusIndicatorThickness} solid ${palette.BLACK};`}
     ${scrollableNavOutline};
   }
 

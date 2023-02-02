@@ -8,7 +8,6 @@ import {
   C_POSTBOX,
   C_GREY_10,
   C_GREY_3,
-  C_BLACK,
 } from '#psammead/psammead-styles/src/colours';
 import {
   GEL_SPACING_HLF,
@@ -182,14 +181,13 @@ DropdownLi.defaultProps = {
   dir: 'ltr',
 };
 
-const iconBorder = `
+const iconBorderPosition = `
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  border: ${GEL_SPACING_HLF} solid ${C_BLACK};
 `;
 
 // The sideLength of the button should be
@@ -220,7 +218,9 @@ const MenuButton = styled(Button)`
     cursor: pointer;
     box-shadow: inset 0 0 0 ${GEL_SPACING_HLF} ${C_WHITE};
     ::after {
-      ${iconBorder};
+      ${iconBorderPosition};
+      ${({ theme: { palette } }) =>
+        `border: ${GEL_SPACING_HLF} solid ${palette.BLACK};`}
     }
   }
 
