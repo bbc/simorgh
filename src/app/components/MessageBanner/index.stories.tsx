@@ -6,14 +6,14 @@ import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpe
 import ThemeProvider from '../ThemeProvider';
 import { Services, Variants } from '../../models/types/global';
 import MessageBanner from '.';
-import kyrgyzBanner from './fixtures';
+import { kyrgyzMessageBannerOnePromo } from './fixtures';
 
 interface Props {
   service: Services;
   variant: Variants;
 }
 
-const { summaries } = kyrgyzBanner;
+const { summaries } = kyrgyzMessageBannerOnePromo;
 
 const Component = ({ service, variant }: Props) => {
   return (
@@ -21,8 +21,8 @@ const Component = ({ service, variant }: Props) => {
       <ServiceContextProvider service={service} variant={variant}>
         <MessageBanner
           summaries={summaries}
-          title={kyrgyzBanner.title}
-          position={kyrgyzBanner.position}
+          title={kyrgyzMessageBannerOnePromo.title}
+          position={kyrgyzMessageBannerOnePromo.position}
         />
       </ServiceContextProvider>
     </ThemeProvider>
