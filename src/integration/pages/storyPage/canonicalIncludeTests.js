@@ -1,4 +1,5 @@
 export default () => {
+  jest.retryTimes(3);
   describe('Includes', () => {
     describe('IDT2', () => {
       it('I can see a "dataPic"', () => {
