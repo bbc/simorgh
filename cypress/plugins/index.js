@@ -91,11 +91,6 @@ module.exports = (on, config) => {
       console.table(message);
       return null;
     },
-    error(message) {
-      // eslint-disable-next-line no-console
-      console.error(message);
-      return null;
-    },
   });
 
   return config;
