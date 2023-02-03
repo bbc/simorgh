@@ -3514,6 +3514,7 @@ exports[`Media Asset Page should render component 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -4374,7 +4375,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgintori23145776-1"
-                            class="focusIndicatorDisplayBlock emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/tori-23145776"
                           >
                             <span
@@ -4439,7 +4440,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgintori23143754-2"
-                            class="focusIndicatorDisplayBlock emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/tori-23143754"
                           >
                             <span
@@ -4521,7 +4522,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgin23146654-3"
-                            class="focusIndicatorDisplayBlock emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/23146654"
                           >
                             <span
@@ -4627,7 +4628,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidginmedia23147054-4"
-                            class="focusIndicatorDisplayBlock emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/media-23147054"
                           >
                             <span

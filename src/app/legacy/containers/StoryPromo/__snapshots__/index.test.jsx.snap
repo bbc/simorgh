@@ -213,6 +213,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -388,7 +389,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-21 emotion-22"
+          class="focusIndicatorDisplayInlineBlock emotion-21 emotion-22"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -646,6 +647,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -821,7 +823,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-22 emotion-23"
+          class="focusIndicatorDisplayInlineBlock emotion-22 emotion-23"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -961,6 +963,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -1208,7 +1211,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -1529,6 +1532,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -1697,7 +1701,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-21 emotion-22"
+          class="focusIndicatorDisplayInlineBlock emotion-21 emotion-22"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -1945,6 +1949,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -2114,7 +2119,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-19 emotion-20"
+          class="focusIndicatorDisplayInlineBlock emotion-19 emotion-20"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -2363,6 +2368,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -2532,7 +2538,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-20 emotion-21"
+          class="focusIndicatorDisplayInlineBlock emotion-20 emotion-21"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -2667,6 +2673,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -2910,7 +2917,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -3216,6 +3223,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -3378,7 +3386,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-19 emotion-20"
+          class="focusIndicatorDisplayInlineBlock emotion-19 emotion-20"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -3575,6 +3583,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -3706,7 +3715,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
       >
         <a
           aria-labelledby="promo-azeri-feature-1"
-          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="/azeri"
         >
           <span
@@ -3901,6 +3910,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -4032,7 +4042,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
       >
         <a
           aria-labelledby="promo-azeri-feature-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="/azeri"
         >
           <span
@@ -4159,6 +4169,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -4345,7 +4356,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
       >
         <a
           aria-labelledby="promo-azeri-feature-1"
-          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="/azeri"
         >
           <span
@@ -4570,6 +4581,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -4694,7 +4706,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
       >
         <a
           aria-labelledby="promo-azeri-feature-1"
-          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="/azeri"
         >
           <span
@@ -4896,6 +4908,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -5020,7 +5033,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -5228,6 +5241,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -5352,7 +5366,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-15 emotion-16"
+          class="focusIndicatorDisplayInlineBlock emotion-15 emotion-16"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -5542,6 +5556,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -5661,7 +5676,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -5851,6 +5866,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -5970,7 +5986,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -6097,6 +6113,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -6284,7 +6301,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -6498,6 +6515,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -6610,7 +6628,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -6799,6 +6817,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -6915,7 +6934,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -7113,6 +7132,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -7229,7 +7249,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -7359,6 +7379,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -7530,7 +7551,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -7758,6 +7779,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -7867,7 +7889,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -8072,6 +8094,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -8190,6 +8213,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -8311,7 +8335,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -8589,6 +8613,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -8684,7 +8709,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="/indonesia/media-45640737"
         >
           <span
@@ -8868,6 +8893,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -8963,7 +8989,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="/indonesia/media-45640737"
         >
           <span
@@ -9084,6 +9110,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -9247,7 +9274,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="/indonesia/media-45640737"
         >
           <span
@@ -9455,6 +9482,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -9543,7 +9571,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
       >
         <a
           aria-labelledby="promo-indonesiamedia45640737-podcast-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="/indonesia/media-45640737"
         >
           <span
@@ -9726,6 +9754,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -9857,7 +9886,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -10052,6 +10081,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -10183,7 +10213,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -10310,6 +10340,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -10496,7 +10527,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -10721,6 +10752,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -10845,7 +10877,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -11034,6 +11066,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -11165,7 +11198,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
       >
         <a
           aria-labelledby="promo-azeri-text-1"
-          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="/azeri"
         >
           <span
@@ -11360,6 +11393,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -11491,7 +11525,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
       >
         <a
           aria-labelledby="promo-azeri-text-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="/azeri"
         >
           <span
@@ -11618,6 +11652,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -11804,7 +11839,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
       >
         <a
           aria-labelledby="promo-azeri-text-1"
-          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="/azeri"
         >
           <span
@@ -12029,6 +12064,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -12153,7 +12189,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
       >
         <a
           aria-labelledby="promo-azeri-text-1"
-          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="/azeri"
         >
           <span
@@ -12342,6 +12378,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -12473,7 +12510,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -12668,6 +12705,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -12799,7 +12837,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-14 emotion-15"
+          class="focusIndicatorDisplayInlineBlock emotion-14 emotion-15"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -12926,6 +12964,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -13112,7 +13151,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -13337,6 +13376,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -13461,7 +13501,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-13 emotion-14"
+          class="focusIndicatorDisplayInlineBlock emotion-13 emotion-14"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -13700,6 +13740,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -13872,7 +13913,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-21 emotion-22"
+          class="focusIndicatorDisplayInlineBlock emotion-21 emotion-22"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -14130,6 +14171,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -14302,7 +14344,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-22 emotion-23"
+          class="focusIndicatorDisplayInlineBlock emotion-22 emotion-23"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -14442,6 +14484,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -14689,7 +14732,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
           href="https://www.bbc.co.uk"
         >
           <span
@@ -15007,6 +15050,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -15172,7 +15216,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
       >
         <a
           aria-labelledby="promo-1"
-          class="focusIndicatorDisplayBlock emotion-21 emotion-22"
+          class="focusIndicatorDisplayInlineBlock emotion-21 emotion-22"
           href="https://www.bbc.co.uk"
         >
           <span

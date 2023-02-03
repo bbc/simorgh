@@ -728,6 +728,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-80:before {
@@ -2169,6 +2170,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-80:before {

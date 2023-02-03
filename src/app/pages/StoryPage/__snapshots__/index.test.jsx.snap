@@ -1851,6 +1851,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -2918,7 +2919,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             >
                               <a
                                 aria-labelledby="top-stories-promo-igbo23182501-1"
-                                class="focusIndicatorDisplayBlock emotion-209 emotion-210"
+                                class="focusIndicatorDisplayInlineBlock emotion-209 emotion-210"
                                 href="/igbo/23182501"
                               >
                                 <span
@@ -2953,7 +2954,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             >
                               <a
                                 aria-labelledby="top-stories-promo-igboliveinstitutional23162153-1"
-                                class="focusIndicatorDisplayBlock emotion-209 emotion-210"
+                                class="focusIndicatorDisplayInlineBlock emotion-209 emotion-210"
                                 href="/igbo/live/institutional-23162153"
                               >
                                 <span
@@ -3017,7 +3018,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             >
                               <a
                                 aria-labelledby="top-stories-promo-igbo23183171-1"
-                                class="focusIndicatorDisplayBlock emotion-209 emotion-210"
+                                class="focusIndicatorDisplayInlineBlock emotion-209 emotion-210"
                                 href="/igbo/23183171"
                               >
                                 <span
@@ -8704,6 +8705,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -9714,7 +9716,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             >
                               <a
                                 aria-labelledby="top-stories-promo-pidgin23248287-1"
-                                class="focusIndicatorDisplayBlock emotion-210 emotion-211"
+                                class="focusIndicatorDisplayInlineBlock emotion-210 emotion-211"
                                 href="/pidgin/23248287"
                               >
                                 <span
@@ -9749,7 +9751,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             >
                               <a
                                 aria-labelledby="top-stories-promo-pidgintori23146434-1"
-                                class="focusIndicatorDisplayBlock emotion-210 emotion-211"
+                                class="focusIndicatorDisplayInlineBlock emotion-210 emotion-211"
                                 href="/pidgin/tori-23146434"
                               >
                                 <span
@@ -9784,7 +9786,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             >
                               <a
                                 aria-labelledby="top-stories-promo-news-feature-1"
-                                class="focusIndicatorDisplayBlock emotion-210 emotion-211"
+                                class="focusIndicatorDisplayInlineBlock emotion-210 emotion-211"
                                 href="/news"
                               >
                                 <span

@@ -155,6 +155,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 }
 
 .emotion-19 {
+  display: block;
   line-height: 0;
   -webkit-text-decoration: none;
   text-decoration: none;

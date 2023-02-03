@@ -284,6 +284,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 .emotion-31 {
+  display: block;
   line-height: 0;
   -webkit-text-decoration: none;
   text-decoration: none;

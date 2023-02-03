@@ -382,6 +382,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-24:before {
@@ -1627,6 +1628,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-24:before {

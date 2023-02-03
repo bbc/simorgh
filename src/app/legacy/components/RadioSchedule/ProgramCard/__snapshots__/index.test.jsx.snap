@@ -53,6 +53,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-6:before {
@@ -653,6 +654,7 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-6:before {
@@ -950,6 +952,7 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-6:before {
@@ -1247,6 +1250,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-6:before {

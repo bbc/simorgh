@@ -1332,6 +1332,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-61:before {

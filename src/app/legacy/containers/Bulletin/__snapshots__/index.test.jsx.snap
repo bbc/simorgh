@@ -135,6 +135,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -519,6 +520,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -897,6 +899,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1266,6 +1269,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1632,6 +1636,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {

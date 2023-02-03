@@ -112,6 +112,7 @@ exports[`Bulletin should render audio correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -448,6 +449,7 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -785,6 +787,7 @@ exports[`Bulletin should render live audio correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1139,6 +1142,7 @@ exports[`Bulletin should render live video correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1487,6 +1491,7 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1823,6 +1828,7 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -2125,6 +2131,7 @@ exports[`Bulletin should render video correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
