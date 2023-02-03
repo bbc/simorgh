@@ -813,13 +813,23 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                               aria-hidden="true"
                               class="emotion-34 emotion-35"
                               focusable="false"
-                              height="12px"
-                              viewBox="0 0 32 32"
-                              width="12px"
+                              height="12"
+                              viewBox="0 0 12 12"
+                              width="12"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
-                              <polygon
-                                points="3,32 29,16 3,0"
-                              />
+                              <g
+                                fill="none"
+                                fill-rule="evenodd"
+                              >
+                                <path
+                                  d="M.5.6h12v12H.5z"
+                                />
+                                <path
+                                  d="M2.144.96v11.28l8.712-5.64z"
+                                  fill="currentColor"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -910,13 +920,23 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                               aria-hidden="true"
                               class="emotion-34 emotion-35"
                               focusable="false"
-                              height="12px"
-                              viewBox="0 0 32 32"
-                              width="12px"
+                              height="12"
+                              viewBox="0 0 12 12"
+                              width="12"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
-                              <polygon
-                                points="3,32 29,16 3,0"
-                              />
+                              <g
+                                fill="none"
+                                fill-rule="evenodd"
+                              >
+                                <path
+                                  d="M.5.6h12v12H.5z"
+                                />
+                                <path
+                                  d="M2.144.96v11.28l8.712-5.64z"
+                                  fill="currentColor"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
@@ -1007,13 +1027,23 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                               aria-hidden="true"
                               class="emotion-34 emotion-35"
                               focusable="false"
-                              height="12px"
-                              viewBox="0 0 32 32"
-                              width="12px"
+                              height="12"
+                              viewBox="0 0 12 12"
+                              width="12"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
-                              <polygon
-                                points="3,32 29,16 3,0"
-                              />
+                              <g
+                                fill="none"
+                                fill-rule="evenodd"
+                              >
+                                <path
+                                  d="M.5.6h12v12H.5z"
+                                />
+                                <path
+                                  d="M2.144.96v11.28l8.712-5.64z"
+                                  fill="currentColor"
+                                />
+                              </g>
                             </svg>
                           </div>
                         </div>
