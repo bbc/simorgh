@@ -12,16 +12,9 @@ const focusIndicator = ({ palette }: Theme) => css`
     outline-offset: ${focusIndicatorThickness};
   }
 
-  // Reverts focus indicator styling, so to display default browser styling
-  a.focusIndicatorRevert:focus-visible {
-    outline: revert;
-    box-shadow: revert;
-    outline-offset: revert;
-  }
-
   // Removes focus indicator styling and stops default browser styling from displaying.
-  // Not specific to a elements, as it is also used to target button elements.
-  .focusIndicatorRemove:focus-visible {
+  a.focusIndicatorRemove:focus-visible,
+  button.focusIndicatorRemove:focus-visible {
     outline: none;
     box-shadow: none;
     outline-offset: 0;
