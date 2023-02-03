@@ -16,8 +16,9 @@ const MediaIndicatorWrapper = styled.div`
   top: 0;
 `;
 
+// `display: block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 const StyledAnchor = styled.a`
-  display: block; // fixes firefox chrome bug
+  display: block;
 
   :before {
     position: absolute;
