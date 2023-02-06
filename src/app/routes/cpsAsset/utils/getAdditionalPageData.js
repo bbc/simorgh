@@ -77,6 +77,71 @@ const getRecommendations = (service, assetUri) => {
       api: 'datalab_hybrid',
       apiContext: 'secondary_data',
     },
+    {
+      name: 'datalabHybridRecommendationsV1x1',
+      attachAgent: true,
+      engine: 'unirecs_datalab_hybrid',
+      path: getRecommendationsUrl({
+        assetUri,
+        engine: 'unirecs_datalab',
+        engineVariant: 'hybrid-v1x1',
+      }),
+      assetUri,
+      api: 'datalab_hybrid',
+      apiContext: 'secondary_data',
+    },
+    {
+      name: 'datalabHybridRecommendationsV1x2',
+      attachAgent: true,
+      engine: 'unirecs_datalab_hybrid',
+      path: getRecommendationsUrl({
+        assetUri,
+        engine: 'unirecs_datalab',
+        engineVariant: 'hybrid-v1x2',
+      }),
+      assetUri,
+      api: 'datalab_hybrid',
+      apiContext: 'secondary_data',
+    },
+    {
+      name: 'datalabHybridRecommendationsV1x3',
+      attachAgent: true,
+      engine: 'unirecs_datalab_hybrid',
+      path: getRecommendationsUrl({
+        assetUri,
+        engine: 'unirecs_datalab',
+        engineVariant: 'hybrid-v1x3',
+      }),
+      assetUri,
+      api: 'datalab_hybrid',
+      apiContext: 'secondary_data',
+    },
+    {
+      name: 'datalabHybridRecommendationsV1x4',
+      attachAgent: true,
+      engine: 'unirecs_datalab_hybrid',
+      path: getRecommendationsUrl({
+        assetUri,
+        engine: 'unirecs_datalab',
+        engineVariant: 'hybrid-v1x4',
+      }),
+      assetUri,
+      api: 'datalab_hybrid',
+      apiContext: 'secondary_data',
+    },
+    {
+      name: 'datalabHybridRecommendationsV1x5',
+      attachAgent: true,
+      engine: 'unirecs_datalab_hybrid',
+      path: getRecommendationsUrl({
+        assetUri,
+        engine: 'unirecs_datalab',
+        engineVariant: 'hybrid-v1x5',
+      }),
+      assetUri,
+      api: 'datalab_hybrid',
+      apiContext: 'secondary_data',
+    },
   ];
 };
 

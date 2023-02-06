@@ -131,6 +131,11 @@ describe('getAdditionalPageData', () => {
           recommendations: recommendationsJson,
           datalabContentRecommendations: recommendationsJson,
           datalabHybridRecommendations: recommendationsJson,
+          datalabHybridRecommendationsV1x1: recommendationsJson,
+          datalabHybridRecommendationsV1x2: recommendationsJson,
+          datalabHybridRecommendationsV1x3: recommendationsJson,
+          datalabHybridRecommendationsV1x4: recommendationsJson,
+          datalabHybridRecommendationsV1x5: recommendationsJson,
         };
 
         hasRecommendations.mockImplementationOnce(() => true);
@@ -145,6 +150,26 @@ describe('getAdditionalPageData', () => {
         );
         fetchMock.mock(
           'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid-v1x1',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid-v1x2',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid-v1x3',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid-v1x4',
+          recommendationsJson,
+        );
+        fetchMock.mock(
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-59057279?Engine=unirecs_datalab&EngineVariant=hybrid-v1x5',
           recommendationsJson,
         );
 

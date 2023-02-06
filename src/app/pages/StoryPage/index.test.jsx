@@ -999,6 +999,73 @@ describe('Story Page', () => {
         });
       });
 
+      describe('hybrid_recs_v1x1', () => {
+        beforeEach(() => {
+          process.env.RECOMMENDATIONS_ENDPOINT =
+            'http://mock-recommendations-path';
+          OptimizelyExperiment.mockImplementation(props => {
+            const { children } = props;
+
+            const variation = 'hybrid-v1x1_recs';
+
+            if (children != null && typeof children === 'function') {
+              return <>{children(variation, true, false)}</>;
+            }
+
+            return null;
+          });
+        });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
+        });
+
+        it('should fetch and render recommendations from datalab hybrid variant endpoint when variation is hybrid_recs_v1x1 and service is portuguese', async () => {
+          const toggles = {
+            cpsRecommendations: {
+              enabled: true,
+            },
+            eventTracking: {
+              enabled: true,
+            },
+          };
+
+          const recommendationsEndpoint =
+            'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab&EngineVariant=hybrid-v1x1';
+
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            portuguesePageData,
+          );
+
+          fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'portuguese',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+          );
+
+          const [recommendationsRegions] = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+
+          const recommendationsItems = within(
+            recommendationsRegions,
+          ).getAllByRole('listitem');
+
+          expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+          expect(recommendationsRegions).not.toBeNull();
+          expect(recommendationsItems).toHaveLength(4);
+        });
+      });
+
       describe('Event Tracking', () => {
         beforeEach(() => {
           process.env.RECOMMENDATIONS_ENDPOINT =
