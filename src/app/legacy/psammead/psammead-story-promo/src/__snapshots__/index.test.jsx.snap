@@ -580,13 +580,23 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
                 aria-hidden="true"
                 class="emotion-20 emotion-21"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <time
                 class="emotion-22 emotion-23"
@@ -1115,13 +1125,23 @@ exports[`StoryPromo - Top Story should render with Media Indicator correctly 1`]
                 aria-hidden="true"
                 class="emotion-12 emotion-13"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <time
                 class="emotion-14 emotion-15"
@@ -1538,13 +1558,23 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
                     aria-hidden="true"
                     class="emotion-28 emotion-29"
                     focusable="false"
-                    height="12px"
-                    viewBox="0 0 32 32"
-                    width="12px"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <polygon
-                      points="3,32 29,16 3,0"
-                    />
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <path
+                        d="M.5.6h12v12H.5z"
+                      />
+                      <path
+                        d="M2.144.96v11.28l8.712-5.64z"
+                        fill="currentColor"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -1950,13 +1980,23 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
                   aria-hidden="true"
                   class="emotion-26 emotion-27"
                   focusable="false"
-                  height="12px"
-                  viewBox="0 0 32 32"
-                  width="12px"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="3,32 29,16 3,0"
-                  />
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <path
+                      d="M.5.6h12v12H.5z"
+                    />
+                    <path
+                      d="M2.144.96v11.28l8.712-5.64z"
+                      fill="currentColor"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -3007,13 +3047,23 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
                 aria-hidden="true"
                 class="emotion-12 emotion-13"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <time
                 class="emotion-14 emotion-15"
@@ -3332,13 +3382,23 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
                 aria-hidden="true"
                 class="emotion-12 emotion-13"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <time
                 class="emotion-14 emotion-15"
