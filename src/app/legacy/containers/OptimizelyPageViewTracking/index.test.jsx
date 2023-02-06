@@ -6,6 +6,7 @@ import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import * as useMVTHook from '../../../hooks/useOptimizelyMvtVariation';
 
 import OptimizelyPageViewTracking from '.';
 
@@ -43,6 +44,23 @@ describe('Optimizely Page View tracking', () => {
 
   it('should call Optimizely track function for Article Page on page render', async () => {
     useOptimizelyVariation.mockReturnValue('variation_1');
+
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+        <OptimizelyPageViewTracking />
+      </ContextWrap>,
+    );
+
+    await waitFor(() => {
+      expect(optimizely.track).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  it('should call Optimizely track function when MVT Hook is active', async () => {
+    useOptimizelyVariation.mockReturnValue(null);
+
+    const mvtHookSpy = jest.spyOn(useMVTHook, 'default');
+    mvtHookSpy.mockImplementation(() => true);
 
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>

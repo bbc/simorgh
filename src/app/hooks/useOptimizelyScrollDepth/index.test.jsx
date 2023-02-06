@@ -6,6 +6,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import useOptimizelyScrollDepth from '.';
+import * as useMVTHook from '../useOptimizelyMvtVariation';
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn());
 
@@ -107,6 +108,26 @@ describe('useOptimizelyScrollDepth', () => {
     });
 
     expect(optimizelyMock.track).toHaveBeenCalledTimes(0);
+  });
+
+  it('should call Optimizely track function when mvt hook is active', async () => {
+    useOptimizelyVariation.mockReturnValue(null);
+
+    const mvtHookSpy = jest.spyOn(useMVTHook, 'default');
+    mvtHookSpy.mockImplementation(() => true);
+
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper,
+    });
+
+    act(() => {
+      result.current.setScrollDepth(25);
+      result.current.setScrollDepth(50);
+      result.current.setScrollDepth(75);
+      result.current.setScrollDepth(100);
+    });
+
+    expect(optimizelyMock.track).toHaveBeenCalledTimes(4);
   });
 
   it('should fire event when scroll depth reaches 25% threshold', () => {
