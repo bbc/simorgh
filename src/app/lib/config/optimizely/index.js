@@ -1,5 +1,5 @@
 export default {
-  experimentId: '004_brasil_recommendations_experiment',
-  featureId: '004_brasil_recommendations_experiment',
+  experimentId: '005_brasil_hybrid_recommendations_',
+  featureId: '005_brasil_hybrid_recommendations_',
   viewClickAttributeId: 'wsoj',
 };

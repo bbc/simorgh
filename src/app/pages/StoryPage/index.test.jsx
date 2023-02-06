@@ -1006,7 +1006,7 @@ describe('Story Page', () => {
           OptimizelyExperiment.mockImplementation(props => {
             const { children } = props;
 
-            const variation = 'hybrid-v1x1_recs';
+            const variation = 'variation_1';
 
             if (children != null && typeof children === 'function') {
               return <>{children(variation, true, false)}</>;

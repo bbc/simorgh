@@ -238,7 +238,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             );
           }
-          if (variation === 'hybrid-v1x1_recs') {
+          if (variation === 'variation_1') {
             const unirecsHybridRecommendationData = path(
               ['datalabHybridRecommendationsV1x1'],
               pageData,
@@ -251,7 +251,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             );
           }
-          if (variation === 'hybrid-v1x2_recs') {
+          if (variation === 'variation_2') {
             const unirecsHybridRecommendationData = path(
               ['datalabHybridRecommendationsV1x2'],
               pageData,
@@ -264,7 +264,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             );
           }
-          if (variation === 'hybrid-v1x3_recs') {
+          if (variation === 'variation_3') {
             const unirecsHybridRecommendationData = path(
               ['datalabHybridRecommendationsV1x3'],
               pageData,
@@ -277,7 +277,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             );
           }
-          if (variation === 'hybrid-v1x4_recs') {
+          if (variation === 'variation_4') {
             const unirecsHybridRecommendationData = path(
               ['datalabHybridRecommendationsV1x4'],
               pageData,
@@ -290,7 +290,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             );
           }
-          if (variation === 'hybrid-v1x5_recs') {
+          if (variation === 'variation_5') {
             const unirecsHybridRecommendationData = path(
               ['datalabHybridRecommendationsV1x5'],
               pageData,
