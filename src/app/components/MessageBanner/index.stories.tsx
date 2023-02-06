@@ -13,14 +13,12 @@ interface Props {
   variant: Variants;
 }
 
-const { summaries } = kyrgyzMessageBannerOnePromo;
-
 const Component = ({ service, variant }: Props) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
         <MessageBanner
-          summaries={summaries}
+          summary={kyrgyzMessageBannerOnePromo.summaries[0]}
           title={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
         />

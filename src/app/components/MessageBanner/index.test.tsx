@@ -8,8 +8,7 @@ import {
 
 describe('MessageBanner', () => {
   describe('One summary', () => {
-    const { summaries } = kyrgyzMessageBannerOnePromo;
-    const summary = summaries[0];
+    const summary = kyrgyzMessageBannerOnePromo.summaries[0];
     it('should render a section with role region', () => {
       render(
         <MessageBanner
