@@ -8,6 +8,7 @@ import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import useTrackingToggle from '#hooks/useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import useOptimizelyMvtVariation from '../useOptimizelyMvtVariation';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
@@ -19,6 +20,7 @@ const useViewTracker = (props = {}) => {
   const advertiserID = path(['advertiserID'], props);
   const url = path(['url'], props);
   const optimizely = path(['optimizely'], props);
+  const mvtVariation = useOptimizelyMvtVariation('full_stack_test');
 
   const observer = useRef();
   const timer = useRef(null);
@@ -72,7 +74,7 @@ const useViewTracker = (props = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          if (optimizely) {
+          if (optimizely || mvtVariation) {
             const overrideAttributes = {
               ...optimizely.user.attributes,
               [`viewed_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,

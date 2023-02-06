@@ -4,7 +4,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useOptimizelyScrollDepth from '#hooks/useOptimizelyScrollDepth';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
+import useOptimizelyMvtVariation from '../../../hooks/useOptimizelyMvtVariation';
 
 const OptimizelyPageViewTracking = () => {
   const { isAmp } = useContext(RequestContext);

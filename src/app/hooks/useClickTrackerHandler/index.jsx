@@ -9,6 +9,7 @@ import useTrackingToggle from '#hooks/useTrackingToggle';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
+import useOptimizelyMvtVariation from '../useOptimizelyMvtVariation';
 
 const EVENT_TYPE = 'click';
 
@@ -19,6 +20,7 @@ const useClickTrackerHandler = (props = {}) => {
   const advertiserID = path(['advertiserID'], props);
   const format = path(['format'], props);
   const optimizely = path(['optimizely'], props);
+  const mvtVariation = useOptimizelyMvtVariation('full_stack_test');
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
@@ -59,7 +61,7 @@ const useClickTrackerHandler = (props = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          if (optimizely) {
+          if (optimizely || mvtVariation) {
             const overrideAttributes = {
               ...optimizely.user.attributes,
               [`clicked_${OPTIMIZELY_CONFIG.viewClickAttributeId}`]: true,
