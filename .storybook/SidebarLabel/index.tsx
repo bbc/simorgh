@@ -8,7 +8,7 @@ const SidebarLabel = ({ item }) => {
   const api = useStorybookApi();
   const { isRoot, parameters, name, children, isComponent } = item;
   const { docsOnly } = parameters ?? {};
-  console.log(item);
+
   if (
     !children ||
     children.length === 0 ||
@@ -19,7 +19,6 @@ const SidebarLabel = ({ item }) => {
     return name;
   }
 
-  console.log(children);
   const hasChild = children[0];
   if (!hasChild) {
     return name;
