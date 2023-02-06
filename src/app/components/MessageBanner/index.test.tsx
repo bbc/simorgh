@@ -12,9 +12,12 @@ describe('MessageBanner', () => {
     it('should render a section with role region', () => {
       render(
         <MessageBanner
-          summary={summary}
-          title={kyrgyzMessageBannerOnePromo.title}
+          heading={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
+          description={summary.description}
+          link={summary.link}
+          linkText={summary.title}
+          image={summary.imageUrl}
         />,
       );
       const region = screen.getByRole('region');
@@ -24,9 +27,12 @@ describe('MessageBanner', () => {
     it('should have a heading with an id which matches the aria-labelledby attribute', () => {
       const { getByRole } = render(
         <MessageBanner
-          summary={summary}
-          title={kyrgyzMessageBannerOnePromo.title}
+          heading={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
+          description={summary.description}
+          link={summary.link}
+          linkText={summary.title}
+          image={summary.imageUrl}
         />,
       );
       const heading = screen.getByText(kyrgyzMessageBannerOnePromo.title);
@@ -36,12 +42,15 @@ describe('MessageBanner', () => {
       );
     });
 
-    it('should display the banner title correctly as an H2', () => {
+    it('should display the banner heading correctly as an H2', () => {
       render(
         <MessageBanner
-          summary={summary}
-          title={kyrgyzMessageBannerOnePromo.title}
+          heading={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
+          description={summary.description}
+          link={summary.link}
+          linkText={summary.title}
+          image={summary.imageUrl}
         />,
       );
       expect(screen.getByText(kyrgyzMessageBannerOnePromo.title).nodeName).toBe(
@@ -52,9 +61,12 @@ describe('MessageBanner', () => {
     it('should display the banner subtext correctly as a Paragraph', () => {
       render(
         <MessageBanner
-          summary={summary}
-          title={kyrgyzMessageBannerOnePromo.title}
+          heading={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
+          description={summary.description}
+          link={summary.link}
+          linkText={summary.title}
+          image={summary.imageUrl}
         />,
       );
       expect(screen.getByText(summary.description).nodeName).toBe('P');
@@ -63,9 +75,12 @@ describe('MessageBanner', () => {
     it('should display link text correctly as an Anchor', () => {
       render(
         <MessageBanner
-          summary={summary}
-          title={kyrgyzMessageBannerOnePromo.title}
+          heading={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
+          description={summary.description}
+          link={summary.link}
+          linkText={summary.title}
+          image={summary.imageUrl}
         />,
       );
       const ctaLink = screen.getByRole('link');
@@ -76,9 +91,12 @@ describe('MessageBanner', () => {
     it('should render an image with the correct image src', () => {
       render(
         <MessageBanner
-          summary={summary}
-          title={kyrgyzMessageBannerOnePromo.title}
+          heading={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
+          description={summary.description}
+          link={summary.link}
+          linkText={summary.title}
+          image={summary.imageUrl}
         />,
       );
       const image = screen.getByAltText('');
@@ -90,9 +108,12 @@ describe('MessageBanner', () => {
     it('should have an image with an empty alt text', () => {
       render(
         <MessageBanner
-          summary={summary}
-          title={kyrgyzMessageBannerOnePromo.title}
+          heading={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
+          description={summary.description}
+          link={summary.link}
+          linkText={summary.title}
+          image={summary.imageUrl}
         />,
       );
       const image = screen.getByAltText('');
@@ -104,9 +125,12 @@ describe('MessageBanner', () => {
     it('should only render one banner per curation', () => {
       render(
         <MessageBanner
-          summary={summaries[0]}
-          title={kyrgyzMessageBannerTwoPromos.title}
+          heading={kyrgyzMessageBannerTwoPromos.title}
           position={kyrgyzMessageBannerTwoPromos.position}
+          description={summaries[0].description}
+          link={summaries[0].link}
+          linkText={summaries[0].title}
+          image={summaries[0].imageUrl}
         />,
       );
 

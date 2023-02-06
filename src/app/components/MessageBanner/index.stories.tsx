@@ -18,9 +18,12 @@ const Component = ({ service, variant }: Props) => {
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
         <MessageBanner
-          summary={kyrgyzMessageBannerOnePromo.summaries[0]}
-          title={kyrgyzMessageBannerOnePromo.title}
+          heading={kyrgyzMessageBannerOnePromo.title}
           position={kyrgyzMessageBannerOnePromo.position}
+          description={kyrgyzMessageBannerOnePromo.summaries[0].description}
+          link={kyrgyzMessageBannerOnePromo.summaries[0].link}
+          linkText={kyrgyzMessageBannerOnePromo.summaries[0].title}
+          image={kyrgyzMessageBannerOnePromo.summaries[0].imageUrl}
         />
       </ServiceContextProvider>
     </ThemeProvider>
