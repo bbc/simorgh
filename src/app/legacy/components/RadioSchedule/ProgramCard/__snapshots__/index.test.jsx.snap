@@ -212,7 +212,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -505,7 +505,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -804,7 +804,7 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1102,7 +1102,7 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1383,7 +1383,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 

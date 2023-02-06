@@ -138,7 +138,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -572,7 +572,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1189,7 +1189,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1454,7 +1454,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1878,7 +1878,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -2297,7 +2297,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -2899,7 +2899,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -3149,7 +3149,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -8391,13 +8391,23 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
                     aria-hidden="true"
                     class="emotion-34 emotion-35"
                     focusable="false"
-                    height="12px"
-                    viewBox="0 0 32 32"
-                    width="12px"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <polygon
-                      points="3,32 29,16 3,0"
-                    />
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <path
+                        d="M.5.6h12v12H.5z"
+                      />
+                      <path
+                        d="M2.144.96v11.28l8.712-5.64z"
+                        fill="currentColor"
+                      />
+                    </g>
                   </svg>
                 </div>
               </div>
@@ -13885,13 +13895,23 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
                 aria-hidden="true"
                 class="emotion-13 emotion-14"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <time
                 class="emotion-15 emotion-16"
@@ -14316,13 +14336,23 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
                 aria-hidden="true"
                 class="emotion-14 emotion-15"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <time
                 class="emotion-16 emotion-17"
@@ -14807,13 +14837,23 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
                 aria-hidden="true"
                 class="emotion-27 emotion-28"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <time
                 class="emotion-29 emotion-30"
@@ -15188,13 +15228,23 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
                 aria-hidden="true"
                 class="emotion-13 emotion-14"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
               <time
                 class="emotion-15 emotion-16"
