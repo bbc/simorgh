@@ -1,10 +1,7 @@
 import React from 'react';
 import { render, screen } from '../react-testing-library-with-providers';
 import MessageBanner from '.';
-import {
-  kyrgyzMessageBannerOnePromo,
-  kyrgyzMessageBannerTwoPromos,
-} from './fixtures';
+import { kyrgyzMessageBannerOnePromo } from './fixtures';
 
 describe('MessageBanner', () => {
   describe('for a curation with 1 summary', () => {
