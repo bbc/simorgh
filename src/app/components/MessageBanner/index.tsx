@@ -1,8 +1,6 @@
 /** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { jsx } from '@emotion/react';
-import { Summary } from '#app/models/types/promoData';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';

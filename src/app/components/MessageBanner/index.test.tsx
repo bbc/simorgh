@@ -120,23 +120,4 @@ describe('MessageBanner', () => {
       expect(image).toBeInTheDocument();
     });
   });
-  describe('for a curation with 2 summaries', () => {
-    const { summaries } = kyrgyzMessageBannerTwoPromos;
-    it('should only render for the first summary', () => {
-      render(
-        <MessageBanner
-          heading={kyrgyzMessageBannerTwoPromos.title}
-          position={kyrgyzMessageBannerTwoPromos.position}
-          description={summaries[0].description}
-          link={summaries[0].link}
-          linkText={summaries[0].title}
-          image={summaries[0].imageUrl}
-        />,
-      );
-
-      expect(document.querySelectorAll("[id='message-banner-6']")).toHaveLength(
-        1,
-      );
-    });
-  });
 });
