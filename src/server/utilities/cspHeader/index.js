@@ -31,6 +31,7 @@ const advertisingDirectives = {
     'https://*.doubleclick.net',
     'https://edigitalsurvey.com',
     'https://*.googlesyndication.com',
+    'https://cdn.privacy-mgmt.com',
   ],
   imgSrc: [
     'https://*.adsafeprotected.com',
