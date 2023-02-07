@@ -1,5 +1,5 @@
 import React, { createRef } from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -95,8 +95,8 @@ describe('canonical', () => {
       pidginServiceConfig.default.translations.consentBanner.cookie.canonical
         .accept;
 
-    getByText(pidginPrivacyAccept).click();
-    getByText(pidginCookieAccept).click();
+    fireEvent.click(getByText(pidginPrivacyAccept));
+    fireEvent.click(getByText(pidginCookieAccept));
 
     expect(document.activeElement).toBe(getByText('BBC Brand'));
   });

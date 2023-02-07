@@ -363,7 +363,7 @@ exports[`Story Promo Headline should match text 1`] = `"المجلس العسك�
 exports[`Story Promo Image should match image 1`] = `
 <img
   alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
-  class="bbc-1uwua2r"
+  class="bbc-1qbo1ki-image"
   height="549"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
   style="aspect-ratio:976 / 549"

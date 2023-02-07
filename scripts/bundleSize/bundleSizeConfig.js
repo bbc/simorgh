@@ -5,6 +5,6 @@ module.exports = {
   // below the smallest value in the build output; this avoids the
   // need for frequent changes as bundle sizes fluctuate.
 
-  MIN_SIZE: 750,
-  MAX_SIZE: 1189,
+  MIN_SIZE: 763,
+  MAX_SIZE: 1202,
 };

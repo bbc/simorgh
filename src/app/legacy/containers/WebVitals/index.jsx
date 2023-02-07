@@ -23,7 +23,7 @@ const WebVitals = ({ pageType }) => {
 
   if (!wsPageType) {
     // eslint-disable-next-line no-console
-    console.error('Web Vitals error: No page type to report.');
+    console.warn('Web Vitals warning: No page type to report.');
   }
 
   const webVitalsConfig = {
