@@ -68,6 +68,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'விளம்பரம்',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'அனைத்தும் பார்க்க',
       home: 'முகப்பு',
       currentPage: 'தற்போதுள்ள பக்கம்',
@@ -294,7 +295,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
