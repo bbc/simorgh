@@ -49,8 +49,8 @@ jobs:
       - name: Publish Storybook Branch Permalink
         if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
         run: |
-          export STORYBOOK_PERMALINK="https://${{ steps.get-storybook-branch-name.outputs.STORYBOOK_BRANCH_NAME }}--5d28eb3fe163f6002046d6fa.chromatic.com"
-          echo "Storybook Permalink is: ${{ STORYBOOK_PERMALINK }}"
+          echo "STORYBOOK_PERMALINK=https://${{ steps.get-storybook-branch-name.outputs.STORYBOOK_BRANCH_NAME }}--5d28eb3fe163f6002046d6fa.chromatic.com" >> $GITHUB_ENV
+          echo "Storybook Permalink is: ${{ env.STORYBOOK_PERMALINK }}"
           curl \
           -X POST \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -61,7 +61,7 @@ jobs:
             "state": "success", 
             "context": "Storybook Permalink", 
             "description": "View the latest changes on Storybook for this PR",
-            "target_url": "${{ STORYBOOK_PERMALINK }}"
+            "target_url": "${{ env.STORYBOOK_PERMALINK }}"
           }' \
           --fail
 
