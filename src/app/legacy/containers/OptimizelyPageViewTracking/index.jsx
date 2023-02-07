@@ -2,8 +2,8 @@ import { useState, useContext, useEffect } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
 import useOptimizelyScrollDepth from '#hooks/useOptimizelyScrollDepth';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-//import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+// import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+// import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const OptimizelyPageViewTracking = () => {
   const { isAmp } = useContext(RequestContext);
@@ -11,8 +11,8 @@ const OptimizelyPageViewTracking = () => {
   const [pageViewSent, setPageViewSent] = useState(false);
 
   // USED FOR CLIENT SIDE EXPERIMENTS
-  //const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
-  //const hasVariationKey = promoVariation !== null;
+  // const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
+  // const hasVariationKey = promoVariation !== null;
 
   const sendPageViewEvent = !isAmp && !pageViewSent;
 

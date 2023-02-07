@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-//import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+// import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+// import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 
 const OptimizelyArticleCompleteTracking = () => {
   const ref = useRef();
@@ -13,7 +13,7 @@ const OptimizelyArticleCompleteTracking = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   // USED FOR CLIENT SIDE EXPERIMENTS
-  //const variation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
+  // const variation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
 
   const sendPageCompleteEvent = !isAmp && !pageCompleteSent && isVisible;
 
