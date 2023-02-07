@@ -85,6 +85,7 @@ describe('cspHeader', () => {
         'https://www.youtube.com',
         'https://www.youtube-nocookie.com',
         'https://www.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -173,6 +174,7 @@ describe('cspHeader', () => {
         'https://edigitalsurvey.com',
         'https://www.tiktok.com',
         'https://*.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -279,6 +281,7 @@ describe('cspHeader', () => {
         'https://www.youtube-nocookie.com',
         'https://www.tiktok.com',
         'https://www.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -370,6 +373,7 @@ describe('cspHeader', () => {
         'https://www.youtube-nocookie.com',
         'https://www.tiktok.com',
         'https://*.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
