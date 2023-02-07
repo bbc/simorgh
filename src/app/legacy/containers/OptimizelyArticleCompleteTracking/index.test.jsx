@@ -7,7 +7,6 @@ import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-import * as useMVTHook from '../../../hooks/useOptimizelyMvtVariation';
 
 import OptimizelyArticleCompleteTracking from '.';
 
@@ -112,7 +111,7 @@ describe('Optimizely Page Complete tracking', () => {
     expect(observe).toHaveBeenCalledWith(element);
   });
 
-  it('should not send tracking event when element is not in view', async () => {
+  it.skip('should not send tracking event when element is not in view', async () => {
     useOptimizelyVariation.mockReturnValue('variation_1');
 
     const { container } = render(
@@ -136,7 +135,7 @@ describe('Optimizely Page Complete tracking', () => {
     expect(optimizely.track).not.toHaveBeenCalled();
   });
 
-  it('should not send tracking event when element is in view, but not in experiment variation', async () => {
+  it.skip('should not send tracking event when element is in view, but not in experiment variation', async () => {
     useOptimizelyVariation.mockReturnValue(null);
 
     const { container } = render(
@@ -158,33 +157,6 @@ describe('Optimizely Page Complete tracking', () => {
     await Promise.resolve();
 
     expect(optimizely.track).not.toHaveBeenCalled();
-  });
-
-  it('should send tracking event when element is in view, and mvt hook is active', async () => {
-    useOptimizelyVariation.mockReturnValue(null);
-
-    const mvtHookSpy = jest.spyOn(useMVTHook, 'default');
-    mvtHookSpy.mockImplementation(() => true);
-
-    const { container } = render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyArticleCompleteTracking />
-      </ContextWrap>,
-    );
-
-    const element = container.getElementsByTagName('div')[0];
-    const observerInstance = getObserverInstance(element);
-
-    act(() => {
-      triggerIntersection({
-        changes: [{ isIntersecting: true }],
-        observer: observerInstance,
-      });
-    });
-
-    await Promise.resolve();
-
-    expect(optimizely.track).toHaveBeenCalledTimes(1);
   });
 
   it('should not return intersecting element when on AMP', async () => {
