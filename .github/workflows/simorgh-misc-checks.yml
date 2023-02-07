@@ -49,7 +49,7 @@ jobs:
       - name: Publish Storybook Branch Permalink
         if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
         env:
-          STORYBOOK_PERMALINK=https://${{ steps.get-storybook-branch-name.outputs.STORYBOOK_BRANCH_NAME }}--5d28eb3fe163f6002046d6fa.chromatic.com
+          STORYBOOK_PERMALINK="https://${{ steps.get-storybook-branch-name.outputs.STORYBOOK_BRANCH_NAME }}--5d28eb3fe163f6002046d6fa.chromatic.com"
         run: |
           echo "Storybook Permalink is: ${{ env.STORYBOOK_PERMALINK }}"
           curl \
