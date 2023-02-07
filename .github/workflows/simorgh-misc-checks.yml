@@ -46,7 +46,6 @@ jobs:
           script: |
             const storybookBranch = '${{ github.event.pull_request.head.ref }}'.toLowerCase().replaceAll(/[/.]/g, '-').trim('-').substring(0, 37);
             const storybookPermalink = `https://${storybookBranch}--5d28eb3fe163f6002046d6fa.chromatic.com`;
-            console.log(`Storybook Permalink is: ${storybookPermalink}`);
             core.setOutput('STORYBOOK_PERMALINK', storybookPermalink);
       
       - name: Publish Storybook Branch Permalink
