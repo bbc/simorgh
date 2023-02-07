@@ -39,19 +39,19 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Get Branch Name for Storybook Permalink
+      - name: Get Storybook Branch Permalink
         uses: actions/github-script@v6
         id: get-storybook-permalink
         with:
           script: |
             const storybookBranch = '${{ github.event.pull_request.head.ref }}'.toLowerCase().replaceAll(/[/.]/g, '-').trim('-').substring(0, 37);
             const storybookPermalink = `https://${storybookBranch}--5d28eb3fe163f6002046d6fa.chromatic.com`;
+            console.log(`Storybook Permalink is: ${storybookPermalink}`);
             core.setOutput('STORYBOOK_PERMALINK', storybookPermalink);
       
       - name: Publish Storybook Branch Permalink
         if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
         run: |
-          echo "Storybook Permalink is: ${{ steps.get-storybook-permalink.outputs.STORYBOOK_PERMALINK }}"
           curl \
           -X POST \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
