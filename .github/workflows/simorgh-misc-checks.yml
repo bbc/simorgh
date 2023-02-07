@@ -41,16 +41,15 @@ jobs:
 
       - name: Get Branch Name for Storybook Permalink
         uses: actions/github-script@v6
-        id: get-storybook-branch-name
+        id: get-storybook-permalink
         with:
           script: |
-            core.setOutput('STORYBOOK_BRANCH_NAME', '${{ github.event.pull_request.head.ref }}'.toLowerCase().replaceAll(/[/.]/g, '-').trim('-').substring(0, 37));
+            core.setOutput('STORYBOOK_PERMALINK', '${{ github.event.pull_request.head.ref }}'.toLowerCase().replaceAll(/[/.]/g, '-').trim('-').substring(0, 37).concat('--5d28eb3fe163f6002046d6fa.chromatic.com'));
       
       - name: Publish Storybook Branch Permalink
         if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
         run: |
-          STORYBOOK_PERMALINK=https://${{ steps.get-storybook-branch-name.outputs.STORYBOOK_BRANCH_NAME }}--5d28eb3fe163f6002046d6fa.chromatic.com
-          echo "Storybook Permalink is: ${{ STORYBOOK_PERMALINK }}"
+          echo "Storybook Permalink is: ${{ steps.get-storybook-permalink.outputs.STORYBOOK_PERMALINK }}"
           curl \
           -X POST \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -61,7 +60,7 @@ jobs:
             "state": "success", 
             "context": "Storybook Permalink", 
             "description": "View the latest changes on Storybook for this PR",
-            "target_url": "${{ STORYBOOK_PERMALINK }}"
+            "target_url": "${{ steps.get-storybook-permalink.outputs.STORYBOOK_PERMALINK }}"
           }' \
           --fail
 
