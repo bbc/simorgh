@@ -232,16 +232,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c1k48dxykddo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c1k48dxykddo",
-          "canonicalUrl": "https://www.bbc.com/sport/articles/c1k48dxykddo"
+          "optimoUrn": "urn:bbc:optimo:asset:c1k48dxykddo"
         },
         "type": "article",
         "createdBy": "Sport",
         "language": "en-gb",
-        "lastUpdated": 1645628585667,
         "firstPublished": 1563022155629,
         "lastPublished": 1563022155629,
-        "timestamp": 1563022155629,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c1k48dxykddo",
@@ -254,44 +251,21 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.0",
         "blockTypes": [
           "headline",
           "text",
           "paragraph",
           "fragment"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c1k48dxykddo",
-          "canonicalUrl": "https://www.bbc.com/sport/articles/c1k48dxykddo"
-        },
-        "timestamp": 1563022155629,
-        "suitableForSyndication": false,
-        "language": "en-gb",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Netball World Cup 2019: Northern Ireland earn crucial 67-50 win over Sri Lanka"
         },
         "images": {},
-        "passport": {
-          "language": "en-gb",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Sport",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:c1k48dxykddo",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Sport",
-          "uri": "/sport",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {

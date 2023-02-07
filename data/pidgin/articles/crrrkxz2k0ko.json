@@ -1785,16 +1785,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:crrrkxz2k0ko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:crrrkxz2k0ko",
-          "canonicalUrl": "https://www.bbc.com/pidgin/articles/crrrkxz2k0ko"
+          "optimoUrn": "urn:bbc:optimo:asset:crrrkxz2k0ko"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
-        "lastUpdated": 1656067310803,
         "firstPublished": 1637670147913,
         "lastPublished": 1638873511565,
-        "timestamp": 1638873511565,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:crrrkxz2k0ko",
@@ -1804,8 +1801,6 @@
         "passport": {
           "language": "pcm",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-          "locator": "urn:bbc:optimo:asset:crrrkxz2k0ko",
-          "availability": "AVAILABLE",
           "taggings": [
             {
               "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
@@ -1816,8 +1811,6 @@
               "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
             }
           ],
-          "schemaVersion": "1.4.0",
-          "publishedState": "PUBLISHED",
           "predicates": {
             "infoClass": [
               {
@@ -1828,7 +1821,6 @@
           }
         },
         "tags": {},
-        "version": "v1.4.7",
         "blockTypes": [
           "headline",
           "text",
@@ -1842,19 +1834,11 @@
           "rawImage",
           "urlLink"
         ],
-        "suitableForSyndication": true,
-        "readTime": 1,
         "consumableAsSFV": false,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:crrrkxz2k0ko",
-          "canonicalUrl": "https://www.bbc.com/pidgin/articles/crrrkxz2k0ko"
-        },
-        "timestamp": 1638873511565,
-        "suitableForSyndication": true,
-        "language": "pcm",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Test Links page",
           "promoHeadline": {
@@ -1956,43 +1940,7 @@
             }
           ]
         },
-        "passport": {
-          "language": "pcm",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-          "locator": "urn:bbc:optimo:asset:crrrkxz2k0ko",
-          "availability": "AVAILABLE",
-          "taggings": [
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-              "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
-            }
-          ],
-          "schemaVersion": "1.4.0",
-          "publishedState": "PUBLISHED",
-          "predicates": {
-            "infoClass": [
-              {
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                "type": "infoClass"
-              }
-            ]
-          }
-        },
-        "id": "urn:bbc:ares::article:crrrkxz2k0ko",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Pidgin",
-          "uri": "/pidgin",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {

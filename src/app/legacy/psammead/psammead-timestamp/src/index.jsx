@@ -44,6 +44,7 @@ const Timestamp = ({
     service={service}
     darkMode={darkMode}
     className={className}
+    suppressHydrationWarning
   >
     {children}
   </StyledTimestamp>

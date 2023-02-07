@@ -44,16 +44,18 @@ describe('AmpMostRead', () => {
     fetchMock.mock('localhost:7080/mundo/mostread.json', {
       throws: 'failed fetch',
     });
+
+    const { container, getByText } = render(
+      <MostReadAmpWithContext
+        service="mundo"
+        mostReadToggle
+        isAmp
+        variant={null}
+        pageType={STORY_PAGE}
+      />,
+    );
+
     await act(async () => {
-      const { container, getByText } = await render(
-        <MostReadAmpWithContext
-          service="mundo"
-          mostReadToggle
-          isAmp
-          variant={null}
-          pageType={STORY_PAGE}
-        />,
-      );
       expect(
         container.querySelector('amp-script amp-list li'),
       ).toBeInTheDocument();
@@ -72,16 +74,18 @@ describe('AmpMostRead', () => {
       totalRecords: 20,
       records: [],
     });
+
+    const { container, getByText } = render(
+      <MostReadAmpWithContext
+        service="mundo"
+        mostReadToggle
+        isAmp
+        variant={null}
+        pageType={STORY_PAGE}
+      />,
+    );
+
     await act(async () => {
-      const { container, getByText } = await render(
-        <MostReadAmpWithContext
-          service="mundo"
-          mostReadToggle
-          isAmp
-          variant={null}
-          pageType={STORY_PAGE}
-        />,
-      );
       expect(
         container.querySelector('amp-script amp-list li'),
       ).toBeInTheDocument();
@@ -99,16 +103,18 @@ describe('AmpMostRead', () => {
       firstRecordTimeStamp: '2022-05-03T14:27:00Z',
       totalRecords: 20,
     });
+
+    const { container, getByText } = render(
+      <MostReadAmpWithContext
+        service="mundo"
+        mostReadToggle
+        isAmp
+        variant={null}
+        pageType={STORY_PAGE}
+      />,
+    );
+
     await act(async () => {
-      const { container, getByText } = await render(
-        <MostReadAmpWithContext
-          service="mundo"
-          mostReadToggle
-          isAmp
-          variant={null}
-          pageType={STORY_PAGE}
-        />,
-      );
       expect(
         container.querySelector('amp-script amp-list li'),
       ).toBeInTheDocument();

@@ -365,7 +365,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -906,13 +906,23 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
                   aria-hidden="true"
                   class="emotion-42 emotion-43"
                   focusable="false"
-                  height="12px"
-                  viewBox="0 0 32 32"
-                  width="12px"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="3,32 29,16 3,0"
-                  />
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <path
+                      d="M.5.6h12v12H.5z"
+                    />
+                    <path
+                      d="M2.144.96v11.28l8.712-5.64z"
+                      fill="currentColor"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -1481,7 +1491,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -2132,7 +2142,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -2583,13 +2593,23 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
                   aria-hidden="true"
                   class="emotion-42 emotion-43"
                   focusable="false"
-                  height="12px"
-                  viewBox="0 0 32 32"
-                  width="12px"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <polygon
-                    points="3,32 29,16 3,0"
-                  />
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <path
+                      d="M.5.6h12v12H.5z"
+                    />
+                    <path
+                      d="M2.144.96v11.28l8.712-5.64z"
+                      fill="currentColor"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -3138,7 +3158,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -3874,7 +3894,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -4280,13 +4300,23 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
               aria-hidden="true"
               class="emotion-36 emotion-37"
               focusable="false"
-              height="12px"
-              viewBox="0 0 32 32"
-              width="12px"
+              height="12"
+              viewBox="0 0 12 12"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <polygon
-                points="3,32 29,16 3,0"
-              />
+              <g
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <path
+                  d="M.5.6h12v12H.5z"
+                />
+                <path
+                  d="M2.144.96v11.28l8.712-5.64z"
+                  fill="currentColor"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -4680,7 +4710,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -5307,7 +5337,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 

@@ -27,19 +27,33 @@
                                   "text": "Thousands turn out to see rare total solar eclipse in Chile",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "15e15c5f",
@@ -70,11 +84,22 @@
                                         "text": "Thousands watching in the region of Coquimbo in Chile cheered as darkness descended during a total eclipse of the sun. ",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               },
                               {
                                 "id": "02aa3e27",
@@ -89,11 +114,22 @@
                                         "text": "The Moon's great shadow, or umbra, then passed over the Andes and across to Argentina. ",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 2, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 2]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  2
+                                ]
                               },
                               {
                                 "id": "f5e6ef38",
@@ -108,19 +144,37 @@
                                         "text": "The rest of Chile, as well as Peru, Ecuador, Paraguay, Bolivia, Uruguay, and parts of Colombia, Brazil, Venezuela and Panama, witnessed a partial eclipse.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 3, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        3,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 3]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  3
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "a820be84",
@@ -149,7 +203,9 @@
                             "versions": [
                               {
                                 "versionId": "p07ftj65",
-                                "types": ["Original"],
+                                "types": [
+                                  "Original"
+                                ],
                                 "duration": 74,
                                 "durationISO8601": "PT1M14S",
                                 "warnings": {},
@@ -160,10 +216,16 @@
                                 "availableFrom": 1562120572000
                               }
                             ],
-                            "syndication": { "destinations": [] },
+                            "syndication": {
+                              "destinations": []
+                            },
                             "smpKind": "programme"
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "be19d8f2",
@@ -180,7 +242,12 @@
                                   "originCode": "mpv",
                                   "copyrightHolder": "AFP"
                                 },
-                                "position": [2, 2, 2, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  2,
+                                  1
+                                ]
                               },
                               {
                                 "id": "32ec6023",
@@ -206,32 +273,65 @@
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    2, 2, 2, 2, 1, 1, 1
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
                                                   ]
                                                 }
                                               ]
                                             },
-                                            "position": [2, 2, 2, 2, 1, 1]
+                                            "position": [
+                                              2,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
                                           }
                                         ]
                                       },
-                                      "position": [2, 2, 2, 2, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 2, 2]
+                                "position": [
+                                  2,
+                                  2,
+                                  2,
+                                  2
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 2]
+                          "position": [
+                            2,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "ea8f29e0",
@@ -240,25 +340,31 @@
                 "firstPublished": 1562586751544,
                 "lastPublished": 1562586751544
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
-            { "id": "c1ba568a", "type": "mpu", "model": {}, "position": [4] }
+            {
+              "id": "c1ba568a",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                4
+              ]
+            }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cd4117egk3go",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cd4117egk3go",
-          "canonicalUrl": "https://www.bbc.com/news/articles/cd4117egk3go"
+          "optimoUrn": "urn:bbc:optimo:asset:cd4117egk3go"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
-        "lastUpdated": 1646742788770,
         "firstPublished": 1562586751544,
         "lastPublished": 1562586751544,
-        "timestamp": 1562586751544,
         "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cd4117egk3go",
@@ -271,7 +377,6 @@
           "taggings": []
         },
         "tags": {},
-        "version": "v1.4.2",
         "blockTypes": [
           "headline",
           "text",
@@ -281,37 +386,15 @@
           "caption",
           "aresMedia"
         ],
-        "readTime": 1,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cd4117egk3go",
-          "canonicalUrl": "https://www.bbc.com/news/articles/cd4117egk3go"
-        },
-        "timestamp": 1562586751544,
-        "suitableForSyndication": false,
-        "language": "en-gb",
+        "locators": {},
         "headlines": {
           "seoHeadline": "Thousands turn out to see rare total solar eclipse in Chile"
         },
         "images": {},
-        "passport": {
-          "language": "en-gb",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
-          "taggings": []
-        },
-        "id": "urn:bbc:ares::article:cd4117egk3go",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "News",
-          "uri": "/news",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -333,7 +416,12 @@
           "byline": {
             "name": "By Jasmine Andersson",
             "title": "BBC News",
-            "persons": [{ "name": "Jasmine Andersson", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Jasmine Andersson",
+                "function": "BBC News"
+              }
+            ]
           },
           "passport": {
             "category": {
@@ -415,7 +503,10 @@
             }
           },
           "isLive": true,
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -472,7 +563,10 @@
             }
           },
           "isLive": true,
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "standard",
           "section": {
             "subType": "IDX",
@@ -530,7 +624,10 @@
             "originCode": "cpsprodpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "UK",
@@ -558,7 +655,10 @@
             "name": "By Riyah Collins",
             "title": "Newsbeat reporter",
             "persons": [
-              { "name": "Riyah Collins", "function": "Newsbeat reporter" }
+              {
+                "name": "Riyah Collins",
+                "function": "Newsbeat reporter"
+              }
             ]
           },
           "cpsType": "STY",
@@ -628,11 +728,16 @@
             "versions": [
               {
                 "versionId": "p0dnyf0q",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 60,
                 "durationISO8601": "PT1M",
                 "warnings": {},
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1670950895000
               }
             ],
@@ -651,7 +756,10 @@
             "copyrightHolder": "DFTB Skin Deep",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Health",
@@ -700,14 +808,19 @@
             "versions": [
               {
                 "versionId": "p0dnwhf1",
-                "types": ["Original"],
+                "types": [
+                  "Original"
+                ],
                 "duration": 188,
                 "durationISO8601": "PT3M8S",
                 "warnings": {
                   "short": "Contains upsetting scenes.",
                   "long": "Contains scenes which some viewers may find upsetting."
                 },
-                "availableTerritories": { "uk": true, "nonUk": true },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
                 "availableFrom": 1670936444000
               }
             ],
@@ -725,7 +838,10 @@
             "copyrightHolder": "BBC",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Middle East",
@@ -754,8 +870,14 @@
             "name": "By Jane Wilkinson & Daniel O'Donoghue",
             "title": "BBC News",
             "persons": [
-              { "name": "Jane Wilkinson", "function": "BBC News" },
-              { "name": "Daniel O'Donoghue", "function": "BBC News" }
+              {
+                "name": "Jane Wilkinson",
+                "function": "BBC News"
+              },
+              {
+                "name": "Daniel O'Donoghue",
+                "function": "BBC News"
+              }
             ]
           },
           "passport": {
@@ -779,7 +901,10 @@
             "originCode": "cpsprodpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Manchester",
@@ -808,7 +933,10 @@
             "name": "By Rachel Schraer",
             "title": "BBC 100 Women",
             "persons": [
-              { "name": "Rachel Schraer", "function": "BBC 100 Women" }
+              {
+                "name": "Rachel Schraer",
+                "function": "BBC 100 Women"
+              }
             ]
           },
           "passport": {
@@ -831,7 +959,10 @@
             "originCode": "cpsprodpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Health",
@@ -860,7 +991,10 @@
             "name": "By Riyah Collins",
             "title": "Newsbeat reporter",
             "persons": [
-              { "name": "Riyah Collins", "function": "Newsbeat reporter" }
+              {
+                "name": "Riyah Collins",
+                "function": "Newsbeat reporter"
+              }
             ]
           },
           "cpsType": "STY",
@@ -968,7 +1102,12 @@
           "byline": {
             "name": "By Chris Vallance",
             "title": "Technology reporter",
-            "persons": [{ "name": "Chris Vallance", "function": "BBC News" }]
+            "persons": [
+              {
+                "name": "Chris Vallance",
+                "function": "BBC News"
+              }
+            ]
           },
           "passport": {
             "category": {
@@ -1036,7 +1175,10 @@
                 "name": "By Jasmine Andersson",
                 "title": "BBC News",
                 "persons": [
-                  { "name": "Jasmine Andersson", "function": "BBC News" }
+                  {
+                    "name": "Jasmine Andersson",
+                    "function": "BBC News"
+                  }
                 ]
               },
               "passport": {
@@ -1111,7 +1253,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -1254,7 +1399,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -1291,7 +1439,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2077456/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2077456/"
+                      ],
                       "thingEnglishLabel": "Australia",
                       "type": "about"
                     }
@@ -1339,7 +1489,10 @@
                 "name": "By Max Matza",
                 "title": "BBC News, Seattle",
                 "persons": [
-                  { "name": "Max Matza", "function": "BBC News, Seattle" }
+                  {
+                    "name": "Max Matza",
+                    "function": "BBC News, Seattle"
+                  }
                 ]
               },
               "passport": {
@@ -1412,7 +1565,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -1450,7 +1606,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/6252001/"
+                      ],
                       "thingEnglishLabel": "United States",
                       "type": "about"
                     },
@@ -1606,7 +1764,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -1747,7 +1908,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -1915,7 +2079,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -1935,7 +2102,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1149361/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1149361/"
+                      ],
                       "thingEnglishLabel": "Afghanistan",
                       "type": "about"
                     },
@@ -1968,7 +2137,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1140043/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1140043/"
+                      ],
                       "thingEnglishLabel": "Helmand",
                       "type": "about"
                     },
@@ -1982,7 +2153,9 @@
                         "core:Place",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1138336/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1138336/"
+                      ],
                       "thingEnglishLabel": "Kandahar",
                       "type": "about"
                     },
@@ -2034,7 +2207,9 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Military"
+                      ],
                       "thingEnglishLabel": "Military",
                       "type": "about"
                     },
@@ -2060,7 +2235,10 @@
                       "thingLabel": "UK troops in Afghanistan",
                       "thingUri": "http://www.bbc.co.uk/things/f556c346-e7c8-423b-9698-aad82a87000f#id",
                       "thingId": "f556c346-e7c8-423b-9698-aad82a87000f",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "UK troops in Afghanistan",
                       "type": "about"
@@ -2107,7 +2285,12 @@
               "byline": {
                 "name": "By Steve Mather and PA Media",
                 "title": "BBC News",
-                "persons": [{ "name": "Steve Mather", "function": "BBC Sport" }]
+                "persons": [
+                  {
+                    "name": "Steve Mather",
+                    "function": "BBC Sport"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -2179,7 +2362,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2199,7 +2385,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2653261/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2653261/"
+                      ],
                       "thingEnglishLabel": "Cheltenham",
                       "type": "about"
                     },
@@ -2369,7 +2557,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2389,7 +2580,9 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2637546/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2637546/"
+                      ],
                       "thingEnglishLabel": "Solihull",
                       "type": "about"
                     },
@@ -2403,7 +2596,9 @@
                         "core:Place",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/6698373/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/6698373/"
+                      ],
                       "thingEnglishLabel": "Chelmsley Wood",
                       "type": "about"
                     },
@@ -2468,8 +2663,14 @@
                 "name": "By Branwen Jeffreys and Sallie George",
                 "title": "BBC News",
                 "persons": [
-                  { "name": "Branwen Jeffreys", "function": "BBC News" },
-                  { "name": "Sallie George", "function": "BBC News" }
+                  {
+                    "name": "Branwen Jeffreys",
+                    "function": "BBC News"
+                  },
+                  {
+                    "name": "Sallie George",
+                    "function": "BBC News"
+                  }
                 ]
               },
               "passport": {
@@ -2558,7 +2759,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2722,7 +2926,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2779,7 +2986,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Norfolk"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Norfolk"
+                      ],
                       "thingEnglishLabel": "Norfolk",
                       "type": "about"
                     },
@@ -2866,7 +3075,10 @@
                 "name": "By Philippa Roxby",
                 "title": "Health reporter",
                 "persons": [
-                  { "name": "Philippa Roxby", "function": "Health reporter" }
+                  {
+                    "name": "Philippa Roxby",
+                    "function": "Health reporter"
+                  }
                 ]
               },
               "passport": {
@@ -2931,7 +3143,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3019,7 +3234,12 @@
               "byline": {
                 "name": "By Max Matza",
                 "title": "BBC News",
-                "persons": [{ "name": "Max Matza", "function": "BBC News" }]
+                "persons": [
+                  {
+                    "name": "Max Matza",
+                    "function": "BBC News"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -3091,7 +3311,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3113,7 +3336,9 @@
                         "core:Person",
                         "tagging:AmbiguousTerm"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Joe_Biden"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Joe_Biden"
+                      ],
                       "thingEnglishLabel": "Joe Biden",
                       "type": "about"
                     },
@@ -3145,7 +3370,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/6252001/"
+                      ],
                       "thingEnglishLabel": "United States",
                       "type": "about"
                     },
@@ -3262,7 +3489,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3422,7 +3652,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3476,7 +3709,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2017370/"
+                      ],
                       "thingEnglishLabel": "Russia",
                       "type": "about"
                     },
@@ -3490,7 +3725,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/130758/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/130758/"
+                      ],
                       "thingEnglishLabel": "Iran",
                       "type": "about"
                     },
@@ -3525,7 +3762,9 @@
                         "core:Place",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/703448/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/703448/"
+                      ],
                       "thingEnglishLabel": "Kyiv",
                       "type": "about"
                     },
@@ -3590,8 +3829,14 @@
                 "name": "By Jane Wilkinson & Daniel O'Donoghue",
                 "title": "BBC News",
                 "persons": [
-                  { "name": "Jane Wilkinson", "function": "BBC News" },
-                  { "name": "Daniel O'Donoghue", "function": "BBC News" }
+                  {
+                    "name": "Jane Wilkinson",
+                    "function": "BBC News"
+                  },
+                  {
+                    "name": "Daniel O'Donoghue",
+                    "function": "BBC News"
+                  }
                 ]
               },
               "passport": {
@@ -3660,7 +3905,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3717,7 +3965,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2655237/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2655237/"
+                      ],
                       "thingEnglishLabel": "Bolton",
                       "type": "about"
                     }
@@ -3839,7 +4089,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3876,7 +4129,9 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2643743/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2643743/"
+                      ],
                       "thingEnglishLabel": "London",
                       "type": "about"
                     },
@@ -4098,7 +4353,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4207,7 +4465,9 @@
                         "core:Theme",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Company"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Company"
+                      ],
                       "thingEnglishLabel": "Companies",
                       "type": "about"
                     },
@@ -4288,7 +4548,10 @@
                 "name": "By Chris Vallance",
                 "title": "Technology reporter",
                 "persons": [
-                  { "name": "Chris Vallance", "function": "BBC News" }
+                  {
+                    "name": "Chris Vallance",
+                    "function": "BBC News"
+                  }
                 ]
               },
               "passport": {
@@ -4385,7 +4648,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4422,7 +4688,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/444187/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/444187/"
+                      ],
                       "thingEnglishLabel": "Tigray Region",
                       "type": "about"
                     },
@@ -4486,7 +4754,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/192950/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/192950/"
+                      ],
                       "thingEnglishLabel": "Kenya",
                       "type": "about"
                     },
@@ -4519,7 +4789,9 @@
                         "core:Thing",
                         "tagging:AmbiguousTerm"
                       ],
-                      "thingSameAs": ["http://www.wikidata.org/entity/Q380"],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q380"
+                      ],
                       "thingEnglishLabel": "Meta",
                       "type": "about"
                     },
@@ -4533,7 +4805,9 @@
                         "tagging:TagConcept",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/337996/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/337996/"
+                      ],
                       "thingEnglishLabel": "Ethiopia",
                       "type": "about"
                     }
@@ -4579,7 +4853,12 @@
               "byline": {
                 "name": "By Frances Mao",
                 "title": "BBC News",
-                "persons": [{ "name": "Frances Mao", "function": "BBC News" }]
+                "persons": [
+                  {
+                    "name": "Frances Mao",
+                    "function": "BBC News"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -4643,7 +4922,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4663,7 +4945,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2077456/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2077456/"
+                      ],
                       "thingEnglishLabel": "Australia",
                       "type": "about"
                     },
@@ -4806,7 +5090,10 @@
                       "thingLabel": "Report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4862,7 +5149,9 @@
                         "core:Theme",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Company"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Company"
+                      ],
                       "thingEnglishLabel": "Companies",
                       "type": "about"
                     },
