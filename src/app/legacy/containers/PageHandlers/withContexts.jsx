@@ -10,6 +10,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { TranslationContextProvider } from '../../../contexts/TranslationContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {
@@ -37,26 +38,28 @@ const WithContexts = Component => {
           variant={variant}
           pageLang={path(['metadata', 'language'], pageData)}
         >
-          <RequestContextProvider
-            bbcOrigin={bbcOrigin}
-            id={id}
-            isAmp={isAmp}
-            pageType={pageType}
-            service={service}
-            statusCode={status}
-            pathname={pathname}
-            previousPath={previousPath}
-            variant={variant}
-            timeOnServer={timeOnServer}
-            showAdsBasedOnLocation={showAdsBasedOnLocation}
-            isNextJs={isNextJs}
-          >
-            <EventTrackingContextProvider pageData={pageData}>
-              <UserContextProvider>
-                <Component {...props} />
-              </UserContextProvider>
-            </EventTrackingContextProvider>
-          </RequestContextProvider>
+          <TranslationContextProvider service={service}>
+            <RequestContextProvider
+              bbcOrigin={bbcOrigin}
+              id={id}
+              isAmp={isAmp}
+              pageType={pageType}
+              service={service}
+              statusCode={status}
+              pathname={pathname}
+              previousPath={previousPath}
+              variant={variant}
+              timeOnServer={timeOnServer}
+              showAdsBasedOnLocation={showAdsBasedOnLocation}
+              isNextJs={isNextJs}
+            >
+              <EventTrackingContextProvider pageData={pageData}>
+                <UserContextProvider>
+                  <Component {...props} />
+                </UserContextProvider>
+              </EventTrackingContextProvider>
+            </RequestContextProvider>
+          </TranslationContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>
     );

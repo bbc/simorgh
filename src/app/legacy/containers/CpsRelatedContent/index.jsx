@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { TranslationContext } from '../../../contexts/TranslationContext';
 
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from './RelatedContentPromo';
@@ -27,7 +28,7 @@ const CpsRelatedContent = ({
   title: _title,
   sectionLabelBackground,
 }) => {
-  const { translations } = useContext(ServiceContext);
+  const translations = useContext(TranslationContext);
 
   const eventTrackingData = getEventTrackingData();
 
