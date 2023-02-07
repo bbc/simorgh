@@ -48,6 +48,7 @@ const OnDemandFooterTimestamp = ({ releaseDateTimeStamp, darkMode }) => {
       service={service}
       darkMode={darkMode}
       dateTime={dateTime}
+      suppressHydrationWarning
     >
       {formattedTimestamp}
     </Wrapper>

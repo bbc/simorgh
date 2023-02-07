@@ -65,7 +65,9 @@ const MediaIndicatorContainer = ({ item, script, service, dir, isInline }) => {
     const isoDuration = duration.toISOString();
     return (
       <MediaIndicator type={type} script={script} service={service} dir={dir}>
-        <StyledTime dateTime={isoDuration}>{durationString}</StyledTime>
+        <StyledTime dateTime={isoDuration} suppressHydrationWarning>
+          {durationString}
+        </StyledTime>
       </MediaIndicator>
     );
   }

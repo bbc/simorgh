@@ -25,11 +25,13 @@ const advertisingDirectives = {
     'https://*.googlesyndication.com',
     'https://*.gstatic.com',
     'https://*.imrworldwide.com',
+    'https://cdn.privacy-mgmt.com',
   ],
   frameSrc: [
     'https://*.doubleclick.net',
     'https://edigitalsurvey.com',
     'https://*.googlesyndication.com',
+    'https://cdn.privacy-mgmt.com',
   ],
   imgSrc: [
     'https://*.adsafeprotected.com',
