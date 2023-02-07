@@ -19,7 +19,6 @@ const Component = ({ service, variant }: Props) => {
       <ServiceContextProvider service={service} variant={variant}>
         <MessageBanner
           heading={kyrgyzMessageBannerOnePromo.title}
-          position={kyrgyzMessageBannerOnePromo.position}
           description={kyrgyzMessageBannerOnePromo.summaries[0].description}
           link={kyrgyzMessageBannerOnePromo.summaries[0].link}
           linkText={kyrgyzMessageBannerOnePromo.summaries[0].title}

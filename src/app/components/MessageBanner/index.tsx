@@ -11,7 +11,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface MessageBannerProps {
   heading: string;
-  position: number;
   description: string;
   link: string;
   linkText: string;
@@ -21,7 +20,6 @@ interface MessageBannerProps {
 const MessageBanner = ({
   heading,
   description,
-  position,
   link,
   linkText,
   image,
@@ -29,20 +27,13 @@ const MessageBanner = ({
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
+  const id = `message-banner-${heading.replaceAll(' ', '-')}`;
+
   return (
-    <section
-      css={styles.container}
-      role="region"
-      aria-labelledby={`message-banner-${position}`}
-    >
+    <section css={styles.container} role="region" aria-labelledby={id}>
       <div css={styles.card}>
         <div css={styles.textWrap}>
-          <Heading
-            level={2}
-            size="paragon"
-            css={styles.heading}
-            id={`message-banner-${position}`}
-          >
+          <Heading level={2} size="paragon" css={styles.heading} id={id}>
             {heading}
           </Heading>
           <Paragraph size="longPrimer" css={styles.paragraph}>

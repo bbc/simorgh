@@ -10,7 +10,6 @@ describe('MessageBanner', () => {
       render(
         <MessageBanner
           heading={kyrgyzMessageBannerOnePromo.title}
-          position={kyrgyzMessageBannerOnePromo.position}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
@@ -25,7 +24,6 @@ describe('MessageBanner', () => {
       const { getByRole } = render(
         <MessageBanner
           heading={kyrgyzMessageBannerOnePromo.title}
-          position={kyrgyzMessageBannerOnePromo.position}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
@@ -43,7 +41,6 @@ describe('MessageBanner', () => {
       render(
         <MessageBanner
           heading={kyrgyzMessageBannerOnePromo.title}
-          position={kyrgyzMessageBannerOnePromo.position}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
@@ -59,7 +56,6 @@ describe('MessageBanner', () => {
       render(
         <MessageBanner
           heading={kyrgyzMessageBannerOnePromo.title}
-          position={kyrgyzMessageBannerOnePromo.position}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
@@ -73,7 +69,6 @@ describe('MessageBanner', () => {
       render(
         <MessageBanner
           heading={kyrgyzMessageBannerOnePromo.title}
-          position={kyrgyzMessageBannerOnePromo.position}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
@@ -89,7 +84,6 @@ describe('MessageBanner', () => {
       render(
         <MessageBanner
           heading={kyrgyzMessageBannerOnePromo.title}
-          position={kyrgyzMessageBannerOnePromo.position}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
@@ -106,7 +100,6 @@ describe('MessageBanner', () => {
       render(
         <MessageBanner
           heading={kyrgyzMessageBannerOnePromo.title}
-          position={kyrgyzMessageBannerOnePromo.position}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
