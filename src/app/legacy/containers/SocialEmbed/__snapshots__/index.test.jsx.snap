@@ -293,7 +293,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 }
 
 .emotion-13:focus-visible {
-  outline: 3px solid black;
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-14 {
@@ -1368,7 +1368,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 }
 
 .emotion-13:focus-visible {
-  outline: 3px solid black;
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-14 {
@@ -2094,7 +2094,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
 }
 
 .emotion-13:focus-visible {
-  outline: 3px solid black;
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-14 {

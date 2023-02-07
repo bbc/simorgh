@@ -344,7 +344,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
 }
 
 .emotion-7:focus-visible {
-  outline: 3px solid black;
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-8 {
@@ -616,7 +616,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
 }
 
 .emotion-7:focus-visible {
-  outline: 3px solid black;
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-8 {
@@ -889,7 +889,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
 }
 
 .emotion-7:focus-visible {
-  outline: 3px solid black;
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-8 {
@@ -1166,7 +1166,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 }
 
 .emotion-9:focus-visible {
-  outline: 3px solid black;
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-10 {

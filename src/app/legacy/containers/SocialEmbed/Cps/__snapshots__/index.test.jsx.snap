@@ -288,7 +288,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
 }
 
 .emotion-11:focus-visible {
-  outline: 3px solid black;
+  outline: 0.1875rem solid #000000;
 }
 
 .emotion-12 {
