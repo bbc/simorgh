@@ -292,6 +292,10 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   text-decoration: underline;
 }
 
+.emotion-13:focus-visible {
+  outline: 3px solid black;
+}
+
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1363,6 +1367,10 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   text-decoration: underline;
 }
 
+.emotion-13:focus-visible {
+  outline: 3px solid black;
+}
+
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2083,6 +2091,10 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-13:focus-visible {
+  outline: 3px solid black;
 }
 
 .emotion-14 {

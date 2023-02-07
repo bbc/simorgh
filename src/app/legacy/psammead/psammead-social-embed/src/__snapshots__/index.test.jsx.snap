@@ -343,6 +343,10 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   text-decoration: underline;
 }
 
+.emotion-7:focus-visible {
+  outline: 3px solid black;
+}
+
 .emotion-8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -609,6 +613,10 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-7:focus-visible {
+  outline: 3px solid black;
 }
 
 .emotion-8 {
@@ -878,6 +886,10 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-7:focus-visible {
+  outline: 3px solid black;
 }
 
 .emotion-8 {
@@ -1151,6 +1163,10 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   border: 0.0625rem solid #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-9:focus-visible {
+  outline: 3px solid black;
 }
 
 .emotion-10 {

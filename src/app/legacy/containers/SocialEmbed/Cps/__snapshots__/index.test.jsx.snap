@@ -287,6 +287,10 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
   text-decoration: underline;
 }
 
+.emotion-11:focus-visible {
+  outline: 3px solid black;
+}
+
 .emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
