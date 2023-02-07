@@ -12,6 +12,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
+import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SCRIPT_LINK_OFFSET_BELOW_240PX = 52;
@@ -64,9 +65,6 @@ const Banner = styled.div`
   ${({ borderBottom }) =>
     borderBottom && `border-bottom: ${TRANSPARENT_BORDER}`};
 `;
-
-// Focus visible indicator to show around all focusable elements, links, buttons etc, across the WS sites.
-const focusIndicatorThickness = '0.1875rem';
 
 const styledLinkOutline = `
   content: '';
