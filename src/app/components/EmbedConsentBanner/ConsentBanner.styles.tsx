@@ -48,5 +48,11 @@ export default {
         border: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
         textDecoration: 'underline',
       },
+
+      // Applies focus indicator black outline.
+      // Overrides dotted Mozilla focus ring applied by Normalize global styles.
+      '&:focus-visible': {
+        outline: `3px solid black`,
+      },
     }),
 };
