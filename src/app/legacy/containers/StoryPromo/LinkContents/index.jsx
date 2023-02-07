@@ -9,7 +9,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { isPgl, isMap } from '../utilities';
 
-const LinkContents = ({ item, headline, isInline, id }) => {
+const LinkContents = ({ item, isInline, id }) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
@@ -17,7 +17,32 @@ const LinkContents = ({ item, headline, isInline, id }) => {
   const isMedia = isMap(item);
   const isPhotoGallery = isPgl(item);
 
-  const content = headline;
+  const getContent = () => {
+    const overtypedHeadline = pathOr('', ['headlines', 'overtyped'], item);
+    const headline =
+      overtypedHeadline ||
+      pathOr('', ['headlines', 'headline'], item) ||
+      pathOr(
+        '',
+        [
+          'headlines',
+          'promoHeadline',
+          'blocks',
+          0,
+          'model',
+          'blocks',
+          0,
+          'model',
+          'text',
+        ],
+        item,
+      ) ||
+      pathOr('', ['name'], item);
+
+    return headline;
+  };
+
+  const content = getContent();
 
   if (!isPhotoGallery && !isMedia) {
     // This span is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
@@ -68,7 +93,6 @@ const LinkContents = ({ item, headline, isInline, id }) => {
 
 LinkContents.propTypes = {
   item: shape(pick(['cpsType', 'headlines', 'media'], storyItem)).isRequired,
-  headline: string.isRequired,
   isInline: bool,
   id: string.isRequired,
 };
