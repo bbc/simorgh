@@ -44,7 +44,9 @@ jobs:
         id: get-storybook-permalink
         with:
           script: |
-            core.setOutput('STORYBOOK_PERMALINK', 'https://${{ github.event.pull_request.head.ref }}.toLowerCase().replaceAll(/[/.]/g, '-').trim('-').substring(0, 37).concat('--5d28eb3fe163f6002046d6fa.chromatic.com'));
+            const storybookBranch = '${{ github.event.pull_request.head.ref }}'.toLowerCase().replaceAll(/[/.]/g, '-').trim('-').substring(0, 37);
+            const storybookPermalink = `https://${storybookBranch}--5d28eb3fe163f6002046d6fa.chromatic.com`;
+            core.setOutput('STORYBOOK_PERMALINK', storybookPermalink);
       
       - name: Publish Storybook Branch Permalink
         if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
