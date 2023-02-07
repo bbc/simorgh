@@ -13,12 +13,10 @@ const OptimizelyArticleCompleteTracking = () => {
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  const variation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
+  // USED FOR CLIENT SIDE EXPERIMENTS
+  //const variation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
 
-  const mvtVariation = useOptimizelyMvtVariation('full_stack_test');
-
-  const sendPageCompleteEvent =
-    (variation || mvtVariation) && !isAmp && !pageCompleteSent && isVisible;
+  const sendPageCompleteEvent = !isAmp && !pageCompleteSent && isVisible;
 
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {

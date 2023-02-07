@@ -11,12 +11,11 @@ const OptimizelyPageViewTracking = () => {
   const { optimizely } = useContext(OptimizelyContext);
   const [pageViewSent, setPageViewSent] = useState(false);
 
-  const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
-  const hasVariationKey = promoVariation !== null;
-  const mvtVariation = useOptimizelyMvtVariation('full_stack_test');
+  // USED FOR CLIENT SIDE EXPERIMENTS
+  //const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
+  //const hasVariationKey = promoVariation !== null;
 
-  const sendPageViewEvent =
-    (hasVariationKey || mvtVariation) && !isAmp && !pageViewSent;
+  const sendPageViewEvent = !isAmp && !pageViewSent;
 
   useOptimizelyScrollDepth();
 

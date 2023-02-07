@@ -12,6 +12,9 @@ const useOptimizelyMvtVariation = id => {
   const experiment = mvtExperiments.find(
     ({ experimentName }) => experimentName === id,
   );
+
+  if (!experiment) return null;
+
   const isEnabled = experiment.enabled;
   const variation = isEnabled && experiment.variation;
 

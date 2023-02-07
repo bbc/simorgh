@@ -22,12 +22,10 @@ const useOptimizelyScrollDepth = () => {
   const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
   const [scrollHundred, setScrollHundred] = useState(false);
 
-  const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
-  const mvtVariation = useOptimizelyMvtVariation('full_stack_test');
+  // USED FOR CLIENT SIDE EXPERIMENTS
+  //const promoVariation = useOptimizelyVariation(OPTIMIZELY_CONFIG.featureId);
 
-  const hasVariationKey = promoVariation !== null || mvtVariation !== null;
-
-  const sendScrollEvents = hasVariationKey && !isAmp;
+  const sendScrollEvents = !isAmp;
 
   useEffect(() => {
     if (!sendScrollEvents) {
