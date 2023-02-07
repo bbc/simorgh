@@ -1007,6 +1007,10 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   text-decoration: underline;
 }
 
+.emotion-10 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-10 {
     width: 17.3125rem;
@@ -1290,6 +1294,10 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
 .emotion-10 button:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-10 button:focus-visible {
+  outline: 0.1875rem solid #000000;
 }
 
 @media (min-width: 25rem) {

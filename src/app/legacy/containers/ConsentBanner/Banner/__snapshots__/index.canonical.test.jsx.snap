@@ -226,6 +226,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   text-decoration: underline;
 }
 
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-12 {
     width: 17.3125rem;
@@ -524,6 +528,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
 .emotion-12 button:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
 }
 
 @media (min-width: 25rem) {
@@ -826,6 +834,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
   text-decoration: underline;
 }
 
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-12 {
     width: 17.3125rem;
@@ -1117,6 +1129,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 .emotion-12 button:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
 }
 
 @media (min-width: 25rem) {
