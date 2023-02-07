@@ -11,7 +11,7 @@ export const getTopicPagePath = currentPath => {
    * If so, do nothing
    * Otherwise, append renderer_env=live to the url when running on test to ensure that the correct topic page is accessed
    */
-  if (!params.get('renderer_env') && getAppEnv() === 'TEST') {
+  if (!params.get('renderer_env') && getAppEnv() === 'test') {
     params.append('renderer_env', 'live');
   }
 
