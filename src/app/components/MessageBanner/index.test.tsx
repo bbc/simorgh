@@ -7,7 +7,7 @@ import {
 } from './fixtures';
 
 describe('MessageBanner', () => {
-  describe('One summary', () => {
+  describe('which has a curation with 1 summary', () => {
     const summary = kyrgyzMessageBannerOnePromo.summaries[0];
     it('should render a section with role region', () => {
       render(
@@ -120,9 +120,9 @@ describe('MessageBanner', () => {
       expect(image).toBeInTheDocument();
     });
   });
-  describe('Two summaries', () => {
+  describe('which has a curation with 2 summaries', () => {
     const { summaries } = kyrgyzMessageBannerTwoPromos;
-    it('should only render one banner per curation', () => {
+    it('should only render for the first summary', () => {
       render(
         <MessageBanner
           heading={kyrgyzMessageBannerTwoPromos.title}
