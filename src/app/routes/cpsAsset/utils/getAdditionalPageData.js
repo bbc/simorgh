@@ -21,6 +21,52 @@ import fetchPageData from '../../utils/fetchPageData';
 const noop = () => {};
 const logger = nodeLogger(__filename);
 
+const mappings = [
+  { name: 'recommendations', api: 'recommendations' },
+  {
+    name: 'datalabContentRecommendations',
+    engine: 'unirecs_datalab_content',
+    engineVariant: 'content',
+    api: 'datalab_content',
+  },
+  {
+    name: 'datalabHybridRecommendations',
+    engine: 'unirecs_datalab_hybrid',
+    engineVariant: 'hybrid',
+    api: 'datalab_hybrid',
+  },
+  {
+    name: 'datalabHybridRecommendationsV1x1',
+    engine: 'unirecs_datalab_hybrid',
+    engineVariant: 'hybrid-v1x1',
+    api: 'datalab_hybrid',
+  },
+  {
+    name: 'datalabHybridRecommendationsV1x2',
+    engine: 'unirecs_datalab_hybrid',
+    engineVariant: 'hybrid-v1x2',
+    api: 'datalab_hybrid',
+  },
+  {
+    name: 'datalabHybridRecommendationsV1x3',
+    engine: 'unirecs_datalab_hybrid',
+    engineVariant: 'hybrid-v1x3',
+    api: 'datalab_hybrid',
+  },
+  {
+    name: 'datalabHybridRecommendationsV1x4',
+    engine: 'unirecs_datalab_hybrid',
+    engineVariant: 'hybrid-v1x4',
+    api: 'datalab_hybrid',
+  },
+  {
+    name: 'datalabHybridRecommendationsV1x5',
+    engine: 'unirecs_datalab_hybrid',
+    engineVariant: 'hybrid-v1x5',
+    api: 'datalab_hybrid',
+  },
+];
+
 // 004_brasil_recommendations_experiment
 const getRecommendations = (service, assetUri) => {
   if (service !== 'portuguese') {
@@ -39,110 +85,21 @@ const getRecommendations = (service, assetUri) => {
     ];
   }
 
-  return [
-    {
-      name: 'recommendations',
+  return mappings.map(variant => {
+    return {
+      name: variant.name,
       attachAgent: true,
+      ...(variant.engine && { engine: variant.engine }),
       path: getRecommendationsUrl({
         assetUri,
         engine: 'unirecs_datalab',
+        ...(variant.engineVariant && { engineVariant: variant.engineVariant }),
       }),
       assetUri,
-      api: 'recommendations',
+      api: variant.api,
       apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabContentRecommendations',
-      attachAgent: true,
-      engine: 'unirecs_datalab_content',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'content',
-      }),
-      assetUri,
-      api: 'datalab_content',
-      apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabHybridRecommendations',
-      attachAgent: true,
-      engine: 'unirecs_datalab_hybrid',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'hybrid',
-      }),
-      assetUri,
-      api: 'datalab_hybrid',
-      apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabHybridRecommendationsV1x1',
-      attachAgent: true,
-      engine: 'unirecs_datalab_hybrid',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'hybrid-v1x1',
-      }),
-      assetUri,
-      api: 'datalab_hybrid',
-      apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabHybridRecommendationsV1x2',
-      attachAgent: true,
-      engine: 'unirecs_datalab_hybrid',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'hybrid-v1x2',
-      }),
-      assetUri,
-      api: 'datalab_hybrid',
-      apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabHybridRecommendationsV1x3',
-      attachAgent: true,
-      engine: 'unirecs_datalab_hybrid',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'hybrid-v1x3',
-      }),
-      assetUri,
-      api: 'datalab_hybrid',
-      apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabHybridRecommendationsV1x4',
-      attachAgent: true,
-      engine: 'unirecs_datalab_hybrid',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'hybrid-v1x4',
-      }),
-      assetUri,
-      api: 'datalab_hybrid',
-      apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabHybridRecommendationsV1x5',
-      attachAgent: true,
-      engine: 'unirecs_datalab_hybrid',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'hybrid-v1x5',
-      }),
-      assetUri,
-      api: 'datalab_hybrid',
-      apiContext: 'secondary_data',
-    },
-  ];
+    };
+  });
 };
 
 const pageTypeUrls = async (
