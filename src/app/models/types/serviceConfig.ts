@@ -6,7 +6,6 @@ import {
   ZhongwenService,
   UkrainianService,
 } from './global';
-import { Translations } from './translations';
 
 export type DefaultServiceConfig = {
   [key in ServicesWithNoVariants['variant']]: ServiceConfig;
@@ -90,7 +89,6 @@ export type ServiceConfig = {
     };
     para3: string;
   };
-  translations: Translations;
   mostRead: MostRead;
   mostWatched: MostWatched;
   radioSchedule?: RadioSchedule;
