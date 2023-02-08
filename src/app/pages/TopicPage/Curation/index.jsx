@@ -11,22 +11,22 @@ export const VISUAL_STYLE = {
   BANNER: 'BANNER',
 };
 
-export const VISUAL_PROMINANCE = {
+export const VISUAL_PROMINENCE = {
   NORMAL: 'NORMAL',
   HIGH: 'HIGH',
 };
 
-// Maps a visual style and prominance to a component that renders that curation
+// Maps a visual style and prominence to a component that renders that curation
 const components = {
   [VISUAL_STYLE.NONE]: {
-    [VISUAL_PROMINANCE.NORMAL]: CurationGrid,
-    [VISUAL_PROMINANCE.HIGH]: HierarchicalGrid,
+    [VISUAL_PROMINENCE.NORMAL]: CurationGrid,
+    [VISUAL_PROMINENCE.HIGH]: HierarchicalGrid,
   },
 };
 
 const Curation = ({
   visualStyle = VISUAL_STYLE.NONE,
-  visualProminance,
+  visualProminence,
   promos,
   title,
   topStoriesTitle,
@@ -39,7 +39,7 @@ const Curation = ({
   if (!promos.length) return null;
   const Component = pathOr(
     CurationGrid,
-    [visualStyle, visualProminance],
+    [visualStyle, visualProminence],
     components,
   );
 
@@ -68,7 +68,7 @@ const Curation = ({
 
 Curation.propTypes = {
   visualStyle: oneOf(Object.values(VISUAL_STYLE)).isRequired,
-  visualProminance: oneOf(Object.values(VISUAL_PROMINANCE)).isRequired,
+  visualProminence: oneOf(Object.values(VISUAL_PROMINENCE)).isRequired,
   promos: arrayOf(shape({})).isRequired,
   title: string,
   link: string,
