@@ -67,7 +67,7 @@ const TopStoriesItem = forwardRef(
     return (
       <StyledTopStoriesWrapper ref={viewRef}>
         <Promo
-          to={assetUri || canonicalUrl || uri}
+          to={assetUri || uri || canonicalUrl}
           ariaLabelledBy={ariaLabelledBy}
           mediaType={mediaType}
           eventTrackingData={eventTrackingData}

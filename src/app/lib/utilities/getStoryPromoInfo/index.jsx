@@ -29,11 +29,11 @@ export const getHeadline = item => {
 };
 
 export const getUrl = item => {
-  const assetUri = pathOr('', ['locators', 'assetUri'], item);
-  const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
-  const uri = pathOr('', ['uri'], item);
+  const assetUri = pathOr(null, ['locators', 'assetUri'], item);
+  const canonicalUrl = pathOr(null, ['locators', 'canonicalUrl'], item);
+  const uri = pathOr(null, ['uri'], item);
 
-  return assetUri || canonicalUrl || makeRelativeUrlPath(uri);
+  return assetUri || makeRelativeUrlPath(uri) || canonicalUrl;
 };
 
 export const getIsLive = item =>

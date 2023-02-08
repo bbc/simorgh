@@ -6,7 +6,7 @@ const generatePromoId = ({
   contentType,
   index = 0,
 }) => {
-  const asset = assetUri || canonicalUrl || uri;
+  const asset = assetUri || uri || canonicalUrl;
   const assetParts = asset
     ? asset.split(/www(.test)?\.bbc\.(co\.uk|com)/)
     : null;
