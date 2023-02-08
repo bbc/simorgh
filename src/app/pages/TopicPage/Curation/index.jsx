@@ -5,16 +5,7 @@ import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from '../HierarchicalGrid';
 import Subheading from './Subhead';
-
-export const VISUAL_STYLE = {
-  NONE: 'NONE',
-  BANNER: 'BANNER',
-};
-
-export const VISUAL_PROMINENCE = {
-  NORMAL: 'NORMAL',
-  HIGH: 'HIGH',
-};
+import { VISUAL_PROMINENCE, VISUAL_STYLE } from '../constants';
 
 // Maps a visual style and prominence to a component that renders that curation
 const components = {
