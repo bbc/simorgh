@@ -209,7 +209,6 @@ export type TranslationsZhongwen = {
 };
 
 export type Translations =
-  | TranslationItems
   | TranslationsDefault
   | TranslationsSerbian
   | TranslationsUkchina
