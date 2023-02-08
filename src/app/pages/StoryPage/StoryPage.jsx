@@ -155,6 +155,16 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group5: 4,
   };
 
+  const mappings = {
+    content_recs: 'datalabContentRecommendations',
+    hybrid_recs: 'datalabHybridRecommendations',
+    variation_1: 'datalabHybridRecommendationsV1x1',
+    variation_2: 'datalabHybridRecommendationsV1x2',
+    variation_3: 'datalabHybridRecommendationsV1x3',
+    variation_4: 'datalabHybridRecommendationsV1x4',
+    variation_5: 'datalabHybridRecommendationsV1x5',
+  };
+
   // ads
   const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
@@ -202,109 +212,21 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       // 004_brasil_recommendations_experiment
       <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
         {variation => {
-          if (variation === 'control' || !variation) {
-            return (
-              <CpsRecommendations
-                {...props}
-                parentColumns={gridColsMain}
-                items={recommendationsData}
-              />
-            );
-          }
-          if (variation === 'content_recs') {
-            const unirecsContentRecommendationData = path(
-              ['datalabContentRecommendations'],
+          let unirecsHybridRecommendationData = null;
+          if (variation && variation !== 'control') {
+            unirecsHybridRecommendationData = path(
+              [mappings[variation]],
               pageData,
-            );
-
-            return (
-              <CpsRecommendations
-                {...props}
-                parentColumns={gridColsMain}
-                items={unirecsContentRecommendationData}
-              />
-            );
-          }
-          if (variation === 'hybrid_recs') {
-            const unirecsHybridRecommendationData = path(
-              ['datalabHybridRecommendations'],
-              pageData,
-            );
-            return (
-              <CpsRecommendations
-                {...props}
-                parentColumns={gridColsMain}
-                items={unirecsHybridRecommendationData}
-              />
-            );
-          }
-          if (variation === 'variation_1') {
-            const unirecsHybridRecommendationData = path(
-              ['datalabHybridRecommendationsV1x1'],
-              pageData,
-            );
-            return (
-              <CpsRecommendations
-                {...props}
-                parentColumns={gridColsMain}
-                items={unirecsHybridRecommendationData}
-              />
-            );
-          }
-          if (variation === 'variation_2') {
-            const unirecsHybridRecommendationData = path(
-              ['datalabHybridRecommendationsV1x2'],
-              pageData,
-            );
-            return (
-              <CpsRecommendations
-                {...props}
-                parentColumns={gridColsMain}
-                items={unirecsHybridRecommendationData}
-              />
-            );
-          }
-          if (variation === 'variation_3') {
-            const unirecsHybridRecommendationData = path(
-              ['datalabHybridRecommendationsV1x3'],
-              pageData,
-            );
-            return (
-              <CpsRecommendations
-                {...props}
-                parentColumns={gridColsMain}
-                items={unirecsHybridRecommendationData}
-              />
-            );
-          }
-          if (variation === 'variation_4') {
-            const unirecsHybridRecommendationData = path(
-              ['datalabHybridRecommendationsV1x4'],
-              pageData,
-            );
-            return (
-              <CpsRecommendations
-                {...props}
-                parentColumns={gridColsMain}
-                items={unirecsHybridRecommendationData}
-              />
-            );
-          }
-          if (variation === 'variation_5') {
-            const unirecsHybridRecommendationData = path(
-              ['datalabHybridRecommendationsV1x5'],
-              pageData,
-            );
-            return (
-              <CpsRecommendations
-                {...props}
-                parentColumns={gridColsMain}
-                items={unirecsHybridRecommendationData}
-              />
             );
           }
 
-          return null;
+          return (
+            <CpsRecommendations
+              {...props}
+              parentColumns={gridColsMain}
+              items={unirecsHybridRecommendationData ?? recommendationsData}
+            />
+          );
         }}
       </OptimizelyExperiment>
     ),
