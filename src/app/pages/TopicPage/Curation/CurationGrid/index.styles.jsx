@@ -14,6 +14,23 @@ const styles = {
           display: 'inline-block',
           verticalAlign: 'top',
         },
+        'div div:nth-child(2) div': {
+          padding: `${spacings.FULL}rem`,
+          [mq.GROUP_4_MIN_WIDTH]: {
+            padding: '0.75rem',
+          },
+          svg: {
+            margin: 0,
+            [mq.GROUP_4_MIN_WIDTH]: {
+              width: `${spacings.TRIPLE}rem`,
+              height: `${spacings.TRIPLE}rem`,
+            },
+          },
+          time: {
+            marginLeft: `${spacings.FULL}rem`,
+            padding: '0',
+          },
+        },
       },
       '.promo-text': {
         [mq.GROUP_2_MAX_WIDTH]: {

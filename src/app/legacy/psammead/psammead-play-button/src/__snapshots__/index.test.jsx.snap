@@ -49,7 +49,7 @@ exports[`PlayButton should render audio correctly without duration details 1`] =
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -136,7 +136,7 @@ exports[`PlayButton should render audio indicator correctly 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -255,13 +255,23 @@ exports[`PlayButton should render video by default 1`] = `
         aria-hidden="true"
         class="emotion-6 emotion-7"
         focusable="false"
-        height="12px"
-        viewBox="0 0 32 32"
-        width="12px"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <polygon
-          points="3,32 29,16 3,0"
-        />
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
       </svg>
     </div>
   </button>
@@ -344,13 +354,23 @@ exports[`PlayButton should render video correctly with duration and guidance mes
         aria-hidden="true"
         class="emotion-6 emotion-7"
         focusable="false"
-        height="12px"
-        viewBox="0 0 32 32"
-        width="12px"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <polygon
-          points="3,32 29,16 3,0"
-        />
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
       </svg>
     </div>
     <time
@@ -434,13 +454,23 @@ exports[`PlayButton should render video correctly without duration details 1`] =
         aria-hidden="true"
         class="emotion-6 emotion-7"
         focusable="false"
-        height="12px"
-        viewBox="0 0 32 32"
-        width="12px"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <polygon
-          points="3,32 29,16 3,0"
-        />
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
       </svg>
     </div>
   </button>
@@ -523,13 +553,23 @@ exports[`PlayButton should render video indicator correctly 1`] = `
         aria-hidden="true"
         class="emotion-6 emotion-7"
         focusable="false"
-        height="12px"
-        viewBox="0 0 32 32"
-        width="12px"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <polygon
-          points="3,32 29,16 3,0"
-        />
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
       </svg>
     </div>
     <time

@@ -157,12 +157,11 @@ describe('Feature Idx Page', () => {
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
-      let container;
-      await act(async () => {
-        ({ container } = render(
-          <FeatureIdxPageWithContext pageData={pageData} />,
-        ));
+      const { container } = render(
+        <FeatureIdxPageWithContext pageData={pageData} />,
+      );
 
+      await act(async () => {
         const h1 = container.querySelector('h1');
         const content = h1.getAttribute('id');
         const tabIndex = h1.getAttribute('tabIndex');
@@ -177,12 +176,11 @@ describe('Feature Idx Page', () => {
     });
 
     it('should render flattened sections', async () => {
-      let container;
-      await act(async () => {
-        ({ container } = render(
-          <FeatureIdxPageWithContext pageData={pageData} />,
-        ));
+      const { container } = render(
+        <FeatureIdxPageWithContext pageData={pageData} />,
+      );
 
+      await act(async () => {
         const sections = container.querySelectorAll('section');
         expect(sections).toHaveLength(4);
         sections.forEach(section => {

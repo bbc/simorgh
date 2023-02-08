@@ -8,10 +8,30 @@ const styles = {
       color: palette.GREY_10,
       ...fontSizes.longPrimer,
     }),
-  item: css({
-    position: 'relative',
-    display: 'inline',
-  }),
+  item: ({ mq, spacings }: Theme) =>
+    css({
+      position: 'relative',
+      display: 'inline',
+      '.promo-image': {
+        'div div:nth-child(2) div': {
+          padding: `${spacings.FULL}rem`,
+          [mq.GROUP_4_MIN_WIDTH]: {
+            padding: '0.75rem',
+          },
+          svg: {
+            margin: 0,
+            [mq.GROUP_4_MIN_WIDTH]: {
+              width: `${spacings.TRIPLE}rem`,
+              height: `${spacings.TRIPLE}rem`,
+            },
+          },
+          time: {
+            marginLeft: `${spacings.FULL}rem`,
+            padding: '0',
+          },
+        },
+      },
+    }),
   list: ({ mq, spacings }: Theme) =>
     css({
       padding: 0,

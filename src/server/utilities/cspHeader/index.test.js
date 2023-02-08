@@ -64,6 +64,7 @@ describe('cspHeader', () => {
         'https://*.imrworldwide.com',
         'https://*.twitter.com',
         'https://connect.facebook.net',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
@@ -84,6 +85,7 @@ describe('cspHeader', () => {
         'https://www.youtube.com',
         'https://www.youtube-nocookie.com',
         'https://www.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -141,6 +143,7 @@ describe('cspHeader', () => {
         'https://*.imrworldwide.com',
         'https://*.optimizely.com',
         'https://*.wearehearken.eu',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
@@ -171,6 +174,7 @@ describe('cspHeader', () => {
         'https://edigitalsurvey.com',
         'https://www.tiktok.com',
         'https://*.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -207,6 +211,7 @@ describe('cspHeader', () => {
         'https://www.googletagservices.com',
         'https://bbc.gscontxt.net',
         'https://*.imrworldwide.com',
+        'https://cdn.privacy-mgmt.com',
         'https://www.instagram.com',
         'https://sb.scorecardresearch.com',
         'https://*.twimg.com',
@@ -253,6 +258,7 @@ describe('cspHeader', () => {
         'https://*.googlesyndication.com',
         'https://*.gstatic.com',
         'https://*.imrworldwide.com',
+        'https://cdn.privacy-mgmt.com',
         'https://*.twitter.com',
         'https://connect.facebook.net',
         "'self'",
@@ -275,6 +281,7 @@ describe('cspHeader', () => {
         'https://www.youtube-nocookie.com',
         'https://www.tiktok.com',
         'https://www.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -335,6 +342,7 @@ describe('cspHeader', () => {
         'https://*.imrworldwide.com',
         'https://*.optimizely.com',
         'https://*.wearehearken.eu',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       defaultSrcExpectation: [
@@ -365,6 +373,7 @@ describe('cspHeader', () => {
         'https://www.youtube-nocookie.com',
         'https://www.tiktok.com',
         'https://*.facebook.com',
+        'https://cdn.privacy-mgmt.com',
         "'self'",
       ].sort(),
       imgSrcExpectation: [
@@ -410,6 +419,7 @@ describe('cspHeader', () => {
         'https://bbc.gscontxt.net',
         'https://sb.scorecardresearch.com',
         'https://*.imrworldwide.com',
+        'https://cdn.privacy-mgmt.com',
         'https://www.tiktok.com',
         'https://lf16-tiktok-web.ttwstatic.com',
         'https://*.facebook.com',

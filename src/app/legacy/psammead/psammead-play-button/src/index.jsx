@@ -88,7 +88,11 @@ const PlayButton = ({
         {mediaIcons[type]}
       </IconWrapper>
       {datetime && duration && durationSpoken && (
-        <TimeDuration dateTime={datetime} aria-hidden="true">
+        <TimeDuration
+          dateTime={datetime}
+          aria-hidden="true"
+          suppressHydrationWarning
+        >
           {duration}
         </TimeDuration>
       )}

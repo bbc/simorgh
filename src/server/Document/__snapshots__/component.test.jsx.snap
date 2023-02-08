@@ -2,7 +2,6 @@
 
 exports[`Document Component should render AMP version correctly 1`] = `
 <html
-  data-reactroot=""
   lang="test"
 >
   <head>
@@ -70,9 +69,7 @@ exports[`Document Component should render AMP version correctly 1`] = `
     <div
       id="root"
     >
-      <h1
-        data-reactroot=""
-      >
+      <h1>
         App!
       </h1>
     </div>
@@ -83,7 +80,6 @@ exports[`Document Component should render AMP version correctly 1`] = `
 exports[`Document Component should render correctly 1`] = `
 <html
   class="no-js"
-  data-reactroot=""
   lang="test"
 >
   <head>
@@ -117,9 +113,7 @@ exports[`Document Component should render correctly 1`] = `
     <div
       id="root"
     >
-      <h1
-        data-reactroot=""
-      >
+      <h1>
         App!
       </h1>
     </div>
