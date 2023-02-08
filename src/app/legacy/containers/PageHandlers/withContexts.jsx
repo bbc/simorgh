@@ -38,7 +38,11 @@ const WithContexts = Component => {
           variant={variant}
           pageLang={path(['metadata', 'language'], pageData)}
         >
-          <TranslationContextProvider service={service}>
+          <TranslationContextProvider
+            service={service}
+            variant={variant}
+            pageLang={path(['metadata', 'language'], pageData)}
+          >
             <RequestContextProvider
               bbcOrigin={bbcOrigin}
               id={id}

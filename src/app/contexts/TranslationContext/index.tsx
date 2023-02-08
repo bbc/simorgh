@@ -1,9 +1,13 @@
 import React, { createContext, PropsWithChildren } from 'react';
 import translations from './services/loadableConfig';
-import { Services } from '../../models/types/global';
+import { Services, Variants } from '../../models/types/global';
+import { getVariant } from '../../lib/utilities/variantHandler';
+import getLangOverride from '../../lib/utilities/langHandler';
 
 interface Props {
   service: Services;
+  variant?: Variants | null;
+  pageLang?: string;
 }
 
 export const TranslationContext = createContext({});
@@ -11,6 +15,8 @@ export const TranslationContext = createContext({});
 export const TranslationContextProvider = ({
   children,
   service,
+  variant,
+  pageLang,
 }: PropsWithChildren<Props>) => {
   const LoadableContextProvider = translations[service];
 
@@ -19,7 +25,13 @@ export const TranslationContextProvider = ({
   }
 
   return (
-    <LoadableContextProvider Context={TranslationContext}>
+    <LoadableContextProvider
+      Context={TranslationContext}
+      dataKey={
+        getLangOverride({ service, pageLang }) ||
+        getVariant({ service, variant })
+      }
+    >
       {children}
     </LoadableContextProvider>
   );
