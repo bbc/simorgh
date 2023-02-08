@@ -155,7 +155,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group5: 4,
   };
 
-  const mappings = {
+  const optimizelyMappings = {
     content_recs: 'datalabContentRecommendations',
     hybrid_recs: 'datalabHybridRecommendations',
     variation_1: 'datalabHybridRecommendationsV1x1',
@@ -215,7 +215,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           let unirecsHybridRecommendationData = null;
           if (variation && variation !== 'control') {
             unirecsHybridRecommendationData = path(
-              [mappings[variation]],
+              [optimizelyMappings[variation]],
               pageData,
             );
           }

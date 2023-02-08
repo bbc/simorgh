@@ -68,6 +68,8 @@ import bylineExtractor from './utilities/bylineExtractor';
 import Byline from './Byline';
 import getAuthorTwitterHandle from './getAuthorTwitterHandle';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
@@ -122,6 +124,15 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
   const recommendationsData = path(['recommendations'], pageData);
+  const optimizelyMappings = {
+    content_recs: 'datalabContentRecommendations',
+    hybrid_recs: 'datalabHybridRecommendations',
+    variation_1: 'datalabHybridRecommendationsV1x1',
+    variation_2: 'datalabHybridRecommendationsV1x2',
+    variation_3: 'datalabHybridRecommendationsV1x3',
+    variation_4: 'datalabHybridRecommendationsV1x4',
+    variation_5: 'datalabHybridRecommendationsV1x5',
+  };
 
   const isAdsEnabled = [
     path(['metadata', 'allowAdvertising'], pageData),
@@ -183,7 +194,25 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
-      <CpsRecommendations {...props} items={recommendationsData} />
+      // 004_brasil_recommendations_experiment
+      <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
+        {variation => {
+          let unirecsHybridRecommendationData = null;
+          if (variation && variation !== 'control') {
+            unirecsHybridRecommendationData = path(
+              [optimizelyMappings[variation]],
+              pageData,
+            );
+          }
+
+          return (
+            <CpsRecommendations
+              {...props}
+              items={unirecsHybridRecommendationData ?? recommendationsData}
+            />
+          );
+        }}
+      </OptimizelyExperiment>
     ),
   };
 
