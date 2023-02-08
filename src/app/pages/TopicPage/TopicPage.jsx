@@ -19,6 +19,7 @@ import Pagination from './Pagination';
 import MessageBanner from '../../components/MessageBanner';
 import { VISUAL_PROMINENCE, VISUAL_STYLE } from './constants';
 import Curation from './Curation';
+import getComponent from './getComponent';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
@@ -105,32 +106,35 @@ const TopicPage = ({ pageData }) => {
               link,
               position,
               visualStyle,
-            }) => (
-              <React.Fragment key={`${curationId}-${position}`}>
-                {shouldRenderMessageBanner(visualStyle, visualProminence) ? (
-                  <MessageBanner
-                    heading={curationTitle}
-                    position={position}
-                    description={summaries[0].description}
-                    link={summaries[0].link}
-                    linkText={summaries[0].title}
-                    image={summaries[0].imageUrl}
-                  />
-                ) : (
-                  <Curation
-                    headingLevel={curationTitle && 3}
-                    visualStyle={visualStyle}
-                    visualProminence={visualProminence}
-                    promos={summaries}
-                    title={curationTitle}
-                    topStoriesTitle={topStoriesTitle}
-                    position={position}
-                    link={link}
-                    curationLength={curations && curations.length}
-                  />
-                )}
-              </React.Fragment>
-            ),
+            }) => {
+              console.log(visualStyle, visualProminence, getComponent(visualStyle, visualProminence));
+              return (
+                <React.Fragment key={`${curationId}-${position}`}>
+                  {shouldRenderMessageBanner(visualStyle, visualProminence) ? (
+                    <MessageBanner
+                      heading={curationTitle}
+                      position={position}
+                      description={summaries[0].description}
+                      link={summaries[0].link}
+                      linkText={summaries[0].title}
+                      image={summaries[0].imageUrl}
+                    />
+                  ) : (
+                    <Curation
+                      headingLevel={curationTitle && 3}
+                      visualStyle={visualStyle}
+                      visualProminence={visualProminence}
+                      promos={summaries}
+                      title={curationTitle}
+                      topStoriesTitle={topStoriesTitle}
+                      position={position}
+                      link={link}
+                      curationLength={curations && curations.length}
+                    />
+                  )}
+                </React.Fragment>
+              );
+            },
           )}
           <Pagination
             activePage={activePage}
