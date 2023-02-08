@@ -3,18 +3,18 @@ import React from 'react';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '#data/mundo/topics/c1en6xwmpkvt.json';
 import { render } from '../../../components/react-testing-library-with-providers';
-
-import Curation, { VISUAL_STYLE, VISUAL_PROMINANCE } from '.';
+import { VISUAL_PROMINENCE, VISUAL_STYLE } from '../constants';
+import Curation from '.';
 
 jest.mock('../../../components/ThemeProvider');
 
 const components = {
   [VISUAL_STYLE.NONE]: {
-    [VISUAL_PROMINANCE.NORMAL]: {
+    [VISUAL_PROMINENCE.NORMAL]: {
       promos: fixture.data.summaries,
       testId: 'curation-grid-normal',
     },
-    [VISUAL_PROMINANCE.HIGH]: {
+    [VISUAL_PROMINENCE.HIGH]: {
       promos: mundoFixture.data.curations[0].summaries,
       testId: 'hierarchical-grid',
     },
@@ -23,13 +23,13 @@ const components = {
 
 describe('Topic Curations', () => {
   it('should render the correct component', () => {
-    Object.entries(components).forEach(([curationType, prominances]) => {
-      Object.entries(prominances).forEach(
-        ([prominance, { promos, testId }]) => {
+    Object.entries(components).forEach(([curationType, prominences]) => {
+      Object.entries(prominences).forEach(
+        ([prominence, { promos, testId }]) => {
           const { getByTestId } = render(
             <Curation
               visualStyle={curationType}
-              visualProminance={prominance}
+              visualProminence={prominence}
               promos={promos}
             />,
           );
@@ -39,11 +39,11 @@ describe('Topic Curations', () => {
     });
   });
 
-  it('should render the standard grid if a style/prominance is not recognised', () => {
+  it('should render the standard grid if a style/prominence is not recognised', () => {
     const { getByTestId } = render(
       <Curation
         visualStyle="something-unsupported"
-        visualProminance="what-is-this"
+        visualProminence="what-is-this"
         promos={fixture.data.summaries}
       />,
     );

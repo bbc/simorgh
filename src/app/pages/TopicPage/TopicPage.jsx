@@ -17,7 +17,8 @@ import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
 import MessageBanner from '../../components/MessageBanner';
-import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
+import { VISUAL_PROMINENCE, VISUAL_STYLE } from './constants';
+import Curation from './Curation';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
@@ -57,7 +58,7 @@ const TopicPage = ({ pageData }) => {
   const shouldRenderMessageBanner = (visualStyle, visualProminence) => {
     return (
       visualStyle === VISUAL_STYLE.BANNER &&
-      visualProminence === VISUAL_PROMINANCE.NORMAL &&
+      visualProminence === VISUAL_PROMINENCE.NORMAL &&
       !isLive()
     );
   };
@@ -119,7 +120,7 @@ const TopicPage = ({ pageData }) => {
                   <Curation
                     headingLevel={curationTitle && 3}
                     visualStyle={visualStyle}
-                    visualProminance={visualProminence}
+                    visualProminence={visualProminence}
                     promos={summaries}
                     title={curationTitle}
                     topStoriesTitle={topStoriesTitle}
