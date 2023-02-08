@@ -1,19 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
-import deepClone from 'ramda/src/clone';
 
 // test helpers
 import { render, waitFor, within } from '@testing-library/react';
-import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
 
 // contexts
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-
-// components to test
-import getInitialData from '#app/routes/article/getInitialData';
 
 // mock data
 import {
@@ -24,14 +19,12 @@ import {
 
 // 004_brasil_recommendations_experiment
 import userEvent from '@testing-library/user-event';
-import portugueseMostReadData from '#data/portuguese/mostRead/index';
 import {
   OptimizelyExperiment,
   OptimizelyProvider,
 } from '@optimizely/react-sdk';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
-import getAgent from '#server/utilities/getAgent/index';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 
@@ -238,11 +231,6 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 });
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
-
-const pageType = 'cpsAsset';
-
-const agent = { cert: 'cert', ca: 'ca', key: 'key' };
-const getInitAgent = jest.fn(() => Promise.resolve(agent));
 
 describe('Article Page', () => {
   const appEnv = process.env.SIMORGH_APP_ENV;

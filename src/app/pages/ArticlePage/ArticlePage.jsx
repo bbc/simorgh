@@ -64,12 +64,12 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import bylineExtractor from './utilities/bylineExtractor';
 import Byline from './Byline';
 import getAuthorTwitterHandle from './getAuthorTwitterHandle';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { OptimizelyExperiment } from '@optimizely/react-sdk';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
