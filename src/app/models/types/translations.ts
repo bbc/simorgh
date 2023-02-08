@@ -1,48 +1,97 @@
 /* eslint-disable camelcase */
-export interface Translations {
-  default: {
-    pagination?: {
-      page?: string;
-      previousPage: string;
-      nextPage: string;
-      pageXOfY: string;
+import {
+  ServicesWithNoVariants,
+  SerbianService,
+  ChineseService,
+  ZhongwenService,
+  UkrainianService,
+} from './global';
+
+interface TranslationItems {
+  pagination?: {
+    page?: string;
+    previousPage: string;
+    nextPage: string;
+    pageXOfY: string;
+  };
+  ads: {
+    advertisementLabel: string;
+  };
+  recommendationTitle?: string;
+  splitRecommendationTitle?: string;
+  seeAll?: string;
+  home: string;
+  currentPage: string;
+  skipLinkText: string;
+  relatedContent: string;
+  topicsPath?: string;
+  relatedTopics?: string;
+  navMenuText: string;
+  mediaAssetPage: {
+    mediaPlayer: string;
+    audioPlayer: string;
+    videoPlayer: string;
+  };
+  gist?: string;
+  error: {
+    home?: string;
+    currentPage?: string;
+    skipLinkText?: string;
+    404: TranslationsError;
+    500: TranslationsError;
+  };
+  byline?: {
+    author?: string;
+    articleInformation?: string;
+    listItemImage?: string;
+    published?: string;
+    reportingFrom?: string;
+    role?: string;
+  };
+  consentBanner: {
+    privacy: {
+      title: string;
+      description: {
+        uk: DescriptionStringBuilder;
+        international: DescriptionStringBuilder;
+      };
+      accept: string;
+      reject: string;
+      rejectUrl: string;
     };
-    ads: {
-      advertisementLabel: string;
-    };
-    recommendationTitle?: string;
-    splitRecommendationTitle?: string;
-    seeAll?: string;
-    home: string;
-    currentPage: string;
-    skipLinkText: string;
-    relatedContent: string;
-    topicsPath?: string;
-    relatedTopics?: string;
-    navMenuText: string;
-    mediaAssetPage: {
-      mediaPlayer: string;
-      audioPlayer: string;
-      videoPlayer: string;
-    };
-    gist?: string;
-    error: {
-      home?: string;
-      currentPage?: string;
-      skipLinkText?: string;
-      404: TranslationsError;
-      500: TranslationsError;
-    };
-    byline?: {
-      author?: string;
-      articleInformation?: string;
-      listItemImage?: string;
-      published?: string;
-      reportingFrom?: string;
-      role?: string;
-    };
-    consentBanner: {
-      privacy: {
+    cookie: {
+      amp: {
+        accept: string;
+        reject: string;
+        initial: {
+          title: string;
+          description: DescriptionStringBuilder;
+          manage: string;
+        };
+        manage: {
+          title: string;
+          description: {
+            para1: string;
+            para2: string;
+            heading2: string;
+            para3: string;
+            para4: {
+              text: string;
+              url: string;
+            };
+            para5: string;
+            heading3: string;
+            para6: string;
+            para7: {
+              text: string;
+              url: string;
+            };
+            para8: string;
+            para9: string;
+          };
+        };
+      };
+      canonical: {
         title: string;
         description: {
           uk: DescriptionStringBuilder;
@@ -52,135 +101,120 @@ export interface Translations {
         reject: string;
         rejectUrl: string;
       };
-      cookie: {
-        amp: {
-          accept: string;
-          reject: string;
-          initial: {
-            title: string;
-            description: DescriptionStringBuilder;
-            manage: string;
-          };
-          manage: {
-            title: string;
-            description: {
-              para1: string;
-              para2: string;
-              heading2: string;
-              para3: string;
-              para4: {
-                text: string;
-                url: string;
-              };
-              para5: string;
-              heading3: string;
-              para6: string;
-              para7: {
-                text: string;
-                url: string;
-              };
-              para8: string;
-              para9: string;
-            };
-          };
-        };
-        canonical: {
-          title: string;
-          description: {
-            uk: DescriptionStringBuilder;
-            international: DescriptionStringBuilder;
-          };
-          accept: string;
-          reject: string;
-          rejectUrl: string;
-        };
-      };
     };
-    media: {
-      noJs?: string;
-      contentExpired?: string;
-      contentNotYetAvailable?: string;
-      audio: string;
-      photogallery: string;
-      video: string;
-      bbc_afrique_radio?: OnDemandRadioTvTranslations;
-      bbc_afrique_tv?: OnDemandRadioTvTranslations;
-      bbc_arabic_radio?: OnDemandRadioTvTranslations;
-      bbc_bangla_radio?: OnDemandRadioTvTranslations;
-      bbc_burmese_radio?: OnDemandRadioTvTranslations;
-      bbc_burmese_tv?: OnDemandRadioTvTranslations;
-      bbc_gahuza_radio?: OnDemandRadioTvTranslations;
-      bbc_gujarati_tv?: OnDemandRadioTvTranslations;
-      bbc_hausa_radio?: OnDemandRadioTvTranslations;
-      bbc_hausa_tv?: OnDemandRadioTvTranslations;
-      bbc_hindi_radio?: OnDemandRadioTvTranslations;
-      bbc_hindi_tv?: OnDemandRadioTvTranslations;
-      bbc_igbo_radio?: OnDemandRadioTvTranslations;
-      bbc_kyrgyz_radio?: OnDemandRadioTvTranslations;
-      bbc_kyrgyz_tv?: OnDemandRadioTvTranslations;
-      bbc_marathi_tv?: OnDemandRadioTvTranslations;
-      bbc_nepali_radio?: OnDemandRadioTvTranslations;
-      bbc_pashto_radio?: OnDemandRadioTvTranslations;
-      bbc_pashto_tv?: OnDemandRadioTvTranslations;
-      bbc_persian_radio?: OnDemandRadioTvTranslations;
-      bbc_dari_radio?: OnDemandRadioTvTranslations;
-      bbc_persian_tv?: OnDemandRadioTvTranslations;
-      bbc_pidgin_radio?: OnDemandRadioTvTranslations;
-      bbc_sinhala_tv?: OnDemandRadioTvTranslations;
-      bbc_somali_radio?: OnDemandRadioTvTranslations;
-      bbc_somali_tv?: OnDemandRadioTvTranslations;
-      bbc_swahili_radio?: OnDemandRadioTvTranslations;
-      bbc_swahili_tv?: OnDemandRadioTvTranslations;
-      bbc_tamil_radio?: OnDemandRadioTvTranslations;
-      bbc_tamil_tv?: OnDemandRadioTvTranslations;
-      bbc_telugu_tv?: OnDemandRadioTvTranslations;
-      bbc_uzbek_radio?: OnDemandRadioTvTranslations;
-      bbc_uzbek_tv?: OnDemandRadioTvTranslations;
-      bbc_yoruba_radio?: OnDemandRadioTvTranslations;
-      listen: string;
-      watch: string;
-      listenLive?: string;
-      listenNext?: string;
-      liveLabel?: string;
-      nextLabel?: string;
-      previousRadioShow?: string;
-      nextRadioShow?: string;
-      duration?: string;
-      recentEpisodes?: string;
-      podcastExternalLinks?: string;
-      download?: string;
-    };
-    socialEmbed: {
-      caption?: {
-        textPrefixVisuallyHidden: string;
-        text: string;
-        articleText?: string;
-        articleAdditionalText?: string;
-      };
-      fallback?: {
-        text: string;
-        linkText: string;
-        linkTextSuffixVisuallyHidden: string;
-        warningText: string;
-      };
-      skipLink?: {
-        text: string;
-        endTextVisuallyHidden: string;
-      };
-      consentBanner?: {
-        heading: string;
-        body: string;
-        button?: string | undefined;
-      };
-    };
-    include?: {
-      errorMessage: string;
-      linkText: string;
-    };
-    topStoriesTitle?: string;
-    featuresAnalysisTitle?: string;
   };
+  media: {
+    noJs?: string;
+    contentExpired?: string;
+    contentNotYetAvailable?: string;
+    audio: string;
+    photogallery: string;
+    video: string;
+    bbc_afrique_radio?: OnDemandRadioTvTranslations;
+    bbc_afrique_tv?: OnDemandRadioTvTranslations;
+    bbc_arabic_radio?: OnDemandRadioTvTranslations;
+    bbc_bangla_radio?: OnDemandRadioTvTranslations;
+    bbc_burmese_radio?: OnDemandRadioTvTranslations;
+    bbc_burmese_tv?: OnDemandRadioTvTranslations;
+    bbc_gahuza_radio?: OnDemandRadioTvTranslations;
+    bbc_gujarati_tv?: OnDemandRadioTvTranslations;
+    bbc_hausa_radio?: OnDemandRadioTvTranslations;
+    bbc_hausa_tv?: OnDemandRadioTvTranslations;
+    bbc_hindi_radio?: OnDemandRadioTvTranslations;
+    bbc_hindi_tv?: OnDemandRadioTvTranslations;
+    bbc_igbo_radio?: OnDemandRadioTvTranslations;
+    bbc_kyrgyz_radio?: OnDemandRadioTvTranslations;
+    bbc_kyrgyz_tv?: OnDemandRadioTvTranslations;
+    bbc_marathi_tv?: OnDemandRadioTvTranslations;
+    bbc_nepali_radio?: OnDemandRadioTvTranslations;
+    bbc_pashto_radio?: OnDemandRadioTvTranslations;
+    bbc_pashto_tv?: OnDemandRadioTvTranslations;
+    bbc_persian_radio?: OnDemandRadioTvTranslations;
+    bbc_dari_radio?: OnDemandRadioTvTranslations;
+    bbc_persian_tv?: OnDemandRadioTvTranslations;
+    bbc_pidgin_radio?: OnDemandRadioTvTranslations;
+    bbc_sinhala_tv?: OnDemandRadioTvTranslations;
+    bbc_somali_radio?: OnDemandRadioTvTranslations;
+    bbc_somali_tv?: OnDemandRadioTvTranslations;
+    bbc_swahili_radio?: OnDemandRadioTvTranslations;
+    bbc_swahili_tv?: OnDemandRadioTvTranslations;
+    bbc_tamil_radio?: OnDemandRadioTvTranslations;
+    bbc_tamil_tv?: OnDemandRadioTvTranslations;
+    bbc_telugu_tv?: OnDemandRadioTvTranslations;
+    bbc_uzbek_radio?: OnDemandRadioTvTranslations;
+    bbc_uzbek_tv?: OnDemandRadioTvTranslations;
+    bbc_yoruba_radio?: OnDemandRadioTvTranslations;
+    listen: string;
+    watch: string;
+    listenLive?: string;
+    listenNext?: string;
+    liveLabel?: string;
+    nextLabel?: string;
+    previousRadioShow?: string;
+    nextRadioShow?: string;
+    duration?: string;
+    recentEpisodes?: string;
+    podcastExternalLinks?: string;
+    download?: string;
+  };
+  socialEmbed: {
+    caption?: {
+      textPrefixVisuallyHidden: string;
+      text: string;
+      articleText?: string;
+      articleAdditionalText?: string;
+    };
+    fallback?: {
+      text: string;
+      linkText: string;
+      linkTextSuffixVisuallyHidden: string;
+      warningText: string;
+    };
+    skipLink?: {
+      text: string;
+      endTextVisuallyHidden: string;
+    };
+    consentBanner?: {
+      heading: string;
+      body: string;
+      button?: string | undefined;
+    };
+  };
+  include?: {
+    errorMessage: string;
+    linkText: string;
+  };
+  topStoriesTitle?: string;
+  featuresAnalysisTitle?: string;
 }
+
+type TranslationsDefault = {
+  [key in ServicesWithNoVariants['variant']]: TranslationItems;
+};
+
+type TranslationsSerbian = {
+  [key in SerbianService['variant']]: TranslationItems;
+};
+
+type TranslationsUkchina = {
+  [key in ChineseService['variant']]: TranslationItems;
+};
+
+type TranslationsUkranian = {
+  [key in UkrainianService['variant']]: TranslationItems;
+};
+
+export type TranslationsZhongwen = {
+  [key in ZhongwenService['variant']]: TranslationItems;
+};
+
+export type Translations =
+  | TranslationItems
+  | TranslationsDefault
+  | TranslationsSerbian
+  | TranslationsUkchina
+  | TranslationsUkranian
+  | TranslationsZhongwen;
 
 export interface TranslationsError {
   statusCode: string;

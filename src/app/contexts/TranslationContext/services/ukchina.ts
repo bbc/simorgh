@@ -2,7 +2,7 @@ import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
 const ukchina: Translations = {
-  default: {
+  simp: {
     pagination: {
       previousPage: '前页',
       nextPage: '后页',
@@ -179,6 +179,184 @@ const ukchina: Translations = {
     },
     topStoriesTitle: '头条内容',
     featuresAnalysisTitle: '特别推荐',
+  },
+  trad: {
+    pagination: {
+      previousPage: '前页',
+      nextPage: '后页',
+      pageXOfY: 'Page {x} 的 {y}',
+    },
+    ads: {
+      advertisementLabel: '廣告',
+    },
+    seeAll: '瀏覽全部',
+    home: '主頁',
+    currentPage: '目前頁面',
+    skipLinkText: '跳過此內容',
+    relatedContent: '更多相關內容',
+    relatedTopics: '相關主題內容',
+    navMenuText: '分類',
+    mediaAssetPage: {
+      mediaPlayer: '多媒體播放器',
+      audioPlayer: '音頻播放器',
+      videoPlayer: '視頻播放器',
+    },
+    gist: '概要',
+    error: {
+      404: {
+        statusCode: '404',
+        title: '頁面無法找到',
+        message: '對不起，我們無法找到您所需頁面。請嘗試：',
+        solutions: [
+          '雙次點擊這個鏈接',
+          '點擊瀏覽器上的更新鈕',
+          '使用BBC搜索欄搜尋此頁面',
+        ],
+        callToActionFirst: '或者，請訪問',
+        callToActionLinkText: 'BBC 英伦网',
+        callToActionLast: '官網主頁',
+        callToActionLinkUrl: 'https://www.bbc.com/ukchina/trad',
+      },
+      500: {
+        statusCode: '500',
+        title: '內部伺服器錯誤',
+        message: '對不起，我們無法找到您所需頁面。請嘗試：',
+        solutions: ['點擊瀏覽器上的更新鈕', '請稍候再試'],
+        callToActionFirst: '或者，請訪問',
+        callToActionLinkText: 'BBC 英伦网',
+        callToActionLast: '官網主頁',
+        callToActionLinkUrl: 'https://www.bbc.com/ukchina/trad',
+      },
+    },
+    consentBanner: {
+      privacy: {
+        title: '我們更新了隱私和Cookies條款',
+        description: {
+          uk: {
+            first:
+              '我們在隱私和Cookies條款上有重要更新，希望告知這對您和您的數據意味著什麼。',
+            linkText: null,
+            last: null,
+            linkUrl: null,
+          },
+          international: {
+            first:
+              '我們在隱私和Cookies條款上有重要更新，希望告知這對您和您的數據意味著什麼。',
+            linkText: null,
+            last: null,
+            linkUrl: null,
+          },
+        },
+        accept: '可以',
+        reject: '了解更新內容',
+        rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
+      },
+      cookie: {
+        amp: {
+          accept: '接受數據收集並繼續',
+          reject: '拒絕數據收集並繼續',
+          initial: {
+            title: '請告知是否允許我們在AMP收集數據',
+            description: {
+              first: '我們及合作夥伴使用例如',
+              linkText: 'cookies',
+              last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
+              linkUrl:
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            },
+            manage: '管理我的設置',
+          },
+          manage: {
+            title: '管理AMP頁面認可授權設置',
+            description: {
+              para1:
+                '上述設置僅用於AMP頁面。如果您再度訪問沒有AMP技術的BBC.com網頁，也可能會被要求設定個人選項。',
+              para2: '您剛剛瀏覽的上述輕載移動頁面，建立時使用了谷歌AMP技術。',
+              heading2: '僅限於必須數據收集',
+              para3: '為使網頁運作正常，我們或在未爭得許可時收集有限必要資訊。',
+              para4: {
+                text: '閲讀更多我們在您的瀏覽器上存儲必需數據，以便頁面正常運作的相關資訊',
+                url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+              },
+              para5: '我們使用本地存儲，將選項存儲於您的瀏覽工具上。',
+              heading3: '可選項數據收集',
+              para6:
+                '認可AMP頁面收集數據，也就是認可您在英國之外區域瀏覽頁面時我們可以顯示個人化的廣告。',
+              para7: {
+                text: '閲讀更多有關BBC及合作夥伴如何實現廣告個人化的咨訊',
+                url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+              },
+              para8:
+                '您可以選擇點擊“拒絕數據收集並繼續”，選擇不接受個人化廣告。請注意，這一選項並不意味著您將不再看到廣告，只是您看到的廣告將不具備個人化設置。',
+              para9:
+                '您可以點擊頁面下邊“Ad Choices / Do not sell my info”選項，更改這些設置。',
+            },
+          },
+        },
+        canonical: {
+          title: '請告知您認可接受Cookies',
+          description: {
+            uk: {
+              first: '我們使用',
+              linkText: 'cookies',
+              last: '以便給您最好的網上體驗。請告知您是否認同使cookies。',
+              linkUrl:
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            },
+            international: {
+              first: '我們及合作夥伴使用例如',
+              linkText: 'cookies',
+              last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
+              linkUrl:
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            },
+          },
+          accept: '可以，我同意',
+          reject: '不可，帶我去設置頁面',
+          rejectUrl:
+            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+        },
+      },
+    },
+    media: {
+      noJs: '你的器材不支持播放多媒體材料',
+      contentExpired: '有關內容已經不再向讀者觀眾提供。',
+      contentNotYetAvailable: '有关内容暂时尚未可以为你提供。',
+      audio: '音頻',
+      photogallery: '圖輯專頁',
+      video: '視頻',
+      listen: '收聽',
+      watch: '觀看',
+      liveLabel: '直播',
+      nextLabel: 'NEXT',
+      previousRadioShow: '上期廣播節目',
+      nextRadioShow: '下期廣播節目',
+      duration: '節目全長',
+      recentEpisodes: '存档节目',
+    },
+    socialEmbed: {
+      caption: {
+        textPrefixVisuallyHidden: '視頻加註文字，',
+        text: '告知：協作方內容可能包含廣告',
+      },
+      fallback: {
+        text: '無內容',
+        linkText: '繼續瀏覽 %provider_name%',
+        linkTextSuffixVisuallyHidden: ', 外部鏈接',
+        warningText: 'BBC對外部網站內容不負責任。',
+      },
+      skipLink: {
+        text: '跳過 %provider_name% 帖子',
+        endTextVisuallyHidden: '結尾 %provider_name% 帖子',
+      },
+    },
+    include: {
+      errorMessage:
+        'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+      linkText: 'View the full version of the page to see all the content.',
+    },
+    topStoriesTitle: '頭條內容',
+    featuresAnalysisTitle: '特別推薦',
   },
 };
 
