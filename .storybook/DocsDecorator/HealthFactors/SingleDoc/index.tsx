@@ -57,7 +57,7 @@ const SingleDoc = ({
             id={ariaLabelId}
           >
             {label}
-            <VisuallyHiddenText>{`, ${iconText}`}</VisuallyHiddenText>
+            <VisuallyHiddenText>{`, ${iconText}.`}</VisuallyHiddenText>
           </span>
         </Text>
       </div>
