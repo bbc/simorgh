@@ -23,6 +23,21 @@ const TopStoriesItem = forwardRef(
     const headline =
       overtypedHeadline ||
       pathOr('', ['headlines', 'headline'], item) ||
+      pathOr(
+        '',
+        [
+          'headlines',
+          'promoHeadline',
+          'blocks',
+          0,
+          'model',
+          'blocks',
+          0,
+          'model',
+          'text',
+        ],
+        item,
+      ) ||
       pathOr('', ['name'], item);
 
     const mediaType = pathOr(null, ['media', 'format'], item);
@@ -32,6 +47,7 @@ const TopStoriesItem = forwardRef(
     const timestamp = pathOr(null, ['timestamp'], item);
 
     const assetUri = pathOr('', ['locators', 'assetUri'], item);
+    const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
     const uri = pathOr('', ['uri'], item);
 
     const isLive = getIsLive(item);
@@ -51,7 +67,7 @@ const TopStoriesItem = forwardRef(
     return (
       <StyledTopStoriesWrapper ref={viewRef}>
         <Promo
-          to={assetUri || uri}
+          to={assetUri || uri || canonicalUrl}
           ariaLabelledBy={ariaLabelledBy}
           mediaType={mediaType}
           eventTrackingData={eventTrackingData}
