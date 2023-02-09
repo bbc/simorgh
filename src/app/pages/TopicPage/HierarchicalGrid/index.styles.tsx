@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 
 const styles = {
   body: ({ spacings, palette, fontSizes }: Theme) =>
@@ -13,26 +14,21 @@ const styles = {
       position: 'relative',
       display: 'inline',
       '.promo-image': {
-        'div div:nth-child(2)': {
-          // [mq.GROUP_1_MAX_WIDTH]: {
-          //   position: 'relative',
-          // },
-          div: {
-            padding: `${spacings.FULL}rem`,
+        'div div:nth-child(2) div': {
+          padding: `${spacings.FULL}rem`,
+          [mq.GROUP_4_MIN_WIDTH]: {
+            padding: '0.75rem',
+          },
+          svg: {
+            margin: 0,
             [mq.GROUP_4_MIN_WIDTH]: {
-              padding: '0.75rem',
+              width: `${spacings.TRIPLE}rem`,
+              height: `${spacings.TRIPLE}rem`,
             },
-            svg: {
-              margin: 0,
-              [mq.GROUP_4_MIN_WIDTH]: {
-                width: `${spacings.TRIPLE}rem`,
-                height: `${spacings.TRIPLE}rem`,
-              },
-            },
-            time: {
-              marginLeft: `${spacings.FULL}rem`,
-              padding: '0',
-            },
+          },
+          time: {
+            marginLeft: `${spacings.FULL}rem`,
+            padding: '0',
           },
         },
       },
@@ -72,6 +68,13 @@ const VerticalPromo = css({
   marginTop: '0.5rem',
   gridColumn: 'span 1',
   gridRow: 'span 2',
+  '.promo-image': {
+    'div div:nth-child(2)': {
+      [GROUP_1_MAX_WIDTH]: {
+        position: 'relative',
+      },
+    },
+  },
   '.promo-paragraph': {
     display: 'none',
   },
@@ -108,40 +111,39 @@ const CompactPromo = css({
   },
 });
 
-const HorizontalPromo = ({ mq }: Theme) =>
-  css({
-    gridColumn: 'span 2',
-    gridRow: 'span 1',
-    paddingTop: '0.5rem',
-    '.promo-paragraph': {
-      display: 'none',
-    },
-    '.promo-image': {
-      width: '33%',
-      display: 'inline-block',
-      verticalAlign: 'top',
-      'div div:nth-child(2)': {
-        [mq.GROUP_1_MAX_WIDTH]: {
-          position: 'relative',
-        },
+const HorizontalPromo = css({
+  gridColumn: 'span 2',
+  gridRow: 'span 1',
+  paddingTop: '0.5rem',
+  '.promo-paragraph': {
+    display: 'none',
+  },
+  '.promo-image': {
+    width: '33%',
+    display: 'inline-block',
+    verticalAlign: 'top',
+    'div div:nth-child(2)': {
+      [GROUP_1_MAX_WIDTH]: {
+        position: 'relative',
       },
     },
-    '.promo-text': {
-      width: '67%',
-      display: 'inline-block',
-      verticalAlign: 'top',
-      paddingInlineStart: '0.5rem',
-    },
-    '::before': {
-      top: 0,
-      content: '""',
-      background: '#e6e8ea',
-      width: '100%',
-      height: `${1 / 16}rem`,
-      position: 'absolute',
-      left: 0,
-    },
-  });
+  },
+  '.promo-text': {
+    width: '67%',
+    display: 'inline-block',
+    verticalAlign: 'top',
+    paddingInlineStart: '0.5rem',
+  },
+  '::before': {
+    top: 0,
+    content: '""',
+    background: '#e6e8ea',
+    width: '100%',
+    height: `${1 / 16}rem`,
+    position: 'absolute',
+    left: 0,
+  },
+});
 
 export {
   styles,
