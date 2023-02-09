@@ -9,13 +9,15 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import isLive from '#lib/utilities/isLive';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
-import Curation, { VISUAL_STYLE } from './Curation';
+import MessageBanner from '../../components/MessageBanner';
+import Curation, { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
@@ -51,6 +53,14 @@ const TopicPage = ({ pageData }) => {
     .replace('{y}', pageCount);
 
   const pageTitle = `${title}, ${translatedPage}`;
+
+  const shouldRenderMessageBanner = (visualStyle, visualProminence) => {
+    return (
+      visualStyle === VISUAL_STYLE.BANNER &&
+      visualProminence === VISUAL_PROMINANCE.NORMAL &&
+      !isLive()
+    );
+  };
 
   return (
     <>
@@ -93,19 +103,32 @@ const TopicPage = ({ pageData }) => {
               title: curationTitle,
               link,
               position,
+              visualStyle,
             }) => (
-              <Curation
-                headingLevel={curationTitle && 3}
-                key={curationId}
-                visualStyle={VISUAL_STYLE.NONE}
-                visualProminance={visualProminence}
-                promos={summaries}
-                title={curationTitle}
-                topStoriesTitle={topStoriesTitle}
-                position={position}
-                link={link}
-                curationLength={curations && curations.length}
-              />
+              <React.Fragment key={`${curationId}-${position}`}>
+                {shouldRenderMessageBanner(visualStyle, visualProminence) ? (
+                  <MessageBanner
+                    heading={curationTitle}
+                    position={position}
+                    description={summaries[0].description}
+                    link={summaries[0].link}
+                    linkText={summaries[0].title}
+                    image={summaries[0].imageUrl}
+                  />
+                ) : (
+                  <Curation
+                    headingLevel={curationTitle && 3}
+                    visualStyle={visualStyle}
+                    visualProminance={visualProminence}
+                    promos={summaries}
+                    title={curationTitle}
+                    topStoriesTitle={topStoriesTitle}
+                    position={position}
+                    link={link}
+                    curationLength={curations && curations.length}
+                  />
+                )}
+              </React.Fragment>
             ),
           )}
           <Pagination

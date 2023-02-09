@@ -1480,7 +1480,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 

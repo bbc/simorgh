@@ -324,7 +324,6 @@ exports[`ErrorPage should correctly render for 404 1`] = `
         >
           BBC News homepage.
         </a>
-        
       </p>
     </div>
   </main>
@@ -981,7 +980,6 @@ exports[`ErrorPage should correctly render for 500 1`] = `
         >
           BBC News homepage.
         </a>
-        
       </p>
     </div>
   </main>
@@ -1633,7 +1631,6 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
         >
           BBC News homepage.
         </a>
-        
       </p>
     </div>
   </main>

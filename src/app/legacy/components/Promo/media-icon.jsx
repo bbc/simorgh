@@ -35,7 +35,11 @@ const formatChildren = children => {
   const duration = moment.duration(children, 'seconds');
   const durationString = formatDuration({ duration });
   const isoDuration = duration.toISOString();
-  return <StyledTime dateTime={isoDuration}>{durationString}</StyledTime>;
+  return (
+    <StyledTime dateTime={isoDuration} suppressHydrationWarning>
+      {durationString}
+    </StyledTime>
+  );
 };
 
 const MediaIcon = ({ script, service, children, type }) => {

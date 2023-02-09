@@ -3,6 +3,7 @@ import Text from '../../../../src/app/components/Text';
 import { Confirm, Close, ExternalLink, Help } from '../Icons/icons';
 import styles from './index.styles';
 import VisuallyHiddenText from '../../../../src/app/legacy/psammead/psammead-visually-hidden-text/src';
+import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
 
 const SingleDoc = ({
   label,
@@ -28,6 +29,8 @@ const SingleDoc = ({
 
   const iconText = typeof status === 'boolean' ? hasIconText : 'Missing data';
 
+  const ariaLabelId = idSanitiser(label);
+
   return (
     <li css={styles.documentationContainer}>
       <div css={[styles.documentationContainer, styles.documentationType]}>
@@ -47,11 +50,15 @@ const SingleDoc = ({
           css={[styles.sidebarColumn, styles.sidebarText]}
           size="bodyCopy"
           fontVariant="sansRegular"
-          // eslint-disable-next-line jsx-a11y/aria-role
-          role="text"
+          aria-labelledby={ariaLabelId}
         >
-          {label}
-          <VisuallyHiddenText>{`, ${iconText}`}</VisuallyHiddenText>
+          <span // eslint-disable-next-line jsx-a11y/aria-role
+            role="text"
+            id={ariaLabelId}
+          >
+            {label}
+            <VisuallyHiddenText>{`, ${iconText}.`}</VisuallyHiddenText>
+          </span>
         </Text>
       </div>
       <div css={styles.documentationLink}>

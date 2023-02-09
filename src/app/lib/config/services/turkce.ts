@@ -328,6 +328,10 @@ export const service: DefaultServiceConfig = {
         url: '/turkce',
       },
       {
+        title: '6 Şubat Depremi',
+        url: '/turkce/topics/c383emwewmqt',
+      },
+      {
         title: 'Türkiye',
         url: '/turkce/topics/ckdxn2xk95gt',
       },
@@ -342,10 +346,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Sağlık',
         url: '/turkce/topics/cnq68n6wgzdt',
-      },
-      {
-        title: 'İngiltere',
-        url: '/turkce/topics/c95y3wy7842t',
       },
       {
         title: 'Bilim',
