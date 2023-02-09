@@ -3,6 +3,7 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ASSET_PAGE,
+  ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import getMostWatchedEndpoint from '#lib/utilities/getUrlHelpers/getMostWatchedUrl';
@@ -148,6 +149,8 @@ const pageTypeUrls = async (
           apiContext: 'secondary_data',
         },
       ];
+    case ARTICLE_PAGE:
+      return getRecommendations(service, assetUri);
     default:
       return null;
   }
@@ -186,10 +189,15 @@ const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   }
 };
 
-const getAdditionalPageData = async ({ pageData, service, variant, env }) => {
+const getAdditionalPageData = async ({
+  pageData,
+  service,
+  variant,
+  env,
+  path = '',
+}) => {
   const assetType = getAssetType(pageData);
-  const assetUri = getAssetUri(pageData);
-
+  const assetUri = getAssetUri(pageData) ?? path;
   const urlsToFetch = await pageTypeUrls(
     assetType,
     service,

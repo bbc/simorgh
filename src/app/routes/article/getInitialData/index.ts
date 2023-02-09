@@ -2,12 +2,12 @@
 import { Agent } from 'https';
 import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
-import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import nodeLogger from '../../../lib/logger.node';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import { Services, Variants } from '../../../models/types/global';
+import getAdditionalPageData from '../../cpsAsset/utils/getAdditionalPageData';
 
 const logger = nodeLogger(__filename);
 
@@ -55,7 +55,7 @@ export default async ({
     const env = getEnvironment(pathname);
     const isLocal = env === 'local';
 
-    const agent = !isLocal ? await getAgent() : null;
+    const agent = true ? await getAgent() : null;
     const id = getId(pathname);
 
     if (!id) throw handleError('Article ID is invalid', 500);
@@ -71,7 +71,7 @@ export default async ({
 
     const optHeaders = { 'ctx-service-env': env };
 
-    if (isLocal) {
+    if (false) {
       fetchUrl = Url(
         `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
       );
@@ -83,22 +83,13 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
-    const wsojURL = getRecommendationsUrl({
-      assetUri: pathname.replace(/(\.|\?).*/g, ''),
-      engine: 'unirecs_datalab',
-      engineVariant: '',
+    const wsojData = await getAdditionalPageData({
+      pageData: json,
+      service,
+      variant,
+      env,
+      path: pathname.replace(/(\.|\?).*/g, ''),
     });
-
-    let wsojData = [];
-    try {
-      const { json: wsojJson = [] } = await fetchPageData({
-        path: wsojURL,
-        ...({ agent, optHeaders } as any),
-      });
-      wsojData = wsojJson;
-    } catch (error) {
-      logger.error('Recommendations JSON malformed', error);
-    }
 
     if (!json?.data?.article) {
       throw handleError('Article data is malformed', 500);
@@ -113,7 +104,7 @@ export default async ({
       pageData: {
         ...article,
         secondaryColumn: secondaryData,
-        recommendations: wsojData,
+        ...(wsojData && wsojData),
       },
     };
   } catch ({ message, status }) {
