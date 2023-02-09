@@ -25,6 +25,16 @@ const REACT_SUPPRESSED_REGEX = new RegExp(REACT_SUPPRESSED_WARNINGS.join('|'));
 
 const { error, warn } = console;
 
+const getFormattedMessage = (message, rest) => {
+  let theMessage = message;
+
+  if (typeof message === 'object') {
+    theMessage = message.toString();
+  }
+
+  return theMessage.replace('%s', rest);
+};
+
 const didSuppressWarning = (message, ...rest) => {
   const { expectedWarnings } = window;
   if (REACT_SUPPRESSED_REGEX.test(message)) {
@@ -35,7 +45,9 @@ const didSuppressWarning = (message, ...rest) => {
       const warningsRegex = new RegExp(
         [REACT_FAILED_PROP_TYPE, ...expectedWarnings[i]].join('*.*'),
       );
-      const consoleFormattedMessage = message.replace('%s', rest);
+
+      const consoleFormattedMessage = getFormattedMessage(message, rest);
+
       if (warningsRegex.test(consoleFormattedMessage)) {
         window.expectedWarnings.splice(i, 1);
         return true;
@@ -49,7 +61,7 @@ const didSuppressWarning = (message, ...rest) => {
 console.error = (message, ...rest) => {
   if (didSuppressWarning(message, ...rest)) return;
 
-  const formattedMessage = message.replace('%s', rest);
+  const formattedMessage = getFormattedMessage(message, rest);
 
   if (REACT_ERRORS_REGEX.test(formattedMessage)) {
     throw new Error(
@@ -67,6 +79,6 @@ console.error = (message, ...rest) => {
 
 // eslint-disable-next-line no-console
 console.warn = (message, ...rest) => {
-  if (didSuppressWarning(message)) return;
+  if (didSuppressWarning(message, ...rest)) return;
   warn(message, ...rest);
 };

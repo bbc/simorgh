@@ -25,7 +25,7 @@ const AcceptButton = ({ message, onClick, dataAttribute }) => (
   </button>
 );
 
-export const RejectButton = ({ message, href, onClick, dataAttribute }) => (
+const RejectButton = ({ message, href, onClick, dataAttribute }) => (
   <a href={href} onClick={onClick} {...dataAttribute}>
     {message}
   </a>
@@ -89,7 +89,7 @@ RejectButton.propTypes = {
   href: string.isRequired,
   onClick: func.isRequired,
   dataAttribute: shape({
-    'data-cookie-banner': string.isRequired,
+    'data-cookie-banner': string,
   }),
 };
 

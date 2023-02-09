@@ -20,8 +20,9 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
       event.target.getAttribute('data-terms-banner') === 'reject' ||
       event.target.getAttribute('data-cookie-banner') === 'reject';
     const isAcceptButton =
-      event.relatedTarget.getAttribute('data-terms-banner') === 'accept' ||
-      event.relatedTarget.getAttribute('data-cookie-banner') === 'accept';
+      event.relatedTarget &&
+      (event.relatedTarget.getAttribute('data-terms-banner') === 'accept' ||
+        event.relatedTarget.getAttribute('data-cookie-banner') === 'accept');
     const hasMovedToContent = !isAcceptButton && event.relatedTarget !== 'null';
 
     if (isRejectButton && hasMovedToContent) {

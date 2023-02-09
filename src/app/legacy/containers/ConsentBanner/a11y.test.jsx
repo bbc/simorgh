@@ -4,7 +4,6 @@ import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { service as pidginServiceConfig } from '../../../lib/config/services/pidgin';
 import ConsentBanner from './index';
@@ -67,8 +66,6 @@ const CanonicalBannerWithContext = React.forwardRef(
 );
 
 describe('canonical', () => {
-  suppressPropWarnings(['dataAttribute.data-cookie-banner', 'undefined']);
-
   it('should focus on canonical consent banner heading on mount on canonical', () => {
     const { getByText } = render(
       <CanonicalBannerWithContext

@@ -2,7 +2,6 @@
 /* eslint-disable global-require */
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { shape, string } from 'prop-types';
 import Cookies from 'js-cookie';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -10,7 +9,6 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ConsentBanner from '.';
-import { RejectButton } from './Banner/index.canonical';
 
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
@@ -48,18 +46,6 @@ beforeEach(() => {
 });
 
 describe('Canonical Consent Banner', () => {
-  const originalDataAttributePropType = RejectButton.propTypes.dataAttribute;
-
-  beforeEach(() => {
-    RejectButton.propTypes.dataAttribute = shape({
-      'data-cookie-banner': string,
-    });
-  });
-
-  afterEach(() => {
-    RejectButton.propTypes.dataAttribute = originalDataAttributePropType;
-  });
-
   it('should render only the privacy banner when no cookies are set', () => {
     renderFixture();
 

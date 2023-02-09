@@ -92,8 +92,6 @@ const renderRouter = props =>
   });
 
 describe('routes', () => {
-  suppressPropWarnings(['dataAttribute.data-cookie-banner', 'undefined']);
-
   it('should have correct properties in each route', () => {
     routes.forEach((route, index) => {
       expect(route).toEqual(expect.any(Object));
