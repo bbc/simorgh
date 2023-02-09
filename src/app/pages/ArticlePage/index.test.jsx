@@ -25,7 +25,10 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-
+import {
+  OptimizelyExperiment,
+  OptimizelyProvider,
+} from '@optimizely/react-sdk';
 jest.mock('../../components/ThemeProvider');
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
@@ -33,10 +36,28 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+jest.mock('@optimizely/react-sdk', () => {
+  const actualModules = jest.requireActual('@optimizely/react-sdk');
+  return {
+    __esModule: true,
+    ...actualModules,
+    OptimizelyExperiment: jest.fn(),
+  };
+});
+
 jest.mock('#containers/OptimizelyPageViewTracking', () => {
   const OptimizelyPageViewTracking = () => null;
   return OptimizelyPageViewTracking;
 });
+
+const optimizely = {
+  onReady: jest.fn(() => Promise.resolve()),
+  track: jest.fn(),
+  user: {
+    attributes: {},
+  },
+  close: jest.fn(),
+};
 
 const recommendationSettings = {
   hasStoryRecommendations: true,
@@ -82,7 +103,9 @@ const Context = ({
             service={service}
             recommendations={recommendationSettings}
           >
-            {children}
+            <OptimizelyProvider optimizely={optimizely} isServerSide>
+              {children}
+            </OptimizelyProvider>
           </ServiceContextProvider>
         </RequestContextProvider>
       </ToggleContextProvider>
@@ -425,6 +448,18 @@ it('should render WSOJ recommendations when passed', async () => {
     ...articleDataNews,
     recommendations: sampleRecommendations,
   };
+  
+  OptimizelyExperiment.mockImplementation(props => {
+    const { children } = props;
+
+    const variation = 'control';
+
+    if (children != null && typeof children === 'function') {
+      return <>{children(variation, true, false)}</>;
+    }
+
+    return null;
+  });
 
   const { getByText } = render(
     <Context service="turkce">
