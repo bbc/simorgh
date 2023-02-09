@@ -140,7 +140,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       pageData: JSON.stringify(bffArticleJson),
       service: 'kyrgyz',
-      variant: undefined
+      variant: undefined,
     });
   });
 
