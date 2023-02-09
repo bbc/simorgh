@@ -20,6 +20,8 @@ import { VISUAL_STYLE, COMPONENT_NAMES } from './constants';
 import Curation from './Curation';
 import getComponent from './getComponent';
 
+const { MESSAGE_BANNER } = COMPONENT_NAMES;
+
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
   const { title, description, imageData, curations, pageCount, activePage } =
@@ -104,7 +106,7 @@ const TopicPage = ({ pageData }) => {
                 <React.Fragment key={`${curationId}-${position}`}>
                   {(() => {
                     switch (component) {
-                      case COMPONENT_NAMES.MESSAGE_BANNER:
+                      case MESSAGE_BANNER:
                         return (
                           <MessageBanner
                             heading={curationTitle}
