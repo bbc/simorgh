@@ -57,7 +57,7 @@ const getProviderName = (provider: ConsentBannerProviders) => {
 
 const getTranslations = (
   provider: ConsentBannerProviders,
-  translations: Translations,
+  translations: TranslationItems,
   externalLinkText: string,
 ) => {
   const headingTranslations = pathOr(
