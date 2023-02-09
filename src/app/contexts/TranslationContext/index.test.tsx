@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { cleanup, render, act } from '@testing-library/react';
 import { TranslationContext, TranslationContextProvider } from '.';
-import services from '../../../server/utilities/serviceConfigs';
+import translations from './utils/translationServices';
 import { Services, Variants } from '../../models/types/global';
 import { Translations } from '../../models/types/translations';
 
@@ -16,62 +16,62 @@ describe('TranslationContextProvider', () => {
     cleanup();
   });
 
-  //   describe('should load hydrated translation context', () => {
-  //     const testForServiceAndVariant = (service: Services, variant: Variants) => {
-  //       it(`should have a brand name for ${service} and variant ${variant}`, async () => {
-  //         const Component = () => {
-  //           const { topStoriesTitle } = useContext(TranslationContext);
+  describe('should load hydrated translation context', () => {
+    const testForServiceAndVariant = (service: Services, variant: Variants) => {
+      it(`should have a topStoriesTitle for ${service} and variant ${variant}`, async () => {
+        const Component = () => {
+          const { topStoriesTitle } = useContext(TranslationContext);
 
-  //           return <span>{topStoriesTitle}</span>;
-  //         };
+          return <span>{topStoriesTitle}</span>;
+        };
 
-  //         const serviceContextProps = {
-  //           service,
-  //           // Dont pass variant if its 'default', this better mirrors the
-  //           // behaviour in the production app, where variant is unset for
-  //           // services with only a 'default' variant
-  //           variant: variant === 'default' ? null : variant,
-  //         };
+        const translationContextProps = {
+          service,
+          // Dont pass variant if its 'default', this better mirrors the
+          // behaviour in the production app, where variant is unset for
+          // services with only a 'default' variant
+          variant: variant === 'default' ? null : variant,
+        };
 
-  //         let container!: HTMLElement;
+        let container!: HTMLElement;
 
-  //         await act(async () => {
-  //           container = render(
-  //             <TranslationContextProvider {...serviceContextProps}>
-  //               <Component />
-  //             </TranslationContextProvider>,
-  //           ).container;
-  //         });
+        await act(async () => {
+          container = render(
+            <TranslationContextProvider {...translationContextProps}>
+              <Component />
+            </TranslationContextProvider>,
+          ).container;
+        });
 
-  //         expect(container.firstChild?.textContent).toEqual(
-  //           services[service][variant].topStoriesTitle,
-  //         );
-  //       });
-  //     };
+        expect(container.firstChild?.textContent).toEqual(
+          translations[service][variant].topStoriesTitle,
+        );
+      });
+    };
 
-  //     Object.keys(services).forEach(service => {
-  //       Object.keys(services[service as Services]).forEach(variant =>
-  //         testForServiceAndVariant(service as Services, variant as Variants),
-  //       );
-  //     });
+    Object.keys(translations).forEach(service => {
+      Object.keys(translations[service as Services]).forEach(variant =>
+        testForServiceAndVariant(service as Services, variant as Variants),
+      );
+    });
 
-  //     it(`should return null for foobar service`, async () => {
-  //       const Component = () => {
-  //         const { topStoriesTitle } = useContext(TranslationContext);
+    it(`should return null for foobar service`, async () => {
+      const Component = () => {
+        const { topStoriesTitle } = useContext(TranslationContext);
 
-  //         return <span>{topStoriesTitle}</span>;
-  //       };
+        return <span>{topStoriesTitle}</span>;
+      };
 
-  //       const { container } = render(
-  //         // @ts-expect-error test passing invalid service
-  //         <TranslationContextProvider service="foobar">
-  //           <Component />
-  //         </TranslationContextProvider>,
-  //       );
+      const { container } = render(
+        // @ts-expect-error test passing invalid service
+        <TranslationContextProvider service="foobar">
+          <Component />
+        </TranslationContextProvider>,
+      );
 
-  //       expect(container.querySelector('span')).toBeNull();
-  //     });
-  //   });
+      expect(container.querySelector('span')).toBeNull();
+    });
+  });
 
   describe('should load ukrainian config with lang override', () => {
     [
@@ -120,10 +120,10 @@ describe('TranslationContextProvider', () => {
       }) => {
         it(description, async () => {
           const Component = () => {
-            const translations = useContext(TranslationContext);
+            const translationsObject = useContext(TranslationContext);
 
             const { [assertionValue as keyof Translations]: item } =
-              translations;
+              translationsObject;
 
             return <span>{item}</span>;
           };
