@@ -388,3 +388,72 @@ export const secondaryColumnContentType = {
   isLive: true,
   type: 'link',
 };
+
+export const tipoFormattedTopStoriesItem = {
+  locators: {
+    optimoUrn: 'urn:bbc:optimo:asset:c6vdqkm8yyvo',
+    canonicalUrl: 'https://www.bbc.com/kyrgyz/articles/c6vdqkm8yyvo',
+  },
+  timestamp: 1666869583946,
+  suitableForSyndication: true,
+  language: 'ky',
+  headlines: {
+    seoHeadline: 'Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ',
+    promoHeadline: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'Published at 12:19 - Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ',
+                  blocks: [
+                    {
+                      type: 'fragment',
+                      model: {
+                        text: 'Published at 12:19 - Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  images: {},
+  summary: {
+    blocks: [
+      {
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              type: 'paragraph',
+              model: {
+                text: 'Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ',
+                blocks: [
+                  {
+                    type: 'fragment',
+                    model: {
+                      text: 'Индиянын Улуттук Конгресс партиясынын жаңы лидери шайланды ',
+                      attributes: [],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+  passport: {},
+  id: 'urn:bbc:ares::article:c6vdqkm8yyvo',
+  type: 'optimo',
+};
