@@ -84,7 +84,7 @@ export default async ({
     });
 
     const wsojURL = getRecommendationsUrl({
-      assetUri: pathname,
+      assetUri: pathname.replace(/(\.|\?).*/g, ''),
       engine: 'unirecs_datalab',
       engineVariant: '',
     });
