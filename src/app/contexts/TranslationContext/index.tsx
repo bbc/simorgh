@@ -3,7 +3,7 @@ import translations from './services/loadableConfig';
 import { Services, Variants } from '../../models/types/global';
 import { getVariant } from '../../lib/utilities/variantHandler';
 import getLangOverride from '../../lib/utilities/langHandler';
-import { Translations } from '../../models/types/translations';
+import { TranslationItems } from '../../models/types/translations';
 
 interface Props {
   service: Services;
@@ -11,8 +11,8 @@ interface Props {
   pageLang?: string;
 }
 
-export const TranslationContext = createContext<Translations>(
-  {} as Translations,
+export const TranslationContext = createContext<TranslationItems>(
+  {} as TranslationItems,
 );
 
 export const TranslationContextProvider = ({

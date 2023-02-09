@@ -7,7 +7,7 @@ import {
   UkrainianService,
 } from './global';
 
-interface TranslationItems {
+export interface TranslationItems {
   pagination?: {
     page?: string;
     previousPage: string;

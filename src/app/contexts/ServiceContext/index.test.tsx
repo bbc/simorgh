@@ -123,9 +123,7 @@ describe('ServiceContextProvider', () => {
             const { translations } = useContext(ServiceContext);
 
             return (
-              <span>
-                {translations[assertionValue as keyof Translations]?.toString()}
-              </span>
+              <span>{translations[assertionValue as keyof Translations]}</span>
             );
           };
 

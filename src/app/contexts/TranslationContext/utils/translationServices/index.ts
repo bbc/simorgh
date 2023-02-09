@@ -54,11 +54,11 @@ import { yoruba } from '../../services/yoruba';
 import { zhongwen } from '../../services/zhongwen';
 
 import { Services, Variants } from '../../../../models/types/global';
-import { Translations } from '../../../../models/types/translations';
+import { TranslationItems } from '../../../../models/types/translations';
 
 type AllTranslations = {
   [s in Services]: {
-    [v in Variants]: Translations;
+    [v in Variants]: TranslationItems;
   };
 };
 

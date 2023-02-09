@@ -7,7 +7,7 @@ import pathOr from 'ramda/src/pathOr';
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { Translations } from '../../models/types/translations';
+import { TranslationItems } from '../../models/types/translations';
 import useViewTracker from '../../hooks/useViewTracker';
 
 import consentBannerCss from './ConsentBanner.styles';
@@ -39,7 +39,7 @@ const BANNER_URLS: BannerUrls = {
   },
 };
 
-const DEFAULT_TRANSLATIONS: Translations['socialEmbed']['consentBanner'] = {
+const DEFAULT_TRANSLATIONS: TranslationItems['socialEmbed']['consentBanner'] = {
   heading: 'Allow [social_media_site] content?',
   body: `This article contains content provided by [social_media_site].  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read [social_media_site] [link] cookie policy [/link] and [link] privacy policy [/link] before accepting. To view this content choose 'accept and continue'.`,
   button: 'Accept and continue',
