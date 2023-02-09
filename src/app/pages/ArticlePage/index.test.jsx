@@ -22,13 +22,14 @@ import {
   singleTextBlock,
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import ArticlePage from './ArticlePage';
-import ThemeProvider from '../../components/ThemeProvider';
 import {
   OptimizelyExperiment,
   OptimizelyProvider,
 } from '@optimizely/react-sdk';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import ArticlePage from './ArticlePage';
+import ThemeProvider from '../../components/ThemeProvider';
+
 jest.mock('../../components/ThemeProvider');
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
@@ -448,7 +449,7 @@ it('should render WSOJ recommendations when passed', async () => {
     ...articleDataNews,
     recommendations: sampleRecommendations,
   };
-  
+
   OptimizelyExperiment.mockImplementation(props => {
     const { children } = props;
 
