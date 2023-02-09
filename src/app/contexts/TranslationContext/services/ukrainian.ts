@@ -210,7 +210,7 @@ const baseTranslations = {
   ...secondaryColumnTranslations,
 };
 
-const ukrainian: Translations = {
+export const ukrainian: Translations = {
   default: { ...baseTranslations },
   'ru-UA': {
     ...baseTranslations,

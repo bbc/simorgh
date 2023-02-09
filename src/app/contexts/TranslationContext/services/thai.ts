@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const thai: Translations = {
+export const thai: Translations = {
   default: {
     pagination: {
       previousPage: 'ก่อนหน้านี้',

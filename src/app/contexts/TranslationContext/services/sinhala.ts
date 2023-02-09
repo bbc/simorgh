@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const sinhala: Translations = {
+export const sinhala: Translations = {
   default: {
     pagination: {
       page: 'පිටුව',

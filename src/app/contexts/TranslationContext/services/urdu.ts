@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const urdu: Translations = {
+export const urdu: Translations = {
   default: {
     pagination: {
       previousPage: 'پچھلا صفحہ',

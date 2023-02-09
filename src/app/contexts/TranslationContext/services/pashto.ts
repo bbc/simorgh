@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const pashto: Translations = {
+export const pashto: Translations = {
   default: {
     pagination: {
       page: 'پاڼه',

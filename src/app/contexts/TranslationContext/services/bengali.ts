@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const bengali: Translations = {
+export const bengali: Translations = {
   default: {
     pagination: {
       page: 'পৃষ্ঠা',

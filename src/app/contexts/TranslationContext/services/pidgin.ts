@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const pidgin: Translations = {
+export const pidgin: Translations = {
   default: {
     pagination: {
       previousPage: 'Before',

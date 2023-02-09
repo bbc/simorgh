@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const yoruba: Translations = {
+export const yoruba: Translations = {
   default: {
     pagination: {
       previousPage: 'Ìṣájú',

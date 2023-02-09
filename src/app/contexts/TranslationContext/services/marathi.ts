@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const marathi: Translations = {
+export const marathi: Translations = {
   default: {
     pagination: {
       page: 'पान',

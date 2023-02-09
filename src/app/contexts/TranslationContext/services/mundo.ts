@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const mundo: Translations = {
+export const mundo: Translations = {
   default: {
     pagination: {
       page: 'Página',

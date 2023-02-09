@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const kyrgyz: Translations = {
+export const kyrgyz: Translations = {
   default: {
     pagination: {
       page: 'бет',

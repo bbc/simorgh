@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const gahuza: Translations = {
+export const gahuza: Translations = {
   default: {
     pagination: {
       previousPage: 'Subira inyuma',

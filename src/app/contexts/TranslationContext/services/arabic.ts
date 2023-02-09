@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const arabic: Translations = {
+export const arabic: Translations = {
   default: {
     pagination: {
       page: 'صفحة',

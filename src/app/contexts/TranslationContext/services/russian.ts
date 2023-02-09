@@ -228,7 +228,7 @@ export const mainTranslations = {
   infoBannerLabel: 'Информация',
 };
 
-const russian: Translations = {
+export const russian: Translations = {
   default: { ...mainTranslations, ...headerFooterTranslations },
 };
 

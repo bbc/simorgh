@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const igbo: Translations = {
+export const igbo: Translations = {
   default: {
     pagination: {
       previousPage: 'Ikpeazụ',

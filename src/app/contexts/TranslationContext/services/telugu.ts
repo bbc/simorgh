@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const telegu: Translations = {
+export const telegu: Translations = {
   default: {
     pagination: {
       previousPage: 'మునుపటి',

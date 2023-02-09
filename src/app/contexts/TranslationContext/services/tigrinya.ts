@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const tigrinya: Translations = {
+export const tigrinya: Translations = {
   default: {
     pagination: {
       previousPage: 'ናይ ሕሉፍ',

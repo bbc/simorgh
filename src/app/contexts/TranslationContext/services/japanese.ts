@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const japanese: Translations = {
+export const japanese: Translations = {
   default: {
     pagination: {
       page: 'ページ',

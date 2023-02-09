@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const sport: Translations = {
+export const sport: Translations = {
   default: {
     ads: {
       advertisementLabel: 'Advertisement',

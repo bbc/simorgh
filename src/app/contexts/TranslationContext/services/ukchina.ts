@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const ukchina: Translations = {
+export const ukchina: Translations = {
   simp: {
     pagination: {
       previousPage: '前页',

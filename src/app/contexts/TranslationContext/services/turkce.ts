@@ -1,7 +1,7 @@
 import withContext from '../../utils/withContext';
 import { Translations } from '../../../models/types/translations';
 
-const turkce: Translations = {
+export const turkce: Translations = {
   default: {
     pagination: {
       previousPage: 'Önceki',
