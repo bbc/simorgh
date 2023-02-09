@@ -1,5 +1,5 @@
 import { Agent } from 'https';
-import * as getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
+import * as getAdditionalPageData from '../../cpsAsset/utils/getAdditionalPageData';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -110,7 +110,10 @@ describe('Articles - BFF Fetching', () => {
 
     const recommendData = [{ type: 'TEST_RECOMMEND_DATA' }];
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
-    const getRecommendationsSpy = jest.spyOn(getRecommendationsUrl, 'default');
+    const getAdditionalPageDataSpy = jest.spyOn(
+      getAdditionalPageData,
+      'default',
+    );
 
     fetchDataSpy
       .mockReturnValueOnce(
@@ -126,28 +129,18 @@ describe('Articles - BFF Fetching', () => {
         }),
       );
 
-    getRecommendationsSpy.mockReturnValueOnce(
-      '/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab',
-    );
-
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
       getAgent,
       service: 'kyrgyz',
     });
 
-    expect(getRecommendationsSpy).toBeCalledWith({
-      assetUri: '/kyrgyz/articles/c0000000000o',
-      engine: 'unirecs_datalab',
-      engineVariant: '',
-    });
-
-    expect(fetchDataSpy).toHaveBeenNthCalledWith(2, {
-      path: '/recommendations/kyrgyz/articles/c0000000000o?Engine=unirecs_datalab',
-      agent,
-      optHeaders: {
-        'ctx-service-env': 'live',
-      },
+    expect(getAdditionalPageDataSpy).toBeCalledWith({
+      env: 'live',
+      path: '/kyrgyz/articles/c0000000000o',
+      pageData: JSON.stringify(bffArticleJson),
+      service: 'kyrgyz',
+      variant: undefined
     });
   });
 
