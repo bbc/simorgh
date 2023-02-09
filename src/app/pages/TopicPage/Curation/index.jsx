@@ -9,14 +9,11 @@ import Subheading from './Subhead';
 export const VISUAL_STYLE = {
   NONE: 'NONE',
   BANNER: 'BANNER',
-  FEED: 'FEED',
-  LINKS: 'LINKS',
 };
 
 export const VISUAL_PROMINANCE = {
   NORMAL: 'NORMAL',
   HIGH: 'HIGH',
-  LOW: 'LOW',
 };
 
 // Maps a visual style and prominance to a component that renders that curation
@@ -28,7 +25,7 @@ const components = {
 };
 
 const Curation = ({
-  visualStyle,
+  visualStyle = VISUAL_STYLE.NONE,
   visualProminance,
   promos,
   title,
@@ -70,7 +67,7 @@ const Curation = ({
 };
 
 Curation.propTypes = {
-  visualStyle: oneOf(Object.values(VISUAL_STYLE)),
+  visualStyle: oneOf(Object.values(VISUAL_STYLE)).isRequired,
   visualProminance: oneOf(Object.values(VISUAL_PROMINANCE)).isRequired,
   promos: arrayOf(shape({})).isRequired,
   title: string,
@@ -86,7 +83,6 @@ Curation.defaultProps = {
   link: '',
   headingLevel: 2,
   topStoriesTitle: '',
-  visualStyle: VISUAL_STYLE.NONE,
 };
 
 export default Curation;
