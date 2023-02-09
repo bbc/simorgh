@@ -11,6 +11,8 @@ import {
   topStoriesListRtl,
   topStoriesSingleItemRtl,
 } from './fixture';
+import metadata from './metadata.json';
+import md from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -32,7 +34,13 @@ const RelatedContentComponent = ({ content, service, script }) => (
 
 export default {
   title: 'components/OptimoPromos/TopStoriesSections',
-  TopStoriesSection,
+  component: TopStoriesSection,
+  parameters: {
+    metadata,
+    docs: {
+      page: md,
+    },
+  },
   decorators: [withKnobs, withServicesKnob()],
 };
 

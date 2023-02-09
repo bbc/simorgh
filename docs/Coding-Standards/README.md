@@ -14,9 +14,9 @@
 
 The following is a collection of coding standards agreed on by the team. Some of the examples are borrowed from online resources.
 
-- [Clean Code](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Clean-Code.md)
-- [General](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/General.md)
-- [Naming Conventions](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Naming-Conventions.md)
-- [React Components](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/React-Components.md)
-- [Styles](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Styles.md)
-- [Testing](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Testing.md)
+- [Clean Code](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Clean-Code.stories.mdx)
+- [General](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/General.stories.mdx)
+- [Naming Conventions](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Naming-Conventions.stories.mdx)
+- [React Components](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/React-Components.stories.mdx)
+- [Styles](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Styles.stories.mdx)
+- [Testing](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Testing.stories.mdx)

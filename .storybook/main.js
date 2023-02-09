@@ -10,17 +10,28 @@ module.exports = {
     builder: 'webpack5',
   },
   stories: [
+    '../docs/**/*.stories.mdx',
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',
     '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
+    './DocsDecorator/**/*.stories.@(t|j)sx',
   ],
   addons: [
     '@storybook/addon-knobs',
+    '@storybook/addon-backgrounds',
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
-    '@storybook/addon-docs',
     '@storybook/addon-controls',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        configureJSX: true,
+        babelOptions: {},
+        sourceLoaderOptions: null,
+        transcludeMarkdown: true,
+      },
+    },
   ],
   webpackFinal: async config => {
     config.target = ['web', 'es5'];
