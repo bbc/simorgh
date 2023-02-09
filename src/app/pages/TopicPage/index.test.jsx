@@ -222,5 +222,23 @@ describe('Topic Page', () => {
         0,
       );
     });
+
+    it('should only render the first summary if there is more than one summary in the curation', () => {
+      const messageBannerCuration =
+        kyrgyzTopicWithMessageBanners.curations.find(
+          ({ visualStyle, visualProminence, summaries }) =>
+            visualProminence === VISUAL_PROMINANCE.NORMAL &&
+            visualStyle === VISUAL_STYLE.BANNER &&
+            summaries.length > 1,
+        );
+      const { queryAllByRole } = render(
+        <TopicPage pageData={kyrgyzTopicWithMessageBanners} />,
+        getOptionParams({ service: 'kyrgyz', lang: 'ky' }),
+      );
+      const messageBanners = queryAllByRole('region', {
+        name: messageBannerCuration.title,
+      });
+      expect(messageBanners).toHaveLength(1);
+    });
   });
 });
