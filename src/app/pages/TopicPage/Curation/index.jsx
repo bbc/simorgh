@@ -16,7 +16,7 @@ const components = {
 };
 
 const Curation = ({
-  visualStyle = VISUAL_STYLE.NONE,
+  visualStyle,
   visualProminence,
   promos,
   title,

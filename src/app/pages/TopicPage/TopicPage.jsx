@@ -9,7 +9,6 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import isLive from '#lib/utilities/isLive';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
@@ -17,7 +16,7 @@ import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
 import MessageBanner from '../../components/MessageBanner';
-import { VISUAL_PROMINENCE, VISUAL_STYLE } from './constants';
+import { VISUAL_STYLE, COMPONENT_NAMES } from './constants';
 import Curation from './Curation';
 import getComponent from './getComponent';
 
@@ -55,14 +54,6 @@ const TopicPage = ({ pageData }) => {
     .replace('{y}', pageCount);
 
   const pageTitle = `${title}, ${translatedPage}`;
-
-  const shouldRenderMessageBanner = (visualStyle, visualProminence) => {
-    return (
-      visualStyle === VISUAL_STYLE.BANNER &&
-      visualProminence === VISUAL_PROMINENCE.NORMAL &&
-      !isLive()
-    );
-  };
 
   return (
     <>
@@ -105,33 +96,41 @@ const TopicPage = ({ pageData }) => {
               title: curationTitle,
               link,
               position,
-              visualStyle,
+              visualStyle = VISUAL_STYLE.NONE,
             }) => {
-              console.log(visualStyle, visualProminence, getComponent(visualStyle, visualProminence));
+              const component = getComponent(visualStyle, visualProminence);
+
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
-                  {shouldRenderMessageBanner(visualStyle, visualProminence) ? (
-                    <MessageBanner
-                      heading={curationTitle}
-                      position={position}
-                      description={summaries[0].description}
-                      link={summaries[0].link}
-                      linkText={summaries[0].title}
-                      image={summaries[0].imageUrl}
-                    />
-                  ) : (
-                    <Curation
-                      headingLevel={curationTitle && 3}
-                      visualStyle={visualStyle}
-                      visualProminence={visualProminence}
-                      promos={summaries}
-                      title={curationTitle}
-                      topStoriesTitle={topStoriesTitle}
-                      position={position}
-                      link={link}
-                      curationLength={curations && curations.length}
-                    />
-                  )}
+                  {(() => {
+                    switch (component) {
+                      case COMPONENT_NAMES.MESSAGE_BANNER:
+                        return (
+                          <MessageBanner
+                            heading={curationTitle}
+                            position={position}
+                            description={summaries[0].description}
+                            link={summaries[0].link}
+                            linkText={summaries[0].title}
+                            image={summaries[0].imageUrl}
+                          />
+                        );
+                      default:
+                        return (
+                          <Curation
+                            headingLevel={curationTitle && 3}
+                            visualStyle={visualStyle}
+                            visualProminence={visualProminence}
+                            promos={summaries}
+                            title={curationTitle}
+                            topStoriesTitle={topStoriesTitle}
+                            position={position}
+                            link={link}
+                            curationLength={curations && curations.length}
+                          />
+                        );
+                    }
+                  })()}
                 </React.Fragment>
               );
             },
