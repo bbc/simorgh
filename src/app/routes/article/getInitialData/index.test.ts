@@ -131,9 +131,15 @@ describe('Articles - BFF Fetching', () => {
     );
 
     await getInitialData({
-      path: '/kyrgyz/articles/c0000000000o',
+      path: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
       getAgent,
       service: 'kyrgyz',
+    });
+
+    expect(getRecommendationsSpy).toBeCalledWith({
+      assetUri: '/kyrgyz/articles/c0000000000o',
+      engine: 'unirecs_datalab',
+      engineVariant: '',
     });
 
     expect(fetchDataSpy).toHaveBeenNthCalledWith(2, {

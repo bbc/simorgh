@@ -69,6 +69,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicités',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'Tout voir',
       home: 'Accueil',
       currentPage: 'Page en cours',
@@ -287,7 +288,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Durée %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

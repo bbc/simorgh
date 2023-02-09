@@ -4,7 +4,11 @@
 import topicTagsTest from '../../support/helpers/topicTagsTest';
 import checkA11y from '../../support/helpers/checkA11y';
 
-export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
+export const testsThatAlwaysRunForAllPages = ({
+  service,
+  variant,
+  pageType,
+}) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
     it('should have no detectable a11y violations on page load', () => {
       checkA11y();
@@ -17,7 +21,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
         service !== 'news' &&
         Cypress.env('APP_ENV') !== 'local'
       ) {
-        topicTagsTest();
+        topicTagsTest(service, variant, pageType);
       } else {
         cy.log('Topic tags currently disabled on Sport and Newsround');
       }

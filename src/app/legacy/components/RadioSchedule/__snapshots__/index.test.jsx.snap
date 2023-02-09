@@ -539,7 +539,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1783,7 +1783,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
