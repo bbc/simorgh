@@ -128,7 +128,11 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
                 service={service}
                 script={script}
                 title="{{promo.headlines.shortHeadline}}"
-                href="{{promo.locators.assetUri}}"
+                href={
+                  MostReadRank.isAmp
+                    ? '{{promo.locators.canonicalUrl}}'
+                    : '{{promo.locators.assetUri}}'
+                }
                 size={size}
               />
             </MostReadItemWrapper>
