@@ -20,6 +20,7 @@ import { VISUAL_STYLE, COMPONENT_NAMES } from './constants';
 import Curation from './Curation';
 import getComponent from './getComponent';
 
+const { NONE } = VISUAL_STYLE;
 const { MESSAGE_BANNER } = COMPONENT_NAMES;
 
 const TopicPage = ({ pageData }) => {
@@ -98,7 +99,7 @@ const TopicPage = ({ pageData }) => {
               title: curationTitle,
               link,
               position,
-              visualStyle = VISUAL_STYLE.NONE,
+              visualStyle = NONE,
             }) => {
               const component = getComponent(visualStyle, visualProminence);
 
