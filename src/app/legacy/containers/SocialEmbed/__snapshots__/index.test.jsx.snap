@@ -292,6 +292,10 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
   text-decoration: underline;
 }
 
+.emotion-13:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -348,7 +352,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-1"
       >
         <span>
@@ -376,6 +380,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
             This article contains content provided by Twitter.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Twitter 
             <a
               aria-label="cookie policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://help.twitter.com/en/rules-and-policies/twitter-cookies"
             >
               cookie policy
@@ -383,6 +388,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
              and 
             <a
               aria-label="privacy policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://twitter.com/en/privacy"
             >
               privacy policy
@@ -672,7 +678,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-facebook-content"
       >
         <span>
@@ -999,7 +1005,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Video block and
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-facebook-content"
       >
         <span>
@@ -1361,6 +1367,10 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
   text-decoration: underline;
 }
 
+.emotion-13:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1417,7 +1427,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-tiktok-content"
       >
         <span>
@@ -1445,6 +1455,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
             This article contains content provided by TikTok.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read TikTok 
             <a
               aria-label="cookie policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://www.tiktok.com/legal/cookie-policy"
             >
               cookie policy
@@ -1452,6 +1463,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
              and 
             <a
               aria-label="privacy policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://www.tiktok.com/legal/privacy-policy"
             >
               privacy policy
@@ -1731,7 +1743,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-1"
       >
         <span>
@@ -2081,6 +2093,10 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
   text-decoration: underline;
 }
 
+.emotion-13:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2137,7 +2153,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-youtube-content"
       >
         <span>
@@ -2165,6 +2181,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
             This article contains content provided by Google YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google YouTube 
             <a
               aria-label="cookie policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://policies.google.com/technologies/cookies"
             >
               cookie policy
@@ -2172,6 +2189,7 @@ exports[`SocialEmbedContainer Canonical should render a YouTube block and unmoun
              and 
             <a
               aria-label="privacy policy, external"
+              class="focusIndicatorReducedWidth"
               href="https://policies.google.com/privacy"
             >
               privacy policy
@@ -2448,7 +2466,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-instagram-content-1"
       >
         <span>

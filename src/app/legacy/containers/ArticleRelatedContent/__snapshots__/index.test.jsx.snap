@@ -368,6 +368,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -472,7 +473,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
             >
               <a
                 aria-labelledby="promo-news-1"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk/news"
               >
                 <span

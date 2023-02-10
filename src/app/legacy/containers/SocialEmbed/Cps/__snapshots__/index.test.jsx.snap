@@ -287,6 +287,10 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
   text-decoration: underline;
 }
 
+.emotion-11:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 .emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -310,7 +314,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-2"
       >
         <span>
@@ -335,6 +339,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
           This article contains content provided by Twitter.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Twitter 
           <a
             aria-label="cookie policy, external"
+            class="focusIndicatorReducedWidth"
             href="https://help.twitter.com/en/rules-and-policies/twitter-cookies"
           >
             cookie policy
@@ -342,6 +347,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
            and 
           <a
             aria-label="privacy policy, external"
+            class="focusIndicatorReducedWidth"
             href="https://twitter.com/en/privacy"
           >
             privacy policy
@@ -586,7 +592,7 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-2"
       >
         <span>
@@ -866,7 +872,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
       class="emotion-4 emotion-5"
     >
       <a
-        class="emotion-6 emotion-7"
+        class="focusIndicatorRemove emotion-6 emotion-7"
         href="#end-of-twitter-content-1"
       >
         <span>

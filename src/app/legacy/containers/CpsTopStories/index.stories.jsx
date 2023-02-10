@@ -7,28 +7,31 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import TopStories from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service, dir = 'ltr', data }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
-    <ServiceContextProvider service={service}>
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.com"
-        isAmp={isAmp}
-        pageType={STORY_PAGE}
-        pathname="/"
-        service={service}
-      >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: false },
-          }}
+    <ThemeProvider service={service}>
+      <ServiceContextProvider service={service}>
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.com"
+          isAmp={isAmp}
+          pageType={STORY_PAGE}
+          pathname="/"
+          service={service}
         >
-          <TopStories content={data} />
-        </ToggleContextProvider>
-      </RequestContextProvider>
-    </ServiceContextProvider>
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: { enabled: false },
+            }}
+          >
+            <TopStories content={data} />
+          </ToggleContextProvider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>
   </div>
 );
 
