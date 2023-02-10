@@ -16,6 +16,7 @@ import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCPSHash';
 
+// should I rename this? It's doing other data formatting as well.
 const rankTranslationScript = (endpoint, service) => {
   const translation = serviceNumerals(service);
   return `
@@ -34,6 +35,11 @@ const rankTranslationScript = (endpoint, service) => {
 
         if (!item.promo.headlines.shortHeadline) {
           item.promo.headlines.shortHeadline = item.promo.headlines.seoHeadline;
+        }
+
+        // Works but seems bad to just rename this?
+        if(!item.promo.locators.assetUri) {
+          item.promo.locators.assetUri = item.promo.locators.canonicalUrl;
         }
       });
 
@@ -70,6 +76,19 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     translations,
   );
 
+  // console.log('innerscript', onlyinnerscript);
+
+  // doesn't work as this onlyinnerscript is a template literal
+  const link = pathOr(
+    '{{promo.locators.assetUri}}',
+    ['promo', 'locators', 'canonicalUrl'],
+    onlyinnerscript,
+  );
+
+  console.log('Izzy', link);
+
+  const condition = true;
+
   return (
     <amp-script id="dataFunctions" script="local-script">
       <Wrapper>
@@ -98,7 +117,6 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
             )}
           />
         </Helmet>
-
         <amp-list
           src="amp-script:dataFunctions.getRemoteData"
           items="records"
@@ -129,6 +147,11 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
                 script={script}
                 title="{{promo.headlines.shortHeadline}}"
                 href="{{promo.locators.assetUri}}"
+                // href={
+                //   condition
+                //     ? '{{promo.locators.assetUri}}'
+                //     : '{{promo.locators.canonicalUrl}}'
+                // }
                 size={size}
               />
             </MostReadItemWrapper>
