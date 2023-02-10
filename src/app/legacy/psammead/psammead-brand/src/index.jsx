@@ -12,6 +12,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
+import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SCRIPT_LINK_OFFSET_BELOW_240PX = 52;
@@ -65,6 +66,15 @@ const Banner = styled.div`
     borderBottom && `border-bottom: ${TRANSPARENT_BORDER}`};
 `;
 
+const styledLinkOutline = `
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -${focusIndicatorThickness};
+  bottom: 0;
+  right: -${focusIndicatorThickness};
+  `;
+
 const StyledLink = styled.a`
   height: 100%;
   display: flex;
@@ -77,6 +87,13 @@ const StyledLink = styled.a`
     text-decoration: none;
     border-bottom: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
     margin-bottom: -${GEL_SPACING_HLF};
+  }
+
+  // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
+  &:focus-visible::after {
+    ${styledLinkOutline}
+    border-top: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
+    outline: ${GEL_SPACING_HLF} solid ${props => props.logoColour};
   }
 `;
 
@@ -212,6 +229,7 @@ const Brand = forwardRef((props, ref) => {
             href={url}
             id={linkId}
             logoColour={logoColour}
+            className="focusIndicatorRemove"
             // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
             aria-labelledby={`BrandLink-${linkId}`}
           >

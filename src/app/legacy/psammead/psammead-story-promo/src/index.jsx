@@ -134,7 +134,7 @@ export const Headline = styled.h3`
   ${({ script, promoType }) => script && headlineTypography(script)[promoType]}
   ${({ promoHasImage }) =>
     !promoHasImage &&
-    `display: inline;`} /* Needed for aligning Media Indicator with Headline */
+    `display: inline-block;`} /* Needed for aligning Media Indicator with Headline */
 `;
 
 Headline.propTypes = {
@@ -198,11 +198,13 @@ Summary.defaultProps = {
   promoType: 'regular',
 };
 
+// `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 export const Link = styled.a`
   position: static;
   color: ${C_EBON};
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 
   &:before {
     bottom: 0;

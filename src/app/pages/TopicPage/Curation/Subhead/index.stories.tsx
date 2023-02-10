@@ -5,6 +5,7 @@ import { withServicesKnob } from '../../../../legacy/psammead/psammead-storybook
 
 import services from '../../../../../server/utilities/serviceConfigs';
 import { Services, Variants } from '../../../../models/types/global';
+import ThemeProvider from '../../../../components/ThemeProvider';
 
 import Subheading from '.';
 
@@ -15,21 +16,25 @@ interface Props {
 
 const Component = ({ service, variant }: Props) => {
   return (
-    <ServiceContextProvider service={service} variant={variant}>
-      <Subheading>
-        {services[service][variant].translations.relatedContent}
-      </Subheading>
-    </ServiceContextProvider>
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <Subheading>
+          {services[service][variant].translations.relatedContent}
+        </Subheading>
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 
 const WithLink = ({ service, variant }: Props) => {
   return (
-    <ServiceContextProvider service={service} variant={variant}>
-      <Subheading link="https://bbc.com">
-        {services[service][variant].translations.relatedContent}
-      </Subheading>
-    </ServiceContextProvider>
+    <ThemeProvider service={service} variant={variant}>
+      <ServiceContextProvider service={service} variant={variant}>
+        <Subheading link="https://bbc.com">
+          {services[service][variant].translations.relatedContent}
+        </Subheading>
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 
