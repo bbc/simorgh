@@ -7,13 +7,16 @@ import Subheading from './Subhead';
 import { COMPONENT_NAMES, VISUAL_STYLE, VISUAL_PROMINENCE } from '../constants';
 import getComponent from '../getComponent';
 
-// eslint-disable-next-line no-unused-vars
 const { SIMPLE_CURATION_GRID, HIERARCHICAL_CURATION_GRID } = COMPONENT_NAMES;
 
-// Maps a visual style and prominence to a component that renders that curation
-const components = {
-  SIMPLE_CURATION_GRID: CurationGrid,
-  HIERARCHICAL_CURATION_GRID: HierarchicalGrid,
+const getComponentToRender = componentName => {
+  switch (componentName) {
+    case HIERARCHICAL_CURATION_GRID:
+      return HierarchicalGrid;
+    case SIMPLE_CURATION_GRID:
+    default:
+      return CurationGrid;
+  }
 };
 
 const Curation = ({
@@ -31,8 +34,7 @@ const Curation = ({
 
   const componentName = getComponent(visualStyle, visualProminence);
 
-  // Look up component map for an entry which matches componentName. If not foind, default to CurationGrid
-  const Component = components[componentName] || CurationGrid;
+  const Component = getComponentToRender(componentName);
 
   const createID = titleText => {
     return titleText.replaceAll(' ', '-');
