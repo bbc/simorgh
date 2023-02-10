@@ -41,7 +41,11 @@ const MessageBanner = ({
           </Paragraph>
         </div>
         <div css={styles.flex}>
-          <a href={link} css={styles.linkBackground} className="focusIndicatorInvert">
+          <a
+            href={link}
+            css={styles.linkBackground}
+            className="focusIndicatorInvert"
+          >
             <div css={styles.linkAndChevron}>
               <Text size="pica" fontVariant="sansBold" css={styles.link}>
                 {linkText}
