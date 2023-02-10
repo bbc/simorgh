@@ -20,6 +20,7 @@ import {
   C_EBON,
   C_GHOST,
 } from '#psammead/psammead-styles/src/colours';
+import { BLACK } from '#app/components/ThemeProvider/palette';
 import {
   getDoublePica,
   getLongPrimer,
@@ -38,6 +39,7 @@ import {
   GEL_SPACING_QUAD,
 } from '#psammead/gel-foundations/src/spacings';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 // Transparent border is to show the top of the wrapper and button border in high-contrast mode
 const transparentBorderHeight = '0.0625rem';
@@ -173,6 +175,12 @@ const ListItem = styled.li`
     &:hover,
     &:focus {
       text-decoration: underline;
+    }
+
+    // Applies focus indicator black outline.
+    // Overrides dotted Mozilla focus ring applied by Normalize global styles.
+    &:focus-visible {
+      outline: ${focusIndicatorThickness} solid ${BLACK};
     }
 
     ${hoverFocusStyles}

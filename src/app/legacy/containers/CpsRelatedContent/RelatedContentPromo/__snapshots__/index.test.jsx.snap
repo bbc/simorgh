@@ -226,6 +226,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -361,7 +362,7 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
         >
           <a
             aria-labelledby="promo-pidgin44508901-1"
-            class="emotion-16 emotion-17"
+            class="focusIndicatorDisplayInlineBlock emotion-16 emotion-17"
             href="/pidgin/44508901"
           >
             <span

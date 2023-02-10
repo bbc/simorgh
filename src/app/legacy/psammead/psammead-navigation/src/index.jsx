@@ -9,6 +9,7 @@ import {
   C_GREY_3,
   C_POSTBOX,
 } from '#psammead/psammead-styles/src/colours';
+import { BLACK } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -23,6 +24,7 @@ import { getPica } from '#psammead/gel-foundations/src/typography';
 import { scriptPropType } from '#psammead/gel-foundations/src/prop-types';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
+import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 
 const SPACING_AROUND_NAV_ITEMS = `${NAV_BAR_TOP_BOTTOM_SPACING}rem`; // 12px
 const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px
@@ -68,6 +70,7 @@ const StyledLink = styled.a`
   text-decoration: none;
   display: inline-block;
   padding: ${SPACING_AROUND_NAV_ITEMS} 0.25rem;
+  outline: none;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     padding: ${SPACING_AROUND_NAV_ITEMS} ${GEL_SPACING};
@@ -89,8 +92,16 @@ const StyledLink = styled.a`
     ${({ brandHighlightColour }) =>
       `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
     top: 0;
+    border: ${focusIndicatorThickness} solid ${BLACK};
+  }
+
+  // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
+  &:focus-visible::after {
+    ${ListItemBorder}
     ${({ brandHighlightColour }) =>
-      `border: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
+      `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
+    top: 0;
+    border: ${focusIndicatorThickness} solid ${BLACK};
   }
 `;
 
@@ -205,6 +216,7 @@ export const NavigationLi = ({
           brandHighlightColour={C_POSTBOX}
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
+          className="focusIndicatorRemove"
           {...props}
         >
           <CurrentLink
@@ -223,6 +235,7 @@ export const NavigationLi = ({
           service={service}
           brandForegroundColour={brandForegroundColour}
           brandHighlightColour={C_POSTBOX}
+          className="focusIndicatorRemove"
           {...props}
         >
           {link}

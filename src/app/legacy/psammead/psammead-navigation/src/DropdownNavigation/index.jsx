@@ -9,6 +9,7 @@ import {
   C_GREY_10,
   C_GREY_3,
 } from '#psammead/psammead-styles/src/colours';
+import { BLACK } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -181,14 +182,13 @@ DropdownLi.defaultProps = {
   dir: 'ltr',
 };
 
-const iconBorder = `
+const iconBorderPosition = `
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  border: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
 `;
 
 // The sideLength of the button should be
@@ -219,7 +219,8 @@ const MenuButton = styled(Button)`
     cursor: pointer;
     box-shadow: inset 0 0 0 ${GEL_SPACING_HLF} ${C_WHITE};
     ::after {
-      ${iconBorder};
+      ${iconBorderPosition};
+      border: ${GEL_SPACING_HLF} solid ${BLACK};
     }
   }
 
@@ -249,6 +250,7 @@ export const CanonicalMenuButton = ({
     aria-expanded={isOpen ? 'true' : 'false'}
     dir={dir}
     script={script}
+    className="focusIndicatorRemove"
   >
     {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>
@@ -298,6 +300,7 @@ export const AmpMenuButton = ({ announcedText, onToggle, dir, script }) => (
       on={`tap:${expandedHandler},${onToggle}`}
       dir={dir}
       script={script}
+      className="focusIndicatorRemove"
     >
       {cloneElement(navigationIcons.hamburger, {
         'data-amp-bind-hidden': 'menuState.expanded',

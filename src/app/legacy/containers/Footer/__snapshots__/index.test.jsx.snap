@@ -114,6 +114,17 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   margin-bottom: -0.25rem;
 }
 
+.emotion-7:focus-visible::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0.1875rem;
+  bottom: 0;
+  right: -0.1875rem;
+  border-top: 0.25rem solid #FFFFFF;
+  outline: 0.25rem solid #FFFFFF;
+}
+
 .emotion-9 {
   box-sizing: content-box;
   color: #FFFFFF;
@@ -307,6 +318,10 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   padding: 1rem 0;
 }
 
+.emotion-51 a {
+  padding: 0;
+}
+
 .emotion-53 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -337,7 +352,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
       >
         <a
           aria-labelledby="BrandLink-footer"
-          class="emotion-7 emotion-8"
+          class="focusIndicatorRemove emotion-7 emotion-8"
           href="/news"
           id="footer"
         >
@@ -383,7 +398,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
             class="emotion-19 emotion-20"
           >
             <a
-              class="emotion-21 emotion-22"
+              class="focusIndicatorInvert emotion-21 emotion-22"
               href="https://www.bbc.com/news/help-41670342"
             >
               Why you can trust the BBC
@@ -394,7 +409,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-21 emotion-22"
+              class="focusIndicatorInvert emotion-21 emotion-22"
               href="https://www.bbc.com/terms"
             >
               Terms of Use
@@ -405,7 +420,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-21 emotion-22"
+              class="focusIndicatorInvert emotion-21 emotion-22"
               href="https://www.bbc.co.uk/aboutthebbc/"
             >
               About the BBC
@@ -416,7 +431,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-21 emotion-22"
+              class="focusIndicatorInvert emotion-21 emotion-22"
               href="https://www.bbc.com/privacy/"
             >
               Privacy Policy
@@ -427,7 +442,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-21 emotion-22"
+              class="focusIndicatorInvert emotion-21 emotion-22"
               href="https://www.bbc.com/usingthebbc/cookies/"
             >
               Cookies
@@ -438,7 +453,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-21 emotion-22"
+              class="focusIndicatorInvert emotion-21 emotion-22"
               href="https://www.bbc.com/accessibility/"
             >
               Accessibility Help
@@ -449,7 +464,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-21 emotion-22"
+              class="focusIndicatorInvert emotion-21 emotion-22"
               href="https://www.bbc.com/contact/"
             >
               Contact the BBC
@@ -460,7 +475,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
             role="listitem"
           >
             <a
-              class="emotion-21 emotion-22"
+              class="focusIndicatorInvert emotion-21 emotion-22"
               href="https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/"
               lang="en-GB"
             >
@@ -480,7 +495,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
           3000 BBC. The BBC is not responsible for the content of external sites.
            
           <a
-            class="emotion-53 emotion-22"
+            class="focusIndicatorInvert emotion-53 emotion-22"
             href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
           >
             Read about our approach to external linking.

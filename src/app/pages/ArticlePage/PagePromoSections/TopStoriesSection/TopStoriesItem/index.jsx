@@ -73,9 +73,9 @@ const TopStoriesItem = forwardRef(
           eventTrackingData={eventTrackingData}
         >
           <Promo.ContentWrapper>
-            {mediaType && <Promo.MediaIndicator />}
             <Title as={titleTag} script={script}>
               <Promo.Link>
+                {mediaType && <Promo.MediaIndicator />}
                 {isLive ? (
                   <Promo.LiveLabel
                     liveText={liveLabel}
