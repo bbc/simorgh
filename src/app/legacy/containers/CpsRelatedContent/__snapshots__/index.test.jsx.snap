@@ -636,6 +636,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -770,7 +771,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               >
                 <a
                   aria-labelledby="promo-rel-content-pidgin44508901-1"
-                  class="emotion-37 emotion-38"
+                  class="focusIndicatorDisplayInlineBlock emotion-37 emotion-38"
                   href="/pidgin/44508901"
                 >
                   <span
@@ -838,7 +839,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               >
                 <a
                   aria-labelledby="promo-rel-content-pidgintori46975713-2"
-                  class="emotion-37 emotion-38"
+                  class="focusIndicatorDisplayInlineBlock emotion-37 emotion-38"
                   href="/pidgin/tori-46975713"
                 >
                   <span
@@ -903,7 +904,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               >
                 <a
                   aria-labelledby="promo-rel-content-pidgintori42494678-3"
-                  class="emotion-37 emotion-38"
+                  class="focusIndicatorDisplayInlineBlock emotion-37 emotion-38"
                   href="/pidgin/tori-42494678"
                 >
                   <span
@@ -1480,6 +1481,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -1651,7 +1653,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               >
                 <a
                   aria-labelledby="promo-pidgin44508901-1"
-                  class="emotion-35 emotion-36"
+                  class="focusIndicatorDisplayInlineBlock emotion-35 emotion-36"
                   href="/pidgin/44508901"
                 >
                   <span

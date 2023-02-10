@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
+import { focusIndicatorThickness } from '../ThemeProvider/focusIndicator';
 
 export default {
   parent: ({ palette }: Theme) =>
@@ -47,6 +48,12 @@ export default {
         color: palette.WHITE,
         border: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
         textDecoration: 'underline',
+      },
+
+      // Applies focus indicator black outline.
+      // Overrides dotted Mozilla focus ring applied by Normalize global styles.
+      '&:focus-visible': {
+        outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
       },
     }),
 };

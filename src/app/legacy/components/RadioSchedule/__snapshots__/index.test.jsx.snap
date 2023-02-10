@@ -382,6 +382,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-24:before {
@@ -438,7 +439,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 
 .emotion-32 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -469,6 +470,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -631,7 +633,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
 
 .emotion-155 {
   color: #6E6E73;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -765,7 +767,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
           >
             <a
               aria-labelledby="scheduleItem-0"
-              class="emotion-24 emotion-25"
+              class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
@@ -906,7 +908,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
           >
             <a
               aria-labelledby="scheduleItem-1"
-              class="emotion-24 emotion-25"
+              class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
@@ -1036,7 +1038,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
           >
             <a
               aria-labelledby="scheduleItem-2"
-              class="emotion-24 emotion-25"
+              class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
@@ -1626,6 +1628,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-24:before {
@@ -1682,7 +1685,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 
 .emotion-32 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1713,6 +1716,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -1875,7 +1879,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
 
 .emotion-155 {
   color: #6E6E73;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2009,7 +2013,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
           >
             <a
               aria-labelledby="scheduleItem-0"
-              class="emotion-24 emotion-25"
+              class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
@@ -2150,7 +2154,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
           >
             <a
               aria-labelledby="scheduleItem-1"
-              class="emotion-24 emotion-25"
+              class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
@@ -2280,7 +2284,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
           >
             <a
               aria-labelledby="scheduleItem-2"
-              class="emotion-24 emotion-25"
+              class="focusIndicatorDisplayBlock emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span

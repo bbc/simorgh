@@ -1307,7 +1307,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 >
                   Шу йил апрел ойида Ўзбекистон Президенти Ислом 
                   <a
-                    class="emotion-53 emotion-54"
+                    class="focusIndicatorReducedWidth emotion-53 emotion-54"
                     href="/uzbek"
                   >
                     Каримов ўзининг
@@ -1425,7 +1425,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     role="listitem"
                   >
                     <a
-                      class="emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -1436,7 +1436,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     role="listitem"
                   >
                     <a
-                      class="emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -1447,7 +1447,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     role="listitem"
                   >
                     <a
-                      class="emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -1458,7 +1458,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     role="listitem"
                   >
                     <a
-                      class="emotion-53 emotion-54"
+                      class="focusIndicatorReducedWidth emotion-53 emotion-54"
                       href="/uzbek"
                     >
                       Ўзбек деҳқонининг косаси нега оқармайди
@@ -3514,6 +3514,7 @@ exports[`Media Asset Page should render component 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -3809,7 +3810,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3820,7 +3821,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3831,7 +3832,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3842,7 +3843,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3853,7 +3854,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3864,7 +3865,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3897,7 +3898,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3908,7 +3909,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3919,7 +3920,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/afrique/23248423"
                     >
                       &lt;Media Asset Page&gt;
@@ -3930,7 +3931,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3941,7 +3942,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3952,7 +3953,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="listitem"
                   >
                     <a
-                      class="emotion-62 emotion-63"
+                      class="focusIndicatorReducedWidth emotion-62 emotion-63"
                       href="/pidgin"
                     >
                       this is the link text
@@ -3984,7 +3985,7 @@ exports[`Media Asset Page should render component 1`] = `
                   </i>
                   dolore "eu fugiat nulla" pariatur. 
                   <a
-                    class="emotion-62 emotion-63"
+                    class="focusIndicatorReducedWidth emotion-62 emotion-63"
                     href="/pidgin"
                   >
                     Excepteur
@@ -4090,7 +4091,7 @@ exports[`Media Asset Page should render component 1`] = `
                 >
                   Lorem ipsum
                   <a
-                    class="emotion-62 emotion-63"
+                    class="focusIndicatorReducedWidth emotion-62 emotion-63"
                     href="/pidgin"
                   >
                      dolor sit amet
@@ -4374,7 +4375,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgintori23145776-1"
-                            class="emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/tori-23145776"
                           >
                             <span
@@ -4439,7 +4440,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgintori23143754-2"
-                            class="emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/tori-23143754"
                           >
                             <span
@@ -4521,7 +4522,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidgin23146654-3"
-                            class="emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/23146654"
                           >
                             <span
@@ -4627,7 +4628,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <a
                             aria-labelledby="promo-rel-content-pidginmedia23147054-4"
-                            class="emotion-262 emotion-263"
+                            class="focusIndicatorDisplayInlineBlock emotion-262 emotion-263"
                             href="/pidgin/media-23147054"
                           >
                             <span
