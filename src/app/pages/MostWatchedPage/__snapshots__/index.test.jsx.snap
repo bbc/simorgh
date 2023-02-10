@@ -667,6 +667,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -845,7 +846,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     >
                       <a
                         aria-labelledby="promo-rel-content-pidginmedia53580248-1"
-                        class="emotion-40 emotion-41"
+                        class="focusIndicatorDisplayInlineBlock emotion-40 emotion-41"
                         href="/pidgin/media-53580248"
                       >
                         <span
@@ -952,7 +953,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     >
                       <a
                         aria-labelledby="promo-rel-content-pidginmedia53591139-2"
-                        class="emotion-40 emotion-41"
+                        class="focusIndicatorDisplayInlineBlock emotion-40 emotion-41"
                         href="/pidgin/media-53591139"
                       >
                         <span
@@ -1059,7 +1060,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     >
                       <a
                         aria-labelledby="promo-rel-content-pidgintori53509788-3"
-                        class="emotion-40 emotion-41"
+                        class="focusIndicatorDisplayInlineBlock emotion-40 emotion-41"
                         href="/pidgin/tori-53509788"
                       >
                         <span

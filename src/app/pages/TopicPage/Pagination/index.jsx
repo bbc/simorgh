@@ -136,6 +136,7 @@ const A = styled.a`
 const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
   <A
     href={`?page=${pageNumber}`}
+    className="focusIndicatorOutlineBlack"
     {...(isActive && { isActive: true, 'aria-current': 'page' })}
     {...rest}
   >

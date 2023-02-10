@@ -58,7 +58,7 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
   const hasMounted = useRef(false);
   const routeProps = getRouteProps(pathname);
   const previousPath = useRef(null);
-  const { showAdsBasedOnLocation, toggles } = initialData;
+  const { showAdsBasedOnLocation, toggles, mvtExperiments } = initialData;
   const [state, setState] = useState(
     mapToState({
       pathname,
@@ -102,6 +102,7 @@ export const App = ({ location, initialData, bbcOrigin, history }) => {
     previousPath: previousPath.current,
     loading: routeHasChanged,
     showAdsBasedOnLocation,
+    mvtExperiments,
   });
 };
 

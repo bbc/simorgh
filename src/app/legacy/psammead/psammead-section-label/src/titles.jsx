@@ -48,6 +48,7 @@ const SectionLabelLink = styled.a`
 SectionLabelLink.propTypes = {
   href: string.isRequired,
   labelId: string.isRequired,
+  className: string,
 };
 
 const FlexRow = styled.span`
@@ -158,7 +159,11 @@ export const LinkTitle = ({
   service,
   backgroundColor,
 }) => (
-  <SectionLabelLink href={href} labelId={labelId}>
+  <SectionLabelLink
+    href={href}
+    labelId={labelId}
+    className="focusIndicatorDisplayBlock"
+  >
     <FlexColumn>
       <FlexRow role="text">
         <Title
