@@ -3,6 +3,7 @@ import { bool, element, string, number, object } from 'prop-types';
 import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
+import mvtExperimentPropType from '#models/propTypes/mvtExperiment';
 
 // context providers
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -27,6 +28,7 @@ const WithContexts = Component => {
       timeOnServer,
       pageData,
       showAdsBasedOnLocation,
+      mvtExperiments,
       isNextJs,
     } = props;
 
@@ -49,6 +51,7 @@ const WithContexts = Component => {
             variant={variant}
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}
+            mvtExperiments={mvtExperiments}
             isNextJs={isNextJs}
           >
             <EventTrackingContextProvider pageData={pageData}>
@@ -77,6 +80,7 @@ const WithContexts = Component => {
     showAdsBasedOnLocation: bool,
     // eslint-disable-next-line react/forbid-prop-types
     toggles: object.isRequired,
+    mvtExperiments: mvtExperimentPropType,
     isNextJs: bool,
   };
 
@@ -89,6 +93,7 @@ const WithContexts = Component => {
     variant: null,
     timeOnServer: null,
     showAdsBasedOnLocation: false,
+    mvtExperiments: null,
     isNextJs: false,
   };
 
