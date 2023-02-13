@@ -47,7 +47,7 @@ describe('Storybook Sidebar Labels', () => {
       );
     });
 
-    const title = screen.getByText(', Component Health, complete');
+    const title = screen.getByText(', Component Health, complete.');
     expect(title).toBeInTheDocument();
   });
 
@@ -71,7 +71,7 @@ describe('Storybook Sidebar Labels', () => {
       );
     });
 
-    const title = screen.getByText(', Component Health, incomplete');
+    const title = screen.getByText(', Component Health, incomplete.');
     expect(title).toBeInTheDocument();
   });
 
@@ -80,7 +80,7 @@ describe('Storybook Sidebar Labels', () => {
       render(<HealthFactorsSidebarLabel metadata={null} name="test_name" />);
     });
 
-    const title = screen.getByText(', Component Health, missing');
+    const title = screen.getByText(', Component Health, missing.');
     expect(title).toBeInTheDocument();
   });
 
