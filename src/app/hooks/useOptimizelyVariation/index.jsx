@@ -24,6 +24,7 @@ const useClientSideOptimizelyVariation = (
   return variation;
 };
 
+// isClientSide must be treated as a contant throughout the entire app.
 const useOptimizelyVariation = (
   experimentId,
   overrideAttributes = {},
