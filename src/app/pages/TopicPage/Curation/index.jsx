@@ -1,18 +1,22 @@
 import React from 'react';
 import { arrayOf, oneOf, shape, string, number } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from '../HierarchicalGrid';
 import Subheading from './Subhead';
-import { VISUAL_PROMINENCE, VISUAL_STYLE } from '../constants';
+import { COMPONENT_NAMES, VISUAL_STYLE, VISUAL_PROMINENCE } from '../constants';
+import getComponent from '../getComponent';
 
-// Maps a visual style and prominence to a component that renders that curation
-const components = {
-  [VISUAL_STYLE.NONE]: {
-    [VISUAL_PROMINENCE.NORMAL]: CurationGrid,
-    [VISUAL_PROMINENCE.HIGH]: HierarchicalGrid,
-  },
+const { SIMPLE_CURATION_GRID, HIERARCHICAL_CURATION_GRID } = COMPONENT_NAMES;
+
+const getComponentToRender = componentName => {
+  switch (componentName) {
+    case HIERARCHICAL_CURATION_GRID:
+      return HierarchicalGrid;
+    case SIMPLE_CURATION_GRID:
+    default:
+      return CurationGrid;
+  }
 };
 
 const Curation = ({
@@ -26,13 +30,11 @@ const Curation = ({
   position,
   curationLength,
 }) => {
-  if (visualStyle === VISUAL_STYLE.BANNER) return null;
   if (!promos.length) return null;
-  const Component = pathOr(
-    CurationGrid,
-    [visualStyle, visualProminence],
-    components,
-  );
+
+  const componentName = getComponent(visualStyle, visualProminence);
+
+  const Component = getComponentToRender(componentName);
 
   const createID = titleText => {
     return titleText.replaceAll(' ', '-');

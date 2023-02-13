@@ -20,6 +20,9 @@ import { VISUAL_STYLE, COMPONENT_NAMES } from './constants';
 import Curation from './Curation';
 import getComponent from './getComponent';
 
+const { NONE } = VISUAL_STYLE;
+const { MESSAGE_BANNER, BILLBOARD } = COMPONENT_NAMES;
+
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
   const { title, description, imageData, curations, pageCount, activePage } =
@@ -96,7 +99,7 @@ const TopicPage = ({ pageData }) => {
               title: curationTitle,
               link,
               position,
-              visualStyle = VISUAL_STYLE.NONE,
+              visualStyle = NONE,
             }) => {
               const component = getComponent(visualStyle, visualProminence);
 
@@ -104,7 +107,7 @@ const TopicPage = ({ pageData }) => {
                 <React.Fragment key={`${curationId}-${position}`}>
                   {(() => {
                     switch (component) {
-                      case COMPONENT_NAMES.MESSAGE_BANNER:
+                      case MESSAGE_BANNER:
                         return (
                           <MessageBanner
                             heading={curationTitle}
@@ -115,6 +118,8 @@ const TopicPage = ({ pageData }) => {
                             image={summaries[0].imageUrl}
                           />
                         );
+                      case BILLBOARD:
+                        return null;
                       default:
                         return (
                           <Curation
