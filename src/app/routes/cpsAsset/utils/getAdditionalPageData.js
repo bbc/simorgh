@@ -150,7 +150,9 @@ const pageTypeUrls = async (
         },
       ];
     case ARTICLE_PAGE:
-      return getRecommendations(service, assetUri);
+      return (await hasRecommendations(service, variant, pageData))
+        ? getRecommendations(service, assetUri)
+        : [];
     default:
       return null;
   }
