@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useDecision } from '@optimizely/react-sdk';
 
+const useTrueFunction = () => {
+  return true;
+};
+
 const useClientSideOptimizelyVariation = (
   experimentId,
   overrideAttributes = {},
@@ -26,11 +30,7 @@ const useClientSideOptimizelyVariation = (
 
 const isClientSide = false;
 
-const useOptimizelyVariation = (experimentId, overrideAttributes = {}) => {
-  if (isClientSide) {
-    return useClientSideOptimizelyVariation(experimentId, overrideAttributes);
-  }
-  return true;
-};
+const useOptimizelyVariation = () =>
+  isClientSide ? useClientSideOptimizelyVariation : useTrueFunction;
 
 export default useOptimizelyVariation;
