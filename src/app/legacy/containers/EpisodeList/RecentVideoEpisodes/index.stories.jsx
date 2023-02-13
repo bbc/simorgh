@@ -8,20 +8,23 @@ import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { afrique, pashto } from './fixtures';
 import RecentVideoEpisodes from '.';
+import ThemeProvider from '../../../../components/ThemeProvider';
 
 /* eslint-disable react/prop-types */
 const Component = ({ masterBrand, episodes, service }) => (
-  <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      service={service}
-      pageType="media"
-      pathname={`/${service}`}
-      isAmp={false}
-      // should amp come from context?
-    >
-      <RecentVideoEpisodes masterBrand={masterBrand} episodes={episodes} />
-    </RequestContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service={service}>
+    <ServiceContextProvider service={service}>
+      <RequestContextProvider
+        service={service}
+        pageType="media"
+        pathname={`/${service}`}
+        isAmp={false}
+        // should amp come from context?
+      >
+        <RecentVideoEpisodes masterBrand={masterBrand} episodes={episodes} />
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 const fixtures = { afrique, pashto };

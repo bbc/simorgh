@@ -46,6 +46,7 @@ const SummaryWrapper = styled.p`
   ${({ service }) => service && getSansRegular(service)}
   ${({ script }) => script && getBrevier(script)}
   color: ${C_METAL};
+  padding-top: ${GEL_SPACING};
   padding-bottom: ${GEL_SPACING_DBL};
   margin: 0; /* Reset */
 `;

@@ -170,7 +170,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
         This is some text.
       </b>
       <a
-        class="emotion-4 emotion-5"
+        class="focusIndicatorReducedWidth emotion-4 emotion-5"
         href="/bbc-test"
       >
         Some text
@@ -360,7 +360,7 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
       >
         <a
           aria-label="چیسربرگرundefined"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorReducedWidth emotion-6 emotion-7"
           href="https://google.com"
         >
           چیسربرگر
