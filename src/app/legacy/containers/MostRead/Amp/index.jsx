@@ -37,7 +37,6 @@ const rankTranslationScript = (endpoint, service) => {
           item.promo.headlines.shortHeadline = item.promo.headlines.seoHeadline;
         }
 
-        // Works but seems bad to just rename this?
         if(!item.promo.locators.assetUri) {
           item.promo.locators.assetUri = item.promo.locators.canonicalUrl;
         }
@@ -75,19 +74,6 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
     ['socialEmbed', 'fallback', 'text'],
     translations,
   );
-
-  // console.log('innerscript', onlyinnerscript);
-
-  // doesn't work as this onlyinnerscript is a template literal
-  const link = pathOr(
-    '{{promo.locators.assetUri}}',
-    ['promo', 'locators', 'canonicalUrl'],
-    onlyinnerscript,
-  );
-
-  console.log('Izzy', link);
-
-  const condition = true;
 
   return (
     <amp-script id="dataFunctions" script="local-script">
@@ -147,11 +133,6 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
                 script={script}
                 title="{{promo.headlines.shortHeadline}}"
                 href="{{promo.locators.assetUri}}"
-                // href={
-                //   condition
-                //     ? '{{promo.locators.assetUri}}'
-                //     : '{{promo.locators.canonicalUrl}}'
-                // }
                 size={size}
               />
             </MostReadItemWrapper>
