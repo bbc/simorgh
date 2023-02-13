@@ -16,7 +16,6 @@ import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank, { serviceNumerals } from '../Canonical/Rank';
 import generateCSPHash from '../utilities/generateCPSHash';
 
-// should I rename this? It's doing other data formatting as well.
 const rankTranslationScript = (endpoint, service) => {
   const translation = serviceNumerals(service);
   return `
