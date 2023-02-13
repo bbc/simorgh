@@ -24,17 +24,13 @@ const useClientSideOptimizelyVariation = (
   return variation;
 };
 
-// isClientSide must be treated as a contant throughout the entire app.
-const useOptimizelyVariation = (
-  experimentId,
-  overrideAttributes = {},
-  isClientSide = false,
-) => {
-    if(isClientSide){
-      return useClientSideOptimizelyVariation(experimentId, overrideAttributes);
-    }
-    return true;
-}
+export const isClientSide = false;
 
+const useOptimizelyVariation = (experimentId, overrideAttributes = {}) => {
+  if (isClientSide) {
+    return useClientSideOptimizelyVariation(experimentId, overrideAttributes);
+  }
+  return true;
+};
 
 export default useOptimizelyVariation;
