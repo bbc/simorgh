@@ -13,7 +13,7 @@ describe('useOptimizelyVariation', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, true, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation('correct_experiment_id'),
+      useOptimizelyVariation('correct_experiment_id', {}, true),
     );
 
     expect(result.current).toEqual('control');
@@ -23,7 +23,7 @@ describe('useOptimizelyVariation', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, false, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation('correct_experiment_id'),
+      useOptimizelyVariation('correct_experiment_id', {}, true),
     );
 
     expect(result.current).toEqual(null);
@@ -33,7 +33,7 @@ describe('useOptimizelyVariation', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, true, true]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation('correct_experiment_id'),
+      useOptimizelyVariation('correct_experiment_id', {}, true),
     );
 
     expect(result.current).toEqual(null);
@@ -43,7 +43,7 @@ describe('useOptimizelyVariation', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, true, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation('wrong_experiment_id'),
+      useOptimizelyVariation('wrong_experiment_id', {}, true),
     );
 
     expect(result.current).toEqual(null);
@@ -52,8 +52,19 @@ describe('useOptimizelyVariation', () => {
   it('should return a variation of null when the experiment id is null', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, true, false]);
 
-    const { result } = renderHook(() => useOptimizelyVariation(null));
+    const { result } = renderHook(() => useOptimizelyVariation(null, {}, true));
 
     expect(result.current).toEqual(null);
+  });
+
+  it('should not use useDecision hook when client side optimizely is disabled', () => {
+    useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, true, false]);
+
+    const { result } = renderHook(() =>
+      useOptimizelyVariation('correct_experiment_id', {}, false),
+    );
+
+    expect(result.current).toEqual(true);
+    expect(useDecisionSpy).toBeCalledTimes(0);
   });
 });
