@@ -24,7 +24,7 @@ const useClientSideOptimizelyVariation = (
   return variation;
 };
 
-export const isClientSide = false;
+const isClientSide = false;
 
 const useOptimizelyVariation = (experimentId, overrideAttributes = {}) => {
   if (isClientSide) {
