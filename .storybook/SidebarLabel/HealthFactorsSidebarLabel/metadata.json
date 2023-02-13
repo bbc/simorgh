@@ -1,7 +1,7 @@
 {
   "lastUpdated": {
-    "day": 30,
-    "month": "January",
+    "day": 13,
+    "month": "February",
     "year": 2023
   },
   "uxAccessibilityDoc": {
@@ -19,10 +19,10 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "",
-      "label": ""
+      "url": "https://docs.google.com/spreadsheets/d/1IZa2gyYyefXxu7OZzzV7-uXQBc6ft9A1kSVuq5j2v5U/edit#gid=2020681037",
+      "label": "Accessibility swarm results"
     }
   }
 }

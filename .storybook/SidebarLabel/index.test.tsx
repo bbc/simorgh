@@ -53,7 +53,7 @@ describe('Storybook Sidebar Labels', () => {
     });
 
     const text = screen.getByText('HealthFactors');
-    const sidbarText = screen.queryByText(', Component Health: incomplete');
+    const sidbarText = screen.queryByText(', Component Health, incomplete');
     expect(sidbarText).toBeNull();
     expect(text).toBeInTheDocument();
   });
@@ -76,7 +76,7 @@ describe('Storybook Sidebar Labels', () => {
       );
     });
     const text = screen.getByText('HealthFactors');
-    const sidbarText = screen.queryByText(', Component Health: incomplete');
+    const sidbarText = screen.queryByText(', Component Health, incomplete');
     expect(sidbarText).toBeNull();
     expect(text).toBeInTheDocument();
   });
@@ -100,7 +100,7 @@ describe('Storybook Sidebar Labels', () => {
       );
     });
     const text = screen.getByText('HealthFactors');
-    const sidbarText = screen.queryByText(', Component Health: incomplete');
+    const sidbarText = screen.queryByText(', Component Health, incomplete');
     expect(sidbarText).toBeNull();
     expect(text).toBeInTheDocument();
   });
@@ -128,7 +128,7 @@ describe('Storybook Sidebar Labels', () => {
       );
     });
     const text = screen.getByText('HealthFactors');
-    const sidbarText = screen.queryByText(', Component Health: incomplete');
+    const sidbarText = screen.queryByText(', Component Health, incomplete');
     expect(sidbarText).toBeNull();
     expect(text).toBeInTheDocument();
   });
@@ -156,7 +156,7 @@ describe('Storybook Sidebar Labels', () => {
         />,
       );
     });
-    const text = screen.getByText(', Component Health: incomplete');
+    const text = screen.getByText(', Component Health, incomplete');
     expect(text).toBeInTheDocument();
   });
 });

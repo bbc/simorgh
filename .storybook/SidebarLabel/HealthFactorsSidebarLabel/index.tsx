@@ -37,7 +37,7 @@ const HealthFactorsSidebarLabel = ({ metadata, name }) => {
           role="text"
         >
           {name}
-          <VisuallyHiddenText>{`, Component Health: ${status}`}</VisuallyHiddenText>
+          <VisuallyHiddenText>{`, Component Health, ${status}.`}</VisuallyHiddenText>
           <span css={styles.iconWrapper}>{actionIcon}</span>
         </span>
       </div>
