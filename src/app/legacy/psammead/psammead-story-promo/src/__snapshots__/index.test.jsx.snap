@@ -101,6 +101,7 @@ exports[`StoryPromo - Leading Story should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-6:before {
@@ -356,6 +357,7 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-6:before {
@@ -745,6 +747,7 @@ exports[`StoryPromo - Top Story should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1038,6 +1041,7 @@ exports[`StoryPromo - Top Story should render with Media Indicator correctly 1`]
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-20:before {
@@ -1313,6 +1317,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1406,6 +1411,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1542,7 +1548,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
           >
             <a
               aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-              class="emotion-22 emotion-23"
+              class="focusIndicatorDisplayInlineBlock emotion-22 emotion-23"
               href="/hausa/labarai-48916590"
             >
               <div
@@ -1598,7 +1604,7 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
             role="listitem"
           >
             <a
-              class="emotion-22 emotion-23"
+              class="focusIndicatorDisplayInlineBlock emotion-22 emotion-23"
               href="/hausa/labarai-42837051"
             >
               <span>
@@ -1746,6 +1752,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1833,6 +1840,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1964,7 +1972,7 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
         >
           <a
             aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-            class="emotion-20 emotion-21"
+            class="focusIndicatorDisplayInlineBlock emotion-20 emotion-21"
             href="/hausa/labarai-48916590"
           >
             <div
@@ -2138,6 +2146,7 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -2399,6 +2408,7 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -2660,6 +2670,7 @@ exports[`StoryPromo should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -2953,6 +2964,7 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-20:before {
@@ -3288,6 +3300,7 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-20:before {

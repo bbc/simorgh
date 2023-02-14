@@ -52,6 +52,7 @@ const input = {
   previousPath: '/previous-path',
   variant: 'simp',
   showAdsBasedOnLocation: true,
+  mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
 };
 
 const expectedOutput = {
@@ -78,6 +79,7 @@ const expectedOutput = {
   showAdsBasedOnLocation: input.showAdsBasedOnLocation,
   service: 'service',
   pathname: '/current-path',
+  mvtExperiments: input.mvtExperiments,
 };
 
 describe('RequestContext', () => {

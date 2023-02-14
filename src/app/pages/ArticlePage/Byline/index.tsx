@@ -80,6 +80,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
               <a
                 css={[BylineCss.link, BylineCss.authorLink]}
                 href={authorTopicUrl}
+                className="focusIndicatorReducedWidth"
               >
                 <Text
                   className="byline__link-text"
@@ -121,6 +122,7 @@ const Byline = ({ blocks, children }: PropsWithChildren<Props>) => {
           <li>
             <a
               css={[BylineCss.link, BylineCss.twitterLink]}
+              className="focusIndicatorReducedWidth"
               href={twitterLink}
               aria-labelledby="byline-twitter-link"
             >

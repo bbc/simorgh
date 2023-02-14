@@ -112,6 +112,7 @@ exports[`Bulletin should render audio correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -280,7 +281,7 @@ exports[`Bulletin should render audio correctly 1`] = `
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -448,6 +449,7 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -616,7 +618,7 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -785,6 +787,7 @@ exports[`Bulletin should render live audio correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -962,7 +965,7 @@ exports[`Bulletin should render live audio correctly 1`] = `
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -1139,6 +1142,7 @@ exports[`Bulletin should render live video correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1316,7 +1320,7 @@ exports[`Bulletin should render live video correctly 1`] = `
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -1497,6 +1501,7 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1665,7 +1670,7 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
       >
         <a
           aria-labelledby="bulletin-null"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -1833,6 +1838,7 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1970,7 +1976,7 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
@@ -2135,6 +2141,7 @@ exports[`Bulletin should render video correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -2303,7 +2310,7 @@ exports[`Bulletin should render video correctly 1`] = `
       >
         <a
           aria-labelledby="bulletin-httpsbbccouk"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://bbc.co.uk"
         >
           <span
