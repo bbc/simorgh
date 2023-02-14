@@ -1,153 +1,264 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:marathi/media-23127353",
-    "locators": {
-      "assetUri": "/marathi/media-23127353",
-      "cpsUrn": "urn:bbc:content:assetUri:marathi/media-23127353",
-      "curie": "http://www.bbc.co.uk/asset/4dadc808-3e48-314a-99fb-11f6418379f9",
-      "assetId": "23127353"
-    },
-    "type": "MAP",
-    "createdBy": "marathi-v6",
-    "language": "mr",
-    "lastUpdated": 1588336097473,
-    "firstPublished": 1495468060000,
-    "lastPublished": 1495468060000,
-    "timestamp": 1495468060000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "marathi.embedded_media.media_asset.23127353.page",
-      "cps_asset_id": "23127353"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01b7vw2",
-        "subType": "clip",
-        "format": "video",
-        "title": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी!",
-        "synopses": {
-          "short": "मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले",
-          "medium": "अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.",
-          "long": "अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत."
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:marathi/media-23127353",
+        "locators": {
+          "assetUri": "/marathi/media-23127353",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:4dadc808-3e48-314a-99fb-11f6418379f9",
+          "assetId": "23127353",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/media-23127353",
+          "curie": "http://www.bbc.co.uk/asset/4dadc808-3e48-314a-99fb-11f6418379f9"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w2v.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी caption!",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "marathi-v6",
+        "language": "mr",
+        "lastUpdated": 1665419833199,
+        "firstPublished": 1495468060000,
+        "lastPublished": 1495468060000,
+        "timestamp": 1495468060000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "marathi.embedded_media.media_asset.23127353.page",
+          "cps_asset_id": "23127353",
+          "contentId": "urn:bbc:cps:curie:asset:4dadc808-3e48-314a-99fb-11f6418379f9"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "MARATHI",
+          "producerId": "59"
+        },
+        "readTime": 1,
+        "siteUri": "/marathi",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01b7vw8",
-            "types": ["Original"],
-            "duration": 20,
-            "durationISO8601": "PT20S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p01b7vw2",
+            "subType": "clip",
+            "format": "video",
+            "title": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी!",
+            "synopses": {
+              "short": "मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले",
+              "medium": "अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.",
+              "long": "अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत."
             },
-            "availableFrom": 1495467052000
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w2v.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी caption!",
+            "versions": [
+              {
+                "versionId": "p01b7vw8",
+                "types": ["Original"],
+                "duration": 20,
+                "durationISO8601": "PT20S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1495467052000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
+          },
+          {
+            "text": "अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत.",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
-        ],
-        "type": "media"
+        ]
       },
-      {
-        "text": "अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत.",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी २०१७!",
+          "headline": "मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७"
+        },
+        "locators": {
+          "assetUri": "/marathi/media-23127353",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:4dadc808-3e48-314a-99fb-11f6418379f9",
+          "assetId": "23127353",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/media-23127353",
+          "curie": "http://www.bbc.co.uk/asset/4dadc808-3e48-314a-99fb-11f6418379f9"
+        },
+        "summary": "अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.",
+        "timestamp": 1495468060000,
+        "language": "mr",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01b7vw2",
+          "subType": "clip",
+          "format": "video",
+          "title": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी!",
+          "synopses": {
+            "short": "मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले",
+            "medium": "अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.",
+            "long": "अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत."
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w2v.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी caption!",
+          "versions": [
+            {
+              "versionId": "p01b7vw8",
+              "types": ["Original"],
+              "duration": 20,
+              "durationISO8601": "PT20S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1495467052000
+            }
+          ],
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63538110",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/049F/test/_63538110_p01b7w2v.jpg",
+          "path": "/cpsdevpb/049F/test/_63538110_p01b7w2v.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "आयपीएल ट्रॉफी सिद्धिविनायक चरणी!",
+          "copyrightHolder": "Magnum Photos",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:marathi/media-23127353",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/marathi/media",
+          "urlIdentifier": "/marathi/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC मराठी",
+          "uri": "/marathi",
+          "urlIdentifier": "/marathi",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी २०१७!",
-      "headline": "मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७"
     },
-    "locators": {
-      "assetUri": "/marathi/media-23127353",
-      "cpsUrn": "urn:bbc:content:assetUri:marathi/media-23127353",
-      "curie": "http://www.bbc.co.uk/asset/4dadc808-3e48-314a-99fb-11f6418379f9",
-      "assetId": "23127353"
-    },
-    "summary": "अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.",
-    "timestamp": 1495468060000,
-    "language": "mr",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01b7vw2",
-      "subType": "clip",
-      "format": "video",
-      "title": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी!",
-      "synopses": {
-        "short": "मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले",
-        "medium": "अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.",
-        "long": "अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत."
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w2v.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी caption!",
-      "versions": [
-        {
-          "versionId": "p01b7vw8",
-          "types": ["Original"],
-          "duration": 20,
-          "durationISO8601": "PT20S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1495467052000
-        }
-      ],
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "63538110",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/049F/test/_63538110_p01b7w2v.jpg",
-      "path": "/cpsdevpb/049F/test/_63538110_p01b7w2v.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "आयपीएल ट्रॉफी सिद्धिविनायक चरणी!",
-      "copyrightHolder": "Magnum Photos",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:marathi/media-23127353",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/marathi/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC मराठी",
-      "uri": "/marathi",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:23:59.32Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 1,
+        "records": [
+          {
+            "id": "4dadc808-3e48-314a-99fb-11f6418379f9",
+            "rank": 1,
+            "count": 4773,
+            "urn": "urn:bbc:curie:asset:4dadc808-3e48-314a-99fb-11f6418379f9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी २०१७!",
+                "headline": "मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७"
+              },
+              "locators": {
+                "assetUri": "/marathi/media-23127353",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:4dadc808-3e48-314a-99fb-11f6418379f9",
+                "assetId": "23127353",
+                "cpsUrn": "urn:bbc:content:assetUri:marathi/media-23127353",
+                "curie": "http://www.bbc.co.uk/asset/4dadc808-3e48-314a-99fb-11f6418379f9"
+              },
+              "summary": "अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.",
+              "timestamp": 1495468060000,
+              "language": "mr",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01b7vw2",
+                "subType": "clip",
+                "format": "video",
+                "title": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी!",
+                "synopses": {
+                  "short": "मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले",
+                  "medium": "अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.",
+                  "long": "अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w2v.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी caption!",
+                "versions": [
+                  {
+                    "versionId": "p01b7vw8",
+                    "types": ["Original"],
+                    "duration": 20,
+                    "durationISO8601": "PT20S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1495467052000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63538110",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/049F/test/_63538110_p01b7w2v.jpg",
+                "path": "/cpsdevpb/049F/test/_63538110_p01b7w2v.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "आयपीएल ट्रॉफी सिद्धिविनायक चरणी!",
+                "copyrightHolder": "Magnum Photos",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:marathi/media-23127353",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
