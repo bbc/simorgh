@@ -18,7 +18,4 @@ const withCache = async ({path,
   cache,
   ...loggerArgs});
 
-console.log('caache keys', cache.keys());
-console.log('caache keys fetchPageData', withCache);
-
 export default withCache;
