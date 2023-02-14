@@ -10,18 +10,14 @@ const {
 } = COMPONENT_NAMES;
 
 export default (visualStyle, visualProminence) => {
-  if (visualStyle === BANNER && visualProminence === NORMAL) {
-    return MESSAGE_BANNER;
-  }
-  if (visualStyle === BANNER && visualProminence === HIGH) {
-    return BILLBOARD;
-  }
-  if (visualStyle === NONE && visualProminence === NORMAL) {
-    return SIMPLE_CURATION_GRID;
-  }
-  if (visualStyle === NONE && visualProminence === HIGH) {
-    return HIERARCHICAL_CURATION_GRID;
-  }
+  const componentsByVisualStyleAndProminence = {
+    [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
+    [`${BANNER}_${HIGH}`]: BILLBOARD,
+    [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
+    [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
+  };
 
-  return null;
+  const visualStyleAndProminence = `${visualStyle}_${visualProminence}`;
+
+  return componentsByVisualStyleAndProminence[visualStyleAndProminence] || null;
 };
