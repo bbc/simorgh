@@ -1,395 +1,2572 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:afrique/monde-49500638",
-    "locators": {
-      "assetUri": "/afrique/monde-49500638",
-      "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
-      "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3",
-      "assetId": "49500638"
-    },
-    "type": "MAP",
-    "createdBy": "afrique-v6",
-    "language": "fr",
-    "lastUpdated": 1588694662066,
-    "firstPublished": 1567684700000,
-    "lastPublished": 1567684700000,
-    "timestamp": 1567684700000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "afrique.sport.media_asset.49500638.page",
-      "cps_asset_id": "49500638"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-        "categoryName": "Feature"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e2139461b000e9dabf7",
-          "campaignName": "WS - Inspire me"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:afrique/monde-49500638",
+        "locators": {
+          "assetUri": "/afrique/monde-49500638",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
+          "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3",
+          "assetId": "49500638"
         },
-        {
-          "campaignId": "5a988e3139461b000e9dabf9",
-          "campaignName": "WS - Divert me"
+        "type": "MAP",
+        "createdBy": "afrique-v6",
+        "language": "fr",
+        "lastUpdated": 1649805590328,
+        "firstPublished": 1567684700000,
+        "lastPublished": 1567684700000,
+        "timestamp": 1567684700000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
         },
-        {
-          "campaignId": "5a988e3739461b000e9dabfa",
-          "campaignName": "WS - Give me perspective"
-        }
-      ],
-      "taggings": []
-    },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p07m7zw4",
-        "subType": "clip",
-        "format": "video",
-        "title": "Tennis: 'Les soeurs Williams' du Cameroun",
-        "synopses": {
-          "short": "Tennis: 'Les soeurs Williams' du Cameroun",
-          "long": "Linda et Manuella Eloundou ont 16 ans. Elles se font appeler les Soeurs Williams. D'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. Un reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "afrique.sport.media_asset.49500638.page",
+          "cps_asset_id": "49500638",
+          "contentId": "urn:bbc:cps:curie:asset:bd174bc3-4065-cb43-a224-6eff60d2a6d3"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
-        "versions": [
-          {
-            "versionId": "p07m7zw7",
-            "types": ["Original"],
-            "duration": 143,
-            "durationISO8601": "PT2M23S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1567437159000
-          }
-        ],
-        "type": "media"
-      },
-      {
-        "text": "Linda et Manuella Eloundou ont 16 ans.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Elles se font appeler les Soeurs Williams. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "D'origine camerounaise, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Un reportage d'Arwa Barkallah pour l'émission BBC Actu Jeunes.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Lire aussi",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<itemMeta>afrique/monde-47950831</itemMeta>",
-        "meta": [
-          {
-            "headlines": {
-              "shortHeadline": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?",
-              "headline": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?",
-              "overtyped": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?"
-            },
-            "locators": {
-              "href": "http://www.bbc.com/afrique/monde-47950831"
-            },
-            "summary": "Au Royaume-Uni, les femmes noires ont beaucoup plus de risques de mourir de complications liées à la grossesse et à l'accouchement que les femmes blanches.",
-            "timestamp": 1555604396000,
-            "language": "fr",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                "categoryName": "Analysis"
-              },
-              "taggings": []
-            },
-            "id": "urn:bbc:ares::asset:afrique/monde-47950831",
-            "type": "cps"
-          }
-        ],
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<itemMeta>afrique/sports-46838699</itemMeta>",
-        "meta": [
-          {
-            "headlines": {
-              "shortHeadline": "Tennis: Andy Murray envisage d'arrêter cette année",
-              "headline": "Tennis: Andy Murray envisage d'arrêter cette année",
-              "overtyped": "Tennis: Andy Murray envisage d'arrêter cette année"
-            },
-            "locators": {
-              "href": "http://www.bbc.com/afrique/sports-46838699"
-            },
-            "summary": "Le joueur de tennis britannique déclare qu'il prévoit de mettre fin à sa carrière après le Grand Chelem de Melbourne.",
-            "timestamp": 1547214809000,
-            "language": "fr",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "taggings": []
-            },
-            "id": "urn:bbc:ares::asset:afrique/sports-46838699",
-            "type": "cps"
-          }
-        ],
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<itemMeta>afrique/monde-45900949</itemMeta>",
-        "meta": [
-          {
-            "headlines": {
-              "shortHeadline": "La taille des doigts détermine l'orientation sexuelle",
-              "headline": "La taille des doigts détermine l'orientation sexuelle chez les femmes",
-              "overtyped": "La taille des doigts détermine l'orientation sexuelle"
-            },
-            "locators": {
-              "href": "http://www.bbc.com/afrique/monde-45900949"
-            },
-            "summary": "Les femmes dont l'index gauche et l'annulaire sont de longueurs différentes sont plus susceptibles d'être lesbiennes.",
-            "timestamp": 1539875197000,
-            "language": "fr",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "taggings": []
-            },
-            "id": "urn:bbc:ares::asset:afrique/monde-45900949",
-            "type": "cps"
-          }
-        ],
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Tennis: 'Les soeurs Williams' du Cameroun",
-      "headline": "Tennis: 'Les soeurs Williams' du Cameroun"
-    },
-    "locators": {
-      "assetUri": "/afrique/monde-49500638",
-      "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
-      "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3",
-      "assetId": "49500638"
-    },
-    "summary": "Linda et Manuella Eloundou sont des jumelles camerounaise de 16 ans, elles parcourent leur pays et la sous-régions pour agrandir leurs collections de trophées de Tennis.",
-    "timestamp": 1567684700000,
-    "language": "fr",
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-        "categoryName": "Feature"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e2139461b000e9dabf7",
-          "campaignName": "WS - Inspire me"
-        },
-        {
-          "campaignId": "5a988e3139461b000e9dabf9",
-          "campaignName": "WS - Divert me"
-        },
-        {
-          "campaignId": "5a988e3739461b000e9dabfa",
-          "campaignName": "WS - Give me perspective"
-        }
-      ],
-      "taggings": []
-    },
-    "media": {
-      "id": "p07m7zw4",
-      "subType": "clip",
-      "format": "video",
-      "title": "Tennis: 'Les soeurs Williams' du Cameroun",
-      "synopses": {
-        "short": "Tennis: 'Les soeurs Williams' du Cameroun",
-        "long": "Linda et Manuella Eloundou ont 16 ans. Elles se font appeler les Soeurs Williams. D'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. Un reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
-      "versions": [
-        {
-          "versionId": "p07m7zw7",
-          "types": ["Original"],
-          "duration": 143,
-          "durationISO8601": "PT2M23S",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true,
-            "world": false
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
           },
-          "availableFrom": 1567437159000
-        }
-      ],
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "108627113",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/79C4/production/_108627113_mediaitem108627110.jpg",
-      "path": "/cpsprodpb/79C4/production/_108627113_mediaitem108627110.jpg",
-      "height": 261,
-      "width": 464,
-      "altText": "Tennis: 'Les soeurs Williams' du Cameroun",
-      "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:afrique/monde-49500638",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Sports",
-      "uri": "/afrique/sports",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "Afrique",
-      "uri": "/afrique",
-      "type": "simple"
-    },
-    "groups": [
-      {
-        "type": "see-alsos",
-        "promos": [
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "AFRIQUE",
+          "producerId": "3"
+        },
+        "readTime": 1,
+        "siteUri": "/afrique",
+        "mediaType": "video"
+      },
+      "content": {
+        "blocks": [
           {
-            "headlines": {
-              "shortHeadline": "Une finale de l’US Open mémorable",
-              "headline": "Serena Williams : Une finale de l'US Open qui fera date"
+            "id": "p07m7zw4",
+            "subType": "clip",
+            "format": "video",
+            "title": "Tennis: 'Les soeurs Williams' du Cameroun",
+            "synopses": {
+              "short": "Tennis: 'Les soeurs Williams' du Cameroun",
+              "long": "Linda et Manuella Eloundou ont 16 ans.\nElles se font appeler les Soeurs Williams. \nD'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. \n\nUn reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
             },
-            "locators": {
-              "assetUri": "/afrique/45504155",
-              "cpsUrn": "urn:bbc:content:assetUri:/afrique/45504155"
-            },
-            "summary": "Le match qui pose la question de l'égalité des sexes dans le tennis",
-            "timestamp": 1536778453000,
-            "language": "fr",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "103401879",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/17E12/production/_103401879_serena.jpg",
-              "path": "/cpsprodpb/17E12/production/_103401879_serena.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Serena Williams et Naomi Osaka à l'US Open",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:afrique/45504155",
-            "type": "cps"
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
+            "versions": [
+              {
+                "versionId": "p07m7zw7",
+                "types": ["Original"],
+                "duration": 143,
+                "durationISO8601": "PT2M23S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1567437159000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
           },
           {
-            "headlines": {
-              "shortHeadline": "Tennis: retour sur un US Open mémorable",
-              "headline": "Une finale de l’US Open qui restera gravée dans les mémoires…"
-            },
-            "locators": {
-              "assetUri": "/afrique/45491927",
-              "cpsUrn": "urn:bbc:content:assetUri:/afrique/45491927"
-            },
-            "summary": "Le match qui pose la question de l'égalité des sexes dans le tennis",
-            "timestamp": 1536694750000,
-            "language": "fr",
-            "cpsType": "MAP",
-            "media": {
-              "id": "p06klsxj",
-              "subType": "clip",
-              "format": "video",
-              "title": "En Sierra Leone, le diamant de la Paix suscite la discorde",
-              "synopses": {
-                "short": "Koyadu, un village Sierra Léonais entre mines de diamants et pauvreté.",
-                "long": "Surnommée le diamant de la paix, une pierre bijou de 709 carats, a été trouvée par le groupe de mineurs d'un pasteur qui l'a remis au gouvernement. Il a ensuite été mis aux enchères et vendu pour 6,5 millions de dollars contre la promesse qu'une partie de l'argent servirait à développer le village de Koyadu. Récit de Raissa Okoi",
-                "medium": "C'est en Sierra Leone qu'a été trouvé l’un des plus gros diamants du monde. Ce bijou de 709 carats été mis aux enchères et vendu pour 6,5 millions de dollars."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06kxf9k.jpg",
-              "embedding": true,
-              "advertising": true,
-              "caption": "Koyadu, un village Sierra Léonais entre mines de diamants et pauvreté.",
-              "versions": [
-                {
-                  "versionId": "p06klsxl",
-                  "types": ["Original"],
-                  "duration": 161,
-                  "durationISO8601": "PT2M41S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true,
-                    "world": false
+            "text": "Linda et Manuella Eloundou ont 16 ans.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Elles se font appeler les Soeurs Williams. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "D'origine camerounaise, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Un reportage d'Arwa Barkallah pour l'émission BBC Actu Jeunes.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Lire aussi",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<itemMeta>afrique/monde-47950831</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?",
+                  "headline": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?",
+                  "overtyped": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/monde-47950831"
+                },
+                "summary": "Au Royaume-Uni, les femmes noires ont beaucoup plus de risques de mourir de complications liées à la grossesse et à l'accouchement que les femmes blanches.",
+                "timestamp": 1555604396000,
+                "language": "fr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
                   },
-                  "availableFrom": 1536693951000
-                }
-              ],
-              "imageCopyright": "BBC",
-              "type": "media"
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/monde-47950831",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<itemMeta>afrique/sports-46838699</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Tennis: Andy Murray envisage d'arrêter cette année",
+                  "headline": "Tennis: Andy Murray envisage d'arrêter cette année",
+                  "overtyped": "Tennis: Andy Murray envisage d'arrêter cette année"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/sports-46838699"
+                },
+                "summary": "Le joueur de tennis britannique déclare qu'il prévoit de mettre fin à sa carrière après le Grand Chelem de Melbourne.",
+                "timestamp": 1547214809000,
+                "language": "fr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/sports-46838699",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<itemMeta>afrique/monde-45900949</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "La taille des doigts détermine l'orientation sexuelle",
+                  "headline": "La taille des doigts détermine l'orientation sexuelle chez les femmes",
+                  "overtyped": "La taille des doigts détermine l'orientation sexuelle"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/monde-45900949"
+                },
+                "summary": "Les femmes dont l'index gauche et l'annulaire sont de longueurs différentes sont plus susceptibles d'être lesbiennes.",
+                "timestamp": 1539875197000,
+                "language": "fr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/monde-45900949",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Tennis: 'Les soeurs Williams' du Cameroun",
+          "headline": "Tennis: 'Les soeurs Williams' du Cameroun"
+        },
+        "locators": {
+          "assetUri": "/afrique/monde-49500638",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
+          "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3",
+          "assetId": "49500638"
+        },
+        "summary": "Linda et Manuella Eloundou sont des jumelles camerounaise de 16 ans, elles parcourent leur pays et la sous-régions pour agrandir leurs collections de trophées de Tennis.",
+        "timestamp": 1567684700000,
+        "language": "fr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
             },
-            "indexImage": {
-              "id": "103387562",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/67D2/production/_103387562_p06kxf9k.jpg",
-              "path": "/cpsprodpb/67D2/production/_103387562_p06kxf9k.jpg",
-              "height": 576,
-              "width": 1024,
-              "altText": "Keyframe #4",
-              "copyrightHolder": "BBC",
-              "type": "image"
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
             },
-            "mediaType": "Video",
-            "id": "urn:bbc:ares::asset:afrique/45491927",
-            "type": "cps"
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+          "taggings": []
+        },
+        "media": {
+          "id": "p07m7zw4",
+          "subType": "clip",
+          "format": "video",
+          "title": "Tennis: 'Les soeurs Williams' du Cameroun",
+          "synopses": {
+            "short": "Tennis: 'Les soeurs Williams' du Cameroun",
+            "long": "Linda et Manuella Eloundou ont 16 ans.\nElles se font appeler les Soeurs Williams. \nD'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. \n\nUn reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
+          "versions": [
+            {
+              "versionId": "p07m7zw7",
+              "types": ["Original"],
+              "duration": 143,
+              "durationISO8601": "PT2M23S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1567437159000
+            }
+          ],
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "108627113",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/79C4/production/_108627113_mediaitem108627110.jpg",
+          "path": "/cpsprodpb/79C4/production/_108627113_mediaitem108627110.jpg",
+          "height": 261,
+          "width": 464,
+          "altText": "Tennis: 'Les soeurs Williams' du Cameroun",
+          "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afrique/monde-49500638",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Sports",
+          "uri": "/afrique/sports",
+          "urlIdentifier": "/afrique/sports",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Afrique",
+          "uri": "/afrique",
+          "urlIdentifier": "/afrique",
+          "type": "simple"
+        },
+        "groups": [
+          {
+            "type": "see-alsos",
+            "promos": [
+              {
+                "headlines": {
+                  "shortHeadline": "Une finale de l’US Open mémorable",
+                  "headline": "Serena Williams : Une finale de l'US Open qui fera date"
+                },
+                "locators": {
+                  "assetUri": "/afrique/45504155",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afrique/45504155"
+                },
+                "summary": "Le match qui pose la question de l'égalité des sexes dans le tennis",
+                "timestamp": 1536778453000,
+                "language": "fr",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "103401879",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/17E12/production/_103401879_serena.jpg",
+                  "path": "/cpsprodpb/17E12/production/_103401879_serena.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Serena Williams et Naomi Osaka à l'US Open",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "id": "urn:bbc:ares::asset:afrique/45504155",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "shortHeadline": "Tennis: retour sur un US Open mémorable",
+                  "headline": "Une finale de l’US Open qui restera gravée dans les mémoires…"
+                },
+                "locators": {
+                  "assetUri": "/afrique/45491927",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afrique/45491927"
+                },
+                "summary": "Le match qui pose la question de l'égalité des sexes dans le tennis",
+                "timestamp": 1536694750000,
+                "language": "fr",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p06klsxj",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "En Sierra Leone, le diamant de la Paix suscite la discorde",
+                  "synopses": {
+                    "short": "Koyadu, un village Sierra Léonais entre mines de diamants et pauvreté.",
+                    "long": "Surnommée le diamant de la paix, une pierre bijou de 709 carats, a été trouvée par le groupe de mineurs d'un pasteur qui l'a remis au gouvernement. Il a ensuite été mis aux enchères et vendu pour 6,5 millions de dollars contre la promesse qu'une partie de l'argent servirait à développer le village de Koyadu. Récit de Raissa Okoi",
+                    "medium": "C'est en Sierra Leone qu'a été trouvé l’un des plus gros diamants du monde. Ce bijou de 709 carats été mis aux enchères et vendu pour 6,5 millions de dollars."
+                  },
+                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06kxf9k.jpg",
+                  "embedding": true,
+                  "advertising": true,
+                  "caption": "Koyadu, un village Sierra Léonais entre mines de diamants et pauvreté.",
+                  "versions": [
+                    {
+                      "versionId": "p06klsxl",
+                      "types": ["Original"],
+                      "duration": 161,
+                      "durationISO8601": "PT2M41S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1536693951000
+                    }
+                  ],
+                  "imageCopyright": "BBC",
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "103387562",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/67D2/production/_103387562_p06kxf9k.jpg",
+                  "path": "/cpsprodpb/67D2/production/_103387562_p06kxf9k.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Keyframe #4",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "mediaType": "Video",
+                "id": "urn:bbc:ares::asset:afrique/45491927",
+                "type": "cps"
+              }
+            ]
           }
         ]
       }
-    ]
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-14T15:54:24.061Z",
+        "lastRecordTimeStamp": "2023-02-14T15:52:00Z",
+        "firstRecordTimeStamp": "2023-02-14T11:52:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "941adaaa-63a6-4b5e-be30-f6d721a7e12e",
+            "rank": 1,
+            "count": 17,
+            "urn": "urn:bbc:curie:asset:941adaaa-63a6-4b5e-be30-f6d721a7e12e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+                "headline": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan"
+              },
+              "locators": {
+                "assetUri": "/afrique/64605886",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:941adaaa-63a6-4b5e-be30-f6d721a7e12e",
+                "assetId": "64605886",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/64605886",
+                "curie": "http://www.bbc.co.uk/asset/941adaaa-63a6-4b5e-be30-f6d721a7e12e"
+              },
+              "summary": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+              "timestamp": 1676062386000,
+              "language": "fr",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "taggings": []
+              },
+              "media": {
+                "id": "p0f2g53f",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+                "synopses": {
+                  "short": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+                  "long": "Le Débat BBC Afrique-Africa Radio, 52 minutes pour comprendre l'Afrique et ses changements, vus d'ici et de là-bas.\n\nDeux journalistes passent en revue les événements de la semaine avec un invité au cœur de l'actualité.\n\nCette semaine, notre invité est Mohamed Elmaouloud Ramadan, porte-parole de la coordination des mouvements de l'Azawad (CMA)",
+                  "medium": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2g5q0.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+                "versions": [
+                  {
+                    "versionId": "p0f2g53k",
+                    "types": ["Original"],
+                    "duration": 3310,
+                    "durationISO8601": "PT55M10S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676062118000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128598400",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/01E9/production/_128598400_p0f2g5q0.jpg",
+                "path": "/cpsprodpb/01E9/production/_128598400_p0f2g5q0.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+                "copyrightHolder": "Le Débat BBC Afrique-Africa Radio, 52 minutes pour",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/64605886",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "83878926-f295-47f3-88de-43ce39cdee22",
+            "rank": 2,
+            "count": 17,
+            "urn": "urn:bbc:curie:asset:83878926-f295-47f3-88de-43ce39cdee22",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Afrique Avenir : Lengo, la plateforme qui connecte grandes marques et boutiquiers",
+                "headline": "Afrique Avenir : Lengo, la plateforme qui connecte grandes marques et boutiquiers"
+              },
+              "locators": {
+                "assetUri": "/afrique/region-63680329",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:83878926-f295-47f3-88de-43ce39cdee22",
+                "assetId": "63680329",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/region-63680329",
+                "curie": "http://www.bbc.co.uk/asset/83878926-f295-47f3-88de-43ce39cdee22"
+              },
+              "summary": "Afrique Avenir reçoit Max Smith et Yaye Biaye de Lengo, une plateforme d'intelligence artificielle pour les produits de grande consommation en Afrique.",
+              "timestamp": 1668784947000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "language": "fr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "locator": "urn:bbc:cps:curie:asset:83878926-f295-47f3-88de-43ce39cdee22",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1abbf54b-53a3-4a01-b0a8-c3dd60b431f7#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "fr",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1abbf54b-53a3-4a01-b0a8-c3dd60b431f7#id",
+                      "thingLabel": "Sénégal (équipe nationale de football)",
+                      "thingUri": "http://www.bbc.co.uk/things/1abbf54b-53a3-4a01-b0a8-c3dd60b431f7#id",
+                      "thingId": "1abbf54b-53a3-4a01-b0a8-c3dd60b431f7",
+                      "thingType": [
+                        "sport:CompetitiveSportingOrganisation",
+                        "core:Thing",
+                        "tagging:Agent",
+                        "sport:SportingOrganisation",
+                        "tagging:TagConcept",
+                        "core:Organisation",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Senegal",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingLabel": "Technologie",
+                      "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Technology",
+                        "http://www.wikidata.org/entity/Q4456888"
+                      ],
+                      "thingEnglishLabel": "Technology",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                      "thingLabel": "Entrepreneur",
+                      "thingUri": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                      "thingId": "41d87885-664f-4d92-931e-470b8fd7b16b",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entrepreneurship"
+                      ],
+                      "thingEnglishLabel": "Entrepreneurship",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dh3415",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Afrique Avenir : Lengo, la plateforme qui se veut le trait d’union entre les grandes marques et les boutiquiers",
+                "synopses": {
+                  "short": "Afrique Avenir : Lengo",
+                  "long": "Ils se prénomment les Xaritou Boutiquiers Yi, les amis des boutiquiers en wollof, la plateforme Lengo fournit grâce à l'intelligence artificielle des données sur les performances des produits de grande consommation chez les petits détaillants. \n\nParti du constat que les marques ont du mal à améliorer leurs distributions par manque de données, Lengo a recensé plus 10 mille boutiquiers à Dakar dans la capitale.\n\nAlexandrine Holognon reçoit pour Afrique Avenir : \n\nMax Smith : Data Scientist, co-fondateur et CEO de Lengo \n\nYaye Biaye, spécialiste en traitement d'images chez lengo",
+                  "medium": "Afrique Avenir reçoit Max Smith et Yaye Biaye de Lengo. Une plateforme d'intelligence artificielle pour les produits de grande consommation en Afrique."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dh4rx6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Afrique Avenir : Lengo, la plateforme qui connecte les grandes marques et les boutiquiers",
+                "versions": [
+                  {
+                    "versionId": "p0dh341h",
+                    "types": ["Original"],
+                    "duration": 1770,
+                    "durationISO8601": "PT29M30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1668779405000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "127691215",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/C813/production/_127691215_p0dh4rx6.jpg",
+                "path": "/cpsprodpb/C813/production/_127691215_p0dh4rx6.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Un aperçu des bureaux de la plateforme Lengo à Dakar",
+                "caption": "Un aperçu des bureaux de la plateforme Lengo à Dakar",
+                "copyrightHolder": "LENGO",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/region-63680329",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5373bd90-650b-484b-88ae-c8b8e120eb80",
+            "rank": 3,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:5373bd90-650b-484b-88ae-c8b8e120eb80",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "L'homme le plus gros au monde tente de perdre du poids",
+                "headline": "L'homme le plus gros au monde tente de perdre du poids"
+              },
+              "locators": {
+                "assetUri": "/afrique/media-42641289",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-42641289",
+                "curie": "http://www.bbc.co.uk/asset/5373bd90-650b-484b-88ae-c8b8e120eb80",
+                "assetId": "42641289"
+              },
+              "summary": "Juan Pedro Franco détient le record Guinness de l'homme le plus gros au monde encore vivant.",
+              "timestamp": 1515601516000,
+              "language": "fr",
+              "media": {
+                "id": "p05tdrp7",
+                "subType": "clip",
+                "format": "video",
+                "title": "L'homme le plus gros au monde tente de perdre du poids",
+                "synopses": {
+                  "short": "L'homme le plus gros au monde tente de perdre du poids",
+                  "medium": "Juan Pedro Franco détient le record Guinness de l'homme le plus gros au monde encore vivant.",
+                  "long": "Juan Pedro Franco détient le record Guinness de l'homme le plus gros au monde encore vivant. \n\nMais il essaie de perdre du poids, grâce à l'aide de médecins au Mexique, où il vit. \n\nLa BBC a suivi son voyage pendant plusieurs jours."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05tds88.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "L'homme le plus gros au monde tente de perdre du poids",
+                "versions": [
+                  {
+                    "versionId": "p05tdrpb",
+                    "types": ["Original"],
+                    "duration": 291,
+                    "durationISO8601": "PT4M51S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1515596107000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99543063",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8CC2/production/_99543063_p05tds88.jpg",
+                "path": "/cpsprodpb/8CC2/production/_99543063_p05tds88.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "bbc",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-42641289",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ef1bdefd-4b2b-f146-a9f5-0ab19252895b",
+            "rank": 4,
+            "count": 9,
+            "urn": "urn:bbc:curie:asset:ef1bdefd-4b2b-f146-a9f5-0ab19252895b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Le Sénégal réclame la restitution de ses œuvres d'art",
+                "headline": "Le Sénégal réclame la restitution de ses œuvres d'art"
+              },
+              "locators": {
+                "assetUri": "/afrique/region-46366350",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/region-46366350",
+                "curie": "http://www.bbc.co.uk/asset/ef1bdefd-4b2b-f146-a9f5-0ab19252895b",
+                "assetId": "46366350"
+              },
+              "summary": "Le gouvernement du Sénégal a déclaré qu'il souhaite la restitution de l'ensemble de ses œuvres d'art qui se trouvent dans les musées français.",
+              "timestamp": 1543384115000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06t11n7",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Le Sénégal réclame la restitution de ses œuvres d'art",
+                "synopses": {
+                  "short": "Le Sénégal réclame la restitution de ses œuvres d'art",
+                  "long": "Le gouvernement du Sénégal a déclaré qu'il souhaite la restitution de l'ensemble de ses œuvres d'art qui se trouvent dans les musées français. \n\nCette demande  intervient quelques jours après la remise au président français  Emmanuel Macron, d'un rapport  sur  les œuvres d'art africains pillées pendant la colonisation française.\n\nLe gouvernement sénégalais souhaite  accueillir ces œuvres dans le  musée des civilisations noires qui doit  ouvrir dans la capitale sénégalaise Dakar la semaine prochaine.\n\nC'est le fruit d'un investissement chinois de quelque 20 millions de dollars.\n\nEcoutez le ministre sénégalais de la Culture Abdou Latif Coulibaly sur la restitution des œuvres d'art africain.",
+                  "medium": "Le gouvernement du Sénégal a déclaré qu'il souhaite la restitution de l'ensemble de ses œuvres d'art qui se trouvent dans les musées français."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06t11q4.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Le Sénégal réclame la restitution de ses œuvres d'art",
+                "versions": [
+                  {
+                    "versionId": "p06t11nb",
+                    "types": ["Original"],
+                    "duration": 27,
+                    "durationISO8601": "PT27S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1543381929000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104519443",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/86BB/production/_104519443_p06t11q4.jpg",
+                "path": "/cpsprodpb/86BB/production/_104519443_p06t11q4.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Le musée des civilisations noires de Dakar",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/region-46366350",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5884208d-dd3e-4828-96d4-23a4a46550c7",
+            "rank": 5,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:5884208d-dd3e-4828-96d4-23a4a46550c7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Le Débat BBC Afrique - Africa Radio avec Bernard Ntaganda",
+                "headline": "Le Débat BBC Afrique - Africa Radio avec Bernard Ntaganda"
+              },
+              "locators": {
+                "assetUri": "/afrique/62018468",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:5884208d-dd3e-4828-96d4-23a4a46550c7",
+                "assetId": "62018468",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/62018468",
+                "curie": "http://www.bbc.co.uk/asset/5884208d-dd3e-4828-96d4-23a4a46550c7"
+              },
+              "summary": "Le Débat BBC Afrique - Africa Radio avec Bernard Ntaganda",
+              "timestamp": 1656709790000,
+              "language": "fr",
+              "media": {
+                "id": "p0cjfn79",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Le Débat BBC Afrique - Africa Radio avec Bernard Ntaganda",
+                "synopses": {
+                  "short": "Le Débat BBC Afrique - Africa Radio avec Bernard Ntaganda",
+                  "long": "Le Débat BBC Afrique - Africa Radio avec Patrick Muyaya\n\n17 juin 2022\n\nLe Débat BBC Afrique-Africa Radio, 52 minutes pour comprendre l'Afrique et ses changements, vus d'ici et de là-bas.\n\nDeux journalistes passent en revue les événements de la semaine avec un invité au cœur de l'actualité.\n\nCette semaine, notre invité est Bernard Ntaganda, fondateur et président du Parti Social Imberakuri, opposant rwandais.",
+                  "medium": "Le Débat BBC Afrique - Africa Radio avec Bernard Ntaganda"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0cjfqbj.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Le Débat BBC Afrique - Africa Radio avec Bernard Ntaganda",
+                "versions": [
+                  {
+                    "versionId": "p0cjfn7k",
+                    "types": ["Original"],
+                    "duration": 2678,
+                    "durationISO8601": "PT44M38S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1656709471000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125727958",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14FD4/production/_125727958_p0cjfqbj.jpg",
+                "path": "/cpsprodpb/14FD4/production/_125727958_p0cjfqbj.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Le Débat BBC Afrique - Africa Radio avec Bernard Ntaganda",
+                "copyrightHolder": "Le Débat BBC Afrique - Africa Radio avec Patrick M",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/62018468",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1eb8c5fe-7b46-11e2-8088-6c5ca79c3f60",
+            "rank": 6,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:1eb8c5fe-7b46-11e2-8088-6c5ca79c3f60",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "L'Afrique en direct",
+                "headline": "L'Afrique en direct"
+              },
+              "locators": {
+                "assetUri": "/afrique/nos_emissions/2010/12/000000_lafrique_direct_generic",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2010/12/000000_lafrique_direct_generic",
+                "curie": "http://www.bbc.co.uk/asset/1eb8c5fe-7b46-11e2-8088-6c5ca79c3f60",
+                "assetId": "7841185"
+              },
+              "summary": "Les auditeurs ont la parole ",
+              "timestamp": 1330178123000,
+              "language": "fr",
+              "media": {
+                "id": "7841185",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "7841185",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2010/12/01/101201144355_afrique_en_direct_640x360.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2010/12/01/101201144355_afrique_en_direct_640x360.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "L'Afrique en direct",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://wsdownload.bbc.co.uk/afrique/meta/tx/flash/l_afrique_en_direct.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/css/32mp3/latest/afriqueendirect.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e212",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/08/06/130806123019_144_afrique_presenters_0008_samba.jpg",
+                "path": "/amz/worldservice/live/assets/images/2013/08/06/130806123019_144_afrique_presenters_0008_samba.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "L'Afrique en direct",
+                "copyrightHolder": "BBC World Service",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/nos_emissions/2010/12/000000_lafrique_direct_generic",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "38f2a3ed-31b9-4d95-b4f5-d04d22453b86",
+            "rank": 7,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:38f2a3ed-31b9-4d95-b4f5-d04d22453b86",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Kush : la nouvelle drogue mortelle qui balaie la Sierra Leone",
+                "headline": "Kush : la nouvelle drogue illégale de la Sierra Leone"
+              },
+              "locators": {
+                "assetUri": "/afrique/media-60320863",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-60320863",
+                "curie": "http://www.bbc.co.uk/asset/38f2a3ed-31b9-4d95-b4f5-d04d22453b86",
+                "assetId": "60320863"
+              },
+              "summary": "La consommation de Kush se répandant rapidement, le réalisateur sierra-leonais Tyson Conteh se demande si son pays peut arrêter la progression de cette drogue dangereusement addictive.",
+              "timestamp": 1644411730000,
+              "language": "fr",
+              "passport": {
+                "language": "fr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "locator": "urn:bbc:cps:curie:asset:38f2a3ed-31b9-4d95-b4f5-d04d22453b86",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4b4cca1c-d458-4310-819e-dd48572b12c4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b712cf42-5a41-4263-879d-5ec4717d7798#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/37cd3473-7b24-44b0-84c1-bf3c4801df5e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e76c669a-a5eb-43d8-9ece-0ba9484192fc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "fr",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/37cd3473-7b24-44b0-84c1-bf3c4801df5e#id",
+                      "thingLabel": "L'usage de drogues",
+                      "thingUri": "http://www.bbc.co.uk/things/37cd3473-7b24-44b0-84c1-bf3c4801df5e#id",
+                      "thingId": "37cd3473-7b24-44b0-84c1-bf3c4801df5e",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7708739",
+                        "http://dbpedia.org/resource/Recreational_drug_use"
+                      ],
+                      "thingEnglishLabel": "Drug use",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/4b4cca1c-d458-4310-819e-dd48572b12c4#id",
+                      "thingLabel": "Commerce de drogue",
+                      "thingUri": "http://www.bbc.co.uk/things/4b4cca1c-d458-4310-819e-dd48572b12c4#id",
+                      "thingId": "4b4cca1c-d458-4310-819e-dd48572b12c4",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Illegal_drug_trade"
+                      ],
+                      "thingEnglishLabel": "Drugs trade",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b712cf42-5a41-4263-879d-5ec4717d7798#id",
+                      "thingLabel": "Afrique de l'Ouest",
+                      "thingUri": "http://www.bbc.co.uk/things/b712cf42-5a41-4263-879d-5ec4717d7798#id",
+                      "thingId": "b712cf42-5a41-4263-879d-5ec4717d7798",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/West_Africa"
+                      ],
+                      "thingEnglishLabel": "West Africa",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingLabel": "Santé",
+                      "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health",
+                        "http://www.wikidata.org/entity/Q12147"
+                      ],
+                      "thingEnglishLabel": "Health",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                      "thingLabel": "Afrique",
+                      "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                      "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q15",
+                        "http://dbpedia.org/resource/Africa",
+                        "http://sws.geonames.org/6255146/"
+                      ],
+                      "thingEnglishLabel": "Africa",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e76c669a-a5eb-43d8-9ece-0ba9484192fc#id",
+                      "thingLabel": "Sierra Leone",
+                      "thingUri": "http://www.bbc.co.uk/things/e76c669a-a5eb-43d8-9ece-0ba9484192fc#id",
+                      "thingId": "e76c669a-a5eb-43d8-9ece-0ba9484192fc",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2403846/"],
+                      "thingEnglishLabel": "Sierra Leone",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0bn2c0h",
+                "subType": "clip",
+                "format": "video",
+                "title": "Kush : La nouvelle drogue mortelle qui balaie la Sierra Leone",
+                "synopses": {
+                  "short": "Kush : La nouvelle drogue illégale de la Sierra Leone",
+                  "long": "Ce film contient des scènes bouleversantes, la consommation de drogues et des références à l'automutilation et au suicide.\n\nLe kush, une nouvelle drogue illégale bon marché, fait des ravages dans les communautés de Sierra Leone.\n\nLa BBC a entendu des témoignages évoquanr de jeunes gens qui se sont suicidés ou se sont fait du mal à eux-mêmes et à d'autres.\n\nLe personnel médical de la capitale Freetown affirme que 90 % des admissions d'hommes dans le service psychiatrique central sont dues à la consommation de Kush.\n\nLa police se bat pour gagner la guerre contre cette drogue.\n\nAlors que la consommation de Kush se répand rapidement et que les jeunes y sont exposés, le reporter d'Africa Eye, Tyson Conteh, enquête sur cette drogue et se demande si la Sierra Leone peut arrêter la progression de cette drogue dangereusement addictive.",
+                  "medium": "With Kush use spreading rapidly, local film-maker Tyson Conteh asks whether Sierra Leone can stop the march of this dangerously addictive high."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bn2rq3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Kush : la nouvelle drogue mortelle qui balaie la Sierra Leone",
+                "versions": [
+                  {
+                    "versionId": "p0bn2c0p",
+                    "types": ["Original"],
+                    "duration": 594,
+                    "durationISO8601": "PT9M54S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1644410700000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "123197793",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9B63/production/_123197793_p0bn2rq3.jpg",
+                "path": "/cpsprodpb/9B63/production/_123197793_p0bn2rq3.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Kush : La nouvelle drogue illégale de la Sierra Leone",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-60320863",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1f7104ac-4ba4-df43-9cb5-c9ece6fb5a9b",
+            "rank": 8,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:1f7104ac-4ba4-df43-9cb5-c9ece6fb5a9b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "De grosses fesses ? Oui, mais à quel prix ?",
+                "headline": "De grosses fesses ? Oui, mais à quel prix ?"
+              },
+              "locators": {
+                "assetUri": "/afrique/media-48230633",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-48230633",
+                "curie": "http://www.bbc.co.uk/asset/1f7104ac-4ba4-df43-9cb5-c9ece6fb5a9b",
+                "assetId": "48230633"
+              },
+              "summary": "Shami, jeune femme d'origine africaine vivant à Londres, voudrait passer par la chirurgie des fesses, l'une des plus dangereuses de la chirurgie esthétique.",
+              "timestamp": 1557511257000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p078wbg2",
+                "subType": "clip",
+                "format": "video",
+                "title": "Butt lift",
+                "synopses": {
+                  "short": "Butt lift",
+                  "long": "Butt lift",
+                  "medium": "Butt lift"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p078wch9.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Butt lift",
+                "versions": [
+                  {
+                    "versionId": "p078wbg4",
+                    "types": ["Original"],
+                    "duration": 184,
+                    "durationISO8601": "PT3M4S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1557509621000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106904939",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/16EF4/production/_106904939_p078wch9.jpg",
+                "path": "/cpsprodpb/16EF4/production/_106904939_p078wch9.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Shami, jeune femme d'origine africaine vivant à Londres, voudrait passer par la chirurgie des fesses, l'une des plus dangereuses.",
+                "caption": "Shami, jeune femme d'origine africaine vivant à Londres, voudrait passer par la chirurgie des fesses, l'une des plus dangereuses.",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-48230633",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2664a2ac-7486-11e3-8439-78843db9bd6e",
+            "rank": 9,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:2664a2ac-7486-11e3-8439-78843db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mort du colonel Ndala: les images",
+                "headline": "Mort du colonel Ndala: les images"
+              },
+              "locators": {
+                "assetUri": "/afrique/nos_emissions/2014/01/140103_rdc_ndala_video",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2014/01/140103_rdc_ndala_video",
+                "curie": "http://www.bbc.co.uk/asset/2664a2ac-7486-11e3-8439-78843db9bd6e"
+              },
+              "summary": "24h apres la mort du colonel Mamadou Ndala, l’émotion est grande en RDC. Ces images tournées juste après l’attaque montre le désarroi des hommes de Ndala, certains fondant en larmes.",
+              "timestamp": 1388760851000,
+              "language": "fr",
+              "media": {
+                "id": "29290791",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "29290791",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/01/03/140103144745_drc_ndala_640x360__nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/01/03/140103144745_drc_ndala_640x360__nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/afrique/meta/dps/2014/01/emp/140103_rdc_ndala_video.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/01/drc_fndala_f1416_f3_f1_140103_rdc_ndala_video_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/01/drc_fndala_f1416_f3_f1_140103_rdc_ndala_video_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/01/drc_fndala_f1416_f3_f1_140103_rdc_ndala_video_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e219",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/01/03/140103144745_drc_ndala_144x81__nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/01/03/140103144745_drc_ndala_144x81__nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/nos_emissions/2014/01/140103_rdc_ndala_video",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "df13ba79-bbc2-489a-8ffc-6ce09b212230",
+            "rank": 10,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:df13ba79-bbc2-489a-8ffc-6ce09b212230",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Les millions disparus du Congo",
+                "headline": "Joseph Kabila et les millions disparus du Congo"
+              },
+              "locators": {
+                "assetUri": "/afrique/media-59462637",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-59462637",
+                "curie": "http://www.bbc.co.uk/asset/df13ba79-bbc2-489a-8ffc-6ce09b212230",
+                "assetId": "59462637"
+              },
+              "summary": "L'enquête fait partie de Congo Hold-up, une collaboration internationale avec Mediapart, Pplaaf, EIC.network et d'autres, qui ont eu accès aux preuves de la BGFI Bank.",
+              "timestamp": 1638189801000,
+              "language": "fr",
+              "passport": {
+                "language": "fr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "locator": "urn:bbc:cps:curie:asset:df13ba79-bbc2-489a-8ffc-6ce09b212230",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b8531a4d-7de6-4b29-b5f2-34f77b47b359#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/cfb8bd8c-0638-4383-9dec-8d1703c8b4b8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "fr",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                      "thingLabel": "République Démocratique du Congo",
+                      "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                      "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/203312/"],
+                      "thingEnglishLabel": "Democratic Republic of Congo",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b8531a4d-7de6-4b29-b5f2-34f77b47b359#id",
+                      "thingLabel": "Corruption",
+                      "thingUri": "http://www.bbc.co.uk/things/b8531a4d-7de6-4b29-b5f2-34f77b47b359#id",
+                      "thingId": "b8531a4d-7de6-4b29-b5f2-34f77b47b359",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:NarrativeTheme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Corruption",
+                        "http://www.wikidata.org/entity/Q366"
+                      ],
+                      "thingEnglishLabel": "Corruption",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/cfb8bd8c-0638-4383-9dec-8d1703c8b4b8#id",
+                      "thingLabel": "Bancaire",
+                      "thingUri": "http://www.bbc.co.uk/things/cfb8bd8c-0638-4383-9dec-8d1703c8b4b8#id",
+                      "thingId": "cfb8bd8c-0638-4383-9dec-8d1703c8b4b8",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q22687",
+                        "http://dbpedia.org/resource/Bank"
+                      ],
+                      "thingEnglishLabel": "Banking",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0b6yj49",
+                "subType": "clip",
+                "format": "video",
+                "title": "Les millions disparus du Congo - documentaire de #BBCAfricaEye",
+                "synopses": {
+                  "short": "Les millions disparus du Congo",
+                  "long": "Dévoilant les secrets de la plus grande fuite de données bancaires d'Afrique, BBC Africa Eye révèle comment des millions de dollars de fonds publics ont fini sur les comptes bancaires privés d'entreprises basées en République démocratique du Congo et appartenant à la famille et aux associés de l'ancien président Joseph Kabila. L'émission soulève également de sérieuses questions sur les transactions inexpliquées effectuées sur un compte officiel du bureau de la présidence lorsque Joseph Kabila était au pouvoir. \n \nQue savait l'ancien président ?\n\nL'enquête fait partie de Congo Hold-up, une collaboration internationale avec l'accès aux preuves de la BGFI Bank.\n\nEn collaboration avec :\nMediaPart\nPPLAAF\nEuropean Investigative Collaborations\nThe Sentry\nCongo Hold-up Partners",
+                  "medium": "L'enquête fait partie de Congo Hold-up, une collaboration internationale avec Mediapart, Pplaaf, EIC.network et d'autres, qui ont eu accès aux preuves de la BGFI Bank."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b6ym4v.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "Les millions disparus du Congo",
+                "versions": [
+                  {
+                    "versionId": "p0b6yj4k",
+                    "types": ["Original"],
+                    "duration": 915,
+                    "durationISO8601": "PT15M15S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1638186449000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "121924727",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11C26/production/_121924727_a982dbee-d993-42bf-ba32-eecbff8b8fb5.jpg",
+                "path": "/cpsprodpb/11C26/production/_121924727_a982dbee-d993-42bf-ba32-eecbff8b8fb5.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-59462637",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c2e6ff82-ad72-4d11-91c5-5bfc3749866f",
+            "rank": 11,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:c2e6ff82-ad72-4d11-91c5-5bfc3749866f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Afrique Avenir : Diana Bouli, de modèle photo à star des années 80 sur TikTok",
+                "headline": "Afrique Avenir : Diana Bouli, de modèle photo à star des années 80 sur TikTok"
+              },
+              "locators": {
+                "assetUri": "/afrique/region-57923354",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/region-57923354",
+                "curie": "http://www.bbc.co.uk/asset/c2e6ff82-ad72-4d11-91c5-5bfc3749866f",
+                "assetId": "57923354"
+              },
+              "summary": "Afrique Avenir reçoit Diana Bouli, modèle photo et créatrice de contenus sur TikTok",
+              "timestamp": 1626890973000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  },
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "fr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "locator": "urn:bbc:cps:curie:asset:c2e6ff82-ad72-4d11-91c5-5bfc3749866f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6ae05645-a3cf-4c86-a194-fdd98389a670#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                      "thingLabel": "Entrepreneur",
+                      "thingUri": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                      "thingId": "41d87885-664f-4d92-931e-470b8fd7b16b",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entrepreneurship"
+                      ],
+                      "thingEnglishLabel": "Entrepreneurship",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6ae05645-a3cf-4c86-a194-fdd98389a670#id",
+                      "thingLabel": "Cameroun",
+                      "thingUri": "http://www.bbc.co.uk/things/6ae05645-a3cf-4c86-a194-fdd98389a670#id",
+                      "thingId": "6ae05645-a3cf-4c86-a194-fdd98389a670",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2233387/"],
+                      "thingEnglishLabel": "Cameroon",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+                      "thingLabel": "Des médias sociaux",
+                      "thingUri": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+                      "thingId": "ea2c5d34-4279-4e06-b69a-e699321d7f9f",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Social_media",
+                        "http://www.wikidata.org/entity/Q202833"
+                      ],
+                      "thingEnglishLabel": "Social media",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id",
+                      "thingLabel": "Les jeunes",
+                      "thingUri": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id",
+                      "thingId": "f6ec89fd-3823-498e-a888-572e96f791b2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Youth",
+                        "http://www.wikidata.org/entity/Q190007"
+                      ],
+                      "thingEnglishLabel": "Young people",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "fr",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09q0cr1",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Afrique Avenir : Diana Bouli, de modèle photo à star des années 80 sur TikTok",
+                "synopses": {
+                  "short": "Afrique Avenir : Diana Bouli, de modèle photo à star des années 80 sur TikTok",
+                  "long": "Tenue vintage, épaules relevées, afro volumineux, moustache broussailleuse, mise en scène, si vous êtes fan de TikTok, vous avez sûrement déjà vu une des multiples vidéos de Diana Hyllarie Bouli Essounga. \n\nLa jeune camerounaise s’est spécialisée dans des remakes de vidéos clips de quelques grands noms de la musique africaine des années 80, et des réunions de familles avec des personnages atypiques.\n\nAvec plus de 700 mille abonnées, et des vidéos qui font parfois plus de 2 millions de vues, Diana Bouli fait sensation sur l’application TikTok avec ses publications. \n\nDes coulisses de la réalisation de ses vidéos, de ses sources d’inspiration aux conditions des créateurs africains sur  TikTok, Diana Bouli se confie à Alexandrine Holognon dans Afrique Avenir.",
+                  "medium": "Afrique Avenir reçoit Diana Bouli, modèle photo et créatrice de contenus sur TikTok"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09q0gcc.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Afrique Avenir : Diana Bouli, de modèle photo à star des années 80 sur TikTok",
+                "versions": [
+                  {
+                    "versionId": "p09q0cr3",
+                    "types": ["Original"],
+                    "duration": 1770,
+                    "durationISO8601": "PT29M30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1626869240000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119520731",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/3586/production/_119520731_a7f86296-f3ee-4444-9180-2906f709d159.jpg",
+                "path": "/cpsprodpb/3586/production/_119520731_a7f86296-f3ee-4444-9180-2906f709d159.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Diana Bouli, modèle photo et créatrice de contenus sur TikTok",
+                "caption": "Diana Bouli, modèle photo et créatrice de contenus sur TikTok",
+                "copyrightHolder": "XAVIER NEXEL",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/region-57923354",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c274635a-2a1d-11e5-9a5b-8cdf3db9bd6e",
+            "rank": 12,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:c274635a-2a1d-11e5-9a5b-8cdf3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Qui est Hissène Habré ?",
+                "headline": "Qui est Hissène Habré ?"
+              },
+              "locators": {
+                "assetUri": "/afrique/institutionelles/2015/07/150714_hissene_habre_explainer",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c274635a-2a1d-11e5-9a5b-8cdf3db9bd6e",
+                "assetId": "39636834",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/institutionelles/2015/07/150714_hissene_habre_explainer",
+                "curie": "http://www.bbc.co.uk/asset/c274635a-2a1d-11e5-9a5b-8cdf3db9bd6e"
+              },
+              "summary": " Le verdit dans le procès de Hissène Habré sera connu ce lundi. L'ancien président tchadien est poursuivi devant les chambres africaines extraordinaires pour crimes contre l'humanité, torture et crimes de guerre.",
+              "timestamp": 1464544059000,
+              "language": "fr",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "taggings": []
+              },
+              "media": {
+                "id": "39636834",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "39636834",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/07/14/150714114834_hissene_habre_bbc_640x360__nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/07/14/150714114834_hissene_habre_bbc_640x360__nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/afrique/meta/dps/2015/07/emp/150714_hissene_habre_explainer.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2015/07/afr~fhabre explainer~f1122~f14~f7_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2015/07/afr~fhabre explainer~f1122~f14~f7_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2015/07/afr~fhabre explainer~f1122~f14~f7_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e232",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/07/14/150714114834_hissene_habre_bbc_144x81__nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/07/14/150714114834_hissene_habre_bbc_144x81__nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "  ",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/institutionelles/2015/07/150714_hissene_habre_explainer",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9f1d02f2-eb14-3344-933e-5335b671d8bb",
+            "rank": 13,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:9f1d02f2-eb14-3344-933e-5335b671d8bb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Un inconnu a touché mon sein dans un bus\"",
+                "headline": "Kenya : \"un inconnu a touché mon sein dans un bus\""
+              },
+              "locators": {
+                "assetUri": "/afrique/region-41669650",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/region-41669650",
+                "curie": "http://www.bbc.co.uk/asset/9f1d02f2-eb14-3344-933e-5335b671d8bb",
+                "assetId": "41669650"
+              },
+              "summary": "Anita Nderu a été plusieurs fois victime de harcèlements sexuels dans les transports en commun à Nairobi(Kenya).",
+              "timestamp": 1508331676000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05k8q9v",
+                "subType": "clip",
+                "format": "video",
+                "title": "Un inconnu a touché mon sein dans un bus",
+                "synopses": {
+                  "short": "Kenya : un inconnu a touché mon sein dans un bus",
+                  "medium": "Anita Nderu a été plusieurs fois victime de harcèlements sexuels dans les transports en commun.",
+                  "long": "Une journaliste relate son expérience.\nAnita Nderu a été plusieurs fois victime de harcèlements sexuels dans les transports en commun. \nElle estime qu'il est temps d'éveiller les consciences sur le problème."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05k8qmc.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Kenya : un inconnu a touché mon sein dans un bus",
+                "versions": [
+                  {
+                    "versionId": "p05k8q9x",
+                    "types": ["Original"],
+                    "duration": 100,
+                    "durationISO8601": "PT1M40S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1508331241000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "98366305",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/C4BE/production/_98366305_p05k8qmc.jpg",
+                "path": "/cpsprodpb/C4BE/production/_98366305_p05k8qmc.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Anita Nderu a été plusieurs fois victime de harcèlements sexuels",
+                "caption": "Anita Nderu a été plusieurs fois victime de harcèlements sexuels",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/region-41669650",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8b64a5ef-6212-c741-a202-81090f104998",
+            "rank": 14,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:8b64a5ef-6212-c741-a202-81090f104998",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"On a produit des masques avec le coton africain mais certains commandent ailleurs\"",
+                "headline": "Alphadi:\"On produit des masques avec le coton africain mais certains commandent ailleurs\""
+              },
+              "locators": {
+                "assetUri": "/afrique/media-53045965",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-53045965",
+                "curie": "http://www.bbc.co.uk/asset/8b64a5ef-6212-c741-a202-81090f104998",
+                "assetId": "53045965"
+              },
+              "summary": "Alphadi, le célèbre styliste d'origine nigérienne, fondateur du Festival International de la Mode Africaine, FIMA, se prononce sur l'impact du coronavirus sur la culture africaine.",
+              "timestamp": 1592194871000,
+              "language": "fr",
+              "media": {
+                "id": "p08gzpcz",
+                "subType": "clip",
+                "format": "audio",
+                "title": "\"On a produit des masques avec le coton africain  mais certains commandent  ailleurs\"",
+                "synopses": {
+                  "short": "Alphadi:\"On produit des masques avec le coton africain mais certains commandent  ailleurs\"",
+                  "long": "La pandémie de Corona Virus a bouleversé les agendas culturels sur le continent. Des promoteurs de  mode africaine parlent de lourdes pertes et avertissent que plusieurs structures pourraient ne pas se relever de la crise actuelle si les dirigeants africains n'appuient pas ce secteur qui emploie de nombreux jeunes. \n Cette année l'effervescence des grands défilés et festivals n'est pas au rendez-vous dans les capitales africaines.\nUn extrait de l'interview de Sidahmed Seidnaly allias Alphadi fondateur du Festival International de la Mode Africaine, FIMA,  au micro de Syntiche Mantar Tompté.",
+                  "medium": "Alphadi,le célèbre styliste d'origine nigérienne, fondateur du Festival International de la Mode Africaine, FIMA se prononce sur l'impact du coronavirus sur la culture africaine."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08gzpnq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Alphadi:\"On produit des masques avec le coton africain mais certains responsables commandent ailleurs\"",
+                "versions": [
+                  {
+                    "versionId": "p08gzpd1",
+                    "types": ["Original"],
+                    "duration": 153,
+                    "durationISO8601": "PT2M33S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1592194606000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "112896581",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4889/production/_112896581_p08gzpnq.jpg",
+                "path": "/cpsprodpb/4889/production/_112896581_p08gzpnq.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Alphadi,le célèbre styliste d'origine nigérienne, fondateur du Festival International de la Mode Africaine, FIMA se prononce sur l'impact du coronavirus sur la culture africaine.",
+                "copyrightHolder": "La pandémie de Corona Virus a bouleversé les agend",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-53045965",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4ddf3f77-e045-481c-9e34-a03d7f2195b2",
+            "rank": 15,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:4ddf3f77-e045-481c-9e34-a03d7f2195b2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Chadwick Boseman: cinq choses à savoir sur la star de Black Panther",
+                "headline": "Chadwick Boseman: cinq choses à savoir sur la star de Black Panther"
+              },
+              "locators": {
+                "assetUri": "/afrique/monde-53977024",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-53977024",
+                "curie": "http://www.bbc.co.uk/asset/4ddf3f77-e045-481c-9e34-a03d7f2195b2",
+                "assetId": "53977024"
+              },
+              "summary": "L'acteur américain Chadwick Boseman, surtout connu pour avoir joué dans Black Panther dans la franchise à succès de super-héros Marvel, est décédé d'un cancer à l'âge de 43 ans.",
+              "timestamp": 1598969353000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08q3yqb",
+                "subType": "clip",
+                "format": "video",
+                "title": "Chadwick Boseman: Cinq choses à savoir sur la star de Black Panther",
+                "synopses": {
+                  "short": "Chadwick Boseman: Cinq choses à savoir sur la star de Black Panther",
+                  "long": "L'acteur américain Chadwick Boseman, surtout connu pour avoir joué dans Black Panther dans la franchise à succès de super-héros Marvel, est décédé d'un cancer à l'âge de 43 ans.\n\nIl est décédé chez lui à Los Angeles avec sa femme et sa famille à ses côtés, selon un communiqué publié sur les réseaux sociaux.\n\nVoici cinq choses à savoir sur l'acteur hollywoodien.",
+                  "medium": "L'acteur américain Chadwick Boseman, surtout connu pour avoir joué dans Black Panther dans la franchise à succès de super-héros Marvel, est décédé d'un cancer à l'âge de 43 ans."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08q3ysh.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Chadwick Boseman: Cinq choses à savoir sur la star de Black Panther",
+                "versions": [
+                  {
+                    "versionId": "p08q3yqf",
+                    "types": ["Original"],
+                    "duration": 123,
+                    "durationISO8601": "PT2M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1598885777000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "114189575",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E0FE/production/_114189575_p08q3ysh.jpg",
+                "path": "/cpsprodpb/E0FE/production/_114189575_p08q3ysh.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "Chadwick Boseman",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/monde-53977024",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d29debfe-1dd5-9946-b383-e8c88e855a7c",
+            "rank": 16,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:d29debfe-1dd5-9946-b383-e8c88e855a7c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Qui sont les Kurdes et pourquoi la Turquie les combat en Syrie?",
+                "headline": "Qui sont les Kurdes et pourquoi la Turquie les combat en Syrie?"
+              },
+              "locators": {
+                "assetUri": "/afrique/monde-50061463",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-50061463",
+                "curie": "http://www.bbc.co.uk/asset/d29debfe-1dd5-9946-b383-e8c88e855a7c",
+                "assetId": "50061463"
+              },
+              "summary": "L'armée turque a lancé une opération transfrontalière contre les forces dirigées par les Kurdes en Syrie début octobre.",
+              "timestamp": 1571161526000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07r3xxf",
+                "subType": "clip",
+                "format": "video",
+                "title": "Qui sont les Kurdes et pourquoi la Turquie les combat-elle dans le nord de la Syrie ?",
+                "synopses": {
+                  "short": "Qui sont les Kurdes et pourquoi la Turquie a-t-elle lancé une offensive contre eux ?",
+                  "long": "Des dizaines de milliers de personnes ont fui leur foyer dans le nord de la Syrie, alors que les forces turques intensifient leur offensive transfrontalière contre les zones tenues par les Kurdes.\n\nLa communauté internationale augmente la pression pour que la Turquie mette un terme à l'attaque.\n\nLa BBC vous explique ce qui se cache derrière le conflit.",
+                  "medium": "L'armée turque a lancé une opération transfrontalière contre les forces dirigées par les Kurdes en Syrie début octobre.\nPourquoi la Turquie a-t-elle lancé une offensive ?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07r3y47.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Qui sont les Kurdes et pourquoi la Turquie a-t-elle lancé une offensive contre eux ?",
+                "versions": [
+                  {
+                    "versionId": "p07r3xxh",
+                    "types": ["Original"],
+                    "duration": 245,
+                    "durationISO8601": "PT4M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1571160313000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109247836",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F982/production/_109247836_8a44502e-eff5-4e0e-ab1f-9ba4283dab8e.jpg",
+                "path": "/cpsprodpb/F982/production/_109247836_8a44502e-eff5-4e0e-ab1f-9ba4283dab8e.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Qui sont les Kurdes et pourquoi la Turquie les combat dans le nord de la Syrie?",
+                "caption": "Qui sont les Kurdes et pourquoi la Turquie les combat dans le nord de la Syrie?",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/monde-50061463",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9f9312fa-89e8-024b-9ee3-d8b7d3e66aba",
+            "rank": 17,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:9f9312fa-89e8-024b-9ee3-d8b7d3e66aba",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Travailler de la maison, quand les enfants s'en mêlent!",
+                "headline": "Coronavirus : Robert Kelly parle du télétravail avec des enfants à la maison"
+              },
+              "locators": {
+                "assetUri": "/afrique/media-52121324",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-52121324",
+                "curie": "http://www.bbc.co.uk/asset/9f9312fa-89e8-024b-9ee3-d8b7d3e66aba",
+                "assetId": "52121324"
+              },
+              "summary": "Le travail à domicile selon Robert Kelly - dont les enfants se sont glissés à l'antenne lors d'une interview en direct avec la BBC.",
+              "timestamp": 1585744907000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  },
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p088bg52",
+                "subType": "clip",
+                "format": "video",
+                "title": "Coronavirus : combien de temps faudra-t-il pour developer un vaccin Covid-19 ?",
+                "synopses": {
+                  "short": "Coronavirus : combien de temps faudra-t-il pour developer un vaccin Covid-19 ?",
+                  "long": "Alors que l'épidémie de coronavirus se propage à travers le monde, de nombreuses personnes se demandent combien de temps il faudra pour trouver un vaccin.",
+                  "medium": "Alors que l'épidémie de coronavirus se propage à travers le monde, de nombreuses personnes se demandent combien de temps il faudra pour trouver un vaccin."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088bhcw.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Coronavirus : Robert Kelly parle du télétravail avec des enfants à la maison",
+                "versions": [
+                  {
+                    "versionId": "p088bg56",
+                    "types": ["Original"],
+                    "duration": 64,
+                    "durationISO8601": "PT1M4S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1585739826000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111498987",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1348D/production/_111498987_p088bhcw.jpg",
+                "path": "/cpsprodpb/1348D/production/_111498987_p088bhcw.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #3",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-52121324",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8deac043-b780-45b7-88a2-1907688fcfd6",
+            "rank": 18,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:8deac043-b780-45b7-88a2-1907688fcfd6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mathydy: la montre de luxe aux couleurs Africaines",
+                "headline": "Mathydy: Des montres de luxe aux couleurs de l’Afrique"
+              },
+              "locators": {
+                "assetUri": "/afrique/53954172",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/53954172",
+                "curie": "http://www.bbc.co.uk/asset/8deac043-b780-45b7-88a2-1907688fcfd6",
+                "assetId": "53954172"
+              },
+              "summary": "Maty Lo et Idrissa Niane, en couple dans la vie comme au travail, s’imposent dans le secteur de l’horlogerie de luxe depuis Dakar.",
+              "timestamp": 1598639069000,
+              "language": "fr",
+              "media": {
+                "id": "p08pyd3w",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Mathydy: des montres inspirées des royaumes d’Afrique",
+                "synopses": {
+                  "short": "Maty Lo et Idrissa Niane s’imposent dans le secteur de l’horlogerie de luxe depuis Dakar",
+                  "long": "Maty Lo et Idrissa Niane sont un véritable « power couple » : Ensembles ils ont fondé Mathydy, une marque de montres de luxe aux couleurs de l’Afrique.\n\nDepuis Dakar ils imposent leur rythme et leur style dans le secteur de l’horlogerie et exportent aujourd’hui leurs produits a une clientèle internationale. Ils nous racontent l’origine de la marque ainsi que les obstacles que doivent surmonter les horlogers Africains dans un secteur ou le continent est encore peu représenté.\n\nAlexandrine Hologon accuille :\nMaty Lo - Cofondateur, Mathydy\nIdrissa Niane - Cofondateur, Mathydy",
+                  "medium": "Maty Lo et Idrissa Niane, en couple dans la vie comme au travail, s’imposent dans le secteur de l’horlogerie de luxe depuis Dakar."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08pydl6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Maty et Idrissa imposent leur style et leur rythme sur le marché de l'horlogerie.",
+                "versions": [
+                  {
+                    "versionId": "p08pyd40",
+                    "types": ["Original"],
+                    "duration": 1769,
+                    "durationISO8601": "PT29M29S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1598637488000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "114162603",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/77A2/production/_114162603_131b750e-8d3f-4310-8f67-dcd32e204e48.jpg",
+                "path": "/cpsprodpb/77A2/production/_114162603_131b750e-8d3f-4310-8f67-dcd32e204e48.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Maty Lo et Idrissa Niane, en couple dans la vie comme au travail, s’imposent dans le secteur de l’horlogerie de luxe depuis Dakar.",
+                "caption": "Maty Lo et Idrissa Niane, en couple dans la vie comme au travail, s’imposent dans le secteur de l’horlogerie de luxe depuis Dakar.",
+                "copyrightHolder": "Maty Lo et Idrissa Niane ",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/53954172",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7bca8cc1-ccbb-48d8-b65e-8e6714b486ef",
+            "rank": 19,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:7bca8cc1-ccbb-48d8-b65e-8e6714b486ef",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Pourquoi la France a fait de Joséphine Baker un héros national",
+                "headline": "Joséphine Baker : une icône qui rêvait de fraternité universelle"
+              },
+              "locators": {
+                "assetUri": "/afrique/media-59497602",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-59497602",
+                "curie": "http://www.bbc.co.uk/asset/7bca8cc1-ccbb-48d8-b65e-8e6714b486ef",
+                "assetId": "59497602"
+              },
+              "summary": "La France fait de cette femme une héroïne nationale pour son action en faveur des droits civiques et son soutien à la Résistance pendant la Seconde Guerre mondiale.",
+              "timestamp": 1638447799000,
+              "language": "fr",
+              "passport": {
+                "language": "fr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "locator": "urn:bbc:cps:curie:asset:7bca8cc1-ccbb-48d8-b65e-8e6714b486ef",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/61ef4416-de68-49ff-9c97-e0779dafd9d2#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "fr",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                      "thingLabel": "Société",
+                      "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                      "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Society",
+                        "http://www.wikidata.org/entity/Q8425"
+                      ],
+                      "thingEnglishLabel": "Society",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/61ef4416-de68-49ff-9c97-e0779dafd9d2#id",
+                      "thingLabel": "France",
+                      "thingUri": "http://www.bbc.co.uk/things/61ef4416-de68-49ff-9c97-e0779dafd9d2#id",
+                      "thingId": "61ef4416-de68-49ff-9c97-e0779dafd9d2",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/3017382/"],
+                      "thingEnglishLabel": "France",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "Etats-Unis",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "Femmes",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0b7kvry",
+                "subType": "clip",
+                "format": "video",
+                "title": "Joséphine Baker : Une icône qui rêvait de fraternité universelle",
+                "synopses": {
+                  "short": "Joséphine Baker : Une icône qui rêvait de fraternité universelle",
+                  "long": "La France fait de cette femme une héroïne nationale pour son action en faveur des droits civiques et son soutien à la Résistance pendant la Seconde Guerre mondiale.",
+                  "medium": "La France fait de cette femme une héroïne nationale pour son action en faveur des droits civiques et son soutien à la Résistance pendant la Seconde Guerre mondiale."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b7kwfz.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Joséphine Baker : Une icône qui rêvait de fraternité universelle",
+                "versions": [
+                  {
+                    "versionId": "p0b7kvs4",
+                    "types": ["Original"],
+                    "duration": 128,
+                    "durationISO8601": "PT2M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1638377212000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "121915987",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13467/production/_121915987_p0b7kwfz.jpg",
+                "path": "/cpsprodpb/13467/production/_121915987_p0b7kwfz.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "Josephine Baker",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-59497602",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5e366f25-300a-a243-b764-9ee2d426320c",
+            "rank": 20,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:5e366f25-300a-a243-b764-9ee2d426320c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Toute vérité est bonne à dessiner\"",
+                "headline": "\"Toute vérité est bonne à dessiner\",Tembo Kash - RDC"
+              },
+              "locators": {
+                "assetUri": "/afrique/45150089",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/45150089",
+                "curie": "http://www.bbc.co.uk/asset/5e366f25-300a-a243-b764-9ee2d426320c",
+                "assetId": "45150089"
+              },
+              "summary": "Tembo Kash, caricaturiste congolais dit ne pas avoir peur de caricaturer les dirigeants de son pays, la RDC, et se dit prêt à tout pour dénoncer les injustices qu'il observe.",
+              "timestamp": 1533920878000,
+              "language": "fr",
+              "media": {
+                "id": "p06h43st",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Toute vérité est bonne à dessiner\"",
+                "synopses": {
+                  "short": "\"Toute vérité est bonne à dessiner\",Tembo Kash - RDC",
+                  "long": "\"Toute vérité est bonne à dessiner\", c'est l'avis de Tembo Kash. \nCe caricaturiste congolais dit être inspiré par la frustration et la révolte qui l'animent en observant la société.Une interview de Jacques Diyamby et Franck Noundofinin",
+                  "medium": "Tembo Kash, caricaturiste congolais dit ne pas avoir peur de caricaturer les dirigeants de son pays, la RDC et se dit prêt à tout pour dénoncer ce qui ne va pas dans sa société."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06h496t.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "\"Toute vérité est bonne à dessiner\",Tembo Kash - RDC",
+                "versions": [
+                  {
+                    "versionId": "p06h43sz",
+                    "types": ["Original"],
+                    "duration": 228,
+                    "durationISO8601": "PT3M48S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1533920242000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "102928986",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10D76/production/_102928986_p06h496t.jpg",
+                "path": "/cpsprodpb/10D76/production/_102928986_p06h496t.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Caricature de Joseph Kabila",
+                "caption": "Caricature de Joseph Kabila",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/45150089",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
