@@ -230,7 +230,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <NielsenAnalytics />
-      <OptimizelyPageViewTracking />
+
       <ArticleMetadata
         articleId={getArticleId(pageData)}
         title={headline}
@@ -285,6 +285,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}
       />
+      <OptimizelyPageViewTracking />
     </Wrapper>
   );
 };
