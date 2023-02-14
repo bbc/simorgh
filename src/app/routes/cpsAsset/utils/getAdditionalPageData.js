@@ -146,7 +146,7 @@ const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   try {
     const agent = attachAgent ? await getAgent() : null;
 
-    if (['recommendations'].includes(name.toLowercase())) {
+    if (name.indexOf('ecommendations') !== -1) {
       return fetchPageData({
         path,
         timeout: SECONDARY_DATA_TIMEOUT,
