@@ -1,251 +1,2609 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:igbo/media-42986440",
-    "locators": {
-      "assetUri": "/igbo/media-42986440",
-      "cpsUrn": "urn:bbc:content:assetUri:igbo/media-42986440",
-      "curie": "http://www.bbc.co.uk/asset/c951fc3d-2f39-084c-b111-3d4985995b96",
-      "assetId": "42986440"
-    },
-    "type": "MAP",
-    "createdBy": "igbo-v6",
-    "language": "ig",
-    "lastUpdated": 1589265201240,
-    "firstPublished": 1518073032000,
-    "lastPublished": 1589265179000,
-    "timestamp": 1589265179000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "igbo.embedded_media.media_asset.42986440.page",
-      "cps_asset_id": "42986440"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e4739461b000e9dabfc",
-          "campaignName": "Update me"
-        }
-      ],
-      "taggings": []
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "Egwuruegwu",
-          "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
-          "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
-          "thingType": [
-            "core:Theme",
-            "core:Thing",
-            "tagging:TagConcept",
-            "tagging:Genre",
-            "tagging:AmbiguousTerm"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:igbo/media-42986440",
+        "locators": {
+          "assetUri": "/igbo/media-42986440",
+          "cpsUrn": "urn:bbc:content:assetUri:igbo/media-42986440",
+          "curie": "http://www.bbc.co.uk/asset/c951fc3d-2f39-084c-b111-3d4985995b96",
+          "assetId": "42986440"
+        },
+        "type": "MAP",
+        "createdBy": "igbo-v6",
+        "language": "ig",
+        "lastUpdated": 1649998744435,
+        "firstPublished": 1518073032000,
+        "lastPublished": 1625726709000,
+        "timestamp": 1625726709000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "ldp_tags": "Nigeria~Sport~Sudan~Africa",
+          "cps_asset_id": "42986440",
+          "ldp_ids": "3d5d5e30-dd50-4041-96d5-c970b20005b9~4063f80f-cccc-44c8-9449-5ca44e4c8592~620270e1-cd82-443d-a7e4-98d177627606~d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+          "contentId": "urn:bbc:cps:curie:asset:c951fc3d-2f39-084c-b111-3d4985995b96",
+          "counterName": "igbo.africa.media_asset.42986440.page",
+          "cps_asset_type": "map"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "Update me"
+            }
           ],
-          "thingSameAs": ["http://dbpedia.org/resource/Sport"],
-          "topicName": "Egwuruegwu",
-          "topicId": "cnq68k0x2vrt",
-          "curationList": [
+          "language": "ig",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
+          "locator": "urn:bbc:cps:curie:asset:c951fc3d-2f39-084c-b111-3d4985995b96",
+          "availability": "AVAILABLE",
+          "taggings": [
             {
-              "curationId": "a8d48174-ad49-4acd-9966-3d30e5f257d1",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Naijiria",
-          "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
-          "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
-          "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/2328926/"],
-          "topicName": "Naijiria",
-          "topicId": "c5qvpxrx6wyt",
-          "curationList": [
-            {
-              "curationId": "010d96d0-32ba-4a8c-8622-4f184aeb4689",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Afịrịka",
-          "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
-          "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
-          "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q15",
-            "http://dbpedia.org/resource/Africa",
-            "http://sws.geonames.org/6255146/"
-          ],
-          "topicName": "Afịrịka",
-          "topicId": "c404vnj5q75t",
-          "curationList": [
-            {
-              "curationId": "75d83320-69b0-4ae7-a253-3867e2dd0fd6",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Sudan",
-          "thingUri": "http://www.bbc.co.uk/things/620270e1-cd82-443d-a7e4-98d177627606#id",
-          "thingId": "620270e1-cd82-443d-a7e4-98d177627606",
-          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
-          "thingSameAs": ["http://sws.geonames.org/366755/"],
-          "topicName": "Sudan",
-          "topicId": "c2dwqj3gz81t",
-          "curationList": [
-            {
-              "curationId": "7509496b-040e-428d-b726-d138521970a3",
-              "curationType": "vivo-stream"
-            }
-          ]
-        }
-      ]
-    },
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p08cxd9f",
-        "subType": "clip",
-        "format": "audio",
-        "title": "BBC Nkeji",
-        "synopses": {
-          "short": "Akụkọ ga-amasị gị ịkọ taa niile",
-          "medium": "Akụkọ ga-amasị gị ịkọ taa niile."
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cxdbl.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "Akụkọ ga-amasị gị ịkọ taa niile",
-        "versions": [
-          {
-            "versionId": "p08cxd9h",
-            "types": ["Original"],
-            "duration": 60,
-            "durationISO8601": "PT1M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
             },
-            "availableUntil": 1589350302000,
-            "availableFrom": 1589263902000
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+              "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/620270e1-cd82-443d-a7e4-98d177627606#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+            }
+          ],
+          "schemaVersion": "1.2.0",
+          "publishedState": "PUBLISHED",
+          "predicates": {
+            "contributor": [
+              {
+                "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id",
+                "type": "contributor"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "ig",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                "thingLabel": "Naijiria",
+                "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
+                "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                "thingEnglishLabel": "Nigeria",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                "thingLabel": "Egwuruegwu",
+                "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+                "thingType": [
+                  "core:Theme",
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:Genre",
+                  "tagging:AmbiguousTerm"
+                ],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Sport",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/620270e1-cd82-443d-a7e4-98d177627606#id",
+                "thingLabel": "Sudan",
+                "thingUri": "http://www.bbc.co.uk/things/620270e1-cd82-443d-a7e4-98d177627606#id",
+                "thingId": "620270e1-cd82-443d-a7e4-98d177627606",
+                "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q1049",
+                  "http://sws.geonames.org/366755/",
+                  "http://dbpedia.org/resource/Sudan"
+                ],
+                "thingEnglishLabel": "Sudan",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                "thingLabel": "Afịrịka",
+                "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+                "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q15",
+                  "http://dbpedia.org/resource/Africa",
+                  "http://sws.geonames.org/6255146/"
+                ],
+                "thingEnglishLabel": "Africa",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Naijiria",
+              "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+              "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+              "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
+              "thingSameAs": ["http://sws.geonames.org/2328926/"],
+              "topicName": "Naijiria",
+              "topicId": "c5qvpxrx6wyt",
+              "curationList": [
+                {
+                  "curationId": "010d96d0-32ba-4a8c-8622-4f184aeb4689",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Nigeria",
+              "thingLabelLanguage": "ig",
+              "thingPreferredLabel": "Nigeria"
+            },
+            {
+              "thingLabel": "Egwuruegwu",
+              "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+              "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+              "thingType": [
+                "core:Theme",
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:Genre",
+                "tagging:AmbiguousTerm"
+              ],
+              "thingSameAs": [],
+              "topicName": "Egwuruegwu",
+              "topicId": "cnq68k0x2vrt",
+              "curationList": [
+                {
+                  "curationId": "a8d48174-ad49-4acd-9966-3d30e5f257d1",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Sport",
+              "thingLabelLanguage": "ig",
+              "thingPreferredLabel": "Sport"
+            },
+            {
+              "thingLabel": "Sudan",
+              "thingUri": "http://www.bbc.co.uk/things/620270e1-cd82-443d-a7e4-98d177627606#id",
+              "thingId": "620270e1-cd82-443d-a7e4-98d177627606",
+              "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q1049",
+                "http://sws.geonames.org/366755/",
+                "http://dbpedia.org/resource/Sudan"
+              ],
+              "topicName": "Sudan",
+              "topicId": "c2dwqj3gz81t",
+              "curationList": [
+                {
+                  "curationId": "7509496b-040e-428d-b726-d138521970a3",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Sudan",
+              "thingLabelLanguage": "ig",
+              "thingPreferredLabel": "Sudan"
+            },
+            {
+              "thingLabel": "Afịrịka",
+              "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+              "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+              "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q15",
+                "http://dbpedia.org/resource/Africa",
+                "http://sws.geonames.org/6255146/"
+              ],
+              "topicName": "Afịrịka",
+              "topicId": "c404vnj5q75t",
+              "curationList": [
+                {
+                  "curationId": "75d83320-69b0-4ae7-a253-3867e2dd0fd6",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Africa",
+              "thingLabelLanguage": "ig",
+              "thingPreferredLabel": "Africa"
+            }
+          ]
+        },
+        "version": "v1.4.2",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "IGBO",
+          "producerId": "53"
+        },
+        "readTime": 1,
+        "siteUri": "/igbo",
+        "topics": [
+          {
+            "topicName": "Sudan",
+            "topicId": "c2dwqj3gz81t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/620270e1-cd82-443d-a7e4-98d177627606#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "7509496b-040e-428d-b726-d138521970a3",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo"
+          },
+          {
+            "topicName": "Afịrịka",
+            "topicId": "c404vnj5q75t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "75d83320-69b0-4ae7-a253-3867e2dd0fd6",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "core:Place", "tagging:TagConcept"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo"
+          },
+          {
+            "topicName": "Naijiria",
+            "topicId": "c5qvpxrx6wyt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "010d96d0-32ba-4a8c-8622-4f184aeb4689",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Place", "core:Thing", "tagging:TagConcept"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo"
+          },
+          {
+            "topicName": "Egwuruegwu",
+            "topicId": "cnq68k0x2vrt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "a8d48174-ad49-4acd-9966-3d30e5f257d1",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Theme",
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:Genre",
+              "tagging:AmbiguousTerm"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo"
           }
         ],
-        "imageCopyright": "BBC",
-        "type": "media"
+        "mediaType": "audio"
       },
-      {
-        "text": "Akụkọ ga-amasị gị ịkọ taa niile.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "p09nrtp8",
+            "subType": "clip",
+            "format": "audio",
+            "title": "BBC Nkeji",
+            "synopses": {
+              "short": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
+              "medium": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile."
+            },
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nrtqz.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
+            "versions": [
+              {
+                "versionId": "p09nrtpb",
+                "types": ["Original"],
+                "duration": 59,
+                "durationISO8601": "PT59S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableUntil": 1625812750000,
+                "availableFrom": 1625726350000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "radioProgramme",
+            "type": "media"
+          },
+          {
+            "text": "Akụkọ ga-amasị gị ịkọ mgbe ọbụla",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "BBC Nkeji",
+          "headline": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile"
+        },
+        "locators": {
+          "assetUri": "/igbo/media-42986440",
+          "cpsUrn": "urn:bbc:content:assetUri:igbo/media-42986440",
+          "curie": "http://www.bbc.co.uk/asset/c951fc3d-2f39-084c-b111-3d4985995b96",
+          "assetId": "42986440"
+        },
+        "summary": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile.",
+        "timestamp": 1625726709000,
+        "language": "ig",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "Update me"
+            }
+          ],
+          "language": "ig",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
+          "locator": "urn:bbc:cps:curie:asset:c951fc3d-2f39-084c-b111-3d4985995b96",
+          "availability": "AVAILABLE",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+              "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/620270e1-cd82-443d-a7e4-98d177627606#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+            }
+          ],
+          "schemaVersion": "1.2.0",
+          "publishedState": "PUBLISHED",
+          "predicates": {
+            "contributor": [
+              {
+                "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id",
+                "type": "contributor"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "ig",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                "thingLabel": "Naijiria",
+                "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
+                "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                "thingEnglishLabel": "Nigeria",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                "thingLabel": "Egwuruegwu",
+                "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+                "thingType": [
+                  "core:Theme",
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:Genre",
+                  "tagging:AmbiguousTerm"
+                ],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Sport",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/620270e1-cd82-443d-a7e4-98d177627606#id",
+                "thingLabel": "Sudan",
+                "thingUri": "http://www.bbc.co.uk/things/620270e1-cd82-443d-a7e4-98d177627606#id",
+                "thingId": "620270e1-cd82-443d-a7e4-98d177627606",
+                "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q1049",
+                  "http://sws.geonames.org/366755/",
+                  "http://dbpedia.org/resource/Sudan"
+                ],
+                "thingEnglishLabel": "Sudan",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                "thingLabel": "Afịrịka",
+                "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+                "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q15",
+                  "http://dbpedia.org/resource/Africa",
+                  "http://sws.geonames.org/6255146/"
+                ],
+                "thingEnglishLabel": "Africa",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "media": {
+          "id": "p09nrtp8",
+          "subType": "clip",
+          "format": "audio",
+          "title": "BBC Nkeji",
+          "synopses": {
+            "short": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
+            "medium": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nrtqz.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
+          "versions": [
+            {
+              "versionId": "p09nrtpb",
+              "types": ["Original"],
+              "duration": 59,
+              "durationISO8601": "PT59S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableUntil": 1625812750000,
+              "availableFrom": 1625726350000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "119308208",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13998/production/_119308208_p09nrtqz.jpg",
+          "path": "/cpsprodpb/13998/production/_119308208_p09nrtqz.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "BBC Nkeji",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:igbo/media-42986440",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Afịrịka",
+          "uri": "/igbo/afirika",
+          "urlIdentifier": "/igbo/afirika",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC News Ìgbò",
+          "uri": "/igbo",
+          "urlIdentifier": "/igbo",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "BBC Nkeji",
-      "headline": "Akụkọ ga-amasị gị ịkọ taa niile"
     },
-    "locators": {
-      "assetUri": "/igbo/media-42986440",
-      "cpsUrn": "urn:bbc:content:assetUri:igbo/media-42986440",
-      "curie": "http://www.bbc.co.uk/asset/c951fc3d-2f39-084c-b111-3d4985995b96",
-      "assetId": "42986440"
-    },
-    "summary": "Akụkọ ga-amasị gị ịkọ taa niile.",
-    "timestamp": 1589265179000,
-    "language": "ig",
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e4739461b000e9dabfc",
-          "campaignName": "Update me"
-        }
-      ],
-      "taggings": []
-    },
-    "media": {
-      "id": "p08cxd9f",
-      "subType": "clip",
-      "format": "audio",
-      "title": "BBC Nkeji",
-      "synopses": {
-        "short": "Akụkọ ga-amasị gị ịkọ taa niile",
-        "medium": "Akụkọ ga-amasị gị ịkọ taa niile."
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cxdbl.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "Akụkọ ga-amasị gị ịkọ taa niile",
-      "versions": [
-        {
-          "versionId": "p08cxd9h",
-          "types": ["Original"],
-          "duration": 60,
-          "durationISO8601": "PT1M",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableUntil": 1589350302000,
-          "availableFrom": 1589263902000
-        }
-      ],
-      "imageCopyright": "BBC",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "112237807",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/114D9/production/_112237807_p08cxdbl.jpg",
-      "path": "/cpsprodpb/114D9/production/_112237807_p08cxdbl.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "BBC Nkeji",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:igbo/media-42986440",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/igbo/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC News Ìgbò",
-      "uri": "/igbo",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-14T16:17:25.796Z",
+        "lastRecordTimeStamp": "2023-02-14T16:15:00Z",
+        "firstRecordTimeStamp": "2023-02-14T12:15:00Z",
+        "totalRecords": 15,
+        "records": [
+          {
+            "id": "c64f295f-e213-f140-9a8b-fe2b8ab2eb6d",
+            "rank": 1,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:c64f295f-e213-f140-9a8b-fe2b8ab2eb6d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Nnamdi Kanu interview: Zik tinyere anyị n'ụmị - Nnamdi Kanu",
+                "headline": "Nnamdi Kanu interview: Ọ bụ Zik tinyere Igbo n'ụmị a"
+              },
+              "locators": {
+                "assetUri": "/igbo/afirika-47242609",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47242609",
+                "curie": "http://www.bbc.co.uk/asset/c64f295f-e213-f140-9a8b-fe2b8ab2eb6d",
+                "assetId": "47242609"
+              },
+              "summary": "N'agba mkparịtaụka nke abụọ BBC Igbo na Nnamdi Kanu nwere, ọ kọwara na ọ gaghị eme mmehie Nnamdi Azikiwe mere n'oge nke ya.",
+              "timestamp": 1550205238000,
+              "language": "ig",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "ig",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
+                "locator": "urn:bbc:cps:curie:asset:c64f295f-e213-f140-9a8b-fe2b8ab2eb6d",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8afa7507-ec9d-47f1-a7b0-01cc8ce33c24#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f865a426-b0e0-4767-bfe4-5a831dd14cc8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.2.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Naijiria",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8afa7507-ec9d-47f1-a7b0-01cc8ce33c24#id",
+                      "thingLabel": "Nnamdi Kanu",
+                      "thingUri": "http://www.bbc.co.uk/things/8afa7507-ec9d-47f1-a7b0-01cc8ce33c24#id",
+                      "thingId": "8afa7507-ec9d-47f1-a7b0-01cc8ce33c24",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Person",
+                        "tagging:AmbiguousTerm",
+                        "tagging:Agent"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q21965090",
+                        "http://dbpedia.org/resource/Nnamdi_Kanu"
+                      ],
+                      "thingEnglishLabel": "Nnamdi Kanu",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f865a426-b0e0-4767-bfe4-5a831dd14cc8#id",
+                      "thingLabel": "Ndị Biafra chọrọ nkewa",
+                      "thingUri": "http://www.bbc.co.uk/things/f865a426-b0e0-4767-bfe4-5a831dd14cc8#id",
+                      "thingId": "f865a426-b0e0-4767-bfe4-5a831dd14cc8",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Indigenous_People_of_Biafra"
+                      ],
+                      "thingEnglishLabel": "Biafran separatists ",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ig",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p070x6zd",
+                "subType": "clip",
+                "format": "video",
+                "title": "“Zik tinyere anyị n’ọmị a” – Nnamdi Kanu",
+                "synopses": {
+                  "short": "Nnamdi Kanu: Azikiwe tinyere ndi Igbo n'ọmị ha nọ na ya",
+                  "medium": "N'agba mkparịtaụka nke abụọ BBC Igbo na Nnamdi Kanu nwere, ọ kọwara na ọ gaghị eme mmejọ Nnamdi Azikiwe mere n'oge nke ya."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p070x9bw.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Nnamdi Kanu: Azikiwe tinyere ndi Igbo n'ọmị ha nọ na ya",
+                "versions": [
+                  {
+                    "versionId": "p070x6zh",
+                    "types": ["Original"],
+                    "duration": 366,
+                    "durationISO8601": "PT6M6S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1550174379000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105657871",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/45D3/production/_105657871_kanu.jpg",
+                "path": "/cpsprodpb/45D3/production/_105657871_kanu.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Nnamdi Kanu",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/afirika-47242609",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a3094ab9-0a99-9548-9649-fc265c233be2",
+            "rank": 2,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:a3094ab9-0a99-9548-9649-fc265c233be2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uru asụsụ Igbo bara",
+                "headline": "Ịsụ asụsụ igbo bara nnukwu uru"
+              },
+              "locators": {
+                "assetUri": "/igbo/afirika-43144352",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-43144352",
+                "curie": "http://www.bbc.co.uk/asset/a3094ab9-0a99-9548-9649-fc265c233be2",
+                "assetId": "43144352"
+              },
+              "summary": "Onye ọkammụta n'asụsụ Igbo bụ Chigozie Nnabụihe kọwapụtara BBC Igbo uru isu asụsụ igbo bara.",
+              "timestamp": 1519273531000,
+              "language": "ig",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05ywqlh",
+                "subType": "clip",
+                "format": "video",
+                "title": "Uru asụsụ igbo bara",
+                "synopses": {
+                  "short": "Ịsụ asụsụ igbo bara nnukwu uru",
+                  "long": "Taa bụ ụbọchị ụwa niile ji echeta asụsụ nne ji mụ gị nke ndi bekee na-akpọ \"World Language day\".\n\nKa ụwa niile na-eme nka,onye ọkammụta n'asụsụ Igbo bụ Chigozie Nnabụihe kọwapụtara uru ọbara isụ asụsụ Igbo.",
+                  "medium": "Onye ọkammụta n'asụsụ Igbo bụ Chigozie Nnabụihe kọwapụtara BBC Igbo uru isu asụsụ igbo bara."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05yy96x.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ịsụ asụsụ Igbo bara nnukwu uru",
+                "versions": [
+                  {
+                    "versionId": "p05yy8vp",
+                    "types": ["Editorial"],
+                    "duration": 143,
+                    "durationISO8601": "PT2M23S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1519218467000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100128358",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14D86/production/_100128358_p05yy96x.jpg",
+                "path": "/cpsprodpb/14D86/production/_100128358_p05yy96x.jpg",
+                "height": 575,
+                "width": 1024,
+                "altText": "Chigozie Nnabụihe",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/afirika-43144352",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b83a95fb-3de2-ea4c-8e78-70fa4f6631db",
+            "rank": 3,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:b83a95fb-3de2-ea4c-8e78-70fa4f6631db",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ị ma ihe bụ njirimara ndị Ozalla?",
+                "headline": "Ozalla: Gịnị bụ njirimara obodo a?"
+              },
+              "locators": {
+                "assetUri": "/igbo/afirika-46771572",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-46771572",
+                "curie": "http://www.bbc.co.uk/asset/b83a95fb-3de2-ea4c-8e78-70fa4f6631db",
+                "assetId": "46771572"
+              },
+              "summary": "Ị ma aha anụmanụ ndị Ozalla na-efe? Lee ihe ụfọdụ pụrụiche BBC Igbo chọpụtara ebe ahụ.",
+              "timestamp": 1546749728000,
+              "language": "ig",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06x9t9g",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ị ma ihe bụ njirimara ndị Ozalla?",
+                "synopses": {
+                  "short": "Ozalla: Gịnị bụ njirimara obodo a?",
+                  "medium": "Ị ma aha anụmanụ ndị Ozalla na-efe? Lee ihe ụfọdụ pụrụiche BBC Igbo chọpụtara ebe ahụ."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06x9tqt.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ihe dị iche n'Ozalla",
+                "versions": [
+                  {
+                    "versionId": "p06x9t9k",
+                    "types": ["Original"],
+                    "duration": 182,
+                    "durationISO8601": "PT3M2S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1546719088000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105075704",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9F35/production/_105075704_p06x9tqt.jpg",
+                "path": "/cpsprodpb/9F35/production/_105075704_p06x9tqt.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Ozalla",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/afirika-46771572",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a8b81afe-b92a-ae47-9127-d8e2fca4cf15",
+            "rank": 4,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:a8b81afe-b92a-ae47-9127-d8e2fca4cf15",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'E ji m ọrụ mesin azụ ụmụ m asaa' - Nwaanyị na-edo ụlọ",
+                "headline": "Ọgba Mbọ: Ịrụ ọrụ mesịn na-amasị m - Nwaanyị na-arụ mesịn"
+              },
+              "locators": {
+                "assetUri": "/igbo/51178112",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a8b81afe-b92a-ae47-9127-d8e2fca4cf15",
+                "assetId": "51178112",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/51178112",
+                "curie": "http://www.bbc.co.uk/asset/a8b81afe-b92a-ae47-9127-d8e2fca4cf15"
+              },
+              "summary": "Agbanyeghi na Uche bụ nwaanyị, ọ sị na ịrụ ọrụ mesịn bụ ọrụ ọ hụrụ n'anya ma bụrụkwa ihe o ji enye ezinaụlọ ya nri.",
+              "timestamp": 1592974988000,
+              "language": "ig",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p080xj77",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ịrụ mesịn na-amasị m - Nwaanyị na-edo ụlọ",
+                "synopses": {
+                  "short": "Ọgba Mbọ: Ịrụ mesịn na-amasị m - Nwaanyị na-arụ mesịn",
+                  "long": "Uche bụ ezigbote ọgba mbọ dịka ọ bụ nwaanyị ji ọrụ ido ụlọ na-azụ ezinaụlọ ya nrị.\nỌ sị na ọ bu ọrụ ya hụrụ na anya ma bụrụ ihe ya ji obi ọcha arụ.\nN'ihe nkiri a, Uche kowari anyị etu ya Jiri malite ya bu ọrụ.\nO kwukwara na agbanyeghi na ụmụ ya na di ya anwụọla, be ya juru eju, dika ọ na nwere mmadụ iri na ise na be ya.",
+                  "medium": "Agbanyeghi na Uche bụ onye nwaanyị, ọ sị na ịrụ ọrụ mesịn bụ ọrụ ya hụrụ na-anya ma bụkwara ihe oji enye ezinaụlọ ya nri."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p080xjt6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ọgba Mbọ: Ịrụ mesịn na-amasị m - Nwaanyị na-arụ mesịn",
+                "versions": [
+                  {
+                    "versionId": "p080xj79",
+                    "types": ["Original"],
+                    "duration": 144,
+                    "durationISO8601": "PT2M24S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1579548190000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110573444",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/AD95/production/_110573444_p080xjt6.jpg",
+                "path": "/cpsprodpb/AD95/production/_110573444_p080xjt6.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Uche",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/51178112",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "733bce75-1c09-814d-8d1e-b306c7ed871e",
+            "rank": 5,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:733bce75-1c09-814d-8d1e-b306c7ed871e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Gịnị ka ịbụ 'slay queen' pụtara?",
+                "headline": "Slay Queen: Gịnị ka ọ pụtara?"
+              },
+              "locators": {
+                "assetUri": "/igbo/51036409",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/51036409",
+                "curie": "http://www.bbc.co.uk/asset/733bce75-1c09-814d-8d1e-b306c7ed871e",
+                "assetId": "51036409"
+              },
+              "summary": "Gịnị ka ịbụ 'slay queen' pụtara?",
+              "timestamp": 1578489410000,
+              "language": "ig",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07ztbcv",
+                "subType": "clip",
+                "format": "video",
+                "title": "Gịnị ka ị bụ 'slay queen' pụtara?",
+                "synopses": {
+                  "short": "Slay Queen: Gịnị ka ọ pụtara?",
+                  "long": "Ndị ntorobịa tụnyere ọnụ n'ihe 'slay queen' pụtara.\n\nGee echiche ha:",
+                  "medium": "Gịnị ka ị bụ 'slay queen' pụtara?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07ztbnq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Gịnị ka ịbụ 'slay queen' pụtara?",
+                "versions": [
+                  {
+                    "versionId": "p07ztbd0",
+                    "types": ["Original"],
+                    "duration": 152,
+                    "durationISO8601": "PT2M32S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1578488696000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110436667",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12B77/production/_110436667_p07ztbnq.jpg",
+                "path": "/cpsprodpb/12B77/production/_110436667_p07ztbnq.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Gịnị bụ 'slay queen'?",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/51036409",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2560922e-5a1d-2940-b74c-f7610850f9fd",
+            "rank": 6,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:2560922e-5a1d-2940-b74c-f7610850f9fd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Onye nkuzi Unilag na-enye ụmụakwụkwọ nsogbu iji dinaa ha amala n'ọnya",
+                "headline": "Sex for Grades: Onye nkuzi Unilag na-enye ụmụakwụkwọ nsogbu iji dinaa ha amala n'ọnya"
+              },
+              "locators": {
+                "assetUri": "/igbo/afirika-49955737",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-49955737",
+                "curie": "http://www.bbc.co.uk/asset/2560922e-5a1d-2940-b74c-f7610850f9fd",
+                "assetId": "49955737"
+              },
+              "summary": "Ndị nkuzi inye ụmụakwụkwọ nsogbu iji dinaa ha abụzighị ihe ọhụrụ na mahadum, mana nke a bụ ihe jọgburu onwe ya.",
+              "timestamp": 1570421701000,
+              "language": "ig",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07q99j8",
+                "subType": "clip",
+                "format": "video",
+                "title": "Onye nkuzi Unilag na-enye ụmụakwụkwọ nsogbu iji dinaa ha amala n'ọnya",
+                "synopses": {
+                  "short": "Sex for Grades: Onye nkuzi Unilag na-enye ụmụakwụkwọ nsogbu iji dinaa ha amala n'ọnya",
+                  "long": "Ugboro ugboro ka ụmụakwụkwọ ụmụnwanyị na mahadum dị na mpaghara ọdịda anyanwụ Afrịka na-ekwu na ndi nkuzi ha na-enye ha nsogbu iji dinaa ha.\nMana mgbe ụfọdụ, ndị mmadụ anaghị ekwetacha ihe ha na-ekwu.\nBBC 'Africa Eye' mere nnyocha pụrụ iche iji mata ma ihe dị otu a ọ na-eme n'ezie.\nIhe anyị hụrụ juru anyị anya, dịka ị ga-ahụ n'ihe onyoonyoo ahụ dị n'elu.",
+                  "medium": "Ndị nkuzi inye ụmụakwụkwọ nsogbu iji dinaa ha abụzighị ihe ọhụrụ na mahadum, mana nke a bụ ihe jọgburu onwe ya."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07q9bhn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ọka mmụta Boniface Igbenehue",
+                "versions": [
+                  {
+                    "versionId": "p07q99jb",
+                    "types": ["Original"],
+                    "duration": 825,
+                    "durationISO8601": "PT13M45S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1570398291000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109124780",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/2226/production/_109124780_p07q9bhn.jpg",
+                "path": "/cpsprodpb/2226/production/_109124780_p07q9bhn.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ọka mmụta Boniface Igbenehue",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/afirika-49955737",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "12e682b5-f93d-2841-8b2f-0ddff16d407f",
+            "rank": 7,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:12e682b5-f93d-2841-8b2f-0ddff16d407f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Peter Obi agaghị enye gị ego mana ọ ga-akwado ọrụ ọbụla ziri ezi'",
+                "headline": "Nigeria Election 2019: Ihe a na-ekwu maka Peter Obi n'obodo ya"
+              },
+              "locators": {
+                "assetUri": "/igbo/afirika-46782009",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-46782009",
+                "curie": "http://www.bbc.co.uk/asset/12e682b5-f93d-2841-8b2f-0ddff16d407f",
+                "assetId": "46782009"
+              },
+              "summary": "Ndị ha na Peter Obi so gụọ akwụkwọ site na praịmarị ruo mahadum, kwuru ihe ndị dị ịtụnanya gbasara ya.",
+              "timestamp": 1550129795000,
+              "language": "ig",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "ig",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
+                "locator": "urn:bbc:cps:curie:asset:12e682b5-f93d-2841-8b2f-0ddff16d407f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/72955eb3-7831-4a1b-b217-55d7627277bb#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "ig",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Naijiria",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/72955eb3-7831-4a1b-b217-55d7627277bb#id",
+                      "thingLabel": "Ntuliaka obodo Naịjirịa nke 2019",
+                      "thingUri": "http://www.bbc.co.uk/things/72955eb3-7831-4a1b-b217-55d7627277bb#id",
+                      "thingId": "72955eb3-7831-4a1b-b217-55d7627277bb",
+                      "thingType": [
+                        "core:Event",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Nigerian general election 2019",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
+                      "thingLabel": "Ndọrọndọrọ ọchịchị Naịjirịa",
+                      "thingUri": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
+                      "thingId": "7d65828a-85c1-41f4-96cf-c758da75e401",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Politics_of_Nigeria"
+                      ],
+                      "thingEnglishLabel": "Nigeria politics",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p06xddh2",
+                "subType": "clip",
+                "format": "video",
+                "title": "'Peter Obi agaghị enye gị ego mana ọ ga-akwado ọrụ ọbụla ziri ezi'",
+                "synopses": {
+                  "short": "Nigeria Elections 2019: Ihe a na-ekwu maka Peter Obi n'obodo ya",
+                  "long": "BBC gara Agụlụ, dị n'Anambara steeti bụ obodo Peter Obi, onye na-azọ ọkwa dịka osote onyeisiala n'okpuru PDP.\nNdị ha na Obi a ma dịka \"Okwute\" so gụọ akwụkwọ site na Praịmarị ruo ma mahadum, kwuru ihe ndị dị ịtụnanya gbasara ya.\nN'okwu ha, ọ malitere ịchụ ego dịka nwa akwụkwọ praịmarị, oge ọ na-ana ha ego tupu ọ rụọrọ ha ọrụ ha kwesịrị ịrụ.\nHa kwukwara na ọ bụghị onye kwenyere n'inye mmadụ ego, mana ọ bụ onye ga-akwado gị n'ọrụ ị na-arụ ma ọ bụrụ na ọrụ ahụ ziri ezi.\nHa kwuru na ọ bụghị onye na-emefu ego.",
+                  "medium": "Ndị ha na Peter Obi so gụọ akwụkwọ site na Praịmarị ruo mahadum, kwuru ihe ndị dị ịtụnanya gbasara ya."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06xdj62.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ihe ndị ma Peter Obi nwere ikwu maka ya",
+                "versions": [
+                  {
+                    "versionId": "p06xddh7",
+                    "types": ["Original"],
+                    "duration": 212,
+                    "durationISO8601": "PT3M32S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1546854132000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "123786086",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/109E4/production/_123786086_p06xdhtt.jpg",
+                "path": "/cpsprodpb/109E4/production/_123786086_p06xdhtt.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ndị ma Peter Obi",
+                "caption": "Ndị ma Peter Obi",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/afirika-46782009",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d96698f7-10f4-46ab-8685-92884e8c2dcb",
+            "rank": 8,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:d96698f7-10f4-46ab-8685-92884e8c2dcb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Ịkpa oke megide anyị n'ihi ahụghị ụzọ gbochiri anyị inweta ọrụ'",
+                "headline": "Causes of blindness: 'ịkpa oke megide anyị n'ihi ahụghị ụzọ gbochiri anyị inweta ọrụ'"
+              },
+              "locators": {
+                "assetUri": "/igbo/afirika-61166556",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d96698f7-10f4-46ab-8685-92884e8c2dcb",
+                "assetId": "61166556",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-61166556",
+                "curie": "http://www.bbc.co.uk/asset/d96698f7-10f4-46ab-8685-92884e8c2dcb"
+              },
+              "summary": "Maxwell Opara, Demola Adeleke na Mercy Nwaigwe kọwara etu ịkpa oke megide ha n'ihi ahụghị ụzọ si gbochie ha inweta ọrụ na Naịjiria.",
+              "timestamp": 1650515309000,
+              "language": "ig",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "language": "ig",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
+                "locator": "urn:bbc:cps:curie:asset:d96698f7-10f4-46ab-8685-92884e8c2dcb",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6d0e57fa-76d9-4d3e-973c-3a903b9edcf1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/6d0e57fa-76d9-4d3e-973c-3a903b9edcf1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "ig",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingLabel": "Ọmụmụ na mmụta",
+                      "thingUri": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingId": "6942cb29-9d3f-4c9c-9806-0a0578c286d6",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8434",
+                        "http://dbpedia.org/resource/Education"
+                      ],
+                      "thingEnglishLabel": "Education",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6d0e57fa-76d9-4d3e-973c-3a903b9edcf1#id",
+                      "thingLabel": "Ikike-diịrị ọbere mba",
+                      "thingUri": "http://www.bbc.co.uk/things/6d0e57fa-76d9-4d3e-973c-3a903b9edcf1#id",
+                      "thingId": "6d0e57fa-76d9-4d3e-973c-3a903b9edcf1",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Minority_rights",
+                        "http://www.wikidata.org/entity/Q1369260"
+                      ],
+                      "thingEnglishLabel": "Minority rights",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingLabel": "Ahụike",
+                      "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health",
+                        "http://www.wikidata.org/entity/Q12147"
+                      ],
+                      "thingEnglishLabel": "Health",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c2946n",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ajụrụ iwe anyị n'ọrụ maka na anyị kpuru isi",
+                "synopses": {
+                  "short": "Causes of blindness: Ajụrụ iwe anyị n'ọrụ maka na anyị kpuru isi",
+                  "long": "Maxwell Opara, Demola Adeleke na Mercy Nwaigwe gụchara mahadum tiwaa 'slate' mana ọ rara ha ahụ inweta ọrụ.\nN'agbanyeghi na ha mere ọfụma n'ụzọ pụrụiche na mahadum, otu ihe nagidere ha inweta ọrụ; isi ha kpuru bịara bụrụ ha ọgbatauhie.\nOpara, Adeleke na Nwaigwe gwara BBC Igbo na ha ekpughi isi mgbe a mụrụ ha.\nHa kọwakwara ahụmihe ha dịka ha gbasiri mbọ ike n'agụmakwụkwọ ha ma turu ugo lọta.\nOpara gụchara jiri 'first class' pụta na mahadum, o che na ọ ga-enweta ọrụ na mahadum ahụ ọ gụrụ, mana nke ahụ enweghi isi.\nỌ kọwara na nsogbu anya ya bidoro n'afọ 2012, mgbe ọ nọ na mahadum nke Federal University of Technology - Owerri (Futo).\nNsogbu ahụ mere ka ọ kwụsị ịga ụlọakwụkwọ mgbe ahụ, n'agbanyeghi na ọ nọ na-achọ ịbanye n'afọ nke atọ ya (3rd year).\nO mechara legharịa ule e ji abanye mahadum ma banye na nke University of Nigeria Nsukka (UNN) ebe ọ nọ gụchaa n'afọ 2019.\nNwaigwe kwuru etu o si gaa ịchọ ọrụ, lechaa ule so ya mana ha eweghi ya n'ọrụ mgbe ha chọpụtara na ọ naghị ahụ ụzọ.\nO kwuru na ọ chọpụtara na anya na-enye ya nsogbu mgbe ọ nọ n'ụlọakwụkwọ sekọndrị.\nỌ kọwara etu o si mechaa banye n'ụlọakwụkwọ Federal College of Education dị n'Oyo steeti, bụ maka ndị ọpụrụiche, ma mechakwaa gaa mahadum nke University of Lagos, site n'afọ 2014 ruo 2017.\nAdeleke kọwara etu o si nweta CGPA 4.4 na mahadum mana ọ rara ya ahụ inweta ọrụ n'ihi na \"anaghị ewe ndị dị ka m n'ọrụ\".\nGee ihe ha kwuru n'uju:",
+                  "medium": "Maxwell Opara, Demola Akinyele na Mercy Nwaigwe kọwara etu ahụghị ụzọ ha si gbochie ha inweta ọrụ na Naịjiria."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c29p92.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ajụrụ iwe anyị n'ọrụ maka na anyị kpuru isi",
+                "versions": [
+                  {
+                    "versionId": "p0c2946s",
+                    "types": ["Original"],
+                    "duration": 393,
+                    "durationISO8601": "PT6M33S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1650484325000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124226110",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/048A/production/_124226110_p0c29p92.jpg",
+                "path": "/cpsprodpb/048A/production/_124226110_p0c29p92.jpg",
+                "height": 566,
+                "width": 1024,
+                "altText": "Ndị na-anaghị ahụ ụzọ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/afirika-61166556",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d3460ebe-bcdb-4564-ac8a-29166b6107c8",
+            "rank": 9,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:d3460ebe-bcdb-4564-ac8a-29166b6107c8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Etu egwu Atịịlogwu siri nweta aha ya",
+                "headline": "Atilogwu Dance: Etu egwu Atịịlogwu siri nweta aha ya"
+              },
+              "locators": {
+                "assetUri": "/igbo/afirika-61455901",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-61455901",
+                "curie": "http://www.bbc.co.uk/asset/d3460ebe-bcdb-4564-ac8a-29166b6107c8",
+                "assetId": "61455901"
+              },
+              "summary": "Nkọwa maka etu egwu Atiilogwu siri bụrụ egwu e ji mara ndị Igbo.",
+              "timestamp": 1652623234000,
+              "language": "ig",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "language": "ig",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
+                "locator": "urn:bbc:cps:curie:asset:d3460ebe-bcdb-4564-ac8a-29166b6107c8",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "ig",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingLabel": "Ịkpa obi aṅụrị",
+                      "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entertainment",
+                        "http://www.wikidata.org/entity/Q173799"
+                      ],
+                      "thingEnglishLabel": "Entertainment",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                      "thingLabel": "Omenala",
+                      "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                      "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Culture",
+                        "http://www.wikidata.org/entity/Q11042"
+                      ],
+                      "thingEnglishLabel": "Culture",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c6xkwt",
+                "subType": "clip",
+                "format": "video",
+                "title": "Etu egwu Atiilogwu siri nweta aha ya",
+                "synopses": {
+                  "short": "Atilogwu Dance: Etu egwu Atiilogwu siri nweta aha ya",
+                  "long": "Otu egwu Atiilogwu bụ egwu e jiri mara ndị Igbo.\nYa bụ egwu agaala mba niile n'ala Naịjiria nakwa mba ofesi n'aha ndị Igbo. \nEgwu Atilogwu so n'egwu bụ ọkaibe n'emume 'Festical of Arts and Culture' (Festac) nke e mere na Naịjirịa n'afọ 1977.\nIhe ịtụnanya bụ na ya bụ egwu abụghị egwu ọdịnaala, kama ọ bụ egwụ ndị Udi na Ezeagu bi na Legọs malitere kemgbe afọ 1947.\nAkụkọ kọrọ na obodo abụọ a dị na Enugwu steeti mụrụ ya bụ egwu na-ebe dị icheiche nke gụnyere Awka, n'Anambra steeti na 1942.\nHa gwara ya bụ egwụ ọgwa tinye ya egwu ọdịnaala ndị ọzọ dịka Ogwurogwu, ugwuọyakanga, Ọganigwe, na Odegere bụ nke mere ka ọ bụrụ ọpụrụiche dị n'egwu.\nNke a mere ka ndị mmadụ jụo ka \"etinyere ya ọgwụ\" bụ naara ya aha ruo taa.\nAkụkọ ọzọ gbasara ebe ya bụ egwu si bịa bụ na otu Dinta nụrụ ka a na-agba ya bụ egwụ n'ọhịa were mụta ya kuziere ndị mmadụ.\nBBC amaghị ka nke a ọ bụ eziokwu ka ọ bụ ugha, mana ihe doro anya bụ na otu e si agba ya bụ egwu tụrụ ndị mmadụ n'anya nke ukwuu bụ ihe mere ejiri gụọ ya \"Atiilogwu\" n'asụsụ ndị Ezeagu.\nN'akụkọ nke mbụ, ka ndị obodo abụọ a mụtara ya bụ egwu mechere gbasaa, ndị Ezeagu bi na Lagọs jidesie nke ha ike mee ka ụmụ ha na ụmụụmụ ha mụkwaa ya bụ egwu.\nMgbe agha Naịjirịa na Biafra biri, ndị Ezeagu bi na Legọs dịka Sylvester Nwokeocha Nzekwe, Emmanuel Ume, Innocent Ozoeze, Peter Onyema, Christopher Onah na ndị ọzọ buru ya bụ egwu lọta Enugwu bụ be ha nọzị kuziwere ya ndị ọzọ.\nAkadieze Ambrose bụ onyeisi ndị egwu a so na ndị mụtara ya n'aka ndị a akpọrọ aha ha ma na-etekwa ya ugbua. \nỌ kọwaara BBC ka ha siri malite nakwa ka ha sị akuziri ya ndị ọzọ, ihu na ya bụ ọkụ agaghị anyụnahụ ha n'aka.\nKirie ya ka ị ịhụ ka ha si eme ya.",
+                  "medium": "Nkọwa maka etu egwu Atiilogwu siri bụrụ egwu e ji mara ndị Igbo."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c6xl7s.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Egwu Atiilogwu",
+                "versions": [
+                  {
+                    "versionId": "p0c6xkwy",
+                    "types": ["Original"],
+                    "duration": 463,
+                    "durationISO8601": "PT7M43S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1652618255000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124755338",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1459B/production/_124755338_p0c6xl7s.jpg",
+                "path": "/cpsprodpb/1459B/production/_124755338_p0c6xl7s.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Egwu Atiilogwu",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/afirika-61455901",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8206ee6a-7c7d-d243-b313-c576befb45d8",
+            "rank": 10,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:8206ee6a-7c7d-d243-b313-c576befb45d8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Morocco nwa Maduka alaala mụọ",
+                "headline": "Emeka Morocco Maduka anwụọla ma lakwuru ndị nna ya ochie"
+              },
+              "locators": {
+                "assetUri": "/igbo/49000702",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/49000702",
+                "curie": "http://www.bbc.co.uk/asset/8206ee6a-7c7d-d243-b313-c576befb45d8",
+                "assetId": "49000702"
+              },
+              "summary": "Otiegwu Morocco Madụka efegharala ụwa a aka.",
+              "timestamp": 1604047170000,
+              "language": "ig",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07h2bv3",
+                "subType": "clip",
+                "format": "video",
+                "title": "'Ahapụrụ m ọrụ 'eletrician' ga tiwe egwu'",
+                "synopses": {
+                  "short": "Morocco nwa Maduka:",
+                  "long": "Morocco Maduka bụ oti egwu a ma ama n'ala Igbo maka iti egwu na-emetụta mmadụ n'ọkpụkpụ.\n\nNa mkparịtaụka ya na BBC Igbo nwere, ọ kọwara ka ya na ije siri bido.\n\nGee ya n'ihe nkiri a:",
+                  "medium": "'Ahapụrụ m ọrụ 'eletrician' ga tiwe egwu'"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08wwbh1.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Morocco nwa Maduka:",
+                "versions": [
+                  {
+                    "versionId": "p08wwbfn",
+                    "types": ["Editorial"],
+                    "duration": 102,
+                    "durationISO8601": "PT1M42S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1604035490000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "107902958",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14FA0/production/_107902958_p07h2c51.jpg",
+                "path": "/cpsprodpb/14FA0/production/_107902958_p07h2c51.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Morocco nwa Maduka",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/49000702",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6fb99950-f0f1-4d33-bfa1-c36239ad082e",
+            "rank": 11,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:6fb99950-f0f1-4d33-bfa1-c36239ad082e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Lee Stanley Okorie,otiegwu Nollywood tiri ‘Happy Mumu’, ‘I go chop your dollar’",
+                "headline": "Stanley Okorie: Lee otiegwu Nollywood tiri ‘Happy Mumu’, ‘I go chop your dollar’"
+              },
+              "locators": {
+                "assetUri": "/igbo/afirika-61265159",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-61265159",
+                "curie": "http://www.bbc.co.uk/asset/6fb99950-f0f1-4d33-bfa1-c36239ad082e",
+                "assetId": "61265159"
+              },
+              "summary": "Stanley Okorie bụ onye na-etipụta ọtụtụ egwu a ma ama n'ejije Nollywood nke Naịjirịa.",
+              "timestamp": 1651205853000,
+              "language": "ig",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "ig",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
+                "locator": "urn:bbc:cps:curie:asset:6fb99950-f0f1-4d33-bfa1-c36239ad082e",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+                    "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/genre",
+                    "value": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1b1b0108-903a-4bf0-bb26-35ab477908f3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/1b1b0108-903a-4bf0-bb26-35ab477908f3#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "genre": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "type": "genre"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id",
+                      "type": "genre"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "ig",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1b1b0108-903a-4bf0-bb26-35ab477908f3#id",
+                      "thingLabel": "Nollywood",
+                      "thingUri": "http://www.bbc.co.uk/things/1b1b0108-903a-4bf0-bb26-35ab477908f3#id",
+                      "thingId": "1b1b0108-903a-4bf0-bb26-35ab477908f3",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://en.wikipedia.org/entity/Cinema_of_Nigeria",
+                        "http://dbpedia.org/resource/Nollywood"
+                      ],
+                      "thingEnglishLabel": "Nollywood",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingLabel": "Ịkpa obi aṅụrị",
+                      "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entertainment",
+                        "http://www.wikidata.org/entity/Q173799"
+                      ],
+                      "thingEnglishLabel": "Entertainment",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id",
+                      "thingLabel": "Abụ",
+                      "thingUri": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id",
+                      "thingId": "de648736-7268-454c-a7b1-dbff416f2865",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Music",
+                        "http://www.wikidata.org/entity/Q638"
+                      ],
+                      "thingEnglishLabel": "Music",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c3vymn",
+                "subType": "clip",
+                "format": "video",
+                "title": "Stanley Okorie: Otiegwu Nollywood tiri ‘Happy Mumu’, ‘I go chop your dollar’",
+                "synopses": {
+                  "short": "Stanley Okorie: Otiegwu Nollywood tiri ‘Happy Mumu’, ‘I go chop your dollar’",
+                  "long": "Ngalaba ejije Naịjirịa a na-akpọ Nollywood  bụ otu ngalaba e ji eme ọnụ n’akụkụ ụwa niile.\nNollywood emepụtala ọtụtụ ejije mara mma ụwa na-anụ aha ya, mana e nwere ọtụtụ ihe na-eme ka ejije Nollywood bụrụ ọkaibe.\nEgwu so n’otu n’ime ihe ndị na-eme ejije ka ọ tọwanye ụtọ.\nStanley Okorie bụ onye na-etipụta ọtụtụ egwu ndị ahụ na-eme ejije Nollywood ka ọ bụrụ sọ mma.\nEgwu ndị o tirila na Nollywood gụnyere: Happy Mumu, I go chop your dollar, Share the national moi moi, na ọtụtụ ndị ọzọ.\nỌ bụkwa Stanley Okorie tiri efere egwu a kpọrọ ‘Goodness of God’, nke wuru ewu nke ukwuu oge ọ pụtara.\nNa mkparịtaụka ya na BBC Igbo, Stanley Okorie kwuru na egwu tinyere ya na nsogbu, maka na nna ya akwadoghị ya.\n“Nna m bụ ọkammụta, o kweghị chaachaa ka m tie egwu.”\n“Ya mere o ji sị m ejikwala aha ya eti egwu.”\nOnyinye iti egwu m bụ ‘Agwụ’\nStanley Okorie kwenyere na ọ bụ ‘Agwụ’ na-enye ya onyinye a.\nN’omenala Igbo, Agwụ bụ mmụọ nke e kwenyere na ọ na-enye onyinye dị icheiche, ma na-akpọkwa mmadụ oku n’ụzọ dị iche iche.\n“Agwụ abụghị ihe ọjọọ, ọ bụghị arụsị,” Stanley Okorie kwuru.\n“Agwụ bụ onyinye amara, onye ọbụla nwere agwụ nke ya. Agwụ nke m bụ egwu.”\nStanley Okorie kwuru na iti egwu maka ejije Nollywood na-enye ego, mana ọtụtụ ihe kwesịrị ịkawanye mma.\nN’ọdị nso a, gọọmentị Naịjirịa na-ebo na ọ bụ ejije Nollywood na-eme ihe ọjọọ ji arị elu na Naịjirịa.\nMana Stanley Okorie kwuru na nke a abụghị eziokwu.\n“Ọ bụ ihe dị n’obodo ka ejije na-ebupụta. Ụta adịrịghị Nollywood. Ụta dịịrị ndị ọchịchị.”\n“Ọ bụrụ na ha chịa nke ọma, mee ihe ha kwesịrị ime, obodo ga-adị mma.”\n\nNdị mere akụkọ bụ Chukwunaeme Obiejesi na Vining Ogu",
+                  "medium": "Stanley Okorie bụ onye na-etipụta ọtụtụ egwu a ma ama n'ejije Nollywood nke Naịjirịa."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c3vzfh.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Stanley Okorie",
+                "versions": [
+                  {
+                    "versionId": "p0c3vymv",
+                    "types": ["Original"],
+                    "duration": 2689,
+                    "durationISO8601": "PT44M49S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1651165031000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124309266",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/102F2/production/_124309266_p0c3vzfh.jpg",
+                "path": "/cpsprodpb/102F2/production/_124309266_p0c3vzfh.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Stanley Okorie",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/afirika-61265159",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6efe54ee-4412-d94e-8949-fe7ae60fdd59",
+            "rank": 12,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:6efe54ee-4412-d94e-8949-fe7ae60fdd59",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Gịnị bụ 'Slay Queen' n'asụsụ Igbo?",
+                "headline": "Igbo Language: Gịnị bụ 'Slay Queen' n'asụsụ Igbo?"
+              },
+              "locators": {
+                "assetUri": "/igbo/48739406",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/48739406",
+                "curie": "http://www.bbc.co.uk/asset/6efe54ee-4412-d94e-8949-fe7ae60fdd59",
+                "assetId": "48739406"
+              },
+              "summary": "BBC Igbo gara na Mahadum Nnamdi Azikiwe n'Ọka ịchọpụta ma ndị ụmụakwụkọ ebe ahụ a ma atụgharị Igbo ọfụma.",
+              "timestamp": 1561315866000,
+              "language": "ig",
+              "media": {
+                "id": "p07dypbl",
+                "subType": "clip",
+                "format": "video",
+                "title": "Gịnị bụ 'Slay Queen' n'asụsụ Igbo?",
+                "synopses": {
+                  "short": "Igbo Language: Gịnị bụ 'Slay Queen' n'asụsụ Igbo?",
+                  "long": "Dịka ụwa na-eme ntụgharị, okwu na asụsụ ndị ọbụla na-emekwa ntụgharị.\nBBC Igbo gara ịchọpụta ma ụmụakwụkwọ Mahadum Azikiwe a ma ihe 'Slay Queen' pụtara n'Igbo\nLee ihe ha kwuru ebe a:",
+                  "medium": "BBC Igbo gara na Mahadum Nnamdi Azikiwe n'Ọka ịchọpụta ma ndị ụmụakwụkọ ebe ahụ a ma atụgharị Igbo ọfụma."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07dyq9s.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Igbo Language: Gịnị bụ 'Slay Queen' n'asụsụ Igbo?",
+                "versions": [
+                  {
+                    "versionId": "p07dypbn",
+                    "types": ["Original"],
+                    "duration": 75,
+                    "durationISO8601": "PT1M15S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1561315250000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "107509724",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/A726/production/_107509724_p07dyq9s.jpg",
+                "path": "/cpsprodpb/A726/production/_107509724_p07dyq9s.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Slayqueen n'asusu Igbo",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/48739406",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "446fe51a-b725-094d-8ffd-9f8f4bee1781",
+            "rank": 13,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:446fe51a-b725-094d-8ffd-9f8f4bee1781",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Gịnị bụ 'Umbrella' n'asụsụ Igbo?",
+                "headline": "Igbo Language: Gịnị bụ 'Umbrella' n'asụsụ Igbo?"
+              },
+              "locators": {
+                "assetUri": "/igbo/afirika-47684158",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-47684158",
+                "curie": "http://www.bbc.co.uk/asset/446fe51a-b725-094d-8ffd-9f8f4bee1781",
+                "assetId": "47684158"
+              },
+              "summary": "Dịka udu mmiri na-abịa nso, BBC Igbo gara ịjụpụta ndị mmadụ ihe ha na-akpọ 'Umbrella' n'Igbo.",
+              "timestamp": 1553420069000,
+              "language": "ig",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
+                  "categoryName": "Ask the Audience"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p074g649",
+                "subType": "clip",
+                "format": "video",
+                "title": "Gịnị bụ 'Umbrella' n'asụsụ Igbo?",
+                "synopses": {
+                  "short": "Igbo Language: Gịnị bụ 'Umbrella' n'asụsụ Igbo?",
+                  "long": "Ụfọdụ mkpụrụokwu asụsụ Igbo na-efu nwayọ nwayọ.\nYa mere BBC Igbo ji ajụ ndị mmadụ ihe a na-akpọ ụfọdụ ihe n'Igbo.\nLee ihe ha kwuru gbasara nke Bekee kpọrọ 'Umbrella'.",
+                  "medium": "Dịka udu mmiri na-abịa nso, BBC Igbo gara ịjụpụta ndị mmadụ ihe ha na-akpọ 'Umbrella' n'Igbo."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074g753.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Igbo Language: Gịnị bụ 'Umbrella' n'asụsụ Igbo?",
+                "versions": [
+                  {
+                    "versionId": "p074g64f",
+                    "types": ["Original"],
+                    "duration": 50,
+                    "durationISO8601": "PT50S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1553419570000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106158082",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6DB5/production/_106158082_p074g753.jpg",
+                "path": "/cpsprodpb/6DB5/production/_106158082_p074g753.jpg",
+                "height": 575,
+                "width": 1024,
+                "altText": "Nche mmiri",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/afirika-47684158",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2ffa9e56-653b-9841-b7e8-a0e5e03c4f27",
+            "rank": 14,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:2ffa9e56-653b-9841-b7e8-a0e5e03c4f27",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "A na-ajụ ma abụ m mmadụ - Nigerian Jackie Chan",
+                "headline": "Nigerian Jackie Chan: A na-ajụ ma abụ m mmadụ"
+              },
+              "locators": {
+                "assetUri": "/igbo/46129282",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/46129282",
+                "curie": "http://www.bbc.co.uk/asset/2ffa9e56-653b-9841-b7e8-a0e5e03c4f27",
+                "assetId": "46129282"
+              },
+              "summary": "Emmanuel Chibuzo a na-akpọ 'Nigerian Jackie Chan', na-ele anya iji ihe Bekee kpọrọ 'stunt' akpa ego na Naịjirịa.",
+              "timestamp": 1541695541000,
+              "language": "ig",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06r5p9p",
+                "subType": "clip",
+                "format": "video",
+                "title": "A na-ajụ ma abụ m mmadụ - Nigerian Jackie Chan",
+                "synopses": {
+                  "short": "Nigerian Jackie Chan: A na-ajụ ma abụ m mmadụ",
+                  "long": "Emmanuel Chibuzo a na-akpọ 'Nigerian Jackie Chan', kwuru na nne ya gwara ya na ọ malitere isi n'elu matuo oge ọ bụ nwatakịrị.\nO kwuru na ụfọdụ oge ndị na-ahụ ya na-ajụ ma ọ bụ mmadụ.\nO kwukwara na ọ na-ele anya iji ihe Bekee kpọrọ 'stunt' akpa ego na Naịjirịa, makana o bidobeghị inye ya nri ugbua.",
+                  "medium": "Emmanuel Chibuzo a na-akpọ 'Nigerian Jackie Chan', na-ele anya iji ihe Bekee kpọrọ 'stunt' akpa ego na Naịjirịa."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06r607g.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "A na-ajụ ma abụ m mmadụ - Nigerian Jackie Chan",
+                "versions": [
+                  {
+                    "versionId": "p06r5p9r",
+                    "types": ["Original"],
+                    "duration": 59,
+                    "durationISO8601": "PT59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1541695104000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104210319",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/164A5/production/_104210319_p06r607g.jpg",
+                "path": "/cpsprodpb/164A5/production/_104210319_p06r607g.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Emmanuel Chibuzo",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/46129282",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "08479ba9-ac30-41b1-a15e-594bea15d326",
+            "rank": 15,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:08479ba9-ac30-41b1-a15e-594bea15d326",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Etu nwunye Leohand Lyeanyi ndị uweojii India gburu si eri uju ọnwụ di ya",
+                "headline": "Leohand Lyeanyi: Etu nwunye ya si eri uju ọnwụ ya"
+              },
+              "locators": {
+                "assetUri": "/igbo/afirika-56619283",
+                "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-56619283",
+                "curie": "http://www.bbc.co.uk/asset/08479ba9-ac30-41b1-a15e-594bea15d326",
+                "assetId": "56619283"
+              },
+              "summary": "Nneka Onyia bụ nwunye Leonard Ifeanyichukwu Onyia, onye ndị uweojii India gburu akwaala arịrị ma kọwaa etu ọnwụ di si emetụta ya.",
+              "timestamp": 1617424479000,
+              "language": "ig",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "ig",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Igbo",
+                "locator": "urn:bbc:cps:curie:asset:08479ba9-ac30-41b1-a15e-594bea15d326",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/68dc9056-ff48-4ab2-ace0-018f6d7c770f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/83a45ff0-d5b2-4cdb-be7e-523c6001751b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8470b75a-3b8c-42cb-9921-5953515d07cc#id"
+                  }
+                ],
+                "schemaVersion": "1.2.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/923e96fd-cb7f-460c-8254-3899d6b393c2#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ig",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Naijiria",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingLabel": "India",
+                      "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/India",
+                        "http://sws.geonames.org/1269750/",
+                        "http://www.wikidata.org/entity/Q668"
+                      ],
+                      "thingEnglishLabel": "India",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/68dc9056-ff48-4ab2-ace0-018f6d7c770f#id",
+                      "thingLabel": "Njepụ",
+                      "thingUri": "http://www.bbc.co.uk/things/68dc9056-ff48-4ab2-ace0-018f6d7c770f#id",
+                      "thingId": "68dc9056-ff48-4ab2-ace0-018f6d7c770f",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q131288",
+                        "http://dbpedia.org/resource/Immigration"
+                      ],
+                      "thingEnglishLabel": "Immigration",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/83a45ff0-d5b2-4cdb-be7e-523c6001751b#id",
+                      "thingLabel": "Njepụ",
+                      "thingUri": "http://www.bbc.co.uk/things/83a45ff0-d5b2-4cdb-be7e-523c6001751b#id",
+                      "thingId": "83a45ff0-d5b2-4cdb-be7e-523c6001751b",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "tagging:NarrativeTheme",
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Human_migration",
+                        "http://www.wikidata.org/entity/Q177626"
+                      ],
+                      "thingEnglishLabel": "Migration",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8470b75a-3b8c-42cb-9921-5953515d07cc#id",
+                      "thingLabel": "Nchekwa ndị ụwe ojii",
+                      "thingUri": "http://www.bbc.co.uk/things/8470b75a-3b8c-42cb-9921-5953515d07cc#id",
+                      "thingId": "8470b75a-3b8c-42cb-9921-5953515d07cc",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Police"],
+                      "thingEnglishLabel": "Policing",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09cmccg",
+                "subType": "clip",
+                "format": "video",
+                "title": "Etu nwunye Leonard Onyia ndị uweojii India gburu si eri uju ọnwụ di ya",
+                "synopses": {
+                  "short": "Nigerians Protest in India: Etu nwunye Leonard Onyia ndị uweojii India gburu si eri uju ọn",
+                  "long": "Nneka Onyia bụ nwunye Leonard Ifeanyichukwu Onyia, onye ndị uweojii India gburu akwaala arịrị ma kọwaa etu ọnwụ di si emetụta ya.\nỌ gwara BBC Igbo etu o si na ọ bụ di ya na-akpọte ya n'ụra kwa ụtụtụ ọbụla mana kamgbe ọ nwụrụ nke ahụ adịghị emezikwa.\nNneka sị na ya na di ya kwuru okwu n'ekwentị n'abalị Satọde mana ozi ọzọ o nwetere bụ na di dọzi n'ozu na mba India.\nMgbe ọ jụrụ kedụ ka ihe si mee, a gwara ya na ọ bụ ndị uweojii ji ihe kugbuo ya.\nKirie ihe o kwuru n'uju.",
+                  "medium": "Nneka Onyia bụ nwunye Leonard Ifeanyichukwu Onyia, onye ndị uweojii India gburu akwaala arịrị ma kọwaa etu ọnwụ di si emetụta ya."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09cmd3r.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Nigerians Protest in India: Etu nwunye Leonard Onyia ndị uweojii India gburu si eri uju ọn",
+                "versions": [
+                  {
+                    "versionId": "p09cmccj",
+                    "types": ["Original"],
+                    "duration": 360,
+                    "durationISO8601": "PT6M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1617393383000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "117827016",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/EE90/production/_117827016_p09cmd3r.jpg",
+                "path": "/cpsprodpb/EE90/production/_117827016_p09cmd3r.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Nwunye Leonard Onyia ndị uweojii India gburu",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:igbo/afirika-56619283",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
