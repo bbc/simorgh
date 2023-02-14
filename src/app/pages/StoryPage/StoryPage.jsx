@@ -181,7 +181,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const VariedCPSRecommendations = props => {
     let unirecsHybridRecommendationData = null;
     const variation = useOptimizelyMvtVariation('test_2');
-    console.log('VARIATION', variation);
     if (variation && variation !== 'control') {
       unirecsHybridRecommendationData = path(
         [optimizelyMappings[variation]],
