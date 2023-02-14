@@ -30,7 +30,12 @@ const MessageBanner = ({
   const id = `message-banner-${heading.replaceAll(' ', '-')}`;
 
   return (
-    <section css={styles.container} role="region" aria-labelledby={id}>
+    <section
+      css={styles.container}
+      role="region"
+      aria-labelledby={id}
+      data-testid={id}
+    >
       <div css={styles.card}>
         <div css={styles.textWrap}>
           <Heading level={2} size="paragon" css={styles.heading} id={id}>
