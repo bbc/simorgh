@@ -1,141 +1,332 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:vietnamese/23222411",
-    "locators": {
-      "assetUri": "/vietnamese/23222411",
-      "cpsUrn": "urn:bbc:content:assetUri:vietnamese/23222411",
-      "curie": "http://www.bbc.co.uk/asset/2a1b8fa2-6808-8a49-b13a-4b97ea19dee6",
-      "assetId": "23222411"
-    },
-    "type": "MAP",
-    "createdBy": "vietnamese-v6",
-    "language": "vi",
-    "lastUpdated": 1588662449212,
-    "firstPublished": 1542285066000,
-    "lastPublished": 1542285066000,
-    "timestamp": 1542285066000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "vietnamese.media_asset.23222411.page",
-      "cps_asset_id": "23222411"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01kg83y",
-        "subType": "clip",
-        "format": "audio",
-        "title": "Short headline",
-        "synopses": { "short": "Long headline", "medium": "summary text" },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kg852.jpg",
-        "embedding": true,
-        "advertising": false,
-        "caption": "Long headline",
-        "versions": [
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:vietnamese/23222411",
+        "locators": {
+          "assetUri": "/vietnamese/23222411",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/23222411",
+          "curie": "http://www.bbc.co.uk/asset/2a1b8fa2-6808-8a49-b13a-4b97ea19dee6",
+          "assetId": "23222411"
+        },
+        "type": "MAP",
+        "createdBy": "vietnamese-v6",
+        "language": "vi",
+        "lastUpdated": 1654014722591,
+        "firstPublished": 1542285066000,
+        "lastPublished": 1542285066000,
+        "timestamp": 1542285066000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "hasShortForm": false,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "vietnamese.media_asset.23222411.page",
+          "cps_asset_id": "23222411",
+          "contentId": "urn:bbc:cps:curie:asset:2a1b8fa2-6808-8a49-b13a-4b97ea19dee6"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.4",
+        "blockTypes": ["media"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "VIETNAMESE",
+          "producerId": "97"
+        },
+        "siteUri": "/vietnamese",
+        "mediaType": "audio"
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01kg841",
-            "types": ["Original"],
-            "duration": 26,
-            "durationISO8601": "PT26S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p01kg83y",
+            "subType": "clip",
+            "format": "audio",
+            "title": "Short headline",
+            "synopses": {
+              "short": "Long headline",
+              "medium": "summary text"
             },
-            "availableFrom": 1542284399000
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kg852.jpg",
+            "embedding": true,
+            "advertising": false,
+            "caption": "Long headline",
+            "versions": [
+              {
+                "versionId": "p01kg841",
+                "types": ["Original"],
+                "duration": 26,
+                "durationISO8601": "PT26S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1542284399000
+              }
+            ],
+            "imageCopyright": "AFP",
+            "smpKind": "radioProgramme",
+            "type": "media"
           }
-        ],
-        "imageCopyright": "AFP",
-        "type": "media"
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Short headline",
+          "headline": "Long headline"
+        },
+        "locators": {
+          "assetUri": "/vietnamese/23222411",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/23222411",
+          "curie": "http://www.bbc.co.uk/asset/2a1b8fa2-6808-8a49-b13a-4b97ea19dee6",
+          "assetId": "23222411"
+        },
+        "summary": "summary text",
+        "timestamp": 1542285066000,
+        "language": "vi",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01kg83y",
+          "subType": "clip",
+          "format": "audio",
+          "title": "Short headline",
+          "synopses": {
+            "short": "Long headline",
+            "medium": "summary text"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kg852.jpg",
+          "embedding": true,
+          "advertising": false,
+          "caption": "Long headline",
+          "versions": [
+            {
+              "versionId": "p01kg841",
+              "types": ["Original"],
+              "duration": 26,
+              "durationISO8601": "PT26S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1542284399000
+            }
+          ],
+          "imageCopyright": "AFP",
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63694416",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/F009/test/_63694416_p01kg852.jpg",
+          "path": "/cpsdevpb/F009/test/_63694416_p01kg852.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "description of the picture",
+          "copyrightHolder": "AFP",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:vietnamese/23222411",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Tin chính",
+          "uri": "/vietnamese/front_page",
+          "urlIdentifier": "/vietnamese/front_page",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Tiếng Việt",
+          "uri": "/vietnamese",
+          "urlIdentifier": "/vietnamese",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Short headline",
-      "headline": "Long headline"
     },
-    "locators": {
-      "assetUri": "/vietnamese/23222411",
-      "cpsUrn": "urn:bbc:content:assetUri:vietnamese/23222411",
-      "curie": "http://www.bbc.co.uk/asset/2a1b8fa2-6808-8a49-b13a-4b97ea19dee6",
-      "assetId": "23222411"
-    },
-    "summary": "summary text",
-    "timestamp": 1542285066000,
-    "language": "vi",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01kg83y",
-      "subType": "clip",
-      "format": "audio",
-      "title": "Short headline",
-      "synopses": { "short": "Long headline", "medium": "summary text" },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kg852.jpg",
-      "embedding": true,
-      "advertising": false,
-      "caption": "Long headline",
-      "versions": [
-        {
-          "versionId": "p01kg841",
-          "types": ["Original"],
-          "duration": 26,
-          "durationISO8601": "PT26S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1542284399000
-        }
-      ],
-      "imageCopyright": "AFP",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "63694416",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/F009/test/_63694416_p01kg852.jpg",
-      "path": "/cpsdevpb/F009/test/_63694416_p01kg852.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "description of the picture",
-      "copyrightHolder": "AFP",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:vietnamese/23222411",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Tin chính",
-      "uri": "/vietnamese/front_page",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Tiếng Việt",
-      "uri": "/vietnamese",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:28:57.648Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "8d3a332c-fff6-9c40-b646-bf1f8534f324",
+            "rank": 1,
+            "count": 7447,
+            "urn": "urn:bbc:curie:asset:8d3a332c-fff6-9c40-b646-bf1f8534f324",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Trẻ em Yemen chết ̣đói do chiến tranh",
+                "headline": "Trẻ em Yemen chết ̣đói do chiến tranh short synopsis"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/media-23079417",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:8d3a332c-fff6-9c40-b646-bf1f8534f324",
+                "assetId": "23079417",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-23079417",
+                "curie": "http://www.bbc.co.uk/asset/8d3a332c-fff6-9c40-b646-bf1f8534f324"
+              },
+              "summary": "Cuộc xung đột đang đẩy đất nước tới bờ vực nạn đói, sau khi chính phủ Yemen bị các lực lượng phiến quân lật đổ.",
+              "timestamp": 1475075306000,
+              "language": "vi",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+                "taggings": []
+              },
+              "media": {
+                "id": "23079530",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015s8bf",
+                "entityType": "Clip",
+                "caption": "Quý vị lưu ý: Trong video này có những hình ảnh gây sốc.",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63513032",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/59F7/test/_63513032_p015s8c6.jpg",
+                "path": "/cpsdevpb/59F7/test/_63513032_p015s8c6.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "BBC Tiếng Việt",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/media-23079417",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f855a5a4-bf7a-bf43-af5e-32bef0f1021f",
+            "rank": 2,
+            "count": 7349,
+            "urn": "urn:bbc:curie:asset:f855a5a4-bf7a-bf43-af5e-32bef0f1021f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Họ giải tán và câu lưu chúng tôi thế nào title updated?",
+                "headline": "Họ giải tán và câu lưu chúng tôi thế nào title updated?"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/sport-23079693",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/sport-23079693",
+                "curie": "http://www.bbc.co.uk/asset/f855a5a4-bf7a-bf43-af5e-32bef0f1021f",
+                "assetId": "23079693"
+              },
+              "summary": "\"Nhà hoạt động thuật lại một phần cuộc đối thoại ở đồn Công an Phường nơi mà bà bị đưa tới và câu lưu hôm Chủ Nhật updated\"",
+              "timestamp": 1475231806000,
+              "language": "vi",
+              "media": {
+                "id": "23079694",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p015sb58",
+                "entityType": "Clip",
+                "caption": "Một ông Phó Trưởng Công an phường có nói như thế này: 'nhưng mà ông Tập Cận Bình updated'",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63513613",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7B8F/test/_63513613_8df94919-c7ed-46b1-9a88-f59df45f52dd.jpg",
+                "path": "/cpsdevpb/7B8F/test/_63513613_8df94919-c7ed-46b1-9a88-f59df45f52dd.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "alt tag updated",
+                "caption": "caption updated",
+                "copyrightHolder": "Một ông Phó Trưởng Công",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/sport-23079693",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e3362fe6-8a0a-da41-b479-d509203a5e55",
+            "rank": 3,
+            "count": 2829,
+            "urn": "urn:bbc:curie:asset:e3362fe6-8a0a-da41-b479-d509203a5e55",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Obama meets Trump Viet version",
+                "headline": "Obama trump"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/23082283",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/23082283",
+                "curie": "http://www.bbc.co.uk/asset/e3362fe6-8a0a-da41-b479-d509203a5e55",
+                "assetId": "23082283"
+              },
+              "summary": "trump obama",
+              "timestamp": 1476097595000,
+              "language": "vi",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "23082285",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015xxj2",
+                "entityType": "Clip",
+                "caption": "Obama meets Trump",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63515574",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/B9BF/test/_63515574_p015xxm5.jpg",
+                "path": "/cpsdevpb/B9BF/test/_63515574_p015xxm5.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/23082283",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
