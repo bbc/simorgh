@@ -55,10 +55,11 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
-import useOptimizelyMvtVariation from '../../hooks/useOptimizelyMvtVariation';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -172,31 +173,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     showAdsBasedOnLocation,
   ].every(Boolean);
 
-  // 004_brasil_recommendations_experiment
-  const optimizelyMappings = {
-    content_recs: 'datalabContentRecommendations',
-    hybrid_recs: 'datalabHybridRecommendations',
-  };
-
-  const VariedCPSRecommendations = props => {
-    let unirecsHybridRecommendationData = null;
-    const variation = useOptimizelyMvtVariation('test_2');
-    if (variation && variation !== 'control') {
-      unirecsHybridRecommendationData = path(
-        [optimizelyMappings[variation]],
-        pageData,
-      );
-    }
-
-    return (
-      <CpsRecommendations
-        {...props}
-        parentColumns={gridColsMain}
-        items={unirecsHybridRecommendationData ?? recommendationsData}
-      />
-    );
-  };
-
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -222,7 +198,51 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => <VariedCPSRecommendations {...props} />,
+    wsoj: props => (
+      // 004_brasil_recommendations_experiment
+      <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
+        {variation => {
+          if (variation === 'control' || !variation) {
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={recommendationsData}
+              />
+            );
+          }
+          if (variation === 'content_recs') {
+            const unirecsContentRecommendationData = path(
+              ['datalabContentRecommendations'],
+              pageData,
+            );
+
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={unirecsContentRecommendationData}
+              />
+            );
+          }
+          if (variation === 'hybrid_recs') {
+            const unirecsHybridRecommendationData = path(
+              ['datalabHybridRecommendations'],
+              pageData,
+            );
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={unirecsHybridRecommendationData}
+              />
+            );
+          }
+
+          return null;
+        }}
+      </OptimizelyExperiment>
+    ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
