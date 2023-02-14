@@ -1,424 +1,2036 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:mundo/noticias-49546078",
-    "locators": {
-      "assetUri": "/mundo/noticias-49546078",
-      "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49546078",
-      "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2",
-      "assetId": "49546078"
-    },
-    "type": "MAP",
-    "createdBy": "mundo-v6",
-    "language": "es",
-    "lastUpdated": 1588690272627,
-    "firstPublished": 1567369729000,
-    "lastPublished": 1567369729000,
-    "timestamp": 1567369729000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "mundo.also_in_the_news.media_asset.49546078.page",
-      "cps_asset_id": "49546078"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:mundo/noticias-49546078",
+        "locators": {
+          "assetUri": "/mundo/noticias-49546078",
+          "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49546078",
+          "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2",
+          "assetId": "49546078"
+        },
+        "type": "MAP",
+        "createdBy": "mundo-v6",
+        "language": "es",
+        "lastUpdated": 1649782033877,
+        "firstPublished": 1567369729000,
+        "lastPublished": 1567369729000,
+        "timestamp": 1567369729000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "mundo.also_in_the_news.media_asset.49546078.page",
+          "cps_asset_id": "49546078",
+          "contentId": "urn:bbc:cps:curie:asset:86a2be8b-f0e4-5847-ba80-3e9b24bed2e2"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["media", "paragraph", "list"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "MUNDO",
+          "producerId": "62"
+        },
+        "readTime": 1,
+        "siteUri": "/mundo",
+        "mediaType": "video"
       },
-      "campaigns": [
-        {
-          "campaignId": "5a988e3739461b000e9dabfa",
-          "campaignName": "WS - Give me perspective"
-        }
-      ],
-      "taggings": []
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "Estados Unidos",
-          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
-          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
-          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
-          "thingSameAs": ["http://sws.geonames.org/6252001/"],
-          "topicName": "Estados Unidos",
-          "topicId": "cdr5613yzwqt",
-          "curationList": [
-            {
-              "curationId": "5c2bf4db-926e-4a03-941f-8ef9ad70855a",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Huracán",
-          "thingUri": "http://www.bbc.co.uk/things/cc90f0c6-deaa-4bf7-9629-187471e7d115#id",
-          "thingId": "cc90f0c6-deaa-4bf7-9629-187471e7d115",
-          "thingType": ["core:Thing", "core:Theme", "tagging:TagConcept"],
-          "thingSameAs": ["http://en.wikipedia.org/entity/Tropical_cyclone"],
-          "topicName": "Huracán",
-          "topicId": "c7zp524p982t",
-          "curationList": [
-            {
-              "curationId": "5e5a867c-c54f-4db6-a6f3-d77b0be379f4",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Espacio",
-          "thingUri": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id",
-          "thingId": "84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc",
-          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q180046",
-            "http://dbpedia.org/resource/Space_exploration"
-          ],
-          "topicName": "Espacio",
-          "topicId": "c06gq9v00w1t",
-          "curationList": [
-            {
-              "curationId": "e815778d-f6df-492a-afd6-830cc91c4478",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Ciencia",
-          "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
-          "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
-          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q336",
-            "http://dbpedia.org/resource/Science"
-          ],
-          "topicName": "Ciencia",
-          "topicId": "ckdxnw959n7t",
-          "curationList": [
-            {
-              "curationId": "36f98027-2c01-416c-8e10-9e8d125c39e7",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Huracán Dorian",
-          "thingUri": "http://www.bbc.co.uk/things/67202fae-2bc2-43b5-9f07-9b9268e541ea#id",
-          "thingId": "67202fae-2bc2-43b5-9f07-9b9268e541ea",
-          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
-          "thingSameAs": [],
-          "topicName": "Huracán Dorian",
-          "topicId": "cgxjr8vz7vgt",
-          "curationList": [
-            {
-              "curationId": "6083fc56-6453-4d39-a90e-e4a2d424e2a6",
-              "curationType": "vivo-stream"
-            }
-          ]
-        }
-      ]
-    },
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph", "list"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p07m6bn3",
-        "subType": "clip",
-        "format": "video",
-        "title": "Dorian seen from space",
-        "synopses": {
-          "short": "Hurricane Dorian seen from International Space Station",
-          "long": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas.\nThe images, taken from 260 miles (418 km) away by cameras outside the orbiting outpost, show the category five storm system over the Bahamas.",
-          "medium": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas."
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m6c1s.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "El huracán Dorian visto desde la Estación Espacial Internacional.",
-        "versions": [
+      "content": {
+        "blocks": [
           {
-            "versionId": "p07m6bn8",
-            "types": ["Original"],
-            "duration": 39,
-            "durationISO8601": "PT39S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p07m6bn3",
+            "subType": "clip",
+            "format": "video",
+            "title": "Dorian seen from space",
+            "synopses": {
+              "short": "Hurricane Dorian seen from International Space Station",
+              "long": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas.\nThe images, taken from 260 miles (418 km) away by cameras outside the orbiting outpost, show the category five storm system over the Bahamas.",
+              "medium": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas."
             },
-            "availableFrom": 1567365024000
-          }
-        ],
-        "imageCopyright": "NASA",
-        "type": "media"
-      },
-      {
-        "text": "<bold>La </bold><bold>Estación Espacial Internacional </bold><bold>(EEI) </bold><bold>captur</bold><bold>ó</bold><bold>este domingo </bold><bold>imágenes del huracán Dorian </bold><bold>de categoría 5 </bold><bold>mientras azotaba las Bahamas</bold><bold>.</bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Las imágenes, tomadas a 418 km de altitud a las 12:16 pm (16:16 GMT), fueron registradas por cámaras instaladas en el exterior de la EEI, publicó la Administración Nacional de la Aeronáutica y del Espacio (NASA) en su cuenta de Youtube. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "El huracán se mueve en dirección oeste con vientos sostenidos de casi 300 km/h, que los convierte en los más fuertes en la historia para el noroeste de Bahamas desde que se tiene registros. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m6c1s.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "El huracán Dorian visto desde la Estación Espacial Internacional.",
+            "versions": [
+              {
+                "versionId": "p07m6bn8",
+                "types": ["Original"],
+                "duration": 39,
+                "durationISO8601": "PT39S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1567365024000
+              }
+            ],
+            "imageCopyright": "NASA",
+            "smpKind": "programme",
+            "type": "media"
+          },
           {
-            "text": "<itemMeta>mundo/49519843</itemMeta>",
-            "meta": [
+            "text": "<bold>La </bold><bold>Estación Espacial Internacional </bold><bold>(EEI) </bold><bold>captur</bold><bold>ó</bold><bold>este domingo </bold><bold>imágenes del huracán Dorian </bold><bold>de categoría 5 </bold><bold>mientras azotaba las Bahamas</bold><bold>.</bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Las imágenes, tomadas a 418 km de altitud a las 12:16 pm (16:16 GMT), fueron registradas por cámaras instaladas en el exterior de la EEI, publicó la Administración Nacional de la Aeronáutica y del Espacio (NASA) en su cuenta de Youtube. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "El huracán se mueve en dirección oeste con vientos sostenidos de casi 300 km/h, que los convierte en los más fuertes en la historia para el noroeste de Bahamas desde que se tiene registros. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "<itemMeta>mundo/49519843</itemMeta>",
+                "meta": [
+                  {
+                    "headlines": {
+                      "shortHeadline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
+                      "headline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
+                      "overtyped": "Huracán Dorian: la tormenta de categoría 5 toca tierra y es la más devastadora para el norte de las Bahamas desde que se tienen registros"
+                    },
+                    "locators": {
+                      "href": "https://www.bbc.com/mundo/49519843"
+                    },
+                    "summary": "Dorian se debilitó este viernes a categoría de intensidad 1 frente a la costa de Carolina del Norte, donde se prevé que toque tierra en las próximas horas.",
+                    "timestamp": 1567754872000,
+                    "language": "es",
+                    "passport": {
+                      "category": {
+                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                        "categoryName": "News"
+                      },
+                      "taggings": []
+                    },
+                    "id": "urn:bbc:ares::asset:mundo/49519843",
+                    "type": "cps"
+                  }
+                ],
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<itemMeta>mundo/media-49546075</itemMeta>",
+                "meta": [
+                  {
+                    "headlines": {
+                      "shortHeadline": "El \"catastrófico\" huracán Dorian de categoría 5 toca tierra en Bahamas",
+                      "headline": "Huracán Dorian: el \"catastrófico\" ciclón de categoría 5 toca tierra en Bahamas",
+                      "overtyped": "El \"catastrófico\" huracán Dorian de categoría 5 toca tierra en Bahamas "
+                    },
+                    "locators": {
+                      "href": "https://www.bbc.com/mundo/media-49546075"
+                    },
+                    "summary": "El Centro Nacional de Huracanes de Estados Unidos describe al huracán Dorian como \"extremadamente peligroso\" y se esperan vientos devastadores y fuertes lluvias.",
+                    "timestamp": 1567360558000,
+                    "language": "es",
+                    "passport": {
+                      "category": {
+                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                        "categoryName": "News"
+                      },
+                      "taggings": []
+                    },
+                    "id": "urn:bbc:ares::asset:mundo/media-49546075",
+                    "type": "cps"
+                  }
+                ],
+                "markupType": "candy_xml",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Así se ve el huracán Dorian desde el espacio",
+          "headline": "Huracán Dorian: así se ve el poderoso ciclón desde la Estación Espacial Internacional"
+        },
+        "locators": {
+          "assetUri": "/mundo/noticias-49546078",
+          "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49546078",
+          "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2",
+          "assetId": "49546078"
+        },
+        "summary": "La Estación Espacial Internacional capturó imágenes del huracán Dorian mientras azotaba las Bahamas este domingo.",
+        "timestamp": 1567369729000,
+        "language": "es",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+          "taggings": []
+        },
+        "media": {
+          "id": "p07m6bn3",
+          "subType": "clip",
+          "format": "video",
+          "title": "Dorian seen from space",
+          "synopses": {
+            "short": "Hurricane Dorian seen from International Space Station",
+            "long": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas.\nThe images, taken from 260 miles (418 km) away by cameras outside the orbiting outpost, show the category five storm system over the Bahamas.",
+            "medium": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m6c1s.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "El huracán Dorian visto desde la Estación Espacial Internacional.",
+          "versions": [
+            {
+              "versionId": "p07m6bn8",
+              "types": ["Original"],
+              "duration": 39,
+              "durationISO8601": "PT39S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1567365024000
+            }
+          ],
+          "imageCopyright": "NASA",
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "108576672",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6C13/production/_108576672_p07m6c1s.jpg",
+          "path": "/cpsprodpb/6C13/production/_108576672_p07m6c1s.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "El huracán Dorian visto desde el espacio.",
+          "caption": "El huracán Dorian visto desde el espacio.",
+          "copyrightHolder": "NASA",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:mundo/noticias-49546078",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Otras noticias",
+          "uri": "/mundo/otras_noticias",
+          "urlIdentifier": "/mundo/otras_noticias",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Mundo",
+          "uri": "/mundo",
+          "urlIdentifier": "/mundo",
+          "type": "simple"
+        },
+        "groups": [
+          {
+            "type": "see-alsos",
+            "promos": [
               {
                 "headlines": {
                   "shortHeadline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
-                  "headline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
-                  "overtyped": "Huracán Dorian: la tormenta de categoría 5 toca tierra y es la más devastadora para el norte de las Bahamas desde que se tienen registros"
+                  "headline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU."
                 },
-                "locators": { "href": "http://www.bbc.com/mundo/49519843" },
+                "locators": {
+                  "assetUri": "/mundo/49519843",
+                  "cpsUrn": "urn:bbc:content:assetUri:/mundo/49519843"
+                },
                 "summary": "Dorian se debilitó este viernes a categoría de intensidad 1 frente a la costa de Carolina del Norte, donde se prevé que toque tierra en las próximas horas.",
                 "timestamp": 1567754872000,
                 "language": "es",
-                "passport": {
-                  "category": {
-                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                    "categoryName": "News"
-                  },
-                  "taggings": []
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "108636927",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/11D03/production/_108636927_gettyimages-1166104148.jpg",
+                  "path": "/cpsprodpb/11D03/production/_108636927_gettyimages-1166104148.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Calle inundada en Carolina del Sur.",
+                  "caption": "El huracán está ahora azotando las Carolinas.",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
                 },
                 "id": "urn:bbc:ares::asset:mundo/49519843",
                 "type": "cps"
-              }
-            ],
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<itemMeta>mundo/media-49546075</itemMeta>",
-            "meta": [
+              },
               {
                 "headlines": {
-                  "shortHeadline": "El \"catastrófico\" huracán Dorian de categoría 5 toca tierra en Bahamas",
-                  "headline": "Huracán Dorian: el \"catastrófico\" ciclón de categoría 5 toca tierra en Bahamas",
-                  "overtyped": "El \"catastrófico\" huracán Dorian de categoría 5 toca tierra en Bahamas "
+                  "shortHeadline": "Por qué el huracán Dorian ha sido particularmente impredecible",
+                  "headline": "Dorian: por qué la trayectoria del huracán que amenaza Florida resulta particularmente impredecible"
                 },
                 "locators": {
-                  "href": "http://www.bbc.com/mundo/media-49546075"
+                  "assetUri": "/mundo/noticias-49530894",
+                  "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-49530894"
                 },
-                "summary": "El Centro Nacional de Huracanes de Estados Unidos describe al huracán Dorian como \"extremadamente peligroso\" y se esperan vientos devastadores y fuertes lluvias.",
-                "timestamp": 1567360558000,
+                "summary": "El mismo Centro Nacional de Huracanes de Estados Unidos, una de las máximas autoridades a nivel mundial en el tema, ha estado reconociendo \"la incertidumbre en el pronóstico de la trayectoria\" de Dorian, que amenaza Florida.",
+                "timestamp": 1567390439000,
                 "language": "es",
-                "passport": {
-                  "category": {
-                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                    "categoryName": "News"
-                  },
-                  "taggings": []
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "108560669",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1795E/production/_108560669_dorian.jpg",
+                  "path": "/cpsprodpb/1795E/production/_108560669_dorian.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "El huracán Dorian",
+                  "caption": "El huracán Dorian se ha intensificado y ya comienza a ser visible un \"ojo\" en el centro de la tormenta.",
+                  "copyrightHolder": "NOAA",
+                  "type": "image"
                 },
-                "id": "urn:bbc:ares::asset:mundo/media-49546075",
+                "id": "urn:bbc:ares::asset:mundo/noticias-49530894",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "shortHeadline": "¿Qué nos dice exactamente el cono que predice el paso de un huracán y por qué tanta gente lo malinterpreta?",
+                  "headline": "Huracán Dorian: ¿qué nos dice exactamente el cono que predice el paso de un ciclón y por qué tanta gente lo malinterpreta?"
+                },
+                "locators": {
+                  "assetUri": "/mundo/noticias-49532705",
+                  "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-49532705"
+                },
+                "summary": "El \"cono de incertidumbre\" que elabora el Centro de Huracanes de Estados Unidos muestra diferentes datos sobre una tormenta. Pero ¿sabes realmente lo que predice?",
+                "timestamp": 1567209982000,
+                "language": "es",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "108562918",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/14006/production/_108562918_dorian-promo.png",
+                  "path": "/cpsprodpb/14006/production/_108562918_dorian-promo.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Gráfico Dorian",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "id": "urn:bbc:ares::asset:mundo/noticias-49532705",
                 "type": "cps"
               }
-            ],
-            "markupType": "candy_xml",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Así se ve el huracán Dorian desde el espacio",
-      "headline": "Huracán Dorian: así se ve el poderoso ciclón desde la Estación Espacial Internacional"
-    },
-    "locators": {
-      "assetUri": "/mundo/noticias-49546078",
-      "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49546078",
-      "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2",
-      "assetId": "49546078"
-    },
-    "summary": "La Estación Espacial Internacional capturó imágenes del huracán Dorian mientras azotaba las Bahamas este domingo.",
-    "timestamp": 1567369729000,
-    "language": "es",
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e3739461b000e9dabfa",
-          "campaignName": "WS - Give me perspective"
-        }
-      ],
-      "taggings": []
-    },
-    "media": {
-      "id": "p07m6bn3",
-      "subType": "clip",
-      "format": "video",
-      "title": "Dorian seen from space",
-      "synopses": {
-        "short": "Hurricane Dorian seen from International Space Station",
-        "long": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas.\nThe images, taken from 260 miles (418 km) away by cameras outside the orbiting outpost, show the category five storm system over the Bahamas.",
-        "medium": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas."
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m6c1s.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "El huracán Dorian visto desde la Estación Espacial Internacional.",
-      "versions": [
-        {
-          "versionId": "p07m6bn8",
-          "types": ["Original"],
-          "duration": 39,
-          "durationISO8601": "PT39S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1567365024000
-        }
-      ],
-      "imageCopyright": "NASA",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "108576672",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/6C13/production/_108576672_p07m6c1s.jpg",
-      "path": "/cpsprodpb/6C13/production/_108576672_p07m6c1s.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "El huracán Dorian visto desde el espacio.",
-      "caption": "El huracán Dorian visto desde el espacio.",
-      "copyrightHolder": "NASA",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:mundo/noticias-49546078",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Otras noticias",
-      "uri": "/mundo/otras_noticias",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Mundo",
-      "uri": "/mundo",
-      "type": "simple"
-    },
-    "groups": [
-      {
-        "type": "see-alsos",
-        "promos": [
-          {
-            "headlines": {
-              "shortHeadline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
-              "headline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU."
-            },
-            "locators": {
-              "assetUri": "/mundo/49519843",
-              "cpsUrn": "urn:bbc:content:assetUri:/mundo/49519843"
-            },
-            "summary": "Dorian se debilitó este viernes a categoría de intensidad 1 frente a la costa de Carolina del Norte, donde se prevé que toque tierra en las próximas horas.",
-            "timestamp": 1567754872000,
-            "language": "es",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "108636927",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/11D03/production/_108636927_gettyimages-1166104148.jpg",
-              "path": "/cpsprodpb/11D03/production/_108636927_gettyimages-1166104148.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Calle inundada en Carolina del Sur.",
-              "caption": "El huracán está ahora azotando las Carolinas.",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:mundo/49519843",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "shortHeadline": "Por qué el huracán Dorian ha sido particularmente impredecible",
-              "headline": "Dorian: por qué la trayectoria del huracán que amenaza Florida resulta particularmente impredecible"
-            },
-            "locators": {
-              "assetUri": "/mundo/noticias-49530894",
-              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-49530894"
-            },
-            "summary": "El mismo Centro Nacional de Huracanes de Estados Unidos, una de las máximas autoridades a nivel mundial en el tema, ha estado reconociendo \"la incertidumbre en el pronóstico de la trayectoria\" de Dorian, que amenaza Florida.",
-            "timestamp": 1567390439000,
-            "language": "es",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "108560669",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/1795E/production/_108560669_dorian.jpg",
-              "path": "/cpsprodpb/1795E/production/_108560669_dorian.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "El huracán Dorian",
-              "caption": "El huracán Dorian se ha intensificado y ya comienza a ser visible un \"ojo\" en el centro de la tormenta.",
-              "copyrightHolder": "NOAA",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:mundo/noticias-49530894",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "shortHeadline": "¿Qué nos dice exactamente el cono que predice el paso de un huracán y por qué tanta gente lo malinterpreta?",
-              "headline": "Huracán Dorian: ¿qué nos dice exactamente el cono que predice el paso de un ciclón y por qué tanta gente lo malinterpreta?"
-            },
-            "locators": {
-              "assetUri": "/mundo/noticias-49532705",
-              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-49532705"
-            },
-            "summary": "El \"cono de incertidumbre\" que elabora el Centro de Huracanes de Estados Unidos muestra diferentes datos sobre una tormenta. Pero ¿sabes realmente lo que predice?",
-            "timestamp": 1567209982000,
-            "language": "es",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "108562918",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/14006/production/_108562918_dorian-promo.png",
-              "path": "/cpsprodpb/14006/production/_108562918_dorian-promo.png",
-              "height": 549,
-              "width": 976,
-              "altText": "Gráfico Dorian",
-              "copyrightHolder": "BBC",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:mundo/noticias-49532705",
-            "type": "cps"
+            ]
           }
         ]
       }
-    ]
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-14T16:29:28.842Z",
+        "lastRecordTimeStamp": "2023-02-14T16:27:00Z",
+        "firstRecordTimeStamp": "2023-02-14T14:27:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "b467d0ea-f35b-8948-ae7b-e20ea4056f05",
+            "rank": 1,
+            "count": 81,
+            "urn": "urn:bbc:curie:asset:b467d0ea-f35b-8948-ae7b-e20ea4056f05",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "El video privado que una joven envió a su novio y se volvió viral en Egipto",
+                "headline": "El video privado que una joven envió a su novio y él publicó para humillarla"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-37780063",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-37780063",
+                "curie": "http://www.bbc.co.uk/asset/b467d0ea-f35b-8948-ae7b-e20ea4056f05",
+                "assetId": "37780063"
+              },
+              "summary": "Una joven en Egipto grabó un video en el que se la veía bailando. Se lo envió a su novio. Cuando se separaron, él decidió compartirlo en internet para humillarla y el video se volvió viral.",
+              "timestamp": 1477500521000,
+              "language": "es",
+              "media": {
+                "id": "p04d74l4",
+                "subType": "clip",
+                "format": "video",
+                "title": "El video íntimo que una joven envió a su novio y que se volvió viral en Egipto",
+                "synopses": {
+                  "short": "El video íntimo que una joven envió a su novio y que se volvió viral en Egipto",
+                  "medium": "Una joven en Egipto grabó un video en el que se la veía bailando. Se lo envió a su novio. Cuando se separaron, él decidió compartirlo en internet, con consecuencias inesperadas.",
+                  "long": "En 2009, una joven egipcia de 18 años grabó un video en la casa de una de sus amigas en el que aparecía bailando.\n\nLas imágenes no contenían ningún material explícito: sólo se la veía moviéndose al ritmo de la música, alegre y sensual. \n\nGhadeer Ahmed le envió el video a su novio. Años más tarde, cuando se separaron, en un acto de venganza, él publicó el video en internet. \n\nAhmed lo llevó a la corte donde él fue hallado culpable de difamación. \n\nPese a haber ganado el juicio, el video siguió circulando por internet. \n\nAhmed decidió publicarlo en su página de Facebook.\n\nEn una entrevista con la BBC, contó por qué lo hizo y por qué cree que hace falta conquistar más derechos para las mujeres en su país."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04d75q3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "El video íntimo que una joven envió a su novio y que se volvió viral en Egipto",
+                "versions": [
+                  {
+                    "versionId": "p04d74l6",
+                    "types": ["Original"],
+                    "duration": 189,
+                    "durationISO8601": "PT3M9S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1477489886000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "92100126",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F294/production/_92100126_p04d75q3.jpg",
+                "path": "/cpsprodpb/F294/production/_92100126_p04d75q3.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ghadeer Ahmed",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-37780063",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f370285a-0406-472d-9900-1ec0604209f8",
+            "rank": 2,
+            "count": 69,
+            "urn": "urn:bbc:curie:asset:f370285a-0406-472d-9900-1ec0604209f8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "En video: la destrucción que dejan los dos terremotos en Turquía y Siria",
+                "headline": "Terremoto en Turquía y Siria | En video: la destrucción que dejan los dos fuertes sismos"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-internacional-64549104",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:f370285a-0406-472d-9900-1ec0604209f8",
+                "assetId": "64549104",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-64549104",
+                "curie": "http://www.bbc.co.uk/asset/f370285a-0406-472d-9900-1ec0604209f8"
+              },
+              "summary": "El presidente de Turquía, Recep Tayyip Erdogan, lo ha llamado \"el peor desastre que ha vivido el país en el último siglo después del terremoto de 1939 en Erzincan\".",
+              "timestamp": 1675720499000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "es",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+                "locator": "urn:bbc:cps:curie:asset:f370285a-0406-472d-9900-1ec0604209f8",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "es",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingLabel": "Siria",
+                      "thingUri": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingId": "28b0a95e-89d3-4fdf-bad0-8565eb549233",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/163843/"],
+                      "thingEnglishLabel": "Syria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "Terremotos",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "Turquía",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1fydv",
+                "subType": "clip",
+                "format": "video",
+                "title": "Por qué Turquía es un \"hervidero de terremotos\"",
+                "synopses": {
+                  "short": "Te explicamos las razones geológicas que hacen de Turquía un centro de terremotos."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1g0dl.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Terremotos en Turquía y Siria dejan más de mil muertos",
+                "versions": [
+                  {
+                    "versionId": "p0f1fyf3",
+                    "types": ["Original"],
+                    "duration": 75,
+                    "durationISO8601": "PT1M15S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675717943000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128544829",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/16AAC/production/_128544829_324220535_737550047756436_7992761491377500150_n.jpg",
+                "path": "/cpsprodpb/16AAC/production/_128544829_324220535_737550047756436_7992761491377500150_n.jpg",
+                "height": 1080,
+                "width": 1920,
+                "altText": "Miles de muertos en el terremoto en Turquía y Siria",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-internacional-64549104",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "54fa6f30-1e97-11e6-8c94-079e3db9bd6e",
+            "rank": 3,
+            "count": 25,
+            "urn": "urn:bbc:curie:asset:54fa6f30-1e97-11e6-8c94-079e3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Quién era Nicholas Winton, el hombre que salvó a casi 700 niños judíos de los nazis?",
+                "headline": "¿Quién era Nicholas Winton, el hombre que salvó a casi 700 niños judíos de los nazis?"
+              },
+              "locators": {
+                "assetUri": "/mundo/video_fotos/2016/05/160520_video_nicholas_winton_nazis_holocausto_lp",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2016/05/160520_video_nicholas_winton_nazis_holocausto_lp",
+                "curie": "http://www.bbc.co.uk/asset/54fa6f30-1e97-11e6-8c94-079e3db9bd6e",
+                "assetId": "43912414"
+              },
+              "summary": "Durante la ocupación nazi de Praga, Winton era un joven que trabajaba como corredor de bolsa en Londres. Pero estos acontecimientos hicieron que lo abandonara todo y se dedicara a sacar por tren a niños judíos de Praga para enviarlos a Reino Unido.",
+              "timestamp": 1463757782000,
+              "language": "es",
+              "media": {
+                "id": "43912414",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "43912414",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/20/160520144059_winton_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2016/05/20/160520144059_winton_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Nicholas Winton ",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/mundo/meta/dps/2016/05/emp/160520_video_nicholas_winton_nazis_holocausto_lp.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/video_mundo_winton_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/video_mundo_winton_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/video_mundo_winton_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e298",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/20/160520144059_winton_640x360_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2016/05/20/160520144059_winton_640x360_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Nicholas Winton ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/video_fotos/2016/05/160520_video_nicholas_winton_nazis_holocausto_lp",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0962c208-9064-9d45-9c80-2fb07c9c0a47",
+            "rank": 4,
+            "count": 12,
+            "urn": "urn:bbc:curie:asset:0962c208-9064-9d45-9c80-2fb07c9c0a47",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Animación creada por David Hockney",
+                "headline": "La animación de uno de los dibujos de David Hockney creado en Normandía"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-52123665",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-52123665",
+                "curie": "http://www.bbc.co.uk/asset/0962c208-9064-9d45-9c80-2fb07c9c0a47",
+                "assetId": "52123665"
+              },
+              "summary": "La animación de uno de los dibujos de David Hockney creado en Normandía",
+              "timestamp": 1585746911000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08884y1",
+                "subType": "clip",
+                "format": "video",
+                "title": "David Hockney animation from Normandy",
+                "synopses": {
+                  "short": "One of David Hockney's animated paintings from Normandy",
+                  "long": "One of David Hockney's animated paintings from Normandy",
+                  "medium": "One of David Hockney's animated paintings from Normandy"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0889gkq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "La animación de uno de los dibujos de David Hockney creado en Normandía",
+                "versions": [
+                  {
+                    "versionId": "p08884y6",
+                    "types": ["Original"],
+                    "duration": 45,
+                    "durationISO8601": "PT45S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1585719158000
+                  }
+                ],
+                "imageCopyright": "David Hockney",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111495397",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/135FF/production/_111495397_p0889gkq.jpg",
+                "path": "/cpsprodpb/135FF/production/_111495397_p0889gkq.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "David Hockney animation",
+                "copyrightHolder": "David Hockney",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-52123665",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cc0a1936-307c-11e5-aba1-30e23db9bd6e",
+            "rank": 5,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:cc0a1936-307c-11e5-aba1-30e23db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Por qué miles de personas se están tatuando un punto y coma?",
+                "headline": "¿Por qué miles de personas se están tatuando un punto y coma?"
+              },
+              "locators": {
+                "assetUri": "/mundo/video_fotos/2015/07/150722_suicidio_tatuaje_puntoycoma_gtg",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2015/07/150722_suicidio_tatuaje_puntoycoma_gtg",
+                "curie": "http://www.bbc.co.uk/asset/cc0a1936-307c-11e5-aba1-30e23db9bd6e",
+                "assetId": "39750827"
+              },
+              "summary": "Muchas veces el \";\" se puede utilizar para continuar una frase que bien podría terminar allí. Ahora, cientos de miles de personas comparten fotos con este signo de puntuación tatuado. La idea, recordar ese momento en que muchos coquetearon con suicidarse.",
+              "timestamp": 1437647207000,
+              "language": "es",
+              "media": {
+                "id": "39750827",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "39750827",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/07/22/150722145747_punto_y_coma_640x360_katieoriel.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/07/22/150722145747_punto_y_coma_640x360_katieoriel.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Katie Oriel",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/mundo/meta/dps/2015/07/emp/150722_suicidio_tatuaje_puntoycoma_gtg.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2015/07/punto_y_coma_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2015/07/punto_y_coma_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2015/07/punto_y_coma_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e271",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/07/22/150722145747_punto_y_coma_144x81_katieoriel_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/07/22/150722145747_punto_y_coma_144x81_katieoriel_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "Katie Oriel",
+                "copyrightHolder": "Katie Oriel",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/video_fotos/2015/07/150722_suicidio_tatuaje_puntoycoma_gtg",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a39ff9e4-6adb-694c-9081-fdb2d3fa2b1d",
+            "rank": 6,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:a39ff9e4-6adb-694c-9081-fdb2d3fa2b1d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Sputnik, el primer satélite que hizo despegar la carrera espacial entre la URSS y Estados Unidos hace 60 años",
+                "headline": "Sputnik, el primer satélite que hizo despegar la carrera espacial entre la URSS y Estados Unidos hace 60 años"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-41503825",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-41503825",
+                "curie": "http://www.bbc.co.uk/asset/a39ff9e4-6adb-694c-9081-fdb2d3fa2b1d",
+                "assetId": "41503825"
+              },
+              "summary": "Cuando la Unión Soviética lanzó al espacio con éxito el primer satélite artificial, dio un impulso nunca antes visto a la carrera espacial en plena Guerra Fría. ¿Cómo afectó a la humanidad el lanzamiento del Sputnik?",
+              "timestamp": 1507131975000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05j1bp7",
+                "subType": "clip",
+                "format": "video",
+                "title": "60 años del Sputnik, el satélite que hizo despegar la carrera espacial entre la URSS y EE.UU.",
+                "synopses": {
+                  "short": "60 años del Sputnik",
+                  "medium": "Hace más de 60 años, la humanidad colocó con éxito por primera vez en su historia un satélite de fabricación propia.",
+                  "long": "Hace más de 60 años, la humanidad colocó con éxito por primera vez en su historia un satélite de fabricación propia."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05j1cgg.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "60 años del Sputnik, el satélite que hizo despegar la carrera espacial entre la URSS y EE.UU.",
+                "versions": [
+                  {
+                    "versionId": "p05j1bp9",
+                    "types": ["Original"],
+                    "duration": 44,
+                    "durationISO8601": "PT44S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1507129645000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "98139908",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13C61/production/_98139908_p05j1cgg.jpg",
+                "path": "/cpsprodpb/13C61/production/_98139908_p05j1cgg.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Sputnik",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-41503825",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b9badb90-6131-4444-9cb0-91b411cf9500",
+            "rank": 7,
+            "count": 10,
+            "urn": "urn:bbc:curie:asset:b9badb90-6131-4444-9cb0-91b411cf9500",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Quiero un pene más grande\": los hombres que se rellenan el miembro para engrosarlo",
+                "headline": "\"Quiero un pene más grande\": los hombres que se rellenan el miembro para engrosarlo"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-46062916",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-46062916",
+                "curie": "http://www.bbc.co.uk/asset/b9badb90-6131-4444-9cb0-91b411cf9500",
+                "assetId": "46062916"
+              },
+              "summary": "Cada vez más hombres se someten en Reino Unido a procedimientos de engrosamiento de pene. Expertos alertan de los riesgos, en especial si se usan versiones caseras.",
+              "timestamp": 1541157282000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "CS"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06qhrtk",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Quiero un pene más grande\": los hombres que se rellenan el miembro para agrandarlo",
+                "synopses": {
+                  "short": "\"Quiero un pene más grande\": los hombres que se rellenan el miembro para agrandarlo",
+                  "long": "Cada vez más hombres se someten en Reino Unido a procedimientos de engrosamiento de pene. Expertos alertan de los riesgos, en especial si se usan versiones caseras.",
+                  "medium": "Cada vez más hombres se someten en Reino Unido a procedimientos de engrosamiento de pene. Expertos alertan de los riesgos, en especial si se usan versiones caseras."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06qmhg0.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "\"Quiero un pene más grande\": los hombres que se rellenan el miembro para agrandarlo",
+                "versions": [
+                  {
+                    "versionId": "p06qmhbd",
+                    "types": ["Editorial"],
+                    "duration": 159,
+                    "durationISO8601": "PT2M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1541082745000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104146774",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/BA94/production/_104146774_p06qlmtb.jpg",
+                "path": "/cpsprodpb/BA94/production/_104146774_p06qlmtb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Pareja en Reino Unido",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-46062916",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6d745333-c79d-e245-a5b2-f4acb7de35e1",
+            "rank": 8,
+            "count": 9,
+            "urn": "urn:bbc:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Qué es el albur en México y cómo puedes saber si te están \"albureando\"?",
+                "headline": "¿Qué es el albur en México y cómo puedes saber si te están \"albureando\"?"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-41174775",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-41174775",
+                "curie": "http://www.bbc.co.uk/asset/6d745333-c79d-e245-a5b2-f4acb7de35e1",
+                "assetId": "41174775"
+              },
+              "summary": "Un juego de palabras, el arte del doble sentido. El albur en México es un lenguaje popular lleno de picardía. Lourdes Ruiz, más conocida como la “reina del albur”, explica su origen, cómo crear albures y cuáles son sus favoritos.",
+              "timestamp": 1505398154000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05fb33s",
+                "subType": "clip",
+                "format": "video",
+                "title": "¿Qué es el albur en México y cómo puedes saber si te están albureando?",
+                "synopses": {
+                  "short": "¿Qué es el albur en México y cómo puedes saber si te están albureando?",
+                  "medium": "Un juego de palabras, el arte del doble sentido, el albur en México es un lenguaje popular lleno de picardía. Lourdes Ruiz, más conocida como la “reina del albur”, lo explica.",
+                  "long": "Es como una esgrima verbal en la que gana el más rápido, dicen los que saben.\nY Lourdes Ruiz sabe: ella ha sido campeona en el torneo nacional de albures, un género antes reservado solo para hombres. \nEn el albur no se puede insultar, ni decir palabras soeces. Eso sí, el doble sentido, en la gran mayoría de los casos, alude al sexo. \nSu origen es prehispánico, se cocina en la calle y en años recientes ha habido una reivindicación de su valor cultural y de su estrecha relación con el “ser mexicano”. \nRuiz, quien es puestera en el mercado de Tepito, en Ciudad de México, incluso imparte talleres de “albures finos”. \nElla ofrece algunas claves para entender mejor la picardía mexicana.\nEste video es parte de la versión digital del Hay Festival Querétaro, un encuentro de escritores y pensadores que se realiza en esa ciudad mexicana entre el 7 y el 10 de septiembre."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05fb4z6.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "¿Qué es el albur en México y cómo puedes saber si te están albureando?",
+                "versions": [
+                  {
+                    "versionId": "p05fb33w",
+                    "types": ["Original"],
+                    "duration": 138,
+                    "durationISO8601": "PT2M18S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1504715453000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "97687659",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/175BE/production/_97687659_p05fb4hj.jpg",
+                "path": "/cpsprodpb/175BE/production/_97687659_p05fb4hj.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Ilustración con emoji",
+                "copyrightHolder": "BBC/Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-41174775",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2b21dc76-7bda-11e5-9fa3-14f33db9bd6e",
+            "rank": 9,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:2b21dc76-7bda-11e5-9fa3-14f33db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Así gruñe el mono aullador: más profunda la voz, más pequeños los testículos",
+                "headline": "Así gruñe el mono aullador: más profunda la voz, más pequeños los testículos"
+              },
+              "locators": {
+                "assetUri": "/mundo/video_fotos/2015/10/151026_video_mono_grito_virilidad_lp",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2015/10/151026_video_mono_grito_virilidad_lp",
+                "curie": "http://www.bbc.co.uk/asset/2b21dc76-7bda-11e5-9fa3-14f33db9bd6e",
+                "assetId": "41057004"
+              },
+              "summary": "Con su voz poderosa atrae a las hembras e intimida a sus competidores. Pero cuánto más profunda es la voz del mono aullador, más reducido es el tamaño de sus testículos, según un nuevo estudio. Mira como gruñen en este video de BBC Mundo. ",
+              "timestamp": 1445876621000,
+              "language": "es",
+              "media": {
+                "id": "41057004",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "41057004",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/10/26/151026122050_mono_grito_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/10/26/151026122050_mono_grito_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Mono gritando",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/mundo/meta/dps/2015/10/emp/151026_video_mono_grito_virilidad_lp.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2015/10/video_mono_grito_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2015/10/video_mono_grito_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2015/10/video_mono_grito_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e242",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/10/26/151026122050_mono_grito_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/10/26/151026122050_mono_grito_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/video_fotos/2015/10/151026_video_mono_grito_virilidad_lp",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "081f34c7-8a16-9c4f-b2ee-6c1b364c816a",
+            "rank": 10,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:081f34c7-8a16-9c4f-b2ee-6c1b364c816a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Violamos en grupo normalmente\": el país donde 2 de cada 3 mujeres son violadas",
+                "headline": "Papúa Nueva Guinea, el país donde 2 de cada 3 mujeres son violadas"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-45756435",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-45756435",
+                "curie": "http://www.bbc.co.uk/asset/081f34c7-8a16-9c4f-b2ee-6c1b364c816a",
+                "assetId": "45756435"
+              },
+              "summary": "En Papúa Nueva Guinea, el 70% de las mujeres ha sido víctima de una violación. Su capital, Puerto Moresby, es una de las ciudades más peligrosas para las mujeres, donde el maltrato y las agresiones sexuales son vistos como algo normal.",
+              "timestamp": 1538717728000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p06mvf61",
+                "subType": "clip",
+                "format": "video",
+                "title": "Cómo es vivir en la ciudad más peligrosa del mundo para las mujeres",
+                "synopses": {
+                  "short": "Cómo es vivir en la ciudad más peligrosa del mundo para las mujeres"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06mvnmm.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Cómo es vivir en la ciudad más peligrosa del mundo para las mujeres",
+                "versions": [
+                  {
+                    "versionId": "p06mvf63",
+                    "types": ["Original"],
+                    "duration": 339,
+                    "durationISO8601": "PT5M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1538574972000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "103689971",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/464E/production/_103689971_p06mvnmm.jpg",
+                "path": "/cpsprodpb/464E/production/_103689971_p06mvnmm.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Mujer",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-45756435",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1d4676a2-925e-4c4f-8e3f-c759b3673bac",
+            "rank": 11,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:1d4676a2-925e-4c4f-8e3f-c759b3673bac",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Qué fue la Revolución Rusa de 1917 y por qué fue tan importante?",
+                "headline": "¿Qué fue la Revolución Rusa de 1917 y por qué fue tan importante?"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-41890233",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-41890233",
+                "curie": "http://www.bbc.co.uk/asset/1d4676a2-925e-4c4f-8e3f-c759b3673bac",
+                "assetId": "41890233"
+              },
+              "summary": "La revolución bolchevique acabó con el imperio zarista en Rusia, propició el fin el Antiguo Régimen y dio inicio al primer estado autoproclamado socialista de la historia. Te contamos en qué contexto se originó, cuáles fueron sus protagonistas y qué impacto tuvo en Rusia y en el mundo.",
+              "timestamp": 1510035164000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05m6g0g",
+                "subType": "clip",
+                "format": "video",
+                "title": "¿Qué fue la Revolución Rusa de 1917 y por qué fue tan importante?",
+                "synopses": {
+                  "short": "¿Qué fue la Revolución Rusa de 1917 y por qué fue tan importante?",
+                  "medium": "La revolución bolchevique acabó con el imperio zarista en Rusia y dio inicio al primer estado autoproclamado socialista de la historia. Te contamos  qué la originó.",
+                  "long": "Hace 100 años ocurrió uno de los mayores levantamientos populares de la historia. \nInspirada por las ideas del filósofo alemán Carlos Marx, la Revolución  Rusa acabó con tres siglos de dominio zarista y dio inicio a uno de los imperios más poderosos: la Unión Soviética.\nEl proceso, cuya fecha clave se conmemora el 7 de noviembre, no estuvo exento de derramamiento de sangre y crueldad. \nNo en vano se conoce como “terror rojo” al periodo en que el ejército bolchevique consolidó su poder durante cinco años de guerra civil, hasta el nacimiento de la URSS en 1922.\n¿Por qué ocurrió en Rusia? ¿Por qué fue tan importante? Son algunas de las preguntas que BBC Mundo intenta\nresponder."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05m97xf.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "¿Qué fue la Revolución Rusa de 1917 y por qué fue tan importante?",
+                "versions": [
+                  {
+                    "versionId": "p05m97m2",
+                    "types": ["Editorial"],
+                    "duration": 294,
+                    "durationISO8601": "PT4M54S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1509988217000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "98636756",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/100E3/production/_98636756_p05m6ggm.jpg",
+                "path": "/cpsprodpb/100E3/production/_98636756_p05m6ggm.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Lenin y Troski",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-41890233",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4ae03bbb-f668-eb4e-b201-ef132163e675",
+            "rank": 12,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:4ae03bbb-f668-eb4e-b201-ef132163e675",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Las difíciles condiciones en las que trabajan los niños que extraen los metales con los que hacen tu teléfono móvil",
+                "headline": "Las difíciles condiciones en las que trabajan los niños que extraen el cobalto, uno de los metales con los que hacen tu teléfono móvil"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-43337190",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-43337190",
+                "curie": "http://www.bbc.co.uk/asset/4ae03bbb-f668-eb4e-b201-ef132163e675",
+                "assetId": "43337190"
+              },
+              "summary": "Unos 40.000 niños trabajan en las minas de la República Democrática del Congo para extraer el cobalto, imprescindible para la fabricación de los teléfonos móviles.",
+              "timestamp": 1520612872000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p060j6zg",
+                "subType": "clip",
+                "format": "video",
+                "title": "El drámatico testimonio de los niños que trabajan en las minas de cobalto",
+                "synopses": {
+                  "short": "El dramatico testimonio de los niños que trabajan en las minas de cobalto"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060wbls.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Las difíciles condiciones en las que trabajan los niños que extraen los metales con los que hacen tu teléfono móvil",
+                "versions": [
+                  {
+                    "versionId": "p060mlsd",
+                    "types": ["Editorial"],
+                    "duration": 82,
+                    "durationISO8601": "PT1M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1520528565000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100352569",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1790D/production/_100352569_p060mxjl.jpg",
+                "path": "/cpsprodpb/1790D/production/_100352569_p060mxjl.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Niño minero en el Congo",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-43337190",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c2fd57af-b2d3-4a5e-8d68-56af05a29592",
+            "rank": 13,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:c2fd57af-b2d3-4a5e-8d68-56af05a29592",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "El rescate de una niña de un edificio que colapsó en Siria por el potente terremoto en Turquía",
+                "headline": "Terremoto en Turquía y Siria: el rescate de una niña de un edificio que colapsó"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-internacional-64542764",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c2fd57af-b2d3-4a5e-8d68-56af05a29592",
+                "assetId": "64542764",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-64542764",
+                "curie": "http://www.bbc.co.uk/asset/c2fd57af-b2d3-4a5e-8d68-56af05a29592"
+              },
+              "summary": "Una niña es rescatada de los escombros tras el terremoto que sacudió Turquía y Siria.",
+              "timestamp": 1675690111000,
+              "language": "es",
+              "passport": {
+                "language": "es",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+                "locator": "urn:bbc:cps:curie:asset:c2fd57af-b2d3-4a5e-8d68-56af05a29592",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "es",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f197t5",
+                "subType": "clip",
+                "format": "video",
+                "title": "Toddler rescued from collapsed Syria building",
+                "synopses": {
+                  "short": "Syria-Turkey earthquake:Toddler rescued from collapsed building",
+                  "long": "A young child was pulled from the rubble in Azaz, after a devastating earthquake shook Syria and Turkey, leaving hundreds of people dead.\n\nThe 7.8 magnitude earthquake struck in the early hours of Monday while people were asleep and dozens of aftershocks have been felt in the hours since.",
+                  "medium": "A child is pulled from the rubble after a deadly earthquake shakes Syria and Turkey."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f19bjf.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "Una niña es rescatada de un edificio derrumbado en Azaz, Siria",
+                "versions": [
+                  {
+                    "versionId": "p0f197t9",
+                    "types": ["Original"],
+                    "duration": 15,
+                    "durationISO8601": "PT15S",
+                    "warnings": {
+                      "short": "Contains upsetting scenes.",
+                      "long": "Contains scenes which some viewers may find upsetting."
+                    },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675675599000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128533286",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10A89/production/_128533286_p0f19bjf.jpg",
+                "path": "/cpsprodpb/10A89/production/_128533286_p0f19bjf.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Child rescued in Syria",
+                "copyrightHolder": "Reuters",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-internacional-64542764",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9ecb1520-7b45-11e4-be78-0bd73db9bd6e",
+            "rank": 14,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:9ecb1520-7b45-11e4-be78-0bd73db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "La muerte de un hombre negro a manos de la policía en Nueva York",
+                "headline": "La muerte de un hombre negro a manos de la policía en Nueva York"
+              },
+              "locators": {
+                "assetUri": "/mundo/video_fotos/2014/12/141203_video_muerte_eric_garner_tsb",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2014/12/141203_video_muerte_eric_garner_tsb",
+                "curie": "http://www.bbc.co.uk/asset/9ecb1520-7b45-11e4-be78-0bd73db9bd6e",
+                "assetId": "36183344"
+              },
+              "summary": "Un gran jurado decidió no acusar a un policía de Nueva York que causó la muerte por asfixia de un hombre negro. El forcejeo entre los dos, en plena calle, fue captado por un testigo en su celular. ",
+              "timestamp": 1417662096000,
+              "language": "es",
+              "media": {
+                "id": "36183344",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "36183344",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/12/04/141204015532_eric_garner_640x360_ap_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/12/04/141204015532_eric_garner_640x360_ap_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Eric Garner",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/mundo/meta/dps/2014/12/emp/141203_video_muerte_eric_garner_tsb.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2014/12/sparrowgarner_141203_video_muerte_eric_garner_tsb_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2014/12/sparrowgarner_141203_video_muerte_eric_garner_tsb_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2014/12/sparrowgarner_141203_video_muerte_eric_garner_tsb_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e241",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/12/04/141204015532_eric_garner_144x81_ap_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/12/04/141204015532_eric_garner_144x81_ap_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "Eric Garner",
+                "copyrightHolder": "AP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/video_fotos/2014/12/141203_video_muerte_eric_garner_tsb",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9d7281a7-68be-6047-9973-edcb01d59f9f",
+            "rank": 15,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:9d7281a7-68be-6047-9973-edcb01d59f9f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Qué significan las figuras del cuadro Guernica, la obra maestra de Pablo Picasso?",
+                "headline": "¿Qué significan las figuras del cuadro Guernica, la obra maestra de Pablo Picasso?"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-39706314",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-39706314",
+                "curie": "http://www.bbc.co.uk/asset/9d7281a7-68be-6047-9973-edcb01d59f9f",
+                "assetId": "39706314"
+              },
+              "summary": "El pintor malagueño decía que el Guernica significaba lo que cada persona viera en él. Pero los expertos siempre han intentado desentrañar el significado de la famosa pintura.",
+              "timestamp": 1493144057000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p0510mjp",
+                "subType": "clip",
+                "format": "video",
+                "title": "¿Qué significan las figuras del cuadro Guernica, la obra maestra de Pablo Picasso?",
+                "synopses": {
+                  "short": "¿Qué significan las figuras del cuadro Guernica, la obra maestra de Pablo Picasso?",
+                  "medium": "El pintor malagueño decía que el Guernica significaba lo que cada persona viera en él. Pero los expertos siempre han intentado desentrañar el significado del famoso cuadro.",
+                  "long": "Se sabe que cuando Picasso se enteró en París del brutal bombardeo a Guernica se lanzó indignado a pintar el enorme cuadro que abriría el pabellón de la República Española en la Exposición Internacional de París de 1937. \n\nTardó poco más de un mes en plasmar sobre el lienzo las desgarradas figuras en blanco, negro y gris que conmueven, 80 años después, a quien observa una de las pinturas más famosas del mundo. \n\nAlegato contra la guerra, símbolo del horror, del dolor... El Guernica representa todo eso. \n\nPero si bien el propio Picasso quería dejar abierta la lectura de su obra y nunca quiso definir el simbolismo de cada una de sus figuras, críticos y expertos han intentado desentrañar su significado a lo largo de los años. \n\nCon motivo de los 80 años del bombardeo a Gernika y de la creación del cuadro que lleva su nombre en español, Rosario Peiró, Jefa de Colecciones del Museo Reina Sofía de Madrid, compartió con BBC Mundo algunas de estas interpretaciones."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0513qpp.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Mira aquí qué significan las figuras del Guernica.",
+                "versions": [
+                  {
+                    "versionId": "p0513qjy",
+                    "types": ["Editorial"],
+                    "duration": 160,
+                    "durationISO8601": "PT2M40S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1493115224000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95777610",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/068D/production/_95777610_guernica_promo3.jpg",
+                "path": "/cpsprodpb/068D/production/_95777610_guernica_promo3.jpg",
+                "height": 1080,
+                "width": 1920,
+                "altText": "Fragmento del Guernica",
+                "caption": "Fragmento del Guernica",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-39706314",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9b18d9f6-62c7-2340-83e4-916e04337f34",
+            "rank": 16,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:9b18d9f6-62c7-2340-83e4-916e04337f34",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "La peligrosa búsqueda del \"Viagra del Himalaya\", el hongo afrodisíaco que vale más que el oro",
+                "headline": "El hongo Yarsagumba, el \"Viagra del Himalaya\" que vale más que el oro"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-44872918",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-44872918",
+                "curie": "http://www.bbc.co.uk/asset/9b18d9f6-62c7-2340-83e4-916e04337f34",
+                "assetId": "44872918"
+              },
+              "summary": "Este hongo cuesta más de US$100.000 el kilo y, según la medicina tradicional, puede curar la impotencia, el asma y el cáncer.",
+              "timestamp": 1532124988000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "CS"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06f1tq4",
+                "subType": "clip",
+                "format": "video",
+                "title": "La peligrosa búsqueda del \"Viagra del Himalaya\" que es más caro que el oro",
+                "synopses": {
+                  "short": "El hongo Yarsagumba se encuentra a más de 3.000 metros de altitud."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06f2hm1.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "El hongo Yarsagumba, el \"Viagra del Himalaya\" que vale más que el oro",
+                "versions": [
+                  {
+                    "versionId": "p06f1tq6",
+                    "types": ["Original"],
+                    "duration": 139,
+                    "durationISO8601": "PT2M19S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1531907507000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "102577014",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/A075/production/_102577014_p06f2hm1.jpg",
+                "path": "/cpsprodpb/A075/production/_102577014_p06f2hm1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Yarsagumba,",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-44872918",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6665cd5c-c302-c64d-a6a8-4169a9babaaf",
+            "rank": 17,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:6665cd5c-c302-c64d-a6a8-4169a9babaaf",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Así son las muñecas sexuales de silicona que se usan en algunos burdeles de Europa",
+                "headline": "Así son las muñecas sexuales de silicona que se usan en algunos burdeles de Europa"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-46965469",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-46965469",
+                "curie": "http://www.bbc.co.uk/asset/6665cd5c-c302-c64d-a6a8-4169a9babaaf",
+                "assetId": "46965469"
+              },
+              "summary": "Para unos es un juguete más, otra forma de dar rienda suelta a las fantasías, pero otros opinan que cosifica el cuerpo de la mujer.",
+              "timestamp": 1548179831000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06yshfn",
+                "subType": "clip",
+                "format": "video",
+                "title": "Así lucen las muñecas de silicona que empiezan a usarse en algunos burdeles",
+                "synopses": {
+                  "short": "Así lucen las muñecas de silicona que empiezan a usarse en algunos burdeles",
+                  "long": "En Europa han empezado a abrirse burdeles de muñecas sexuales. Sofía Bettiza, reportera de la BBC estuvo allí.\nEn lugar de pagar por sexo con personas reales, los clientes pasan tiempo con muñecas de silicona increíblemente realistas. Pueden elegir el color de cabello deseado, la forma del cuerpo y el atuendo. \nLos dueños de uno de los locales abiertos en Turín, al norte de Italia, dicen que este lugar es ético, porque no se explota a nadie.\nPero otros opinan que estás muñecas convierten a las mujeres en un objeto\nEntonces, ¿es una innovación liberadora o no?",
+                  "medium": "Para unos es un juguete más, otra forma de dar rienda suelta a las fantasías, pero otros opinan que se objetiviza el cuerpo de la mujer."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06ysmms.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Las muñecas de silicona son increíblemente realistas",
+                "versions": [
+                  {
+                    "versionId": "p06yshfs",
+                    "types": ["Original"],
+                    "duration": 60,
+                    "durationISO8601": "PT1M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1548174437000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105300120",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0834/production/_105300120_p06ysmms.jpg",
+                "path": "/cpsprodpb/0834/production/_105300120_p06ysmms.jpg",
+                "height": 575,
+                "width": 1024,
+                "altText": "Muñecas de silicona",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-46965469",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "52a4a7d2-6c34-8d46-acb0-556480813130",
+            "rank": 18,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:52a4a7d2-6c34-8d46-acb0-556480813130",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Cómo logran doblarse los ratones para pasar por huecos muy pequeños?",
+                "headline": "¿Cómo logran doblarse los ratones para pasar por huecos muy pequeños?"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-42866453",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-42866453",
+                "curie": "http://www.bbc.co.uk/asset/52a4a7d2-6c34-8d46-acb0-556480813130",
+                "assetId": "42866453"
+              },
+              "summary": "Aunque no lo creas, el secreto está en... su cabeza. Una vez pasa esa parte del cuerpo, el resto se adapta como lo demuestran estas interesantes imágenes de rayos X.",
+              "timestamp": 1517248910000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05wh1pj",
+                "subType": "clip",
+                "format": "video",
+                "title": "¿Cómo logran doblarse los ratones para pasar por huecos muy pequeños?",
+                "synopses": {
+                  "short": "¿Cómo logran doblarse los ratones para pasar por huecos muy pequeños?",
+                  "medium": "Aunque no lo creas, el secreto está en... su cabeza. Una vez pasa esa parte del cuerpo, el resto se adapta como lo demuestran estas interesantes imágenes de rayos X.",
+                  "long": "Sí, para algunos son una plaga, pero es imposible desconocer que después de siglos han logrado sobrevivir y la razón es que saben muy bien cómo encontrar su alimento y más aún: llegar a él.\n\nPara eso hacen uso de lo mejor de sus habilidades, empezando por un cuerpo muy flexible y unos bigotes que le dan información del ambiente en el que se encuentran.\n\nVe en este video de la BBC cómo estos roedores logran estrujar su cuerpo en orificios y espacios muy pequeños.\n\nTe sorprenderás cómo lo logran."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wh30n.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "¿Cómo logran doblarse los ratones para pasar por huecos muy pequeños?",
+                "versions": [
+                  {
+                    "versionId": "p05wh1pm",
+                    "types": ["Original"],
+                    "duration": 96,
+                    "durationISO8601": "PT1M36S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1517247987000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99800333",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8214/production/_99800333_p05wh30n.jpg",
+                "path": "/cpsprodpb/8214/production/_99800333_p05wh30n.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ratoncito",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-42866453",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "34caf2bb-789a-5d47-8053-a007d6d20e69",
+            "rank": 19,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:34caf2bb-789a-5d47-8053-a007d6d20e69",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "El telegrama a México que definió la suerte de la Primera Guerra Mundial",
+                "headline": "Primera Guerra Mundial: el telegrama a México que definió la suerte del conflicto en 1917"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-internacional-46139449",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-46139449",
+                "curie": "http://www.bbc.co.uk/asset/34caf2bb-789a-5d47-8053-a007d6d20e69",
+                "assetId": "46139449"
+              },
+              "summary": "El gobierno alemán le ofreció respaldo militar a Venustiano Carranza para que entrara en conflicto contra EE.UU., a cambio de recuperar los territorios perdidos en el siglo XIX.",
+              "timestamp": 1541946616000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06r5w1h",
+                "subType": "clip",
+                "format": "video",
+                "title": "El telegrama a México que definió la suerte de la Primera Guerra Mundial",
+                "synopses": {
+                  "short": "Alemania le ofreció respaldo militar a México para que entrara en conflicto con EE.UU."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06rh5kc.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Alemania le ofreció respaldo militar a México para que entrara en conflicto con EE.UU.",
+                "versions": [
+                  {
+                    "versionId": "p06r8fy7",
+                    "types": ["Editorial"],
+                    "duration": 237,
+                    "durationISO8601": "PT3M57S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1541695198000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104245540",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11CA/production/_104245540_p06r8jcn.jpg",
+                "path": "/cpsprodpb/11CA/production/_104245540_p06r8jcn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Telegrama Zimmermann",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-internacional-46139449",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f0048d5c-3ac3-11e5-9816-7c943db9bd6e",
+            "rank": 20,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:f0048d5c-3ac3-11e5-9816-7c943db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "El poderoso testimonio animado de una sobreviviente de la bomba de Hiroshima",
+                "headline": "El poderoso testimonio animado de una sobreviviente de la bomba de Hiroshima"
+              },
+              "locators": {
+                "assetUri": "/mundo/video_fotos/2015/08/150804_video_animacion_sobreviviente_hiroshima_np",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2015/08/150804_video_animacion_sobreviviente_hiroshima_np",
+                "curie": "http://www.bbc.co.uk/asset/f0048d5c-3ac3-11e5-9816-7c943db9bd6e",
+                "assetId": "39933605"
+              },
+              "summary": "Bun Hashizume tenía 14 años y estaba en Hiroshima cuando la bomba atómica destruyó la ciudad. La BBC ilustró sus recuerdos para crear un conmovedor relato animado del primer ataque nuclear del mundo.",
+              "timestamp": 1438744321000,
+              "language": "es",
+              "media": {
+                "id": "39933605",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "39933605",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/04/150804161759_animacion_hiroshima_dos_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/08/04/150804161759_animacion_hiroshima_dos_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Animación sobre Hiroshima",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/mundo/meta/dps/2015/08/emp/150804_video_animacion_sobreviviente_hiroshima_np.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2015/08/mundo_hiroshima_animacion_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2015/08/mundo_hiroshima_animacion_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2015/08/mundo_hiroshima_animacion_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e249",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/04/150804161628_animacion_hiroshima_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/08/04/150804161628_animacion_hiroshima_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "Animación sobre Hiroshima",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/video_fotos/2015/08/150804_video_animacion_sobreviviente_hiroshima_np",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

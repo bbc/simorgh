@@ -1,196 +1,899 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:mundo/media-23283126",
-    "locators": {
-      "assetUri": "/mundo/media-23283126",
-      "cpsUrn": "urn:bbc:content:assetUri:mundo/media-23283126",
-      "curie": "http://www.bbc.co.uk/asset/22720ea0-aaf8-8749-afa1-a0b36a632a71",
-      "assetId": "23283126"
-    },
-    "type": "MAP",
-    "createdBy": "mundo-v6",
-    "language": "es",
-    "lastUpdated": 1588335919732,
-    "firstPublished": 1585748681000,
-    "lastPublished": 1585748681000,
-    "timestamp": 1585748681000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "mundo.media.media_asset.23283126.page",
-      "cps_asset_id": "23283126"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph", "crosshead", "image"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01m7d07",
-        "subType": "clip",
-        "format": "audio",
-        "title": "Birmingham checkout",
-        "synopses": {
-          "short": "Some audio from a supermarket checkout in Birmingham"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:mundo/media-23283126",
+        "locators": {
+          "assetUri": "/mundo/media-23283126",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:22720ea0-aaf8-8749-afa1-a0b36a632a71",
+          "assetId": "23283126",
+          "cpsUrn": "urn:bbc:content:assetUri:mundo/media-23283126",
+          "curie": "http://www.bbc.co.uk/asset/22720ea0-aaf8-8749-afa1-a0b36a632a71"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-        "embedding": false,
-        "advertising": false,
-        "caption": "Some audio from a supermarket checkout in Birmingham",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "mundo-v6",
+        "language": "es",
+        "lastUpdated": 1665415639623,
+        "firstPublished": 1585748681000,
+        "lastPublished": 1585748681000,
+        "timestamp": 1585748681000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "ldp_tags": "Colombia+peace+agreement",
+          "cps_asset_id": "23283126",
+          "ldp_ids": "98449ae1-463d-457c-9f8e-63ae24c3d72f",
+          "contentId": "urn:bbc:cps:curie:asset:22720ea0-aaf8-8749-afa1-a0b36a632a71",
+          "counterName": "mundo.media.media_asset.23283126.page",
+          "cps_asset_type": "map"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "language": "es",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+          "locator": "urn:bbc:cps:curie:asset:22720ea0-aaf8-8749-afa1-a0b36a632a71",
+          "availability": "AVAILABLE",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/98449ae1-463d-457c-9f8e-63ae24c3d72f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+              "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+            }
+          ],
+          "schemaVersion": "1.4.0",
+          "publishedState": "PUBLISHED",
+          "predicates": {
+            "contributor": [
+              {
+                "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id",
+                "type": "contributor"
+              }
+            ],
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "es",
+                "type": "formats"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/98449ae1-463d-457c-9f8e-63ae24c3d72f#id",
+                "thingLabel": "Proceso paz en Colombia",
+                "thingUri": "http://www.bbc.co.uk/things/98449ae1-463d-457c-9f8e-63ae24c3d72f#id",
+                "thingId": "98449ae1-463d-457c-9f8e-63ae24c3d72f",
+                "thingType": ["core:Event", "tagging:TagConcept", "core:Thing"],
+                "thingSameAs": ["http://www.wikidata.org/entity/Q5858325"],
+                "thingEnglishLabel": "Colombia peace agreement",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Proceso paz en Colombia",
+              "thingUri": "http://www.bbc.co.uk/things/98449ae1-463d-457c-9f8e-63ae24c3d72f#id",
+              "thingId": "98449ae1-463d-457c-9f8e-63ae24c3d72f",
+              "thingType": ["core:Event", "tagging:TagConcept", "core:Thing"],
+              "thingSameAs": ["http://www.wikidata.org/entity/Q5858325"],
+              "topicName": "Colombia Peace Agreement",
+              "topicId": "c1en6xwmpkvt",
+              "curationList": [
+                {
+                  "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+                  "curationType": "tipo-curation"
+                },
+                {
+                  "curationId": "22f2633b-f31e-4195-81d6-5dd5f766ca42",
+                  "curationType": "vivo-stream"
+                },
+                {
+                  "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+                  "curationType": "tipo-curation"
+                },
+                {
+                  "curationId": "8c1500fa-88b3-4465-98f0-76e69259ed9e",
+                  "curationType": "vivo-stream"
+                },
+                {
+                  "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+                  "curationType": "tipo-curation"
+                },
+                {
+                  "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+                  "curationType": "tipo-curation"
+                },
+                {
+                  "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+                  "curationType": "tipo-curation"
+                }
+              ],
+              "thingEnglishLabel": "Colombia peace agreement",
+              "thingLabelLanguage": "es",
+              "thingPreferredLabel": "Colombia peace agreement"
+            }
+          ]
+        },
+        "version": "v1.4.7",
+        "blockTypes": ["media", "paragraph", "crosshead", "image"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "MUNDO",
+          "producerId": "62"
+        },
+        "readTime": 1,
+        "siteUri": "/mundo",
+        "topics": [
           {
-            "versionId": "p01m7d09",
-            "types": ["Original"],
-            "duration": 127,
-            "durationISO8601": "PT2M7S",
-            "warnings": {
-              "short": "Contains some strong language.",
-              "long": "Contains some strong language."
-            },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1555067395000
+            "topicName": "Colombia Peace Agreement",
+            "topicId": "c1en6xwmpkvt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/98449ae1-463d-457c-9f8e-63ae24c3d72f#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+                "curationType": "tipo-curation",
+                "position": 0,
+                "visualProminence": "HIGH"
+              },
+              {
+                "curationId": "22f2633b-f31e-4195-81d6-5dd5f766ca42",
+                "curationType": "vivo-stream",
+                "position": 1,
+                "visualProminence": "NORMAL"
+              },
+              {
+                "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+                "curationType": "tipo-curation",
+                "position": 2,
+                "visualProminence": "NORMAL"
+              },
+              {
+                "curationId": "8c1500fa-88b3-4465-98f0-76e69259ed9e",
+                "curationType": "vivo-stream",
+                "position": 3,
+                "visualProminence": "HIGH"
+              },
+              {
+                "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+                "curationType": "tipo-curation",
+                "position": 4,
+                "visualProminence": "HIGH"
+              },
+              {
+                "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+                "curationType": "tipo-curation",
+                "position": 5,
+                "visualProminence": "NORMAL"
+              },
+              {
+                "curationId": "urn:bbc:tipo:list:d0348c91-39f5-4224-91cf-6ca9f2812376",
+                "curationType": "tipo-curation",
+                "position": 6,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Event", "tagging:TagConcept", "core:Thing"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo"
           }
         ],
-        "imageCopyright": "Getty Images",
-        "type": "media"
+        "mediaType": "audio",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "text": "This is an introduction to the Mundo test MAP",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>Así lo asegura la Organización de Naciones Unidas al 30 de marzo.</bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Eso quiere decir que son 1.500 millones de estudiantes sin clases en 165 países del mundo debido al coronavirus.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Si eres una de esas personas que se ha quedado sin clases o si estás con ganas de aprender algo nuevo en tu tiempo libre, <bold>internet está lleno de cursos online en todas las áreas de especialización.</bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Algunos incluso son dictados por las mejores universidades del mundo y de forma gratuita, aunque la mayoría están exclusivamente en inglés y es usual tener que para obtener un certificado oficial.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      { "text": "Crosshead", "markupType": "plain_text", "type": "crosshead" },
-      {
-        "id": "63733332",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/5B25/test/_63733332__111437543_197389d9-800f-4763-8654-aa30c04220e4.png",
-        "path": "/cpsdevpb/5B25/test/_63733332__111437543_197389d9-800f-4763-8654-aa30c04220e4.png",
-        "height": 549,
-        "width": 976,
-        "altText": "Colourful studying",
-        "caption": "Do you like school?",
-        "copyrightHolder": "Getty/ BBC",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "text": "A continuación, los 24 disponibles en cinco prestigiosos centros, sobre temas tan variados como negocios, matemáticas y paternidad, y que incluye el curso más exitoso en la historia de Yale: La ciencia del bienestar.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Mundo test MAP !\"£$%^&*(){}[]:@;'~#?/>.<,|\\\\",
-      "headline": "Mundo test MAP !\"£$%^&*(){}[]:@;'~#?/>.<,|\\\\"
-    },
-    "locators": {
-      "assetUri": "/mundo/media-23283126",
-      "cpsUrn": "urn:bbc:content:assetUri:mundo/media-23283126",
-      "curie": "http://www.bbc.co.uk/asset/22720ea0-aaf8-8749-afa1-a0b36a632a71",
-      "assetId": "23283126"
-    },
-    "summary": "test",
-    "timestamp": 1585748681000,
-    "language": "es",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01m7d07",
-      "subType": "clip",
-      "format": "audio",
-      "title": "Birmingham checkout",
-      "synopses": {
-        "short": "Some audio from a supermarket checkout in Birmingham"
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-      "embedding": false,
-      "advertising": false,
-      "caption": "Some audio from a supermarket checkout in Birmingham",
-      "versions": [
-        {
-          "versionId": "p01m7d09",
-          "types": ["Original"],
-          "duration": 127,
-          "durationISO8601": "PT2M7S",
-          "warnings": {
-            "short": "Contains some strong language.",
-            "long": "Contains some strong language."
+      "content": {
+        "blocks": [
+          {
+            "id": "p01m7d07",
+            "subType": "clip",
+            "format": "audio",
+            "title": "Birmingham checkout",
+            "synopses": {
+              "short": "Some audio from a supermarket checkout in Birmingham"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+            "embedding": false,
+            "advertising": false,
+            "caption": "Some audio from a supermarket checkout in Birmingham",
+            "versions": [
+              {
+                "versionId": "p01m7d09",
+                "types": ["Original"],
+                "duration": 127,
+                "durationISO8601": "PT2M7S",
+                "warnings": {
+                  "short": "Contains some strong language.",
+                  "long": "Contains some strong language."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1555067395000
+              }
+            ],
+            "imageCopyright": "Getty Images",
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1555067395000
-        }
-      ],
-      "imageCopyright": "Getty Images",
-      "type": "media"
+          {
+            "text": "This is an introduction to the Mundo test MAP",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold>Así lo asegura la Organización de Naciones Unidas al 30 de marzo.</bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Eso quiere decir que son 1.500 millones de estudiantes sin clases en 165 países del mundo debido al coronavirus.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Si eres una de esas personas que se ha quedado sin clases o si estás con ganas de aprender algo nuevo en tu tiempo libre, <bold>internet está lleno de cursos online en todas las áreas de especialización.</bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Algunos incluso son dictados por las mejores universidades del mundo y de forma gratuita, aunque la mayoría están exclusivamente en inglés y es usual tener que para obtener un certificado oficial.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Crosshead",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "id": "63733332",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/5B25/test/_63733332__111437543_197389d9-800f-4763-8654-aa30c04220e4.png",
+            "path": "/cpsdevpb/5B25/test/_63733332__111437543_197389d9-800f-4763-8654-aa30c04220e4.png",
+            "height": 549,
+            "width": 976,
+            "altText": "Colourful studying",
+            "caption": "Do you like school?",
+            "copyrightHolder": "Getty/ BBC",
+            "positionHint": "full-width",
+            "type": "image"
+          },
+          {
+            "text": "A continuación, los 24 disponibles en cinco prestigiosos centros, sobre temas tan variados como negocios, matemáticas y paternidad, y que incluye el curso más exitoso en la historia de Yale: La ciencia del bienestar.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Un pagina de video de prueba",
+          "headline": "Un pagina de video de prueba"
+        },
+        "locators": {
+          "assetUri": "/mundo/media-23283126",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:22720ea0-aaf8-8749-afa1-a0b36a632a71",
+          "assetId": "23283126",
+          "cpsUrn": "urn:bbc:content:assetUri:mundo/media-23283126",
+          "curie": "http://www.bbc.co.uk/asset/22720ea0-aaf8-8749-afa1-a0b36a632a71"
+        },
+        "summary": "test",
+        "timestamp": 1585748681000,
+        "language": "es",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "language": "es",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+          "locator": "urn:bbc:cps:curie:asset:22720ea0-aaf8-8749-afa1-a0b36a632a71",
+          "availability": "AVAILABLE",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/98449ae1-463d-457c-9f8e-63ae24c3d72f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+              "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+            }
+          ],
+          "schemaVersion": "1.4.0",
+          "publishedState": "PUBLISHED",
+          "predicates": {
+            "contributor": [
+              {
+                "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id",
+                "type": "contributor"
+              }
+            ],
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "es",
+                "type": "formats"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/98449ae1-463d-457c-9f8e-63ae24c3d72f#id",
+                "thingLabel": "Proceso paz en Colombia",
+                "thingUri": "http://www.bbc.co.uk/things/98449ae1-463d-457c-9f8e-63ae24c3d72f#id",
+                "thingId": "98449ae1-463d-457c-9f8e-63ae24c3d72f",
+                "thingType": ["core:Event", "tagging:TagConcept", "core:Thing"],
+                "thingSameAs": ["http://www.wikidata.org/entity/Q5858325"],
+                "thingEnglishLabel": "Colombia peace agreement",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "media": {
+          "id": "p01m7d07",
+          "subType": "clip",
+          "format": "audio",
+          "title": "Birmingham checkout",
+          "synopses": {
+            "short": "Some audio from a supermarket checkout in Birmingham"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+          "embedding": false,
+          "advertising": false,
+          "caption": "Some audio from a supermarket checkout in Birmingham",
+          "versions": [
+            {
+              "versionId": "p01m7d09",
+              "types": ["Original"],
+              "duration": 127,
+              "durationISO8601": "PT2M7S",
+              "warnings": {
+                "short": "Contains some strong language.",
+                "long": "Contains some strong language."
+              },
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1555067395000
+            }
+          ],
+          "imageCopyright": "Getty Images",
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63733330",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/0D05/test/_63733330_p01mt2kt.jpg",
+          "path": "/cpsdevpb/0D05/test/_63733330_p01mt2kt.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "England star Fran Kirby",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:mundo/media-23283126",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/mundo/media",
+          "urlIdentifier": "/mundo/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Mundo",
+          "uri": "/mundo",
+          "urlIdentifier": "/mundo",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "63733330",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/0D05/test/_63733330_p01mt2kt.jpg",
-      "path": "/cpsdevpb/0D05/test/_63733330_p01mt2kt.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "England star Fran Kirby",
-      "copyrightHolder": "Getty Images",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:mundo/media-23283126",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/mundo/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Mundo",
-      "uri": "/mundo",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:13:56.959Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 7,
+        "records": [
+          {
+            "id": "d4f715b7-c008-2843-8dd0-9d1ff94afdb5",
+            "rank": 1,
+            "count": 7284,
+            "urn": "urn:bbc:curie:asset:d4f715b7-c008-2843-8dd0-9d1ff94afdb5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Flo",
+                "headline": "Flo"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-23192036",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-23192036",
+                "curie": "http://www.bbc.co.uk/asset/d4f715b7-c008-2843-8dd0-9d1ff94afdb5",
+                "assetId": "23192036"
+              },
+              "summary": "Flo",
+              "timestamp": 1521136521000,
+              "language": "es",
+              "media": {
+                "id": "p01gx32h",
+                "subType": "clip",
+                "format": "video",
+                "title": "Flo",
+                "synopses": {
+                  "short": "Flo"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Flo",
+                "versions": [
+                  {
+                    "versionId": "p01gx32k",
+                    "types": ["Original"],
+                    "duration": 6,
+                    "durationISO8601": "PT6S",
+                    "warnings": {
+                      "short": "Contains strong language.",
+                      "long": "Contains strong language."
+                    },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1521136063000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-23192036",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7b54732b-3c50-174f-9afe-01b3b43938c4",
+            "rank": 2,
+            "count": 6931,
+            "urn": "urn:bbc:curie:asset:7b54732b-3c50-174f-9afe-01b3b43938c4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Блог Севы Новгородцева: мрамор острова Тассос",
+                "headline": "Блог Севы Новгородцева: мрамор острова Тассос"
+              },
+              "locators": {
+                "assetUri": "/russian/news-23047463",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/news-23047463",
+                "curie": "http://www.bbc.co.uk/asset/7b54732b-3c50-174f-9afe-01b3b43938c4",
+                "assetId": "23047463"
+              },
+              "summary": "Туристы, поехавшие на морскую экскурсию в Залив Акул на западе Австралии получили акул сполна",
+              "timestamp": 1464094242000,
+              "language": "ru",
+              "media": {
+                "id": "23029933",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0128hn2",
+                "entityType": "Clip",
+                "caption": "test clip short synopsis 1",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63488084",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/BBD8/test/_63488084_mediaitem63488083.jpg",
+                "path": "/cpsdevpb/BBD8/test/_63488084_mediaitem63488083.jpg",
+                "height": 1152,
+                "width": 2048,
+                "altText": "a",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/news-23047463",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2b5b5210-f49f-5a4e-a901-a6fed5d30447",
+            "rank": 3,
+            "count": 5164,
+            "urn": "urn:bbc:curie:asset:2b5b5210-f49f-5a4e-a901-a6fed5d30447",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "CPS Audio clip",
+                "headline": "Please do not edit this asset"
+              },
+              "locators": {
+                "assetUri": "/news/health-23201480",
+                "cpsUrn": "urn:bbc:content:assetUri:news/health-23201480",
+                "curie": "http://www.bbc.co.uk/asset/2b5b5210-f49f-5a4e-a901-a6fed5d30447",
+                "assetId": "23201480"
+              },
+              "summary": "summary",
+              "timestamp": 1526918547000,
+              "language": "en-gb",
+              "media": {
+                "id": "p01hnn2b",
+                "subType": "clip",
+                "format": "audio",
+                "title": "CPS Audio clip",
+                "synopses": {
+                  "short": "Please do not edit this asset"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hnn31.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Please do not edit this asset",
+                "versions": [
+                  {
+                    "versionId": "p01hnn2d",
+                    "types": ["Original"],
+                    "duration": 16,
+                    "durationISO8601": "PT16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1526050744000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63679746",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/FD1D/test/_63679746_p01hnn31.jpg",
+                "path": "/cpsdevpb/FD1D/test/_63679746_p01hnn31.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "alt tag",
+                "caption": "cpation",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:news/health-23201480",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2da62f0d-1c8f-5b42-91c9-178976ec1a69",
+            "rank": 4,
+            "count": 5009,
+            "urn": "urn:bbc:curie:asset:2da62f0d-1c8f-5b42-91c9-178976ec1a69",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "short headline",
+                "headline": "Long headline"
+              },
+              "locators": {
+                "assetUri": "/mundo/23151735",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/23151735",
+                "curie": "http://www.bbc.co.uk/asset/2da62f0d-1c8f-5b42-91c9-178976ec1a69",
+                "assetId": "23151735"
+              },
+              "summary": "Summary text",
+              "timestamp": 1504785192000,
+              "language": "es",
+              "media": {
+                "id": "p01d5lw4",
+                "subType": "clip",
+                "format": "audio",
+                "title": "short headline",
+                "synopses": {
+                  "short": "Long headline",
+                  "medium": "Summary text"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01d5lx7.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "Long headline",
+                "versions": [
+                  {
+                    "versionId": "p01d5lw6",
+                    "types": ["Original"],
+                    "duration": 26,
+                    "durationISO8601": "PT26S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1504784474000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63590927",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/11CCD/test/_63590927_p01d5lx7.jpg",
+                "path": "/cpsdevpb/11CCD/test/_63590927_p01d5lx7.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Summary text",
+                "copyrightHolder": "Mnbm",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/23151735",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4e2253b8-463b-5641-af77-07f92f84c701",
+            "rank": 5,
+            "count": 4350,
+            "urn": "urn:bbc:curie:asset:4e2253b8-463b-5641-af77-07f92f84c701",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Rio Olympics",
+                "headline": "SEO headline"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-internacional-23201396",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:4e2253b8-463b-5641-af77-07f92f84c701",
+                "assetId": "23201396",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-23201396",
+                "curie": "http://www.bbc.co.uk/asset/4e2253b8-463b-5641-af77-07f92f84c701"
+              },
+              "summary": "Summary",
+              "timestamp": 1526912203000,
+              "language": "es",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01hj5mn",
+                "subType": "clip",
+                "format": "video",
+                "title": "Rio Olympics",
+                "synopses": {
+                  "short": "SEO headline",
+                  "long": "Max two paragraphs",
+                  "medium": "Summary"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hsh58.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "The Rio Olympics have began",
+                "versions": [
+                  {
+                    "versionId": "p01hj5mq",
+                    "types": ["Original"],
+                    "duration": 14,
+                    "durationISO8601": "PT14S",
+                    "warnings": {
+                      "short": "Contains some strong language, adult humour, sexual content, some violence, upsetting scenes and flashing images.",
+                      "long": "Contains some strong language, adult humour, scenes of a sexual nature, some violent scenes, scenes which some viewers may find upsetting and scenes of flashing images."
+                    },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1525096602000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63679660",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1A29/test/_63679660_p01hj5nn.jpg",
+                "path": "/cpsdevpb/1A29/test/_63679660_p01hj5nn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Rio Olympics banner",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-internacional-23201396",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8a277ecc-9993-904f-acc7-33837fdc52ce",
+            "rank": 6,
+            "count": 648,
+            "urn": "urn:bbc:curie:asset:8a277ecc-9993-904f-acc7-33837fdc52ce",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Headline for the app video",
+                "headline": "Headline for the app video"
+              },
+              "locators": {
+                "assetUri": "/mundo/aprenda-ingles-23049220",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:8a277ecc-9993-904f-acc7-33837fdc52ce",
+                "assetId": "23049220",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/aprenda-ingles-23049220",
+                "curie": "http://www.bbc.co.uk/asset/8a277ecc-9993-904f-acc7-33837fdc52ce"
+              },
+              "summary": "This is the teaser summary",
+              "timestamp": 1502871828000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+                "taggings": []
+              },
+              "media": {
+                "id": "23049221",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p013nd9b",
+                "entityType": "Clip",
+                "caption": "Full headline",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63487462",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/676E/test/_63487462_p013ndby.jpg",
+                "path": "/cpsdevpb/676E/test/_63487462_p013ndby.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "tag",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/aprenda-ingles-23049220",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a4dca9e6-8370-254e-a1aa-ed622bf050e8",
+            "rank": 7,
+            "count": 96,
+            "urn": "urn:bbc:curie:asset:a4dca9e6-8370-254e-a1aa-ed622bf050e8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Revoked Clip Mundo",
+                "headline": "Test"
+              },
+              "locators": {
+                "assetUri": "/mundo/23201488",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/23201488",
+                "curie": "http://www.bbc.co.uk/asset/a4dca9e6-8370-254e-a1aa-ed622bf050e8",
+                "assetId": "23201488"
+              },
+              "summary": "summary",
+              "timestamp": 1526920381000,
+              "language": "es",
+              "media": {
+                "id": "23201489",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p01h8qd9",
+                "entityType": "Clip",
+                "caption": "Test",
+                "statusCode": 410,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63679755",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/D9F5/test/_63679755_p00wjk8v.jpg",
+                "path": "/cpsdevpb/D9F5/test/_63679755_p00wjk8v.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Brand exists in Test for the purpose of testing end-to-end clip publication.",
+                "copyrightHolder": "Brand exists in Test for the purpose of testing en",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/23201488",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
