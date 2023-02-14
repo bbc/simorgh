@@ -64,17 +64,14 @@ export default async ({
 
     if (!id) throw handleError('Article ID is invalid', 500);
 
-    let fetchUrl = Url('http://localhost:3210/module/simorgh-bff?').set(
-      'query',
-      {
-        id,
-        service,
-        ...(variant && {
-          variant,
-        }),
-        pageType,
-      },
-    );
+    let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
+      id,
+      service,
+      ...(variant && {
+        variant,
+      }),
+      pageType,
+    });
 
     const optHeaders = { 'ctx-service-env': env };
 
@@ -93,7 +90,7 @@ export default async ({
     // @ts-ignore - Ignore fetchPageData argument types
     const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
-      ...(!isLocal && { optHeaders }),
+      ...(!isLocal && { agent, optHeaders }),
     });
 
     const wsojURL = getRecommendationsUrl({
@@ -112,6 +109,10 @@ export default async ({
       wsojData = wsojJson;
     } catch (error) {
       logger.error('Recommendations JSON malformed', error);
+    }
+
+    if (!json?.data?.article) {
+      throw handleError('Article data is malformed', 500);
     }
 
     const {
