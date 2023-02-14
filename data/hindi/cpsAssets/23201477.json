@@ -1,183 +1,399 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:hindi/23201477",
-    "locators": {
-      "assetUri": "/hindi/23201477",
-      "cpsUrn": "urn:bbc:content:assetUri:hindi/23201477",
-      "curie": "http://www.bbc.co.uk/asset/e97d7208-292f-184e-90b7-f58106f27db5",
-      "assetId": "23201477"
-    },
-    "type": "MAP",
-    "createdBy": "hindi-v6",
-    "language": "hi",
-    "lastUpdated": 1588336117538,
-    "firstPublished": 1526917251000,
-    "lastPublished": 1526917251000,
-    "timestamp": 1526917251000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "hindi.media_asset.23201477.page",
-      "cps_asset_id": "23201477"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "social_embed", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01hcz73",
-        "subType": "clip",
-        "format": "video",
-        "title": "à¤œà¤¾à¤¨à¤µà¤°à¥‹à¤‚",
-        "synopses": { "short": "à¤¸à¤¾à¤°" },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hczc4.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "शीर्षक",
-        "versions": [
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:hindi/23201477",
+        "locators": {
+          "assetUri": "/hindi/23201477",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:e97d7208-292f-184e-90b7-f58106f27db5",
+          "assetId": "23201477",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/23201477",
+          "curie": "http://www.bbc.co.uk/asset/e97d7208-292f-184e-90b7-f58106f27db5"
+        },
+        "type": "MAP",
+        "createdBy": "hindi-v6",
+        "language": "hi",
+        "lastUpdated": 1665415104881,
+        "firstPublished": 1526917251000,
+        "lastPublished": 1526917251000,
+        "timestamp": 1526917251000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "hindi.media_asset.23201477.page",
+          "cps_asset_id": "23201477",
+          "contentId": "urn:bbc:cps:curie:asset:e97d7208-292f-184e-90b7-f58106f27db5"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["media", "social_embed", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "HINDI",
+          "producerId": "52"
+        },
+        "readTime": 1,
+        "siteUri": "/hindi",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01hcz75",
-            "types": ["Original"],
-            "duration": 119,
-            "durationISO8601": "PT1M59S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p01hcz73",
+            "subType": "clip",
+            "format": "video",
+            "title": "à¤œà¤¾à¤¨à¤µà¤°à¥‹à¤‚",
+            "synopses": {
+              "short": "à¤¸à¤¾à¤°"
             },
-            "availableFrom": 1524139096000
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hczc4.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "शीर्षक",
+            "versions": [
+              {
+                "versionId": "p01hcz75",
+                "types": ["Original"],
+                "duration": 119,
+                "durationISO8601": "PT1M59S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1524139096000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
+          },
+          {
+            "href": "https://youtu.be/VVD7E0JUjEI",
+            "source": "youtube",
+            "id": "VVD7E0JUjEI",
+            "type": "social_embed"
+          },
+          {
+            "text": "ट्रंप प्रशासन ने अमेरिकन एयरलाइंस और अपने यहाँ के अन्य विमान सेवा देने वाली कंपनियों से आग्रह किया है कि वो ताइवान को लेकर चीनी मांगों को नज़रअंदाज़ करें.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "चीन और अमरीका के बीच तनाव बढ़ने का यह ताज़ा उदाहरण है.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "अमरीकी अधिकारियों ने अमेरिकन एयरलाइंस और डेल्टा से कहा है कि वो चीन की उस मांग को नहीं मानें जिसमें ताइवान को ''ताइवान चाइना'' कहने के लिए कहा गया है.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "अमरीका ने यह निर्देश तब जारी किया है जब चीन ने 36 विदेशी एयरलाइंस को आदेश दिया कि चाहे जिस भी भाषा में केवल ताइवान लिखा है उसे हटा दे. ताइवान एक स्वतंत्र लोकतांत्रिक द्वीप है, लेकिन चीन दावा करता है यह उसका हिस्सा है.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "वाइट हाउस ने चीन के इस आदेश को बकवास बताया है. अमरेकिन एयरलाइंस ने इस पर कोई भी टिप्पणी करने से इनकार कर दिया है.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "चीन ने दुनिया भर की एयरलाइंस से कहा है कि वो अपनी वेबसाइट पर ताइवान, हॉन्ग कॉन्ग और मकाउ को चीन का हिस्सा बताए न कि स्वतंत्र देश. इस मांग की ऑस्ट्रेलिया, ताइवान और अमरीका ने आलोचना की है.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "ताइवान को चीन वन चाइना पॉलिसी के तहत अपना आंतरिक हिस्सा बताता है. वहीं चीन हॉन्ग कॉन्ग और मकाउ को विशेष प्रशासनिक क्षेत्र बताता है.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "कई पर्यक्षकों का कहना है कि चीन दुनिया भर के देशों पर दबाव बना रहा है ताकि ताइवान को अलग-थलग किया जाए.",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
-        ],
-        "type": "media"
+        ]
       },
-      {
-        "href": "https://youtu.be/VVD7E0JUjEI",
-        "source": "youtube",
-        "id": "VVD7E0JUjEI",
-        "type": "social_embed"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "जानवरों",
+          "headline": "सार"
+        },
+        "locators": {
+          "assetUri": "/hindi/23201477",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:e97d7208-292f-184e-90b7-f58106f27db5",
+          "assetId": "23201477",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/23201477",
+          "curie": "http://www.bbc.co.uk/asset/e97d7208-292f-184e-90b7-f58106f27db5"
+        },
+        "summary": "सार",
+        "timestamp": 1526917251000,
+        "language": "hi",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01hcz73",
+          "subType": "clip",
+          "format": "video",
+          "title": "à¤œà¤¾à¤¨à¤µà¤°à¥‹à¤‚",
+          "synopses": {
+            "short": "à¤¸à¤¾à¤°"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hczc4.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "शीर्षक",
+          "versions": [
+            {
+              "versionId": "p01hcz75",
+              "types": ["Original"],
+              "duration": 119,
+              "durationISO8601": "PT1M59S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1524139096000
+            }
+          ],
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63679742",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/60DD/test/_63679742_p01hczc4.jpg",
+          "path": "/cpsdevpb/60DD/test/_63679742_p01hczc4.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "alt tag",
+          "caption": "image caption",
+          "copyrightHolder": "Empics",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:hindi/23201477",
+        "type": "cps"
       },
-      {
-        "text": "ट्रंप प्रशासन ने अमेरिकन एयरलाइंस और अपने यहाँ के अन्य विमान सेवा देने वाली कंपनियों से आग्रह किया है कि वो ताइवान को लेकर चीनी मांगों को नज़रअंदाज़ करें.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "चीन और अमरीका के बीच तनाव बढ़ने का यह ताज़ा उदाहरण है.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "अमरीकी अधिकारियों ने अमेरिकन एयरलाइंस और डेल्टा से कहा है कि वो चीन की उस मांग को नहीं मानें जिसमें ताइवान को ''ताइवान चाइना'' कहने के लिए कहा गया है.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "अमरीका ने यह निर्देश तब जारी किया है जब चीन ने 36 विदेशी एयरलाइंस को आदेश दिया कि चाहे जिस भी भाषा में केवल ताइवान लिखा है उसे हटा दे. ताइवान एक स्वतंत्र लोकतांत्रिक द्वीप है, लेकिन चीन दावा करता है यह उसका हिस्सा है.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "वाइट हाउस ने चीन के इस आदेश को बकवास बताया है. अमरेकिन एयरलाइंस ने इस पर कोई भी टिप्पणी करने से इनकार कर दिया है.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "चीन ने दुनिया भर की एयरलाइंस से कहा है कि वो अपनी वेबसाइट पर ताइवान, हॉन्ग कॉन्ग और मकाउ को चीन का हिस्सा बताए न कि स्वतंत्र देश. इस मांग की ऑस्ट्रेलिया, ताइवान और अमरीका ने आलोचना की है.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "ताइवान को चीन वन चाइना पॉलिसी के तहत अपना आंतरिक हिस्सा बताता है. वहीं चीन हॉन्ग कॉन्ग और मकाउ को विशेष प्रशासनिक क्षेत्र बताता है.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "कई पर्यक्षकों का कहना है कि चीन दुनिया भर के देशों पर दबाव बना रहा है ताकि ताइवान को अलग-थलग किया जाए.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "होम पेज",
+          "uri": "/hindi/front_page",
+          "urlIdentifier": "/hindi/front_page",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC हिंदी",
+          "uri": "/hindi",
+          "urlIdentifier": "/hindi",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": { "shortHeadline": "जानवरों", "headline": "सार" },
-    "locators": {
-      "assetUri": "/hindi/23201477",
-      "cpsUrn": "urn:bbc:content:assetUri:hindi/23201477",
-      "curie": "http://www.bbc.co.uk/asset/e97d7208-292f-184e-90b7-f58106f27db5",
-      "assetId": "23201477"
     },
-    "summary": "सार",
-    "timestamp": 1526917251000,
-    "language": "hi",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01hcz73",
-      "subType": "clip",
-      "format": "video",
-      "title": "à¤œà¤¾à¤¨à¤µà¤°à¥‹à¤‚",
-      "synopses": { "short": "à¤¸à¤¾à¤°" },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hczc4.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "शीर्षक",
-      "versions": [
-        {
-          "versionId": "p01hcz75",
-          "types": ["Original"],
-          "duration": 119,
-          "durationISO8601": "PT1M59S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1524139096000
-        }
-      ],
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "63679742",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/60DD/test/_63679742_p01hczc4.jpg",
-      "path": "/cpsdevpb/60DD/test/_63679742_p01hczc4.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "alt tag",
-      "caption": "image caption",
-      "copyrightHolder": "Empics",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:hindi/23201477",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "होम पेज",
-      "uri": "/hindi/front_page",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC हिंदी",
-      "uri": "/hindi",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:09:57.873Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "9aac19ce-3db4-2a4e-af49-16b7063c6187",
+            "rank": 1,
+            "count": 9007,
+            "urn": "urn:bbc:curie:asset:9aac19ce-3db4-2a4e-af49-16b7063c6187",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Obama pledge on South China Sea access",
+                "headline": "Obama: 'We will stand with partners in South China Sea'"
+              },
+              "locators": {
+                "assetUri": "/sport/football/23048790",
+                "cpsUrn": "urn:bbc:content:assetUri:sport/football/23048790",
+                "curie": "http://www.bbc.co.uk/asset/9aac19ce-3db4-2a4e-af49-16b7063c6187",
+                "assetId": "23048790"
+              },
+              "summary": "President Barack Obama says the US 'will stand with its partners' in the South China Sea.",
+              "timestamp": 1464778996000,
+              "language": "en-gb",
+              "media": {
+                "id": "23048791",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p013gztc",
+                "entityType": "Clip",
+                "caption": "Obama: 'We will stand with partners in South China Sea'",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63487097",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/134E6/test/_63487097_p013h167.jpg",
+                "path": "/cpsdevpb/134E6/test/_63487097_p013h167.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #4",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:sport/football/23048790",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7a506544-b60c-5b4f-9055-672a0e4b1279",
+            "rank": 2,
+            "count": 6336,
+            "urn": "urn:bbc:curie:asset:7a506544-b60c-5b4f-9055-672a0e4b1279",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "पदकों की दौड़ में भारत इतना पिछ़ड़ा क्यों?",
+                "headline": "पदकों की दौड़ में भारत इतना पिछ़ड़ा क्यों?"
+              },
+              "locators": {
+                "assetUri": "/hindi/23070447",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:7a506544-b60c-5b4f-9055-672a0e4b1279",
+                "assetId": "23070447",
+                "cpsUrn": "urn:bbc:content:assetUri:hindi/23070447",
+                "curie": "http://www.bbc.co.uk/asset/7a506544-b60c-5b4f-9055-672a0e4b1279"
+              },
+              "summary": "शनिवार 20 अगस्त का बीबीसी इंडिया बोल कार्यक्रम सुनिए मोहन लाल शर्मा से",
+              "timestamp": 1472550241000,
+              "language": "hi",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+                "taggings": []
+              },
+              "media": {
+                "id": "23070448",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p015chcl",
+                "entityType": "Clip",
+                "caption": "पदकों की दौड़ में भारत इतना पिछ़ड़ा क्यों?",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63505599",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/184DE/test/_63505599_p015chdn.jpg",
+                "path": "/cpsdevpb/184DE/test/_63505599_p015chdn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "भारत",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hindi/23070447",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e97d7208-292f-184e-90b7-f58106f27db5",
+            "rank": 3,
+            "count": 2291,
+            "urn": "urn:bbc:curie:asset:e97d7208-292f-184e-90b7-f58106f27db5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "जानवरों",
+                "headline": "सार"
+              },
+              "locators": {
+                "assetUri": "/hindi/23201477",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e97d7208-292f-184e-90b7-f58106f27db5",
+                "assetId": "23201477",
+                "cpsUrn": "urn:bbc:content:assetUri:hindi/23201477",
+                "curie": "http://www.bbc.co.uk/asset/e97d7208-292f-184e-90b7-f58106f27db5"
+              },
+              "summary": "सार",
+              "timestamp": 1526917251000,
+              "language": "hi",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01hcz73",
+                "subType": "clip",
+                "format": "video",
+                "title": "à¤œà¤¾à¤¨à¤µà¤°à¥‹à¤‚",
+                "synopses": {
+                  "short": "à¤¸à¤¾à¤°"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hczc4.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "शीर्षक",
+                "versions": [
+                  {
+                    "versionId": "p01hcz75",
+                    "types": ["Original"],
+                    "duration": 119,
+                    "durationISO8601": "PT1M59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1524139096000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63679742",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/60DD/test/_63679742_p01hczc4.jpg",
+                "path": "/cpsdevpb/60DD/test/_63679742_p01hczc4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "alt tag",
+                "caption": "image caption",
+                "copyrightHolder": "Empics",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hindi/23201477",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
