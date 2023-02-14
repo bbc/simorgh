@@ -1,3 +1,4 @@
+import paths from 'ramda/src/paths';
 import envConfig from '../../../support/config/envs';
 
 export const getBlockByType = (blocks, blockType) => {
@@ -49,4 +50,16 @@ export const getVideoEmbedUrl = (body, language, isAmp = false) => {
   ].join('/');
 
   return isAmp ? `${embedUrl}/amp` : embedUrl;
+};
+
+export const getMostReadUrl = jsonData => {
+  const [cpsUrl, optimoUrl] = paths(
+    [
+      ['records', 0, 'promo', 'locators', 'assetUri'],
+      ['records', 0, 'promo', 'locators', 'canonicalUrl'],
+    ],
+    jsonData,
+  );
+
+  return cpsUrl || optimoUrl;
 };
