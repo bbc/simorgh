@@ -146,7 +146,6 @@ const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   try {
     const agent = attachAgent ? await getAgent() : null;
 
-    console.log({ name });
     if (!name.toLowerCase().includes('recommendations')) {
       return fetchPageData({
         path,
