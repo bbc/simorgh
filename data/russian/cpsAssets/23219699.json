@@ -1,310 +1,1668 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:russian/23219699",
-    "locators": {
-      "assetUri": "/russian/23219699",
-      "cpsUrn": "urn:bbc:content:assetUri:russian/23219699",
-      "curie": "http://www.bbc.co.uk/asset/7b4af3d0-75dd-fd44-ab78-5886867301a5",
-      "assetId": "23219699"
-    },
-    "type": "STY",
-    "createdBy": "russian-v6",
-    "language": "ru",
-    "lastUpdated": 1594988722118,
-    "firstPublished": 1539689568000,
-    "lastPublished": 1539689568000,
-    "timestamp": 1539689568000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "allowAdvertising": true,
-      "hasContentWarning": false,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "sty",
-      "counterName": "russian.story.23219699.page",
-      "cps_asset_id": "23219699"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:russian/23219699",
+        "locators": {
+          "assetUri": "/russian/23219699",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:7b4af3d0-75dd-fd44-ab78-5886867301a5",
+          "assetId": "23219699",
+          "cpsUrn": "urn:bbc:content:assetUri:russian/23219699",
+          "curie": "http://www.bbc.co.uk/asset/7b4af3d0-75dd-fd44-ab78-5886867301a5"
+        },
+        "type": "STY",
+        "createdBy": "russian-v6",
+        "language": "ru",
+        "lastUpdated": 1665419903561,
+        "firstPublished": 1539689568000,
+        "lastPublished": 1539689568000,
+        "timestamp": 1539689568000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "sty",
+          "counterName": "russian.story.23219699.page",
+          "cps_asset_id": "23219699",
+          "contentId": "urn:bbc:cps:curie:asset:7b4af3d0-75dd-fd44-ab78-5886867301a5"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["image", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "RUSSIAN",
+          "producerId": "75"
+        },
+        "readTime": 3,
+        "siteUri": "/russian",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      "taggings": []
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "Россия",
-          "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
-          "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
-          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
-          "thingSameAs": ["http://sws.geonames.org/2017370/"],
-          "topicName": "Россия",
-          "topicId": "cw6eyw7m0m1t",
-          "curationList": [
-            {
-              "curationId": "3d1d4d60-3a85-42d9-9559-41b3291908dc",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingEnglishLabel": "Russia"
-        }
-      ]
-    },
-    "version": "v1.3.2",
-    "blockTypes": ["image", "paragraph"],
-    "includeComments": false,
-    "atiAnalytics": { "producerName": "RUSSIAN", "producerId": "75" }
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "63692491",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/4BE5/test/_63692491_040867809-1.jpg",
-        "path": "/cpsdevpb/4BE5/test/_63692491_040867809-1.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "A feral street kitten pops its head out of a cardboard box on the Greek island of Kos",
-        "caption": "Cats all over the world live in boxes",
-        "copyrightHolder": "BBC",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "text": "В понедельник, 15 октября, стало известно, что полицейские задержали предполагаемого четвертого участника банды. Девушка, которой во время нападений было 17 лет, по данным следствия, предлагала секс жертвам и заманивала их на встречу с неонацистами.",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Убийство в промышленном районе",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Всех подозреваемых в нападениях местная полиция окончательно установила только после гибели одной из жертв. Тело 32-летнего Ваги Залибекяна обнаружили утром 1 октября 2016 года в промышленном районе на юге Омска.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Суд отменил десятилетний срок скинхеду Марцинкевичу по кличке Тесак",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "В Германии раскрыли неонацистскую группировку &quot;Революция Хемниц&quot;. Она готовила нападения на мигрантов",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Участники &quot;банды ГТА&quot; получили пожизненные сроки за убийства водителей",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "У мужчины был успешный бизнес - своя фирма по ремонту дорог. Накануне гибели Залибекян отправился на свидание с девушкой, с которой познакомился в социальных сетях, писала &quot;Комсомольская правда&quot;.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Вместо девушки на встречу пришли участники банды. Бизнесмен получил несколько ножевых ранений. Добили мужчину ударами по голове прикладом винтовки. Участники банды к тому времени уже находились под подозрением у полицейских, утверждает КП. По данным издания, их телефоны прослушивались.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Также на сайте",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Сторонники финансовой пирамиды &quot;Кэшбери&quot; объявили войну блогерам и СМИ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "В разговорах между участниками якобы прозвучало: &quot;*** **** [убили выходца с Кавказа], нужно искать алиби&quot;. Мужчины обсудили, где спрятать оружие и вещи, которые были на них во время убийства, и повезли улики к своему знакомому. В этот момент их задержали.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "В следственном комитете тогда сообщили о задержании двух подозреваемых. Не называя имен, в ведомстве уточнили, что обоим по 24 года, один из них - студент местного вуза, а второй - &quot;неработающий молодой человек, имеющий звание кандидата в мастера спорта по рукопашному бою&quot;.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Боец, студент и заключенный",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Предположительный руководитель группы - 24-летний Никита Федоненко - с подросткового возраста серьезно занимался единоборствами. По данным новостного сайта &quot;СуперОмск&quot;, он состоял в местном отделении &quot;Федерации смешанного боевого единоборства ММА&quot; и получал на ринге награды.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "В 2013 году Федоненко занял второе место на &quot;Кубке золотого шлема&quot; - международных соревнованиях по панкратиону, проводящихся в Омске. На соревнованиях он тогда представлял местную академию МВД, в которой проходил обучение.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Академию Федоненко не закончил. По одним данным, он сам решил отказаться от учебы в пользу работы и ушел в патрульно-постовую службу. По другим - был отчислен из-за неуспеваемости.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Службу в полиции вскоре тоже пришлось оставить: Федоненко не смог сдать необходимый экзамен, пишет КП. По сведениям газеты, бывший полицейский никогда не скрывал своих взглядов и на своих страницах в соцсетях &quot;с 15 лет открыто выражал ненависть к нерусским&quot;.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Вторым подозреваемым был ровесник Федоненко Александр Безбородов. На момент задержания он учился на третьем курсе одного из технических вузов в Омске. Третий обвиняемый - Александр Ландин - во время задержания остальных уже находился под стражей: его как раз судили за другое преступление.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "17-летний парень в 2015 году избил битой знакомую девушку и бросил ее на месте преступления. Девушка выжила, а Ландин получил три года лишения свободы",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Рейды&quot;",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Почти год трое мужчин выслеживали выходцев из стран Средний Азии и кавказских регионов, вооружившись винтовкой, ножом, битой и газовым баллончиком. Помимо убийства в деле еще пять эпизодов с избиениями.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Брат одного из пострадавших во время судебного заседания 15 октября описал столкновение с участниками банды так:",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Мы с моим двоюродным братом Азаматом шли по улице ... Невдалеке от нас стояло трое молодых людей. Поравнялись с ним и тут один из них, вот этот (указывает на Никиту Федоненко), не сказав ни слова, просто без причины, ударил брата в лицо. От удара тот упал. Тогда этот парень сел ему на грудь и стал избивать. Второй (Александр Безбородов) стал бегать вокруг Азамата и пинать его. Пока били матерились и кричали, мол казахи убирайтесь из этого города. Я был в шоке, потом смотрю третий из этой компании (Александр Ланбин) направился в мою сторону&quot;, - приводит слова Данияра К. &quot;Супер Омск&quot;.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Данияру К. удалось убежать от преследователя.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "После одного из таких &quot;рейдов&quot; участникам банды пришлось сменить тактику. Во время нападения на помощь жертве пришли друзья. Безбородов и Федоненко убежали, а Ландин в результате этого отпора оказался в больнице.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Тогда, пишут местные СМИ, банда решила выманивать своих жертв. В соцсетях бал создан аккаунт вымышленной девушки. Переписку с мужчинами, по данным следствия, вела Регина Микуличева, которой тогда было 17 лет.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Откуда именно взялась девушка - неясно. По данным КП, ее обязанностью было созваниваться с будущими жертвами и назначать свидания, на которые приходили остальные участники.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;СуперОмск&quot; уточняет, что в деле Микуличева &quot;обозначена статусом &quot;проститутка&quot;.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Суд над участниками банды начался еще в мае. Однако вскоре судье пришлось объявить перерыв в деле - Микуличева пропала из города.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "По данным местных СМИ, во время расследования почти все фигуранты находились на свободе. Единственным подозреваемым, содержавшимся под стражей, был уже осужденный за нападение на девушку Ландин.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Остальные трое были под подпиской о невыезде или же под домашним арестом. Микуличева пропала из города уже ко второму заседанию по делу.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "В течение нескольких месяцев девушку искала полиция. Во время слушаний 15 октября председательствующий в процессе судья сообщил, что Микуличева задержана и уже доставлена в Омск.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "В Омске судят банду националистов во главе с бойцом ММА.",
-      "headline": "В Омске судят банду националистов во главе с бойцом ММА. Что о ней известно?"
-    },
-    "locators": {
-      "assetUri": "/russian/23219699",
-      "cpsUrn": "urn:bbc:content:assetUri:russian/23219699",
-      "curie": "http://www.bbc.co.uk/asset/7b4af3d0-75dd-fd44-ab78-5886867301a5",
-      "assetId": "23219699"
-    },
-    "summary": "Четверых жителей Омска судят за серию нападений на выходцев с Кавказа и стран Средней Азии, одно из которых закончилось убийством. Бандой руководил бывший полицейский и боец MMA Никита Федоненко, считает следствие.",
-    "timestamp": 1539689568000,
-    "language": "ru",
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "taggings": []
-    },
-    "indexImage": {
-      "id": "63692492",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/72F5/test/_63692492_040867809-1.jpg",
-      "path": "/cpsdevpb/72F5/test/_63692492_040867809-1.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "A feral street kitten pops its head out of a cardboard box on the Greek island of Kos",
-      "caption": "Cats all over the world live in boxes",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:russian/23219699",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Главная",
-      "uri": "/russian/front_page",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "Новости на русском языке",
-      "uri": "/russian",
-      "type": "simple"
-    },
-    "groups": [
-      {
-        "type": "see-alsos",
-        "promos": [
+      "content": {
+        "blocks": [
           {
-            "name": "Cat was poisoned with antifreeze",
-            "uri": "http://www.bbc.co.uk/news/uk-england-somerset-16936764",
-            "type": "link"
+            "id": "63692491",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/4BE5/test/_63692491_040867809-1.jpg",
+            "path": "/cpsdevpb/4BE5/test/_63692491_040867809-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "A feral street kitten pops its head out of a cardboard box on the Greek island of Kos",
+            "caption": "Cats all over the world live in boxes",
+            "copyrightHolder": "BBC",
+            "positionHint": "full-width",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          {
+            "text": "В понедельник, 15 октября, стало известно, что полицейские задержали предполагаемого четвертого участника банды. Девушка, которой во время нападений было 17 лет, по данным следствия, предлагала секс жертвам и заманивала их на встречу с неонацистами.",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Убийство в промышленном районе",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Всех подозреваемых в нападениях местная полиция окончательно установила только после гибели одной из жертв. Тело 32-летнего Ваги Залибекяна обнаружили утром 1 октября 2016 года в промышленном районе на юге Омска.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Суд отменил десятилетний срок скинхеду Марцинкевичу по кличке Тесак",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "В Германии раскрыли неонацистскую группировку &quot;Революция Хемниц&quot;. Она готовила нападения на мигрантов",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Участники &quot;банды ГТА&quot; получили пожизненные сроки за убийства водителей",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "У мужчины был успешный бизнес - своя фирма по ремонту дорог. Накануне гибели Залибекян отправился на свидание с девушкой, с которой познакомился в социальных сетях, писала &quot;Комсомольская правда&quot;.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Вместо девушки на встречу пришли участники банды. Бизнесмен получил несколько ножевых ранений. Добили мужчину ударами по голове прикладом винтовки. Участники банды к тому времени уже находились под подозрением у полицейских, утверждает КП. По данным издания, их телефоны прослушивались.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Также на сайте",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Сторонники финансовой пирамиды &quot;Кэшбери&quot; объявили войну блогерам и СМИ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "В разговорах между участниками якобы прозвучало: &quot;*** **** [убили выходца с Кавказа], нужно искать алиби&quot;. Мужчины обсудили, где спрятать оружие и вещи, которые были на них во время убийства, и повезли улики к своему знакомому. В этот момент их задержали.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "В следственном комитете тогда сообщили о задержании двух подозреваемых. Не называя имен, в ведомстве уточнили, что обоим по 24 года, один из них - студент местного вуза, а второй - &quot;неработающий молодой человек, имеющий звание кандидата в мастера спорта по рукопашному бою&quot;.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Боец, студент и заключенный",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Предположительный руководитель группы - 24-летний Никита Федоненко - с подросткового возраста серьезно занимался единоборствами. По данным новостного сайта &quot;СуперОмск&quot;, он состоял в местном отделении &quot;Федерации смешанного боевого единоборства ММА&quot; и получал на ринге награды.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "В 2013 году Федоненко занял второе место на &quot;Кубке золотого шлема&quot; - международных соревнованиях по панкратиону, проводящихся в Омске. На соревнованиях он тогда представлял местную академию МВД, в которой проходил обучение.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Академию Федоненко не закончил. По одним данным, он сам решил отказаться от учебы в пользу работы и ушел в патрульно-постовую службу. По другим - был отчислен из-за неуспеваемости.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Службу в полиции вскоре тоже пришлось оставить: Федоненко не смог сдать необходимый экзамен, пишет КП. По сведениям газеты, бывший полицейский никогда не скрывал своих взглядов и на своих страницах в соцсетях &quot;с 15 лет открыто выражал ненависть к нерусским&quot;.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Вторым подозреваемым был ровесник Федоненко Александр Безбородов. На момент задержания он учился на третьем курсе одного из технических вузов в Омске. Третий обвиняемый - Александр Ландин - во время задержания остальных уже находился под стражей: его как раз судили за другое преступление.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "17-летний парень в 2015 году избил битой знакомую девушку и бросил ее на месте преступления. Девушка выжила, а Ландин получил три года лишения свободы",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Рейды&quot;",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Почти год трое мужчин выслеживали выходцев из стран Средний Азии и кавказских регионов, вооружившись винтовкой, ножом, битой и газовым баллончиком. Помимо убийства в деле еще пять эпизодов с избиениями.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Брат одного из пострадавших во время судебного заседания 15 октября описал столкновение с участниками банды так:",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Мы с моим двоюродным братом Азаматом шли по улице ... Невдалеке от нас стояло трое молодых людей. Поравнялись с ним и тут один из них, вот этот (указывает на Никиту Федоненко), не сказав ни слова, просто без причины, ударил брата в лицо. От удара тот упал. Тогда этот парень сел ему на грудь и стал избивать. Второй (Александр Безбородов) стал бегать вокруг Азамата и пинать его. Пока били матерились и кричали, мол казахи убирайтесь из этого города. Я был в шоке, потом смотрю третий из этой компании (Александр Ланбин) направился в мою сторону&quot;, - приводит слова Данияра К. &quot;Супер Омск&quot;.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Данияру К. удалось убежать от преследователя.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "После одного из таких &quot;рейдов&quot; участникам банды пришлось сменить тактику. Во время нападения на помощь жертве пришли друзья. Безбородов и Федоненко убежали, а Ландин в результате этого отпора оказался в больнице.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Тогда, пишут местные СМИ, банда решила выманивать своих жертв. В соцсетях бал создан аккаунт вымышленной девушки. Переписку с мужчинами, по данным следствия, вела Регина Микуличева, которой тогда было 17 лет.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Откуда именно взялась девушка - неясно. По данным КП, ее обязанностью было созваниваться с будущими жертвами и назначать свидания, на которые приходили остальные участники.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;СуперОмск&quot; уточняет, что в деле Микуличева &quot;обозначена статусом &quot;проститутка&quot;.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Суд над участниками банды начался еще в мае. Однако вскоре судье пришлось объявить перерыв в деле - Микуличева пропала из города.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "По данным местных СМИ, во время расследования почти все фигуранты находились на свободе. Единственным подозреваемым, содержавшимся под стражей, был уже осужденный за нападение на девушку Ландин.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Остальные трое были под подпиской о невыезде или же под домашним арестом. Микуличева пропала из города уже ко второму заседанию по делу.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "В течение нескольких месяцев девушку искала полиция. Во время слушаний 15 октября председательствующий в процессе судья сообщил, что Микуличева задержана и уже доставлена в Омск.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "В Омске судят банду националистов во главе с бойцом ММА.",
+          "headline": "В Омске судят банду националистов во главе с бойцом ММА. Что о ней известно?"
+        },
+        "locators": {
+          "assetUri": "/russian/23219699",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:7b4af3d0-75dd-fd44-ab78-5886867301a5",
+          "assetId": "23219699",
+          "cpsUrn": "urn:bbc:content:assetUri:russian/23219699",
+          "curie": "http://www.bbc.co.uk/asset/7b4af3d0-75dd-fd44-ab78-5886867301a5"
+        },
+        "summary": "Четверых жителей Омска судят за серию нападений на выходцев с Кавказа и стран Средней Азии, одно из которых закончилось убийством. Бандой руководил бывший полицейский и боец MMA Никита Федоненко, считает следствие.",
+        "timestamp": 1539689568000,
+        "language": "ru",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+          "taggings": []
+        },
+        "indexImage": {
+          "id": "63692492",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/72F5/test/_63692492_040867809-1.jpg",
+          "path": "/cpsdevpb/72F5/test/_63692492_040867809-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "A feral street kitten pops its head out of a cardboard box on the Greek island of Kos",
+          "caption": "Cats all over the world live in boxes",
+          "copyrightHolder": "BBC",
+          "originCode": "cpsdevpb",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:russian/23219699",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Главная",
+          "uri": "/russian/front_page",
+          "urlIdentifier": "/russian/front_page",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Новости на русском языке",
+          "uri": "/russian",
+          "urlIdentifier": "/russian",
+          "type": "simple"
+        },
+        "groups": [
+          {
+            "type": "see-alsos",
+            "promos": [
+              {
+                "name": "Cat was poisoned with antifreeze",
+                "uri": "http://www.bbc.co.uk/news/uk-england-somerset-16936764",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/uk-england-somerset-16936764",
+                "timestamp": 1328735394000,
+                "type": "link"
+              }
+            ]
           }
         ]
       }
-    ]
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "test_russian"
+          },
+          "locators": {
+            "assetUri": "/russian/23303728",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:b973244b-f0cd-fe4c-9cb4-d0a9c78d1ea3",
+            "assetId": "23303728",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23303728",
+            "curie": "http://www.bbc.co.uk/asset/b973244b-f0cd-fe4c-9cb4-d0a9c78d1ea3"
+          },
+          "summary": "test",
+          "timestamp": 1589996345000,
+          "language": "ru",
+          "cpsType": "STY",
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23303728",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Tory leadership rivals face first party vote"
+          },
+          "locators": {
+            "assetUri": "/russian/23241517",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:1743c672-c7c8-8f4b-9841-bd04296a5812",
+            "assetId": "23241517",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23241517",
+            "curie": "http://www.bbc.co.uk/asset/1743c672-c7c8-8f4b-9841-bd04296a5812"
+          },
+          "summary": "Conservative MPs have begun voting for their new leader and next prime minister in the party's first ballot in Parliament.",
+          "timestamp": 1560430132000,
+          "language": "ru",
+          "cpsType": "STY",
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23241517",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Russian producer test"
+          },
+          "locators": {
+            "assetUri": "/russian/23247448",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:ccb3b0e4-adc4-4342-9208-dbab7ce6b8d7",
+            "assetId": "23247448",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23247448",
+            "curie": "http://www.bbc.co.uk/asset/ccb3b0e4-adc4-4342-9208-dbab7ce6b8d7"
+          },
+          "summary": "summary",
+          "timestamp": 1567069704000,
+          "language": "ru",
+          "cpsType": "STY",
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23247448",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 8"
+          },
+          "locators": {
+            "assetUri": "/russian/23171293",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:15fab0aa-be8d-5c48-9c86-851bf79c60d3",
+            "assetId": "23171293",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171293",
+            "curie": "http://www.bbc.co.uk/asset/15fab0aa-be8d-5c48-9c86-851bf79c60d3"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512986529000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171293",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 7"
+          },
+          "locators": {
+            "assetUri": "/russian/23171289",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:a5c94c54-90d8-9449-b3f1-29acc7ec1af0",
+            "assetId": "23171289",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171289",
+            "curie": "http://www.bbc.co.uk/asset/a5c94c54-90d8-9449-b3f1-29acc7ec1af0"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512986516000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171289",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 6"
+          },
+          "locators": {
+            "assetUri": "/russian/23171283",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:2fa49e09-621d-a946-90ad-769ce65da15a",
+            "assetId": "23171283",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171283",
+            "curie": "http://www.bbc.co.uk/asset/2fa49e09-621d-a946-90ad-769ce65da15a"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512986437000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171283",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 5"
+          },
+          "locators": {
+            "assetUri": "/russian/23171279",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:c79bc53d-1cf3-644a-a52b-3a912332d7a1",
+            "assetId": "23171279",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171279",
+            "curie": "http://www.bbc.co.uk/asset/c79bc53d-1cf3-644a-a52b-3a912332d7a1"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512986410000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171279",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 4"
+          },
+          "locators": {
+            "assetUri": "/russian/23171245",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:91dbda32-7c1d-124d-8b89-12c95c5c4fa3",
+            "assetId": "23171245",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171245",
+            "curie": "http://www.bbc.co.uk/asset/91dbda32-7c1d-124d-8b89-12c95c5c4fa3"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512986396000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171245",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 3"
+          },
+          "locators": {
+            "assetUri": "/russian/23171241",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:1e483798-b1d3-f146-ba1b-beff668a205c",
+            "assetId": "23171241",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171241",
+            "curie": "http://www.bbc.co.uk/asset/1e483798-b1d3-f146-ba1b-beff668a205c"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512987701000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171241",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 37"
+          },
+          "locators": {
+            "assetUri": "/russian/23171429",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:37ca2941-d02e-aa4b-bf50-fc4dce9c1b27",
+            "assetId": "23171429",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171429",
+            "curie": "http://www.bbc.co.uk/asset/37ca2941-d02e-aa4b-bf50-fc4dce9c1b27"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512987272000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171429",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 39"
+          },
+          "locators": {
+            "assetUri": "/russian/23171437",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:6eb335ca-9edf-174a-82f6-cff442832fa4",
+            "assetId": "23171437",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171437",
+            "curie": "http://www.bbc.co.uk/asset/6eb335ca-9edf-174a-82f6-cff442832fa4"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512987302000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171437",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 38"
+          },
+          "locators": {
+            "assetUri": "/russian/23171433",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:3cb2da53-34b0-cf4d-907d-cc6c08233eda",
+            "assetId": "23171433",
+            "cpsUrn": "urn:bbc:content:assetUri:russian/23171433",
+            "curie": "http://www.bbc.co.uk/asset/3cb2da53-34b0-cf4d-907d-cc6c08233eda"
+          },
+          "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+          "timestamp": 1512987287000,
+          "language": "ru",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63593151",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63593153",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "path": "/cpsdevpb/8943/test/_63593153_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "выборы",
+            "caption": "Собчак хочет стать первой женщиной-президентом",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Главная",
+            "uri": "/russian/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:russian/23171433",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2023-02-02T03:16:59.004Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "73d1cf7d-bb96-7c44-8a2f-01323f5607c4",
+            "rank": 1,
+            "count": 9976,
+            "urn": "urn:bbc:curie:asset:73d1cf7d-bb96-7c44-8a2f-01323f5607c4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 46",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 46"
+              },
+              "locators": {
+                "assetUri": "/russian/23174367",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23174367",
+                "curie": "http://www.bbc.co.uk/asset/73d1cf7d-bb96-7c44-8a2f-01323f5607c4",
+                "assetId": "23174367"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1513859679000,
+              "language": "ru",
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23174367",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a9d26e52-34f9-d54d-b8a2-659f3b25c9ae",
+            "rank": 2,
+            "count": 9860,
+            "urn": "urn:bbc:curie:asset:a9d26e52-34f9-d54d-b8a2-659f3b25c9ae",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Лидера хакерской группы \"Шалтай-Болтай\" досрочно отпустили на свободу",
+                "headline": "Лидера хакерской группы \"Шалтай-Болтай\" досрочно отпустили на свободу"
+              },
+              "locators": {
+                "assetUri": "/russian/23210764",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a9d26e52-34f9-d54d-b8a2-659f3b25c9ae",
+                "assetId": "23210764",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23210764",
+                "curie": "http://www.bbc.co.uk/asset/a9d26e52-34f9-d54d-b8a2-659f3b25c9ae"
+              },
+              "summary": "Лидер хакерской группировки \"Шалтай-Болтай\" Владимир Аникеев вышел на свободу из СИЗО \"Лефортово\".",
+              "timestamp": 1533551291000,
+              "language": "ru",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63685300",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/0166/test/_63685300_000064057-1.jpg",
+                "path": "/cpsdevpb/0166/test/_63685300_000064057-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Лидер хакерской группировки \"Шалтай-Болтай\" Владимир Аникеев",
+                "caption": "Лидер хакерской группировки \"Шалтай-Болтай\" Владимир Аникеев",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23210764",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f2124cdb-8cbf-a94d-8bbf-4ef225cbd7bc",
+            "rank": 3,
+            "count": 9665,
+            "urn": "urn:bbc:curie:asset:f2124cdb-8cbf-a94d-8bbf-4ef225cbd7bc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 39",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 39"
+              },
+              "locators": {
+                "assetUri": "/russian/23174290",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23174290",
+                "curie": "http://www.bbc.co.uk/asset/f2124cdb-8cbf-a94d-8bbf-4ef225cbd7bc",
+                "assetId": "23174290"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1513859059000,
+              "language": "ru",
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23174290",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ddc65414-8450-d64f-aeb4-a0f257307904",
+            "rank": 4,
+            "count": 9511,
+            "urn": "urn:bbc:curie:asset:ddc65414-8450-d64f-aeb4-a0f257307904",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 20",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 20"
+              },
+              "locators": {
+                "assetUri": "/russian/23171341",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23171341",
+                "curie": "http://www.bbc.co.uk/asset/ddc65414-8450-d64f-aeb4-a0f257307904",
+                "assetId": "23171341"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1512986704000,
+              "language": "ru",
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23171341",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3cb2da53-34b0-cf4d-907d-cc6c08233eda",
+            "rank": 5,
+            "count": 8667,
+            "urn": "urn:bbc:curie:asset:3cb2da53-34b0-cf4d-907d-cc6c08233eda",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 38",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 38"
+              },
+              "locators": {
+                "assetUri": "/russian/23171433",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:3cb2da53-34b0-cf4d-907d-cc6c08233eda",
+                "assetId": "23171433",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23171433",
+                "curie": "http://www.bbc.co.uk/asset/3cb2da53-34b0-cf4d-907d-cc6c08233eda"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1512987287000,
+              "language": "ru",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23171433",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3f1f2ace-ba4d-8846-9764-e6366968750f",
+            "rank": 6,
+            "count": 8632,
+            "urn": "urn:bbc:curie:asset:3f1f2ace-ba4d-8846-9764-e6366968750f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 36",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 36"
+              },
+              "locators": {
+                "assetUri": "/russian/23171425",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:3f1f2ace-ba4d-8846-9764-e6366968750f",
+                "assetId": "23171425",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23171425",
+                "curie": "http://www.bbc.co.uk/asset/3f1f2ace-ba4d-8846-9764-e6366968750f"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1512987259000,
+              "language": "ru",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23171425",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "181cd820-32ed-ea4a-8b16-7505cdec126d",
+            "rank": 7,
+            "count": 8396,
+            "urn": "urn:bbc:curie:asset:181cd820-32ed-ea4a-8b16-7505cdec126d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 44",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 44"
+              },
+              "locators": {
+                "assetUri": "/russian/23174329",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:181cd820-32ed-ea4a-8b16-7505cdec126d",
+                "assetId": "23174329",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23174329",
+                "curie": "http://www.bbc.co.uk/asset/181cd820-32ed-ea4a-8b16-7505cdec126d"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1513859646000,
+              "language": "ru",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23174329",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4a52b440-f480-1246-9a77-e21beda2a999",
+            "rank": 8,
+            "count": 8394,
+            "urn": "urn:bbc:curie:asset:4a52b440-f480-1246-9a77-e21beda2a999",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 42",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 42"
+              },
+              "locators": {
+                "assetUri": "/russian/23171401",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:4a52b440-f480-1246-9a77-e21beda2a999",
+                "assetId": "23171401",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23171401",
+                "curie": "http://www.bbc.co.uk/asset/4a52b440-f480-1246-9a77-e21beda2a999"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1512986942000,
+              "language": "ru",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23171401",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b450aaae-70be-6b47-88c9-7fd9eae0d34f",
+            "rank": 9,
+            "count": 8181,
+            "urn": "urn:bbc:curie:asset:b450aaae-70be-6b47-88c9-7fd9eae0d34f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 28",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 28"
+              },
+              "locators": {
+                "assetUri": "/russian/23171373",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23171373",
+                "curie": "http://www.bbc.co.uk/asset/b450aaae-70be-6b47-88c9-7fd9eae0d34f",
+                "assetId": "23171373"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1512986806000,
+              "language": "ru",
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23171373",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "56bbb2c6-7b1d-ba46-b95e-0aa3aa5ab493",
+            "rank": 10,
+            "count": 8039,
+            "urn": "urn:bbc:curie:asset:56bbb2c6-7b1d-ba46-b95e-0aa3aa5ab493",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 31",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 31"
+              },
+              "locators": {
+                "assetUri": "/russian/23171405",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:56bbb2c6-7b1d-ba46-b95e-0aa3aa5ab493",
+                "assetId": "23171405",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23171405",
+                "curie": "http://www.bbc.co.uk/asset/56bbb2c6-7b1d-ba46-b95e-0aa3aa5ab493"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1512987182000,
+              "language": "ru",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23171405",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3c996ef9-167c-ed46-a100-57bb6db90ee0",
+            "rank": 11,
+            "count": 7817,
+            "urn": "urn:bbc:curie:asset:3c996ef9-167c-ed46-a100-57bb6db90ee0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 43",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 43"
+              },
+              "locators": {
+                "assetUri": "/russian/23185597",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23185597",
+                "curie": "http://www.bbc.co.uk/asset/3c996ef9-167c-ed46-a100-57bb6db90ee0",
+                "assetId": "23185597"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1517846389000,
+              "language": "ru",
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23185597",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "da3bb5b2-45ed-fd4a-894c-0faad5f1c728",
+            "rank": 12,
+            "count": 7687,
+            "urn": "urn:bbc:curie:asset:da3bb5b2-45ed-fd4a-894c-0faad5f1c728",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 14",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 14"
+              },
+              "locators": {
+                "assetUri": "/russian/23171317",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:da3bb5b2-45ed-fd4a-894c-0faad5f1c728",
+                "assetId": "23171317",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23171317",
+                "curie": "http://www.bbc.co.uk/asset/da3bb5b2-45ed-fd4a-894c-0faad5f1c728"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1512986612000,
+              "language": "ru",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23171317",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1d59b9b7-7c52-f944-9a9e-26683e2f786e",
+            "rank": 13,
+            "count": 7208,
+            "urn": "urn:bbc:curie:asset:1d59b9b7-7c52-f944-9a9e-26683e2f786e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 45",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 45"
+              },
+              "locators": {
+                "assetUri": "/russian/23174363",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:1d59b9b7-7c52-f944-9a9e-26683e2f786e",
+                "assetId": "23174363",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23174363",
+                "curie": "http://www.bbc.co.uk/asset/1d59b9b7-7c52-f944-9a9e-26683e2f786e"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1513859663000,
+              "language": "ru",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23174363",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2b41ecda-cf85-cc44-aff9-e1fca1fb9e58",
+            "rank": 14,
+            "count": 7017,
+            "urn": "urn:bbc:curie:asset:2b41ecda-cf85-cc44-aff9-e1fca1fb9e58",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 24",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 24"
+              },
+              "locators": {
+                "assetUri": "/russian/23171357",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23171357",
+                "curie": "http://www.bbc.co.uk/asset/2b41ecda-cf85-cc44-aff9-e1fca1fb9e58",
+                "assetId": "23171357"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1512986753000,
+              "language": "ru",
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23171357",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "baf0c365-9592-4941-9b81-1b84297b2f2e",
+            "rank": 15,
+            "count": 6947,
+            "urn": "urn:bbc:curie:asset:baf0c365-9592-4941-9b81-1b84297b2f2e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 41",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 41"
+              },
+              "locators": {
+                "assetUri": "/russian/23174318",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23174318",
+                "curie": "http://www.bbc.co.uk/asset/baf0c365-9592-4941-9b81-1b84297b2f2e",
+                "assetId": "23174318"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1513859412000,
+              "language": "ru",
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23174318",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "68b87501-61df-304f-9a18-14be332377b2",
+            "rank": 16,
+            "count": 6934,
+            "urn": "urn:bbc:curie:asset:68b87501-61df-304f-9a18-14be332377b2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 42",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 42"
+              },
+              "locators": {
+                "assetUri": "/russian/23185593",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23185593",
+                "curie": "http://www.bbc.co.uk/asset/68b87501-61df-304f-9a18-14be332377b2",
+                "assetId": "23185593"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1517846374000,
+              "language": "ru",
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23185593",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2e80824b-981e-e14a-aaef-d00684b5f68a",
+            "rank": 17,
+            "count": 6438,
+            "urn": "urn:bbc:curie:asset:2e80824b-981e-e14a-aaef-d00684b5f68a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 12",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 12"
+              },
+              "locators": {
+                "assetUri": "/russian/23171309",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:2e80824b-981e-e14a-aaef-d00684b5f68a",
+                "assetId": "23171309",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23171309",
+                "curie": "http://www.bbc.co.uk/asset/2e80824b-981e-e14a-aaef-d00684b5f68a"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1512986587000,
+              "language": "ru",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23171309",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3ca2ec20-1187-4442-b059-f21f98658104",
+            "rank": 18,
+            "count": 6353,
+            "urn": "urn:bbc:curie:asset:3ca2ec20-1187-4442-b059-f21f98658104",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 47",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 47"
+              },
+              "locators": {
+                "assetUri": "/russian/23174371",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23174371",
+                "curie": "http://www.bbc.co.uk/asset/3ca2ec20-1187-4442-b059-f21f98658104",
+                "assetId": "23174371"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1513859690000,
+              "language": "ru",
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23174371",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a5c94c54-90d8-9449-b3f1-29acc7ec1af0",
+            "rank": 19,
+            "count": 5842,
+            "urn": "urn:bbc:curie:asset:a5c94c54-90d8-9449-b3f1-29acc7ec1af0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 7",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 7"
+              },
+              "locators": {
+                "assetUri": "/russian/23171289",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a5c94c54-90d8-9449-b3f1-29acc7ec1af0",
+                "assetId": "23171289",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23171289",
+                "curie": "http://www.bbc.co.uk/asset/a5c94c54-90d8-9449-b3f1-29acc7ec1af0"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1512986516000,
+              "language": "ru",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23171289",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c6121349-1a6d-a347-9894-39909ff529f2",
+            "rank": 20,
+            "count": 5650,
+            "urn": "urn:bbc:curie:asset:c6121349-1a6d-a347-9894-39909ff529f2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 48",
+                "headline": "Ксения Собчак приняла предложение Кремля баллотироваться в президенты 48"
+              },
+              "locators": {
+                "assetUri": "/russian/23174375",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c6121349-1a6d-a347-9894-39909ff529f2",
+                "assetId": "23174375",
+                "cpsUrn": "urn:bbc:content:assetUri:russian/23174375",
+                "curie": "http://www.bbc.co.uk/asset/c6121349-1a6d-a347-9894-39909ff529f2"
+              },
+              "summary": "Участие телеведущей Ксении Собчак в президентских выборах - идея Кремля. Помогать ей регистрироваться власти не планируют. Сама Собчак уже ищет руководителя предвыборного штаба. Пока безуспешно.",
+              "timestamp": 1513859724000,
+              "language": "ru",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63593151",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "path": "/cpsdevpb/3B23/test/_63593151_785141c4-1a95-497f-b2b2-7047f8d82857.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "выборы",
+                "caption": "Собчак хочет стать первой женщиной-президентом",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:russian/23174375",
+              "type": "cps"
+            }
+          }
+        ]
+      },
+      "mostWatched": null
+    }
   }
 }
