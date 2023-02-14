@@ -36,9 +36,18 @@ const fetchPageData = async ({
   shouldLogFetchTime = !onClient(),
   agent,
   optHeaders,
+  cache,
   ...loggerArgs
 }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
+
+  const cachedResponse = cache && cache.get(url);
+  if (cachedResponse) {
+    return {
+      status: 200,
+      json: cachedResponse,
+    };
+  }
 
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
   const fetchOptions = {
@@ -73,9 +82,12 @@ const fetchPageData = async ({
         ...loggerArgs,
       });
     }
-
     if (status === OK) {
       const json = await response.json();
+
+      if (cache) {
+        cache.set(url, json);
+      }
 
       return {
         status,
