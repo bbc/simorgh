@@ -21,7 +21,7 @@ import Curation from './Curation';
 import getComponent from './getComponent';
 
 const { NONE } = VISUAL_STYLE;
-const { MESSAGE_BANNER, BILLBOARD } = COMPONENT_NAMES;
+const { MESSAGE_BANNER, NOT_SUPPORTED } = COMPONENT_NAMES;
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
@@ -118,7 +118,7 @@ const TopicPage = ({ pageData }) => {
                             image={summaries[0].imageUrl}
                           />
                         );
-                      case BILLBOARD:
+                      case NOT_SUPPORTED:
                         return null;
                       default:
                         return (

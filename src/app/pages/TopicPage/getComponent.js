@@ -6,16 +6,16 @@ const {
   MESSAGE_BANNER,
   SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
-  BILLBOARD,
+  NOT_SUPPORTED,
 } = COMPONENT_NAMES;
 
 export default (visualStyle, visualProminence) => {
   const componentsByVisualStyleAndProminence = {
-    [`${BANNER}_${MINIMUM}`]: MESSAGE_BANNER,
-    [`${BANNER}_${LOW}`]: MESSAGE_BANNER,
+    [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
+    [`${BANNER}_${LOW}`]: NOT_SUPPORTED,
     [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
-    [`${BANNER}_${HIGH}`]: BILLBOARD,
-    [`${BANNER}_${MAXIMUM}`]: BILLBOARD,
+    [`${BANNER}_${HIGH}`]: NOT_SUPPORTED,
+    [`${BANNER}_${MAXIMUM}`]: NOT_SUPPORTED,
     [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
     [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
   };

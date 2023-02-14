@@ -7,17 +7,17 @@ const {
   MESSAGE_BANNER,
   SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
-  BILLBOARD,
+  NOT_SUPPORTED,
 } = COMPONENT_NAMES;
 
 describe('getComponent', () => {
   it.each`
     visualStyle     | visualProminence     | expected
-    ${BANNER}       | ${MINIMUM}           | ${MESSAGE_BANNER}
-    ${BANNER}       | ${LOW}               | ${MESSAGE_BANNER}
+    ${BANNER}       | ${MINIMUM}           | ${NOT_SUPPORTED}
+    ${BANNER}       | ${LOW}               | ${NOT_SUPPORTED}
     ${BANNER}       | ${NORMAL}            | ${MESSAGE_BANNER}
-    ${BANNER}       | ${HIGH}              | ${BILLBOARD}
-    ${BANNER}       | ${MAXIMUM}           | ${BILLBOARD}
+    ${BANNER}       | ${HIGH}              | ${NOT_SUPPORTED}
+    ${BANNER}       | ${MAXIMUM}           | ${NOT_SUPPORTED}
     ${NONE}         | ${NORMAL}            | ${SIMPLE_CURATION_GRID}
     ${NONE}         | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
     ${'fake-style'} | ${'fake-prominence'} | ${null}
