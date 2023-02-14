@@ -1,6 +1,10 @@
 export const VISUAL_STYLE = {
   NONE: 'NONE',
   BANNER: 'BANNER',
+  COLLECTION: 'COLLECTION',
+  LINKS: 'LINKS',
+  FEED: 'FEED',
+  RANKED: 'RANKED',
 };
 
 export const VISUAL_PROMINENCE = {
