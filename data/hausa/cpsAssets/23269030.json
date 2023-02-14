@@ -1,183 +1,155 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:hausa/23269030",
-    "locators": {
-      "assetUri": "/hausa/23269030",
-      "cpsUrn": "urn:bbc:content:assetUri:hausa/23269030",
-      "curie": "http://www.bbc.co.uk/asset/6df6257b-2fdd-0344-9382-bad1fe40e0b2",
-      "assetId": "23269030"
-    },
-    "type": "MAP",
-    "createdBy": "hausa-v6",
-    "language": "ha",
-    "lastUpdated": 1588335916991,
-    "firstPublished": 1583166303000,
-    "lastPublished": 1583166303000,
-    "timestamp": 1583166303000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "hausa.media_asset.23269030.page",
-      "cps_asset_id": "23269030"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": [
-      "media",
-      "paragraph",
-      "heading",
-      "subheading",
-      "crosshead",
-      "list"
-    ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01k6msm",
-        "subType": "clip",
-        "format": "video",
-        "title": "Five things ants can teach us about management",
-        "synopses": {
-          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:hausa/23269030",
+        "locators": {
+          "assetUri": "/hausa/23269030",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:6df6257b-2fdd-0344-9382-bad1fe40e0b2",
+          "assetId": "23269030",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/23269030",
+          "curie": "http://www.bbc.co.uk/asset/6df6257b-2fdd-0344-9382-bad1fe40e0b2"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
-        "versions": [
-          {
-            "versionId": "p01k6msp",
-            "types": ["Original"],
-            "duration": 191,
-            "durationISO8601": "PT3M11S",
-            "warnings": {
-              "short": "Contains strong language and adult humour.",
-              "long": "Contains strong language and adult humour."
-            },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1540218932000
-          }
+        "type": "MAP",
+        "createdBy": "hausa-v6",
+        "language": "ha",
+        "lastUpdated": 1666090340277,
+        "firstPublished": 1583166303000,
+        "lastPublished": 1583166303000,
+        "timestamp": 1583166303000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "hausa.media_asset.23269030.page",
+          "cps_asset_id": "23269030",
+          "contentId": "urn:bbc:cps:curie:asset:6df6257b-2fdd-0344-9382-bad1fe40e0b2"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.8",
+        "blockTypes": [
+          "media",
+          "paragraph",
+          "heading",
+          "subheading",
+          "crosshead",
+          "list"
         ],
-        "imageCopyright": "BBC",
-        "type": "media"
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "HAUSA",
+          "producerId": "51"
+        },
+        "readTime": 1,
+        "siteUri": "/hausa",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "text": "Latsa hoton da ke sama don jin cikakken shirin:",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Latsa hoton da ke sama don jin cikakken shirin",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Latsa hoton da ke sama don jin cikakken shirin",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "Latsa hoton da ke sama don jin cikakken shirin",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "Latsa hoton da ke sama don jin cikakken shirin",
-        "role": "transmission-info",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mata, musamman wadanda suka fito daga gidajen marasa galihu na fuskantar barazanar kamuwa da wasu cututtuka, saboda rashin samun abubuwan da suka dace su yi amfani da su wajen kula da kansu a yayin da suke jinin al'ada.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "A wasu lokutan 'yan mata kan yi amfani da takarda ko tsumma har ma da safa don tare jinin da ke zuba daga jikinsu. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Lamarin da likitoci ke gargadin cewa rashin tsaftar wadannan abubuwa ka iya shafar lafiyar iyayen gobe.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ga wasu shirye-shiryen na baya da za ku so ku karanta da saurara <itemMeta>hausa/media-23269029</itemMeta>",
-        "meta": [
+      "content": {
+        "blocks": [
           {
-            "headlines": {
-              "shortHeadline": "Lafiya Zinariya: Me ke",
-              "headline": "Lafiya Zinariya: Me ke",
-              "overtyped": "Lafiya Zinariya: Me ke "
+            "id": "p01k6msm",
+            "subType": "clip",
+            "format": "video",
+            "title": "Five things ants can teach us about management",
+            "synopses": {
+              "short": "They may be tiny, but us humans could learn a thing or two from ants."
             },
-            "locators": {
-              "href": "http://www.bbc.com/hausa/media-23269029"
-            },
-            "summary": "Lafiya Zinariya: Me ke",
-            "timestamp": 1583165690000,
-            "language": "ha",
-            "passport": {
-              "category": {
-                "categoryId": "",
-                "categoryName": ""
-              },
-              "taggings": []
-            },
-            "id": "urn:bbc:ares::asset:hausa/media-23269029",
-            "type": "cps"
-          }
-        ],
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ga wasu shirye-shiryen na baya da za ku so ku karanta da saurara",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "<bold>Lafiya Zinariya: Jinin haila a tsakanin 'yan mata</bold>",
-            "markupType": "candy_xml",
-            "type": "listItem"
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+            "versions": [
+              {
+                "versionId": "p01k6msp",
+                "types": ["Original"],
+                "duration": 191,
+                "durationISO8601": "PT3M11S",
+                "warnings": {
+                  "short": "Contains strong language and adult humour.",
+                  "long": "Contains strong language and adult humour."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1540218932000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
           },
           {
-            "text": "Lafiya Zinariya: Dalilan da ke sa wasu masu jego yunkurin raunata kansu ko jariransu",
+            "text": "Latsa hoton da ke sama don jin cikakken shirin:",
+            "role": "introduction",
             "markupType": "plain_text",
-            "type": "listItem"
+            "type": "paragraph"
           },
           {
-            "text": "<italic>Lafiya Zinariya: Ko daukewar jinin al'ada kan shafi jima'in ma'aurata?</italic>",
-            "markupType": "candy_xml",
-            "type": "listItem"
+            "text": "Latsa hoton da ke sama don jin cikakken shirin",
+            "markupType": "plain_text",
+            "type": "heading"
           },
           {
-            "text": "<itemMeta>hausa/media-23269029</itemMeta>",
+            "text": "text here 1",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Subheading italics",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "text": "text here 2",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Subheading bold",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "text": "Latsa hoton da ke sama don jin cikakken shirin",
+            "role": "transmission-info",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mata, musamman wadanda suka fito daga gidajen marasa galihu na fuskantar barazanar kamuwa da wasu cututtuka, saboda rashin samun abubuwan da suka dace su yi amfani da su wajen kula da kansu a yayin da suke jinin al'ada.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "A wasu lokutan 'yan mata kan yi amfani da takarda ko tsumma har ma da safa don tare jinin da ke zuba daga jikinsu. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Lamarin da likitoci ke gargadin cewa rashin tsaftar wadannan abubuwa ka iya shafar lafiyar iyayen gobe.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Ga wasu shirye-shiryen na baya da za ku so ku karanta da saurara <itemMeta>hausa/media-23269029</itemMeta>",
             "meta": [
               {
                 "headlines": {
@@ -186,7 +158,7 @@
                   "overtyped": "Lafiya Zinariya: Me ke "
                 },
                 "locators": {
-                  "href": "http://www.bbc.com/hausa/media-23269029"
+                  "href": "https://www.bbc.com/hausa/media-23269029"
                 },
                 "summary": "Lafiya Zinariya: Me ke",
                 "timestamp": 1583165690000,
@@ -203,79 +175,355 @@
               }
             ],
             "markupType": "candy_xml",
-            "type": "listItem"
+            "type": "paragraph"
+          },
+          {
+            "text": "Ga wasu shirye-shiryen na baya da za ku so ku karanta da saurara",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "<bold>Lafiya Zinariya: Jinin haila a tsakanin 'yan mata</bold>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "Lafiya Zinariya: Dalilan da ke sa wasu masu jego yunkurin raunata kansu ko jariransu",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "<italic>Lafiya Zinariya: Ko daukewar jinin al'ada kan shafi jima'in ma'aurata?</italic>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<itemMeta>hausa/media-23269029</itemMeta>",
+                "meta": [
+                  {
+                    "headlines": {
+                      "shortHeadline": "Lafiya Zinariya: Me ke",
+                      "headline": "Lafiya Zinariya: Me ke",
+                      "overtyped": "Lafiya Zinariya: Me ke "
+                    },
+                    "locators": {
+                      "href": "https://www.bbc.com/hausa/media-23269029"
+                    },
+                    "summary": "Lafiya Zinariya: Me ke",
+                    "timestamp": 1583165690000,
+                    "language": "ha",
+                    "passport": {
+                      "category": {
+                        "categoryId": "",
+                        "categoryName": ""
+                      },
+                      "taggings": []
+                    },
+                    "id": "urn:bbc:ares::asset:hausa/media-23269029",
+                    "type": "cps"
+                  }
+                ],
+                "markupType": "candy_xml",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
           }
-        ],
-        "type": "list"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
-      "headline": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?"
-    },
-    "locators": {
-      "assetUri": "/hausa/23269030",
-      "cpsUrn": "urn:bbc:content:assetUri:hausa/23269030",
-      "curie": "http://www.bbc.co.uk/asset/6df6257b-2fdd-0344-9382-bad1fe40e0b2",
-      "assetId": "23269030"
-    },
-    "summary": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
-    "timestamp": 1583166303000,
-    "language": "ha",
-    "passport": {
-      "taggings": []
-    },
-    "media": {
-      "id": "p01k6msm",
-      "subType": "clip",
-      "format": "video",
-      "title": "Five things ants can teach us about management",
-      "synopses": {
-        "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        ]
       },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
-      "versions": [
-        {
-          "versionId": "p01k6msp",
-          "types": ["Original"],
-          "duration": 191,
-          "durationISO8601": "PT3M11S",
-          "warnings": {
-            "short": "Contains strong language and adult humour.",
-            "long": "Contains strong language and adult humour."
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+          "headline": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?"
+        },
+        "locators": {
+          "assetUri": "/hausa/23269030",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:6df6257b-2fdd-0344-9382-bad1fe40e0b2",
+          "assetId": "23269030",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/23269030",
+          "curie": "http://www.bbc.co.uk/asset/6df6257b-2fdd-0344-9382-bad1fe40e0b2"
+        },
+        "summary": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+        "timestamp": 1583166303000,
+        "language": "ha",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01k6msm",
+          "subType": "clip",
+          "format": "video",
+          "title": "Five things ants can teach us about management",
+          "synopses": {
+            "short": "They may be tiny, but us humans could learn a thing or two from ants."
           },
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true,
-            "world": false
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+          "versions": [
+            {
+              "versionId": "p01k6msp",
+              "types": ["Original"],
+              "duration": 191,
+              "durationISO8601": "PT3M11S",
+              "warnings": {
+                "short": "Contains strong language and adult humour.",
+                "long": "Contains strong language and adult humour."
+              },
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1540218932000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "id": "urn:bbc:ares::asset:hausa/23269030",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Labaran Duniya",
+          "uri": "/hausa/hausa",
+          "urlIdentifier": "/hausa/hausa",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Hausa",
+          "uri": "/hausa",
+          "urlIdentifier": "/hausa",
+          "type": "simple"
+        },
+        "groups": []
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:08:58.129Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 4,
+        "records": [
+          {
+            "id": "8e99293e-5a50-9d4d-a834-c16497360fb8",
+            "rank": 1,
+            "count": 9329,
+            "urn": "urn:bbc:curie:asset:8e99293e-5a50-9d4d-a834-c16497360fb8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ina son habaka tattalin arzikin Nigeria — Murtala fp update",
+                "headline": "Ina son habaka tattalin arzikin Nigeria — Murtala 1 update"
+              },
+              "locators": {
+                "assetUri": "/hausa/23061964",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23061964",
+                "curie": "http://www.bbc.co.uk/asset/8e99293e-5a50-9d4d-a834-c16497360fb8",
+                "assetId": "23061964"
+              },
+              "summary": "Ina son habaka tattalin arzikin Nigeria — Murtala medium synopsis 1 summary",
+              "timestamp": 1469118012000,
+              "language": "ha",
+              "media": {
+                "id": "23061487",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p014p0pr",
+                "entityType": "Clip",
+                "caption": "Ina son habaka tattalin arzikin Nigeria — Murtala caption overtype",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63497204",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/9D57/test/_63497204_d07e0f33-b9e9-42b2-a92f-932e1010d255.jpg",
+                "path": "/cpsdevpb/9D57/test/_63497204_d07e0f33-b9e9-42b2-a92f-932e1010d255.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Amurka na binciken hadarin mota marar matuki",
+                "caption": "caption added",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23061964",
+              "type": "cps"
+            }
           },
-          "availableFrom": 1540218932000
-        }
-      ],
-      "imageCopyright": "BBC",
-      "type": "media"
-    },
-    "id": "urn:bbc:ares::asset:hausa/23269030",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Labaran Duniya",
-      "uri": "/hausa/hausa",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Hausa",
-      "uri": "/hausa",
-      "type": "simple"
-    },
-    "groups": []
+          {
+            "id": "ed6aede6-c0fe-b247-82f7-dc256c141526",
+            "rank": 2,
+            "count": 8062,
+            "urn": "urn:bbc:curie:asset:ed6aede6-c0fe-b247-82f7-dc256c141526",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Gane Mani Hanya: Tsaro a yankin Diffa - 16/07/2016",
+                "headline": "Gane Mani Hanya: Tsaro a yankin Diffa - 16/07/2016"
+              },
+              "locators": {
+                "assetUri": "/hausa/media-23061640",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/media-23061640",
+                "curie": "http://www.bbc.co.uk/asset/ed6aede6-c0fe-b247-82f7-dc256c141526",
+                "assetId": "23061640"
+              },
+              "summary": "Baya ga Najeriya, za a iya cewa Jamhuriyar Nijar wadda ita ce makwabciyar Najeriyar ta kusa, ta kasance kasa ta biyu da ta fuskanci hare-haren kungiyar Boko Haram.",
+              "timestamp": 1468945336000,
+              "language": "ha",
+              "media": {
+                "id": "23061641",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p014p205",
+                "entityType": "Clip",
+                "caption": "Gane Mani Hanya: Tsaro a yankin Diffa - 16/07/2016",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63496938",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14801/test/_63496938_p014p267.jpg",
+                "path": "/cpsdevpb/14801/test/_63496938_p014p267.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Gane Mani Hanya: Tsaro a yankin Diffa - 16/07/2016",
+                "caption": "Gane Mani Hanya: Tsaro a yankin Diffa - 16/07/2016",
+                "copyrightHolder": "Empics",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/media-23061640",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "939fe657-b46c-fc44-b620-b5ff7113c17f",
+            "rank": 3,
+            "count": 7306,
+            "urn": "urn:bbc:curie:asset:939fe657-b46c-fc44-b620-b5ff7113c17f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "France beat England in a friendly",
+                "headline": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."
+              },
+              "locators": {
+                "assetUri": "/hausa/23132710",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23132710",
+                "curie": "http://www.bbc.co.uk/asset/939fe657-b46c-fc44-b620-b5ff7113c17f",
+                "assetId": "23132710"
+              },
+              "summary": "hgasjkgdja jkghd hkdh gyebnawh duiagd uw qwjdgufg bdfagafms c bgfiubaggd doiabnasmbfui",
+              "timestamp": 1497442123000,
+              "language": "ha",
+              "media": {
+                "id": "p01b7w2r",
+                "subType": "clip",
+                "format": "audio",
+                "title": "पुणे सुपरजायंट्स आयपीएलच्या अंतिम फेरीत!",
+                "synopses": {
+                  "short": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w9z.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे.",
+                "versions": [
+                  {
+                    "versionId": "p01b7w2z",
+                    "types": ["Original"],
+                    "duration": 16,
+                    "durationISO8601": "PT16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1495467503000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63542408",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13A28/test/_63542408_p01b7w9z.jpg",
+                "path": "/cpsdevpb/13A28/test/_63542408_p01b7w9z.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "सेहवागनं 'असा' पाहिला मुंबई-पुणे सामना",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23132710",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2c0f5dc1-d7e5-aa47-9a00-fe7f14c01911",
+            "rank": 4,
+            "count": 6491,
+            "urn": "urn:bbc:curie:asset:2c0f5dc1-d7e5-aa47-9a00-fe7f14c01911",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ina son habaka tattalin arzikin Nigeria — Murtala",
+                "headline": "Ina son habaka tattalin arzikin Nigeria — Murtala full headline"
+              },
+              "locators": {
+                "assetUri": "/hausa/media-23061485",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:2c0f5dc1-d7e5-aa47-9a00-fe7f14c01911",
+                "assetId": "23061485",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/media-23061485",
+                "curie": "http://www.bbc.co.uk/asset/2c0f5dc1-d7e5-aa47-9a00-fe7f14c01911"
+              },
+              "summary": "Ina son habaka tattalin arzikin Nigeria — Murtala medium synopsis summary",
+              "timestamp": 1468935900000,
+              "language": "ha",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+                "taggings": []
+              },
+              "media": {
+                "id": "23061487",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p014p0pr",
+                "entityType": "Clip",
+                "caption": "Ina son habaka tattalin arzikin Nigeria — Murtala caption",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63496901",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/2AD9/test/_63496901_p014p0q4.jpg",
+                "path": "/cpsdevpb/2AD9/test/_63496901_p014p0q4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Amurka na binciken hadarin mota marar matuki",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/media-23061485",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
