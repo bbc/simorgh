@@ -1,4 +1,5 @@
 import React from 'react';
+import isLive from '#lib/utilities/isLive';
 import { render, screen } from '../react-testing-library-with-providers';
 import MessageBanner from '.';
 import { kyrgyzMessageBannerOnePromo } from './fixtures';
@@ -108,6 +109,48 @@ describe('MessageBanner', () => {
       );
       const image = screen.getByAltText('');
       expect(image).toBeInTheDocument();
+    });
+    describe('Presence on live environment', () => {
+      it('should not render banner when SIMORGH_APP_ENV is live and isLive is set to render null', () => {
+        process.env.SIMORGH_APP_ENV = 'live';
+
+        // if islive is true, show banner
+        render(
+          <MessageBanner
+            heading={kyrgyzMessageBannerOnePromo.title}
+            description={summary.description}
+            link={summary.link}
+            linkText={summary.title}
+            image={summary.imageUrl}
+          />,
+        );
+        expect(
+          document.querySelectorAll("[id^='message-banner']"),
+        ).toHaveLength(0);
+        expect(isLive()).toBe(true);
+      });
+
+      it('should render banner when SIMORGH_APP_ENV is not live', () => {
+        process.env.SIMORGH_APP_ENV = 'non-live';
+        render(
+          <MessageBanner
+            heading={kyrgyzMessageBannerOnePromo.title}
+            description={summary.description}
+            link={summary.link}
+            linkText={summary.title}
+            image={summary.imageUrl}
+          />,
+        );
+        expect(
+          document.querySelectorAll("[id^='message-banner']"),
+        ).toHaveLength(1);
+        // if isLive is false do not show banner
+        expect(isLive()).toBe(false);
+      });
+
+      afterAll(() => {
+        delete process.env.SIMORGH_APP_ENV;
+      });
     });
   });
 });
