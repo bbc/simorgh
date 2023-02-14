@@ -1,7 +1,7 @@
 import getComponent from './getComponent';
 import { VISUAL_PROMINENCE, VISUAL_STYLE, COMPONENT_NAMES } from './constants';
 
-const { NORMAL, HIGH } = VISUAL_PROMINENCE;
+const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const { NONE, BANNER } = VISUAL_STYLE;
 const {
   MESSAGE_BANNER,
@@ -13,8 +13,11 @@ const {
 describe('getComponent', () => {
   it.each`
     visualStyle | visualProminence | expected
+    ${BANNER}   | ${MINIMUM}       | ${MESSAGE_BANNER}
+    ${BANNER}   | ${LOW}           | ${MESSAGE_BANNER}
     ${BANNER}   | ${NORMAL}        | ${MESSAGE_BANNER}
     ${BANNER}   | ${HIGH}          | ${BILLBOARD}
+    ${BANNER}   | ${MAXIMUM}       | ${BILLBOARD}
     ${NONE}     | ${NORMAL}        | ${SIMPLE_CURATION_GRID}
     ${NONE}     | ${HIGH}          | ${HIERARCHICAL_CURATION_GRID}
   `(
