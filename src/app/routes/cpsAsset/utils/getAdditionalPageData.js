@@ -146,27 +146,26 @@ const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   try {
     const agent = attachAgent ? await getAgent() : null;
 
-    if (name.indexOf('ecommendations') !== -1){
-        return fetchPageData({
-          path,
-          timeout: SECONDARY_DATA_TIMEOUT,
-          agent,
-          cache: null,
-          ...loggerArgs,
-        })
-          .then(response => validateResponse(response, name))
-          .catch(noop);
+    if (name.indexOf('ecommendations') !== -1) {
+      return fetchPageData({
+        path,
+        timeout: SECONDARY_DATA_TIMEOUT,
+        agent,
+        cache: null,
+        ...loggerArgs,
+      })
+        .then(response => validateResponse(response, name))
+        .catch(noop);
     }
-    else {
-        return withCache({
-          path,
-          timeout: SECONDARY_DATA_TIMEOUT,
-          agent,
-          ...loggerArgs,
-        })
-          .then(response => validateResponse(response, name))
-          .catch(noop);
-    }
+
+    return withCache({
+      path,
+      timeout: SECONDARY_DATA_TIMEOUT,
+      agent,
+      ...loggerArgs,
+    })
+      .then(response => validateResponse(response, name))
+      .catch(noop);
   } catch (error) {
     logger.error(DATA_FETCH_ERROR, {
       data: path,

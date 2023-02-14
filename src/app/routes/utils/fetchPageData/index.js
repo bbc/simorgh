@@ -45,9 +45,9 @@ const fetchPageData = async ({
   if (cachedResponse) {
     return {
       status: 200,
-      json: cachedResponse
+      json: cachedResponse,
     };
-  } 
+  }
 
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
   const fetchOptions = {
