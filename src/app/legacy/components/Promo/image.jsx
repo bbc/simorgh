@@ -20,7 +20,7 @@ const ChildWrapper = styled.div`
 
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
-// promos of type audio (and possibly others) use a different iChef recipe requiring a second set of resolutions
+// promos with images via Programmes (which can be of type audio and possibly others) use a different iChef recipe requiring a second set of resolutions
 // https://github.com/bbc/programme-images/tree/master/webapp/ichef/recipes
 const createSrcSet = (imageUrl, suffix = '', isProgrammeImage) => {
   const imageResolutions = [85, 120, 170, 232, 325, 450, 660];
