@@ -1,156 +1,511 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "advertising": true,
-        "caption": "Quba abbudduu miilaatiin yeroo dorggoman",
-        "embedding": false,
-        "format": "video",
-        "id": "p01cynmd",
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cynqv.jpg",
-        "subType": "clip",
-        "synopses": {
-          "short": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:afaanoromoo/23149891",
+        "locators": {
+          "assetUri": "/afaanoromoo/23149891",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:c182ef59-3f36-4844-991f-c35f96b98d23",
+          "assetId": "23149891",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149891",
+          "curie": "http://www.bbc.co.uk/asset/c182ef59-3f36-4844-991f-c35f96b98d23"
         },
-        "title": "Dorggommii quba abbudduu miilaatiin",
-        "type": "media",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "oromo-v6",
+        "language": "om",
+        "lastUpdated": 1665419818452,
+        "firstPublished": 1503567591000,
+        "lastPublished": 1503567591000,
+        "timestamp": 1503567591000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "afaanoromoo.media_asset.23149891.page",
+          "cps_asset_id": "23149891",
+          "contentId": "urn:bbc:cps:curie:asset:c182ef59-3f36-4844-991f-c35f96b98d23"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Afaanoromoo",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "AFAAN_OROMOO",
+          "producerId": "2"
+        },
+        "readTime": 1,
+        "siteUri": "/afaanoromoo",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
           {
-            "availableFrom": 1503567046000,
-            "availableTerritories": {
-              "nonUk": true,
-              "uk": true,
-              "world": false
+            "id": "p01cynmd",
+            "subType": "clip",
+            "format": "video",
+            "title": "Dorggommii quba abbudduu miilaatiin",
+            "synopses": {
+              "short": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?"
             },
-            "duration": 53,
-            "durationISO8601": "PT53S",
-            "types": ["Original"],
-            "versionId": "p01cynmg",
-            "warnings": {}
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cynqv.jpg",
+            "embedding": false,
+            "advertising": true,
+            "caption": "Quba abbudduu miilaatiin yeroo dorggoman",
+            "versions": [
+              {
+                "versionId": "p01cynmg",
+                "types": ["Original"],
+                "duration": 53,
+                "durationISO8601": "PT53S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1503567046000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
+          },
+          {
+            "text": "test",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
         ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "test",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "counterName": "afaanoromoo.media_asset.23149891.page",
-      "cps_asset_id": "23149891",
-      "cps_asset_type": "map"
-    },
-    "blockTypes": ["media", "paragraph"],
-    "createdBy": "oromo-v6",
-    "firstPublished": 1503567591000,
-    "id": "urn:bbc:ares::asset:afaanoromoo/23149891",
-    "includeComments": false,
-    "language": "om",
-    "lastPublished": 1503567591000,
-    "lastUpdated": 1588336078892,
-    "locators": {
-      "assetId": "23149891",
-      "assetUri": "/afaanoromoo/23149891",
-      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149891",
-      "curie": "http://www.bbc.co.uk/asset/c182ef59-3f36-4844-991f-c35f96b98d23"
-    },
-    "options": {
-      "allowDateStamp": true,
-      "allowHeadline": true,
-      "allowPrintingSharingLinks": true,
-      "allowRelatedStoriesBox": true,
-      "allowRightHandSide": true,
-      "hasNewsTracker": false,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "isFactCheck": false,
-      "isIgorSeoTagsEnabled": false,
-      "isKeyContent": false
-    },
-    "passport": {
-      "taggings": []
-    },
-    "tags": {},
-    "timestamp": 1503567591000,
-    "type": "MAP",
-    "version": "v1.2.1"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?",
-      "shortHeadline": "Dorggommii quba abbudduu miilaatiin"
-    },
-    "id": "urn:bbc:ares::asset:afaanoromoo/23149891",
-    "indexImage": {
-      "altText": "Keyframe #5",
-      "copyrightHolder": "BBC",
-      "height": 576,
-      "href": "http://b.files.bbci.co.uk/12FE6/test/_63589777_p01cynqv.jpg",
-      "id": "63589777",
-      "path": "/cpsdevpb/12FE6/test/_63589777_p01cynqv.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 1024
-    },
-    "language": "om",
-    "locators": {
-      "assetId": "23149891",
-      "assetUri": "/afaanoromoo/23149891",
-      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149891",
-      "curie": "http://www.bbc.co.uk/asset/c182ef59-3f36-4844-991f-c35f96b98d23"
-    },
-    "media": {
-      "advertising": true,
-      "caption": "Quba abbudduu miilaatiin yeroo dorggoman",
-      "embedding": false,
-      "format": "video",
-      "id": "p01cynmd",
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cynqv.jpg",
-      "subType": "clip",
-      "synopses": {
-        "short": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?"
-      },
-      "title": "Dorggommii quba abbudduu miilaatiin",
-      "type": "media",
-      "versions": [
-        {
-          "availableFrom": 1503567046000,
-          "availableTerritories": {
-            "nonUk": true,
-            "uk": true,
-            "world": false
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Dorggommii quba abbudduu miilaatiin",
+          "headline": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/23149891",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:c182ef59-3f36-4844-991f-c35f96b98d23",
+          "assetId": "23149891",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149891",
+          "curie": "http://www.bbc.co.uk/asset/c182ef59-3f36-4844-991f-c35f96b98d23"
+        },
+        "summary": "Ingilaanditti dorgommiin quba abbudduu miilaatiin, waggaa waggaan ni gaggeefama.",
+        "timestamp": 1503567591000,
+        "language": "om",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Afaanoromoo",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01cynmd",
+          "subType": "clip",
+          "format": "video",
+          "title": "Dorggommii quba abbudduu miilaatiin",
+          "synopses": {
+            "short": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?"
           },
-          "duration": 53,
-          "durationISO8601": "PT53S",
-          "types": ["Original"],
-          "versionId": "p01cynmg",
-          "warnings": {}
-        }
-      ]
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cynqv.jpg",
+          "embedding": false,
+          "advertising": true,
+          "caption": "Quba abbudduu miilaatiin yeroo dorggoman",
+          "versions": [
+            {
+              "versionId": "p01cynmg",
+              "types": ["Original"],
+              "duration": 53,
+              "durationISO8601": "PT53S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1503567046000
+            }
+          ],
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63589777",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/12FE6/test/_63589777_p01cynqv.jpg",
+          "path": "/cpsdevpb/12FE6/test/_63589777_p01cynqv.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Keyframe #5",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/23149891",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Oduu",
+          "uri": "/afaanoromoo/front_page",
+          "urlIdentifier": "/afaanoromoo/front_page",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Afaan Oromoo",
+          "uri": "/afaanoromoo",
+          "urlIdentifier": "/afaanoromoo",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "passport": {
-      "taggings": []
-    },
-    "summary": "Ingilaanditti dorgommiin quba abbudduu miilaatiin, waggaa waggaan ni gaggeefama.",
-    "timestamp": 1503567591000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Oduu",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/afaanoromoo/front_page"
-    },
-    "site": {
-      "name": "BBC Afaan Oromoo",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/afaanoromoo"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:21:57.219Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 5,
+        "records": [
+          {
+            "id": "c182ef59-3f36-4844-991f-c35f96b98d23",
+            "rank": 1,
+            "count": 5656,
+            "urn": "urn:bbc:curie:asset:c182ef59-3f36-4844-991f-c35f96b98d23",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dorggommii quba abbudduu miilaatiin",
+                "headline": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/23149891",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c182ef59-3f36-4844-991f-c35f96b98d23",
+                "assetId": "23149891",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149891",
+                "curie": "http://www.bbc.co.uk/asset/c182ef59-3f36-4844-991f-c35f96b98d23"
+              },
+              "summary": "Ingilaanditti dorgommiin quba abbudduu miilaatiin, waggaa waggaan ni gaggeefama.",
+              "timestamp": 1503567591000,
+              "language": "om",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afaanoromoo",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01cynmd",
+                "subType": "clip",
+                "format": "video",
+                "title": "Dorggommii quba abbudduu miilaatiin",
+                "synopses": {
+                  "short": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cynqv.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Quba abbudduu miilaatiin yeroo dorggoman",
+                "versions": [
+                  {
+                    "versionId": "p01cynmg",
+                    "types": ["Original"],
+                    "duration": 53,
+                    "durationISO8601": "PT53S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1503567046000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63589777",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12FE6/test/_63589777_p01cynqv.jpg",
+                "path": "/cpsdevpb/12FE6/test/_63589777_p01cynqv.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #5",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/23149891",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "26546d0e-562b-354a-a726-b48470c5b08e",
+            "rank": 2,
+            "count": 5229,
+            "urn": "urn:bbc:curie:asset:26546d0e-562b-354a-a726-b48470c5b08e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ameerikaatti Addeessi biiftuu daheessuuf jira",
+                "headline": "Ameerikaatti Addeessi biiftuu daheessuuf jira"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/23149174",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149174",
+                "curie": "http://www.bbc.co.uk/asset/26546d0e-562b-354a-a726-b48470c5b08e",
+                "assetId": "23149174"
+              },
+              "summary": "Ameerikaatti Addeessi biiftuu daheessuuf deemti, isa miilanaa maaltu adda taasisa?",
+              "timestamp": 1503314266000,
+              "language": "om",
+              "media": {
+                "id": "p01cxdjg",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ameerikaatti Addeessi biiftuu daheessuuf deemti.",
+                "synopses": {
+                  "short": "Ameerikaatti Addeessi biiftuu daheessuuf deemti, isa miilanaa maaltu adda taasisa?"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cxdrk.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Ameerikaatti Addeessi biiftuu daheessuuf deemti, isa miilanaa maaltu adda taasisa?",
+                "versions": [
+                  {
+                    "versionId": "p01cxdjj",
+                    "types": ["Original"],
+                    "duration": 92,
+                    "durationISO8601": "PT1M32S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1503312511000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63589460",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1962/test/_63589460_p01cxdrk.jpg",
+                "path": "/cpsdevpb/1962/test/_63589460_p01cxdrk.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/23149174",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "34d2a81e-9fcf-c94f-b4ec-964806fcc393",
+            "rank": 3,
+            "count": 3128,
+            "urn": "urn:bbc:curie:asset:34d2a81e-9fcf-c94f-b4ec-964806fcc393",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Hodhaa huccuu ariitiin ga'u",
+                "headline": "Huccuun keessan daqiiqaa shan keessatti isiniif ga'a osoo jedhamtanii ni amantuu?"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23142375",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23142375",
+                "curie": "http://www.bbc.co.uk/asset/34d2a81e-9fcf-c94f-b4ec-964806fcc393",
+                "assetId": "23142375"
+              },
+              "summary": "Diizaayinara faashinii Yugaandaa wandaboo/qamisii daqiiqaa muraasa keessatti hodhee qaqqabsiisuun beekamaa ta’aa jiruun walbaraa.",
+              "timestamp": 1500976149000,
+              "language": "om",
+              "media": {
+                "id": "p01ch3d9",
+                "subType": "clip",
+                "format": "video",
+                "title": "Hodhaa huccuu ariitiin ga'u",
+                "synopses": {
+                  "short": "Ogeessa hodhaa huccuu dafee qaqqabsiisu",
+                  "medium": "Diizaayinara faashinii Yugaandaa wandaboo/qamisii daqiiqaa muraasa keessatti hodhee qaqqabsiisuun beekamaa ta’aa jiruun walbaraa."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01ch3f4.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Ogeessa huccuu dafee qaqqabsiisu",
+                "versions": [
+                  {
+                    "versionId": "p01ch3dd",
+                    "types": ["Original"],
+                    "duration": 38,
+                    "durationISO8601": "PT38S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1500975279000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63580885",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/E5B8/test/_63580885_p01ch3f4.jpg",
+                "path": "/cpsdevpb/E5B8/test/_63580885_p01ch3f4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #3",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23142375",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "424857f4-7223-724d-891d-3276631def39",
+            "rank": 4,
+            "count": 1862,
+            "urn": "urn:bbc:curie:asset:424857f4-7223-724d-891d-3276631def39",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Gurgurtaa Daabboo irraa gara Moodeliingii",
+                "headline": "Gurgurtaa Daabboo irraa gara Moodeliingii"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/oduu-23149172",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-23149172",
+                "curie": "http://www.bbc.co.uk/asset/424857f4-7223-724d-891d-3276631def39",
+                "assetId": "23149172"
+              },
+              "summary": "Jiraattuu Magaalaa Leegoos kan taate Olajomokeen Gurgurtaa Daabboo irraa kaatee Moodeelii beekamtuu taate.",
+              "timestamp": 1503315259000,
+              "language": "om",
+              "media": {
+                "id": "p01cxd4d",
+                "subType": "clip",
+                "format": "video",
+                "title": "Gurgurtaa Daabboo irraa gara Moodeliingii",
+                "synopses": {
+                  "short": "Jiraattuu Magaalaa Leegoos kan taate"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cxd86.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Olajomoke",
+                "versions": [
+                  {
+                    "versionId": "p01cxd4g",
+                    "types": ["Original"],
+                    "duration": 86,
+                    "durationISO8601": "PT1M26S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1503310476000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63589457",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/126EA/test/_63589457_p01cxd86.jpg",
+                "path": "/cpsdevpb/126EA/test/_63589457_p01cxd86.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #5",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/oduu-23149172",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "34ca2607-9034-9a47-a64b-113f9fc18c78",
+            "rank": 5,
+            "count": 1130,
+            "urn": "urn:bbc:curie:asset:34ca2607-9034-9a47-a64b-113f9fc18c78",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ergaa qaruuraa keessaa",
+                "headline": "Ergaan barreeffamaa qaruuraa keessa ture nama qurxxummii qabuun argame"
+              },
+              "locators": {
+                "assetUri": "/afaanoromoo/23149893",
+                "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149893",
+                "curie": "http://www.bbc.co.uk/asset/34ca2607-9034-9a47-a64b-113f9fc18c78",
+                "assetId": "23149893"
+              },
+              "summary": "Ergaan barreeffamaa jaalalleewwan lamaan qaruuraa keessa kaa'amee Giriikitti buufame, KM 800 ol imaluun Filisxeemitti argameera.",
+              "timestamp": 1503568735000,
+              "language": "om",
+              "media": {
+                "id": "p01cynwv",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ergaa qaruuraa keessaa",
+                "synopses": {
+                  "short": "Ergaan barreeffamaa qaruuraa keessa ture nama qurxxummii qabuun argame",
+                  "medium": "Ergaan barreeffamaa jaalalleewwan lamaan qaruuraa keessa kaa'amee Giriikitti buufame, KM 800 ol imaluun Filisxeemitti argameera."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cyp7z.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Ergaan barreeffamaa qaruuraa keessa ture nama qurxxummii qabuun argame",
+                "versions": [
+                  {
+                    "versionId": "p01cynwz",
+                    "types": ["Original"],
+                    "duration": 47,
+                    "durationISO8601": "PT47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1503568429000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63740830",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/0EDC/test/_63740830_p01cyp7z.jpg",
+                "path": "/cpsdevpb/0EDC/test/_63740830_p01cyp7z.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afaanoromoo/23149893",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }
