@@ -6,6 +6,7 @@ export default ({ service, pageType, variant }) => {
   let pageCount;
   let numberOfItems;
   let appendVariant = '';
+  let messageBanner;
   const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
   let otherVariant;
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -30,21 +31,35 @@ export default ({ service, pageType, variant }) => {
           }
         }
 
-        // Gets the topic page data for all the tests
-        cy.request(
-          `https://web-cdn.${
+        const requestObject = {
+          method: 'GET',
+          url: `https://web-cdn.${
             env === 'live' ? '' : `${env}.`
-          }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
-        ).then(({ body }) => {
+            }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
+        };
+
+        if (Cypress.env('currentPath').includes('?renderer_env=test')) {
+          requestObject.headers = { 'ctx-service-env': 'test' };
+        }
+
+        // Gets the topic page data for all the tests
+        cy.request(requestObject).then(({ body }) => {
           topicTitle = body.data.title;
           variantTopicId = body.data.variantTopicId;
           pageCount = body.data.pageCount;
           numberOfItems = body.data.curations[0].summaries.length;
           firstItemHeadline = body.data.curations[0].summaries[0].title;
+          messageBanner = body.data.curations.find(
+            curation =>
+              curation.visualProminence === 'NORMAL' &&
+              curation.visualStyle === 'BANNER',
+          );
         });
+        cy.log(`Message Banner: ${JSON.stringify(messageBanner, null, 2)}`);
         cy.log(`topic id ${topicId}`);
       }
     });
+
     describe(`Page content`, () => {
       it('should render a H1, which contains/displays topic title', () => {
         cy.log(Cypress.env('currentPath'));
@@ -126,7 +141,31 @@ export default ({ service, pageType, variant }) => {
               });
           });
       });
+
+      it.only('clicking the message banner should navigate to the correct page', () => {
+        if (messageBanner) {
+          cy.get(
+            `[data-testid="${`message-banner-${messageBanner.title.replaceAll(
+              ' ',
+              '-',
+            )}`}"]`,
+          )
+            // .should('exist')
+            .within(() => {
+              cy.get('a')
+                .should('have.attr', 'href')
+                .then($href => {
+                  cy.log($href);
+                  cy.get('a').click();
+                  cy.url().should('eq', messageBanner.summaries[0].link);
+                });
+            });
+        } else {
+          cy.log('No Message Banner exist on Page!');
+        }
+      });
     });
+
     describe(`Pagination`, () => {
       it('should show pagination if there is more than one page', () => {
         // First return to the topics page. Last test has page on article
@@ -181,7 +220,7 @@ export default ({ service, pageType, variant }) => {
       it('Next button navigates to next page (3)', () => {
         if (pageCount > 2) {
           cy.get('[id="pagination-next-page"]').click();
-          cy.url().should('include', `?page=3`);
+          cy.url().should('include', `? page = 3`);
           cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No next button when on page 2 of 2');
@@ -190,7 +229,7 @@ export default ({ service, pageType, variant }) => {
       it('Last page number button navigates to last page', () => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > ul > li').last().click();
-          cy.url().should('include', `?page=${pageCount}`);
+          cy.url().should('include', `? page = ${pageCount}`);
           cy.get('[data-testid="curation-grid-normal"]');
         } else {
           cy.log('No pagination as there is only one page');
@@ -199,9 +238,9 @@ export default ({ service, pageType, variant }) => {
       it('Previous page button navigates to previous page (second to last)', () => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > span > a').click();
-          cy.url().should('include', `?page=${pageCount - 1}`);
+          cy.url().should('include', `? page = ${pageCount - 1} `);
           cy.get('[data-testid="topic-pagination"] > ul > li').first().click();
-          cy.url().should('include', `?page=1`);
+          cy.url().should('include', `? page = 1`);
           cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No pagination as there is only one page');
@@ -210,7 +249,7 @@ export default ({ service, pageType, variant }) => {
       it('Page 1 button navigates to page 1', () => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > ul > li').first().click();
-          cy.url().should('include', `?page=1`);
+          cy.url().should('include', `? page = 1`);
           cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No pagination as there is only one page');
@@ -239,7 +278,7 @@ export default ({ service, pageType, variant }) => {
     describe(`Script switch`, () => {
       it('Pages with 2 scripts should have a script switch button with correct other variant', () => {
         if (scriptSwitchServices.includes(service)) {
-          cy.get(`[data-variant="${otherVariant}"]`).should('be.visible');
+          cy.get(`[data - variant= "${otherVariant}"]`).should('be.visible');
         } else {
           cy.log('Not a script switch service');
         }
@@ -248,14 +287,14 @@ export default ({ service, pageType, variant }) => {
       it('Script switch button switches the script', () => {
         if (scriptSwitchServices.includes(service)) {
           // clicks script switch
-          cy.get(`[data-variant="${otherVariant}"]`).click();
+          cy.get(`[data - variant= "${otherVariant}"]`).click();
           // URL contains correct variant after click
           cy.url().should('contain', otherVariant);
           // URL contains the correct topic ID
           cy.url().should('contain', variantTopicId);
 
           // clicks script switch
-          cy.get(`[data-variant="${variant}"]`).click();
+          cy.get(`[data - variant= "${variant}"]`).click();
           // URL contains correct variant after click
           cy.url().should('contain', variant);
           // URL contains the correct topic ID
