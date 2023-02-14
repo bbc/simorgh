@@ -40,7 +40,8 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
-import CpsRecommendationsVaried from '#containers/CpsRecommendationsVaried';
+import CpsRecommendations from '#containers/CpsRecommendations';
+import CpsVaried from '#containers/CpsVaried';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
@@ -196,13 +197,12 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => (
-      <CpsRecommendationsVaried
-        pageData={pageData}
-        recommendationsData={recommendationsData}
-        {...props}
-      />
-    ),
+    wsoj: props =>
+      CpsVaried({
+        pageData,
+        recommendationsData,
+        renderFunction: data => <CpsRecommendations {...props} items={data} />,
+      }),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
