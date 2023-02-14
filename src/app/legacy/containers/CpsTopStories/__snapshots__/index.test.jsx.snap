@@ -445,7 +445,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  display: inline;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -468,6 +468,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -571,7 +572,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
               >
                 <a
                   aria-labelledby="top-stories-promo-mundonoticiasinternacional51939501-1"
-                  class="emotion-27 emotion-28"
+                  class="focusIndicatorDisplayInlineBlock emotion-27 emotion-28"
                   href="/mundo/noticias-internacional-51939501"
                 >
                   <span
@@ -606,7 +607,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
               >
                 <a
                   aria-labelledby="top-stories-promo-pidgintori51945757-1"
-                  class="emotion-27 emotion-28"
+                  class="focusIndicatorDisplayInlineBlock emotion-27 emotion-28"
                   href="/pidgin/tori-51945757"
                 >
                   <span
@@ -1042,7 +1043,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  display: inline;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1065,6 +1066,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -1165,7 +1167,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
               >
                 <a
                   aria-labelledby="top-stories-promo-mundonoticiasinternacional51939501-1"
-                  class="emotion-25 emotion-26"
+                  class="focusIndicatorDisplayInlineBlock emotion-25 emotion-26"
                   href="/mundo/noticias-internacional-51939501"
                 >
                   <span

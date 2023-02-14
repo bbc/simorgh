@@ -284,6 +284,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 .emotion-31 {
+  display: block;
   line-height: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -536,7 +537,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
           >
             <a
               aria-labelledby="episodeLinkIndex-0"
-              class="emotion-31 emotion-32"
+              class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-31 emotion-32"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk"
             >
               <span
@@ -639,7 +640,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
           >
             <a
               aria-labelledby="episodeLinkIndex-1"
-              class="emotion-31 emotion-32"
+              class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-31 emotion-32"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2ghpjg"
             >
               <span
@@ -742,7 +743,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
           >
             <a
               aria-labelledby="episodeLinkIndex-2"
-              class="emotion-31 emotion-32"
+              class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-31 emotion-32"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2gdsmc"
             >
               <span

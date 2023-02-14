@@ -396,7 +396,7 @@ exports[`should render correctly with inline block 1`] = `
       >
         <a
           aria-label="چیسربرگرundefined"
-          class="emotion-6 emotion-7"
+          class="focusIndicatorReducedWidth emotion-6 emotion-7"
           href="https://google.com"
         >
           چیسربرگر
