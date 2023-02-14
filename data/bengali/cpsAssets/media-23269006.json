@@ -1,191 +1,119 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:bengali/media-23269006",
-    "locators": {
-      "assetUri": "/bengali/media-23269006",
-      "cpsUrn": "urn:bbc:content:assetUri:bengali/media-23269006",
-      "curie": "http://www.bbc.co.uk/asset/4908ebb9-6362-c740-98ac-9d9f9e5cdb69",
-      "assetId": "23269006"
-    },
-    "type": "MAP",
-    "createdBy": "bengali-v6",
-    "language": "bn",
-    "lastUpdated": 1588335916998,
-    "firstPublished": 1583163908000,
-    "lastPublished": 1583163908000,
-    "timestamp": 1583163908000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "bengali.embedded_media.media_asset.23269006.page",
-      "cps_asset_id": "23269006"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": [
-      "media",
-      "paragraph",
-      "heading",
-      "subheading",
-      "crosshead",
-      "list"
-    ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01k6msm",
-        "subType": "clip",
-        "format": "video",
-        "title": "Five things ants can teach us about management",
-        "synopses": {
-          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:bengali/media-23269006",
+        "locators": {
+          "assetUri": "/bengali/media-23269006",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:4908ebb9-6362-c740-98ac-9d9f9e5cdb69",
+          "assetId": "23269006",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/media-23269006",
+          "curie": "http://www.bbc.co.uk/asset/4908ebb9-6362-c740-98ac-9d9f9e5cdb69"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
-        "versions": [
-          {
-            "versionId": "p01k6msp",
-            "types": ["Original"],
-            "duration": 191,
-            "durationISO8601": "PT3M11S",
-            "warnings": {
-              "short": "Contains strong language and adult humour.",
-              "long": "Contains strong language and adult humour."
-            },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1540218932000
-          }
+        "type": "MAP",
+        "createdBy": "bengali-v6",
+        "language": "bn",
+        "lastUpdated": 1666090341296,
+        "firstPublished": 1583163908000,
+        "lastPublished": 1583163908000,
+        "timestamp": 1583163908000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "bengali.embedded_media.media_asset.23269006.page",
+          "cps_asset_id": "23269006",
+          "contentId": "urn:bbc:cps:curie:asset:4908ebb9-6362-c740-98ac-9d9f9e5cdb69"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.8",
+        "blockTypes": [
+          "media",
+          "paragraph",
+          "heading",
+          "subheading",
+          "crosshead",
+          "list"
         ],
-        "imageCopyright": "BBC",
-        "type": "media"
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "BENGALI",
+          "producerId": "31"
+        },
+        "readTime": 1,
+        "siteUri": "/bengali",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "text": "মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। ",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? <itemMeta>bengali/media-23269008</itemMeta> কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। ",
-        "meta": [
+      "content": {
+        "blocks": [
           {
-            "headlines": {
-              "shortHeadline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন",
-              "headline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন",
-              "overtyped": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন"
+            "id": "p01k6msm",
+            "subType": "clip",
+            "format": "video",
+            "title": "Five things ants can teach us about management",
+            "synopses": {
+              "short": "They may be tiny, but us humans could learn a thing or two from ants."
             },
-            "locators": { "href": "http://www.bbc.com/bengali/media-23269008" },
-            "summary": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
-            "timestamp": 1583163835000,
-            "language": "bn",
-            "passport": {
-              "category": { "categoryId": "", "categoryName": "" },
-              "taggings": []
-            },
-            "id": "urn:bbc:ares::asset:bengali/media-23269008",
-            "type": "cps"
-          }
-        ],
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। ",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?  দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+            "versions": [
+              {
+                "versionId": "p01k6msp",
+                "types": ["Original"],
+                "duration": 191,
+                "durationISO8601": "PT3M11S",
+                "warnings": {
+                  "short": "Contains strong language and adult humour.",
+                  "long": "Contains strong language and adult humour."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1540218932000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
+          },
           {
-            "text": "<link><caption>মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। </caption><url href=\"https://bbc.com/bengali\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
+            "text": "মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। ",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
           },
           {
             "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
             "markupType": "plain_text",
-            "type": "listItem"
+            "type": "heading"
           },
           {
             "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
             "markupType": "plain_text",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      },
-      {
-        "numbered": true,
-        "items": [
-          {
-            "text": "<italic>মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। </italic>",
-            "markupType": "candy_xml",
-            "type": "listItem"
+            "type": "heading"
           },
           {
-            "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "<bold>দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?</bold>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<itemMeta>bengali/media-23269008</itemMeta>",
+            "text": "মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? <itemMeta>bengali/media-23269008</itemMeta> কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। ",
             "meta": [
               {
                 "headlines": {
@@ -194,13 +122,16 @@
                   "overtyped": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন"
                 },
                 "locators": {
-                  "href": "http://www.bbc.com/bengali/media-23269008"
+                  "href": "https://www.bbc.com/bengali/media-23269008"
                 },
                 "summary": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
                 "timestamp": 1583163835000,
                 "language": "bn",
                 "passport": {
-                  "category": { "categoryId": "", "categoryName": "" },
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
                   "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:bengali/media-23269008",
@@ -208,73 +139,419 @@
               }
             ],
             "markupType": "candy_xml",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
-      "headline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?"
-    },
-    "locators": {
-      "assetUri": "/bengali/media-23269006",
-      "cpsUrn": "urn:bbc:content:assetUri:bengali/media-23269006",
-      "curie": "http://www.bbc.co.uk/asset/4908ebb9-6362-c740-98ac-9d9f9e5cdb69",
-      "assetId": "23269006"
-    },
-    "summary": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
-    "timestamp": 1583163908000,
-    "language": "bn",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01k6msm",
-      "subType": "clip",
-      "format": "video",
-      "title": "Five things ants can teach us about management",
-      "synopses": {
-        "short": "They may be tiny, but us humans could learn a thing or two from ants."
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
-      "versions": [
-        {
-          "versionId": "p01k6msp",
-          "types": ["Original"],
-          "duration": 191,
-          "durationISO8601": "PT3M11S",
-          "warnings": {
-            "short": "Contains strong language and adult humour.",
-            "long": "Contains strong language and adult humour."
+            "type": "paragraph"
           },
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1540218932000
-        }
-      ],
-      "imageCopyright": "BBC",
-      "type": "media"
+          {
+            "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। ",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?  দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "<link><caption>মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। </caption><url href=\"https://bbc.com/bengali\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?",
+                "markupType": "plain_text",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "numbered": true,
+            "items": [
+              {
+                "text": "<italic>মার্কিন নির্বাচনে ডোনাল্ড ট্রাম্পের প্রতিদ্বন্দ্বী কে হবেন? কেউ কি ট্রাম্পকে হারাতে পারবেন? যুক্তরাষ্ট্রের অনেক ডেমোক্রেটের মনেই এখন এই প্রশ্ন। </italic>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "'সুপার টিউসডে' বলে পরিচিত ২০২০ সালের তেসরা মার্চ, মঙ্গলবারই কি বোঝা যাবে, নভেম্বরের নির্বাচনে কে হতে যাচ্ছেন ট্রাম্পের প্রতিদ্বন্দ্বী?",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "<bold>দিনটি কী এবং কেনইবা এটি গুরুত্বপূর্ণ?</bold>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<itemMeta>bengali/media-23269008</itemMeta>",
+                "meta": [
+                  {
+                    "headlines": {
+                      "shortHeadline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন",
+                      "headline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন",
+                      "overtyped": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন"
+                    },
+                    "locators": {
+                      "href": "https://www.bbc.com/bengali/media-23269008"
+                    },
+                    "summary": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+                    "timestamp": 1583163835000,
+                    "language": "bn",
+                    "passport": {
+                      "category": {
+                        "categoryId": "",
+                        "categoryName": ""
+                      },
+                      "taggings": []
+                    },
+                    "id": "urn:bbc:ares::asset:bengali/media-23269008",
+                    "type": "cps"
+                  }
+                ],
+                "markupType": "candy_xml",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+          "headline": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?"
+        },
+        "locators": {
+          "assetUri": "/bengali/media-23269006",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:4908ebb9-6362-c740-98ac-9d9f9e5cdb69",
+          "assetId": "23269006",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/media-23269006",
+          "curie": "http://www.bbc.co.uk/asset/4908ebb9-6362-c740-98ac-9d9f9e5cdb69"
+        },
+        "summary": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+        "timestamp": 1583163908000,
+        "language": "bn",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01k6msm",
+          "subType": "clip",
+          "format": "video",
+          "title": "Five things ants can teach us about management",
+          "synopses": {
+            "short": "They may be tiny, but us humans could learn a thing or two from ants."
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "২০২০ সালের ৩রা মার্চ, মঙ্গলবার কেন যুক্তরাষ্ট্রের রাজনীতিতে 'সুপার টিউসডে'?",
+          "versions": [
+            {
+              "versionId": "p01k6msp",
+              "types": ["Original"],
+              "duration": 191,
+              "durationISO8601": "PT3M11S",
+              "warnings": {
+                "short": "Contains strong language and adult humour.",
+                "long": "Contains strong language and adult humour."
+              },
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1540218932000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "id": "urn:bbc:ares::asset:bengali/media-23269006",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/bengali/media",
+          "urlIdentifier": "/bengali/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news",
+          "uri": "/bengali",
+          "urlIdentifier": "/bengali",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "id": "urn:bbc:ares::asset:bengali/media-23269006",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/bengali/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news",
-      "uri": "/bengali",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:20:57.837Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 4,
+        "records": [
+          {
+            "id": "be7c3955-a895-154d-9d05-eed86509a13a",
+            "rank": 1,
+            "count": 6351,
+            "urn": "urn:bbc:curie:asset:be7c3955-a895-154d-9d05-eed86509a13a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Audio: ক্যান্সার মানেই মৃত্যু ঘনিয়ে আসা নয়",
+                "headline": "ক্যান্সার মানেই মৃত্যু ঘনিয়ে আসা নয় short synopsis"
+              },
+              "locators": {
+                "assetUri": "/bengali/media-23066857",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/media-23066857",
+                "curie": "http://www.bbc.co.uk/asset/be7c3955-a895-154d-9d05-eed86509a13a",
+                "assetId": "23066857"
+              },
+              "summary": "ক্যান্সারে আক্রান্ত হওয়া মানেই আয়ু প্রায় শেষ, এই ধারণা শেষ হতে চলল বলে। আজকাল শরীরে ক্যান্সার ধরা পড়ার পরও অনেকে বছরের পর বছর বাঁচছেন সঠিক ও উন্নত চিকিৎসার সুবাদে।",
+              "timestamp": 1470826304000,
+              "language": "bn",
+              "media": {
+                "id": "23066858",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p0152dbg",
+                "entityType": "Clip",
+                "caption": "ক্যান্সার মানেই মৃত্যু ঘনিয়ে আসা নয় short synopsis overtype জচজ",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63502751",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3D68/test/_63502751_p012zl0f.jpg",
+                "path": "/cpsdevpb/3D68/test/_63502751_p012zl0f.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "হগড়হটগ টহযগড়হট পটদতকদক",
+                "caption": "ড়ড়হডপটজ দতকটপটজহ সানব",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/media-23066857",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "01014d01-dda7-884b-89ff-4795088d7632",
+            "rank": 2,
+            "count": 4640,
+            "urn": "urn:bbc:curie:asset:01014d01-dda7-884b-89ff-4795088d7632",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "The short headline; with a Quala in it",
+                "headline": "The summary"
+              },
+              "locators": {
+                "assetUri": "/bengali/content-23164015",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/content-23164015",
+                "curie": "http://www.bbc.co.uk/asset/01014d01-dda7-884b-89ff-4795088d7632",
+                "assetId": "23164015"
+              },
+              "summary": "Synopsis",
+              "timestamp": 1510550255000,
+              "language": "bn",
+              "media": {
+                "id": "p01dyx4r",
+                "subType": "clip",
+                "format": "video",
+                "title": "The short headline",
+                "synopses": {
+                  "short": "The summary",
+                  "medium": "Synopsis",
+                  "long": "Synopsissssss"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01dyxhq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "The summary",
+                "versions": [
+                  {
+                    "versionId": "p01dyx4t",
+                    "types": ["Original"],
+                    "duration": 32,
+                    "durationISO8601": "PT32S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1510548859000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63599605",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C60B/test/_63599605_p01dyxhq.jpg",
+                "path": "/cpsdevpb/C60B/test/_63599605_p01dyxhq.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Quala",
+                "caption": "Cap",
+                "copyrightHolder": "BBC Sport",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/content-23164015",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "73c58aaf-3794-c546-a486-4be3ee930787",
+            "rank": 3,
+            "count": 2571,
+            "urn": "urn:bbc:curie:asset:73c58aaf-3794-c546-a486-4be3ee930787",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "How beautiful wild life is? = short healine",
+                "headline": "Widllife: Isn;t it beautiful? = long headilne"
+              },
+              "locators": {
+                "assetUri": "/bengali/23165145",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:73c58aaf-3794-c546-a486-4be3ee930787",
+                "assetId": "23165145",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23165145",
+                "curie": "http://www.bbc.co.uk/asset/73c58aaf-3794-c546-a486-4be3ee930787"
+              },
+              "summary": "This is the summary so can be much longer - up to 120 characters",
+              "timestamp": 1510722796000,
+              "language": "bn",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01f1153",
+                "subType": "clip",
+                "format": "video",
+                "title": "How beautiful wild life is? = short healine",
+                "synopses": {
+                  "short": "Widllife: Isn;t it beautiful? = long headilne",
+                  "medium": "This is the summary so can be much longer - up to 120 characters",
+                  "long": "Whatever you write in here goes into the body of the story"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01f11dz.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Widllife: Is not it beautiful?",
+                "versions": [
+                  {
+                    "versionId": "p01f1155",
+                    "types": ["Original"],
+                    "duration": 30,
+                    "durationISO8601": "PT30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1510721941000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63600423",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7E90/test/_63600423_p01f11dz.jpg",
+                "path": "/cpsdevpb/7E90/test/_63600423_p01f11dz.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Wild Life",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23165145",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "106b637b-efe8-2046-939c-cec9e63a40ad",
+            "rank": 4,
+            "count": 1985,
+            "urn": "urn:bbc:curie:asset:106b637b-efe8-2046-939c-cec9e63a40ad",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "রিও'র জনপ্রিয় পথ চিত্রশিল্পীর হাতে থাকবে অলিম্পিক মশাল BBC updated",
+                "headline": "রিও'র জনপ্রিয় পথ চিত্রশিল্পীর হাতে থাকবে অলিম্পিক মশাল BBC full headline overtype updated"
+              },
+              "locators": {
+                "assetUri": "/bengali/media-23066148",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/media-23066148",
+                "curie": "http://www.bbc.co.uk/asset/106b637b-efe8-2046-939c-cec9e63a40ad",
+                "assetId": "23066148"
+              },
+              "summary": "মার্কোস রদ্রিগো নেভেস যিনি ওয়ার্ক রোকিনহা নামেও পরিচিত, রিও শহরজুড়ে রয়েছে তাঁর পথ চিত্রকর্ম। updated",
+              "timestamp": 1470844771000,
+              "language": "bn",
+              "media": {
+                "id": "23066149",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0151b5p",
+                "entityType": "Clip",
+                "caption": "রিও'র জনপ্রিয় পথ চিত্রশিল্পীর হাতে থাকবে অলিম্পিক মশাল BBC overtype caption updated",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63502976",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10950/test/_63502976_ebcea40b-cb5d-4eba-a8a4-cb1d720311fc.jpg",
+                "path": "/cpsdevpb/10950/test/_63502976_ebcea40b-cb5d-4eba-a8a4-cb1d720311fc.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "কারা এই হামলা চালিয়েছে সেটা স্পষ্ট নয়।",
+                "caption": "updated যডপটযটয",
+                "copyrightHolder": "বিবিমি",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/media-23066148",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
