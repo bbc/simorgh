@@ -1,147 +1,332 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:persian/iran-23231114",
-    "locators": {
-      "assetUri": "/persian/iran-23231114",
-      "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23231114",
-      "curie": "http://www.bbc.co.uk/asset/43667729-4c50-834f-a4b5-c0c95c3cafcf",
-      "assetId": "23231114"
-    },
-    "type": "MAP",
-    "createdBy": "persian-v6",
-    "language": "fa",
-    "lastUpdated": 1588336099853,
-    "firstPublished": 1550234871000,
-    "lastPublished": 1550234871000,
-    "timestamp": 1550234871000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "persian.iran.media_asset.23231114.page",
-      "cps_asset_id": "23231114"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01lmkjh",
-        "subType": "clip",
-        "format": "audio",
-        "title": "Trump short headline",
-        "synopses": {
-          "short": "Trump long headline",
-          "medium": "Trump summary text"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:persian/iran-23231114",
+        "locators": {
+          "assetUri": "/persian/iran-23231114",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:43667729-4c50-834f-a4b5-c0c95c3cafcf",
+          "assetId": "23231114",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23231114",
+          "curie": "http://www.bbc.co.uk/asset/43667729-4c50-834f-a4b5-c0c95c3cafcf"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01lmkk5.jpg",
-        "embedding": true,
-        "advertising": false,
-        "caption": "Trump long headline",
-        "versions": [
-          {
-            "versionId": "p01lmkjk",
-            "types": ["Original"],
-            "duration": 26,
-            "durationISO8601": "PT26S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1550234248000
-          }
-        ],
-        "imageCopyright": "AFP",
-        "type": "media"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Trump short headline",
-      "headline": "Trump long headline"
-    },
-    "locators": {
-      "assetUri": "/persian/iran-23231114",
-      "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23231114",
-      "curie": "http://www.bbc.co.uk/asset/43667729-4c50-834f-a4b5-c0c95c3cafcf",
-      "assetId": "23231114"
-    },
-    "summary": "Trump summary text",
-    "timestamp": 1550234871000,
-    "language": "fa",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01lmkjh",
-      "subType": "clip",
-      "format": "audio",
-      "title": "Trump short headline",
-      "synopses": {
-        "short": "Trump long headline",
-        "medium": "Trump summary text"
+        "type": "MAP",
+        "createdBy": "persian-v6",
+        "language": "fa",
+        "lastUpdated": 1665414984844,
+        "firstPublished": 1550234871000,
+        "lastPublished": 1550234871000,
+        "timestamp": 1550234871000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "persian.iran.media_asset.23231114.page",
+          "cps_asset_id": "23231114",
+          "contentId": "urn:bbc:cps:curie:asset:43667729-4c50-834f-a4b5-c0c95c3cafcf"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["media"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "PERSIAN",
+          "producerId": "69"
+        },
+        "siteUri": "/persian",
+        "mediaType": "audio",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01lmkk5.jpg",
-      "embedding": true,
-      "advertising": false,
-      "caption": "Trump long headline",
-      "versions": [
-        {
-          "versionId": "p01lmkjk",
-          "types": ["Original"],
-          "duration": 26,
-          "durationISO8601": "PT26S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1550234248000
-        }
-      ],
-      "imageCopyright": "AFP",
-      "type": "media"
+      "content": {
+        "blocks": [
+          {
+            "id": "p01lmkjh",
+            "subType": "clip",
+            "format": "audio",
+            "title": "Trump short headline",
+            "synopses": {
+              "short": "Trump long headline",
+              "medium": "Trump summary text"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01lmkk5.jpg",
+            "embedding": true,
+            "advertising": false,
+            "caption": "Trump long headline",
+            "versions": [
+              {
+                "versionId": "p01lmkjk",
+                "types": ["Original"],
+                "duration": 26,
+                "durationISO8601": "PT26S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1550234248000
+              }
+            ],
+            "imageCopyright": "AFP",
+            "smpKind": "radioProgramme",
+            "type": "media"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Trump short headline",
+          "headline": "Trump long headline"
+        },
+        "locators": {
+          "assetUri": "/persian/iran-23231114",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:43667729-4c50-834f-a4b5-c0c95c3cafcf",
+          "assetId": "23231114",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/iran-23231114",
+          "curie": "http://www.bbc.co.uk/asset/43667729-4c50-834f-a4b5-c0c95c3cafcf"
+        },
+        "summary": "Trump summary text",
+        "timestamp": 1550234871000,
+        "language": "fa",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01lmkjh",
+          "subType": "clip",
+          "format": "audio",
+          "title": "Trump short headline",
+          "synopses": {
+            "short": "Trump long headline",
+            "medium": "Trump summary text"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01lmkk5.jpg",
+          "embedding": true,
+          "advertising": false,
+          "caption": "Trump long headline",
+          "versions": [
+            {
+              "versionId": "p01lmkjk",
+              "types": ["Original"],
+              "duration": 26,
+              "durationISO8601": "PT26S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1550234248000
+            }
+          ],
+          "imageCopyright": "AFP",
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63700558",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/14DFC/test/_63700558_p01lmkk5.jpg",
+          "path": "/cpsdevpb/14DFC/test/_63700558_p01lmkk5.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Trump getting upset",
+          "copyrightHolder": "AFP",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:persian/iran-23231114",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "صفحه ایران",
+          "uri": "/persian/iran",
+          "urlIdentifier": "/persian/iran",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Persian v6",
+          "uri": "/persian",
+          "urlIdentifier": "/persian",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "63700558",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/14DFC/test/_63700558_p01lmkk5.jpg",
-      "path": "/cpsdevpb/14DFC/test/_63700558_p01lmkk5.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "Trump getting upset",
-      "copyrightHolder": "AFP",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:persian/iran-23231114",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "صفحه ایران",
-      "uri": "/persian/iran",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "Persian v6",
-      "uri": "/persian",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:16:59.523Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "8ccdbd83-a87f-1547-add1-819750072744",
+            "rank": 1,
+            "count": 6458,
+            "urn": "urn:bbc:curie:asset:8ccdbd83-a87f-1547-add1-819750072744",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "فثسف RTL تلاستنلیانلتایل سلتاستیلاسنت بلتنا test2 فاهسبی ثقاسنتا سباسبتنب",
+                "headline": "بش (BBC) صاحبان کسب و کار در آمریکا درباره حال و آینده اقتصاد ایالات متحده چه فکر می کنند؟"
+              },
+              "locators": {
+                "assetUri": "/persian/media-23072692",
+                "cpsUrn": "urn:bbc:content:assetUri:persian/media-23072692",
+                "curie": "http://www.bbc.co.uk/asset/8ccdbd83-a87f-1547-add1-819750072744",
+                "assetId": "23072692"
+              },
+              "summary": "یتسباسیتباستنباشسیبن @ sahas بتاتلابلایبتللینبتل س سینتابنتاس نیتبسی سیباسنبتاسنت",
+              "timestamp": 1473353045000,
+              "language": "fa",
+              "media": {
+                "id": "23072693",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015hmg1",
+                "entityType": "Clip",
+                "caption": "بش (BBC) صاحبان کسب و کار در آمریکا درباره حال و آینده اقتصاد ایالات متحده چه فکر می کنند؟",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63507466",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/103A6/test/_63507466_p015hn07.jpg",
+                "path": "/cpsdevpb/103A6/test/_63507466_p015hn07.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "شمف فثطف زشسفشصشغ alt tag",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:persian/media-23072692",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f888ea07-4108-1940-94c2-2ca711fbf278",
+            "rank": 2,
+            "count": 4955,
+            "urn": "urn:bbc:curie:asset:f888ea07-4108-1940-94c2-2ca711fbf278",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "فعالیت های حزب راست افراطی آلمان، شرایط را برای بعضی مهاجران نا امن کرده",
+                "headline": "فعالیت های حزب راست افراطی آلمان، شرایط را برای بعضی مهاجران نا امن کرده short"
+              },
+              "locators": {
+                "assetUri": "/persian/sport-23072986",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:f888ea07-4108-1940-94c2-2ca711fbf278",
+                "assetId": "23072986",
+                "cpsUrn": "urn:bbc:content:assetUri:persian/sport-23072986",
+                "curie": "http://www.bbc.co.uk/asset/f888ea07-4108-1940-94c2-2ca711fbf278"
+              },
+              "summary": "در بین کشورهای اروپایی، آلمان، بیشترین پناهجو را پذیرفته. اما با فعالیت های حزب راست افراطی و سیاست های ضد مهاجرتی آن حالا بعضی شهرها دیگر جای امنی برای پناهجوها نیستند.",
+              "timestamp": 1473414341000,
+              "language": "fa",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+                "taggings": []
+              },
+              "media": {
+                "id": "23072987",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015hmrp",
+                "entityType": "Clip",
+                "caption": "فعالیت های حزب راست افراطی آلمان، شرایط را برای بعضی مهاجران نا امن کرده short",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63507659",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/175B6/test/_63507659_p015j1nq.jpg",
+                "path": "/cpsdevpb/175B6/test/_63507659_p015j1nq.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "سیامک و باقر نمازی",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:persian/sport-23072986",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a4f1d2bb-6544-2e48-a860-945ea73e8743",
+            "rank": 3,
+            "count": 2153,
+            "urn": "urn:bbc:curie:asset:a4f1d2bb-6544-2e48-a860-945ea73e8743",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "فاهس هس بشقسه فثطف mixed English text ثدی فهفمث",
+                "headline": "،اهس هس ساخقف سغدخحسهس added English text ثدی"
+              },
+              "locators": {
+                "assetUri": "/persian/world-23072946",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a4f1d2bb-6544-2e48-a860-945ea73e8743",
+                "assetId": "23072946",
+                "cpsUrn": "urn:bbc:content:assetUri:persian/world-23072946",
+                "curie": "http://www.bbc.co.uk/asset/a4f1d2bb-6544-2e48-a860-945ea73e8743"
+              },
+              "summary": "بشقسه فثطف قهلاف شمهلدثی english text بشقسه",
+              "timestamp": 1473354254000,
+              "language": "fa",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+                "taggings": []
+              },
+              "media": {
+                "id": "23072947",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p015hnbc",
+                "entityType": "Clip",
+                "caption": "،اهس هس ساخقف سغدخحسهس added English text ثدی",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63507618",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13F06/test/_63507618_p015hnw4.jpg",
+                "path": "/cpsdevpb/13F06/test/_63507618_p015hnw4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "فاهس هس بشقسه alt tag شمف",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:persian/world-23072946",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
