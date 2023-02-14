@@ -1,171 +1,351 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:ukrainian/other-news-23279018",
-    "locators": {
-      "assetUri": "/ukrainian/other-news-23279018",
-      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/other-news-23279018",
-      "curie": "http://www.bbc.co.uk/asset/2af9a514-a7c6-5647-a7f3-786b5b71555a",
-      "assetId": "23279018"
-    },
-    "type": "MAP",
-    "createdBy": "ukrainian-v6",
-    "language": "uk",
-    "lastUpdated": 1588335916055,
-    "firstPublished": 1585041417000,
-    "lastPublished": 1585041417000,
-    "timestamp": 1585041417000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "ukrainian.other_news.media_asset.23279018.page",
-      "cps_asset_id": "23279018"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01k6msm",
-        "subType": "clip",
-        "format": "video",
-        "title": "Five things ants can teach us about management",
-        "synopses": {
-          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:ukrainian/other-news-23279018",
+        "locators": {
+          "assetUri": "/ukrainian/other-news-23279018",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:2af9a514-a7c6-5647-a7f3-786b5b71555a",
+          "assetId": "23279018",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/other-news-23279018",
+          "curie": "http://www.bbc.co.uk/asset/2af9a514-a7c6-5647-a7f3-786b5b71555a"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "ukrainian-v6",
+        "language": "uk",
+        "lastUpdated": 1665419853798,
+        "firstPublished": 1585041417000,
+        "lastPublished": 1585041417000,
+        "timestamp": 1585041417000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "ukrainian.other_news.media_asset.23279018.page",
+          "cps_asset_id": "23279018",
+          "contentId": "urn:bbc:cps:curie:asset:2af9a514-a7c6-5647-a7f3-786b5b71555a"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "UKRAINIAN",
+          "producerId": "94"
+        },
+        "readTime": 1,
+        "siteUri": "/ukrainian",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01k6msp",
-            "types": ["Original"],
-            "duration": 191,
-            "durationISO8601": "PT3M11S",
-            "warnings": {
-              "short": "Contains strong language and adult humour.",
-              "long": "Contains strong language and adult humour."
+            "id": "p01k6msm",
+            "subType": "clip",
+            "format": "video",
+            "title": "Five things ants can teach us about management",
+            "synopses": {
+              "short": "They may be tiny, but us humans could learn a thing or two from ants."
             },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1540218932000
-          }
-        ],
-        "imageCopyright": "BBC",
-        "type": "media"
-      },
-      {
-        "text": "Ви колись бачили порожню Площу Ринок у Львові? Показуємо, як виглядають міста України під час карантину.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Львів, Одеса, Кропивницький, Київ - Україна офіційно на карантині.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "З 12 березня його запровадили в Києві, а з 17 березня в столиці припинили роботу метро й всіх розважальних закладів, кафе, ресторанів та ТРЦ.цінує Володимира Путіна. А той, в свою чергу, вважає його талановитим і яскравим політиком.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Симпатію росіян до республіканця Трампа намагається пояснити кореспондент BBC Стівен Розенберг.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Коронавірус: як живе Україна на карантині (Ukrainian Test)",
-      "headline": "Коронавірус: як живе Україна на карантині (Ukrainian Test)"
-    },
-    "locators": {
-      "assetUri": "/ukrainian/other-news-23279018",
-      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/other-news-23279018",
-      "curie": "http://www.bbc.co.uk/asset/2af9a514-a7c6-5647-a7f3-786b5b71555a",
-      "assetId": "23279018"
-    },
-    "summary": "Коронавірус: як живе Україна на карантині (Ukrainian Test)",
-    "timestamp": 1585041417000,
-    "language": "uk",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01k6msm",
-      "subType": "clip",
-      "format": "video",
-      "title": "Five things ants can teach us about management",
-      "synopses": {
-        "short": "They may be tiny, but us humans could learn a thing or two from ants."
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
-      "versions": [
-        {
-          "versionId": "p01k6msp",
-          "types": ["Original"],
-          "duration": 191,
-          "durationISO8601": "PT3M11S",
-          "warnings": {
-            "short": "Contains strong language and adult humour.",
-            "long": "Contains strong language and adult humour."
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+            "versions": [
+              {
+                "versionId": "p01k6msp",
+                "types": ["Original"],
+                "duration": 191,
+                "durationISO8601": "PT3M11S",
+                "warnings": {
+                  "short": "Contains strong language and adult humour.",
+                  "long": "Contains strong language and adult humour."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1540218932000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
           },
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1540218932000
-        }
-      ],
-      "imageCopyright": "BBC",
-      "type": "media"
+          {
+            "text": "Ви колись бачили порожню Площу Ринок у Львові? Показуємо, як виглядають міста України під час карантину.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Львів, Одеса, Кропивницький, Київ - Україна офіційно на карантині.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "З 12 березня його запровадили в Києві, а з 17 березня в столиці припинили роботу метро й всіх розважальних закладів, кафе, ресторанів та ТРЦ.цінує Володимира Путіна. А той, в свою чергу, вважає його талановитим і яскравим політиком.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Симпатію росіян до республіканця Трампа намагається пояснити кореспондент BBC Стівен Розенберг.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Коронавірус: як живе Україна на карантині (Ukrainian Test)",
+          "headline": "Коронавірус: як живе Україна на карантині (Ukrainian Test)"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/other-news-23279018",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:2af9a514-a7c6-5647-a7f3-786b5b71555a",
+          "assetId": "23279018",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/other-news-23279018",
+          "curie": "http://www.bbc.co.uk/asset/2af9a514-a7c6-5647-a7f3-786b5b71555a"
+        },
+        "summary": "Коронавірус: як живе Україна на карантині (Ukrainian Test)",
+        "timestamp": 1585041417000,
+        "language": "uk",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01k6msm",
+          "subType": "clip",
+          "format": "video",
+          "title": "Five things ants can teach us about management",
+          "synopses": {
+            "short": "They may be tiny, but us humans could learn a thing or two from ants."
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+          "versions": [
+            {
+              "versionId": "p01k6msp",
+              "types": ["Original"],
+              "duration": 191,
+              "durationISO8601": "PT3M11S",
+              "warnings": {
+                "short": "Contains strong language and adult humour.",
+                "long": "Contains strong language and adult humour."
+              },
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1540218932000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63519926",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/F60F/test/_63519926_p016cr26.jpg",
+          "path": "/cpsdevpb/F60F/test/_63519926_p016cr26.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "цуу уйцу єждґячсю",
+          "copyrightHolder": "Magnum Photos",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/other-news-23279018",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Також у новинах",
+          "uri": "/ukrainian/other_news",
+          "urlIdentifier": "/ukrainian/other_news",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Україна",
+          "uri": "/ukrainian",
+          "urlIdentifier": "/ukrainian",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "63519926",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/F60F/test/_63519926_p016cr26.jpg",
-      "path": "/cpsdevpb/F60F/test/_63519926_p016cr26.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "цуу уйцу єждґячсю",
-      "copyrightHolder": "Magnum Photos",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:ukrainian/other-news-23279018",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Також у новинах",
-      "uri": "/ukrainian/other_news",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Україна",
-      "uri": "/ukrainian",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:25:59.229Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T03:53:00Z",
+        "totalRecords": 2,
+        "records": [
+          {
+            "id": "e346fdd6-fbe7-7145-80a3-88ae47d62342",
+            "rank": 1,
+            "count": 9217,
+            "urn": "urn:bbc:curie:asset:e346fdd6-fbe7-7145-80a3-88ae47d62342",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Чому росіяни віддали б голоси за Трампа? (Russian TEST)",
+                "headline": "Чому росіяни віддали б голоси за Трампа? (Russian TEST)"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/world-23087423",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e346fdd6-fbe7-7145-80a3-88ae47d62342",
+                "assetId": "23087423",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/world-23087423",
+                "curie": "http://www.bbc.co.uk/asset/e346fdd6-fbe7-7145-80a3-88ae47d62342"
+              },
+              "summary": "Росія - єдина країна \"Великої двадцятки\", окрім самих США, в якій на майбутніх президентських виборах у Сполучених Штатах проголосували б не за Гіларі Клінтон.",
+              "timestamp": 1477664959000,
+              "language": "ru",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01k6msm",
+                "subType": "clip",
+                "format": "video",
+                "title": "Five things ants can teach us about management",
+                "synopses": {
+                  "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+                "versions": [
+                  {
+                    "versionId": "p01k6msp",
+                    "types": ["Original"],
+                    "duration": 191,
+                    "durationISO8601": "PT3M11S",
+                    "warnings": {
+                      "short": "Contains strong language and adult humour.",
+                      "long": "Contains strong language and adult humour."
+                    },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1540218932000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63519926",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/F60F/test/_63519926_p016cr26.jpg",
+                "path": "/cpsdevpb/F60F/test/_63519926_p016cr26.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "цуу уйцу єждґячсю",
+                "copyrightHolder": "Magnum Photos",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/world-23087423",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ec9db30d-70a8-e047-acf7-d54a16573a1f",
+            "rank": 2,
+            "count": 9081,
+            "urn": "urn:bbc:curie:asset:ec9db30d-70a8-e047-acf7-d54a16573a1f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Live TV bulletin",
+                "headline": "Live TV bulletin"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/23188133",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:ec9db30d-70a8-e047-acf7-d54a16573a1f",
+                "assetId": "23188133",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/23188133",
+                "curie": "http://www.bbc.co.uk/asset/ec9db30d-70a8-e047-acf7-d54a16573a1f"
+              },
+              "summary": "Live TV bulletin",
+              "timestamp": 1519141675000,
+              "language": "uk",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "taggings": []
+              },
+              "media": {
+                "id": "63501296",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "journalism_world_service_stream_01",
+                "duration": "PT0S",
+                "caption": "bbc",
+                "image": {
+                  "id": "63501296",
+                  "subType": "thumbnail",
+                  "href": "http://b.files.bbci.co.uk/7D4B/test/_63657023__100102369_kfc_closed_reuters.jpg",
+                  "path": "/cpsdevpb/7D4B/test/_63657023__100102369_kfc_closed_reuters.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "bbc",
+                  "copyrightHolder": "(C) British Broadcasting Corporation",
+                  "type": "image"
+                },
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63657028",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1409B/test/_63657028__100102369_kfc_closed_reuters.jpg",
+                "path": "/cpsdevpb/1409B/test/_63657028__100102369_kfc_closed_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "bbc",
+                "caption": "bbc",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/23188133",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
