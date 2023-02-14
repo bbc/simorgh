@@ -1,164 +1,477 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:somali/hayadeed-23269042",
-    "locators": {
-      "assetUri": "/somali/hayadeed-23269042",
-      "cpsUrn": "urn:bbc:content:assetUri:somali/hayadeed-23269042",
-      "curie": "http://www.bbc.co.uk/asset/53b6eaa9-125c-6440-93cb-4c60607551a0",
-      "assetId": "23269042"
-    },
-    "type": "MAP",
-    "createdBy": "somali-v6",
-    "language": "so",
-    "lastUpdated": 1588335919609,
-    "firstPublished": 1583166801000,
-    "lastPublished": 1583166801000,
-    "timestamp": 1583166801000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "somali.institutional.media_asset.23269042.page",
-      "cps_asset_id": "23269042"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01m7d07",
-        "subType": "clip",
-        "format": "audio",
-        "title": "Birmingham checkout",
-        "synopses": {
-          "short": "Some audio from a supermarket checkout in Birmingham"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:somali/hayadeed-23269042",
+        "locators": {
+          "assetUri": "/somali/hayadeed-23269042",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/hayadeed-23269042",
+          "curie": "http://www.bbc.co.uk/asset/53b6eaa9-125c-6440-93cb-4c60607551a0",
+          "assetId": "23269042"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-        "embedding": false,
-        "advertising": false,
-        "caption": "Some audio from a supermarket checkout in Birmingham",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "somali-v6",
+        "language": "so",
+        "lastUpdated": 1647278512389,
+        "firstPublished": 1583166801000,
+        "lastPublished": 1583166801000,
+        "timestamp": 1583166801000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "somali.institutional.media_asset.23269042.page",
+          "cps_asset_id": "23269042",
+          "contentId": "urn:bbc:cps:curie:asset:53b6eaa9-125c-6440-93cb-4c60607551a0"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.5",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "SOMALI",
+          "producerId": "83"
+        },
+        "readTime": 1,
+        "siteUri": "/somali"
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01m7d09",
-            "types": ["Original"],
-            "duration": 127,
-            "durationISO8601": "PT2M7S",
-            "warnings": {
-              "short": "Contains some strong language.",
-              "long": "Contains some strong language."
+            "id": "p01m7d07",
+            "subType": "clip",
+            "format": "audio",
+            "title": "Birmingham checkout",
+            "synopses": {
+              "short": "Some audio from a supermarket checkout in Birmingham"
             },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1555067395000
-          }
-        ],
-        "imageCopyright": "Getty Images",
-        "type": "media"
-      },
-      {
-        "text": "Qaar kamid ah waxay xilka qabteen iyagoo leh hanti ama kasoo jeedaa qoys hanti leh, halka kuwa kalena ay ka yimaadeen qoysas aan waxba heysanin.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Warbaahinta Fox News ee dalka Mareykanka ayaa warbixin ka qortay shanta madaxweyne ee ugu hantida badnaa ee qabtay hogaanka dalkaasi.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      { "text": "Heading", "markupType": "plain_text", "type": "paragraph" },
-      { "text": "Subheading", "markupType": "plain_text", "type": "paragraph" },
-      { "text": "Crosshead", "markupType": "plain_text", "type": "paragraph" }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Birmingham checkout",
-      "headline": "Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka"
-    },
-    "locators": {
-      "assetUri": "/somali/hayadeed-23269042",
-      "cpsUrn": "urn:bbc:content:assetUri:somali/hayadeed-23269042",
-      "curie": "http://www.bbc.co.uk/asset/53b6eaa9-125c-6440-93cb-4c60607551a0",
-      "assetId": "23269042"
-    },
-    "summary": "Somali",
-    "timestamp": 1583166801000,
-    "language": "so",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01m7d07",
-      "subType": "clip",
-      "format": "audio",
-      "title": "Birmingham checkout",
-      "synopses": {
-        "short": "Some audio from a supermarket checkout in Birmingham"
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-      "embedding": false,
-      "advertising": false,
-      "caption": "Some audio from a supermarket checkout in Birmingham",
-      "versions": [
-        {
-          "versionId": "p01m7d09",
-          "types": ["Original"],
-          "duration": 127,
-          "durationISO8601": "PT2M7S",
-          "warnings": {
-            "short": "Contains some strong language.",
-            "long": "Contains some strong language."
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+            "embedding": false,
+            "advertising": false,
+            "caption": "Some audio from a supermarket checkout in Birmingham",
+            "versions": [
+              {
+                "versionId": "p01m7d09",
+                "types": ["Original"],
+                "duration": 127,
+                "durationISO8601": "PT2M7S",
+                "warnings": {
+                  "short": "Contains some strong language.",
+                  "long": "Contains some strong language."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1555067395000
+              }
+            ],
+            "imageCopyright": "Getty Images",
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1555067395000
-        }
-      ],
-      "imageCopyright": "Getty Images",
-      "type": "media"
+          {
+            "text": "Qaar kamid ah waxay xilka qabteen iyagoo leh hanti ama kasoo jeedaa qoys hanti leh, halka kuwa kalena ay ka yimaadeen qoysas aan waxba heysanin.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Warbaahinta Fox News ee dalka Mareykanka ayaa warbixin ka qortay shanta madaxweyne ee ugu hantida badnaa ee qabtay hogaanka dalkaasi.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Heading",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Subheading",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Crosshead",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Birmingham checkout",
+          "headline": "Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka"
+        },
+        "locators": {
+          "assetUri": "/somali/hayadeed-23269042",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/hayadeed-23269042",
+          "curie": "http://www.bbc.co.uk/asset/53b6eaa9-125c-6440-93cb-4c60607551a0",
+          "assetId": "23269042"
+        },
+        "summary": "Somali",
+        "timestamp": 1583166801000,
+        "language": "so",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01m7d07",
+          "subType": "clip",
+          "format": "audio",
+          "title": "Birmingham checkout",
+          "synopses": {
+            "short": "Some audio from a supermarket checkout in Birmingham"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+          "embedding": false,
+          "advertising": false,
+          "caption": "Some audio from a supermarket checkout in Birmingham",
+          "versions": [
+            {
+              "versionId": "p01m7d09",
+              "types": ["Original"],
+              "duration": 127,
+              "durationISO8601": "PT2M7S",
+              "warnings": {
+                "short": "Contains some strong language.",
+                "long": "Contains some strong language."
+              },
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1555067395000
+            }
+          ],
+          "imageCopyright": "Getty Images",
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63732079",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/17AFF/test/_63732079_p01mt2kt.jpg",
+          "path": "/cpsdevpb/17AFF/test/_63732079_p01mt2kt.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "England star Fran Kirby",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:somali/hayadeed-23269042",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Institutional",
+          "uri": "/somali/institutional",
+          "urlIdentifier": "/somali/institutional",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Somali",
+          "uri": "/somali",
+          "urlIdentifier": "/somali",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "63732079",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/17AFF/test/_63732079_p01mt2kt.jpg",
-      "path": "/cpsdevpb/17AFF/test/_63732079_p01mt2kt.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "England star Fran Kirby",
-      "copyrightHolder": "Getty Images",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:somali/hayadeed-23269042",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Institutional",
-      "uri": "/somali/institutional",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "Somali",
-      "uri": "/somali",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:20:00.163Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 5,
+        "records": [
+          {
+            "id": "172022bb-2241-a745-90a2-f2589defdc4b",
+            "rank": 1,
+            "count": 9485,
+            "urn": "urn:bbc:curie:asset:172022bb-2241-a745-90a2-f2589defdc4b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Test 1 - Magari yasiyotumia mafuta yaanza kazi ivertype",
+                "headline": "Test 2 - Magari yasiyotumia mafuta yaanza kazi Kenya"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-23063597",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:172022bb-2241-a745-90a2-f2589defdc4b",
+                "assetId": "23063597",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-23063597",
+                "curie": "http://www.bbc.co.uk/asset/172022bb-2241-a745-90a2-f2589defdc4b"
+              },
+              "summary": "Test 3 - Magari yasiyotumia mafuta yaanza kazi Kenya",
+              "timestamp": 1469800474000,
+              "language": "bn",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "taggings": []
+              },
+              "media": {
+                "id": "23062547",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p014t04t",
+                "entityType": "Clip",
+                "caption": "Test 2 - Magari yasiyotumia mafuta yaanza kazi Kenya",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63498089",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/17F29/test/_63498089_p012zl0f.jpg",
+                "path": "/cpsdevpb/17F29/test/_63498089_p012zl0f.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Logo",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-23063597",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "562203d3-286e-7140-ad85-142dd7e8f601",
+            "rank": 2,
+            "count": 8533,
+            "urn": "urn:bbc:curie:asset:562203d3-286e-7140-ad85-142dd7e8f601",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uganda oo sheegtay ka baxida Soomaaliya 30",
+                "headline": "Uganda oo sheegtay ka baxida Soomaaliya 30"
+              },
+              "locators": {
+                "assetUri": "/somali/23055894",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:562203d3-286e-7140-ad85-142dd7e8f601",
+                "assetId": "23055894",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23055894",
+                "curie": "http://www.bbc.co.uk/asset/562203d3-286e-7140-ad85-142dd7e8f601"
+              },
+              "summary": "Uganda oo sheegtay ka baxida Soomaaliya 30",
+              "timestamp": 1466782420000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "63485393",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "bbc_world_service_west_africa",
+                "duration": "PT0S",
+                "caption": "Uganda oo sheegtay ka baxida Soomaaliya 30",
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63492875",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/E1E5/test/_63492875_160605152839_radio_station_640x360_bbc_nocredit.jpg",
+                "path": "/cpsdevpb/E1E5/test/_63492875_160605152839_radio_station_640x360_bbc_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Uganda oo sheegtay ka baxida Soomaaliya 30",
+                "caption": "Uganda oo sheegtay ka baxida Soomaaliya 30",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23055894",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "00bbf54d-ae1a-5340-9e6c-2d6eeeee5daf",
+            "rank": 3,
+            "count": 7395,
+            "urn": "urn:bbc:curie:asset:00bbf54d-ae1a-5340-9e6c-2d6eeeee5daf",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Biyo la'aan ka taagan deegaanka Siyeelow",
+                "headline": "Biyo la'aan ka taagan deegaanka Siyeelow"
+              },
+              "locators": {
+                "assetUri": "/somali/ka-qayb-gal-23057597",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:00bbf54d-ae1a-5340-9e6c-2d6eeeee5daf",
+                "assetId": "23057597",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/ka-qayb-gal-23057597",
+                "curie": "http://www.bbc.co.uk/asset/00bbf54d-ae1a-5340-9e6c-2d6eeeee5daf"
+              },
+              "summary": "Magaalada Siyeelo ayaa laga soo sheegayaa biyo la'aan kadib markii roobabkii ay u di'i waayeen sidii la filayey.",
+              "timestamp": 1467642123000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "23057598",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p014cn4t",
+                "entityType": "Clip",
+                "caption": "Biyo la'aan ka taagan deegaanka Siyeelow audio",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63494267",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/129D9/test/_63494267_p014cn5h.jpg",
+                "path": "/cpsdevpb/129D9/test/_63494267_p014cn5h.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "audio",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/ka-qayb-gal-23057597",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8acee938-41a4-9942-81ea-5665918885b2",
+            "rank": 4,
+            "count": 1183,
+            "urn": "urn:bbc:curie:asset:8acee938-41a4-9942-81ea-5665918885b2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Daawo: Xoola-dhaqato abaaro iyo daadad isugu xigsadeen",
+                "headline": "Daawo: Xoola-dhaqato abaaro iyo daadad isugu xigsadeen"
+              },
+              "locators": {
+                "assetUri": "/somali/media-23057594",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:8acee938-41a4-9942-81ea-5665918885b2",
+                "assetId": "23057594",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/media-23057594",
+                "curie": "http://www.bbc.co.uk/asset/8acee938-41a4-9942-81ea-5665918885b2"
+              },
+              "summary": "Malaayin qof oo ku nool geeska afrika ayaa waxa saamaysay abaar daba dheeraatay, taasi oo ku qaaday in ay u baahdaan gargaar bani’aadanimo.",
+              "timestamp": 1467641886000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "23057596",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p014cn2n",
+                "entityType": "Clip",
+                "caption": "Daawo: Xoola-dhaqato abaaro iyo daadad isugu xigsadeen",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63494119",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1640D/test/_63494119_p014cn38.jpg",
+                "path": "/cpsdevpb/1640D/test/_63494119_p014cn38.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Daawo: Xoola-dhaqato abaaro iyo daadad isugu xigsadeen",
+                "copyrightHolder": "Magnum Photos",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/media-23057594",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bee9a732-c1aa-764f-b056-c1d38f15d626",
+            "rank": 5,
+            "count": 794,
+            "urn": "urn:bbc:curie:asset:bee9a732-c1aa-764f-b056-c1d38f15d626",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Toos u daawo Euro 2016 live stream",
+                "headline": "Toos u daawo Euro 2016 live stream"
+              },
+              "locators": {
+                "assetUri": "/somali/media-23058074",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:bee9a732-c1aa-764f-b056-c1d38f15d626",
+                "assetId": "23058074",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/media-23058074",
+                "curie": "http://www.bbc.co.uk/asset/bee9a732-c1aa-764f-b056-c1d38f15d626"
+              },
+              "summary": "Kumanyaal ruux ayaa taagan hareeraha wadooyinka Louisville ee Kentucky si ay u daawadaan aaska Maxamed Cali.",
+              "timestamp": 1467803504000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "63485389",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "journalism_world_service_stream_01",
+                "duration": "PT0S",
+                "caption": "Toos u daawo Euro 2016",
+                "image": {
+                  "id": "63485389",
+                  "subType": "thumbnail",
+                  "href": "http://b.files.bbci.co.uk/0DDD/test/_63494530_160223150754_turkey_team_redcard_640x360_reuters_nocredit.jpg",
+                  "path": "/cpsdevpb/0DDD/test/_63494530_160223150754_turkey_team_redcard_640x360_reuters_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Euro 2016",
+                  "copyrightHolder": "Alamy",
+                  "type": "image"
+                },
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63494523",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7F25/test/_63494523_160223150754_turkey_team_redcard_640x360_reuters_nocredit.jpg",
+                "path": "/cpsdevpb/7F25/test/_63494523_160223150754_turkey_team_redcard_640x360_reuters_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Euro 2016",
+                "caption": "Euro 2016",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/media-23058074",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
