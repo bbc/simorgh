@@ -7,6 +7,12 @@ Add enabled experiments objects inside this array in this format:
   pageTypes: [],
 }
 */
-const enabledExperimentList = [];
+const enabledExperimentList = [
+  {
+    name: 'test_2',
+    services: ['mundo'],
+    pageTypes: ['STY'],
+  },
+];
 
 export default enabledExperimentList;

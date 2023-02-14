@@ -230,7 +230,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <NielsenAnalytics />
-
       <ArticleMetadata
         articleId={getArticleId(pageData)}
         title={headline}
