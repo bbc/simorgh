@@ -12,14 +12,15 @@ const {
 
 describe('getComponent', () => {
   it.each`
-    visualStyle | visualProminence | expected
-    ${BANNER}   | ${MINIMUM}       | ${MESSAGE_BANNER}
-    ${BANNER}   | ${LOW}           | ${MESSAGE_BANNER}
-    ${BANNER}   | ${NORMAL}        | ${MESSAGE_BANNER}
-    ${BANNER}   | ${HIGH}          | ${BILLBOARD}
-    ${BANNER}   | ${MAXIMUM}       | ${BILLBOARD}
-    ${NONE}     | ${NORMAL}        | ${SIMPLE_CURATION_GRID}
-    ${NONE}     | ${HIGH}          | ${HIERARCHICAL_CURATION_GRID}
+    visualStyle     | visualProminence     | expected
+    ${BANNER}       | ${MINIMUM}           | ${MESSAGE_BANNER}
+    ${BANNER}       | ${LOW}               | ${MESSAGE_BANNER}
+    ${BANNER}       | ${NORMAL}            | ${MESSAGE_BANNER}
+    ${BANNER}       | ${HIGH}              | ${BILLBOARD}
+    ${BANNER}       | ${MAXIMUM}           | ${BILLBOARD}
+    ${NONE}         | ${NORMAL}            | ${SIMPLE_CURATION_GRID}
+    ${NONE}         | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
+    ${'fake-style'} | ${'fake-prominence'} | ${null}
   `(
     'should render $expected when visual style is $visualStyle and visual prominence is $visualProminence',
     ({ visualStyle, visualProminence, expected }) => {
