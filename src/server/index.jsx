@@ -181,20 +181,10 @@ server.get(
     injectResourceHintsHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
-
-    const headersTest = {
-      ...headers,
-      ...{
-        'mvt-simorgh_dark_mode': 'experiment;control',
-        'mvt-simorgh_data_saving': 'saving',
-        'mvt-full_stack_test': 'Control_1'
-      },
-    };
-
     res.removeHeader('Expect-CT');
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
-      headers: removeSensitiveHeaders(headersTest),
+      headers: removeSensitiveHeaders(headers),
     });
 
     let derivedPageType = 'Unknown';
@@ -227,14 +217,14 @@ server.get(
       data.toggles = toggles;
       data.path = urlPath;
       data.timeOnServer = Date.now();
-      data.showAdsBasedOnLocation = headersTest['bbc-adverts'] === 'true';
+      data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
 
       let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
 
-        mvtExperiments = getMvtExperiments(headersTest, service, derivedPageType);
+        mvtExperiments = getMvtExperiments(headers, service, derivedPageType);
         data.mvtExperiments = mvtExperiments;
       } else {
         sendCustomMetric({
@@ -245,7 +235,7 @@ server.get(
         });
       }
 
-      const bbcOrigin = headersTest['bbc-origin'];
+      const bbcOrigin = headers['bbc-origin'];
 
       let result;
       try {
@@ -271,7 +261,7 @@ server.get(
           status,
           message,
           url,
-          headers: removeSensitiveHeaders(headersTest),
+          headers: removeSensitiveHeaders(headers),
         });
 
         result = await renderDocument({
@@ -318,7 +308,7 @@ server.get(
         status,
         message,
         url,
-        headers: removeSensitiveHeaders(headersTest),
+        headers: removeSensitiveHeaders(headers),
       });
 
       res.status(500).send('Internal server error');
