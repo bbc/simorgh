@@ -1,190 +1,277 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:turkce/media-23268997",
-    "locators": {
-      "assetUri": "/turkce/media-23268997",
-      "cpsUrn": "urn:bbc:content:assetUri:turkce/media-23268997",
-      "curie": "http://www.bbc.co.uk/asset/ebbdb429-1837-b34e-a5ec-1351d577da4b",
-      "assetId": "23268997"
-    },
-    "type": "MAP",
-    "createdBy": "turkish-v6",
-    "language": "tr",
-    "lastUpdated": 1588335919813,
-    "firstPublished": 1583162382000,
-    "lastPublished": 1583162382000,
-    "timestamp": 1583162382000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "turkce.embedded_video.media_asset.23268997.page",
-      "cps_asset_id": "23268997"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph", "heading", "image"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01m7d07",
-        "subType": "clip",
-        "format": "audio",
-        "title": "Birmingham checkout",
-        "synopses": {
-          "short": "Some audio from a supermarket checkout in Birmingham"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:turkce/media-23268997",
+        "locators": {
+          "assetUri": "/turkce/media-23268997",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/media-23268997",
+          "curie": "http://www.bbc.co.uk/asset/ebbdb429-1837-b34e-a5ec-1351d577da4b",
+          "assetId": "23268997"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-        "embedding": false,
-        "advertising": false,
-        "caption": "Some audio from a supermarket checkout in Birmingham",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "turkish-v6",
+        "language": "tr",
+        "lastUpdated": 1644764830932,
+        "firstPublished": 1583162382000,
+        "lastPublished": 1583162382000,
+        "timestamp": 1583162382000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "turkce.embedded_video.media_asset.23268997.page",
+          "cps_asset_id": "23268997",
+          "contentId": "urn:bbc:cps:curie:asset:ebbdb429-1837-b34e-a5ec-1351d577da4b"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.4",
+        "blockTypes": ["media", "paragraph", "heading", "image"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "TURKISH",
+          "producerId": "92"
+        },
+        "readTime": 1,
+        "siteUri": "/turkce"
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01m7d09",
-            "types": ["Original"],
-            "duration": 127,
-            "durationISO8601": "PT2M7S",
-            "warnings": {
-              "short": "Contains some strong language.",
-              "long": "Contains some strong language."
+            "id": "p01m7d07",
+            "subType": "clip",
+            "format": "audio",
+            "title": "Birmingham checkout",
+            "synopses": {
+              "short": "Some audio from a supermarket checkout in Birmingham"
             },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1555067395000
-          }
-        ],
-        "imageCopyright": "Getty Images",
-        "type": "media"
-      },
-      {
-        "text": "Tiramisu candy icing candy canes halvah bear claw pie. Bonbon chocolate bar topping fruitcake oat cake candy canes caramels. ",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Heading Jelly beans biscuit jelly beans gummies jelly-o gingerbread topping.",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Cupcake ipsum dolor. Sit amet candy jelly-o pie jelly beans jelly beans chocolate bar cupcake. Pudding muffin fruitcake cotton candy tootsie roll liquorice gummies. Chupa chups topping pudding. Bear claw toffee candy canes tiramisu carrot cake. Sweet candy carrot cake cake tootsie roll candy. Gummies cheesecake gummies icing marzipan gummi bears. Chocolate cake sugar plum chocolate bar. Sugar plum fruitcake cheesecake powder gingerbread cake pie. Tiramisu pudding toffee sweet. Brownie dragée fruitcake cookie tiramisu cotton candy bear claw bear claw. Muffin jelly beans chocolate sugar plum. Tiramisu lollipop gingerbread tootsie roll cake jelly beans gingerbread jujubes.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "63732048",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/14837/test/_63732048_starsinthesky.jpg",
-        "path": "/cpsdevpb/14837/test/_63732048_starsinthesky.jpg",
-        "height": 141,
-        "width": 220,
-        "altText": "stars",
-        "caption": "This is a picture of stars",
-        "copyrightHolder": "Wikipedia",
-        "type": "image"
-      },
-      {
-        "id": "63732034",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/A80F/test/_63732034_cake.jpg",
-        "path": "/cpsdevpb/A80F/test/_63732034_cake.jpg",
-        "height": 195,
-        "width": 180,
-        "altText": "cake",
-        "copyrightHolder": "can stock",
-        "type": "image"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Turkce CPS test",
-      "headline": "Some audio from a supermarket checkout in Birmingham"
-    },
-    "locators": {
-      "assetUri": "/turkce/media-23268997",
-      "cpsUrn": "urn:bbc:content:assetUri:turkce/media-23268997",
-      "curie": "http://www.bbc.co.uk/asset/ebbdb429-1837-b34e-a5ec-1351d577da4b",
-      "assetId": "23268997"
-    },
-    "summary": "audio.",
-    "timestamp": 1583162382000,
-    "language": "tr",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01m7d07",
-      "subType": "clip",
-      "format": "audio",
-      "title": "Birmingham checkout",
-      "synopses": {
-        "short": "Some audio from a supermarket checkout in Birmingham"
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-      "embedding": false,
-      "advertising": false,
-      "caption": "Some audio from a supermarket checkout in Birmingham",
-      "versions": [
-        {
-          "versionId": "p01m7d09",
-          "types": ["Original"],
-          "duration": 127,
-          "durationISO8601": "PT2M7S",
-          "warnings": {
-            "short": "Contains some strong language.",
-            "long": "Contains some strong language."
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+            "embedding": false,
+            "advertising": false,
+            "caption": "Some audio from a supermarket checkout in Birmingham",
+            "versions": [
+              {
+                "versionId": "p01m7d09",
+                "types": ["Original"],
+                "duration": 127,
+                "durationISO8601": "PT2M7S",
+                "warnings": {
+                  "short": "Contains some strong language.",
+                  "long": "Contains some strong language."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1555067395000
+              }
+            ],
+            "imageCopyright": "Getty Images",
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1555067395000
-        }
-      ],
-      "imageCopyright": "Getty Images",
-      "type": "media"
+          {
+            "text": "Tiramisu candy icing candy canes halvah bear claw pie. Bonbon chocolate bar topping fruitcake oat cake candy canes caramels. ",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Heading Jelly beans biscuit jelly beans gummies jelly-o gingerbread topping.",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Cupcake ipsum dolor. Sit amet candy jelly-o pie jelly beans jelly beans chocolate bar cupcake. Pudding muffin fruitcake cotton candy tootsie roll liquorice gummies. Chupa chups topping pudding. Bear claw toffee candy canes tiramisu carrot cake. Sweet candy carrot cake cake tootsie roll candy. Gummies cheesecake gummies icing marzipan gummi bears. Chocolate cake sugar plum chocolate bar. Sugar plum fruitcake cheesecake powder gingerbread cake pie. Tiramisu pudding toffee sweet. Brownie dragée fruitcake cookie tiramisu cotton candy bear claw bear claw. Muffin jelly beans chocolate sugar plum. Tiramisu lollipop gingerbread tootsie roll cake jelly beans gingerbread jujubes.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "id": "63732048",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/14837/test/_63732048_starsinthesky.jpg",
+            "path": "/cpsdevpb/14837/test/_63732048_starsinthesky.jpg",
+            "height": 141,
+            "width": 220,
+            "altText": "stars",
+            "caption": "This is a picture of stars",
+            "copyrightHolder": "Wikipedia",
+            "type": "image"
+          },
+          {
+            "id": "63732034",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/A80F/test/_63732034_cake.jpg",
+            "path": "/cpsdevpb/A80F/test/_63732034_cake.jpg",
+            "height": 195,
+            "width": 180,
+            "altText": "cake",
+            "copyrightHolder": "can stock",
+            "type": "image"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Turkce CPS test",
+          "headline": "Some audio from a supermarket checkout in Birmingham"
+        },
+        "locators": {
+          "assetUri": "/turkce/media-23268997",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/media-23268997",
+          "curie": "http://www.bbc.co.uk/asset/ebbdb429-1837-b34e-a5ec-1351d577da4b",
+          "assetId": "23268997"
+        },
+        "summary": "audio.",
+        "timestamp": 1583162382000,
+        "language": "tr",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01m7d07",
+          "subType": "clip",
+          "format": "audio",
+          "title": "Birmingham checkout",
+          "synopses": {
+            "short": "Some audio from a supermarket checkout in Birmingham"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+          "embedding": false,
+          "advertising": false,
+          "caption": "Some audio from a supermarket checkout in Birmingham",
+          "versions": [
+            {
+              "versionId": "p01m7d09",
+              "types": ["Original"],
+              "duration": 127,
+              "durationISO8601": "PT2M7S",
+              "warnings": {
+                "short": "Contains some strong language.",
+                "long": "Contains some strong language."
+              },
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1555067395000
+            }
+          ],
+          "imageCopyright": "Getty Images",
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63732032",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/59EF/test/_63732032_p01mt2kt.jpg",
+          "path": "/cpsdevpb/59EF/test/_63732032_p01mt2kt.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "England star Fran Kirby",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:turkce/media-23268997",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/turkce/media",
+          "urlIdentifier": "/turkce/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Turkce",
+          "uri": "/turkce",
+          "urlIdentifier": "/turkce",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "63732032",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/59EF/test/_63732032_p01mt2kt.jpg",
-      "path": "/cpsdevpb/59EF/test/_63732032_p01mt2kt.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "England star Fran Kirby",
-      "copyrightHolder": "Getty Images",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:turkce/media-23268997",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/turkce/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "Turkce",
-      "uri": "/turkce",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:24:57.897Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 1,
+        "records": [
+          {
+            "id": "498c4962-df15-9c42-8093-59dc25ec5423",
+            "rank": 1,
+            "count": 2263,
+            "urn": "urn:bbc:curie:asset:498c4962-df15-9c42-8093-59dc25ec5423",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Yarasa kanat'la Çin Seddi'nin üzerinden uçtu vertıcal",
+                "headline": "'Yarasa kanat'la Çin Seddi'nin üzerinden uçtu short"
+              },
+              "locators": {
+                "assetUri": "/turkce/dergi-23049850",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:498c4962-df15-9c42-8093-59dc25ec5423",
+                "assetId": "23049850",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/dergi-23049850",
+                "curie": "http://www.bbc.co.uk/asset/498c4962-df15-9c42-8093-59dc25ec5423"
+              },
+              "summary": "ABD'li serbest paraşütçü Jeb Corliss, 'kanatlı elbise'si (wingsuit) ile bir helikopterden atlayarak Çin Seddi'nin üzerinde 'süzüldü'.",
+              "timestamp": 1465212645000,
+              "language": "tr",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+                "taggings": []
+              },
+              "media": {
+                "id": "23049461",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p013p0yc",
+                "entityType": "Clip",
+                "caption": "'Yarasa kanat'la Çin Seddi'nin üzerinden uçtu short",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63487677",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12F6E/test/_63487677_p013p10c.jpg",
+                "path": "/cpsdevpb/12F6E/test/_63487677_p013p10c.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Hızla yaptığı uçuşta",
+                "caption": "Hızla yaptığı uçuşta",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/dergi-23049850",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
