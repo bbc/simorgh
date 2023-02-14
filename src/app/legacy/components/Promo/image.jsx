@@ -63,7 +63,9 @@ const Image = props => {
   const isWebPSupported = WEBP_ORIGIN_CODES.some(originCode =>
     src.includes(originCode),
   );
-  const isProgrammeImage = src.includes('https://ichef.bbci.co.uk/images/ic/');
+  const isProgrammeImage = src.startsWith(
+    'https://ichef.bbci.co.uk/images/ic/',
+  );
   const primarySrcSet = createSrcSet(
     src,
     isWebPSupported ? '.webp' : '',
