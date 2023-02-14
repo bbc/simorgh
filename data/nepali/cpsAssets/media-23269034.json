@@ -1,189 +1,396 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:nepali/media-23269034",
-    "locators": {
-      "assetUri": "/nepali/media-23269034",
-      "cpsUrn": "urn:bbc:content:assetUri:nepali/media-23269034",
-      "curie": "http://www.bbc.co.uk/asset/3591b75f-7789-5f47-920a-965036840121",
-      "assetId": "23269034"
-    },
-    "type": "MAP",
-    "createdBy": "nepali-v6",
-    "language": "ne",
-    "lastUpdated": 1588335920330,
-    "firstPublished": 1583164953000,
-    "lastPublished": 1583164953000,
-    "timestamp": 1583164953000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "nepali.embedded_media.media_asset.23269034.page",
-      "cps_asset_id": "23269034"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph", "image"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01mbrvl",
-        "subType": "episode",
-        "format": "audio",
-        "title": "Test audio episode for articles, worldwide",
-        "synopses": {
-          "short": "This is a test asset created for the articles project"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:nepali/media-23269034",
+        "locators": {
+          "assetUri": "/nepali/media-23269034",
+          "cpsUrn": "urn:bbc:content:assetUri:nepali/media-23269034",
+          "curie": "http://www.bbc.co.uk/asset/3591b75f-7789-5f47-920a-965036840121",
+          "assetId": "23269034"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2j2b.jpg",
-        "embedding": false,
-        "advertising": false,
-        "caption": "This is a test asset created for the articles project",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "nepali-v6",
+        "language": "ne",
+        "lastUpdated": 1644764944743,
+        "firstPublished": 1583164953000,
+        "lastPublished": 1583164953000,
+        "timestamp": 1583164953000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "nepali.embedded_media.media_asset.23269034.page",
+          "cps_asset_id": "23269034",
+          "contentId": "urn:bbc:cps:curie:asset:3591b75f-7789-5f47-920a-965036840121"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.4",
+        "blockTypes": ["media", "paragraph", "image"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "NEPALI",
+          "producerId": "63"
+        },
+        "readTime": 1,
+        "siteUri": "/nepali"
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01mbrx4",
-            "types": ["Original"],
-            "duration": 127,
-            "durationISO8601": "PT2M7S",
-            "warnings": {
-              "short": "Contains strong language.",
-              "long": "Contains strong language."
+            "id": "p01mbrvl",
+            "subType": "episode",
+            "format": "audio",
+            "title": "Test audio episode for articles, worldwide",
+            "synopses": {
+              "short": "This is a test asset created for the articles project"
             },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1556298963000
-          }
-        ],
-        "type": "media"
-      },
-      {
-        "text": "बुधवार मिर्गौला प्रत्यारोपण गराउनका निम्ति सोमवार साँझ काठमाण्डूस्थित त्रिभुवन विश्वविद्यालय शिक्षण अस्पतालमा भर्ना हुन जानु अगाडि प्रधानमन्त्री केपी ओलीले एक भिडिओ सन्देशमार्फत् आफू चाँडै निको भएर पूर्ववत् काममा फर्कने विश्वास दिलाउन खोजेका छन्।",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "आत्मविश्वासी देखिएका प्रधानमन्त्रीले विगतको निर्वाचन र त्यसले जगाएका 'सपना'को स्मरण गर्दै आफू बीचमै मैदान छाडेर नजाने दृढता प्रकट गरे।",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;जसरी खेलकोबीचमा 'राम्रो खेलाडी'ले मैदान छोड्दैन, त्यसैगरी हाम्रा भरखर जागृत हुँदै गरेका सपनालाई बीचमा अलपत्र पारेर म पनि अलप हुन्न। संसारमा कोही पनि अजम्मरी छैन। मेरो यो संकल्प पनि अजम्मरी बन्न होइन, हाम्रा जागृत हुँदै गरेका सपनालाई साकार पार्नका लागि हो भन्ने यहाँहरुले बुझ्नु नै भएको छ,&quot; उनले भने।",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;म पुनः एकपटक आग्रह गर्दछु, मेरो स्वास्थ्यलाई लिएर यहाँहरू ढुक्क रहनुहोस्।&quot; ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<link><caption>मिर्गौला स्वस्थ राख्न जान्नुपर्ने सात महत्त्वपूर्ण कुरा</caption><altText>kidneys</altText><url href=\"https://www.bbc.com/nepali/news-47564957\" platform=\"highweb\"/></link>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "id": "63732075",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/DEBF/test/_63732075_1920px-snice_svg.png",
-        "path": "/cpsdevpb/DEBF/test/_63732075_1920px-snice_svg.png",
-        "height": 1920,
-        "width": 1920,
-        "altText": "face",
-        "caption": "smile",
-        "copyrightHolder": "AP",
-        "positionHint": "full-width",
-        "type": "image"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Test cps nepali",
-      "headline": "test nepali cps मिर्गौलाको महत्त्वबारे जनजागरण अभियान सञ्चालन गरेर बिहीवार मार्च १४ मा विश्व मिर्गौला दिवस मनाइँदैछ।"
-    },
-    "locators": {
-      "assetUri": "/nepali/media-23269034",
-      "cpsUrn": "urn:bbc:content:assetUri:nepali/media-23269034",
-      "curie": "http://www.bbc.co.uk/asset/3591b75f-7789-5f47-920a-965036840121",
-      "assetId": "23269034"
-    },
-    "summary": "test",
-    "timestamp": 1583164953000,
-    "language": "ne",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01mbrvl",
-      "subType": "episode",
-      "format": "audio",
-      "title": "Test audio episode for articles, worldwide",
-      "synopses": {
-        "short": "This is a test asset created for the articles project"
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2j2b.jpg",
-      "embedding": false,
-      "advertising": false,
-      "caption": "This is a test asset created for the articles project",
-      "versions": [
-        {
-          "versionId": "p01mbrx4",
-          "types": ["Original"],
-          "duration": 127,
-          "durationISO8601": "PT2M7S",
-          "warnings": {
-            "short": "Contains strong language.",
-            "long": "Contains strong language."
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2j2b.jpg",
+            "embedding": false,
+            "advertising": false,
+            "caption": "This is a test asset created for the articles project",
+            "versions": [
+              {
+                "versionId": "p01mbrx4",
+                "types": ["Original"],
+                "duration": 127,
+                "durationISO8601": "PT2M7S",
+                "warnings": {
+                  "short": "Contains strong language.",
+                  "long": "Contains strong language."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1556298963000
+              }
+            ],
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1556298963000
-        }
-      ],
-      "type": "media"
+          {
+            "text": "बुधवार मिर्गौला प्रत्यारोपण गराउनका निम्ति सोमवार साँझ काठमाण्डूस्थित त्रिभुवन विश्वविद्यालय शिक्षण अस्पतालमा भर्ना हुन जानु अगाडि प्रधानमन्त्री केपी ओलीले एक भिडिओ सन्देशमार्फत् आफू चाँडै निको भएर पूर्ववत् काममा फर्कने विश्वास दिलाउन खोजेका छन्।",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "आत्मविश्वासी देखिएका प्रधानमन्त्रीले विगतको निर्वाचन र त्यसले जगाएका 'सपना'को स्मरण गर्दै आफू बीचमै मैदान छाडेर नजाने दृढता प्रकट गरे।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;जसरी खेलकोबीचमा 'राम्रो खेलाडी'ले मैदान छोड्दैन, त्यसैगरी हाम्रा भरखर जागृत हुँदै गरेका सपनालाई बीचमा अलपत्र पारेर म पनि अलप हुन्न। संसारमा कोही पनि अजम्मरी छैन। मेरो यो संकल्प पनि अजम्मरी बन्न होइन, हाम्रा जागृत हुँदै गरेका सपनालाई साकार पार्नका लागि हो भन्ने यहाँहरुले बुझ्नु नै भएको छ,&quot; उनले भने।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;म पुनः एकपटक आग्रह गर्दछु, मेरो स्वास्थ्यलाई लिएर यहाँहरू ढुक्क रहनुहोस्।&quot; ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<link><caption>मिर्गौला स्वस्थ राख्न जान्नुपर्ने सात महत्त्वपूर्ण कुरा</caption><altText>kidneys</altText><url href=\"https://www.bbc.com/nepali/news-47564957\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/nepali/news-47564957",
+            "type": "paragraph"
+          },
+          {
+            "id": "63732075",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/DEBF/test/_63732075_1920px-snice_svg.png",
+            "path": "/cpsdevpb/DEBF/test/_63732075_1920px-snice_svg.png",
+            "height": 1920,
+            "width": 1920,
+            "altText": "face",
+            "caption": "smile",
+            "copyrightHolder": "AP",
+            "positionHint": "full-width",
+            "type": "image"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Test cps nepali",
+          "headline": "test nepali cps मिर्गौलाको महत्त्वबारे जनजागरण अभियान सञ्चालन गरेर बिहीवार मार्च १४ मा विश्व मिर्गौला दिवस मनाइँदैछ।"
+        },
+        "locators": {
+          "assetUri": "/nepali/media-23269034",
+          "cpsUrn": "urn:bbc:content:assetUri:nepali/media-23269034",
+          "curie": "http://www.bbc.co.uk/asset/3591b75f-7789-5f47-920a-965036840121",
+          "assetId": "23269034"
+        },
+        "summary": "test",
+        "timestamp": 1583164953000,
+        "language": "ne",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01mbrvl",
+          "subType": "episode",
+          "format": "audio",
+          "title": "Test audio episode for articles, worldwide",
+          "synopses": {
+            "short": "This is a test asset created for the articles project"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2j2b.jpg",
+          "embedding": false,
+          "advertising": false,
+          "caption": "This is a test asset created for the articles project",
+          "versions": [
+            {
+              "versionId": "p01mbrx4",
+              "types": ["Original"],
+              "duration": 127,
+              "durationISO8601": "PT2M7S",
+              "warnings": {
+                "short": "Contains strong language.",
+                "long": "Contains strong language."
+              },
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1556298963000
+            }
+          ],
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63732076",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/105CF/test/_63732076_p01n2j2b.jpg",
+          "path": "/cpsdevpb/105CF/test/_63732076_p01n2j2b.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "running",
+          "caption": "running",
+          "copyrightHolder": "Run",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:nepali/media-23269034",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/nepali/media",
+          "urlIdentifier": "/nepali/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "नेपाली समाचार",
+          "uri": "/nepali",
+          "urlIdentifier": "/nepali",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "63732076",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/105CF/test/_63732076_p01n2j2b.jpg",
-      "path": "/cpsdevpb/105CF/test/_63732076_p01n2j2b.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "running",
-      "caption": "running",
-      "copyrightHolder": "Run",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:nepali/media-23269034",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/nepali/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "नेपाली समाचार",
-      "uri": "/nepali",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:29:58.9Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "ebe1e99a-f217-2241-9532-d3d13935b5b8",
+            "rank": 1,
+            "count": 4227,
+            "urn": "urn:bbc:curie:asset:ebe1e99a-f217-2241-9532-d3d13935b5b8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "पछिल्लो प्रसारण audio",
+                "headline": "पछिल्लो प्रसारण २०१६"
+              },
+              "locators": {
+                "assetUri": "/nepali/media-23064562",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:ebe1e99a-f217-2241-9532-d3d13935b5b8",
+                "assetId": "23064562",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/media-23064562",
+                "curie": "http://www.bbc.co.uk/asset/ebe1e99a-f217-2241-9532-d3d13935b5b8"
+              },
+              "summary": "यो खण्डमा पछिल्लो प्रसारण सुन्न सकिन्छ भने तलको खण्डमा तपाईं गत एक हप्ताका कार्यक्रमहरू सुन्न सक्नुहुन्छ।",
+              "timestamp": 1470151129000,
+              "language": "ne",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "taggings": []
+              },
+              "media": {
+                "id": "23064787",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p014xpxg",
+                "entityType": "Clip",
+                "caption": "पछिल्लो प्रसारण २०१६",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63500897",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/137B8/test/_63500897_p012zl0f.jpg",
+                "path": "/cpsdevpb/137B8/test/_63500897_p012zl0f.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "विष्फोटपछि निकैबेर गोली हानाहान भएको थियो।",
+                "caption": "विष्फोटपछि निकैबेर गोली हानाहान भएको थियो।",
+                "copyrightHolder": "BBC Sport",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/media-23064562",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ee1178cc-b55d-9045-9e7d-28683d2234a2",
+            "rank": 2,
+            "count": 3776,
+            "urn": "urn:bbc:curie:asset:ee1178cc-b55d-9045-9e7d-28683d2234a2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "A meeting to remember",
+                "headline": "Queen Elizabeth meets the delegates of European Union"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-23184411",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:ee1178cc-b55d-9045-9e7d-28683d2234a2",
+                "assetId": "23184411",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-23184411",
+                "curie": "http://www.bbc.co.uk/asset/ee1178cc-b55d-9045-9e7d-28683d2234a2"
+              },
+              "summary": "Queen Elizabeth meets the delegates of European Union. Queen Elizabeth meets the delegates of European Union. Queen Elizabeth meets the delegates of European Union.",
+              "timestamp": 1517306495000,
+              "language": "ne",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01g5bg7",
+                "subType": "clip",
+                "format": "video",
+                "title": "A meeting to remember",
+                "synopses": {
+                  "short": "Queen Elizabeth meets the delegates of European Union",
+                  "medium": "Queen Elizabeth meets the delegates of European Union. Queen Elizabeth meets the delegates of European Union. Queen Elizabeth meets the delegates of European Union."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01g5bry.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "A meeting to remember",
+                "versions": [
+                  {
+                    "versionId": "p01g5bg9",
+                    "types": ["Original"],
+                    "duration": 17,
+                    "durationISO8601": "PT17S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1517305602000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63653937",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/120CF/test/_63653937_p01g5bry.jpg",
+                "path": "/cpsdevpb/120CF/test/_63653937_p01g5bry.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "gd",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-23184411",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "560b9fa4-e513-cc45-9994-0d62c68f1ed5",
+            "rank": 3,
+            "count": 3660,
+            "urn": "urn:bbc:curie:asset:560b9fa4-e513-cc45-9994-0d62c68f1ed5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "रामप्रसादको ओलिम्पिक्स सम्झना",
+                "headline": "रामप्रसादको ओलिम्पिक्स सम्झना."
+              },
+              "locators": {
+                "assetUri": "/nepali/news-23062852",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:560b9fa4-e513-cc45-9994-0d62c68f1ed5",
+                "assetId": "23062852",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-23062852",
+                "curie": "http://www.bbc.co.uk/asset/560b9fa4-e513-cc45-9994-0d62c68f1ed5"
+              },
+              "summary": "पाँच दशकअघिको ओलिम्पिक्समा सहभागिता जनाएका नेपाली बक्सर रामप्रसाद गुरुङले आफ्नो रोमाञ्चयुक्त सम्झना सम्हालेर राखेका छन्। Audio clip.",
+              "timestamp": 1469620015000,
+              "language": "ne",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "taggings": []
+              },
+              "media": {
+                "id": "23062853",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p014v0ww",
+                "entityType": "Clip",
+                "caption": "रामप्रसादको ओलिम्पिक्स सम्झना",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63497615",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C9DF/test/_63497615_p014v12g.jpg",
+                "path": "/cpsdevpb/C9DF/test/_63497615_p014v12g.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "ओलिम्पिक्स २०१६",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-23062852",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
