@@ -783,7 +783,7 @@ describe('Story Page', () => {
     );
   });
 
-  describe.skip('Optimizely Experiments', () => {
+  describe.skip('Optimizely Experiments ', () => {
     describe('004_brasil_recommendations_experiment', () => {
       beforeEach(() => {
         process.env.RECOMMENDATIONS_ENDPOINT =
