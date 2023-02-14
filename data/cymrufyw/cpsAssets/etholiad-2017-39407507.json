@@ -1,466 +1,801 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:newyddion/etholiad-2017-39407507",
-    "locators": {
-      "assetUri": "/newyddion/etholiad-2017-39407507",
-      "cpsUrn": "urn:bbc:content:assetUri:newyddion/etholiad-2017-39407507",
-      "curie": "http://www.bbc.co.uk/asset/86d24cff-f55f-0b41-8318-afc98f4e42d0",
-      "assetId": "39407507"
-    },
-    "type": "STY",
-    "createdBy": "newyddion-v6",
-    "language": "cy",
-    "lastUpdated": 1606747255602,
-    "firstPublished": 1493388731000,
-    "lastPublished": 1493388731000,
-    "timestamp": 1493388731000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "allowAdvertising": true,
-      "hasContentWarning": false,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": false
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "sty",
-      "counterName": "newyddion.etholiad.2017.story.39407507.page",
-      "cps_asset_id": "39407507"
-    },
-    "tags": {},
-    "version": "v1.3.11",
-    "blockTypes": [
-      "heading",
-      "paragraph",
-      "subheading"
-    ],
-    "includeComments": false,
-    "atiAnalytics": {
-      "producerName": "WALES",
-      "producerId": "100"
-    },
-    "readTime": 3,
-    "siteUri": "/newyddion"
-  },
-  "content": {
-    "blocks": [
-      {
-        "text": "Pa etholiadau fydd yn cael eu cynnal ym mis Mai 2017?",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Bydd etholiadau'n cael eu cynnal mewn 34 o gynghorau yn Lloegr, pob un o 32 o gynghorau Yr Alban a phob un o 22 o gynghorau Cymru ar 4 Mai 2017.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Yn ogystal, bydd chwe ardal yn Lloegr yn pleidleisio am rôl newydd y &quot;meiri awdurdod lleol cyfunol&quot;.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Bydd y meiri yma'n gyfrifol am ddatblygiad economaidd yn eu hardaloedd, ond fe fydd gan rai bwerau dros drafnidiaeth a thai.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mae Doncaster a Gogledd Tyneside hefyd yn ethol meiri awdurdod lleol, fydd yn arweinwyr eu cynghorau.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Dros bwy ydw i'n pleidleisio a beth maen nhw'n ei wneud?",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "Mewn etholiadau lleol, mae cynghorwyr yn cael eu hethol i redeg awdurdodau lleol.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mae cyngor sir yn gyfrifol am reoli sir, fel Sir Ddinbych neu Sir Gaerfyrddin er enghraifft.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Maen nhw'n gyfrifol am ofalu am y gwasanaethau cyngor mwyaf drud gan gynnwys ysgolion, gwasanaethau cymdeithasol, llyfrgelloedd, priffyrdd, trafnidiaeth gyhoeddus, heddluoedd a gwasanaethau tân, gwastraff a chynllunio strategol.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Caiff rhai siroedd eu rhannu'n gynghorau ardal, sy'n gyfrifol am faterion lleol a gwasanaethau fel cynllunio, tai cyngor, ffyrdd llai, iechyd yr amgylchedd, marchnadoedd, casglu gwastraff ac ailgylchu, parciau a thwristiaeth.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mewn rhai llefydd, mae'r ddau fath o gyngor yn cael eu cyfuno i greu awdurdod unedol sy'n gyfrifol am yr holl wasanaethau.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Yn 2017, mae bron pob etholiad yn Lloegr ar gyfer cyngor sir, tra bod pob cyngor yng Nghymru a'r Alban yn awdurdodau unedol.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Beth am ethol meiri?",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "Bydd chwe maer newydd yn cael eu hethol i gynrychioli nifer o ardaloedd yn Lloegr.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mae'r swyddi yma'n cael eu creu fel rhan o gynllun y llywodraeth i gynyddu pwerau lleol a datganoli mwy o bwerau i ardaloedd yn Lloegr.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Bydd y meiri yn cynrychioli nifer o awdurdodau lleol ym mhob ardal.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mae'r union bwerau yn amrywio yn ôl y gwahanol gytundebau rhwng awdurdodau a'r llywodraeth, ond yn gyffredinol yn ymwneud a strategaeth economaidd, trafnidiaeth a chynllunio.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Pam nad yw pob cyngor yn Lloegr yn cynnal etholiad?",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "Mae gwahanol fathau o gyngor ar draws y DU ac maen nhw'n cynnal etholiadau ar adegau gwahanol.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Nid yw pob cyngor yn cynnal etholiad bob blwyddyn.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Pryd mae disgwyl y canlyniadau?",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "Bydd rhai cynghorau yng Nghymru a Lloegr yn dechrau cyfri' pleidleisiau yn syth ar ôl i'r blychau gan am 22:00 ar 4 Mai.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Bydd eraill yn dechrau cyfri' fore Gwener gyda'r canlyniadau'n cael eu cadarnhau yn ystod y dydd.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mae cynghorau yn Yr Alban yn dechrau cyfri' fore Gwener, ac mae disgwyl y canlyniadau cyntaf tua 12:00.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Bydd canlyniadau etholiadau meiri yn cael eu cyhoeddi ddydd Gwener.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Sut mae cyfrifo rheolaeth cyngor?",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "Os oes gan blaid fwyafrif ar unrhyw gyngor, mae'n cael ei ystyried mewn rheolaeth o'r cyngor yna.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Os nad oes gan unrhyw blaid fwyafrif yna caiff ei ddisgrifio fel &quot;Dim Rheolaeth Lawn&quot;.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mae'r BBC, Press Association ac eraill yn diffinio rheolaeth cyngor cyn etholiad fel y blaid, os oes un o gwbl, sydd â mwyafrif ar y noson cyn y bleidlais.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Pe bai'r Ceidwadwyr wedi ennill cyngor yn 2012, ond yna drwy aelodau'n gadael y blaid a seddi wedi eu colli mewn isetholiadau mae'r cyngor yn troi'n un Dim Rheolaeth Lawn, yn 2017, pe bai'r Ceidwadwyr yn cael mwyafrif byddai'n cael ei ddisgrifio fel y Ceidwadwyr yn cipio'r cyngor.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Sut mae cyfrifo newid mewn seddi?",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "Mae newid mewn seddi yn ddibynnol ar faint o seddi wnaeth bob plaid eu hennill yn yr etholiad tebyg diwethaf.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Yn Lloegr, roedd yr etholiad diwethaf i bron bob un o'r seddi yn 2013* a bron pobman yng Nghymru yn 2012**.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Roedd etholiadau lleol diwethaf Yr Alban yn 2012.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mewn rhai cynghorau, mae newidiadau i ffiniau wrth ad-drefnu cynghorau ac mae'r nifer o seddi ar y cyngor yn newid.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mewn achosion o'r fath, mae'r BBC yn defnyddio &quot;canlyniadau damcaniaethol&quot; i amcangyfrif beth fyddai'r canlyniad wedi bod petai'r ffiniau wedi newid yn yr etholiad diwethaf.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Bydd cyfanswm y seddi i bob plaid ychydig yn wahanol i'r seddi wrth ddiddymu a'r rhai gafodd eu hennill yn 2012 a 2013.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<italic>* Roedd etholiad diwethaf tebyg Doncaster yn 2015</italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<italic>** Cafodd etholiad Ynys Môn ei ohirio am flwyddyn tan 2013.</italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Beth mae DRL a thalfyriadau eraill yn eu golygu?",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "ANI - Annibynnol",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "CEID - Ceidwadwyr",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "DRL - Dim Rheolaeth Lawn",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "DRh - Democratiaid Rhyddfrydol",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "GRDD - Plaid Werdd",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "LLAF - Llafur",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "LLG - Llais Gwynedd",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "PC - Plaid Cymru",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "UKIP - Plaid Annibyniaeth y DU",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Pa gynghorau sy'n cynnal etholiad eleni?",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "<link><caption>Cliciwch yma am fanylion yr holl ymgeiswyr ar gyfer yr etholiadau lleol</caption><url href=\"http://www.bbc.co.uk/cymrufyw/etholiad-2017-39513723\" platform=\"highweb\"/></link>.",
-        "markupType": "candy_xml",
-        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/etholiad-2017-39513723",
-        "type": "paragraph"
-      },
-      {
-        "text": "Abertawe",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Blaenau Gwent",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Bro Morgannwg",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Caerdydd",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Caerffili",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Casnewydd",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Castell-nedd Port Talbot",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ceredigion",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Conwy",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Gwynedd",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Merthyr Tudful",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Pen-y-bont ar Ogwr",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Powys",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Rhondda Cynon Taf",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Sir Penfro",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Sir Ddinbych",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Sir Fynwy",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Sir Gaerfyrddin",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Sir y Fflint",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Torfaen",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Wrecsam",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ynys Môn",
-        "markupType": "plain_text",
-        "type": "paragraph"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:newyddion/etholiad-2017-39407507",
+        "locators": {
+          "assetUri": "/newyddion/etholiad-2017-39407507",
+          "cpsUrn": "urn:bbc:content:assetUri:newyddion/etholiad-2017-39407507",
+          "curie": "http://www.bbc.co.uk/asset/86d24cff-f55f-0b41-8318-afc98f4e42d0",
+          "assetId": "39407507"
+        },
+        "type": "STY",
+        "createdBy": "newyddion-v6",
+        "language": "cy",
+        "lastUpdated": 1645358093445,
+        "firstPublished": 1493388731000,
+        "lastPublished": 1493388731000,
+        "timestamp": 1493388731000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "sty",
+          "counterName": "newyddion.etholiad.2017.story.39407507.page",
+          "cps_asset_id": "39407507",
+          "contentId": "urn:bbc:cps:curie:asset:86d24cff-f55f-0b41-8318-afc98f4e42d0"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.0",
+        "blockTypes": ["heading", "paragraph", "subheading"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "WALES",
+          "producerId": "100"
+        },
+        "readTime": 3,
+        "siteUri": "/newyddion"
+      },
+      "content": {
+        "blocks": [
+          {
+            "text": "Pa etholiadau fydd yn cael eu cynnal ym mis Mai 2017?",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Bydd etholiadau'n cael eu cynnal mewn 34 o gynghorau yn Lloegr, pob un o 32 o gynghorau Yr Alban a phob un o 22 o gynghorau Cymru ar 4 Mai 2017.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Yn ogystal, bydd chwe ardal yn Lloegr yn pleidleisio am rôl newydd y &quot;meiri awdurdod lleol cyfunol&quot;.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Bydd y meiri yma'n gyfrifol am ddatblygiad economaidd yn eu hardaloedd, ond fe fydd gan rai bwerau dros drafnidiaeth a thai.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mae Doncaster a Gogledd Tyneside hefyd yn ethol meiri awdurdod lleol, fydd yn arweinwyr eu cynghorau.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Dros bwy ydw i'n pleidleisio a beth maen nhw'n ei wneud?",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "text": "Mewn etholiadau lleol, mae cynghorwyr yn cael eu hethol i redeg awdurdodau lleol.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mae cyngor sir yn gyfrifol am reoli sir, fel Sir Ddinbych neu Sir Gaerfyrddin er enghraifft.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Maen nhw'n gyfrifol am ofalu am y gwasanaethau cyngor mwyaf drud gan gynnwys ysgolion, gwasanaethau cymdeithasol, llyfrgelloedd, priffyrdd, trafnidiaeth gyhoeddus, heddluoedd a gwasanaethau tân, gwastraff a chynllunio strategol.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Caiff rhai siroedd eu rhannu'n gynghorau ardal, sy'n gyfrifol am faterion lleol a gwasanaethau fel cynllunio, tai cyngor, ffyrdd llai, iechyd yr amgylchedd, marchnadoedd, casglu gwastraff ac ailgylchu, parciau a thwristiaeth.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mewn rhai llefydd, mae'r ddau fath o gyngor yn cael eu cyfuno i greu awdurdod unedol sy'n gyfrifol am yr holl wasanaethau.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Yn 2017, mae bron pob etholiad yn Lloegr ar gyfer cyngor sir, tra bod pob cyngor yng Nghymru a'r Alban yn awdurdodau unedol.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Beth am ethol meiri?",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "text": "Bydd chwe maer newydd yn cael eu hethol i gynrychioli nifer o ardaloedd yn Lloegr.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mae'r swyddi yma'n cael eu creu fel rhan o gynllun y llywodraeth i gynyddu pwerau lleol a datganoli mwy o bwerau i ardaloedd yn Lloegr.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Bydd y meiri yn cynrychioli nifer o awdurdodau lleol ym mhob ardal.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mae'r union bwerau yn amrywio yn ôl y gwahanol gytundebau rhwng awdurdodau a'r llywodraeth, ond yn gyffredinol yn ymwneud a strategaeth economaidd, trafnidiaeth a chynllunio.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Pam nad yw pob cyngor yn Lloegr yn cynnal etholiad?",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "text": "Mae gwahanol fathau o gyngor ar draws y DU ac maen nhw'n cynnal etholiadau ar adegau gwahanol.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Nid yw pob cyngor yn cynnal etholiad bob blwyddyn.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Pryd mae disgwyl y canlyniadau?",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "text": "Bydd rhai cynghorau yng Nghymru a Lloegr yn dechrau cyfri' pleidleisiau yn syth ar ôl i'r blychau gan am 22:00 ar 4 Mai.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Bydd eraill yn dechrau cyfri' fore Gwener gyda'r canlyniadau'n cael eu cadarnhau yn ystod y dydd.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mae cynghorau yn Yr Alban yn dechrau cyfri' fore Gwener, ac mae disgwyl y canlyniadau cyntaf tua 12:00.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Bydd canlyniadau etholiadau meiri yn cael eu cyhoeddi ddydd Gwener.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Sut mae cyfrifo rheolaeth cyngor?",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "text": "Os oes gan blaid fwyafrif ar unrhyw gyngor, mae'n cael ei ystyried mewn rheolaeth o'r cyngor yna.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Os nad oes gan unrhyw blaid fwyafrif yna caiff ei ddisgrifio fel &quot;Dim Rheolaeth Lawn&quot;.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mae'r BBC, Press Association ac eraill yn diffinio rheolaeth cyngor cyn etholiad fel y blaid, os oes un o gwbl, sydd â mwyafrif ar y noson cyn y bleidlais.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Pe bai'r Ceidwadwyr wedi ennill cyngor yn 2012, ond yna drwy aelodau'n gadael y blaid a seddi wedi eu colli mewn isetholiadau mae'r cyngor yn troi'n un Dim Rheolaeth Lawn, yn 2017, pe bai'r Ceidwadwyr yn cael mwyafrif byddai'n cael ei ddisgrifio fel y Ceidwadwyr yn cipio'r cyngor.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Sut mae cyfrifo newid mewn seddi?",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "text": "Mae newid mewn seddi yn ddibynnol ar faint o seddi wnaeth bob plaid eu hennill yn yr etholiad tebyg diwethaf.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Yn Lloegr, roedd yr etholiad diwethaf i bron bob un o'r seddi yn 2013* a bron pobman yng Nghymru yn 2012**.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Roedd etholiadau lleol diwethaf Yr Alban yn 2012.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mewn rhai cynghorau, mae newidiadau i ffiniau wrth ad-drefnu cynghorau ac mae'r nifer o seddi ar y cyngor yn newid.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mewn achosion o'r fath, mae'r BBC yn defnyddio &quot;canlyniadau damcaniaethol&quot; i amcangyfrif beth fyddai'r canlyniad wedi bod petai'r ffiniau wedi newid yn yr etholiad diwethaf.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Bydd cyfanswm y seddi i bob plaid ychydig yn wahanol i'r seddi wrth ddiddymu a'r rhai gafodd eu hennill yn 2012 a 2013.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic>* Roedd etholiad diwethaf tebyg Doncaster yn 2015</italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic>** Cafodd etholiad Ynys Môn ei ohirio am flwyddyn tan 2013.</italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Beth mae DRL a thalfyriadau eraill yn eu golygu?",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "text": "ANI - Annibynnol",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "CEID - Ceidwadwyr",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "DRL - Dim Rheolaeth Lawn",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "DRh - Democratiaid Rhyddfrydol",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "GRDD - Plaid Werdd",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "LLAF - Llafur",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "LLG - Llais Gwynedd",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "PC - Plaid Cymru",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "UKIP - Plaid Annibyniaeth y DU",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Pa gynghorau sy'n cynnal etholiad eleni?",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "text": "<link><caption>Cliciwch yma am fanylion yr holl ymgeiswyr ar gyfer yr etholiadau lleol</caption><url href=\"http://www.bbc.co.uk/cymrufyw/etholiad-2017-39513723\" platform=\"highweb\"/></link>.",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/etholiad-2017-39513723",
+            "type": "paragraph"
+          },
+          {
+            "text": "Abertawe",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Blaenau Gwent",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Bro Morgannwg",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Caerdydd",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Caerffili",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Casnewydd",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Castell-nedd Port Talbot",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Ceredigion",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Conwy",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Gwynedd",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Merthyr Tudful",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Pen-y-bont ar Ogwr",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Powys",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Rhondda Cynon Taf",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Sir Penfro",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Sir Ddinbych",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Sir Fynwy",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Sir Gaerfyrddin",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Sir y Fflint",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Torfaen",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Wrecsam",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Ynys Môn",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Sut fydd y BBC yn adrodd canlyniadau etholiadau lleol 2017?",
+          "headline": "Sut fydd y BBC yn adrodd canlyniadau etholiadau lleol 2017?"
+        },
+        "locators": {
+          "assetUri": "/newyddion/etholiad-2017-39407507",
+          "cpsUrn": "urn:bbc:content:assetUri:newyddion/etholiad-2017-39407507",
+          "curie": "http://www.bbc.co.uk/asset/86d24cff-f55f-0b41-8318-afc98f4e42d0",
+          "assetId": "39407507"
+        },
+        "summary": "Sut fydd y BBC yn adrodd canlyniadau etholiadau lleol 2017?",
+        "timestamp": 1493388731000,
+        "language": "cy",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw",
+          "taggings": []
+        },
+        "indexImage": {
+          "id": "95830301",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/283F/production/_95830301_mediaitem95830300.jpg",
+          "path": "/cpsprodpb/283F/production/_95830301_mediaitem95830300.jpg",
+          "height": 351,
+          "width": 624,
+          "altText": "etholiad",
+          "copyrightHolder": "BBC",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:newyddion/etholiad-2017-39407507",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Etholiad 2017",
+          "uri": "/newyddion/etholiad/2017",
+          "urlIdentifier": "/newyddion/etholiad/2017",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Newyddion",
+          "uri": "/newyddion",
+          "urlIdentifier": "/newyddion",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Sut fydd y BBC yn adrodd canlyniadau etholiadau lleol 2017?",
-      "headline": "Sut fydd y BBC yn adrodd canlyniadau etholiadau lleol 2017?"
     },
-    "locators": {
-      "assetUri": "/newyddion/etholiad-2017-39407507",
-      "cpsUrn": "urn:bbc:content:assetUri:newyddion/etholiad-2017-39407507",
-      "curie": "http://www.bbc.co.uk/asset/86d24cff-f55f-0b41-8318-afc98f4e42d0",
-      "assetId": "39407507"
-    },
-    "summary": "Sut fydd y BBC yn adrodd canlyniadau etholiadau lleol 2017?",
-    "timestamp": 1493388731000,
-    "language": "cy",
-    "indexImage": {
-      "id": "95830301",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/283F/production/_95830301_mediaitem95830300.jpg",
-      "path": "/cpsprodpb/283F/production/_95830301_mediaitem95830300.jpg",
-      "height": 351,
-      "width": 624,
-      "altText": "etholiad",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:newyddion/etholiad-2017-39407507",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Etholiad 2017",
-      "uri": "/newyddion/etholiad/2017",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "Newyddion",
-      "uri": "/newyddion",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "Sefyllfa'r GIG 'ar ei waethaf' ers 25 mlynedd"
+          },
+          "locators": {
+            "assetUri": "/newyddion/60319348",
+            "cpsUrn": "urn:bbc:content:assetUri:newyddion/60319348",
+            "curie": "http://www.bbc.co.uk/asset/c980a97f-671f-4bf9-8bcb-7e2069683f26",
+            "assetId": "60319348"
+          },
+          "summary": "Nyrsys a meddygon blaenllaw yn rhannu eu profiadau o weithio i'r GIG yn ystod gaeaf heriol tu hwnt.",
+          "timestamp": 1644474196000,
+          "language": "cy",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "123203182",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/6DE2/production/_123203182_b68584b0-670c-4a9e-b30c-50c84560d095.jpg",
+            "path": "/cpsprodpb/6DE2/production/_123203182_b68584b0-670c-4a9e-b30c-50c84560d095.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ysbyty",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Newyddion a mwy",
+            "uri": "/newyddion/hafan",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:newyddion/60319348",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Cyngor Gwynedd: Cadarnhau gwyliau Dydd Gŵyl Dewi"
+          },
+          "locators": {
+            "assetUri": "/newyddion/60330913",
+            "cpsUrn": "urn:bbc:content:assetUri:newyddion/60330913",
+            "curie": "http://www.bbc.co.uk/asset/91596f4f-a42f-4b69-8ca6-5074e54d0504",
+            "assetId": "60330913"
+          },
+          "summary": "Roedd rhai cynghorwyr wedi cwestiynu'r penderfyniad i wario £200,000 ar ddiwrnod ychwanegol o wyliau i'w staff.",
+          "timestamp": 1644495015000,
+          "language": "cy",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "122744996",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/11138/production/_122744996_5f194c0a-498e-46e8-a818-9623182c91ef.jpg",
+            "path": "/cpsprodpb/11138/production/_122744996_5f194c0a-498e-46e8-a818-9623182c91ef.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Cennin Pedr",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Gogledd-Orllewin",
+            "uri": "/newyddion/gogledd-orllewin",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:newyddion/60330913",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Llanelli: Arestio dyn ar amheuaeth o droseddau ffrwydron"
+          },
+          "locators": {
+            "assetUri": "/newyddion/60334001",
+            "cpsUrn": "urn:bbc:content:assetUri:newyddion/60334001",
+            "curie": "http://www.bbc.co.uk/asset/d5aa3243-6a3b-4050-9f28-cf7021d16603",
+            "assetId": "60334001"
+          },
+          "summary": "Dyn 41 oed wedi ei arestio ar ôl i swyddogion arbenigol chwilio adeilad yn Llanelli ddydd Iau.",
+          "timestamp": 1644502929000,
+          "language": "cy",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "123212536",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/F821/production/_123212536_mediaitem123212535.jpg",
+            "path": "/cpsprodpb/F821/production/_123212536_mediaitem123212535.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Heddlu",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "De-Orllewin",
+            "uri": "/newyddion/de-orllewin",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:newyddion/60334001",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "name": "Y bugail o Rydychen sy’n barddoni’n Gymraeg",
+          "indexImage": {
+            "id": "123188913",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/7CF4/production/_123188913_140e1462-cab1-42d9-a704-768dd7247ad5.jpg",
+            "path": "/cpsprodpb/7CF4/production/_123188913_140e1462-cab1-42d9-a704-768dd7247ad5.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Sam Robinson",
+            "caption": "Sam Robinson",
+            "copyrightHolder": "Sam Robinson",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60311402",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60311402",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644425282000,
+          "type": "link"
+        },
+        {
+          "name": "'Mae pizza fel crefydd yn Napoli'",
+          "indexImage": {
+            "id": "123201815",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/CA62/production/_123201815_microsoftteams-image-7.png",
+            "path": "/cpsprodpb/CA62/production/_123201815_microsoftteams-image-7.png",
+            "height": 1080,
+            "width": 1920,
+            "altText": "pizza",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60323061",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60323061",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644425822000,
+          "type": "link"
+        },
+        {
+          "name": "Carys Davies: 'Troi diddordeb tai mewn i fusnes'",
+          "indexImage": {
+            "id": "123194539",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/16D6D/production/_123194539_carys.jpg",
+            "path": "/cpsprodpb/16D6D/production/_123194539_carys.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Carys Davies",
+            "copyrightHolder": "S4C",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60302803",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60302803",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644400486000,
+          "type": "link"
+        },
+        {
+          "name": "Cwestiynu 'naratif unochrog' Covid",
+          "indexImage": {
+            "id": "123185745",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/D5E6/production/_123185745_aled.jpg",
+            "path": "/cpsprodpb/D5E6/production/_123185745_aled.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Aled Gwyn Job",
+            "caption": "Aled Gwyn Job",
+            "copyrightHolder": "Aled Gwyn Job",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60219154",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60219154",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1643727884000,
+          "type": "link"
+        },
+        {
+          "name": "Star Wars a Doc Penfro",
+          "indexImage": {
+            "id": "123047318",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/13DDE/production/_123047318_gettyimages-1147201564.jpg",
+            "path": "/cpsprodpb/13DDE/production/_123047318_gettyimages-1147201564.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "The Millennium Falcon",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60287763",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60287763",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644321981000,
+          "type": "link"
+        },
+        {
+          "name": "Guto Harri - y Cymro yn Rhif 10",
+          "indexImage": {
+            "id": "123168280",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/205E/production/_123168280_gettyimages-1238260354.jpg",
+            "path": "/cpsprodpb/205E/production/_123168280_gettyimages-1238260354.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "guto harri",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60287355",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60287355",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644249536000,
+          "type": "link"
+        },
+        {
+          "name": "Oes cynrychiolaeth LHDTC+ ddigonol yn y sîn gerddoriaeth Gymraeg?",
+          "indexImage": {
+            "id": "123165898",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/15F00/production/_123165898_pridecymru.jpg",
+            "path": "/cpsprodpb/15F00/production/_123165898_pridecymru.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "lhdtc+",
+            "caption": "Mae Pride Cymru yn un o ddigwyddiadau LHDTC+ mwyaf yng Nghymru",
+            "copyrightHolder": "Pride Cymru",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60290333",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60290333",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644246599000,
+          "type": "link"
+        },
+        {
+          "name": "Ateb y Galw: Iwan Griffiths",
+          "indexImage": {
+            "id": "123104448",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/149D8/production/_123104448_iwangriffiths1.jpg",
+            "path": "/cpsprodpb/149D8/production/_123104448_iwangriffiths1.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "Llun o'r darlledwr Iwan Griffiths",
+            "copyrightHolder": "Iwan Griffiths",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60231327",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60231327",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644227351000,
+          "type": "link"
+        },
+        {
+          "name": "Nathan Wyburn: Creu celf o Marmite a thost",
+          "indexImage": {
+            "id": "123136488",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/1598F/production/_123136488_image00010.jpg",
+            "path": "/cpsprodpb/1598F/production/_123136488_image00010.jpg",
+            "height": 309,
+            "width": 549,
+            "altText": "czj",
+            "caption": "Cyflwyno gwaith i'r seren Hollywood o Abertawe, Catherine Zeta-Jones",
+            "copyrightHolder": "Nathan",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60214549",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60214549",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1643985807000,
+          "type": "link"
+        }
+      ],
+      "mostRead": null,
+      "mostWatched": null
+    }
   }
 }

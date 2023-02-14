@@ -1,284 +1,521 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:newyddion/53403042",
-    "locators": {
-      "assetUri": "/newyddion/53403042",
-      "cpsUrn": "urn:bbc:content:assetUri:newyddion/53403042",
-      "curie": "http://www.bbc.co.uk/asset/2dd1cf1a-91f8-4aa5-b84f-a7567f762494",
-      "assetId": "53403042"
-    },
-    "type": "CSP",
-    "createdBy": "newyddion-v6",
-    "language": "cy",
-    "lastUpdated": 1606843841021,
-    "firstPublished": 1594723545000,
-    "lastPublished": 1594723545000,
-    "timestamp": 1594723545000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "allowAdvertising": true,
-      "hasContentWarning": false,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": false
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "csp",
-      "counterName": "newyddion.gwleidyddiaeth.correspondent_story.53403042.page",
-      "cps_asset_id": "53403042"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:newyddion/53403042",
+        "locators": {
+          "assetUri": "/newyddion/53403042",
+          "cpsUrn": "urn:bbc:content:assetUri:newyddion/53403042",
+          "curie": "http://www.bbc.co.uk/asset/2dd1cf1a-91f8-4aa5-b84f-a7567f762494",
+          "assetId": "53403042"
+        },
+        "type": "CSP",
+        "createdBy": "newyddion-v6",
+        "language": "cy",
+        "lastUpdated": 1644502112382,
+        "firstPublished": 1594723545000,
+        "lastPublished": 1594723545000,
+        "timestamp": 1594723545000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "csp",
+          "counterName": "newyddion.gwleidyddiaeth.correspondent_story.53403042.page",
+          "cps_asset_id": "53403042",
+          "contentId": "urn:bbc:cps:curie:asset:2dd1cf1a-91f8-4aa5-b84f-a7567f762494"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.0",
+        "blockTypes": ["paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "WALES",
+          "producerId": "100"
+        },
+        "readTime": 2,
+        "siteUri": "/newyddion"
       },
-      "taggings": []
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "Gwleidyddiaeth",
-          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": [
-            "tagging:TagConcept",
-            "core:Theme",
-            "core:Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Politics"
-          ],
-          "topicName": "Gwleidyddiaeth",
-          "topicId": "cjyqgz5kvryt",
-          "curationList": [
+      "content": {
+        "blocks": [
+          {
+            "text": "I'r rheiny sydd, fel fi, yn ymddiddori yng ngwleidyddiaeth a hanes Awstralia mae heddiw yn ddiwrnod mawr a dweud y lleiaf.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Ar ôl blynyddoedd o frwydro yn y llysoedd gorfodwyd i'r archif genedlaethol gyhoeddi'r ohebiaeth rhwng Palas Buckingham a'r Llywodraethwr Cyffredinol adeg diswyddo'r Prif Weinidog Llafur Gough Whitlam yn 1975.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Roedd yr archif wedi dadlau mai gohebiaeth breifat oedd y 211 o lythyrau a gyhoeddwyd heddiw. Doedd dim modd eu rhyddhau felly heb gytundeb y Frenhines a doedd hithau neu ei swyddogion ddim yn fodlon rhoi'r caniatâd hwnnw.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "I haneswyr roedd y syniad y gallai dogfennau sydd yn greiddiol i hanes gwleidyddol Awstralia gael eu cadw'n ddirgel ar fympwy menyw ym mhendraw'r byd yn sarhaus. Am unwaith, yr haneswyr wnaeth ennill y ddadl. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Nawr, mae'r llythyrau'n ddiddorol ynddyn nhw eu hun ond maen nhw hefyd yn rhybudd pwysig ynghylch y peryglon o gredu'n ormodol ar rym confensiynau mewn gwledydd sydd a'u cyfansoddiadau'n seiliedig ar gyfundrefn Westminster.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Cymerwch enghraifft. Does neb yn gwadu am eiliad bod gan y Goron, y Frenhines hynny yw, hawl didramgwydd i benodi a diswyddo Prif Weinidogion ond mae'r syniad y byddai Elisabeth II yn diswyddo Prif Weinidog oedd â chefnogaeth mwyafrif yn Nhŷ'r Cyffredin y tu hwnt o bob dychymyg.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Ond dyna oedd yr union bŵer a ddefnyddiwyd gan Syr John Kerr i ddiswyddo Whitlam, ac mae'n brawf o ba mor beryglus yw credu na fydd pwerau sy'n bodoli ar bapur byth yn cael eu defnyddio.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mae hynny'n bwysig wrth i ni ystyried y tensiynau cynyddol rhwng llywodraeth y Deyrnas Unedig ar y naill law a llywodraethau Cymru a'r Alban ar y llall.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Priodolir y geiriau &quot;power devolved is power retained&quot; i Enoch Powell gan amlaf ond mae'r pwynt yn un digon amlwg. Mae San Steffan yn gallu cymryd yn ogystal â rhoi.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Os ydy Boris Johnson o ddifri wrth ddweud y bydd Llywodraeth y Deyrnas Unedig yn adeiladu traffordd newydd i liniaru'r M4 yng Nghasnewydd mae modd iddi wneud hynny.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Gallaf ddychmygu'n hawdd y dadleuon a fyddai'n cael eu defnyddio i gyfiawnhau cyflwyno deddfwriaeth yn San Steffan i sicrhau bod Llywodraeth y DU yn cael cyflawni prosiectau o 'bwys strategol i'r deyrnas gyfan'.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Yn yr un modd os ydy Llywodraeth y DU yn penderfynu mae hi, a hi'n unig, fydd yn llunio amodau a rheolau'r farchnad sengl newydd rhwng Cymru, yr Alban a Lloegr fydd angen ei chreu yn sgil Bregsit does 'na fawr ddim y gall Bae Caerdydd a Holyrood wneud ynghylch y peth.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Byddai, fe fyddai 'na lawer o weiddi a sgrechian ac argyfwng cyfansoddiadol go ddifrifol ond, fel y canfu Whitlam, diwedd y gân yw'r goron.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Diwedd y gân yw'r goron",
+          "headline": "Diwedd y gân yw'r goron"
+        },
+        "locators": {
+          "assetUri": "/newyddion/53403042",
+          "cpsUrn": "urn:bbc:content:assetUri:newyddion/53403042",
+          "curie": "http://www.bbc.co.uk/asset/2dd1cf1a-91f8-4aa5-b84f-a7567f762494",
+          "assetId": "53403042"
+        },
+        "summary": "I'r rheiny sydd, fel fi, yn ymddiddori yng ngwleidyddiaeth a hanes Awstralia mae heddiw yn ddiwrnod mawr a dweud y lleiaf.",
+        "timestamp": 1594723545000,
+        "language": "cy",
+        "byline": {
+          "name": "By Vaughan Roderick",
+          "title": "Golygydd Materion Cymreig y BBC",
+          "persons": [
             {
-              "curationId": "4f5e0352-b5fa-40a6-8f0c-b3c2260157ce",
-              "curationType": "vivo-stream"
+              "name": "Vaughan Roderick",
+              "function": "Golygydd Materion Cymreig y BBC",
+              "url": "/newyddion/correspondents/vaughanroderick",
+              "correspondentId": "vaughanroderick",
+              "thumbnail": "http://news.bbcimg.co.uk/media/images/66800000/jpg/_66800378_roderick144x104-gray.jpg"
             }
-          ],
-          "thingEnglishLabel": "Politics"
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw",
+          "taggings": []
+        },
+        "indexImage": {
+          "id": "111079399",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/18445/production/_111079399_vaughanroderickmawr.jpg",
+          "path": "/cpsprodpb/18445/production/_111079399_vaughanroderickmawr.jpg",
+          "height": 675,
+          "width": 1200,
+          "altText": "vaughan",
+          "copyrightHolder": "BBC",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:newyddion/53403042",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Gwleidyddiaeth",
+          "uri": "/newyddion/gwleidyddiaeth",
+          "urlIdentifier": "/newyddion/gwleidyddiaeth",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Newyddion",
+          "uri": "/newyddion",
+          "urlIdentifier": "/newyddion",
+          "type": "simple"
+        },
+        "groups": []
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "Sefyllfa'r GIG 'ar ei waethaf' ers 25 mlynedd"
+          },
+          "locators": {
+            "assetUri": "/newyddion/60319348",
+            "cpsUrn": "urn:bbc:content:assetUri:newyddion/60319348",
+            "curie": "http://www.bbc.co.uk/asset/c980a97f-671f-4bf9-8bcb-7e2069683f26",
+            "assetId": "60319348"
+          },
+          "summary": "Nyrsys a meddygon blaenllaw yn rhannu eu profiadau o weithio i'r GIG yn ystod gaeaf heriol tu hwnt.",
+          "timestamp": 1644474196000,
+          "language": "cy",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "123203182",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/6DE2/production/_123203182_b68584b0-670c-4a9e-b30c-50c84560d095.jpg",
+            "path": "/cpsprodpb/6DE2/production/_123203182_b68584b0-670c-4a9e-b30c-50c84560d095.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "ysbyty",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Newyddion a mwy",
+            "uri": "/newyddion/hafan",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:newyddion/60319348",
+          "type": "cps"
         },
         {
-          "thingLabel": "Datganoli",
-          "thingUri": "http://www.bbc.co.uk/things/dc9b2f0c-3528-4c7e-b078-4d3074f99a60#id",
-          "thingId": "dc9b2f0c-3528-4c7e-b078-4d3074f99a60",
-          "thingType": [
-            "core:Theme",
-            "tagging:TagConcept",
-            "core:Thing"
-          ],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q744894",
-            "http://dbpedia.org/resource/Devolution_in_the_United_Kingdom"
-          ],
-          "topicName": "Datganoli",
-          "topicId": "c8xqxvg8ly4t",
-          "curationList": [
-            {
-              "curationId": "10e6982b-d217-4e3a-8590-d876338f88b8",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingEnglishLabel": "UK devolution"
-        }
-      ]
-    },
-    "version": "v1.3.11",
-    "blockTypes": [
-      "paragraph"
-    ],
-    "includeComments": false,
-    "atiAnalytics": {
-      "producerName": "WALES",
-      "producerId": "100"
-    },
-    "readTime": 2,
-    "siteUri": "/newyddion",
-    "topics": [
-      {
-        "topicName": "Datganoli",
-        "topicId": "c8xqxvg8ly4t",
-        "subjectList": [
-          {
-            "subjectId": "http://www.bbc.co.uk/things/dc9b2f0c-3528-4c7e-b078-4d3074f99a60#id",
-            "subjectType": "tag"
-          }
-        ],
-        "curationList": [
-          {
-            "curationId": "10e6982b-d217-4e3a-8590-d876338f88b8",
-            "curationType": "vivo-stream",
-            "visualProminence": "NORMAL"
-          }
-        ],
-        "types": [
-          "core:Theme",
-          "tagging:TagConcept",
-          "core:Thing"
-        ]
-      },
-      {
-        "topicName": "Gwleidyddiaeth",
-        "topicId": "cjyqgz5kvryt",
-        "subjectList": [
-          {
-            "subjectId": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-            "subjectType": "tag"
-          }
-        ],
-        "curationList": [
-          {
-            "curationId": "4f5e0352-b5fa-40a6-8f0c-b3c2260157ce",
-            "curationType": "vivo-stream",
-            "visualProminence": "NORMAL"
-          }
-        ],
-        "types": [
-          "tagging:TagConcept",
-          "core:Theme",
-          "core:Thing"
-        ]
-      }
-    ]
-  },
-  "content": {
-    "blocks": [
-      {
-        "text": "I'r rheiny sydd, fel fi, yn ymddiddori yng ngwleidyddiaeth a hanes Awstralia mae heddiw yn ddiwrnod mawr a dweud y lleiaf.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ar ôl blynyddoedd o frwydro yn y llysoedd gorfodwyd i'r archif genedlaethol gyhoeddi'r ohebiaeth rhwng Palas Buckingham a'r Llywodraethwr Cyffredinol adeg diswyddo'r Prif Weinidog Llafur Gough Whitlam yn 1975.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Roedd yr archif wedi dadlau mai gohebiaeth breifat oedd y 211 o lythyrau a gyhoeddwyd heddiw. Doedd dim modd eu rhyddhau felly heb gytundeb y Frenhines a doedd hithau neu ei swyddogion ddim yn fodlon rhoi'r caniatâd hwnnw.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "I haneswyr roedd y syniad y gallai dogfennau sydd yn greiddiol i hanes gwleidyddol Awstralia gael eu cadw'n ddirgel ar fympwy menyw ym mhendraw'r byd yn sarhaus. Am unwaith, yr haneswyr wnaeth ennill y ddadl. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Nawr, mae'r llythyrau'n ddiddorol ynddyn nhw eu hun ond maen nhw hefyd yn rhybudd pwysig ynghylch y peryglon o gredu'n ormodol ar rym confensiynau mewn gwledydd sydd a'u cyfansoddiadau'n seiliedig ar gyfundrefn Westminster.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Cymerwch enghraifft. Does neb yn gwadu am eiliad bod gan y Goron, y Frenhines hynny yw, hawl didramgwydd i benodi a diswyddo Prif Weinidogion ond mae'r syniad y byddai Elisabeth II yn diswyddo Prif Weinidog oedd â chefnogaeth mwyafrif yn Nhŷ'r Cyffredin y tu hwnt o bob dychymyg.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ond dyna oedd yr union bŵer a ddefnyddiwyd gan Syr John Kerr i ddiswyddo Whitlam, ac mae'n brawf o ba mor beryglus yw credu na fydd pwerau sy'n bodoli ar bapur byth yn cael eu defnyddio.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mae hynny'n bwysig wrth i ni ystyried y tensiynau cynyddol rhwng llywodraeth y Deyrnas Unedig ar y naill law a llywodraethau Cymru a'r Alban ar y llall.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Priodolir y geiriau &quot;power devolved is power retained&quot; i Enoch Powell gan amlaf ond mae'r pwynt yn un digon amlwg. Mae San Steffan yn gallu cymryd yn ogystal â rhoi.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Os ydy Boris Johnson o ddifri wrth ddweud y bydd Llywodraeth y Deyrnas Unedig yn adeiladu traffordd newydd i liniaru'r M4 yng Nghasnewydd mae modd iddi wneud hynny.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Gallaf ddychmygu'n hawdd y dadleuon a fyddai'n cael eu defnyddio i gyfiawnhau cyflwyno deddfwriaeth yn San Steffan i sicrhau bod Llywodraeth y DU yn cael cyflawni prosiectau o 'bwys strategol i'r deyrnas gyfan'.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Yn yr un modd os ydy Llywodraeth y DU yn penderfynu mae hi, a hi'n unig, fydd yn llunio amodau a rheolau'r farchnad sengl newydd rhwng Cymru, yr Alban a Lloegr fydd angen ei chreu yn sgil Bregsit does 'na fawr ddim y gall Bae Caerdydd a Holyrood wneud ynghylch y peth.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Byddai, fe fyddai 'na lawer o weiddi a sgrechian ac argyfwng cyfansoddiadol go ddifrifol ond, fel y canfu Whitlam, diwedd y gân yw'r goron.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Diwedd y gân yw'r goron",
-      "headline": "Diwedd y gân yw'r goron"
-    },
-    "locators": {
-      "assetUri": "/newyddion/53403042",
-      "cpsUrn": "urn:bbc:content:assetUri:newyddion/53403042",
-      "curie": "http://www.bbc.co.uk/asset/2dd1cf1a-91f8-4aa5-b84f-a7567f762494",
-      "assetId": "53403042"
-    },
-    "summary": "I'r rheiny sydd, fel fi, yn ymddiddori yng ngwleidyddiaeth a hanes Awstralia mae heddiw yn ddiwrnod mawr a dweud y lleiaf.",
-    "timestamp": 1594723545000,
-    "language": "cy",
-    "byline": {
-      "name": "By Vaughan Roderick",
-      "title": "Golygydd Materion Cymreig y BBC",
-      "persons": [
+          "headlines": {
+            "headline": "Cyngor Gwynedd: Cadarnhau gwyliau Dydd Gŵyl Dewi"
+          },
+          "locators": {
+            "assetUri": "/newyddion/60330913",
+            "cpsUrn": "urn:bbc:content:assetUri:newyddion/60330913",
+            "curie": "http://www.bbc.co.uk/asset/91596f4f-a42f-4b69-8ca6-5074e54d0504",
+            "assetId": "60330913"
+          },
+          "summary": "Roedd rhai cynghorwyr wedi cwestiynu'r penderfyniad i wario £200,000 ar ddiwrnod ychwanegol o wyliau i'w staff.",
+          "timestamp": 1644495015000,
+          "language": "cy",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "122744996",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/11138/production/_122744996_5f194c0a-498e-46e8-a818-9623182c91ef.jpg",
+            "path": "/cpsprodpb/11138/production/_122744996_5f194c0a-498e-46e8-a818-9623182c91ef.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Cennin Pedr",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Gogledd-Orllewin",
+            "uri": "/newyddion/gogledd-orllewin",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:newyddion/60330913",
+          "type": "cps"
+        },
         {
-          "name": "Vaughan Roderick",
-          "function": "Golygydd Materion Cymreig y BBC",
-          "url": "/newyddion/correspondents/vaughanroderick",
-          "correspondentId": "vaughanroderick",
-          "thumbnail": "http://news.bbcimg.co.uk/media/images/66800000/jpg/_66800378_roderick144x104-gray.jpg"
+          "headlines": {
+            "headline": "Llanelli: Arestio dyn ar amheuaeth o droseddau ffrwydron"
+          },
+          "locators": {
+            "assetUri": "/newyddion/60334001",
+            "cpsUrn": "urn:bbc:content:assetUri:newyddion/60334001",
+            "curie": "http://www.bbc.co.uk/asset/d5aa3243-6a3b-4050-9f28-cf7021d16603",
+            "assetId": "60334001"
+          },
+          "summary": "Dyn 41 oed wedi ei arestio ar ôl i swyddogion arbenigol chwilio adeilad yn Llanelli ddydd Iau.",
+          "timestamp": 1644502929000,
+          "language": "cy",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "123212536",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/F821/production/_123212536_mediaitem123212535.jpg",
+            "path": "/cpsprodpb/F821/production/_123212536_mediaitem123212535.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Heddlu",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "De-Orllewin",
+            "uri": "/newyddion/de-orllewin",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:newyddion/60334001",
+          "type": "cps"
         }
-      ]
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "taggings": []
-    },
-    "indexImage": {
-      "id": "111079399",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/18445/production/_111079399_vaughanroderickmawr.jpg",
-      "path": "/cpsprodpb/18445/production/_111079399_vaughanroderickmawr.jpg",
-      "height": 675,
-      "width": 1200,
-      "altText": "vaughan",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:newyddion/53403042",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Gwleidyddiaeth",
-      "uri": "/newyddion/gwleidyddiaeth",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "Newyddion",
-      "uri": "/newyddion",
-      "type": "simple"
-    },
-    "groups": []
+      ],
+      "features": [
+        {
+          "name": "Y bugail o Rydychen sy’n barddoni’n Gymraeg",
+          "indexImage": {
+            "id": "123188913",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/7CF4/production/_123188913_140e1462-cab1-42d9-a704-768dd7247ad5.jpg",
+            "path": "/cpsprodpb/7CF4/production/_123188913_140e1462-cab1-42d9-a704-768dd7247ad5.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Sam Robinson",
+            "caption": "Sam Robinson",
+            "copyrightHolder": "Sam Robinson",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60311402",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60311402",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644425282000,
+          "type": "link"
+        },
+        {
+          "name": "'Mae pizza fel crefydd yn Napoli'",
+          "indexImage": {
+            "id": "123201815",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/CA62/production/_123201815_microsoftteams-image-7.png",
+            "path": "/cpsprodpb/CA62/production/_123201815_microsoftteams-image-7.png",
+            "height": 1080,
+            "width": 1920,
+            "altText": "pizza",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60323061",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60323061",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644425822000,
+          "type": "link"
+        },
+        {
+          "name": "Carys Davies: 'Troi diddordeb tai mewn i fusnes'",
+          "indexImage": {
+            "id": "123194539",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/16D6D/production/_123194539_carys.jpg",
+            "path": "/cpsprodpb/16D6D/production/_123194539_carys.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Carys Davies",
+            "copyrightHolder": "S4C",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60302803",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60302803",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644400486000,
+          "type": "link"
+        },
+        {
+          "name": "Cwestiynu 'naratif unochrog' Covid",
+          "indexImage": {
+            "id": "123185745",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/D5E6/production/_123185745_aled.jpg",
+            "path": "/cpsprodpb/D5E6/production/_123185745_aled.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Aled Gwyn Job",
+            "caption": "Aled Gwyn Job",
+            "copyrightHolder": "Aled Gwyn Job",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60219154",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60219154",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1643727884000,
+          "type": "link"
+        },
+        {
+          "name": "Star Wars a Doc Penfro",
+          "indexImage": {
+            "id": "123047318",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/13DDE/production/_123047318_gettyimages-1147201564.jpg",
+            "path": "/cpsprodpb/13DDE/production/_123047318_gettyimages-1147201564.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "The Millennium Falcon",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60287763",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60287763",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644321981000,
+          "type": "link"
+        },
+        {
+          "name": "Guto Harri - y Cymro yn Rhif 10",
+          "indexImage": {
+            "id": "123168280",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/205E/production/_123168280_gettyimages-1238260354.jpg",
+            "path": "/cpsprodpb/205E/production/_123168280_gettyimages-1238260354.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "guto harri",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60287355",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60287355",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644249536000,
+          "type": "link"
+        },
+        {
+          "name": "Oes cynrychiolaeth LHDTC+ ddigonol yn y sîn gerddoriaeth Gymraeg?",
+          "indexImage": {
+            "id": "123165898",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/15F00/production/_123165898_pridecymru.jpg",
+            "path": "/cpsprodpb/15F00/production/_123165898_pridecymru.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "lhdtc+",
+            "caption": "Mae Pride Cymru yn un o ddigwyddiadau LHDTC+ mwyaf yng Nghymru",
+            "copyrightHolder": "Pride Cymru",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60290333",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60290333",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644246599000,
+          "type": "link"
+        },
+        {
+          "name": "Ateb y Galw: Iwan Griffiths",
+          "indexImage": {
+            "id": "123104448",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/149D8/production/_123104448_iwangriffiths1.jpg",
+            "path": "/cpsprodpb/149D8/production/_123104448_iwangriffiths1.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "Llun o'r darlledwr Iwan Griffiths",
+            "copyrightHolder": "Iwan Griffiths",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60231327",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60231327",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1644227351000,
+          "type": "link"
+        },
+        {
+          "name": "Nathan Wyburn: Creu celf o Marmite a thost",
+          "indexImage": {
+            "id": "123136488",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/1598F/production/_123136488_image00010.jpg",
+            "path": "/cpsprodpb/1598F/production/_123136488_image00010.jpg",
+            "height": 309,
+            "width": 549,
+            "altText": "czj",
+            "caption": "Cyflwyno gwaith i'r seren Hollywood o Abertawe, Catherine Zeta-Jones",
+            "copyrightHolder": "Nathan",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.co.uk/cymrufyw/60214549",
+          "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newyddion/60214549",
+          "contentType": "Feature",
+          "assetTypeCode": "PRO",
+          "timestamp": 1643985807000,
+          "type": "link"
+        }
+      ],
+      "mostRead": null,
+      "mostWatched": null
+    }
   }
 }
