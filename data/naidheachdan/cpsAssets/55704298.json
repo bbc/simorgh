@@ -1,173 +1,590 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:naidheachdan/55704298",
-    "locators": {
-      "assetUri": "/naidheachdan/55704298",
-      "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/55704298",
-      "curie": "http://www.bbc.co.uk/asset/ef92c041-98ee-4b68-9760-93d39f663dfb",
-      "assetId": "55704298"
-    },
-    "type": "STY",
-    "createdBy": "naidheachdan-v6",
-    "language": "gd",
-    "lastUpdated": 1610967654334,
-    "firstPublished": 1610967647000,
-    "lastPublished": 1610967647000,
-    "timestamp": 1610967647000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "allowAdvertising": true,
-      "hasContentWarning": false,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": false
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "sty",
-      "counterName": "naidheachdan.story.55704298.page",
-      "cps_asset_id": "55704298"
-    },
-    "tags": {},
-    "version": "v1.3.11",
-    "blockTypes": [
-      "image",
-      "paragraph",
-      "crosshead"
-    ],
-    "includeComments": false,
-    "atiAnalytics": {
-      "producerName": "SCOTLAND",
-      "producerId": "79"
-    },
-    "readTime": 1,
-    "siteUri": "/naidheachdan"
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "116563758",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/14EE8/production/_116563758__113255509_edencourt.jpg",
-        "path": "/cpsprodpb/14EE8/production/_116563758__113255509_edencourt.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "Taigh-cluiche Eden Court",
-        "copyrightHolder": "BBC",
-        "positionHint": "full-width",
-        "type": "image"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:naidheachdan/55704298",
+        "locators": {
+          "assetUri": "/naidheachdan/55704298",
+          "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/55704298",
+          "curie": "http://www.bbc.co.uk/asset/ef92c041-98ee-4b68-9760-93d39f663dfb",
+          "assetId": "55704298"
+        },
+        "type": "STY",
+        "createdBy": "naidheachdan-v6",
+        "language": "gd",
+        "lastUpdated": 1645113109128,
+        "firstPublished": 1610967647000,
+        "lastPublished": 1610967647000,
+        "timestamp": 1610967647000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "sty",
+          "counterName": "naidheachdan.story.55704298.page",
+          "cps_asset_id": "55704298",
+          "contentId": "urn:bbc:cps:curie:asset:ef92c041-98ee-4b68-9760-93d39f663dfb"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Naidheachdan",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.0",
+        "blockTypes": ["image", "paragraph", "crosshead"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "SCOTLAND",
+          "producerId": "79"
+        },
+        "readTime": 1,
+        "siteUri": "/naidheachdan"
       },
-      {
-        "text": "Cuiridh maoineachadh ùr airson taigh-cluiche agus ionad-ealain Eden Court dìon air obraichean, a rèir àrd-oifigear na companaidh.",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "116563758",
+            "subType": "body",
+            "href": "http://c.files.bbci.co.uk/14EE8/production/_116563758__113255509_edencourt.jpg",
+            "path": "/cpsprodpb/14EE8/production/_116563758__113255509_edencourt.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Taigh-cluiche Eden Court",
+            "copyrightHolder": "BBC",
+            "positionHint": "full-width",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          {
+            "text": "Cuiridh maoineachadh ùr airson taigh-cluiche agus ionad-ealain Eden Court dìon air obraichean, a rèir àrd-oifigear na companaidh.",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Gheibh Eden Court mu £800,000 de thaic-airgid a bharrachd bho Riaghaltas na h-Alba gus an cuideachadh le bhith a' dèiligeadh le buaidh a' Choròna-bhìorais. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Tha an t-airgead mar phàirt de mhaoineachadh luach £185 millean a chaidh ainmeachadh air a' mhìos a chaidh gus cuideachadh a thoirt do ghnìomhachasan ealain tron phandemic. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Seasmhachd",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "text": "Tha Eden Court am measg trì buidhnean a tha a' ruith ionadan ealain a fhuair taic a bharrachd.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Tha e a' ciallachadh gun urrainn dhuinn dìon a chur air obraichean&quot;, thuirt Seumas MacCoinnich Blackman.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Tha fhios againn gum bi sinn seasmhach a' dol a-steach ann an 2021&quot;.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Luchd-obrach",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "text": "'S e Eden Court an t-ionad ealain a tha air aon làrach as motha ann an Alba.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "A-mach à còrr is 100 luchd-obrach, tha còrr is 90% dhiubh fhathast air sgeama fòrlaidh an Riaghaltais. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Chan eil ach naoinear againn an-dràsta a' ruith Eden Court&quot;, thuirt Mgr Blackman.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Tha cùisean suas is sìos dhan fheadhainn a tha a' feuchainn ri Eden Court a chumail a' dol. Ach tha sinn a' dèanamh a h-uile càil as urrainn dhuinn gus fosgladh a-rithist cho luath 's a bhios sin comasach&quot;, thuirt e.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "Gheibh Eden Court mu £800,000 de thaic-airgid a bharrachd bho Riaghaltas na h-Alba gus an cuideachadh le bhith a' dèiligeadh le buaidh a' Choròna-bhìorais. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Maoineachadh ùr \"a' cur dìon air obraichean\" aig Eden Court",
+          "headline": "Maoineachadh ùr \"a' cur dìon air obraichean\" aig Eden Court"
+        },
+        "locators": {
+          "assetUri": "/naidheachdan/55704298",
+          "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/55704298",
+          "curie": "http://www.bbc.co.uk/asset/ef92c041-98ee-4b68-9760-93d39f663dfb",
+          "assetId": "55704298"
+        },
+        "summary": "Cuiridh maoineachadh ùr airson taigh-cluiche agus ionad-ealain Eden Court dìon air obraichean, a rèir àrd-oifigear na companaidh.",
+        "timestamp": 1610967647000,
+        "language": "gd",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Naidheachdan",
+          "taggings": []
+        },
+        "indexImage": {
+          "id": "116563759",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/175F8/production/_116563759__113255509_edencourt.jpg",
+          "path": "/cpsprodpb/175F8/production/_116563759__113255509_edencourt.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Taigh-cluiche Eden Court",
+          "copyrightHolder": "BBC",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:naidheachdan/55704298",
+        "type": "cps"
       },
-      {
-        "text": "Tha an t-airgead mar phàirt de mhaoineachadh luach £185 millean a chaidh ainmeachadh air a' mhìos a chaidh gus cuideachadh a thoirt do ghnìomhachasan ealain tron phandemic. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Seasmhachd",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "Tha Eden Court am measg trì buidhnean a tha a' ruith ionadan ealain a fhuair taic a bharrachd.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Tha e a' ciallachadh gun urrainn dhuinn dìon a chur air obraichean&quot;, thuirt Seumas MacCoinnich Blackman.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Tha fhios againn gum bi sinn seasmhach a' dol a-steach ann an 2021&quot;.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Luchd-obrach",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "'S e Eden Court an t-ionad ealain a tha air aon làrach as motha ann an Alba.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "A-mach à còrr is 100 luchd-obrach, tha còrr is 90% dhiubh fhathast air sgeama fòrlaidh an Riaghaltais. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Chan eil ach naoinear againn an-dràsta a' ruith Eden Court&quot;, thuirt Mgr Blackman.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Tha cùisean suas is sìos dhan fheadhainn a tha a' feuchainn ri Eden Court a chumail a' dol. Ach tha sinn a' dèanamh a h-uile càil as urrainn dhuinn gus fosgladh a-rithist cho luath 's a bhios sin comasach&quot;, thuirt e.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Dachaigh",
+          "uri": "/naidheachdan/dachaigh",
+          "urlIdentifier": "/naidheachdan/dachaigh",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Naidheachdan",
+          "uri": "/naidheachdan",
+          "urlIdentifier": "/naidheachdan",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Maoineachadh ùr \"a' cur dìon air obraichean\" aig Eden Court",
-      "headline": "Maoineachadh ùr \"a' cur dìon air obraichean\" aig Eden Court"
     },
-    "locators": {
-      "assetUri": "/naidheachdan/55704298",
-      "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/55704298",
-      "curie": "http://www.bbc.co.uk/asset/ef92c041-98ee-4b68-9760-93d39f663dfb",
-      "assetId": "55704298"
-    },
-    "summary": "Cuiridh maoineachadh ùr airson taigh-cluiche agus ionad-ealain Eden Court dìon air obraichean, a rèir àrd-oifigear na companaidh.",
-    "timestamp": 1610967647000,
-    "language": "gd",
-    "indexImage": {
-      "id": "116563759",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/175F8/production/_116563759__113255509_edencourt.jpg",
-      "path": "/cpsprodpb/175F8/production/_116563759__113255509_edencourt.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "Taigh-cluiche Eden Court",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:naidheachdan/55704298",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Dachaigh",
-      "uri": "/naidheachdan/dachaigh",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "Naidheachdan",
-      "uri": "/naidheachdan",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "Droch shìde a' toirt buaidh"
+          },
+          "locators": {
+            "assetUri": "/naidheachdan/60334323",
+            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/60334323",
+            "curie": "http://www.bbc.co.uk/asset/a3d26e47-7f78-4081-a005-8529b1a0b40b",
+            "assetId": "60334323"
+          },
+          "summary": "Tha sneachda agus gèiltean air duilgheadasan adhbhrachadh do dhraibhearan agus luchd-siubhail ann an cuid de sgìrean na h-Alba Diardaoin.",
+          "timestamp": 1644498425000,
+          "language": "gd",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "123195684",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/BE13/production/_123195684_plough.jpg",
+            "path": "/cpsprodpb/BE13/production/_123195684_plough.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Inneal sneachd",
+            "copyrightHolder": "PA Media",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "123210428",
+            "subType": "index-thumbnail",
+            "href": "http://c.files.bbci.co.uk/141E1/production/_123210428_stow.jpg",
+            "path": "/cpsprodpb/141E1/production/_123210428_stow.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Stow anns na Crìochan",
+            "caption": "Sealladh geamhradail ann an Stow anns na Crìochan madainn an-diugh",
+            "copyrightHolder": "Derek B/BBC Weather Watchers",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Dachaigh",
+            "uri": "/naidheachdan/dachaigh",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:naidheachdan/60334323",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Leasachach cidhe Stafainn"
+          },
+          "locators": {
+            "assetUri": "/naidheachdan/60334322",
+            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/60334322",
+            "curie": "http://www.bbc.co.uk/asset/55014ae1-44e3-4350-92a9-6f2876ee02e4",
+            "assetId": "60334322"
+          },
+          "summary": "Thòisich obair a' leasachadh cidhe Stafainn san Eilean Sgitheanach.",
+          "timestamp": 1644496709000,
+          "language": "gd",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "123210422",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/5781/production/_123210422_staffinslipway.jpg",
+            "path": "/cpsprodpb/5781/production/_123210422_staffinslipway.jpg",
+            "height": 348,
+            "width": 618,
+            "altText": "Cidhe Stafainn",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Dachaigh",
+            "uri": "/naidheachdan/dachaigh",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:naidheachdan/60334322",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Dragh mu ghainnead bìdhe ùir an Uibhist is Bharraigh"
+          },
+          "locators": {
+            "assetUri": "/naidheachdan/60332365",
+            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/60332365",
+            "curie": "http://www.bbc.co.uk/asset/b6d3a637-12e5-4352-a1bd-b2e729d0c689",
+            "assetId": "60332365"
+          },
+          "summary": "Tha dragh ann an Uibhist is Barraigh gu bheil cho cugallach 's a tha seirbheis nan aiseagan air a bhith bho chionn ghoirid a' fàgail gainnead bìdh ùir sna bùithdean.",
+          "timestamp": 1644491487000,
+          "language": "gd",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "123208262",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/66A8/production/_123208262_barraferry_0.jpg",
+            "path": "/cpsprodpb/66A8/production/_123208262_barraferry_0.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "Bàt-aiseig",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Dachaigh",
+            "uri": "/naidheachdan/dachaigh",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:naidheachdan/60332365",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "Fàilte dhan Stravàidhealtachd"
+          },
+          "locators": {
+            "assetUri": "/naidheachdan/60315587",
+            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/60315587",
+            "curie": "http://www.bbc.co.uk/asset/6d600d99-f390-4670-988d-998a5e270ff1",
+            "assetId": "60315587"
+          },
+          "summary": "Oidhirp às ùr daoine a bhrosnachadh a bhith ag eacarsaich is a' cleachdadh na Gàidhlig.",
+          "timestamp": 1644413322000,
+          "language": "gd",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "123194138",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/144CD/production/_123194138_gettyimages-1288198123.jpg",
+            "path": "/cpsprodpb/144CD/production/_123194138_gettyimages-1288198123.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Ruith",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Spors",
+            "uri": "/naidheachdan/spors",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:naidheachdan/60315587",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Luaidh ga dhèanamh air Willie Teddy"
+          },
+          "locators": {
+            "assetUri": "/naidheachdan/60302279",
+            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/60302279",
+            "curie": "http://www.bbc.co.uk/asset/a9c4df36-32e8-4cac-aec1-2d0f58f5a0b9",
+            "assetId": "60302279"
+          },
+          "summary": "Tha luaidh ga dhèanamh air bàrd baile à Leòdhas, Uilleam Iain Caimbeul, neo Willie Teddy.",
+          "timestamp": 1644314816000,
+          "language": "gd",
+          "cpsType": "MAP",
+          "media": {
+            "id": "p0bmv3fp",
+            "subType": "clip",
+            "format": "audio",
+            "title": "Luaidh ga dhèanamh air Willie Teddy",
+            "synopses": {
+              "short": "Tha luaidh ga dhèanamh air bàrd baile à Leòdhas",
+              "long": "Tha luaidh ga dhèanamh air bàrd baile à Leòdhas - Uilleam Iain Caimbeul, neo Willie Teddy - Bàrd nam Fleisearan.  \nBhàsaich e aig aois 83.  Bhiodh Willie Teddy a' sgrìobhadh rannan mun Rubha, agus gu h-àraid mu chluba ball-coise na sgìre. Fhuair e cothrom leabhar dhen bhàrdachd aige fhoillseachadh ann an 2018.",
+              "medium": "Tha luaidh ga dhèanamh air bàrd baile à Leòdhas, Uilleam Iain Caimbeul, neo Willie Teddy, Bàrd nam Fleisearan."
+            },
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bmv46c.jpg",
+            "embedding": true,
+            "advertising": false,
+            "caption": "Tha luaidh ga dhèanamh air bàrd baile à Leòdhas",
+            "versions": [
+              {
+                "versionId": "p0bmv3ft",
+                "types": ["Original"],
+                "duration": 242,
+                "durationISO8601": "PT4M2S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1644312847000
+              }
+            ],
+            "smpKind": "radioProgramme",
+            "type": "media"
+          },
+          "indexImage": {
+            "id": "123175774",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/BA8D/production/_123175774_p0bmv46c.jpg",
+            "path": "/cpsprodpb/BA8D/production/_123175774_p0bmv46c.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Leabhar bardachd",
+            "copyrightHolder": "Acair",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Dachaigh",
+            "uri": "/naidheachdan/dachaigh",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:naidheachdan/60302279",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Rinneadh cobhair air turtar a chaidh air tìr ann an Eilean Ì"
+          },
+          "locators": {
+            "assetUri": "/naidheachdan/60196037",
+            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/60196037",
+            "curie": "http://www.bbc.co.uk/asset/68451d25-357c-40f6-bd6a-1aa80b3fc861",
+            "assetId": "60196037"
+          },
+          "summary": "Tha an turtar loggerhead òg fo chùram ionad chreutairean-mara an dèidh a lorg an Eilean Ì.",
+          "timestamp": 1643637638000,
+          "language": "gd",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "123063765",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/DDA0/production/_123063765_turtletwo.jpg",
+            "path": "/cpsprodpb/DDA0/production/_123063765_turtletwo.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Turtar",
+            "copyrightHolder": "BDMLR",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Dachaigh",
+            "uri": "/naidheachdan/dachaigh",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:naidheachdan/60196037",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Fiabhras a' Chupa an Inbhir Nis"
+          },
+          "locators": {
+            "assetUri": "/naidheachdan/60160069",
+            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/60160069",
+            "curie": "http://www.bbc.co.uk/asset/d8783f8f-0700-4d79-b731-52e2bf98d22f",
+            "assetId": "60160069"
+          },
+          "summary": "B' e ball-coise a-mhàin a bha ann am beul bhaile Inbhir Nis bho chionn 100 bliadhna.",
+          "timestamp": 1643353853000,
+          "language": "gd",
+          "byline": {
+            "name": "Dòmhnall Pollock",
+            "title": "BBC Naidheachdan",
+            "persons": [
+              {
+                "name": "Dòmhnall Pollock",
+                "function": "BBC Naidheachdan"
+              }
+            ]
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "123028041",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/3702/production/_123028041_mediaitem122881795.jpg",
+            "path": "/cpsprodpb/3702/production/_123028041_mediaitem122881795.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Clach 1924",
+            "caption": "Bha Clach na Cùdainn aithnichte mar fìor sgioba chupa aig an àm. Seo iad ann an cuairt dheireannach Chupa Qualifying na h-Alba an 1924. Dealbh le cead bho DC Thomson & Co Earranta.",
+            "copyrightHolder": "DC Thomson",
+            "originCode": "cpsprodpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Dachaigh",
+            "uri": "/naidheachdan/dachaigh",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:naidheachdan/60160069",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "Naidheachdan 11:00m"
+          },
+          "locators": {
+            "assetUri": "/naidheachdan/60332366",
+            "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/60332366",
+            "curie": "http://www.bbc.co.uk/asset/11d16b08-6ec9-456b-b160-cc97fc008024",
+            "assetId": "60332366"
+          },
+          "summary": "Geàrr-chunntas sgrìobhte de naidheachdan 11:00m, le clàr-fuaime na chois.",
+          "timestamp": 1644495985000,
+          "language": "gd",
+          "cpsType": "MAP",
+          "media": {
+            "id": "p0bnc0td",
+            "subType": "clip",
+            "format": "audio",
+            "title": "Naidheachdan 11:00m",
+            "synopses": {
+              "short": "Naidheachdan 11:00m",
+              "long": "An Ruis \n\nThòisich feachdan armaichte na Ruis agus Belarus ag eacarsaich còmhla faisg air crìoch a tuath na h-Ugràin. Tha Mosgo mar thà air na deichean mhìltean shaighdearan a ghluasad chun na crìche an ear. Tha am Prìomhaire Boris Johnson sa Bhruiseil an-dràsta airson coinneimh le Àrd-Rùnaire NATO, Jens Stoltenberg. A' bruidhinn aig coinneimh naidheachd o chionn ghoirid, thuirt Mgr Johnson gur màithte gu bheil sinn a-niste air an ìre as cunnartaiche a ruighinn, agus gur e seo an staing tèarainteachd as miosa san Roinn Eòrpa airson bliadhnaichean mòra.\n\nTha Rùnaire Cèin na Rìoghachd Aonaichte, Liz Truss, anns an Ruis airson còmhraidhean ri ministear cèin na dùthcha, Sergei Larov. A' bhruidhinn ron choinneimh, thuirt a' Bh-Mh. Truss gum biodh cogadh mì-bhuadhach dhan dà chuid an Ugràin agus an Ruis. Thuirt Mgr Lavrov nach b' e seo an t-àm airson a bhith a' cur a-mach rabhadh bhuilean. \n\nCovid\n\nTha ministearan Albannach a' sireadh fhreagart air dè bhios e a' ciallachadh do dh'Alba nuair a thèid cur às do chuingealachaidhean Covid ann an Sasainn. Tha Riaghaltas na h-Alba an dùil na cumhachdan laghail a ghabh iad aig toiseach a' phandemic a leudachadh chun an Fhoghair, ach tha Boris Johnson air innse do bhuill-phàrlamaid gun tig na riaghailtean mu dheireadh ann an Sasainn gu ceann ann am beagan sheachdainnean. \n\nAilig Cole Hamilton\n\nAgus chaidh ceannard Lib-Deamach na h-Alba, Ailig Cole-Hamilton, a dhearbhadh le Coròna-bhìoras. A' foillseachadh dealbh den deuchainn lateral flow aige, thuirt Mgr Cole-Hamilton gun robh e taingeil gun robh e air na banachdaichean aige a ghabhail, agus gu bheil e a-niste a' fèin-aonranachadh. Tha sin a' ciallachadh nach bi e ann an seòmar na Pàrlamaid feasgar airson Ceistean a' Phrìomh Mhinisteir. \n\nAn Fhraing\n\nThàinig rabhadh bho phoilis na Frainge gun cuir iad stad air duine sam bith a dh'fheuchas ri fianais a thogail ann am Paris air an deireadh-sheachdain. Tha luchd-iomairt an aghaidh na banachdaich an dùil an eisimpleir aig dràibhearan làraidh ann an Canada a leantainn agus carbadan a chleachdadh airson am prìomh bhaile a thoirt gu stad. Tha na Poilis ag ràdh, bhon a-màireach, gu bheil càin susbainteach, casg-dràibhidh agus suas ri dà bhliadhna sa phrìosan a' feitheamh air duine sam bith a dh'fheuchas ri rathaidean Pharis a dhùnadh. \n\nUibhist is Barraigh\n\nTha dragh ag èirigh ann an Uibhist is Barraigh mu ghainnead bìdhe anns na bùithdean leis cho gann 's a tha seirbheisean aiseig air a bhith o chionn ghoirid. Tha droch shìde, cion bhàtaichean agus an Coròna-bhìoras a' cur ris an t-suidheachadh. Thuirt Caledonian Mac a' Bhiuthainn gun seòil àiseag às an t-Òban gu Bàgh a' Chaisteil agus Loch Baghasdail feasgar, agus gu bheil iad ag ullachadh phlanaichean airson a-màireach. \n\nGeamaichean Oilimpigeach a' Gheamhraidh\n\nAgus tha Comataidh Eadar-nàiseanta na h-Olympics air diùltadh innse carson a chaidh dàil a chur air a bhith a' toirt seachad nam bonn airson dannsa spèile aig na geamaichean geamhraidh ann am Beijing. Tha fathannan a' dol mun cuairt gum b' fheudar dàil a chur air cuirm nam bonn oir gu bheil ball den sgioba Ruiseanach a bhuannaich an fharpais air deuchainn dhrogaichean fhàiligeadh.",
+              "medium": "Geàrr-chunntas sgrìobhte de naidheachdan 11:00m, le clàr-fuaime na chois."
+            },
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bnc4x1.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "Naidheachdan 11:00m",
+            "versions": [
+              {
+                "versionId": "p0bnc0tj",
+                "types": ["Original"],
+                "duration": 150,
+                "durationISO8601": "PT2M30S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1644493631000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "radioProgramme",
+            "type": "media"
+          },
+          "indexImage": {
+            "id": "123210223",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/7DC9/production/_123210223_p0bnc4x1.jpg",
+            "path": "/cpsprodpb/7DC9/production/_123210223_p0bnc4x1.jpg",
+            "height": 576,
+            "width": 1024,
+            "altText": "Stiùidio",
+            "copyrightHolder": "BBC",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Dachaigh",
+            "uri": "/naidheachdan/dachaigh",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:naidheachdan/60332366",
+          "type": "cps"
+        }
+      ],
+      "mostRead": null,
+      "mostWatched": null
+    }
   }
 }
