@@ -33,11 +33,13 @@ const StyledIndexAlsosUl = styled.ul`
   margin: 0;
 `;
 
+// `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 const StyledIndexAlsosLink = styled.a`
   ${({ script }) => script && getBrevier(script)};
   ${({ service }) => getSerifMedium(service)}
   color: ${C_EBON};
   text-decoration: none;
+  display: inline-block;
 
   &:hover,
   &:focus {
@@ -68,6 +70,7 @@ const IndexAlsosLink = ({
       href={url}
       script={script}
       service={service}
+      className="focusIndicatorDisplayInlineBlock"
       // Line 63 and id={`IndexAlsosLink-${sanitisedUrl}`} in line 68 are temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
       {...(mediaIndicator && {
         'aria-labelledby': `IndexAlsosLink-${sanitisedUrl}`,
@@ -95,11 +98,13 @@ IndexAlsosLink.propTypes = {
   url: string.isRequired,
   mediaIndicator: node,
   mediaType: string,
+  className: string,
 };
 
 IndexAlsosLink.defaultProps = {
   mediaIndicator: null,
   mediaType: null,
+  className: null,
 };
 
 export const IndexAlsos = props => {

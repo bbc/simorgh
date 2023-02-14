@@ -19,11 +19,13 @@ import generatePromoId from '../generatePromoId';
 const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
   const contentType = pathOr('', ['contentType'], item);
   const assetUri = pathOr('', ['locators', 'assetUri'], item);
+  const canonicalUrl = pathOr('', ['locators', 'canonicalUrl'], item);
   const uri = pathOr('', ['uri'], item);
 
   const ariaLabelledBy = generatePromoId({
     sectionType: 'top-stories',
     assetUri,
+    canonicalUrl,
     uri,
     contentType,
     index,

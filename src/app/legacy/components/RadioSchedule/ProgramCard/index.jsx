@@ -46,6 +46,7 @@ const SummaryWrapper = styled.p`
   ${({ service }) => service && getSansRegular(service)}
   ${({ script }) => script && getBrevier(script)}
   color: ${C_METAL};
+  padding-top: ${GEL_SPACING};
   padding-bottom: ${GEL_SPACING_DBL};
   margin: 0; /* Reset */
 `;
@@ -119,7 +120,7 @@ const ProgramCard = ({ program, id, ...props }) => {
         <IconWrapper {...programStateConfig[state]}>
           {mediaIcons.audio}
         </IconWrapper>
-        <DurationWrapper dir={dir} dateTime={duration}>
+        <DurationWrapper dir={dir} dateTime={duration} suppressHydrationWarning>
           <span aria-hidden="true">{formatDuration({ duration, locale })}</span>
         </DurationWrapper>
       </ButtonWrapper>

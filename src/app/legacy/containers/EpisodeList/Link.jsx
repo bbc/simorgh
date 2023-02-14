@@ -16,7 +16,10 @@ const MediaIndicatorWrapper = styled.div`
   top: 0;
 `;
 
+// `display: block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 const StyledAnchor = styled.a`
+  display: block;
+
   :before {
     position: absolute;
     top: 0;
@@ -61,6 +64,7 @@ const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
       showMediaIndicator={showMediaIndicator}
       // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
       aria-labelledby={`episodeLinkIndex-${index}`}
+      className="focusIndicatorDisplayBlock focusIndicatorInvert"
       {...props}
     >
       {showMediaIndicator && (

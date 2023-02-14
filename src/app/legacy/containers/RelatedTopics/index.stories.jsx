@@ -8,30 +8,33 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import RelatedTopics from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const WithContexts = ({ children, variant, service = 'mundo' }) => {
   return (
-    <ToggleContextProvider
-      toggles={{
-        eventTracking: {
-          enabled: true,
-        },
-      }}
-    >
-      <RequestContextProvider
-        service={service}
-        variant={variant}
-        pageType={STORY_PAGE}
-        isAmp={false}
-        pathname="/"
+    <ThemeProvider service={service}>
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: {
+            enabled: true,
+          },
+        }}
       >
-        <ServiceContextProvider service={service}>
-          <EventTrackingContextProvider>
-            {children}
-          </EventTrackingContextProvider>
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContextProvider>
+        <RequestContextProvider
+          service={service}
+          variant={variant}
+          pageType={STORY_PAGE}
+          isAmp={false}
+          pathname="/"
+        >
+          <ServiceContextProvider service={service}>
+            <EventTrackingContextProvider>
+              {children}
+            </EventTrackingContextProvider>
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
   );
 };
 

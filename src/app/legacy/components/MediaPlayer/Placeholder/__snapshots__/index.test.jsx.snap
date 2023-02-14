@@ -68,6 +68,17 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   transition: background-color 300ms;
 }
 
+.emotion-7:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -120,7 +131,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
       />
     </div>
     <button
-      class="emotion-6 emotion-7 emotion-8"
+      class="focusIndicatorRemove emotion-6 emotion-7 emotion-8"
     >
       <span
         class="emotion-9 emotion-10"
@@ -135,13 +146,23 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
           aria-hidden="true"
           class="emotion-13 emotion-14"
           focusable="false"
-          height="12px"
-          viewBox="0 0 32 32"
-          width="12px"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="3,32 29,16 3,0"
-          />
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
         </svg>
       </div>
       <time
@@ -255,6 +276,17 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   transition: background-color 300ms;
 }
 
+.emotion-9:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -313,7 +345,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
       />
     </div>
     <button
-      class="emotion-8 emotion-9 emotion-10"
+      class="focusIndicatorRemove emotion-8 emotion-9 emotion-10"
     >
       <span
         class="emotion-11 emotion-12"
@@ -328,13 +360,23 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
           aria-hidden="true"
           class="emotion-15 emotion-16"
           focusable="false"
-          height="12px"
-          viewBox="0 0 32 32"
-          width="12px"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="3,32 29,16 3,0"
-          />
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
         </svg>
       </div>
       <time
@@ -422,6 +464,17 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   transition: background-color 300ms;
 }
 
+.emotion-7:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -468,7 +521,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
       />
     </div>
     <button
-      class="emotion-6 emotion-7 emotion-8"
+      class="focusIndicatorRemove emotion-6 emotion-7 emotion-8"
     >
       <span
         class="emotion-9 emotion-10"
@@ -483,13 +536,23 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
           aria-hidden="true"
           class="emotion-13 emotion-14"
           focusable="false"
-          height="12px"
-          viewBox="0 0 32 32"
-          width="12px"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="3,32 29,16 3,0"
-          />
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
         </svg>
       </div>
     </button>
@@ -570,6 +633,17 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   transition: background-color 300ms;
 }
 
+.emotion-7:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -594,7 +668,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -622,7 +696,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
       />
     </div>
     <button
-      class="emotion-6 emotion-7 emotion-8"
+      class="focusIndicatorRemove emotion-6 emotion-7 emotion-8"
     >
       <span
         class="emotion-9 emotion-10"
@@ -734,6 +808,17 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   transition: background-color 300ms;
 }
 
+.emotion-7:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -757,7 +842,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -780,7 +865,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
       />
     </div>
     <button
-      class="emotion-6 emotion-7 emotion-8"
+      class="focusIndicatorRemove emotion-6 emotion-7 emotion-8"
     >
       <span
         class="emotion-9 emotion-10"
@@ -928,6 +1013,17 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   display: none;
 }
 
+.emotion-9:focus-visible::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF inset;
+  border: 0.1875rem solid #000000;
+}
+
 .emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -986,7 +1082,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
       />
     </div>
     <button
-      class="emotion-8 emotion-9 emotion-10"
+      class="focusIndicatorRemove emotion-8 emotion-9 emotion-10"
     >
       <span
         class="emotion-11 emotion-12"
@@ -1001,13 +1097,23 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
           aria-hidden="true"
           class="emotion-15 emotion-16"
           focusable="false"
-          height="12px"
-          viewBox="0 0 32 32"
-          width="12px"
+          height="12"
+          viewBox="0 0 12 12"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <polygon
-            points="3,32 29,16 3,0"
-          />
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <path
+              d="M.5.6h12v12H.5z"
+            />
+            <path
+              d="M2.144.96v11.28l8.712-5.64z"
+              fill="currentColor"
+            />
+          </g>
         </svg>
       </div>
       <time

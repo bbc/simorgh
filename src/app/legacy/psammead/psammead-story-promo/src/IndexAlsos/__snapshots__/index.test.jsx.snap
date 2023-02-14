@@ -38,6 +38,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -136,7 +137,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
       >
         <a
           aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-          class="emotion-8 emotion-9"
+          class="focusIndicatorDisplayInlineBlock emotion-8 emotion-9"
           href="/hausa/labarai-48916590"
         >
           <div
@@ -152,13 +153,23 @@ exports[`Index Alsos should render multiple correctly 1`] = `
                 aria-hidden="true"
                 class="emotion-14 emotion-15"
                 focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
+                height="12"
+                viewBox="0 0 12 12"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M.5.6h12v12H.5z"
+                  />
+                  <path
+                    d="M2.144.96v11.28l8.712-5.64z"
+                    fill="currentColor"
+                  />
+                </g>
               </svg>
             </div>
           </div>
@@ -182,7 +193,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
         role="listitem"
       >
         <a
-          class="emotion-8 emotion-9"
+          class="focusIndicatorDisplayInlineBlock emotion-8 emotion-9"
           href="/hausa/labarai-42837051"
         >
           <span>
@@ -227,6 +238,7 @@ exports[`Index Alsos should render one correctly 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -320,7 +332,7 @@ exports[`Index Alsos should render one correctly 1`] = `
     >
       <a
         aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-        class="emotion-6 emotion-7"
+        class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
         href="/hausa/labarai-48916590"
       >
         <div
@@ -336,13 +348,23 @@ exports[`Index Alsos should render one correctly 1`] = `
               aria-hidden="true"
               class="emotion-12 emotion-13"
               focusable="false"
-              height="12px"
-              viewBox="0 0 32 32"
-              width="12px"
+              height="12"
+              viewBox="0 0 12 12"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <polygon
-                points="3,32 29,16 3,0"
-              />
+              <g
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <path
+                  d="M.5.6h12v12H.5z"
+                />
+                <path
+                  d="M2.144.96v11.28l8.712-5.64z"
+                  fill="currentColor"
+                />
+              </g>
             </svg>
           </div>
         </div>

@@ -12,6 +12,7 @@ import {
   RelatedContentSingleItemRtl,
   RelatedContentListRtl,
 } from './fixture';
+import md from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -42,6 +43,11 @@ export default {
   title: 'components/OptimoPromos/OptimoRelatedContent',
   RelatedContentComponent,
   decorators: [withKnobs, withServicesKnob()],
+  parameters: {
+    docs: {
+      page: md,
+    },
+  },
 };
 
 export const ListRelatedContent = props => (

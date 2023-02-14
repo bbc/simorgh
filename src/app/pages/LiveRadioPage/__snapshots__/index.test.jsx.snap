@@ -1332,6 +1332,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-61:before {
@@ -1379,7 +1380,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 
 .emotion-67 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1410,6 +1411,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -1480,7 +1482,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1539,7 +1541,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 
 .emotion-190 {
   color: #6E6E73;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1788,7 +1790,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               >
                 <a
                   aria-labelledby="scheduleItem-p086pmts"
-                  class="emotion-61 emotion-62"
+                  class="focusIndicatorDisplayBlock emotion-61 emotion-62"
                   href="/afrique/bbc_afrique_radio/w172x371xccjp2q"
                 >
                   <span
@@ -1918,7 +1920,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               >
                 <a
                   aria-labelledby="scheduleItem-p086pmv1"
-                  class="emotion-61 emotion-62"
+                  class="focusIndicatorDisplayBlock emotion-61 emotion-62"
                   href="/afrique/bbc_afrique_radio/w172x6djbb3rg44"
                 >
                   <span
@@ -2048,7 +2050,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               >
                 <a
                   aria-labelledby="scheduleItem-p086pmtq"
-                  class="emotion-61 emotion-62"
+                  class="focusIndicatorDisplayBlock emotion-61 emotion-62"
                   href="/afrique/bbc_afrique_radio/w172x5n20y5f68g"
                 >
                   <span
