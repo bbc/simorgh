@@ -1,176 +1,361 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:swahili/media-23268999",
-    "locators": {
-      "assetUri": "/swahili/media-23268999",
-      "cpsUrn": "urn:bbc:content:assetUri:swahili/media-23268999",
-      "curie": "http://www.bbc.co.uk/asset/31f81487-2e93-5a42-ae5a-e289cd114aed",
-      "assetId": "23268999"
-    },
-    "type": "MAP",
-    "createdBy": "swahili-v6",
-    "language": "sw",
-    "lastUpdated": 1588336103147,
-    "firstPublished": 1583163256000,
-    "lastPublished": 1583163256000,
-    "timestamp": 1583163256000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "allowAdvertising": true,
-      "hasContentWarning": false,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "swahili.embedded_video.media_asset.23268999.page",
-      "cps_asset_id": "23268999"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["version", "paragraph", "crosshead", "list"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "63501283",
-        "subType": "primary",
-        "format": "video",
-        "externalId": "bbc_one_northern_ireland_hd",
-        "duration": "PT0S",
-        "caption": "NI stream test",
-        "image": {
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:swahili/media-23268999",
+        "locators": {
+          "assetUri": "/swahili/media-23268999",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:31f81487-2e93-5a42-ae5a-e289cd114aed",
+          "assetId": "23268999",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/media-23268999",
+          "curie": "http://www.bbc.co.uk/asset/31f81487-2e93-5a42-ae5a-e289cd114aed"
+        },
+        "type": "MAP",
+        "createdBy": "swahili-v6",
+        "language": "sw",
+        "lastUpdated": 1665415016433,
+        "firstPublished": 1583163256000,
+        "lastPublished": 1583163256000,
+        "timestamp": 1583163256000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "swahili.embedded_video.media_asset.23268999.page",
+          "cps_asset_id": "23268999",
+          "contentId": "urn:bbc:cps:curie:asset:31f81487-2e93-5a42-ae5a-e289cd114aed"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["version", "paragraph", "crosshead", "list"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "SWAHILI",
+          "producerId": "86"
+        },
+        "readTime": 1,
+        "siteUri": "/swahili",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
+          {
+            "id": "63501283",
+            "subType": "primary",
+            "format": "video",
+            "externalId": "bbc_one_northern_ireland_hd",
+            "duration": "PT0S",
+            "caption": "NI stream test",
+            "image": {
+              "id": "63501283",
+              "subType": "thumbnail",
+              "href": "http://b.files.bbci.co.uk/51BB/test/_63732902_p01n6y7l.jpg",
+              "path": "/cpsdevpb/51BB/test/_63732902_p01n6y7l.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "church",
+              "caption": "audio",
+              "copyrightHolder": "Hmm",
+              "type": "image"
+            },
+            "embedding": false,
+            "available": true,
+            "live": true,
+            "type": "version"
+          },
+          {
+            "text": "Raia wanne wa kigeni waliowasili nchini Uganda na dalili za virusi vya corona wametengwa katika hospitali ya Entebbe, Waziri wa afya amethibitisha.",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Bila ya kutaja uraia wao, afisa mahusiano wa waziri wa afya bwana Emmanuel Ainebyoona alisema kuwa raia hao wamechukuliwa katika uwanja wa ndege wa kimataifa wa Entebbe.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Sampuli ya vipimo vyao vimepelekwa katika kituo cha utafiti wa virusi nchini humo (UVRI). Na tutaitaarifu umma &quot; gazeti la Daily Monitor limemnukuu.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "crosshead",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "one",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "two",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "three",
+                "markupType": "plain_text",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "numbered": true,
+            "items": [
+              {
+                "text": "one",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "two",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "three",
+                "markupType": "plain_text",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Swahili test page Audio test for articles, UK only test stream",
+          "headline": "Swahili test page Audio test for articles, UK only test stream"
+        },
+        "locators": {
+          "assetUri": "/swahili/media-23268999",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:31f81487-2e93-5a42-ae5a-e289cd114aed",
+          "assetId": "23268999",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/media-23268999",
+          "curie": "http://www.bbc.co.uk/asset/31f81487-2e93-5a42-ae5a-e289cd114aed"
+        },
+        "summary": "swahili",
+        "timestamp": 1583163256000,
+        "language": "sw",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+          "taggings": []
+        },
+        "media": {
           "id": "63501283",
-          "subType": "thumbnail",
-          "href": "http://b.files.bbci.co.uk/51BB/test/_63732902_p01n6y7l.jpg",
-          "path": "/cpsdevpb/51BB/test/_63732902_p01n6y7l.jpg",
-          "height": 360,
-          "width": 640,
+          "subType": "primary",
+          "format": "video",
+          "externalId": "bbc_one_northern_ireland_hd",
+          "duration": "PT0S",
+          "caption": "NI stream test",
+          "image": {
+            "id": "63501283",
+            "subType": "thumbnail",
+            "href": "http://b.files.bbci.co.uk/51BB/test/_63732902_p01n6y7l.jpg",
+            "path": "/cpsdevpb/51BB/test/_63732902_p01n6y7l.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "church",
+            "caption": "audio",
+            "copyrightHolder": "Hmm",
+            "type": "image"
+          },
+          "embedding": false,
+          "available": true,
+          "live": true,
+          "type": "version"
+        },
+        "indexImage": {
+          "id": "63732058",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/14C1F/test/_63732058_p01n6y7l.jpg",
+          "path": "/cpsdevpb/14C1F/test/_63732058_p01n6y7l.jpg",
+          "height": 576,
+          "width": 1024,
           "altText": "church",
           "caption": "audio",
           "copyrightHolder": "Hmm",
           "type": "image"
         },
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
+        "id": "urn:bbc:ares::asset:swahili/media-23268999",
+        "type": "cps"
       },
-      {
-        "text": "Raia wanne wa kigeni waliowasili nchini Uganda na dalili za virusi vya corona wametengwa katika hospitali ya Entebbe, Waziri wa afya amethibitisha.",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Bila ya kutaja uraia wao, afisa mahusiano wa waziri wa afya bwana Emmanuel Ainebyoona alisema kuwa raia hao wamechukuliwa katika uwanja wa ndege wa kimataifa wa Entebbe.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Sampuli ya vipimo vyao vimepelekwa katika kituo cha utafiti wa virusi nchini humo (UVRI). Na tutaitaarifu umma &quot; gazeti la Daily Monitor limemnukuu.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      { "text": "crosshead", "markupType": "plain_text", "type": "crosshead" },
-      {
-        "numbered": false,
-        "items": [
-          { "text": "one", "markupType": "plain_text", "type": "listItem" },
-          { "text": "two", "markupType": "plain_text", "type": "listItem" },
-          { "text": "three", "markupType": "plain_text", "type": "listItem" }
-        ],
-        "type": "list"
-      },
-      {
-        "numbered": true,
-        "items": [
-          { "text": "one", "markupType": "plain_text", "type": "listItem" },
-          { "text": "two", "markupType": "plain_text", "type": "listItem" },
-          { "text": "three", "markupType": "plain_text", "type": "listItem" }
-        ],
-        "type": "list"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/swahili/media",
+          "urlIdentifier": "/swahili/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Swahili",
+          "uri": "/swahili",
+          "urlIdentifier": "/swahili",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Swahili test page Audio test for articles, UK only test stream",
-      "headline": "Swahili test page Audio test for articles, UK only test stream"
     },
-    "locators": {
-      "assetUri": "/swahili/media-23268999",
-      "cpsUrn": "urn:bbc:content:assetUri:swahili/media-23268999",
-      "curie": "http://www.bbc.co.uk/asset/31f81487-2e93-5a42-ae5a-e289cd114aed",
-      "assetId": "23268999"
-    },
-    "summary": "swahili",
-    "timestamp": 1583163256000,
-    "language": "sw",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "63501283",
-      "subType": "primary",
-      "format": "video",
-      "externalId": "bbc_one_northern_ireland_hd",
-      "duration": "PT0S",
-      "caption": "NI stream test",
-      "image": {
-        "id": "63501283",
-        "subType": "thumbnail",
-        "href": "http://b.files.bbci.co.uk/51BB/test/_63732902_p01n6y7l.jpg",
-        "path": "/cpsdevpb/51BB/test/_63732902_p01n6y7l.jpg",
-        "height": 360,
-        "width": 640,
-        "altText": "church",
-        "caption": "audio",
-        "copyrightHolder": "Hmm",
-        "type": "image"
-      },
-      "embedding": false,
-      "available": true,
-      "live": true,
-      "type": "version"
-    },
-    "indexImage": {
-      "id": "63732058",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/14C1F/test/_63732058_p01n6y7l.jpg",
-      "path": "/cpsdevpb/14C1F/test/_63732058_p01n6y7l.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "church",
-      "caption": "audio",
-      "copyrightHolder": "Hmm",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:swahili/media-23268999",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/swahili/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Swahili",
-      "uri": "/swahili",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:05:57.555Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 2,
+        "records": [
+          {
+            "id": "7b08019d-64c1-6d42-a6f2-2ff018698824",
+            "rank": 1,
+            "count": 5502,
+            "urn": "urn:bbc:curie:asset:7b08019d-64c1-6d42-a6f2-2ff018698824",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ethiopian singer Teddy Afro goes global",
+                "headline": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."
+              },
+              "locators": {
+                "assetUri": "/swahili/23132728",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:7b08019d-64c1-6d42-a6f2-2ff018698824",
+                "assetId": "23132728",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23132728",
+                "curie": "http://www.bbc.co.uk/asset/7b08019d-64c1-6d42-a6f2-2ff018698824"
+              },
+              "summary": "jaf;djs jsdlka;f lksdajf lkdjfd lkfsdjalkf jlkadfjdlk jflksda jflkdajsflk dalkfdjslk fjdaslkfjdsk flksda jflkdsjalkf sdalk fjlds jflkdsajf jasdlk fjlkd jfd.",
+              "timestamp": 1497442114000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01b7w2r",
+                "subType": "clip",
+                "format": "audio",
+                "title": "पुणे सुपरजायंट्स आयपीएलच्या अंतिम फेरीत!",
+                "synopses": {
+                  "short": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w9z.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे.",
+                "versions": [
+                  {
+                    "versionId": "p01b7w2z",
+                    "types": ["Original"],
+                    "duration": 16,
+                    "durationISO8601": "PT16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1495467503000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63542378",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1551C/test/_63542378_p01b7w9z.jpg",
+                "path": "/cpsdevpb/1551C/test/_63542378_p01b7w9z.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "सेहवागनं 'असा' पाहिला मुंबई-पुणे सामना",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23132728",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c6ce1538-fc56-6042-be8e-4b56bab9f0b6",
+            "rank": 2,
+            "count": 4220,
+            "urn": "urn:bbc:curie:asset:c6ce1538-fc56-6042-be8e-4b56bab9f0b6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 43",
+                "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 43"
+              },
+              "locators": {
+                "assetUri": "/swahili/23057235",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c6ce1538-fc56-6042-be8e-4b56bab9f0b6",
+                "assetId": "23057235",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23057235",
+                "curie": "http://www.bbc.co.uk/asset/c6ce1538-fc56-6042-be8e-4b56bab9f0b6"
+              },
+              "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+              "timestamp": 1467385790000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "media": {
+                "id": "63485393",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "bbc_world_service_west_africa",
+                "duration": "PT0S",
+                "caption": "BBC",
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63493625",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/CD9F/test/_63493625_160529154036_hajj_624x351_getty.jpg",
+                "path": "/cpsdevpb/CD9F/test/_63493625_160529154036_hajj_624x351_getty.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "BBC",
+                "caption": "BBC",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23057235",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
