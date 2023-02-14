@@ -1,448 +1,2416 @@
 {
-    "metadata": {
-      "id": "urn:bbc:ares::index:urdu/world-53692225/desktop/domestic",
-      "locators": {
-        "assetUri": "/urdu/world-53692225",
-        "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53692225",
-        "curie": "http://www.bbc.co.uk/asset/5188eb4d-a7e3-4069-afeb-539ccda2d613/desktop/domestic",
-        "assetId": "53692225"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::index:urdu/world-53692225/mobile/domestic",
+        "locators": {
+          "assetUri": "/urdu/world-53692225",
+          "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53692225",
+          "curie": "http://www.bbc.co.uk/asset/5188eb4d-a7e3-4069-afeb-539ccda2d613/desktop/domestic",
+          "assetId": "53692225"
+        },
+        "type": "FIX",
+        "createdBy": "urdu-v6",
+        "language": "ur",
+        "lastUpdated": 1651830349590,
+        "firstPublished": 1596787901000,
+        "lastPublished": 1651830343000,
+        "timestamp": 1604771610000,
+        "options": {
+          "allowAdvertising": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "fix",
+          "counterName": "urdu.world.feature_index.53692225.page",
+          "cps_asset_id": "53692225",
+          "contentId": "urn:bbc:cps:curie:asset:5188eb4d-a7e3-4069-afeb-539ccda2d613"
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": [
+          "container-top-stories",
+          "av-stories-now",
+          "container-guides",
+          "feature-main"
+        ],
+        "title": "امریکی صدارتی انتخاب 2020",
+        "summary": "امریکی عوام تین نومبر 2020 کو اگلے چار برس کے لیے اپنے نئے صدر کا انتخاب کرے گی۔ اس مرتبہ مقابلہ موجودہ صدر اور رپبلکن پارٹی کے امیدوار ڈونلڈ ٹرمپ اور سابق نائب صدر اور ڈیموکریٹ پارٹی کے امیدوار جو بائیڈن کے مابین ہے۔",
+        "atiAnalytics": {
+          "producerName": "URDU",
+          "producerId": "95"
+        }
       },
-      "type": "FIX",
-      "createdBy": "urdu-v6",
-      "language": "ur",
-      "lastUpdated": 1597123889099,
-      "firstPublished": 1596787901000,
-      "lastPublished": 1597123883000,
-      "timestamp": 1597066229000,
-      "options": {
-        "allowAdvertising": true
+      "content": {
+        "groups": [
+          {
+            "type": "container-top-stories",
+            "title": "Container Top Stories",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "نو منتخب امریکی صدر جو بائیڈن: ’ایک ایسا صدر بنوں گا جو لوگوں کو تقسیم کرنے کے بجائے متحد کرے‘"
+                },
+                "locators": {
+                  "assetUri": "/urdu/live/world-54790455",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/live/world-54790455",
+                  "curie": "http://www.bbc.co.uk/asset/a24006ec-5db1-41b4-bc80-3fda9575f814",
+                  "assetId": "54790455"
+                },
+                "summary": "ڈیموکریٹک پارٹی کے امیدوار جو بائیڈن نے متوقع نتائج کے مطابق امریکہ کا 59واں صدارتی انتخاب جیت لیا ہے۔ انھیں ریاست پینسلوینیا میں کامیابی کے بعد 20 الیکٹورل کالج ووٹ حاصل ہوئے ہیں جس کے بعد ان کے کل الیکٹورل ووٹ 273 ہو گئے ہیں جبکہ امریکی صدر منتخب ہونے کے لیے 270 الیکٹورل ووٹوں کی ضرورت ہوتی ہے۔",
+                "timestamp": 1604395024000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "LIV",
+                "indexImage": {
+                  "id": "115281918",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/13FFE/production/_115281918_tv064243130.jpg",
+                  "path": "/cpsprodpb/13FFE/production/_115281918_tv064243130.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "امریکہ",
+                  "copyrightHolder": "Reuters",
+                  "type": "image"
+                },
+                "commentary": {
+                  "order": "descending",
+                  "assetUUID": "64AE965BE0075548B73169C38340B911",
+                  "channels": {
+                    "enhancedmobile": "bbc.cps.asset.54792128_EnhancedMobile",
+                    "desktop": "bbc.cps.asset.54792128_HighWeb",
+                    "highweb": "bbc.cps.asset.54792128_HighWeb",
+                    "mobile": "bbc.cps.asset.54792128_EnhancedMobile"
+                  }
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/live/world-54790455",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "جو بائیڈن: وہ سیاستدان جنھیں قسمت کبھی عام سا نہیں رہنے دیتی"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54157766",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54157766",
+                  "curie": "http://www.bbc.co.uk/asset/e42289c2-e501-c548-8e4d-e0413350a1b7",
+                  "assetId": "54157766"
+                },
+                "summary": "اکثر سیاسی رہنماؤں کو سیاست وراثت میں ملتی ہے یا ان کی کامیابی مکمل طور پر ان کی اپنی محنت کا نتیجہ ہوتی ہے یا ان کے ارد گرد کے حالات انھیں حادثاتی لیڈر بنا دیتے ہے۔ متوقع نتائج کے مطابق امریکہ کے 46ویں صدر بننے والے بائیڈن کو تیسری فہرست یعنی حادثاتی لیڈر میں شمار کیا جا سکتا ہے۔",
+                "timestamp": 1604768554000,
+                "language": "ur",
+                "byline": {
+                  "name": "ثقلین امام",
+                  "title": "بی بی سی اردو سروس",
+                  "persons": [
+                    {
+                      "name": "امام ثقلین",
+                      "function": "بی بی سی اردو سروس"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114379853",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/8C39/production/_114379853_gettyimages-464374715.jpg",
+                  "path": "/cpsprodpb/8C39/production/_114379853_gettyimages-464374715.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "جو بائیڈن",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54157766",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکہ کی پہلی خاتون اور غیر سفیدفام نائب صدر منتخب ہونے والی کملا ہیرس کون ہیں؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-53746269",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53746269",
+                  "curie": "http://www.bbc.co.uk/asset/8a444861-8a51-4fa8-ac38-cbc1ca0485da",
+                  "assetId": "53746269"
+                },
+                "summary": "کملا ہیرس انڈین ثقافتی پس منظر میں پلی بڑھیں اور اپنی والدہ کے ساتھ وہ انڈیا کے دورے پر آتی رہتی تھیں لیکن ان کی والدہ نے پوری طرح آکلینڈ کی سیاہ فام ثقافت کو اپنا لیا تھا اور انھوں نے اپنی دو بیٹویں کملا اور ان کی چھوٹی بہن مایا کو اسی تہذیب و ثقافت میں رچا بسا دیا تھا۔",
+                "timestamp": 1604773044000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "113881973",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/941E/production/_113881973_gettyimages-1183681979.jpg",
+                  "path": "/cpsprodpb/941E/production/_113881973_gettyimages-1183681979.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Kamala Harris",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-53746269",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکہ میں عوام اپنا صدر کیسے چنتے ہیں؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-53694173",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53694173",
+                  "curie": "http://www.bbc.co.uk/asset/470fadd9-cf88-4eac-a7b7-c7910aaf6f49",
+                  "assetId": "53694173"
+                },
+                "summary": "کیا آپ جانتے ہیں کہ امریکہ میں صدارتی انتخاب میں عوام کی جانب سے زیادہ ووٹ حاصل کرنے والا امیدوار ضروری نہیں کہ ملک کا نیا صدر بنے۔",
+                "timestamp": 1604298327000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "113666168",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15096/production/_113666168_usvoter.jpg",
+                  "path": "/cpsprodpb/15096/production/_113666168_usvoter.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "US voter at booth",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-53694173",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی صدر کا انتخاب درحقیقت کون کرتا ہے؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54497231",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54497231",
+                  "curie": "http://www.bbc.co.uk/asset/5a6ddf7b-13d7-4e97-9127-62ee8832322f",
+                  "assetId": "54497231"
+                },
+                "summary": "امریکہ کی صدارت دنیا کی سب سے طاقتور نوکری ہے۔ لیکن یہاں صدارتی انتخابات میں ضروری نہیں کہ صدر وہ امیدوار بنے جس نے سب سے زیادہ ووٹ حاصل کیے ہوں۔",
+                "timestamp": 1602413955000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p08tzrsp",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "امریکی صدر کا انتخاب درحقیقت کون کرتا ہے؟",
+                  "synopses": {
+                    "short": "امریکی صدارتی انتخاب 2020: امریکہ میں صدر کون منتخب کرتا ہے؟"
+                  },
+                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08tztgr.jpg",
+                  "embedding": true,
+                  "advertising": true,
+                  "caption": "امریکی صدارتی انتخاب 2020: امریکہ میں صدر کون منتخب کرتا ہے؟",
+                  "versions": [
+                    {
+                      "versionId": "p08tzrsr",
+                      "types": ["Original"],
+                      "duration": 160,
+                      "durationISO8601": "PT2M40S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1602412644000
+                    }
+                  ],
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "114842227",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/11A20/production/_114842227_p08tztgr.jpg",
+                  "path": "/cpsprodpb/11A20/production/_114842227_p08tztgr.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "امریکی صدارتی انتخاب 2020: امریکہ میں صدر کون منتخب کرتا ہے؟",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54497231",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Container Top Stories"
+          },
+          {
+            "type": "av-stories-now",
+            "title": "Watch/Listen",
+            "items": [
+              {
+                "name": "امریکہ کے نومنتخب صدر جو بائیڈن کون ہیں؟",
+                "summary": "جو بائیڈن امریکہ کے 46ویں صدر منتخب ہوگئے ہیں۔77 برس کے بائڈن اِس عہدے پر فائز ہونے والے مُعَمَّر ترین امریکی ہیں۔ انھوں نے ریپبلکن امیدوار صدر ٹرمپ کے خلاف ایک سخت انتخابی مہم چلائی اور وائٹ ہاؤس میں ایک ڈیموکریٹ امیدوار کی واپسی کو یقینی بنایا۔ ہم نے جو بائڈن کی چار دہائیوں پر مُحیِط سیاسی زندگی پر نظر ڈالی ہے۔ تفصیل جاوید سومرو کی زبانی",
+                "indexImage": {
+                  "id": "114378877",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1303F/production/_114378877_gettyimages-860982274.jpg",
+                  "path": "/cpsprodpb/1303F/production/_114378877_gettyimages-860982274.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "جو بائیڈن",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "uri": "https://youtu.be/smbZrU6t4Bg",
+                "contentType": "Video",
+                "assetTypeCode": "PRO",
+                "timestamp": 1604770379000,
+                "type": "link"
+              },
+              {
+                "name": "کملا ہیرس: امریکہ کی پہلی خاتون اور غیر سفیدفام نائب صدر",
+                "summary": "کملا ہیرس صرف پہلی خاتون نائب صدر ہی نہیں بلکہ ان کے والدین کے جمیکا اور انڈیا سے تعلق کی وجہ سے وہ پہلی غیرسفید فام شخصیت بھی ہیں جو امریکہ کی نائب صدر بن رہی ہیں۔",
+                "indexImage": {
+                  "id": "113904891",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4D80/production/_113904891__113881976_gettyimages-1222886885-1.jpg",
+                  "path": "/cpsprodpb/4D80/production/_113904891__113881976_gettyimages-1222886885-1.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "کاملا",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "uri": "https://www.youtube.com/watch?v=IJu8rxLdi4g",
+                "contentType": "Video",
+                "assetTypeCode": "PRO",
+                "timestamp": 1604771596000,
+                "type": "link"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی صدارتی انتخاب 2020: کیا نئے صدر کا تعین عدالتیں کریں گی؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54827542",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54827542",
+                  "curie": "http://www.bbc.co.uk/asset/b6abca52-5eb9-44fb-85d2-9528e4288559",
+                  "assetId": "54827542"
+                },
+                "summary": "امریکی صدر کے انتخاب میں پولنگ ہوئے دو دن گزر چکے ہیں لیکن ابھی حتمی طر پر کسی کو نہیں معلوم کہ کون جیتا ہے اور اب معاملات کو عدالتوں میں لے جایا جا رہا ہے۔",
+                "timestamp": 1604626704000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e1739461b000e9dabf6",
+                      "campaignName": "WS - CS"
+                    },
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115247268",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15102/production/_115247268_mediaitem115246887.jpg",
+                  "path": "/cpsprodpb/15102/production/_115247268_mediaitem115246887.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "ٹرمپ، بائیڈن",
+                  "copyrightHolder": "Getty Images/EPA",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54827542",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی سینیٹ: نتائج کے لیے جنوری تک کیوں انتظار کرنا پڑ سکتا ہے؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54823723",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54823723",
+                  "curie": "http://www.bbc.co.uk/asset/63db709f-f5e5-4cfc-b57d-565a79ee5b9e",
+                  "assetId": "54823723"
+                },
+                "summary": "امریکی سینیٹ میں پلڑا کس کے حق میں بھاری رہے گا، اس کا فیصلہ شاید جنوری تک نہیں ہو سکے گا کیونکہ ممکنہ طور پر جارجیا میں دونوں نشستوں کے لیے الیکشن کا دوسرا راؤنڈ ہوگا۔",
+                "timestamp": 1604696104000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115267067",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1292C/production/_115267067_gettyimages-1073812942.jpg",
+                  "path": "/cpsprodpb/1292C/production/_115267067_gettyimages-1073812942.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "امریکی کانگریس، سینیٹ",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54823723",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "ڈونلڈ ٹرمپ نے جیت کی دوڑ میں مقدمات کا راستہ اپنا لیا"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54820834",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54820834",
+                  "curie": "http://www.bbc.co.uk/asset/a729f820-a6d0-fb45-960d-23e55f134352",
+                  "assetId": "54820834"
+                },
+                "summary": "امریکی صدارتی انتخاب میں اہم سمجھی جانے والی ریاستوں وسکونسن، جارجیا، پینسلوینیا اور مشیگن میں ڈونلڈ ٹرمپ ووٹوں کی گنتی کو چیلنج کر رہے ہیں۔",
+                "timestamp": 1604578862000,
+                "language": "ur",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115234061",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3EAB/production/_115234061_p08xch7z.jpg",
+                  "path": "/cpsprodpb/3EAB/production/_115234061_p08xch7z.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Trump and Biden",
+                  "copyrightHolder": "Reuters / EPA",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54820834",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "کیا نتائج سے متعلق ڈراؤنا خواب حقیقت کا روپ دھار رہا ہے؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54812892",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54812892",
+                  "curie": "http://www.bbc.co.uk/asset/0ce8f170-1e32-4e51-a930-a53ec39a6818",
+                  "assetId": "54812892"
+                },
+                "summary": "امریکی صدارتی انتخابات میں بعض ریاستوں میں ووٹوں کی گنتی مکمل ہوچکی ہے لیکن ابھی لاکھوں ووٹوں کی گنتی ہونا باقی ہے اور اس درمیان صدر ڈونلڈ ٹرمپ نے ووٹوں میں دھاندلی کا بے بنیاد دعویٰ کر کے یہ اعلان کر دیا ہے کہ وہ صدارتی انتخاب جیت چکے ہیں۔",
+                "timestamp": 1604505902000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e1739461b000e9dabf6",
+                      "campaignName": "WS - CS"
+                    },
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115226251",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3B9E/production/_115226251_f20f4003-1170-4dbf-9efc-f0f917e5bc2c.jpg",
+                  "path": "/cpsprodpb/3B9E/production/_115226251_f20f4003-1170-4dbf-9efc-f0f917e5bc2c.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "صدر ٹرمپ",
+                  "caption": "صدر ٹرمپ بدھ کی الصج یہ دعوی کر چکے ہیں کہ انہوں نے انتخابات جیت لیے ہیں۔",
+                  "copyrightHolder": "EPA",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "imageThumbnail": {
+                  "id": "115223200",
+                  "subType": "index-thumbnail",
+                  "href": "http://c.files.bbci.co.uk/00E8/production/_115223200_f20f4003-1170-4dbf-9efc-f0f917e5bc2c.jpg",
+                  "path": "/cpsprodpb/00E8/production/_115223200_f20f4003-1170-4dbf-9efc-f0f917e5bc2c.jpg",
+                  "height": 180,
+                  "width": 320,
+                  "altText": "US President Donald J. Trump leaves the room after speaking at an event at the White House in Washington, DC, USA, on the election night, 04 November 2020",
+                  "caption": "The US president has been suggesting for weeks that he would call fraud and accuse opponents of trying to steal the elections",
+                  "copyrightHolder": "EPA",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54812892",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی صدارتی انتخاب کے نتائج کا انتظار کرتے ہوئے کن چیزوں پر نظر رکھیں؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54798051",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54798051",
+                  "curie": "http://www.bbc.co.uk/asset/f2914c48-3c1d-47e8-976e-9e3506a9f90c",
+                  "assetId": "54798051"
+                },
+                "summary": "امریکہ میں آج اگلے چار برسوں کے لیے ملکی سیاست کا تعین تو ہوگا ہی لیکن اس کے اثرات پوری دنیا پر پڑیں گے، تو ایسی صورت میں آپ کو کِن باتوں کو مدِنظر رکھنے کی ضرورت ہے؟",
+                "timestamp": 1604468384000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e1739461b000e9dabf6",
+                      "campaignName": "WS - CS"
+                    },
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115216520",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/0A01/production/_115216520_856a10c3-a375-4604-9750-1430cdf4c191.jpg",
+                  "path": "/cpsprodpb/0A01/production/_115216520_856a10c3-a375-4604-9750-1430cdf4c191.jpg",
+                  "height": 450,
+                  "width": 800,
+                  "altText": "ٹرمپ بائیڈن",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54798051",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکہ کے صدارتی انتخاب کے نتائج میں تاخیر کیوں ہو سکتی ہے؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54640866",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54640866",
+                  "curie": "http://www.bbc.co.uk/asset/b984f0f4-57e5-4cf8-9437-45a9882aa5f6",
+                  "assetId": "54640866"
+                },
+                "summary": "اس بار امریکی شہریوں کی ایک بڑی تعداد ڈاک کے ذریعے قبل از وقت ووٹ ڈال چکی ہے تاہم قانونی پیچیدگیاں نتائج آنے میں تاخیر کا باعث بن سکتے ہیں۔",
+                "timestamp": 1604407284000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e1739461b000e9dabf6",
+                      "campaignName": "WS - CS"
+                    },
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115061467",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/12A80/production/_115061467_when_will_get_result_index_promo976-nc.png",
+                  "path": "/cpsprodpb/12A80/production/_115061467_when_will_get_result_index_promo976-nc.png",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Promo image showing ballots, a clock and a question mark",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54640866",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی صدارتی انتخاب 2020: کیا انتخاب کی رات فاتح کا تعین ہو جائے گا؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54787212",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54787212",
+                  "curie": "http://www.bbc.co.uk/asset/ab47f30d-0ca8-45e3-990e-78c034d5a125",
+                  "assetId": "54787212"
+                },
+                "summary": "کیا امریکی صدارتی انتخاب کی رات کو ہی انتخاب کے نتائج آ سکتے ہیں، یہ سوال نہایت اہم ہے اور خدشہ ظاہر کیا جا رہا ہے کہ اس بار انتخابی نتائج میں تاخیر ہو سکتی ہے۔",
+                "timestamp": 1604417490000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e1739461b000e9dabf6",
+                      "campaignName": "WS - CS"
+                    },
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115216587",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/132E1/production/_115216587_tv064167678.jpg",
+                  "path": "/cpsprodpb/132E1/production/_115216587_tv064167678.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ووٹ",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54787212",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی الیکشن 2020: ڈونلڈ ٹرمپ آگے ہیں یا جو بائیڈن؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-53687572",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53687572",
+                  "curie": "http://www.bbc.co.uk/asset/e4709b8b-dcc8-a14e-bb59-f8f5af304da6",
+                  "assetId": "53687572"
+                },
+                "summary": "جیسے جیسے امریکہ میں صدارتی الیکشن کا دن قریب آ رہا ہے انتخابی سرگرمیوں میں تیزی آتی جا رہی ہے۔ ٹی وی پر صدارتی امیدواروں کے درمیان مباحثوں کا عمل مکمل ہو چکا ہے اور رائے شماری کی کمپنیاں امریکہ عوام سے پوچھ رہی ہیں کہ وہ کس امیدوار کی حمایت کرتے ہیں۔",
+                "timestamp": 1604063542000,
+                "language": "ur",
+                "byline": {
+                  "name": "ویژوئل اینڈ ڈیٹا جرنلزم ٹیم",
+                  "title": "بی بی سی نیوز",
+                  "persons": [
+                    {
+                      "name": "The Visual and Data Journalism Team",
+                      "function": "BBC News"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "113810584",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/BD75/production/_113810584_index_promo_poll_tracker_bw_976.png",
+                  "path": "/cpsprodpb/BD75/production/_113810584_index_promo_poll_tracker_bw_976.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Promo image showing Joe Biden and Donald Trump",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-53687572",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکہ کا اگلا صدر کون ہو گا؟ آپ فیصلہ کریں"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54369855",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54369855",
+                  "curie": "http://www.bbc.co.uk/asset/499704a7-675a-4cff-9e67-9816eb451fd5",
+                  "assetId": "54369855"
+                },
+                "summary": "بی بی سی کی اس گیم کے ذریعے آپ فیصلہ کر سکتے ہیں کہ آپ کے خیال میں امریکہ کا اگلا صدر کون ہو سکتا ہے؟",
+                "timestamp": 1604063456000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+                    "categoryName": "Interactive"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3139461b000e9dabf9",
+                      "campaignName": "WS - Divert me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114734980",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/22EF/production/_114734980_battlegtound_promo.png",
+                  "path": "/cpsprodpb/22EF/production/_114734980_battlegtound_promo.png",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "امریکہ",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54369855",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکہ میں ووٹ ڈالنا اتنا مشکل کیوں ہو جاتا ہے؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54640865",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54640865",
+                  "curie": "http://www.bbc.co.uk/asset/c6805597-b89d-4fcb-b286-af0a7e82bd84",
+                  "assetId": "54640865"
+                },
+                "summary": "ملک کی 44 ریاستوں میں اس وقت 300 سے زیادہ مقدمات کیے جا چکے ہیں جن کا تعلق ایبسنٹی ووٹوں (یعنی جو لوگ پولنگ سٹیشن پر از خود آ کر ووٹ نہیں ڈالتے) کی گنتی سے ہے۔",
+                "timestamp": 1603519750000,
+                "language": "ur",
+                "byline": {
+                  "name": "رابن لونسن کنگ",
+                  "title": "بی بی سی نیوز",
+                  "persons": [
+                    {
+                      "name": "Robin Levinson-King",
+                      "function": "BBC News"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115010760",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1A2D/production/_115010760_lines2_976.jpg",
+                  "path": "/cpsprodpb/1A2D/production/_115010760_lines2_976.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Long queues in Ohio",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54640865",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "صدر ٹرمپ نے پاکستان کا ذکر کب کب اور کہاں کہاں کیا؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/pakistan-54756824",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-54756824",
+                  "curie": "http://www.bbc.co.uk/asset/46082bb0-ed87-4a77-9dde-0715ad39f088",
+                  "assetId": "54756824"
+                },
+                "summary": "امریکی صدر ڈونلڈ ٹرمپ نے اپنے دور صدارت میں نو ایسی ٹویٹس پوسٹ کی ہیں جن میں پاکستان کا ذکر ہے، اور ان میں سے ایک ایسی ہے جو پوسٹ کرنے کے بعد ڈیلیٹ کردی گئی تھی۔ اس کے علاوہ انھوں نے پچاس بار مختلف موقعوں پر پاکستان کا ذکر کیا ہے۔",
+                "timestamp": 1604203407000,
+                "language": "ur",
+                "byline": {
+                  "name": "ثقلین امام ",
+                  "title": "بی بی سی اردو سروس",
+                  "persons": [
+                    {
+                      "name": "امام ثقلین",
+                      "function": "بی بی سی اردو سروس"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115148443",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/86B4/production/_115148443_gettyimages-1163579180.jpg",
+                  "path": "/cpsprodpb/86B4/production/_115148443_gettyimages-1163579180.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ٹرمپ",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/pakistan-54756824",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی صدارتی انتخاب اس سال اتنا منفرد کیوں؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54336227",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54336227",
+                  "curie": "http://www.bbc.co.uk/asset/2c687d04-3053-411e-b047-b00e28b81148",
+                  "assetId": "54336227"
+                },
+                "summary": "امریکہ میں اس سال ہونے والا صدارتی انتخاب تاریخ میں سب سے منفرد ہو گا۔۔۔ ایسا کیوں ہے؟ اس کی وجہ جاننے کے لیے یہ ویڈیو دیکھیے۔",
+                "timestamp": 1601354858000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e1739461b000e9dabf6",
+                      "campaignName": "WS - CS"
+                    },
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p08stq0c",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "امریکی صدارتی انتخاب اس سال اتنا منفرد کیوں؟",
+                  "synopses": {
+                    "short": "امریکی صدارتی انتخاب اس سال اتنا منفرد کیوں؟"
+                  },
+                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08stq5j.jpg",
+                  "embedding": false,
+                  "advertising": false,
+                  "caption": "امریکی صدارتی انتخاب اس سال اتنا منفرد کیوں؟",
+                  "versions": [
+                    {
+                      "versionId": "p08stq0f",
+                      "types": ["Original"],
+                      "duration": 114,
+                      "durationISO8601": "PT1M54S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1601354351000
+                    }
+                  ],
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "114677642",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/6065/production/_114677642_p08stq5j.jpg",
+                  "path": "/cpsprodpb/6065/production/_114677642_p08stq5j.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "امریکہ",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54336227",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "کیا امریکہ واقعی آزاد ریاست ہے؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54742805",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54742805",
+                  "curie": "http://www.bbc.co.uk/asset/07581ee6-8855-4f1b-950e-505913c39909",
+                  "assetId": "54742805"
+                },
+                "summary": "امریکی آئین میں ’لائف، لبرٹی، اینڈ پرسوٹ آف ہیپینس‘ کے حقوق طے کر دیے گئے ہیں جو کی امریکی ریاست کی بنیاد ہیں، امریکی ثقافت کے اہم ترین جز ہیں، اور امریکی حکومت کے ستون ہیں۔",
+                "timestamp": 1604118831000,
+                "language": "ur",
+                "byline": {
+                  "name": "شجاع ملک  ",
+                  "title": "بی بی سی اردو سروس",
+                  "persons": [
+                    {
+                      "name": "شجاع ملک",
+                      "function": "بی بی سی اردو سروس"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115149085",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/E2EE/production/_115149085_gettyimages-1189256907.jpg",
+                  "path": "/cpsprodpb/E2EE/production/_115149085_gettyimages-1189256907.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "امریکہ",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54742805",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی صدر ڈونلڈ ٹرمپ نے دنیا کو کس طرح تبدیل کیا ہے؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54672203",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54672203",
+                  "curie": "http://www.bbc.co.uk/asset/893fa8fd-cf07-4d47-b2c6-098400098a73",
+                  "assetId": "54672203"
+                },
+                "summary": "امریکہ کا صدر صرف اپنے ملک کا رہنما نہیں بلکہ شاید دنیا کا سب سے طاقتور شخص تصور کیا جاتا ہے۔ اس کا فعل ہم سبھی کی زندگیوں کو متاثر کرتا ہے۔ ڈونلڈ ٹرمپ کو بھی اس میں رعایت نہیں ملی، تو آخر وہ دنیا میں کیا کیا تبدیلی لائے ہیں؟",
+                "timestamp": 1603555270000,
+                "language": "ur",
+                "byline": {
+                  "name": "ربیکا سیلز",
+                  "title": "بی بی سی نیوز",
+                  "persons": [
+                    {
+                      "name": "ریبیکا سیلس",
+                      "function": "بی بی سی نیوز"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115056782",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/705D/production/_115056782_8e501af8-1ec8-4ae6-80c5-acf0a6dd7f60.jpg",
+                  "path": "/cpsprodpb/705D/production/_115056782_8e501af8-1ec8-4ae6-80c5-acf0a6dd7f60.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ڈونلڈ ٹرمپ",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54672203",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی صدارتی انتخابات 2020: انڈین اور پاکستانی نژاد امریکی متحد"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54689543",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54689543",
+                  "curie": "http://www.bbc.co.uk/asset/3e6d39e3-468d-44ab-a205-b877c8d656e5",
+                  "assetId": "54689543"
+                },
+                "summary": "انڈینز اور پاکستانی اکثر اپنے ممالک کے مابین کشیدہ تعلقات کی وجہ سے ایک دوسرے کے مخالف ہوتے ہیں۔ لیکن امریکہ میں دونوں ممالک کے لوگ ایک ہی خطے جنوبی ایشیا کے باشندے ہیں اور اکثر سیاسی مہموں کے دوران مل کر کام کرتے ہیں۔",
+                "timestamp": 1603762005000,
+                "language": "ur",
+                "byline": {
+                  "name": "ونیت کھرے",
+                  "title": "بی بی سی،نیوز، واشنگٹن ڈی سی",
+                  "persons": [
+                    {
+                      "name": "ونیت کھرے",
+                      "function": "بی بی سی، ہندی"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    },
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115071029",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/16771/production/_115071029_86b09c77-8b70-48df-9299-d8170e123f5a.jpg",
+                  "path": "/cpsprodpb/16771/production/_115071029_86b09c77-8b70-48df-9299-d8170e123f5a.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "جو بائیڈن اور انڈین نژاد امریکی شیکر نرسمہن",
+                  "caption": "جو بائیڈن اور انڈین نژاد امریکی شیکر نرسمہن",
+                  "copyrightHolder": "SHEKAR NARASIMHAN",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54689543",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Watch/Listen"
+          },
+          {
+            "type": "container-guides",
+            "title": "Guides 1",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "پانچ چیزیں جو ڈونلڈ ٹرمپ کو دوبارہ صدر بنا سکتی ہیں"
+                },
+                "locators": {
+                  "assetUri": "/urdu/pakistan-54584479",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-54584479",
+                  "curie": "http://www.bbc.co.uk/asset/c732cca5-b246-4189-9a16-f9a4a3c2b71e",
+                  "assetId": "54584479"
+                },
+                "summary": "حالیہ انتخابی جائزوں سے معلوم ہوتا ہے کہ ڈیموکریٹک پارٹی کے امیدوار جو بائیڈن رواں سال کی صدارتی دوڑ میں صدر ڈونلڈ ٹرمپ سے بہت آگے ہیں۔ وہ سخت مقابلے والی ریاستوں میں بھی سبقت حاصل کیے ہوئے ہیں۔",
+                "timestamp": 1603252045000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115010607",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/113C9/production/_115010607__114964010_d35ad673-e44f-4926-ae29-24e3d6d36459.jpg",
+                  "path": "/cpsprodpb/113C9/production/_115010607__114964010_d35ad673-e44f-4926-ae29-24e3d6d36459.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "صدر ٹرمپ",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/pakistan-54584479",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "ٹرمپ کے رہنے یا نہ رہنے سے انڈیا کو کیا فرق پڑے گا؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/regional-54608627",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-54608627",
+                  "curie": "http://www.bbc.co.uk/asset/4880466a-23bb-46f0-8f6f-9353d40ea7bd",
+                  "assetId": "54608627"
+                },
+                "summary": "انڈیا اور امریکہ کے مابین تعلقات گہرے ہیں اور وزیراعظم نریندر مودی اور امریکی صدر ڈونلڈ ٹرمپ میں ذاتی نوعیت کی دوستی ہے لیکن انڈیا آخر امریکہ سے کیا چاہتا ہے اور وہ اگلے امریکی صدر سے کس قسم کی مدد کی توقع کر سکتا ہے؟",
+                "timestamp": 1603170451000,
+                "language": "ur",
+                "byline": {
+                  "name": "زبیر احمد",
+                  "title": "بی بی سی نیوز، دہلی",
+                  "persons": [
+                    {
+                      "name": "زبیر احمد",
+                      "function": "بی بی سی نیوز، دہلی"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e1739461b000e9dabf6",
+                      "campaignName": "WS - CS"
+                    },
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114996225",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/CC2D/production/_114996225_49a36496-6825-406d-b701-c8bbb8eb84e6.jpg",
+                  "path": "/cpsprodpb/CC2D/production/_114996225_49a36496-6825-406d-b701-c8bbb8eb84e6.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "مودی، ٹرمپ",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/regional-54608627",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی صدور کے پاکستان دورے: کبھی کشیدگی کم کرنے تو کبھی طیارے میں تیل کے بہانے"
+                },
+                "locators": {
+                  "assetUri": "/urdu/pakistan-54587674",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-54587674",
+                  "curie": "http://www.bbc.co.uk/asset/86d439a6-1aa7-47ec-8caa-1416d8702b3f",
+                  "assetId": "54587674"
+                },
+                "summary": "قیام پاکستان سے اب تک جمہوریت کی علم بردار عالمی طاقت امریکہ کے پانچ صدور نے دورۂ پاکستان کے لیے ہمیشہ ایسے وقت کا انتخاب کیا جب اقتدار پر فوج قابض تھی۔",
+                "timestamp": 1603120953000,
+                "language": "ur",
+                "byline": {
+                  "name": "عمر آفریدی",
+                  "title": "بی بی سی اردو ڈاٹ کام، لندن",
+                  "persons": [
+                    {
+                      "name": "عمر آفریدی",
+                      "function": "بی بی سی اردو سروس لندن"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114962562",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/679E/production/_114962562_20e4c83d-b498-4624-8327-8de0dca20086.jpg",
+                  "path": "/cpsprodpb/679E/production/_114962562_20e4c83d-b498-4624-8327-8de0dca20086.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "امریکی صدر",
+                  "copyrightHolder": "LBJ Library",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/pakistan-54587674",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Guides 1"
+          },
+          {
+            "type": "container-guides",
+            "title": "Guides 2",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "ہنری کسنجر کے خفیہ دورہ چین میں پاکستان نے امریکہ کی کیسے مدد کی؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54587678",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54587678",
+                  "curie": "http://www.bbc.co.uk/asset/fc3cb833-84ae-4f54-993a-d709204161bd",
+                  "assetId": "54587678"
+                },
+                "summary": "سنہ 1971 میں امریکی وزیر خارجہ ہنری کسنجر نے چین کا ایک خفیہ لیکن تاریخ ساز دورہ کیا تھا۔ اُس وقت پاکستان گھمبیر سیاسی بحران میں گھرا ہوا تھا اور امریکہ سرد جنگ کے اُس زمانے میں چین اور سویت یونین کے درمیان پیدا ہونے والی نظریاتی اور تزویراتی خلیج کا فائدہ اٹھانا چاہتا تھا۔",
+                "timestamp": 1603425996000,
+                "language": "ur",
+                "byline": {
+                  "name": "ثقلین امام",
+                  "title": "بی بی سی اردو سروس، لندن",
+                  "persons": [
+                    {
+                      "name": "امام ثقلین",
+                      "function": "بی بی سی اردو سروس"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115035422",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/57B5/production/_115035422_gettyimages-515575328.jpg",
+                  "path": "/cpsprodpb/57B5/production/_115035422_gettyimages-515575328.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "ہنری کسنجر",
+                  "caption": "ہنری کسنجر",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54587678",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "سرد جنگ کے دوران جب پاکستانی فضائی اڈہ امریکہ کے زیراستعمال ہونے کا راز کھلا"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54587679",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54587679",
+                  "curie": "http://www.bbc.co.uk/asset/773c0550-b19c-4574-97a2-9895bd8c220b",
+                  "assetId": "54587679"
+                },
+                "summary": "یہ دوسری جنگ عظیم کے بعد سرد جنگ کا زمانہ تھا۔ دنیا دو سپر پاورز امریکہ اور سویت یونین کے درمیان تقسیم ہو چکی تھی اور دونوں ہی طاقتیں ایک دوسرے پر سبقت لے جانے کی خاموش دوڑ میں مصروف تھیں۔",
+                "timestamp": 1603942867000,
+                "language": "ur",
+                "byline": {
+                  "name": "عقیل عباس جعفری  ",
+                  "title": "محقق و مورخ، کراچی",
+                  "persons": [
+                    {
+                      "name": "عقیل عباس جعفری",
+                      "function": "محقق و مؤرخ، کراچی"
+                    }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115109561",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/40CE/production/_115109561_gettyimages-1774004.jpg",
+                  "path": "/cpsprodpb/40CE/production/_115109561_gettyimages-1774004.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "یو ٹو جاسوس طیارہ",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54587679",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "کیا امریکہ اب بھی ’سپر پاور‘ ہے؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54623287",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54623287",
+                  "curie": "http://www.bbc.co.uk/asset/24c605b1-ee42-f64f-8d18-11bd30241b6f",
+                  "assetId": "54623287"
+                },
+                "summary": "دنیا بھر میں معاشی، عسکری، تقافتی اور سفارتی سطح پر سب سے طاقتور گردانے جانا والا ملک امریکہ کب اور کیسے سپرپاور بنا اور کیا صدر ٹرمپ امریکہ کے اس عالمی تشخص کو برقرار رکھنے کی راہ میں ایک رکاوٹ ہیں۔",
+                "timestamp": 1603276932000,
+                "language": "ur",
+                "byline": {
+                  "name": "شجاع ملک",
+                  "title": "بی بی سی اردو ڈاٹ کام، اسلام آباد",
+                  "persons": [
+                    {
+                      "name": "ذیشان حیدر، رضا ہمدانی، مرزا باقی بیگ، شجاع ملک",
+                      "function": "بی بی سی اردو سروس"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "115008839",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/16EB8/production/_115008839_mediaitem115008838.jpg",
+                  "path": "/cpsprodpb/16EB8/production/_115008839_mediaitem115008838.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "امریکہ",
+                  "caption": "امریکہ کے اس وقت دنیا بھر میں آٹھ سو سے زیادہ فوجی اڈے ہیں",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54623287",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "روس، چین اور ایران امریکی انتخابات میں کس کی فتح کے خواہش مند"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54427785",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54427785",
+                  "curie": "http://www.bbc.co.uk/asset/35283613-a445-48b7-a87d-3806631ac3a4",
+                  "assetId": "54427785"
+                },
+                "summary": "کیا روس چاہے گا کہ ’امریکہ عظیم طاقت رہے‘؟ کیا چین بائیڈن کی کامیابی چاہتا ہے؟ یہ ایسے سوالات ہیں جو امریکہ کے نومبر میں ہونے والے انتخابات کے موقع پر امریکہ کی انٹیلیجینس کمیونٹی کے سر پر سوار ہیں۔ اب جبکہ انتخابات میں تقریباً ایک ماہ رہ گیا ہے تو ووٹروں کو کیا جاننے کی ضرورت ہے؟",
+                "timestamp": 1601963336000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114777083",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/94BD/production/_114777083__114604432_mediaitem114604431.jpg",
+                  "path": "/cpsprodpb/94BD/production/_114777083__114604432_mediaitem114604431.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "ٹرمپ اور بائیڈن کے بینر",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54427785",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "ٹرمپ کے حامی پاکستانی نژاد امریکی شہری انھیں کیوں پسند کرتے ہیں"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54383729",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54383729",
+                  "curie": "http://www.bbc.co.uk/asset/fdc31fed-9d72-46a6-88ee-5b8013f698cf",
+                  "assetId": "54383729"
+                },
+                "summary": "صدر ٹرمپ کے ناقدین کا کہنا ہے کہ وہ نسل پرست، جھوٹے اور لوگوں کو تقسیم کرتے ہیں لیکن اس کے باوجود ان کے پاکستانی نژاد امریکی حامی سمجھتے ہیں کہ وہ امریکہ اور پاکستان دونوں کے لیے اچھے ہیں۔",
+                "timestamp": 1602302487000,
+                "language": "ur",
+                "byline": {
+                  "name": "ونیت کھرے",
+                  "title": "بی بی سی، واشنگٹن ڈی سی",
+                  "persons": [
+                    {
+                      "name": "जोनाथन ग्लेंसी",
+                      "function": "बीबीसी कल्चर"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114283970",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1F02/production/_114283970_ce44113e-7925-4994-9d8a-cc0b3ed54d60.jpg",
+                  "path": "/cpsprodpb/1F02/production/_114283970_ce44113e-7925-4994-9d8a-cc0b3ed54d60.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "डोनाल्ड ट्रंप",
+                  "copyrightHolder": "EPA",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54383729",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "’مسٹر نائب صدر، میں بات کر رہی ہوں۔۔۔ پہلے مجھے میری بات ختم کرنے دیں‘"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54459676",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54459676",
+                  "curie": "http://www.bbc.co.uk/asset/40948043-75ac-4d4a-8bc9-6c65789cb778",
+                  "assetId": "54459676"
+                },
+                "summary": "اگر نائب صدر کے امیدوار مائیک پینس اور کملا ہیرس کے اس مباحثے کو ایسے میچ کی طرح دیکھا جائے جو ڈیموکریٹک اور ریپبلکن پارٹی کے مستقبل کی عکاسی کرتا ہے تو کہا جا سکتا ہے کہ اس کے لیے آنے والے چند برس انتظار کرنا ہو گا۔",
+                "timestamp": 1602159371000,
+                "language": "ur",
+                "byline": {
+                  "name": "اینتھونی زرچر",
+                  "title": "بی بی سی نامہ نگار، شمالی امریکہ",
+                  "persons": [
+                    {
+                      "name": "ثنا آصف",
+                      "function": "بی بی سی اردو ڈاٹ کام، اسلام آباد"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114808861",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/41F0/production/_114808861_reuters.jpg",
+                  "path": "/cpsprodpb/41F0/production/_114808861_reuters.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "کملا ہیرث، مائیک پینس",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54459676",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "کملا، کشمیر اور ’مودی کے دوست‘ انڈین نژاد امریکیوں کے ووٹ پر کیسے اثر انداز ہوں گے؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54458432",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54458432",
+                  "curie": "http://www.bbc.co.uk/asset/1e82f5e4-920d-4e38-998d-270ad45003b7",
+                  "assetId": "54458432"
+                },
+                "summary": "اگرچہ تاریخی طور پر امریکہ میں مقیم انڈین برادری کا جھکاؤ ڈیموکریٹک پارٹی کی جانب رہا ہے لیکن کیا صدر ڈونلڈ ٹرمپ ’عظیم تاریخی جماعت‘ کہلانے والی ریپبلکن پارٹی کے لیے اس برادری کا دل جیتنے میں کامیاب رہے ہیں؟",
+                "timestamp": 1602134998000,
+                "language": "ur",
+                "byline": {
+                  "name": "برجیش اپادھیائے  ",
+                  "title": "بی بی سی اردو ڈاٹ کام، واشنگٹن",
+                  "persons": [
+                    {
+                      "name": "برجیش اپادھیائے",
+                      "function": "بی بی سی اردو ڈاٹ کام، واشنگٹن"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114805968",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/153A6/production/_114805968_trumpcollage.jpg",
+                  "path": "/cpsprodpb/153A6/production/_114805968_trumpcollage.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "کملا، ٹرمپ، مودی",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54458432",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکی انتخابات میں حصہ لینے والی انڈین اور پاکستانی خواتین"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54405233",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54405233",
+                  "curie": "http://www.bbc.co.uk/asset/347638e0-b3e5-3d4e-80aa-a29ab6046a05",
+                  "assetId": "54405233"
+                },
+                "summary": "جانیے ایسی چند پاکستانی اور انڈین نژاد خواتین کے بارے میں جو تین نومبر کو ہونے والے امریکی انتخابات میں اپنی قسمت آزمائیں گی۔",
+                "timestamp": 1601813707000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2139461b000e9dabf7",
+                      "campaignName": "WS - Inspire me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114741772",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/6C42/production/_114741772_bbc.jpg",
+                  "path": "/cpsprodpb/6C42/production/_114741772_bbc.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "خواتین امیدوار",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54405233",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "جب ایک مکھی کو انتخابی مباحثے میں امیدواروں سے زیادہ توجہ ملی"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54386219",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54386219",
+                  "curie": "http://www.bbc.co.uk/asset/be01da7e-30d6-4b03-a402-5c8f4c927c1d",
+                  "assetId": "54386219"
+                },
+                "summary": "امریکہ میں نائب صدور کے امیدواروں کے درمیان مباحثے کے دوران سوشل میڈیا پر توجہ کا مرکز امیدواروں سے زیادہ وہ مکھی بنی جو مائیک پینس کے سر پر بیٹھی اور پھر کافی دیر بیٹھی ہی رہی۔",
+                "timestamp": 1602148095000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3139461b000e9dabf9",
+                      "campaignName": "WS - Divert me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p08tq0f7",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "امریکی صدارتی انتخاب 2020: جب ایک مکھی کو مباحثے میں امیدواروں سے زیادہ توجہ ملی",
+                  "synopses": {
+                    "short": "امریکی صدارتی انتخاب 2020: جب ایک مکھی کو مباحثے میں امیدواروں سے زیادہ توجہ ملی",
+                    "long": "امریکہ میں نائب صدور کے امیدواروں کے درمیان مباحثے کے دوران سوشل میڈیا پر توجہ کا مرکز امیدواروں سے زیادہ وہ مکھی بنی جو مائیک پینس کے سر پر بیٹھی اور پھر کافی دیر بیٹھی ہی رہی۔",
+                    "medium": "امریکہ میں نائب صدور کے امیدواروں کے درمیان مباحثے کے دوران سوشل میڈیا پر توجہ کا مرکز امیدواروں سے زیادہ وہ مکھی بنی جو مائیک پینس کے سر پر بیٹھی اور پھر کافی دیر بیٹھی ہی رہی۔"
+                  },
+                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08tq142.jpg",
+                  "embedding": false,
+                  "advertising": false,
+                  "caption": "مکھی کو مباحثے میں امیدواروں سے زیادہ توجہ ملی",
+                  "versions": [
+                    {
+                      "versionId": "p08tq0fc",
+                      "types": ["Original"],
+                      "duration": 51,
+                      "durationISO8601": "PT51S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1602147753000
+                    }
+                  ],
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "114806864",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/B70C/production/_114806864_gettyimages-1228948645.jpg",
+                  "path": "/cpsprodpb/B70C/production/_114806864_gettyimages-1228948645.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "A fly on Mike Pence's head",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54386219",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکہ کے 46ویں صدر جن پر قسمت تیسری بار میں مہربان ہوئی"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-52987829",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-52987829",
+                  "curie": "http://www.bbc.co.uk/asset/2bf37f3b-5c4b-d348-8444-3681fa97514e",
+                  "assetId": "52987829"
+                },
+                "summary": "اپنے حمایتوں کے لیے وہ خارجہ امور کے ماہر ہیں جنھیں واشنگٹن میں کام کرنے کا کئی دہائیوں کا تجربہ ہے، ایک متاثر کن خطیب جن کی پہنچ عام لوگوں تک ہے اور ایک ایسا شخص جس نے اپنی ذاتی زندگی میں انتہائی تکلیف دہ سانحوں کا بہادری سے مقابلہ کیا ہے۔",
+                "timestamp": 1611138292000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e1739461b000e9dabf6",
+                      "campaignName": "WS - CS"
+                    },
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "116588747",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/12424/production/_116588747_mediaitem116587619.jpg",
+                  "path": "/cpsprodpb/12424/production/_116588747_mediaitem116587619.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "بائیڈن",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-52987829",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "’اگر صدر بنا تو پہلے ہی دن مسلم تارکین وطن پر پابندی ختم کر دوں گا‘"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-53539628",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53539628",
+                  "curie": "http://www.bbc.co.uk/asset/34bd7d57-30c8-4f1f-bbbb-1bb512d46742",
+                  "assetId": "53539628"
+                },
+                "summary": "امریکہ کی ڈیموکریٹک پارٹی کے صدارتی امیدوار جو بائیڈن نے ایک مرتبہ پھر اپنے وعدے کو دہراتے ہوئے کہا ہے کہ اگر وہ صدارتی انتخاب جیت گئے تو صدر ڈونلڈ ٹرمپ کی جانب سے سات مسلم ممالک کے تارکین وطن کے ملک میں داخلے پر پابندی کے حکمنامے کو ختم کر دیں گے۔",
+                "timestamp": 1595689278000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "111976512",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/543F/production/_111976512_whatsubject.jpg",
+                  "path": "/cpsprodpb/543F/production/_111976512_whatsubject.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Joe Biden looks into the distance with US flags behind him.",
+                  "caption": "اپنے حمایتوں کے لیے وہ خارجہ امور کے ماہر ایسے شخص ہیں جنھیں واشنگٹن میں کام کرنے کا کئی دہائیوں کا تجربہ ہے",
+                  "copyrightHolder": "Getty",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-53539628",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "یوکرین کے صدر سے متنازع گفتگو پر ٹرمپ مشکل میں"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-49795627",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-49795627",
+                  "curie": "http://www.bbc.co.uk/asset/941ada51-9446-ce43-b676-6e79a605f5df",
+                  "assetId": "49795627"
+                },
+                "summary": "ٹرمپ پر الزام ہے کہ انھوں نے یوکرین پر دباؤ ڈالا کہ وہ 2020 کے صدارتی انتخابات میں ان کے ممکنہ حریف جو بائیڈن کے متعلق تحقیقات کریں۔ اس اعتراف کے بعد ڈیموکریٹس کی جانب سے کانگریس میں ان کے مواخذے کے مطالبات میں تیزی آئی ہے۔",
+                "timestamp": 1569232158000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "108890344",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/AD15/production/_108890344_mediaitem108890343.jpg",
+                  "path": "/cpsprodpb/AD15/production/_108890344_mediaitem108890343.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Donald Trump",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-49795627",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "ٹرمپ کی وہ ’غلطیاں‘ جو انھیں آئندہ انتخابات میں شکست سے دوچار کر سکتی ہیں"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-53032754",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53032754",
+                  "curie": "http://www.bbc.co.uk/asset/7b27cbcc-bd1a-eb4d-96f5-06c1d740dc4a",
+                  "assetId": "53032754"
+                },
+                "summary": "یہ امکان اب بھی موجود ہے کہ ڈونلڈ ٹرمپ کو کھڑے ہونے کے لیے کوئی سہارا مل جائے یا ان کے مخالف امیدوار بائیڈن کوئی بڑی بیوقوفی کر بیٹھیں۔ فی الحال جو بائیڈن کا پلڑا بھاری ہے اور ڈیموکریٹک پارٹی کے لیے صورتحال سنہ 2016 سے بہتر ہے۔",
+                "timestamp": 1592060177000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "112886844",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/AF44/production/_112886844_tv061928216.jpg",
+                  "path": "/cpsprodpb/AF44/production/_112886844_tv061928216.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "ٹرمپ",
+                  "copyrightHolder": "AFP",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-53032754",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Guides 2"
+          },
+          {
+            "type": "feature-main",
+            "title": "Features and Analysis",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "پہلے پاکستانی فوجی صدر کا امریکہ میں فقیدالمثال استقبال کیوں ہوا؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/pakistan-54239435",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-54239435",
+                  "curie": "http://www.bbc.co.uk/asset/51e6820f-5708-4e77-a720-d72d5e351bdd",
+                  "assetId": "54239435"
+                },
+                "summary": "ساٹھ کی دہائی میں صدر ایوب خان کا امریکہ میں زبردست استقبال دراصل امریکہ کی اس خطے میں سرد جنگ کی پالیسی کا حصہ تھا جس میں چاہے کوئی فوجی آمر ہو یا مطلق العنان بادشاہ، اگر وہ کمیونزم کے خلاف ہے تو وہ امریکی اتحادی ہوگا۔",
+                "timestamp": 1602907406000,
+                "language": "ur",
+                "byline": {
+                  "name": "ثقلین امام",
+                  "title": "بی بی سی اردو سروس",
+                  "persons": [
+                    {
+                      "name": "امام ثقلین",
+                      "function": "بی بی سی اردو سروس"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3139461b000e9dabf9",
+                      "campaignName": "WS - Divert me"
+                    },
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114550815",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/CA5D/production/_114550815_gettyimages-515020724.jpg",
+                  "path": "/cpsprodpb/CA5D/production/_114550815_gettyimages-515020724.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ایوب خان کی جانب سے جوابی عشائیے میں امریکی صدر جان کینیڈی کے علاوہ سابق امریکی صدر آئزن ہاور نے بھی شرکت کی",
+                  "caption": "ایوب خان کی جانب سے جوابی عشائیے میں امریکی صدر جان کینیڈی کے علاوہ سابق امریکی صدر آئزن ہاور نے بھی شرکت کی",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/pakistan-54239435",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "صدر ٹرمپ اور ان کے انتخابی وعدے"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54364042",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54364042",
+                  "curie": "http://www.bbc.co.uk/asset/ff850fa5-cafb-45cb-8149-7e40ec495792",
+                  "assetId": "54364042"
+                },
+                "summary": "صدر ٹرمپ نے گذشتہ انتخابی مہم کے دوران کیا وعدے کیے اور کسی حد تک ان کو عملی جامہ پہنانے میں کامیاب ہوئے اور اب کیا پروگرام انھوں نے عوام کے سامنے رکھا ہے۔",
+                "timestamp": 1602677460000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114901641",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/3912/production/_114901641_696a439d-6cb2-462f-8a4a-aa277b842f44.jpg",
+                  "path": "/cpsprodpb/3912/production/_114901641_696a439d-6cb2-462f-8a4a-aa277b842f44.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "صدر ٹرمپ",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54364042",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "اہم امور پر نومنتخب امریکی صدر کا کیا مؤقف ہے؟"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54358925",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54358925",
+                  "curie": "http://www.bbc.co.uk/asset/d53d6d97-9089-45fa-8824-1a918be9eeaf",
+                  "assetId": "54358925"
+                },
+                "summary": "ڈیموکریٹ پارٹی کے صدارتی امیدوار جو بائیڈن نے چین کے احتساب کی بات کی ہے اور ٹیکس میں رعایت ختم کر کے طلبہ کے قرضوں میں چھوٹ دینے کا وعدہ کیا ہے۔",
+                "timestamp": 1604770917000,
+                "language": "ur",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e1739461b000e9dabf6",
+                      "campaignName": "WS - CS"
+                    },
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114918197",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1354D/production/_114918197_dem_manifesto_biden_index_promo976-nc.jpg",
+                  "path": "/cpsprodpb/1354D/production/_114918197_dem_manifesto_biden_index_promo976-nc.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Joe Biden and icons for some of his policy areas, including coronavirus, the economy and foreign affairs",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54358925",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "موچی کا بیٹا جو امریکہ کا صدر بنا"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54490717",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54490717",
+                  "curie": "http://www.bbc.co.uk/asset/70d6ba67-9bf2-024c-96c4-55c2487cf557",
+                  "assetId": "54490717"
+                },
+                "summary": "امریکی صدر کی موجودہ تنخواہ سالانہ چار لاکھ ڈالر ہوتی ہے مگر کیا سارے امریکی صدور امیر گھرانوں سے آتے ہیں؟",
+                "timestamp": 1602402550000,
+                "language": "ur",
+                "byline": {
+                  "name": "شجاع ملک  ",
+                  "title": "بی بی سی اردو",
+                  "persons": [
+                    {
+                      "name": "شجاع ملک",
+                      "function": "بی بی سی اردو سروس"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2139461b000e9dabf7",
+                      "campaignName": "WS - Inspire me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114841693",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/9ABE/production/_114841693_hi063398117.jpg",
+                  "path": "/cpsprodpb/9ABE/production/_114841693_hi063398117.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "لنکن",
+                  "copyrightHolder": "EPA",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54490717",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "بشیر ساربان: جب ایک پاکستانی اونٹ والا امریکی نائب صدر کا مہمان بنا"
+                },
+                "locators": {
+                  "assetUri": "/urdu/pakistan-54435713",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-54435713",
+                  "curie": "http://www.bbc.co.uk/asset/672de728-b425-3d4d-be26-a0dff9431f93",
+                  "assetId": "54435713"
+                },
+                "summary": "یہ کہانی ایک ایسے پاکستانی اونٹ گاڑی بان کی ہے جس نے نہ صرف امریکی میڈیا کا دل اپنی سادہ اور مخلص باتوں سے جیتا بلکہ وہ ایک امریکی صدر کو فخر کے ساتپ اپنا دوست بھی کہہ سکتے تھے۔",
+                "timestamp": 1602215267000,
+                "language": "ur",
+                "byline": {
+                  "name": "عقیل عباس جعفری  ",
+                  "title": "محقق و مورخ، کراچی",
+                  "persons": [
+                    {
+                      "name": "عقیل عباس جعفری",
+                      "function": "محقق و مؤرخ، کراچی"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114820600",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/025A/production/_114820600_bashir.jpg",
+                  "path": "/cpsprodpb/025A/production/_114820600_bashir.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "بشیر ساربان",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/pakistan-54435713",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "امریکہ کے لیے ’انکل سیم‘ کی اصطلاح کیسے وجود میں آئی"
+                },
+                "locators": {
+                  "assetUri": "/urdu/world-54414383",
+                  "cpsUrn": "urn:bbc:content:assetUri:urdu/world-54414383",
+                  "curie": "http://www.bbc.co.uk/asset/9b591e92-4301-4f88-ae79-ff2a9452e4f3",
+                  "assetId": "54414383"
+                },
+                "summary": "سات ستمبر 1813 کی ٹرائے (نیویارک) پوسٹ کے ایک نامہ نگار نے پہلی مرتبہ ’انکل سیم‘ کی اصطلاح امریکی حکومت کے لیے تحریر کی۔ اس کے بعد اس اصطلاح کا مطلب ہی امریکی حکومت ہو گیا اور ہر شخص اسے امریکی انتظامیہ کے مفہوم میں استعمال کرنے لگا۔",
+                "timestamp": 1601873929000,
+                "language": "ur",
+                "byline": {
+                  "name": "عقیل عباس جعفری  ",
+                  "title": "محقق و مورخ، کراچی",
+                  "persons": [
+                    {
+                      "name": "عقیل عباس جعفری",
+                      "function": "محقق و مؤرخ، کراچی"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "114749648",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/14AD6/production/_114749648_tv040298048.jpg",
+                  "path": "/cpsprodpb/14AD6/production/_114749648_tv040298048.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "انکل سیم",
+                  "copyrightHolder": "Library of Congress",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:urdu/world-54414383",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Features and Analysis"
+          }
+        ]
       },
-      "analyticsLabels": {
-        "cps_asset_type": "fix",
-        "counterName": "urdu.world.feature_index.53692225.page",
-        "cps_asset_id": "53692225"
+      "promo": {
+        "subType": "IDX",
+        "name": "امریکی صدارتی انتخاب 2020",
+        "uri": "/urdu/world-53692225",
+        "id": "urn:bbc:ares::index:urdu/world-53692225/desktop/domestic",
+        "type": "simple"
       },
-      "tags": {},
-      "version": "v1.3.5",
-      "blockTypes": [
-        "lead-feature-now",
-        "container-top-stories",
-        "other-top-stories",
-        "feature-main"
-      ],
-      "title": "امریکی صدارتی انتخاب 2020",
-      "summary": "امریکی عوام تین نومبر 2020 کو اگلے چار برس کے لیے اپنے نئے صدر کا انتخاب کرے گی۔ اس مرتبہ مقابلہ موجودہ صدر اور رپبلکن پارٹی کے امیدوار ڈونلڈ ٹرمپ اور سابق نائب صدر اور ڈیموکریٹ پارٹی کے امیدوار جو بائیڈن کے مابین ہے۔",
-      "atiAnalytics": {
-        "producerName": "URDU",
-        "producerId": "95"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "ورلڈ",
+          "uri": "/urdu/world",
+          "urlIdentifier": "/urdu/world",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Urdu",
+          "uri": "/urdu",
+          "urlIdentifier": "/urdu",
+          "type": "simple"
+        },
+        "groups": []
       }
     },
-    "content": {
-      "groups": [
-        {
-          "type": "lead-feature-now",
-          "title": "Lead Feature",
-          "items": [
-            {
-              "headlines": {
-                "headline": "کیا آپ زیادہ ووٹ لیے بغیر بھی امریکی صدر بن سکتے ہیں؟"
-              },
-              "locators": {
-                "assetUri": "/urdu/world-53694173",
-                "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53694173",
-                "curie": "http://www.bbc.co.uk/asset/470fadd9-cf88-4eac-a7b7-c7910aaf6f49",
-                "assetId": "53694173"
-              },
-              "summary": "کیا آپ جانتے ہیں کہ امریکہ میں صدارتی انتخاب میں عوام کی جانب سے زیادہ ووٹ حاصل کرنے والا امیدوار ضروری نہیں کہ ملک کا نیا صدر بنے۔",
-              "timestamp": 1597065478000,
-              "language": "ur",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                  "categoryName": "Explainer"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e2939461b000e9dabf8",
-                    "campaignName": "WS - Educate me"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "113666168",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/15096/production/_113666168_usvoter.jpg",
-                "path": "/cpsprodpb/15096/production/_113666168_usvoter.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "US voter at booth",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:urdu/world-53694173",
-              "type": "cps"
-            }
-          ],
-          "semanticGroupName": "Lead Feature"
-        },
-        {
-          "type": "container-top-stories",
-          "title": "Container Top Stories",
-          "items": [
-            {
-              "headlines": {
-                "headline": "امریکی الیکشن 2020: ڈونلڈ ٹرمپ آگے ہیں یا جو بائیڈن؟"
-              },
-              "locators": {
-                "assetUri": "/urdu/world-53687572",
-                "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53687572",
-                "curie": "http://www.bbc.co.uk/asset/e4709b8b-dcc8-a14e-bb59-f8f5af304da6",
-                "assetId": "53687572"
-              },
-              "summary": "اس وقت کڑے مقابلے والی ریاستوں میں رائے شماری کے جائزوں میں جو بائیڈن کی پوزیشن اچھی معلوم ہوتی ہے مگر ابھی صدارتی انتخاب میں کافی وقت ہے اور جہاں ٹرمپ ہوں وہاں چیزیں بہت تیزی سے بدل سکتی ہیں۔",
-              "timestamp": 1596791555000,
-              "language": "ur",
-              "byline": {
-                "name": "ویژوئل اینڈ ڈیٹا جرنلزم ٹیم",
-                "title": "بی بی سی نیوز",
-                "persons": [
-                  {
-                    "name": "The Visual and Data Journalism Team",
-                    "function": "BBC News"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                  "categoryName": "Explainer"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "113810584",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/BD75/production/_113810584_index_promo_poll_tracker_bw_976.png",
-                "path": "/cpsprodpb/BD75/production/_113810584_index_promo_poll_tracker_bw_976.png",
-                "height": 549,
-                "width": 976,
-                "altText": "Promo image showing Joe Biden and Donald Trump",
-                "copyrightHolder": "BBC",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:urdu/world-53687572",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "ٹرمپ کی وہ ’غلطیاں‘ جو انھیں آئندہ انتخابات میں شکست سے دوچار کر سکتی ہیں"
-              },
-              "locators": {
-                "assetUri": "/urdu/world-53032754",
-                "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53032754",
-                "curie": "http://www.bbc.co.uk/asset/7b27cbcc-bd1a-eb4d-96f5-06c1d740dc4a",
-                "assetId": "53032754"
-              },
-              "summary": "یہ امکان اب بھی موجود ہے کہ ڈونلڈ ٹرمپ کو کھڑے ہونے کے لیے کوئی سہارا مل جائے یا ان کے مخالف امیدوار بائیڈن کوئی بڑی بیوقوفی کر بیٹھیں۔ فی الحال جو بائیڈن کا پلڑا بھاری ہے اور ڈیموکریٹک پارٹی کے لیے صورتحال سنہ 2016 سے بہتر ہے۔",
-              "timestamp": 1592060177000,
-              "language": "ur",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                  "categoryName": "Analysis"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "112886844",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/AF44/production/_112886844_tv061928216.jpg",
-                "path": "/cpsprodpb/AF44/production/_112886844_tv061928216.jpg",
-                "height": 576,
-                "width": 1024,
-                "altText": "ٹرمپ",
-                "copyrightHolder": "AFP",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:urdu/world-53032754",
-              "type": "cps"
-            }
-          ],
-          "semanticGroupName": "Container Top Stories"
-        },
-        {
-          "type": "other-top-stories",
-          "title": "Standalone Other Top Stories",
-          "items": [
-            {
-              "headlines": {
-                "headline": "کیا جو بائیڈن ٹرمپ کو شکست دے کر اگلے صدر بن سکتے ہیں؟"
-              },
-              "locators": {
-                "assetUri": "/urdu/world-52987829",
-                "cpsUrn": "urn:bbc:content:assetUri:urdu/world-52987829",
-                "curie": "http://www.bbc.co.uk/asset/2bf37f3b-5c4b-d348-8444-3681fa97514e",
-                "assetId": "52987829"
-              },
-              "summary": "اپنے حمایتوں کے لیے وہ خارجہ امور کے ماہر ہیں جنھیں واشنگٹن میں کام کرنے کا کئی دہائیوں کا تجربہ ہے، ایک متاثر کن خطیب جن کی پہنچ عام لوگوں تک ہے اور ایک ایسا شخص جس نے اپنی ذاتی زندگی میں انتہائی تکلیف دہ سانحوں کا بہادری سے مقابلہ کیا ہے۔ لیکن کیا جو بائیڈن میں ڈونلڈ ٹرمپ کو وائٹ ہاؤس سے نکالنے کی صلاحیت ہے؟",
-              "timestamp": 1591942173000,
-              "language": "ur",
-              "byline": {
-                "name": "پیٹر بال",
-                "title": "بی بی سی ورلڈ سروس",
-                "persons": [
-                  {
-                    "name": "Peter Ball",
-                    "function": "BBC"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                  "categoryName": "Analysis"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e1739461b000e9dabf6",
-                    "campaignName": "WS - CS"
-                  },
-                  {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "112870460",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/1907/production/_112870460_whatsubject.jpg",
-                "path": "/cpsprodpb/1907/production/_112870460_whatsubject.jpg",
-                "height": 576,
-                "width": 1024,
-                "altText": "Joe Biden looks into the distance with US flags behind him.",
-                "copyrightHolder": "Getty",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:urdu/world-52987829",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "’اگر صدر بنا تو پہلے ہی دن مسلم تارکین وطن پر پابندی ختم کر دوں گا‘"
-              },
-              "locators": {
-                "assetUri": "/urdu/world-53539628",
-                "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53539628",
-                "curie": "http://www.bbc.co.uk/asset/34bd7d57-30c8-4f1f-bbbb-1bb512d46742",
-                "assetId": "53539628"
-              },
-              "summary": "امریکہ کی ڈیموکریٹک پارٹی کے صدارتی امیدوار جو بائیڈن نے ایک مرتبہ پھر اپنے وعدے کو دہراتے ہوئے کہا ہے کہ اگر وہ صدارتی انتخاب جیت گئے تو صدر ڈونلڈ ٹرمپ کی جانب سے سات مسلم ممالک کے تارکین وطن کے ملک میں داخلے پر پابندی کے حکمنامے کو ختم کر دیں گے۔",
-              "timestamp": 1595689278000,
-              "language": "ur",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e4739461b000e9dabfc",
-                    "campaignName": "WS - Update me"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "111976512",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/543F/production/_111976512_whatsubject.jpg",
-                "path": "/cpsprodpb/543F/production/_111976512_whatsubject.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Joe Biden looks into the distance with US flags behind him.",
-                "caption": "اپنے حمایتوں کے لیے وہ خارجہ امور کے ماہر ایسے شخص ہیں جنھیں واشنگٹن میں کام کرنے کا کئی دہائیوں کا تجربہ ہے",
-                "copyrightHolder": "Getty",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:urdu/world-53539628",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "یوکرین کے صدر سے متنازع گفتگو پر ٹرمپ مشکل میں"
-              },
-              "locators": {
-                "assetUri": "/urdu/world-49795627",
-                "cpsUrn": "urn:bbc:content:assetUri:urdu/world-49795627",
-                "curie": "http://www.bbc.co.uk/asset/941ada51-9446-ce43-b676-6e79a605f5df",
-                "assetId": "49795627"
-              },
-              "summary": "ٹرمپ پر الزام ہے کہ انھوں نے یوکرین پر دباؤ ڈالا کہ وہ 2020 کے صدارتی انتخابات میں ان کے ممکنہ حریف جو بائیڈن کے متعلق تحقیقات کریں۔ اس اعتراف کے بعد ڈیموکریٹس کی جانب سے کانگریس میں ان کے مواخذے کے مطالبات میں تیزی آئی ہے۔",
-              "timestamp": 1569232158000,
-              "language": "ur",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "108890344",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/AD15/production/_108890344_mediaitem108890343.jpg",
-                "path": "/cpsprodpb/AD15/production/_108890344_mediaitem108890343.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Donald Trump",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:urdu/world-49795627",
-              "type": "cps"
-            }
-          ],
-          "semanticGroupName": "Standalone Other Top Stories"
-        },
-        {
-          "type": "feature-main",
-          "title": "Features and Analysis",
-          "items": [
-            {
-              "headlines": {
-                "headline": "جو بائیڈن نائب صدر کے لیے اپنا ساتھی امیدوار کسے چنیں گے؟"
-              },
-              "locators": {
-                "assetUri": "/urdu/world-53271169",
-                "cpsUrn": "urn:bbc:content:assetUri:urdu/world-53271169",
-                "curie": "http://www.bbc.co.uk/asset/1fe3149d-f032-4a23-ad86-a16b0893ad7d",
-                "assetId": "53271169"
-              },
-              "summary": "جو بائیڈن نے وعدہ کیا تھا کہ اگر صدارتی انتخابات کے لیے وہ پارٹی کی نامزدگی حاصل کرنے میں کامیاب ہوئے تو نائب صدر کی ساتھی امیدوار کے طور پر وہ کسی خاتون کا انتخاب کریں گے، تو ایسے میں وہ کون سی سرکردہ خواتین ہیں جو اُن کا انتخاب ثابت ہو سکتی ہیں؟",
-              "timestamp": 1595212925000,
-              "language": "ur",
-              "byline": {
-                "name": "اینتھنی زورکر",
-                "title": "نامہ نگار، نارتھ امریکہ",
-                "persons": [
-                  {
-                    "name": "ریاض سهیل",
-                    "function": "بي بي سي کراچۍ"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                  "categoryName": "Analysis"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e1739461b000e9dabf6",
-                    "campaignName": "WS - CS"
-                  },
-                  {
-                    "campaignId": "5a988e2939461b000e9dabf8",
-                    "campaignName": "WS - Educate me"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "113523692",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/73C0/production/_113523692_biden_vp_contenders_index_promo_976.png",
-                "path": "/cpsprodpb/73C0/production/_113523692_biden_vp_contenders_index_promo_976.png",
-                "height": 576,
-                "width": 1024,
-                "altText": "بائڈن اور بعض ممکنہ ساتھی امیدوار",
-                "copyrightHolder": "BBC",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:urdu/world-53271169",
-              "type": "cps"
-            }
-          ],
-          "semanticGroupName": "Features and Analysis"
-        }
-      ]
-    },
-    "promo": {
-      "subType": "IDX",
-      "name": "امریکی صدارتی انتخاب 2020",
-      "uri": "/urdu/world-53692225",
-      "id": "urn:bbc:ares::index:urdu/world-53692225/desktop/domestic",
-      "type": "simple"
-    },
-    "relatedContent": {
-      "section": {
-        "subType": "index",
-        "name": "ورلڈ",
-        "uri": "/urdu/world",
-        "type": "simple"
-      },
-      "site": {
-        "subType": "site",
-        "name": "BBC Urdu",
-        "uri": "/urdu",
-        "type": "simple"
-      },
-      "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": null
     }
   }
+}
