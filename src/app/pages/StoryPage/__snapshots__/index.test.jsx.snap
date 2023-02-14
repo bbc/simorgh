@@ -5312,10 +5312,28 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 .emotion-185 {
   margin-bottom: 1.5rem;
-  padding: 1rem;
 }
 
-.emotion-188 {
+@media (min-width: 63rem) {
+  .emotion-185 {
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-187 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-187 {
+    padding: 0 1rem;
+  }
+}
+
+.emotion-190 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -5324,23 +5342,29 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-188 {
+  .emotion-190 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-188 {
+  .emotion-190 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-190 {
+@media (min-width: 37.5rem) {
+  .emotion-190 {
+    margin-top: 0;
+  }
+}
+
+.emotion-192 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-192 {
+.emotion-194 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5350,7 +5374,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   flex-direction: column;
 }
 
-.emotion-194 {
+.emotion-196 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5370,7 +5394,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-194 {
+  .emotion-196 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -5378,7 +5402,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-.emotion-196 {
+.emotion-198 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5398,32 +5422,336 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-196 {
+  .emotion-198 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-196 {
+  .emotion-198 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-196 {
+  .emotion-198 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-196 {
+  .emotion-198 {
     padding-right: 1rem;
   }
 }
 
-.emotion-199 {
+.emotion-200 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-202 {
+  padding: 0.5rem 0 1rem;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-202 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+.emotion-202:last-child {
+  border: none;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-202 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-202 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+.emotion-202:first-child {
+  padding-top: 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-202:first-child {
+    padding-top: 1rem;
+  }
+}
+
+.emotion-202:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-204 {
+  position: relative;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-204 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-204 {
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-204 {
+      display: block;
+    }
+  }
+}
+
+.emotion-206 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-206 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-206 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+.emotion-206>div {
+  vertical-align: middle;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-206 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3/span 4;
+    grid-column: 1/span 6;
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-206 {
+      padding-top: 0;
+    }
+  }
+}
+
+.emotion-206>div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.emotion-206 svg {
+  margin: 0;
+}
+
+.emotion-208 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-208 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-208 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-210 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+  overflow-wrap: anywhere;
+}
+
+.emotion-210:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-210:hover,
+.emotion-210:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-210:visited {
+  color: #6E6E73;
+}
+
+.emotion-212 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-212 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-212 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-253 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-253 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+  }
+}
+
+.emotion-255 {
+  padding: 0.5rem 0 1rem;
+  line-height: 0;
+  height: 100%;
+}
+
+.emotion-255:last-child {
+  border: none;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-255 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-255 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+.emotion-255:first-child {
+  padding-top: 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-255:first-child {
+    padding-top: 1rem;
+  }
+}
+
+.emotion-255:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-255:first-child {
+  padding: 0 0 0.5rem 0;
+}
+
+.emotion-255:not(:first-child):not(:last-child) {
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.emotion-255:last-child {
+  padding: 0.5rem 0 0 0;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-255 {
+    padding: 0;
+  }
+
+  .emotion-255:first-child,
+  .emotion-255:not(:first-child):not(:last-child),
+  .emotion-255:last-child {
+    padding: 0;
+  }
+}
+
+.emotion-273 {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.emotion-276 {
+  position: relative;
+  z-index: 0;
+  color: #141414;
+  margin-top: 2rem;
+  margin-top: 0;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-276 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-276 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-287 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -5432,7 +5760,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @supports (display: grid) {
-  .emotion-199 {
+  .emotion-287 {
     display: grid;
     position: initial;
     width: initial;
@@ -5440,7 +5768,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-199 {
+    .emotion-287 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5448,7 +5776,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-199 {
+    .emotion-287 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5456,7 +5784,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-199 {
+    .emotion-287 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5464,7 +5792,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-199 {
+    .emotion-287 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5472,7 +5800,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-199 {
+    .emotion-287 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5480,7 +5808,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 80rem) {
-    .emotion-199 {
+    .emotion-287 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -5488,62 +5816,62 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-.emotion-202 {
+.emotion-290 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-202 {
+  .emotion-290 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-202 {
+    .emotion-290 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-202 {
+    .emotion-290 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-202 {
+    .emotion-290 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-202 {
+    .emotion-290 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-202 {
+    .emotion-290 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-202 {
+    .emotion-290 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-204 {
+.emotion-292 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5556,30 +5884,30 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-206 {
+  .emotion-294 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-206 {
+  .emotion-294 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-206 {
+  .emotion-294 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-206 {
+  .emotion-294 {
     min-width: 2.5rem;
   }
 }
 
-.emotion-208 {
+.emotion-296 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -5592,32 +5920,32 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-208 {
+  .emotion-296 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-208 {
+  .emotion-296 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-210 {
+.emotion-298 {
   padding-top: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-210 {
+  .emotion-298 {
     padding-right: 0;
   }
 }
 
-.emotion-212 {
+.emotion-300 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5631,26 +5959,26 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-212 {
+  .emotion-300 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-212 {
+  .emotion-300 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-212:hover,
-.emotion-212:focus {
+.emotion-300:hover,
+.emotion-300:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-212:before {
+.emotion-300:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -5662,32 +5990,8 @@ exports[`Story Page should render correctly when the secondary column data is no
   z-index: 1;
 }
 
-.emotion-214 {
+.emotion-302 {
   padding-top: 0.5rem;
-}
-
-.emotion-216 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-216 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-216 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
 }
 
 <div>
@@ -6259,24 +6563,270 @@ exports[`Story Page should render correctly when the secondary column data is no
                   class="emotion-185 emotion-186"
                 >
                   <section
+                    aria-labelledby="top-stories-heading"
+                    class=" emotion-187 emotion-188"
+                    data-e2e="top-stories-heading"
+                    role="region"
+                  >
+                    <div
+                      class="emotion-189 emotion-190 emotion-191"
+                    >
+                      <h2
+                        class="emotion-192 emotion-193"
+                      >
+                        <span
+                          class="emotion-194 emotion-195"
+                        >
+                          <span
+                            class="emotion-196 emotion-197"
+                          >
+                            <span
+                              class="emotion-198 emotion-199"
+                              dir="ltr"
+                              id="top-stories-heading"
+                            >
+                              Top Tori
+                            </span>
+                          </span>
+                        </span>
+                      </h2>
+                    </div>
+                    <ul
+                      class="emotion-200 emotion-201"
+                      role="list"
+                    >
+                      <li
+                        class="emotion-202 emotion-203"
+                      >
+                        <div
+                          class="emotion-204 emotion-205"
+                          data-e2e="story-promo"
+                        >
+                          <div
+                            class="emotion-206 emotion-207"
+                            dir="ltr"
+                          >
+                            <h3
+                              class="emotion-208 emotion-209"
+                            >
+                              <a
+                                aria-labelledby="top-stories-promo-pidgin23248287-1"
+                                class="focusIndicatorDisplayInlineBlock emotion-210 emotion-211"
+                                href="/pidgin/23248287"
+                              >
+                                <span
+                                  id="top-stories-promo-pidgin23248287-1"
+                                >
+                                  ATMs across the country
+                                </span>
+                              </a>
+                            </h3>
+                            <time
+                              class="emotion-212 emotion-25"
+                              datetime="2019-09-10"
+                            >
+                              10th September 2019
+                            </time>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="emotion-202 emotion-203"
+                      >
+                        <div
+                          class="emotion-204 emotion-205"
+                          data-e2e="story-promo"
+                        >
+                          <div
+                            class="emotion-206 emotion-207"
+                            dir="ltr"
+                          >
+                            <h3
+                              class="emotion-208 emotion-209"
+                            >
+                              <a
+                                aria-labelledby="top-stories-promo-pidgintori23146434-1"
+                                class="focusIndicatorDisplayInlineBlock emotion-210 emotion-211"
+                                href="/pidgin/tori-23146434"
+                              >
+                                <span
+                                  id="top-stories-promo-pidgintori23146434-1"
+                                >
+                                  Jacob Zuma: Staying!!!
+                                </span>
+                              </a>
+                            </h3>
+                            <time
+                              class="emotion-212 emotion-25"
+                              datetime="2017-08-08"
+                            >
+                              8th August 2017
+                            </time>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="emotion-202 emotion-203"
+                      >
+                        <div
+                          class="emotion-204 emotion-205"
+                          data-e2e="story-promo"
+                        >
+                          <div
+                            class="emotion-206 emotion-207"
+                            dir="ltr"
+                          >
+                            <h3
+                              class="emotion-208 emotion-209"
+                            >
+                              <a
+                                aria-labelledby="top-stories-promo-news-feature-1"
+                                class="focusIndicatorDisplayInlineBlock emotion-210 emotion-211"
+                                href="/news"
+                              >
+                                <span
+                                  id="top-stories-promo-news-feature-1"
+                                >
+                                  Feature promo
+                                </span>
+                              </a>
+                            </h3>
+                            <time
+                              class="emotion-212 emotion-25"
+                              datetime="2019-12-06"
+                            >
+                              6th December 2019
+                            </time>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+                <div
+                  class="emotion-185 emotion-186"
+                >
+                  <section
+                    aria-labelledby="features-analysis-heading"
+                    class=" emotion-187 emotion-188"
+                    data-e2e="features-analysis-heading"
+                    role="region"
+                  >
+                    <div
+                      class="emotion-189 emotion-190 emotion-191"
+                    >
+                      <h2
+                        class="emotion-192 emotion-193"
+                      >
+                        <span
+                          class="emotion-194 emotion-195"
+                        >
+                          <span
+                            class="emotion-196 emotion-197"
+                          >
+                            <span
+                              class="emotion-198 emotion-199"
+                              dir="ltr"
+                              id="features-analysis-heading"
+                            >
+                              Informate me
+                            </span>
+                          </span>
+                        </span>
+                      </h2>
+                    </div>
+                    <ul
+                      class="emotion-253 emotion-254"
+                      role="list"
+                    >
+                      <li
+                        class="emotion-255 emotion-256"
+                      >
+                        <span
+                          data-testid="frosted-promo-loader"
+                        />
+                      </li>
+                      <li
+                        class="emotion-255 emotion-256"
+                      >
+                        <span
+                          data-testid="frosted-promo-loader"
+                        />
+                      </li>
+                      <li
+                        class="emotion-255 emotion-256"
+                      >
+                        <span
+                          data-testid="frosted-promo-loader"
+                        />
+                      </li>
+                      <li
+                        class="emotion-255 emotion-256"
+                      >
+                        <span
+                          data-testid="frosted-promo-loader"
+                        />
+                      </li>
+                      <li
+                        class="emotion-255 emotion-256"
+                      >
+                        <span
+                          data-testid="frosted-promo-loader"
+                        />
+                      </li>
+                      <li
+                        class="emotion-255 emotion-256"
+                      >
+                        <span
+                          data-testid="frosted-promo-loader"
+                        />
+                      </li>
+                      <li
+                        class="emotion-255 emotion-256"
+                      >
+                        <span
+                          data-testid="frosted-promo-loader"
+                        />
+                      </li>
+                      <li
+                        class="emotion-255 emotion-256"
+                      >
+                        <span
+                          data-testid="frosted-promo-loader"
+                        />
+                      </li>
+                      <li
+                        class="emotion-255 emotion-256"
+                      >
+                        <span
+                          data-testid="frosted-promo-loader"
+                        />
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+                <div
+                  class="emotion-273 emotion-274"
+                >
+                  <section
                     aria-labelledby="Most-Read"
                     data-e2e="most-read"
                     role="region"
                   >
                     <div
-                      class="emotion-187 emotion-188 emotion-189"
+                      class="emotion-275 emotion-276 emotion-191"
                     >
                       <h2
-                        class="emotion-190 emotion-191"
+                        class="emotion-192 emotion-193"
                       >
                         <span
-                          class="emotion-192 emotion-193"
+                          class="emotion-194 emotion-195"
                         >
                           <span
-                            class="emotion-194 emotion-195"
+                            class="emotion-196 emotion-197"
                           >
                             <span
-                              class="emotion-196 emotion-197"
+                              class="emotion-198 emotion-199"
                               dir="ltr"
                               id="Most-Read"
                             >
@@ -6287,43 +6837,43 @@ exports[`Story Page should render correctly when the secondary column data is no
                       </h2>
                     </div>
                     <ol
-                      class="emotion-198 emotion-199 emotion-2"
+                      class="emotion-286 emotion-287 emotion-2"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-201 emotion-202 emotion-2"
+                        class="emotion-289 emotion-290 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-204 emotion-205"
+                          class="emotion-292 emotion-293"
                         >
                           <div
-                            class="emotion-206 emotion-207"
+                            class="emotion-294 emotion-295"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-208 emotion-209"
+                              class="emotion-296 emotion-297"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="emotion-210 emotion-211"
+                            class="emotion-298 emotion-299"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-46729879"
                             >
                               Public Holidays wey go happun for 2019
                             </a>
                             <div
-                              class="emotion-214 emotion-215"
+                              class="emotion-302 emotion-303"
                             >
                               <time
-                                class="emotion-216 emotion-25"
+                                class="emotion-212 emotion-25"
                                 datetime="2019-05-21"
                               >
                                 De one we dem update for: 21st May 2019
@@ -6333,38 +6883,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-201 emotion-202 emotion-2"
+                        class="emotion-289 emotion-290 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-204 emotion-205"
+                          class="emotion-292 emotion-293"
                         >
                           <div
-                            class="emotion-206 emotion-207"
+                            class="emotion-294 emotion-295"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-208 emotion-209"
+                              class="emotion-296 emotion-297"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="emotion-210 emotion-211"
+                            class="emotion-298 emotion-299"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50304653"
                             >
                               Liberia banks don run out of money
                             </a>
                             <div
-                              class="emotion-214 emotion-215"
+                              class="emotion-302 emotion-303"
                             >
                               <time
-                                class="emotion-216 emotion-25"
+                                class="emotion-212 emotion-25"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -6374,38 +6924,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-201 emotion-202 emotion-2"
+                        class="emotion-289 emotion-290 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-204 emotion-205"
+                          class="emotion-292 emotion-293"
                         >
                           <div
-                            class="emotion-206 emotion-207"
+                            class="emotion-294 emotion-295"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-208 emotion-209"
+                              class="emotion-296 emotion-297"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="emotion-210 emotion-211"
+                            class="emotion-298 emotion-299"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50298882"
                             >
                               Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
                             </a>
                             <div
-                              class="emotion-214 emotion-215"
+                              class="emotion-302 emotion-303"
                             >
                               <time
-                                class="emotion-216 emotion-25"
+                                class="emotion-212 emotion-25"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -6415,38 +6965,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-201 emotion-202 emotion-2"
+                        class="emotion-289 emotion-290 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-204 emotion-205"
+                          class="emotion-292 emotion-293"
                         >
                           <div
-                            class="emotion-206 emotion-207"
+                            class="emotion-294 emotion-295"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-208 emotion-209"
+                              class="emotion-296 emotion-297"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="emotion-210 emotion-211"
+                            class="emotion-298 emotion-299"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50315150"
                             >
                               Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
                             </a>
                             <div
-                              class="emotion-214 emotion-215"
+                              class="emotion-302 emotion-303"
                             >
                               <time
-                                class="emotion-216 emotion-25"
+                                class="emotion-212 emotion-25"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -6456,38 +7006,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-201 emotion-202 emotion-2"
+                        class="emotion-289 emotion-290 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-204 emotion-205"
+                          class="emotion-292 emotion-293"
                         >
                           <div
-                            class="emotion-206 emotion-207"
+                            class="emotion-294 emotion-295"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-208 emotion-209"
+                              class="emotion-296 emotion-297"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="emotion-210 emotion-211"
+                            class="emotion-298 emotion-299"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50315157"
                             >
                               How Balogun market fire kill Policeman for Lagos
                             </a>
                             <div
-                              class="emotion-214 emotion-215"
+                              class="emotion-302 emotion-303"
                             >
                               <time
-                                class="emotion-216 emotion-25"
+                                class="emotion-212 emotion-25"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -6497,38 +7047,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-201 emotion-202 emotion-2"
+                        class="emotion-289 emotion-290 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-204 emotion-205"
+                          class="emotion-292 emotion-293"
                         >
                           <div
-                            class="emotion-206 emotion-207"
+                            class="emotion-294 emotion-295"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-208 emotion-209"
+                              class="emotion-296 emotion-297"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="emotion-210 emotion-211"
+                            class="emotion-298 emotion-299"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50093818"
                             >
                               Labour, FG finally agree minimum wage salary adjustment
                             </a>
                             <div
-                              class="emotion-214 emotion-215"
+                              class="emotion-302 emotion-303"
                             >
                               <time
-                                class="emotion-216 emotion-25"
+                                class="emotion-212 emotion-25"
                                 datetime="2019-10-18"
                               >
                                 De one we dem update for: 18th October 2019
@@ -6538,38 +7088,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-201 emotion-202 emotion-2"
+                        class="emotion-289 emotion-290 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-204 emotion-205"
+                          class="emotion-292 emotion-293"
                         >
                           <div
-                            class="emotion-206 emotion-207"
+                            class="emotion-294 emotion-295"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-208 emotion-209"
+                              class="emotion-296 emotion-297"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="emotion-210 emotion-211"
+                            class="emotion-298 emotion-299"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50187218"
                             >
                               Naira Marley na 'Bad Influence'?
                             </a>
                             <div
-                              class="emotion-214 emotion-215"
+                              class="emotion-302 emotion-303"
                             >
                               <time
-                                class="emotion-216 emotion-25"
+                                class="emotion-212 emotion-25"
                                 datetime="2019-10-25"
                               >
                                 De one we dem update for: 25th October 2019
@@ -6579,38 +7129,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-201 emotion-202 emotion-2"
+                        class="emotion-289 emotion-290 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-204 emotion-205"
+                          class="emotion-292 emotion-293"
                         >
                           <div
-                            class="emotion-206 emotion-207"
+                            class="emotion-294 emotion-295"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-208 emotion-209"
+                              class="emotion-296 emotion-297"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="emotion-210 emotion-211"
+                            class="emotion-298 emotion-299"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-48347911"
                             >
                               Tins you suppose know about Naira Marley
                             </a>
                             <div
-                              class="emotion-214 emotion-215"
+                              class="emotion-302 emotion-303"
                             >
                               <time
-                                class="emotion-216 emotion-25"
+                                class="emotion-212 emotion-25"
                                 datetime="2019-05-23"
                               >
                                 De one we dem update for: 23rd May 2019
@@ -6620,38 +7170,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-201 emotion-202 emotion-2"
+                        class="emotion-289 emotion-290 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-204 emotion-205"
+                          class="emotion-292 emotion-293"
                         >
                           <div
-                            class="emotion-206 emotion-207"
+                            class="emotion-294 emotion-295"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-208 emotion-209"
+                              class="emotion-296 emotion-297"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="emotion-210 emotion-211"
+                            class="emotion-298 emotion-299"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/sport-50312710"
                             >
                               Golden Eaglets crash out of Fifa U17 World Cup
                             </a>
                             <div
-                              class="emotion-214 emotion-215"
+                              class="emotion-302 emotion-303"
                             >
                               <time
-                                class="emotion-216 emotion-25"
+                                class="emotion-212 emotion-25"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -6661,38 +7211,38 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </div>
                       </li>
                       <li
-                        class="emotion-201 emotion-202 emotion-2"
+                        class="emotion-289 emotion-290 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-204 emotion-205"
+                          class="emotion-292 emotion-293"
                         >
                           <div
-                            class="emotion-206 emotion-207"
+                            class="emotion-294 emotion-295"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-208 emotion-209"
+                              class="emotion-296 emotion-297"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="emotion-210 emotion-211"
+                            class="emotion-298 emotion-299"
                             dir="ltr"
                           >
                             <a
-                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-42945173"
                             >
                               Tiger nut drink fit wake up your sex drive - Nutritionist
                             </a>
                             <div
-                              class="emotion-214 emotion-215"
+                              class="emotion-302 emotion-303"
                             >
                               <time
-                                class="emotion-216 emotion-25"
+                                class="emotion-212 emotion-25"
                                 datetime="2019-05-21"
                               >
                                 De one we dem update for: 21st May 2019

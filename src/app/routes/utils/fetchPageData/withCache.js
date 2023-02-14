@@ -1,8 +1,8 @@
 import LRUCache from 'lru-cache';
 import fetchPageData from './index.js';
 
-const cacheMaxItems = parseInt(process.env.SIMORGH_CONFIG_CACHE_ITEMS, 10);
-const cacheTTL = parseInt(process.env.SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS, 10);
+const cacheMaxItems = 400;
+const cacheTTL = 300;
 const cache = new LRUCache({ max: cacheMaxItems, ttl: cacheTTL * 1000 });
 
 const withCache = async ({
