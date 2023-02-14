@@ -4,8 +4,11 @@ export const VISUAL_STYLE = {
 };
 
 export const VISUAL_PROMINENCE = {
+  MINIMUM: 'MINIMUM',
+  LOW: 'LOW',
   NORMAL: 'NORMAL',
   HIGH: 'HIGH',
+  MAXIMUM: 'MAXIMUM',
 };
 
 export const COMPONENT_NAMES = {
