@@ -215,7 +215,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           let unirecsHybridRecommendationData = null;
           if (variation && variation !== 'control') {
             unirecsHybridRecommendationData = path(
-              [optimizelyMappings[variation]],
+              [OPTIMIZELY_CONFIG.variationMappings[variation]],
               pageData,
             );
           }

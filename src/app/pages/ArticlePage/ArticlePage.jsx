@@ -124,15 +124,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
   const recommendationsData = path(['recommendations'], pageData);
-  const optimizelyMappings = {
-    content_recs: 'datalabContentRecommendations',
-    hybrid_recs: 'datalabHybridRecommendations',
-    variation_1: 'datalabHybridRecommendationsV1x1',
-    variation_2: 'datalabHybridRecommendationsV1x2',
-    variation_3: 'datalabHybridRecommendationsV1x3',
-    variation_4: 'datalabHybridRecommendationsV1x4',
-    variation_5: 'datalabHybridRecommendationsV1x5',
-  };
 
   const isAdsEnabled = [
     path(['metadata', 'allowAdvertising'], pageData),
@@ -200,7 +191,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
           let unirecsHybridRecommendationData = null;
           if (variation && variation !== 'control') {
             unirecsHybridRecommendationData = path(
-              [optimizelyMappings[variation]],
+              [OPTIMIZELY_CONFIG.variationMappings[variation]],
               pageData,
             );
           }
