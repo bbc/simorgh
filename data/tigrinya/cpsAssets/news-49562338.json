@@ -1,265 +1,628 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:tigrinya/news-49562338",
-    "locators": {
-      "assetUri": "/tigrinya/news-49562338",
-      "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-49562338",
-      "curie": "http://www.bbc.co.uk/asset/1e6c9040-cfac-cb44-9a41-e187e92591c8",
-      "assetId": "49562338"
-    },
-    "type": "MAP",
-    "createdBy": "tigrinya-v6",
-    "language": "ti",
-    "lastUpdated": 1588924429459,
-    "firstPublished": 1567493591000,
-    "lastPublished": 1567493591000,
-    "timestamp": 1567493591000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "tigrinya.news.media_asset.49562338.page",
-      "cps_asset_id": "49562338"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-        "categoryName": "Feature"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:tigrinya/news-49562338",
+        "locators": {
+          "assetUri": "/tigrinya/news-49562338",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-49562338",
+          "curie": "http://www.bbc.co.uk/asset/1e6c9040-cfac-cb44-9a41-e187e92591c8",
+          "assetId": "49562338"
+        },
+        "type": "MAP",
+        "createdBy": "tigrinya-v6",
+        "language": "ti",
+        "lastUpdated": 1649917650933,
+        "firstPublished": 1567493591000,
+        "lastPublished": 1567493591000,
+        "timestamp": 1567493591000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "tigrinya.news.media_asset.49562338.page",
+          "cps_asset_id": "49562338",
+          "contentId": "urn:bbc:cps:curie:asset:1e6c9040-cfac-cb44-9a41-e187e92591c8"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "TIGRINYA",
+          "producerId": "91"
+        },
+        "readTime": 1,
+        "siteUri": "/tigrinya",
+        "mediaType": "video"
       },
-      "campaigns": [
-        {
-          "campaignId": "5a988e2139461b000e9dabf7",
-          "campaignName": "WS - Inspire me"
-        }
-      ],
-      "taggings": []
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "መሰላት ደቂ ኣንስትዮ",
-          "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
-          "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
-          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Women%27s_rights",
-            "http://www.wikidata.org/entity/Q223569"
-          ],
-          "topicName": "መሰላት ደቂ ኣንስትዮ",
-          "topicId": "cyx5kzz9wyxt",
-          "curationList": [
-            {
-              "curationId": "ab1ff4ea-eda2-4b8b-a6ba-862d114957c5",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "ኢትዮጵያ",
-          "thingUri": "http://www.bbc.co.uk/things/e986aff5-6b26-4638-b468-371d1d9617b4#id",
-          "thingId": "e986aff5-6b26-4638-b468-371d1d9617b4",
-          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
-          "thingSameAs": ["http://sws.geonames.org/337996/"],
-          "topicName": "ኢትዮጵያ",
-          "topicId": "cdr56vrknx6t",
-          "curationList": [
-            {
-              "curationId": "bc3871a0-cc6a-478a-9aab-be8d762f9481",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "ኣርት/ ስነ ጥበብ",
-          "thingUri": "http://www.bbc.co.uk/things/37dcc888-51a7-4470-82d8-8ef2b811d482#id",
-          "thingId": "37dcc888-51a7-4470-82d8-8ef2b811d482",
-          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q735",
-            "http://dbpedia.org/resource/Art"
-          ],
-          "topicName": "ኣርት/ ስነ ጥበብ",
-          "topicId": "cpzd47z02yjt",
-          "curationList": [
-            {
-              "curationId": "a6e04d37-8fd9-4dc9-96f1-6f8c72da8bdd",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "ኤርትራ",
-          "thingUri": "http://www.bbc.co.uk/things/a6e771f0-8659-456a-9334-94a451fc81a6#id",
-          "thingId": "a6e771f0-8659-456a-9334-94a451fc81a6",
-          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
-          "thingSameAs": ["http://sws.geonames.org/338010/"],
-          "topicName": "ኤርትራ",
-          "topicId": "c1gdqrg28zxt",
-          "curationList": [
-            {
-              "curationId": "3e9b5f75-85c9-4961-9208-b0ab5bfaa39c",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "ደቂ ኣንስትዮ",
-          "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
-          "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
-          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q467",
-            "http://dbpedia.org/resource/Woman"
-          ],
-          "topicName": "ደቂ ኣንስትዮ",
-          "topicId": "cr50y664ww4t",
-          "curationList": [
-            {
-              "curationId": "1696a502-f6cf-4759-b587-caf52d2563cf",
-              "curationType": "vivo-stream"
-            }
-          ]
-        }
-      ]
-    },
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p07m9fhc",
-        "subType": "clip",
-        "format": "video",
-        "title": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
-        "synopses": {
-          "short": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
-          "long": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ። ካብ ጎረባብታ ጓል ኮይንኪ ካብ ትዋጥይስ ትምህርትኺ እንዶ ግዳ ኣይትመሃርን ተበሃላ እያ።",
-          "medium": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ።"
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9fy0.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
-        "versions": [
+      "content": {
+        "blocks": [
           {
-            "versionId": "p07m9fhg",
-            "types": ["Original"],
-            "duration": 113,
-            "durationISO8601": "PT1M53S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p07m9fhc",
+            "subType": "clip",
+            "format": "video",
+            "title": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
+            "synopses": {
+              "short": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
+              "long": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ። ካብ ጎረባብታ ጓል ኮይንኪ ካብ ትዋጥይስ ትምህርትኺ እንዶ ግዳ ኣይትመሃርን ተበሃላ እያ።",
+              "medium": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ።"
             },
-            "availableFrom": 1567493138000
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9fy0.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
+            "versions": [
+              {
+                "versionId": "p07m9fhg",
+                "types": ["Original"],
+                "duration": 113,
+                "durationISO8601": "PT1M53S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1567493138000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
+          },
+          {
+            "text": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ። ካብ ጎረባብታ ጓል ኮይንኪ ካብ ትዋጥይስ ትምህርትኺ እንዶ ግዳ ኣይትመሃርን ተባሂላ እያ።",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
-        ],
-        "imageCopyright": "BBC",
-        "type": "media"
+        ]
       },
-      {
-        "text": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ። ካብ ጎረባብታ ጓል ኮይንኪ ካብ ትዋጥይስ ትምህርትኺ እንዶ ግዳ ኣይትመሃርን ተባሂላ እያ።",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
+          "headline": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-49562338",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-49562338",
+          "curie": "http://www.bbc.co.uk/asset/1e6c9040-cfac-cb44-9a41-e187e92591c8",
+          "assetId": "49562338"
+        },
+        "summary": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ።",
+        "timestamp": 1567493591000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
+          "taggings": []
+        },
+        "media": {
+          "id": "p07m9fhc",
+          "subType": "clip",
+          "format": "video",
+          "title": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
+          "synopses": {
+            "short": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
+            "long": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ። ካብ ጎረባብታ ጓል ኮይንኪ ካብ ትዋጥይስ ትምህርትኺ እንዶ ግዳ ኣይትመሃርን ተበሃላ እያ።",
+            "medium": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ።"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9fy0.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
+          "versions": [
+            {
+              "versionId": "p07m9fhg",
+              "types": ["Original"],
+              "duration": 113,
+              "durationISO8601": "PT1M53S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1567493138000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "108592958",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14FA9/production/_108592958_p07m9fy0.jpg",
+          "path": "/cpsprodpb/14FA9/production/_108592958_p07m9fy0.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "እዝግሄሩ ገብረኣብዝጊ",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/news-49562338",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "ዜና",
+          "uri": "/tigrinya/news",
+          "urlIdentifier": "/tigrinya/news",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC ትግርኛ",
+          "uri": "/tigrinya",
+          "urlIdentifier": "/tigrinya",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
-      "headline": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?"
     },
-    "locators": {
-      "assetUri": "/tigrinya/news-49562338",
-      "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-49562338",
-      "curie": "http://www.bbc.co.uk/asset/1e6c9040-cfac-cb44-9a41-e187e92591c8",
-      "assetId": "49562338"
-    },
-    "summary": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ።",
-    "timestamp": 1567493591000,
-    "language": "ti",
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-        "categoryName": "Feature"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e2139461b000e9dabf7",
-          "campaignName": "WS - Inspire me"
-        }
-      ],
-      "taggings": []
-    },
-    "media": {
-      "id": "p07m9fhc",
-      "subType": "clip",
-      "format": "video",
-      "title": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
-      "synopses": {
-        "short": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
-        "long": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ። ካብ ጎረባብታ ጓል ኮይንኪ ካብ ትዋጥይስ ትምህርትኺ እንዶ ግዳ ኣይትመሃርን ተበሃላ እያ።",
-        "medium": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ።"
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9fy0.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "ጭራዋጣ እትጻወት ጓል ኣነስተይቲ ዶ ገጢማትኩም ትፈልጥ?",
-      "versions": [
-        {
-          "versionId": "p07m9fhg",
-          "types": ["Original"],
-          "duration": 113,
-          "durationISO8601": "PT1M53S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1567493138000
-        }
-      ],
-      "imageCopyright": "BBC",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "108592958",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/14FA9/production/_108592958_p07m9fy0.jpg",
-      "path": "/cpsprodpb/14FA9/production/_108592958_p07m9fy0.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "እዝግሄሩ ገብረኣብዝጊ",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:tigrinya/news-49562338",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "ዜና",
-      "uri": "/tigrinya/news",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC ትግርኛ",
-      "uri": "/tigrinya",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-14T17:09:36.232Z",
+        "lastRecordTimeStamp": "2023-02-14T17:07:00Z",
+        "firstRecordTimeStamp": "2023-02-14T13:07:00Z",
+        "totalRecords": 4,
+        "records": [
+          {
+            "id": "cd4838b9-d2a9-4715-9ca1-fb7c3a32bde2",
+            "rank": 1,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:cd4838b9-d2a9-4715-9ca1-fb7c3a32bde2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ኣብ ግዜ ንእስነታ ብዙሕ ጸገማት ሓሊፋ ደቂ ኣንስትዮ ከይጽገማ እትሕግዝ ሳኪራ",
+                "headline": "ኣብ ግዜ ንእስነታ ብዙሕ ጸገማት ሓሊፋ ደቂ ኣንስትዮ ከይጽገማ እትሕግዝ ሳኪራ"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-56323312",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-56323312",
+                "curie": "http://www.bbc.co.uk/asset/cd4838b9-d2a9-4715-9ca1-fb7c3a32bde2",
+                "assetId": "56323312"
+              },
+              "summary": "ስረ ኣሕጺራ ስፖርት ስለዝተጻወተት ኣቦኣ ኮርዩ ክልተ ዓመት ከዛርባ ፍቓደኛ ከምዘይነበረ እትዝክር ህንዳዊት ሳኪራ፡ ብምትብባዕ ኣዲኣን እኖሓጎኣን ግን: ኣብዚ ሕጂ እዋን ብስፖርት: እቲ ኣብ ሃገራ ዝተኸበረ ሽልማት ከምዝረኸበት ገሊጻ።",
+              "timestamp": 1615207038000,
+              "language": "ti",
+              "media": {
+                "id": "p0990qdz",
+                "subType": "clip",
+                "format": "video",
+                "title": "ኣብ ግዜ ንእስነታ ብዙሕ ጸገማት ሓሊፋ ደቂ ኣንስትዮ ከይጽገማ እትሕግዝ ሳኪራ",
+                "synopses": {
+                  "short": "ኣብ ግዜ ንእስነታ ብዙሕ ጸገማት ሓሊፋ ደቂ ኣንስትዮ ከይጽገማ እትሕግዝ ሳኪራ",
+                  "long": "ስረ ኣሕጺራ ስፖርት ስለዝተጻወተት ኣቦኣ ኮርዩ ክልተ ዓመት ከዛርባ ፍቓደኛ ከምዘይነበረ እትዝክር ህንዳዊት ሳኪራ፡ ብኣተባባዓይነት ኣዲኣን እኖሓጎኣን ግን ኣብዚ ሕጂ እዋን ብስፖርት እቲ ኣብ ሃገራ ዝተኸበረ ሽልማት ከምዝረኸበት ገሊጻ።",
+                  "medium": "ስረ ኣሕጺራ ስፖርት ስለዝተጻወተት ኣቦኣ ኮርዩ ክልተ ዓመት ከዛርባ ፍቓደኛ ከምዘይነበረ እትዝክር ህንዳዊት ሳኪራ፡ ብኣተባባዓይነት ኣዲኣን እኖሓጎኣን ግን ኣብዚ ሕጂ እዋን ብስፖርት እቲ ኣብ ሃገራ ዝተኸበረ ሽልማት ከምዝረኸበት ገሊጻ።"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0990r9j.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ኣብ ግዜ ንእስነታ ብዙሕ ጸገማት ሓሊፋ ደቂ ኣንስትዮ ከይጽገማ እትሕግዝ ሳኪራ",
+                "versions": [
+                  {
+                    "versionId": "p0990qf2",
+                    "types": ["Original"],
+                    "duration": 235,
+                    "durationISO8601": "PT3M55S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1615201156000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "117492661",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/40F5/production/_117492661_p0990r9j.jpg",
+                "path": "/cpsprodpb/40F5/production/_117492661_p0990r9j.jpg",
+                "height": 575,
+                "width": 1024,
+                "altText": "ሳኪራ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-56323312",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b2850bc8-4635-46cd-9efa-40d263526e3a",
+            "rank": 2,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:b2850bc8-4635-46cd-9efa-40d263526e3a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ብዓለልፈለል ናብ ሰማይ ዝተወንጨፈ ስሪላንካዊ ሓሳረ መከርኡ ርእዩ",
+                "headline": "ብዓለልፈለል ናብ ሰማይ ዝተወንጨፈ ስሪላንካዊ ሓሳረ መከርኡ ርእዩ"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/60079227",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/60079227",
+                "curie": "http://www.bbc.co.uk/asset/b2850bc8-4635-46cd-9efa-40d263526e3a",
+                "assetId": "60079227"
+              },
+              "summary": "ኣብ ሰሜናዊ ክፋል ስሪላንካ ገለ ኣዕሩኽ መንእሰያት ዓለልፈለል ናብ ሰማይ ንምብራር እንዳፈተኑ እንከለዉ ብርቱዕ ንፋስ ብምንባሩ ሓደ ካብኣቶም ተጎቲቱ 12 ሜትሮ ኣብ ኣየር ተንጠልጢሉ። መሓዙቱ ድሕሪ ዝገበርዎ ነዊሕ ጻዕሪ ናብ መሬት ክምለስ እንከሎ ብዙሕ ጉድኣት ከምዘይበጽሖ ተገሊጹ።",
+              "timestamp": 1642741402000,
+              "language": "ti",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "ti",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
+                "locator": "urn:bbc:cps:curie:asset:b2850bc8-4635-46cd-9efa-40d263526e3a",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/37c192e9-a178-491f-ae54-c84d5e5cf894#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ba90754a-9033-4e9c-990b-d1139e5070a3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/37c192e9-a178-491f-ae54-c84d5e5cf894#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ti",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                      "thingLabel": "ተፈጥሮ",
+                      "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                      "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "tagging:Genre",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Nature"],
+                      "thingEnglishLabel": "Nature",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                      "thingLabel": "ህፃናት",
+                      "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                      "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "tagging:AmbiguousTerm",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7569",
+                        "http://dbpedia.org/resource/Child"
+                      ],
+                      "thingEnglishLabel": "Children",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ba90754a-9033-4e9c-990b-d1139e5070a3#id",
+                      "thingLabel": "ኤስያ/ኤሽያ",
+                      "thingUri": "http://www.bbc.co.uk/things/ba90754a-9033-4e9c-990b-d1139e5070a3#id",
+                      "thingId": "ba90754a-9033-4e9c-990b-d1139e5070a3",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q48",
+                        "http://dbpedia.org/resource/Asia"
+                      ],
+                      "thingEnglishLabel": "Asia",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0bj987s",
+                "subType": "clip",
+                "format": "video",
+                "title": "ብዓለልፈለል ናብ ሰማይ ዝተወንጨፈ ስሪላንካዊ ሓሳረ መከርኡ ርእዩ",
+                "synopses": {
+                  "short": "ብዓለልፈለል ናብ ሰማይ ዝተወንጨፈ ስሪላንካዊ ሓሳረ መከርኡ ርእዩ",
+                  "long": "ኣብ ሰሜናዊ ክፋል ስሪላንካ ዓለልፈለል ተጠቒሞም ናብ ሰማይ ንምውንጫፍ እንዳፈተኑ እንከለዉ ናዳራሳ 12 ሜትሮ ንላዕሊ ተንጠልጢሉ። እቶም መሓዙቱ ከወርድዎ ፈቲኖም ድሕሪ ክንደይ ጻዕሪ ናብ መርየት ዓሊቡ። ንሱ ቅሩብ ጉድኣት ወሪድዎ እምበር ኣይሞተን።",
+                  "medium": "ኣብ ሰሜናዊ ክፋል ስሪላንካ ዓለልፈለል ተጠቒሞም ናብ ሰማይ ንምውንጫፍ እንዳፈተኑ እንከለዉ ናዳራሳ 12 ሜትሮ ንላዕሊ ተንጠልጢሉ። እቶም መሓዙቱ ከወርድዎ ፈቲኖም ድሕሪ ክንደይ ጻዕሪ ናብ መርየት ዓሊቡ። ንሱ ቅሩብ ጉድኣት ወሪድዎ እምበር ኣይሞተን።"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bj98l3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ብዓለልፈለል ናብ ሰማይ ዝተወንጨፈ ስሪላንካዊ ሓሳረ መከርኡ ርእዩ",
+                "versions": [
+                  {
+                    "versionId": "p0bj987z",
+                    "types": ["Original"],
+                    "duration": 71,
+                    "durationISO8601": "PT1M11S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1642675530000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "122925632",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5C64/production/_122925632_p0bj98l3.jpg",
+                "path": "/cpsprodpb/5C64/production/_122925632_p0bj98l3.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "ስሪላንካ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/60079227",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "695be878-5541-47a9-8054-2a1259a2915a",
+            "rank": 3,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:695be878-5541-47a9-8054-2a1259a2915a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"ምምያ ኣብ ምዕቃብ ክብርታት ኤርትራ ኣበርክትኡ ዕዙዝ'ዩ\" ሰሎሞን ድራር",
+                "headline": "\"ምምያ ኣብ ምዕቃብ ክብርታት ኤርትራ ኣበርክትኡ ዕዙዝ'ዩ\" ሰሎሞን ድራር"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-53759116",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-53759116",
+                "curie": "http://www.bbc.co.uk/asset/695be878-5541-47a9-8054-2a1259a2915a",
+                "assetId": "53759116"
+              },
+              "summary": "ደራስን ዳይሬክተርን ሰሎሞን ድራር፡ ስነ ጥበብ ብፍላይ ስነ ጽሑፍ ኤርትራ ይዓቢ ከምዘሎ ይዛረብ። ኣብ ኤርትራ በብዓመቱ ልዕሊ ሓደ ምኢቲ መጽሓፍቲ ከም ዝፈርዩ'ውን ተዛሪቡ።",
+              "timestamp": 1597386881000,
+              "language": "ti",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08njlk0",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"ምምያ ኣብ ምዕቃብ ክብርታት ኤርትራ ኣበርክትኡ ዕዙዝ'ዩ\" ሰሎሞን ድራር",
+                "synopses": {
+                  "short": "\"ምምያ ኣብ ምዕቃብ ክብርታት ኤርትራ ኣበርክትኡ ዕዙዝ'ዩ\" ሰሎሞን ድራር",
+                  "long": "ደራስን ዳይሬክተርን ሰሎሞን ድራር፡ ስነ ጥበብ ብፍላይ ስነ ጽሑፍ ኤርትራ ይዓቢ ከምዘሎ ይዛረብ። ኣብ ኤርትራ በብዓመቱ ልዕሊ ሓደ ምኢቲ መጽሓፍቲ ከምዝፈርዩ'ውን ተዛሪቡ።",
+                  "medium": "ደራስን ዳይሬክተርን ሰሎሞን ድራር፡ ስነ ጥበብ ብፍላይ ስነ ጽሑፍ ኤርትራ ይዓቢ ከምዘሎ ይዛረብ። ኣብ ኤርትራ በብዓመቱ ልዕሊ ሓደ ምኢቲ መጽሓፍቲ ከምዝፈርዩ'ውን ተዛሪቡ።"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08njmgh.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "\"ምምያ ኣብ ምዕቃብ ክብርታት ኤርትራ ኣበርክትኡ ዕዙዝ'ዩ\" ሰሎሞን ድራር",
+                "versions": [
+                  {
+                    "versionId": "p08njlk2",
+                    "types": ["Original"],
+                    "duration": 245,
+                    "durationISO8601": "PT4M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1597314802000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "113922768",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/152C2/production/_113922768_p08njmgh.jpg",
+                "path": "/cpsprodpb/152C2/production/_113922768_p08njmgh.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ሰሎሞን ድራር",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-53759116",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2145ef51-1878-48d1-9869-1e8f2d409db7",
+            "rank": 4,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:2145ef51-1878-48d1-9869-1e8f2d409db7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'ወደይ ብኽልተ ጥይት ኣብ ጎደና ቀቲሎሞ'",
+                "headline": "'ወደይ ብኽልተ ጥይት ኣብ ጎደና ቀቲሎሞ'"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-57653701",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-57653701",
+                "curie": "http://www.bbc.co.uk/asset/2145ef51-1878-48d1-9869-1e8f2d409db7",
+                "assetId": "57653701"
+              },
+              "summary": "ኣቶ ተኽለሃይማኖት ገብረኣረጋዊ ኣብ ትግራይ ነባሪ ጣብያ ፍረዳሹም ኮይኖም: ወዲ 32 ዓመት ወዶም ቀሺ ኣብርሃ ኣብ ዝሓለፈ በዓል ልደት ቤተ ክርስትያን ክዓጥን ኢሉ ምስከደ ወተሃደራት ኤርትራ ከምዝቐተልዎ ምስ ቢቢሲ ኣብ ዝነበሮም ጻኒሒት ተዛሪቦም።",
+              "timestamp": 1624967103000,
+              "language": "ti",
+              "media": {
+                "id": "p09mtxj2",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"ወደይ ብኽልተ ጥይት ኣብ ጎደና ቀቲሎሞ\"",
+                "synopses": {
+                  "short": "\"ወደይ ብኽልተ ጥይት ኣብ ጎደና ቀቲሎሞ\"",
+                  "long": "ኣቶ ተኽለሃይማኖት ገብረኣረጋዊ ኣብ ትግራይ ነባሪ ጣብያ ፍረዳሹም ኮይኖም ወዲ 32 ዓመት ወዶም ቀሺ ኣብርሃ ኣብ ዝሓለፈ በዓል ልደት ቤተ ክርስትያን ክዓጥን ኢሉ ምስከደ ወተሃደራት ኤርትራ ከምዝቐተልዎ ምስ ቢቢሲ ኣብ ዝነበሮም ጻኒሒት ተዛሪቦም።",
+                  "medium": "ኣቶ ተኽለሃይማኖት ገብረኣረጋዊ ኣብ ትግራይ ነባሪ ጣብያ ፍረዳሹም ኮይኖም ወዲ 32 ዓመት ወዶም ቀሺ ኣብርሃ ኣብ ዝሓለፈ በዓል ልደት ቤተ ክርስትያን ክዓጥን ኢሉ ምስከደ ወተሃደራት ኤርትራ ከምዝቐተልዎ ምስ ቢቢሲ ኣብ ዝነበሮም ጻኒሒት ተዛሪቦም።"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09mtz6p.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "\"ወደይ ብኽልተ ጥይት ኣብ ጎደና ቀቲሎሞ\"",
+                "versions": [
+                  {
+                    "versionId": "p09mtxj4",
+                    "types": ["Original"],
+                    "duration": 224,
+                    "durationISO8601": "PT3M44S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1624962895000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119166577",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12EFE/production/_119166577_e9ff17d8-4b97-401e-9a30-33ec1c218a0f.jpg",
+                "path": "/cpsprodpb/12EFE/production/_119166577_e9ff17d8-4b97-401e-9a30-33ec1c218a0f.jpg",
+                "height": 720,
+                "width": 1280,
+                "altText": "ኣቶ ተኽለሃይማኖት",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-57653701",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

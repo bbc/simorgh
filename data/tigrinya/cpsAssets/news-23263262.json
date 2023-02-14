@@ -1,172 +1,341 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:tigrinya/news-23263262",
-    "locators": {
-      "assetUri": "/tigrinya/news-23263262",
-      "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23263262",
-      "curie": "http://www.bbc.co.uk/asset/2494dfe3-6374-414a-91d4-8a62cb9c7152",
-      "assetId": "23263262"
-    },
-    "type": "MAP",
-    "createdBy": "tigrinya-v6",
-    "language": "ti",
-    "lastUpdated": 1588335920171,
-    "firstPublished": 1580304209000,
-    "lastPublished": 1580304209000,
-    "timestamp": 1580304209000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "tigrinya.news.media_asset.23263262.page",
-      "cps_asset_id": "23263262"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01m7d07",
-        "subType": "clip",
-        "format": "audio",
-        "title": "Birmingham checkout",
-        "synopses": {
-          "short": "Some audio from a supermarket checkout in Birmingham"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:tigrinya/news-23263262",
+        "locators": {
+          "assetUri": "/tigrinya/news-23263262",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:2494dfe3-6374-414a-91d4-8a62cb9c7152",
+          "assetId": "23263262",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23263262",
+          "curie": "http://www.bbc.co.uk/asset/2494dfe3-6374-414a-91d4-8a62cb9c7152"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-        "embedding": false,
-        "advertising": false,
-        "caption": "Some audio from a supermarket checkout in Birmingham",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "tigrinya-v6",
+        "language": "ti",
+        "lastUpdated": 1665415025880,
+        "firstPublished": 1580304209000,
+        "lastPublished": 1580304209000,
+        "timestamp": 1580304209000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "tigrinya.news.media_asset.23263262.page",
+          "cps_asset_id": "23263262",
+          "contentId": "urn:bbc:cps:curie:asset:2494dfe3-6374-414a-91d4-8a62cb9c7152"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "TIGRINYA",
+          "producerId": "91"
+        },
+        "readTime": 1,
+        "siteUri": "/tigrinya",
+        "mediaType": "audio",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01m7d09",
-            "types": ["Original"],
-            "duration": 127,
-            "durationISO8601": "PT2M7S",
-            "warnings": {
-              "short": "Contains some strong language.",
-              "long": "Contains some strong language."
+            "id": "p01m7d07",
+            "subType": "clip",
+            "format": "audio",
+            "title": "Birmingham checkout",
+            "synopses": {
+              "short": "Some audio from a supermarket checkout in Birmingham"
             },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1555067395000
-          }
-        ],
-        "imageCopyright": "Getty Images",
-        "type": "media"
-      },
-      {
-        "text": "Tigrinya introduction &lt;lalala&gt;&amp;blabla",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>Tigrinya </bold><bold>heading</bold><bold> &lt;lalala&gt;&amp;blabla</bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<link><caption>Mystery test link&amp;</caption><altText>link</altText><url href=\"https://en.wikipedia.org/wiki/Hamster\" platform=\"highweb\"/></link>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<link><caption>Link</caption><altText>Link to another &lt;map&gt;</altText><url href=\"https://www.bbc.com/pidgin/tori-51268839\" platform=\"highweb\"/></link>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Test Tigrinya Audio MAP Birmingham checkout",
-      "headline": "Test Tigrinya Audio MAP Some audio from a supermarket checkout in Birmingham"
-    },
-    "locators": {
-      "assetUri": "/tigrinya/news-23263262",
-      "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23263262",
-      "curie": "http://www.bbc.co.uk/asset/2494dfe3-6374-414a-91d4-8a62cb9c7152",
-      "assetId": "23263262"
-    },
-    "summary": "audio",
-    "timestamp": 1580304209000,
-    "language": "ti",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01m7d07",
-      "subType": "clip",
-      "format": "audio",
-      "title": "Birmingham checkout",
-      "synopses": {
-        "short": "Some audio from a supermarket checkout in Birmingham"
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-      "embedding": false,
-      "advertising": false,
-      "caption": "Some audio from a supermarket checkout in Birmingham",
-      "versions": [
-        {
-          "versionId": "p01m7d09",
-          "types": ["Original"],
-          "duration": 127,
-          "durationISO8601": "PT2M7S",
-          "warnings": {
-            "short": "Contains some strong language.",
-            "long": "Contains some strong language."
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+            "embedding": false,
+            "advertising": false,
+            "caption": "Some audio from a supermarket checkout in Birmingham",
+            "versions": [
+              {
+                "versionId": "p01m7d09",
+                "types": ["Original"],
+                "duration": 127,
+                "durationISO8601": "PT2M7S",
+                "warnings": {
+                  "short": "Contains some strong language.",
+                  "long": "Contains some strong language."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1555067395000
+              }
+            ],
+            "imageCopyright": "Getty Images",
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1555067395000
-        }
-      ],
-      "imageCopyright": "Getty Images",
-      "type": "media"
+          {
+            "text": "Tigrinya introduction &lt;lalala&gt;&amp;blabla",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold>Tigrinya </bold><bold>heading</bold><bold> &lt;lalala&gt;&amp;blabla</bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<link><caption>Mystery test link&amp;</caption><altText>link</altText><url href=\"https://en.wikipedia.org/wiki/Hamster\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<link><caption>Link</caption><altText>Link to another &lt;map&gt;</altText><url href=\"https://www.bbc.com/pidgin/tori-51268839\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/pidgin/tori-51268839",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Test Tigrinya Audio MAP Birmingham checkout",
+          "headline": "Test Tigrinya Audio MAP Some audio from a supermarket checkout in Birmingham"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-23263262",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:2494dfe3-6374-414a-91d4-8a62cb9c7152",
+          "assetId": "23263262",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23263262",
+          "curie": "http://www.bbc.co.uk/asset/2494dfe3-6374-414a-91d4-8a62cb9c7152"
+        },
+        "summary": "audio",
+        "timestamp": 1580304209000,
+        "language": "ti",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01m7d07",
+          "subType": "clip",
+          "format": "audio",
+          "title": "Birmingham checkout",
+          "synopses": {
+            "short": "Some audio from a supermarket checkout in Birmingham"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+          "embedding": false,
+          "advertising": false,
+          "caption": "Some audio from a supermarket checkout in Birmingham",
+          "versions": [
+            {
+              "versionId": "p01m7d09",
+              "types": ["Original"],
+              "duration": 127,
+              "durationISO8601": "PT2M7S",
+              "warnings": {
+                "short": "Contains some strong language.",
+                "long": "Contains some strong language."
+              },
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1555067395000
+            }
+          ],
+          "imageCopyright": "Getty Images",
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63730182",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/6DC7/test/_63730182_p01mt2kt.jpg",
+          "path": "/cpsdevpb/6DC7/test/_63730182_p01mt2kt.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "England star Fran Kirby",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/news-23263262",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "ዜና",
+          "uri": "/tigrinya/news",
+          "urlIdentifier": "/tigrinya/news",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC ትግርኛ",
+          "uri": "/tigrinya",
+          "urlIdentifier": "/tigrinya",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "63730182",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/6DC7/test/_63730182_p01mt2kt.jpg",
-      "path": "/cpsdevpb/6DC7/test/_63730182_p01mt2kt.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "England star Fran Kirby",
-      "copyrightHolder": "Getty Images",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:tigrinya/news-23263262",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "ዜና",
-      "uri": "/tigrinya/news",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC ትግርኛ",
-      "uri": "/tigrinya",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:05:57.688Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 2,
+        "records": [
+          {
+            "id": "6af6d1de-980e-154f-ae7e-9e4f197e10d4",
+            "rank": 1,
+            "count": 5509,
+            "urn": "urn:bbc:curie:asset:6af6d1de-980e-154f-ae7e-9e4f197e10d4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "800 ኪ ሜ ጋዛ በፂሓ ተጋዒዛ ኣብ ጋዛ ዝበፅሐት ደብዳቤ",
+                "headline": "ብፍቑራት ኢንግሊዝያውያን ኣብ ግሪክ ዝተደርበየት ደብዳቤ ኣብ ወሰናወሰን ባሕሪ ጋዛ በፂሓ"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/23149946",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/23149946",
+                "curie": "http://www.bbc.co.uk/asset/6af6d1de-980e-154f-ae7e-9e4f197e10d4",
+                "assetId": "23149946"
+              },
+              "summary": "ርሕቐት ዘይገደባ ደብዳበ ማይ ከይበልዓ ዝሃዘቶ መልእኽቲ ክተብፅሕ 800 ኪ.ሜ ተጓዒዛላ።",
+              "timestamp": 1503574099000,
+              "language": "ti",
+              "media": {
+                "id": "p01cyq6w",
+                "subType": "clip",
+                "format": "video",
+                "title": "800 ኪ ሜ ተጋዒዛ ኣብ ጋዛ ዝበፅሐት ደብዳቤ",
+                "synopses": {
+                  "short": "ብፍቑራት ኢንግሊዝያውያን ኣብ ግሪክ ዝተደርበየት ደብዳቤ ኣብ ወሰናወሰን ባሕሪ ጋዛ በፂሓ"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cyqb7.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "ብፍቑራት ኢንግሊዝያውያን ኣብ ግሪክ ዝተደርበየት ደብዳቤ ኣብ ወሰናወሰን ባሕሪ ጋዛ በፂሓ",
+                "versions": [
+                  {
+                    "versionId": "p01cyq6y",
+                    "types": ["Original"],
+                    "duration": 47,
+                    "durationISO8601": "PT47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1503572545000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63589867",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12C62/test/_63589867_p01cyqb7.jpg",
+                "path": "/cpsdevpb/12C62/test/_63589867_p01cyqb7.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/23149946",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f213cde5-9bfe-e545-bee7-11ce0904b5cc",
+            "rank": 2,
+            "count": 1690,
+            "urn": "urn:bbc:curie:asset:f213cde5-9bfe-e545-bee7-11ce0904b5cc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ንደቂ-ተባዕትዮ ሕልፊ ዋጋ ዘኽፍል ካፌ",
+                "headline": "ንደቂ-ተባዕትዮ ሕልፊ ዋጋ ዘኽፍል ካፌ"
+              },
+              "locators": {
+                "assetUri": "/tigrinya/news-23149243",
+                "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-23149243",
+                "curie": "http://www.bbc.co.uk/asset/f213cde5-9bfe-e545-bee7-11ce0904b5cc",
+                "assetId": "23149243"
+              },
+              "summary": "ኣብ ሜልቦርን ኣውስትራልያ ንደቂ-ተባዕትዮ ሕልፊ ዋጋ ዘኽፍል ካፌ ተኸፊቱ",
+              "timestamp": 1503319333000,
+              "language": "ti",
+              "media": {
+                "id": "p01cxfx5",
+                "subType": "clip",
+                "format": "video",
+                "title": "men pay more",
+                "synopses": {
+                  "short": "men pay more"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cxg3r.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "men pay more",
+                "versions": [
+                  {
+                    "versionId": "p01cxfx7",
+                    "types": ["Original"],
+                    "duration": 46,
+                    "durationISO8601": "PT46S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1503318295000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63589520",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/0A26/test/_63589520_p01cxfyd.jpg",
+                "path": "/cpsdevpb/0A26/test/_63589520_p01cxfyd.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "caption": "ንደቂ-ተባዕትዮ ሕልፊ ዋጋ ዘኽፍል ካፌ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tigrinya/news-23149243",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
