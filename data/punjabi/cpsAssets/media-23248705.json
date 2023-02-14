@@ -1,372 +1,478 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:punjabi/media-23248705",
-    "locators": {
-      "assetUri": "/punjabi/media-23248705",
-      "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-23248705",
-      "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594",
-      "assetId": "23248705"
-    },
-    "type": "MAP",
-    "createdBy": "punjabi-v6",
-    "language": "pa",
-    "lastUpdated": 1588333324789,
-    "firstPublished": 1568389310000,
-    "lastPublished": 1568389310000,
-    "timestamp": 1568389310000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "punjabi.embedded_media.media_asset.23248705.page",
-      "cps_asset_id": "23248705"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": [
-      "media",
-      "paragraph",
-      "heading",
-      "subheading",
-      "crosshead",
-      "list",
-      "image"
-    ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01kx42s",
-        "subType": "clip",
-        "format": "video",
-        "title": "トランプ氏、香港人権法案に署名　中国は反発",
-        "synopses": {
-          "short": "トランプ氏、香港人権法案に署名　中国は反発",
-          "long": "トランプ氏、香港人権法案に署名　中国は反発",
-          "medium": "トランプ氏、香港人権法案に署名　中国は反発"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:punjabi/media-23248705",
+        "locators": {
+          "assetUri": "/punjabi/media-23248705",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:bf82d577-f00b-494f-b100-9bac79a82594",
+          "assetId": "23248705",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-23248705",
+          "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
-        "embedding": false,
-        "advertising": true,
-        "caption": "short",
-        "versions": [
-          {
-            "versionId": "p01kx42v",
-            "types": ["Original"],
-            "duration": 5,
-            "durationISO8601": "PT5S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1545304011000
-          }
+        "type": "MAP",
+        "createdBy": "punjabi-v6",
+        "language": "pa",
+        "lastUpdated": 1665419838946,
+        "firstPublished": 1568389310000,
+        "lastPublished": 1568389310000,
+        "timestamp": 1568389310000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "punjabi.embedded_media.media_asset.23248705.page",
+          "cps_asset_id": "23248705",
+          "contentId": "urn:bbc:cps:curie:asset:bf82d577-f00b-494f-b100-9bac79a82594"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Punjabi",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": [
+          "media",
+          "paragraph",
+          "heading",
+          "subheading",
+          "crosshead",
+          "list",
+          "image"
         ],
-        "type": "media"
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "PUNJABI",
+          "producerId": "73"
+        },
+        "readTime": 1,
+        "siteUri": "/punjabi",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "text": "ਅੰਮ੍ਰਿਤਸਰ, (ਇੰਦਰਜੀਤ) - ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। heading ",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। subheading",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। crosshead ",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਦੇ <bold>ਪ੍ਰਧਾਨ ਪਿਆਰਾ ਲਾਲ ਸੇਠ ਨੇ ਕਿਹਾ ਕਿ ਦੇਸ਼ 'ਚ ਖੇਤੀਬਾੜੀ ਤੋਂ ਬਾਅ</bold>ਦ ਕੱਪੜਾ ਉਦਯੋਗ ਦੂਜਾ ਅਜਿਹਾ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮੂਹ ਹੈ, ਜੋ ਵੱਧਦੀ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਰੋਕਣ ਲਈ ਪੂਰੇ ਦੇਸ਼ ਲਈ ਸਹਾਇਕ ਸਿੱਧ ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ  ਦੂਰ ਕਰਨ ਦੇ ਨਾਲ ਇਸ ਉਦਯੋਗ ਦਾ ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਇਨਕਮ ਟੈਕਸ ਦੇਣ ਵਿਚ ਵੀ ਵੱਡਾ ਹੱਥ ਹੈ।ਅੰਮ੍ਰਿਤਸਰ, (ਇੰਦਰਜੀਤ) - ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਦੇ ਪ੍ਰਧਾਨ ਪਿਆਰਾ ਲਾਲ ਸੇਠ ਨੇ ਕਿਹਾ ਕਿ ਦੇਸ਼ 'ਚ ਖੇਤੀਬਾੜੀ ਤੋਂ ਬਾਅਦ ਕੱਪੜਾ ਉਦਯੋਗ ਦੂਜਾ ਅਜਿਹਾ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮੂਹ ਹੈ, ਜੋ ਵੱਧਦੀ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਰੋਕਣ ਲਈ ਪੂਰੇ ਦੇਸ਼ ਲਈ ਸਹਾਇਕ ਸਿੱਧ<link><caption> ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਦੂ</caption><altText> ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਦੂ</altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>ਰ ਕਰਨ ਦੇ ਨਾਲ ਇਸ ਉਦਯੋਗ ਦਾ<bold> ਇਨਕਮ ਟੈਕਸ ਦੇਣ ਵਿਚ ਵੀ ਵੱਡਾ ਹੱਥ ਹੈ।</bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
+      "content": {
+        "blocks": [
           {
-            "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
-            "markupType": "plain_text",
-            "type": "listItem"
+            "id": "p01kx42s",
+            "subType": "clip",
+            "format": "video",
+            "title": "トランプ氏、香港人権法案に署名　中国は反発",
+            "synopses": {
+              "short": "トランプ氏、香港人権法案に署名　中国は反発",
+              "long": "トランプ氏、香港人権法案に署名　中国は反発",
+              "medium": "トランプ氏、香港人権法案に署名　中国は反発"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+            "embedding": false,
+            "advertising": true,
+            "caption": "short",
+            "versions": [
+              {
+                "versionId": "p01kx42v",
+                "types": ["Original"],
+                "duration": 5,
+                "durationISO8601": "PT5S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1545304011000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
           },
           {
-            "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+            "text": "ਅੰਮ੍ਰਿਤਸਰ, (ਇੰਦਰਜੀਤ) - ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
+            "role": "introduction",
             "markupType": "plain_text",
-            "type": "listItem"
+            "type": "paragraph"
           },
           {
-            "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+            "text": "ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। heading ",
             "markupType": "plain_text",
-            "type": "listItem"
+            "type": "heading"
           },
           {
-            "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+            "text": "ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। subheading",
             "markupType": "plain_text",
-            "type": "listItem"
+            "type": "subheading"
+          },
+          {
+            "text": "ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। crosshead ",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਦੇ <bold>ਪ੍ਰਧਾਨ ਪਿਆਰਾ ਲਾਲ ਸੇਠ ਨੇ ਕਿਹਾ ਕਿ ਦੇਸ਼ 'ਚ ਖੇਤੀਬਾੜੀ ਤੋਂ ਬਾਅ</bold>ਦ ਕੱਪੜਾ ਉਦਯੋਗ ਦੂਜਾ ਅਜਿਹਾ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮੂਹ ਹੈ, ਜੋ ਵੱਧਦੀ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਰੋਕਣ ਲਈ ਪੂਰੇ ਦੇਸ਼ ਲਈ ਸਹਾਇਕ ਸਿੱਧ ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ  ਦੂਰ ਕਰਨ ਦੇ ਨਾਲ ਇਸ ਉਦਯੋਗ ਦਾ ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਇਨਕਮ ਟੈਕਸ ਦੇਣ ਵਿਚ ਵੀ ਵੱਡਾ ਹੱਥ ਹੈ।ਅੰਮ੍ਰਿਤਸਰ, (ਇੰਦਰਜੀਤ) - ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਦੇ ਪ੍ਰਧਾਨ ਪਿਆਰਾ ਲਾਲ ਸੇਠ ਨੇ ਕਿਹਾ ਕਿ ਦੇਸ਼ 'ਚ ਖੇਤੀਬਾੜੀ ਤੋਂ ਬਾਅਦ ਕੱਪੜਾ ਉਦਯੋਗ ਦੂਜਾ ਅਜਿਹਾ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮੂਹ ਹੈ, ਜੋ ਵੱਧਦੀ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਰੋਕਣ ਲਈ ਪੂਰੇ ਦੇਸ਼ ਲਈ ਸਹਾਇਕ ਸਿੱਧ<link><caption> ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਦੂ</caption><altText> ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਦੂ</altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>ਰ ਕਰਨ ਦੇ ਨਾਲ ਇਸ ਉਦਯੋਗ ਦਾ<bold> ਇਨਕਮ ਟੈਕਸ ਦੇਣ ਵਿਚ ਵੀ ਵੱਡਾ ਹੱਥ ਹੈ।</bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+                "markupType": "plain_text",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "id": "63721690",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/258C/test/_63721690_testimage.jpg",
+            "path": "/cpsdevpb/258C/test/_63721690_testimage.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ",
+            "caption": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ",
+            "copyrightHolder": "BBC",
+            "positionHint": "full-width",
+            "type": "image"
+          },
+          {
+            "text": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ transmission info",
+            "role": "transmission-info",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": " ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ transmission info ",
+            "role": "footer",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
-        ],
-        "type": "list"
+        ]
       },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "WSMEDIA - ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
+          "headline": "WSMEDIA - ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।"
+        },
+        "locators": {
+          "assetUri": "/punjabi/media-23248705",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:bf82d577-f00b-494f-b100-9bac79a82594",
+          "assetId": "23248705",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-23248705",
+          "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594"
+        },
+        "summary": "ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
+        "timestamp": 1568389310000,
+        "language": "pa",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Punjabi",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01kx42s",
+          "subType": "clip",
+          "format": "video",
+          "title": "トランプ氏、香港人権法案に署名　中国は反発",
+          "synopses": {
+            "short": "トランプ氏、香港人権法案に署名　中国は反発",
+            "long": "トランプ氏、香港人権法案に署名　中国は反発",
+            "medium": "トランプ氏、香港人権法案に署名　中国は反発"
           },
-          {
-            "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+          "embedding": false,
+          "advertising": true,
+          "caption": "short",
+          "versions": [
+            {
+              "versionId": "p01kx42v",
+              "types": ["Original"],
+              "duration": 5,
+              "durationISO8601": "PT5S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1545304011000
+            }
+          ],
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63721693",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/9ABC/test/_63721693_p01kx435.jpg",
+          "path": "/cpsdevpb/9ABC/test/_63721693_p01kx435.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "connectionAltText",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:punjabi/media-23248705",
+        "type": "cps"
       },
-      {
-        "id": "63721690",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/258C/test/_63721690_testimage.jpg",
-        "path": "/cpsdevpb/258C/test/_63721690_testimage.jpg",
-        "height": 360,
-        "width": 640,
-        "altText": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ",
-        "caption": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ",
-        "copyrightHolder": "BBC",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "text": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ transmission info",
-        "role": "transmission-info",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": " ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ transmission info ",
-        "role": "footer",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "WSMEDIA - ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
-      "headline": "WSMEDIA - ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।"
-    },
-    "locators": {
-      "assetUri": "/punjabi/media-23248705",
-      "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-23248705",
-      "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594",
-      "assetId": "23248705"
-    },
-    "summary": "ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
-    "timestamp": 1568389310000,
-    "language": "pa",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01kx42s",
-      "subType": "clip",
-      "format": "video",
-      "title": "トランプ氏、香港人権法案に署名　中国は反発",
-      "synopses": {
-        "short": "トランプ氏、香港人権法案に署名　中国は反発",
-        "long": "トランプ氏、香港人権法案に署名　中国は反発",
-        "medium": "トランプ氏、香港人権法案に署名　中国は反発"
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
-      "embedding": false,
-      "advertising": true,
-      "caption": "short",
-      "versions": [
-        {
-          "versionId": "p01kx42v",
-          "types": ["Original"],
-          "duration": 5,
-          "durationISO8601": "PT5S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1545304011000
-        }
-      ],
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "63721693",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/9ABC/test/_63721693_p01kx435.jpg",
-      "path": "/cpsdevpb/9ABC/test/_63721693_p01kx435.jpg",
-      "height": 360,
-      "width": 640,
-      "altText": "connectionAltText",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:punjabi/media-23248705",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/punjabi/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC ਪੰਜਾਬੀ",
-      "uri": "/punjabi",
-      "type": "simple"
-    },
-    "groups": [
-      {
-        "type": "see-alsos",
-        "promos": [
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/punjabi/media",
+          "urlIdentifier": "/punjabi/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC ਪੰਜਾਬੀ",
+          "uri": "/punjabi",
+          "urlIdentifier": "/punjabi",
+          "type": "simple"
+        },
+        "groups": [
           {
-            "headlines": {
-              "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 6",
-              "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 6"
-            },
-            "locators": {
-              "assetUri": "/punjabi/international-23129784",
-              "cpsUrn": "urn:bbc:content:assetUri:/punjabi/international-23129784"
-            },
-            "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
-            "timestamp": 1496632491000,
-            "language": "pa",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "63539190",
-              "subType": "index",
-              "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
-              "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਅਮਨ ਕਮੇਟੀ",
-              "copyrightHolder": "BBBC",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/international-23129784",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 9",
-              "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 9"
-            },
-            "locators": {
-              "assetUri": "/punjabi/other-news-23129787",
-              "cpsUrn": "urn:bbc:content:assetUri:/punjabi/other-news-23129787"
-            },
-            "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
-            "timestamp": 1496632245000,
-            "language": "pa",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "63539190",
-              "subType": "index",
-              "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
-              "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਅਮਨ ਕਮੇਟੀ",
-              "copyrightHolder": "BBBC",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/other-news-23129787",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 4",
-              "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 4"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-23129782",
-              "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-23129782"
-            },
-            "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
-            "timestamp": 1496632165000,
-            "language": "pa",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "63539190",
-              "subType": "index",
-              "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
-              "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਅਮਨ ਕਮੇਟੀ",
-              "copyrightHolder": "BBBC",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-23129782",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 37",
-              "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 37"
-            },
-            "locators": {
-              "assetUri": "/punjabi/india-23129865",
-              "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-23129865"
-            },
-            "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
-            "timestamp": 1496651173000,
-            "language": "pa",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "63539190",
-              "subType": "index",
-              "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
-              "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "ਅਮਨ ਕਮੇਟੀ",
-              "copyrightHolder": "BBBC",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:punjabi/india-23129865",
-            "type": "cps"
+            "type": "see-alsos",
+            "promos": [
+              {
+                "headlines": {
+                  "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 6",
+                  "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 6"
+                },
+                "locators": {
+                  "assetUri": "/punjabi/international-23129784",
+                  "cpsUrn": "urn:bbc:content:assetUri:/punjabi/international-23129784"
+                },
+                "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
+                "timestamp": 1496632491000,
+                "language": "pa",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63539190",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
+                  "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ਅਮਨ ਕਮੇਟੀ",
+                  "copyrightHolder": "BBBC",
+                  "type": "image"
+                },
+                "id": "urn:bbc:ares::asset:punjabi/international-23129784",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 9",
+                  "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 9"
+                },
+                "locators": {
+                  "assetUri": "/punjabi/other-news-23129787",
+                  "cpsUrn": "urn:bbc:content:assetUri:/punjabi/other-news-23129787"
+                },
+                "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
+                "timestamp": 1496632245000,
+                "language": "pa",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63539190",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
+                  "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ਅਮਨ ਕਮੇਟੀ",
+                  "copyrightHolder": "BBBC",
+                  "type": "image"
+                },
+                "id": "urn:bbc:ares::asset:punjabi/other-news-23129787",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 4",
+                  "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 4"
+                },
+                "locators": {
+                  "assetUri": "/punjabi/india-23129782",
+                  "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-23129782"
+                },
+                "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
+                "timestamp": 1496632165000,
+                "language": "pa",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63539190",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
+                  "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ਅਮਨ ਕਮੇਟੀ",
+                  "copyrightHolder": "BBBC",
+                  "type": "image"
+                },
+                "id": "urn:bbc:ares::asset:punjabi/india-23129782",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 37",
+                  "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 37"
+                },
+                "locators": {
+                  "assetUri": "/punjabi/india-23129865",
+                  "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-23129865"
+                },
+                "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
+                "timestamp": 1496651173000,
+                "language": "pa",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63539190",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
+                  "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ਅਮਨ ਕਮੇਟੀ",
+                  "copyrightHolder": "BBBC",
+                  "type": "image"
+                },
+                "id": "urn:bbc:ares::asset:punjabi/india-23129865",
+                "type": "cps"
+              }
+            ]
           }
         ]
       }
-    ]
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:25:59.087Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 1,
+        "records": [
+          {
+            "id": "c014a857-2cde-d545-8cf4-d4db7ca47e70",
+            "rank": 1,
+            "count": 7746,
+            "urn": "urn:bbc:curie:asset:c014a857-2cde-d545-8cf4-d4db7ca47e70",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ਵਪਾਰੀਆਂ ਦੀ ਦੋ ਟੁੱਕ : ਕੱਪੜੇ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਸਵੀਕਾਰ ਨਹੀਂ 2",
+                "headline": "ਵਪਾਰੀਆਂ ਦੀ ਦੋ ਟੁੱਕ : ਕੱਪੜੇ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਸਵੀਕਾਰ ਨਹੀਂ 2"
+              },
+              "locators": {
+                "assetUri": "/punjabi/other-news-23131887",
+                "cpsUrn": "urn:bbc:content:assetUri:punjabi/other-news-23131887",
+                "curie": "http://www.bbc.co.uk/asset/c014a857-2cde-d545-8cf4-d4db7ca47e70",
+                "assetId": "23131887"
+              },
+              "summary": "ਅੰਮ੍ਰਿਤਸਰ, (ਇੰਦਰਜੀਤ) - ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ।",
+              "timestamp": 1497280260000,
+              "language": "pa",
+              "media": {
+                "id": "p01blkbb",
+                "subType": "clip",
+                "format": "video",
+                "title": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ",
+                "synopses": {
+                  "short": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ- તેની સામે હું ક્લબ ક્રિકેટર લાગી રહ્યો હતો",
+                  "medium": "ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો.",
+                  "long": "શું કહ્યું વિરાટ કોહલીએ?\n \n- વિરાટ કોહલી અને યુવરાજની બેટિંગના દમ પર ભારતે 319 રન બનાવ્યા હતા. યુવરાજે 32 બોલમાં 53 રનની વિસ્ફોટક ઇનિંગ રમી હતી. જ્યારે વિરાટે 68 બોલમાં 81 રન બનાવ્યા હતા.\n- વિરાટે મેચ બાદ કહ્યું પત્રકાર પરિષદમાં કહ્યું કે જ્યારે હું રન નહતો બનાવી રહ્યો, ત્યારે યુવીએ દબાણ નાખ્યુ હતું, જે રીતે તે બોલને મારી રહ્યો હતો, હું તેની સામે એક ક્લબ બેટ્સમેન જેવો લાગી રહ્યો હતો."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01blkd6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "20 ਲੱਖ ਦੀ ਹੇਠਲੀ ਹੱਦ ਇਕ ਧੋਖਾ",
+                "versions": [
+                  {
+                    "versionId": "p01blkbd",
+                    "types": ["Original"],
+                    "duration": 20,
+                    "durationISO8601": "PT20S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1496677744000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63540292",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7214/test/_63540292_p01blkd6.jpg",
+                "path": "/cpsdevpb/7214/test/_63540292_p01blkd6.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ",
+                "copyrightHolder": "વવમ લાૈે",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:punjabi/other-news-23131887",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
