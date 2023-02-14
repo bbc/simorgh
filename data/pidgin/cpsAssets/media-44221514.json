@@ -1,288 +1,2340 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:pidgin/media-44221514",
-    "locators": {
-      "assetUri": "/pidgin/media-44221514",
-      "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514",
-      "curie": "http://www.bbc.co.uk/asset/80c40606-2288-7e48-820e-1770842e1230",
-      "assetId": "44221514"
-    },
-    "type": "MAP",
-    "createdBy": "pidgin-v6",
-    "language": "pcm",
-    "lastUpdated": 1589273389232,
-    "firstPublished": 1527054884000,
-    "lastPublished": 1589273373000,
-    "timestamp": 1589273373000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "pidgin.embedded_media.media_asset.44221514.page",
-      "cps_asset_id": "44221514"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e2939461b000e9dabf8",
-          "campaignName": "WS - Educate me"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:pidgin/media-44221514",
+        "locators": {
+          "assetUri": "/pidgin/media-44221514",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514",
+          "curie": "http://www.bbc.co.uk/asset/80c40606-2288-7e48-820e-1770842e1230",
+          "assetId": "44221514"
         },
-        {
-          "campaignId": "5a988e3739461b000e9dabfa",
-          "campaignName": "WS - Give me perspective"
+        "type": "MAP",
+        "createdBy": "pidgin-v6",
+        "language": "pcm",
+        "lastUpdated": 1649765057917,
+        "firstPublished": 1527054884000,
+        "lastPublished": 1591693719000,
+        "timestamp": 1591693719000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
         },
-        {
-          "campaignId": "5a988e3e39461b000e9dabfb",
-          "campaignName": "WS - Keep me on trend"
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "pidgin.embedded_media.media_asset.44221514.page",
+          "cps_asset_id": "44221514",
+          "contentId": "urn:bbc:cps:curie:asset:80c40606-2288-7e48-820e-1770842e1230"
         },
-        {
-          "campaignId": "5a988e4739461b000e9dabfc",
-          "campaignName": "WS - Update me"
-        }
-      ],
-      "taggings": []
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "Nigeria",
-          "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
-          "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
-          "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/2328926/"],
-          "topicName": "Nigeria",
-          "topicId": "c2dwqd1zr92t",
-          "curationList": [
-            {
-              "curationId": "30600bd9-ac23-45c9-948a-55fe7e115078",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Africa",
-          "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
-          "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
-          "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q15",
-            "http://dbpedia.org/resource/Africa",
-            "http://sws.geonames.org/6255146/"
-          ],
-          "topicName": "Africa",
-          "topicId": "c404v061z85t",
-          "curationList": [
-            {
-              "curationId": "fa9a0861-2fbd-4caf-856b-f25a20f741b4",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Cameroon",
-          "thingUri": "http://www.bbc.co.uk/things/6ae05645-a3cf-4c86-a194-fdd98389a670#id",
-          "thingId": "6ae05645-a3cf-4c86-a194-fdd98389a670",
-          "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
-          "thingSameAs": ["http://sws.geonames.org/2233387/"],
-          "topicName": "Cameroon",
-          "topicId": "c340q4z3n2qt",
-          "curationList": [
-            {
-              "curationId": "6396890d-e9a6-4ca8-a8a0-29be9b9ef754",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Ghana",
-          "thingUri": "http://www.bbc.co.uk/things/d3d75366-7593-4ef6-93c7-b9490925fea0#id",
-          "thingId": "d3d75366-7593-4ef6-93c7-b9490925fea0",
-          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
-          "thingSameAs": ["http://sws.geonames.org/2300660/"],
-          "topicName": "Ghana",
-          "topicId": "cg72673yg2rt",
-          "curationList": [
-            {
-              "curationId": "bc8ddb8e-dd87-4a69-9cae-832d7c377302",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Coronavirus",
-          "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
-          "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
-          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
-          "thingSameAs": ["http://www.wikidata.org/entity/Q290805"],
-          "topicName": "Coronavirus",
-          "topicId": "c235vrjxq59t",
-          "curationList": [
-            {
-              "curationId": "ef908066-c741-4203-8f35-d907c9741d77",
-              "curationType": "vivo-stream"
-            }
-          ]
-        }
-      ]
-    },
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p08cxl7l",
-        "subType": "clip",
-        "format": "audio",
-        "title": "BBC Pidgin Minute",
-        "synopses": {
-          "short": "BBC Pidgin Minute",
-          "medium": "All di local and world tori wey you suppose know in 60 seconds!"
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cxlk2.jpg",
-        "embedding": false,
-        "advertising": false,
-        "caption": "BBC Pidgin Minute",
-        "versions": [
-          {
-            "versionId": "p08cxl7r",
-            "types": ["Original"],
-            "duration": 61,
-            "durationISO8601": "PT1M1S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableUntil": 1589359188000,
-            "availableFrom": 1589272788000
-          }
-        ],
-        "imageCopyright": "BBC",
-        "type": "media"
-      },
-      {
-        "text": "All di local and world tori wey you suppose know in 60 seconds!g",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "BBC Pidgin Minute",
-      "headline": "BBC Pidgin Minute"
-    },
-    "locators": {
-      "assetUri": "/pidgin/media-44221514",
-      "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514",
-      "curie": "http://www.bbc.co.uk/asset/80c40606-2288-7e48-820e-1770842e1230",
-      "assetId": "44221514"
-    },
-    "summary": "All di local and world tori wey you suppose know in 60 seconds!",
-    "timestamp": 1589273373000,
-    "language": "pcm",
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e2939461b000e9dabf8",
-          "campaignName": "WS - Educate me"
-        },
-        {
-          "campaignId": "5a988e3739461b000e9dabfa",
-          "campaignName": "WS - Give me perspective"
-        },
-        {
-          "campaignId": "5a988e3e39461b000e9dabfb",
-          "campaignName": "WS - Keep me on trend"
-        },
-        {
-          "campaignId": "5a988e4739461b000e9dabfc",
-          "campaignName": "WS - Update me"
-        }
-      ],
-      "taggings": []
-    },
-    "media": {
-      "id": "p08cxl7l",
-      "subType": "clip",
-      "format": "audio",
-      "title": "BBC Pidgin Minute",
-      "synopses": {
-        "short": "BBC Pidgin Minute",
-        "medium": "All di local and world tori wey you suppose know in 60 seconds!"
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cxlk2.jpg",
-      "embedding": false,
-      "advertising": false,
-      "caption": "BBC Pidgin Minute",
-      "versions": [
-        {
-          "versionId": "p08cxl7r",
-          "types": ["Original"],
-          "duration": 61,
-          "durationISO8601": "PT1M1S",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true,
-            "world": false
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
           },
-          "availableUntil": 1589359188000,
-          "availableFrom": 1589272788000
-        }
-      ],
-      "imageCopyright": "BBC",
-      "type": "media"
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "PIDGIN",
+          "producerId": "70"
+        },
+        "readTime": 1,
+        "siteUri": "/pidgin",
+        "mediaType": "audio"
+      },
+      "content": {
+        "blocks": [
+          {
+            "id": "p08gfvk4",
+            "subType": "clip",
+            "format": "audio",
+            "title": "BBC Pidgin Minute",
+            "synopses": {
+              "short": "BBC Pidgin Minute",
+              "medium": "All di local and world tori wey you suppose know in 60 seconds!"
+            },
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08gfw0h.jpg",
+            "embedding": false,
+            "advertising": false,
+            "caption": "BBC Pidgin Minute",
+            "versions": [
+              {
+                "versionId": "p08gfvk6",
+                "types": ["Original"],
+                "duration": 60,
+                "durationISO8601": "PT1M",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableUntil": 1591779650000,
+                "availableFrom": 1591693250000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "radioProgramme",
+            "type": "media"
+          },
+          {
+            "text": "All di local and world tori wey you suppose know in 60 seconds! ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "BBC Pidgin Minute",
+          "headline": "BBC Pidgin Minute"
+        },
+        "locators": {
+          "assetUri": "/pidgin/media-44221514",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514",
+          "curie": "http://www.bbc.co.uk/asset/80c40606-2288-7e48-820e-1770842e1230",
+          "assetId": "44221514"
+        },
+        "summary": "All di local and world tori wey you suppose know in 60 seconds!",
+        "timestamp": 1591693719000,
+        "language": "pcm",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+          "taggings": []
+        },
+        "media": {
+          "id": "p08gfvk4",
+          "subType": "clip",
+          "format": "audio",
+          "title": "BBC Pidgin Minute",
+          "synopses": {
+            "short": "BBC Pidgin Minute",
+            "medium": "All di local and world tori wey you suppose know in 60 seconds!"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08gfw0h.jpg",
+          "embedding": false,
+          "advertising": false,
+          "caption": "BBC Pidgin Minute",
+          "versions": [
+            {
+              "versionId": "p08gfvk6",
+              "types": ["Original"],
+              "duration": 60,
+              "durationISO8601": "PT1M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableUntil": 1591779650000,
+              "availableFrom": 1591693250000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "111515667",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/12B6B/production/_111515667_p07y820h.jpg",
+          "path": "/cpsprodpb/12B6B/production/_111515667_p07y820h.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "BBC Pidgin Minute",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:pidgin/media-44221514",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/pidgin/media",
+          "urlIdentifier": "/pidgin/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Pidgin",
+          "uri": "/pidgin",
+          "urlIdentifier": "/pidgin",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "111515667",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/12B6B/production/_111515667_p07y820h.jpg",
-      "path": "/cpsprodpb/12B6B/production/_111515667_p07y820h.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "BBC Pidgin Minute",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:pidgin/media-44221514",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/pidgin/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Pidgin",
-      "uri": "/pidgin",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-14T16:36:23.737Z",
+        "lastRecordTimeStamp": "2023-02-14T16:34:00Z",
+        "firstRecordTimeStamp": "2023-02-14T12:34:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "99ca8ca4-c89e-44b7-b640-2d3a920468bf",
+            "rank": 1,
+            "count": 938,
+            "urn": "urn:bbc:curie:asset:99ca8ca4-c89e-44b7-b640-2d3a920468bf",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "35 years afta dem meet, woman marry her lover at 50",
+                "headline": "35 years afta dem meet, woman marry her lover at 50"
+              },
+              "locators": {
+                "assetUri": "/pidgin/tori-58102460",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-58102460",
+                "curie": "http://www.bbc.co.uk/asset/99ca8ca4-c89e-44b7-b640-2d3a920468bf",
+                "assetId": "58102460"
+              },
+              "summary": "\"I bin no know say love for old age and love for small pikin na di same tin\".",
+              "timestamp": 1628250104000,
+              "language": "pcm",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "pcm",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+                "locator": "urn:bbc:cps:curie:asset:99ca8ca4-c89e-44b7-b640-2d3a920468bf",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pcm",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id",
+                      "thingLabel": "Family",
+                      "thingUri": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id",
+                      "thingId": "184cb2f7-e305-4c46-ab4f-2e18f60b0293",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8436",
+                        "http://dbpedia.org/resource/Family"
+                      ],
+                      "thingEnglishLabel": "Family",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Nigeria",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09rj8v7",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ova 35 years afta dem, meet di Okoruwas wey just marry",
+                "synopses": {
+                  "short": "Ova 35 years afta dem, meet di Okoruwas wey just marry",
+                  "long": "Love Nwantintin no be small tin.\nBusiness woman Okiemute Okoruwa and her husband tok di tori of how dem bin meet wen dem dey small, and finally marry.\nMadama Okoruwa also tell BBC why she bin ginger to marry again at 50 after she born pikin.\nDi couple speak to all di trolling wey dem bin get afta dia marriage start to dey trend for social media.",
+                  "medium": "\"I bin no know say love ofr old age and love for small pikin na di same tin\"."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09rjc6p.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ova 35 years afta dem, meet di Okoruwas wey just marry",
+                "versions": [
+                  {
+                    "versionId": "p09rj8vf",
+                    "types": ["Original"],
+                    "duration": 286,
+                    "durationISO8601": "PT4M46S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1628241912000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119797269",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17817/production/_119797269_p09rjc6p.jpg",
+                "path": "/cpsprodpb/17817/production/_119797269_p09rjc6p.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Man dey kiss im wife for forehead",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/tori-58102460",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "de112f88-48cc-2543-ac13-72aeb2f796eb",
+            "rank": 2,
+            "count": 32,
+            "urn": "urn:bbc:curie:asset:de112f88-48cc-2543-ac13-72aeb2f796eb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"I dey make 80k to 100k per blue film\"",
+                "headline": "Savage Trap Queen: I dey make 80k - 100k per blue film"
+              },
+              "locators": {
+                "assetUri": "/pidgin/tori-45225863",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-45225863",
+                "curie": "http://www.bbc.co.uk/asset/de112f88-48cc-2543-ac13-72aeb2f796eb",
+                "assetId": "45225863"
+              },
+              "summary": "Di Nigerian porn star say her mama still dey show am correct 'motherly love'.",
+              "timestamp": 1544112267000,
+              "language": "pcm",
+              "media": {
+                "id": "p06hr471",
+                "subType": "clip",
+                "format": "video",
+                "title": "Nigerian Pornstar: \"Difference dey between ashawo work and bluefilm\"",
+                "synopses": {
+                  "short": "Nigerian Pornstar: \"Difference dey between ashawo work and bluefilm\"",
+                  "medium": "One Nigerian pornstar don come out to talk all di kain tins wey she dey use her eyes see inside di Nigerian porn industry wey dey very lowkey."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hr6jl.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Nigerian Pornstar: \"Difference dey between ashawo work and bluefilm\"",
+                "versions": [
+                  {
+                    "versionId": "p06hr475",
+                    "types": ["Original"],
+                    "duration": 181,
+                    "durationISO8601": "PT3M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1534515922000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "103063870",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1E9C/production/_103063870_bbc.jpg",
+                "path": "/cpsprodpb/1E9C/production/_103063870_bbc.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Savage Trap Queen",
+                "copyrightHolder": "Savage Trap Queen",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/tori-45225863",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d0a91ef3-b3fa-074c-82fa-e627b47b6d4a",
+            "rank": 3,
+            "count": 14,
+            "urn": "urn:bbc:curie:asset:d0a91ef3-b3fa-074c-82fa-e627b47b6d4a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Delete your naked picture from your bobo phone before e too late\"",
+                "headline": "Lekki Pastor sextape: \"Delete your naked picture from your bobo phone before e too late\""
+              },
+              "locators": {
+                "assetUri": "/pidgin/46105091",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/46105091",
+                "curie": "http://www.bbc.co.uk/asset/d0a91ef3-b3fa-074c-82fa-e627b47b6d4a",
+                "assetId": "46105091"
+              },
+              "summary": "Princess Tamara wey her sex video leak for internet don come out to talk about how e dey affect her life and her plan to move on.",
+              "timestamp": 1541526683000,
+              "language": "pcm",
+              "media": {
+                "id": "p06qxms5",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Delete your naked picture from your bobo phone before e too late\"",
+                "synopses": {
+                  "short": "Lekki Pastor sextape: \"Delete your naked picture from your bobo phone before e too late\"",
+                  "long": "'Make pipo delete dia naked foto and videos from dia bobo or girlfriend phone before e dey too late' na wetin di girl wey her sex video wit one Lagos pastor leak online tell BBC News Pidgin.\n\nPrincess Tamara Okpewho bin dey befriend one Apostle Chris Omatsola, di Pastor of Zionwealth of Life Assembly wey bin dey Lekki, Lagos, Nigeria but di seven-month-old relationship end on top claim wey Tamara make say di Pastor bin dey beat her.\n\nSex video wey dia two do leak for internet and Tamara dey point finger to Pastor Omatsola say na im leak am.\nDi 24-year-old girl tok say she dey veri hurt and sometimes, she dey shame to face di world. \n\nBut Pastor Omatsola tell BBC Pidgin say how im go leak sex tape wey show im own face inside, say e no make sense.\n\nPolice bin arrest di Pastor but dem release am afta im do apology video to im ex, Tamara.\n\nTamara say di sex video don affect her seriously but she dey move forward. She advise pipo wey get any nude picture or video for dia bobo or girlfriend phone make dem delete am because anytin fit happen and anybodi fit mess you up.\n\nAs tins be so, Tamara and her family dey call for justice for di mata because she wan use am as lesson to any man wey dey reason to leak any woman nude for internet.\n\nBBC still try reach di Pastor for more comment but im no gree tok and im don move im church from di Lekki venue go anoda place wey e no gree tok.\n\nno go quick forget di day wey her sex tape leak for internet for di whole world to see but she don learn lesson from am.",
+                  "medium": "Princess Tamara wey her sex video leak for internet don come out to talk about how e dey affect her life and her plan to move on."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06qycbn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Lekki Pastor sextape: \"Delete your naked picture from your bobo phone before e too late\"",
+                "versions": [
+                  {
+                    "versionId": "p06qxms8",
+                    "types": ["Original"],
+                    "duration": 93,
+                    "durationISO8601": "PT1M33S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1541521972000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104184369",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1785C/production/_104184369_p06qycbn.jpg",
+                "path": "/cpsprodpb/1785C/production/_104184369_p06qycbn.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Princess Tamara",
+                "caption": "Princess Tamara",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/46105091",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fcdbbde4-3c24-e44a-9af7-1405b0dd6498",
+            "rank": 4,
+            "count": 9,
+            "urn": "urn:bbc:curie:asset:fcdbbde4-3c24-e44a-9af7-1405b0dd6498",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Why I dey smoke igbo'",
+                "headline": "'Why I dey smoke igbo'"
+              },
+              "locators": {
+                "assetUri": "/pidgin/media-44583752",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44583752",
+                "curie": "http://www.bbc.co.uk/asset/fcdbbde4-3c24-e44a-9af7-1405b0dd6498",
+                "assetId": "44583752"
+              },
+              "summary": "Chuks na young Nigerian graduate wey no fit eat or reason without Igbo.",
+              "timestamp": 1529745291000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06bt5zg",
+                "subType": "clip",
+                "format": "video",
+                "title": "'Why I dey smoke igbo'",
+                "synopses": {
+                  "short": "'Why I dey smoke igbo'",
+                  "long": "Marijuana wey dem dey call Igbo na illegal drug for Nigeria, but di drug full everywhere for plenti pipo like Chuks to buy and use.",
+                  "medium": "Chuks na young Nigerian graduate wey no fit eat or reason without Igbo."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06bvhqm.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "'Why I dey smoke igbo'",
+                "versions": [
+                  {
+                    "versionId": "p06bt5zm",
+                    "types": ["Original"],
+                    "duration": 21,
+                    "durationISO8601": "PT21S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1529686286000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "102167767",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12BE8/production/_102167767_p06bvhqm.jpg",
+                "path": "/cpsprodpb/12BE8/production/_102167767_p06bvhqm.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Pipo wey dey smoke",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/media-44583752",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b49d2fd5-12a1-b64b-bff8-1a1adfa51f21",
+            "rank": 5,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:b49d2fd5-12a1-b64b-bff8-1a1adfa51f21",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "My wedding plan: Woman versus man",
+                "headline": "My wedding plan: Woman versus man formula for di sweetest jollificate"
+              },
+              "locators": {
+                "assetUri": "/pidgin/media-43525428",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-43525428",
+                "curie": "http://www.bbc.co.uk/asset/b49d2fd5-12a1-b64b-bff8-1a1adfa51f21",
+                "assetId": "43525428"
+              },
+              "summary": "Person wedding day na one kain special occasion all over di world. But no two man or woman get di same idea how dem wan take do am.",
+              "timestamp": 1521895786000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p0625qmj",
+                "subType": "clip",
+                "format": "video",
+                "title": "My wedding plan",
+                "synopses": {
+                  "short": "My wedding plan: Di best formula for di sweetest jollificate",
+                  "medium": "Person wedding day na one kain special occasion all over di world. But no two man or woman get di same idea how dem wan do am."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0625ztf.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "My wedding plan: Di best formula for di sweetest jollificate",
+                "versions": [
+                  {
+                    "versionId": "p0625qml",
+                    "types": ["Original"],
+                    "duration": 98,
+                    "durationISO8601": "PT1M38S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1521893160000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100553622",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/586B/production/_100553622_p0625ztf.jpg",
+                "path": "/cpsprodpb/586B/production/_100553622_p0625ztf.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "My wedding plan",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/media-43525428",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "87ef712c-4e34-6546-badc-fb46a6022b72",
+            "rank": 6,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:87ef712c-4e34-6546-badc-fb46a6022b72",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "See places dem dey practice traditional womb setting massage to 'help woman get belle'",
+                "headline": "Traditional womb setting massage: See places wia dem dey practice am to 'help woman get belle'"
+              },
+              "locators": {
+                "assetUri": "/pidgin/media-52570363",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-52570363",
+                "curie": "http://www.bbc.co.uk/asset/87ef712c-4e34-6546-badc-fb46a6022b72",
+                "assetId": "52570363"
+              },
+              "summary": "Womb setting massage na traditional massage wey some women dey do for Warri, Delta state.",
+              "timestamp": 1588829305000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08cj1rn",
+                "subType": "clip",
+                "format": "video",
+                "title": "Womb setting massage wey dey epp women get belle for warri",
+                "synopses": {
+                  "short": "Womb setting massage wey dey epp women get belle for warri",
+                  "long": "Womb setting massage na traditional massage wey women dey do for Warri, Delta state, South-South Nigeria.\nDis women believe say after dem massage and set di woman womb she go get belle.",
+                  "medium": "Womb setting massage na traditional massage wey women dey do for Warri, Delta state."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cj1x3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Womb setting massage wey dey epp women get belle for warri",
+                "versions": [
+                  {
+                    "versionId": "p08cj1rq",
+                    "types": ["Original"],
+                    "duration": 164,
+                    "durationISO8601": "PT2M44S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1588827493000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "112181996",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1111E/production/_112181996_wombmassage_3.png",
+                "path": "/cpsprodpb/1111E/production/_112181996_wombmassage_3.png",
+                "height": 261,
+                "width": 464,
+                "altText": "Womb setting massage na traditional massage wey women dey do for Warri, Delta state.",
+                "caption": "Womb setting massage na traditional massage wey women dey do for Warri, Delta state.",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/media-52570363",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4e80556c-d04d-2e44-8d6b-bd95e0bc2264",
+            "rank": 7,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:4e80556c-d04d-2e44-8d6b-bd95e0bc2264",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Wahala wey intersex dey face for Nigeria",
+                "headline": "Intersex: Wahala wey intersex pipo dey face for Nigeria"
+              },
+              "locators": {
+                "assetUri": "/pidgin/sport-49875448",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/sport-49875448",
+                "curie": "http://www.bbc.co.uk/asset/4e80556c-d04d-2e44-8d6b-bd95e0bc2264",
+                "assetId": "49875448"
+              },
+              "summary": "Out of evri 2000 pikin wey dem newly born, one get both man and woman organs.",
+              "timestamp": 1569843269000,
+              "language": "pcm",
+              "media": {
+                "id": "p07ppqkk",
+                "subType": "clip",
+                "format": "video",
+                "title": "Wahala wey intersex dey face for Nigeria",
+                "synopses": {
+                  "short": "Wahala wey intersex dey face for Nigeria",
+                  "medium": "Out of evri 2000 pikin wey dem newly born, one get both man and woman organs."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07pptvj.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Wahala wey intersex dey face for Nigeria",
+                "versions": [
+                  {
+                    "versionId": "p07ppqkm",
+                    "types": ["Original"],
+                    "duration": 307,
+                    "durationISO8601": "PT5M7S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1569841137000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109021771",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4530/production/_109021771_p07pptvj.jpg",
+                "path": "/cpsprodpb/4530/production/_109021771_p07pptvj.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Intersex pipo for Nigeria",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/sport-49875448",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "24ad3376-554b-4ad8-b0f6-060801d9a3e9",
+            "rank": 8,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:24ad3376-554b-4ad8-b0f6-060801d9a3e9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Wetin e take to win election for Nigeria",
+                "headline": "Wetin e take to win election for Nigeria"
+              },
+              "locators": {
+                "assetUri": "/pidgin/64626014",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:24ad3376-554b-4ad8-b0f6-060801d9a3e9",
+                "assetId": "64626014",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/64626014",
+                "curie": "http://www.bbc.co.uk/asset/24ad3376-554b-4ad8-b0f6-060801d9a3e9"
+              },
+              "summary": "Elections na tricky business all ova di world and e no dey different for Nigeria.",
+              "timestamp": 1676287687000,
+              "language": "pcm",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "language": "pcm",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+                "locator": "urn:bbc:cps:curie:asset:24ad3376-554b-4ad8-b0f6-060801d9a3e9",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ad97dddb-ea75-4493-a4ed-95ad1477049f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingLabel": "Explainer",
+                      "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+                      ],
+                      "thingEnglishLabel": "Explainer",
+                      "thingPreferredLabel": "Explainer",
+                      "thingLabelLanguage": "pcm",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Nigeria",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
+                      "thingLabel": "Nigeria politics",
+                      "thingUri": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
+                      "thingId": "7d65828a-85c1-41f4-96cf-c758da75e401",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Politics_of_Nigeria"
+                      ],
+                      "thingEnglishLabel": "Nigeria politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ad97dddb-ea75-4493-a4ed-95ad1477049f#id",
+                      "thingLabel": "Nigerian Presidential Election 2023",
+                      "thingUri": "http://www.bbc.co.uk/things/ad97dddb-ea75-4493-a4ed-95ad1477049f#id",
+                      "thingId": "ad97dddb-ea75-4493-a4ed-95ad1477049f",
+                      "thingType": [
+                        "core:Event",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/2023_Nigerian_general_election",
+                        "http://www.wikidata.org/entity/Q1318985"
+                      ],
+                      "thingEnglishLabel": "Nigerian elections 2023",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2skq2",
+                "subType": "clip",
+                "format": "video",
+                "title": "Wetin e take to win election for Nigeria",
+                "synopses": {
+                  "short": "Wetin e take to win election for Nigeria"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2slkn.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "Wetin e take to win election for Nigeria",
+                "versions": [
+                  {
+                    "versionId": "p0f2skq6",
+                    "types": ["Original"],
+                    "duration": 239,
+                    "durationISO8601": "PT3M59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676279717000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128598001",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/2769/production/_128598001_p0f2slkn.jpg",
+                "path": "/cpsprodpb/2769/production/_128598001_p0f2slkn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Wetin e take to win election for Nigeria",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/64626014",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ea11f95c-d96b-4a6b-aa5b-5ae7b6ac7af9",
+            "rank": 9,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:ea11f95c-d96b-4a6b-aa5b-5ae7b6ac7af9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Tins you go do during election wey go land you for INEC hot soup",
+                "headline": "Nigeria general election 2023: Election offence and dia penalties"
+              },
+              "locators": {
+                "assetUri": "/pidgin/tori-64534844",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:ea11f95c-d96b-4a6b-aa5b-5ae7b6ac7af9",
+                "assetId": "64534844",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-64534844",
+                "curie": "http://www.bbc.co.uk/asset/ea11f95c-d96b-4a6b-aa5b-5ae7b6ac7af9"
+              },
+              "summary": "As Nigeria election dey come up, we chook eye for di tins to avoid during election wey fit land you for trouble.",
+              "timestamp": 1675664889000,
+              "language": "pcm",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "pcm",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+                "locator": "urn:bbc:cps:curie:asset:ea11f95c-d96b-4a6b-aa5b-5ae7b6ac7af9",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ad97dddb-ea75-4493-a4ed-95ad1477049f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingLabel": "Explainer",
+                      "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+                      ],
+                      "thingEnglishLabel": "Explainer",
+                      "thingPreferredLabel": "Explainer",
+                      "thingLabelLanguage": "pcm",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Nigeria",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
+                      "thingLabel": "Nigeria politics",
+                      "thingUri": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
+                      "thingId": "7d65828a-85c1-41f4-96cf-c758da75e401",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Politics_of_Nigeria"
+                      ],
+                      "thingEnglishLabel": "Nigeria politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ad97dddb-ea75-4493-a4ed-95ad1477049f#id",
+                      "thingLabel": "Nigerian Presidential Election 2023",
+                      "thingUri": "http://www.bbc.co.uk/things/ad97dddb-ea75-4493-a4ed-95ad1477049f#id",
+                      "thingId": "ad97dddb-ea75-4493-a4ed-95ad1477049f",
+                      "thingType": [
+                        "core:Event",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/2023_Nigerian_general_election",
+                        "http://www.wikidata.org/entity/Q1318985"
+                      ],
+                      "thingEnglishLabel": "Nigerian elections 2023",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f18dkh",
+                "subType": "clip",
+                "format": "video",
+                "title": "Tins you go do during election wey go land you for INEC hot soup",
+                "synopses": {
+                  "short": "Nigeria general election 2023: Election offence and dia penalties",
+                  "long": "As you dey prepare to go exercise your rights to vote for di Nigeria general elections, e dey important make you sabi some tins wey fit land you inside serious trouble if you no follow di electoral law.",
+                  "medium": "As Nigeria election dey come up, we chook eye for di tins to avoid during election wey fit land you for trouble."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f18f1d.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Nigeria general election 2023: Election offence and dia penalties",
+                "versions": [
+                  {
+                    "versionId": "p0f18dkm",
+                    "types": ["Original"],
+                    "duration": 93,
+                    "durationISO8601": "PT1M33S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675662952000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128532590",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/2533/production/_128532590_p0f18f1d.jpg",
+                "path": "/cpsprodpb/2533/production/_128532590_p0f18f1d.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Explainer on di election",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/tori-64534844",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6147ec31-f6c9-4d49-8019-c291d2c52def",
+            "rank": 10,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:6147ec31-f6c9-4d49-8019-c291d2c52def",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'I draw Adesua wedding clothes dem'",
+                "headline": "Nigeria: \"I teach myself Fashion Illustration\"- Okhai Akhigbe"
+              },
+              "locators": {
+                "assetUri": "/pidgin/tori-42617345",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-42617345",
+                "curie": "http://www.bbc.co.uk/asset/6147ec31-f6c9-4d49-8019-c291d2c52def",
+                "assetId": "42617345"
+              },
+              "summary": "Meet di young fashion illustrator wey teach himself and...wey design di clothes for one of Africa most viral weddings",
+              "timestamp": 1515494976000,
+              "language": "pcm",
+              "media": {
+                "id": "p05t87g5",
+                "subType": "clip",
+                "format": "video",
+                "title": "'Na me design Adesuwa wedding cloth dem'",
+                "synopses": {
+                  "short": "Nigeria: \"I teach myself Fashion Illustration\"- Okhai Akhigbe",
+                  "medium": "Meet di young fashion illustrator wey teach himself and...wey design di clothes for one of Africa most viral weddings",
+                  "long": "Okhai Akhigbe, 27, study Building Technology for university, but dis days, na clothes im dey build.\nIm don work with top fashion designers and houses for Nigeria including top stars dem like Adesua Etomi Wellington.\nNa di cloth wey Akhigbe design for Wellington na im she wear for her wedding, wey dey among di most viral ceremonies for Africa for di whole of 2017.\n\nFashion illustrators dey work with fashion designers with dia drawings to help dem create clothes.\n\nOkhai teach himself fashion illustration, im  also be one of di people wey make dem begin look di work as better real work for Nigeria.\n\nE tell BBC News Pidgin say im dream na to show di world Nigeria diversity and culture through im illustration dem."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05t88fc.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Nigeria: \"I teach myself Fashion Illustration\"- Okhai Akhigbe",
+                "versions": [
+                  {
+                    "versionId": "p05t87g8",
+                    "types": ["Original"],
+                    "duration": 88,
+                    "durationISO8601": "PT1M28S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1515493406000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99517864",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B717/production/_99517864_p05t88fc.jpg",
+                "path": "/cpsprodpb/B717/production/_99517864_p05t88fc.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Fashion illustrator dey draw for BBC Pidgin",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/tori-42617345",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d8745a7b-4d23-47e9-a0f7-901b8af0ba9a",
+            "rank": 11,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:d8745a7b-4d23-47e9-a0f7-901b8af0ba9a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "BBC Pidgin Minute",
+                "headline": "BBC Pidgin Minute"
+              },
+              "locators": {
+                "assetUri": "/pidgin/media-55222820",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d8745a7b-4d23-47e9-a0f7-901b8af0ba9a",
+                "assetId": "55222820",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-55222820",
+                "curie": "http://www.bbc.co.uk/asset/d8745a7b-4d23-47e9-a0f7-901b8af0ba9a"
+              },
+              "summary": "All di local and world tori wey you suppose know in 60 seconds!",
+              "timestamp": 1671817317000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "pcm",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+                "locator": "urn:bbc:cps:curie:asset:d8745a7b-4d23-47e9-a0f7-901b8af0ba9a",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d3d75366-7593-4ef6-93c7-b9490925fea0#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ad97dddb-ea75-4493-a4ed-95ad1477049f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pcm",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Nigeria",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ad97dddb-ea75-4493-a4ed-95ad1477049f#id",
+                      "thingLabel": "Nigerian Presidential Election 2023",
+                      "thingUri": "http://www.bbc.co.uk/things/ad97dddb-ea75-4493-a4ed-95ad1477049f#id",
+                      "thingId": "ad97dddb-ea75-4493-a4ed-95ad1477049f",
+                      "thingType": [
+                        "core:Event",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/2023_Nigerian_general_election",
+                        "http://www.wikidata.org/entity/Q1318985"
+                      ],
+                      "thingEnglishLabel": "Nigerian elections 2023",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                      "thingLabel": "Africa",
+                      "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                      "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q15",
+                        "http://dbpedia.org/resource/Africa",
+                        "http://sws.geonames.org/6255146/"
+                      ],
+                      "thingEnglishLabel": "Africa",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/d3d75366-7593-4ef6-93c7-b9490925fea0#id",
+                      "thingLabel": "Ghana",
+                      "thingUri": "http://www.bbc.co.uk/things/d3d75366-7593-4ef6-93c7-b9490925fea0#id",
+                      "thingId": "d3d75366-7593-4ef6-93c7-b9490925fea0",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2300660/"],
+                      "thingEnglishLabel": "Ghana",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dr85js",
+                "subType": "clip",
+                "format": "audio",
+                "title": "BBC Pidgin Minute",
+                "synopses": {
+                  "short": "BBC Pidgin Minute",
+                  "medium": "All di local and world tori wey you suppose know in 60 seconds!"
+                },
+                "imageUrl": null,
+                "embedding": false,
+                "advertising": false,
+                "caption": "BBC Pidgin Minute",
+                "versions": [
+                  {
+                    "versionId": "p0dr85jx",
+                    "types": ["Original"],
+                    "duration": 62,
+                    "durationISO8601": "PT1M2S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableUntil": 1671903528000,
+                    "availableFrom": 1671817128000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125849496",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10F76/production/_125849496_p09htdf9.jpg",
+                "path": "/cpsprodpb/10F76/production/_125849496_p09htdf9.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "BBC Pidgin Minute",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/media-55222820",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "487f9ac8-2979-4dc7-a360-943267bba05b",
+            "rank": 12,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:487f9ac8-2979-4dc7-a360-943267bba05b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Exclusive: 'I bin always wan become king – Olu of Warri, Ogiame Atuwatse III",
+                "headline": "Olu of Warri coronation: Ogiame Atuwatse III tok about im journey to become king and oda controversy wey follow before im coronation"
+              },
+              "locators": {
+                "assetUri": "/pidgin/media-58288112",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-58288112",
+                "curie": "http://www.bbc.co.uk/asset/487f9ac8-2979-4dc7-a360-943267bba05b",
+                "assetId": "58288112"
+              },
+              "summary": "For dis exclusive interview with BBC Pidgin, di 21st Olu of Warri, Ogiame Atuwatse III tok about im journey to be king, controversies wey follow and im plan to lead.",
+              "timestamp": 1629556212000,
+              "language": "pcm",
+              "media": {
+                "id": "p09st9ny",
+                "subType": "clip",
+                "format": "video",
+                "title": "Olu of Warri exclusive",
+                "synopses": {
+                  "short": "Olu of Warri exclusive"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09st9vw.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "Olu of Warri exclusive",
+                "versions": [
+                  {
+                    "versionId": "p09st9p0",
+                    "types": ["Original"],
+                    "duration": 1547,
+                    "durationISO8601": "PT25M47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1629486282000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "120146153",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/895C/production/_120146153_oluofwarricoronationomobatsolaemikosay400-year-oldmissingcrownnogostopimcoronation.jpg",
+                "path": "/cpsprodpb/895C/production/_120146153_oluofwarricoronationomobatsolaemikosay400-year-oldmissingcrownnogostopimcoronation.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Olu of Warri coronation: Omoba Tsola Emiko say 400-year-old missing crown no go stop im coronation",
+                "caption": "Omoba Tsola Emiko",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/media-58288112",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e0c39a84-2521-684d-9051-2386daabfa83",
+            "rank": 13,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:e0c39a84-2521-684d-9051-2386daabfa83",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'I dey breastfeed, I dey cut paper'",
+                "headline": "'I dey breastfeed, I dey cut paper': See how dis woman change paper to money"
+              },
+              "locators": {
+                "assetUri": "/pidgin/media-42438101",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-42438101",
+                "curie": "http://www.bbc.co.uk/asset/e0c39a84-2521-684d-9051-2386daabfa83",
+                "assetId": "42438101"
+              },
+              "summary": "Funmi Adubi don tell BBC News Pidgin how she take change paper to money.",
+              "timestamp": 1513975451000,
+              "language": "pcm",
+              "media": {
+                "id": "p05rpv9d",
+                "subType": "clip",
+                "format": "video",
+                "title": "'I dey breastfeed, I dey cut paper' - See how dis woman change paper to money",
+                "synopses": {
+                  "short": "'I just dey teach myself' See how dis woman change paper to money",
+                  "medium": "Funmi Adubi don tell BBC News Pidgin how she take change paper to money.",
+                  "long": "Funmi Adubi don tell BBC News Pidgin how she take change paper to money."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05rpxyy.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "'I just dey teach myself' See how dis woman change paper to money",
+                "versions": [
+                  {
+                    "versionId": "p05rpv9h",
+                    "types": ["Original"],
+                    "duration": 123,
+                    "durationISO8601": "PT2M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1513856310000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99313844",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/AF1F/production/_99313844_p05rpxyy.jpg",
+                "path": "/cpsprodpb/AF1F/production/_99313844_p05rpxyy.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #7",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/media-42438101",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cb5dea99-6de9-6a4d-98dd-2cf6743df67d",
+            "rank": 14,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:cb5dea99-6de9-6a4d-98dd-2cf6743df67d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Man wey kill im eight year old sister go die by hanging for Port-Harcourt",
+                "headline": "Ifeanyi Dike: Man wey kill im eight year old sister go die by hanging for Port-Harcourt"
+              },
+              "locators": {
+                "assetUri": "/pidgin/tori-52652469",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-52652469",
+                "curie": "http://www.bbc.co.uk/asset/cb5dea99-6de9-6a4d-98dd-2cf6743df67d",
+                "assetId": "52652469"
+              },
+              "summary": "Police arrest Ifeanyi Dike for Eliozu area of Obio Akpor local goment for Rivers State after local vigilante catch am as im dey go troway di deadibody of 8 year old Chikamso Victory for night.",
+              "timestamp": 1589380319000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08d1zf5",
+                "subType": "clip",
+                "format": "video",
+                "title": "Rivers State High Court don sentence Ifeanyi Dike to death by hanging",
+                "synopses": {
+                  "short": "Rivers State High Court don sentence Ifeanyi Maxwell Dike to death by hanging",
+                  "long": "Justice Adolphus Enebeli wey deliver di over two hours judgement also find di second defendant, Ugochukwu Onwuamiro guilty of conspiracy to commit murder, say na im join body with  Ifeanyi Dike to kill di girl so im also sentence am too to death by hanging.",
+                  "medium": "Rivers State High Court for Port Harcourt don sentence Ifeanyi Maxwell Dike to death by hanging say im dey guilty of killing 8 year old Chikamso Victory Nmezurumba for 2017."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08d20c8.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "Rivers State High Court don sentence Ifeanyi Maxwell Dike to death by hanging",
+                "versions": [
+                  {
+                    "versionId": "p08d1zf8",
+                    "types": ["Original"],
+                    "duration": 46,
+                    "durationISO8601": "PT46S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1589378273000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "112258382",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6EE1/production/_112258382_phmurder.jpg",
+                "path": "/cpsprodpb/6EE1/production/_112258382_phmurder.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Court sentence Ifeanyi Dike",
+                "caption": "Court sentence Ifeanyi Dike",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/tori-52652469",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5c7adf5c-a1c6-8744-9684-da6110c7b7fb",
+            "rank": 15,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:5c7adf5c-a1c6-8744-9684-da6110c7b7fb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "My 'father' rape me for seven years",
+                "headline": "How my step-father rape me for seven years’"
+              },
+              "locators": {
+                "assetUri": "/pidgin/media-50617660",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-50617660",
+                "curie": "http://www.bbc.co.uk/asset/5c7adf5c-a1c6-8744-9684-da6110c7b7fb",
+                "assetId": "50617660"
+              },
+              "summary": "Fatima Ishiaku experience with rape begin from di age of five, wen pesin wey she think say na her papa first begin dey abuse her.",
+              "timestamp": 1575373142000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07wrfmh",
+                "subType": "clip",
+                "format": "video",
+                "title": "My 'father' rape me for seven years",
+                "synopses": {
+                  "short": "Rape: How my step-father rape me for seven years’",
+                  "long": "Fatima Ishiaku experience with rape begin from di age of five, wen pesin wey she think say na her papa first begin dey abuse her.\n\nAccording to Fatima, di real rape she suffer for di hand of her step-father start from wen she be seven till she clock 14. \n\nNow 43, she wan use her tori to ginger oda victims.\n\nProducer: Helen Oyibo\nVideo: Ufuoma Gift",
+                  "medium": "Fatima Ishiaku experience with rape begin from di age of five, wen pesin wey she think say na her papa first begin dey abuse her."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07wrgwp.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Rape: How my step-father rape me for seven years’",
+                "versions": [
+                  {
+                    "versionId": "p07wrfmp",
+                    "types": ["Original"],
+                    "duration": 161,
+                    "durationISO8601": "PT2M41S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1575372855000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109984369",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1785C/production/_109984369_p07wrgwp.jpg",
+                "path": "/cpsprodpb/1785C/production/_109984369_p07wrgwp.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Fatima Ishiaku",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/media-50617660",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5a53cad3-ff45-6e4b-ba38-81e0af1ab2cc",
+            "rank": 16,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:5a53cad3-ff45-6e4b-ba38-81e0af1ab2cc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Women no be object for dia husband hand but agent of change\"",
+                "headline": "Aisha Babangida: Meet di lady wey gada all First Ladies of Nigeria to empower 'poor women’ in memory of her mama"
+              },
+              "locators": {
+                "assetUri": "/pidgin/tori-51354830",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-51354830",
+                "curie": "http://www.bbc.co.uk/asset/5a53cad3-ff45-6e4b-ba38-81e0af1ab2cc",
+                "assetId": "51354830"
+              },
+              "summary": "My mother Mariam Babaginda ginger me to work epp women for Naija.",
+              "timestamp": 1580812970000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08279nt",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Women no be object for dia husband hand but agent of change\"",
+                "synopses": {
+                  "short": "Aisha Babangida: \"My mother Mariam Babaginda ginger me to work epp women for Naija\"",
+                  "long": "As Nigeria economy dey slowdown, many women across Nigeria dey find am difficult to provide three square meal for dia family.\n \nMany of dem no fit pay dia pikin dem hospital bills, education plus housing bills.\n \nIn order to find solution to dis economic wahala wey women dey face, na im make Aisha Babangida, di daughter of one of Nigeria ogbonge First Ladies decide to gada all di former first ladies from 1960 till date togeda to rob mind on how to epp di common Nigerian woman.\n \nThis she dey do in honour of her mother wey for 1986 use her position as di wife of head of state, General Ibrahim Badamasi Babangida to fight for di economic empowerment of Nigerian women.\n \nShe create the Better Life Programme for Rural Women for 1986 to launch plenti cottage industry, open business for rural women and even ginger dem to farm and feed their families and make money.\n \nSince her death, plenti oda First Ladies don launch different programme wey suppose benefit women\n \nAccording to di first ladies, women no suppose no be object for dia husbands dem hand but agent of change to transform dia communities and empower oda women like dem.\n\nFirst ladies from 1960 like Mrs Uche Azikiwe, Mrs Victoria Ironsi, Mrs Ajoke Mohammed,plus recent ones like Turai Yar’adua, Fati Lami Abubakar, Patience Jonathan and Aisha Buhari all of dem tell dia tori of how dem survive for office.\n\nAnd encourage younger women make dem sieze every opportunity to develop themselves and achieve their goals and not allow society to drag them down.\n\nProducer: Dooshima Abu",
+                  "medium": "My mother Mariam Babaginda ginger me to work epp women for Naija"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0827k3b.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Aisha Babangida: \"My mother Mariam Babaginda ginger me to work epp women for Naija\"",
+                "versions": [
+                  {
+                    "versionId": "p08279nw",
+                    "types": ["Original"],
+                    "duration": 119,
+                    "durationISO8601": "PT1M59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1580811600000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110761689",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/18138/production/_110761689_p0827k3b.jpg",
+                "path": "/cpsprodpb/18138/production/_110761689_p0827k3b.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Aisha Babangida",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/tori-51354830",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f8e6d068-10b3-274c-9df4-84c0d59ff53d",
+            "rank": 17,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f8e6d068-10b3-274c-9df4-84c0d59ff53d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Why you feel say I no fit love?\"",
+                "headline": "Valentine's Day: \"Why you feel say I no fit find true love?\""
+              },
+              "locators": {
+                "assetUri": "/pidgin/tori-47241653",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-47241653",
+                "curie": "http://www.bbc.co.uk/asset/f8e6d068-10b3-274c-9df4-84c0d59ff53d",
+                "assetId": "47241653"
+              },
+              "summary": "On dis Valentine's Day, Voke Okoro get message for all of us about di power of true love.",
+              "timestamp": 1550173426000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+                  "categoryName": "Interactive"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  },
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p070w71x",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Why you feel say I no fit find true love?\"",
+                "synopses": {
+                  "short": "Valentine's Day: \"Why you feel say I no fit find true love?\""
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p070wdcl.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Valentine's Day: \"Why you feel say I no fit find true love?\"",
+                "versions": [
+                  {
+                    "versionId": "p070w72d",
+                    "types": ["Original"],
+                    "duration": 55,
+                    "durationISO8601": "PT55S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1550162103000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105654425",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CCDD/production/_105654425_p070wdcl.jpg",
+                "path": "/cpsprodpb/CCDD/production/_105654425_p070wdcl.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Voke Okoro",
+                "copyrightHolder": "Voke Okoro",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/tori-47241653",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f7131405-3b95-4f5b-a443-159aebe29214",
+            "rank": 18,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f7131405-3b95-4f5b-a443-159aebe29214",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Exclusive interview wit Evangelist Olufunmilayo Adebayo",
+                "headline": "Mummy GO trend: Exclusive interview wit Evangelist Olufunmilayo Adebayo"
+              },
+              "locators": {
+                "assetUri": "/pidgin/tori-59926785",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-59926785",
+                "curie": "http://www.bbc.co.uk/asset/f7131405-3b95-4f5b-a443-159aebe29214",
+                "assetId": "59926785"
+              },
+              "summary": "BBC Pidgin Sidon tok wit Evangelist Olufunmilayo Adebayo wey don become meme for Nigeria social media",
+              "timestamp": 1641728183000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "pcm",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+                "locator": "urn:bbc:cps:curie:asset:f7131405-3b95-4f5b-a443-159aebe29214",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5410e094-f776-4f85-ad56-cf931d3312b2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Nigeria",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5410e094-f776-4f85-ad56-cf931d3312b2#id",
+                      "thingLabel": "People wey dey follow Christ",
+                      "thingUri": "http://www.bbc.co.uk/things/5410e094-f776-4f85-ad56-cf931d3312b2#id",
+                      "thingId": "5410e094-f776-4f85-ad56-cf931d3312b2",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q5043",
+                        "http://dbpedia.org/resource/Christianity"
+                      ],
+                      "thingEnglishLabel": "Christianity",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id",
+                      "thingLabel": "Religion",
+                      "thingUri": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id",
+                      "thingId": "fbcd47f3-d67a-4b69-b15c-d4b6c270adbf",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Religion",
+                        "http://www.wikidata.org/entity/Q9174"
+                      ],
+                      "thingEnglishLabel": "Religion",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pcm",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/07d06259-d570-4131-92ad-a09278d1b77b#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0bg6hnm",
+                "subType": "clip",
+                "format": "video",
+                "title": "Mummy G.O.",
+                "synopses": {
+                  "short": "Mummy G.O."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bg6q3c.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "Mummy G.O.",
+                "versions": [
+                  {
+                    "versionId": "p0bg6hnr",
+                    "types": ["Original"],
+                    "duration": 1306,
+                    "durationISO8601": "PT21M46S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1641722305000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "122632335",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/D04B/production/_122632335_p0bg6q3c.jpg",
+                "path": "/cpsprodpb/D04B/production/_122632335_p0bg6q3c.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Evangelist Olufunmilayo Adebayo",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/tori-59926785",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f0eb0729-e5f5-cd44-a6aa-394694733250",
+            "rank": 19,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f0eb0729-e5f5-cd44-a6aa-394694733250",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Which pidgin sweet pass?",
+                "headline": "Pidgin English: Which pidgin sweet pass for Africa?"
+              },
+              "locators": {
+                "assetUri": "/pidgin/media-49006806",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-49006806",
+                "curie": "http://www.bbc.co.uk/asset/f0eb0729-e5f5-cd44-a6aa-394694733250",
+                "assetId": "49006806"
+              },
+              "summary": "Pidgin language get different types and sounds according to language professors wey meet for Ibadan south west Nigeria to discuss future of di language.",
+              "timestamp": 1563280707000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07h0qrv",
+                "subType": "clip",
+                "format": "video",
+                "title": "Which pidgin sweet pass?",
+                "synopses": {
+                  "short": "Pidgin English: Which pidgin sweet pass for Africa?",
+                  "long": "Producers: Bongben Jisi, Usifo Omozokpea, Sarah Tiamiyu\n\nPidgin language get different types and sounds according to language professors wey meet for Ibadan south west Nigeria to discuss future of di language.\n\n\nInside video wey BBC Pidgin get, pipo for dia speak different kinds of pidgin from different kontris.\n\nFrom Cameroon to Ghana to Equitorial Guinea and Nigeria speakers say pidgin language go soon grow pass other languages for Africa.\n\nCreole, canyon and pichi na di names of oda kinds of pidgin wey dey accross di world according to Professor Kofi Yakpo from University of Hong Kong.",
+                  "medium": "Pidgin language get different types and sounds according to language professors wey meet for Ibadan south west Nigeria to discuss future of di language."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07h0st5.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "Pidgin English: Which pidgin sweet pass for Africa?",
+                "versions": [
+                  {
+                    "versionId": "p07h0qrx",
+                    "types": ["Original"],
+                    "duration": 101,
+                    "durationISO8601": "PT1M41S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1563279624000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "107898644",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/AE91/production/_107898644_p07h0st5.jpg",
+                "path": "/cpsprodpb/AE91/production/_107898644_p07h0st5.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/media-49006806",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c6576c6f-83b8-064a-992c-84b58b5b7162",
+            "rank": 20,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:c6576c6f-83b8-064a-992c-84b58b5b7162",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "World heaviest man wan lose weight",
+                "headline": "World heaviest man wan lose weight"
+              },
+              "locators": {
+                "assetUri": "/pidgin/world-42650169",
+                "cpsUrn": "urn:bbc:content:assetUri:pidgin/world-42650169",
+                "curie": "http://www.bbc.co.uk/asset/c6576c6f-83b8-064a-992c-84b58b5b7162",
+                "assetId": "42650169"
+              },
+              "summary": "According to Guinness World Book of Records, Juan Pedro Franco na di heaviest man in di world for 2017. But now im don do operation to reduce weight.",
+              "timestamp": 1515695905000,
+              "language": "pcm",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05tkf8w",
+                "subType": "clip",
+                "format": "video",
+                "title": "Meet di man wey heavy pass for dis world",
+                "synopses": {
+                  "short": "Meet di man wey heavy pass for dis world",
+                  "medium": "Juan Pedro Franco wey be di world heaviest man according to Guinness World Book of Records survive operation to reduce wait for late 2017.",
+                  "long": "Juan Pedro Franco wey be di world heaviest man according to Guinness World Book of Records survive operation to reduce wait for late 2017. \nAfter di operation, Di first thing Juan talk na \"I wan do when I fit waka na to go out go take breeze, see wetin di street be like\"."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05tkztn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Meet di man wey heavy pass for dis world",
+                "versions": [
+                  {
+                    "versionId": "p05tkf93",
+                    "types": ["Original"],
+                    "duration": 291,
+                    "durationISO8601": "PT4M51S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1515694896000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99560873",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/93AE/production/_99560873_p05tkztn.jpg",
+                "path": "/cpsprodpb/93AE/production/_99560873_p05tkztn.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #5",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/world-42650169",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

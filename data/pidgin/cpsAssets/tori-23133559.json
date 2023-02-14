@@ -1,302 +1,1520 @@
 {
-    "metadata": {
-      "id": "urn:bbc:ares::index:pidgin/tori-23133559/desktop/domestic",
-      "locators": {
-        "assetUri": "/pidgin/tori-23133559",
-        "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23133559",
-        "curie": "http://www.bbc.co.uk/asset/791ea76c-88d4-3a44-b360-f2a6b89d4294/desktop/domestic",
-        "assetId": "23133559"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::index:pidgin/tori-23133559/mobile/domestic",
+        "locators": {
+          "assetUri": "/pidgin/tori-23133559",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:791ea76c-88d4-3a44-b360-f2a6b89d4294/desktop/domestic",
+          "assetId": "23133559",
+          "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23133559",
+          "curie": "http://www.bbc.co.uk/asset/791ea76c-88d4-3a44-b360-f2a6b89d4294/desktop/domestic"
+        },
+        "type": "FIX",
+        "createdBy": "pidgin-v6",
+        "language": "pcm",
+        "lastUpdated": 1665414695968,
+        "firstPublished": 1497542120000,
+        "lastPublished": 1602584043000,
+        "timestamp": 1602584042000,
+        "options": {
+          "allowAdvertising": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "fix",
+          "counterName": "pidgin.news.feature_index.23133559.page",
+          "cps_asset_id": "23133559",
+          "contentId": "urn:bbc:cps:curie:asset:791ea76c-88d4-3a44-b360-f2a6b89d4294"
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": [
+          "container-top-stories",
+          "av-stories-now",
+          "topic-cluster",
+          "feature-main",
+          "feature-digest"
+        ],
+        "title": "BBC Pidgin Test FIX",
+        "summary": "BBC Pidgin Test FIX",
+        "atiAnalytics": {
+          "producerName": "PIDGIN",
+          "producerId": "70"
+        }
       },
-      "type": "FIX",
-      "createdBy": "pidgin-v6",
-      "language": "pcm",
-      "lastUpdated": 1600253819695,
-      "firstPublished": 1497542120000,
-      "lastPublished": 1497975000000,
-      "timestamp": 1497884634000,
-      "options": {
-        "allowAdvertising": true
+      "content": {
+        "groups": [
+          {
+            "type": "container-top-stories",
+            "title": "Container Top Stories",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "Test - DONALD TRUMP NO GO GREE MEK DEM TURN NIGERIA TO ISLAM- FANI KAYODE"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/23132976",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:f8170aa3-4862-7d4c-bb98-26f7faac98ff",
+                  "assetId": "23132976",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/23132976",
+                  "curie": "http://www.bbc.co.uk/asset/f8170aa3-4862-7d4c-bb98-26f7faac98ff"
+                },
+                "summary": "DONALD TRUMP NO GO GREE MEK DEM TURN NIGERIA TO ISLAM- FANI KAYODE summary",
+                "timestamp": 1497630188000,
+                "language": "pcm",
+                "byline": {
+                  "name": "Reno Omokri",
+                  "title": "BBC Pidgin editor",
+                  "persons": [
+                    {
+                      "name": "Reno Omokri",
+                      "function": "BBC Pidgin editor",
+                      "thumbnail": "http://b.files.bbci.co.uk/A81A/test/_63543034_160223170857_somalia_640x360__nocredit.jpg",
+                      "twitterName": "renoomokri"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63542695",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/E8E8/test/_63542695_160225094449_mohamed_ould_abdel_aziz_512x288_bbc_nocredit.jpg",
+                  "path": "/cpsdevpb/E8E8/test/_63542695_160225094449_mohamed_ould_abdel_aziz_512x288_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Bros Fani- Kayode bin call Trump for phone to show say him hapi for am as e be sey im win election as US President",
+                  "caption": "Bros Fani- Kayode bin call Trump for phone to show say him hapi for am as e be sey im win election as US President",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "imageThumbnail": {
+                  "id": "63542697",
+                  "subType": "index-thumbnail",
+                  "href": "http://b.files.bbci.co.uk/13708/test/_63542697_160225094449_mohamed_ould_abdel_aziz_512x288_bbc_nocredit.jpg",
+                  "path": "/cpsdevpb/13708/test/_63542697_160225094449_mohamed_ould_abdel_aziz_512x288_bbc_nocredit.jpg",
+                  "height": 180,
+                  "width": 320,
+                  "altText": "Bros Fani- Kayode bin call Trump for phone to show say him hapi for am as e be sey im win election as US President",
+                  "caption": "Bros Fani- Kayode bin call Trump for phone to show say him hapi for am as e be sey im win election as US President",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "section": {
+                  "subType": "IDX",
+                  "name": "Domot",
+                  "uri": "/pidgin/front_page",
+                  "type": "simple"
+                },
+                "relatedItems": [
+                  {
+                    "headlines": {
+                      "headline": "CHARLES OKOCHA DEY TEACH IM PIKIN NEW SWAG"
+                    },
+                    "locators": {
+                      "assetUri": "/pidgin/23133939",
+                      "cpsUrn": "urn:bbc:content:assetUri:/pidgin/23133939"
+                    },
+                    "summary": "Tori wey dey hapun now be sey Nollywood actor, Charles Okocha and im pikin dey do father and son things.",
+                    "timestamp": 1497878609000,
+                    "language": "pcm",
+                    "cpsType": "MAP",
+                    "mediaType": "Video",
+                    "id": "urn:bbc:ares::asset:pidgin/23133939",
+                    "type": "cps"
+                  },
+                  {
+                    "headlines": {
+                      "headline": "Test - DONALD TRUMP NO GO GREE MEK DEM TURN NIGERIA TO ISLAM- FANI KAYODE sport"
+                    },
+                    "locators": {
+                      "assetUri": "/pidgin/sport-23133561",
+                      "cpsUrn": "urn:bbc:content:assetUri:/pidgin/sport-23133561"
+                    },
+                    "summary": "DONALD TRUMP NO GO GREE MEK DEM TURN NIGERIA TO ISLAM- FANI KAYODE summary",
+                    "timestamp": 1497544543000,
+                    "language": "pcm",
+                    "cpsType": "STY",
+                    "id": "urn:bbc:ares::asset:pidgin/sport-23133561",
+                    "type": "cps"
+                  },
+                  {
+                    "headlines": {
+                      "headline": "BBC Pidgin test: Arsenal, Atletico, Bayern don enta Champions League last 16"
+                    },
+                    "locators": {
+                      "assetUri": "/pidgin/live/tori-23133495",
+                      "cpsUrn": "urn:bbc:content:assetUri:/pidgin/live/tori-23133495"
+                    },
+                    "summary": "Atletico Madrid, Arsenal, PSG and Bayern na the four club wey don enta the last 16 of the Champions League, 2016",
+                    "timestamp": 1497534135000,
+                    "language": "pcm",
+                    "cpsType": "LIV",
+                    "liveStatus": "AUTO",
+                    "id": "urn:bbc:ares::asset:pidgin/live/tori-23133495",
+                    "type": "cps"
+                  }
+                ],
+                "id": "urn:bbc:ares::asset:pidgin/23132976",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "BBC Pidgin test: Arsenal, Atletico, Bayern don enta Champions League last 16"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/live/tori-23133495",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8e3c7865-fdde-3c49-814f-caf27f0df5d2",
+                  "assetId": "23133495",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/live/tori-23133495",
+                  "curie": "http://www.bbc.co.uk/asset/8e3c7865-fdde-3c49-814f-caf27f0df5d2"
+                },
+                "summary": "Atletico Madrid, Arsenal, PSG and Bayern na the four club wey don enta the last 16 of the Champions League, 2016",
+                "timestamp": 1497534135000,
+                "language": "pcm",
+                "cpsType": "LIV",
+                "indexImage": {
+                  "id": "63543197",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/1351E/test/_63543197_160928204129_theo_walcott__640x360_pa_nocredit.jpg",
+                  "path": "/cpsdevpb/1351E/test/_63543197_160928204129_theo_walcott__640x360_pa_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Arsenal, Atletico, Bayern don enta Champions League last 16",
+                  "caption": "Arsenal, Atletico, Bayern don enta Champions League last 16",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "commentary": {
+                  "order": "descending",
+                  "assetUUID": "015272297F76D546BCD367DF5BD3E266",
+                  "channels": {
+                    "enhancedmobile": "bbc.cps.asset.23133496_EnhancedMobile",
+                    "desktop": "bbc.cps.asset.23133496_HighWeb",
+                    "highweb": "bbc.cps.asset.23133496_HighWeb",
+                    "mobile": "bbc.cps.asset.23133496_EnhancedMobile"
+                  }
+                },
+                "imageThumbnail": {
+                  "id": "63543199",
+                  "subType": "index-thumbnail",
+                  "href": "http://b.files.bbci.co.uk/1833E/test/_63543199_160928204129_theo_walcott__640x360_pa_nocredit.jpg",
+                  "path": "/cpsdevpb/1833E/test/_63543199_160928204129_theo_walcott__640x360_pa_nocredit.jpg",
+                  "height": 180,
+                  "width": 320,
+                  "altText": "Arsenal, Atletico, Bayern don enta Champions League last 16",
+                  "caption": "Arsenal, Atletico, Bayern don enta Champions League last 16",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "liveStatus": "AUTO",
+                "id": "urn:bbc:ares::asset:pidgin/live/tori-23133495",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Oga kpatakpata for Dangote Group, Aliko Dangote, don yan sey water don pass garri oo for the kind poverty wey Naija pipo dey inside"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/media-23133346",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:cead9bf9-edc2-a944-8587-fddd68cfc309",
+                  "assetId": "23133346",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23133346",
+                  "curie": "http://www.bbc.co.uk/asset/cead9bf9-edc2-a944-8587-fddd68cfc309"
+                },
+                "summary": "Oga kpatakpata for Dangote Group, Aliko Dangote, don yan sey water don pass garri oo for the kind poverty wey Naija pipo dey inside",
+                "timestamp": 1497525436000,
+                "language": "pcm",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "cpsType": "PGL",
+                "indexImage": {
+                  "id": "63543041",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/36D2/test/_63543041_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
+                  "path": "/cpsdevpb/36D2/test/_63543041_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "MEK GOVAMENT REMOVE ALL THE YEYE YEYE HOUSE FOR QUEENS BARRACKS- BASKET MOUTH",
+                  "caption": "MEK GOVAMENT REMOVE ALL THE YEYE YEYE HOUSE FOR QUEENS BARRACKS- BASKET MOUTH",
+                  "copyrightHolder": "Magnum Photos",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "imageThumbnail": {
+                  "id": "63543093",
+                  "subType": "index-thumbnail",
+                  "href": "http://b.files.bbci.co.uk/987A/test/_63543093_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
+                  "path": "/cpsdevpb/987A/test/_63543093_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
+                  "height": 180,
+                  "width": 320,
+                  "altText": "MEK GOVAMENT REMOVE ALL THE YEYE YEYE HOUSE FOR QUEENS BARRACKS- BASKET MOUTH",
+                  "caption": "MEK GOVAMENT REMOVE ALL THE YEYE YEYE HOUSE FOR QUEENS BARRACKS- BASKET MOUTH",
+                  "copyrightHolder": "Magnum Photos",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/media-23133346",
+                "type": "cps"
+              },
+              {
+                "name": "WETIN UNEMPLOYMENT CAUSE FOR CHINA promo",
+                "summary": "For China pipo wey reach 10,000 apply for the job of receptionist, for the in the civil servants examination wey China won do.",
+                "uri": "http://www.test.bbc.co.uk/pidgin?_x_candy_override=https://api.test.bbc.co.uk",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1497539398000,
+                "type": "link"
+              },
+              {
+                "name": "Eagles be like 94 Team- Babayaro",
+                "summary": "Former Nigeria international Celestine Babayaro don salute the Super Eagles boys and the way dem tek play futbol under new manager Gernot Rohr",
+                "indexImage": {
+                  "id": "63549173",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/914A/test/_63549173_140223222022_512x288i.jpg",
+                  "path": "/cpsdevpb/914A/test/_63549173_140223222022_512x288i.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "Eagles be like 94 Team- Babayaro",
+                  "caption": "Eagles be like 94 Team- Babayaro",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "indexThumbnail": {
+                  "id": "63549175",
+                  "subType": "index-thumbnail",
+                  "href": "http://b.files.bbci.co.uk/DF6A/test/_63549175_140223222022_512x288i.jpg",
+                  "path": "/cpsdevpb/DF6A/test/_63549175_140223222022_512x288i.jpg",
+                  "height": 180,
+                  "width": 320,
+                  "altText": "Eagles be like 94 Team- Babayaro",
+                  "caption": "Eagles be like 94 Team- Babayaro",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "uri": "http://pidginnews.com/eagles-like-94-team-babayaro/",
+                "contentType": "Infographic",
+                "assetTypeCode": "PRO",
+                "timestamp": 1497539203000,
+                "type": "link"
+              },
+              {
+                "headlines": {
+                  "headline": "How US, North Korea Dey Beat War Drums"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23147215",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:b0905be8-54c1-d843-856f-cbe54ba2c4c5",
+                  "assetId": "23147215",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23147215",
+                  "curie": "http://www.bbc.co.uk/asset/b0905be8-54c1-d843-856f-cbe54ba2c4c5"
+                },
+                "summary": "North Korea say dem dey prepare plan for how dem go fire missile for inside Guam wey be US Island for Asia.",
+                "timestamp": 1502362660000,
+                "language": "pcm",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63587806",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/EDCE/test/_63587806_trumpkim.jpg",
+                  "path": "/cpsdevpb/EDCE/test/_63587806_trumpkim.jpg",
+                  "height": 405,
+                  "width": 720,
+                  "altText": "Kim Jong-Un for North Korea and Donald Trump wey be US President",
+                  "caption": "Kim Jong-Un and Donald Trump : Dem No Dey See Eye to Eye",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23147215",
+                "type": "cps"
+              },
+              {
+                "name": "Antarctica: Climate change dey give you 'high blood pressure'? Three steps wey fit help",
+                "summary": "Di temperature for Antarctica - di coldest place for world - don pass 20C for di first time, afta researchers record temperature of 20.7C for one island wey dey di coast of di continent.",
+                "indexImage": {
+                  "id": "63731492",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/72E5/test/_63731492__110911319_antartica.jpg",
+                  "path": "/cpsdevpb/72E5/test/_63731492__110911319_antartica.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "Temperature change picture",
+                  "caption": "Temp for antartica",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/pidgin/world-51506953",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/pidgin/world-51506953",
+                "contentType": "RadioBulletin",
+                "assetTypeCode": "PRO",
+                "timestamp": 1581941378000,
+                "type": "link"
+              },
+              {
+                "headlines": {
+                  "headline": "South Africa no Get Money for Army"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23139944",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:b582d74a-439a-1741-befd-c7af2c57b9b2",
+                  "assetId": "23139944",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23139944",
+                  "curie": "http://www.bbc.co.uk/asset/b582d74a-439a-1741-befd-c7af2c57b9b2"
+                },
+                "summary": "South Africa Minister for Defence, Nosiviwe Nquakula, talk say as things be now, South Africa no fit no send soldiers on peacekeeping",
+                "timestamp": 1502219853000,
+                "language": "pcm",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63577276",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/106CD/test/_63577276_tv000046325.jpg",
+                  "path": "/cpsdevpb/106CD/test/_63577276_tv000046325.jpg",
+                  "height": 432,
+                  "width": 768,
+                  "altText": "BBC",
+                  "caption": "South Africa Army no go fit join fit protect the country",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23139944",
+                "type": "cps"
+              },
+              {
+                "name": "Uganda star wey feature for Queen of Katwe movie Nikita Pearl Waligwa don die",
+                "summary": "Uganda star wey feature for Queen of Katwe movie Nikita Pearl Waligwa don die",
+                "indexImage": {
+                  "id": "63731496",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/10F25/test/_63731496__110928540_bbc.jpg",
+                  "path": "/cpsdevpb/10F25/test/_63731496__110928540_bbc.jpg",
+                  "height": 371,
+                  "width": 660,
+                  "altText": "Alternate tag",
+                  "caption": "Coronavirus",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/pidgin/media-44221514",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/pidgin/media-44221514",
+                "contentType": "TVBulletin",
+                "assetTypeCode": "PRO",
+                "timestamp": 1581941715000,
+                "type": "link"
+              },
+              {
+                "headlines": {
+                  "headline": "South Korea Wan Follow North Talk"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23139864",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:e6479504-a483-fd44-a9c5-5cd3da4f1a41",
+                  "assetId": "23139864",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23139864",
+                  "curie": "http://www.bbc.co.uk/asset/e6479504-a483-fd44-a9c5-5cd3da4f1a41"
+                },
+                "summary": "South Korea dey hope say North Korea fit meet dem make dem talk before mata reach military tension",
+                "timestamp": 1502220340000,
+                "language": "pcm",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63577226",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/F345/test/_63577226_missileslaunch.jpg",
+                  "path": "/cpsdevpb/F345/test/_63577226_missileslaunch.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Missiles being launched",
+                  "copyrightHolder": "AFP",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23139864",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Kaduna: Government Order More Police"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/23141241",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:9f2e9c73-d22b-b14c-a557-bfdca715dd51",
+                  "assetId": "23141241",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/23141241",
+                  "curie": "http://www.bbc.co.uk/asset/9f2e9c73-d22b-b14c-a557-bfdca715dd51"
+                },
+                "summary": "Acting Nigerian President, Yemi Osinbajo, don order more security officers for Kaduna State after the big trouble wey happen for villages in Northern parts of the state.",
+                "timestamp": 1502222909000,
+                "language": "pcm",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63579338",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/145C5/test/_63579338_police.jpg",
+                  "path": "/cpsdevpb/145C5/test/_63579338_police.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "More Nigerian Police join for Kaduna",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "section": {
+                  "subType": "IDX",
+                  "name": "Domot",
+                  "uri": "/pidgin/front_page",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:pidgin/23141241",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Lagos Demolish Shanties for Obalende"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23143554",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:28817483-9401-b04a-8ea8-6aa65ec3f9e3",
+                  "assetId": "23143554",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23143554",
+                  "curie": "http://www.bbc.co.uk/asset/28817483-9401-b04a-8ea8-6aa65ec3f9e3"
+                },
+                "summary": "Lagos State Government don demolish illegal structures for Obalende after grace period expire",
+                "timestamp": 1502226291000,
+                "language": "pcm",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63582324",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/A558/test/_63582324_20170729_083830.jpg",
+                  "path": "/cpsdevpb/A558/test/_63582324_20170729_083830.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "People wey dey sell never come when demolition begin",
+                  "caption": "People wey dey sell never come when demolition begin for early morning",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23143554",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Container Top Stories"
+          },
+          {
+            "type": "av-stories-now",
+            "title": "Watch/Listen",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "BBC News Pidgin One Minute News"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/media-23147054",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:800b4caf-3081-5047-ba3f-4f46a9344aae",
+                  "assetId": "23147054",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23147054",
+                  "curie": "http://www.bbc.co.uk/asset/800b4caf-3081-5047-ba3f-4f46a9344aae"
+                },
+                "summary": "All di local and world tori wey you suppose know in 60 seconds!",
+                "timestamp": 1502963087000,
+                "language": "pcm",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p01cqycr",
+                  "subType": "clip",
+                  "format": "audio",
+                  "title": "BBC News Piding One Minute News",
+                  "synopses": {
+                    "short": "The Wold's most interesting stories",
+                    "medium": "The Wold's most interesting stories",
+                    "long": "The Wold's most interesting stories"
+                  },
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cqz13.jpg",
+                  "embedding": false,
+                  "advertising": true,
+                  "caption": "The Wold's most interesting stories",
+                  "versions": [
+                    {
+                      "versionId": "p01cqyct",
+                      "types": ["Original"],
+                      "duration": 15,
+                      "durationISO8601": "PT15S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1502288512000
+                    }
+                  ],
+                  "smpKind": "radioProgramme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "63708074",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/B7E8/test/_63708074_mediaitem63708073.png",
+                  "path": "/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "BBC MInute",
+                  "caption": "BBC Pidgin minute",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/media-23147054",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Demolition"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/23247498",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:99cb416f-ec61-b142-a693-9f44d85bbd75",
+                  "assetId": "23247498",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/23247498",
+                  "curie": "http://www.bbc.co.uk/asset/99cb416f-ec61-b142-a693-9f44d85bbd75"
+                },
+                "summary": "A bus driver ruined a perfect shot",
+                "timestamp": 1567088904000,
+                "language": "pcm",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p01ggx4d",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "Demolition",
+                  "synopses": {
+                    "short": "A bus driver ruined a perfect shot"
+                  },
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01ggx88.jpg",
+                  "embedding": true,
+                  "advertising": true,
+                  "caption": "A bus driver ruined a perfect shot",
+                  "versions": [
+                    {
+                      "versionId": "p01ggx4g",
+                      "types": ["Original"],
+                      "duration": 38,
+                      "durationISO8601": "PT38S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1518788866000
+                    }
+                  ],
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "63712783",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/9741/test/_63712783_p01ggx88.jpg",
+                  "path": "/cpsdevpb/9741/test/_63712783_p01ggx88.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Keyframe #1",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "section": {
+                  "subType": "IDX",
+                  "name": "Domot",
+                  "uri": "/pidgin/front_page",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:pidgin/23247498",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "International Audio Embedding enabled"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/media-23256553",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:d0e0c0ce-f07f-bb43-a3ac-3a0729e9b58a",
+                  "assetId": "23256553",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23256553",
+                  "curie": "http://www.bbc.co.uk/asset/d0e0c0ce-f07f-bb43-a3ac-3a0729e9b58a"
+                },
+                "summary": "International Audio Embedding enabled",
+                "timestamp": 1574705422000,
+                "language": "pcm",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "63501300",
+                  "subType": "index",
+                  "format": "audio",
+                  "externalId": "bbc_world_service_west_africa",
+                  "duration": "PT0S",
+                  "caption": "audio stream",
+                  "image": {
+                    "id": "63501300",
+                    "subType": "thumbnail",
+                    "href": "http://b.files.bbci.co.uk/1197E/test/_63726027_test66.jpg",
+                    "path": "/cpsdevpb/1197E/test/_63726027_test66.jpg",
+                    "height": 360,
+                    "width": 640,
+                    "altText": "test image",
+                    "copyrightHolder": "(C) British Broadcasting Corporation",
+                    "type": "image"
+                  },
+                  "embedding": true,
+                  "available": true,
+                  "live": true,
+                  "type": "version"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/media-23256553",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Update on Bayelsa Election"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/23259748",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:5058846b-4e68-be42-ada7-f4d4336447b8",
+                  "assetId": "23259748",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/23259748",
+                  "curie": "http://www.bbc.co.uk/asset/5058846b-4e68-be42-ada7-f4d4336447b8"
+                },
+                "summary": "Nigeria election office, Independent National Electoral Commission - INEC say APC Govnorship candidate go participate for 16 November election.",
+                "timestamp": 1576670920000,
+                "language": "pcm",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "63501279",
+                  "subType": "index",
+                  "format": "video",
+                  "externalId": "bbc_news_channel_hd",
+                  "duration": "PT0S",
+                  "caption": "Update on Bayelsa Election",
+                  "image": {
+                    "id": "63501279",
+                    "subType": "thumbnail",
+                    "href": "http://b.files.bbci.co.uk/C3A2/test/_63728005_election.png",
+                    "path": "/cpsdevpb/C3A2/test/_63728005_election.png",
+                    "height": 549,
+                    "width": 976,
+                    "altText": "election",
+                    "copyrightHolder": "BBC",
+                    "type": "image"
+                  },
+                  "embedding": false,
+                  "available": true,
+                  "live": true,
+                  "type": "version"
+                },
+                "indexImage": {
+                  "id": "63728007",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/111C2/test/_63728007__104099041_buhari_atiku976.png",
+                  "path": "/cpsdevpb/111C2/test/_63728007__104099041_buhari_atiku976.png",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "test",
+                  "caption": "test",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/23259748",
+                "type": "cps"
+              }
+            ],
+            "strapline": {
+              "name": "Yarn Me Tori"
+            },
+            "semanticGroupName": "Watch/Listen"
+          },
+          {
+            "type": "topic-cluster",
+            "title": "Standalone Topic Cluster",
+            "items": [
+              {
+                "name": "Covid-19: How China town for Lagos dey reason Coronavirus",
+                "summary": "Covid-19: How China town for Lagos dey reason Coronavirus",
+                "indexImage": {
+                  "id": "63587724",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/A71A/test/_63587724_jane7.jpg",
+                  "path": "/cpsdevpb/A71A/test/_63587724_jane7.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "Uchenna Obunadike",
+                  "caption": "Uchenna Obunadike die for the Anambra church attack",
+                  "copyrightHolder": "Uchenna Obunadike/Facebook",
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/pidgin/tori-51355986",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/pidgin/tori-51355986",
+                "contentType": "Feature",
+                "assetTypeCode": "PRO",
+                "timestamp": 1581937703000,
+                "type": "link"
+              },
+              {
+                "headlines": {
+                  "headline": "Makwala Don Come Back"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23146974",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:d3b5f1f7-5ef9-fe4b-b24c-9400b204467a",
+                  "assetId": "23146974",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146974",
+                  "curie": "http://www.bbc.co.uk/asset/d3b5f1f7-5ef9-fe4b-b24c-9400b204467a"
+                },
+                "summary": "Isaac Makwala don qualify for semi-final after IAAF Allow Him Run",
+                "timestamp": 1502304514000,
+                "language": "pcm",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63586237",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/11E34/test/_63586237_makwala.jpg",
+                  "path": "/cpsdevpb/11E34/test/_63586237_makwala.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "Picture of Makwala",
+                  "caption": "Makwala say e pain am well well as Im no run",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23146974",
+                "type": "cps"
+              }
+            ],
+            "strapline": {
+              "name": "Sport"
+            },
+            "semanticGroupName": "Standalone Topic Cluster"
+          },
+          {
+            "type": "feature-main",
+            "title": "Features and Analysis",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "How Lagos Dey Fight Lassa Fever"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23146625",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:fd1307eb-2887-1b40-b64c-d95841bdfebd",
+                  "assetId": "23146625",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146625",
+                  "curie": "http://www.bbc.co.uk/asset/fd1307eb-2887-1b40-b64c-d95841bdfebd"
+                },
+                "summary": "100 workers for LUTH dey under observation after two people die from Lassa Fever.",
+                "timestamp": 1502300525000,
+                "language": "pcm",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63586234",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/A904/test/_63586234_lassalagos.jpg",
+                  "path": "/cpsdevpb/A904/test/_63586234_lassalagos.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "Nurses for LUTH isolation Center",
+                  "caption": "Lassa Fever don show again for Nigeria",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23146625",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/media-23267821",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:0f35c912-afc7-1a4b-9518-7853401c1149",
+                  "assetId": "23267821",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23267821",
+                  "curie": "http://www.bbc.co.uk/asset/0f35c912-afc7-1a4b-9518-7853401c1149"
+                },
+                "summary": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.",
+                "timestamp": 1581940273000,
+                "language": "pcm",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p01p5qfc",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "Justin Trudeau wins Canadian election with minority government",
+                  "synopses": {
+                    "short": "Voters take to the polls in the Canadian election",
+                    "long": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.Th BBC's Lyce Ducette reports.",
+                    "medium": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote."
+                  },
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01p5ql9.jpg",
+                  "embedding": true,
+                  "advertising": true,
+                  "caption": "Canada's general election took place on Monday 22 October",
+                  "versions": [
+                    {
+                      "versionId": "p01p5qff",
+                      "types": ["Original"],
+                      "duration": 67,
+                      "durationISO8601": "PT1M7S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1571751302000
+                    }
+                  ],
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "63731474",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/B935/test/_63731474_p01p5ql9.jpg",
+                  "path": "/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "Keyframe #2",
+                  "copyrightHolder": "AFP",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/media-23267821",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Kojey Radical: Why gigs feel like football matches"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/23267823",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:5649a73b-773b-5b45-9f3e-cb0ed14efb5b",
+                  "assetId": "23267823",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/23267823",
+                  "curie": "http://www.bbc.co.uk/asset/5649a73b-773b-5b45-9f3e-cb0ed14efb5b"
+                },
+                "summary": "Kojey Radical and guests discuss how to write about something you’ve not experienced.",
+                "timestamp": 1581940421000,
+                "language": "pcm",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "23267824",
+                  "subType": "index",
+                  "format": "audio",
+                  "externalId": "w3csz54v",
+                  "entityType": "Episode",
+                  "caption": "Kojey Radical and guests discuss how to write about something you’ve not experienced.",
+                  "statusCode": 410,
+                  "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                  "type": "external_vpid"
+                },
+                "indexImage": {
+                  "id": "63721223",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/7DD4/test/_63721223_image1.jpg",
+                  "path": "/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "-",
+                  "copyrightHolder": "-",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "section": {
+                  "subType": "IDX",
+                  "name": "Domot",
+                  "uri": "/pidgin/front_page",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:pidgin/23267823",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Libya: omo ile Ghana márùndínláàdóje pada sile"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23169387",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:7e55bb3e-6260-064a-b66b-6ff259080e38",
+                  "assetId": "23169387",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23169387",
+                  "curie": "http://www.bbc.co.uk/asset/7e55bb3e-6260-064a-b66b-6ff259080e38"
+                },
+                "summary": "Omo Orileede Ghana to le ni márùndínláàdóje ti pada sile lati Libya ti won ti lo se atipo, leyin ti fonran fihan wipe won n ta won bi eru.",
+                "timestamp": 1512472247000,
+                "language": "pcm",
+                "byline": {
+                  "name": "By Funmi Jokotade",
+                  "title": "BBC News, Nigeria",
+                  "persons": [
+                    {
+                      "name": "Chris Sanctus Okereke",
+                      "function": "Broadcast Journalist"
+                    }
+                  ]
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63603618",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/13EDE/test/_63603618_040299897-1.jpg",
+                  "path": "/cpsdevpb/13EDE/test/_63603618_040299897-1.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "MIGRANTS",
+                  "caption": "atipo lati ile adunlawo fi emi ara won wewu lati lo soke okun",
+                  "copyrightHolder": "AFP",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23169387",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Like Scaramucci, Like Others"
+                },
+                "locators": {
+                  "assetUri": "/news/world-africa-23143884",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:b2b93a75-0950-4149-a672-1ddb7e80ed13",
+                  "assetId": "23143884",
+                  "cpsUrn": "urn:bbc:content:assetUri:news/world-africa-23143884",
+                  "curie": "http://www.bbc.co.uk/asset/b2b93a75-0950-4149-a672-1ddb7e80ed13"
+                },
+                "summary": "President Trump sack Anthony Scaramucci after ten days for office, but wetin happen to Scaramucci don happen to other people before.",
+                "timestamp": 1502195546000,
+                "language": "en-gb",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63582573",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/9298/test/_63582573_scaramucci.jpg",
+                  "path": "/cpsdevpb/9298/test/_63582573_scaramucci.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Anthony Scaramucci na former Communications Director for White House",
+                  "copyrightHolder": "Reuters",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "section": {
+                  "subType": "IDX",
+                  "name": "Africa",
+                  "uri": "/news/world/africa",
+                  "type": "simple"
+                },
+                "site": {
+                  "subType": "site",
+                  "name": "BBC News",
+                  "uri": "/news",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:news/world-africa-23143884",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Anambra Attack: 'My Friend Uchenna na Nice Girl'- Gabros"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23146975",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:845807ce-41ff-df47-9bc2-f84ddf8ad6ad",
+                  "assetId": "23146975",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23146975",
+                  "curie": "http://www.bbc.co.uk/asset/845807ce-41ff-df47-9bc2-f84ddf8ad6ad"
+                },
+                "summary": "Chukwuka Gabros tell BBC about Im friend wey die for the church attack for Ozubulu, Anambra State.",
+                "timestamp": 1502309407000,
+                "language": "pcm",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63587724",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/A71A/test/_63587724_jane7.jpg",
+                  "path": "/cpsdevpb/A71A/test/_63587724_jane7.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "Uchenna Obunadike",
+                  "caption": "Uchenna Obunadike die for the Anambra church attack",
+                  "copyrightHolder": "Uchenna Obunadike/Facebook",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23146975",
+                "type": "cps"
+              }
+            ],
+            "strapline": {
+              "name": "Informate me",
+              "type": "LINK",
+              "links": {
+                "highweb": "https://www.bbc.com/pidgin",
+                "desktop": "https://www.bbc.com/pidgin"
+              }
+            },
+            "semanticGroupName": "Features and Analysis"
+          },
+          {
+            "type": "feature-digest",
+            "title": "Feature Digest",
+            "items": [
+              {
+                "name": "Man City vs West Ham: Bad weather force Premier League to cancel Sunday match",
+                "summary": "Man City vs West Ham: Bad weather force Premier League to cancel Sunday match",
+                "indexImage": {
+                  "id": "63731494",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/C105/test/_63731494__110870927_climategrief5.jpg",
+                  "path": "/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "E dey good for your",
+                  "caption": "E dey good for your wellbeing to reconnect wit nature",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/pidgin/sport-51434980",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/pidgin/sport-51434980",
+                "contentType": "RadioBulletin",
+                "assetTypeCode": "PRO",
+                "timestamp": 1581941235000,
+                "type": "link"
+              },
+              {
+                "headlines": {
+                  "headline": "Anambra Church: Police Arrest 3"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23145776",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:5bcd6ce8-fec9-7e4a-ae03-55931069d29b",
+                  "assetId": "23145776",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23145776",
+                  "curie": "http://www.bbc.co.uk/asset/5bcd6ce8-fec9-7e4a-ae03-55931069d29b"
+                },
+                "summary": "Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp",
+                "timestamp": 1502217403000,
+                "language": "pcm",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63585532",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/5C06/test/_63585532_ozubuluchurch.jpg",
+                  "path": "/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others",
+                  "caption": "Di attack happen for inside St. Philip Catholic Chirch Ozubulu",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23145776",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Kenya Decides 2017 in Pictures"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/23146654",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:84585d0d-3fab-9346-8227-5bc3e67c0214",
+                  "assetId": "23146654",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/23146654",
+                  "curie": "http://www.bbc.co.uk/asset/84585d0d-3fab-9346-8227-5bc3e67c0214"
+                },
+                "summary": "This na some of the picture wey our eye see as Kenya people go vote for election today",
+                "timestamp": 1502222360000,
+                "language": "pcm",
+                "cpsType": "PGL",
+                "indexImage": {
+                  "id": "63586070",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/1B9C/test/_63586070_kenya.jpg",
+                  "path": "/cpsdevpb/1B9C/test/_63586070_kenya.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "This man leather no be for here",
+                  "caption": "See Obama for di corner",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "section": {
+                  "subType": "IDX",
+                  "name": "Domot",
+                  "uri": "/pidgin/front_page",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:pidgin/23146654",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Why The Smiths are actually happy"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/23267826",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:5956d079-297f-114b-b9ab-07b2f666f847",
+                  "assetId": "23267826",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/23267826",
+                  "curie": "http://www.bbc.co.uk/asset/5956d079-297f-114b-b9ab-07b2f666f847"
+                },
+                "summary": "Quantic with guests Rosie Lowe, Adriano Adewale and Emma-Jean Thackray.",
+                "timestamp": 1581941009000,
+                "language": "pcm",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "23267827",
+                  "subType": "index",
+                  "format": "audio",
+                  "externalId": "w3csz54d",
+                  "entityType": "Episode",
+                  "caption": "Quantic with guests Rosie Lowe, Adriano Adewale and Emma-Jean Thackray.",
+                  "statusCode": 410,
+                  "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                  "type": "external_vpid"
+                },
+                "indexImage": {
+                  "id": "63731487",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/1324D/test/_63731487__110199045_gettyimages-1188705707.jpg",
+                  "path": "/cpsdevpb/1324D/test/_63731487__110199045_gettyimages-1188705707.jpg",
+                  "height": 371,
+                  "width": 660,
+                  "altText": "The smiths",
+                  "caption": "The smiths",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "section": {
+                  "subType": "IDX",
+                  "name": "Domot",
+                  "uri": "/pidgin/front_page",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:pidgin/23267826",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Index headline/short: How a peace icon ended up at a genocide trial"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/23267828",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:d8ac5da3-17d0-8244-ba41-fa6f8773fed0",
+                  "assetId": "23267828",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/23267828",
+                  "curie": "http://www.bbc.co.uk/asset/d8ac5da3-17d0-8244-ba41-fa6f8773fed0"
+                },
+                "summary": "Summary - single sentence on front page: Myanmar's Aung San Suu Kyi is set to defend her country in the International court of Justice.",
+                "timestamp": 1581941121000,
+                "language": "pcm",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p01pns0b",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "Index headline/short: How a peace icon ended up at a genocide trial",
+                  "synopses": {
+                    "short": "Long headline/SEO: Aung San Suu Kyi: How a peace icon ended up at a genocide trial",
+                    "long": "Body text - Cue:Nobel Peace Prize winner Aung San Suu Kyi used to be seen as a symbol of human rights, and spent years under house arrest for promoting democracy.Now, as Myanmar's civilian leader, she is at the International Court of Justice to defend her country against charges of genocide committed against the Rohingya Muslim minority. She will, in fact, be defending the very people who had previously imprisoned her - the military.How did this peace icon wind up in the dock?Video by Nick Beake and Tessa Wong.",
+                    "medium": "Summary - single sentence on front page: Myanmar's Aung San Suu Kyi is set to defend her country in the International court of Justice."
+                  },
+                  "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01pnswn.jpg",
+                  "embedding": true,
+                  "advertising": false,
+                  "caption": "Caption under video when embedded in a text story",
+                  "versions": [
+                    {
+                      "versionId": "p01pns0d",
+                      "types": ["Original"],
+                      "duration": 16,
+                      "durationISO8601": "PT16S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1575972721000
+                    }
+                  ],
+                  "imageCopyright": "Lucy Penwarden",
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "63731490",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/24C5/test/_63731490_p01pnswn.jpg",
+                  "path": "/cpsdevpb/24C5/test/_63731490_p01pnswn.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Mama Mia billboard in Times Square",
+                  "copyrightHolder": "Lucy Penwarden",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "section": {
+                  "subType": "IDX",
+                  "name": "Domot",
+                  "uri": "/pidgin/front_page",
+                  "type": "simple"
+                },
+                "id": "urn:bbc:ares::asset:pidgin/23267828",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Senegal: FA Don Ban US Ouakam"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23140044",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:d5eae64e-3e91-8e4b-add4-c7fc37de76d0",
+                  "assetId": "23140044",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23140044",
+                  "curie": "http://www.bbc.co.uk/asset/d5eae64e-3e91-8e4b-add4-c7fc37de76d0"
+                },
+                "summary": "Na for inside US Oukam stadium the fans been die during match with Stade de Mbour.",
+                "timestamp": 1502218733000,
+                "language": "pcm",
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63577713",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/7C21/test/_63577713_senegalpicturestadium.jpg",
+                  "path": "/cpsdevpb/7C21/test/_63577713_senegalpicturestadium.jpg",
+                  "height": 351,
+                  "width": 624,
+                  "altText": "Senegal",
+                  "caption": "8 people die, sixty eight people na im wound",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23140044",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Indian Coaches Dey Go For Test"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/tori-23139945",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:6a0421c8-f0bb-8b4f-a731-4d7a235d80d6",
+                  "assetId": "23139945",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/tori-23139945",
+                  "curie": "http://www.bbc.co.uk/asset/6a0421c8-f0bb-8b4f-a731-4d7a235d80d6"
+                },
+                "summary": "Sport Minister for India, Vijay Goel, say make coaches wey don reach Forty years go test Demself",
+                "timestamp": 1502219726000,
+                "language": "pcm",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "63577282",
+                  "subType": "index",
+                  "href": "http://b.files.bbci.co.uk/6E75/test/_63577282_hi020307160.jpg",
+                  "path": "/cpsdevpb/6E75/test/_63577282_hi020307160.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Getty AFP",
+                  "caption": "Coaches go run 800m to show say dem still dey full ground",
+                  "copyrightHolder": "Getty AFP",
+                  "originCode": "cpsdevpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/tori-23139945",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "PGL - Blood pressure drugs dey work better"
+                },
+                "locators": {
+                  "assetUri": "/pidgin/sport-23252855",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:e0cab3d5-421d-1c41-a425-4696586278a1",
+                  "assetId": "23252855",
+                  "cpsUrn": "urn:bbc:content:assetUri:pidgin/sport-23252855",
+                  "curie": "http://www.bbc.co.uk/asset/e0cab3d5-421d-1c41-a425-4696586278a1"
+                },
+                "summary": "This is a test asset used in Simorgh, please do not edit it without asking.",
+                "timestamp": 1571836784000,
+                "language": "pcm",
+                "cpsType": "PGL",
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:pidgin/sport-23252855",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Feature Digest"
+          }
+        ]
       },
-      "analyticsLabels": {
-        "cps_asset_type": "fix",
-        "counterName": "pidgin.news.feature_index.23133559.page",
-        "cps_asset_id": "23133559"
+      "promo": {
+        "subType": "IDX",
+        "name": "BBC Pidgin Test FIX",
+        "uri": "/pidgin/tori-23133559",
+        "id": "urn:bbc:ares::index:pidgin/tori-23133559/desktop/domestic",
+        "type": "simple"
       },
-      "tags": {},
-      "version": "v1.3.6",
-      "blockTypes": [
-        "container-top-stories",
-        "container-guides"
-      ],
-      "title": "BBC Pidgin Test FIX",
-      "summary": "BBC Pidgin Test FIX",
-      "atiAnalytics": {
-        "producerName": "PIDGIN",
-        "producerId": "70"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Tori",
+          "uri": "/pidgin/tori",
+          "urlIdentifier": "/pidgin/tori",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Pidgin",
+          "uri": "/pidgin",
+          "urlIdentifier": "/pidgin",
+          "type": "simple"
+        },
+        "groups": []
       }
     },
-    "content": {
-      "groups": [
-        {
-          "type": "container-top-stories",
-          "title": "Container Top Stories",
-          "items": [
-            {
-              "headlines": {
-                "headline": "Test - DONALD TRUMP NO GO GREE MEK DEM TURN NIGERIA TO ISLAM- FANI KAYODE"
-              },
-              "locators": {
-                "assetUri": "/pidgin/23132976",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/23132976",
-                "assetId": "23132976"
-              },
-              "summary": "DONALD TRUMP NO GO GREE MEK DEM TURN NIGERIA TO ISLAM- FANI KAYODE summary",
-              "timestamp": 1497630188000,
-              "language": "pcm",
-              "byline": {
-                "name": "Reno Omokri",
-                "title": "BBC Pidgin editor",
-                "persons": [
-                  {
-                    "name": "Reno Omokri",
-                    "function": "BBC Pidgin editor",
-                    "thumbnail": "http://b.files.bbci.co.uk/A81A/test/_63543034_160223170857_somalia_640x360__nocredit.jpg",
-                    "twitterName": "renoomokri"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "63542695",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/E8E8/test/_63542695_160225094449_mohamed_ould_abdel_aziz_512x288_bbc_nocredit.jpg",
-                "path": "/cpsdevpb/E8E8/test/_63542695_160225094449_mohamed_ould_abdel_aziz_512x288_bbc_nocredit.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "Bros Fani- Kayode bin call Trump for phone to show say him hapi for am as e be sey im win election as US President",
-                "caption": "Bros Fani- Kayode bin call Trump for phone to show say him hapi for am as e be sey im win election as US President",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "imageThumbnail": {
-                "id": "63542697",
-                "subType": "index-thumbnail",
-                "href": "http://b.files.bbci.co.uk/13708/test/_63542697_160225094449_mohamed_ould_abdel_aziz_512x288_bbc_nocredit.jpg",
-                "path": "/cpsdevpb/13708/test/_63542697_160225094449_mohamed_ould_abdel_aziz_512x288_bbc_nocredit.jpg",
-                "height": 180,
-                "width": 320,
-                "altText": "Bros Fani- Kayode bin call Trump for phone to show say him hapi for am as e be sey im win election as US President",
-                "caption": "Bros Fani- Kayode bin call Trump for phone to show say him hapi for am as e be sey im win election as US President",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "section": {
-                "subType": "IDX",
-                "name": "Domot",
-                "uri": "/pidgin/front_page",
-                "type": "simple"
-              },
-              "id": "urn:bbc:ares::asset:pidgin/23132976",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "BBC Pidgin test: Arsenal, Atletico, Bayern don enta Champions League last 16"
-              },
-              "locators": {
-                "assetUri": "/pidgin/live/tori-23133495",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/live/tori-23133495",
-                "assetId": "23133495"
-              },
-              "summary": "Atletico Madrid, Arsenal, PSG and Bayern na the four club wey don enta the last 16 of the Champions League, 2016",
-              "timestamp": 1497534135000,
-              "language": "pcm",
-              "cpsType": "LIV",
-              "indexImage": {
-                "id": "63543197",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/1351E/test/_63543197_160928204129_theo_walcott__640x360_pa_nocredit.jpg",
-                "path": "/cpsdevpb/1351E/test/_63543197_160928204129_theo_walcott__640x360_pa_nocredit.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "Arsenal, Atletico, Bayern don enta Champions League last 16",
-                "caption": "Arsenal, Atletico, Bayern don enta Champions League last 16",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "commentary": {
-                "order": "descending",
-                "assetUUID": "015272297F76D546BCD367DF5BD3E266",
-                "channels": {
-                  "enhancedmobile": "bbc.cps.asset.23133496_EnhancedMobile",
-                  "desktop": "bbc.cps.asset.23133496_HighWeb",
-                  "highweb": "bbc.cps.asset.23133496_HighWeb",
-                  "mobile": "bbc.cps.asset.23133496_EnhancedMobile"
-                }
-              },
-              "isLive": true,
-              "imageThumbnail": {
-                "id": "63543199",
-                "subType": "index-thumbnail",
-                "href": "http://b.files.bbci.co.uk/1833E/test/_63543199_160928204129_theo_walcott__640x360_pa_nocredit.jpg",
-                "path": "/cpsdevpb/1833E/test/_63543199_160928204129_theo_walcott__640x360_pa_nocredit.jpg",
-                "height": 180,
-                "width": 320,
-                "altText": "Arsenal, Atletico, Bayern don enta Champions League last 16",
-                "caption": "Arsenal, Atletico, Bayern don enta Champions League last 16",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:pidgin/live/tori-23133495",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "Oga kpatakpata for Dangote Group, Aliko Dangote, don yan sey water don pass garri oo for the kind poverty wey Naija pipo dey inside"
-              },
-              "locators": {
-                "assetUri": "/pidgin/media-23133346",
-                "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-23133346",
-                "assetId": "23133346"
-              },
-              "summary": "Oga kpatakpata for Dangote Group, Aliko Dangote, don yan sey water don pass garri oo for the kind poverty wey Naija pipo dey inside",
-              "timestamp": 1497525436000,
-              "language": "pcm",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "taggings": []
-              },
-              "cpsType": "PGL",
-              "indexImage": {
-                "id": "63543041",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/36D2/test/_63543041_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
-                "path": "/cpsdevpb/36D2/test/_63543041_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "MEK GOVAMENT REMOVE ALL THE YEYE YEYE HOUSE FOR QUEENS BARRACKS- BASKET MOUTH",
-                "caption": "MEK GOVAMENT REMOVE ALL THE YEYE YEYE HOUSE FOR QUEENS BARRACKS- BASKET MOUTH",
-                "copyrightHolder": "Magnum Photos",
-                "type": "image"
-              },
-              "imageThumbnail": {
-                "id": "63543093",
-                "subType": "index-thumbnail",
-                "href": "http://b.files.bbci.co.uk/987A/test/_63543093_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
-                "path": "/cpsdevpb/987A/test/_63543093_160223135053_rwanda_minister_for_refugees_640x360_bbc_nocredit.jpg",
-                "height": 180,
-                "width": 320,
-                "altText": "MEK GOVAMENT REMOVE ALL THE YEYE YEYE HOUSE FOR QUEENS BARRACKS- BASKET MOUTH",
-                "caption": "MEK GOVAMENT REMOVE ALL THE YEYE YEYE HOUSE FOR QUEENS BARRACKS- BASKET MOUTH",
-                "copyrightHolder": "Magnum Photos",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:pidgin/media-23133346",
-              "type": "cps"
-            }
-          ],
-          "semanticGroupName": "Container Top Stories"
-        },
-        {
-          "type": "container-guides",
-          "title": "Guides 1",
-          "items": [
-            {
-              "name": "Eagles be like 94 Team- Babayaro",
-              "summary": "Former Nigeria international Celestine Babayaro don salute the Super Eagles boys and the way dem tek play futbol under new manager Gernot Rohr",
-              "indexImage": {
-                "id": "63549173",
-                "subType": "index",
-                "href": "http://b.files.bbci.co.uk/914A/test/_63549173_140223222022_512x288i.jpg",
-                "path": "/cpsdevpb/914A/test/_63549173_140223222022_512x288i.jpg",
-                "height": 351,
-                "width": 624,
-                "altText": "Eagles be like 94 Team- Babayaro",
-                "caption": "Eagles be like 94 Team- Babayaro",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "indexThumbnail": {
-                "id": "63549175",
-                "subType": "index-thumbnail",
-                "href": "http://b.files.bbci.co.uk/DF6A/test/_63549175_140223222022_512x288i.jpg",
-                "path": "/cpsdevpb/DF6A/test/_63549175_140223222022_512x288i.jpg",
-                "height": 180,
-                "width": 320,
-                "altText": "Eagles be like 94 Team- Babayaro",
-                "caption": "Eagles be like 94 Team- Babayaro",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "uri": "http://pidginnews.com/eagles-like-94-team-babayaro/",
-              "contentType": "Infographic",
-              "assetTypeCode": "PRO",
-              "timestamp": 1497539203000,
-              "type": "link"
-            }
-          ],
-          "semanticGroupName": "Guides 1"
-        },
-        {
-          "type": "container-guides",
-          "title": "Guides 2",
-          "items": [
-            {
-              "name": "WETIN UNEMPLOYMENT CAUSE FOR CHINA promo",
-              "summary": "For China pipo wey reach 10,000 apply for the job of receptionist, for the in the civil servants examination wey China won do.",
-              "uri": "http://www.test.bbc.co.uk/pidgin?_x_candy_override=https://api.test.bbc.co.uk",
-              "contentType": "Text",
-              "assetTypeCode": "PRO",
-              "timestamp": 1497539398000,
-              "type": "link"
-            }
-          ],
-          "semanticGroupName": "Guides 2"
-        }
-      ]
-    },
-    "promo": {
-      "subType": "IDX",
-      "name": "BBC Pidgin Test FIX",
-      "uri": "/pidgin/tori-23133559",
-      "id": "urn:bbc:ares::index:pidgin/tori-23133559/desktop/domestic",
-      "type": "simple"
-    },
-    "relatedContent": {
-      "section": {
-        "subType": "index",
-        "name": "Tori",
-        "uri": "/pidgin/tori",
-        "type": "simple"
-      },
-      "site": {
-        "subType": "site",
-        "name": "BBC Pidgin",
-        "uri": "/pidgin",
-        "type": "simple"
-      },
-      "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": null
     }
   }
+}
