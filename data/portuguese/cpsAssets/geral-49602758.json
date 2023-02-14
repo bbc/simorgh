@@ -1,341 +1,2965 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:portuguese/geral-49602758",
-    "locators": {
-      "assetUri": "/portuguese/geral-49602758",
-      "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-49602758",
-      "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd",
-      "assetId": "49602758"
-    },
-    "type": "MAP",
-    "createdBy": "brasil-v6",
-    "language": "pt-BR",
-    "lastUpdated": 1588761519035,
-    "firstPublished": 1567799208000,
-    "lastPublished": 1567799208000,
-    "timestamp": 1567799208000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "portuguese.also_in_the_news.media_asset.49602758.page",
-      "cps_asset_id": "49602758"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:portuguese/geral-49602758",
+        "locators": {
+          "assetUri": "/portuguese/geral-49602758",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-49602758",
+          "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd",
+          "assetId": "49602758"
+        },
+        "type": "MAP",
+        "createdBy": "brasil-v6",
+        "language": "pt-BR",
+        "lastUpdated": 1653036507225,
+        "firstPublished": 1567799208000,
+        "lastPublished": 1567799208000,
+        "timestamp": 1567799208000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "portuguese.also_in_the_news.media_asset.49602758.page",
+          "cps_asset_id": "49602758",
+          "contentId": "urn:bbc:cps:curie:asset:0bff94de-2253-a145-be0f-926c848991fd"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.3",
+        "blockTypes": ["media", "paragraph", "list", "image", "social_embed"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "BRASIL",
+          "producerId": "33"
+        },
+        "readTime": 1,
+        "siteUri": "/portuguese",
+        "mediaType": "video"
       },
-      "campaigns": [
-        {
-          "campaignId": "5a988e3739461b000e9dabfa",
-          "campaignName": "WS - Give me perspective"
-        }
-      ],
-      "taggings": []
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "Health",
-          "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
-          "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
-          "thingType": ["core:Thing", "core:Theme", "tagging:TagConcept"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Health",
-            "http://www.wikidata.org/entity/Q12147"
-          ]
-        },
-        {
-          "thingLabel": "Cancer",
-          "thingUri": "http://www.bbc.co.uk/things/583f320b-e25a-433c-ad39-b637a4f27866#id",
-          "thingId": "583f320b-e25a-433c-ad39-b637a4f27866",
-          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q12078",
-            "http://dbpedia.org/resource/Cancer"
-          ]
-        },
-        {
-          "thingLabel": "Stem cells",
-          "thingUri": "http://www.bbc.co.uk/things/58e41e89-4d5e-4af6-b707-8e012bf861b6#id",
-          "thingId": "58e41e89-4d5e-4af6-b707-8e012bf861b6",
-          "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Stem_cell",
-            "http://www.wikidata.org/entity/Q48196"
-          ]
-        }
-      ]
-    },
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph", "list", "image", "social_embed"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p07mnyz5",
-        "subType": "clip",
-        "format": "video",
-        "title": "O drama da mulher em uma busca mundial por doador de células-tronco",
-        "synopses": {
-          "short": "O drama de mulher em uma busca mundial por doador de células-tronco",
-          "long": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.\n\nAstrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.\n\nMas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. \n\nEmbora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.\n\nEla corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.\n\n\"Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte\", desabafa.\n\nO vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
-          "medium": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador."
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mprx8.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "O drama de mulher em uma busca mundial por doador de células-tronco",
-        "versions": [
+      "content": {
+        "blocks": [
           {
-            "versionId": "p07mnyzb",
-            "types": ["Original"],
-            "duration": 213,
-            "durationISO8601": "PT3M33S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p07mnyz5",
+            "subType": "clip",
+            "format": "video",
+            "title": "O drama da mulher em uma busca mundial por doador de células-tronco",
+            "synopses": {
+              "short": "O drama de mulher em uma busca mundial por doador de células-tronco",
+              "long": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.\n\nAstrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.\n\nMas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. \n\nEmbora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.\n\nEla corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.\n\n\"Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte\", desabafa.\n\nO vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
+              "medium": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador."
             },
-            "availableFrom": 1567798828000
-          }
-        ],
-        "imageCopyright": "BBC",
-        "type": "media"
-      },
-      {
-        "text": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Astrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "<itemMeta>portuguese/internacional-49600608</itemMeta>",
-            "meta": [
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mprx8.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "O drama de mulher em uma busca mundial por doador de células-tronco",
+            "versions": [
               {
-                "headlines": {
-                  "shortHeadline": "O que torna o infarto mais letal em pessoas jovens",
-                  "headline": "O que torna o infarto mais letal em pessoas jovens",
-                  "overtyped": "O que torna o infarto mais letal em pessoas jovens"
+                "versionId": "p07mnyzb",
+                "types": ["Original"],
+                "duration": 213,
+                "durationISO8601": "PT3M33S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
                 },
-                "locators": {
-                  "href": "http://www.bbc.com/portuguese/internacional-49600608"
-                },
-                "summary": "Segundo cardiologista, jovens não têm proteção extra no coração como mais velhos; Danilo Feliciano de Moraes, filho mais velho do ex-jogador Cafu, morreu após sofrer infarto enquanto jogava futebol.",
-                "timestamp": 1567706265000,
-                "language": "pt-BR",
-                "passport": {
-                  "category": {
-                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                    "categoryName": "Analysis"
-                  },
-                  "taggings": []
-                },
-                "id": "urn:bbc:ares::asset:portuguese/internacional-49600608",
-                "type": "cps"
+                "availableFrom": 1567798828000
               }
             ],
-            "markupType": "candy_xml",
-            "type": "listItem"
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
           },
           {
-            "text": "<itemMeta>portuguese/geral-49569915</itemMeta>",
-            "meta": [
+            "text": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Astrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "numbered": false,
+            "items": [
               {
-                "headlines": {
-                  "shortHeadline": "Zika causa danos neurológicos também em adultos, aponta estudo",
-                  "headline": "Zika causa danos neurológicos também em adultos, aponta estudo",
-                  "overtyped": "Zika causa danos neurológicos também em adultos, aponta estudo"
-                },
-                "locators": {
-                  "href": "http://www.bbc.com/portuguese/geral-49569915"
-                },
-                "summary": "Além de provocar microcefalia em bebês, vírus tem efeito em células neurais maduras, provocando, em alguns casos, perda de memória e outros prejuízos neurológico, segundo pesquisa realizada na UFRJ.",
-                "timestamp": 1567678027000,
-                "language": "pt-BR",
-                "passport": {
-                  "category": {
-                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                    "categoryName": "News"
-                  },
-                  "taggings": []
-                },
-                "id": "urn:bbc:ares::asset:portuguese/geral-49569915",
-                "type": "cps"
+                "text": "<itemMeta>portuguese/internacional-49600608</itemMeta>",
+                "meta": [
+                  {
+                    "headlines": {
+                      "shortHeadline": "O que torna o infarto mais letal em pessoas jovens",
+                      "headline": "O que torna o infarto mais letal em pessoas jovens",
+                      "overtyped": "O que torna o infarto mais letal em pessoas jovens"
+                    },
+                    "locators": {
+                      "href": "https://www.bbc.com/portuguese/internacional-49600608"
+                    },
+                    "summary": "Segundo cardiologista, jovens não têm proteção extra no coração como mais velhos; Danilo Feliciano de Moraes, filho mais velho do ex-jogador Cafu, morreu após sofrer infarto enquanto jogava futebol.",
+                    "timestamp": 1567706265000,
+                    "language": "pt-BR",
+                    "passport": {
+                      "category": {
+                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                        "categoryName": "Analysis"
+                      },
+                      "taggings": []
+                    },
+                    "id": "urn:bbc:ares::asset:portuguese/internacional-49600608",
+                    "type": "cps"
+                  }
+                ],
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<itemMeta>portuguese/geral-49569915</itemMeta>",
+                "meta": [
+                  {
+                    "headlines": {
+                      "shortHeadline": "Zika causa danos neurológicos também em adultos, aponta estudo",
+                      "headline": "Zika causa danos neurológicos também em adultos, aponta estudo",
+                      "overtyped": "Zika causa danos neurológicos também em adultos, aponta estudo"
+                    },
+                    "locators": {
+                      "href": "https://www.bbc.com/portuguese/geral-49569915"
+                    },
+                    "summary": "Além de provocar microcefalia em bebês, vírus tem efeito em células neurais maduras, provocando, em alguns casos, perda de memória e outros prejuízos neurológico, segundo pesquisa realizada na UFRJ.",
+                    "timestamp": 1567678027000,
+                    "language": "pt-BR",
+                    "passport": {
+                      "category": {
+                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                        "categoryName": "News"
+                      },
+                      "taggings": []
+                    },
+                    "id": "urn:bbc:ares::asset:portuguese/geral-49569915",
+                    "type": "cps"
+                  }
+                ],
+                "markupType": "candy_xml",
+                "type": "listItem"
               }
             ],
+            "type": "list"
+          },
+          {
+            "text": "Mas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Embora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Ela corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte&quot;, desabafa.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "O vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "id": "104602229",
+            "subType": "body",
+            "href": "http://c.files.bbci.co.uk/1683C/production/_104602229_line976.jpg",
+            "path": "/cpsprodpb/1683C/production/_104602229_line976.jpg",
+            "height": 2,
+            "width": 464,
+            "altText": "Línea",
+            "copyrightHolder": "BBC",
+            "positionHint": "body-width",
+            "type": "image"
+          },
+          {
+            "text": "<bold>Já assistiu aos nossos novos vídeos no </bold><link><caption>YouTube</caption><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"highweb\"/><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"enhancedmobile\"/></link><bold>? Inscreva-se no nosso canal! </bold>",
             "markupType": "candy_xml",
-            "type": "listItem"
+            "type": "paragraph"
+          },
+          {
+            "href": "https://www.youtube.com/watch?v=uflBBRUJCfk",
+            "source": "youtube",
+            "id": "uflBBRUJCfk",
+            "type": "social_embed"
+          },
+          {
+            "href": "https://www.youtube.com/watch?v=t0WiAn_TIkI",
+            "source": "youtube",
+            "id": "t0WiAn_TIkI",
+            "type": "social_embed"
+          },
+          {
+            "href": "https://www.youtube.com/watch?v=8w-M0y8CmuU",
+            "source": "youtube",
+            "id": "8w-M0y8CmuU",
+            "type": "social_embed"
           }
-        ],
-        "type": "list"
+        ]
       },
-      {
-        "text": "Mas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "O drama da mulher em uma busca mundial por doador de células-tronco",
+          "headline": "O drama da mulher em uma busca mundial por doador de células-tronco"
+        },
+        "locators": {
+          "assetUri": "/portuguese/geral-49602758",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-49602758",
+          "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd",
+          "assetId": "49602758"
+        },
+        "summary": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador.",
+        "timestamp": 1567799208000,
+        "language": "pt-BR",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "taggings": []
+        },
+        "media": {
+          "id": "p07mnyz5",
+          "subType": "clip",
+          "format": "video",
+          "title": "O drama da mulher em uma busca mundial por doador de células-tronco",
+          "synopses": {
+            "short": "O drama de mulher em uma busca mundial por doador de células-tronco",
+            "long": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.\n\nAstrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.\n\nMas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. \n\nEmbora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.\n\nEla corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.\n\n\"Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte\", desabafa.\n\nO vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
+            "medium": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mprx8.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "O drama de mulher em uma busca mundial por doador de células-tronco",
+          "versions": [
+            {
+              "versionId": "p07mnyzb",
+              "types": ["Original"],
+              "duration": 213,
+              "durationISO8601": "PT3M33S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1567798828000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "108634506",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/EC7F/production/_108634506_p07mprgb.jpg",
+          "path": "/cpsprodpb/EC7F/production/_108634506_p07mprgb.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Astrid, que tem leucemia",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:portuguese/geral-49602758",
+        "type": "cps"
       },
-      {
-        "text": "Embora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ela corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte&quot;, desabafa.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "O vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "104602229",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/1683C/production/_104602229_line976.jpg",
-        "path": "/cpsprodpb/1683C/production/_104602229_line976.jpg",
-        "height": 2,
-        "width": 464,
-        "altText": "Línea",
-        "copyrightHolder": "BBC",
-        "positionHint": "body-width",
-        "type": "image"
-      },
-      {
-        "text": "<bold>Já assistiu aos nossos novos vídeos no </bold><link><caption>YouTube</caption><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"highweb\"/><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"enhancedmobile\"/></link><bold>? Inscreva-se no nosso canal! </bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "href": "https://www.youtube.com/watch?v=uflBBRUJCfk",
-        "source": "youtube",
-        "id": "uflBBRUJCfk",
-        "type": "social_embed"
-      },
-      {
-        "href": "https://www.youtube.com/watch?v=t0WiAn_TIkI",
-        "source": "youtube",
-        "id": "t0WiAn_TIkI",
-        "type": "social_embed"
-      },
-      {
-        "href": "https://www.youtube.com/watch?v=8w-M0y8CmuU",
-        "source": "youtube",
-        "id": "8w-M0y8CmuU",
-        "type": "social_embed"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Geral",
+          "uri": "/portuguese/geral",
+          "urlIdentifier": "/portuguese/geral",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Brasil",
+          "uri": "/portuguese",
+          "urlIdentifier": "/portuguese",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "O drama da mulher em uma busca mundial por doador de células-tronco",
-      "headline": "O drama da mulher em uma busca mundial por doador de células-tronco"
     },
-    "locators": {
-      "assetUri": "/portuguese/geral-49602758",
-      "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-49602758",
-      "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd",
-      "assetId": "49602758"
-    },
-    "summary": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador.",
-    "timestamp": 1567799208000,
-    "language": "pt-BR",
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e3739461b000e9dabfa",
-          "campaignName": "WS - Give me perspective"
-        }
-      ],
-      "taggings": []
-    },
-    "media": {
-      "id": "p07mnyz5",
-      "subType": "clip",
-      "format": "video",
-      "title": "O drama da mulher em uma busca mundial por doador de células-tronco",
-      "synopses": {
-        "short": "O drama de mulher em uma busca mundial por doador de células-tronco",
-        "long": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.\n\nAstrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.\n\nMas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. \n\nEmbora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.\n\nEla corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.\n\n\"Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte\", desabafa.\n\nO vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
-        "medium": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador."
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mprx8.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "O drama de mulher em uma busca mundial por doador de células-tronco",
-      "versions": [
-        {
-          "versionId": "p07mnyzb",
-          "types": ["Original"],
-          "duration": 213,
-          "durationISO8601": "PT3M33S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1567798828000
-        }
-      ],
-      "imageCopyright": "BBC",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "108634506",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/EC7F/production/_108634506_p07mprgb.jpg",
-      "path": "/cpsprodpb/EC7F/production/_108634506_p07mprgb.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "Astrid, que tem leucemia",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:portuguese/geral-49602758",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Geral",
-      "uri": "/portuguese/geral",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Brasil",
-      "uri": "/portuguese",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-14T16:50:24.806Z",
+        "lastRecordTimeStamp": "2023-02-14T16:48:00Z",
+        "firstRecordTimeStamp": "2023-02-14T14:48:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "b84571fd-89b5-2c42-97a6-b51458b97376",
+            "rank": 1,
+            "count": 70,
+            "urn": "urn:bbc:curie:asset:b84571fd-89b5-2c42-97a6-b51458b97376",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Qual é a maior palavra da língua portuguesa registrada no dicionário?",
+                "headline": "Qual é a maior palavra da língua portuguesa registrada no dicionário?"
+              },
+              "locators": {
+                "assetUri": "/portuguese/curiosidades-43938059",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/curiosidades-43938059",
+                "curie": "http://www.bbc.co.uk/asset/b84571fd-89b5-2c42-97a6-b51458b97376",
+                "assetId": "43938059"
+              },
+              "summary": "Com 46 letras, pneumoultramicroscopicossilicovulcanoconiótico descreve indivíduo que possui doença pulmonar causada pela inspiração de cinzas vulcânicas.",
+              "timestamp": 1524950924000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p064nr8b",
+                "subType": "clip",
+                "format": "video",
+                "title": "Qual é a maior palavra da língua portuguesa registrada no dicionário?",
+                "synopses": {
+                  "short": "Qual é a maior palavra da língua portuguesa registrada no dicionário?",
+                  "long": "Você sabe qual é a maior palavra da língua portuguesa registrada em dicionário?\nEntão, respire fundo, segure o fôlego e tente dizer, sem errar, pneumoultramicroscopicossilicovulcanoconiótico.\nA equipe da BBC Brasil em Londres foi submetida à prova de fogo. Foram necessários alguns minutos – acompanhados de algumas engasgadas – para que a palavra fosse finalmente pronunciada.\nCom 46 letras, a palavra teve seu registro feito em 2001 pelo dicionário Houaiss e descreve o indivíduo que possui doença pulmonar causada pela inspiração de cinzas vulcânicas.\nApesar do tamanho, pneumoultramicroscopicossilicovulcanoconiótico está longe de ser uma das maiores palavras do mundo. \nA isso se deve ao fato de que o português é uma língua flexiva (também chamada de flexional ou fusional), diferentemente do húngaro, por exemplo, que é uma língua aglutinante, ou seja, que tende à aglutinação. \n\"Nós aglutinamos também, mas não tanto como em outras línguas. Nossos limites, especialmente na língua do dia a dia, são bem curtos\", resume o professor Pasquale Cipro Neto à BBC Brasil.\nAlgumas palavras, contudo, não estão dicionarizadas, sendo restritas à literatura médica. É o caso do nome químico da maior proteína do mundo, conhecida como titina. A palavra possui 189.819 letras. São necessárias cerca de 3,5 horas para pronunciá-la. \nNo Reino Unido, uma das maiores palavras registradas é o nome de uma estação de trem numa cidade do País de Gales: Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch.\nVeja algumas das maiores palavras do mundo em outros idiomas:\nAlemão: Donaudampfschifffahrtselektrizitätenhauptbetriebswerkbauunterbeamtengesellschaft (“Associação dos Funcionários Subordinados da Construção da Central Elétrica da Companhia de Barcos a Vapor do Danúbio”)\nDinamarquês: speciallaegepraksisplanaegningsstabiliseringsperiode (Período de estabilização para a prática médica de um especialista)\nEspanhol: electroencefalografista (quem estuda pratica a Eletroencefalografia)\nFrancês: anticonstitutionnellement (algo que vai contra a Constituição)\nGrego: λοπαδο­τεμαχο­σελαχο­γαλεο­κρανιο­λειψανο­δριμ­υπο­τριμματο­σιλφιο­καραβο­μελιτο­κατακεχυ­μενο­κιχλ­επι­κοσσυφο­φαττο­περιστερ­αλεκτρυον­οπτο­κεφαλλιο­κιγκλο­πελειο­λαγῳο­σιραιο­βαφη­τραγανο­πτερύγων (A palavra é mencionada na comédia As Mulheres na Assembleia, escrita por Aristófanes - 447-385 a.C.).\nHolandês: Kindercarnavalsoptochtvoorbereidingswerkzaamheden (Preparação para um desfile infantil de carnaval)\nHúngaro: megszentségtelenithetetlenségeskedéseitekért (descreve o comportamento de alguém que não pode ser desacatado).\nItaliano: precipitevolissimevolmente (alguém que age de maneira precipitada)\nSueco: Nordöstersjökustartilleriflygspaningssimulatoraeistoa do anläggningsmaterielunderhållsuppföljningssystemdiskussionsinläggsförberedelsearbeten (trabalho preparatório de contribuição para a discussão sobre o sistema de manutenção de suporte do material do dispositivo de inspeção do simulador de aviação da artilharia de costa do norte do Mar Báltico)",
+                  "medium": "Com 46 letras, pneumoultramicroscopicossilicovulcanoconiótico descreve indivíduo que possui doença pulmonar causada pela inspiração de cinzas vulcânicas."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p065mnd2.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Qual é a maior palavra da língua portuguesa registrada no dicionário?",
+                "versions": [
+                  {
+                    "versionId": "p064nr8g",
+                    "types": ["Original"],
+                    "duration": 91,
+                    "durationISO8601": "PT1M31S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1524950517000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "101088166",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1028C/production/_101088166_p065mnd2.jpg",
+                "path": "/cpsprodpb/1028C/production/_101088166_p065mnd2.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Montagem - BBC",
+                "caption": "Vídeo BBC",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/curiosidades-43938059",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "532f6619-7940-4d0f-a946-40ab9b9fb3df",
+            "rank": 2,
+            "count": 60,
+            "urn": "urn:bbc:curie:asset:532f6619-7940-4d0f-a946-40ab9b9fb3df",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "7 resgates emocionantes de sobreviventes de terremoto em Síria e Turquia",
+                "headline": "7 resgates emocionantes de sobreviventes de terremoto em Síria e Turquia"
+              },
+              "locators": {
+                "assetUri": "/portuguese/brasil-64605692",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:532f6619-7940-4d0f-a946-40ab9b9fb3df",
+                "assetId": "64605692",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-64605692",
+                "curie": "http://www.bbc.co.uk/asset/532f6619-7940-4d0f-a946-40ab9b9fb3df"
+              },
+              "summary": "Com o frio na região e o passar do tempo, diminuem as chances de salvamentos bem-sucedidos.",
+              "timestamp": 1676059271000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "language": "pt-br",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+                "locator": "urn:bbc:cps:curie:asset:532f6619-7940-4d0f-a946-40ab9b9fb3df",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pt-br",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "Terremotos",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "Turquia",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2fm0k",
+                "subType": "clip",
+                "format": "video",
+                "title": "7 resgates emocionantes de sobreviventes de terremoto em Síria e Turquia",
+                "synopses": {
+                  "short": "7 resgates emocionantes de sobreviventes de terremoto em Síria e Turquia",
+                  "long": "Mais de 22 mil pessoas morreram no terremoto de segunda-feira (6/2) no sul da Turquia e norte da Síria, e moradores de muitas das áreas atingidas têm se queixado de que houve demora das autoridades em prover esforços de resgate. \n\nCom o frio na região e o passar do tempo, diminuem as chances de salvamentos bem-sucedidos. \n\nEm meio ao caos e à tristeza, porém, há cenas emocionantes de pessoas sendo resgatadas com vida, e até de animais sendo salvos. \n\nConfira sete desses momentos, registrados nos últimos dias.",
+                  "medium": "Com o frio na região e o passar do tempo, diminuem as chances de salvamentos bem-sucedidos."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2fyxm.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "7 resgates emocionantes de sobreviventes de terremoto em Síria e Turquia",
+                "versions": [
+                  {
+                    "versionId": "p0f2fm0r",
+                    "types": ["Original"],
+                    "duration": 96,
+                    "durationISO8601": "PT1M36S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676058950000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128597525",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CD63/production/_128597525_p0f2fyxm.jpg",
+                "path": "/cpsprodpb/CD63/production/_128597525_p0f2fyxm.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Criança após ser resgatada de escombros de terremoto",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/brasil-64605692",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a1448acb-a0f2-c646-b2af-b8c136043cbc",
+            "rank": 3,
+            "count": 40,
+            "urn": "urn:bbc:curie:asset:a1448acb-a0f2-c646-b2af-b8c136043cbc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Professor Pasquale responde: quando usar 'porque', 'por que' 'porquê' e 'por quê'?",
+                "headline": "Quando usar 'porque', 'por que' 'porquê' e 'por quê'? Professor Pasquale responde"
+              },
+              "locators": {
+                "assetUri": "/portuguese/brasil-39572054",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-39572054",
+                "curie": "http://www.bbc.co.uk/asset/a1448acb-a0f2-c646-b2af-b8c136043cbc",
+                "assetId": "39572054"
+              },
+              "summary": "Em segundo vídeo de série sobre dúvidas de português, especialista responde a questão que confunde vários leitores da BBC Brasil.",
+              "timestamp": 1491930033000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "pt-br",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+                "locator": "urn:bbc:cps:curie:asset:a1448acb-a0f2-c646-b2af-b8c136043cbc",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31777b10-9008-49e0-a9c0-9dd6f6e7c7fb#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/31777b10-9008-49e0-a9c0-9dd6f6e7c7fb#id",
+                      "thingLabel": "Línguas",
+                      "thingUri": "http://www.bbc.co.uk/things/31777b10-9008-49e0-a9c0-9dd6f6e7c7fb#id",
+                      "thingId": "31777b10-9008-49e0-a9c0-9dd6f6e7c7fb",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q315",
+                        "http://dbpedia.org/resource/Language"
+                      ],
+                      "thingEnglishLabel": "Language",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingLabel": "Educação",
+                      "thingUri": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingId": "6942cb29-9d3f-4c9c-9806-0a0578c286d6",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8434",
+                        "http://dbpedia.org/resource/Education"
+                      ],
+                      "thingEnglishLabel": "Education",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pt-br",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p04zpr9q",
+                "subType": "clip",
+                "format": "video",
+                "title": "Professor Pasquale responde: quando usar 'porque', 'por que' 'porquê' e 'por quê'?",
+                "synopses": {
+                  "short": "Professor Pasquale responde: quando usar 'porque', 'por que' 'porquê' e 'por quê'?",
+                  "medium": "Em segundo vídeo de série sobre dúvidas de português, especialista responde a questão que confunde vários leitores da BBC Brasil.",
+                  "long": "Anderson, Glaciane, Rubia, Robson, Denilson, Myrian, João Pedro, Estelle, Deywer e Victor perguntaram à BBC Brasil quando usar “porque”, “por que” “porquê” e “por quê”.\n\nPara responder esta pergunta, consultamos o professor Pasquale Cipro Neto, que já começa derrubando a ideia compartilhada por muitos de que o “por que” é usado em todas as frases terminadas com ponto de interrogação.\n\n“Isso é o caminho para o naufrágio”, alerta.\n\nConfira, a seguir, dicas para não errar:\n\n• “Por que” separado\n\n“O ‘por que’ separado sempre pode embutir a palavra ‘razão’ ou a palavra ‘motivo’”, explica o professor.\n\nIsso vale para perguntas diretas - “Por que você não foi?\" vira \"Por que razão você não foi?\" e \"Por que você não pagou a conta?\" vira \"Por que motivo você não pagou a conta?\".\n\nE também para a frases terminadas com ponto final - “Você sabe por que eu ajo assim” vira “Você sabe por qual razão eu ajo assim” ou “Você sabe por qual motivo eu ajo assim”.\n\n“E existe ainda um outro ‘por que’ separado\", acrescentou Pasquale. “Lembra aquela música? ‘Só eu sei as esquinas por que passei’, lembra?”.\n\nCom esse exemplo, ele explica que o “por que” também é separado quando equivale a \"pelo qual\", \"pela qual\", \"pelos quais\", \"pelas quais\".\n\nNesse caso da música, a letra também poderia ser: “Só eu sei as esquinas pelas quais passei”.\n\n• \"Porque\" junto \n\nO “porque” junto é uma conjunção que indica causa, motivo, justificativa ou explicação.\n\nUm exemplo: \"Eu não fui porque estava doente\".\n\nDe acordo com o professor, \"Porque estava doente\" é a oração que indica a razão pela qual ele não foi.\n\nNesses casos, o “porque” é junto e sem acento.\n\nCom isso, é possível existir “porque” junto mesmo em frases que terminam com interrogação, como esta: “Será que ela está chateada comigo porque eu não fui ao aniversário dela?”\n\nAlguns professores recomendam tentar trocar o \"porque\" junto por \"pois\". Se der certo, está correto o uso do \"porque\" junto.\n\n• \"Por quê\" separado com acento\n\nO “por quê” separado e com acento é um “por que” separado que está localizado antes de uma pausa na fala ou na escrita.\n\n“É preciso que haja uma pausa, um ponto final, um ponto de interrogação...\" explica Pasquale.\n\nExemplo: “Por quê?”\n\nSó isso. É o mesmo que perguntar \"Por qual razão?\", \"Por qual motivo?\".\n\nDe acordo com o professor, esse \"quê\" vira tônico na entonação.\n\nAssim, quando há um “por que” separado encerrando uma frase, ele ganha o acento e passa a ser “por quê”.\n\n• \"Porquê\" junto com acento\n\nNesse caso, o “porque” vira sinônimo da palavra \"motivo\".\n\nO professor exemplifica: “Qual é o porquê de tanta tristeza?\".\n\nÉ o mesmo que perguntar “Qual é o motivo de tanta tristeza?\"."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04zsmg7.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Professor Pasquale responde: quando usar 'porque', 'por que' 'porquê' e 'por quê'?",
+                "versions": [
+                  {
+                    "versionId": "p04zpr9s",
+                    "types": ["Original"],
+                    "duration": 143,
+                    "durationISO8601": "PT2M23S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1491928700000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95589035",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CF6A/production/_95589035_p04zsmg7.jpg",
+                "path": "/cpsprodpb/CF6A/production/_95589035_p04zsmg7.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "O professor Pasquale Cipro Neto",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/brasil-39572054",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "26ec7185-cada-46f1-aac0-939cd547b411",
+            "rank": 4,
+            "count": 30,
+            "urn": "urn:bbc:curie:asset:26ec7185-cada-46f1-aac0-939cd547b411",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Documentário BBC: exploração de petróleo associada a casos de câncer em crianças no Iraque",
+                "headline": "Documentário BBC: exploração de petróleo associada a casos de câncer em crianças no Iraque"
+              },
+              "locators": {
+                "assetUri": "/portuguese/geral-64591199",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:26ec7185-cada-46f1-aac0-939cd547b411",
+                "assetId": "64591199",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-64591199",
+                "curie": "http://www.bbc.co.uk/asset/26ec7185-cada-46f1-aac0-939cd547b411"
+              },
+              "summary": "Gigantes petrolíferas internacionais estão colocando crianças e adolescentes iraquianos ao risco de desenvolverem formas graves de câncer.",
+              "timestamp": 1675975359000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "pt-br",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+                "locator": "urn:bbc:cps:curie:asset:26ec7185-cada-46f1-aac0-939cd547b411",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b3f4238f-ae69-4c19-8f0e-8bef7d4f359c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/02cfdd49-c5f4-4906-9657-055a810bca41#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pt-br",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/02cfdd49-c5f4-4906-9657-055a810bca41#id",
+                      "thingLabel": "Iraque",
+                      "thingUri": "http://www.bbc.co.uk/things/02cfdd49-c5f4-4906-9657-055a810bca41#id",
+                      "thingId": "02cfdd49-c5f4-4906-9657-055a810bca41",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/99237/"],
+                      "thingEnglishLabel": "Iraq",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id",
+                      "thingLabel": "Poluição do ar",
+                      "thingUri": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id",
+                      "thingId": "0e6837e4-b06b-4574-96da-ebf5957d8a6d",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q131123",
+                        "http://dbpedia.org/resource/Air_pollution"
+                      ],
+                      "thingEnglishLabel": "Air pollution",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b3f4238f-ae69-4c19-8f0e-8bef7d4f359c#id",
+                      "thingLabel": "Indústria petroleira",
+                      "thingUri": "http://www.bbc.co.uk/things/b3f4238f-ae69-4c19-8f0e-8bef7d4f359c#id",
+                      "thingId": "b3f4238f-ae69-4c19-8f0e-8bef7d4f359c",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Petroleum_industry"
+                      ],
+                      "thingEnglishLabel": "Oil & Gas industry",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingLabel": "Saúde",
+                      "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health",
+                        "http://www.wikidata.org/entity/Q12147"
+                      ],
+                      "thingEnglishLabel": "Health",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dz2rjm",
+                "subType": "clip",
+                "format": "video",
+                "title": "Documentário BBC: Exploração de petróleo associada a casos de câncer em crianças no Iraque",
+                "synopses": {
+                  "short": "Documentário BBC: Exploração de petróleo associada a casos de câncer em crianças no Iraque",
+                  "long": "Uma investigação da BBC revela como gigantes petrolíferas internacionais estão colocando crianças e adolescentes iraquianos ao risco de desenvolverem formas graves de câncer - graças à emissão de benzeno no ar.\n\nAli Hussein Julood, de 19 anos, mora dentro do maior campo de petróleo do Iraque, gerenciado pela britânica BP.\n\nNeste documentário, Ali mostra como é a vida no local e como ele e seus vizinhos estão sendo afetados por um problema do qual não têm conseguido escapar.",
+                  "medium": "Gigantes petrolíferas internacionais estão colocando crianças e adolescentes iraquianos ao risco de desenvolverem formas graves de câncer."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f26rb4.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ali Hussein Julood, de 19 anos, mostra como ele e seus vizinhos estão sendo afetados pela poluição.",
+                "versions": [
+                  {
+                    "versionId": "p0dz2rjr",
+                    "types": ["Original"],
+                    "duration": 828,
+                    "durationISO8601": "PT13M48S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675974536000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128583425",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CCD6/production/_128583425_p0f26rb4.jpg",
+                "path": "/cpsprodpb/CCD6/production/_128583425_p0f26rb4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Chamas por queima de gás em estação de petróleo",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/geral-64591199",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b7c46dae-ad59-9140-9398-f7eb18234341",
+            "rank": 5,
+            "count": 27,
+            "urn": "urn:bbc:curie:asset:b7c46dae-ad59-9140-9398-f7eb18234341",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "O que é a teoria da evolução de Charles Darwin e o que inspirou suas ideias revolucionárias",
+                "headline": "O que é a teoria da evolução de Charles Darwin e o que inspirou suas ideias revolucionárias"
+              },
+              "locators": {
+                "assetUri": "/portuguese/geral-50525124",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-50525124",
+                "curie": "http://www.bbc.co.uk/asset/b7c46dae-ad59-9140-9398-f7eb18234341",
+                "assetId": "50525124"
+              },
+              "summary": "Há 160 anos, o naturalista britânico publicava o livro 'A origem das espécies' e mudava radicalmente a biologia com sua explicação sobre a origem do ser humano.",
+              "timestamp": 1574451291000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07vs001",
+                "subType": "clip",
+                "format": "video",
+                "title": "O que é a teoria da evolução de Charles Darwin e o que inspirou suas ideias revolucionárias",
+                "synopses": {
+                  "short": "O que é a teoria da evolução de Charles Darwin e o que inspirou suas ideias",
+                  "long": "Há 160 anos, o naturalista britânico Charles Darwin publicava o livro “A origem das espécies'” (1859) e mudava radicalmente a biologia com sua Teoria da Evolução.\n\nA explicação dele sobre a origem do ser humano representou uma verdadeira revolução — uma vez que, até meados do século 19, a maioria dos cientistas ocidentais compartilhava a ideia de que Deus tinha concebido todas as criaturas do planeta.\n\nAlguns pesquisadores já falavam sobre uma possível evolução das espécies, mas Darwin foi o primeiro a oferecer provas científicas e explicar o mecanismo que a torna possível: a seleção natural.\n\nPor causa disso, ele se tornou um dos pensadores e cientistas mais importantes da história. Mas, antes, precisou embarcar em uma viagem extraordinária por cinco continentes, fazer centenas de experimentos e refinar suas ideias ao longo de 20 anos.\n\nTudo começou em 1831, quando o então estudante de 22 anos da Universidade de Cambridge, no Reino Unido, foi convidado a participar de uma grande expedição como naturalista. \n\nEle passou quase cinco anos a bordo do navio HMS Beagle, percorrendo vários continentes, a começar pela América do Sul. De lá, ele voltou com dezenas de exemplares de espécies vivos, ilustrações e fósseis.\n\nOs fósseis deram a ele uma das primeiras pistas sobre a evolução — quando se deparou com os restos de um milodonte, um animal gigante já extinto, parecido com a preguiça, ele deduziu que a semelhança não poderia ser mera coincidência. \n\nAo passar pelo arquipélago de Galápagos, no Oceano Pacífico, o naturalista observou que em cada ilha existiam espécies distintas de tartarugas, que se diferenciavam pelo tamanho do pescoço e pelo formato dos casos.\n\nApós anos de estudo, ele chegou à conclusão de que as diferenças nas tartarugas que viu em Galápagos eram produto da evolução. \n\nDe acordo com sua teoria, há uma luta pela sobrevivência na natureza, mas aquele que sobrevive não é necessariamente o mais forte e, sim, o que melhor se adapta às condições do ambiente em que vive.\n\nNo ambiente árido, as tartarugas de pescoço longo alcançavam os arbustos para se alimentar. Enquanto aquelas que viviam em local úmido, podiam comer grama e se proteger dos predadores graças ao pescoço curto e à carapaça arredondada.\n\nAvanços científicos vieram a comprovar a teoria de Darwin, e até a Igreja Católica a acabou aceitando décadas mais tarde, com as devidas ressalvas de que a evolução era compatível com a fé.",
+                  "medium": "Há 160 anos, o naturalista britânico publicava o livro 'A origem das espécies' e mudava radicalmente a biologia com sua explicação sobre a origem do ser humano."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07vtr94.png",
+                "embedding": true,
+                "advertising": true,
+                "caption": "O que é a teoria da evolução de Charles Darwin e o que inspirou suas ideias",
+                "versions": [
+                  {
+                    "versionId": "p07vs003",
+                    "types": ["Original"],
+                    "duration": 352,
+                    "durationISO8601": "PT5M52S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1574451041000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109793548",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14A3B/production/_109793548_p07vtr94.png",
+                "path": "/cpsprodpb/14A3B/production/_109793548_p07vtr94.png",
+                "height": 576,
+                "width": 1024,
+                "altText": "Charles Darwin",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/geral-50525124",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "33e88f6c-63f9-4810-8cb6-523ffc30d69a",
+            "rank": 6,
+            "count": 19,
+            "urn": "urn:bbc:curie:asset:33e88f6c-63f9-4810-8cb6-523ffc30d69a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "O momento em que forte terremoto atinge Turquia e Síria",
+                "headline": "O momento em que forte terremoto atinge Turquia e Síria"
+              },
+              "locators": {
+                "assetUri": "/portuguese/internacional-64546624",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:33e88f6c-63f9-4810-8cb6-523ffc30d69a",
+                "assetId": "64546624",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-64546624",
+                "curie": "http://www.bbc.co.uk/asset/33e88f6c-63f9-4810-8cb6-523ffc30d69a"
+              },
+              "summary": "Imagens mostram momento do abalo de magnitude 7,8, que causou milhares de mortes de turcos e sírios.",
+              "timestamp": 1675702798000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "language": "pt-br",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+                "locator": "urn:bbc:cps:curie:asset:33e88f6c-63f9-4810-8cb6-523ffc30d69a",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pt-br",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "Terremotos",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "Turquia",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1dn1p",
+                "subType": "clip",
+                "format": "video",
+                "title": "O momento em que forte terremoto atinge Turquia e Síria",
+                "synopses": {
+                  "short": "O momento em que forte terremoto atinge Turquia e Síria",
+                  "long": "Um forte terremoto de magnitude 7,8 atingiu Turquia e Síria neste 6 de fevereiro, tendo como epicentro os arredores da cidade de Gaziantep.\n\nAté a tarde desta segunda-feira (6/2), o total de mortos já passava de 1,9 mil, e centenas de edifícios ficaram destruídos.\n\nConfira no vídeo.",
+                  "medium": "Imagens mostram momento do abalo de magnitude 7,8, que causou milhares de mortes de turcos e sírios."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1dq8d.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "O momento em que forte terremoto atinge Turquia e Síria",
+                "versions": [
+                  {
+                    "versionId": "p0f1dn1t",
+                    "types": ["Original"],
+                    "duration": 123,
+                    "durationISO8601": "PT2M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675702145000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128541947",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/124A2/production/_128541947_p0f1dq8d.jpg",
+                "path": "/cpsprodpb/124A2/production/_128541947_p0f1dq8d.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Imagens mostram momento do abalo de magnitude 7,8, que causou milhares de mortes de turcos e sírios.",
+                "copyrightHolder": "Um forte terremoto de magnitude 7,8 atingiu Turqui",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/internacional-64546624",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e62a6401-b813-43e4-804d-392b6cd3e3ea",
+            "rank": 7,
+            "count": 18,
+            "urn": "urn:bbc:curie:asset:e62a6401-b813-43e4-804d-392b6cd3e3ea",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "300 dias de guerra na Ucrânia: em mapas, os avanços e recuos das tropas ao longo do ano",
+                "headline": "300 dias de guerra na Ucrânia: em mapas, os avanços e recuos das tropas ao longo do ano"
+              },
+              "locators": {
+                "assetUri": "/portuguese/internacional-64044468",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e62a6401-b813-43e4-804d-392b6cd3e3ea",
+                "assetId": "64044468",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-64044468",
+                "curie": "http://www.bbc.co.uk/asset/e62a6401-b813-43e4-804d-392b6cd3e3ea"
+              },
+              "summary": "Cidade de Bakhmut, no leste, é um dos fronts mais duros de batalha atualmente; mapa da BBC mostra desdobramentos territoriais da guerra até agora.",
+              "timestamp": 1671556918000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "pt-br",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+                "locator": "urn:bbc:cps:curie:asset:e62a6401-b813-43e4-804d-392b6cd3e3ea",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pt-br",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingLabel": "Guerra Rússia-Ucrânia  ",
+                      "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q110254389"
+                      ],
+                      "thingEnglishLabel": "Russia-Ukraine war",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "Rússia",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingLabel": "Ucrânia",
+                      "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Ukraine",
+                        "http://www.wikidata.org/entity/Q212",
+                        "http://sws.geonames.org/690791/"
+                      ],
+                      "thingEnglishLabel": "Ukraine",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dqhg4r",
+                "subType": "clip",
+                "format": "video",
+                "title": "300 dias de guerra na Ucrânia: em mapas, os avanços e recuos das tropas ao longo do ano",
+                "synopses": {
+                  "short": "300 dias de guerra na Ucrânia: em mapas, os avanços e recuos das tropas ao longo do ano",
+                  "long": "A guerra na Ucrânia, iniciada em 24 de fevereiro de 2022, completa 300 dias nesta terça-feira, 20 de dezembro.\n\nNeste vídeo, a BBC mostra, em mapas, como está a situação no território ucraniano - desde o avanço russo às contraofensivas militares de Kiev. \n\nAtualmente, uma das frentes de batalha mais duras é a cidade de Bakhmut, na região de Donetsk (leste), onde russos e ucranianos têm se enfrentado há meses.\n\nA cidade foi visitada nesta terça pelo presidente da Ucrânia, Volodymyr Zelensky, em tom de desafio aos russos e para sinalizar apoio às tropas ucranianas.\n\n\"Quero desejar luz (aos soldados em Bakhmut), mas a situação tem sido tão difícil que às vezes há luz e às vezes não há\", disse Zelensky. \"O mais importante é haver luz interna.\"\n\nNem Moscou, nem Kiev confirmam oficialmente o número de mortos na guerra até agora.",
+                  "medium": "Cidade de Bakhmut, no leste, é um dos fronts mais duros de batalha atualmente; mapa da BBC mostra desdobramentos territoriais da guerra até agora."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dqjphd.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "300 dias de guerra na Ucrânia: em mapas, os avanços e recuos das tropas ao longo do ano",
+                "versions": [
+                  {
+                    "versionId": "p0dqhg4w",
+                    "types": ["Original"],
+                    "duration": 188,
+                    "durationISO8601": "PT3M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1671552270000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128080191",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4AA4/production/_128080191_phptl9qsb.jpg",
+                "path": "/cpsprodpb/4AA4/production/_128080191_phptl9qsb.jpg",
+                "height": 540,
+                "width": 960,
+                "altText": "Vídeo",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/internacional-64044468",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6795c4a7-dfe7-4d25-b7d0-451031931508",
+            "rank": 8,
+            "count": 18,
+            "urn": "urn:bbc:curie:asset:6795c4a7-dfe7-4d25-b7d0-451031931508",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "De Lula a Bolsonaro: quem gastou mais no cartão corporativo?",
+                "headline": "De Lula a Bolsonaro: quem gastou mais no cartão corporativo?"
+              },
+              "locators": {
+                "assetUri": "/portuguese/brasil-64433193",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:6795c4a7-dfe7-4d25-b7d0-451031931508",
+                "assetId": "64433193",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-64433193",
+                "curie": "http://www.bbc.co.uk/asset/6795c4a7-dfe7-4d25-b7d0-451031931508"
+              },
+              "summary": "Nossa repórter Mariana Schreiber diz o que é cartão corporativo, mostra os dados e explica polêmicas envolvendo essa modalidade de pagamento.",
+              "timestamp": 1674840301000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "pt-br",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+                "locator": "urn:bbc:cps:curie:asset:6795c4a7-dfe7-4d25-b7d0-451031931508",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pt-br",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingLabel": "Política",
+                      "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingEnglishLabel": "Politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id",
+                      "thingLabel": "Jair Bolsonaro                               ",
+                      "thingUri": "http://www.bbc.co.uk/things/f21d4493-e3bd-47df-b23c-1d57f0e3e818#id",
+                      "thingId": "f21d4493-e3bd-47df-b23c-1d57f0e3e818",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "tagging:Agent",
+                        "core:Person",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Jair_Bolsonaro",
+                        "http://www.wikidata.org/entity/Q10304982"
+                      ],
+                      "thingEnglishLabel": "Jair Bolsonaro",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dzb02l",
+                "subType": "clip",
+                "format": "video",
+                "title": "De Lula a Bolsonaro: quem gastou mais no cartão corporativo?",
+                "synopses": {
+                  "short": "De Lula a Bolsonaro: quem gastou mais no cartão corporativo?",
+                  "long": "O governo de Luiz Inácio Lula da Silva disponibilizou rapidamente uma enorme planilha que detalha dezenas de milhões de reais em gastos públicos com cartão corporativo pelos últimos quatro presidentes (2003 a 2022), retirando o sigilo de milhares de operações.\n\nDesde que os números foram revelados, apoiadores de diferentes governos passaram a discutir nas redes sociais sobre qual presidente teria usado mais o cartão: Lula, Dilma Rousseff, Michel Temer ou Jair Bolsonaro?\n\nMas planilha divulgada pelo governo — após pedido da organização especializada em transparência Fiquem Sabendo — não é a fonte ideal para concluir qual deles registrou mais despesas. \n\nOs dados do Portal da Transparência, que trazem o total dos gastos com cartão por cada governo, indicam que essa planilha não traz todas as despesas feitas pelos quatro presidentes.\n\nPor isso, nossa repórter Mariana Schreiber fez um amplo levantamento no portal, tanto das despesas totais com cartão, como dos gastos específicos da Presidência da República, em cada governo, desde 2004 (o portal não tem dados anteriores a isso).\n\nE neste vídeo, ela explica o que é o cartão corporativo, mostra o que o levantamento revelou e quais são as polêmicas envolvendo essa modalidade de pagamento.\n\nAssista e confira.\n\nReportagem em texto: \nhttps://www.bbc.com/portuguese/brasil-64380490",
+                  "medium": "Nossa repórter Mariana Schreiber diz o que é cartão corporativo, mostra os dados e explica polêmicas envolvendo essa modalidade de pagamento."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dzc1fy.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "De Lula a Bolsonaro: quem gastou mais no cartão corporativo?",
+                "versions": [
+                  {
+                    "versionId": "p0dzb02z",
+                    "types": ["Original"],
+                    "duration": 561,
+                    "durationISO8601": "PT9M21S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1674840049000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128441820",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0AFE/production/_128441820_p0dzc1fy.jpg",
+                "path": "/cpsprodpb/0AFE/production/_128441820_p0dzc1fy.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Fotos de Temer, Dilma, Bolsonaro e Lula; repórter Mariana Schreiber e o texto: cartão corporativo - quem gastou mais?",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/brasil-64433193",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "63d6ee12-6f2e-11e4-8bef-efde3db9bd6e",
+            "rank": 9,
+            "count": 17,
+            "urn": "urn:bbc:curie:asset:63d6ee12-6f2e-11e4-8bef-efde3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ataques sexuais de lobos-marinhos a pinguins impressionam cientistas",
+                "headline": "Ataques sexuais de lobos-marinhos a pinguins impressionam cientistas"
+              },
+              "locators": {
+                "assetUri": "/portuguese/videos_e_fotos/2014/11/141114_leoes_marinhos_pinguins_rm",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/videos_e_fotos/2014/11/141114_leoes_marinhos_pinguins_rm",
+                "curie": "http://www.bbc.co.uk/asset/63d6ee12-6f2e-11e4-8bef-efde3db9bd6e",
+                "assetId": "35909113"
+              },
+              "summary": "Vídeo de pesquisadores flagra lobos-marinhos tentando fazer sexo com pinguins em uma ilha remota no Oceano Antártico.",
+              "timestamp": 1416332218000,
+              "language": "pt-BR",
+              "media": {
+                "id": "35909113",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "35909113",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/18/141118031507_seal_penguin_sex_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/11/18/141118031507_seal_penguin_sex_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/portuguese/meta/dps/2014/11/emp/141114_leoes_marinhos_pinguins_rm.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/portuguese/dps/2014/11/pinguins1_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/portuguese/dps/2014/11/pinguins1_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/portuguese/dps/2014/11/pinguins1_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e218",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/18/141118031507_seal_penguin_sex_640x360_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/11/18/141118031507_seal_penguin_sex_640x360_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "credit: Thebeccamurray / CC by 2.0",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/videos_e_fotos/2014/11/141114_leoes_marinhos_pinguins_rm",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cd5468b4-9b02-4862-bf8f-334c48bbb492",
+            "rank": 10,
+            "count": 15,
+            "urn": "urn:bbc:curie:asset:cd5468b4-9b02-4862-bf8f-334c48bbb492",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Terremoto na Turquia e na Síria: a destruição vista do alto",
+                "headline": "Terremoto na Turquia e na Síria: a destruição vista do alto"
+              },
+              "locators": {
+                "assetUri": "/portuguese/internacional-64560583",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:cd5468b4-9b02-4862-bf8f-334c48bbb492",
+                "assetId": "64560583",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-64560583",
+                "curie": "http://www.bbc.co.uk/asset/cd5468b4-9b02-4862-bf8f-334c48bbb492"
+              },
+              "summary": "Imagens de drone mostram dia seguinte ao terremoto que deixou milhares de mortos e desabrigados.",
+              "timestamp": 1675785854000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "language": "pt-br",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+                "locator": "urn:bbc:cps:curie:asset:cd5468b4-9b02-4862-bf8f-334c48bbb492",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pt-br",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingLabel": "Síria",
+                      "thingUri": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingId": "28b0a95e-89d3-4fdf-bad0-8565eb549233",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/163843/"],
+                      "thingEnglishLabel": "Syria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "Terremotos",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "Turquia",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1ll4x",
+                "subType": "clip",
+                "format": "video",
+                "title": "Terremoto na Turquia e na Síria: a destruição vista do alto",
+                "synopses": {
+                  "short": "Terremoto na Turquia e na Síria: a destruição vista do alto",
+                  "long": "Imagens de drones obtidas pela agência Reuters mostram a dimensão da destruição na província turca de Hatay, na fronteira com a Síria, uma das áreas mais fortemente atingidas pelo terremoto de 6 de fevereiro.\n\nAté o início da tarde desta terça (7),  o total de mortos passava de 5 mil.\n\nSobreviventes ainda aguardavam resgate sob os escombros de milhares de edificações que desabaram. Veja nas imagens.",
+                  "medium": "Imagens de drone mostram dia seguinte ao terremoto que deixou milhares de mortos e desabrigados."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1lzcy.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Terremoto na Turquia e na Síria: a destruição vista do alto",
+                "versions": [
+                  {
+                    "versionId": "p0f1ll55",
+                    "types": ["Original"],
+                    "duration": 56,
+                    "durationISO8601": "PT56S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675785345000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128554617",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/117DD/production/_128554617_p0f1lzcy.jpg",
+                "path": "/cpsprodpb/117DD/production/_128554617_p0f1lzcy.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Vídeo",
+                "copyrightHolder": "Reuters",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/internacional-64560583",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "33e31a39-00b8-3c41-8761-350c2f5a7e57",
+            "rank": 11,
+            "count": 12,
+            "urn": "urn:bbc:curie:asset:33e31a39-00b8-3c41-8761-350c2f5a7e57",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Professor Pasquale explica: devemos colocar vírgula antes de 'etc.'?",
+                "headline": "Professor Pasquale explica: devemos colocar vírgula antes de 'etc.'?"
+              },
+              "locators": {
+                "assetUri": "/portuguese/brasil-39623847",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-39623847",
+                "curie": "http://www.bbc.co.uk/asset/33e31a39-00b8-3c41-8761-350c2f5a7e57",
+                "assetId": "39623847"
+              },
+              "summary": "No quarto vídeo de série da BBC Brasil, especialista tira dúvida de leitor sobre pontuação.",
+              "timestamp": 1492447236000,
+              "language": "pt-BR",
+              "media": {
+                "id": "p05011v1",
+                "subType": "clip",
+                "format": "video",
+                "title": "Professor Pasquale explica: devemos colocar vírgula antes de 'etc.'?",
+                "synopses": {
+                  "short": "Professor Pasquale explica: devemos colocar vírgula antes de 'etc.'?",
+                  "medium": "No quarto vídeo de série da BBC Brasil, especialista tira dúvida de leitor sobre pontuação.",
+                  "long": "Um leitor perguntou à BBC Brasil e o professor Pasquale Cipro Neto responde neste quarto vídeo da série sobre dúvidas de português: devemos colocar vírgula antes de “etc.”? \n\nPrimeiro, ele lembra que “etc.” sempre se escreve com ponto, mesmo que apareça no meio do texto. A forma correta é: “Comprei laranja, banana, etc. e depois fui ao cinema\".\n\nEssas três letrinhas - “etc.” - são a redução de uma expressão do latim, \"et coetera\", que significa \"e outras coisas\".\n\nDe acordo com Pasquale, há duas maneiras de se proceder.\n\n“Há quem leve ao pé da letra a etimologia, ou seja, a origem. Se ‘etc.’ significa ‘et coetera’, ‘e outras coisas’, quem age assim não colocaria vírgula antes de 'etc.' na frase 'Comprei laranja, banana, abacate etc.', assim como não colocaria vírgula na frase 'Comprei laranja, banana, abacate e outras coisas'.\"\n\n“Assim procede, por exemplo, o dicionário Houaiss”, explica o professor.\n\nEntão a pergunta está respondida? Ainda não.\n\nO professor diz que, como muitas pessoas perderam a noção histórica do sentido da palavra, elas consideram que o “etc.” virou uma palavra, mais um elemento da enumeração.\n\n“Assim procede, por exemplo, o texto do formulário ortográfico oficial”, diz. “O que não quer dizer que seja essa a única forma possível. As duas formas são possíveis.”\n\nEle acrescenta que alguns órgãos da imprensa colocam vírgula antes de “etc.” e outros não. “E ambos acertam. Então tanto faz.”\n\nExiste, porém, um caso em que a vírgula é obrigatória: “Se você repetir 'etc., etc., etc.', aí você passa a ter uma enumeração, como outra qualquer\".\n\n\"Você age como age quando diz 'laranja, banana, abacate etc.'. Vai virgular, vai separar um elemento do outro da enumeração.\""
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p050cgg8.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Professor Pasquale explica: devemos colocar vírgula antes de 'etc.'?",
+                "versions": [
+                  {
+                    "versionId": "p05011v3",
+                    "types": ["Original"],
+                    "duration": 133,
+                    "durationISO8601": "PT2M13S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1492446383000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95672569",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1790F/production/_95672569_p050cgg8.jpg",
+                "path": "/cpsprodpb/1790F/production/_95672569_p050cgg8.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "O professor Pasquale Cipro Neto",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/brasil-39623847",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5b8faabe-388a-3643-91c5-5270552e0002",
+            "rank": 12,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:5b8faabe-388a-3643-91c5-5270552e0002",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "O que é a teoria da relatividade geral de Einstein, que mudou nossa compreensão do universo",
+                "headline": "O que é a teoria da relatividade geral de Einstein?"
+              },
+              "locators": {
+                "assetUri": "/portuguese/geral-48398691",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48398691",
+                "curie": "http://www.bbc.co.uk/asset/5b8faabe-388a-3643-91c5-5270552e0002",
+                "assetId": "48398691"
+              },
+              "summary": "No início do século 20, o cientista alemão propôs uma nova concepção do espaço e do tempo, e derrubou a teoria clássica sobre a gravidade.",
+              "timestamp": 1558694573000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07b6ryk",
+                "subType": "clip",
+                "format": "video",
+                "title": "O que é a teoria da relatividade geral de Einstein, que o transformou em celebridade mundial",
+                "synopses": {
+                  "short": "O que é a teoria da relatividade geral de Einstein?",
+                  "long": "A teoria da relatividade geral de Albert Einstein, publicada em 1915, revolucionou completamente a compreensão da ciência sobre o universo.\n\nEla só foi confirmada pela primeira vez em 1919, com um experimento feito durante um eclipse total do Sol em Sobral, no Ceará, e na Ilha de Príncipe, no arquipélago de São Tomé e Príncipe.\n\nA partir daí, o então desconhecido físico alemão se transformou em uma celebridade mundial, e passou a ser parado na rua para dar autógrafos.\n\nMas o que exatamente é essa teoria e por que foi tão revolucionária?\n\nAté o início do século 20, a Física era regida pelas leis de Isaac Newton.\n\nO físico e matemático inglês dizia que a gravidade era uma força causada pela massa dos objetos e fazia com que eles fossem atraídos um em direção ao outro. O objeto com mais massa atrai mais intensamente.\n\nPor isso, nos mantemos sobre o chão na Terra. Ela nos atrai para o seu centro. Por isso também os planetas se movem ao redor do Sol.\n\nMas imagine que o Sol, de repente, desaparecesse por completo. \n\nSegundo a teoria de Newton, os planetas do Sistema Solar sairiam instantaneamente de suas órbitas, já que não haveria mais a força de gravidade do Sol atraindo-os.\n\nPara ele, a gravidade era uma força de ação imediata, independente da distância entre os corpos.\n\nMas Einstein encontrou um problema: segundo seus cálculos, a luz era a coisa mais rápida do Universo. Nenhum corpo com massa alcançava uma velocidade superior à da luz. Nem a gravidade.\n\nNos dez anos que passou pensando nisso, entre 1905 e 1915, o físico alemão criou a teoria da relatividade geral. \n\nEle imaginou as três dimensões do espaço e a dimensão do tempo juntas, como uma espécie de tecido que nos rodeia e que é deformado pela presença dos corpos celestes massivos, como os planetas e estrelas.\n\nEssas deformações criam o que nós sentimos como força de gravidade\n\nEntão a Terra e os outros planetas permanecem em órbita não porque o Sol simplesmente os atrai, como pensava Newton. \n\nPara Einstein, isso acontece porque o Sol é uma estrela tão massiva que os outros corpos seguem a curvatura que ela gera no tecido do espaço-tempo. \n\nA relatividade geral permitiu explicar desde o nascimento do Universo até a órbita dos planetas e os buracos negros. \n\nAté hoje, algumas de suas previsões são testadas e confirmadas pelos cientistas, que se surpreendem com a precisão das ideias do físico alemão.\n\nPor causa dela, ele se tornou uma das figuras mais icônicas da ciência mundial.\n\n\nRoteiro: Camilla Costa e Ana Pais\n\nVoz: Camilla Costa\n\nDesign, Animação e som: Kako Abraham",
+                  "medium": "No início do século 20, o cientista alemão propôs uma nova concepção do espaço e do tempo, e derrubou a teoria clássica sobre a gravidade."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07b6wm5.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "O que é a teoria da relatividade geral de Einstein?",
+                "versions": [
+                  {
+                    "versionId": "p07b6ryn",
+                    "types": ["Original"],
+                    "duration": 214,
+                    "durationISO8601": "PT3M34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1558693596000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "107095205",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/C453/production/_107095205_p07b6wm5.jpg",
+                "path": "/cpsprodpb/C453/production/_107095205_p07b6wm5.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #3",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/geral-48398691",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fbc2b600-b0c3-4258-96df-1c03bcba4982",
+            "rank": 13,
+            "count": 10,
+            "urn": "urn:bbc:curie:asset:fbc2b600-b0c3-4258-96df-1c03bcba4982",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "O momento em que menina é resgatada de escombros na Turquia",
+                "headline": "O momento em que menina é resgatada de escombros na Turquia"
+              },
+              "locators": {
+                "assetUri": "/portuguese/internacional-64560585",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:fbc2b600-b0c3-4258-96df-1c03bcba4982",
+                "assetId": "64560585",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-64560585",
+                "curie": "http://www.bbc.co.uk/asset/fbc2b600-b0c3-4258-96df-1c03bcba4982"
+              },
+              "summary": "Imagens cedidas pelos bombeiros mostram resgate de criança na província de Hatay, uma das áreas mais atingidas pelos tremores de 6 de fevereiro.",
+              "timestamp": 1675805719000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "pt-br",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+                "locator": "urn:bbc:cps:curie:asset:fbc2b600-b0c3-4258-96df-1c03bcba4982",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pt-br",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1mqb1",
+                "subType": "clip",
+                "format": "video",
+                "title": "O momento em que menina é resgatada de escombros na Turquia",
+                "synopses": {
+                  "short": "O momento em que menina é resgatada de escombros na Turquia",
+                  "long": "Imagens cedidas por uma unidade do Corpo de Bombeiros mostram o resgate de uma menina dos escombros na província de Hatay, sudeste da Turquia.\n\nA área, próxima à fronteira com a Síria, foi uma das mais atingidas pelo terremoto de 6 de fevereiro, que deixou milhares de mortos e desabrigados, além de ter feito desmoronar milhares de prédios.",
+                  "medium": "Imagens cedidas pelos bombeiros mostram resgate de criança na província de Hatay, uma das áreas mais atingidas pelos tremores de 6 de fevereiro."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1n9bc.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "O momento em que menina é resgatada de escombros na Turquia",
+                "versions": [
+                  {
+                    "versionId": "p0f1mqb5",
+                    "types": ["Original"],
+                    "duration": 49,
+                    "durationISO8601": "PT49S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675795676000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128556815",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CA99/production/_128556815_p0f1n9bc.jpg",
+                "path": "/cpsprodpb/CA99/production/_128556815_p0f1n9bc.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Vídeo",
+                "copyrightHolder": "Divulgação",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/internacional-64560585",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "34ba738d-8c02-49f8-b708-0b9034f16c42",
+            "rank": 14,
+            "count": 10,
+            "urn": "urn:bbc:curie:asset:34ba738d-8c02-49f8-b708-0b9034f16c42",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "A propaganda pública sobre pornô para proteger crianças na Nova Zelândia",
+                "headline": "A propaganda pública sobre pornô para proteger crianças na Nova Zelândia"
+              },
+              "locators": {
+                "assetUri": "/portuguese/geral-53171634",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-53171634",
+                "curie": "http://www.bbc.co.uk/asset/34ba738d-8c02-49f8-b708-0b9034f16c42",
+                "assetId": "53171634"
+              },
+              "summary": "Campanha do governo da Nova Zelândia destaca como é importante conversar com crianças e adolescentes sobre como a pornografia é diferente dos relacionamentos na vida real.",
+              "timestamp": 1593016361000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08hwhjy",
+                "subType": "clip",
+                "format": "video",
+                "title": "A propaganda pública sobre pornô para proteger crianças na Nova Zelândia",
+                "synopses": {
+                  "short": "Vídeo alerta sobre necessidade de conversar com os jovens sobre pornografia.",
+                  "long": "Um homem e uma mulher, no papel de atores pornô, vão até a casa de uma criança para alertar a família de que ela está assistindo a esse tipo de conteúdo. É assim o vídeo do governo da Nova Zelândia que procura alertar a população sobre a necessidade de conversar com os jovens sobre o tema.\n\nA campanha viralizou.\n\nPela internet, é comum que crianças se deparem com conteúdos pornográficos. Isso pode acontecer inclusive por acidente, já que muitos sites são gratuitos e não exigem uma verificação de idade, ou mesmo por curiosidade. \n\nO responsáveis pela propaganda apontam que é comum que crianças mais novas vejam esses conteúdos por acidente, e que adolescentes procurem ativamente por eles.\n\n“É normal que jovens estejam curiosos sobre sexo. A melhor forma de dar apoio a eles é estar aberto para conversas honestas sobre o que eles podem estar vendo e falar sobre como a pornografia é diferente dos relacionamentos na vida real”, apontam os responsáveis pela campanha.\n\nO site da campanha Keep it real online (disponível em inglês - https://www.keepitrealonline.govt.nz/) aponta que pode ser desafiador conversar sobre esse tema com as crianças. Sugere que os pais escolham um momento adequado, escutem tudo que a criança tem a dizer, expliquem que a pornografia não reflete o que acontece ou deve acontecer na vida real e que falem sobre a necessidade de consentimento e respeito nas relações.",
+                  "medium": "Campanha do governo da Nova Zelândia destaca como é importante conversar com crianças e adolescentes sobre como a pornografia é diferente dos relacionamentos na vida real."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08hwx7b.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Vídeo alerta sobre necessidade de conversar com os jovens sobre pornografia.",
+                "versions": [
+                  {
+                    "versionId": "p08hwhk0",
+                    "types": ["Original"],
+                    "duration": 107,
+                    "durationISO8601": "PT1M47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1593015790000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "113086885",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E5F4/production/_113086885_p08hwx7b.jpg",
+                "path": "/cpsprodpb/E5F4/production/_113086885_p08hwx7b.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/geral-53171634",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "80717d34-e41b-4c42-906e-532c22fc98ab",
+            "rank": 15,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:80717d34-e41b-4c42-906e-532c22fc98ab",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Professor Pasquale responde: devo usar 'esse' ou 'este'?",
+                "headline": "Professor Pasquale responde: devo usar 'esse' ou 'este'?"
+              },
+              "locators": {
+                "assetUri": "/portuguese/brasil-39646836",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-39646836",
+                "curie": "http://www.bbc.co.uk/asset/80717d34-e41b-4c42-906e-532c22fc98ab",
+                "assetId": "39646836"
+              },
+              "summary": "Especialista em língua portuguesa dá dicas de como aplicar os pronomes demonstrativos corretamente.",
+              "timestamp": 1492630119000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p050jvdz",
+                "subType": "clip",
+                "format": "video",
+                "title": "Professor Pasquale responde: devo usar 'esse' ou 'este'?",
+                "synopses": {
+                  "short": "Professor Pasquale responde: devo usar 'esse' ou 'este'?",
+                  "medium": "Especialista em língua portuguesa dá dicas de como usar os pronomes demonstrativos corretamente.",
+                  "long": "Neste sexto e último vídeo da série da BBC Brasil sobre dúvidas de português, o professor Pasquale Cipro Neto dá dicas de como evitar um erro bastante comum.\n\nOs leitores Pedro Renan, Thayná, Glauco, Murilo e Israel perguntaram sobre o uso correto dos pronomes demonstrativos (este, esta, isto, esse, essa, isso, aquele, aquela, aquilo…).\n\nPasquale explica que há mais de um emprego para eles - são usados para indicar lugar e posição, para se referir a tempo e desempenham papel essencial na coesão do texto.\n\nLugar\n\nDe acordo com Pasquale, o uso mais básico e tradicional é aquele que indica a posição do próprio falante ou a posição de algo em relação a ele.\n\nSe o falante quiser se referir aos próprios óculos, que estão consigo, deve dizer: \"estes óculos\".\n\nSe quiser indicar os óculos que estão com a pessoa com a qual está falando, deve dizer: \"esses óculos\".\n\nMas se a intenção for se referir a óculos que não estão nem perto dele e nem perto da pessoa com quem está falando, deve dizer “aqueles óculos”.\n\nOutro exemplo é o caso de falante estar na cidade de São Paulo, mas conversando pelo telefone com um amigo que mora em Curitiba sobre alguém que mora em Olinda.\n\nEle dirá “esta cidade” para se referir a São Paulo, onde ele próprio está, “essa cidade” para se referir a Curitiba, local da pessoa com quem está conversando, e “aquela cidade” para se referir a Olinda.\n\nTempo\n\nO professor explica: “Nesta semana” é a semana que está em curso. “Nesse mês” é o mês que já foi citado. \"Neste domingo\" pode ser o domingo que está em curso ou o domingo que está para chegar, domingo da semana em que se está.\n\n“E que não pode ser assim um mês muito distante. Não me pergunte qual é o tamanho dessa distância, a coisa é meio subjetiva. Se eu for falar de uma passagem bíblica, por exemplo, eu vou falar ‘naquele tempo’, ‘naquele’, lá longe”, diz Pasquale.\n\n“Eu até poderia dizer ‘nesse tempo’, mas, quando se trata de um tempo muito distante, eu vou dizer ‘naquele tempo’, ‘naquele ano’, ‘naquele período’\", acrescenta.\n\nCoesão textual\n\n“O mais importante mesmo é lembrar o papel desses pronomes no texto, na coesão textual”, afirma o professor. \n\nPara se referir a algo que já foi dito no texto ou na conversa, deve-se usar “esse\", \"essa\", \"isso\".\n\nExemplo: \"O Copom resolveu reduzir a taxa de juros. Essa decisão já era esperada pelo mercado\".\n\nO pronome \"essa\" se refere à decisão citada antes, sobre o Copom.\n\nPara se referir a algo que será citado, deve-se usar “este”, “esta”, “isto”.\n\nExemplo: \"A decisão do Copom é esta: a taxa de juros foi reduzida\".\n\nO pronome \"esta\" se refere à decisão que ainda será anunciada.\n\n“Então o pronome ‘este’, o pronome ‘esta’, o pronome ‘isto’ anunciam. O pronome ‘esse’, o pronome ‘essa’, o pronome ‘isso’ retomam, recuperam”, conclui Pasquale.\n\nOutro caso\n\nHá outro caso, usado em frases que citam duas pessoas. \n\nExemplo: \"O delegado interrogou Pedro e Paulo. Este negou a versão, aquele confirmou\".\n\nO pronome \"este\" se refere ao mais próximo, ao citado mais recentemente. Nesse caso, é o Paulo. \"Aquele\" se refere ao mais distante, ao anterior - no caso do exemplo, Pedro."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p050kfln.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Professor Pasquale responde: devo usar 'esse' ou 'este'?",
+                "versions": [
+                  {
+                    "versionId": "p050jvf6",
+                    "types": ["Original"],
+                    "duration": 215,
+                    "durationISO8601": "PT3M35S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1492629769000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95709499",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/184A2/production/_95709499_p050kfln.jpg",
+                "path": "/cpsprodpb/184A2/production/_95709499_p050kfln.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "O professor Pasquale Cipro Neto",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/brasil-39646836",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a76589e8-8193-fb44-addb-764fd9e59e27",
+            "rank": 16,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:a76589e8-8193-fb44-addb-764fd9e59e27",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "A história do Universo em 4 minutos - e como podemos levar a Terra à prosperidade ou à catástrofe",
+                "headline": "A história do Universo em 4 minutos - e como podemos levar a Terra à prosperidade ou à catástrofe"
+              },
+              "locators": {
+                "assetUri": "/portuguese/geral-44527107",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-44527107",
+                "curie": "http://www.bbc.co.uk/asset/a76589e8-8193-fb44-addb-764fd9e59e27",
+                "assetId": "44527107"
+              },
+              "summary": "Chegamos do Big Bang, há 13,8 bilhões de anos, às tecnologias mais avançadas produzidas por humanos e o controle de recursos naturais em níveis inéditos. Mas o que vai acontecer agora?",
+              "timestamp": 1529359378000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p06bg0nd",
+                "subType": "clip",
+                "format": "video",
+                "title": "A história do Universo em 4 minutos  - e como podemos levar a Terra à prosperidade ou à catástrofe",
+                "synopses": {
+                  "short": "A história do Universo em 4 minutos",
+                  "long": "Como surgiu o universo e para onde vamos a partir daqui? \n\nNeste vídeo, o historiador americano David Christian, autor do livro \"History of the Universe\" (\"História do Universo\"), narra a história do Cosmos e do planeta Terra em 4 minutos.\n\nNosso Universo foi criado há 13,8 bilhões de anos, com o Big Bang. No começo, não havia estrelas, nem galáxias ou seres vivos. Apenas hidrogênio, hélio e muita energia. \n\nAs primeiras estrelas e galáxias provavelmente surgiram cerca de 200 milhões de anos depois do Big Bang. \n\nNosso Sol e o Sistema Solar surgiram há cerca de 4,5 bilhões de anos. E é provável que a vida tenha surgido na Terra \"logo\" depois, há 4 bilhões de anos. \n\nOs humanos demoraram mais, aparecendo há cerca de 200 mil anos. \n\nDesde então, acumulamos conhecimento e desenvolvemos ferramentas avançadas. E o que fizermos nas próximas décadas determinará o futuro dos oceanos, do clima e da maioria das espécies da Terra, incluindo nossos próprios descendentes.\n\nO planeta Terra está em um ponto de virada em sua história. Os humanos conduzirão a biosfera até um futuro fértil ou à catástrofe. \n\nA notícia boa é que dominamos a ciência e já temos parte da tecnologia necessária para construir um futuro sustentável. O que falta agora é a \"tecnologia política\".",
+                  "medium": "Chegamos do Big Bang, há 13,8 bilhões de anos, às tecnologias mais avançadas produzidas por humanos. Mas o que vai acontecer agora?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06bh13v.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "A história do Universo em 4 minutos",
+                "versions": [
+                  {
+                    "versionId": "p06bg0nk",
+                    "types": ["Original"],
+                    "duration": 258,
+                    "durationISO8601": "PT4M18S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1529358861000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "102100457",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12688/production/_102100457_p06bh13v.jpg",
+                "path": "/cpsprodpb/12688/production/_102100457_p06bh13v.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Universo",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/geral-44527107",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "80a7ee3b-60eb-514a-8bca-f637f4d1b513",
+            "rank": 17,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:80a7ee3b-60eb-514a-8bca-f637f4d1b513",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "O que se sabe sobre a misteriosa Área 51 nos EUA",
+                "headline": "O que se sabe sobre a misteriosa Área 51 nos EUA"
+              },
+              "locators": {
+                "assetUri": "/portuguese/geral-52795602",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-52795602",
+                "curie": "http://www.bbc.co.uk/asset/80a7ee3b-60eb-514a-8bca-f637f4d1b513",
+                "assetId": "52795602"
+              },
+              "summary": "Muitas coisas são ditas sobre a base secreta — que estaria guardando segredos sobre ovnis e vida extraterrestre —, mas o que se sabe realmente?",
+              "timestamp": 1590406148000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08dt2wf",
+                "subType": "clip",
+                "format": "video",
+                "title": "O que se sabe sobre a misteriosa Área 51 dos Estados Unidos",
+                "synopses": {
+                  "short": "Muitas coisas são ditas sobre a base secreta, mas o que se sabe realmente?",
+                  "long": "Existe uma Área 51? Existem aliens? Que tipo de instalação é essa? Muitas coisas são ditas sobre a base secreta do Exército dos Estados Unidos, mas o que se sabe realmente?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08f3wn1.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Muitas coisas são ditas sobre a base secreta, mas o que se sabe realmente?",
+                "versions": [
+                  {
+                    "versionId": "p08dt2wm",
+                    "types": ["Original"],
+                    "duration": 472,
+                    "durationISO8601": "PT7M52S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1590405773000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "112439721",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/31F9/production/_112439721_p08f3wn1.jpg",
+                "path": "/cpsprodpb/31F9/production/_112439721_p08f3wn1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Malu Cursino",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/geral-52795602",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6afacb53-92c2-1c4a-80d0-324d28de9ae5",
+            "rank": 18,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:6afacb53-92c2-1c4a-80d0-324d28de9ae5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Eleições no Reino Unido: Como é o sistema peculiar de escolha do primeiro-ministro britânico",
+                "headline": "Eleições no Reino Unido: Como é o sistema peculiar de escolha do primeiro-ministro"
+              },
+              "locators": {
+                "assetUri": "/portuguese/media-50687685",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-50687685",
+                "curie": "http://www.bbc.co.uk/asset/6afacb53-92c2-1c4a-80d0-324d28de9ae5",
+                "assetId": "50687685"
+              },
+              "summary": "Eleição geral vai escolher o novo Parlamento Britânico e, por consequência, o primeiro-ministro que governará o país",
+              "timestamp": 1575629634000,
+              "language": "pt-BR",
+              "media": {
+                "id": "p07x3dkr",
+                "subType": "clip",
+                "format": "video",
+                "title": "Eleições no Reino Unido: Como é o sistema peculiar de escolha do primeiro-ministro britânico",
+                "synopses": {
+                  "short": "Eleições no Reino Unido: Como é o sistema peculiar de escolha do primeiro-ministro",
+                  "long": "Os 46 milhões de eleitores do Reino Unido vão às urnas no dia 12 de dezembro.\n\nA eleição geral vai escolher o novo Parlamento Britânico e, por consequência, o primeiro-ministro que governará o país.\n\nO sistema de votação é, no entanto, um tanto peculiar.\n\nNas eleições gerais, o primeiro-ministro não é eleito diretamente pelo povo.\n\nOs eleitores são convidados a escolher um representante para seu distrito eleitoral — são 650 no total, com 80 mil eleitores em cada.\n\nQualquer pessoa com 18 anos ou mais pode votar, desde que esteja registrada e seja um cidadão britânico ou cidadão qualificado da Commonwealth (a Comunidade Britânica, que reúne antigas colônias britânicas, inclusive a Austrália) ou da República da Irlanda.\n\nO candidato com mais votos ganha e se torna membro do Parlamento Britânico.\n\nE como o primeiro-ministro é eleito? Ele é escolhido pelos parlamentares do partido vencedor e nomeado pela rainha, que é obrigada a seguir a sugestão deles.\n\nEm geral, acaba sendo o líder do partido.\n\nAs eleições-gerais acontecem supostamente a cada cinco anos. Mas esta será a terceira desde 2015.\n\nA antecipação do pleito, que deveria ocorrer apenas em 2022, representa mais um capítulo na novela do Brexit, após meses de impasse sobre o processo de saída do Reino Unido da União Europeia.",
+                  "medium": "Eleição geral vai escolher o novo Parlamento Britânico e, por consequência, o primeiro-ministro que governará o país"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07x3jrh.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Eleições no Reino Unido: Como é o sistema peculiar de escolha do primeiro-ministro",
+                "versions": [
+                  {
+                    "versionId": "p07x3dkv",
+                    "types": ["Original"],
+                    "duration": 90,
+                    "durationISO8601": "PT1M30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1575628794000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110031504",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9E41/production/_110031504_p07x3gw4.jpg",
+                "path": "/cpsprodpb/9E41/production/_110031504_p07x3gw4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Eleição geral vai escolher o novo Parlamento Britânico e, por consequência, o primeiro-ministro que governará o país",
+                "copyrightHolder": "Os 46 milhões de eleitores do Reino Unido vão às u",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/media-50687685",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "eb83c5d5-c900-471e-be23-74278bdc10e1",
+            "rank": 19,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:eb83c5d5-c900-471e-be23-74278bdc10e1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Relógio do Juízo Final': o mundo está mais perto do que nunca do fim?",
+                "headline": "'Relógio do Juízo Final': o mundo está mais perto do que nunca do fim?"
+              },
+              "locators": {
+                "assetUri": "/portuguese/geral-64394392",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:eb83c5d5-c900-471e-be23-74278bdc10e1",
+                "assetId": "64394392",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-64394392",
+                "curie": "http://www.bbc.co.uk/asset/eb83c5d5-c900-471e-be23-74278bdc10e1"
+              },
+              "summary": "A cada ano, o Boletim dos Cientistas Atômicos define um horário no simbólico que ilustra o quão perto a humanidade está do fim do mundo.",
+              "timestamp": 1674598311000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "language": "pt-br",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+                "locator": "urn:bbc:cps:curie:asset:eb83c5d5-c900-471e-be23-74278bdc10e1",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pt-br",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingLabel": "Guerra Rússia-Ucrânia  ",
+                      "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q110254389"
+                      ],
+                      "thingEnglishLabel": "Russia-Ukraine war",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingLabel": "Economia",
+                      "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+                      "thingEnglishLabel": "Economics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                      "thingLabel": "Mudanças climáticas",
+                      "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                      "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q125928",
+                        "http://dbpedia.org/resource/Climate_change"
+                      ],
+                      "thingEnglishLabel": "Climate change",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dykmdw",
+                "subType": "clip",
+                "format": "video",
+                "title": "'Relógio do Juízo Final': o mundo está mais perto do que nunca do fim?",
+                "synopses": {
+                  "short": "'Relógio do Juízo Final': o mundo está mais perto do que nunca do fim?",
+                  "medium": "A cada ano, o Boletim dos Cientistas Atômicos define um horário no simbólico “Relógio do Juízo Final”, que ilustra o quão perto a humanidade está do fim do mundo."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dykr0t.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "'Relógio do Juízo Final': o mundo está mais perto do que nunca do fim?",
+                "versions": [
+                  {
+                    "versionId": "p0dykmf6",
+                    "types": ["Original"],
+                    "duration": 74,
+                    "durationISO8601": "PT1M14S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1674598069000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128404402",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4FD8/production/_128404402_p0dykr0t.jpg",
+                "path": "/cpsprodpb/4FD8/production/_128404402_p0dykr0t.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Pessoa toda coberta com jaleco e máscara",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/geral-64394392",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bb999a9f-411c-41c2-92ef-2b8de587456c",
+            "rank": 20,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:bb999a9f-411c-41c2-92ef-2b8de587456c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Por que bilionários estão perdendo parte de suas fortunas",
+                "headline": "Por que bilionários estão perdendo parte de suas fortunas"
+              },
+              "locators": {
+                "assetUri": "/portuguese/geral-64576409",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:bb999a9f-411c-41c2-92ef-2b8de587456c",
+                "assetId": "64576409",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-64576409",
+                "curie": "http://www.bbc.co.uk/asset/bb999a9f-411c-41c2-92ef-2b8de587456c"
+              },
+              "summary": "Elon Musk e Mark Zuckerberg estão entre bilionários que registraram perdas recordes.",
+              "timestamp": 1675881802000,
+              "language": "pt-BR",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "language": "pt-br",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+                "locator": "urn:bbc:cps:curie:asset:bb999a9f-411c-41c2-92ef-2b8de587456c",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/abe467d9-3bce-4f21-aa48-cc1b4b3877b5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/bc0b91dc-0475-486a-95c5-3f47194dd1eb#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "pt-br",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingLabel": "Tecnologia",
+                      "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Technology",
+                        "http://www.wikidata.org/entity/Q4456888"
+                      ],
+                      "thingEnglishLabel": "Technology",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/abe467d9-3bce-4f21-aa48-cc1b4b3877b5#id",
+                      "thingLabel": "Mark Zuckerberg",
+                      "thingUri": "http://www.bbc.co.uk/things/abe467d9-3bce-4f21-aa48-cc1b4b3877b5#id",
+                      "thingId": "abe467d9-3bce-4f21-aa48-cc1b4b3877b5",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "core:Thing",
+                        "tagging:Agent",
+                        "tagging:TagConcept",
+                        "core:Person"
+                      ],
+                      "thingSameAs": [
+                        "http://rdf.freebase.com/ns/m.086dny",
+                        "http://dbpedia.org/resource/Mark_Zuckerberg",
+                        "http://www.wikidata.org/entity/Q36215"
+                      ],
+                      "thingEnglishLabel": "Mark Zuckerberg",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/bc0b91dc-0475-486a-95c5-3f47194dd1eb#id",
+                      "thingLabel": "Elon Musk",
+                      "thingUri": "http://www.bbc.co.uk/things/bc0b91dc-0475-486a-95c5-3f47194dd1eb#id",
+                      "thingId": "bc0b91dc-0475-486a-95c5-3f47194dd1eb",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "tagging:Agent",
+                        "core:Person",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Elon_Musk",
+                        "http://www.wikidata.org/entity/Q317521"
+                      ],
+                      "thingEnglishLabel": "Elon Musk",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingLabel": "Economia",
+                      "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+                      "thingEnglishLabel": "Economics",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1rrr7",
+                "subType": "clip",
+                "format": "video",
+                "title": "Por que bilionários estão perdendo parte de suas fortunas",
+                "synopses": {
+                  "short": "Por que bilionários estão perdendo parte de suas fortunas",
+                  "long": "Algumas das pessoas mais ricas do mundo viram sua riqueza pessoal despencar recentemente. Mas o que está por trás da queda em suas fortunas?\nNa semana passada, o bilionário dos grupos Tesla e SpaceX, Elon Musk, quebrou o recorde mundial de maior perda de fortuna pessoal da história.\nDe novembro de 2021 a dezembro de 2022, ele perdeu cerca de US$ 165 bilhões, segundo o Guinness World Records.\nOs números são baseados em dados da revista Forbes, mas o Guinness disse que outras fontes sugeriram que as perdas de Musk poderiam ter sido maiores.\nNo final do ano passado, o fundador do grupo Meta, Mark Zuckerberg, chegou a cair da lista das 10 pessoas mais ricas do mundo. Ele esteve nessa lista por sete anos.\nOutro bilionário que viu sua fortuna pessoal desabar foi Gautam Adani, que também saiu da lista das 20 pessoas mais ricas do mundo. O magnata lidera o grupo Adani, de infraestrutura e logística.\nO que aconteceu?\nA fortuna pessoal dos três bilionários está diretamente ligada aos grupos que eles comandam, já que eles são grandes acionistas.\nNo caso de Musk e Zuckerberg, o problema foi uma espécie de \"crash\" das ações de tecnologia.\nNo final do ano passado, o grupo Meta anunciou a demissão de 11 mil pessoas. Zuckerberg disse que as demissões foram causadas pelas enormes expectativas de crescimento de longo prazo com base no aumento da receita da empresa durante a pandemia.\n“Muitas pessoas previram que estaríamos em aceleração permanente”, escreveu ele na época. “Eu também achei, então tomei a decisão de aumentar significativamente nossos investimentos”.\nEm vez disso, ele disse que a \"recessão macroeconômica\" e o \"aumento da concorrência\" fizeram com que a receita fosse muito menor do que o esperado\n\"Eu li errado o cenário e assumo a responsabilidade por isso\", disse ele.\nIt follows a fall in value of shares in Mr Musk's electric car firm Tesla after he bought Twitter last year.\nNo caso de Elon Musk, o valor das ações da Tesla desabou depois que o bilionário comprou o Twitter no ano passado. A aquisição de US$ 44 bilhões da empresa de mídia social gerou temores entre os investidores de que Musk não estaria mais dando atenção suficiente à Tesla.\nJá o caso de Gautam Adani está ligado a acusações de fraude. Em 24 de janeiro, uma empresa americana acusou o grupo de manipulação de ações e fraude contábil. A cotação da empresa nos mercados caiu quase pela metade. O Grupo Adani nega as acusações, chamando-as de \"maliciosas\" e \"infundadas\".\nMas a sorte da fortuna de muitos desses bilionários pode se reverter rapidamente, justamente por causa do mercado acionário.\nNa quinta-feira, a fortuna de Mark Zuckerberg aumentou em US$ 12,5 bilhões em apenas um dia - depois da divulgação de resultados do grupo Meta que mostraram recuperação da empresa no último trimestre.",
+                  "medium": "Elon Musk e Mark Zuckerberg estão entre bilionários que registraram perdas recordes."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1x224.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Por que bilionários estão perdendo parte de suas fortunas",
+                "versions": [
+                  {
+                    "versionId": "p0f1rrrm",
+                    "types": ["Original"],
+                    "duration": 77,
+                    "durationISO8601": "PT1M17S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675881483000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128569378",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/15564/production/_128569378_p0f1x224.jpg",
+                "path": "/cpsprodpb/15564/production/_128569378_p0f1x224.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Musk, Zuckenberg e Adani (montagem da foto)",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/geral-64576409",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

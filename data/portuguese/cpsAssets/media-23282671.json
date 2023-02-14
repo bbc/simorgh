@@ -1,245 +1,414 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:portuguese/media-23282671",
-    "locators": {
-      "assetUri": "/portuguese/media-23282671",
-      "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23282671",
-      "curie": "http://www.bbc.co.uk/asset/a9601e04-929a-c74b-8198-cdbdfd3f046e",
-      "assetId": "23282671"
-    },
-    "type": "MAP",
-    "createdBy": "brasil-v6",
-    "language": "pt-BR",
-    "lastUpdated": 1588335920162,
-    "firstPublished": 1585672938000,
-    "lastPublished": 1585672938000,
-    "timestamp": 1585672938000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "portuguese.media.media_asset.23282671.page",
-      "cps_asset_id": "23282671"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": [
-      "media",
-      "paragraph",
-      "heading",
-      "image",
-      "subheading",
-      "list"
-    ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01kdbns",
-        "subType": "clip",
-        "format": "video",
-        "title": "How Germans remember the World Wars",
-        "synopses": {
-          "short": "Remembrance Day: How Germans remember the World Wars",
-          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
-          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:portuguese/media-23282671",
+        "locators": {
+          "assetUri": "/portuguese/media-23282671",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:a9601e04-929a-c74b-8198-cdbdfd3f046e",
+          "assetId": "23282671",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23282671",
+          "curie": "http://www.bbc.co.uk/asset/a9601e04-929a-c74b-8198-cdbdfd3f046e"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "How do Germans remember the World Wars?",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "brasil-v6",
+        "language": "pt-BR",
+        "lastUpdated": 1665419837635,
+        "firstPublished": 1585672938000,
+        "lastPublished": 1585672938000,
+        "timestamp": 1585672938000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "portuguese.media.media_asset.23282671.page",
+          "cps_asset_id": "23282671",
+          "contentId": "urn:bbc:cps:curie:asset:a9601e04-929a-c74b-8198-cdbdfd3f046e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": [
+          "media",
+          "paragraph",
+          "heading",
+          "image",
+          "subheading",
+          "list"
+        ],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "BRASIL",
+          "producerId": "33"
+        },
+        "readTime": 1,
+        "siteUri": "/portuguese",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01kdbnv",
-            "types": ["Original"],
-            "duration": 162,
-            "durationISO8601": "PT2M42S",
-            "warnings": {
-              "short": "Contains some strong language.",
-              "long": "Contains some strong language."
+            "id": "p01kdbns",
+            "subType": "clip",
+            "format": "video",
+            "title": "How Germans remember the World Wars",
+            "synopses": {
+              "short": "Remembrance Day: How Germans remember the World Wars",
+              "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+              "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
             },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": false,
-              "world": false
-            },
-            "availableFrom": 1541761851000
-          }
-        ],
-        "imageCopyright": "BBC",
-        "type": "media"
-      },
-      {
-        "text": "Já ouviu falar da cabra gnu, do macaco de orelhas vermelhas ou do monstro de Gila?",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Eles podem ser os futuros ícones da conservação ambiental, de acordo com um estudo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Os cientistas acreditam que estes animais pouco conhecidos são fundamentais para arrecadar dinheiro para proteger ecossistemas vulneráveis.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "As imagens de tigres e elefantes, que têm grande apelo junto ao público, são frequentemente selecionadas para campanhas de arrecadação de fundos.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Heading",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "text text text text",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "63733272",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/6A61/test/_63733272__110989783_animals-comp.jpg",
-        "path": "/cpsdevpb/6A61/test/_63733272__110989783_animals-comp.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "Two photos of nice animals",
-        "caption": "Nice animals",
-        "copyrightHolder": "Getty Images",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "text": "Subheading",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "numbered": false,
-        "items": [
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "How do Germans remember the World Wars?",
+            "versions": [
+              {
+                "versionId": "p01kdbnv",
+                "types": ["Original"],
+                "duration": 162,
+                "durationISO8601": "PT2M42S",
+                "warnings": {
+                  "short": "Contains some strong language.",
+                  "long": "Contains some strong language."
+                },
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": false
+                },
+                "availableFrom": 1541761851000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
+          },
           {
-            "text": "Conheça as 'superfrutas' encontradas na Mata Atlântica que pesquisadores tentam salvar da extinção",
+            "text": "Já ouviu falar da cabra gnu, do macaco de orelhas vermelhas ou do monstro de Gila?",
             "markupType": "plain_text",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      },
-      {
-        "numbered": false,
-        "items": [
+            "type": "paragraph"
+          },
           {
-            "text": "Por que Greta Thunberg pode estar errada sobre estarmos diante da 'sexta extinção em massa na Terra'",
+            "text": "Eles podem ser os futuros ícones da conservação ambiental, de acordo com um estudo.",
             "markupType": "plain_text",
-            "type": "listItem"
+            "type": "paragraph"
+          },
+          {
+            "text": "Os cientistas acreditam que estes animais pouco conhecidos são fundamentais para arrecadar dinheiro para proteger ecossistemas vulneráveis.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "As imagens de tigres e elefantes, que têm grande apelo junto ao público, são frequentemente selecionadas para campanhas de arrecadação de fundos.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Heading",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "text text text text",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "id": "63733272",
+            "subType": "body",
+            "href": "http://b.files.bbci.co.uk/6A61/test/_63733272__110989783_animals-comp.jpg",
+            "path": "/cpsdevpb/6A61/test/_63733272__110989783_animals-comp.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "Two photos of nice animals",
+            "caption": "Nice animals",
+            "copyrightHolder": "Getty Images",
+            "positionHint": "full-width",
+            "type": "image"
+          },
+          {
+            "text": "Subheading",
+            "markupType": "plain_text",
+            "type": "subheading"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "Conheça as 'superfrutas' encontradas na Mata Atlântica que pesquisadores tentam salvar da extinção",
+                "markupType": "plain_text",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "Por que Greta Thunberg pode estar errada sobre estarmos diante da 'sexta extinção em massa na Terra'",
+                "markupType": "plain_text",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "text": "<italic>Mas essa abordagem tem sido criticada por negligenciar muitas outras espécies que precisam da nossa ajuda.</italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
           }
-        ],
-        "type": "list"
+        ]
       },
-      {
-        "text": "<italic>Mas essa abordagem tem sido criticada por negligenciar muitas outras espécies que precisam da nossa ajuda.</italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Brasil/Portuguese test MAP",
+          "headline": "Brasil/Portuguese test MAP"
+        },
+        "locators": {
+          "assetUri": "/portuguese/media-23282671",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:a9601e04-929a-c74b-8198-cdbdfd3f046e",
+          "assetId": "23282671",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23282671",
+          "curie": "http://www.bbc.co.uk/asset/a9601e04-929a-c74b-8198-cdbdfd3f046e"
+        },
+        "summary": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
+        "timestamp": 1585672938000,
+        "language": "pt-BR",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01kdbns",
+          "subType": "clip",
+          "format": "video",
+          "title": "How Germans remember the World Wars",
+          "synopses": {
+            "short": "Remembrance Day: How Germans remember the World Wars",
+            "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+            "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "How do Germans remember the World Wars?",
+          "versions": [
+            {
+              "versionId": "p01kdbnv",
+              "types": ["Original"],
+              "duration": 162,
+              "durationISO8601": "PT2M42S",
+              "warnings": {
+                "short": "Contains some strong language.",
+                "long": "Contains some strong language."
+              },
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": false
+              },
+              "availableFrom": 1541761851000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63733270",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/1C41/test/_63733270_p01kdbpk.jpg",
+          "path": "/cpsdevpb/1C41/test/_63733270_p01kdbpk.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Description of picture (ALT TEXT)",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:portuguese/media-23282671",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/portuguese/media",
+          "urlIdentifier": "/portuguese/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Brasil",
+          "uri": "/portuguese",
+          "urlIdentifier": "/portuguese",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Brasil/Portuguese test MAP",
-      "headline": "Brasil/Portuguese test MAP"
     },
-    "locators": {
-      "assetUri": "/portuguese/media-23282671",
-      "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23282671",
-      "curie": "http://www.bbc.co.uk/asset/a9601e04-929a-c74b-8198-cdbdfd3f046e",
-      "assetId": "23282671"
-    },
-    "summary": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
-    "timestamp": 1585672938000,
-    "language": "pt-BR",
-    "passport": {
-      "taggings": []
-    },
-    "media": {
-      "id": "p01kdbns",
-      "subType": "clip",
-      "format": "video",
-      "title": "How Germans remember the World Wars",
-      "synopses": {
-        "short": "Remembrance Day: How Germans remember the World Wars",
-        "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
-        "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "How do Germans remember the World Wars?",
-      "versions": [
-        {
-          "versionId": "p01kdbnv",
-          "types": ["Original"],
-          "duration": 162,
-          "durationISO8601": "PT2M42S",
-          "warnings": {
-            "short": "Contains some strong language.",
-            "long": "Contains some strong language."
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:18:00.434Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "84d71d4b-3222-7145-8a16-af72f6049586",
+            "rank": 1,
+            "count": 8623,
+            "urn": "urn:bbc:curie:asset:84d71d4b-3222-7145-8a16-af72f6049586",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "brasil media title Bebê é resgatado de escombros após terremoto no Jãpao",
+                "headline": "brasil short Bebê é resgatado de escombros após terremoto no Jãpao"
+              },
+              "locators": {
+                "assetUri": "/portuguese/media-23035861",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23035861",
+                "curie": "http://www.bbc.co.uk/asset/84d71d4b-3222-7145-8a16-af72f6049586",
+                "assetId": "23035861"
+              },
+              "summary": "brasil medium Bebê é resgatado de escombros após terremoto no Jãpao. Na quinta-feira, um tremor de magnitude 6 atingiu o sul do país.",
+              "timestamp": 1461232489000,
+              "language": "pt-BR",
+              "media": {
+                "id": "23034846",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012vc7h",
+                "entityType": "Clip",
+                "caption": "brasil short Bebê é resgatado de escombros após terremoto no Jãpao",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63481008",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13892/test/_63481008_p012vchb.jpg",
+                "path": "/cpsdevpb/13892/test/_63481008_p012vchb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "test brasil video áéíóú âêîôû àèìòù",
+                "copyrightHolder": "BBC Brasília",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/media-23035861",
+              "type": "cps"
+            }
           },
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": false,
-            "world": false
+          {
+            "id": "18fd7c68-68e0-fe4e-9ae1-85a1f220ffe0",
+            "rank": 2,
+            "count": 3752,
+            "urn": "urn:bbc:curie:asset:18fd7c68-68e0-fe4e-9ae1-85a1f220ffe0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Cameron fala sobre ataques aereos na Siria",
+                "headline": "Cameron discursa sobre ataques aereos na Siria"
+              },
+              "locators": {
+                "assetUri": "/portuguese/internacional-23040500",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-23040500",
+                "curie": "http://www.bbc.co.uk/asset/18fd7c68-68e0-fe4e-9ae1-85a1f220ffe0",
+                "assetId": "23040500"
+              },
+              "summary": "Primeiro-ministro do Reino Unido faz pronunciamento no Parlamento sobre ofensiva",
+              "timestamp": 1463145187000,
+              "language": "pt-BR",
+              "media": {
+                "id": "23015436",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0107ljs",
+                "entityType": "Clip",
+                "caption": "Cameron discursa sobre ataques na Siria",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63482806",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/ED9C/test/_63482806_p0107lk3.jpg",
+                "path": "/cpsdevpb/ED9C/test/_63482806_p0107lk3.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "David Cameron",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/internacional-23040500",
+              "type": "cps"
+            }
           },
-          "availableFrom": 1541761851000
-        }
-      ],
-      "imageCopyright": "BBC",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "63733270",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/1C41/test/_63733270_p01kdbpk.jpg",
-      "path": "/cpsdevpb/1C41/test/_63733270_p01kdbpk.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "Description of picture (ALT TEXT)",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:portuguese/media-23282671",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/portuguese/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Brasil",
-      "uri": "/portuguese",
-      "type": "simple"
-    },
-    "groups": []
+          {
+            "id": "8e96738f-0306-ed4b-971e-94bb3b9e168b",
+            "rank": 3,
+            "count": 3295,
+            "urn": "urn:bbc:curie:asset:8e96738f-0306-ed4b-971e-94bb3b9e168b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "test brasil audio Bebê panda faz primeira aparição pública em zôo dos EUA edit",
+                "headline": "short Bebê panda faz primeira aparição pública em zôo dos EUA edit"
+              },
+              "locators": {
+                "assetUri": "/portuguese/salasocial-23034850",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/salasocial-23034850",
+                "curie": "http://www.bbc.co.uk/asset/8e96738f-0306-ed4b-971e-94bb3b9e168b",
+                "assetId": "23034850"
+              },
+              "summary": "medium Bebê panda faz primeira aparição pública em zôo dos EUA. O filhote de panda-gigante tem cinco meses e, desde que nasceu, só podia ser visto pela internet edit.",
+              "timestamp": 1460996592000,
+              "language": "pt-BR",
+              "media": {
+                "id": "23034945",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p012vcml",
+                "entityType": "Clip",
+                "caption": "short Bebê panda faz primeira aparição pública em zôo dos EUA edit",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63481075",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/DEBA/test/_63481075_p012vcqs.jpg",
+                "path": "/cpsdevpb/DEBA/test/_63481075_p012vcqs.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "test brasil audio áéíóú âêîôû àèìòù cãõ",
+                "caption": "caption áéíóú âêîôû àèìòù cãõ",
+                "copyrightHolder": "BBC Brasília",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/salasocial-23034850",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
