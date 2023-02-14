@@ -1,266 +1,637 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:sinhala/23248970",
-    "locators": {
-      "assetUri": "/sinhala/23248970",
-      "cpsUrn": "urn:bbc:content:assetUri:sinhala/23248970",
-      "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593",
-      "assetId": "23248970"
-    },
-    "type": "MAP",
-    "createdBy": "sinhala-v6",
-    "language": "si",
-    "lastUpdated": 1588336102942,
-    "firstPublished": 1568721388000,
-    "lastPublished": 1568721388000,
-    "timestamp": 1568721388000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "sinhala.media_asset.23248970.page",
-      "cps_asset_id": "23248970"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph", "list"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01mr6r7",
-        "subType": "clip",
-        "format": "audio",
-        "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
-        "synopses": {
-          "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:sinhala/23248970",
+        "locators": {
+          "assetUri": "/sinhala/23248970",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/23248970",
+          "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593",
+          "assetId": "23248970"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "sinhala-v6",
+        "language": "si",
+        "lastUpdated": 1654014036087,
+        "firstPublished": 1568721388000,
+        "lastPublished": 1568721388000,
+        "timestamp": 1568721388000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "hasShortForm": false,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "sinhala.media_asset.23248970.page",
+          "cps_asset_id": "23248970",
+          "contentId": "urn:bbc:cps:curie:asset:96eaf247-c838-d849-9dd3-a513103c0593"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Sinhala",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.4",
+        "blockTypes": ["media", "paragraph", "list"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "SINHALA",
+          "producerId": "82"
+        },
+        "readTime": 1,
+        "siteUri": "/sinhala",
+        "mediaType": "audio"
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01mr6r9",
-            "types": ["Original"],
-            "duration": 1961,
-            "durationISO8601": "PT32M41S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p01mr6r7",
+            "subType": "clip",
+            "format": "audio",
+            "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
+            "synopses": {
+              "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
             },
-            "availableFrom": 1559819809000
-          }
-        ],
-        "imageCopyright": "Getty Images",
-        "type": "media"
-      },
-      {
-        "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. introduction",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </bold><bold>Heading</bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold><italic>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </italic></bold><bold><italic>subheading</italic></bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </bold><bold> crosshead </bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට පැය දහයක කාලයක් තිස්සේ උත්සාහ කළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
+            "versions": [
+              {
+                "versionId": "p01mr6r9",
+                "types": ["Original"],
+                "duration": 1961,
+                "durationISO8601": "PT32M41S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1559819809000
+              }
+            ],
+            "imageCopyright": "Getty Images",
+            "smpKind": "radioProgramme",
+            "type": "media"
+          },
+          {
+            "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. introduction",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </bold><bold>Heading</bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold><italic>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </italic></bold><bold><italic>subheading</italic></bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </bold><bold> crosshead </bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට පැය දහයක කාලයක් තිස්සේ උත්සාහ කළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+                "markupType": "plain_text",
+                "type": "listItem"
+              },
+              {
+                "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+                "markupType": "plain_text",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට <bold>කඩා වැඩුණු දිවියෙක් </bold>ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "numbered": true,
+            "items": [
+              {
+                "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              },
+              {
+                "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
+                "markupType": "candy_xml",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
+          },
+          {
+            "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා footer ",
+            "role": "footer",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා transmission info ",
+            "role": "transmission-info",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
           {
             "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
             "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-            "markupType": "plain_text",
-            "type": "listItem"
+            "type": "paragraph"
           }
-        ],
-        "type": "list"
+        ]
       },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
+          "headline": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා"
+        },
+        "locators": {
+          "assetUri": "/sinhala/23248970",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/23248970",
+          "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593",
+          "assetId": "23248970"
+        },
+        "summary": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+        "timestamp": 1568721388000,
+        "language": "si",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Sinhala",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01mr6r7",
+          "subType": "clip",
+          "format": "audio",
+          "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
+          "synopses": {
+            "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
           },
-          {
-            "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
+          "versions": [
+            {
+              "versionId": "p01mr6r9",
+              "types": ["Original"],
+              "duration": 1961,
+              "durationISO8601": "PT32M41S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1559819809000
+            }
+          ],
+          "imageCopyright": "Getty Images",
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63721761",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/4148/test/_63721761_p01mr7dp.jpg",
+          "path": "/cpsdevpb/4148/test/_63721761_p01mr7dp.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Crowds",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:sinhala/23248970",
+        "type": "cps"
       },
-      {
-        "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට <bold>කඩා වැඩුණු දිවියෙක් </bold>ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "numbered": true,
-        "items": [
-          {
-            "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
-            "markupType": "candy_xml",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      },
-      {
-        "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා footer ",
-        "role": "footer",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා transmission info ",
-        "role": "transmission-info",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "පුවත්, ප්රවෘත්ති, විශ්ලේෂණ, වීඩියෝ",
+          "uri": "/sinhala/front_page",
+          "urlIdentifier": "/sinhala/front_page",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "පුවත් - බීබීසී සිංහල",
+          "uri": "/sinhala",
+          "urlIdentifier": "/sinhala",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
-      "headline": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා"
     },
-    "locators": {
-      "assetUri": "/sinhala/23248970",
-      "cpsUrn": "urn:bbc:content:assetUri:sinhala/23248970",
-      "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593",
-      "assetId": "23248970"
-    },
-    "summary": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-    "timestamp": 1568721388000,
-    "language": "si",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01mr6r7",
-      "subType": "clip",
-      "format": "audio",
-      "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
-      "synopses": {
-        "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
-      "versions": [
-        {
-          "versionId": "p01mr6r9",
-          "types": ["Original"],
-          "duration": 1961,
-          "durationISO8601": "PT32M41S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1559819809000
-        }
-      ],
-      "imageCopyright": "Getty Images",
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "63721761",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/4148/test/_63721761_p01mr7dp.jpg",
-      "path": "/cpsdevpb/4148/test/_63721761_p01mr7dp.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "Crowds",
-      "copyrightHolder": "Getty Images",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:sinhala/23248970",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "පුවත්, ප්රවෘත්ති, විශ්ලේෂණ, වීඩියෝ",
-      "uri": "/sinhala/front_page",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "පුවත් - බීබීසී සිංහල",
-      "uri": "/sinhala",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:18:58.04Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T03:53:00Z",
+        "totalRecords": 7,
+        "records": [
+          {
+            "id": "60074cd0-9e94-2849-bb59-779cfe479155",
+            "rank": 1,
+            "count": 7600,
+            "urn": "urn:bbc:curie:asset:60074cd0-9e94-2849-bb59-779cfe479155",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Sinhala Video: 'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි' 4",
+                "headline": "Sinhala Video: 'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි' 4"
+              },
+              "locators": {
+                "assetUri": "/sinhala/world-23031337",
+                "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-23031337",
+                "curie": "http://www.bbc.co.uk/asset/60074cd0-9e94-2849-bb59-779cfe479155",
+                "assetId": "23031337"
+              },
+              "summary": "Sinhala Video: අඟහරුවාදා බ්‍රසල්ස් හි දී සිදු වූ බෝම්බ පිපිරීම් වලින් තුවාල ලැබූ පිරිස් තවමත් රෝහල් දැඩි සත්කාර ඒකක යේ ප්‍රතිකා",
+              "timestamp": 1458823303000,
+              "language": "si",
+              "media": {
+                "id": "23031334",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012fsz0",
+                "entityType": "Clip",
+                "caption": "'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි'",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63478186",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10A5B/test/_63478186_p012ft0p.jpg",
+                "path": "/cpsdevpb/10A5B/test/_63478186_p012ft0p.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Brussels Mourning",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:sinhala/world-23031337",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f1f2c3ab-5575-d94a-918f-0d7e75667c7d",
+            "rank": 2,
+            "count": 7428,
+            "urn": "urn:bbc:curie:asset:f1f2c3ab-5575-d94a-918f-0d7e75667c7d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "alpha",
+                "headline": "beta"
+              },
+              "locators": {
+                "assetUri": "/sinhala/world-23031333",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:f1f2c3ab-5575-d94a-918f-0d7e75667c7d",
+                "assetId": "23031333",
+                "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-23031333",
+                "curie": "http://www.bbc.co.uk/asset/f1f2c3ab-5575-d94a-918f-0d7e75667c7d"
+              },
+              "summary": "gamma",
+              "timestamp": 1459428357000,
+              "language": "si",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Sinhala",
+                "taggings": []
+              },
+              "media": {
+                "id": "23031853",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012j56c",
+                "entityType": "Clip",
+                "caption": "beta",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63478476",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1079F/test/_63478476_p012j585.jpg",
+                "path": "/cpsdevpb/1079F/test/_63478476_p012j585.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #7",
+                "copyrightHolder": "BBC Sport",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:sinhala/world-23031333",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "90124822-c271-9445-bc6f-cf00642b3bc5",
+            "rank": 3,
+            "count": 7083,
+            "urn": "urn:bbc:curie:asset:90124822-c271-9445-bc6f-cf00642b3bc5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Sinhala Video: 'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි' 3",
+                "headline": "Sinhala Video: 'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි' 3"
+              },
+              "locators": {
+                "assetUri": "/sinhala/world-23031336",
+                "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-23031336",
+                "curie": "http://www.bbc.co.uk/asset/90124822-c271-9445-bc6f-cf00642b3bc5",
+                "assetId": "23031336"
+              },
+              "summary": "Sinhala Video: අඟහරුවාදා බ්‍රසල්ස් හි දී සිදු වූ බෝම්බ පිපිරීම් වලින් තුවාල ලැබූ පිරිස් තවමත් රෝහල් දැඩි සත්කාර ඒකක යේ ප්‍රතිකා",
+              "timestamp": 1458823234000,
+              "language": "si",
+              "media": {
+                "id": "23031334",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012fsz0",
+                "entityType": "Clip",
+                "caption": "'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි'",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63478186",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10A5B/test/_63478186_p012ft0p.jpg",
+                "path": "/cpsdevpb/10A5B/test/_63478186_p012ft0p.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Brussels Mourning",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:sinhala/world-23031336",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b3d30bb0-dc9c-a34d-8781-ceb16bdcad38",
+            "rank": 4,
+            "count": 6091,
+            "urn": "urn:bbc:curie:asset:b3d30bb0-dc9c-a34d-8781-ceb16bdcad38",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Sinhala Video: 'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි' 2",
+                "headline": "Sinhala Video: 'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි' 2"
+              },
+              "locators": {
+                "assetUri": "/sinhala/world-23031335",
+                "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-23031335",
+                "curie": "http://www.bbc.co.uk/asset/b3d30bb0-dc9c-a34d-8781-ceb16bdcad38",
+                "assetId": "23031335"
+              },
+              "summary": "Sinhala Video: අඟහරුවාදා බ්‍රසල්ස් හි දී සිදු වූ බෝම්බ පිපිරීම් වලින් තුවාල ලැබූ පිරිස් තවමත් රෝහල් දැඩි සත්කාර ඒකක යේ ප්‍රතිකා",
+              "timestamp": 1458823193000,
+              "language": "si",
+              "media": {
+                "id": "23031334",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012fsz0",
+                "entityType": "Clip",
+                "caption": "'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි'",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63478186",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10A5B/test/_63478186_p012ft0p.jpg",
+                "path": "/cpsdevpb/10A5B/test/_63478186_p012ft0p.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Brussels Mourning",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:sinhala/world-23031335",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "084cdf1f-70ea-1b42-89f0-0cd8afa7181f",
+            "rank": 5,
+            "count": 4532,
+            "urn": "urn:bbc:curie:asset:084cdf1f-70ea-1b42-89f0-0cd8afa7181f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "දිවියෙක් පාසලකට කඩා වදියි 1",
+                "headline": "දිවියෙක් පාසලකට කඩා වදියි 1"
+              },
+              "locators": {
+                "assetUri": "/sinhala/world-23022324",
+                "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-23022324",
+                "curie": "http://www.bbc.co.uk/asset/084cdf1f-70ea-1b42-89f0-0cd8afa7181f",
+                "assetId": "23022324"
+              },
+              "summary": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+              "timestamp": 1455031532000,
+              "language": "en-gb",
+              "media": {
+                "id": "63305311",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p00zc1p4",
+                "duration": "PT2M13S",
+                "caption": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+                "image": {
+                  "id": "63305311",
+                  "subType": "thumbnail",
+                  "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63302000/jpg/_63302851_63302850.jpg",
+                  "path": "/tmcs/media/images/63302000/jpg/_63302851_63302850.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Facebook 1bn graphic",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "embedding": false,
+                "available": true,
+                "live": false,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63302853",
+                "subType": "index",
+                "href": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/63302000/jpg/_63302853_63302850.jpg",
+                "path": "/tmcs/media/images/63302000/jpg/_63302853_63302850.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Facebook 1bn graphic",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:sinhala/world-23022324",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "eceb9b1b-fb12-de46-b928-95e0cd0819df",
+            "rank": 6,
+            "count": 1838,
+            "urn": "urn:bbc:curie:asset:eceb9b1b-fb12-de46-b928-95e0cd0819df",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Sinhala Video: 'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි' 5",
+                "headline": "Sinhala Video: 'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි' 5"
+              },
+              "locators": {
+                "assetUri": "/sinhala/world-23031338",
+                "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-23031338",
+                "curie": "http://www.bbc.co.uk/asset/eceb9b1b-fb12-de46-b928-95e0cd0819df",
+                "assetId": "23031338"
+              },
+              "summary": "Sinhala Video: අඟහරුවාදා බ්‍රසල්ස් හි දී සිදු වූ බෝම්බ පිපිරීම් වලින් තුවාල ලැබූ පිරිස් තවමත් රෝහල් දැඩි සත්කාර ඒකක යේ ප්‍රතිකා",
+              "timestamp": 1458823469000,
+              "language": "si",
+              "media": {
+                "id": "23031334",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012fsz0",
+                "entityType": "Clip",
+                "caption": "'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි'",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63478186",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10A5B/test/_63478186_p012ft0p.jpg",
+                "path": "/cpsdevpb/10A5B/test/_63478186_p012ft0p.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Brussels Mourning",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:sinhala/world-23031338",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "60c6147d-4449-f84a-8400-b901255eee2c",
+            "rank": 7,
+            "count": 1184,
+            "urn": "urn:bbc:curie:asset:60c6147d-4449-f84a-8400-b901255eee2c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි' rewrite",
+                "headline": "'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි' rewrite"
+              },
+              "locators": {
+                "assetUri": "/sinhala/sri-lanka-23032582",
+                "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-23032582",
+                "curie": "http://www.bbc.co.uk/asset/60c6147d-4449-f84a-8400-b901255eee2c",
+                "assetId": "23032582"
+              },
+              "summary": "අඟහරුවාදා බ්‍රසල්ස් හි දී සිදු වූ බෝම්බ පිපිරීම් වලින් තුවාල ලැබූ පිරිස් තවමත් රෝහල් දැඩි සත්කාර ඒකක යේ ප්‍රතිකා",
+              "timestamp": 1459861740000,
+              "language": "si",
+              "media": {
+                "id": "23031334",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012fsz0",
+                "entityType": "Clip",
+                "caption": "'බ්‍රසල්ස් මරණ සංඛ්‍යාව ඉහළ යා හැකියි'",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63479171",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/432D/test/_63479171_89da95a6-0343-48f1-bd9d-23d344686929.jpg",
+                "path": "/cpsdevpb/432D/test/_63479171_89da95a6-0343-48f1-bd9d-23d344686929.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Brussels Mourning",
+                "caption": "බ්බ්ක",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:sinhala/sri-lanka-23032582",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

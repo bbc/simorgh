@@ -1,569 +1,621 @@
 {
-    "metadata": {
-      "id": "urn:bbc:ares::index:sinhala/51727586/desktop/domestic",
-      "locators": {
-        "assetUri": "/sinhala/51727586",
-        "cpsUrn": "urn:bbc:content:assetUri:sinhala/51727586",
-        "curie": "http://www.bbc.co.uk/asset/145c9cc1-0a93-ad44-9df6-c68f3dc8b01a/desktop/domestic",
-        "assetId": "51727586"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::index:sinhala/51727586/mobile/domestic",
+        "locators": {
+          "assetUri": "/sinhala/51727586",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:145c9cc1-0a93-ad44-9df6-c68f3dc8b01a/desktop/domestic",
+          "assetId": "51727586",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/51727586",
+          "curie": "http://www.bbc.co.uk/asset/145c9cc1-0a93-ad44-9df6-c68f3dc8b01a/desktop/domestic"
+        },
+        "type": "FIX",
+        "createdBy": "sinhala-v6",
+        "language": "si",
+        "lastUpdated": 1675482575830,
+        "firstPublished": 1583421529000,
+        "lastPublished": 1675482570000,
+        "timestamp": 1675482569000,
+        "options": {
+          "allowAdvertising": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "fix",
+          "counterName": "sinhala.feature_index.51727586.page",
+          "cps_asset_id": "51727586",
+          "contentId": "urn:bbc:cps:curie:asset:145c9cc1-0a93-ad44-9df6-c68f3dc8b01a"
+        },
+        "tags": {},
+        "version": "v1.4.15",
+        "blockTypes": [
+          "lead-feature-now",
+          "container-top-stories",
+          "container-guides",
+          "feature-main"
+        ],
+        "title": "විශේෂාංග",
+        "summary": "විශේෂාංග",
+        "atiAnalytics": {
+          "producerName": "SINHALA",
+          "producerId": "82"
+        }
       },
-      "type": "FIX",
-      "createdBy": "sinhala-v6",
-      "language": "si",
-      "lastUpdated": 1597729628418,
-      "firstPublished": 1583421529000,
-      "lastPublished": 1597729622000,
-      "timestamp": 1597729621000,
-      "options": {
-        "allowAdvertising": true
+      "content": {
+        "groups": [
+          {
+            "type": "lead-feature-now",
+            "title": "Lead Feature",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "පළාත් පාලන මැතිවරණය පැවැත්වීම අවිනිශ්චිත ද? මැ.කො.ස සභාපති නීතීඥ නිමල් පුංචිහේවා කියන්නේ කුමක්ද?"
+                },
+                "locators": {
+                  "assetUri": "/sinhala/sri-lanka-64432108",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:659415f5-be2c-40ae-9eb4-69c3ce09e359",
+                  "assetId": "64432108",
+                  "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-64432108",
+                  "curie": "http://www.bbc.co.uk/asset/659415f5-be2c-40ae-9eb4-69c3ce09e359"
+                },
+                "summary": "අභියෝගාත්මක වුවද, ආතතියකින් තොරව මැතිවරණ කටයුතු මෙහෙයවන බව කී ඔහු \"කිසිම බාධවක් නැතෙයි කියන එක නෙවෙයි මම කියන්නේ, කොමිසම හැටියට මාර්තු 9 ඡන්දේ දෙන්න කොමිසමේ තියෙන ව්‍යවස්ථාපිත වගකීමත් එක්ක ඒ කටයුතු අපි ඉෂ්ට කරගෙන යනවයි කියලා\" යනුවෙන් අවධාරණය කළේය.",
+                "timestamp": 1674836914000,
+                "language": "si",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    },
+                    {
+                      "campaignId": "5a988e3e39461b000e9dabfb",
+                      "campaignName": "WS - Keep me on trend"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p0dzbkj1",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "පළාත් පාලන මැතිවරණය පැවැත්වීම අවිනිශ්චිත ද? මැ.කො.ස සභාපති නීතීඥ නිමල් පුංචිහේවාගෙන් කියන්නේ කුමක්ද?",
+                  "synopses": {
+                    "short": "පළාත් පාලන මැතිවරණය පැවැත්වීම අවිනිශ්චිත ද?",
+                    "long": "පළාත් පාලන මැතිවරණය සම්බන්ධයෙන් ඇතැම් පාර්ශව මතු කරන අවිනිශ්චිත තත්ත්වය පිළිබඳව මැතිවරණ කොමිෂන් සභාවේ සභාපති නීතීඥ නිමල් පුංචිහේවා බීබීසී සිංහල සේවය සමඟ අද (ජනවාරි 27) සංවාදයකට එක් වෙමින් අදහස් පළ කළේය .\n\nසභාපතිවරයා අවධාරණය කළේ, සැලසුම් කළ පරිදි මාර්තු 9 වැනිදා පළාත් පාලන මැතිවරණය පැවැත්වීමට අවශ්‍ය කටයුතු මේ වන විට ක්‍රියාත්මක කරමින් සිටින බවය.\n\nකොමිෂන් සභාවේ සාමාජිකයෙකු ඉල්ලා අස්වු බවට මාධ්‍ය මගින් වාර්තා කර ඇතැත් මෙතෙක් තමන්ට නිල දැනුම් දීමක් කර නැතැයි ඔහු පැවසීය.\n\nඅලුතින් සම්මත කරගත් මැතිවරණ වියදම් හෙළිදරව්  කිරීමේ නීතිය අනුව,පළාත් පාලන මැතිවරණයට තරග කරන අපේක්ෂකයෙකුට, මැතිවරණ වියදම් ලෙස  එක් කොට්ඨාසයක ඡන්ද දායකයකු වෙනුවෙන් වැය කර හැකි මුදල රුපියල් විස්සක් වන බවද සභාපතිවරයා කියා සිටියේය.\n\nඅභියෝගාත්මක වුවද, ආතතියකින් තොරව මැතිවරණ කටයුතු මෙහෙයවන බව කී  ඔහු \"කිසිම බාධවක් නැතෙයි කියන එක නෙවෙයි මම කියන්නේ, කොමිසම හැටියට මාර්තු 9 ඡන්දේ දෙන්න කොමිසමේ තියෙන ව්‍යවස්ථාපිත වගකීමත් එක්ක ඒ කටයුතු අපි ඉෂ්ට කරගෙන යනවයි කියලා\" යනුවෙන් අවධාරණය කළේය.",
+                    "medium": "පළාත් පාලන මැතිවරණය පැවැත්වීම අවිනිශ්චිත ද? මැ.කො.ස සභාපති නීතීඥ නිමල් පුංචිහේවාගෙන් කියන්නේ කුමක්ද?"
+                  },
+                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f06jjr.jpg",
+                  "embedding": true,
+                  "advertising": true,
+                  "caption": "පළාත් පාලන මැතිවරණය පැවැත්වීම අවිනිශ්චිත ද?",
+                  "versions": [
+                    {
+                      "versionId": "p0dzbkj5",
+                      "types": ["Original"],
+                      "duration": 673,
+                      "durationISO8601": "PT11M13S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1674836469000
+                    }
+                  ],
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "128440842",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/60E4/production/_128440842_p0dzbkwl.jpg",
+                  "path": "/cpsprodpb/60E4/production/_128440842_p0dzbkwl.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "election",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:sinhala/sri-lanka-64432108",
+                "type": "cps"
+              },
+              {
+                "name": "පළාත් පාලන මැතිවරණය 2023:තරග බිමේ අපේක්ෂකයන්ගේ අලුත්ම ට්‍රේන්ඩ් එක මොකක්ද?",
+                "summary": "“අපි අපේක්ෂා කරන්නේ බුද්ධිමත් ඡන්ද දායකයෙක් නේ. ඡන්ද දායකයෙක් තමන්ගේ අපේක්ෂකයාගේ සුදුසුකම් සොයාලා බලලා ඒ අපේක්ෂකයට අපිව නියෝජනය කරන්න. ඒ ආයතනවල වැඩ කරන්න අවශ්‍ය ධාරිතාව, ශක්‍යතාව ඒගොල්ලන්ට තියෙනවද? එක හොයලා බලලා ඡන්දය දීම තමයි අපි අපේක්ෂා කළ යුතු වෙන්නේ. ඒවගේ ඡන්ද දායක ප්‍රජාවක්. ඒවගේ අපේක්ෂකයෝ නිර්මාණය කිරීම තමයි කළ යුතු වන්නේ\"",
+                "indexImage": {
+                  "id": "128382272",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/6A5C/production/_128382272_f88b5df4-4619-4c22-8958-899bfa63a785.jpg",
+                  "path": "/cpsprodpb/6A5C/production/_128382272_f88b5df4-4619-4c22-8958-899bfa63a785.jpg",
+                  "height": 389,
+                  "width": 594,
+                  "altText": "Voters wait in a queue to cast their ballots in the parliamentary election at a polling station in Colombo August 5, 2020. - Sri Lankan voters cast their ballots on August 5 for a new parliament as the ruling Rajapaksa brothers seek a fresh mandate to cement their grip on power.",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/sinhala/articles/c87pn50z56yo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c87pn50z56yo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1674463515000,
+                "type": "link"
+              },
+              {
+                "name": "ඇමතිවරයෙකුටත් නැති කොළඹ නගරාධිපති සුපිරි නිල නිවසේ මීළඟ හිමිකරු කවුද?",
+                "summary": "කොළඹ 07, ශ්‍රීමත් මාකස් ප්‍රනාන්දු මාවතේ අක්කරයක පමණ භූමි ප්‍රදේශයක කොළඹ නගරාධිපති නිල නිවස පිහිටා ඇත.මහජන දේපළක් වන මෙහි වර්තමාන වටිනාකම රුපියල් බිලියන ගණනක් වන බව කොළඹ නගර සභාවේ ජ්‍යෙෂ්ඨ නිලධාරියෙකු අප සමඟ සඳහන් කළේය.නිදන කාමර,සාකච්ඡා ශාලා, උද්‍යාන මෙන්ම වෙනම කාර්ය මණ්ඩල සාමාජිකයින් පිරිසක් ද ඊට ඇතුළත්ය.",
+                "indexImage": {
+                  "id": "128412953",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/e0eb/live/838ce2b0-9cb7-11ed-ad89-4f53842b367a.png",
+                  "path": "/cpsprodpb/e0eb/live/838ce2b0-9cb7-11ed-ad89-4f53842b367a.png",
+                  "height": 1080,
+                  "width": 1920,
+                  "altText": "Municipal Council Main Candidates",
+                  "copyrightHolder": "BBC",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/sinhala/articles/c198x0vdwyxo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c198x0vdwyxo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1674656467000,
+                "type": "link"
+              },
+              {
+                "name": "ශ්‍රී ලංකා පාපන්දු තහනම:අපට අහිමිවන්නේ මොනවාද?",
+                "summary": "ජාත්‍යන්තර පාපන්දු සම්මේලනයේ (FIFA) මහ ලේකම් පසුගිය දා නිවේදනයක් නිකුත් කරමින්, ජාත්‍යන්තර පාපන්දු සම්මේලනය සහ ආසියානු පාපන්දු සම්මේලනය විසින් ශ්‍රී ලංකාවේ පාපන්දු සම්මේලනය තහනම් කරනු ලැබීය. මෙය ශ්‍රී ලංකාවේ පාපන්දු ක්‍රීඩාවට මෙන්ම පාපන්දු ක්‍රීඩකයින්ගේ අනාගතයට ද දැඩි බලපෑමක් එල්ල කරනු ඇතැ යි යන්න නොඅනුමාන ය.",
+                "indexImage": {
+                  "id": "128397445",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/D4CF/production/_128397445_cad0cb82-1297-4575-9406-8ffc1ad5f901.jpg",
+                  "path": "/cpsprodpb/D4CF/production/_128397445_cad0cb82-1297-4575-9406-8ffc1ad5f901.jpg",
+                  "height": 536,
+                  "width": 954,
+                  "altText": "The FIFA logo on a banner before the FIFA World Cup Qatar 2022 semi final match between France and Morocco at Al Bayt Stadium on December 14, 2022 in Al Khor, Qatar",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/sinhala/articles/c2xrjjz6egdo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c2xrjjz6egdo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1674565145000,
+                "type": "link"
+              }
+            ],
+            "semanticGroupName": "Lead Feature"
+          },
+          {
+            "type": "container-top-stories",
+            "title": "Container Top Stories",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "චීනයේ සහ ඉන්දියාවේ බල අරගලයට මැදි වූ ශ්‍රී ලංකාවේ අනාගතය කෙබඳු වෙයි ද?"
+                },
+                "locators": {
+                  "assetUri": "/sinhala/sri-lanka-64320609",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:183ef7b5-fd8b-4305-af5a-aef4ab450123",
+                  "assetId": "64320609",
+                  "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-64320609",
+                  "curie": "http://www.bbc.co.uk/asset/183ef7b5-fd8b-4305-af5a-aef4ab450123"
+                },
+                "summary": "21 වන සියවසේ විශාලම භූ දේශපාලන බල එදිරිවාදිකම්වලින් එකක් වන චීනය සහ ඉන්දියාව අතර බල අරගලය හේතූවෙන් ශ්‍රී ලංකාවේ ආසන්නම අනාගතය සහ නැවත යථා තත්වයට පත්වීම අවහිරව තිබෙන ආකාරය පිළිබඳව BBC නිවුස් නයිට් වැඩසටහනේ අවදානයට ලක්විය.",
+                "timestamp": 1674047704000,
+                "language": "si",
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3139461b000e9dabf9",
+                      "campaignName": "WS - Divert me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "MAP",
+                "media": {
+                  "id": "p0dx3yx6",
+                  "subType": "clip",
+                  "format": "video",
+                  "title": "චීනයේ සහ ඉන්දියාවේ බල අරගලයට මැදි වූ ශ්‍රී ලංකාවේ අනාගතය කෙබඳු වෙයි ද?",
+                  "synopses": {
+                    "short": "චීනයේ සහ ඉන්දියාවේ බල අරගලයට මැදි වූ ශ්‍රී ලංකාවේ අනාගතය කෙබඳු වෙයි ද?"
+                  },
+                  "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dx46g6.jpg",
+                  "embedding": true,
+                  "advertising": true,
+                  "caption": "චීනයේ සහ ඉන්දියාවේ බල අරගලයට මැදි වූ ශ්‍රී ලංකාවේ අනාගතය කෙබඳු වෙයි ද?",
+                  "versions": [
+                    {
+                      "versionId": "p0dx3yxl",
+                      "types": ["Original"],
+                      "duration": 404,
+                      "durationISO8601": "PT6M44S",
+                      "warnings": {},
+                      "availableTerritories": {
+                        "uk": true,
+                        "nonUk": true
+                      },
+                      "availableFrom": 1674046715000
+                    }
+                  ],
+                  "imageCopyright": "Getty Images",
+                  "smpKind": "programme",
+                  "type": "media"
+                },
+                "indexImage": {
+                  "id": "128336389",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1803B/production/_128336389_p0dx46g6.jpg",
+                  "path": "/cpsprodpb/1803B/production/_128336389_p0dx46g6.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ශ්‍රී ලංකාවේ අනාගතය කෙබඳු වෙයි ද?",
+                  "caption": "ශ්‍රී ලංකාවේ අනාගතය කෙබඳු වෙයි ද?",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:sinhala/sri-lanka-64320609",
+                "type": "cps"
+              },
+              {
+                "name": "කේ.බී.හේරත්:'පිරවිය නොහැකි හිඩැසක්' තබා නික්ම ගිය නාට්‍ය කලාවේ 'ස්වතන්ත්‍ර නිර්මාණකරුවා'",
+                "summary": "විමලරත්න අදිකාරි විසින් අධ්‍යක්ෂණය කරන ලද පාරමී දම් ටෙලි නාට්‍යය රචනා කරමින් ඔහු ටෙලි නාට්‍ය තිර රචනයට එක්වූ අතර, ගජමන් නෝනා, ඉසිවර අසපුව, ඉති අතු, ගිරි දෙරණ, සදගිරි පව්ව, දෙනුවර මැණිකේ, ටිකිරි නිලමෙ, ‍සසර සෙවණැලි ආදී ටෙලි නාට්‍ය ජනාදරයට පත් විය.ඉංගම්මාරුව ආදී ඒකාංගික ටෙලි නාට්‍ය මාලා කිහිපයක් ද ඔහු විසින් නිර්මාණය කරන ලදී.",
+                "indexImage": {
+                  "id": "128465870",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/1EB0/production/_128465870_3f6bb050-7a91-41d9-b9fc-d15b3e42cbe2.jpg",
+                  "path": "/cpsprodpb/1EB0/production/_128465870_3f6bb050-7a91-41d9-b9fc-d15b3e42cbe2.jpg",
+                  "height": 449,
+                  "width": 798,
+                  "altText": "K.B. Herath",
+                  "copyrightHolder": "Facebook",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/sinhala/articles/c72z40zvlp2o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c72z40zvlp2o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1675099951000,
+                "type": "link"
+              },
+              {
+                "name": "චීන- ඉන්දීය බල අරලය මැද සේතු සමුද්‍රම් යථාර්ථයක් වෙයිද?",
+                "summary": "\"මේක ලංකාවට බලපානව නම් ලංකාවට කතා කිරීමේ අයිතියක් තියෙන්න ඕනේ. දැන් වෙලා තියෙන්නේ අයිතිය තියෙනවාද අපිට. මොකද හිඟන්නො බවට පත්වෙලා ඉන්දියාවට ණය වෙලා තියෙන කොට කටවල් වහන්න පහසුයිනේ\"",
+                "indexImage": {
+                  "id": "128359410",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/05D7/production/_128359410_a362a911-f076-47c1-b7ba-8e3f59fcc9f9.jpg",
+                  "path": "/cpsprodpb/05D7/production/_128359410_a362a911-f076-47c1-b7ba-8e3f59fcc9f9.jpg",
+                  "height": 433,
+                  "width": 770,
+                  "altText": "සේතුසමුද්‍රම් නාවික ඇළ ව්‍යාපෘතිය යනු ඉන්දියාව සහ ශ්‍රී ලංකාව අතර නොගැඹුරු සමුද්‍ර සන්ධියේ නාවික මාර්ගයක් නිර්මාණය කිරීමට යෝජිත ව්‍යාපෘතියකි.",
+                  "copyrightHolder": "Google",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/sinhala/articles/cv26znvd4vvo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cv26znvd4vvo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1674208771000,
+                "type": "link"
+              },
+              {
+                "headlines": {
+                  "headline": "මියන්මාරයේ මාරාන්තික අවි නිපදවීමට ගෝලීය සමාගම්හි අනුග්‍රහය"
+                },
+                "locators": {
+                  "assetUri": "/sinhala/world-64302664",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:ccc8c166-d2af-4bdf-b60d-48e948d95629",
+                  "assetId": "64302664",
+                  "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-64302664",
+                  "curie": "http://www.bbc.co.uk/asset/ccc8c166-d2af-4bdf-b60d-48e948d95629"
+                },
+                "summary": "මියන්මාර හමුදාව තමන්ගේම ජනතාවට එරෙහිව දේශීයව නිෂ්පාදිත අවි භාවිත කරන බව වාර්තාවකින් හෙළිකර තිබේ. සැපයුම් නතර කරන්නැ යි අදාළ වාර්තාවෙන් ඉල්ලීමක්කර ඇත.",
+                "timestamp": 1674019833000,
+                "language": "si",
+                "byline": {
+                  "name": "සීලියා හැට්න්",
+                  "title": "බීබීසී",
+                  "persons": [
+                    {
+                      "name": "Celia Hatton",
+                      "function": "BBC News",
+                      "thumbnail": "http://news.bbcimg.co.uk/media/images/70992000/jpg/_70992367_celia112.jpg"
+                    }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    },
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "128280512",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/5404/production/_128280512_bullet.png",
+                  "path": "/cpsprodpb/5404/production/_128280512_bullet.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "A protester holds a bullet fired during a protest against the military coup in March 2021",
+                  "caption": "The marking of the Myanmar military DDI is on this bullet casing found after a lethal crackdown on protesters in 2021",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:sinhala/world-64302664",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Container Top Stories"
+          },
+          {
+            "type": "container-guides",
+            "title": "Guides 1",
+            "items": [
+              {
+                "name": "සිඩ්නි සම්මාන උළෙලේ සම්මාන 4ක් දිනූ The Jungle and the Sea ගැන නදී කම්මැල්ලවීර සමග කතාබහක්",
+                "summary": "\"මං මේ නාට්‍යයේ චරිත දෙකක් රඟපෑවා. එකක් මධු කියන චරිතය. එය කතාවේ ප්‍රධාන දෙමළ පවුලේ දියණියකගේ චරිතයක්. අනික් චරිතය දේව්ලා කියන, පුහුදුන් මිනිසුන් ඇසුරේ ජීවත්වීම ප්‍රකිත්ෂේප කරමින් කැලෑ වැදී, ස්වභාවධර්මයේ නියාමයන්ට අනුව ජීවත්වෙන, සමාජය විසින් '' පිස්සු ගෑනියෙන්'' විදියට නම් කරන ලද වියපත් ස්ත්‍රියකගේ චරිතයක්\"",
+                "indexImage": {
+                  "id": "128430974",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/BB1F/production/_128430974_c7ba060c-b0d8-49fc-b375-e4114b65b0ed.jpg",
+                  "path": "/cpsprodpb/BB1F/production/_128430974_c7ba060c-b0d8-49fc-b375-e4114b65b0ed.jpg",
+                  "height": 1280,
+                  "width": 1919,
+                  "altText": "THE JUNGLE AND THE SEA",
+                  "copyrightHolder": "THE JUNGLE AND THE SEA",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/sinhala/articles/c517n259j2yo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c517n259j2yo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1674777638000,
+                "type": "link"
+              },
+              {
+                "headlines": {
+                  "headline": "රාජ්‍ය සේවක වැටුප් පවා ගෙවාගත නොහැකිව ශ්‍රී ලංකාවට සිය 75 වැනි නිදහස අභිමානවත්ව සැමරිය හැකිද?"
+                },
+                "locators": {
+                  "assetUri": "/sinhala/sri-lanka-64305900",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:80f261b3-2a95-439b-81a1-8f2a265f156e",
+                  "assetId": "64305900",
+                  "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-64305900",
+                  "curie": "http://www.bbc.co.uk/asset/80f261b3-2a95-439b-81a1-8f2a265f156e"
+                },
+                "summary": "පවතින අර්ථික අර්බුදය හමුවේ රාජ්‍ය සේවක වැටුප් ගෙවීම අර්බුදකාරී තත්ත්වයකට පත්ව ඇත. කැබිනට් ප්‍රකාශක අමාත්‍ය බන්දුල ගුණවර්ධන අද (ජනවාරි 17 වැනිදා ) පැවති කැබිනට් ප්‍රවෘත්ති සාකච්ඡාවේදී අනාවරණය කළේ ,රාජ්‍ය සේවකයින්ට නිශ්චිත දිනයටම වැටුප් ගෙවා ගත නොහැකි තත්ත්වයක් උද්ගත වී ඇති බවයි.මෙවනි තත්ත්වයක් උද්ගත වූයේ ලංකා ඉතිහාසයේ ප්‍රථමවතාවට බවද ඔහු සඳහන් කළේය.",
+                "timestamp": 1673965484000,
+                "language": "si",
+                "byline": {
+                  "name": "සම්පත්  දිසානායක",
+                  "title": "බීබීසී සිංහල ",
+                  "persons": [
+                    {
+                      "name": "Ana Gabriela Rojas",
+                      "function": "BBC News Mundo, enviada especial a Honduras"
+                    }
+                  ]
+                },
+                "passport": {
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    },
+                    {
+                      "campaignId": "5a988e4739461b000e9dabfc",
+                      "campaignName": "WS - Update me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "128323188",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15844/production/_128323188_gettyimages-1218754599.jpg",
+                  "path": "/cpsprodpb/15844/production/_128323188_gettyimages-1218754599.jpg",
+                  "height": 1152,
+                  "width": 2048,
+                  "altText": "Sri lanka economy",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:sinhala/sri-lanka-64305900",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "ශ්‍රී ලංකාවේ ණය බර අඩු කරන්නැයි ශ්‍රී ලංකා මහ බැංකුවෙන් චීනයට සහ ඉන්දියාවට ඉල්ලීමක්"
+                },
+                "locators": {
+                  "assetUri": "/sinhala/sri-lanka-64259191",
+                  "curieCpsUrn": "urn:bbc:cps:curie:asset:8531a477-244f-4eb4-81f9-10485f9082fd",
+                  "assetId": "64259191",
+                  "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-64259191",
+                  "curie": "http://www.bbc.co.uk/asset/8531a477-244f-4eb4-81f9-10485f9082fd"
+                },
+                "summary": "\"දිර්ඝ කාලයක් ණය නොගෙවා, මේ වගේ තත්ත්වයක අපිට ඉන්න ඕනේ නෑ. ඒක අපිට වගේම රටටත් හොඳ නැහැ. ඒක ශ්‍රී ලංකාවේ ආයෝජක විශ්වාසයටත් හොඳ නැහැ.\"",
+                "timestamp": 1673586867000,
+                "language": "si",
+                "byline": {
+                  "name": "බෙන් චූ",
+                  "title": "ආර්ථික සංස්කාරක, නිව්ස්නයිට්",
+                  "persons": [
+                    {
+                      "name": "Ben Chu",
+                      "function": "Economics editor, Newsnight"
+                    }
+                  ]
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "128262305",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/C496/production/_128262305_teapickersms.png",
+                  "path": "/cpsprodpb/C496/production/_128262305_teapickersms.png",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "Tea pickers",
+                  "copyrightHolder": "Jack Garland",
+                  "originCode": "cpsprodpb",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:sinhala/sri-lanka-64259191",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Guides 1"
+          },
+          {
+            "type": "feature-main",
+            "title": "Features and Analysis",
+            "items": [
+              {
+                "name": "2023 : ශ්‍රී ලංකාවේ කල දසාව කුමක් විය හැකි ද?",
+                "summary": "ඉහළ යන ජීවන වියදම, බදු බර, පොහොර අර්බුදය, දෛනික විදුලි කප්පාදුව, රැකියා අහිමි වීම්, ණය පොලී ඉහළ යෑම, මානව හිමිකම් උල්ලංඝනය  වැනි ප්‍රශ්න හේතුවෙන් ජනතාව ද විශාල පීඩනයකින් 2023 වසරට පියනගති.",
+                "indexImage": {
+                  "id": "128170758",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/14ECB/production/_128170758_71b5d5f5-d80d-46e4-8e05-9bfe6b6c0bad.jpg",
+                  "path": "/cpsprodpb/14ECB/production/_128170758_71b5d5f5-d80d-46e4-8e05-9bfe6b6c0bad.jpg",
+                  "height": 683,
+                  "width": 1024,
+                  "altText": "2022 වසරේ දෙසැම්බර් 31 වැනිදා දක්වාම IMF ණය සඳහා නිශ්චිත එකඟතාවක් ලැබී නොතිබුණි.",
+                  "copyrightHolder": "Getty Images",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.co.uk/sinhala/articles/c198jmykem7o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c198jmykem7o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1672545104000,
+                "type": "link"
+              },
+              {
+                "name": "ආගමික මතවාද විවේචනය කරන්න අයිතියක් නැද්ද?",
+                "summary": " “නමුත් දැන් මේ වෙලාවේ මේක ඊට වඩා වෙනස්. අපේ රටේ සාමාන්‍යයෙන් බොහෝ දේවල් සිද්ධ වෙන්නේ ඡන්ද එක්ක. මේ වෙලාවේ ප්‍රාදේශීය සභා ඡන්දය එන්න පුලුවන්. එතකොට ආයිත් බුද්ධාගමටයි, අරකටයි මේකටයි. හතුරෝ ඇවිදින්, ඔන්න ඒ පාර බුද්ධාගම බේර ගන්න මේ අර වීරයන්ට අවස්ථාව එනවා.”",
+                "indexImage": {
+                  "id": "128242137",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/11DA4/production/_128242137_6c10ccf0-893d-4c66-bc75-6aa00a0216d6.jpg",
+                  "path": "/cpsprodpb/11DA4/production/_128242137_6c10ccf0-893d-4c66-bc75-6aa00a0216d6.jpg",
+                  "height": 436,
+                  "width": 774,
+                  "altText": "Sepal Amarasinghe",
+                  "copyrightHolder": "Sepal Amarasinghe|Youtube",
+                  "allowSyndication": true,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/sinhala/articles/c4nd2zz8v73o",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/c4nd2zz8v73o",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1673277754000,
+                "type": "link"
+              },
+              {
+                "name": "ඉලංගෙයි තමිල් අරසු කච්චි පක්ෂය දෙමළ ජාතික සන්ධානයෙන් වෙන්වීම උතුරු නැගෙනහිර දේශපාලන පිටියේ තීරණාත්මක හැරවුමක්ද?",
+                "summary": "දෙමළ ජනතාවගේ ආරක්ෂාව, දෙමළ ජනතාවගේ භූමිය හා දෙමළ ජනතාවගේ අයිතීන් වෙනුවෙන් දෙමළ දේශපාලන පක්ෂ සියල්ල එක්ව කටයුතු කළ යුතුබවට වන දෙමළ ජනතාවගේ ඉල්ලීම මත පසුගිය 12 වැනිදා හා 13 වැනිදා දෙමළ දේශපාලන පක්ෂ ඒකාබද්ධ ගිවිසුමකට එළැඹීම වෙනුවෙන් සාකච්ජා පැවැත්වූහ.",
+                "indexImage": {
+                  "id": "128318849",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/172A1/production/_128318849_gettyimages-181402994-594x594.jpg",
+                  "path": "/cpsprodpb/172A1/production/_128318849_gettyimages-181402994-594x594.jpg",
+                  "height": 576,
+                  "width": 1024,
+                  "altText": "jaffna election",
+                  "copyrightHolder": "LAKRUWAN WANNIARACHCHI",
+                  "allowSyndication": false,
+                  "type": "image"
+                },
+                "uri": "https://www.bbc.com/sinhala/articles/cv29jrjnypqo",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/article/cv29jrjnypqo",
+                "contentType": "Text",
+                "assetTypeCode": "PRO",
+                "timestamp": 1673927162000,
+                "type": "link"
+              }
+            ],
+            "semanticGroupName": "Features and Analysis"
+          }
+        ]
       },
-      "analyticsLabels": {
-        "cps_asset_type": "fix",
-        "counterName": "sinhala.feature_index.51727586.page",
-        "cps_asset_id": "51727586"
+      "promo": {
+        "subType": "IDX",
+        "name": "විශේෂාංග",
+        "uri": "/sinhala/51727586",
+        "id": "urn:bbc:ares::index:sinhala/51727586/desktop/domestic",
+        "type": "simple"
       },
-      "tags": {},
-      "version": "v1.3.6",
-      "blockTypes": [
-        "lead-feature-now",
-        "container-top-stories",
-        "container-guides",
-        "feature-main"
-      ],
-      "title": "විශේෂාංග",
-      "summary": "විශේෂාංග",
-      "atiAnalytics": {
-        "producerName": "SINHALA",
-        "producerId": "82"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "මුල් පුවත්, ප්රවෘත්ති, විශ්ලේෂණ, වීඩියෝ",
+          "uri": "/sinhala/front_page",
+          "urlIdentifier": "/sinhala/front_page",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "පුවත් - බීබීසී සිංහල",
+          "uri": "/sinhala",
+          "urlIdentifier": "/sinhala",
+          "type": "simple"
+        },
+        "groups": []
       }
     },
-    "content": {
-      "groups": [
-        {
-          "type": "lead-feature-now",
-          "title": "Lead Feature",
-          "items": [
-            {
-              "headlines": {
-                "headline": "ළමා සාහිත්‍ය නිර්මාණ තුළින් ලෝකය දිනූ 'සිබිල් නැන්දා'"
-              },
-              "locators": {
-                "assetUri": "/sinhala/sri-lanka-53265256",
-                "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-53265256",
-                "curie": "http://www.bbc.co.uk/asset/3c81a3a7-bac0-4f4c-a6d6-9f0063a62d30",
-                "assetId": "53265256"
-              },
-              "summary": "ගිංතොට ගමේ පොල් මුලක් උඩ තැනූ 'සිහින රාජධානිය' ලෝවැසි දරුවන්ට තිළිණ කර, දිවි සැරිය හමාර කළ ලෝකය දිනූ සිත්තරාවිය",
-              "timestamp": 1593693935000,
-              "language": "si",
-              "byline": {
-                "name": "ෂර්ලි  උපුල් කුමාර ",
-                "title": "බීබීසී සිංහල",
-                "persons": [
-                  {
-                    "name": "ෂර්ලි උපුල් කුමාර",
-                    "function": "බීබීසී සිංහල"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "113204864",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/B6F8/production/_113204864_img_4369.jpg",
-                "path": "/cpsprodpb/B6F8/production/_113204864_img_4369.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "සිබිල් වෙත්තසිංහ",
-                "copyrightHolder": "Kelum Chamara ",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:sinhala/sri-lanka-53265256",
-              "type": "cps"
-            }
-          ],
-          "semanticGroupName": "Lead Feature"
-        },
-        {
-          "type": "container-top-stories",
-          "title": "Container Top Stories",
-          "items": [
-            {
-              "headlines": {
-                "headline": "\"ලෝකයේ විශාලම කබල්ලෑවා\" ශ්‍රී ලංකාවෙන් සොයා ගැනේ"
-              },
-              "locators": {
-                "assetUri": "/sinhala/sri-lanka-53249120",
-                "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-53249120",
-                "curie": "http://www.bbc.co.uk/asset/0aae14ff-30c8-4663-b4d1-29adf71ee550",
-                "assetId": "53249120"
-              },
-              "summary": "ශ්‍රී ලංකාවෙන් හමුවූ වූ \"ලෝකයේ ලොකුම කබල්ලෑවා\" දඩයක්කරුවෙකුගේ ගොදුරක් වී ඇති බැවින් එම සත්ත්වයා සජීවීව දැකිය නොහැකි බව පර්යේෂකයින් පිරිස පැවසුහ.",
-              "timestamp": 1593662713000,
-              "language": "si",
-              "byline": {
-                "name": "ෂර්ලි  උපුල් කුමාර ",
-                "title": "බීබීසී සිංහල",
-                "persons": [
-                  {
-                    "name": "ෂර්ලි උපුල් කුමාර",
-                    "function": "බීබීසී සිංහල"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e2939461b000e9dabf8",
-                    "campaignName": "WS - Educate me"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "113186238",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/14544/production/_113186238_img_0629copy2.jpg",
-                "path": "/cpsprodpb/14544/production/_113186238_img_0629copy2.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "ශ්‍රී ලංකාවේ දක්නට ලැබෙන්නේ 'ඉන්දියානු කබල්ලෑවා' [Indian Pangolin] නමැති විශේෂය ය.",
-                "caption": "ශ්‍රී ලංකාවේ දක්නට ලැබෙන්නේ 'ඉන්දියානු කබල්ලෑවා' [Indian Pangolin] නමැති විශේෂය ය.",
-                "copyrightHolder": "Dr. Priyan Perera",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:sinhala/sri-lanka-53249120",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "'යුරෝපයේ විශාලම මහා විහාරය' ඉදිකරන ශ්‍රී ලාංකික නායක හාමුදුරුවෝ"
-              },
-              "locators": {
-                "assetUri": "/sinhala/sri-lanka-53493119",
-                "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-53493119",
-                "curie": "http://www.bbc.co.uk/asset/b5cde37a-33b6-48c3-94c6-f29d56336b38",
-                "assetId": "53493119"
-              },
-              "summary": "\"මේ තරුණයා පන්සලට ඇවිත් බණ අහනවා. කවදාවත් කිව්වේ නැහැ එයා කාගේ කවුද කියල. මෙයා දවසක් මට කිව්වා ශ්‍රී ලංකාවේ ජනාධිපතිගේ නමත් එයාගේ තාත්තගේ නමට සමානයි කියල.\"",
-              "timestamp": 1595480416000,
-              "language": "si",
-              "byline": {
-                "name": "තිසර රතුවිතාන ",
-                "title": "BBC",
-                "persons": [
-                  {
-                    "name": "Abdujalil Abdurasulov",
-                    "function": "BBC News Almata"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                  "categoryName": "Feature"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "113567726",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/F538/production/_113567726_t1.png",
-                "path": "/cpsprodpb/F538/production/_113567726_t1.png",
-                "height": 549,
-                "width": 976,
-                "altText": "Birmingham Buddhist Maha Vihara",
-                "caption": "බර්මින්ග්හැම් බෞද්ධ මහා විහාරයේ ඉදිකිරීම් සියල්ල නිමවීමෙන් පසු දිස්වන අයුරු දැක්වෙන රූ සටහන",
-                "copyrightHolder": "Birmingham Buddhist Maha Vihara",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:sinhala/sri-lanka-53493119",
-              "type": "cps"
-            }
-          ],
-          "semanticGroupName": "Container Top Stories"
-        },
-        {
-          "type": "container-guides",
-          "title": "Guides 1",
-          "items": [
-            {
-              "headlines": {
-                "headline": "කොරෝනාවෛරසය හමුවේ 'පල්ලම් බසින' ශ්‍රී ලංකාවේ ආර්ථිකය"
-              },
-              "locators": {
-                "assetUri": "/sinhala/sri-lanka-53315248",
-                "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-53315248",
-                "curie": "http://www.bbc.co.uk/asset/eb095bd9-ae48-4fa4-8cb7-305cbae62bf9",
-                "assetId": "53315248"
-              },
-              "summary": "\"එක මාසයකට විතරක් විදෙස් විනිමය 1/3ක් පමණ පහළට ගිහින් තිබෙනවා. කොහොමත් 20%කින් විතර ලංකාවේ ප්‍රේෂණ අවම වන බව ලෝක බැංකුව පුරෝකථනය කර තිබෙනවා.\"",
-              "timestamp": 1594182026000,
-              "language": "si",
-              "byline": {
-                "name": "දැහැමි රණවීර ",
-                "title": "BBC සිංහල ",
-                "persons": [
-                  {
-                    "name": "Abdujalil Abdurasulov",
-                    "function": "BBC News Almata"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                  "categoryName": "Feature"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "113262915",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/CAD6/production/_113262915_gettyimages-672088514-594x594.jpg",
-                "path": "/cpsprodpb/CAD6/production/_113262915_gettyimages-672088514-594x594.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Sri Lanka economy",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:sinhala/sri-lanka-53315248",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "කොරෝනා වෛරසය: 'වසා දැමුණු' ඉතාලියේ සිටින ශ්‍රී ලාංකිකයෝ"
-              },
-              "locators": {
-                "assetUri": "/sinhala/world-51825379",
-                "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-51825379",
-                "curie": "http://www.bbc.co.uk/asset/2ae95143-771b-3a46-97ea-cda31ce63cf4",
-                "assetId": "51825379"
-              },
-              "summary": "\"විවිධ කටකතා, බොරු ප්‍රචාර යනවා අපිට කන්න බොන්න නැහැ කියලා. නමුත් එහෙම තත්ත්වයක් මෙහෙ නැහැ.\"",
-              "timestamp": 1583897629000,
-              "language": "si",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e3e39461b000e9dabfb",
-                    "campaignName": "WS - Keep me on trend"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "111209307",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/112F6/production/_111209307_gettyimages-1206349141-594x594.jpg",
-                "path": "/cpsprodpb/112F6/production/_111209307_gettyimages-1206349141-594x594.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Coronavirus in Italy",
-                "caption": "වෙනදා සංචාරකයන්ගෙන් පිරී ගිය මිලාන්හි Vittorio Emanuele II galleria සාප්පු සංකීර්ණය",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:sinhala/world-51825379",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "ජාතිවාදියෙකු සමග තර්ක කරන්නේ කොහොම ද?"
-              },
-              "locators": {
-                "assetUri": "/sinhala/world-52980617",
-                "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-52980617",
-                "curie": "http://www.bbc.co.uk/asset/22a723a1-2330-4641-9fc3-c52162799da9",
-                "assetId": "52980617"
-              },
-              "summary": "යමෙකුගේ ජාතිය සම්බන්ධයෙන් පවතින ස්ථාපිත ආදර්ශ (Stereotypes) සහ මිත්‍යා විශ්වාස භාවිත කරන්නේ ජාතිවාදීන්ම පමණක් නොවේ. යහපත් චේතනාවක් සහිත පුද්ගලයෙකු වුවත් ඇතැම් ජාතියක් සම්බන්ධයෙන් පවතින අතීත අත්දැකීම් සහ ඔවුන්ගේ සංස්කෘතික ඉතිහාසය නිසා උපකල්පනයන්ට තල්ලු විය හැක. මේ විද්‍යාව සහ කරුණු (Facts) යොදා ගනිමින් ජාතිවාදී මිත්‍යා පහක් බිඳ දමන ආකාරය පිළිබඳ සැකසුනු ලිපියකි.",
-              "timestamp": 1591848506000,
-              "language": "si",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
-                  "categoryName": "Fact Check"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e1739461b000e9dabf6",
-                    "campaignName": "WS - CS"
-                  },
-                  {
-                    "campaignId": "5a988e2939461b000e9dabf8",
-                    "campaignName": "WS - Educate me"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "110947845",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/D65A/production/_110947845_6b4b21e5-e37a-4770-a031-caad5231f2fd.jpg",
-                "path": "/cpsprodpb/D65A/production/_110947845_6b4b21e5-e37a-4770-a031-caad5231f2fd.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "poster of two people on",
-                "caption": "විද්‍යාව සහ කරුණු යොදා ගෙන ජාතිවාදය බිඳ දැමිය හැක",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:sinhala/world-52980617",
-              "type": "cps"
-            }
-          ],
-          "semanticGroupName": "Guides 1"
-        },
-        {
-          "type": "feature-main",
-          "title": "Features and Analysis",
-          "items": [
-            {
-              "headlines": {
-                "headline": "ශ්‍රී ලංකාවේ විදුලි සැර වැදීමෙන් සිදු වූ මරණවල 'වැඩිවීමක්'"
-              },
-              "locators": {
-                "assetUri": "/sinhala/sri-lanka-51723382",
-                "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-51723382",
-                "curie": "http://www.bbc.co.uk/asset/ead59dc1-0c6c-054a-9191-eb157221bd20",
-                "assetId": "51723382"
-              },
-              "summary": "නවතම සංඛ්‍යාලේඛන වලට අනුව, 2019 දී වාර්තා වූ විදුලි සැර වැදීමෙන් සිදු වූ මරණවලින් 86% ක් පුරුෂයන් වන අතර, 2018 දී එය 83%ක්ව පැවතියේය.",
-              "timestamp": 1583296168000,
-              "language": "si",
-              "byline": {
-                "name": "දැහැමි  රණවීර",
-                "title": "බීබීසී සිංහල",
-                "persons": [
-                  {
-                    "name": "දැහැමි රණවීර",
-                    "function": "බීබීසී සිංහල"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                  "categoryName": "Feature"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e2939461b000e9dabf8",
-                    "campaignName": "WS - Educate me"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "111128481",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/4832/production/_111128481_mediaitem111128480.jpg",
-                "path": "/cpsprodpb/4832/production/_111128481_mediaitem111128480.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "ශ්‍රී ලංකාවේ විදුලි සැර වැදීමෙන් සිදු වූ මරණවල 'වැඩිවීමක්'",
-                "copyrightHolder": "Getty Images",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:sinhala/sri-lanka-51723382",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "විදු ලොවේ වාර්තා අලුත් කළ ශ්‍රී ලාංකික විද්‍යාඥවරිය"
-              },
-              "locators": {
-                "assetUri": "/sinhala/sri-lanka-51545981",
-                "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-51545981",
-                "curie": "http://www.bbc.co.uk/asset/41497430-679b-4048-9f69-63df19f68e76",
-                "assetId": "51545981"
-              },
-              "summary": "නමින් ගෝතමී වීරකෝන් වන ඇය ලන්ඩනයේ ස්වභාවික විද්‍යා කෞතුකාගාරයේ (Natural History Museum) ලයිකන අංශයේ ජ්‍යෙෂ්ඨ භාරකරු ලෙස කටයුතු කරයි.",
-              "timestamp": 1582615041000,
-              "language": "si",
-              "byline": {
-                "name": "සුනෙත්  පෙරේරා ",
-                "title": "BBC සිංහල ",
-                "persons": [
-                  {
-                    "name": "සුනෙත් පෙරේරා",
-                    "function": "BBC සිංහල සේවය"
-                  }
-                ]
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                  "categoryName": "Feature"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e2139461b000e9dabf7",
-                    "campaignName": "WS - Inspire me"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "111080619",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/165D8/production/_111080619_de9c3634-c005-47b8-9506-25d464273b33.jpg",
-                "path": "/cpsprodpb/165D8/production/_111080619_de9c3634-c005-47b8-9506-25d464273b33.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "ගෝතමී වීරකෝන්",
-                "caption": "\"මට කඳු නගින්න වෙනවා, ගස් නගින්න වෙනවා, රැයක් දවාලක් නැතුව වැඩ කරන්න වෙනවා. ඒ වගේම බොහෝ විට ඒ දේවල් කරන්න වෙන්නේ මේල් ටීම් (පිරිමි කණ්ඩායමක්) එකක් සමග\"",
-                "copyrightHolder": "Natural History Museum",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:sinhala/sri-lanka-51545981",
-              "type": "cps"
-            },
-            {
-              "headlines": {
-                "headline": "පාසලේදී හිරිහැර විඳි දරුවාට ලොව නන් දෙසින් සහය පළ වේ"
-              },
-              "locators": {
-                "assetUri": "/sinhala/world-51589741",
-                "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-51589741",
-                "curie": "http://www.bbc.co.uk/asset/bdb99e15-6110-7240-9854-d67d6f9b4fe9",
-                "assetId": "51589741"
-              },
-              "summary": "\"සෑම දිනකම ... යම් දෙයක් සිදුවෙනවා. තවත් සිද්ධියක්, තවත් හිරිහැර කිරීමක්, තවත් නින්දා කිරීමක්, තවත් නම් පටබැඳීමක්.\"",
-              "timestamp": 1582298563000,
-              "language": "si",
-              "passport": {
-                "category": {
-                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                  "categoryName": "News"
-                },
-                "campaigns": [
-                  {
-                    "campaignId": "5a988e3e39461b000e9dabfb",
-                    "campaignName": "WS - Keep me on trend"
-                  }
-                ],
-                "taggings": []
-              },
-              "cpsType": "STY",
-              "indexImage": {
-                "id": "110988711",
-                "subType": "index",
-                "href": "http://c.files.bbci.co.uk/2E0C/production/_110988711_bul1.jpg",
-                "path": "/cpsprodpb/2E0C/production/_110988711_bul1.jpg",
-                "height": 549,
-                "width": 976,
-                "altText": "Quaden",
-                "caption": "ක්ආඩන් (වම් පස) සහ ප්‍රසිද්ධ රංගන ශිල්පී හියු ජැක්මන් (දකුණු පස)",
-                "copyrightHolder": "BBC",
-                "type": "image"
-              },
-              "options": {
-                "isBreakingNews": false,
-                "isFactCheck": false
-              },
-              "id": "urn:bbc:ares::asset:sinhala/world-51589741",
-              "type": "cps"
-            }
-          ],
-          "semanticGroupName": "Features and Analysis"
-        }
-      ]
-    },
-    "promo": {
-      "subType": "IDX",
-      "name": "විශේෂාංග",
-      "uri": "/sinhala/51727586",
-      "id": "urn:bbc:ares::index:sinhala/51727586/desktop/domestic",
-      "type": "simple"
-    },
-    "relatedContent": {
-      "section": {
-        "subType": "index",
-        "name": "මුල් පුවත්, ප්රවෘත්ති, විශ්ලේෂණ, වීඩියෝ",
-        "uri": "/sinhala/front_page",
-        "type": "simple"
-      },
-      "site": {
-        "subType": "site",
-        "name": "පුවත් - බීබීසී සිංහල",
-        "uri": "/sinhala",
-        "type": "simple"
-      },
-      "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": null
     }
   }
+}
