@@ -155,16 +155,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group5: 4,
   };
 
-  const optimizelyMappings = {
-    content_recs: 'datalabContentRecommendations',
-    hybrid_recs: 'datalabHybridRecommendations',
-    variation_1: 'datalabHybridRecommendationsV1x1',
-    variation_2: 'datalabHybridRecommendationsV1x2',
-    variation_3: 'datalabHybridRecommendationsV1x3',
-    variation_4: 'datalabHybridRecommendationsV1x4',
-    variation_5: 'datalabHybridRecommendationsV1x5',
-  };
-
   // ads
   const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
