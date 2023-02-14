@@ -1,172 +1,347 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:gujarati/other-news-23130286",
-    "locators": {
-      "assetUri": "/gujarati/other-news-23130286",
-      "cpsUrn": "urn:bbc:content:assetUri:gujarati/other-news-23130286",
-      "curie": "http://www.bbc.co.uk/asset/77bd783c-5f55-1a4f-8704-baaaee04a4e4",
-      "assetId": "23130286"
-    },
-    "type": "MAP",
-    "createdBy": "gujarati-v6",
-    "language": "gu",
-    "lastUpdated": 1588335930363,
-    "firstPublished": 1496745098000,
-    "lastPublished": 1496745098000,
-    "timestamp": 1496745098000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "gujarati.also_in_the_news.media_asset.23130286.page",
-      "cps_asset_id": "23130286"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:gujarati/other-news-23130286",
+        "locators": {
+          "assetUri": "/gujarati/other-news-23130286",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:77bd783c-5f55-1a4f-8704-baaaee04a4e4",
+          "assetId": "23130286",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/other-news-23130286",
+          "curie": "http://www.bbc.co.uk/asset/77bd783c-5f55-1a4f-8704-baaaee04a4e4"
+        },
+        "type": "MAP",
+        "createdBy": "gujarati-v6",
+        "language": "gu",
+        "lastUpdated": 1665419824815,
+        "firstPublished": 1496745098000,
+        "lastPublished": 1496745098000,
+        "timestamp": 1496745098000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "gujarati.also_in_the_news.media_asset.23130286.page",
+          "cps_asset_id": "23130286",
+          "contentId": "urn:bbc:cps:curie:asset:77bd783c-5f55-1a4f-8704-baaaee04a4e4"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "GUJARATI",
+          "producerId": "50"
+        },
+        "readTime": 1,
+        "siteUri": "/gujarati",
+        "mediaType": "audio",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      "taggings": []
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "નરેન્દ્ર મોદી",
-          "thingUri": "http://www.bbc.co.uk/things/103fc7e4-3a8d-491c-9a75-3c37c299d48f#id",
-          "thingId": "103fc7e4-3a8d-491c-9a75-3c37c299d48f",
-          "thingType": ["core:Thing", "tagging:TagConcept", "core:Person"],
-          "thingSameAs": []
-        }
-      ]
-    },
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01blkgh",
-        "subType": "clip",
-        "format": "audio",
-        "title": "શિખર-રોહિતની કરી પ્રશંસા",
-        "synopses": { "short": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..." },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01blmqx.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "યુવરાજ સિંહ અને વિરાટ કોહલી",
-        "versions": [
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01blkgq",
-            "types": ["Original"],
-            "duration": 16,
-            "durationISO8601": "PT16S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p01blkgh",
+            "subType": "clip",
+            "format": "audio",
+            "title": "શિખર-રોહિતની કરી પ્રશંસા",
+            "synopses": {
+              "short": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..."
             },
-            "availableFrom": 1496679977000
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01blmqx.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "યુવરાજ સિંહ અને વિરાટ કોહલી",
+            "versions": [
+              {
+                "versionId": "p01blkgq",
+                "types": ["Original"],
+                "duration": 16,
+                "durationISO8601": "PT16S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1496679977000
+              }
+            ],
+            "smpKind": "radioProgramme",
+            "type": "media"
+          },
+          {
+            "text": "વિરાટે ભારતીય ટીમના પ્રદર્શનને લઇ બેટ્સમેન અને બોલરોને 10માંથી 9 અંક આપ્યા જ્યારે ફિલ્ડરને 6 અંક આપ્યા હતા.",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "- વિરાટે કહ્યું અમારે સર્વશ્રેષ્ઠ ટીમો વિરૂદ્ધ જોરદાર સ્પર્ધા માટે ફિલ્ડિંગ પર ભાર આપવાની જરૂર છે, અમારે આગળ આનાથી પણ સારૂ પ્રદર્શન કરવાનું છે॥",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
-        ],
-        "type": "media"
+        ]
       },
-      {
-        "text": "વિરાટે ભારતીય ટીમના પ્રદર્શનને લઇ બેટ્સમેન અને બોલરોને 10માંથી 9 અંક આપ્યા જ્યારે ફિલ્ડરને 6 અંક આપ્યા હતા.",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "શિખર-રોહિતની કરી પ્રશંસા",
+          "headline": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..."
+        },
+        "locators": {
+          "assetUri": "/gujarati/other-news-23130286",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:77bd783c-5f55-1a4f-8704-baaaee04a4e4",
+          "assetId": "23130286",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/other-news-23130286",
+          "curie": "http://www.bbc.co.uk/asset/77bd783c-5f55-1a4f-8704-baaaee04a4e4"
+        },
+        "summary": "ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો.",
+        "timestamp": 1496745098000,
+        "language": "gu",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01blkgh",
+          "subType": "clip",
+          "format": "audio",
+          "title": "શિખર-રોહિતની કરી પ્રશંસા",
+          "synopses": {
+            "short": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..."
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01blmqx.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "યુવરાજ સિંહ અને વિરાટ કોહલી",
+          "versions": [
+            {
+              "versionId": "p01blkgq",
+              "types": ["Original"],
+              "duration": 16,
+              "durationISO8601": "PT16S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1496679977000
+            }
+          ],
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63539794",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/C281/test/_63539794_p01blmqx.jpg",
+          "path": "/cpsdevpb/C281/test/_63539794_p01blmqx.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "શિખર-રોહિતની કરી પ્રશંસા",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:gujarati/other-news-23130286",
+        "type": "cps"
       },
-      {
-        "text": "- વિરાટે કહ્યું અમારે સર્વશ્રેષ્ઠ ટીમો વિરૂદ્ધ જોરદાર સ્પર્ધા માટે ફિલ્ડિંગ પર ભાર આપવાની જરૂર છે, અમારે આગળ આનાથી પણ સારૂ પ્રદર્શન કરવાનું છે॥",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "અન્ય સમાચાર",
+          "uri": "/gujarati/other_news",
+          "urlIdentifier": "/gujarati/other_news",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC ગુજરાતી",
+          "uri": "/gujarati",
+          "urlIdentifier": "/gujarati",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "શિખર-રોહિતની કરી પ્રશંસા",
-      "headline": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..."
     },
-    "locators": {
-      "assetUri": "/gujarati/other-news-23130286",
-      "cpsUrn": "urn:bbc:content:assetUri:gujarati/other-news-23130286",
-      "curie": "http://www.bbc.co.uk/asset/77bd783c-5f55-1a4f-8704-baaaee04a4e4",
-      "assetId": "23130286"
-    },
-    "summary": "ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો.",
-    "timestamp": 1496745098000,
-    "language": "gu",
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "taggings": []
-    },
-    "media": {
-      "id": "p01blkgh",
-      "subType": "clip",
-      "format": "audio",
-      "title": "શિખર-રોહિતની કરી પ્રશંસા",
-      "synopses": { "short": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..." },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01blmqx.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "યુવરાજ સિંહ અને વિરાટ કોહલી",
-      "versions": [
-        {
-          "versionId": "p01blkgq",
-          "types": ["Original"],
-          "duration": 16,
-          "durationISO8601": "PT16S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1496679977000
-        }
-      ],
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "63539794",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/C281/test/_63539794_p01blmqx.jpg",
-      "path": "/cpsdevpb/C281/test/_63539794_p01blmqx.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "શિખર-રોહિતની કરી પ્રશંસા",
-      "copyrightHolder": "Reuters",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:gujarati/other-news-23130286",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "અન્ય સમાચાર",
-      "uri": "/gujarati/other_news",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC ગુજરાતી",
-      "uri": "/gujarati",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:26:58.148Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 2,
+        "records": [
+          {
+            "id": "950a50a1-e62b-a94c-8d8e-0725a3270319",
+            "rank": 1,
+            "count": 9838,
+            "urn": "urn:bbc:curie:asset:950a50a1-e62b-a94c-8d8e-0725a3270319",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ",
+                "headline": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ- તેની સામે હું ક્લબ ક્રિકેટર લાગી રહ્યો હતો"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-23130284",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-23130284",
+                "curie": "http://www.bbc.co.uk/asset/950a50a1-e62b-a94c-8d8e-0725a3270319",
+                "assetId": "23130284"
+              },
+              "summary": "ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો.",
+              "timestamp": 1496744090000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p01blkbb",
+                "subType": "clip",
+                "format": "video",
+                "title": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ",
+                "synopses": {
+                  "short": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ- તેની સામે હું ક્લબ ક્રિકેટર લાગી રહ્યો હતો",
+                  "medium": "ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો.",
+                  "long": "શું કહ્યું વિરાટ કોહલીએ?\n \n- વિરાટ કોહલી અને યુવરાજની બેટિંગના દમ પર ભારતે 319 રન બનાવ્યા હતા. યુવરાજે 32 બોલમાં 53 રનની વિસ્ફોટક ઇનિંગ રમી હતી. જ્યારે વિરાટે 68 બોલમાં 81 રન બનાવ્યા હતા.\n- વિરાટે મેચ બાદ કહ્યું પત્રકાર પરિષદમાં કહ્યું કે જ્યારે હું રન નહતો બનાવી રહ્યો, ત્યારે યુવીએ દબાણ નાખ્યુ હતું, જે રીતે તે બોલને મારી રહ્યો હતો, હું તેની સામે એક ક્લબ બેટ્સમેન જેવો લાગી રહ્યો હતો."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01blkd6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "યુવરાજ સિંહ અને વિરાટ કોહલી",
+                "versions": [
+                  {
+                    "versionId": "p01blkbd",
+                    "types": ["Original"],
+                    "duration": 20,
+                    "durationISO8601": "PT20S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1496677744000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63539792",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7461/test/_63539792_p01blkd6.jpg",
+                "path": "/cpsdevpb/7461/test/_63539792_p01blkd6.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "યુવરાજની ઇનિંગ પર બોલ્યો વિરાટ",
+                "copyrightHolder": "વવમ લાૈે",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-23130284",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "77bd783c-5f55-1a4f-8704-baaaee04a4e4",
+            "rank": 2,
+            "count": 204,
+            "urn": "urn:bbc:curie:asset:77bd783c-5f55-1a4f-8704-baaaee04a4e4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "શિખર-રોહિતની કરી પ્રશંસા",
+                "headline": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..."
+              },
+              "locators": {
+                "assetUri": "/gujarati/other-news-23130286",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:77bd783c-5f55-1a4f-8704-baaaee04a4e4",
+                "assetId": "23130286",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/other-news-23130286",
+                "curie": "http://www.bbc.co.uk/asset/77bd783c-5f55-1a4f-8704-baaaee04a4e4"
+              },
+              "summary": "ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો.",
+              "timestamp": 1496745098000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01blkgh",
+                "subType": "clip",
+                "format": "audio",
+                "title": "શિખર-રોહિતની કરી પ્રશંસા",
+                "synopses": {
+                  "short": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01blmqx.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "યુવરાજ સિંહ અને વિરાટ કોહલી",
+                "versions": [
+                  {
+                    "versionId": "p01blkgq",
+                    "types": ["Original"],
+                    "duration": 16,
+                    "durationISO8601": "PT16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1496679977000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63539794",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C281/test/_63539794_p01blmqx.jpg",
+                "path": "/cpsdevpb/C281/test/_63539794_p01blmqx.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "શિખર-રોહિતની કરી પ્રશંસા",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/other-news-23130286",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

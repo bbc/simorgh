@@ -1,282 +1,3774 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:gujarati/media-49502679",
-    "locators": {
-      "assetUri": "/gujarati/media-49502679",
-      "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-49502679",
-      "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c",
-      "assetId": "49502679"
-    },
-    "type": "MAP",
-    "createdBy": "gujarati-v6",
-    "language": "gu",
-    "lastUpdated": 1588785566621,
-    "firstPublished": 1567079155000,
-    "lastPublished": 1567079155000,
-    "timestamp": 1567079155000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "gujarati.embedded_media.media_asset.49502679.page",
-      "cps_asset_id": "49502679"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-        "categoryName": "Feature"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e2139461b000e9dabf7",
-          "campaignName": "WS - Inspire me"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:gujarati/media-49502679",
+        "locators": {
+          "assetUri": "/gujarati/media-49502679",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-49502679",
+          "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c",
+          "assetId": "49502679"
         },
-        {
-          "campaignId": "5a988e3139461b000e9dabf9",
-          "campaignName": "WS - Divert me"
-        }
-      ],
-      "taggings": []
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "બાળક",
-          "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
-          "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
-          "thingType": [
-            "core:Theme",
-            "tagging:TagConcept",
-            "core:Thing",
-            "tagging:AmbiguousTerm",
-            "tagging:Genre"
-          ],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q7569",
-            "http://dbpedia.org/resource/Child"
-          ],
-          "topicName": "બાળક",
-          "topicId": "cpzd4k9j2g9t",
-          "curationList": [
+        "type": "MAP",
+        "createdBy": "gujarati-v6",
+        "language": "gu",
+        "lastUpdated": 1649974122315,
+        "firstPublished": 1567079155000,
+        "lastPublished": 1567079155000,
+        "timestamp": 1567079155000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "gujarati.embedded_media.media_asset.49502679.page",
+          "cps_asset_id": "49502679",
+          "contentId": "urn:bbc:cps:curie:asset:b914f819-3a6c-324a-b3b0-f7d2d2613b9c"
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
             {
-              "curationId": "555663be-6ff0-45c1-9527-abb6a9ff3c93",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "નેપાળ",
-          "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
-          "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
-          "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/1282988/"],
-          "topicName": "નેપાળ",
-          "topicId": "c404vn5789qt",
-          "curationList": [
-            {
-              "curationId": "32bcce5b-99ed-48a0-99ed-ac2fe5cacefc",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "મહિલા",
-          "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
-          "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
-          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q467",
-            "http://dbpedia.org/resource/Woman"
-          ],
-          "topicName": "મહિલા",
-          "topicId": "c7zp5121jg8t",
-          "curationList": [
-            {
-              "curationId": "cfddbe74-5eff-4106-8fa8-9da604322568",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "મહિલા આરોગ્ય",
-          "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
-          "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
-          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
-          "thingSameAs": ["http://www.wikidata.org/entity/Q8031191"],
-          "topicName": "મહિલા આરોગ્ય",
-          "topicId": "c1gdq29gx40t",
-          "curationList": [
-            {
-              "curationId": "18f11cbb-ccde-4895-baa1-45be5ebd3224",
-              "curationType": "vivo-stream"
-            }
-          ]
-        }
-      ]
-    },
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p07ltlm1",
-        "subType": "clip",
-        "format": "video",
-        "title": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-        "synopses": {
-          "short": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-          "long": "નેપાળની રાજધાની કાઠમાંડુંમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. \nઅનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી તેમના માટે પાંચ માતાઓ વરદાન સમાન બની છે કે જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. \nપાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
-          "medium": "માતાના દૂધથી વંચિત બાળકો માટે આશીર્વાદ સમાન બની પાંચ મહિલાઓ."
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lv5tj.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-        "versions": [
-          {
-            "versionId": "p07ltlm4",
-            "types": ["Original"],
-            "duration": 140,
-            "durationISO8601": "PT2M20S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
             },
-            "availableFrom": 1567011153000
-          }
-        ],
-        "imageCopyright": "BBC",
-        "type": "media"
-      },
-      {
-        "text": "નેપાળની રાજધાની કાઠમાંડુમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. ",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "અનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી, તેમના માટે પાંચ માતાઓ 'દેવદૂત' સમાન બની છે. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "પાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold><italic>તમે અમને </italic></bold><link><caption>ફેસબુક</caption><url href=\"https://www.facebook.com/BBCnewsGujarati/\" platform=\"highweb\"/></link><bold><italic>, </italic></bold><link><caption>ઇન્સ્ટાગ્રામ</caption><url href=\"https://www.instagram.com/bbcnewsgujarati/\" platform=\"highweb\"/></link><bold><italic>, </italic></bold><link><caption>યૂટ્યૂબ</caption><url href=\"https://www.youtube.com/channel/UCYUPBf8y9ggcnpBxCKZteHA\" platform=\"highweb\"/></link><bold><italic> અને </italic></bold><link><caption>ટ્વિટર</caption><url href=\"https://twitter.com/bbcnewsgujarati\" platform=\"highweb\"/></link><bold><italic> પર ફોલો કરી શકો છો</italic></bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "અનાથ બાળકોને માનું દૂધ પીવડાવતી વૉલન્ટિયર માતાઓ",
-      "headline": "અનાથ બાળકોને માનું દૂધ પીવડાવતી વૉલન્ટિયર માતાઓ"
-    },
-    "locators": {
-      "assetUri": "/gujarati/media-49502679",
-      "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-49502679",
-      "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c",
-      "assetId": "49502679"
-    },
-    "summary": "માતાનાં દૂધથી વંચિત બાળકો માટે 'દેવદૂત' સમાન બની પાંચ મહિલાઓ.",
-    "timestamp": 1567079155000,
-    "language": "gu",
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-        "categoryName": "Feature"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e2139461b000e9dabf7",
-          "campaignName": "WS - Inspire me"
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+          "taggings": []
         },
-        {
-          "campaignId": "5a988e3139461b000e9dabf9",
-          "campaignName": "WS - Divert me"
-        }
-      ],
-      "taggings": []
-    },
-    "media": {
-      "id": "p07ltlm1",
-      "subType": "clip",
-      "format": "video",
-      "title": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-      "synopses": {
-        "short": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-        "long": "નેપાળની રાજધાની કાઠમાંડુંમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. \nઅનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી તેમના માટે પાંચ માતાઓ વરદાન સમાન બની છે કે જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. \nપાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
-        "medium": "માતાના દૂધથી વંચિત બાળકો માટે આશીર્વાદ સમાન બની પાંચ મહિલાઓ."
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "GUJARATI",
+          "producerId": "50"
+        },
+        "readTime": 1,
+        "siteUri": "/gujarati",
+        "mediaType": "video"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lv5tj.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-      "versions": [
-        {
-          "versionId": "p07ltlm4",
-          "types": ["Original"],
-          "duration": 140,
-          "durationISO8601": "PT2M20S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1567011153000
-        }
-      ],
-      "imageCopyright": "BBC",
-      "type": "media"
+      "content": {
+        "blocks": [
+          {
+            "id": "p07ltlm1",
+            "subType": "clip",
+            "format": "video",
+            "title": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+            "synopses": {
+              "short": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+              "long": "નેપાળની રાજધાની કાઠમાંડુંમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. \nઅનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી તેમના માટે પાંચ માતાઓ વરદાન સમાન બની છે કે જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. \nપાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
+              "medium": "માતાના દૂધથી વંચિત બાળકો માટે આશીર્વાદ સમાન બની પાંચ મહિલાઓ."
+            },
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lv5tj.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+            "versions": [
+              {
+                "versionId": "p07ltlm4",
+                "types": ["Original"],
+                "duration": 140,
+                "durationISO8601": "PT2M20S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1567011153000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
+          },
+          {
+            "text": "નેપાળની રાજધાની કાઠમાંડુમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. ",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "અનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી, તેમના માટે પાંચ માતાઓ 'દેવદૂત' સમાન બની છે. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "પાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold><italic>તમે અમને </italic></bold><link><caption>ફેસબુક</caption><url href=\"https://www.facebook.com/BBCnewsGujarati/\" platform=\"highweb\"/></link><bold><italic>, </italic></bold><link><caption>ઇન્સ્ટાગ્રામ</caption><url href=\"https://www.instagram.com/bbcnewsgujarati/\" platform=\"highweb\"/></link><bold><italic>, </italic></bold><link><caption>યૂટ્યૂબ</caption><url href=\"https://www.youtube.com/channel/UCYUPBf8y9ggcnpBxCKZteHA\" platform=\"highweb\"/></link><bold><italic> અને </italic></bold><link><caption>ટ્વિટર</caption><url href=\"https://twitter.com/bbcnewsgujarati\" platform=\"highweb\"/></link><bold><italic> પર ફોલો કરી શકો છો</italic></bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "અનાથ બાળકોને માનું દૂધ પીવડાવતી વૉલન્ટિયર માતાઓ",
+          "headline": "અનાથ બાળકોને માનું દૂધ પીવડાવતી વૉલન્ટિયર માતાઓ"
+        },
+        "locators": {
+          "assetUri": "/gujarati/media-49502679",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-49502679",
+          "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c",
+          "assetId": "49502679"
+        },
+        "summary": "માતાનાં દૂધથી વંચિત બાળકો માટે 'દેવદૂત' સમાન બની પાંચ મહિલાઓ.",
+        "timestamp": 1567079155000,
+        "language": "gu",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+          "taggings": []
+        },
+        "media": {
+          "id": "p07ltlm1",
+          "subType": "clip",
+          "format": "video",
+          "title": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+          "synopses": {
+            "short": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+            "long": "નેપાળની રાજધાની કાઠમાંડુંમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. \nઅનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી તેમના માટે પાંચ માતાઓ વરદાન સમાન બની છે કે જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. \nપાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
+            "medium": "માતાના દૂધથી વંચિત બાળકો માટે આશીર્વાદ સમાન બની પાંચ મહિલાઓ."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lv5tj.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+          "versions": [
+            {
+              "versionId": "p07ltlm4",
+              "types": ["Original"],
+              "duration": 140,
+              "durationISO8601": "PT2M20S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1567011153000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "108531939",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16ED9/production/_108531939_p07lv5tj.jpg",
+          "path": "/cpsprodpb/16ED9/production/_108531939_p07lv5tj.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "બ્રેસ્ટફિડિંગ કરાવતી મહિલાઓ",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:gujarati/media-49502679",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Media",
+          "uri": "/gujarati/media",
+          "urlIdentifier": "/gujarati/media",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC ગુજરાતી",
+          "uri": "/gujarati",
+          "urlIdentifier": "/gujarati",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "108531939",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/16ED9/production/_108531939_p07lv5tj.jpg",
-      "path": "/cpsprodpb/16ED9/production/_108531939_p07lv5tj.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "બ્રેસ્ટફિડિંગ કરાવતી મહિલાઓ",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:gujarati/media-49502679",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Media",
-      "uri": "/gujarati/media",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC ગુજરાતી",
-      "uri": "/gujarati",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-14T16:13:22.834Z",
+        "lastRecordTimeStamp": "2023-02-14T16:11:00Z",
+        "firstRecordTimeStamp": "2023-02-14T12:11:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "cc481a65-0545-bb4a-ba13-3c3575ee8ac1",
+            "rank": 1,
+            "count": 77,
+            "urn": "urn:bbc:curie:asset:cc481a65-0545-bb4a-ba13-3c3575ee8ac1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "યુવાનો સેક્સટિંગ વિશે શું વિચારે છે?",
+                "headline": "યુવાનો સેક્સટિંગ વિશે શું વિચારે છે?"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-46782686",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-46782686",
+                "curie": "http://www.bbc.co.uk/asset/cc481a65-0545-bb4a-ba13-3c3575ee8ac1",
+                "assetId": "46782686"
+              },
+              "summary": "સેક્સટિંગ શું છે અને તેના વિશે યુવાનો શું વિચારે છે?",
+              "timestamp": 1546943409000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06xdmnt",
+                "subType": "clip",
+                "format": "video",
+                "title": "યુવાનો સેક્સ ચૅટ વિશે શું વિચારે છે?",
+                "synopses": {
+                  "short": "યુવાનો સેક્સ ચૅટ વિશે શું વિચારે છે?",
+                  "long": "જો કોઈ વ્યક્તિ ઉત્તેજક ફોટો, વીડિયો અથવા મેસેજ મોકલે છે તો તેને સેક્સટિંગ કહેવામાં આવે છે. \nપરંતુ શું સેક્સટિંગ વિકૃતિ છે? યુવાનો તેના વિશે શું વિચારે છે?",
+                  "medium": "સેક્સટિંગ શું છે અને તેના વિશે યુવાનો શું વિચારે છે?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06xdvfl.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "યુવાનો સેક્સ ચૅટ વિશે શું વિચારે છે?",
+                "versions": [
+                  {
+                    "versionId": "p06xdmnz",
+                    "types": ["Original"],
+                    "duration": 140,
+                    "durationISO8601": "PT2M20S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1546861298000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105088303",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/76B4/production/_105088303_p06xdvfl.jpg",
+                "path": "/cpsprodpb/76B4/production/_105088303_p06xdvfl.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "નિશા નામની યુવતી",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-46782686",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9ad6e6fa-93e6-9746-b23f-1f749ddde2fb",
+            "rank": 2,
+            "count": 44,
+            "urn": "urn:bbc:curie:asset:9ad6e6fa-93e6-9746-b23f-1f749ddde2fb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "સેક્સ વર્કર્સની દીકરીઓએ કેવી રીતે નવું જીવન શરૂ કર્યું?",
+                "headline": "મુંબઈની સેક્સ વર્કર્સની દીકરીઓએ બ્રિટનમાં પરફોર્મ કર્યું"
+              },
+              "locators": {
+                "assetUri": "/gujarati/41322518",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/41322518",
+                "curie": "http://www.bbc.co.uk/asset/9ad6e6fa-93e6-9746-b23f-1f749ddde2fb",
+                "assetId": "41322518"
+              },
+              "summary": "ઍડિનબર્ગ ફેસ્ટિવલમાં તેમની નજરે સફળતાની વ્યાખ્યા મંચન દ્વારા રજૂ કરી હતી.",
+              "timestamp": 1507118390000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05gl58l",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"દસ વર્ષની ઉંમરે મારો રેપ થયો'તો પણ હું માફ કરતા શીખી છું\"",
+                "synopses": {
+                  "short": "મુંબઈની સેક્સ વર્કર્સની દીકરીઓએ બ્રિટનમાં પરફોર્મ કર્યું",
+                  "medium": "ઍડિનબર્ગ ફેસ્ટિવલમાં તેમની નજરે સફળતાની વ્યાખ્યા મંચન દ્વારા રજૂ કરી",
+                  "long": "મુંબઈની સેક્સ વર્કર્સની દીકરીઓએ ઍડિનબર્ગ ફેસ્ટિવલમાં પરફોર્મ કર્યું. આ છોકરીઓએ તેમની નજરે સફળતા શું છે, તેની વ્યાખ્યા કરી. 21 વર્ષીય સંધ્યા માત્ર દસ વર્ષની હતી, ત્યારે તેનો પ્રથમ વખત રેપ થયો હતો. પછી આવું નિયમિત રીતે થતું રહ્યું."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gshhg.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "મુંબઈની સેક્સ વર્કર્સની દીકરીઓએ બ્રિટનમાં પરફોર્મ કર્યું",
+                "versions": [
+                  {
+                    "versionId": "p05gl58p",
+                    "types": ["Original"],
+                    "duration": 142,
+                    "durationISO8601": "PT2M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1505820553000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "97969331",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/3454/production/_97969331_p05gshhg.jpg",
+                "path": "/cpsprodpb/3454/production/_97969331_p05gshhg.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "ઍડિનબર્ગ ફેસ્ટિવલમાં તેમની નજરે સફળતાની વ્યાખ્યા મંચન દ્વારા રજૂ કરી",
+                "copyrightHolder": "મુંબઈની સેક્સ વર્કર્સની દીકરીઓએ ઍડિનબર્ગ ફેસ્ટિવલમ",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/41322518",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "80530ea7-a849-45d9-afbb-c87d6215d58b",
+            "rank": 3,
+            "count": 21,
+            "urn": "urn:bbc:curie:asset:80530ea7-a849-45d9-afbb-c87d6215d58b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ગુજરાતમાં છોકરીઓની સંખ્યા ઓછી હોવાથી કેવી મુશ્કેલીઓ ઊભી થઈ રહી છે?",
+                "headline": "ગુજરાતમાં છોકરીઓની સંખ્યા ઓછી હોવાથી કેવી મુશ્કેલીઓ ઊભી થઈ રહી છે?"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-61767953",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-61767953",
+                "curie": "http://www.bbc.co.uk/asset/80530ea7-a849-45d9-afbb-c87d6215d58b",
+                "assetId": "61767953"
+              },
+              "summary": "કેન્દ્ર સરકારના સિટીઝન રજીસ્ટ્રેશન સિસ્ટમના 2020ના આંકડા પ્રમાણે ગુજરાત રાજ્યમાં સેક્સ રેશિયો (લિંગ અનુપાત) દેશમાં ત્રીજો સૌથી નીચો છે.",
+              "timestamp": 1654917812000,
+              "language": "gu",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:80530ea7-a849-45d9-afbb-c87d6215d58b",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingLabel": "ગુજરાત",
+                      "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Gujarat"],
+                      "thingEnglishLabel": "Gujarat",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                      "thingLabel": "મહિલાઓના અધિકારો",
+                      "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                      "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Women%27s_rights",
+                        "http://www.wikidata.org/entity/Q223569"
+                      ],
+                      "thingEnglishLabel": "Women's rights",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "મહિલા",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+                      "thingLabel": "મહિલા આરોગ્ય",
+                      "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+                      "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8031191"
+                      ],
+                      "thingEnglishLabel": "Women's health",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0cd7bq4",
+                "subType": "clip",
+                "format": "video",
+                "title": "ગુજરાતના સેક્સ રેશ્યોની સમસ્યા ક્યારે ઉકેલાશે? – GUJARAT NI VAAT",
+                "synopses": {
+                  "short": "ગુજરાતના સેક્સ રેશ્યોની સમસ્યા ક્યારે ઉકેલાશે? – GUJARAT NI VAAT",
+                  "long": "કેન્દ્ર સરકારનાં સીટીઝન રજીસ્ટ્રેશન સિસ્ટમનાં ૨૦૨૦નાં આંકડા પ્રમાણે ગુજરાત રાજ્યનો સેક્સ રેશ્યો દેશમાં ત્રીજો સૌથી નીચો રેશિયો ધરાવે છે.ઘણા ગામમાં પરિસ્થિતિ એટલી ખરાબ છે કે લગ્ન કરવા માટે બીજા ગામની છોકરીઓ શોધવી પડે છે. જાણીએ બીબીસી સંવાદદાતા રૉક્સી ગાગડેકર છારાના અહેવાલમાં"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0cd7cr8.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ગુજરાતના સેક્સ રેશ્યોની સમસ્યા ક્યારે ઉકેલાશે? – GUJARAT NI VAAT",
+                "versions": [
+                  {
+                    "versionId": "p0cd7bqd",
+                    "types": ["Original"],
+                    "duration": 137,
+                    "durationISO8601": "PT2M17S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1654875447000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125360497",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1362E/production/_125360497_gettyimages-595302810.jpg",
+                "path": "/cpsprodpb/1362E/production/_125360497_gettyimages-595302810.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "બાળકી",
+                "copyrightHolder": "Alison Wright",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-61767953",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "03411a6d-5e99-4196-9471-613deed90df9",
+            "rank": 4,
+            "count": 13,
+            "urn": "urn:bbc:curie:asset:03411a6d-5e99-4196-9471-613deed90df9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Gujarat Election 2022 : યુવાનો ગુજરાતમાં પરિવર્તન ઇચ્છે છે?",
+                "headline": "Gujarat Election 2022 : યુવાનો ગુજરાતમાં પરિવર્તન ઇચ્છે છે?"
+              },
+              "locators": {
+                "assetUri": "/gujarati/india-63370196",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:03411a6d-5e99-4196-9471-613deed90df9",
+                "assetId": "63370196",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-63370196",
+                "curie": "http://www.bbc.co.uk/asset/03411a6d-5e99-4196-9471-613deed90df9"
+              },
+              "summary": "ગુજરાતમાં ચૂંટણીના પડઘમ વાગી રહ્યા છે. ભાજપ અને આમ આદમી પાર્ટી વચ્ચે આ વખતે જોરદાર ટક્કર થતી દેખાઈ રહી છે.",
+              "timestamp": 1666602815000,
+              "language": "gu",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:03411a6d-5e99-4196-9471-613deed90df9",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3f1dfddc-a2d6-45a3-813d-8d4987655141#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3a21bf58-2fc9-4c09-904c-71520dc65f28#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/f499d40a-84bf-4eb2-8a69-49f54b3ec924#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f499d40a-84bf-4eb2-8a69-49f54b3ec924#id",
+                      "thingLabel": "Question & Answer",
+                      "thingUri": "http://www.bbc.co.uk/things/f499d40a-84bf-4eb2-8a69-49f54b3ec924#id",
+                      "thingId": "f499d40a-84bf-4eb2-8a69-49f54b3ec924",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Question & Answer",
+                      "thingPreferredLabel": "Question & Answer",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3a21bf58-2fc9-4c09-904c-71520dc65f28#id",
+                      "thingLabel": "ગુજરાત વિધાનસભા ચૂંટણી 2022",
+                      "thingUri": "http://www.bbc.co.uk/things/3a21bf58-2fc9-4c09-904c-71520dc65f28#id",
+                      "thingId": "3a21bf58-2fc9-4c09-904c-71520dc65f28",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Event",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/2022_Gujarat_Legislative_Assembly_election",
+                        "http://www.wikidata.org/entity/Q98078815"
+                      ],
+                      "thingEnglishLabel": "Gujarat Legislative Assembly election 2022",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/3f1dfddc-a2d6-45a3-813d-8d4987655141#id",
+                      "thingLabel": "ગુજરાત વિધાનસભા",
+                      "thingUri": "http://www.bbc.co.uk/things/3f1dfddc-a2d6-45a3-813d-8d4987655141#id",
+                      "thingId": "3f1dfddc-a2d6-45a3-813d-8d4987655141",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:AmbiguousTerm",
+                        "tagging:Agent",
+                        "core:Organisation",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Gujarat_Legislative_Assembly"
+                      ],
+                      "thingEnglishLabel": "Gujarat Legislative Assembly",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingLabel": "ગુજરાત",
+                      "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Gujarat"],
+                      "thingEnglishLabel": "Gujarat",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingLabel": "રાજકારણ",
+                      "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingEnglishLabel": "Politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id",
+                      "thingLabel": "યુવા વર્ગ",
+                      "thingUri": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id",
+                      "thingId": "f6ec89fd-3823-498e-a888-572e96f791b2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Youth",
+                        "http://www.wikidata.org/entity/Q190007"
+                      ],
+                      "thingEnglishLabel": "Young people",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0d93dqb",
+                "subType": "clip",
+                "format": "video",
+                "title": "Gujarat Election 2022 : યુવાનો ગુજરાતમાં પરિવર્તન ઇચ્છે છે?",
+                "synopses": {
+                  "short": "Gujarat Election 2022 : યુવાનો ગુજરાતમાં પરિવર્તન ઇચ્છે છે?",
+                  "long": "ગુજરાતમાં ચૂંટણીના પડઘમ વાગી રહ્યા છે. \nભાજપ અને આમ આદમી પાર્ટી વચ્ચે આ વખતે જોરદાર ટક્કર થતી દેખાઈ રહી છે. \nત્યારે અમે ગુજરાતના યુવાનોને પૂછ્યું કે તેઓ કઈ પાર્ટીને મત આપવા માગે છે. \nસાંભળો તેઓ શું કહે છે?",
+                  "medium": "ગુજરાતમાં ચૂંટણીના પડઘમ વાગી રહ્યા છે. \nભાજપ અને આમ આદમી પાર્ટી વચ્ચે આ વખતે જોરદાર ટક્કર થતી દેખાઈ રહી છે."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0d93hnr.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Gujarat Election 2022 : યુવાનો ગુજરાતમાં પરિવર્તન ઇચ્છે છે?",
+                "versions": [
+                  {
+                    "versionId": "p0d93dqj",
+                    "types": ["Original"],
+                    "duration": 216,
+                    "durationISO8601": "PT3M36S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1666600725000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "127309561",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/40CE/production/_127309561_p0d93hnr.jpg",
+                "path": "/cpsprodpb/40CE/production/_127309561_p0d93hnr.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "યુવા મતદાર",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/india-63370196",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "94fd18c9-268b-4f1e-a50b-23abc0023815",
+            "rank": 5,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:94fd18c9-268b-4f1e-a50b-23abc0023815",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "200 વધુ પ્રકારના જૂના દુર્લભ રેડિયોનો સંગ્રહ ધરાવતા એ નિવૃત્ત શિક્ષક",
+                "headline": "રેડિયો દિવસ : 200 વધુ પ્રકારના જૂના દુર્લભ રેડિયોનો સંગ્રહ ધરાવતા એ નિવૃત્ત શિક્ષક"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-64618651",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:94fd18c9-268b-4f1e-a50b-23abc0023815",
+                "assetId": "64618651",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-64618651",
+                "curie": "http://www.bbc.co.uk/asset/94fd18c9-268b-4f1e-a50b-23abc0023815"
+              },
+              "summary": "અલગ અલગ પ્રકારના અને જુદી જુદી કંપનીના 200 કરતાં વધુ રેડિયોનો સંગ્રહ અમરેલીના ચલાળાના સુલેમાન દલ પાસે છે.",
+              "timestamp": 1676257304000,
+              "language": "gu",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:94fd18c9-268b-4f1e-a50b-23abc0023815",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/eba69ff4-48ff-48ba-9af4-ac832fc189f6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/dc5878c0-6293-4428-8205-7a55cba0c8b8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingLabel": "મનોરંજન",
+                      "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entertainment",
+                        "http://www.wikidata.org/entity/Q173799"
+                      ],
+                      "thingEnglishLabel": "Entertainment",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingLabel": "ગુજરાત",
+                      "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Gujarat"],
+                      "thingEnglishLabel": "Gujarat",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/dc5878c0-6293-4428-8205-7a55cba0c8b8#id",
+                      "thingLabel": "ગુજરાતી ગીતો",
+                      "thingUri": "http://www.bbc.co.uk/things/dc5878c0-6293-4428-8205-7a55cba0c8b8#id",
+                      "thingId": "dc5878c0-6293-4428-8205-7a55cba0c8b8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Music_of_Gujarat",
+                        "http://www.wikidata.org/entity/Q6942107"
+                      ],
+                      "thingEnglishLabel": "Music of Gujarat",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id",
+                      "thingLabel": "સંગીત",
+                      "thingUri": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id",
+                      "thingId": "de648736-7268-454c-a7b1-dbff416f2865",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Music",
+                        "http://www.wikidata.org/entity/Q638"
+                      ],
+                      "thingEnglishLabel": "Music",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "મહિલા",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/eba69ff4-48ff-48ba-9af4-ac832fc189f6#id",
+                      "thingLabel": "રેડિયો",
+                      "thingUri": "http://www.bbc.co.uk/things/eba69ff4-48ff-48ba-9af4-ac832fc189f6#id",
+                      "thingId": "eba69ff4-48ff-48ba-9af4-ac832fc189f6",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Radio",
+                        "http://www.wikidata.org/entity/Q12146773"
+                      ],
+                      "thingEnglishLabel": "Radio",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2pqcf",
+                "subType": "clip",
+                "format": "video",
+                "title": "200 વધુ પ્રકારના જુના દૂર્લભ રેડિયોનો સંગ્રહ ધરાવતા એ નિવૃત્ત શિક્ષક",
+                "synopses": {
+                  "short": "200 વધુ પ્રકારના જુના દૂર્લભ રેડિયોનો સંગ્રહ ધરાવતા એ નિવૃત્ત શિક્ષક",
+                  "long": "અલગ અલગ પ્રકારના અને જુદી જુદી કંપનીના રેડિયોનો સંગ્રહ અમરેલીના ચલાળાના સુલેમાન દલ પાસે છે. \nતેઓ કહે છે કે 20-25 વર્ષથી મને જુના રેડિયોનો સંગ્રહ કરવાનો શોખ જાગ્યો છે.\nનિવૃત શિક્ષક સુલેમાન દલનું ઘર જાણે કે રેડિયો મ્યુઝિયમ લાગે છે.\nતેમની પાસે 200થી વધુ રેડિયોનો સંગ્રહ છે.\nદસમાં ધોરણ પછી તેમણે રેડિયોનો કોર્સ કર્યો હતો.\nતે સમયે વાલ્વવાળા રેડિયોનો જમાનો હતો.\nસુલેમાનભાઈ 1963થી રેડિયોનું રિપેરિંગ કામ કરતા આવ્યા છે.\nનિવૃત્તિ બાદ પેન્શનમાંથી બચત રેડિયામાં ખર્ચ કરતા ગયા અને તેમના ખજાનામાં રેડિયો ઉમેરાતા ગયા.",
+                  "medium": "અલગ અલગ પ્રકારના અને જુદી જુદી કંપનીના 200 કરતા રેડિયોનો સંગ્રહ અમરેલીના ચલાળાના સુલેમાન દલ પાસે છે."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2prpn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "200 વધુ પ્રકારના જુના દૂર્લભ રેડિયોનો સંગ્રહ ધરાવતા એ નિવૃત્ત શિક્ષક",
+                "versions": [
+                  {
+                    "versionId": "p0f2pqck",
+                    "types": ["Original"],
+                    "duration": 201,
+                    "durationISO8601": "PT3M21S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676216209000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128611412",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/53A3/production/_128611412_p0f2prpn.jpg",
+                "path": "/cpsprodpb/53A3/production/_128611412_p0f2prpn.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "રેડિયો",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-64618651",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "328c45d9-da05-4cd7-aed2-f381f97cad43",
+            "rank": 6,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:328c45d9-da05-4cd7-aed2-f381f97cad43",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "એક એવું ટીવી જેને લોકો જોવાની સાથે ચાટી શકે છે",
+                "headline": "Lickable TV : એક એવું ટીવી જેને લોકો જોવાની સાથે ચાટી શકે છે"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-59878725",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-59878725",
+                "curie": "http://www.bbc.co.uk/asset/328c45d9-da05-4cd7-aed2-f381f97cad43",
+                "assetId": "59878725"
+              },
+              "summary": "એક જમાનો બ્લૅક ઍન્ડ વ્હાઇટ ટીવીનો હતો અને લેટેસ્ટ કડી છે લિકેબલ ટીવી, એટલે કે જેને લિક કરી શકાય એટલે કે ચાટી શકાય છે.",
+              "timestamp": 1641374304000,
+              "language": "gu",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:328c45d9-da05-4cd7-aed2-f381f97cad43",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6a57de69-8b35-4777-9a42-621da0e39310#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c85b2a53-395d-4055-829a-f042f4d3ec0d#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingLabel": "ટેકનોલોજી",
+                      "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Technology",
+                        "http://www.wikidata.org/entity/Q4456888"
+                      ],
+                      "thingEnglishLabel": "Technology",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id",
+                      "thingLabel": "જાપાન",
+                      "thingUri": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id",
+                      "thingId": "3f53c272-5b8f-4a4f-99de-a857d6726c5b",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Japan",
+                        "http://www.wikidata.org/entity/Q17",
+                        "http://sws.geonames.org/1861060/"
+                      ],
+                      "thingEnglishLabel": "Japan",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a57de69-8b35-4777-9a42-621da0e39310#id",
+                      "thingLabel": "આર્ટિફિશ્યલ ઇન્ટેલિજન્સ",
+                      "thingUri": "http://www.bbc.co.uk/things/6a57de69-8b35-4777-9a42-621da0e39310#id",
+                      "thingId": "6a57de69-8b35-4777-9a42-621da0e39310",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q11660",
+                        "http://dbpedia.org/resource/Artificial_intelligence"
+                      ],
+                      "thingEnglishLabel": "Artificial intelligence",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c85b2a53-395d-4055-829a-f042f4d3ec0d#id",
+                      "thingLabel": "દૂરદર્શન",
+                      "thingUri": "http://www.bbc.co.uk/things/c85b2a53-395d-4055-829a-f042f4d3ec0d#id",
+                      "thingId": "c85b2a53-395d-4055-829a-f042f4d3ec0d",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Television",
+                        "http://www.wikidata.org/entity/Q289"
+                      ],
+                      "thingEnglishLabel": "Television",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id",
+                      "thingLabel": "યુવા વર્ગ",
+                      "thingUri": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id",
+                      "thingId": "f6ec89fd-3823-498e-a888-572e96f791b2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Youth",
+                        "http://www.wikidata.org/entity/Q190007"
+                      ],
+                      "thingEnglishLabel": "Young people",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0bfd3dq",
+                "subType": "clip",
+                "format": "video",
+                "title": "એક એવું ટીવી જેને લોકો જોવાની સાથે ચાટી શકે છે",
+                "synopses": {
+                  "short": "Lickable TV : એક એવું ટીવી જેને લોકો જોવાની સાથે ચાટી શકે છે",
+                  "long": "એક જમાનામાં ટેલિવિઝન બ્લૅક ઍન્ડ વ્હાઇટ હતાં. બાદમાં તે રંગીન થયાં.\nએ પછી તો તેમાં અનેક ફેરફાર આવ્યા. એક તબક્કે થ્રીડી ટીવી આવ્યાં, તો ક્યારેક એચડી ટીવી, હાલના સમયમાં સ્માર્ટ અને એલઈડી ટીવીની બોલબાલા છે. \nઆ જ કડીમાં વધુ એક નવા પ્રકારના ટેલિવિઝન લૉન્ચના સમાચાર આવી રહ્યા છે. \nઆ છે લિકેબલ ટીવી, એટલે કે જેને લિક કરી શકાય એટલે કે ચાટી શકાય છે. \nજાણો શું ખાસિયત એ આ ટીવીની બીબીસી ગુજરાતી પર",
+                  "medium": "એક જમાનો બ્લૅક ઍન્ડ વ્હાઇટ ટીવીનો હતો અને લેટેસ્ટ કડી છે લિકેબલ ટીવી, એટલે કે જેને લિક કરી શકાય એટલે કે ચાટી શકાય છે."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bfd5mr.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Lickable TV : એક એવું ટીવી જેને લોકો જોવાની સાથે ચાટી શકે છે",
+                "versions": [
+                  {
+                    "versionId": "p0bfd3dv",
+                    "types": ["Original"],
+                    "duration": 135,
+                    "durationISO8601": "PT2M15S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1641373942000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "122588071",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/42C0/production/_122588071_p0bfd5mr.jpg",
+                "path": "/cpsprodpb/42C0/production/_122588071_p0bfd5mr.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "મહિલા ટીવી સાથે",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-59878725",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b6243dd0-fc6b-4e92-a1da-6bed6a5f811c",
+            "rank": 7,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:b6243dd0-fc6b-4e92-a1da-6bed6a5f811c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "લગ્ન માટે છોકરીઓની વયમર્યાદા વધારવા પાછળનું કારણ શું છે?",
+                "headline": "લગ્ન માટે છોકરીઓની વયમર્યાદા વધારવા પાછળનું કારણ શું છે?"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-59704037",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-59704037",
+                "curie": "http://www.bbc.co.uk/asset/b6243dd0-fc6b-4e92-a1da-6bed6a5f811c",
+                "assetId": "59704037"
+              },
+              "summary": "ભારતમાં છોકરીઓ માટે લગ્નની વયમર્યાદા 18થી વધીને 21 થવા જઈ રહી છે.",
+              "timestamp": 1639757755000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:b6243dd0-fc6b-4e92-a1da-6bed6a5f811c",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f7f69688-712a-4e57-94df-998ac40df82f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingLabel": "ગુજરાત",
+                      "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Gujarat"],
+                      "thingEnglishLabel": "Gujarat",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingLabel": "ભારત",
+                      "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/India",
+                        "http://sws.geonames.org/1269750/",
+                        "http://www.wikidata.org/entity/Q668"
+                      ],
+                      "thingEnglishLabel": "India",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                      "thingLabel": "મહિલાઓના અધિકારો",
+                      "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                      "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Women%27s_rights",
+                        "http://www.wikidata.org/entity/Q223569"
+                      ],
+                      "thingEnglishLabel": "Women's rights",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+                      "thingLabel": "કાયદો",
+                      "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+                      "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Law"],
+                      "thingEnglishLabel": "Law and order",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "મહિલા",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f7f69688-712a-4e57-94df-998ac40df82f#id",
+                      "thingLabel": "લગ્ન",
+                      "thingUri": "http://www.bbc.co.uk/things/f7f69688-712a-4e57-94df-998ac40df82f#id",
+                      "thingId": "f7f69688-712a-4e57-94df-998ac40df82f",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Marriage",
+                        "http://www.wikidata.org/entity/Q8445"
+                      ],
+                      "thingEnglishLabel": "Marriage",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0bbrcx8",
+                "subType": "clip",
+                "format": "video",
+                "title": "લગ્ન માટે છોકરીઓની વયમર્યાદા વધારવા પાછળનું કારણ શું છે?",
+                "synopses": {
+                  "short": "લગ્ન માટે છોકરીઓની વયમર્યાદા વધારવા પાછળનું કારણ શું છે?",
+                  "long": "ભારતમાં છોકરીઓ માટે લગ્નની વયમર્યાદા 18થી વધીને 21 થવા જઈ રહી છે.\nગત વર્ષે  વડા પ્રધાન મોદીએ સ્વાતંત્ર્યદિવસે કરેલા સંબોધનમાં તેનો ઉલ્લેખ કર્યો હતો.\nકેન્દ્રીય કૅબિનેટે બુધવારે આ પ્રસ્તાવને મંજૂરી આપી દીધી છે. જેને આધારે સરકાર બાળલગ્ન કાયદો, 2006માં સુધારો કરશે.\nઆ સાથે જ સ્પેશિયલ મૅરેજ ઍક્ટ અને હિન્દુ મૅરેજ ઍક્ટ, 1955માં પણ મોટા સુધારા થઈ શકે છે.",
+                  "medium": "ભારતમાં છોકરીઓ માટે લગ્નની વયમર્યાદા 18થી વધીને 21 થવા જઈ રહી છે."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bbrhp3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "લગ્ન માટે છોકરીઓની વયમર્યાદા વધારવા પાછળનું કારણ શું છે?",
+                "versions": [
+                  {
+                    "versionId": "p0bbrcxl",
+                    "types": ["Original"],
+                    "duration": 215,
+                    "durationISO8601": "PT3M35S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1639757072000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "122269164",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B474/production/_122269164_2cd7dafc-25f5-4a7d-ac4c-9d2c68c9a392.jpg",
+                "path": "/cpsprodpb/B474/production/_122269164_2cd7dafc-25f5-4a7d-ac4c-9d2c68c9a392.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "પ્રતીકાત્મક તસવીર",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-59704037",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fbb796aa-3a9b-4b6a-871b-5f2833a921c3",
+            "rank": 8,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:fbb796aa-3a9b-4b6a-871b-5f2833a921c3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "TB એટલે શું? આ બીમારી કેટલી ઘાતક છે?",
+                "headline": "Tuberculosis Day : TB એટલે શું? આ બીમારી કેટલી ઘાતક છે?"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-56503385",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-56503385",
+                "curie": "http://www.bbc.co.uk/asset/fbb796aa-3a9b-4b6a-871b-5f2833a921c3",
+                "assetId": "56503385"
+              },
+              "summary": "24 માર્ચે વિશ્વ ટીબી દિવસ છે. સાઇલન્ટ કિલર તરીકે ઓળખાતા આ રોગી સારવાર કેવી રીતે થાય છે?",
+              "timestamp": 1648094832000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:fbb796aa-3a9b-4b6a-871b-5f2833a921c3",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e7f068e4-c41a-448c-9efc-769ef0ee1803#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingLabel": "Explainer",
+                      "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+                      ],
+                      "thingEnglishLabel": "Explainer",
+                      "thingPreferredLabel": "Explainer",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                      "thingLabel": "કોરોના વાઇરસ",
+                      "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                      "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/COVID-19_pandemic",
+                        "http://www.wikidata.org/entity/Q81068910"
+                      ],
+                      "thingEnglishLabel": "Coronavirus pandemic",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingLabel": "હેલ્થ / સ્વાસ્થ્ય",
+                      "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health",
+                        "http://www.wikidata.org/entity/Q12147"
+                      ],
+                      "thingEnglishLabel": "Health",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e7f068e4-c41a-448c-9efc-769ef0ee1803#id",
+                      "thingLabel": "વર્લ્ડ હેલ્થ ઓર્ગેનાઈઝેશન (WHO)",
+                      "thingUri": "http://www.bbc.co.uk/things/e7f068e4-c41a-448c-9efc-769ef0ee1803#id",
+                      "thingId": "e7f068e4-c41a-448c-9efc-769ef0ee1803",
+                      "thingType": [
+                        "core:Organisation",
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "tagging:Agent"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/World_Health_Organization"
+                      ],
+                      "thingEnglishLabel": "World Health Organization (WHO)",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09blcvn",
+                "subType": "clip",
+                "format": "video",
+                "title": "#WorldTBDay: ટીબી એટલે શું? આ બીમારી કેટલી ઘાતક છે?",
+                "synopses": {
+                  "short": "#WorldTBDay: ટીબી એટલે શું? આ બીમારી કેટલી ઘાતક છે?",
+                  "long": "વિશ્વ સ્વાસ્થ્ય સંગઠન એટલે WHO મુજબ દર વર્ષે દુનિયામાં નોંધાતા ક્ષયરોગના કુલ કેસોમાં તૃતીયાંશ ભારતમાં થાય છે અને દેશમાં આ રોગથી વર્ષે 4,80,000 મૃત્યુ ભારતમાં થાય છે. \nઆંકડાને બ્રેક કરીએ તો પરિસ્થિતિ વધારે ખતરનાક લાગે છે કારણ કે ભારત સરકારનું આકલન છે કે દેશમાં ટીબીના કારણ કે દરરોજ 1,300 મૃત્યુ થાય છે. \nજોકે ભારત છેલ્લા 50 વર્ષથી ટીબીને ખતમ કરવામાં લાગ્યું છે પરતું હજી સુધી આ સાઇલન્સ કિલરના નામે ઓળખાય છે. \nનરેન્દ્ર મોદી સરકારે વર્ષ 2025 સુધી ટીબીને દેશમાં મિટાવી દેવાનું પ્રણ કર્યું છે પરંતુ કોવિડના કહેરની અસર ટીબી પર પણ ગત વર્ષે દેખાઈ હતી \n\nએપીડેમિયોલૉજી ઍન્ડ ગ્લોબલ હેલ્થમાં કનાડા રિસર્ચ ચેયર અને મૅકગિલ આંતરરાષ્ટ્રીય ટીબી સેન્ટ્રના પ્રમુખ ડૉક્ટર મધુ પાઈએ આ ઘટનાક્રમનું અધ્યયન કર્યું છે. તેઓ કહે છે કે ભારતનું ટીબીને 2025 સુઘી ખતમ કરવાનું ટારગેટ ઓછામાં ઓછા પાંચ વર્ષ પાછળ ખસકી શકે છે. ગત વર્ષના સરકારી આંકડા મુજબ કોરોના વાઇરસને કારણે ટીબીના દર્દીઓનું રિપોર્ટિંગ ( સરકારી અને ખાનગી હૉસ્પિટલમાં) કમી આવી છે અને આ 2020માં અડધું રહી ગયું હતું. \nસાઇલન્ટ કિલર નામે ઓળખાતા આરોગ વિશે જાણો આ વીડિયોમાં.",
+                  "medium": "24 માર્ચે વિશ્વ  ક્ષયરોગ દિવસ છે."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09blhh6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "#WorldTBDay: ટીબી એટલે શું? આ બીમારી કેટલી ઘાતક છે?",
+                "versions": [
+                  {
+                    "versionId": "p09blcvr",
+                    "types": ["Original"],
+                    "duration": 91,
+                    "durationISO8601": "PT1M31S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1616518926000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "123863868",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/15334/production/_123863868_untitleddesign-40.jpg",
+                "path": "/cpsprodpb/15334/production/_123863868_untitleddesign-40.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "વિશ્વ ટીબી દિવસ",
+                "caption": "વિશ્વ ટીબી દિવસ",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-56503385",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "81ddbc20-692b-42ba-b565-4e5b40651eea",
+            "rank": 9,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:81ddbc20-692b-42ba-b565-4e5b40651eea",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "એ મહિલા જે જાપાનીઝ લોકોને હિન્દી ભાષા શીખવી રહ્યાં છે",
+                "headline": "જાપાન : એ મહિલા જે લોકોને હિન્દી ભાષા શીખવી રહ્યાં છે"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-57975080",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-57975080",
+                "curie": "http://www.bbc.co.uk/asset/81ddbc20-692b-42ba-b565-4e5b40651eea",
+                "assetId": "57975080"
+              },
+              "summary": "જાપાનનાં માયો ભારતીયો સાથે ભાષા થકી જોડાયાં છે અને તેઓ જાપાન વિશે ભારતીયોને હિન્દીમાં માહિતી આપી રહ્યાં છે.",
+              "timestamp": 1627362423000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:81ddbc20-692b-42ba-b565-4e5b40651eea",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31777b10-9008-49e0-a9c0-9dd6f6e7c7fb#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/31777b10-9008-49e0-a9c0-9dd6f6e7c7fb#id",
+                      "thingLabel": "ભાષા",
+                      "thingUri": "http://www.bbc.co.uk/things/31777b10-9008-49e0-a9c0-9dd6f6e7c7fb#id",
+                      "thingId": "31777b10-9008-49e0-a9c0-9dd6f6e7c7fb",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q315",
+                        "http://dbpedia.org/resource/Language"
+                      ],
+                      "thingEnglishLabel": "Language",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id",
+                      "thingLabel": "જાપાન",
+                      "thingUri": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id",
+                      "thingId": "3f53c272-5b8f-4a4f-99de-a857d6726c5b",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Japan",
+                        "http://www.wikidata.org/entity/Q17",
+                        "http://sws.geonames.org/1861060/"
+                      ],
+                      "thingEnglishLabel": "Japan",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingLabel": "ભારત",
+                      "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/India",
+                        "http://sws.geonames.org/1269750/",
+                        "http://www.wikidata.org/entity/Q668"
+                      ],
+                      "thingEnglishLabel": "India",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                      "thingLabel": "સંસ્કૃતિ",
+                      "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                      "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Culture",
+                        "http://www.wikidata.org/entity/Q11042"
+                      ],
+                      "thingEnglishLabel": "Culture",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "મહિલા",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09qh1nd",
+                "subType": "clip",
+                "format": "video",
+                "title": "એ મહિલા, જે જાપાનમાં લોકોને હિન્દી ભાષા શીખવી રહ્યાં છે",
+                "synopses": {
+                  "short": "એ મહિલા, જે જાપાનમાં લોકોને હિન્દી ભાષા શીખવી રહ્યાં છે",
+                  "long": "જાપાનનાં માયો ભારતીયો સાથે ભાષા થકી જોડાયાં છે અને તેઓ જાપાન વિશે ભારતીયોને હિન્દીમાં માહિતી આપી રહ્યાં છે.\nતેમજ જાપાનના લોકોને પણ હિન્દી શીખવી રહ્યાં છે.\nમાયોના પિતાએ તેમને ભારત વિશે જાણવા માટે પ્રેરિત કર્યાં હતાં.\nમાયોએ ઓસાકા યુનિવર્સિટીમાં ચાર વર્ષ સુધી હિન્દીનો અભ્યાસ કર્યો છે. તેમણે ભાષા શીખવા માટે ભારતમાં પણ અમુક સમય પસાર કર્યો.\nમાયોને લાગે છે કે બંને દેશની સંસ્કૃતિમાં ઘણું સામ્ય છે, પરંતુ માયોને ભારત અંગે ઘણી ફરિયાદો પણ છે. \nમાયો હવે ભારતની અન્ય ભાષાઓમાં પણ રસ દાખવી રહ્યાં છે.",
+                  "medium": "એ મહિલા, જે જાપાનમાં લોકોને હિન્દી ભાષા શીખવી રહ્યાં છે"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09qh40q.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "એ મહિલા, જે જાપાનમાં લોકોને હિન્દી ભાષા શીખવી રહ્યાં છે",
+                "versions": [
+                  {
+                    "versionId": "p09qh1ng",
+                    "types": ["Original"],
+                    "duration": 250,
+                    "durationISO8601": "PT4M10S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1627315704000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119596967",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12CA9/production/_119596967_p09qh40q.jpg",
+                "path": "/cpsprodpb/12CA9/production/_119596967_p09qh40q.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "મહિલા",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-57975080",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d0d0f937-f898-45ba-9d5e-e165414a9196",
+            "rank": 10,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:d0d0f937-f898-45ba-9d5e-e165414a9196",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "અમેરિકામાં વારંવાર હિંસક ઘટનાઓ છતાં 'ગન કલ્ચર'નો અંત કેમ નથી આવી રહ્યો ?",
+                "headline": "અમેરિકા : 'ગન કલ્ચર'ને લીધે હિંસક ઘટનાઓ ઘટવા છતાં એનો અંત કેમ નથી આવી રહ્યો?"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-61602505",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-61602505",
+                "curie": "http://www.bbc.co.uk/asset/d0d0f937-f898-45ba-9d5e-e165414a9196",
+                "assetId": "61602505"
+              },
+              "summary": "અમેરિકાના ટૅક્સાસમાં થયેલા ગોળીબાર બાદ 'હિંસક ગન કલ્ચર' અંગે ફરી એક વખત ચર્ચા શરૂ થઈ ગઈ છે.",
+              "timestamp": 1653628723000,
+              "language": "gu",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:d0d0f937-f898-45ba-9d5e-e165414a9196",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1e80aea5-9931-40e5-bac5-c919d297df08#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1e80aea5-9931-40e5-bac5-c919d297df08#id",
+                      "thingLabel": "જો બાયડન",
+                      "thingUri": "http://www.bbc.co.uk/things/1e80aea5-9931-40e5-bac5-c919d297df08#id",
+                      "thingId": "1e80aea5-9931-40e5-bac5-c919d297df08",
+                      "thingType": [
+                        "tagging:Agent",
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Person",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Joe_Biden"],
+                      "thingEnglishLabel": "Joe Biden",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                      "thingLabel": "ડોનાલ્ડ ટ્રમ્પ",
+                      "thingUri": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                      "thingId": "78080d81-2849-497e-bc3a-bf364626456b",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Person",
+                        "tagging:Agent"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Donald_Trump"
+                      ],
+                      "thingEnglishLabel": "Donald Trump",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "યુનાઈટેડ સ્ટેટ્સ",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
+                      "thingLabel": "માનવ અધિકાર",
+                      "thingUri": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
+                      "thingId": "8b04c2e8-5409-4e7d-9877-3ccaf04727af",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8458",
+                        "http://dbpedia.org/resource/Human_rights"
+                      ],
+                      "thingEnglishLabel": "Human rights",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                      "thingLabel": "બાળક",
+                      "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                      "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "tagging:AmbiguousTerm",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7569",
+                        "http://dbpedia.org/resource/Child"
+                      ],
+                      "thingEnglishLabel": "Children",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c99tqg",
+                "subType": "clip",
+                "format": "video",
+                "title": "દાયકાઓ વિત્યા છતા અમેરિકામાં ગન કલ્ચરની કેમ નથી બદલાઈ પરિસ્થિતિ COVER STORY",
+                "synopses": {
+                  "short": "દાયકાઓ વિત્યા છતા અમેરિકામાં ગન કલ્ચરની કેમ નથી બદલાઈ પરિસ્થિતિ COVER STORY",
+                  "long": "અમેરિકાના ટૅક્સાસ રાજયમાં 19 નાનાં ભૂલકાઓ અને બે શિક્ષકોની...સ્કૂલના ક્લાસરૂમમાં જ 18 વર્ષના હત્યારાએ ગોળીબારથી કરેલી સામૂહિક નિર્મમ હત્યાના ઘેરા પ્રત્યાઘાત પડ્યા છે..બીજી તરફ પોલીસે કાર્યવાહીમાં વિલંબ કર્યાની ફરિયાદો પણ ઊઠી રહી છે. જોકે, આ બધા વચ્ચે જ્યાં આ કરુણાંતિકા સર્જાઈ એ યુવાલ્ડે ટાઉનમાં આજે ગમગીની છવાઈ રહી..અને હવે લોકોના મનમાં એક સવાલ ગૂંજી રહ્યો છે કે – અમેરિકામાં જનતા માટે વ્યક્તિના જીવ કરતા શું બંદૂકો વધારે મહત્ત્વની છે? તેના પર જ જોઈશું આજની કવર સ્ટોરી..."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c99v0t.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "દાયકાઓ વિત્યા છતા અમેરિકામાં ગન કલ્ચરની કેમ નથી બદલાઈ પરિસ્થિતિ COVER STORY",
+                "versions": [
+                  {
+                    "versionId": "p0c99tqq",
+                    "types": ["Original"],
+                    "duration": 422,
+                    "durationISO8601": "PT7M2S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1653582039000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124937591",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4C75/production/_124937591_126eb2af-0a41-4992-8abd-328d8dc4a8eb.jpg",
+                "path": "/cpsprodpb/4C75/production/_124937591_126eb2af-0a41-4992-8abd-328d8dc4a8eb.jpg",
+                "height": 1080,
+                "width": 1920,
+                "altText": "અમેરિકા",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-61602505",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c4bcdf89-1192-4444-b231-adcd5a5fb0e1",
+            "rank": 11,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:c4bcdf89-1192-4444-b231-adcd5a5fb0e1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ટિકટૉક પર અંગ્રેજી શીખવતાં મહિલાની કહાણી",
+                "headline": "ટિકટૉક પર અંગ્રેજી શીખવતાં મહિલાની કહાણી"
+              },
+              "locators": {
+                "assetUri": "/gujarati/india-50974287",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-50974287",
+                "curie": "http://www.bbc.co.uk/asset/c4bcdf89-1192-4444-b231-adcd5a5fb0e1",
+                "assetId": "50974287"
+              },
+              "summary": "'બાળપણથી ઍક્ટ્રેસ બનવાનું સપનું હતું જે કાર-ઍક્સિડન્ટને લીધે તૂટી ગયું.'",
+              "timestamp": 1578023144000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07zd4wk",
+                "subType": "clip",
+                "format": "video",
+                "title": "એક વીડિયો જેનાથી મહિલાની જિંદગી બદલાઈ ગઈ",
+                "synopses": {
+                  "short": "એક વીડિયો જેનાથી મહિલાની જિંદગી બદલાઈ ગઈ",
+                  "long": "ગીત નામના મહિલા ટિકટૉક પર પ્રેરણાત્મક અને અંગ્રેજી શીખવવાના વીડિયો બનાવે છે.\nતેઓ કહે છે,  “બાળપણથી મારું સપનું ઍક્ટ્રેસ બનવાનું હતું. જ્યારે હું 10 વર્ષની હતી ત્યારે એક કાર ઍક્સિડન્ટ થયો જેનાથી મારું ઍક્ટ્રેસ બનવાનું સપનું થોડું તૂટી ગયું હતું.”\nત્યારબાદ ટીવી પર એક રિયાલિટી શો આવ્યો, જેમાં તે ઍક્ટ્રેસ  શોધી રહ્યા હતા. તેમાં ભાગ લીધા બાદ ઍક્ટિંગનો કીડો જાગી ગયો.\nતેમણે ટિકટોકમાં ફની વીડિયો નાખવાના શરૂ કર્યા. \nપછી લોકોએ તેમને અંગ્રેજી શીખવવા માટે વિનંતી કરી.\nઅંગ્રેજી વીડિયો નાખવાના શરૂ કર્યા તો એક અઠવાડિયાની અંદર એક લાખ ફોલોવર્સ થઈ ગયા."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07zd527.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "એક વીડિયો જેનાથી મહિલાની જિંદગી બદલાઈ ગઈ",
+                "versions": [
+                  {
+                    "versionId": "p07zd4wm",
+                    "types": ["Original"],
+                    "duration": 64,
+                    "durationISO8601": "PT1M4S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1577983743000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110378208",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1399F/production/_110378208_one.jpg",
+                "path": "/cpsprodpb/1399F/production/_110378208_one.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ટિકટૉક",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/india-50974287",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a5b96c79-7bc2-1f41-929b-892649b21551",
+            "rank": 12,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:a5b96c79-7bc2-1f41-929b-892649b21551",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "બૅંક લોનના હપ્તા વસૂલી ના શકે તો શું થાય?",
+                "headline": "બૅંકિંગ સિસ્ટમમાં વપારાતો શબ્દ NPA એટલે શું જાણો છો?"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-44258099",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-44258099",
+                "curie": "http://www.bbc.co.uk/asset/a5b96c79-7bc2-1f41-929b-892649b21551",
+                "assetId": "44258099"
+              },
+              "summary": "બૅંકિંગ સિસ્ટમમાં NPA લગભગ સાડા આઠ લાખ કરોડ સુધી પહોંચી ગઈ છે.",
+              "timestamp": 1527486392000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p06876kl",
+                "subType": "clip",
+                "format": "video",
+                "title": "લોનના હપ્તા બૅંક ના વસૂલી શકે તેનું શું થાય છે",
+                "synopses": {
+                  "short": "બૅંકિંગ સિસ્ટમમાં વપારાતો શબ્દ NPA એટલે શું જાણો છો?",
+                  "long": "આનું કારણ છે બેડ લોન. બેડ લોન એટલે કે એવી લોન જેમની વસૂલી કાંતો થઈ નથી રહી અથવા લોનના પૈસા વસુલવા લગભગ અશક્ય છે. \nઆર્થિક ભાષામાં તેને એનપીએ અથવા નોન-પર્ફોર્મિંગ એસેટ્સ કહેવામાં આવે છે.\nબૅન્ક તમારી જરૂરિયાત મુજબ લોન આપતી હોય છે. લોનના બદલે ગ્રાહકે પોતાની મિલકત ગિરવી મૂકવી પડે છે.\nએના બદલામાં દર મહિને હફ્તો ભરવાનો હોય છે. હવે જો બૅન્કને મળતા હફ્તા બંધ થઈ જાય તો તેને NPA માનવામાં આવે છે. \n90 દિવસની અંદર લોનના હપ્તા બૅંક ના વસુલી શકે તો તેને NPAમાં મુકવામાં આવે છે.\nસપ્ટેમ્બર 2008માં એનપીએની રકમ 53,917 કરોડ હતી જે 2015માં છ ગણી વધી ગઈ. \nતાજેતરમાં જ સરકારે સંસદમાં જાણકારી આપી હતી કે બૅન્કિંગ સિસ્ટમમાં NPA લગભગ સાડા આઠ લાખ કરોડ સુધી પહોંચી ગઈ છે.\nસપ્ટેમ્બર 2008માં રકમ હતી 53,917 કરોડ રૂપિયા\n2015માં આ રકમ હતી 3,50,000 કરોડ રૂપિયા\nહાલમાં આ રકમ છે 8 લાખ 40 હજાર 958 કરોડ રૂપિયા\nસરકારે એનપીએથી બચવા માટે બૅન્કિંગ રેગ્યુલેશન એક્ટમાં બદલાવ કર્યો છે. બૅન્કિંગ રેગ્યુલેશન અમેંડમેન્ટ ઑર્ડિનેંસ 2017 અંતર્ગત આરબીઆઈને વધુ મજબૂત બનાવવામાં આવી છે.",
+                  "medium": "બૅન્કિંગ સિસ્ટમમાં NPA લગભગ સાડા આઠ લાખ કરોડ સુધી પહોંચી ગઈ છે."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06876wx.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "બૅંકિંગ સિસ્ટમમાં વપારાતો શબ્દ NPA એટલે શું જાણો છો?",
+                "versions": [
+                  {
+                    "versionId": "p06876kq",
+                    "types": ["Original"],
+                    "duration": 162,
+                    "durationISO8601": "PT2M42S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1527254529000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "101750564",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B5A9/production/_101750564_p06876wx.jpg",
+                "path": "/cpsprodpb/B5A9/production/_101750564_p06876wx.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ધંધાપાણી",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-44258099",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fb2b30b2-4ae0-7b40-82b8-6c54091af948",
+            "rank": 13,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:fb2b30b2-4ae0-7b40-82b8-6c54091af948",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "એક મિનિટમાં જુઓ શ્રીદેવીની આખી ફિલ્મી સફર",
+                "headline": "‘કંધન કરુણઈ’ થી ‘ઇંગ્લિશ-વિંગ્લિશ’ અને‘મૉમ’ની સફર"
+              },
+              "locators": {
+                "assetUri": "/gujarati/india-43189280",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-43189280",
+                "curie": "http://www.bbc.co.uk/asset/fb2b30b2-4ae0-7b40-82b8-6c54091af948",
+                "assetId": "43189280"
+              },
+              "summary": "શ્રીદેવી ફિલ્મી સફર બાળપણથી જ શરૂ થઈ હતી. કેવી રીતે શરૂઆત થઈ તેમની આ સફરની કરી જુઓ આ વીડિયોમાં.",
+              "timestamp": 1519556095000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05z9bqv",
+                "subType": "clip",
+                "format": "video",
+                "title": "એક મિનિટમાં જુઓ શ્રીદેવીની ફિલ્મી સફર",
+                "synopses": {
+                  "short": "એક મિનિટમાં જુઓ શ્રીદેવીની ફિલ્મી સફર",
+                  "long": "શ્રીદેવીએ ચાર વર્ષની ઉંમરે પહેલી ફિલ્મમાં કામ કર્યું હતું.\nહિન્દી સિવાય તમિલ, તેલૂગુ અને મલયાલમ ફિલ્મોમાં પણ કામ કર્યું છે.\nફિલ્મ જુદાઈ પછી તેમણે 15 વર્ષ માટે ફિલ્મોમાંથી બ્રેક લીધો હતો.\nતેમની સેકન્ડ ઇનિંગ ફિલ્મ ઇંગ્લિશ-વિંગ્લિશથી શરૂ થઈ હતી.\nતેમને પ્રસંશકો માટે તેમનું કામ હંમેશા અમર રહેશે.",
+                  "medium": "‘કંધન કરુણઈ’ થી ‘ઇંગ્લિશ-વિંગ્લિશ’ અને‘મૉમ’ની સફર"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05z9c8c.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "એક મિનિટમાં જુઓ શ્રીદેવીની ફિલ્મી સફર",
+                "versions": [
+                  {
+                    "versionId": "p05z9bqx",
+                    "types": ["Original"],
+                    "duration": 67,
+                    "durationISO8601": "PT1M7S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1519554956000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100172655",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/D94B/production/_100172655_p05z9c8c.jpg",
+                "path": "/cpsprodpb/D94B/production/_100172655_p05z9c8c.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "શ્રીદેવી",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/india-43189280",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f0a144b3-a4ad-c046-bb2c-9babeaa4eea4",
+            "rank": 14,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f0a144b3-a4ad-c046-bb2c-9babeaa4eea4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "શું બાળકોને 'સંપૂર્ણ આહાર' દૂધ પિવડાવવું ખરેખર જરૂરી છે?",
+                "headline": "શું બાળકોને 'સંપૂર્ણ આહાર' દૂધ પિવડાવવું ખરેખર જરૂરી છે?"
+              },
+              "locators": {
+                "assetUri": "/gujarati/india-47076819",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-47076819",
+                "curie": "http://www.bbc.co.uk/asset/f0a144b3-a4ad-c046-bb2c-9babeaa4eea4",
+                "assetId": "47076819"
+              },
+              "summary": "દૂધને સંપૂર્ણ આહાર કહેવામાં આવે છે પરંતુ ખરેખર તેની ખોરાકમાં જરૂર છે ખરી?",
+              "timestamp": 1549008026000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06zlk0b",
+                "subType": "clip",
+                "format": "video",
+                "title": "બાળકોને દૂધ પિવડાવવું ખરેખરે જરૂરી છે?",
+                "synopses": {
+                  "short": "બાળકોને દૂધ પિવડાવવું ખરેખરે જરૂરી છે?",
+                  "long": "દૂધને આપણે પૂર્ણ આહાર તરીકે ઓળખીયે છીએ. નાના હોઈએ ત્યારથી જ દૂધ પીવાની સલાહો મળતી રહે છે. જોકે, ખરેખર આપણા આહારમાં દૂધને પ્રાથમિકતા આપવી જોઈએ? શું વધારે પડતું દૂધ મેદસ્વીતા વધારે છે? જુઓ વીડિયો.",
+                  "medium": "દૂધને સંપૂર્ણ આહાર કહેવામાં આવે છે પરંતુ ખરેખર તેની ખોરાકમાં જરૂર છે ખરી?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06zlyh7.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "બાળકોને દૂધ પિવડાવવું ખરેખરે જરૂરી છે?",
+                "versions": [
+                  {
+                    "versionId": "p06zlk0d",
+                    "types": ["Original"],
+                    "duration": 143,
+                    "durationISO8601": "PT2M23S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1548953203000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105421930",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0F48/production/_105421930_p06zlyh7.jpg",
+                "path": "/cpsprodpb/0F48/production/_105421930_p06zlyh7.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #9",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/india-47076819",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ccf53074-450b-479a-962b-00b9c18a873b",
+            "rank": 15,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:ccf53074-450b-479a-962b-00b9c18a873b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "કચ્છના રણમાં આકરા તાપમાં બીમાર વૃદ્ધાને 5 કિમી સુધી ઊંચકીને જતાં મહિલા પોલીસની કહાણી",
+                "headline": "ગુજરાત પોલીસ : કચ્છના રણમાં આકરા તાપમાં બીમાર વૃદ્ધાને 5 કિમી સુધી ઊંચકીને જતાં મહિલા પોલીસની કહાણી"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-61284456",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-61284456",
+                "curie": "http://www.bbc.co.uk/asset/ccf53074-450b-479a-962b-00b9c18a873b",
+                "assetId": "61284456"
+              },
+              "summary": "કચ્છના અફાટ રણમાં આકરા તાપ વચ્ચે મહિલા પોલીસ કોન્સ્ટેબલનો એક વૃદ્ધાને ઊંચકીને લઈ જતો વીડિયો સોશિયલ મીડિયામાં ખૂબ જ વાઇરલ થઈ રહ્યો છે.",
+              "timestamp": 1651376250000,
+              "language": "gu",
+              "passport": {
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:ccf53074-450b-479a-962b-00b9c18a873b",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f53ba0aa-8602-4467-9cf2-ddc1887483f8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d698591e-9608-43b6-83c2-bb7a4e8edd3a#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d698591e-9608-43b6-83c2-bb7a4e8edd3a#id",
+                      "thingLabel": "કચ્છ",
+                      "thingUri": "http://www.bbc.co.uk/things/d698591e-9608-43b6-83c2-bb7a4e8edd3a#id",
+                      "thingId": "d698591e-9608-43b6-83c2-bb7a4e8edd3a",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Kutch_district",
+                        "http://sws.geonames.org/1268731/"
+                      ],
+                      "thingEnglishLabel": "Kutch district",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+                      "thingLabel": "કાયદો",
+                      "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+                      "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Law"],
+                      "thingEnglishLabel": "Law and order",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "મહિલા",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f53ba0aa-8602-4467-9cf2-ddc1887483f8#id",
+                      "thingLabel": "કચ્છનું રણ",
+                      "thingUri": "http://www.bbc.co.uk/things/f53ba0aa-8602-4467-9cf2-ddc1887483f8#id",
+                      "thingId": "f53ba0aa-8602-4467-9cf2-ddc1887483f8",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1265425/",
+                        "http://dbpedia.org/resource/Great_Rann_of_Kutch",
+                        "http://www.wikidata.org/entity/Q1118568"
+                      ],
+                      "thingEnglishLabel": "Desert of Kutch",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c45q9w",
+                "subType": "clip",
+                "format": "video",
+                "title": "કચ્છના રણમાં આકરા તાપ વચ્ચે વૃદ્ધાને ઊંચકીને 5 કિલોમીટર ચાલનારાં મહિલા પોલીસકર્મીની કહાણી",
+                "synopses": {
+                  "short": "કચ્છના રણમાં આકરા તાપ વચ્ચે વૃદ્ધાને ઊંચકીને 5 કિલોમીટર ચાલનારાં મહિલા પોલીસકર્મીની કહાણી",
+                  "long": "કચ્છના અફાટ રણમાં આકરા તાપ વચ્ચે મહિલા પોલીસ કોન્સ્ટેબલનો એક વૃદ્ધને ઉંચકીને ચાલીને જતો આ વીડિયો સોશિયલ મીડિયામાં ખૂબ જ વાઇરલ થઈ રહ્યો છે. \nધોળાવીરાથી 10 કિ.મી દૂર ભંજડા દાદાના મંદિરે કથાના એક કાર્યક્રમ એક શ્રદ્ધાળુ વૃદ્ધા પહોંચ્યા હતા. \nત્યાં ડુંગરનાં પગથિયાં ચડતી વેળાએ તેઓ ચક્કર ખાઈને પડી ગયાં હતાં. \nબંદોબસ્તમાં રહેલાં મહિલા કોન્સ્ટેબલને જાણ થતાં તેમણે દુર્ગમ સ્થળે પહોંચી વૃદ્ધાની પ્રાથમિક સારવાર કરીને પાંચ કિલોમીટર ઊંચકીને લઈ આવ્યાં હતાં.",
+                  "medium": "કચ્છના અફાટ રણમાં આકરા તાપ વચ્ચે મહિલા પોલીસ કોન્સ્ટેબલનો એક વૃદ્ધને ઉંચકીને ચાલીને જતો આ વીડિયો સોશિયલ મીડિયામાં ખૂબ જ વાઇરલ થઈ રહ્યો છે."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c45qjb.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "કચ્છના રણમાં આકરા તાપ વચ્ચે વૃદ્ધાને ઊંચકીને 5 કિલોમીટર ચાલનારાં મહિલા પોલીસકર્મીની કહાણી",
+                "versions": [
+                  {
+                    "versionId": "p0c45qb0",
+                    "types": ["Original"],
+                    "duration": 190,
+                    "durationISO8601": "PT3M10S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1651319206000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124376051",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/3ADB/production/_124376051_untitleddesign.jpg",
+                "path": "/cpsprodpb/3ADB/production/_124376051_untitleddesign.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "મહિલા",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-61284456",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c6b7c5b9-9e2b-4f6b-88ee-36bda3c56b72",
+            "rank": 16,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:c6b7c5b9-9e2b-4f6b-88ee-36bda3c56b72",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ગુજરાતને બંગાળની ખાડીમાં સર્જાયેલા વાવાઝોડાની કેવી અસર થશે?",
+                "headline": "મૉનસૂન 2022 : બંગાળની ખાડીમાં સર્જાયેલા વાવાઝોડાની ગુજરાતને કેવી અસર થશે?"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-61352379",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-61352379",
+                "curie": "http://www.bbc.co.uk/asset/c6b7c5b9-9e2b-4f6b-88ee-36bda3c56b72",
+                "assetId": "61352379"
+              },
+              "summary": "વાવાઝોડું ક્યારે સર્જાશે, તેની ગુજરાતના ચોમાસા પર શું અસર થશે અને કયા વિસ્તારો પર ત્રાટકે તેવી સંભાવના છે?",
+              "timestamp": 1651844264000,
+              "language": "gu",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:c6b7c5b9-9e2b-4f6b-88ee-36bda3c56b72",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingLabel": "ગુજરાત",
+                      "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Gujarat"],
+                      "thingEnglishLabel": "Gujarat",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingLabel": "ભારત",
+                      "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/India",
+                        "http://sws.geonames.org/1269750/",
+                        "http://www.wikidata.org/entity/Q668"
+                      ],
+                      "thingEnglishLabel": "India",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                      "thingLabel": "વાતાવરણ",
+                      "thingUri": "http://www.bbc.co.uk/things/9b16a6c2-7c16-42b7-bff7-6549579622e8#id",
+                      "thingId": "9b16a6c2-7c16-42b7-bff7-6549579622e8",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Extreme_weather"
+                      ],
+                      "thingEnglishLabel": "Severe weather",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                      "thingLabel": "આબોહવા પરિવર્તન / ક્લાઈમેટ ચેન્જ",
+                      "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                      "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q125928",
+                        "http://dbpedia.org/resource/Climate_change"
+                      ],
+                      "thingEnglishLabel": "Climate change",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c599ch",
+                "subType": "clip",
+                "format": "video",
+                "title": "મૉનસૂન 2022 : બંગાળની ખાડીમાં સર્જાયેલા વાવાઝોડાની ગુજરાતને કેવી અસર થશે?",
+                "synopses": {
+                  "short": "મૉનસૂન 2022 : બંગાળની ખાડીમાં સર્જાયેલા વાવાઝોડાની ગુજરાતને કેવી અસર થશે?",
+                  "long": "ભારત પર ચોમાસાની શરૂઆત પહેલાં જ વાવાઝોડાનો ખતરો તોળાઈ રહ્યો છે. જે ભારતના અનેક વિસ્તારોને અસર કરે તેવી સંભાવના છે. \nજો વાવાઝોડું સર્જાય તો તેની ચોમાસા પર પણ અસર થવાની સંભાવના છે.\nવાવાઝોડું ક્યારે સર્જાશે, તેની ગુજરાતના ચોમાસા પર શું અસર થશે અને કયા વિસ્તારો પર ત્રાટકે તેવી સંભાવના છે?",
+                  "medium": "વાવાઝોડું ક્યારે સર્જાશે, તેની ગુજરાતના ચોમાસા પર શું અસર થશે અને કયા વિસ્તારો પર ત્રાટકે તેવી સંભાવના છે?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c59jh0.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "મૉનસૂન 2022 : બંગાળની ખાડીમાં સર્જાયેલા વાવાઝોડાની ગુજરાતને કેવી અસર થશે?",
+                "versions": [
+                  {
+                    "versionId": "p0c599cr",
+                    "types": ["Original"],
+                    "duration": 180,
+                    "durationISO8601": "PT3M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1651843108000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124622257",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/125D6/production/_124622257_mediaitem124622256.jpg",
+                "path": "/cpsprodpb/125D6/production/_124622257_mediaitem124622256.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "વરસાદ",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-61352379",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b2023003-3a61-42d5-92a1-0e691fe4b6b3",
+            "rank": 17,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:b2023003-3a61-42d5-92a1-0e691fe4b6b3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "અરવલ્લીની કૉલેજ આદિવાસી વિદ્યાર્થીઓ ફી ભરી શકે તે માટે શીખવે છે આ કળા",
+                "headline": "અરવલ્લીની કૉલેજ આદિવાસી વિદ્યાર્થીઓ ફી ભરી શકે તે માટે શીખવે છે આ કળા"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-64612160",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:b2023003-3a61-42d5-92a1-0e691fe4b6b3",
+                "assetId": "64612160",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-64612160",
+                "curie": "http://www.bbc.co.uk/asset/b2023003-3a61-42d5-92a1-0e691fe4b6b3"
+              },
+              "summary": "અહીં કૉલેજના વિદ્યાર્થીઓ મેક્રમ આર્ટથી સુશોભનની અને ઉપયોગમાં લઇ શકાય એવી વસ્તુઓ બનાવી રહ્યા છે.",
+              "timestamp": 1676166543000,
+              "language": "gu",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:b2023003-3a61-42d5-92a1-0e691fe4b6b3",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee4d5541-afdc-4511-9ba6-a42823b19429#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/607578f7-8b04-4dc1-8cd3-a70db77134b1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingLabel": "ગુજરાત",
+                      "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+                      "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Gujarat"],
+                      "thingEnglishLabel": "Gujarat",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/607578f7-8b04-4dc1-8cd3-a70db77134b1#id",
+                      "thingLabel": "અરવલ્લી",
+                      "thingUri": "http://www.bbc.co.uk/things/607578f7-8b04-4dc1-8cd3-a70db77134b1#id",
+                      "thingId": "607578f7-8b04-4dc1-8cd3-a70db77134b1",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Aravalli_Range",
+                        "http://sws.geonames.org/1278434/"
+                      ],
+                      "thingEnglishLabel": "Aravalli Range",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingLabel": "શિક્ષણ",
+                      "thingUri": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingId": "6942cb29-9d3f-4c9c-9806-0a0578c286d6",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8434",
+                        "http://dbpedia.org/resource/Education"
+                      ],
+                      "thingEnglishLabel": "Education",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "મહિલા",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee4d5541-afdc-4511-9ba6-a42823b19429#id",
+                      "thingLabel": "રોજગારી",
+                      "thingUri": "http://www.bbc.co.uk/things/ee4d5541-afdc-4511-9ba6-a42823b19429#id",
+                      "thingId": "ee4d5541-afdc-4511-9ba6-a42823b19429",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Employment",
+                        "http://www.wikidata.org/entity/Q656365"
+                      ],
+                      "thingEnglishLabel": "Employment",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2kfm6",
+                "subType": "clip",
+                "format": "video",
+                "title": "અરવલ્લીની કૉલેજ આદિવાસી વિદ્યાર્થીઓ ફી ભરી શકે તે માટે શીખવે છે આ કળા",
+                "synopses": {
+                  "short": "અરવલ્લીની કૉલેજ આદિવાસી વિદ્યાર્થીઓ ફી ભરી શકે તે માટે શીખવે છે આ કળા",
+                  "long": "સુશોભનની આ રંગબેરંગી વસ્તુઓ અરવલ્લીની કૉલેજના વિદ્યાર્થીઓ બનાવે છે.\nઅરવલ્લીના અંતરિયાળ વિસ્તારની કૉલેજમાં વિદ્યાર્થીઓ માટેનું આ એક સ્ટાર્ટ અપ છે એમ પણ કહી શકાય.\nકૉલેજના આ વિદ્યાર્થીઓ મેક્રમ આર્ટથી સુશોભનની અને ઉપયોગમાં લઇ શકાય એવી વસ્તુઓ બનાવી રહ્યા છે. \nમેક્રમ એક પ્રકારની પ્લાસ્ટિકની દોરી હોય છે, જેમાંથી બનેલી કલાકૃતિઓ લાંબા સમય સુધી ટકે છે. જુઓ આ વીડિયો અહેવાલ..."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2kjdj.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "અરવલ્લીની કૉલેજ આદિવાસી વિદ્યાર્થીઓ ફી ભરી શકે તે માટે શીખવે છે આ કળા",
+                "versions": [
+                  {
+                    "versionId": "p0f2kfmb",
+                    "types": ["Original"],
+                    "duration": 256,
+                    "durationISO8601": "PT4M16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676128958000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128605116",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/EEDE/production/_128605116_mediaitem128605115.jpg",
+                "path": "/cpsprodpb/EEDE/production/_128605116_mediaitem128605115.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "યુવતી",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-64612160",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a408d557-ee3c-430e-94a1-8d7ac355dbc4",
+            "rank": 18,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:a408d557-ee3c-430e-94a1-8d7ac355dbc4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ગુજરાતનાં આદિવાસી મહિલાઓની એ બૅન્ક જે કરે છે કરોડોનો કારોબાર",
+                "headline": "ગુજરાતનાં આદિવાસી મહિલાઓની એ બૅન્ક જે કરે છે કરોડોનો કારોબાર"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-54228884",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-54228884",
+                "curie": "http://www.bbc.co.uk/asset/a408d557-ee3c-430e-94a1-8d7ac355dbc4",
+                "assetId": "54228884"
+              },
+              "summary": "ખાસ વાત એ છે કે આ બૅન્ક મહિલાઓ માટે મહિલાઓ દ્વારા જ ચલાવવામાં આવે છે.",
+              "timestamp": 1600653054000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08s1j27",
+                "subType": "clip",
+                "format": "video",
+                "title": "ગુજરાતની આદિવાસી મહિલાઓની એ બૅન્ક જે કરે ચે કરોડોનો કારોબાર",
+                "synopses": {
+                  "short": "ગુજરાતની આદિવાસી મહિલાઓની એ બૅન્ક જે કરે ચે કરોડોનો કારોબાર",
+                  "long": "ગુજરાતમાં આવેલી આ બૅન્ક ખાસ છે. કેમ કે આ ખાસ બૅન્ક મહિલાઓ માટે ચાલે છે અને મહિલાઓ દ્વારા જ ચલાવવામાં આવે છે. \nઆદિવાસી મહિલાઓ દ્વારા સંચાલિત આ સહકારી બૅન્ક એક આદર્શ બેંકની સાથે કરોડપતિ બેન્ક તરીકેની છાપ પણ ઊભી કરી છે. \nતાપી જિલ્લાના માંડળ ગામે આવેલ આ સહકારી બેન્ક થાપણ પર સારું વ્યાજ આપવાની સાથે સાથે જરૂરિયાત સમયે લોન આપી મહિલાઓને પગભર કરવાનું કામ પણ કરે છે.\nજુઓ વીડિયો અહેવાલ",
+                  "medium": "તાપી જિલ્લામાં આવેલી આ બૅન્ક મહિલાનું જીવન બદલી રહી છે."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08s1jbq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ગુજરાતની આદિવાસી મહિલાઓની એ બૅન્ક જે કરે ચે કરોડોનો કારોબાર",
+                "versions": [
+                  {
+                    "versionId": "p08s1j2b",
+                    "types": ["Original"],
+                    "duration": 193,
+                    "durationISO8601": "PT3M13S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1600624963000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "114505752",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6496/production/_114505752_capture.jpg",
+                "path": "/cpsprodpb/6496/production/_114505752_capture.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "બૅન્ક",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-54228884",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9fbb8392-027c-784a-8ae6-96a7018d40cb",
+            "rank": 19,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:9fbb8392-027c-784a-8ae6-96a7018d40cb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "બાળક રડે તો તેને શાંત કેવી રીતે કરશો?",
+                "headline": "બાળક રડે તો તેને શાંત કેવી રીતે કરશો?"
+              },
+              "locators": {
+                "assetUri": "/gujarati/media-46622706",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-46622706",
+                "curie": "http://www.bbc.co.uk/asset/9fbb8392-027c-784a-8ae6-96a7018d40cb",
+                "assetId": "46622706"
+              },
+              "summary": "આ નવું સંશોધન દરેક માતાપિતા માટે મદદરૂપ સાબિત થઈ શકે છે.",
+              "timestamp": 1545309822000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "CS"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06w2h6w",
+                "subType": "clip",
+                "format": "video",
+                "title": "બાળક રડે તો તેને શાંત કેવી રીતે કરશો?",
+                "synopses": {
+                  "short": "બાળક રડે તો તેને શાંત કેવી રીતે કરશો?",
+                  "long": "નવા માતાપિતા એક પરિસ્થિતિમાં હંમેશાં મુંજવણમાં પડી જાય છે જ્યારે તેમનું બાળક રડે છે, અને તેમને એ વાતની ખબર હોતી નથી કે બાળક શા માટે રડે છે. \nજો બાળકને કોઈ તકલીફ છે, તો તેને શાંત કેવી રીતે કરવું તે પણ માતાપિતા સમજી શકતા નથી.\nઆ મામલે યુનિવર્સિટી ઑફ ઑક્સફોર્ડ એન્ડ લિવરપૂલના સંશોધકોએ 32 બાળકો પર પરીક્ષણ કરી ઉત્તમ પરિણામ આપ્યું છે. \nઆ વીડિયો કેટલાક એવા જ માતા પિતા માટે મદદરૂપ બની શકે છે કે જેમનું બાળક ખૂબ રડે છે.",
+                  "medium": "યુનિવર્સિટી ઑફ ઑક્સફોર્ડ એન્ડ લિવરપૂલના સંશોધકોનું આ સંશોધન દરેક માતાપિતા માટે મદદરૂપ સાબિત થઈ શકે છે."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06w2j9k.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "બાળક રડે તો તેને શાંત કેવી રીતે કરશો?",
+                "versions": [
+                  {
+                    "versionId": "p06w2h6z",
+                    "types": ["Original"],
+                    "duration": 57,
+                    "durationISO8601": "PT57S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1545231116000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104878387",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13233/production/_104878387_p06w2j9k.jpg",
+                "path": "/cpsprodpb/13233/production/_104878387_p06w2j9k.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "રડતું બાળક",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/media-46622706",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9b94b83c-f294-4f24-a96a-054a95013776",
+            "rank": 20,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:9b94b83c-f294-4f24-a96a-054a95013776",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "લાવણી નૃત્ય કરતા મહારાષ્ટ્રના પુરુષની કહાણી, સંઘર્ષથી સફળતા સુધી",
+                "headline": "મહારાષ્ટ્ર : લાવણી નૃત્ય કરતા મહારાષ્ટ્રના પુરુષની કહાણી, સંઘર્ષથી સફળતા સુધી"
+              },
+              "locators": {
+                "assetUri": "/gujarati/international-59944326",
+                "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-59944326",
+                "curie": "http://www.bbc.co.uk/asset/9b94b83c-f294-4f24-a96a-054a95013776",
+                "assetId": "59944326"
+              },
+              "summary": "કિરણ કોરે મહારાષ્ટ્રના એક લાવણી કલાકાર છે. લાવણી એ સ્ત્રીઓ દ્વારા કરવામાં આવતું મહારાષ્ટ્રનું પરંપરાગત નૃત્ય છે.",
+              "timestamp": 1641875029000,
+              "language": "gu",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "language": "gu",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gujarati",
+                "locator": "urn:bbc:cps:curie:asset:9b94b83c-f294-4f24-a96a-054a95013776",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/37dcc888-51a7-4470-82d8-8ef2b811d482#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b805724b-b4b1-41db-9c16-de0dd571b599#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/37dcc888-51a7-4470-82d8-8ef2b811d482#id",
+                      "thingLabel": "આર્ટ / કળા",
+                      "thingUri": "http://www.bbc.co.uk/things/37dcc888-51a7-4470-82d8-8ef2b811d482#id",
+                      "thingId": "37dcc888-51a7-4470-82d8-8ef2b811d482",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q735",
+                        "http://dbpedia.org/resource/Art"
+                      ],
+                      "thingEnglishLabel": "Art",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingLabel": "ભારત",
+                      "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/India",
+                        "http://sws.geonames.org/1269750/",
+                        "http://www.wikidata.org/entity/Q668"
+                      ],
+                      "thingEnglishLabel": "India",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                      "thingLabel": "સંસ્કૃતિ",
+                      "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+                      "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Culture",
+                        "http://www.wikidata.org/entity/Q11042"
+                      ],
+                      "thingEnglishLabel": "Culture",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b805724b-b4b1-41db-9c16-de0dd571b599#id",
+                      "thingLabel": "મહારાષ્ટ્ર",
+                      "thingUri": "http://www.bbc.co.uk/things/b805724b-b4b1-41db-9c16-de0dd571b599#id",
+                      "thingId": "b805724b-b4b1-41db-9c16-de0dd571b599",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Maharashtra"
+                      ],
+                      "thingEnglishLabel": "Maharashtra",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "મહિલા",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "gu",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/f14ca648-31bd-43df-b54d-5c27a6fa038f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0bgddpy",
+                "subType": "clip",
+                "format": "video",
+                "title": "મહારાષ્ટ્રના પુરૂષ લાવણી નૃત્યકારની સંઘર્ષથી સફળતા સુધીની કહાણી INSPIRE",
+                "synopses": {
+                  "short": "મહારાષ્ટ્રના પુરૂષ લાવણી નૃત્યકારની સંઘર્ષથી સફળતા સુધીની કહાણી INSPIRE",
+                  "long": "હવે વાત પુરુષ લાવણી નૃત્યકારની....કિરણ કોરે મહારાષ્ટ્રમાં લાવણી કલાકાર છે. લાવણી એ સ્ત્રીઓ દ્વારા કરવામાં આવતું મહારાષ્ટ્રનું પરંપરાગત નૃત્ય છે. પરંતુ કિરણ આ તમામ પરંપરાને તોડવાનો પ્રયાસ કરી રહ્યા છે. નીતિન નાગરકરનો બીબીસી  માટે અહેવાલ જોઈએ..."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bgdf56.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "મહારાષ્ટ્રના પુરુષ લાવણી નૃત્યકારની સંઘર્ષથી સફળતા સુધીની કહાણી",
+                "versions": [
+                  {
+                    "versionId": "p0bgddqq",
+                    "types": ["Original"],
+                    "duration": 132,
+                    "durationISO8601": "PT2M12S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1641827035000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "122646987",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13474/production/_122646987_p0bgdf56.jpg",
+                "path": "/cpsprodpb/13474/production/_122646987_p0bgdf56.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "કિરણ કોરે",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gujarati/international-59944326",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
