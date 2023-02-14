@@ -7,6 +7,7 @@ import { create } from '@storybook/theming';
 import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
+import DocsDecorator from './DocsDecorator';
 
 const REITH_SERIF_REGULAR = {
   '@font-face': {
@@ -323,5 +324,21 @@ export const parameters = {
     panelPosition: 'right',
     sidebarAnimcations: true,
     theme,
+  },
+  docs: {
+    container: ({ context, children }) => DocsDecorator({ context, children }),
+  },
+  backgrounds: {
+    default: 'CPS',
+    values: [
+      {
+        name: 'Optimo',
+        value: '#F6F6F6',
+      },
+      {
+        name: 'CPS',
+        value: '#FFFFFF',
+      },
+    ],
   },
 };

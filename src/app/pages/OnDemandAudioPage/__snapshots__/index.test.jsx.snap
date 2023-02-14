@@ -854,11 +854,11 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
                 alt="BBC News پښتو"
                 attribution=""
                 fallback=""
-                height="240"
+                height="256"
                 layout="responsive"
-                src="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"
+                src="https://ichef.bbci.co.uk/images/ic/256x256/p08b23c8.png"
                 style="background-color: rgb(253, 253, 253);"
-                width="240"
+                width="256"
               />
             </div>
           </div>
@@ -1784,10 +1784,10 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
               <img
                 alt="BBC News پښتو"
                 class="emotion-29 emotion-30 emotion-31"
-                height="240"
+                height="256"
                 sizes="(min-width: 1008px) 228px, 30vw"
-                src="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"
-                width="240"
+                src="https://ichef.bbci.co.uk/images/ic/256x256/p08b23c8.png"
+                width="256"
               />
             </div>
           </div>
@@ -2677,10 +2677,10 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
               <img
                 alt="BBC News 코리아"
                 class="emotion-29 emotion-30 emotion-31"
-                height="240"
+                height="256"
                 sizes="(min-width: 1008px) 228px, 30vw"
-                src="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png"
-                width="240"
+                src="https://ichef.bbci.co.uk/images/ic/256x256/p08b8lzc.png"
+                width="256"
               />
             </div>
           </div>
@@ -3531,10 +3531,10 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
               <img
                 alt="BBC News 코리아"
                 class="emotion-29 emotion-30 emotion-31"
-                height="240"
+                height="256"
                 sizes="(min-width: 1008px) 228px, 30vw"
-                src="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png"
-                width="240"
+                src="https://ichef.bbci.co.uk/images/ic/256x256/p08b8lzc.png"
+                width="256"
               />
             </div>
           </div>

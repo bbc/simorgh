@@ -1828,7 +1828,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  display: inline;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1851,6 +1851,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -2451,7 +2452,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                          This is introduction text, it should be bold by default, but also support 
                       </b>
                       <a
-                        class="emotion-48 emotion-49"
+                        class="focusIndicatorReducedWidth emotion-48 emotion-49"
                         href="/pidgin/23248703"
                       >
                         inline links
@@ -2477,7 +2478,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </b>
                       </i>
                       <a
-                        class="emotion-48 emotion-49"
+                        class="focusIndicatorReducedWidth emotion-48 emotion-49"
                         href="/pidgin/23248703"
                       >
                         a link
@@ -2514,7 +2515,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <a
-                          class="emotion-48 emotion-49"
+                          class="focusIndicatorReducedWidth emotion-48 emotion-49"
                           href="/pidgin/23248703"
                         >
                           It can also have links
@@ -2542,7 +2543,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     >
                       Feta the big cheese macaroni cheese. 
                       <a
-                        class="emotion-48 emotion-49"
+                        class="focusIndicatorReducedWidth emotion-48 emotion-49"
                         href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
@@ -2686,7 +2687,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         role="listitem"
                       >
                         <a
-                          class="emotion-48 emotion-49"
+                          class="focusIndicatorReducedWidth emotion-48 emotion-49"
                           href="/pidgin/23248703"
                         >
                           It can also have links
@@ -2839,7 +2840,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     >
                       <a
                         aria-label="This is an external link to google!, outside"
-                        class="emotion-48 emotion-49"
+                        class="focusIndicatorReducedWidth emotion-48 emotion-49"
                         href="https://www.google.com/"
                       >
                         This is an external link to google!
@@ -2918,7 +2919,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             >
                               <a
                                 aria-labelledby="top-stories-promo-igbo23182501-1"
-                                class="emotion-209 emotion-210"
+                                class="focusIndicatorDisplayInlineBlock emotion-209 emotion-210"
                                 href="/igbo/23182501"
                               >
                                 <span
@@ -2953,7 +2954,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             >
                               <a
                                 aria-labelledby="top-stories-promo-igboliveinstitutional23162153-1"
-                                class="emotion-209 emotion-210"
+                                class="focusIndicatorDisplayInlineBlock emotion-209 emotion-210"
                                 href="/igbo/live/institutional-23162153"
                               >
                                 <span
@@ -3017,7 +3018,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             >
                               <a
                                 aria-labelledby="top-stories-promo-igbo23183171-1"
-                                class="emotion-209 emotion-210"
+                                class="focusIndicatorDisplayInlineBlock emotion-209 emotion-210"
                                 href="/igbo/23183171"
                               >
                                 <span
@@ -3208,7 +3209,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             dir="ltr"
                           >
                             <a
-                              class="emotion-307 emotion-308"
+                              class="focusIndicatorDisplayTableCell emotion-307 emotion-308"
                               href="/igbo/afirika-50299413"
                             >
                               Obi adịghị ndị Igbo mma n'ọnọdụ ha nọ na Naịjirịa - Ekweremadu
@@ -3249,7 +3250,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             dir="ltr"
                           >
                             <a
-                              class="emotion-307 emotion-308"
+                              class="focusIndicatorDisplayTableCell emotion-307 emotion-308"
                               href="/igbo/afirika-50295552"
                             >
                               Ihe gọọmentị Naịjirịa sị a ga-eme tupu ha agbapee 'border'
@@ -3290,7 +3291,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             dir="ltr"
                           >
                             <a
-                              class="emotion-307 emotion-308"
+                              class="focusIndicatorDisplayTableCell emotion-307 emotion-308"
                               href="/igbo/afirika-50227971"
                             >
                               Onye bụ 'Sarah Baartman' a e ji maka ya adọri Dice Ailes?
@@ -3331,7 +3332,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             dir="ltr"
                           >
                             <a
-                              class="emotion-307 emotion-308"
+                              class="focusIndicatorDisplayTableCell emotion-307 emotion-308"
                               href="/igbo/afirika-50299416"
                             >
                               Ụlọ na-agba ọkụ n'ahia Balogun, Legọs
@@ -3372,7 +3373,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             dir="ltr"
                           >
                             <a
-                              class="emotion-307 emotion-308"
+                              class="focusIndicatorDisplayTableCell emotion-307 emotion-308"
                               href="/igbo/afirika-50259685"
                             >
                               Gịnị bụ ikuchi nwaanyị n'ala Igbo?
@@ -3413,7 +3414,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             dir="ltr"
                           >
                             <a
-                              class="emotion-307 emotion-308"
+                              class="focusIndicatorDisplayTableCell emotion-307 emotion-308"
                               href="/igbo/afirika-50294336"
                             >
                               Nne ụmụaka atọ ụlọ aja dagburu n'Ebonyi amabeghị na ha nwụrụ
@@ -3454,7 +3455,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             dir="ltr"
                           >
                             <a
-                              class="emotion-307 emotion-308"
+                              class="focusIndicatorDisplayTableCell emotion-307 emotion-308"
                               href="/igbo/afirika-50292027"
                             >
                               Akwamozu o kwesiri ịbụ oriri na nkwari?
@@ -3495,7 +3496,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             dir="ltr"
                           >
                             <a
-                              class="emotion-307 emotion-308"
+                              class="focusIndicatorDisplayTableCell emotion-307 emotion-308"
                               href="/igbo/afirika-50289214"
                             >
                               Gịnị ka ị ma maka 'Aba Women's riot' mere afọ 90 gara aga?
@@ -3536,7 +3537,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             dir="ltr"
                           >
                             <a
-                              class="emotion-307 emotion-308"
+                              class="focusIndicatorDisplayTableCell emotion-307 emotion-308"
                               href="/igbo/mba-uba-50266111"
                             >
                               Eke adọgbuola nwaanyị ji ya eme ihe olu
@@ -3577,7 +3578,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             dir="ltr"
                           >
                             <a
-                              class="emotion-307 emotion-308"
+                              class="focusIndicatorDisplayTableCell emotion-307 emotion-308"
                               href="/igbo/afirika-50279948"
                             >
                               Etu dị na nwunye zụtara ụmụaka abụọ si ma n'ọnya ndị uweojii
@@ -5851,7 +5852,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                          This is introduction text, it should be bold by default, but also support 
                       </b>
                       <a
-                        class="emotion-53 emotion-54"
+                        class="focusIndicatorReducedWidth emotion-53 emotion-54"
                         href="/pidgin/23248703"
                       >
                         inline links
@@ -5877,7 +5878,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                         </b>
                       </i>
                       <a
-                        class="emotion-53 emotion-54"
+                        class="focusIndicatorReducedWidth emotion-53 emotion-54"
                         href="/pidgin/23248703"
                       >
                         a link
@@ -5914,7 +5915,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                         role="listitem"
                       >
                         <a
-                          class="emotion-53 emotion-54"
+                          class="focusIndicatorReducedWidth emotion-53 emotion-54"
                           href="/pidgin/23248703"
                         >
                           It can also have links
@@ -5942,7 +5943,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     >
                       Feta the big cheese macaroni cheese. 
                       <a
-                        class="emotion-53 emotion-54"
+                        class="focusIndicatorReducedWidth emotion-53 emotion-54"
                         href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
@@ -6086,7 +6087,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                         role="listitem"
                       >
                         <a
-                          class="emotion-53 emotion-54"
+                          class="focusIndicatorReducedWidth emotion-53 emotion-54"
                           href="/pidgin/23248703"
                         >
                           It can also have links
@@ -6227,7 +6228,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     >
                       <a
                         aria-label="This is an external link to google!, outside"
-                        class="emotion-53 emotion-54"
+                        class="focusIndicatorReducedWidth emotion-53 emotion-54"
                         href="https://www.google.com/"
                       >
                         This is an external link to google!
@@ -6313,7 +6314,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             dir="ltr"
                           >
                             <a
-                              class="emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
                               href="/pidgin/tori-46729879"
                             >
                               Public Holidays wey go happun for 2019
@@ -6354,7 +6355,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             dir="ltr"
                           >
                             <a
-                              class="emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
                               href="/pidgin/tori-50304653"
                             >
                               Liberia banks don run out of money
@@ -6395,7 +6396,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             dir="ltr"
                           >
                             <a
-                              class="emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
                               href="/pidgin/tori-50298882"
                             >
                               Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
@@ -6436,7 +6437,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             dir="ltr"
                           >
                             <a
-                              class="emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
                               href="/pidgin/tori-50315150"
                             >
                               Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
@@ -6477,7 +6478,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             dir="ltr"
                           >
                             <a
-                              class="emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
                               href="/pidgin/tori-50315157"
                             >
                               How Balogun market fire kill Policeman for Lagos
@@ -6518,7 +6519,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             dir="ltr"
                           >
                             <a
-                              class="emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
                               href="/pidgin/tori-50093818"
                             >
                               Labour, FG finally agree minimum wage salary adjustment
@@ -6559,7 +6560,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             dir="ltr"
                           >
                             <a
-                              class="emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
                               href="/pidgin/tori-50187218"
                             >
                               Naira Marley na 'Bad Influence'?
@@ -6600,7 +6601,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             dir="ltr"
                           >
                             <a
-                              class="emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
                               href="/pidgin/tori-48347911"
                             >
                               Tins you suppose know about Naira Marley
@@ -6641,7 +6642,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             dir="ltr"
                           >
                             <a
-                              class="emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
                               href="/pidgin/sport-50312710"
                             >
                               Golden Eaglets crash out of Fifa U17 World Cup
@@ -6682,7 +6683,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             dir="ltr"
                           >
                             <a
-                              class="emotion-212 emotion-213"
+                              class="focusIndicatorDisplayTableCell emotion-212 emotion-213"
                               href="/pidgin/tori-42945173"
                             >
                               Tiger nut drink fit wake up your sex drive - Nutritionist
@@ -8681,7 +8682,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  display: inline;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -8704,6 +8705,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -9259,7 +9261,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                          This is introduction text, it should be bold by default, but also support 
                       </b>
                       <a
-                        class="emotion-53 emotion-54"
+                        class="focusIndicatorReducedWidth emotion-53 emotion-54"
                         href="/pidgin/23248703"
                       >
                         inline links
@@ -9285,7 +9287,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </b>
                       </i>
                       <a
-                        class="emotion-53 emotion-54"
+                        class="focusIndicatorReducedWidth emotion-53 emotion-54"
                         href="/pidgin/23248703"
                       >
                         a link
@@ -9322,7 +9324,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         role="listitem"
                       >
                         <a
-                          class="emotion-53 emotion-54"
+                          class="focusIndicatorReducedWidth emotion-53 emotion-54"
                           href="/pidgin/23248703"
                         >
                           It can also have links
@@ -9350,7 +9352,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     >
                       Feta the big cheese macaroni cheese. 
                       <a
-                        class="emotion-53 emotion-54"
+                        class="focusIndicatorReducedWidth emotion-53 emotion-54"
                         href="/pidgin/23248703"
                       >
                         Caerphilly danish fontina
@@ -9494,7 +9496,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         role="listitem"
                       >
                         <a
-                          class="emotion-53 emotion-54"
+                          class="focusIndicatorReducedWidth emotion-53 emotion-54"
                           href="/pidgin/23248703"
                         >
                           It can also have links
@@ -9635,7 +9637,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     >
                       <a
                         aria-label="This is an external link to google!, outside"
-                        class="emotion-53 emotion-54"
+                        class="focusIndicatorReducedWidth emotion-53 emotion-54"
                         href="https://www.google.com/"
                       >
                         This is an external link to google!
@@ -9714,7 +9716,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             >
                               <a
                                 aria-labelledby="top-stories-promo-pidgin23248287-1"
-                                class="emotion-210 emotion-211"
+                                class="focusIndicatorDisplayInlineBlock emotion-210 emotion-211"
                                 href="/pidgin/23248287"
                               >
                                 <span
@@ -9749,7 +9751,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             >
                               <a
                                 aria-labelledby="top-stories-promo-pidgintori23146434-1"
-                                class="emotion-210 emotion-211"
+                                class="focusIndicatorDisplayInlineBlock emotion-210 emotion-211"
                                 href="/pidgin/tori-23146434"
                               >
                                 <span
@@ -9784,7 +9786,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             >
                               <a
                                 aria-labelledby="top-stories-promo-news-feature-1"
-                                class="emotion-210 emotion-211"
+                                class="focusIndicatorDisplayInlineBlock emotion-210 emotion-211"
                                 href="/news"
                               >
                                 <span
@@ -9967,7 +9969,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             dir="ltr"
                           >
                             <a
-                              class="emotion-300 emotion-301"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-46729879"
                             >
                               Public Holidays wey go happun for 2019
@@ -10008,7 +10010,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             dir="ltr"
                           >
                             <a
-                              class="emotion-300 emotion-301"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50304653"
                             >
                               Liberia banks don run out of money
@@ -10049,7 +10051,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             dir="ltr"
                           >
                             <a
-                              class="emotion-300 emotion-301"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50298882"
                             >
                               Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
@@ -10090,7 +10092,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             dir="ltr"
                           >
                             <a
-                              class="emotion-300 emotion-301"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50315150"
                             >
                               Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
@@ -10131,7 +10133,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             dir="ltr"
                           >
                             <a
-                              class="emotion-300 emotion-301"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50315157"
                             >
                               How Balogun market fire kill Policeman for Lagos
@@ -10172,7 +10174,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             dir="ltr"
                           >
                             <a
-                              class="emotion-300 emotion-301"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50093818"
                             >
                               Labour, FG finally agree minimum wage salary adjustment
@@ -10213,7 +10215,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             dir="ltr"
                           >
                             <a
-                              class="emotion-300 emotion-301"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-50187218"
                             >
                               Naira Marley na 'Bad Influence'?
@@ -10254,7 +10256,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             dir="ltr"
                           >
                             <a
-                              class="emotion-300 emotion-301"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-48347911"
                             >
                               Tins you suppose know about Naira Marley
@@ -10295,7 +10297,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             dir="ltr"
                           >
                             <a
-                              class="emotion-300 emotion-301"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/sport-50312710"
                             >
                               Golden Eaglets crash out of Fifa U17 World Cup
@@ -10336,7 +10338,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             dir="ltr"
                           >
                             <a
-                              class="emotion-300 emotion-301"
+                              class="focusIndicatorDisplayTableCell emotion-300 emotion-301"
                               href="/pidgin/tori-42945173"
                             >
                               Tiger nut drink fit wake up your sex drive - Nutritionist

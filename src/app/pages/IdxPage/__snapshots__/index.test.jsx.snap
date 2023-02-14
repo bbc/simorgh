@@ -394,6 +394,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -1598,7 +1599,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 .emotion-274 {
   color: #6E6E73;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1629,6 +1630,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -1737,6 +1739,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-309:before {
@@ -1773,7 +1776,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 
 .emotion-315 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2420,7 +2423,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               >
                 <a
                   aria-labelledby="promo-persianafghanistan52735886-1"
-                  class="emotion-32 emotion-33"
+                  class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                   href="/persian/afghanistan-52735886"
                 >
                   <span
@@ -2564,7 +2567,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-persianafghanistan52726383-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52726383"
                   >
                     <span
@@ -2687,7 +2690,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-watchlisten-persianafghanistan52710877-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52710877"
                   >
                     <span
@@ -2810,7 +2813,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-watchlisten-persianafghanistan52699256-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52699256"
                   >
                     <span
@@ -2933,7 +2936,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-watchlisten-persianafghanistan52651714-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52651714"
                   >
                     <span
@@ -3056,7 +3059,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-watchlisten-persianafghanistan52640314-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52640314"
                   >
                     <span
@@ -3321,7 +3324,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     <a
                       aria-labelledby="scheduleItem-p086pms9"
-                      class="emotion-309 emotion-310"
+                      class="focusIndicatorDisplayBlock emotion-309 emotion-310"
                       href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
                     >
                       <span
@@ -3451,7 +3454,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     <a
                       aria-labelledby="scheduleItem-p086pjpq"
-                      class="emotion-309 emotion-310"
+                      class="focusIndicatorDisplayBlock emotion-309 emotion-310"
                       href="/persian/bbc_dari_radio/w3csz8fk"
                     >
                       <span
@@ -3581,7 +3584,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   >
                     <a
                       aria-labelledby="scheduleItem-p086phc8"
-                      class="emotion-309 emotion-310"
+                      class="focusIndicatorDisplayBlock emotion-309 emotion-310"
                       href="/persian/bbc_dari_radio/w3csz7tn"
                     >
                       <span
@@ -3736,7 +3739,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-persianafghanistan52722865-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52722865"
                   >
                     <span
@@ -3806,7 +3809,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-features-persianafghanistan52697976-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52697976"
                   >
                     <span
@@ -3876,7 +3879,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-features-persianblogviewpoints52616632-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/blog-viewpoints-52616632"
                   >
                     <span
@@ -3946,7 +3949,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-features-persianafghanistan52700014-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/afghanistan-52700014"
                   >
                     <span
@@ -4016,7 +4019,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 >
                   <a
                     aria-labelledby="promo-features-persianblogviewpoints52692067-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/persian/blog-viewpoints-52692067"
                   >
                     <span
@@ -4099,7 +4102,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/world-50317704"
                 >
                   توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
@@ -4140,7 +4143,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/iran-50319870"
                 >
                   فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
@@ -4181,7 +4184,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/world-50320610"
                 >
                   ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
@@ -4222,7 +4225,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/world-50316456"
                 >
                   غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
@@ -4263,7 +4266,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/magazine-50249226"
                 >
                   دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
@@ -4304,7 +4307,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/world-50317700"
                 >
                   انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
@@ -4345,7 +4348,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/sport-50322486"
                 >
                   عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
@@ -4386,7 +4389,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/iran-features-50310665"
                 >
                   آیا تهران بازی هسته ای را به هم می‌زند؟
@@ -4427,7 +4430,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/world-50316450"
                 >
                   آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
@@ -4468,7 +4471,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 dir="rtl"
               >
                 <a
-                  class="emotion-568 emotion-569"
+                  class="focusIndicatorDisplayTableCell emotion-568 emotion-569"
                   href="/persian/sport-50318030"
                 >
                   فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
@@ -4887,6 +4890,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -4999,6 +5003,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -5988,7 +5993,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
               >
                 <a
                   aria-labelledby="promo-ukrainiannewsrussian52721557-1"
-                  class="emotion-32 emotion-33"
+                  class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                   href="/ukrainian/news-russian-52721557"
                 >
                   <span
@@ -6022,7 +6027,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-42 emotion-43"
                 >
                   <a
-                    class="emotion-44 emotion-45"
+                    class="focusIndicatorDisplayInlineBlock emotion-44 emotion-45"
                     href="/ukrainian/features-russian-52633464"
                   >
                     <span>
@@ -6047,7 +6052,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             class="emotion-8 emotion-9"
           >
             <a
-              class="emotion-52 emotion-53"
+              class="focusIndicatorDisplayBlock emotion-52 emotion-53"
               href="/ukrainian/magazine_russian"
             >
               <span
@@ -6098,7 +6103,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-verticals-ukrainianfeaturesrussian52261329-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52261329"
                   >
                     <span
@@ -6197,7 +6202,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-ukrainianfeaturesrussian52357130-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52357130"
                   >
                     <span
@@ -6273,7 +6278,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainiannewsrussian52663545-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52663545"
                   >
                     <span
@@ -6372,7 +6377,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-ukrainianvertfutrussian52663551-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/vert-fut-russian-52663551"
                   >
                     <span
@@ -6442,7 +6447,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainianfeaturesrussian52633464-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52633464"
                   >
                     <span
@@ -6512,7 +6517,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainiannewsrussian52647120-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52647120"
                   >
                     <span
@@ -6582,7 +6587,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainiannewsrussian52493624-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52493624"
                   >
                     <span
@@ -6652,7 +6657,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainianfeaturesrussian52395098-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52395098"
                   >
                     <span
@@ -6722,7 +6727,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainiannewsrussian52443350-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52443350"
                   >
                     <span
@@ -6792,7 +6797,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainianfeaturesrussian52339462-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52339462"
                   >
                     <span
@@ -6862,7 +6867,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainianfeaturesrussian52336989-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52336989"
                   >
                     <span
@@ -6932,7 +6937,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-also-in-the-news-ukrainianfeaturesrussian52344279-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52344279"
                   >
                     <span
@@ -6970,7 +6975,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             class="emotion-8 emotion-9"
           >
             <a
-              class="emotion-52 emotion-53"
+              class="focusIndicatorDisplayBlock emotion-52 emotion-53"
               href="/ukrainian/russian/media/photogalleries"
             >
               <span
@@ -7050,7 +7055,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-ukrainianfeaturesrussian50186307-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-50186307"
                   >
                     <span
@@ -7120,7 +7125,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-picture-galleries-ukrainianfeaturesrussian49780932-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-49780932"
                   >
                     <span
@@ -7190,7 +7195,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-picture-galleries-ukrainianfeaturesrussian49621722-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-49621722"
                   >
                     <span
@@ -7260,7 +7265,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-picture-galleries-ukrainiannewsrussian49613573-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-49613573"
                   >
                     <span
@@ -7330,7 +7335,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-picture-galleries-ukrainianfeaturesrussian49382281-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-49382281"
                   >
                     <span
@@ -7406,7 +7411,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-features-ukrainianfeaturesrussian52653319-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52653319"
                   >
                     <span
@@ -7505,7 +7510,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-ukrainiannewsrussian52675911-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52675911"
                   >
                     <span
@@ -7575,7 +7580,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-features-ukrainiannewsrussian52688931-1"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52688931"
                   >
                     <span
@@ -7645,7 +7650,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-features-ukrainianfeaturesrussian52620256-2"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52620256"
                   >
                     <span
@@ -7715,7 +7720,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-features-ukrainiannewsrussian52597888-3"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/news-russian-52597888"
                   >
                     <span
@@ -7785,7 +7790,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 >
                   <a
                     aria-labelledby="promo-features-ukrainianfeaturesrussian52573535-4"
-                    class="emotion-32 emotion-33"
+                    class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                     href="/ukrainian/features-russian-52573535"
                   >
                     <span

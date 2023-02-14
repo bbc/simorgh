@@ -4,6 +4,7 @@ import { boolean, withKnobs } from '@storybook/addon-knobs';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import notes from './README.mdx';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const withDuration = {
   duration: '2:30',
@@ -24,13 +25,15 @@ export default {
 };
 
 export const ArticlesCanonical = () => (
-  <CanonicalMediaPlayer
-    src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
-    placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
-    service="news"
-    mediaInfo={{ title: 'Dog chases cat.', type: 'video', ...withDuration }}
-    title="Default Video player"
-  />
+  <ThemeProvider service="news">
+    <CanonicalMediaPlayer
+      src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
+      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      service="news"
+      mediaInfo={{ title: 'Dog chases cat.', type: 'video', ...withDuration }}
+      title="Default Video player"
+    />
+  </ThemeProvider>
 );
 
 export const MAPCanonical = () => (
@@ -52,32 +55,37 @@ export const MAPCanonical = () => (
 );
 
 export const Guidance = () => (
-  <CanonicalMediaPlayer
-    src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
-    placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
-    service="news"
-    title="Video player"
-    mediaInfo={{
-      title: 'Dog chases cat.',
-      type: 'video',
-      guidanceMessage: 'Guidance: May contain strong language that may offend',
-      ...withDuration,
-    }}
-  />
+  <ThemeProvider service="news">
+    <CanonicalMediaPlayer
+      src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
+      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      service="news"
+      title="Video player"
+      mediaInfo={{
+        title: 'Dog chases cat.',
+        type: 'video',
+        guidanceMessage:
+          'Guidance: May contain strong language that may offend',
+        ...withDuration,
+      }}
+    />
+  </ThemeProvider>
 );
 
 export const Audio = () => (
-  <CanonicalMediaPlayer
-    src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
-    placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
-    service="news"
-    mediaInfo={{
-      type: 'audio',
-      title: 'Dog barks at cat.',
-      ...withDuration,
-    }}
-    title="Video player"
-  />
+  <ThemeProvider service="news">
+    <CanonicalMediaPlayer
+      src="https://www.test.bbc.co.uk/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6msp/en"
+      placeholderSrc="https://ichef.bbci.co.uk/news/640/cpsdevpb/4eb7/test/ba7482d0-cca8-11e8-b0bf-f33155223fc4.jpg"
+      service="news"
+      mediaInfo={{
+        type: 'audio',
+        title: 'Dog barks at cat.',
+        ...withDuration,
+      }}
+      title="Video player"
+    />
+  </ThemeProvider>
 );
 
 export const AudioSkin = () => (

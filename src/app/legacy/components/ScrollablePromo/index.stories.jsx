@@ -15,6 +15,7 @@ import {
   truncatedTextInSingleLink,
   arabicText,
 } from './helpers/fixtureData';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const BackGround = styled.div`
   background-color: #f6f6f6;
@@ -22,13 +23,15 @@ const BackGround = styled.div`
 `;
 // eslint-disable-next-line react/prop-types
 const ScrollablePromoComponent = ({ data, service, script, dir }) => (
-  <ToggleContextProvider>
-    <BackGround>
-      <ServiceContextProvider service={service} script={script} dir={dir}>
-        <ScrollablePromo blocks={data} />
-      </ServiceContextProvider>
-    </BackGround>
-  </ToggleContextProvider>
+  <ThemeProvider service={service}>
+    <ToggleContextProvider>
+      <BackGround>
+        <ServiceContextProvider service={service} script={script} dir={dir}>
+          <ScrollablePromo blocks={data} />
+        </ServiceContextProvider>
+      </BackGround>
+    </ToggleContextProvider>
+  </ThemeProvider>
 );
 
 export default {

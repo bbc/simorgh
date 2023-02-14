@@ -35,7 +35,12 @@ const MessageBanner = ({
   const id = `message-banner-${heading.replaceAll(' ', '-')}`;
 
   return (
-    <section css={styles.container} role="region" aria-labelledby={id}>
+    <section
+      css={styles.container}
+      role="region"
+      aria-labelledby={id}
+      data-testid={id}
+    >
       <div css={styles.card}>
         <div css={styles.textWrap}>
           <Heading level={2} size="paragon" css={styles.heading} id={id}>
@@ -46,7 +51,11 @@ const MessageBanner = ({
           </Paragraph>
         </div>
         <div css={styles.flex}>
-          <a href={link} css={styles.linkBackground}>
+          <a
+            href={link}
+            css={styles.linkBackground}
+            className="focusIndicatorInvert"
+          >
             <div css={styles.linkAndChevron}>
               <Text size="pica" fontVariant="sansBold" css={styles.link}>
                 {linkText}

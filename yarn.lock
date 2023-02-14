@@ -4132,10 +4132,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sideway/formula@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@sideway/formula@npm:3.0.0"
-  checksum: 8ae26a0ed6bc84f7310be6aae6eb9d81e97f382619fc69025d346871a707eaab0fa38b8c857e3f0c35a19923de129f42d35c50b8010c928d64aab41578580ec4
+"@sideway/formula@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@sideway/formula@npm:3.0.1"
+  checksum: e4beeebc9dbe2ff4ef0def15cec0165e00d1612e3d7cea0bc9ce5175c3263fc2c818b679bd558957f49400ee7be9d4e5ac90487e1625b4932e15c4aa7919c57a
   languageName: node
   linkType: hard
 
@@ -4193,6 +4193,35 @@ __metadata:
     react-dom:
       optional: true
   checksum: 6f1ba1f0d97d652a5346a33e051e1ff79aa07786532c6450c5c3dd677c2195e3ee8792cda756d4556e5fbaa2a72a0631843aec2880121b3439bad3e401c25359
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-backgrounds@npm:6.5.13":
+  version: 6.5.13
+  resolution: "@storybook/addon-backgrounds@npm:6.5.13"
+  dependencies:
+    "@storybook/addons": 6.5.13
+    "@storybook/api": 6.5.13
+    "@storybook/client-logger": 6.5.13
+    "@storybook/components": 6.5.13
+    "@storybook/core-events": 6.5.13
+    "@storybook/csf": 0.0.2--canary.4566f4d.1
+    "@storybook/theming": 6.5.13
+    core-js: ^3.8.2
+    global: ^4.4.0
+    memoizerific: ^1.11.3
+    regenerator-runtime: ^0.13.7
+    ts-dedent: ^2.0.0
+    util-deprecate: ^1.0.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 1b18255e0d8dceca56b8d6cf672506176eedad3809f11879d9754652538bf004f90637c0bf557de5e7bc24d5db5410da79e61f131493cb87b27340611cb31cf5
   languageName: node
   linkType: hard
 
@@ -15483,13 +15512,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:7.7.1":
-  version: 7.7.1
-  resolution: "lru-cache@npm:7.7.1"
-  checksum: f362c5a2cfa8ad6fe557ec43dc1b7a9695cce84a5652a43ff813609f782f5da576631e7dfad41878bf19a7a69438f38375178635ee80de269aa314280ca2f59e
-  languageName: node
-  linkType: hard
-
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -15505,6 +15527,13 @@ __metadata:
   dependencies:
     yallist: ^4.0.0
   checksum: f97f499f898f23e4585742138a22f22526254fdba6d75d41a1c2526b3b6cc5747ef59c5612ba7375f42aca4f8461950e925ba08c991ead0651b4918b7c978297
+  languageName: node
+  linkType: hard
+
+"lru-cache@npm:^7.14.1":
+  version: 7.14.1
+  resolution: "lru-cache@npm:7.14.1"
+  checksum: d72c6713c6a6d86836a7a6523b3f1ac6764768cca47ec99341c3e76db06aacd4764620e5e2cda719a36848785a52a70e531822dc2b33fb071fa709683746c104
   languageName: node
   linkType: hard
 
@@ -19931,6 +19960,7 @@ __metadata:
     "@loadable/webpack-plugin": 5.15.2
     "@optimizely/react-sdk": 2.8.1
     "@storybook/addon-a11y": 6.5.13
+    "@storybook/addon-backgrounds": 6.5.13
     "@storybook/addon-controls": 6.5.13
     "@storybook/addon-docs": 6.5.13
     "@storybook/addon-knobs": 6.4.0
@@ -20011,7 +20041,7 @@ __metadata:
     js-cookie: 3.0.1
     jsdom: 19.0.0
     json5: 2.2.2
-    lru-cache: 7.7.1
+    lru-cache: ^7.14.1
     minimist: 1.2.7
     mkdirp: 1.0.4
     mocha: 9.2.2
