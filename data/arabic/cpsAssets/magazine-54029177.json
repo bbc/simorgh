@@ -1,758 +1,1114 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::index:arabic/magazine-54029177/desktop/domestic",
-    "locators": {
-      "assetUri": "/arabic/magazine-54029177",
-      "cpsUrn": "urn:bbc:content:assetUri:arabic/magazine-54029177",
-      "curie": "http://www.bbc.co.uk/asset/564e1755-974b-43f4-a080-8e242197e7cd/desktop/domestic",
-      "assetId": "54029177"
-    },
-    "type": "FIX",
-    "createdBy": "arabic-v6",
-    "language": "ar",
-    "lastUpdated": 1599229004536,
-    "firstPublished": 1599228885000,
-    "lastPublished": 1599228998000,
-    "timestamp": 1599228997000,
-    "options": {
-      "allowAdvertising": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "fix",
-      "counterName": "arabic.magazine.feature_index.54029177.page",
-      "cps_asset_id": "54029177"
-    },
-    "tags": {},
-    "version": "v1.3.6",
-    "blockTypes": [
-      "lead-feature-now",
-      "container-guides",
-      "feature-main"
-    ],
-    "title": "مجلة",
-    "summary": "مجلة",
-    "atiAnalytics": {
-      "producerName": "ARABIC",
-      "producerId": "5"
-    }
-  },
-  "content": {
-    "groups": [
-      {
-        "type": "lead-feature-now",
-        "title": "Lead Feature",
-        "items": [
-          {
-            "headlines": {
-              "headline": "من مهاجرة أفريقية إلى صاحبة شركة أزياء تجني آلاف الدولارات"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-54002984",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-54002984",
-              "curie": "http://www.bbc.co.uk/asset/44bc5afe-8e9a-4ece-8138-dc7a856cf0ae",
-              "assetId": "54002984"
-            },
-            "summary": "مصممة الأزياء الرواندية جوسلين أوموتونيواسي، التي بدأت رحلتها في عالم الموضة والأزياء بحقيبتين فقط، تتحدث لبي بي سي عن قصة نجاحها.",
-            "timestamp": 1599218684000,
-            "language": "ar",
-            "byline": {
-              "name": "أندريا  ديجكسترا",
-              "title": "بي بي سي",
-              "persons": [
-                {
-                  "name": "أندريا ديجكسترا",
-                  "function": "بي بي سي"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2139461b000e9dabf7",
-                  "campaignName": "WS - Inspire me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114213834",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/AB37/production/_114213834_54002984.jpg",
-              "path": "/cpsprodpb/AB37/production/_114213834_54002984.jpg",
-              "height": 371,
-              "width": 660,
-              "altText": "في عام 2018 تحقق أحد أحلام جوسلين أوموتونيواسي الكبرى عندما تلقت دعوة لأسبوع ميلان للأزياء",
-              "caption": "في عام 2018 تحقق أحد أحلام جوسلين أوموتونيواسي الكبرى عندما تلقت دعوة لأسبوع ميلان للأزياء",
-              "copyrightHolder": "JEROEN VAN LOON",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-54002984",
-            "type": "cps"
-          }
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::index:arabic/magazine-54029177/mobile/domestic",
+        "locators": {
+          "assetUri": "/arabic/magazine-54029177",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/magazine-54029177",
+          "curie": "http://www.bbc.co.uk/asset/564e1755-974b-43f4-a080-8e242197e7cd/desktop/domestic",
+          "assetId": "54029177"
+        },
+        "type": "FIX",
+        "createdBy": "arabic-v6",
+        "language": "ar",
+        "lastUpdated": 1655293602682,
+        "firstPublished": 1599228885000,
+        "lastPublished": 1655293596000,
+        "timestamp": 1646892967000,
+        "options": {
+          "allowAdvertising": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "fix",
+          "counterName": "arabic.magazine.feature_index.54029177.page",
+          "cps_asset_id": "54029177",
+          "contentId": "urn:bbc:cps:curie:asset:564e1755-974b-43f4-a080-8e242197e7cd"
+        },
+        "tags": {},
+        "version": "v1.4.4",
+        "blockTypes": [
+          "container-top-stories",
+          "container-guides",
+          "feature-main"
         ],
-        "semanticGroupName": "Lead Feature"
+        "title": "مجلة",
+        "summary": "مجلة",
+        "atiAnalytics": {
+          "producerName": "ARABIC",
+          "producerId": "5"
+        }
       },
-      {
-        "type": "container-guides",
-        "title": "Guides 1",
-        "items": [
+      "content": {
+        "groups": [
           {
-            "headlines": {
-              "headline": "بيلا ثورن تعتذر بعد جمع مليوني دولار من بيع صورها العارية"
-            },
-            "locators": {
-              "assetUri": "/arabic/magazine-53998945",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/magazine-53998945",
-              "curie": "http://www.bbc.co.uk/asset/d6931d15-f13f-407d-878a-e3e75b35eeb1",
-              "assetId": "53998945"
-            },
-            "summary": "بعد الجدل الذي أثارته الممثلة الأمريكية بيلا ثورن إثر بيعها صورها الحميمية بمليوني دولار خلال أسبوع واحد، منصة أونلي فانز تضع حداً أقصى لأسعار المنتجات التي يبعها المؤثرون عن طريقها.",
-            "timestamp": 1599106780000,
-            "language": "ar",
-            "byline": {
-              "name": "ماري آن روسون",
-              "title": "مراسلة الشؤون الاقتصادية - بي بي سي نيوز",
-              "persons": [
-                {
-                  "name": "ماري آن روسون",
-                  "function": "بي بي سي"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3e39461b000e9dabfb",
-                  "campaignName": "WS - Keep me on trend"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114223811",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/2E38/production/_114223811_mediaitem114223810.jpg",
-              "path": "/cpsprodpb/2E38/production/_114223811_mediaitem114223810.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "بيلا ثورن",
-              "copyrightHolder": "PA Media",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/magazine-53998945",
-            "type": "cps"
+            "type": "container-top-stories",
+            "title": "Container Top Stories",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "لماذا تتزايد ظاهرة اختيار أسماء غريبة للأطفال؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cap-60642242",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-60642242",
+                  "curie": "http://www.bbc.co.uk/asset/d8aa76d0-151d-4199-98d7-461140aabdf1",
+                  "assetId": "60642242"
+                },
+                "summary": "أسماء الأطفال غير الشائعة تنتشر في جميع أنحاء العالم، حتى في المجتمعات التقليدية. فلماذا يصمم الآباء بشكل متزايد على جعل أسماء الأطفال \"فريدة\"؟",
+                "timestamp": 1646835595000,
+                "language": "ar",
+                "byline": {
+                  "name": " عائشة امتياز",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123575276",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/106B9/production/_123575276_40e74805-ff95-49cf-8e93-2a5efc8aadd0.jpg",
+                  "path": "/cpsprodpb/106B9/production/_123575276_40e74805-ff95-49cf-8e93-2a5efc8aadd0.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "لماذا تتزايد أسماء الأطفال غير الشائعة؟",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cap-60642242",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Container Top Stories"
           },
           {
-            "headlines": {
-              "headline": "كيف تحول مشاعر القلق والتوتر إلى طاقة إيجابية تستفيد منها؟"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-53991130",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-53991130",
-              "curie": "http://www.bbc.co.uk/asset/6e5f0f02-bdf4-41be-a5b1-d0b355221ffa",
-              "assetId": "53991130"
-            },
-            "summary": "الشعور بالقلق ربما يكون منهكا، وهناك أسباب لذلك بالطبع، لكن المفاجئ أن هناك فوائد قد تنجم عن أنواع محددة من هذا الشعور.",
-            "timestamp": 1599042272000,
-            "language": "ar",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+            "type": "container-guides",
+            "title": "Guides 1",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "\"عوامل نفسية\" تجعل كثيرين يقعون في حب زملائهم في العمل"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cap-60642236",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-60642236",
+                  "curie": "http://www.bbc.co.uk/asset/7106b5e4-e4de-461e-9b0f-95f1ea64871d",
+                  "assetId": "60642236"
+                },
+                "summary": "العمل يعد أرضا خصبة لازدهار العلاقات الرومانسية، وهناك أسباب وجيهة تجعلنا غالبًا ما نقع في حب زملائنا في العمل، سواء شخصيًا أو افتراضيًا.",
+                "timestamp": 1646643325000,
+                "language": "ar",
+                "byline": {
+                  "name": "بريان لوفكين",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123504803",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/7878/production/_123504803_9dd64e1f-67a2-419e-8876-4a000a017bdd.jpg",
+                  "path": "/cpsprodpb/7878/production/_123504803_9dd64e1f-67a2-419e-8876-4a000a017bdd.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "\"عوامل نفسية\" تجعل كثيرين يقعون في حب زملائهم في العمل",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cap-60642236",
+                "type": "cps"
               },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114204300",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/0154/production/_114204300_thinkstockphotos-160611067.jpg",
-              "path": "/cpsprodpb/0154/production/_114204300_thinkstockphotos-160611067.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "فتاة تشعر بالضجر",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-53991130",
-            "type": "cps"
+              {
+                "headlines": {
+                  "headline": "يقال \"المعدة بيت الداء\"، فماذا لو كان الغذاء مصدر الدواء أيضاً؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-fut-60550465",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-60550465",
+                  "curie": "http://www.bbc.co.uk/asset/f8f76376-18f3-49af-9f6c-1e42e3c13d30",
+                  "assetId": "60550465"
+                },
+                "summary": "الطعام الذي نأكله هو أحد الأسباب الرئيسية للمرض. ومع زيادة سوء التغذية، تزداد الأمراض المصاحبة لذلك. لكن هل يمكننا استخدام الغذاء لمعالجة المشاكل الصحية في العالم بدلاً من ذلك؟",
+                "timestamp": 1646385322000,
+                "language": "ar",
+                "byline": {
+                  "name": "إيديل كارسيت",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123504798",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15E8C/production/_123504798_5f5c5bde-d909-4fe6-820a-0700efc24cb5.jpg",
+                  "path": "/cpsprodpb/15E8C/production/_123504798_5f5c5bde-d909-4fe6-820a-0700efc24cb5.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "كيف يمكن لنظامك الغذائي أن يعالج الأمراض؟",
+                  "caption": "النظام الغذائي الصحي قد لا يكون فقط وسيلة لدرء هذه المشاكل الصحية، لكنه قادر أيضا على علاج الأمراض",
+                  "copyrightHolder": "BBC",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-fut-60550465",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "كيف يؤثر كوفيد طويل الأمد على الأطفال؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-fut-60595005",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-60595005",
+                  "curie": "http://www.bbc.co.uk/asset/2c3c6d2e-34e3-4317-8240-c498b4493a19",
+                  "assetId": "60595005"
+                },
+                "summary": "تعب، صداع، دوار، آلام مفاصل وعضلات، مشاكل في التنفس، بعض الأعراض التي تلازم الأطفال الذين أصيبوا بكوفيد طويل الأمد. يحاول العلماء حول العالم كشف لغز تلك الإصابات.",
+                "timestamp": 1646304758000,
+                "language": "ar",
+                "byline": {
+                  "name": "ديفيد كوكس",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123485826",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/F58A/production/_123485826_006d5c66-fafb-4d7a-982d-6a6fe5024cdf.jpg",
+                  "path": "/cpsprodpb/F58A/production/_123485826_006d5c66-fafb-4d7a-982d-6a6fe5024cdf.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "كيف يتأثر الأطفال بالإصابة بفيروس كورونا طويل الأمد؟",
+                  "copyrightHolder": "Mohammed Abed/Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-fut-60595005",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "فوائد مذهلة للعسل الإيطالي المر والنادر"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cul-60550462",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cul-60550462",
+                  "curie": "http://www.bbc.co.uk/asset/694b78f2-5df5-4690-b133-084dbc760b93",
+                  "assetId": "60550462"
+                },
+                "summary": "عسل كوربيزولو ليس حلو المذاق، وله تاريخ يعود إلى أكثر من 2000 عام، ويمكن الحصول عليه من الإزهار الخريفي لشجرة الفراولة في جزيرة سردينيا.",
+                "timestamp": 1646226206000,
+                "language": "ar",
+                "byline": {
+                  "name": "إيمي بيزاري",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123458202",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4F3D/production/_123458202_d16b9cb2-0deb-491b-a844-173d54279e45.jpg",
+                  "path": "/cpsprodpb/4F3D/production/_123458202_d16b9cb2-0deb-491b-a844-173d54279e45.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "فوائد مذهلة للعسل الإيطالي المر والنادر",
+                  "copyrightHolder": "Westend61/Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cul-60550462",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "حقائق عن هرمون الحب: كيف يعزز المهارات الاجتماعية؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-fut-60550459",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-60550459",
+                  "curie": "http://www.bbc.co.uk/asset/42826424-9718-47cd-b086-a63350d607a2",
+                  "assetId": "60550459"
+                },
+                "summary": "تكشف دراسات جديدة أن ما يعرف بـ\"هرمون الحب\" يلعب دوراً أكبر من ذلك الذي كان منسوباً إليه في السابق، في بناء العلاقات بين الشركاء، وقدرتهم على تمييز روائح بعضهم البعض.",
+                "timestamp": 1646127672000,
+                "language": "ar",
+                "byline": {
+                  "name": "بوب هولمز",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123458198",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/15C61/production/_123458198_c0698446-3ba6-4f6c-9929-2fd50bf049c8.jpg",
+                  "path": "/cpsprodpb/15C61/production/_123458198_c0698446-3ba6-4f6c-9929-2fd50bf049c8.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "حقائق مدهشة عن \"هرمون الحب\" تؤثر على الترابط الزوجي والأسري",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-fut-60550459",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "ما العقبات التي تواجهها رائدات الأعمال من ذوات البشرة السوداء؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cap-60486015",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-60486015",
+                  "curie": "http://www.bbc.co.uk/asset/8a453605-ade0-48fb-987b-7cf4a9df61b4",
+                  "assetId": "60486015"
+                },
+                "summary": "النضال من أجل الحصول على التمويل، والتوازن الصعب بين العمل والحياة، وانعدام الثقة، من بين العقبات التي تواجهها رائدات الأعمال.",
+                "timestamp": 1646041910000,
+                "language": "ar",
+                "byline": {
+                  "name": "كيت مورغان",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123409924",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/A7EE/production/_123409924_c54b53c6-258c-4ee7-8105-74fff8cd715b.jpg",
+                  "path": "/cpsprodpb/A7EE/production/_123409924_c54b53c6-258c-4ee7-8105-74fff8cd715b.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ميلين إدوموني",
+                  "caption": "مصممة الغرافيك، ميلين إدوموني، تبيع قمصانا تحمل شعارا تحث على تحفيز الناس وتمكينهم",
+                  "copyrightHolder": "MELIN EDOMWONYI",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cap-60486015",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "الملوخية: الطعام الذي منعه الفاطميون في مصر بسبب مزاعم تأثيره الجنسي"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cul-60486012",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cul-60486012",
+                  "curie": "http://www.bbc.co.uk/asset/e815122d-a964-4ed9-b694-039fe40a9915",
+                  "assetId": "60486012"
+                },
+                "summary": "الملوخية أطلق عليها قديما اسم \"طعام الملوك\"، ومنعت في فترة ما في مصر بسبب تأثيرها المزعوم كمنشط جنسي، فماذا نعرف عنها.",
+                "timestamp": 1645791783000,
+                "language": "ar",
+                "byline": {
+                  "name": " سارة فريمان",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3139461b000e9dabf9",
+                      "campaignName": "WS - Divert me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123387724",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/A71A/production/_123387724_dabffaf0-823d-4fc8-8f76-bb11581d5da1.jpg",
+                  "path": "/cpsprodpb/A71A/production/_123387724_dabffaf0-823d-4fc8-8f76-bb11581d5da1.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "الملوخية",
+                  "copyrightHolder": "Sarah Freeman",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cul-60486012",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "هل الأجيال الشابة أقل قدرة على التحمل من الأجيال السابقة حقا؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cap-60486009",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-60486009",
+                  "curie": "http://www.bbc.co.uk/asset/76a206a0-b815-47cb-bb42-e69fd240b522",
+                  "assetId": "60486009"
+                },
+                "summary": "غالبا ما كان يُنظر إلى الأجيال الأصغر سنا على مدى قرون على أنها كسولة أو مهووسة بنفسها، لكن هل ما زال هذا التصور كما هو ولم يتغير؟",
+                "timestamp": 1645698290000,
+                "language": "ar",
+                "byline": {
+                  "name": "  كاتي بيشوب",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123387679",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/17D8E/production/_123387679_b2c0816f-da08-4254-b860-8a5c50609065.jpg",
+                  "path": "/cpsprodpb/17D8E/production/_123387679_b2c0816f-da08-4254-b860-8a5c50609065.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "هل الأجيال الشابة أضعف حقًا من الأجيال السابقة؟",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cap-60486009",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "لماذا يجيد البعض فن اختيار الهدايا دون غيرهم؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cap-60422512",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-60422512",
+                  "curie": "http://www.bbc.co.uk/asset/8991db83-cf29-4eb9-9f06-db5bcd0cf83a",
+                  "assetId": "60422512"
+                },
+                "summary": "تقديم الهدية المناسبة هو فن يتقنه بعض الناس، فما الذي يجعل هؤلاء الناس بارعين في اختيار الهدية المثالية؟",
+                "timestamp": 1645616882000,
+                "language": "ar",
+                "byline": {
+                  "name": "بريان لوفكين",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123354101",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/27A1/production/_123354101_010d3b5f-9af8-4ec9-8939-cd8f35be66bc.jpg",
+                  "path": "/cpsprodpb/27A1/production/_123354101_010d3b5f-9af8-4ec9-8939-cd8f35be66bc.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "لماذا يجيد البعض \"فن\" اختيار الهدايا؟",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cap-60422512",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "لماذا لا يحصل كثير من المهاجرين على الوظائف التي تناسب مهاراتهم ومؤهلاتهم؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cap-60422509",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-60422509",
+                  "curie": "http://www.bbc.co.uk/asset/6ada4f5e-2f4b-4293-99b6-915e8b2b2cb1",
+                  "assetId": "60422509"
+                },
+                "summary": "بعض البلدان مليئة بالأشخاص المتعلمين الذين تكون هناك حاجة ماسة إلى مهاراتهم. لكن هناك حواجز تحول دون استغلال هذه المهارات مع الوظائف المناسبة، وهو ما يؤدي إلى \"عدم استغلال العقول\".",
+                "timestamp": 1645522475000,
+                "language": "ar",
+                "byline": {
+                  "name": "كريستين رو",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123341874",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/BAC6/production/_123341874_48e92f0d-bdf3-4e06-a133-6a0c294918a0.jpg",
+                  "path": "/cpsprodpb/BAC6/production/_123341874_48e92f0d-bdf3-4e06-a133-6a0c294918a0.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "أبيغيل ساندوفال",
+                  "caption": "تحولت أبيغيل ساندوفال من الطب إلى صناعة البيتزا بسبب التمييز الوظيفي الذي واجهته",
+                  "copyrightHolder": "Jos Eizaga",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cap-60422509",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "لماذا لا يزال البعض يؤمنون بأسطورة \"توأم الروح\"؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cap-60422506",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-60422506",
+                  "curie": "http://www.bbc.co.uk/asset/a5d1eddb-70fa-4a6d-8763-2942edbfcee7",
+                  "assetId": "60422506"
+                },
+                "summary": "لماذا لا يزال بعض الناس يؤمنون بإمكانية العثور على الشخص المثالي، وما سر استمرار جاذبية أسطورة توأم الروح عبر الزمن والثقافات المختلفة؟",
+                "timestamp": 1645436332000,
+                "language": "ar",
+                "byline": {
+                  "name": "كاتي بيشوب",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123329329",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/168E8/production/_123329329_bad0fde9-2873-4ca1-9514-e2927db66e9d.jpg",
+                  "path": "/cpsprodpb/168E8/production/_123329329_bad0fde9-2873-4ca1-9514-e2927db66e9d.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "لماذا لا يزال الناس يؤمنون بـ \"أسطورة توأم الروح\"؟",
+                  "caption": "حتى لو لم تكن فكرة رفقاء الروح موجودة، فهناك الكثير من الراحة في الاعتقاد بأن بإمكان الناس العثور على رفيق الروح",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cap-60422506",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "كيف تتنبأ الحيوانات بالكوارث قبل وقوعها؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-fut-60422503",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-60422503",
+                  "curie": "http://www.bbc.co.uk/asset/d168a66c-a339-4a98-8179-9f131753cb29",
+                  "assetId": "60422503"
+                },
+                "summary": "منذ آلاف السنين، يُبلغ الناس في جميع أنحاء العالم عن سلوك ينذر بالخطر من جانب الحيوانات في الفترة التي تسبق وقوع الكوارث الطبيعية. فهل يمكن استخدام هذه الإشارات لتحذيرنا من الكوارث الوشيكة؟",
+                "timestamp": 1645177215000,
+                "language": "ar",
+                "byline": {
+                  "name": "نورمان ميلر",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123296771",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4569/production/_123296771_4fcf7c51-0e93-4eb9-9bcc-bcb9ff57566e.jpg",
+                  "path": "/cpsprodpb/4569/production/_123296771_4fcf7c51-0e93-4eb9-9bcc-bcb9ff57566e.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "الأفيال",
+                  "caption": "وفقًا لروايات شهود عيان، ركضت الأفيال إلى مناطق مرتفعة قبل تسونامي المحيط الهندي عام 2004",
+                  "copyrightHolder": "CHAIDEER MAHYUDDIN/Getty",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-fut-60422503",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "لغز النباتات التي أرسلت بذورها للقمر قبل إعادة زراعتها على الأرض"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-fut-60370452",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-60370452",
+                  "curie": "http://www.bbc.co.uk/asset/3857568d-6a6b-401b-8d9d-a827bfbedc25",
+                  "assetId": "60370452"
+                },
+                "summary": "إحدى رحلات أبولو الأخيرة حملت إلى القمر بذورا أُعيدت لاحقًا لتُزرع مرة أخرى على الأرض. لكن المكان الذي زرع به العديد من هذه النباتات بعد عودتها من الفضاء يظل لغزا، والآن تجري عملية البحث عن هذه النباتات وتعقبها.",
+                "timestamp": 1644920584000,
+                "language": "ar",
+                "byline": {
+                  "name": " ريتشارد هولينغهام",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123258972",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/6D51/production/_123258972_962322a0-d1fa-41f1-9178-016d24aec3ea.jpg",
+                  "path": "/cpsprodpb/6D51/production/_123258972_962322a0-d1fa-41f1-9178-016d24aec3ea.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "النباتات التي أرسلت بذورها للقمر قبل إعادة زراعتها على الأرض",
+                  "copyrightHolder": "NASA",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-fut-60370452",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Guides 1"
           },
           {
-            "headlines": {
-              "headline": "تقنيات حديثة تساعدنا على معرفة مصادر الأطعمة التي نتناولها"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-53991868",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-53991868",
-              "curie": "http://www.bbc.co.uk/asset/88381331-5944-47d8-8f15-2307486f5671",
-              "assetId": "53991868"
-            },
-            "summary": "يحرص الكثيرون على تناول طعام صحي، لكننا لا نزال نفتقر إلى المعلومات عن مصادر الأطعمة التي نتناولها. وقد تسهم التقنيات الجديدة وطرق الزراعة الحديثة في سد هذه الفجوة في المعلومات لمساعدة المستهلك في اختيار الأطعمة المناسبة.",
-            "timestamp": 1598988388000,
-            "language": "ar",
-            "byline": {
-              "name": "إيلويز  غيبسون",
-              "title": "صحفي",
-              "persons": [
-                {
-                  "name": "إيلويز غيبسون",
-                  "function": "صحفي"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
+            "type": "feature-main",
+            "title": "Features and Analysis",
+            "items": [
+              {
+                "headlines": {
+                  "headline": "ما هي آثار تفضيل الآباء لأحد الأبناء على أشقائه؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cap-60370449",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-60370449",
+                  "curie": "http://www.bbc.co.uk/asset/a29b6075-695c-4e89-a467-45703fea5d18",
+                  "assetId": "60370449"
+                },
+                "summary": "آباء كثيرون يفضلون أحد الأبناء على أشقائه، على الرغم من أنهم على الأرجح لا يعترفون بذلك، فهل هذه طريقة \"سيئة\" للتربية؟",
+                "timestamp": 1644831574000,
+                "language": "ar",
+                "byline": {
+                  "name": "كاتي بيشوب",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123243392",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/7296/production/_123243392_df499aae-8408-499a-bb5d-29c013aa2132.jpg",
+                  "path": "/cpsprodpb/7296/production/_123243392_df499aae-8408-499a-bb5d-29c013aa2132.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "ما هي آثار تفضيل الآباء لطفل على أشقائه؟",
+                  "caption": "في بعض الأحيان، يفضل الآباء الأطفال الأصغر سنًا، ربما لأنهم يشعرون بمزيد من الثقة أثناء تربية الأطفال الجدد بعدما مروا بمثل هذه التجارب مع الأبناء الأكبر سنا",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cap-60370449",
+                "type": "cps"
               },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114199647",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/123CB/production/_114199647_whatsubject.jpg",
-              "path": "/cpsprodpb/123CB/production/_114199647_whatsubject.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "أصبح بإمكان الزبائن الآن تتبع رحلة العصير الذي يشربونه من بلد المنشأ إلى مائدة الإفطار",
-              "caption": "أصبح بإمكان الزبائن الآن تتبع رحلة العصير الذي يشربونه من بلد المنشأ إلى مائدة الإفطار",
-              "copyrightHolder": "Getty, Refresco",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-53991868",
-            "type": "cps"
+              {
+                "headlines": {
+                  "headline": "الجهل بثقافة الأجور يجعل كثيرين يتقاضون رواتب منخفضة"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cap-60311953",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cap-60311953",
+                  "curie": "http://www.bbc.co.uk/asset/4ea4cd42-4a26-4714-9a29-f1efa12b9e31",
+                  "assetId": "60311953"
+                },
+                "summary": "الناس يستخفون بشكل كبير بما يقوم به الآخرون في نفس العمل، وهو ما يبقيهم في وظائف منخفضة الأجر، ويضر بالعديد من العمال.",
+                "timestamp": 1644573033000,
+                "language": "ar",
+                "byline": {
+                  "name": " آنا جونز",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e3739461b000e9dabfa",
+                      "campaignName": "WS - Give me perspective"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123203364",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/B4FA/production/_123203364_cf302d72-7b15-46bd-bc9c-fdce01d158d6.jpg",
+                  "path": "/cpsprodpb/B4FA/production/_123203364_cf302d72-7b15-46bd-bc9c-fdce01d158d6.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "\"الجهل بالراتب\" يجعل الكثيرين يتقاضون رواتب منخفضة",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cap-60311953",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "ماذا يقول العلم بشأن النوم الصحي للأطفال الرضع؟"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-fut-60311950",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-60311950",
+                  "curie": "http://www.bbc.co.uk/asset/73c4811b-64dd-4898-8a7a-0ab95068e34d",
+                  "assetId": "60311950"
+                },
+                "summary": "انحسار النوم ليس حقيقيا، والاستيقاظ الليلي أمر طبيعي ويقي من متلازمة تعرف باسم موت الرضع المفاجئ. و12 ساعة من النوم ليست معيارا ذهبيا كما يعتقد كثيرون. إليك ما يريد العلماء أن نعرفه عن نوم الأطفال الرضع.",
+                "timestamp": 1644488607000,
+                "language": "ar",
+                "byline": {
+                  "name": "أماندا روجيري",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123203312",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/5352/production/_123203312_8f86b9ae-08b8-4032-a699-fb3bc739017b.jpg",
+                  "path": "/cpsprodpb/5352/production/_123203312_8f86b9ae-08b8-4032-a699-fb3bc739017b.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "تتبع بعض العائلات جدولًا صارمًا، بينما يتبع البعض الآخر نهجًا أكثر استرخاءً، فيما يتعلق بالنوم",
+                  "caption": "تتبع بعض العائلات جدولًا صارمًا، بينما يتبع البعض الآخر نهجًا أكثر استرخاءً، فيما يتعلق بالنوم",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-fut-60311950",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "قصة آخر سفينة معروفة نقلت الرقيق من أفريقيا إلى الولايات المتحدة"
+                },
+                "locators": {
+                  "assetUri": "/arabic/vert-cul-60311947",
+                  "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cul-60311947",
+                  "curie": "http://www.bbc.co.uk/asset/78d773b0-7d89-49e4-af87-3b2a827f16cd",
+                  "assetId": "60311947"
+                },
+                "summary": "اكتشاف حطام السفينة \"كلوتيلدا\"، بعد 160 عامًا من غرقها، يجلب حياة جديدة واهتماما كبيرا بالمدينة التي بناها الناجون الأصليون.",
+                "timestamp": 1644398915000,
+                "language": "ar",
+                "byline": {
+                  "name": "  زوي غوتو",
+                  "title": " بي بي سي ",
+                  "persons": [
+                    {
+                      "name": "ريفل ألدرسون",
+                      "function": "بي بي سي اسكتلندا"
+                    }
+                  ]
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "campaigns": [
+                    {
+                      "campaignId": "5a988e2939461b000e9dabf8",
+                      "campaignName": "WS - Educate me"
+                    }
+                  ],
+                  "taggings": []
+                },
+                "cpsType": "STY",
+                "indexImage": {
+                  "id": "123195291",
+                  "subType": "index",
+                  "href": "http://c.files.bbci.co.uk/4B3B/production/_123195291_b178200f-6e51-479c-888f-84d5f4cc7854.jpg",
+                  "path": "/cpsprodpb/4B3B/production/_123195291_b178200f-6e51-479c-888f-84d5f4cc7854.jpg",
+                  "height": 549,
+                  "width": 976,
+                  "altText": "اعتاد تجار الرقيق نقلهم في سفن من أفريقيا إلى الولايات المتحدة",
+                  "copyrightHolder": "Getty Images",
+                  "originCode": "cpsprodpb",
+                  "type": "image"
+                },
+                "options": {
+                  "isBreakingNews": false,
+                  "isFactCheck": false
+                },
+                "id": "urn:bbc:ares::asset:arabic/vert-cul-60311947",
+                "type": "cps"
+              }
+            ],
+            "semanticGroupName": "Features and Analysis"
           }
-        ],
-        "semanticGroupName": "Guides 1"
+        ]
       },
-      {
-        "type": "container-guides",
-        "title": "Guides 2",
-        "items": [
-          {
-            "headlines": {
-              "headline": "قصة المكان الساحر الذي احتضن لقاء سريا لمناقشة إنشاء البنك الدولي"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-53978526",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-53978526",
-              "curie": "http://www.bbc.co.uk/asset/13319b00-c9f8-4cf5-ab94-55e622275b3f",
-              "assetId": "53978526"
-            },
-            "summary": "في لقاء سري إبان الحرب العالمية الثانية بين جبال \"وايت ماونتنز\" النائية بولاية نيوهامشير تقرر إنشاء أحد أهم وأبرز مؤسسات القرن العشرين.",
-            "timestamp": 1598899045000,
-            "language": "ar",
-            "byline": {
-              "name": "ليندا  ليبان",
-              "title": "بي بي سي",
-              "persons": [
-                {
-                  "name": "ليندا ليبان",
-                  "function": "بي بي سي"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3139461b000e9dabf9",
-                  "campaignName": "WS - Divert me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114191286",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/10A7B/production/_114191286_whatsubject.jpg",
-              "path": "/cpsprodpb/10A7B/production/_114191286_whatsubject.jpg",
-              "height": 360,
-              "width": 640,
-              "altText": "فندق ماونت واشنطن بين قلة من الفنادق القديمة الفاخرة التي مازالت باقية بمنطقة نيو إينغلند شمال شرقي الولايات المتحدة",
-              "caption": "فندق ماونت واشنطن بين قلة من الفنادق القديمة الفاخرة التي مازالت باقية بمنطقة نيو إينغلند شمال شرقي الولايات المتحدة",
-              "copyrightHolder": "Philip Scalia/Alamy",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-53978526",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "كيف أصبح الشعب الهولندي من أطول الشعوب قامة في العالم؟"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-53925721",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-53925721",
-              "curie": "http://www.bbc.co.uk/asset/17c73c09-416c-47b3-bbc0-0d87b9b98aea",
-              "assetId": "53925721"
-            },
-            "summary": "استطاع الهولنديون أن يشيدوا دولتهم على أراض مستصلحة من البحر، وأصبحوا مع الوقت أطول الشعوب قامة في العالم، فكيف حدث ذلك؟",
-            "timestamp": 1598877343000,
-            "language": "ar",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114186017",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/1159C/production/_114186017_whatsubject.jpg",
-              "path": "/cpsprodpb/1159C/production/_114186017_whatsubject.jpg",
-              "height": 351,
-              "width": 624,
-              "altText": "يقع نحو ثلث مساحة هولندا تحت مستوى سطح البحر",
-              "caption": "يقع نحو ثلث مساحة هولندا تحت مستوى سطح البحر",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-53925721",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "فيروس كورونا: تأشيرات جديدة تشجع الناس على الإقامة والعمل عن بُعد من بلدان أجنبية"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-53953980",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-53953980",
-              "curie": "http://www.bbc.co.uk/asset/655cabbc-28d0-46d5-a28d-3ea6df08efdc",
-              "assetId": "53953980"
-            },
-            "summary": "في غمار أزمة وباء كورونا، شهدت مناطق مختلفة من العالم ظهور خطط جديدة تحض الناس على الاستقرار خارج بلادهم، و\"العمل عن بعد\" من هناك، فهل يعني ذلك أننا قد نصبح قريبا مجموعة من العمال المتنقلين الذين يستخدمون وسائل الاتصال الحديثة لأداء مهامهم عن بعد؟",
-            "timestamp": 1598688899000,
-            "language": "ar",
-            "byline": {
-              "name": "مارك جوهانسون",
-              "title": "صحفي",
-              "persons": [
-                {
-                  "name": "مارك جونسون",
-                  "function": "بي بي سي"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114170452",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/633F/production/_114170452_whatsubject.jpg",
-              "path": "/cpsprodpb/633F/production/_114170452_whatsubject.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "يسمح برنامج \"العمل من برمودا\"، للأشخاص الذين يعملون عن بعد، بالحصول على تصريح للإقامة في الجزيرة لمدة عام",
-              "caption": "يسمح برنامج \"العمل من برمودا\"، للأشخاص الذين يعملون عن بعد، بالحصول على تصريح للإقامة في الجزيرة لمدة عام",
-              "copyrightHolder": "Alamy",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-53953980",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "مهمة غير مسبوقة لإنقاذ أشجار نادرة \"تعود إلى عصر الديناصورات\""
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-53953326",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-53953326",
-              "curie": "http://www.bbc.co.uk/asset/8b288d99-b8ad-4471-9506-76c3675b5651",
-              "assetId": "53953326"
-            },
-            "summary": "تعد هذه الشجرة واحدة من أكبر النباتات وأندرها في العالم، ولا تنمو بريا سوى في مكان واحد فقط في أخدود بغابة مطيرة محاط بالسرية التامة.",
-            "timestamp": 1598644289000,
-            "language": "ar",
-            "byline": {
-              "name": "جولي  ميلر",
-              "title": "بي بي سي",
-              "persons": [
-                {
-                  "name": "جولي ميلر",
-                  "function": "بي بي سي"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114161617",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/117C0/production/_114161617_53953326.jpg",
-              "path": "/cpsprodpb/117C0/production/_114161617_53953326.jpg",
-              "height": 351,
-              "width": 624,
-              "altText": "لا يوجد اليوم سوى أقل من 100 شجرة ووليمي صنوبرية تنمو بريا، ويحاط موقعها بالسرية",
-              "caption": "لا يوجد اليوم سوى أقل من 100 شجرة ووليمي صنوبرية تنمو بريا، ويحاط موقعها بالسرية",
-              "copyrightHolder": "Inahwen/Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-53953326",
-            "type": "cps"
-          }
-        ],
-        "semanticGroupName": "Guides 2"
+      "promo": {
+        "subType": "IDX",
+        "name": "مجلة",
+        "uri": "/arabic/magazine-54029177",
+        "id": "urn:bbc:ares::index:arabic/magazine-54029177/desktop/domestic",
+        "type": "simple"
       },
-      {
-        "type": "feature-main",
-        "title": "Features and Analysis",
-        "items": [
-          {
-            "headlines": {
-              "headline": "هل من الممكن مساعدة ضباط الشرطة في التخلص من تحيزاتهم الخفية؟"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-53977639",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-53977639",
-              "curie": "http://www.bbc.co.uk/asset/a49aa750-69f8-4b49-ba0b-0af149dafd85",
-              "assetId": "53977639"
-            },
-            "summary": "قوات الشرطة وعدد من المؤسسات تشرع في تدريب أفرادها على تجاوز ما يعرف بـ\"التحيز الضمني\"، أو \"التحيز الخفي\"، لمساعدتهم في تجنب اتخاذ القرارات بناء على الافتراضات العنصرية، فهل تنجح هذه التدريبات في القضاء على السلوكيات التمييزية بين أفراد الشرطة؟",
-            "timestamp": 1598963021000,
-            "language": "ar",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114190349",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/17065/production/_114190349_53977639.jpg",
-              "path": "/cpsprodpb/17065/production/_114190349_53977639.jpg",
-              "height": 840,
-              "width": 1494,
-              "altText": "الاحتجاجات ضد عنصرية الشرطة ليست بالجديدة في الولايات المتحدة، لكن الكثير من القوات الآن تتخذ خطوات لاجتثاث المشكلة من جذورها",
-              "caption": "الاحتجاجات ضد عنصرية الشرطة ليست بالجديدة في الولايات المتحدة، لكن الكثير من القوات الآن تتخذ خطوات لاجتثاث المشكلة من جذورها",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-53977639",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "ما سر النباتات النادرة التي تنتج معدن النيكل في إندونيسيا؟"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-53939241",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-53939241",
-              "curie": "http://www.bbc.co.uk/asset/66d674d0-1b0a-4f97-80dd-92d55f2cbf33",
-              "assetId": "53939241"
-            },
-            "summary": "باحثون يعتقدون أن نباتات نادرة وقيمة لديها قدرة على امتصاص وتخزين كميات كبيرة من النيكل من التربة لا تزال مخبأة بين ثنايا غابات إندويسيا، ويسابق الباحثون الزمن لاكتشاف هذه النباتات قبل أن تختفي في خضم عمليات إزالة الغابات.",
-            "timestamp": 1598621844000,
-            "language": "ar",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114148152",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/6260/production/_114148152_53939241.jpg",
-              "path": "/cpsprodpb/6260/production/_114148152_53939241.jpg",
-              "height": 503,
-              "width": 894,
-              "altText": "ثمة اختبار سريع وفوري للكشف عن النيكل في النباتات يتضمن استخدام ورقة بيضاء تتحول إلى اللون الوردي عند التعرض للنيكل",
-              "caption": "ثمة اختبار سريع وفوري للكشف عن النيكل في النباتات يتضمن استخدام ورقة بيضاء تتحول إلى اللون الوردي عند التعرض للنيكل",
-              "copyrightHolder": "Antony van der Ent",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-53939241",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "هل غسل اليدين لمدة 20 ثانية يكفي للقضاء على فيروس كورونا؟"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-53936694",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-53936694",
-              "curie": "http://www.bbc.co.uk/asset/dcc38f1d-ad49-4fb2-bd41-874bf0ed3308",
-              "assetId": "53936694"
-            },
-            "summary": "بخلاف إجراءات الإغلاق وارتداء الأقنعة والتباعد الاجتماعي، يلعب الماء والصابون دورا مهما في المعركة ضد فيروس كورونا، وهو الدور الذي نغفله كثيرا.",
-            "timestamp": 1598557371000,
-            "language": "ar",
-            "byline": {
-              "name": "ستيفن داولنغ",
-              "title": "صحفي",
-              "persons": [
-                {
-                  "name": "ستيفن داولنغ",
-                  "function": "صحفي"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                "categoryName": "Explainer"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114145509",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/161BA/production/_114145509_53936694.jpg",
-              "path": "/cpsprodpb/161BA/production/_114145509_53936694.jpg",
-              "height": 842,
-              "width": 1497,
-              "altText": "انتشرت في بداية انتشار الفيروس رسوم تنصح بالطريقة الصحيحة لغسل الأيدي واستخدام المطهرات",
-              "caption": "انتشرت في بداية انتشار الفيروس رسوم تنصح بالطريقة الصحيحة لغسل الأيدي واستخدام المطهرات",
-              "copyrightHolder": "People Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-53936694",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "حيل نفسية تساعدك في زيادة الثقة بالنفس والتحدث كالمشاهير"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-fut-53925118",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-fut-53925118",
-              "curie": "http://www.bbc.co.uk/asset/9d8ab793-4771-4a87-8504-f0d11953dcf0",
-              "assetId": "53925118"
-            },
-            "summary": "يمكن أن يؤدي تفكيرك في نفسك وكأنها كيان منفصل عنك، إلى تقليل الشعور بالتوتر، وإطلاق العنان لك للانتفاع بفوائد لا يُستهان بها، على صعيد تعزيز تصميمك وثقتك بنفسك.",
-            "timestamp": 1598533458000,
-            "language": "ar",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114144636",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/F89C/production/_114144636_e66d2a67-b216-4d49-9f4c-92084461899d.jpg",
-              "path": "/cpsprodpb/F89C/production/_114144636_e66d2a67-b216-4d49-9f4c-92084461899d.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "بيونسيه",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-fut-53925118",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "انفجار بيروت: معركة لإنقاذ الأبنية التاريخية في المدينة"
-            },
-            "locators": {
-              "assetUri": "/arabic/vert-cul-53895901",
-              "cpsUrn": "urn:bbc:content:assetUri:arabic/vert-cul-53895901",
-              "curie": "http://www.bbc.co.uk/asset/83dd55b7-3394-419e-a968-f354b6c15ba1",
-              "assetId": "53895901"
-            },
-            "summary": "أمضى المصور الفوتوغرافي جوزيف خوري وزوجته، غابرييلا كاردوزو، خمس سنوات في توثيق التراث المعماري للحقبة العثمانية والاستعمارية في بيروت، الذي أصبح الآن مهددا بالانهيار.",
-            "timestamp": 1598352393000,
-            "language": "ar",
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ],
-              "taggings": []
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "114098945",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/D6CD/production/_114098945_whatsubject.jpg",
-              "path": "/cpsprodpb/D6CD/production/_114098945_whatsubject.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "تعرّف الزوجان في أعقاب الانفجار على 25 مبنى وتركا أمام كل منها بطاقة بريدية تحمل صورة من مجموعة \"بيوت بيروت\"",
-              "caption": "تعرّف الزوجان في أعقاب الانفجار على 25 مبنى وتركا أمام كل منها بطاقة بريدية تحمل صورة من مجموعة \"بيوت بيروت\"",
-              "copyrightHolder": "Joseph M Khoury",
-              "type": "image"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:arabic/vert-cul-53895901",
-            "type": "cps"
-          }
-        ],
-        "semanticGroupName": "Features and Analysis"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "المجلة",
+          "uri": "/arabic/magazine",
+          "urlIdentifier": "/arabic/magazine",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC Arabic",
+          "uri": "/arabic",
+          "urlIdentifier": "/arabic",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "subType": "IDX",
-    "name": "مجلة",
-    "uri": "/arabic/magazine-54029177",
-    "id": "urn:bbc:ares::index:arabic/magazine-54029177/desktop/domestic",
-    "type": "simple"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "المجلة",
-      "uri": "/arabic/magazine",
-      "type": "simple"
     },
-    "site": {
-      "subType": "site",
-      "name": "BBC Arabic",
-      "uri": "/arabic",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": null
+    }
   }
 }
