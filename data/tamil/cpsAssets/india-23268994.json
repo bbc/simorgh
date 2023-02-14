@@ -1,195 +1,415 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:tamil/india-23268994",
-    "locators": {
-      "assetUri": "/tamil/india-23268994",
-      "cpsUrn": "urn:bbc:content:assetUri:tamil/india-23268994",
-      "curie": "http://www.bbc.co.uk/asset/27fd3dff-09e3-a94c-82fb-4674a0045395",
-      "assetId": "23268994"
-    },
-    "type": "MAP",
-    "createdBy": "tamil-v6",
-    "language": "ta",
-    "lastUpdated": 1588335919857,
-    "firstPublished": 1583160738000,
-    "lastPublished": 1583160738000,
-    "timestamp": 1583160738000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "tamil.india.media_asset.23268994.page",
-      "cps_asset_id": "23268994"
-    },
-    "passport": { "taggings": [] },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph", "heading", "crosshead"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01m7d3c",
-        "subType": "clip",
-        "format": "audio",
-        "title": "Birmingham Checkout 2",
-        "synopses": {
-          "short": "This is some sound from a supermarket checkout in Birmingham"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:tamil/india-23268994",
+        "locators": {
+          "assetUri": "/tamil/india-23268994",
+          "cpsUrn": "urn:bbc:content:assetUri:tamil/india-23268994",
+          "curie": "http://www.bbc.co.uk/asset/27fd3dff-09e3-a94c-82fb-4674a0045395",
+          "assetId": "23268994"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gbb.jpg",
-        "embedding": true,
-        "advertising": false,
-        "caption": "This is some sound from a supermarket checkout in Birmingham",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "tamil-v6",
+        "language": "ta",
+        "lastUpdated": 1645644416024,
+        "firstPublished": 1583160738000,
+        "lastPublished": 1583160738000,
+        "timestamp": 1583160738000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "tamil.india.media_asset.23268994.page",
+          "cps_asset_id": "23268994",
+          "contentId": "urn:bbc:cps:curie:asset:27fd3dff-09e3-a94c-82fb-4674a0045395"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.5",
+        "blockTypes": ["media", "paragraph", "heading", "crosshead"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "TAMIL",
+          "producerId": "87"
+        },
+        "readTime": 1,
+        "siteUri": "/tamil"
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01m7d3h",
-            "types": ["Original"],
-            "duration": 127,
-            "durationISO8601": "PT2M7S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": false,
-              "world": false
+            "id": "p01m7d3c",
+            "subType": "clip",
+            "format": "audio",
+            "title": "Birmingham Checkout 2",
+            "synopses": {
+              "short": "This is some sound from a supermarket checkout in Birmingham"
             },
-            "availableFrom": 1555067786000
-          }
-        ],
-        "imageCopyright": "AP",
-        "type": "media"
-      },
-      {
-        "text": "அணிகலன்களாக மாறும் தேங்காய் சிரட்டைகள்",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "எட்டு ஆண்டுகளாக கல்வியியல் கல்லூரியில் விரிவுரையாளராக இருந்த அவிலா ஜூலியட் , தற்போது தேங்காய் சிரட்டையிலிருந்து கைவினை பொருட்கள் செய்யும் கலைஞராக மாறியுள்ளார்.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Pea horseradish azuki bean lettuce avocado asparagus okra.",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Tamil CPS test Audio UK only அணிகலன்களாக மாறும் தேங்காய் சிரட்டைகள் Birmingham Checkout 2",
-      "headline": "Tamil CPS test Audio UK only அணிகலன்களாக மாறும் தேங்காய் சிரட்டைகள்"
-    },
-    "locators": {
-      "assetUri": "/tamil/india-23268994",
-      "cpsUrn": "urn:bbc:content:assetUri:tamil/india-23268994",
-      "curie": "http://www.bbc.co.uk/asset/27fd3dff-09e3-a94c-82fb-4674a0045395",
-      "assetId": "23268994"
-    },
-    "summary": "audio",
-    "timestamp": 1583160738000,
-    "language": "ta",
-    "passport": { "taggings": [] },
-    "media": {
-      "id": "p01m7d3c",
-      "subType": "clip",
-      "format": "audio",
-      "title": "Birmingham Checkout 2",
-      "synopses": {
-        "short": "This is some sound from a supermarket checkout in Birmingham"
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gbb.jpg",
-      "embedding": true,
-      "advertising": false,
-      "caption": "This is some sound from a supermarket checkout in Birmingham",
-      "versions": [
-        {
-          "versionId": "p01m7d3h",
-          "types": ["Original"],
-          "duration": 127,
-          "durationISO8601": "PT2M7S",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": false,
-            "world": false
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gbb.jpg",
+            "embedding": true,
+            "advertising": false,
+            "caption": "This is some sound from a supermarket checkout in Birmingham",
+            "versions": [
+              {
+                "versionId": "p01m7d3h",
+                "types": ["Original"],
+                "duration": 127,
+                "durationISO8601": "PT2M7S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": false
+                },
+                "availableFrom": 1555067786000
+              }
+            ],
+            "imageCopyright": "AP",
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "availableFrom": 1555067786000
-        }
-      ],
-      "imageCopyright": "AP",
-      "type": "media"
+          {
+            "text": "அணிகலன்களாக மாறும் தேங்காய் சிரட்டைகள்",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "எட்டு ஆண்டுகளாக கல்வியியல் கல்லூரியில் விரிவுரையாளராக இருந்த அவிலா ஜூலியட் , தற்போது தேங்காய் சிரட்டையிலிருந்து கைவினை பொருட்கள் செய்யும் கலைஞராக மாறியுள்ளார்.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Pea horseradish azuki bean lettuce avocado asparagus okra.",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "text": "Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard. ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Tamil CPS test Audio UK only அணிகலன்களாக மாறும் தேங்காய் சிரட்டைகள் Birmingham Checkout 2",
+          "headline": "Tamil CPS test Audio UK only அணிகலன்களாக மாறும் தேங்காய் சிரட்டைகள்"
+        },
+        "locators": {
+          "assetUri": "/tamil/india-23268994",
+          "cpsUrn": "urn:bbc:content:assetUri:tamil/india-23268994",
+          "curie": "http://www.bbc.co.uk/asset/27fd3dff-09e3-a94c-82fb-4674a0045395",
+          "assetId": "23268994"
+        },
+        "summary": "audio",
+        "timestamp": 1583160738000,
+        "language": "ta",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01m7d3c",
+          "subType": "clip",
+          "format": "audio",
+          "title": "Birmingham Checkout 2",
+          "synopses": {
+            "short": "This is some sound from a supermarket checkout in Birmingham"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gbb.jpg",
+          "embedding": true,
+          "advertising": false,
+          "caption": "This is some sound from a supermarket checkout in Birmingham",
+          "versions": [
+            {
+              "versionId": "p01m7d3h",
+              "types": ["Original"],
+              "duration": 127,
+              "durationISO8601": "PT2M7S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": false
+              },
+              "availableFrom": 1555067786000
+            }
+          ],
+          "imageCopyright": "AP",
+          "smpKind": "radioProgramme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63732055",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/D6EF/test/_63732055_p01n2gbb.jpg",
+          "path": "/cpsdevpb/D6EF/test/_63732055_p01n2gbb.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Alt text",
+          "copyrightHolder": "AP",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:tamil/india-23268994",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "இந்தியா",
+          "uri": "/tamil/india",
+          "urlIdentifier": "/tamil/india",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "தமிழில் செய்திகள்",
+          "uri": "/tamil",
+          "urlIdentifier": "/tamil",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "63732055",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/D6EF/test/_63732055_p01n2gbb.jpg",
-      "path": "/cpsdevpb/D6EF/test/_63732055_p01n2gbb.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "Alt text",
-      "copyrightHolder": "AP",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:tamil/india-23268994",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "இந்தியா",
-      "uri": "/tamil/india",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "தமிழில் செய்திகள்",
-      "uri": "/tamil",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:22:58.313Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 4,
+        "records": [
+          {
+            "id": "c17f93bd-8e2d-a345-aee1-650b2ea24f85",
+            "rank": 1,
+            "count": 8835,
+            "urn": "urn:bbc:curie:asset:c17f93bd-8e2d-a345-aee1-650b2ea24f85",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'மச்சிலி' புலி குறித்த மலரும் நினைவுகள்",
+                "headline": "'மச்சிலி' புலி குறித்த மலரும் நினைவுகள்"
+              },
+              "locators": {
+                "assetUri": "/tamil/sport-23068961",
+                "cpsUrn": "urn:bbc:content:assetUri:tamil/sport-23068961",
+                "curie": "http://www.bbc.co.uk/asset/c17f93bd-8e2d-a345-aee1-650b2ea24f85",
+                "assetId": "23068961"
+              },
+              "summary": "இந்தியாவின் புகழ்பெற்ற புலிகளில் ஒன்றான 'மச்சிலி' புலி, இன்று ரண்தம்பூர் தேசிய பூங்காவில் இறந்துள்ளது.",
+              "timestamp": 1471970153000,
+              "language": "ta",
+              "media": {
+                "id": "23068962",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p0158n4j",
+                "entityType": "Clip",
+                "caption": "'மச்சிலி' புலி குறித்த மலரும் நினைவுகள்",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63504249",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/17020/test/_63504249_p012zl0f.jpg",
+                "path": "/cpsdevpb/17020/test/_63504249_p012zl0f.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "விண்ணில் செலுத்தப்படும் முன்னர் ஜூனோ விண்கலம்",
+                "caption": "விண்ணில் செலுத்தப்படும் முன்னர் ஜூனோ விண்கலம்",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tamil/sport-23068961",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9a0437e7-2bc1-674d-afaf-344915ad964f",
+            "rank": 2,
+            "count": 8789,
+            "urn": "urn:bbc:curie:asset:9a0437e7-2bc1-674d-afaf-344915ad964f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "சிரியாவின் சிறைகளில் 18, 000 பேர் உயிரிழப்பு - காணொளி BBC rewrite",
+                "headline": "சிரியாவின் சிறைகளில் 18, 000 பேர் உயிரிழப்பு - காணொளி short rewrite"
+              },
+              "locators": {
+                "assetUri": "/tamil/global-23069347",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:9a0437e7-2bc1-674d-afaf-344915ad964f",
+                "assetId": "23069347",
+                "cpsUrn": "urn:bbc:content:assetUri:tamil/global-23069347",
+                "curie": "http://www.bbc.co.uk/asset/9a0437e7-2bc1-674d-afaf-344915ad964f"
+              },
+              "summary": "சிரியாவில் இரண்டாயிரத்து பதினோராம் ஆண்டு முதல் பதினைந்தாம் ஆண்டுவரை அரசாங்க சிறையில் சுமார் பதினெட்டாயிரம் பேர் உயிரிழந்துள்ளனர்.",
+              "timestamp": 1472056659000,
+              "language": "ta",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+                "taggings": []
+              },
+              "media": {
+                "id": "23068960",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0158m4d",
+                "entityType": "Clip",
+                "caption": "சிரியாவின் சிறைகளில் 18, 000 பேர் உயிரிழப்பு - காணொளி short",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63504243",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/85C0/test/_63504243_p0158mcm.jpg",
+                "path": "/cpsdevpb/85C0/test/_63504243_p0158mcm.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "18, 000 பேர் உயிரிழப்பு BBC",
+                "copyrightHolder": "இலங்கை",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tamil/global-23069347",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cdb21693-77bc-ba40-a782-4862d440dc5c",
+            "rank": 3,
+            "count": 7327,
+            "urn": "urn:bbc:curie:asset:cdb21693-77bc-ba40-a782-4862d440dc5c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "சிரியாவின் சிறைகளில் 18, 000 பேர் உயிரிழப்பு - காணொளி BBC rewrite av",
+                "headline": "சிரியாவின் சிறைகளில் 18, 000 பேர் உயிரிழப்பு - காணொளி short rewrite av"
+              },
+              "locators": {
+                "assetUri": "/tamil/global-23095612",
+                "cpsUrn": "urn:bbc:content:assetUri:tamil/global-23095612",
+                "curie": "http://www.bbc.co.uk/asset/cdb21693-77bc-ba40-a782-4862d440dc5c",
+                "assetId": "23095612"
+              },
+              "summary": "சிரியாவில் இரண்டாயிரத்து பதினோராம் ஆண்டு முதல் பதினைந்தாம் ஆண்டுவரை அரசாங்க சிறையில் சுமார் பதினெட்டாயிரம் பேர் உயிரிழந்துள்ளனர்.",
+              "timestamp": 1481039613000,
+              "language": "ta",
+              "media": {
+                "id": "23068960",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0158m4d",
+                "entityType": "Clip",
+                "caption": "சிரியாவின் சிறைகளில் 18, 000 பேர் உயிரிழப்பு - காணொளி short",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63504243",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/85C0/test/_63504243_p0158mcm.jpg",
+                "path": "/cpsdevpb/85C0/test/_63504243_p0158mcm.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "18, 000 பேர் உயிரிழப்பு BBC",
+                "copyrightHolder": "இலங்கை",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tamil/global-23095612",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "62572726-1cfb-7e40-b091-b3e34d703f03",
+            "rank": 4,
+            "count": 5400,
+            "urn": "urn:bbc:curie:asset:62572726-1cfb-7e40-b091-b3e34d703f03",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "கிளிக் - தொழில்நுட்ப காணொளி",
+                "headline": "கிளிக் - தொழில்நுட்ப காணொளி"
+              },
+              "locators": {
+                "assetUri": "/tamil/23064878",
+                "cpsUrn": "urn:bbc:content:assetUri:tamil/23064878",
+                "curie": "http://www.bbc.co.uk/asset/62572726-1cfb-7e40-b091-b3e34d703f03",
+                "assetId": "23064878"
+              },
+              "summary": "கிளிக் - தொழில்நுட்ப காணொளி",
+              "timestamp": 1470149272000,
+              "language": "ta",
+              "media": {
+                "id": "63485393",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "bbc_world_service_west_africa",
+                "duration": "PT0S",
+                "caption": "கிளிக்",
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63501205",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C422/test/_63501205__90567143_gettyimages-540421476.jpg",
+                "path": "/cpsdevpb/C422/test/_63501205__90567143_gettyimages-540421476.jpg",
+                "height": 270,
+                "width": 480,
+                "altText": "கிளிக்",
+                "caption": "கிளிக்",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:tamil/23064878",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
