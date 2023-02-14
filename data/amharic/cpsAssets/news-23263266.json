@@ -1,168 +1,442 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:amharic/news-23263266",
-    "locators": {
-      "assetUri": "/amharic/news-23263266",
-      "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23263266",
-      "curie": "http://www.bbc.co.uk/asset/1d1cb419-974b-8241-99b1-a13a7c5220fe",
-      "assetId": "23263266"
-    },
-    "type": "MAP",
-    "createdBy": "amharic-v6",
-    "language": "am",
-    "lastUpdated": 1588335920840,
-    "firstPublished": 1580305097000,
-    "lastPublished": 1580305097000,
-    "timestamp": 1580305097000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "amharic.news.media_asset.23263266.page",
-      "cps_asset_id": "23263266"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "heading", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p01n40vn",
-        "subType": "clip",
-        "format": "video",
-        "title": "A vertical video pretending to be a cat title",
-        "synopses": {
-          "short": "A vertical video pretending to be a cat short synopsis"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:amharic/news-23263266",
+        "locators": {
+          "assetUri": "/amharic/news-23263266",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:1d1cb419-974b-8241-99b1-a13a7c5220fe",
+          "assetId": "23263266",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23263266",
+          "curie": "http://www.bbc.co.uk/asset/1d1cb419-974b-8241-99b1-a13a7c5220fe"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n71w7.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "A vertical video pretending to be a cat short synopsis",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "amharic-v6",
+        "language": "am",
+        "lastUpdated": 1665414944443,
+        "firstPublished": 1580305097000,
+        "lastPublished": 1580305097000,
+        "timestamp": 1580305097000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "amharic.news.media_asset.23263266.page",
+          "cps_asset_id": "23263266",
+          "contentId": "urn:bbc:cps:curie:asset:1d1cb419-974b-8241-99b1-a13a7c5220fe"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["media", "heading", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "AMHARIC",
+          "producerId": "4"
+        },
+        "readTime": 1,
+        "siteUri": "/amharic",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p01n40vq",
-            "types": ["Portrait"],
-            "duration": 11,
-            "durationISO8601": "PT11S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p01n40vn",
+            "subType": "clip",
+            "format": "video",
+            "title": "A vertical video pretending to be a cat title",
+            "synopses": {
+              "short": "A vertical video pretending to be a cat short synopsis"
             },
-            "availableFrom": 1563017501000
-          }
-        ],
-        "imageCopyright": "BBC",
-        "type": "media"
-      },
-      {
-        "text": "Random cat text",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "My left donut is missing, as is my right more napping, more napping all the napping is exhausting. Lick yarn hanging out of own butt. Weigh eight pounds but take up a full-size bed stare at ceiling light or claw drapes making bread on the bathrobe annoy the old grumpy cat, start a fight and then retreat to wash when i lose sleep. Sleep everywhere, but not in my bed scratch at door to be let outside, get let out then scratch at door immmediately after to be let back in meeeeouw good morning sunshine. I is not fat, i is fluffy scratch the box but meowzer that box?",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Munch on tasty moths being gorgeous with belly side up stuff and things yet hunt by meowing loudly at 5am next to human slave food dispenser lick the curtain just to be annoying so favor packaging over toy and cats go for world domination. More napping, more napping all the napping is exhausting lounge in doorway. Somehow manage to catch a bird but have no idea what to do next,",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Amharic test MAP A vertical video pretending to be a cat title",
-      "headline": "Amharic test MAP A vertical video pretending to be a cat short synopsis"
-    },
-    "locators": {
-      "assetUri": "/amharic/news-23263266",
-      "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23263266",
-      "curie": "http://www.bbc.co.uk/asset/1d1cb419-974b-8241-99b1-a13a7c5220fe",
-      "assetId": "23263266"
-    },
-    "summary": "amharic test",
-    "timestamp": 1580305097000,
-    "language": "am",
-    "passport": {
-      "taggings": []
-    },
-    "media": {
-      "id": "p01n40vn",
-      "subType": "clip",
-      "format": "video",
-      "title": "A vertical video pretending to be a cat title",
-      "synopses": {
-        "short": "A vertical video pretending to be a cat short synopsis"
-      },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n71w7.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "A vertical video pretending to be a cat short synopsis",
-      "versions": [
-        {
-          "versionId": "p01n40vq",
-          "types": ["Portrait"],
-          "duration": 11,
-          "durationISO8601": "PT11S",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true,
-            "world": false
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n71w7.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "A vertical video pretending to be a cat short synopsis",
+            "versions": [
+              {
+                "versionId": "p01n40vq",
+                "types": ["Portrait"],
+                "duration": 11,
+                "durationISO8601": "PT11S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1563017501000
+              }
+            ],
+            "imageCopyright": "BBC",
+            "smpKind": "programme",
+            "type": "media"
           },
-          "availableFrom": 1563017501000
-        }
-      ],
-      "imageCopyright": "BBC",
-      "type": "media"
+          {
+            "text": "Random cat text",
+            "markupType": "plain_text",
+            "type": "heading"
+          },
+          {
+            "text": "My left donut is missing, as is my right more napping, more napping all the napping is exhausting. Lick yarn hanging out of own butt. Weigh eight pounds but take up a full-size bed stare at ceiling light or claw drapes making bread on the bathrobe annoy the old grumpy cat, start a fight and then retreat to wash when i lose sleep. Sleep everywhere, but not in my bed scratch at door to be let outside, get let out then scratch at door immmediately after to be let back in meeeeouw good morning sunshine. I is not fat, i is fluffy scratch the box but meowzer that box?",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Munch on tasty moths being gorgeous with belly side up stuff and things yet hunt by meowing loudly at 5am next to human slave food dispenser lick the curtain just to be annoying so favor packaging over toy and cats go for world domination. More napping, more napping all the napping is exhausting lounge in doorway. Somehow manage to catch a bird but have no idea what to do next,",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Amharic test MAP A vertical video pretending to be a cat title",
+          "headline": "Amharic test MAP A vertical video pretending to be a cat short synopsis"
+        },
+        "locators": {
+          "assetUri": "/amharic/news-23263266",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:1d1cb419-974b-8241-99b1-a13a7c5220fe",
+          "assetId": "23263266",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23263266",
+          "curie": "http://www.bbc.co.uk/asset/1d1cb419-974b-8241-99b1-a13a7c5220fe"
+        },
+        "summary": "amharic test",
+        "timestamp": 1580305097000,
+        "language": "am",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+          "taggings": []
+        },
+        "media": {
+          "id": "p01n40vn",
+          "subType": "clip",
+          "format": "video",
+          "title": "A vertical video pretending to be a cat title",
+          "synopses": {
+            "short": "A vertical video pretending to be a cat short synopsis"
+          },
+          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n71w7.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "A vertical video pretending to be a cat short synopsis",
+          "versions": [
+            {
+              "versionId": "p01n40vq",
+              "types": ["Portrait"],
+              "duration": 11,
+              "durationISO8601": "PT11S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1563017501000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "63730205",
+          "subType": "index",
+          "href": "http://b.files.bbci.co.uk/C41B/test/_63730205_p01n71w7.jpg",
+          "path": "/cpsdevpb/C41B/test/_63730205_p01n71w7.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Cat",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:amharic/news-23263266",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "ዜና",
+          "uri": "/amharic/news",
+          "urlIdentifier": "/amharic/news",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC አማርኛ",
+          "uri": "/amharic",
+          "urlIdentifier": "/amharic",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "63730205",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/C41B/test/_63730205_p01n71w7.jpg",
-      "path": "/cpsdevpb/C41B/test/_63730205_p01n71w7.jpg",
-      "height": 1152,
-      "width": 2048,
-      "altText": "Cat",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:amharic/news-23263266",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "ዜና",
-      "uri": "/amharic/news",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC አማርኛ",
-      "uri": "/amharic",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:03:57.627Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 4,
+        "records": [
+          {
+            "id": "cd93b04a-cb40-b541-bf25-c8ca83eecfa4",
+            "rank": 1,
+            "count": 7251,
+            "urn": "urn:bbc:curie:asset:cd93b04a-cb40-b541-bf25-c8ca83eecfa4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'እናቴን አገናኙኝ'፦ ኢራቃዊው የ12 ዓመቱ ታዳጊ",
+                "headline": "እናቴን አገናኙኝ"
+              },
+              "locators": {
+                "assetUri": "/amharic/23143332",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/23143332",
+                "curie": "http://www.bbc.co.uk/asset/cd93b04a-cb40-b541-bf25-c8ca83eecfa4",
+                "assetId": "23143332"
+              },
+              "summary": "እናቴን አገናኙኝ፦ የ12 ዓመቱ ኢራቃዊ ታዳጊ",
+              "timestamp": 1501246293000,
+              "language": "am",
+              "media": {
+                "id": "p01cjslp",
+                "subType": "clip",
+                "format": "video",
+                "title": "እናቴን አገናኙኝ ኢራቃዊው የ12 ዓመቱ ታዳጊ",
+                "synopses": {
+                  "short": "እናቴን አገናኙኝ"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cjsml.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "እናቴን አገናኙኝ",
+                "versions": [
+                  {
+                    "versionId": "p01cjslr",
+                    "types": ["Original"],
+                    "duration": 56,
+                    "durationISO8601": "PT56S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1501245615000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63582207",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/11254/test/_63582207_p01cjsml.jpg",
+                "path": "/cpsdevpb/11254/test/_63582207_p01cjsml.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "የ12 ዓመቱ ኢራቃዊ ታዳጊ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/23143332",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "55f39340-5469-9d47-8466-61b16bed755a",
+            "rank": 2,
+            "count": 5399,
+            "urn": "urn:bbc:curie:asset:55f39340-5469-9d47-8466-61b16bed755a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''",
+                "headline": "ቪድዮ"
+              },
+              "locators": {
+                "assetUri": "/amharic/23118972",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/23118972",
+                "curie": "http://www.bbc.co.uk/asset/55f39340-5469-9d47-8466-61b16bed755a",
+                "assetId": "23118972"
+              },
+              "summary": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''",
+              "timestamp": 1493202691000,
+              "language": "am",
+              "media": {
+                "id": "p01cj5w4",
+                "subType": "clip",
+                "format": "video",
+                "title": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት''",
+                "synopses": {
+                  "short": "ቪድዮ"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cj70g.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "ቪድዮ",
+                "versions": [
+                  {
+                    "versionId": "p01cj5w6",
+                    "types": ["Original"],
+                    "duration": 59,
+                    "durationISO8601": "PT59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1501161311000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63581875",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/E1DA/test/_63581875_p01cj70g.jpg",
+                "path": "/cpsdevpb/E1DA/test/_63581875_p01cj70g.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "''አይ.ኤስን መቀላቀል የፈለኩበት ምክንያት. . . ''",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/23118972",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "53019ef1-28fd-df4a-99d7-a6b4d3f2a7ed",
+            "rank": 3,
+            "count": 3365,
+            "urn": "urn:bbc:curie:asset:53019ef1-28fd-df4a-99d7-a6b4d3f2a7ed",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ከዳቦ ሻጭነት ወደ ዓለማቀፍ ሞዴልነት",
+                "headline": "ከዳቦ ሻጭነት ወደ ዓለማቀፍ ሞዴልነት"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-23149013",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-23149013",
+                "curie": "http://www.bbc.co.uk/asset/53019ef1-28fd-df4a-99d7-a6b4d3f2a7ed",
+                "assetId": "23149013"
+              },
+              "summary": "ከዳቦ ሻጭነት ወደ ዓለማቀፍ ሞዴልነት",
+              "timestamp": 1503308043000,
+              "language": "am",
+              "media": {
+                "id": "p01cxcb9",
+                "subType": "clip",
+                "format": "video",
+                "title": "nigerina modenilst",
+                "synopses": {
+                  "short": "a woman who changed her life"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cxcdj.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "ከዳቦ ሻጭነት ወደ ዓለማቀፍ ሞዴልነት",
+                "versions": [
+                  {
+                    "versionId": "p01cxcbd",
+                    "types": ["Original"],
+                    "duration": 86,
+                    "durationISO8601": "PT1M26S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1503307358000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63589352",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/6336/test/_63589352_untitled.png",
+                "path": "/cpsdevpb/6336/test/_63589352_untitled.png",
+                "height": 549,
+                "width": 976,
+                "altText": "DDDD",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-23149013",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "be689056-64cf-5041-af15-0bcf1676c64e",
+            "rank": 4,
+            "count": 2007,
+            "urn": "urn:bbc:curie:asset:be689056-64cf-5041-af15-0bcf1676c64e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ስለጸሀይ ግርዶሽ ምን ያህል ያውቃሉ?",
+                "headline": "ስለጸሀይ ግርዶሽ ምን ያህል ያውቃሉ?"
+              },
+              "locators": {
+                "assetUri": "/amharic/23149015",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/23149015",
+                "curie": "http://www.bbc.co.uk/asset/be689056-64cf-5041-af15-0bcf1676c64e",
+                "assetId": "23149015"
+              },
+              "summary": "ስለጸሀይ ግርዶሽ ምን ያህል ያውቃሉ?",
+              "timestamp": 1503308436000,
+              "language": "am",
+              "media": {
+                "id": "p01cxcg4",
+                "subType": "clip",
+                "format": "video",
+                "title": "american eclipse",
+                "synopses": {
+                  "short": "eclipse to be seen in the US"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cxcjg.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "ስለጸሀይ ግርዶሽ ምን ያህል ያውቃሉ?",
+                "versions": [
+                  {
+                    "versionId": "p01cxcg6",
+                    "types": ["Original"],
+                    "duration": 92,
+                    "durationISO8601": "PT1M32S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1503307813000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "id": "urn:bbc:ares::asset:amharic/23149015",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

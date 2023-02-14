@@ -1,169 +1,1824 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:amharic/news-49562667",
-    "locators": {
-      "assetUri": "/amharic/news-49562667",
-      "cpsUrn": "urn:bbc:content:assetUri:amharic/news-49562667",
-      "curie": "http://www.bbc.co.uk/asset/3d1552a3-9e53-1a4e-853d-9c518af58ff0",
-      "assetId": "49562667"
-    },
-    "type": "MAP",
-    "createdBy": "amharic-v6",
-    "language": "am",
-    "lastUpdated": 1588885935696,
-    "firstPublished": 1567503148000,
-    "lastPublished": 1567503148000,
-    "timestamp": 1567503148000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "amharic.news.media_asset.49562667.page",
-      "cps_asset_id": "49562667"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "tags": {},
-    "version": "v1.2.1",
-    "blockTypes": ["media", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p07m9gb5",
-        "subType": "clip",
-        "format": "video",
-        "title": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
-        "synopses": {
-          "short": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
-          "medium": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል ለጊዜው ብዙ የተረጋገጡ ነገሮች ለማግኘት ባይቻልም፤ ሲያጠያይቁ የነበሩትን ነገሮች ምላሽ ለማብራራት ብለን በሥዕላዊ መግለጫ ይዘንላችሁ ቀርበናል።"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:amharic/news-49562667",
+        "locators": {
+          "assetUri": "/amharic/news-49562667",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-49562667",
+          "curie": "http://www.bbc.co.uk/asset/3d1552a3-9e53-1a4e-853d-9c518af58ff0",
+          "assetId": "49562667"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9hdb.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
-        "versions": [
+        "type": "MAP",
+        "createdBy": "amharic-v6",
+        "language": "am",
+        "lastUpdated": 1649795101614,
+        "firstPublished": 1567503148000,
+        "lastPublished": 1567503148000,
+        "timestamp": 1567503148000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "amharic.news.media_asset.49562667.page",
+          "cps_asset_id": "49562667",
+          "contentId": "urn:bbc:cps:curie:asset:3d1552a3-9e53-1a4e-853d-9c518af58ff0"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["media", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "AMHARIC",
+          "producerId": "4"
+        },
+        "readTime": 1,
+        "siteUri": "/amharic",
+        "mediaType": "video"
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p07m9gb7",
-            "types": ["Original"],
-            "duration": 178,
-            "durationISO8601": "PT2M58S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p07m9gb5",
+            "subType": "clip",
+            "format": "video",
+            "title": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
+            "synopses": {
+              "short": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
+              "medium": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል    \nለጊዜው ብዙ የተረጋገጡ ነገሮች ለማግኘት ባይቻልም፤ ሲያጠያይቁ የነበሩትን ነገሮች ምላሽ ለማብራራት ብለን በሥዕላዊ መግለጫ ይዘንላችሁ ቀርበናል።"
             },
-            "availableFrom": 1567495074000
-          }
-        ],
-        "type": "media"
-      },
-      {
-        "text": "በጠቅላይ ሚኒስትር ዐብይ አህመድ አነሳሽነት ሐምሌ 22 ቀን 2011 ዓ.ም 'አረንጓዴ አሻራ' በሚል መሪ ቃል በሃገር አቀፍ ደረጃ በተደረገው የችግኝ ተከላ ዘመቻ ከ300 ሚሊዮን በላይ ችግኞች መተከላቸው ተነግሯል። ",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "ከአንድ ወር በፊት ስለተከናወነው ዘመቻ ይፋዊ ዝርዝር መረጃዎች ባይሰጡም፤ ሰዎችን ሲያነጋግሩ ለነበሩ ጥያቄዎች ምላሽ ይሰጣል ያልነውን ማብራሪያ እንደሚከተለው በሥዕላዊ መግለጫ ይዘንናለችሁ ቀርበናል። ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "ጥያቄዎቻችሁንና ሃሳባችሁን በፌስቡክ የመልዕክት ሳጥናችን ወይም በbbcamharic@bbc.co.uk ይላኩልን። ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
-      "headline": "ሲያነጋግሩ ለነበሩ የችግኝ ተከላ ጥያቄዎች የቀረበ ሥዕላዊ መግለጫ"
-    },
-    "locators": {
-      "assetUri": "/amharic/news-49562667",
-      "cpsUrn": "urn:bbc:content:assetUri:amharic/news-49562667",
-      "curie": "http://www.bbc.co.uk/asset/3d1552a3-9e53-1a4e-853d-9c518af58ff0",
-      "assetId": "49562667"
-    },
-    "summary": "በጠቅላይ ሚኒስትር ዐብይ አህመድ አነሳሽነት ሐምሌ 22 ቀን 2011 ዓ.ም 'አረንጓዴ አሻራ' በሚል መሪ ቃል በሃገር አቀፍ ደረጃ በተደረገው የችግኝ ተከላ ዘመቻ ከ300 ሚሊዮን በላይ ችግኞች መተከላቸው ተነግሯል። ብዙዎችን ሲያነጋግሩ ለነበሩ ጥያቄዎች የሚከተለው ሥዕላዊ መግለጫ ቀርቧል።",
-    "timestamp": 1567503148000,
-    "language": "am",
-    "passport": {
-      "taggings": []
-    },
-    "media": {
-      "id": "p07m9gb5",
-      "subType": "clip",
-      "format": "video",
-      "title": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
-      "synopses": {
-        "short": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
-        "medium": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል ለጊዜው ብዙ የተረጋገጡ ነገሮች ለማግኘት ባይቻልም፤ ሲያጠያይቁ የነበሩትን ነገሮች ምላሽ ለማብራራት ብለን በሥዕላዊ መግለጫ ይዘንላችሁ ቀርበናል።"
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9hdb.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
-      "versions": [
-        {
-          "versionId": "p07m9gb7",
-          "types": ["Original"],
-          "duration": 178,
-          "durationISO8601": "PT2M58S",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true,
-            "world": false
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9hdb.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
+            "versions": [
+              {
+                "versionId": "p07m9gb7",
+                "types": ["Original"],
+                "duration": 178,
+                "durationISO8601": "PT2M58S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1567495074000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
           },
-          "availableFrom": 1567495074000
-        }
-      ],
-      "type": "media"
+          {
+            "text": "በጠቅላይ ሚኒስትር ዐብይ አህመድ አነሳሽነት ሐምሌ 22 ቀን 2011 ዓ.ም 'አረንጓዴ አሻራ' በሚል መሪ ቃል በሃገር አቀፍ ደረጃ በተደረገው የችግኝ ተከላ ዘመቻ ከ300 ሚሊዮን በላይ ችግኞች መተከላቸው ተነግሯል። ",
+            "role": "introduction",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "ከአንድ ወር በፊት ስለተከናወነው ዘመቻ ይፋዊ ዝርዝር መረጃዎች ባይሰጡም፤ ሰዎችን ሲያነጋግሩ ለነበሩ ጥያቄዎች ምላሽ ይሰጣል ያልነውን ማብራሪያ እንደሚከተለው በሥዕላዊ መግለጫ ይዘንናለችሁ ቀርበናል። ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "ጥያቄዎቻችሁንና ሃሳባችሁን በፌስቡክ የመልዕክት ሳጥናችን ወይም በbbcamharic@bbc.co.uk ይላኩልን። ",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
+          "headline": "ሲያነጋግሩ ለነበሩ የችግኝ ተከላ ጥያቄዎች የቀረበ ሥዕላዊ መግለጫ"
+        },
+        "locators": {
+          "assetUri": "/amharic/news-49562667",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-49562667",
+          "curie": "http://www.bbc.co.uk/asset/3d1552a3-9e53-1a4e-853d-9c518af58ff0",
+          "assetId": "49562667"
+        },
+        "summary": "በጠቅላይ ሚኒስትር ዐብይ አህመድ አነሳሽነት ሐምሌ 22 ቀን 2011 ዓ.ም 'አረንጓዴ አሻራ' በሚል መሪ ቃል በሃገር አቀፍ ደረጃ በተደረገው የችግኝ ተከላ ዘመቻ ከ300 ሚሊዮን በላይ ችግኞች መተከላቸው ተነግሯል። ብዙዎችን ሲያነጋግሩ ለነበሩ ጥያቄዎች የሚከተለው ሥዕላዊ መግለጫ ቀርቧል።",
+        "timestamp": 1567503148000,
+        "language": "am",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+          "taggings": []
+        },
+        "media": {
+          "id": "p07m9gb5",
+          "subType": "clip",
+          "format": "video",
+          "title": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
+          "synopses": {
+            "short": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
+            "medium": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል    \nለጊዜው ብዙ የተረጋገጡ ነገሮች ለማግኘት ባይቻልም፤ ሲያጠያይቁ የነበሩትን ነገሮች ምላሽ ለማብራራት ብለን በሥዕላዊ መግለጫ ይዘንላችሁ ቀርበናል።"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9hdb.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
+          "versions": [
+            {
+              "versionId": "p07m9gb7",
+              "types": ["Original"],
+              "duration": 178,
+              "durationISO8601": "PT2M58S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1567495074000
+            }
+          ],
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "108085442",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/5F8A/production/_108085442_65213069_612592232565297_3763400458157162496_n.jpg",
+          "path": "/cpsprodpb/5F8A/production/_108085442_65213069_612592232565297_3763400458157162496_n.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ጠቅላይ ሚኒስትር ዐቢይ አህመድ ችግኝ ሲተክሉ",
+          "copyrightHolder": "PM Office Facebook Page",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:amharic/news-49562667",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "ዜና",
+          "uri": "/amharic/news",
+          "urlIdentifier": "/amharic/news",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBC አማርኛ",
+          "uri": "/amharic",
+          "urlIdentifier": "/amharic",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "indexImage": {
-      "id": "108085442",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/5F8A/production/_108085442_65213069_612592232565297_3763400458157162496_n.jpg",
-      "path": "/cpsprodpb/5F8A/production/_108085442_65213069_612592232565297_3763400458157162496_n.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "ጠቅላይ ሚኒስትር ዐቢይ አህመድ ችግኝ ሲተክሉ",
-      "copyrightHolder": "PM Office Facebook Page",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:amharic/news-49562667",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "ዜና",
-      "uri": "/amharic/news",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC አማርኛ",
-      "uri": "/amharic",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-14T15:50:03.453Z",
+        "lastRecordTimeStamp": "2023-02-14T15:48:00Z",
+        "firstRecordTimeStamp": "2023-02-14T11:48:00Z",
+        "totalRecords": 11,
+        "records": [
+          {
+            "id": "f52c5e33-f200-6d47-8e00-a2b694132757",
+            "rank": 1,
+            "count": 71,
+            "urn": "urn:bbc:curie:asset:f52c5e33-f200-6d47-8e00-a2b694132757",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ወዳጅ ዘመድዎን የመሳም ልምድ አለዎት?",
+                "headline": "መሳሳም እንደ ባህል የሚታይበት የቻይና ግዛት"
+              },
+              "locators": {
+                "assetUri": "/amharic/41323792",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/41323792",
+                "curie": "http://www.bbc.co.uk/asset/f52c5e33-f200-6d47-8e00-a2b694132757",
+                "assetId": "41323792"
+              },
+              "summary": "አባ በተሰኘው የቻይና ግዛት መሳሳም ትልቅ የባህል አካል ነው። ፍቅራችንን ለወዳጅ ዘመዶቻችን መግለጫ ነው ብለው ያምናሉ የግዛቱ ነዋሪ የሆኑት ቲቤታውያን።",
+              "timestamp": 1505831568000,
+              "language": "am",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05glf59",
+                "subType": "clip",
+                "format": "video",
+                "title": "ወዳጅ ዘመድዎን የመሳም ልምድ አለዎት?",
+                "synopses": {
+                  "short": "መሳሳም እንደ ባህል የሚታይበት የቻይና ግዛት"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05glnmx.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "መሳሳም እንደ ባህል የሚታይበት የቻይና ግዛት",
+                "versions": [
+                  {
+                    "versionId": "p05gln6g",
+                    "types": ["Editorial"],
+                    "duration": 81,
+                    "durationISO8601": "PT1M21S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1505827309000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "97866635",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/D1A2/production/_97866635_p05glgvg.jpg",
+                "path": "/cpsprodpb/D1A2/production/_97866635_p05glgvg.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "ቲቤታውያን ሲሳሳሙ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/41323792",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e98c7f81-730b-49c8-ab59-c1a0dd1e0dfb",
+            "rank": 2,
+            "count": 51,
+            "urn": "urn:bbc:curie:asset:e98c7f81-730b-49c8-ab59-c1a0dd1e0dfb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'ሩሲያ ወደ ኃያልነቷ መልሰዋል' የሚባልላቸው ቭላድሚር ፑቲን ማን ናቸው?",
+                "headline": "'ሩሲያ ወደ ኃያልነቷ መልሰዋል' የሚባልላቸው ቭላድሚር ፑቲን ማን ናቸው?"
+              },
+              "locators": {
+                "assetUri": "/amharic/53336076",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/53336076",
+                "curie": "http://www.bbc.co.uk/asset/e98c7f81-730b-49c8-ab59-c1a0dd1e0dfb",
+                "assetId": "53336076"
+              },
+              "summary": "ሩሲያን በታሪክ ለረጅም ጊዜ ለመምራት የተዘጋጁት ቭላድሚር ፑቲን ማን ናቸው?",
+              "timestamp": 1645761673000,
+              "language": "am",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "am",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+                "locator": "urn:bbc:cps:curie:asset:e98c7f81-730b-49c8-ab59-c1a0dd1e0dfb",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "am",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "ሩስያ",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                      "thingLabel": "ቭላድሚር ፑቲን",
+                      "thingUri": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                      "thingId": "7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:Agent",
+                        "tagging:TagConcept",
+                        "core:Person",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://www.imdb.com/name/nm1269884/",
+                        "http://dbpedia.org/resource/Vladimir_Putin",
+                        "http://musicbrainz.org/artist/833f5372-a2a5-4932-8a5c-399184f29541#_",
+                        "http://www.wikidata.org/entity/Q7747"
+                      ],
+                      "thingEnglishLabel": "Vladimir Putin",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p08k578c",
+                "subType": "clip",
+                "format": "video",
+                "title": "ቭላድሚር ፑቲን ማን ናቸው- ሩሲያን በታሪክ ለረጅም ጊዜ የሚመሩ ሰው?",
+                "synopses": {
+                  "short": "ቭላድሚር ፑቲን ማን ናቸው- ሩሲያን በታሪክ ለረጅም ጊዜ የሚመሩ ሰው?",
+                  "long": "ቭላድሚር ፑቲን ማን ናቸው- ሩሲያን በታሪክ ለረጅም ጊዜ የሚመሩ ሰው?",
+                  "medium": "ቭላድሚር ፑቲን ማን ናቸው- ሩሲያን በታሪክ ለረጅም ጊዜ የሚመሩ ሰው?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08k57j9.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "ቭላድሚር ፑቲን ማን ናቸው- ሩሲያን በታሪክ ለረጅም ጊዜ የሚመሩ ሰው?",
+                "versions": [
+                  {
+                    "versionId": "p08k578f",
+                    "types": ["Original"],
+                    "duration": 114,
+                    "durationISO8601": "PT1M54S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1594205608000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "113287620",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0A76/production/_113287620_p08k57j9.jpg",
+                "path": "/cpsprodpb/0A76/production/_113287620_p08k57j9.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "ቭላድሚር ፑቲን ማን ናቸው- ሩሲያን በታሪክ ለረጅም ጊዜ የሚመሩ ሰው?",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/53336076",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3197223d-9d0f-654f-9387-b6f0c52dcb06",
+            "rank": 3,
+            "count": 42,
+            "urn": "urn:bbc:curie:asset:3197223d-9d0f-654f-9387-b6f0c52dcb06",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "የታገቱት ተማሪዎች፡ የቤተሰብ ሰቀቀን እና የመንግሥት ዝምታ",
+                "headline": "የታገቱት ተማሪዎች፡ የቤተሰብ ሰቀቀን እና የመንግሥት ዝምታ"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-51270657",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-51270657",
+                "curie": "http://www.bbc.co.uk/asset/3197223d-9d0f-654f-9387-b6f0c52dcb06",
+                "assetId": "51270657"
+              },
+              "summary": "የታገቱት ተማሪዎች፡ የቤተሰብ ሰቀቀን እና የመንግሥት ዝምታ",
+              "timestamp": 1580134082000,
+              "language": "am",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p081j4zz",
+                "subType": "clip",
+                "format": "video",
+                "title": "የታገቱት ተማሪዎች፡ የቤተሰብ ሰቀቀን እና የመንግሥት ዝምታ",
+                "synopses": {
+                  "short": "የታገቱት ተማሪዎች፡ የቤተሰብ ሰቀቀን እና የመንግሥት ዝምታ"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p081j54j.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "የታገቱት ተማሪዎች፡ የቤተሰብ ሰቀቀን እና የመንግሥት ዝምታ",
+                "versions": [
+                  {
+                    "versionId": "p081j504",
+                    "types": ["Original"],
+                    "duration": 405,
+                    "durationISO8601": "PT6M45S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1580133709000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110663354",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B118/production/_110663354_p081j54j.jpg",
+                "path": "/cpsprodpb/B118/production/_110663354_p081j54j.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #3",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-51270657",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "eabe163d-fcb7-4f4a-9e1f-c5f1b3a98971",
+            "rank": 4,
+            "count": 38,
+            "urn": "urn:bbc:curie:asset:eabe163d-fcb7-4f4a-9e1f-c5f1b3a98971",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'ልጄ የተገደለበትን ስፍራ ላለማየት ቤተክርስትያን መሄድ ተውኩኝ'",
+                "headline": "የትግራይ ግጭት፡ 'ልጄ የተገደለበትን ስፍራ ላለማየት ቤተክርስትያን መሄድ ተውኩኝ' አቶ ተክለሃይማኖት ገብረአረጋዊ"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-57653381",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-57653381",
+                "curie": "http://www.bbc.co.uk/asset/eabe163d-fcb7-4f4a-9e1f-c5f1b3a98971",
+                "assetId": "57653381"
+              },
+              "summary": "ባለፉት ስምንት ወራት በትግራይ ክልል በፌደራል ፀጥታ ኃይሎች እና በህወሓት መካከል በተደረገው ጦርነት በርካታ ንፁኀን ዜጎች ላይ የተለያዩ ሰብዓዊ መብት ጥሰቶች ተፈፍመዋል። ቢቢሲ ወደ ስፍራው ባቀናበት ወቅት የተወሰኑትን አግንቶ አነጋግሯል።",
+              "timestamp": 1624966260000,
+              "language": "am",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "am",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+                "locator": "urn:bbc:cps:curie:asset:eabe163d-fcb7-4f4a-9e1f-c5f1b3a98971",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e986aff5-6b26-4638-b468-371d1d9617b4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/70d0fd72-e867-439d-b2ea-a9aba4d37529#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ea03a609-e92d-4704-9489-e896ec5a1690#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "am",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/70d0fd72-e867-439d-b2ea-a9aba4d37529#id",
+                      "thingLabel": "የትግራይ እና የፌደራል መንግሥት ግጭት",
+                      "thingUri": "http://www.bbc.co.uk/things/70d0fd72-e867-439d-b2ea-a9aba4d37529#id",
+                      "thingId": "70d0fd72-e867-439d-b2ea-a9aba4d37529",
+                      "thingType": [
+                        "core:Event",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Ethiopian civil war",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e986aff5-6b26-4638-b468-371d1d9617b4#id",
+                      "thingLabel": "ኢትዮጵያ",
+                      "thingUri": "http://www.bbc.co.uk/things/e986aff5-6b26-4638-b468-371d1d9617b4#id",
+                      "thingId": "e986aff5-6b26-4638-b468-371d1d9617b4",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/337996/"],
+                      "thingEnglishLabel": "Ethiopia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ea03a609-e92d-4704-9489-e896ec5a1690#id",
+                      "thingLabel": "ህወሃት",
+                      "thingUri": "http://www.bbc.co.uk/things/ea03a609-e92d-4704-9489-e896ec5a1690#id",
+                      "thingId": "ea03a609-e92d-4704-9489-e896ec5a1690",
+                      "thingType": [
+                        "tagging:Agent",
+                        "core:Organisation",
+                        "tagging:AmbiguousTerm",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q1699287",
+                        "http://dbpedia.org/resource/Tigrayan_People%27s_Liberation_Front"
+                      ],
+                      "thingEnglishLabel": "Tigray People's Liberation Front",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09mv2mn",
+                "subType": "clip",
+                "format": "video",
+                "title": "'ልጄን በሁለት ጥይት ተኩሰው ገደሉት'-አቶ ተክለሃይማኖት ገብረአረጋዊ",
+                "synopses": {
+                  "short": "'ልጄ የሞተበትን ስፍራ ላለማት ስል ቤተክርስትያን መሄድ ተውኩኝ።'"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09mv3y2.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "'ልጄ የሞተበትን ስፍራ ላለማት ስል ቤተክርስትያን መሄድ ተውኩኝ።'",
+                "versions": [
+                  {
+                    "versionId": "p09mv2mr",
+                    "types": ["Original"],
+                    "duration": 224,
+                    "durationISO8601": "PT3M44S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1624965178000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119132047",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12127/production/_119132047_whatsappimage2021-06-29at14.15.11.jpg",
+                "path": "/cpsprodpb/12127/production/_119132047_whatsappimage2021-06-29at14.15.11.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "አቶ ተክለሃይማኖት ገብረአረጋዊ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-57653381",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "911e63f6-828b-4e89-a4ce-956b68929f17",
+            "rank": 5,
+            "count": 32,
+            "urn": "urn:bbc:curie:asset:911e63f6-828b-4e89-a4ce-956b68929f17",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"እርግዝናዬ ሦሰት ጊዜ የተጨናገፈበትን ምክንያት ለማወቅ ቻልኩ\"",
+                "headline": "\"እርግዝናዬ ሦሰት ጊዜ የተጨናገፈበትን ምክንያት ለማወቅ ቻልኩ\""
+              },
+              "locators": {
+                "assetUri": "/amharic/news-56375075",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-56375075",
+                "curie": "http://www.bbc.co.uk/asset/911e63f6-828b-4e89-a4ce-956b68929f17",
+                "assetId": "56375075"
+              },
+              "summary": "ሎይስ ንያጎል በአምስት ዓመት ጊዜ ውስጥ ሦስት እርግዝናዎቿ ተጨናግፈውባታል። ይህንን ውርጃ ያስከተለባት ብላይትድ ኦቩም የተባለ ችግር መሆኑን ባለሙያዎች ነግረዋታል።",
+              "timestamp": 1615779574000,
+              "language": "am",
+              "passport": {
+                "language": "am",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+                "locator": "urn:bbc:cps:curie:asset:911e63f6-828b-4e89-a4ce-956b68929f17",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "am",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                      "thingLabel": "ተፈጥሮ",
+                      "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                      "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "tagging:Genre",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Nature"],
+                      "thingEnglishLabel": "Nature",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                      "thingLabel": "ህፃናት",
+                      "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+                      "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "tagging:AmbiguousTerm",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7569",
+                        "http://dbpedia.org/resource/Child"
+                      ],
+                      "thingEnglishLabel": "Children",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingLabel": "ጤና",
+                      "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health",
+                        "http://www.wikidata.org/entity/Q12147"
+                      ],
+                      "thingEnglishLabel": "Health",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p099hl6w",
+                "subType": "clip",
+                "format": "video",
+                "title": "ልጁ እያደገ አለመሆኑን ሐኪሞች ነገሩኝ፤ በታም ነበር ቅስሜ የተሰበረው",
+                "synopses": {
+                  "short": "ልጁ እያደገ አለመሆኑን ሐኪሞች ነገሩኝ፤ በታም ነበር ቅስሜ የተሰበረው",
+                  "long": "ልጁ እያደገ አለመሆኑን ሐኪሞች ነገሩኝ፤ በታም ነበር ቅስሜ የተሰበረው",
+                  "medium": "ልጁ እያደገ አለመሆኑን ሐኪሞች ነገሩኝ፤ በታም ነበር ቅስሜ የተሰበረው"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p099hlhy.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "\"እርግዝናዬ ሦሰት ጊዜ የተጨናገፈበትን ምክንያት ለማወቅ ቻልኩ\"",
+                "versions": [
+                  {
+                    "versionId": "p099hl70",
+                    "types": ["Original"],
+                    "duration": 274,
+                    "durationISO8601": "PT4M34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1615548768000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "117547789",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/181D6/production/_117547789_p099hlhy.jpg",
+                "path": "/cpsprodpb/181D6/production/_117547789_p099hlhy.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "ሎይስ ንያጎል",
+                "caption": "ሎይስ ንያጎል",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-56375075",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ebf08dd7-e50d-4529-8387-45a66933b2a4",
+            "rank": 6,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:ebf08dd7-e50d-4529-8387-45a66933b2a4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ከፍተኛ ቁጥር ያለው የኒውክሌር ጦር መሳሪያ በማን እጅ ነው ያለው?",
+                "headline": "ከፍተኛ ቁጥር ያለው የኒውክሌር ጦር መሳሪያ በማን እጅ ነው ያለው?"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-60630453",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-60630453",
+                "curie": "http://www.bbc.co.uk/asset/ebf08dd7-e50d-4529-8387-45a66933b2a4",
+                "assetId": "60630453"
+              },
+              "summary": "በዓለም ላይ ዘጠኝ አገራት የኒወክሌር ጦር መሳሪያ አላቸው። እነሱም ቻይና፣ ፈረንሳይ፣ ሕንድ፣ እስራኤል፣ ሰሜን ኮሪያ፣ ፓኪስታን፣ ሩሲያ፣ ዩናይትድ ስቴትስ እና ዩናይትድ ኪንግድም ናቸው። ከፍተኛ መጠን ያለው የኒውክሌር ጦር መሳሪያ በማን እጅ ነው ያለው?",
+              "timestamp": 1646626356000,
+              "language": "am",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "am",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+                "locator": "urn:bbc:cps:curie:asset:ebf08dd7-e50d-4529-8387-45a66933b2a4",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/16161b86-757f-4539-80a4-05e76681bcc0#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "am",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/16161b86-757f-4539-80a4-05e76681bcc0#id",
+                      "thingLabel": "የኑክሊዬር ጦር መሳሪያ",
+                      "thingUri": "http://www.bbc.co.uk/things/16161b86-757f-4539-80a4-05e76681bcc0#id",
+                      "thingId": "16161b86-757f-4539-80a4-05e76681bcc0",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q12802",
+                        "http://dbpedia.org/resource/Nuclear_weapon"
+                      ],
+                      "thingEnglishLabel": "Nuclear weapons",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "ሩስያ",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                      "thingLabel": "ቭላድሚር ፑቲን",
+                      "thingUri": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                      "thingId": "7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:Agent",
+                        "tagging:TagConcept",
+                        "core:Person",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://www.imdb.com/name/nm1269884/",
+                        "http://dbpedia.org/resource/Vladimir_Putin",
+                        "http://musicbrainz.org/artist/833f5372-a2a5-4932-8a5c-399184f29541#_",
+                        "http://www.wikidata.org/entity/Q7747"
+                      ],
+                      "thingEnglishLabel": "Vladimir Putin",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "ዩናይትድ ስቴትስ",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id",
+                      "thingLabel": "የኑክሊዬር ሃይል",
+                      "thingUri": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id",
+                      "thingId": "c191b8f2-d9db-49eb-9194-8980e1bf3661",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Nuclear_power",
+                        "http://www.wikidata.org/entity/Q12739"
+                      ],
+                      "thingEnglishLabel": "Nuclear power",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0bsqcxt",
+                "subType": "clip",
+                "format": "video",
+                "title": "ከፍተኛ መጠን ያለው የኒውክሌር ጦር መሳሪያ በማን እጅ ነው ያለው?",
+                "synopses": {
+                  "short": "ከፍተኛ መጠን ያለው የኒውክሌር ጦር መሳሪያ በማን እጅ ነው ያለው?",
+                  "long": "ከፍተኛ መጠን ያለው የኒውክሌር ጦር መሳሪያ በማን እጅ ነው ያለው?",
+                  "medium": "ከፍተኛ መጠን ያለው የኒውክሌር ጦር መሳሪያ በማን እጅ ነው ያለው?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bsqgs2.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ከፍተኛ መጠን ያለው የኒውክሌር ጦር መሳሪያ በማን እጅ ነው ያለው?",
+                "versions": [
+                  {
+                    "versionId": "p0bsqcy0",
+                    "types": ["Original"],
+                    "duration": 119,
+                    "durationISO8601": "PT1M59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1646493134000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "123536192",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/71EB/production/_123536192_p0bsqgs2.jpg",
+                "path": "/cpsprodpb/71EB/production/_123536192_p0bsqgs2.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ከፍተኛ መጠን ያለው የኒውክሌር ጦር መሳሪያ በማን እጅ ነው ያለው?",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-60630453",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5517f77e-9f43-485f-a1ba-2d3dd6527ea7",
+            "rank": 7,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:5517f77e-9f43-485f-a1ba-2d3dd6527ea7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ከ10 ዓመት በፊት የተቀጣጠለው የግብጹ ጣህሪር አደባባይ አብዮት ምን ፈየደ?",
+                "headline": "ከ10 ዓመት በፊት የተቀጣጠለው የግብጹ ጣህሪር አደባባይ አብዮት ምን ፈየደ?"
+              },
+              "locators": {
+                "assetUri": "/amharic/55841890",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/55841890",
+                "curie": "http://www.bbc.co.uk/asset/5517f77e-9f43-485f-a1ba-2d3dd6527ea7",
+                "assetId": "55841890"
+              },
+              "summary": "ከ10 ዓመት በፊት የተቀጣጠለው የግብጹ ጣህሪር አደባባይ አብዮት ምን ፈየደ?",
+              "timestamp": 1611833577000,
+              "language": "am",
+              "passport": {
+                "language": "am",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+                "locator": "urn:bbc:cps:curie:asset:5517f77e-9f43-485f-a1ba-2d3dd6527ea7",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/9519c450-d886-406a-8fc3-aaa847a2cf88#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/9519c450-d886-406a-8fc3-aaa847a2cf88#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/9519c450-d886-406a-8fc3-aaa847a2cf88#id",
+                      "thingLabel": "ግብፅ",
+                      "thingUri": "http://www.bbc.co.uk/things/9519c450-d886-406a-8fc3-aaa847a2cf88#id",
+                      "thingId": "9519c450-d886-406a-8fc3-aaa847a2cf88",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/357994/"],
+                      "thingEnglishLabel": "Egypt",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "am",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p095cl1y",
+                "subType": "clip",
+                "format": "video",
+                "title": "ከ10 ዓመት በፊት የተቀጣጠለው የግብጹ ጣህሪር አደባባይ አብዮት ምን ፈየደ?",
+                "synopses": {
+                  "short": "ከ10 ዓመት በፊት የተቀጣጠለው የግብጹ ጣህሪር አደባባይ አብዮት ምን ፈየደ?",
+                  "long": "ከ10 ዓመት በፊት የተቀጣጠለው የግብጹ ጣህሪር አደባባይ አብዮት ምን ፈየደ?",
+                  "medium": "ከ10 ዓመት በፊት የተቀጣጠለው የግብጹ ጣህሪር አደባባይ አብዮት ምን ፈየደ?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p095cl96.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "ከ10 ዓመት በፊት የተቀጣጠለው የግብጹ ጣህሪር አደባባይ አብዮት ምን ፈየደ?",
+                "versions": [
+                  {
+                    "versionId": "p095cl22",
+                    "types": ["Original"],
+                    "duration": 302,
+                    "durationISO8601": "PT5M2S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1611831075000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "116711227",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11A13/production/_116711227_p095cl96.jpg",
+                "path": "/cpsprodpb/11A13/production/_116711227_p095cl96.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "የግብጽ አብዮት",
+                "caption": "የግብጽ አብዮት",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/55841890",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3aee65e5-d115-4d72-bdea-9506856ee422",
+            "rank": 8,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:3aee65e5-d115-4d72-bdea-9506856ee422",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ለስደት የተዳረጉት በአፍሪካ ቀንድ የሚገኙ የተመሳሳይ ጾታ አፍቃሪያን",
+                "headline": "ለስደት የተዳረጉት በአፍሪካ ቀንድ የሚገኙ የተመሳሳይ ጾታ አፍቃሪያን"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-54179705",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-54179705",
+                "curie": "http://www.bbc.co.uk/asset/3aee65e5-d115-4d72-bdea-9506856ee422",
+                "assetId": "54179705"
+              },
+              "summary": "በአፍሪካ ቀንድ የሚገኙ የተመሳሳይ ጾታ አፍቃሪያን",
+              "timestamp": 1600315788000,
+              "language": "am",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p08rn5c1",
+                "subType": "clip",
+                "format": "video",
+                "title": "በአፍሪካ ቀንድ የሚገኙ የተመሳሳይ ጾታ አፍቃሪያን",
+                "synopses": {
+                  "short": "በአፍሪካ ቀንድ የሚገኙ የተመሳሳይ ጾታ አፍቃሪያን",
+                  "long": "በአፍሪካ ቀንድ የሚገኙ የተመሳሳይ ጾታ አፍቃሪያን",
+                  "medium": "በአፍሪካ ቀንድ የሚገኙ የተመሳሳይ ጾታ አፍቃሪያን"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08rn5y4.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "በአፍሪካ ቀንድ የሚገኙ የተመሳሳይ ጾታ አፍቃሪያን",
+                "versions": [
+                  {
+                    "versionId": "p08rn5c8",
+                    "types": ["Original"],
+                    "duration": 362,
+                    "durationISO8601": "PT6M2S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1600258234000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "114397928",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14423/production/_114397928_p08rn5y4.jpg",
+                "path": "/cpsprodpb/14423/production/_114397928_p08rn5y4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "ዋሂራ ላቤሌ",
+                "caption": "ዋሂራ ላቤሌ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-54179705",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "31b62abc-2afa-4135-a82b-70c682e0bd95",
+            "rank": 9,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:31b62abc-2afa-4135-a82b-70c682e0bd95",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ስለ ደቡብ ሱዳን ልናውቃቸው የሚገቡ አምስት ነገሮች",
+                "headline": "ስለ ደቡብ ሱዳን ልናውቃቸው የሚገቡ አምስት ነገሮች"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-57806984",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-57806984",
+                "curie": "http://www.bbc.co.uk/asset/31b62abc-2afa-4135-a82b-70c682e0bd95",
+                "assetId": "57806984"
+              },
+              "summary": "ስለ ደቡብ ሱዳን ልናውቃቸው የሚገቡ አምስት ነገሮች",
+              "timestamp": 1626091152000,
+              "language": "am",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "am",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+                "locator": "urn:bbc:cps:curie:asset:31b62abc-2afa-4135-a82b-70c682e0bd95",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e22171da-04a9-4877-a885-abce4c99e529#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/9d4b0cb6-1f21-40f0-ac81-75f58f01f884#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/9d4b0cb6-1f21-40f0-ac81-75f58f01f884#id",
+                      "thingLabel": "ጦርነት",
+                      "thingUri": "http://www.bbc.co.uk/things/9d4b0cb6-1f21-40f0-ac81-75f58f01f884#id",
+                      "thingId": "9d4b0cb6-1f21-40f0-ac81-75f58f01f884",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/War",
+                        "http://www.wikidata.org/entity/Q198"
+                      ],
+                      "thingEnglishLabel": "War",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e22171da-04a9-4877-a885-abce4c99e529#id",
+                      "thingLabel": "ደቡብ ሱዳን",
+                      "thingUri": "http://www.bbc.co.uk/things/e22171da-04a9-4877-a885-abce4c99e529#id",
+                      "thingId": "e22171da-04a9-4877-a885-abce4c99e529",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/7909807/"],
+                      "thingEnglishLabel": "South Sudan",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingLabel": "Explainer",
+                      "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+                      ],
+                      "thingEnglishLabel": "Explainer",
+                      "thingPreferredLabel": "Explainer",
+                      "thingLabelLanguage": "am",
+                      "type": "formats"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id",
+                      "type": "contributor"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09p49bz",
+                "subType": "clip",
+                "format": "video",
+                "title": "ስለደቡብ ሱዳን ልናውቃቸው የሚገቡ አምስት ነገሮች",
+                "synopses": {
+                  "short": "ስለደቡብ ሱዳን ልናውቃቸው የሚገቡ አምስት ነገሮች",
+                  "long": "ስለደቡብ ሱዳን ልናውቃቸው የሚገቡ አምስት ነገሮች",
+                  "medium": "ስለደቡብ ሱዳን ልናውቃቸው የሚገቡ አምስት ነገሮች"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09p49s0.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "ስለደቡብ ሱዳን ልናውቃቸው የሚገቡ አምስት ነገሮች",
+                "versions": [
+                  {
+                    "versionId": "p09p49c2",
+                    "types": ["Original"],
+                    "duration": 124,
+                    "durationISO8601": "PT2M4S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1626087050000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119357762",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6897/production/_119357762_p09p49s0.jpg",
+                "path": "/cpsprodpb/6897/production/_119357762_p09p49s0.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "አምስት ነገሮች ስለ ደቡብ ሱዳን",
+                "caption": "አምስት ነገሮች ስለ ደቡብ ሱዳን",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-57806984",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "207788d8-8030-4d47-9b81-0580b611b16e",
+            "rank": 10,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:207788d8-8030-4d47-9b81-0580b611b16e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "የሩሲያ እና የዩክሬን ፍጥጫ አሁን ካለበት እንዴት ደረሰ?",
+                "headline": "ሩሲያ እና ዩክሬን: የሩሲያ እና የዩክሬን ፍጥጫ አሁን ካለበት እንዴት ደረሰ?"
+              },
+              "locators": {
+                "assetUri": "/amharic/60506608",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/60506608",
+                "curie": "http://www.bbc.co.uk/asset/207788d8-8030-4d47-9b81-0580b611b16e",
+                "assetId": "60506608"
+              },
+              "summary": "ፕሬዝዳንት ቭላድሚር ፑቲን ጦራቸው በዩክሬን ልዩ ወታደራዊ ዘመቻ እንዲያካሂዱ ትዕዛዝ ሰጡ።",
+              "timestamp": 1645717371000,
+              "language": "am",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "am",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
+                "locator": "urn:bbc:cps:curie:asset:207788d8-8030-4d47-9b81-0580b611b16e",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/9d4b0cb6-1f21-40f0-ac81-75f58f01f884#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0ab4d92c-26ea-4599-93b6-5e6a25c760e5#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "am",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "ሩስያ",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/9d4b0cb6-1f21-40f0-ac81-75f58f01f884#id",
+                      "thingLabel": "ጦርነት",
+                      "thingUri": "http://www.bbc.co.uk/things/9d4b0cb6-1f21-40f0-ac81-75f58f01f884#id",
+                      "thingId": "9d4b0cb6-1f21-40f0-ac81-75f58f01f884",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/War",
+                        "http://www.wikidata.org/entity/Q198"
+                      ],
+                      "thingEnglishLabel": "War",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingLabel": "ዩክሬን",
+                      "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Ukraine",
+                        "http://www.wikidata.org/entity/Q212",
+                        "http://sws.geonames.org/690791/"
+                      ],
+                      "thingEnglishLabel": "Ukraine",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0br0xn9",
+                "subType": "clip",
+                "format": "video",
+                "title": "ፕሬዝዳንት ቭላድሚር ፑቲን ጦራቸው በዩክሬን ልዩ ወታደራዊ ዘመቻ እንዲያካሂዱ ትዕዛዝ ሰጡ",
+                "synopses": {
+                  "short": "የሩሲያው ፕሬዝዳንት ቭላድሚር ፑቲን በምስራቃዊ ዩክሬን ዶንባስ ክልል ወታደሮቻቸው ልዩ ወታደራዊ ዘመቻ እንዲያካሂዱ ትዕዛዝ ሰጥተዋል።"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0br0xt4.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "የሩሲያ እና የዩክሬን ፍጥጫ አሁን ካለበት እንዴት ደረሰ?",
+                "versions": [
+                  {
+                    "versionId": "p0br0xnh",
+                    "types": ["Original"],
+                    "duration": 131,
+                    "durationISO8601": "PT2M11S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1645716862000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "123403854",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B306/production/_123403854_538a7f23-15f6-450b-9f98-96c3eeb85341.jpg",
+                "path": "/cpsprodpb/B306/production/_123403854_538a7f23-15f6-450b-9f98-96c3eeb85341.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "የሩሲያ ታንክ",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/60506608",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0cb73f70-dd57-0547-9311-28773bb4f16c",
+            "rank": 11,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:0cb73f70-dd57-0547-9311-28773bb4f16c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "የወር አበባ መቀበያ ኩባያ ዝቅተኛ ኑሮ ለሚገፉ ሴቶች መፍትሔ ይሆን?",
+                "headline": "የወር አበባ መቀበያ ኩባያ ዝቅተኛ ኑሮ ለሚገፉ ሴቶች መፍትሔ ይሆን?"
+              },
+              "locators": {
+                "assetUri": "/amharic/news-48429823",
+                "cpsUrn": "urn:bbc:content:assetUri:amharic/news-48429823",
+                "curie": "http://www.bbc.co.uk/asset/0cb73f70-dd57-0547-9311-28773bb4f16c",
+                "assetId": "48429823"
+              },
+              "summary": "በማላዊ የንፅህና መጠበቂያ ፓድ ዋጋ ውድ ነው። ገዝተው መጠቀም ያልቻሉ ሴት ተማሪዎች ከትምህርት ቤት ይቀራሉ። አንድ መንግሥታዊ ያልሆነ ድርጅት የወር አበባ መቀበያ ኩባያን እያስተዋወቀ ሲሆን፤ ኩባያው ለ10 ዓመት እንደሚያገለግልና ዋጋውም ርካሽ መሆኑ ተገልጿል።",
+              "timestamp": 1559033100000,
+              "language": "am",
+              "media": {
+                "id": "p07bhh2h",
+                "subType": "clip",
+                "format": "video",
+                "title": "የወር አበባ መቀበያ ኩባያ ዝቅተኛ ኑሮ ለሚገፉ ሴቶች መፍትሔ ይሆን?",
+                "synopses": {
+                  "short": "በማላዊ የንፅህና መጠበቂያ ፓድ ዋጋ ውድ ነው። በዚህም የተነሳ ሴት ተማሪዎች ከትምህርት ቤት ይቀራሉ።",
+                  "long": "በማላዊ የንፅህና መጠበቂያ ፓድ ዋጋ ውድ ነው። በዚህም የተነሳ ሴት ተማሪዎች ከትምህርት ቤት ይቀራሉ። አንድ መንግሥታዊ ያልሆነ ድርጅት የወር አበባ መቀበያ ኩባያን እያስተዋወቀ ሲሆን፤ ኩባያው ለ10 ዓመት እንደሚያገለግልና ዋጋውም ርካሽ መሆኑ ተገልጿል።"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07bhj4p.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "በማላዊ የንፅህና መጠበቂያ ፓድ ዋጋ ውድ ነው። በዚህም የተነሳ ሴት ተማሪዎች ከትምህርት ቤት ይቀራሉ።",
+                "versions": [
+                  {
+                    "versionId": "p07bhh2q",
+                    "types": ["Original"],
+                    "duration": 137,
+                    "durationISO8601": "PT2M17S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1559032883000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "107131041",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/36BD/production/_107131041_p07bhj4p.jpg",
+                "path": "/cpsprodpb/36BD/production/_107131041_p07bhj4p.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "የወር አበባ መቀበያ ኩባያ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:amharic/news-48429823",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
