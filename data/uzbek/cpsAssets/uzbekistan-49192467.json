@@ -1,279 +1,1530 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:uzbek/uzbekistan-49192467",
-    "locators": {
-      "assetUri": "/uzbek/uzbekistan-49192467",
-      "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-49192467",
-      "curie": "http://www.bbc.co.uk/asset/b3bd2e90-c4e0-004f-9836-5165b31f8c36",
-      "assetId": "49192467"
-    },
-    "type": "MAP",
-    "createdBy": "uzbek-v6",
-    "language": "uz-Cyrl",
-    "lastUpdated": 1588693455784,
-    "firstPublished": 1564662578000,
-    "lastPublished": 1564662578000,
-    "timestamp": 1564662578000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "counterName": "uzbek.uzbekistan.media_asset.49192467.page",
-      "cps_asset_id": "49192467"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
-        "categoryName": "Interactive"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e4739461b000e9dabfc",
-          "campaignName": "WS - Update me"
-        }
-      ],
-      "taggings": []
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "100 Women",
-          "thingUri": "http://www.bbc.co.uk/things/875e94b8-021d-4411-93f4-a8d5e09d6adb#id",
-          "thingId": "875e94b8-021d-4411-93f4-a8d5e09d6adb",
-          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
-          "thingSameAs": ["http://dbpedia.org/resource/100_Women_(BBC)"]
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:uzbek/uzbekistan-49192467",
+        "locators": {
+          "assetUri": "/uzbek/uzbekistan-49192467",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-49192467",
+          "curie": "http://www.bbc.co.uk/asset/b3bd2e90-c4e0-004f-9836-5165b31f8c36",
+          "assetId": "49192467"
         },
-        {
-          "thingLabel": "Women's rights",
-          "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
-          "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
-          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Women%27s_rights",
-            "http://www.wikidata.org/entity/Q223569"
-          ]
+        "type": "MAP",
+        "createdBy": "uzbek-v6",
+        "language": "uz-Cyrl",
+        "lastUpdated": 1649954445959,
+        "firstPublished": 1564662578000,
+        "lastPublished": 1564662578000,
+        "timestamp": 1564662578000,
+        "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
         },
-        {
-          "thingLabel": "Politics",
-          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
-          "thingSameAs": ["http://dbpedia.org/resource/Politics"]
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "counterName": "uzbek.uzbekistan.media_asset.49192467.page",
+          "cps_asset_id": "49192467",
+          "contentId": "urn:bbc:cps:curie:asset:b3bd2e90-c4e0-004f-9836-5165b31f8c36"
         },
-        {
-          "thingLabel": "Law and order",
-          "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
-          "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
-          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
-          "thingSameAs": ["http://dbpedia.org/resource/Law"]
-        },
-        {
-          "thingLabel": "Human rights",
-          "thingUri": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
-          "thingId": "8b04c2e8-5409-4e7d-9877-3ccaf04727af",
-          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q8458",
-            "http://dbpedia.org/resource/Human_rights"
-          ]
-        },
-        {
-          "thingLabel": "Uzbekistan",
-          "thingUri": "http://www.bbc.co.uk/things/a89521da-bd3a-4cf9-92b2-2921dbb2c76b#id",
-          "thingId": "a89521da-bd3a-4cf9-92b2-2921dbb2c76b",
-          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
-          "thingSameAs": ["http://sws.geonames.org/1512440/"]
-        },
-        {
-          "thingLabel": "Crime",
-          "thingUri": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
-          "thingId": "bd7b89a7-78bd-4c60-a78c-9983a479f70f",
-          "thingType": ["core:Thing", "core:Theme", "tagging:TagConcept"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q83267",
-            "http://dbpedia.org/resource/Crime"
-          ]
-        },
-        {
-          "thingLabel": "Uzbekistan presidential elections 2016",
-          "thingUri": "http://www.bbc.co.uk/things/26d74b20-ab15-4097-9f38-b2a8570aa093#id",
-          "thingId": "26d74b20-ab15-4097-9f38-b2a8570aa093",
-          "thingType": ["core:Event", "core:Thing", "tagging:TagConcept"],
-          "thingSameAs": []
-        },
-        {
-          "thingLabel": "Tashkent",
-          "thingUri": "http://www.bbc.co.uk/things/e5c4868b-9d4d-4c34-bd0f-58accd0e90e1#id",
-          "thingId": "e5c4868b-9d4d-4c34-bd0f-58accd0e90e1",
-          "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/1512569/"]
-        },
-        {
-          "thingLabel": "Senate of Uzbekistan",
-          "thingUri": "http://www.bbc.co.uk/things/42fe3a50-18db-4614-9e43-4a40cce8a01c#id",
-          "thingId": "42fe3a50-18db-4614-9e43-4a40cce8a01c",
-          "thingType": [
-            "core:Organisation",
-            "core:Thing",
-            "tagging:TagConcept"
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+            "categoryName": "Interactive"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
           ],
-          "thingSameAs": []
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+          "taggings": []
         },
-        {
-          "thingLabel": "Women",
-          "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
-          "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
-          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q467",
-            "http://dbpedia.org/resource/Woman"
-          ]
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["media"],
+        "includeComments": false,
+        "atiAnalytics": {
+          "producerName": "UZBEK",
+          "producerId": "96"
         },
-        {
-          "thingLabel": "Women's health",
-          "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
-          "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
-          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
-          "thingSameAs": ["http://www.wikidata.org/entity/Q8031191"]
-        },
-        {
-          "thingLabel": "Constitution of Uzbekistan",
-          "thingUri": "http://www.bbc.co.uk/things/e6f347d1-ed1b-4814-bca1-99718af3bb73#id",
-          "thingId": "e6f347d1-ed1b-4814-bca1-99718af3bb73",
-          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Constitution_of_Uzbekistan"
-          ]
-        }
-      ]
-    },
-    "version": "v1.2.1",
-    "blockTypes": ["media"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "p07jh6zj",
-        "subType": "clip",
-        "format": "video",
-        "title": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
-        "synopses": {
-          "short": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
-        },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07jh743.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
-        "versions": [
+        "siteUri": "/uzbek",
+        "mediaType": "video"
+      },
+      "content": {
+        "blocks": [
           {
-            "versionId": "p07jh6zq",
-            "types": ["Original"],
-            "duration": 77,
-            "durationISO8601": "PT1M17S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
+            "id": "p07jh6zj",
+            "subType": "clip",
+            "format": "video",
+            "title": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
+            "synopses": {
+              "short": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
             },
-            "availableFrom": 1564662306000
+            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07jh743.jpg",
+            "embedding": true,
+            "advertising": true,
+            "caption": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
+            "versions": [
+              {
+                "versionId": "p07jh6zq",
+                "types": ["Original"],
+                "duration": 77,
+                "durationISO8601": "PT1M17S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": true
+                },
+                "availableFrom": 1564662306000
+              }
+            ],
+            "smpKind": "programme",
+            "type": "media"
           }
-        ],
-        "type": "media"
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
+          "headline": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
+        },
+        "locators": {
+          "assetUri": "/uzbek/uzbekistan-49192467",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-49192467",
+          "curie": "http://www.bbc.co.uk/asset/b3bd2e90-c4e0-004f-9836-5165b31f8c36",
+          "assetId": "49192467"
+        },
+        "summary": "Тошкент шаҳар Хотин-қизлар қўмитасидан айтишларича, оммавий ахборот воситалари ва социал тармоқларда тарқалган 23 гуруҳдан иборат рўйхат - муаммолари ҳал этилиши талаб қилинадиган ижтимоий ҳимояга муҳтож аёллар категорияларидир.",
+        "timestamp": 1564662578000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+            "categoryName": "Interactive"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+          "taggings": []
+        },
+        "media": {
+          "id": "p07jh6zj",
+          "subType": "clip",
+          "format": "video",
+          "title": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
+          "synopses": {
+            "short": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07jh743.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
+          "versions": [
+            {
+              "versionId": "p07jh6zq",
+              "types": ["Original"],
+              "duration": 77,
+              "durationISO8601": "PT1M17S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1564662306000
+            }
+          ],
+          "smpKind": "programme",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "108146510",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/061C/production/_108146510_p07jh743.jpg",
+          "path": "/cpsprodpb/061C/production/_108146510_p07jh743.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Дилбар Нажмутдинова",
+          "copyrightHolder": "Tvr.by",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:uzbek/uzbekistan-49192467",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Ўзбекистон",
+          "uri": "/uzbek/uzbekistan",
+          "urlIdentifier": "/uzbek/uzbekistan",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "Ўзбек тилидаги янгиликлар",
+          "uri": "/uzbek",
+          "urlIdentifier": "/uzbek",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
-      "headline": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
     },
-    "locators": {
-      "assetUri": "/uzbek/uzbekistan-49192467",
-      "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-49192467",
-      "curie": "http://www.bbc.co.uk/asset/b3bd2e90-c4e0-004f-9836-5165b31f8c36",
-      "assetId": "49192467"
-    },
-    "summary": "Тошкент шаҳар Хотин-қизлар қўмитасидан айтишларича, оммавий ахборот воситалари ва социал тармоқларда тарқалган 23 гуруҳдан иборат рўйхат - муаммолари ҳал этилиши талаб қилинадиган ижтимоий ҳимояга муҳтож аёллар категорияларидир.",
-    "timestamp": 1564662578000,
-    "language": "uz-Cyrl",
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
-        "categoryName": "Interactive"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5a988e4739461b000e9dabfc",
-          "campaignName": "WS - Update me"
-        }
-      ],
-      "taggings": []
-    },
-    "media": {
-      "id": "p07jh6zj",
-      "subType": "clip",
-      "format": "video",
-      "title": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
-      "synopses": {
-        "short": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
-      },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07jh743.jpg",
-      "embedding": true,
-      "advertising": true,
-      "caption": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
-      "versions": [
-        {
-          "versionId": "p07jh6zq",
-          "types": ["Original"],
-          "duration": 77,
-          "durationISO8601": "PT1M17S",
-          "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
-          "availableFrom": 1564662306000
-        }
-      ],
-      "type": "media"
-    },
-    "indexImage": {
-      "id": "108146510",
-      "subType": "index",
-      "href": "http://c.files.bbci.co.uk/061C/production/_108146510_p07jh743.jpg",
-      "path": "/cpsprodpb/061C/production/_108146510_p07jh743.jpg",
-      "height": 576,
-      "width": 1024,
-      "altText": "Дилбар Нажмутдинова",
-      "copyrightHolder": "Tvr.by",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:uzbek/uzbekistan-49192467",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Ўзбекистон",
-      "uri": "/uzbek/uzbekistan",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "Ўзбек тилидаги янгиликлар",
-      "uri": "/uzbek",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-14T17:17:16.386Z",
+        "lastRecordTimeStamp": "2023-02-14T17:15:00Z",
+        "firstRecordTimeStamp": "2023-02-14T09:15:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "a5a386b2-5312-0843-b5ae-74e3351362c8",
+            "rank": 1,
+            "count": 90,
+            "urn": "urn:bbc:curie:asset:a5a386b2-5312-0843-b5ae-74e3351362c8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Skype, seks va qalloblik",
+                "headline": "Video - Skype, seks va qalloblik"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-37801708",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-37801708",
+                "curie": "http://www.bbc.co.uk/asset/a5a386b2-5312-0843-b5ae-74e3351362c8",
+                "assetId": "37801708"
+              },
+              "summary": "Jahonning turli nuqtalarida, ayniqsa? ana'naviy jamiyatlarda internet orqali shaxsiy yo-da, shahvoniy hayot aks etgan videolarni oshkor etish bilan tovlamachilik, qalloblik, qo'rqitish va inson sha'nini bulg'ashga urinish hollari kuzatilmoqda.",
+              "timestamp": 1477665441000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p04dbj3m",
+                "subType": "clip",
+                "format": "video",
+                "title": "Skype, секс ва қаллоблик",
+                "synopses": {
+                  "short": "Шахсий видеоларни интернетда тарқатиш билан инсон шаънини булғашга уринишлар кўпайган.",
+                  "long": "Би-би-си охирги вақтларда кенг тарқалаётган янги бир кўриниш юзасидан тадқиқотлар олиб борган: Жаҳоннинг турли нуқталарида, айниқса анаънавий жамиятларда интернет орқали ўта шахсий ёки шаҳвоний видеоларни ошкор этиш билан товламачилик, қаллоблик, қўрқитиш ва инсон шаънини булғашга уриниш ҳоллари кузатилмоқда. \n\nБу каби амалларда кўпда қизлар нишонга олинадилар."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04dbjs9.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Insonlar sha'ni bulg'ash kabi amallarda ko'pda qizlar nishonga olinadi.",
+                "versions": [
+                  {
+                    "versionId": "p04dbj3r",
+                    "types": ["Original"],
+                    "duration": 226,
+                    "durationISO8601": "PT3M46S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1477582364000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "92112195",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E6F1/production/_92112195_p04dbjs9.jpg",
+                "path": "/cpsprodpb/E6F1/production/_92112195_p04dbjs9.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Интернет қуролга айланган",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-37801708",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d3824347-87e3-1c47-a61c-5f35498e9a0c",
+            "rank": 2,
+            "count": 20,
+            "urn": "urn:bbc:curie:asset:d3824347-87e3-1c47-a61c-5f35498e9a0c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Hur qizmi yo behayo?",
+                "headline": "Pokistonlik Qandil: Hur qizmi yo uyatsiz?"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-36809128",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-36809128",
+                "curie": "http://www.bbc.co.uk/asset/d3824347-87e3-1c47-a61c-5f35498e9a0c",
+                "assetId": "36809128"
+              },
+              "summary": "Pokistonlik 25 yashar Qandil Baluch ochiq-sochiq suratlari bilan tilga tushmoqda.",
+              "timestamp": 1468594470000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p041bd74",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ҳур қизми ё беҳаё?",
+                "synopses": {
+                  "short": "Покистонлик Қандил ҳур қизми ё беҳаё?",
+                  "medium": "Покистонлик 25 яшар Қандил Балуч очиқ-сочиқ суратлари билан тилга тушмоқда.",
+                  "long": "25 яшар Қандил Балуч ўз очиқ-сочиқ сурат ва видеолари билан машҳур бўлган илк покистонлик аёлдир.\n\n Бу мамлакатда аксар хотин-қизлар оталари ё эрлари рухсатисиз  кўчага ҳам чиқишолмайди.\n\nҚандил эса ҳатто чўмилиш кийимидаги тасвирлари ҳамда \"қип-яланғоч суратимни намойиш этаман\" каби зиддиятли гапларини ҳам интернетга қўймоқда.\n\nКўпчилик  уни тақиқлашни талаб қилмоқда. \n\nЛекин машҳурлигига қараганда, Қандилнинг  суратларини томоша қиладиган покистонликлар ҳам жуда кўп.\n\nБи-би-си Ўзбек хизмати билан Whatsapp, Telegram ва Viber орқали боғланишни истасангиз, \n\nтелефонимиз:+44 78-58-86-00-02\n\n•ТЕЛЕГРАМДА ЭСА каналимиз - https://telegram.me/bbcuzbek\n\n•Instagram - BBC UZBEK\n\n•Twitter - BBC UZBEK\n\n•Odnoklassniki - BBC UZBEK\n\n•Facebook - BBC UZBEK\n\n•Google+BBC UZBEK\n\n•YouTube - BBCUZBEK (https://www.youtube.com/user/bbcuzbek)\n\n•Skype - uzbekbbclondon\n\n•bbcuzbek.comга тўсиқ бўлса, uzbekweb.netга киринг."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p041fdzk.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Pokistonlik Qandil hur qizmi yo behayo?",
+                "versions": [
+                  {
+                    "versionId": "p041bd7v",
+                    "types": ["Original"],
+                    "duration": 125,
+                    "durationISO8601": "PT2M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1468416730000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "90376421",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/30B3/production/_90376421_p041bps6.jpg",
+                "path": "/cpsprodpb/30B3/production/_90376421_p041bps6.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Қандил Балуч расмга тушмоқда",
+                "copyrightHolder": "Daily Pakistan",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-36809128",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "287e5f8a-ee74-f342-bf10-3ee83b843936",
+            "rank": 3,
+            "count": 13,
+            "urn": "urn:bbc:curie:asset:287e5f8a-ee74-f342-bf10-3ee83b843936",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video: Sumalak - Navroʻzning shoh taomi",
+                "headline": "Video: Sumalak - Navroʻzning shoh taomi"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-39345828",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-39345828",
+                "curie": "http://www.bbc.co.uk/asset/287e5f8a-ee74-f342-bf10-3ee83b843936",
+                "assetId": "39345828"
+              },
+              "summary": "Oʻzbekistonda Navroʻz milliy oʻzlikning ajralmas qismi hisoblanadi.",
+              "timestamp": 1490190385000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p04wyp35",
+                "subType": "clip",
+                "format": "video",
+                "title": "Сумалак - Наврўзнинг шоҳ таоми",
+                "synopses": {
+                  "short": "Сумалак - Наврўзнинг шоҳ таоми",
+                  "medium": "Ўзбекистонда Наврўз миллий ўзликнинг ажралмас қисми ҳисобланади.",
+                  "long": "Ўзбекистонда Наврўз миллий ўзликнинг ажралмас қисми ҳисобланади. Совет Ўзбекистонида ҳам Наврўз тақиққа учраганди. 1990 йиллар бошларида Наврўз қайта тикланди ва умумхалқ байрами сифатида кенг нишонлана бошлади. Бугунда Наврўз тадбирларида масъулиятни асосан аёллар зиммаларига оладилар."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04wypl5.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "\"Sumalakdan tosh topdim...\"",
+                "versions": [
+                  {
+                    "versionId": "p04wyp39",
+                    "types": ["Original"],
+                    "duration": 134,
+                    "durationISO8601": "PT2M14S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1489589500000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95267635",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/D1AC/production/_95267635_p04wypl5.jpg",
+                "path": "/cpsprodpb/D1AC/production/_95267635_p04wypl5.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ayollar sumalak pishirishmoqda, Toshkent viloyati",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-39345828",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "154200eb-3e16-6d41-8eb8-f8af8d5f2f67",
+            "rank": 4,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:154200eb-3e16-6d41-8eb8-f8af8d5f2f67",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Oʻzbek ayollari fohishalikka, erkaklari esa qullikka majburlanmoqda\"",
+                "headline": "Video - \"Oʻzbek ayollari fohishalikka, erkaklari esa qullikka majburlanmoqda\""
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-40446251",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-40446251",
+                "curie": "http://www.bbc.co.uk/asset/154200eb-3e16-6d41-8eb8-f8af8d5f2f67",
+                "assetId": "40446251"
+              },
+              "summary": "AQSh Davlat Departamenti bu yil ham Oʻzbekistonni jinsiy savdo va majburiy mehnat manbaʼi boʻlgan davlatlar qatorida qoldirgan.",
+              "timestamp": 1498739045000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p0578hhx",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Ўзбек аёллари фоҳишаликка, эркаклари эса қулликка мажбурланмоқда\"",
+                "synopses": {
+                  "short": "\"Ўзбек аёллари фоҳишаликка, эркаклари эса қулликка мажбурланмоқда\"",
+                  "medium": "АҚШ Давлат Департаменти бу йил ҳам Ўзбекистонни жинсий савдо ва мажбурий меҳнат манбаъи бўлган давлатлар қаторида қолдирган.",
+                  "long": "АҚШ Давлат Департаментига кўра, ўзбек аёллари хорижда фоҳишаликка, эркаклари эса қулликка мажбурланмоқда.\n\nВидео лавҳаларимизни YouTube каналимизда ҳам томоша қилинг.\n\nҲисобот бу йил ҳам Ўзбекистонни жинсий савдо ва мажбурий меҳнат манбаъи, деб атаган. \n\nОдам савдосига доир йиллик ҳисоботда айтилишича, аёллар ва эркаклар Ўзбекистоннинг ўзида ҳам қулликка солинади.\n\nДавлат Департаменти одам савдосига қарши курашда Ўзбекистонни сўнгги 5 йилда энг қуйи, 3-даражага қўйган.\n\nҲисоботда айтилишича, ўзбек ҳукумати жинсий қуллик ва мажбурий меҳнатга қарши етарли чоралар кўрмаяпти.\n\nАҚШ Ўзбекистон ҳукуматини пахта мавсумида катталарнинг мажбурий меҳнатига чек қўйишга чақирган. \n\nБи-би-си Ўзбек хизмати билан Whatsapp, Telegram ва Viber орқали боғланишни истасангиз, телефонимиз: +44 78-58-86-00-02\nБи-би-си Ўзбек хизматининг видеоларини www.bbcuzbek.com да ҳам кўришингиз мумкин."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0578kdl.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "AQSh Davlat Departamenti Oʻzbekistonni eng quyi 3-darajaga qoʻygan.",
+                "versions": [
+                  {
+                    "versionId": "p0578hj2",
+                    "types": ["Original"],
+                    "duration": 44,
+                    "durationISO8601": "PT44S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1498736057000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "96733502",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5035/production/_96733502_p0578kdl.jpg",
+                "path": "/cpsprodpb/5035/production/_96733502_p0578kdl.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Jinsiy qullik va majburiy mehnat",
+                "copyrightHolder": "Amunews.uz",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-40446251",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "56436ae7-86a2-8344-b03d-310bcd057ae5",
+            "rank": 5,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:56436ae7-86a2-8344-b03d-310bcd057ae5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Geylar qurollanmoqda. Siz nima deysiz?",
+                "headline": "Video - Geylar qurollanmoqda. Siz nima deysiz?"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-40304291",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-40304291",
+                "curie": "http://www.bbc.co.uk/asset/56436ae7-86a2-8344-b03d-310bcd057ae5",
+                "assetId": "40304291"
+              },
+              "summary": "Geylar oʻzlarini himoya qilish uchun qoʻllariga qurol olishayotganini aytishmoqda.",
+              "timestamp": 1497612057000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p0562lgd",
+                "subType": "clip",
+                "format": "video",
+                "title": "Гейлар қуролланмоқда. Сиз нима дейсиз?",
+                "synopses": {
+                  "short": "Гейлар қуролланмоқда. Сиз нима дейсиз?",
+                  "medium": "Гейлар ўзларини ҳимоя қилиш учун қўлларига қурол олишаётганини айтишмоқда.",
+                  "long": "Гейлар ўзларини ҳимоя қилиш учун қўлларига қурол олишаётганини айтишмоқда.\n\nВидео лавҳаларимизни YouTube каналимизда ҳам томоша қилинг. \n\nАҚШда кўплаб гейлар ҳозир отишни ўрганишаяпти.   \n\nБесоқолбозлар бир йил олдин Орландодаги гей клубига қилинган ҳужумдан бери қўрқиб қолишган.  \n\nБостондаги гейларга қурол ишлатишни ўргатадиган мактабда олинган лавҳамизни кўринг.  \n\n\nБи-би-си Ўзбек хизмати билан Whatsapp, Telegram ва Viber орқали боғланишни истасангиз, телефонимиз: +44 78-58-86-00-02\nБи-би-си Ўзбек хизматининг видеоларини www.bbcuzbek.com да ҳам кўришингиз мумкин."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0562mz5.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "AQShda koʻplab geylar oʻzlarini himoya qilish uchun otishni oʻrganishayapti.",
+                "versions": [
+                  {
+                    "versionId": "p0562lgm",
+                    "types": ["Original"],
+                    "duration": 59,
+                    "durationISO8601": "PT59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1497609775000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "96517585",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E4CB/production/_96517585_p0562mz5.jpg",
+                "path": "/cpsprodpb/E4CB/production/_96517585_p0562mz5.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Geylar qurollanmoqda",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-40304291",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1a89c722-8791-11e4-bf84-39be3db9bd6e",
+            "rank": 6,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:1a89c722-8791-11e4-bf84-39be3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Эркаклар, огоҳ бўлинг!",
+                "headline": "Эркаклар, огоҳ бўлинг!"
+              },
+              "locators": {
+                "assetUri": "/uzbek/institutional/2014/12/141219_sextortion_video",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/institutional/2014/12/141219_sextortion_video",
+                "curie": "http://www.bbc.co.uk/asset/1a89c722-8791-11e4-bf84-39be3db9bd6e",
+                "assetId": "36455847"
+              },
+              "summary": "Эркаклар, огоҳ бўлинг!",
+              "timestamp": 1419008523000,
+              "language": "uz",
+              "media": {
+                "id": "36455847",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "36455847",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/12/19/141219150044_sextortion_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/12/19/141219150044_sextortion_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/uzbek/meta/dps/2014/12/emp/141219_sextortion_video.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2014/12/sextortion_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2014/12/sextortion_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2014/12/sextortion_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e203",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/12/19/141219150044_sextortion_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/12/19/141219150044_sextortion_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/institutional/2014/12/141219_sextortion_video",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b95e1262-c634-ff4c-b51d-5f9760566b17",
+            "rank": 7,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:b95e1262-c634-ff4c-b51d-5f9760566b17",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Tuyaqush goʻshtiga qalaysiz?",
+                "headline": "Video - Tuyaqush goʻshtiga qalaysiz?"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-39590918",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-39590918",
+                "curie": "http://www.bbc.co.uk/asset/b95e1262-c634-ff4c-b51d-5f9760566b17",
+                "assetId": "39590918"
+              },
+              "summary": "Oʻzbekistonlik qator fermerlar tuyaqush goʻshti yetishtirishga kirishganlar.",
+              "timestamp": 1492098026000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p05007yv",
+                "subType": "clip",
+                "format": "video",
+                "title": "Туяқуш гўштига қалайсиз?",
+                "synopses": {
+                  "short": "Туяқуш гўштига қалайсиз?",
+                  "medium": "Ўзбекистонлик қатор фермерлар туяқуш гўшти етиштиришга киришганлар.",
+                  "long": "Ўзбекистонлик қатор фермерлар туяқуш гўшти етиштиришга киришганлар. \n\nТуяқуш гўшти асосан экспорт учун эканлиги айтилмоқда. \n\nТуяқуш гўштига маҳаллий истеъмолчи топилармикан? \n\nВидеолавҳа Reuters агентлигидан."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0500897.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Fermerlar tuyaqush goʻshti yetishtirishga kirishganlar",
+                "versions": [
+                  {
+                    "versionId": "p05007yx",
+                    "types": ["Original"],
+                    "duration": 65,
+                    "durationISO8601": "PT1M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1492093363000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95630846",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/FD23/production/_95630846_p0500897.jpg",
+                "path": "/cpsprodpb/FD23/production/_95630846_p0500897.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Tuyaqushlar",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-39590918",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0028b29a-4faf-11e4-bf03-40923db9bd6e",
+            "rank": 8,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:0028b29a-4faf-11e4-bf03-40923db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "O‘zbek paxta dalasidan \"reportaj\"",
+                "headline": "O‘zbek paxta dalasidan \"reportaj\""
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin/2014/10/141009_latin_cotton_ugc_video",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin/2014/10/141009_latin_cotton_ugc_video",
+                "curie": "http://www.bbc.co.uk/asset/0028b29a-4faf-11e4-bf03-40923db9bd6e",
+                "assetId": "35209866"
+              },
+              "summary": "Videolavha - O‘zbekiston paxta dalalariga terimga jalb etilgan \"ko‘ngillilar\"dan biri BBCga dalada olingan tasvirlarni yo‘llagan.",
+              "timestamp": 1412857509000,
+              "language": "uz",
+              "media": {
+                "id": "35209866",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "35209866",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/10/09/141009113819_uzbek_cotton_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/10/09/141009113819_uzbek_cotton_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/uzbek/meta/dps/2014/10/emp/141009_latin_cotton_ugc_video.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2014/10/cotton_field_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2014/10/cotton_field_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2014/10/cotton_field_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e195",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/10/09/141009113819_uzbek_cotton_640x360_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/10/09/141009113819_uzbek_cotton_640x360_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin/2014/10/141009_latin_cotton_ugc_video",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b052ffb5-8805-c545-a9e7-f51d2ea68b93",
+            "rank": 9,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:b052ffb5-8805-c545-a9e7-f51d2ea68b93",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Traktorlar poygasi",
+                "headline": "Video - Traktorlar poygasi"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-38973102",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-38973102",
+                "curie": "http://www.bbc.co.uk/asset/b052ffb5-8805-c545-a9e7-f51d2ea68b93",
+                "assetId": "38973102"
+              },
+              "summary": "Belorusda Parij-Dakar poygasidan ilhomlanib, traktorlar poygasi yoʻlga qoʻyildi.",
+              "timestamp": 1487088010000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p04sxfcf",
+                "subType": "clip",
+                "format": "video",
+                "title": "Тракторлар пойгаси",
+                "synopses": {
+                  "short": "Тракторлар пойгаси",
+                  "medium": "Белорусда Париж-Дакар пойгасидан илҳомланиб, тракторлар пойгаси йўлга қўйилди."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04sxfml.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Traktorlar poygasi",
+                "versions": [
+                  {
+                    "versionId": "p04sxfcl",
+                    "types": ["Original"],
+                    "duration": 55,
+                    "durationISO8601": "PT55S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1487084382000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "94644951",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/3E48/production/_94644951_p04sxfml.jpg",
+                "path": "/cpsprodpb/3E48/production/_94644951_p04sxfml.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Traktorlar",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-38973102",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a42359aa-605b-11e5-95dc-7bce3db9bd6e",
+            "rank": 10,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:a42359aa-605b-11e5-95dc-7bce3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Муҳожир болалар фоҳишалик қилишга мажбурлар",
+                "headline": "Муҳожир болалар фоҳишалик қилишга мажбурлар"
+              },
+              "locators": {
+                "assetUri": "/uzbek/multimedia/2015/09/150921_video_italy_migrant_prostitution",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/multimedia/2015/09/150921_video_italy_migrant_prostitution",
+                "curie": "http://www.bbc.co.uk/asset/a42359aa-605b-11e5-95dc-7bce3db9bd6e",
+                "assetId": "40577127"
+              },
+              "summary": "Би-би-си тергови аниқлаганидек, уларнинг баъзилари омон қолиш учун гиёҳванд моддалар ва ўз танасини сотишга мажбурлар. ",
+              "timestamp": 1442838249000,
+              "language": "uz",
+              "media": {
+                "id": "40577127",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "40577127",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/09/18/150918153518_migrants_sex_trade_prostitution_italy_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/09/18/150918153518_migrants_sex_trade_prostitution_italy_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/uzbek/meta/dps/2015/09/emp/150921_video_italy_migrant_prostitution.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/09/uzbek~fmigrant-italy~f1300~f21~f9_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/09/uzbek~fmigrant-italy~f1300~f21~f9_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/09/uzbek~fmigrant-italy~f1300~f21~f9_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e221",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/05/06/150506140528_ireland_prostitution_304x171_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/05/06/150506140528_ireland_prostitution_304x171_bbc_nocredit.jpg",
+                "height": 171,
+                "width": 304,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/multimedia/2015/09/150921_video_italy_migrant_prostitution",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0cf6651c-78c6-11e5-a5ea-9f933db9bd6e",
+            "rank": 11,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:0cf6651c-78c6-11e5-a5ea-9f933db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Xolingizni sanab, saratonni aniqlang",
+                "headline": "Xolingizni sanab, saratonni aniqlang"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin/2015/10/151022_latin_mole_skin_cancer_science_medicine",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin/2015/10/151022_latin_mole_skin_cancer_science_medicine",
+                "curie": "http://www.bbc.co.uk/asset/0cf6651c-78c6-11e5-a5ea-9f933db9bd6e",
+                "assetId": "41010353"
+              },
+              "summary": "Videolavha - Agar bir qo‘lingizda 10-15 dona xol topsangiz, tezda shifokorga uchrashing. Chunki sizda teri saratoniga chalinish ehtimoli katta bo‘lishi mumkin. Britaniyalik olimlarga ko‘ra, xol qancha ko‘p bo‘lsa, teri saratoni xavfi ham shunchalik baland",
+              "timestamp": 1445522983000,
+              "language": "uz",
+              "media": {
+                "id": "41010353",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "41010353",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/06/01/150601103443_melanoma_640x360_thinkstock_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/06/01/150601103443_melanoma_640x360_thinkstock_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/uzbek/meta/dps/2015/10/emp/151022_latin_mole_skin_cancer_science_medicine.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/10/uzbek~fmole cancer~f1300~f22~f10_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/10/uzbek~fmole cancer~f1300~f22~f10_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/10/uzbek~fmole cancer~f1300~f22~f10_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e244",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/06/01/150601103443_melanoma_640x360_thinkstock_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/06/01/150601103443_melanoma_640x360_thinkstock_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "",
+                "copyrightHolder": "Thinkstock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin/2015/10/151022_latin_mole_skin_cancer_science_medicine",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "07b00f6b-d898-394e-a2bf-774d4ca53798",
+            "rank": 12,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:07b00f6b-d898-394e-a2bf-774d4ca53798",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Poyezddagi oʻrindiqda \"olat\"",
+                "headline": "Video - Poyezddagi oʻrindiqda \"olat\""
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-39491313",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-39491313",
+                "curie": "http://www.bbc.co.uk/asset/07b00f6b-d898-394e-a2bf-774d4ca53798",
+                "assetId": "39491313"
+              },
+              "summary": "Mexikoda poyezdlaridagi oʻrindiqda \"olat\" paydo boʻldi.",
+              "timestamp": 1491318212000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p04z190d",
+                "subType": "clip",
+                "format": "video",
+                "title": "Поезддаги ўриндиқда \"олат\"",
+                "synopses": {
+                  "short": "Поезддаги ўриндиқда \"олат\""
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y5lv6.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Mexikoda poyezdlaridagi oʻrindiqda \"olat\" paydo boʻldi.",
+                "versions": [
+                  {
+                    "versionId": "p04z190g",
+                    "types": ["Original"],
+                    "duration": 49,
+                    "durationISO8601": "PT49S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1491316580000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95460601",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/296E/production/_95460601_de27.jpg",
+                "path": "/cpsprodpb/296E/production/_95460601_de27.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Poyezddagi oʻrindiq",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-39491313",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "01bca0b5-b678-1c48-b7e3-0d7bb72b2638",
+            "rank": 13,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:01bca0b5-b678-1c48-b7e3-0d7bb72b2638",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Disneydek \"multik\" chizishni oʻrganing",
+                "headline": "Video - Disneydek \"multik\" chizishni oʻrganing"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-39502934",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-39502934",
+                "curie": "http://www.bbc.co.uk/asset/01bca0b5-b678-1c48-b7e3-0d7bb72b2638",
+                "assetId": "39502934"
+              },
+              "summary": "Disney rassomlari multfilmga rasm chizish mahoratini namoyish etdilar.",
+              "timestamp": 1491406214000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p04z4b7s",
+                "subType": "clip",
+                "format": "video",
+                "title": "Диснейдек \"мультик\" чизишни ўрганинг",
+                "synopses": {
+                  "short": "Диснейдек \"мультик\" чизишни ўрганинг",
+                  "medium": "Дисней рассомлари мультфильмга расм чизиш маҳоратини намойиш этдилар.",
+                  "long": "Дисней рассомлари мультфильмга расм чизиш маҳоратини намойиш этдилар.\n\nВидеоларимизни BBC O'ZBEK Youtube каналида томоша қилинг.\n\nДиснейдек \"мультик\" чизишни Ўрганинг\n\nДисней рассомлари Дан Повенмайер ва Жефф Марш мультфильмга расм чизиш маҳоратини намойиш этдилар.\n\n1.\tЭнг муҳими кўзлар.\n\nКўзлар эътиборни энг кўп тортадиган нуқта.\n\n2.\tҚўлни чизиш энг мушкул.\n\nСекундига 24 расмни \"жонлантириш\" Кекрак.\n\nБиргина бармоқнинг қолиб кетиши катта муаммо бўлиши мумкин.\n\n3.\tДадил бўлинг.\n\nЎчирғич ишлатманг, ўткир фломастер ишлатинг. Бу сизни қайта-қайта чизаверишдан Сақлайди.\n\n4.\tСабрли бўлинг.\n\n11 дақиқалик эпизодни яратишга 10 ойга қадар вақт кетади.\n\n5.\tМашқ қилинг ва тўхтаманг.\n\nАгарда мультфилм яратишни касб этмоқчи бўлсангиз жуда кўп расм чизинг.\n\nБошқалар эса бўш вақтида чизишлари мумкин. Бу жуда завқли машғулот. \n\n\nБи-би-си Ўзбек хизматининг видеоларини www.bbcuzbek.com да ҳам кўришингиз мумкин.\n\nБи-би-си Ўзбек хизмати билан Whatsapp, Telegram ва Viber орқали боғланишни истасангиз, телефонимиз:+44 78-58-86-00-02\n\nТЕЛЕГРАМДА ЭСА каналимиз - https://telegram.me/bbcuzbek\n\nInstagram - BBC UZBEK\n\nTwitter - BBC UZBEK\n\nOdnoklassniki - BBC UZBEK\n\nFacebook - BBC UZBEK\n\nGoogle+ - BBC UZBEK\n\nYouTube - BBCUZBEK (https://www.youtube.com/user/bbcuzbek)\n\nSkype - uzbekbbclondon\n\nbbcuzbek.comга тўсиқ бўлса, uzbekweb.netга киринг"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04z4hkj.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Multfilmga rasm chizish",
+                "versions": [
+                  {
+                    "versionId": "p04z4b82",
+                    "types": ["Original"],
+                    "duration": 58,
+                    "durationISO8601": "PT58S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1491401573000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95476212",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5313/production/_95476212_p04z4hkj.jpg",
+                "path": "/cpsprodpb/5313/production/_95476212_p04z4hkj.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Multfilmga rasm chizish",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-39502934",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fa917f5e-150c-9043-b8a7-8d03abcdf2b8",
+            "rank": 14,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:fa917f5e-150c-9043-b8a7-8d03abcdf2b8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Playboy jurnalida chiqqan muslima",
+                "headline": "Video - Playboy jurnalida chiqqan muslima"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-37574917",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-37574917",
+                "curie": "http://www.bbc.co.uk/asset/fa917f5e-150c-9043-b8a7-8d03abcdf2b8",
+                "assetId": "37574917"
+              },
+              "summary": "Videolavha - Playboy jurnali ilk bor hijob o'ragan musulmon ayol bilan suhbatni chop qildi. Jurnal 2005 yildan beri yalang'och ayollar suratlarini chop qilishni to'xtatgan.",
+              "timestamp": 1475754897000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p04b4n8k",
+                "subType": "clip",
+                "format": "video",
+                "title": "Playboy журналида чиққан муслима",
+                "synopses": {
+                  "short": "Playboy журналида чиққан муслима",
+                  "medium": "Playboy журнали илк бор ҳижоб ўраган мусулмон аёл билан суҳбатни чоп қилди. Журнал 2005 йилдан бери яланғоч аёллар суратларини чоп қилишни тўхтатган.",
+                  "long": "Playboy журнали илк бор ҳижоб ўраган мусулмон аёл билан суҳбатни чоп қилди. Журнал 2005 йилдан бери яланғоч аёллар суратларини чоп қилишни тўхтатган."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y5lv6.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Playboy jurnalida chiqqan muslima",
+                "versions": [
+                  {
+                    "versionId": "p04b4n8n",
+                    "types": ["Original"],
+                    "duration": 94,
+                    "durationISO8601": "PT1M34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1475752530000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "91545264",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B4AE/production/_91545264_de27.jpg",
+                "path": "/cpsprodpb/B4AE/production/_91545264_de27.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Нур Тажурий",
+                "caption": "Нур Тажурий",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-37574917",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f9afedb1-acdd-774f-89f1-ce1b1a95ea4c",
+            "rank": 15,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:f9afedb1-acdd-774f-89f1-ce1b1a95ea4c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Oilada o'sgan kiyik",
+                "headline": "Video - Oilada o'sgan kiyik"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-38145580",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-38145580",
+                "curie": "http://www.bbc.co.uk/asset/f9afedb1-acdd-774f-89f1-ce1b1a95ea4c",
+                "assetId": "38145580"
+              },
+              "summary": "To'rt oyga to'lgan bu kiyikcha Mila, oddiy hayvoncha emas, balki oila a'zosidir.",
+              "timestamp": 1480421026000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p04j7lpd",
+                "subType": "clip",
+                "format": "video",
+                "title": "Оилада ўсган кийик",
+                "synopses": {
+                  "short": "Оилада ўсган кийик",
+                  "medium": "Тўрт ойга тўлган бу кийикча оддий ҳайвонча эмас, балки оила аъзосидир.",
+                  "long": "Тўрт ойга тўлган бу кийикча Мила, оддий ҳайвонча эмас, балки оила аъзосидир."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04j7nwy.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Bu kiyikcha oddiy hayvoncha emas, balki oila a'zosidir.",
+                "versions": [
+                  {
+                    "versionId": "p04j7lpw",
+                    "types": ["Original"],
+                    "duration": 60,
+                    "durationISO8601": "PT1M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1480341382000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "92694771",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4555/production/_92694771_p04j7nwy.jpg",
+                "path": "/cpsprodpb/4555/production/_92694771_p04j7nwy.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Kiyik Mila",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-38145580",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d904aae2-a8aa-11e5-aed6-518c3db9bd6e",
+            "rank": 16,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:d904aae2-a8aa-11e5-aed6-518c3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Xitoy janubida ko‘chki",
+                "headline": "Xitoy janubida ko‘chki"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin/2015/12/151222_latin_china-landslide_video",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin/2015/12/151222_latin_china-landslide_video",
+                "curie": "http://www.bbc.co.uk/asset/d904aae2-a8aa-11e5-aed6-518c3db9bd6e",
+                "assetId": "41854090"
+              },
+              "summary": "Videolavha - Xitoy janubidagi sanoat markazlaridan birida ko‘chki ostida qolgan 91 kishini izlash ishlari davom etmoqda. ",
+              "timestamp": 1450788792000,
+              "language": "uz",
+              "media": {
+                "id": "41854090",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "41854090",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/12/21/151221163637_china640.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/12/21/151221163637_china640.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/uzbek/meta/dps/2015/12/emp/151222_latin_china-landslide_video.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/12/china~flandslide~f1115~f22~f12_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/12/china~flandslide~f1115~f22~f12_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/12/china~flandslide~f1115~f22~f12_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e241",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/12/21/151221160806_china_landslide_640x360_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/12/21/151221160806_china_landslide_640x360_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin/2015/12/151222_latin_china-landslide_video",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c6954435-8921-7f4f-b561-aefc7820713d",
+            "rank": 17,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:c6954435-8921-7f4f-b561-aefc7820713d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Abort uchun kurash",
+                "headline": "Video - Abort uchun kurash"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-37520212",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-37520212",
+                "curie": "http://www.bbc.co.uk/asset/c6954435-8921-7f4f-b561-aefc7820713d",
+                "assetId": "37520212"
+              },
+              "summary": "Chilida ayollar abort uchun qamalishi mumkin. Mamlakat Prezidenti Mishel Blanshet abort bo'yicha qonunga yengilliklar kiritmoqchi, abortga ruxsat bermoqchi. Ayollar tanlash huquqiga ega. Agar ayol zo'rlangan bo'lsa, sog'ligi ko'tarmasa va homila yashab ketishi qiyin bo'lsa, abortga ruxsat berishimiz kerak, deydi u.",
+              "timestamp": 1475242529000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p049k5w8",
+                "subType": "clip",
+                "format": "video",
+                "title": "Аборт учун кураш",
+                "synopses": {
+                  "short": "Аборт учун кураш"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p049k66h.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Abort uchun kurash",
+                "versions": [
+                  {
+                    "versionId": "p049k5wh",
+                    "types": ["Original"],
+                    "duration": 52,
+                    "durationISO8601": "PT52S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1475237691000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "91459283",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9597/production/_91459283_p049k66h.jpg",
+                "path": "/cpsprodpb/9597/production/_91459283_p049k66h.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Чилида аборт учун қамалади",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-37520212",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bc4efbf0-f515-7143-929b-81f842cbd68f",
+            "rank": 18,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:bc4efbf0-f515-7143-929b-81f842cbd68f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Oʻzbekistondagi eng qimmat 6 mashina",
+                "headline": "Video - Oʻzbekistondagi eng qimmat 6 mashina"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-40137550",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-40137550",
+                "curie": "http://www.bbc.co.uk/asset/bc4efbf0-f515-7143-929b-81f842cbd68f",
+                "assetId": "40137550"
+              },
+              "summary": "Oʻzbekistondagi eng qimmat 6 mashinaning soʻmdagi yangi narxlari eʼlon qilindi.",
+              "timestamp": 1496418506000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p054r510",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ўзбекистондаги энг қиммат 6 машина",
+                "synopses": {
+                  "short": "Ўзбекистондаги энг қиммат 6 машина",
+                  "medium": "Ўзбекистондаги энг қиммат 6 машинанинг сўмдаги янги нархлари эълон қилинди.",
+                  "long": "Ўзбекистондаги энг қиммат 6 машинанинг сўмдаги янги нархлари эълон қилинди."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p054r56q.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Oʻzbekistondagi eng qimmat 6 mashina",
+                "versions": [
+                  {
+                    "versionId": "p054r512",
+                    "types": ["Original"],
+                    "duration": 42,
+                    "durationISO8601": "PT42S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1496415407000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "96322449",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/170D6/production/_96322449_p054r56q.jpg",
+                "path": "/cpsprodpb/170D6/production/_96322449_p054r56q.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Oʻzbekistondagi eng qimmat 6 mashinaning soʻmdagi yangi narxlari eʼlon qilindi.",
+                "copyrightHolder": "PAultan",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-40137550",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "997e8b06-4688-11e5-907b-b1f13db9bd6e",
+            "rank": 19,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:997e8b06-4688-11e5-907b-b1f13db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Аёллар учун виагра",
+                "headline": "Аёллар учун виагра"
+              },
+              "locators": {
+                "assetUri": "/uzbek/multimedia/2015/08/150819_female_viagra",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/multimedia/2015/08/150819_female_viagra",
+                "curie": "http://www.bbc.co.uk/asset/997e8b06-4688-11e5-907b-b1f13db9bd6e",
+                "assetId": "40137042"
+              },
+              "summary": "Аёллар учун виагра",
+              "timestamp": 1439998870000,
+              "language": "uz",
+              "media": {
+                "id": "40137042",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "40137042",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/19/150819020126_female_viagra_sprout_640x360__nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/08/19/150819020126_female_viagra_sprout_640x360__nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/uzbek/meta/dps/2015/08/emp/150819_female_viagra.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/08/bbcshorts_femaleviagra_uzbek_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/08/bbcshorts_femaleviagra_uzbek_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/uzbek/dps/2015/08/bbcshorts_femaleviagra_uzbek_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e209",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/19/150819031333_us_female_viagara_144x81_ap.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/08/19/150819031333_us_female_viagara_144x81_ap.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "AP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/multimedia/2015/08/150819_female_viagra",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "90903652-3ffe-3846-a7b9-fb323e4df408",
+            "rank": 20,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:90903652-3ffe-3846-a7b9-fb323e4df408",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Video - Dunyoning eng tez oʻsayotgan dini qaysi?",
+                "headline": "Video - Dunyoning eng tez oʻsayotgan dini qaysi?"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-39297842",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-39297842",
+                "curie": "http://www.bbc.co.uk/asset/90903652-3ffe-3846-a7b9-fb323e4df408",
+                "assetId": "39297842"
+              },
+              "summary": "Pyu tadqiqot markazining oxirgi ilmiy ishi xulosasiga koʻra, 2070 yilga borib Islom dunyodagi eng katta din boʻladi.",
+              "timestamp": 1489685558000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "p04x1sfg",
+                "subType": "clip",
+                "format": "video",
+                "title": "Дунёнинг энг тез ўсаётган дини қайси?",
+                "synopses": {
+                  "short": "Дунёнинг энг тез ўсаётган дини қайси?",
+                  "medium": "Пю тадқиқот марказининг охирги илмий иши хулосасига кўра, 2070 йилга бориб Ислом дунёдаги энг катта дин бўлади.",
+                  "long": "Пю тадқиқот марказининг охирги илмий иши хулосасига кўра, 2070 йилга бориб Ислом дунёдаги энг катта дин бўлади. \n\nВидеоларимизни BBC O'ZBEK Youtube каналида томоша қилинг.\n\n2070 йилга бориб Ислом дунёдаги энг катта дин бўлади.\n\nМазкур хулоса Пю тадқиқот марказининг охирги илмий ишида қилинди.\n\n2010 йилда жаҳоннинг энг катта мусулмон аҳолиси Индонезияда яшади.\n\nАммо, Ҳиндистоннинг мусулмон аҳолиси 2050 йилда энг йириги бўлади, ҳиндулардан ошмаса-да. \n\nБритания ва Франциядаги насроний аҳоли сони 50 фоиздан кам бўлади. \n\n2050 йилга бориб Европа аҳолисининг 10 фоизи мусулмон бўлиши башорат қилинади. \n\nҲар 10 насронийдан 4 нафари қора Африкада яшайди.\n\n2050 йилга бориб АҚШдаги ҳар 50 кишидан бири мусулмон бўлади. \n\nБи-би-си Ўзбек хизматининг видеоларини www.bbcuzbek.com да ҳам кўришингиз мумкин. \n\n\nБи-би-си Ўзбек хизмати билан Whatsapp, Telegram ва Viber да: +44 78-58-86-00-02\n\nТЕЛЕГРАМДА ЭСА каналимиз - https://telegram.me/bbcuzbek ёки BBCUZBEK\n\nInstagram - BBC UZBEK\n\nTwitter - BBC UZBEK\n\nOdnoklassniki - BBC UZBEK\n\nFacebook - BBC UZBEK\n\nGoogle+ - BBC UZBEK\n\nYouTube - BBCUZBEK (https://www.youtube.com/user/bbcuzbek)\n\nSkype - bbcuzbekradio\n\nbbcuzbek.comга тўсиқ бўлса, uzbekweb.netга киринг"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04x1z7k.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "2070 yilga borib Islom dunyodagi eng katta din boʻladi.",
+                "versions": [
+                  {
+                    "versionId": "p04x1sfj",
+                    "types": ["Original"],
+                    "duration": 39,
+                    "durationISO8601": "PT39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1489683104000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95187075",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/DEF6/production/_95187075_p04x1z7k.jpg",
+                "path": "/cpsprodpb/DEF6/production/_95187075_p04x1z7k.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "2070 yilga borib Islom dunyodagi eng katta din boʻladi",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-39297842",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }
