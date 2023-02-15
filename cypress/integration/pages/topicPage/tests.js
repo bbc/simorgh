@@ -142,7 +142,7 @@ export default ({ service, pageType, variant }) => {
           });
       });
 
-      it.only('clicking the message banner should navigate to the correct page', () => {
+      it('clicking the message banner should navigate to the correct page', () => {
         if (messageBanner) {
           cy.get(
             `[data-testid="${`message-banner-${messageBanner.title.replaceAll(
