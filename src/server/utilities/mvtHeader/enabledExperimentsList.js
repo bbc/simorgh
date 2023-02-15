@@ -11,7 +11,7 @@ const enabledExperimentList = [
   {
     name: 'test_2',
     services: ['portuguese'],
-    pageTypes: ['STY'],
+    pageTypes: ['STY', 'article'],
   },
 ];
 
