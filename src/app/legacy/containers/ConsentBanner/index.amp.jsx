@@ -4,24 +4,63 @@ import AmpGeo from '#components/AmpGeo';
 import Banner from './Banner/index.amp';
 
 const ampConsentData = {
-  consents: {
-    'user-consent': {
-      promptIfUnknownForGeoGroup: 'eea',
-      promptUI: 'consent-prompt',
-    },
-  },
-  policy: {
-    default: {
-      waitFor: {
-        'user-consent': [],
-      },
-      timeout: {
-        seconds: 0,
-        fallbackAction: 'reject',
-      },
-    },
-  },
+  "checkConsentHref": "https://cdn.privacy-mgmt.com/wrapper/tcfv2/v1/amp-v2?authId=CLIENT_ID",
+  "consentRequired": "remote",
+  "consentInstanceId": "sourcepoint",
+  "postPromptUI": "consent-ui",
+  "promptUISrc": "https://cdn.privacy-mgmt.com/amp/unified/index.html?authId=CLIENT_ID&source_url=SOURCE_URL",
+  "cookies": {
+  "enabled": true,
+  "AMP-CONSENT": { "value": "LINKER_PARAM(authId, _a)" }
+},
+  "clientConfig": {
+  "accountId": "1786",
+  "propertyHref": "https://www.bbc.com",
+  "stageCampaign": false,
+    "pmTab": "purposes",
+    "privacyManagerId": "648235",
+    "initialHeight": 80
+}
 };
+
+// const ampConsentData = {
+//   consents: {
+//     'user-consent': {
+//       promptIfUnknownForGeoGroup: 'eea',
+//       promptUI: 'consent-prompt',
+//     },
+//   },
+//   policy: {
+//     default: {
+//       waitFor: {
+//         'user-consent': [],
+//       },
+//       timeout: {
+//         seconds: 0,
+//         fallbackAction: 'reject',
+//       },
+//     },
+//   }
+// };
+// {
+//   checkConsentHref: 'https://{CNAME DOMAIN}/wrapper/tcfv2/v1/amp-v2?authId=CLIENT_ID',
+//   consentRequired: 'remote',
+//   consentInstanceId: 'sourcepoint',
+//   postPromptUI: 'consent-ui',
+//   promptUISrc: 'https://{CNAME DOMAIN}/amp/unified/index.html?authId=CLIENT_ID&source_url=SOURCE_URL',
+//   cookies: {
+//     enabled: true,
+//     'AMP-CONSENT': { 'value': 'LINKER_PARAM(authId, _a)' }
+//   },
+//   clientConfig: {
+//     accountId: { __SP_ACCOUNT_ID__ },
+//     propertyHref: { __SP_PROPERTY_HREF__ },
+//     stageCampaign: false,
+//     pmTab: 'purposes',
+//     privacyManagerId: { __SP_PRIVACY_MANAGER_ID__ }
+//   }
+// },
+// };
 
 const jsonInlinedScript = data => (
   <script
