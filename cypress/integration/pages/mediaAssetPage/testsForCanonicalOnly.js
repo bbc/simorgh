@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import getStoryPageData from '../../../support/helpers/getStoryPageData';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getEmbedUrl, hasMedia } from './helpers';
@@ -23,25 +24,23 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
       it('should render an iframe with a valid URL', () => {
         if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(
-            ({ body: jsonData }) => {
-              if (hasMedia(jsonData)) {
-                const embedUrl = getEmbedUrl(jsonData, language);
-                cy.log(embedUrl);
-                cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
-                cy.testResponseCodeAndTypeRetry({
-                  path: embedUrl,
-                  responseCode: 200,
-                  type: 'text/html',
-                  allowFallback: true,
-                });
-              } else {
-                cy.log(
-                  `No media on ${pageType} for ${Cypress.env('currentPath')}`,
-                );
-              }
-            },
-          );
+          getStoryPageData(service, variant).then(({ body }) => {
+            if (hasMedia(body.data.article)) {
+              const embedUrl = getEmbedUrl(body.data.article, language);
+              cy.log(embedUrl);
+              cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+              cy.testResponseCodeAndTypeRetry({
+                path: embedUrl,
+                responseCode: 200,
+                type: 'text/html',
+                allowFallback: true,
+              });
+            } else {
+              cy.log(
+                `No media on ${pageType} for ${Cypress.env('currentPath')}`,
+              );
+            }
+          });
         } else {
           cy.log('skipped test for cps russian map');
         }

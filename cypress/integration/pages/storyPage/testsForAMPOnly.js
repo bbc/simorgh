@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import getStoryPageData from '../../../support/helpers/getStoryPageData';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import config from '../../../support/config/services';
 import runAMPAdsTests from '../../../support/helpers/adsTests/testsForAMPOnly';
@@ -9,60 +10,61 @@ export const testsThatAlwaysRunForAMPOnly = ({
   pageType,
   variant,
 }) => {
+  let storyData;
   describe(`No testsToAlwaysRunForAMPOnly to run for ${service} ${pageType}`, () => {
+    before(async () => {
+      storyData = await getStoryPageData(service, variant).then(
+        ({ body }) => body,
+      );
+    });
+
     it('If there is a table in the json, display it on the page', () => {
       if (service === 'sport') {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const tableBlock = body.content.blocks.find(
-            block => block.type === 'table',
-          );
-          if (tableBlock) {
-            cy.get('table');
-          }
-        });
+        const tableBlock = storyData.data.article.content.blocks.find(
+          block => block.type === 'table',
+        );
+        if (tableBlock) {
+          cy.get('table');
+        }
       }
     });
     it('Table displays expected number of rows and columns', () => {
       if (service === 'sport') {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const tableBlock = body.content.blocks.find(
-            block => block.type === 'table',
-          );
-          if (tableBlock) {
-            const numberOfRows = tableBlock.rows.length;
-            cy.get('table')
-              .find('tr')
-              .then(row => {
-                expect(row.length).to.equal(numberOfRows);
-                cy.log(
-                  `Number of rows in json = ${numberOfRows}. Number of rows displayed on page = ${row.length}`,
-                );
-                const numberOfColumns = tableBlock.width;
-                cy.get('table')
-                  .find('tr')
-                  .eq(0)
-                  .find('th')
-                  .then(th => {
-                    expect(th.length).to.equal(numberOfColumns);
-                    cy.log(
-                      `Number of columns in json = ${numberOfColumns}. Number of columns displayed on page = ${th.length}`,
-                    );
-                  });
-              });
-          }
-        });
+        const tableBlock = storyData.data.article.content.blocks.find(
+          block => block.type === 'table',
+        );
+        if (tableBlock) {
+          const numberOfRows = tableBlock.rows.length;
+          cy.get('table')
+            .find('tr')
+            .then(row => {
+              expect(row.length).to.equal(numberOfRows);
+              cy.log(
+                `Number of rows in json = ${numberOfRows}. Number of rows displayed on page = ${row.length}`,
+              );
+              const numberOfColumns = tableBlock.width;
+              cy.get('table')
+                .find('tr')
+                .eq(0)
+                .find('th')
+                .then(th => {
+                  expect(th.length).to.equal(numberOfColumns);
+                  cy.log(
+                    `Number of columns in json = ${numberOfColumns}. Number of columns displayed on page = ${th.length}`,
+                  );
+                });
+            });
+        }
       }
     });
     it('Table has a heading', () => {
       if (service === 'sport') {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const tableBlock = body.content.blocks.find(
-            block => block.type === 'table',
-          );
-          if (tableBlock) {
-            cy.get('table').find('thead');
-          }
-        });
+        const tableBlock = storyData.data.article.content.blocks.find(
+          block => block.type === 'table',
+        );
+        if (tableBlock) {
+          cy.get('table').find('thead');
+        }
       }
     });
 

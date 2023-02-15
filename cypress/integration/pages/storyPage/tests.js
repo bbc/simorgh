@@ -1,5 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import getStoryPageData from '../../../support/helpers/getStoryPageData';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 import topicTagsTest from '../../../support/helpers/topicTagsTest';
 import envConfig from '../../../support/config/envs';
@@ -12,43 +13,48 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({
   service,
+  variant,
   pageType,
   isAmp,
 }) => {
+  let storyData;
+
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
+    before(async () => {
+      storyData = await getStoryPageData(service, variant).then(
+        ({ body }) => body,
+      );
+    });
+
     it('should render a description for the page', () => {
-      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        const descriptionBlock = body.content.blocks.find(
-          block => block.role === 'introduction',
-        );
-        // Condition added because introduction is non-mandatory
-        if (descriptionBlock) {
-          const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
-          // strip html from the description, so we get description as plain text
-          const elem = document.createElement('div');
-          elem.innerHTML = descriptionHtml;
-          const description = elem.innerText;
-          cy.get('main p').should('contain', description);
-        }
-      });
+      const descriptionBlock = storyData.data.article.content.blocks.find(
+        block => block.role === 'introduction',
+      );
+      // Condition added because introduction is non-mandatory
+      if (descriptionBlock) {
+        const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
+        // strip html from the description, so we get description as plain text
+        const elem = document.createElement('div');
+        elem.innerHTML = descriptionHtml;
+        const description = elem.innerText;
+        cy.get('main p').should('contain', description);
+      }
     });
 
     it('should render paragraph text for the page', () => {
-      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        const paragraphBlock = body.content.blocks.find(
-          block => block.type === 'paragraph',
-        );
-        // Conditional because in test assets the data model structure is sometimes variable and unusual
-        // so cannot be accessed in the same way across assets
-        if (paragraphBlock) {
-          const descriptionHtml = pathOr({}, ['text'], paragraphBlock);
-          // strip html from the description, so we get description as plain text
-          const elem = document.createElement('div');
-          elem.innerHTML = descriptionHtml;
-          const paragraph = elem.innerText;
-          cy.get('main p').should('contain', paragraph);
-        }
-      });
+      const paragraphBlock = storyData.data.article.content.blocks.find(
+        block => block.type === 'paragraph',
+      );
+      // Conditional because in test assets the data model structure is sometimes variable and unusual
+      // so cannot be accessed in the same way across assets
+      if (paragraphBlock) {
+        const descriptionHtml = pathOr({}, ['text'], paragraphBlock);
+        // strip html from the description, so we get description as plain text
+        const elem = document.createElement('div');
+        elem.innerHTML = descriptionHtml;
+        const paragraph = elem.innerText;
+        cy.get('main p').should('contain', paragraph);
+      }
     });
     it('FOR /news/technology-60561162.amp ONLY - should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       if (service === 'news' && Cypress.env('APP_ENV') !== 'local') {

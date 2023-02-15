@@ -1,3 +1,4 @@
+import getStoryPageData from '../../../support/helpers/getStoryPageData';
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -5,11 +6,15 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
+export const testsThatFollowSmokeTestConfig = ({
+  service,
+  variant,
+  pageType,
+}) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     it('should render a description for the page', () => {
-      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        const description = body.promo.summary;
+      getStoryPageData(service, variant).then(({ body }) => {
+        const description = body.data.article.promo.summary;
         cy.get('main p').first().should('contain', description);
       });
     });
