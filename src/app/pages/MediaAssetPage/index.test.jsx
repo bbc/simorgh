@@ -10,7 +10,6 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
-import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -29,26 +28,28 @@ jest.mock('#containers/ComscoreAnalytics', () => {
 
 jest.mock('../../components/ThemeProvider');
 
-const createAssetPage = ({ pageData }, service) => (
-  <StaticRouter>
-    <ThemeProvider service={service} variant="default">
-      <ToggleContextProvider>
-        <ServiceContextProvider service={service}>
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            isAmp={false}
-            pageType={pageData.metadata.type}
-            pathname={pageData.metadata.locators.assetUri}
-            service={service}
-            statusCode={200}
-          >
-            <MediaAssetPage service={service} pageData={pageData} />
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>
-    </ThemeProvider>
-  </StaticRouter>
-);
+const createAssetPage = ({ pageData }, service) => {
+  return (
+    <StaticRouter>
+      <ThemeProvider service={service} variant="default">
+        <ToggleContextProvider>
+          <ServiceContextProvider service={service}>
+            <RequestContextProvider
+              bbcOrigin="https://www.test.bbc.co.uk"
+              isAmp={false}
+              pageType={pageData.metadata.type}
+              pathname={pageData.metadata.locators.assetUri}
+              service={service}
+              statusCode={200}
+            >
+              <MediaAssetPage service={service} pageData={pageData} />
+            </RequestContextProvider>
+          </ServiceContextProvider>
+        </ToggleContextProvider>
+      </ThemeProvider>
+    </StaticRouter>
+  );
+};
 
 jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
@@ -117,19 +118,19 @@ const escapedText = text => {
 };
 
 const getBlockTextAtIndex = (index, originalPageData) => {
-  return path(['content', 'blocks', index, 'text'], originalPageData);
+  return path(
+    ['data', 'article', 'content', 'blocks', index, 'text'],
+    originalPageData,
+  );
 };
 
 const pageType = 'cpsAsset';
 
 fetchMock.config.overwriteRoutes = true;
 
-const mockInitialData = ({ service, assetId, pageData, mostWatched }) => {
-  fetchMock.mock(`http://localhost/${assetId}.json`, pageData);
-  fetchMock.mock(
-    `http://localhost/${service}/mostwatched.json`,
-    mostWatched || mostWatchedData,
-  );
+const mockInitialData = ({ service, assetId, pageData }) => {
+  fetch.mockResponse(JSON.stringify(pageData));
+
   return getInitialData({
     path: assetId,
     service,
@@ -205,13 +206,13 @@ describe('Media Asset Page', () => {
   });
 
   it('should render paragraph', () => {
-    const paragraphText = getBlockTextAtIndex(1, mapPageData);
+    const paragraphText = getBlockTextAtIndex(2, mapPageData);
     expect(getByText(escapedText(paragraphText))).toBeInTheDocument();
   });
 
   it('should render image', () => {
     const imageCaption = path(
-      ['content', 'blocks', 25, 'caption'],
+      ['data', 'article', 'content', 'blocks', 11, 'caption'],
       mapPageData,
     );
     // Images not rendered properly due to lazyload, therefore can only check caption text
@@ -300,15 +301,11 @@ describe('Media Asset Page', () => {
   });
 
   it('should render sub heading', () => {
-    const subHeadingText = getBlockTextAtIndex(3, mapPageData);
-
-    expect(getByText(escapedText(subHeadingText))).toBeInTheDocument();
+    expect(getByText('This is a subheading')).toBeInTheDocument();
   });
 
   it('should render crosshead', () => {
-    const crossHeadText = getBlockTextAtIndex(4, mapPageData);
-
-    expect(getByText(escapedText(crossHeadText))).toBeInTheDocument();
+    expect(getByText('This is a crosshead')).toBeInTheDocument();
   });
 
   it('should render firstPublished timestamp for Pidgin', () => {
@@ -316,7 +313,7 @@ describe('Media Asset Page', () => {
   });
 
   it('should render lastPublished timestamp for Pidgin', () => {
-    expect(getByText('New Informate 20 November 2019')).toBeInTheDocument();
+    expect(getByText('New Informate 10 June 2020')).toBeInTheDocument();
   });
 
   it('has a single "main" element, and a single "region" element (a11y)', async () => {
@@ -343,21 +340,16 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
 });
 
 it('should not show the iframe when available is false', async () => {
-  const { pageData } = await mockInitialData({
-    assetId: 'uzbek/a-media-asset',
-    service: 'uzbek',
-    pageData: uzbekPageData,
-  });
   const uzbekDataExpiredLivestream = assocPath(
-    ['content', 'blocks', 0, 'available'],
+    ['data', 'article', 'content', 'blocks', 0, 'available'],
     false,
-    pageData,
+    uzbekPageData,
   );
 
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
     assetId: 'uzbek/a-media-asset',
     service: 'uzbek',
-    pageData: JSON.stringify(uzbekDataExpiredLivestream),
+    pageData: uzbekDataExpiredLivestream,
   });
 
   render(createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'));
@@ -367,7 +359,7 @@ it('should not show the iframe when available is false', async () => {
 
 it('should show the media message when available is false', async () => {
   const uzbekDataExpiredLivestream = assocPath(
-    ['content', 'blocks', 0, 'available'],
+    ['data', 'article', 'content', 'blocks', 0, 'available'],
     false,
     uzbekPageData,
   );
@@ -375,8 +367,9 @@ it('should show the media message when available is false', async () => {
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
     assetId: 'uzbek/a-media-asset',
     service: 'uzbek',
-    pageData: JSON.stringify(uzbekDataExpiredLivestream),
+    pageData: uzbekDataExpiredLivestream,
   });
+
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
   );
@@ -387,15 +380,23 @@ it('should show the media message when available is false', async () => {
 });
 
 it('should show the media message when there is no media block', async () => {
-  const blocks = pathOr([], ['content', 'blocks'], uzbekPageData);
-  const blockTypes = pathOr([], ['metadata', 'blockTypes'], uzbekPageData);
+  const blocks = pathOr(
+    [],
+    ['data', 'article', 'content', 'blocks'],
+    uzbekPageData,
+  );
+  const blockTypes = pathOr(
+    [],
+    ['data', 'article', 'metadata', 'blockTypes'],
+    uzbekPageData,
+  );
   const uzbekDataWithNoMediaBlock = assocPath(
-    ['content', 'blocks'],
+    ['data', 'article', 'content', 'blocks'],
     blocks.filter(block => block.type !== 'version'),
     uzbekPageData,
   );
   const uzbekDataWithNoMediaType = assocPath(
-    ['metadata', 'blockTypes'],
+    ['data', 'article', 'metadata', 'blockTypes'],
     blockTypes.filter(type => type !== 'version'),
     uzbekDataWithNoMediaBlock,
   );
@@ -403,7 +404,7 @@ it('should show the media message when there is no media block', async () => {
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
     assetId: 'uzbek/a-media-asset',
     service: 'uzbek',
-    pageData: JSON.stringify(uzbekDataWithNoMediaType),
+    pageData: uzbekDataWithNoMediaType,
   });
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),

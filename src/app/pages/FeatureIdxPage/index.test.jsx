@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -8,6 +7,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import urduPageData from '#data/urdu/cpsAssets/science-51314202';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
+import * as fetchPageData from '../../routes/utils/fetchPageData';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import FeatureIdxPage from '.';
@@ -135,23 +135,26 @@ jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
   return CanonicalAdBootstrapJs;
 });
 
+const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+fetchDataSpy.mockImplementation(() =>
+  Promise.resolve({
+    status: 200,
+    json: urduPageData,
+  }),
+);
+
 describe('Feature Idx Page', () => {
   let pageData;
 
   beforeEach(async () => {
-    fetchMock.mock(
-      'http://localhost/some-feature-idx-page-path.json',
-      JSON.stringify(urduPageData),
-    );
-
     ({ pageData } = await getInitialData({
       path: 'some-feature-idx-page-path',
       service: 'urdu',
+      pageType: 'cpsAsset',
     }));
   });
 
   afterEach(() => {
-    fetchMock.restore();
     jest.clearAllMocks();
   });
 
@@ -165,7 +168,6 @@ describe('Feature Idx Page', () => {
         const h1 = container.querySelector('h1');
         const content = h1.getAttribute('id');
         const tabIndex = h1.getAttribute('tabIndex');
-
         expect(content).toEqual('content');
         expect(tabIndex).toBe('-1');
 
@@ -262,7 +264,6 @@ describe('Feature Idx Page', () => {
       });
 
       it('should not render canonical ad bootstrap on amp', async () => {
-        process.env.SIMORGH_APP_ENV = 'test';
         const toggles = {
           ads: {
             enabled: true,

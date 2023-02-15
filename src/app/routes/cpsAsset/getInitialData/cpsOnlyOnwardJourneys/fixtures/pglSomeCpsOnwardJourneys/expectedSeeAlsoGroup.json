@@ -11,7 +11,8 @@
         "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-44124647"
       },
       "summary": "Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edir.",
-      "timestamp": 1526553848,
+      "timestamp": 1526553848000,
+      "language": "az",
       "cpsType": "STY",
       "indexImage": {
         "id": "100713334",
@@ -38,7 +39,8 @@
         "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-43540056"
       },
       "summary": "ADR-100 layihəmizdə növbəti yazı: 1918-ci il martın 3-də Bolşeviklər Almaniya, Bolqarıstan, Avstriya-Macarıstan və Osmanlı nümayəndələri ilə Brest-Litovsk Sülh Sazişi imzalayır. İmzalanma Bakının azadlığı ilə nəticələnən bir sıra hadisələrə səbəb olur.",
-      "timestamp": 1522167836,
+      "timestamp": 1522167836000,
+      "language": "az",
       "cpsType": "STY",
       "indexImage": {
         "id": "100567146",
@@ -65,7 +67,8 @@
         "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-44022776"
       },
       "summary": "#ADR100 layihəmizdə: 1918-1920-ci illərdə Gürcüstanla Azərbaycan arasında əməkdaşlıq yeni respublikalar üçün olduqca mühüm idi. Eyni zamanda Bakı ilə Tbilisi arasında gərginlik yaradan məsələlər mövcud idi. Belə məsələlərdən biri də ərazi mübahisələri idi.",
-      "timestamp": 1525930091,
+      "timestamp": 1525930091000,
+      "language": "az",
       "cpsType": "STY",
       "indexImage": {
         "id": "101240680",
@@ -92,7 +95,8 @@
         "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-43713137"
       },
       "summary": "1918-ci il mayın 28-də Azərbaycanın istiqlaliyyəti elan olunanda bu hadisədən bir gün əvvəl dağılmış Zaqafqaziya Seyminin 44 nəfər müsəlman nümayəndəsi Tiflisdə toplanır və özlərini Azərbaycanın Milli Şurası elan edirlər.",
-      "timestamp": 1523357059,
+      "timestamp": 1523357059000,
+      "language": "az",
       "cpsType": "STY",
       "indexImage": {
         "id": "100780968",
@@ -119,7 +123,8 @@
         "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-37688691"
       },
       "summary": "25 il əvvəl bu gün Azərbaycan çökməkdə olan Sovet İttifaqından özünün müstəqillyini bəyan edib. Bu, Azərbaycan Respublikasının ikinci doğuluşu idi.",
-      "timestamp": 1476780870,
+      "timestamp": 1476780870000,
+      "language": "az",
       "cpsType": "STY",
       "indexImage": {
         "id": "91964456",
@@ -146,8 +151,18 @@
         "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-37691096"
       },
       "summary": "Çərşənbə axşamı şəhər sakinləri BBC Azərbaycancanın \"Müstəqillik sizə nə verib?\" sualını cavablandırıb.",
-      "timestamp": 1476806574,
+      "timestamp": 1476806574000,
+      "language": "az",
       "cpsType": "MAP",
+      "media": {
+        "id": "37697331",
+        "subType": "primary",
+        "format": "video",
+        "externalId": "p04cfdk9",
+        "entityType": "Clip",
+        "caption": "Bakı sakinləri müstəqillik barədə danışır",
+        "type": "external_vpid"
+      },
       "indexImage": {
         "id": "91973882",
         "subType": "index",
@@ -159,6 +174,7 @@
         "copyrightHolder": "BBC",
         "type": "image"
       },
+      "mediaType": "Video",
       "id": "urn:bbc:ares::asset:azeri/azerbaijan-37691096",
       "type": "cps"
     },
@@ -172,7 +188,8 @@
         "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-43499221"
       },
       "summary": "Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edəcək.",
-      "timestamp": 1521736027,
+      "timestamp": 1521736027000,
+      "language": "az",
       "cpsType": "STY",
       "indexImage": {
         "id": "100522730",
@@ -199,7 +216,8 @@
         "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-44004471"
       },
       "summary": "Bir çox azərbaycanlı və gürcüstanlı siyasətçiləri anlayırdılar ki, onların içində olduğu həssas dövrdən salamat çıxmaq üçün iqtisadi, siyasi və hərbi müttəfiqlik vacibdir. Eyni zamanda hər iki respublika arasında bir sıra mübahisələr də mövcud idi.",
-      "timestamp": 1525432932,
+      "timestamp": 1525432932000,
+      "language": "az",
       "cpsType": "STY",
       "indexImage": {
         "id": "101168620",
@@ -225,7 +243,8 @@
         "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-43870815"
       },
       "summary": "İranın Xəzər sahilinə çıxan bölgələrində Azərbaycan Respublikasını böyük ticari imkanlar gözləyirdi. İran ixracatının 60-70 faizinin istehsalı ənənəvi olaraq məhz həmin regionun payına düşüb. Azərbaycan və xüsusilə Bakı-Batumi dəhlizi isə Avropa bazarına aparan təbii çıxış idi. Bəs milli hökümət iqtisadi imkanları gəlirli xarici ticarətə çevirə bildimi?",
-      "timestamp": 1524969295,
+      "timestamp": 1524969295000,
+      "language": "az",
       "cpsType": "STY",
       "indexImage": {
         "id": "101070770",

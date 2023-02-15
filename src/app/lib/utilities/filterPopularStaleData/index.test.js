@@ -7,6 +7,7 @@ import filterPopularStaleData from '.';
 
 describe('filterPopularStaleData', () => {
   it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 60min', () => {
+    process.env.SIMORGH_APP_ENV = 'live';
     const staleData = {
       lastRecordTimeStamp: '2019-11-06T16:28:00Z',
       generated: '2019-11-06T17:05:17.981Z',
@@ -29,6 +30,7 @@ describe('filterPopularStaleData', () => {
   });
 
   it('should log MOST_WATCHED_STALE_DATA when lastRecordTimestamp is greater than 60min', () => {
+    process.env.SIMORGH_APP_ENV = 'live';
     const staleData = {
       lastRecordTimeStamp: '2019-11-06T16:28:00Z',
       generated: '2019-11-06T17:05:17.981Z',

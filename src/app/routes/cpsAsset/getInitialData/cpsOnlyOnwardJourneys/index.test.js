@@ -11,7 +11,7 @@ import fullAsset from './fixtures/pglSomeCpsOnwardJourneys/fullAsset.json';
 
 describe('cpsOnlyOnwardJourneys', () => {
   it("should remove promos in 'see-alsos' group without type: cps", () => {
-    const result = cpsOnlyPromos(fullAsset);
+    const result = cpsOnlyPromos(fullAsset.data.article);
     const groups = path(['relatedContent', 'groups'], result);
     const actualSeeAlso = groups.find(({ type }) => {
       return type === 'see-alsos';
@@ -20,34 +20,34 @@ describe('cpsOnlyOnwardJourneys', () => {
   });
 
   it("should empty related content 'groups' if all 'see-alsos' promos are not cps content - PGL", () => {
-    const result = cpsOnlyPromos(pglNoCpsPromos);
+    const result = cpsOnlyPromos(pglNoCpsPromos.data.article);
     const groups = path(['relatedContent', 'groups'], result);
     expect(groups).toHaveLength(0);
   });
 
   it("should empty related content 'groups' if all 'see-alsos' promos are not cps content - STY", () => {
-    const result = cpsOnlyPromos(styNoCpsPromos);
+    const result = cpsOnlyPromos(styNoCpsPromos.data.article);
     const groups = path(['relatedContent', 'groups'], result);
     expect(groups).toHaveLength(0);
   });
 
   it("should empty related content 'groups' if groups are not of type 'see-alsos'", () => {
-    const result = cpsOnlyPromos(noSeeAlsoRelatedContent);
+    const result = cpsOnlyPromos(noSeeAlsoRelatedContent.data.article);
     const groups = path(['relatedContent', 'groups'], result);
     expect(groups).toHaveLength(0);
   });
 
   it("should leave 'see-alsos' group promos unchanged if type: cps, PGL page", () => {
-    const result = cpsOnlyPromos(pglAllCpsPromos);
-    expect(result).toEqual(pglAllCpsPromos);
+    const result = cpsOnlyPromos(pglAllCpsPromos.data.article);
+    expect(result).toEqual(pglAllCpsPromos.data.article);
   });
   it("should leave 'see-alsos' group promos unchanged if type: cps, MAP page", () => {
-    const result = cpsOnlyPromos(mapPageAllCpsPromos);
-    expect(result).toEqual(mapPageAllCpsPromos);
+    const result = cpsOnlyPromos(mapPageAllCpsPromos.data.article);
+    expect(result).toEqual(mapPageAllCpsPromos.data.article);
   });
 
   it('should leave payload unchanged if no related content groups', () => {
-    const result = cpsOnlyPromos(pglNoRelatedContent);
-    expect(result).toEqual(pglNoRelatedContent);
+    const result = cpsOnlyPromos(pglNoRelatedContent.data.article);
+    expect(result).toEqual(pglNoRelatedContent.data.article);
   });
 });

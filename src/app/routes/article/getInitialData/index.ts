@@ -57,11 +57,10 @@ export default async ({
 }: Props) => {
   try {
     const env = getEnvironment(pathname);
-    const isLocal = env === 'local';
+    const isLocal = !env || env === 'local';
 
     const agent = !isLocal ? await getAgent() : null;
     const id = getId(pageType)(pathname);
-
     if (!id) throw handleError('Article ID is invalid', 500);
 
     let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {

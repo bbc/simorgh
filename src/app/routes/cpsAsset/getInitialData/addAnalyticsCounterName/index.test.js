@@ -7,8 +7,8 @@ describe('addAnalyticsCounterName', () => {
     const expected = assocPath(
       ['metadata', 'analyticsLabels', 'counterName'],
       'hausa.multimedia.2012.07.120712_click.page',
-      legacyPageData,
+      legacyPageData.data.article,
     );
-    expect(transformer(legacyPageData)).toEqual(expected);
+    expect(transformer(legacyPageData.data.article)).toEqual(expected);
   });
 });
