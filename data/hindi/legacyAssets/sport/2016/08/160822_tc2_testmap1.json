@@ -1,158 +1,364 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/hindi/meta/dps/junk/2016/08/emp/160822_tc2_testmap1.emp.xml",
-        "id": "17698163",
-        "image": {
-          "altText": "",
-          "copyrightHolder": "",
-          "height": 360,
-          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
-          "id": "17698163",
-          "path": "/amz/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
-          "subType": "thumbnail",
-          "type": "image",
-          "width": 640
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:hindi/sport/2016/08/160822_tc2_testmap1",
+        "locators": {
+          "assetUri": "/hindi/sport/2016/08/160822_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:e2d17af6-687a-11e6-b84d-d6e07ecad303",
+          "assetId": "17698163",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/sport/2016/08/160822_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/e2d17af6-687a-11e6-b84d-d6e07ecad303"
         },
-        "live": false,
-        "playlist": [
+        "type": "MAP",
+        "createdBy": "hindi",
+        "language": "hi",
+        "lastUpdated": 1665414980121,
+        "firstPublished": 1471879748000,
+        "lastPublished": 1471879748000,
+        "timestamp": 1471879748000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17698163",
+          "contentId": "urn:bbc:topcat:curie:asset:e2d17af6-687a-11e6-b84d-d6e07ecad303"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/hindi",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
           {
-            "bitrate": "168000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_lo.mp4"
+            "id": "17698163",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17698163",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
+              "path": "/amz/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/hindi/meta/dps/junk/2016/08/emp/160822_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
           },
           {
-            "bitrate": "320000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_med.mp4"
-          },
-          {
-            "bitrate": "904000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_hi.mp4"
+            "text": "अमरीकी तैराकों के रियो में लूटपाट की झूठी कहानी पर अमरीकी ओलंपिक एसोसिएशन ने ब्राज़ील से मांगी माफी.",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
-        ],
-        "subType": "primary",
-        "type": "legacyMedia"
+        ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "अमरीकी तैराकों के रियो में लूटपाट की झूठी कहानी पर अमरीकी ओलंपिक एसोसिएशन ने ब्राज़ील से मांगी माफी.",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "रियो में अमरीकी तैराकों ने बोला झूठ",
+          "headline": "रियो में अमरीकी तैराकों ने बोला झूठ"
+        },
+        "locators": {
+          "assetUri": "/hindi/sport/2016/08/160822_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:e2d17af6-687a-11e6-b84d-d6e07ecad303",
+          "assetId": "17698163",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/sport/2016/08/160822_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/e2d17af6-687a-11e6-b84d-d6e07ecad303"
+        },
+        "summary": "अमरीकी तैराकों के रियो में लूटपाट की झूठी कहानी पर अमरीकी ओलंपिक एसोसिएशन ने ब्राज़ील से मांगी माफी.",
+        "timestamp": 1471879748000,
+        "language": "hi",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+          "taggings": []
+        },
+        "media": {
+          "id": "17698163",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17698163",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
+            "path": "/amz/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/hindi/meta/dps/junk/2016/08/emp/160822_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e212",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_144x81_getty_nocredit.jpg",
+          "path": "/amz/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_144x81_getty_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "Getty",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:hindi/sport/2016/08/160822_tc2_testmap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "खेल",
+          "uri": "/hindi/sport",
+          "urlIdentifier": "/hindi/sport",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCHindi.com",
+          "uri": "/hindi",
+          "urlIdentifier": "/hindi",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17698163", "cps_asset_type": "map" },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "hindi",
-    "firstPublished": 1471879748000,
-    "id": "urn:bbc:ares::asset:hindi/sport/2016/08/160822_tc2_testmap1",
-    "includeComments": false,
-    "language": "hi",
-    "lastPublished": 1471879748000,
-    "lastUpdated": 1585590680693,
-    "locators": {
-      "assetId": "17698163",
-      "assetUri": "/hindi/sport/2016/08/160822_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:hindi/sport/2016/08/160822_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/e2d17af6-687a-11e6-b84d-d6e07ecad303"
     },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1471879748000,
-    "type": "MAP",
-    "version": "v1.1.10"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "रियो में अमरीकी तैराकों ने बोला झूठ",
-      "shortHeadline": "रियो में अमरीकी तैराकों ने बोला झूठ"
-    },
-    "id": "urn:bbc:ares::asset:hindi/sport/2016/08/160822_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "Getty",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_144x81_getty_nocredit.jpg",
-      "id": "d5e212",
-      "path": "/amz/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_144x81_getty_nocredit.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "hi",
-    "locators": {
-      "assetId": "17698163",
-      "assetUri": "/hindi/sport/2016/08/160822_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:hindi/sport/2016/08/160822_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/e2d17af6-687a-11e6-b84d-d6e07ecad303"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/hindi/meta/dps/junk/2016/08/emp/160822_tc2_testmap1.emp.xml",
-      "id": "17698163",
-      "image": {
-        "altText": "",
-        "copyrightHolder": "",
-        "height": 360,
-        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
-        "id": "17698163",
-        "path": "/amz/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
-        "subType": "thumbnail",
-        "type": "image",
-        "width": 640
-      },
-      "live": false,
-      "playlist": [
-        {
-          "bitrate": "168000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_lo.mp4"
-        },
-        {
-          "bitrate": "320000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_med.mp4"
-        },
-        {
-          "bitrate": "904000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_hi.mp4"
-        }
-      ],
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": { "taggings": [] },
-    "summary": "अमरीकी तैराकों के रियो में लूटपाट की झूठी कहानी पर अमरीकी ओलंपिक एसोसिएशन ने ब्राज़ील से मांगी माफी.",
-    "timestamp": 1471879748000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "खेल",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/hindi/sport"
-    },
-    "site": {
-      "name": "BBCHindi.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/hindi"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:09:57.873Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "9aac19ce-3db4-2a4e-af49-16b7063c6187",
+            "rank": 1,
+            "count": 9007,
+            "urn": "urn:bbc:curie:asset:9aac19ce-3db4-2a4e-af49-16b7063c6187",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Obama pledge on South China Sea access",
+                "headline": "Obama: 'We will stand with partners in South China Sea'"
+              },
+              "locators": {
+                "assetUri": "/sport/football/23048790",
+                "cpsUrn": "urn:bbc:content:assetUri:sport/football/23048790",
+                "curie": "http://www.bbc.co.uk/asset/9aac19ce-3db4-2a4e-af49-16b7063c6187",
+                "assetId": "23048790"
+              },
+              "summary": "President Barack Obama says the US 'will stand with its partners' in the South China Sea.",
+              "timestamp": 1464778996000,
+              "language": "en-gb",
+              "media": {
+                "id": "23048791",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p013gztc",
+                "entityType": "Clip",
+                "caption": "Obama: 'We will stand with partners in South China Sea'",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63487097",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/134E6/test/_63487097_p013h167.jpg",
+                "path": "/cpsdevpb/134E6/test/_63487097_p013h167.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #4",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:sport/football/23048790",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7a506544-b60c-5b4f-9055-672a0e4b1279",
+            "rank": 2,
+            "count": 6336,
+            "urn": "urn:bbc:curie:asset:7a506544-b60c-5b4f-9055-672a0e4b1279",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "पदकों की दौड़ में भारत इतना पिछ़ड़ा क्यों?",
+                "headline": "पदकों की दौड़ में भारत इतना पिछ़ड़ा क्यों?"
+              },
+              "locators": {
+                "assetUri": "/hindi/23070447",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:7a506544-b60c-5b4f-9055-672a0e4b1279",
+                "assetId": "23070447",
+                "cpsUrn": "urn:bbc:content:assetUri:hindi/23070447",
+                "curie": "http://www.bbc.co.uk/asset/7a506544-b60c-5b4f-9055-672a0e4b1279"
+              },
+              "summary": "शनिवार 20 अगस्त का बीबीसी इंडिया बोल कार्यक्रम सुनिए मोहन लाल शर्मा से",
+              "timestamp": 1472550241000,
+              "language": "hi",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+                "taggings": []
+              },
+              "media": {
+                "id": "23070448",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p015chcl",
+                "entityType": "Clip",
+                "caption": "पदकों की दौड़ में भारत इतना पिछ़ड़ा क्यों?",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63505599",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/184DE/test/_63505599_p015chdn.jpg",
+                "path": "/cpsdevpb/184DE/test/_63505599_p015chdn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "भारत",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hindi/23070447",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e97d7208-292f-184e-90b7-f58106f27db5",
+            "rank": 3,
+            "count": 2291,
+            "urn": "urn:bbc:curie:asset:e97d7208-292f-184e-90b7-f58106f27db5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "जानवरों",
+                "headline": "सार"
+              },
+              "locators": {
+                "assetUri": "/hindi/23201477",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e97d7208-292f-184e-90b7-f58106f27db5",
+                "assetId": "23201477",
+                "cpsUrn": "urn:bbc:content:assetUri:hindi/23201477",
+                "curie": "http://www.bbc.co.uk/asset/e97d7208-292f-184e-90b7-f58106f27db5"
+              },
+              "summary": "सार",
+              "timestamp": 1526917251000,
+              "language": "hi",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01hcz73",
+                "subType": "clip",
+                "format": "video",
+                "title": "à¤œà¤¾à¤¨à¤µà¤°à¥‹à¤‚",
+                "synopses": {
+                  "short": "à¤¸à¤¾à¤°"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hczc4.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "शीर्षक",
+                "versions": [
+                  {
+                    "versionId": "p01hcz75",
+                    "types": ["Original"],
+                    "duration": 119,
+                    "durationISO8601": "PT1M59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1524139096000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63679742",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/60DD/test/_63679742_p01hczc4.jpg",
+                "path": "/cpsdevpb/60DD/test/_63679742_p01hczc4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "alt tag",
+                "caption": "image caption",
+                "copyrightHolder": "Empics",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hindi/23201477",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

@@ -1,107 +1,366 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/nepali/meta/dps/junk/2016/07/emp/160725_tc2_testmap1.emp.xml",
-        "id": "17697967",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:nepali/multimedia/2016/07/160725_tc2_testmap1",
+        "locators": {
+          "assetUri": "/nepali/multimedia/2016/07/160725_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:1f27213a-527e-11e6-8b75-81730d6c36a9",
+          "assetId": "17697967",
+          "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2016/07/160725_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/1f27213a-527e-11e6-8b75-81730d6c36a9"
+        },
+        "type": "MAP",
+        "createdBy": "nepali",
+        "language": "ne",
+        "lastUpdated": 1665420082854,
+        "firstPublished": 1469461574000,
+        "lastPublished": 1469461574000,
+        "timestamp": 1469461574000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17697967",
+          "contentId": "urn:bbc:topcat:curie:asset:1f27213a-527e-11e6-8b75-81730d6c36a9"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/nepali",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "पश्चिम लण्डनको एक अस्पतालमा बिरामीहरुलाई तंग्रन सघाउन बलिउड नृत्यको प्रयोग भैरहेकोबारे बीबीसीका राहुल जोगलेकरको रिपोर्ट (भिडियो) ।",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17697967",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17697967",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/nepali/meta/dps/junk/2016/07/emp/160725_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/nepali/dps/junk/2016/07/hd_cps_sot_1800_24_2_105_5256622_toprores_160725_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/nepali/dps/junk/2016/07/hd_cps_sot_1800_24_2_105_5256622_toprores_160725_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/nepali/dps/junk/2016/07/hd_cps_sot_1800_24_2_105_5256622_toprores_160725_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "पश्चिम लण्डनको एक अस्पतालमा बिरामीहरुलाई तंग्रन सघाउन बलिउड नृत्यको प्रयोग भैरहेकोबारे बीबीसीका राहुल जोगलेकरको रिपोर्ट (भिडियो) ।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "बलिउड नृत्यद्वारा उपचार",
+          "headline": "बलिउड नृत्यद्वारा उपचार"
+        },
+        "locators": {
+          "assetUri": "/nepali/multimedia/2016/07/160725_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:1f27213a-527e-11e6-8b75-81730d6c36a9",
+          "assetId": "17697967",
+          "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2016/07/160725_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/1f27213a-527e-11e6-8b75-81730d6c36a9"
+        },
+        "summary": "पश्चिम लण्डनको एक अस्पतालमा बिरामीहरुलाई तंग्रन सघाउन बलिउड नृत्यको प्रयोग भैरहेकोबारे बीबीसीका राहुल जोगलेकरको रिपोर्ट (भिडियो) ।",
+        "timestamp": 1469461574000,
+        "language": "ne",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+          "taggings": []
+        },
+        "media": {
+          "id": "17697967",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17697967",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/nepali/meta/dps/junk/2016/07/emp/160725_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/nepali/dps/junk/2016/07/hd_cps_sot_1800_24_2_105_5256622_toprores_160725_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/nepali/dps/junk/2016/07/hd_cps_sot_1800_24_2_105_5256622_toprores_160725_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/nepali/dps/junk/2016/07/hd_cps_sot_1800_24_2_105_5256622_toprores_160725_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e208",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145826_duarte_3_144x81_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145826_duarte_3_144x81_bbc_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:nepali/multimedia/2016/07/160725_tc2_testmap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Multimedia",
+          "uri": "/nepali/multimedia",
+          "urlIdentifier": "/nepali/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCNepali.com",
+          "uri": "/nepali",
+          "urlIdentifier": "/nepali",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "cps_asset_id": "17697967",
-      "cps_asset_type": "map"
     },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "nepali",
-    "firstPublished": 1469461574000,
-    "id": "urn:bbc:ares::asset:nepali/multimedia/2016/07/160725_tc2_testmap1",
-    "includeComments": false,
-    "language": "ne",
-    "lastPublished": 1469461574000,
-    "lastUpdated": 1583244348190,
-    "locators": {
-      "assetId": "17697967",
-      "assetUri": "/nepali/multimedia/2016/07/160725_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2016/07/160725_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/1f27213a-527e-11e6-8b75-81730d6c36a9"
-    },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1469461574000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "बलिउड नृत्यद्वारा उपचार",
-      "shortHeadline": "बलिउड नृत्यद्वारा उपचार"
-    },
-    "id": "urn:bbc:ares::asset:nepali/multimedia/2016/07/160725_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145826_duarte_3_144x81_bbc_nocredit.jpg",
-      "id": "d5e208",
-      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145826_duarte_3_144x81_bbc_nocredit.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "ne",
-    "locators": {
-      "assetId": "17697967",
-      "assetUri": "/nepali/multimedia/2016/07/160725_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2016/07/160725_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/1f27213a-527e-11e6-8b75-81730d6c36a9"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/nepali/meta/dps/junk/2016/07/emp/160725_tc2_testmap1.emp.xml",
-      "id": "17697967",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "summary": "पश्चिम लण्डनको एक अस्पतालमा बिरामीहरुलाई तंग्रन सघाउन बलिउड नृत्यको प्रयोग भैरहेकोबारे बीबीसीका राहुल जोगलेकरको रिपोर्ट (भिडियो) ।",
-    "timestamp": 1469461574000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Multimedia",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/nepali/multimedia"
-    },
-    "site": {
-      "name": "BBCNepali.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/nepali"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:29:58.9Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "ebe1e99a-f217-2241-9532-d3d13935b5b8",
+            "rank": 1,
+            "count": 4227,
+            "urn": "urn:bbc:curie:asset:ebe1e99a-f217-2241-9532-d3d13935b5b8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "पछिल्लो प्रसारण audio",
+                "headline": "पछिल्लो प्रसारण २०१६"
+              },
+              "locators": {
+                "assetUri": "/nepali/media-23064562",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:ebe1e99a-f217-2241-9532-d3d13935b5b8",
+                "assetId": "23064562",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/media-23064562",
+                "curie": "http://www.bbc.co.uk/asset/ebe1e99a-f217-2241-9532-d3d13935b5b8"
+              },
+              "summary": "यो खण्डमा पछिल्लो प्रसारण सुन्न सकिन्छ भने तलको खण्डमा तपाईं गत एक हप्ताका कार्यक्रमहरू सुन्न सक्नुहुन्छ।",
+              "timestamp": 1470151129000,
+              "language": "ne",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "taggings": []
+              },
+              "media": {
+                "id": "23064787",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p014xpxg",
+                "entityType": "Clip",
+                "caption": "पछिल्लो प्रसारण २०१६",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63500897",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/137B8/test/_63500897_p012zl0f.jpg",
+                "path": "/cpsdevpb/137B8/test/_63500897_p012zl0f.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "विष्फोटपछि निकैबेर गोली हानाहान भएको थियो।",
+                "caption": "विष्फोटपछि निकैबेर गोली हानाहान भएको थियो।",
+                "copyrightHolder": "BBC Sport",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/media-23064562",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ee1178cc-b55d-9045-9e7d-28683d2234a2",
+            "rank": 2,
+            "count": 3776,
+            "urn": "urn:bbc:curie:asset:ee1178cc-b55d-9045-9e7d-28683d2234a2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "A meeting to remember",
+                "headline": "Queen Elizabeth meets the delegates of European Union"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-23184411",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:ee1178cc-b55d-9045-9e7d-28683d2234a2",
+                "assetId": "23184411",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-23184411",
+                "curie": "http://www.bbc.co.uk/asset/ee1178cc-b55d-9045-9e7d-28683d2234a2"
+              },
+              "summary": "Queen Elizabeth meets the delegates of European Union. Queen Elizabeth meets the delegates of European Union. Queen Elizabeth meets the delegates of European Union.",
+              "timestamp": 1517306495000,
+              "language": "ne",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01g5bg7",
+                "subType": "clip",
+                "format": "video",
+                "title": "A meeting to remember",
+                "synopses": {
+                  "short": "Queen Elizabeth meets the delegates of European Union",
+                  "medium": "Queen Elizabeth meets the delegates of European Union. Queen Elizabeth meets the delegates of European Union. Queen Elizabeth meets the delegates of European Union."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01g5bry.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "A meeting to remember",
+                "versions": [
+                  {
+                    "versionId": "p01g5bg9",
+                    "types": ["Original"],
+                    "duration": 17,
+                    "durationISO8601": "PT17S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1517305602000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63653937",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/120CF/test/_63653937_p01g5bry.jpg",
+                "path": "/cpsdevpb/120CF/test/_63653937_p01g5bry.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "gd",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-23184411",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "560b9fa4-e513-cc45-9994-0d62c68f1ed5",
+            "rank": 3,
+            "count": 3660,
+            "urn": "urn:bbc:curie:asset:560b9fa4-e513-cc45-9994-0d62c68f1ed5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "रामप्रसादको ओलिम्पिक्स सम्झना",
+                "headline": "रामप्रसादको ओलिम्पिक्स सम्झना."
+              },
+              "locators": {
+                "assetUri": "/nepali/news-23062852",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:560b9fa4-e513-cc45-9994-0d62c68f1ed5",
+                "assetId": "23062852",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-23062852",
+                "curie": "http://www.bbc.co.uk/asset/560b9fa4-e513-cc45-9994-0d62c68f1ed5"
+              },
+              "summary": "पाँच दशकअघिको ओलिम्पिक्समा सहभागिता जनाएका नेपाली बक्सर रामप्रसाद गुरुङले आफ्नो रोमाञ्चयुक्त सम्झना सम्हालेर राखेका छन्। Audio clip.",
+              "timestamp": 1469620015000,
+              "language": "ne",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "taggings": []
+              },
+              "media": {
+                "id": "23062853",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p014v0ww",
+                "entityType": "Clip",
+                "caption": "रामप्रसादको ओलिम्पिक्स सम्झना",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63497615",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C9DF/test/_63497615_p014v12g.jpg",
+                "path": "/cpsdevpb/C9DF/test/_63497615_p014v12g.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "ओलिम्पिक्स २०१६",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-23062852",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

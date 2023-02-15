@@ -1,158 +1,402 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/uzbek/meta/dps/junk/2016/06/emp/160610_tc2_testmap1.emp.xml",
-        "id": "17697486",
-        "image": {
-          "altText": "",
-          "copyrightHolder": "",
-          "height": 360,
-          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-          "id": "17697486",
-          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-          "subType": "thumbnail",
-          "type": "image",
-          "width": 640
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:uzbek/multimedia/2016/06/160610_tc2_testmap1",
+        "locators": {
+          "assetUri": "/uzbek/multimedia/2016/06/160610_tc2_testmap1",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/multimedia/2016/06/160610_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/f0c20df6-2f22-11e6-b1ca-8fb8adeda546",
+          "assetId": "17697486"
         },
-        "live": false,
-        "playlist": [
+        "type": "MAP",
+        "createdBy": "uzbek",
+        "language": "uz-Cyrl",
+        "lastUpdated": 1654014698502,
+        "firstPublished": 1465573901000,
+        "lastPublished": 1465573901000,
+        "timestamp": 1465573901000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17697486",
+          "contentId": "urn:bbc:topcat:curie:asset:f0c20df6-2f22-11e6-b1ca-8fb8adeda546"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.4",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/uzbek",
+        "mediaType": "video"
+      },
+      "content": {
+        "blocks": [
           {
-            "bitrate": "168000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_lo.mp4"
+            "id": "17697486",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17697486",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/uzbek/meta/dps/junk/2016/06/emp/160610_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
           },
           {
-            "bitrate": "320000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_med.mp4"
-          },
-          {
-            "bitrate": "904000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_hi.mp4"
+            "text": "Таиланддаги йўлбрасларга макон бўлган ибодатхона музлатгичидан 40 та йўлбрасбача қолдиқлари топилган.",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
-        ],
-        "subType": "primary",
-        "type": "legacyMedia"
+        ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "Таиланддаги йўлбрасларга макон бўлган ибодатхона музлатгичидан 40 та йўлбрасбача қолдиқлари топилган.",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Таиланддаги музлатгичда 40та йўлбарсбача",
+          "headline": "Таиланддаги музлатгичда 40та йўлбарсбача"
+        },
+        "locators": {
+          "assetUri": "/uzbek/multimedia/2016/06/160610_tc2_testmap1",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/multimedia/2016/06/160610_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/f0c20df6-2f22-11e6-b1ca-8fb8adeda546",
+          "assetId": "17697486"
+        },
+        "summary": "Таиланддаги йўлбрасларга макон бўлган ибодатхона музлатгичидан 40 та йўлбрасбача қолдиқлари топилган.",
+        "timestamp": 1465573901000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+          "taggings": []
+        },
+        "media": {
+          "id": "17697486",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17697486",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/uzbek/meta/dps/junk/2016/06/emp/160610_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e212",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "Getty",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:uzbek/multimedia/2016/06/160610_tc2_testmap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Multimedia",
+          "uri": "/uzbek/multimedia",
+          "urlIdentifier": "/uzbek/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCUzbek.com",
+          "uri": "/uzbek",
+          "urlIdentifier": "/uzbek",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17697486", "cps_asset_type": "map" },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "uzbek",
-    "firstPublished": 1465573901000,
-    "id": "urn:bbc:ares::asset:uzbek/multimedia/2016/06/160610_tc2_testmap1",
-    "includeComments": false,
-    "language": "uz-Cyrl",
-    "lastPublished": 1466442557000,
-    "lastUpdated": 1585065225970,
-    "locators": {
-      "assetId": "17697486",
-      "assetUri": "/uzbek/multimedia/2016/06/160610_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:uzbek/multimedia/2016/06/160610_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/f0c20df6-2f22-11e6-b1ca-8fb8adeda546"
     },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1465573901000,
-    "type": "MAP",
-    "version": "v1.1.8"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "Таиланддаги музлатгичда 40та йўлбарсбача",
-      "shortHeadline": "Таиланддаги музлатгичда 40та йўлбарсбача"
-    },
-    "id": "urn:bbc:ares::asset:uzbek/multimedia/2016/06/160610_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "Getty",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-      "id": "d5e212",
-      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "uz-Cyrl",
-    "locators": {
-      "assetId": "17697486",
-      "assetUri": "/uzbek/multimedia/2016/06/160610_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:uzbek/multimedia/2016/06/160610_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/f0c20df6-2f22-11e6-b1ca-8fb8adeda546"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/uzbek/meta/dps/junk/2016/06/emp/160610_tc2_testmap1.emp.xml",
-      "id": "17697486",
-      "image": {
-        "altText": "",
-        "copyrightHolder": "",
-        "height": 360,
-        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-        "id": "17697486",
-        "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-        "subType": "thumbnail",
-        "type": "image",
-        "width": 640
-      },
-      "live": false,
-      "playlist": [
-        {
-          "bitrate": "168000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_lo.mp4"
-        },
-        {
-          "bitrate": "320000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_med.mp4"
-        },
-        {
-          "bitrate": "904000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_hi.mp4"
-        }
-      ],
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": { "taggings": [] },
-    "summary": "Таиланддаги йўлбрасларга макон бўлган ибодатхона музлатгичидан 40 та йўлбрасбача қолдиқлари топилган.",
-    "timestamp": 1465573901000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Multimedia",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/uzbek/multimedia"
-    },
-    "site": {
-      "name": "BBCUzbek.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/uzbek"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:27:58.245Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T03:53:00Z",
+        "totalRecords": 4,
+        "records": [
+          {
+            "id": "7ddd3054-31c8-0b46-af41-661f5dda0709",
+            "rank": 1,
+            "count": 6010,
+            "urn": "urn:bbc:curie:asset:7ddd3054-31c8-0b46-af41-661f5dda0709",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "test Uzbek Latin video",
+                "headline": "test Uzbek Latin video"
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-23051989",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-23051989",
+                "curie": "http://www.bbc.co.uk/asset/7ddd3054-31c8-0b46-af41-661f5dda0709",
+                "assetId": "23051989"
+              },
+              "summary": "test Uzbek Latin video",
+              "timestamp": 1465910821000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "23034846",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012vc7h",
+                "entityType": "Clip",
+                "caption": "brasil short Bebê é resgatado de escombros após terremoto no Jãpao",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63481008",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13892/test/_63481008_p012vchb.jpg",
+                "path": "/cpsdevpb/13892/test/_63481008_p012vchb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "test brasil video áéíóú âêîôû àèìòù",
+                "copyrightHolder": "BBC Brasília",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-23051989",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "031ecf7c-ced8-7e4f-9e75-ad22c8e6b54b",
+            "rank": 2,
+            "count": 5865,
+            "urn": "urn:bbc:curie:asset:031ecf7c-ced8-7e4f-9e75-ad22c8e6b54b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "BBCning 60 lahzalik videoyangiliklari",
+                "headline": "16 iyun kuni jahonda yuz bergan muhim voqealar sharhi Latin."
+              },
+              "locators": {
+                "assetUri": "/uzbek/lotin-23053619",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-23053619",
+                "curie": "http://www.bbc.co.uk/asset/031ecf7c-ced8-7e4f-9e75-ad22c8e6b54b",
+                "assetId": "23053619"
+              },
+              "summary": "Ha, bugun Angliyaga qarshi maydonga tushajak yulduzi Garet Beyl sharafiga Uelsning shimoliy Bala shahri ma‘muriyati xuddi shunga qaror qilibdi.",
+              "timestamp": 1466177546000,
+              "language": "uz-Latn",
+              "media": {
+                "id": "23053620",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0140vnz",
+                "entityType": "Clip",
+                "caption": "16 iyun kuni jahonda yuz bergan muhim voqealar sharhi Latin.",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63490936",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/F9A5/test/_63490936_p0140w5x.jpg",
+                "path": "/cpsdevpb/F9A5/test/_63490936_p0140w5x.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "BBCning 60 lahzalik videoyangiliklari",
+                "caption": "BBCning 60 lahzalik videoyangiliklari",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/lotin-23053619",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4",
+            "rank": 3,
+            "count": 5766,
+            "urn": "urn:bbc:curie:asset:d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O`zbekiston",
+                "headline": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O`zbekiston"
+              },
+              "locators": {
+                "assetUri": "/uzbek/world-23053613",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4",
+                "assetId": "23053613",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-23053613",
+                "curie": "http://www.bbc.co.uk/asset/d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4"
+              },
+              "summary": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O`zbekiston",
+              "timestamp": 1466593972000,
+              "language": "uz-Cyrl",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Uzbek",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01qjbpq",
+                "subType": "clip",
+                "format": "video",
+                "title": "koala",
+                "synopses": {
+                  "short": "koajaa",
+                  "long": "koala ijm aus",
+                  "medium": "australia"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "nnnnn",
+                "versions": [
+                  {
+                    "versionId": "p01qjbvb",
+                    "types": ["Editorial"],
+                    "duration": 15,
+                    "durationISO8601": "PT15S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1582890367000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63490864",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/B6D9/test/_63490864_p0140swc.jpg",
+                "path": "/cpsdevpb/B6D9/test/_63490864_p0140swc.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Америкада 2 яшар болани тимсоҳ тортиб кетди",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/world-23053613",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6cfd1bfe-3787-8143-a3cf-422f0739b070",
+            "rank": 4,
+            "count": 1549,
+            "urn": "urn:bbc:curie:asset:6cfd1bfe-3787-8143-a3cf-422f0739b070",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "test Uzbek Cyrillic video",
+                "headline": "test Uzbek Cyrillic video"
+              },
+              "locators": {
+                "assetUri": "/uzbek/uzbekistan-23051985",
+                "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-23051985",
+                "curie": "http://www.bbc.co.uk/asset/6cfd1bfe-3787-8143-a3cf-422f0739b070",
+                "assetId": "23051985"
+              },
+              "summary": "test Uzbek Cyrillic video",
+              "timestamp": 1465910632000,
+              "language": "uz-Cyrl",
+              "media": {
+                "id": "23034846",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012vc7h",
+                "entityType": "Clip",
+                "caption": "brasil short Bebê é resgatado de escombros após terremoto no Jãpao",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63481008",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13892/test/_63481008_p012vchb.jpg",
+                "path": "/cpsdevpb/13892/test/_63481008_p012vchb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "test brasil video áéíóú âêîôû àèìòù",
+                "copyrightHolder": "BBC Brasília",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23051985",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

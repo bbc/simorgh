@@ -1,233 +1,2619 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
-    "locators": {
-      "assetUri": "/vietnamese/multimedia/2015/04/150428_david_wheat_interview",
-      "cpsUrn": "urn:bbc:content:assetUri:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
-      "curie": "http://www.bbc.co.uk/asset/6adefc24-edc1-11e4-b0ab-3fa93db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "vietnamese",
-    "language": "vi",
-    "lastUpdated": 1552976060199,
-    "firstPublished": 1430237581,
-    "lastPublished": 1430607748,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": false,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "38491575" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "38491575",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2015/04/emp/150428_david_wheat_interview.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+        "locators": {
+          "assetUri": "/vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+          "curie": "http://www.bbc.co.uk/asset/6adefc24-edc1-11e4-b0ab-3fa93db9bd6e",
+          "assetId": "38491575"
+        },
+        "type": "MAP",
+        "createdBy": "vietnamese",
+        "language": "vi",
+        "lastUpdated": 1649895157810,
+        "firstPublished": 1430237581000,
+        "lastPublished": 1430237581000,
+        "timestamp": 1430237581000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": false,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "38491575",
+          "contentId": "urn:bbc:topcat:curie:asset:6adefc24-edc1-11e4-b0ab-3fa93db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 6,
+        "siteUri": "/vietnamese"
       },
-      {
-        "text": "Một Thiếu tá Hải quân Mỹ ngồi tù ở Hỏa Lò hơn bảy năm khi chiến đấu cơ bị trúng đạn kể lại cho BBC về những gì đã xảy ra.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "38491575",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "38491575",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/04/28/150428160747_david_wheat_640x360_bbcvietnamese.com_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2015/04/28/150428160747_david_wheat_640x360_bbcvietnamese.com_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2015/04/emp/150428_david_wheat_interview.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/04/news~fdavidwheat~f1659~f28~f4_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/04/news~fdavidwheat~f1659~f28~f4_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/04/news~fdavidwheat~f1659~f28~f4_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "Một Thiếu tá Hải quân Mỹ ngồi tù ở Hỏa Lò hơn bảy năm khi chiến đấu cơ bị trúng đạn kể lại cho BBC về những gì đã xảy ra.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Vào tháng 10 năm 1965, phi cơ của Thiếu tá Tá Hải quân David Wheat và phi công trưởng là Trung Tá Roderick Mayer điều khiển bị bắn hạ ở miền Bắc Việt Nam. Ông David Wheat bị bắt và đưa về nhà tù Hỏa Lò ở Hà Nội trong khi đồng đội tử nạn. Cuộc phỏng vấn dành cho Nguyễn Hoàng của BBC tiếng Việt thực hiện vào tháng 04/2015 ở California.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold><italic>BBC: Nhiệm vụ của ông được giao trong lần bay bị bắn hạ là gì?</italic></bold>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "David Wheat: Nhiệm vụ của lần không kích đó của chúng tôi là ném bom một cây cầu ở Thái Nguyên để chặn đường tiếp tế từ Trung Quốc sang. Khi phi cơ của chúng tôi bị trúng đạn thì vì được huấn luyện từ trước tôi thấy là cần phải bấm nút để bật thoát ra ngoài. Và khi xuống đất rồi thì tôi tháo dây dù ra và bò ngược lên đồi và trốn trong bụi cây. Tôi có thể nhìn thấy đồng đội của tôi vẫn còn dù gắn vào người và anh ta bị thương rất nặng. Tôi nghĩ rằng một hai ngày sau đó thì anh ta qua đời.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Lúc đó tôi bị thương ở đầu gối và không đi được. Khi dân quân phát hiện ra tôi thì họ lục soát xem trong người có gì hay không và dẫn đi. Có người nhổ nước bọt vào tôi. Có hai dân quân đỡ tôi để đi lên đồi và sau đó họ kiếm được một cái cáng và đưa tôi đi. Rồi từ làng này qua làng khác và rốt cùng là dùng xe quân sự chở tôi về Hỏa Lò hay còn gọi là ''Khách sạn Hilton'' vào sáng sớm.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic><bold>BBC:Việc hỏi cung được thực hiện như thế nào?</bold></italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Tôi được đưa vào một phòng giam khoảng 12 foot vuông (9 mét vuông) và trong phòng không có gì cả. Chỉ là nền gạch đỏ và tôi nằm xuống ngủ vì tôi mệt quá. Chẳng bao lâu sau thì họ hỏi cung tôi. Vào thời điểm đó là giai đoạn kể như đầu tiên của tù binh chiến tranh nên những gì tôi khai họ cũng không biết thực hư thế nào. Một ngày hỏi cung hai lần, một lần vào khoảng 10 giờ sáng và một lần vào khoảng 5 giờ chiều.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Và tôi bắt đầu nghĩ tới cách liên lạc với các tù binh ở các phòng giam khác như thế nào. Bữa ăn thì có cơm với bí ngô và thỉnh thoảng có chuối, nghiền ra ăn cùng với cơm.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic><bold>BBC: Ông trao đổi với tù binh khác trong nhà giam như thế nào?</bold></italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Trong khu nhà giam chúng tôi thì có khoảng 6-8 phòng giam và mỗi người bị giam riêng biệt. Chúng tôi đã được học cách gõ vào tường để liên lạc với nhau bằng mã riêng và chỉ cần dùng một bàn tay là có thể ra ký hiệu về chữ cái và số. Chúng tôi cũng thỉnh thoảng ho hoặc hắng giọng theo cách mã hóa các chữ cái để nói chuyện với nhau.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Chúng tôi cũng viết lên giấy đi vệ sinh để liên lạc với nhau hoặc khi bị thẩm vấn thì đôi khi bẻ đầu bút chì và gài mẩu chì đó vào quần áo để dùng sau này khi cần viết cho nhau. Và hộp thư của chúng tôi nằm trong nhà tắm, để ở chỗ không ai để ý cả. Nếu chúng tôi mà bị phát hiện là liên lạc với nhau trong tù thì chúng tôi bị phạt nặng.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic><bold>BBC:Trong những năm tháng ở tù thì ông thường nghĩ về điều gì nhất?</bold></italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Nghĩ nhiều nhất là ngày tự do. Cả ngày thì chẳng có việc gì làm nên cũng chỉ nghĩ ngợi là khi ra tù thì mình sẽ đi đâu, làm gì. Vì tôi độc thân khi đó nên tôi nghĩ về căn nhà mình xây sau này cho mình sẽ thế nào. Rèm cửa kiểu cách ra sao. Chủ đề này có thể giúp tôi nghĩ ngợi khoảng một tháng.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Rồi cũng rất chán và không thể ép mình nghĩ mãi về một chủ đề. Đôi khi thể nằm mơ ra cái gì đó khác như xe hơi chẳng hạn thì lại nghĩ về đi du lịch. Cứ như thế và rồi khi chán thì lại quay lại nghĩ về chủ đề cũ là xây nhà mà mình đã nghĩ vài tuần trước.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Đôi khi ngồi quan sát xem con nhện nó bắt ruồi thế nào. Và chán quá nữa thì ngồi giết một vài con kiến để rồi gây náo loạn cho cả đàn kiến đang di chuyển phải đổi hướng đi. Hoặc xem kiến mang thức ăn về tổ thế nào.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic><bold>BBC:Ông có thể kể lại ngày ông được trả tự do? Ông có được thông báo trước?</bold></italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Trước khi chúng tôi được thả thì chúng tôi được chuyển đi một nơi khác vì đó là vào mùa Giáng sinh 1972 khi đó có ném bom ở Hà Nội. Nhưng sau đó họ lại đưa chúng tôi trở lại 'Khách sạn Hilton'. Khi hiệp định Paris được ký kết vào năm 1973 thì một trong các điều khoản là phải thông báo cho tù binh chiến tranh là họ sẽ được thả. Và chúng tôi được thông báo là họ sẽ sớm thả chúng tôi nhưng không biết sớm là thế nào. Sau đó khoảng hai tuần thì chúng tôi được thả. Và đêm trước hôm thả chúng tôi thì họ tập trung tất cả vào một khu và phân phát quần áo dân sự, tất, giày...",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Rồi sáng hôm đó họ đưa chúng tôi ra sân bay bằng xe buýt. Lúc đó chúng tôi cũng chưa vui vì vẫn còn nằm trong sự kiểm soát của họ. Sau đó khi ra sân bay rồi thì chúng tôi được trao cho quân nhân Mỹ để lên phi cơ. Chỉ khi máy bay ra đường băng và bắt đầu cất cánh thì tôi mới thấy thở phào là sau 7 năm rưỡi thì cuối cùng cảm thấy giây phút đang trở về quê hương mình.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic><bold>BBC: 7 năm 4 tháng tù có ảnh hưởng gì tới thể lực và tâm trí của ông?</bold></italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Trong suốt thời gian ở tù thì tôi không có vấn đề gì về thần kinh. Về thể lực cũng không bị ảnh hưởng đáng kể gì. Nhưng tôi bị áp xe răng vào năm cuối ở tù nên một bên mặt tôi bị sưng vù nhưng sau đó đỡ hơn. Và Hải quân Mỹ có chương trình khám, điều trị hay trợ giúp tù binh chiến tranh về tâm lý và thể lực và vẫn còn áp dụng cho tới tận bây giờ. Cuộc chiến Việt Nam có thể xem là có dài ngày đối với tù binh chiến tranh so với các cuộc chiến khác như Triều Tiên.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic><bold>BBC: Ông trở lại thăm Hỏa Lò vào năm 2013, ông thấy gì ở đó và ông đã đi tới những đâu ở Việt Nam?</bold></italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Tôi và vợ tôi đi cùng với một cựu thủy quân lục chiến cùng vợ ông và một vài người bạn người Mỹ gốc Việt trở về Việt Nam lần đó. Khi máy bay hạ cánh ở sân bay Nội Bài thì tôi có cảm giác khó tả vì đây vẫn là một nước Cộng sản và chẳng biết điều gì sẽ xảy ra ở một nước Cộng sản cả.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Chúng tôi đi taxi khá dễ chịu về khách sạn ở Hà Nội và chúng tôi ở một khách sạn rất đẹp. Sau đó thì chúng tôi bàn tới chuyện là phải quay lại “Khách sạn Hilton” và tôi đi qua cổng chính nhà tù, cái cổng mà tôi đã ra rồi lại vào ít nhất là bốn lần. Tôi rẽ phải và đi vào chính nơi tôi từng bị giam.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Tất nhiên là phòng giam có thay đổi so với trước đây bởi người ta mở rộng ra thành phòng lớn hơn (sau hiệp định Paris 1973) nhưng tôi vẫn nhớ như in chỗ mà tôi hay đứng, hay ngồi. Rồi chúng tôi đi sang khu trưng bày hiện vật và một phòng giam mà người ta tái hiện lại. Trong đó có một cái giường đơn cho một người nằm. Nhưng thời gian chúng tôi bị giam ở đó thì không có giường, tức là tôi ngủ trên nền bê tông. Rồi có một cậu hướng dẫn cho du khách thăm quan kể về những gì đã xảy ra ở đây. Tôi bảo cậu ấy rằng “Này cậu, tôi đã từng ở đây và tôi biết cái gì là sự thật, cái gì không&quot;. Đó là lần ghé thăm thú vị và tôi vui là vợ tôi biết được nơi tôi từng bị giam tại đây.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic><bold>BBC: Việt Nam và Hoa Kỳ đang cải thiện quan hệ trong đó có hợp tác quân sự. Hà Nội muốn Washington bỏ lệnh cấm bán vũ khí sát thương, ông nghĩ gì về đề nghị này?</bold></italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Tôi đã từng nghe nói về việc này và tôi thực sự không có bình luận gì về chủ đề này. Nhưng tôi muốn nói tiếp rằng chuyến thăm của chúng tôi tới nhiều nơi ở Việt Nam, từ Hà Nội tới Huế, Đà Nẵng, rồi một số nơi ở miền Nam, và Sài Gòn thì mọi thứ thật tuyệt.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Mọi người đều chăm chỉ làm việc và bận rộn kiếm sống. Có những tour du lịch cho người ít tiền và người giàu có hơn. Đối với chúng tôi đó là chuyến đi thật tuyệt vời.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "<italic>Thiếu tá Hải quân David Wheat là bạn cùng tù với Thượng Nghị sỹ John McCain, người cũng bị giam tại Hỏa Lò và ra tù sau ông Wheat một tháng. Ông David Wheat sinh ngày 16 tháng 12, năm 1939 tại thành phố Duluth, tiểu bang Minnesota. Tốt nghiệp Đại học Minnesota năm 1963, sau đó ghi danh vào Trường Sỹ quan Phi công Hải quân Hoa Kỳ.</italic>",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "Vào tháng 10 năm 1965, phi cơ của Thiếu tá Tá Hải quân David Wheat và phi công trưởng là Trung Tá Roderick Mayer điều khiển bị bắn hạ ở miền Bắc Việt Nam. Ông David Wheat bị bắt và đưa về nhà tù Hỏa Lò ở Hà Nội trong khi đồng đội tử nạn. Cuộc phỏng vấn dành cho Nguyễn Hoàng của BBC tiếng Việt thực hiện vào tháng 04/2015 ở California.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Phi công Mỹ  ở Hỏa Lò 'mong ngày tự do'",
+          "headline": "Phi công Mỹ  ở Hỏa Lò 'mong ngày tự do'"
+        },
+        "locators": {
+          "assetUri": "/vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+          "curie": "http://www.bbc.co.uk/asset/6adefc24-edc1-11e4-b0ab-3fa93db9bd6e",
+          "assetId": "38491575"
+        },
+        "summary": "Một Thiếu tá Hải quân Mỹ ngồi tù ở Hỏa Lò hơn bảy năm nói điều nghĩ đến nhiều nhất là 'ngày tự do'.",
+        "timestamp": 1430237581000,
+        "language": "vi",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+          "taggings": []
+        },
+        "media": {
+          "id": "38491575",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "38491575",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/04/28/150428160747_david_wheat_640x360_bbcvietnamese.com_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2015/04/28/150428160747_david_wheat_640x360_bbcvietnamese.com_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2015/04/emp/150428_david_wheat_interview.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/04/news~fdavidwheat~f1659~f28~f4_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/04/news~fdavidwheat~f1659~f28~f4_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/04/news~fdavidwheat~f1659~f28~f4_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e246",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/04/28/150428160747_david_wheat_640x360_bbcvietnamese.com_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2015/04/28/150428160747_david_wheat_640x360_bbcvietnamese.com_nocredit.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "",
+          "copyrightHolder": "bbcvietnamese.com",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+        "type": "cps"
       },
-      {
-        "text": "<bold><italic>BBC: Nhiệm vụ của ông được giao trong lần bay bị bắn hạ là gì?</italic></bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "David Wheat: Nhiệm vụ của lần không kích đó của chúng tôi là ném bom một cây cầu ở Thái Nguyên để chặn đường tiếp tế từ Trung Quốc sang. Khi phi cơ của chúng tôi bị trúng đạn thì vì được huấn luyện từ trước tôi thấy là cần phải bấm nút để bật thoát ra ngoài. Và khi xuống đất rồi thì tôi tháo dây dù ra và bò ngược lên đồi và trốn trong bụi cây. Tôi có thể nhìn thấy đồng đội của tôi vẫn còn dù gắn vào người và anh ta bị thương rất nặng. Tôi nghĩ rằng một hai ngày sau đó thì anh ta qua đời.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Lúc đó tôi bị thương ở đầu gối và không đi được. Khi dân quân phát hiện ra tôi thì họ lục soát xem trong người có gì hay không và dẫn đi. Có người nhổ nước bọt vào tôi. Có hai dân quân đỡ tôi để đi lên đồi và sau đó họ kiếm được một cái cáng và đưa tôi đi. Rồi từ làng này qua làng khác và rốt cùng là dùng xe quân sự chở tôi về Hỏa Lò hay còn gọi là ''Khách sạn Hilton'' vào sáng sớm.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<italic><bold>BBC:Việc hỏi cung được thực hiện như thế nào?</bold></italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Tôi được đưa vào một phòng giam khoảng 12 foot vuông (9 mét vuông) và trong phòng không có gì cả. Chỉ là nền gạch đỏ và tôi nằm xuống ngủ vì tôi mệt quá. Chẳng bao lâu sau thì họ hỏi cung tôi. Vào thời điểm đó là giai đoạn kể như đầu tiên của tù binh chiến tranh nên những gì tôi khai họ cũng không biết thực hư thế nào. Một ngày hỏi cung hai lần, một lần vào khoảng 10 giờ sáng và một lần vào khoảng 5 giờ chiều.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Và tôi bắt đầu nghĩ tới cách liên lạc với các tù binh ở các phòng giam khác như thế nào. Bữa ăn thì có cơm với bí ngô và thỉnh thoảng có chuối, nghiền ra ăn cùng với cơm.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<italic><bold>BBC: Ông trao đổi với tù binh khác trong nhà giam như thế nào?</bold></italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Trong khu nhà giam chúng tôi thì có khoảng 6-8 phòng giam và mỗi người bị giam riêng biệt. Chúng tôi đã được học cách gõ vào tường để liên lạc với nhau bằng mã riêng và chỉ cần dùng một bàn tay là có thể ra ký hiệu về chữ cái và số. Chúng tôi cũng thỉnh thoảng ho hoặc hắng giọng theo cách mã hóa các chữ cái để nói chuyện với nhau.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Chúng tôi cũng viết lên giấy đi vệ sinh để liên lạc với nhau hoặc khi bị thẩm vấn thì đôi khi bẻ đầu bút chì và gài mẩu chì đó vào quần áo để dùng sau này khi cần viết cho nhau. Và hộp thư của chúng tôi nằm trong nhà tắm, để ở chỗ không ai để ý cả. Nếu chúng tôi mà bị phát hiện là liên lạc với nhau trong tù thì chúng tôi bị phạt nặng.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<italic><bold>BBC:Trong những năm tháng ở tù thì ông thường nghĩ về điều gì nhất?</bold></italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Nghĩ nhiều nhất là ngày tự do. Cả ngày thì chẳng có việc gì làm nên cũng chỉ nghĩ ngợi là khi ra tù thì mình sẽ đi đâu, làm gì. Vì tôi độc thân khi đó nên tôi nghĩ về căn nhà mình xây sau này cho mình sẽ thế nào. Rèm cửa kiểu cách ra sao. Chủ đề này có thể giúp tôi nghĩ ngợi khoảng một tháng.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Rồi cũng rất chán và không thể ép mình nghĩ mãi về một chủ đề. Đôi khi thể nằm mơ ra cái gì đó khác như xe hơi chẳng hạn thì lại nghĩ về đi du lịch. Cứ như thế và rồi khi chán thì lại quay lại nghĩ về chủ đề cũ là xây nhà mà mình đã nghĩ vài tuần trước.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Đôi khi ngồi quan sát xem con nhện nó bắt ruồi thế nào. Và chán quá nữa thì ngồi giết một vài con kiến để rồi gây náo loạn cho cả đàn kiến đang di chuyển phải đổi hướng đi. Hoặc xem kiến mang thức ăn về tổ thế nào.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<italic><bold>BBC:Ông có thể kể lại ngày ông được trả tự do? Ông có được thông báo trước?</bold></italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Trước khi chúng tôi được thả thì chúng tôi được chuyển đi một nơi khác vì đó là vào mùa Giáng sinh 1972 khi đó có ném bom ở Hà Nội. Nhưng sau đó họ lại đưa chúng tôi trở lại 'Khách sạn Hilton'. Khi hiệp định Paris được ký kết vào năm 1973 thì một trong các điều khoản là phải thông báo cho tù binh chiến tranh là họ sẽ được thả. Và chúng tôi được thông báo là họ sẽ sớm thả chúng tôi nhưng không biết sớm là thế nào. Sau đó khoảng hai tuần thì chúng tôi được thả. Và đêm trước hôm thả chúng tôi thì họ tập trung tất cả vào một khu và phân phát quần áo dân sự, tất, giày...",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Rồi sáng hôm đó họ đưa chúng tôi ra sân bay bằng xe buýt. Lúc đó chúng tôi cũng chưa vui vì vẫn còn nằm trong sự kiểm soát của họ. Sau đó khi ra sân bay rồi thì chúng tôi được trao cho quân nhân Mỹ để lên phi cơ. Chỉ khi máy bay ra đường băng và bắt đầu cất cánh thì tôi mới thấy thở phào là sau 7 năm rưỡi thì cuối cùng cảm thấy giây phút đang trở về quê hương mình.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<italic><bold>BBC: 7 năm 4 tháng tù có ảnh hưởng gì tới thể lực và tâm trí của ông?</bold></italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Trong suốt thời gian ở tù thì tôi không có vấn đề gì về thần kinh. Về thể lực cũng không bị ảnh hưởng đáng kể gì. Nhưng tôi bị áp xe răng vào năm cuối ở tù nên một bên mặt tôi bị sưng vù nhưng sau đó đỡ hơn. Và Hải quân Mỹ có chương trình khám, điều trị hay trợ giúp tù binh chiến tranh về tâm lý và thể lực và vẫn còn áp dụng cho tới tận bây giờ. Cuộc chiến Việt Nam có thể xem là có dài ngày đối với tù binh chiến tranh so với các cuộc chiến khác như Triều Tiên.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<italic><bold>BBC: Ông trở lại thăm Hỏa Lò vào năm 2013, ông thấy gì ở đó và ông đã đi tới những đâu ở Việt Nam?</bold></italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Tôi và vợ tôi đi cùng với một cựu thủy quân lục chiến cùng vợ ông và một vài người bạn người Mỹ gốc Việt trở về Việt Nam lần đó. Khi máy bay hạ cánh ở sân bay Nội Bài thì tôi có cảm giác khó tả vì đây vẫn là một nước Cộng sản và chẳng biết điều gì sẽ xảy ra ở một nước Cộng sản cả.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Chúng tôi đi taxi khá dễ chịu về khách sạn ở Hà Nội và chúng tôi ở một khách sạn rất đẹp. Sau đó thì chúng tôi bàn tới chuyện là phải quay lại “Khách sạn Hilton” và tôi đi qua cổng chính nhà tù, cái cổng mà tôi đã ra rồi lại vào ít nhất là bốn lần. Tôi rẽ phải và đi vào chính nơi tôi từng bị giam.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Tất nhiên là phòng giam có thay đổi so với trước đây bởi người ta mở rộng ra thành phòng lớn hơn (sau hiệp định Paris 1973) nhưng tôi vẫn nhớ như in chỗ mà tôi hay đứng, hay ngồi. Rồi chúng tôi đi sang khu trưng bày hiện vật và một phòng giam mà người ta tái hiện lại. Trong đó có một cái giường đơn cho một người nằm. Nhưng thời gian chúng tôi bị giam ở đó thì không có giường, tức là tôi ngủ trên nền bê tông. Rồi có một cậu hướng dẫn cho du khách thăm quan kể về những gì đã xảy ra ở đây. Tôi bảo cậu ấy rằng “Này cậu, tôi đã từng ở đây và tôi biết cái gì là sự thật, cái gì không&quot;. Đó là lần ghé thăm thú vị và tôi vui là vợ tôi biết được nơi tôi từng bị giam tại đây.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<italic><bold>BBC: Việt Nam và Hoa Kỳ đang cải thiện quan hệ trong đó có hợp tác quân sự. Hà Nội muốn Washington bỏ lệnh cấm bán vũ khí sát thương, ông nghĩ gì về đề nghị này?</bold></italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Tôi đã từng nghe nói về việc này và tôi thực sự không có bình luận gì về chủ đề này. Nhưng tôi muốn nói tiếp rằng chuyến thăm của chúng tôi tới nhiều nơi ở Việt Nam, từ Hà Nội tới Huế, Đà Nẵng, rồi một số nơi ở miền Nam, và Sài Gòn thì mọi thứ thật tuyệt.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mọi người đều chăm chỉ làm việc và bận rộn kiếm sống. Có những tour du lịch cho người ít tiền và người giàu có hơn. Đối với chúng tôi đó là chuyến đi thật tuyệt vời.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "<italic>Thiếu tá Hải quân David Wheat là bạn cùng tù với Thượng Nghị sỹ John McCain, người cũng bị giam tại Hỏa Lò và ra tù sau ông Wheat một tháng. Ông David Wheat sinh ngày 16 tháng 12, năm 1939 tại thành phố Duluth, tiểu bang Minnesota. Tốt nghiệp Đại học Minnesota năm 1963, sau đó ghi danh vào Trường Sỹ quan Phi công Hải quân Hoa Kỳ.</italic>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Multimedia",
+          "uri": "/vietnamese/multimedia",
+          "urlIdentifier": "/vietnamese/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCVietnamese.com",
+          "uri": "/vietnamese",
+          "urlIdentifier": "/vietnamese",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Phi công Mỹ  ở Hỏa Lò 'mong ngày tự do'",
-      "headline": "Phi công Mỹ  ở Hỏa Lò 'mong ngày tự do'"
     },
-    "locators": {
-      "assetUri": "/vietnamese/multimedia/2015/04/150428_david_wheat_interview",
-      "cpsUrn": "urn:bbc:content:assetUri:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
-      "curie": "http://www.bbc.co.uk/asset/6adefc24-edc1-11e4-b0ab-3fa93db9bd6e"
-    },
-    "summary": "Một Thiếu tá Hải quân Mỹ ngồi tù ở Hỏa Lò hơn bảy năm nói điều nghĩ đến nhiều nhất là 'ngày tự do'.",
-    "timestamp": 1552976060199,
-    "passport": {},
-    "media": {
-      "id": "38491575",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2015/04/emp/150428_david_wheat_interview.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e246",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/04/28/150428160747_david_wheat_640x360_bbcvietnamese.com_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2015/04/28/150428160747_david_wheat_640x360_bbcvietnamese.com_nocredit.jpg",
-      "height": 360,
-      "width": 640,
-      "altText": "",
-      "copyrightHolder": "bbcvietnamese.com",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Multimedia",
-      "uri": "/vietnamese/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCVietnamese.com",
-      "uri": "/vietnamese",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T10:14:41.144Z",
+        "lastRecordTimeStamp": "2023-02-15T10:12:00Z",
+        "firstRecordTimeStamp": "2023-02-15T08:12:00Z",
+        "totalRecords": 19,
+        "records": [
+          {
+            "id": "d521c54f-b2ce-4aa5-ab41-f7c8379dc7fe",
+            "rank": 1,
+            "count": 15,
+            "urn": "urn:bbc:curie:asset:d521c54f-b2ce-4aa5-ab41-f7c8379dc7fe",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Món ngan nướng của người Việt trên đất Cộng hòa Czech",
+                "headline": "Món ngan nướng của người Việt trên đất Cộng hòa Czech"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/culture-social-64542377",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d521c54f-b2ce-4aa5-ab41-f7c8379dc7fe",
+                "assetId": "64542377",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/culture-social-64542377",
+                "curie": "http://www.bbc.co.uk/asset/d521c54f-b2ce-4aa5-ab41-f7c8379dc7fe"
+              },
+              "summary": "\"Hồi 10 năm trước, phóng viên người Czech tới làm chương trình, nói quán tôi là quán ngan ngon nhất Cộng hòa Czech,\" ông chủ quán Dũng Liên ở chợ Sapa, Prague, nói với BBC.",
+              "timestamp": 1675689200000,
+              "language": "vi",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "vi",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+                "locator": "urn:bbc:cps:curie:asset:d521c54f-b2ce-4aa5-ab41-f7c8379dc7fe",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/88119577-886f-471f-ba5e-ce518f0ea04f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/91836fb1-7094-472d-b0c1-066a9a03fb6c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/95be9761-5d75-4e12-a6d5-ebee92098844#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "vi",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/88119577-886f-471f-ba5e-ce518f0ea04f#id",
+                      "thingLabel": "Người Việt Nam Toàn Cầu",
+                      "thingUri": "http://www.bbc.co.uk/things/88119577-886f-471f-ba5e-ce518f0ea04f#id",
+                      "thingId": "88119577-886f-471f-ba5e-ce518f0ea04f",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Overseas_Vietnamese"
+                      ],
+                      "thingEnglishLabel": "Vietnamese diaspora",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/91836fb1-7094-472d-b0c1-066a9a03fb6c#id",
+                      "thingLabel": "Việt Nam",
+                      "thingUri": "http://www.bbc.co.uk/things/91836fb1-7094-472d-b0c1-066a9a03fb6c#id",
+                      "thingId": "91836fb1-7094-472d-b0c1-066a9a03fb6c",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1562822/"],
+                      "thingEnglishLabel": "Vietnam",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/95be9761-5d75-4e12-a6d5-ebee92098844#id",
+                      "thingLabel": "Cộng hòa Czech",
+                      "thingUri": "http://www.bbc.co.uk/things/95be9761-5d75-4e12-a6d5-ebee92098844#id",
+                      "thingId": "95be9761-5d75-4e12-a6d5-ebee92098844",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/3077311/"],
+                      "thingEnglishLabel": "Czech Republic",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1b1v5",
+                "subType": "clip",
+                "format": "video",
+                "title": "Món ngan nướng của người Việt trên đất CH Czech",
+                "synopses": {
+                  "short": "Món ngan nướng của người Việt trên đất CH Czech",
+                  "long": "\"Hồi 10 năm trước, phóng viên người Czech tới làm chương trình, nói quán tôi là quán ngan ngon nhất Cộng hòa Czech,\" ông chủ quán Dũng Liên ở chợ Sapa,, Prague, nói với BBC.",
+                  "medium": "\"Hồi 10 năm trước, phóng viên người Czech tới làm chương trình, nói quán tôi là quán ngan ngon nhất Cộng hòa Czech,\" ông chủ quán Dũng Liên ở chợ Sapa, Prague, nói với BBC."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1btgy.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Món ngan nướng của người Việt trên đất CH Czech",
+                "versions": [
+                  {
+                    "versionId": "p0f1b1vc",
+                    "types": ["Original"],
+                    "duration": 446,
+                    "durationISO8601": "PT7M26S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675685629000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128535893",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9BAD/production/_128535893_p0f1btgy.jpg",
+                "path": "/cpsprodpb/9BAD/production/_128535893_p0f1btgy.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #5",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/culture-social-64542377",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "be2264b9-d31a-404f-80a6-e8a0ecfb87c0",
+            "rank": 2,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:be2264b9-d31a-404f-80a6-e8a0ecfb87c0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Ngạc nhiên là chính phủ Czech chọn tôi, không chọn người Sứ quán VN đề cử\"",
+                "headline": "\"Ngạc nhiên là chính phủ Czech chọn tôi, không chọn người Sứ quán VN đề cử\""
+              },
+              "locators": {
+                "assetUri": "/vietnamese/media-64386793",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:be2264b9-d31a-404f-80a6-e8a0ecfb87c0",
+                "assetId": "64386793",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-64386793",
+                "curie": "http://www.bbc.co.uk/asset/be2264b9-d31a-404f-80a6-e8a0ecfb87c0"
+              },
+              "summary": "\"Câu chuyện bắt đầu từ năm 2013, khi chính phủ Czech quyết định công nhận thêm hai cộng đồng là cộng đồng người Việt và Belarus,\" ông Phạm Hữu Uyển nói với BBC News Tiếng Việt.",
+              "timestamp": 1674563367000,
+              "language": "vi",
+              "passport": {
+                "language": "vi",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+                "locator": "urn:bbc:cps:curie:asset:be2264b9-d31a-404f-80a6-e8a0ecfb87c0",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/88119577-886f-471f-ba5e-ce518f0ea04f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/95be9761-5d75-4e12-a6d5-ebee92098844#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "vi",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/88119577-886f-471f-ba5e-ce518f0ea04f#id",
+                      "thingLabel": "Người Việt Nam Toàn Cầu",
+                      "thingUri": "http://www.bbc.co.uk/things/88119577-886f-471f-ba5e-ce518f0ea04f#id",
+                      "thingId": "88119577-886f-471f-ba5e-ce518f0ea04f",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Overseas_Vietnamese"
+                      ],
+                      "thingEnglishLabel": "Vietnamese diaspora",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/95be9761-5d75-4e12-a6d5-ebee92098844#id",
+                      "thingLabel": "Cộng hòa Czech",
+                      "thingUri": "http://www.bbc.co.uk/things/95be9761-5d75-4e12-a6d5-ebee92098844#id",
+                      "thingId": "95be9761-5d75-4e12-a6d5-ebee92098844",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/3077311/"],
+                      "thingEnglishLabel": "Czech Republic",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dyf6jz",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Ngạc nhiên là chính phủ Czech chọn tôi, không chọn người Sứ quán VN đề cử\"",
+                "synopses": {
+                  "short": "\"Ngạc nhiên là chính phủ Czech chọn tôi, không chọn người Sứ quán VN đề cử\"",
+                  "long": "\"Câu chuyện của người Việt bắt đầu từ năm 2013, khi chính phủ Czech quyết định công nhận thêm hai cộng đồng là cộng đồng người Việt và cộng đồng Belarus,\" ông Phạm Hữu Uyển nói với BBC News Tiếng Việt.\n\nLà sinh viên sang Tiệp Khắc học từ đầu thập niên 1980, ông Phạm Hữu Uyển đã sống và làm việc tại Prague từ đó đến nay, là một trong những nhân chứng chứng kiến những biến động chính trị, xã hội mạnh mẽ của đất nước này từ một quốc gia cộng sản trải qua Cách mạng Nhung 1989 để trở thành một nền dân chủ ở châu Âu.\n\nÔng Phạm Hữu Uyển là thành viên chủ chốt của nhóm Văn Lang, một nhóm hoạt động của người Việt tại Cộng hoà Czech, trở thành gương mặt đại diện cho cộng đồng người Việt tại Hội đồng các Dân tộc Thiểu số trong chính phủ Cộng hoà Czech ngay từ những ngày đầu tiên.",
+                  "medium": "\"Câu chuyện bắt đầu từ năm 2013, khi chính phủ Czech quyết định công nhận thêm hai cộng đồng là cộng đồng người Việt và Belarus,\" ông Phạm Hữu Uyển nói với BBC News Tiếng Việt."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dyffs1.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "\"Ngạc nhiên là chính phủ Czech chọn tôi, không chọn người Sứ quán VN đề cử\"",
+                "versions": [
+                  {
+                    "versionId": "p0dyf6k5",
+                    "types": ["Original"],
+                    "duration": 562,
+                    "durationISO8601": "PT9M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1674557236000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128395213",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/7A1B/production/_128395213_p0dyffs1.jpg",
+                "path": "/cpsprodpb/7A1B/production/_128395213_p0dyffs1.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "\"Câu chuyện bắt đầu từ năm 2013, khi chính phủ Czech quyết định công nhận thêm hai cộng đồng là cộng đồng người Việt và Belarus,\" ông Phạm Hữu Uyển nói với BBC News Tiếng Việt.",
+                "copyrightHolder": "\"Câu chuyện của người Việt bắt đầu từ năm 2013, kh",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/media-64386793",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "69f7cee2-caf5-4863-aed8-50ad957fb987",
+            "rank": 3,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:69f7cee2-caf5-4863-aed8-50ad957fb987",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Động vật có thể dự đoán được động đất không?",
+                "headline": "Động đất Thổ Nhĩ Kỳ - Syria: Động vật có thể dự đoán được thảm hoạ không?"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/64607749",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:69f7cee2-caf5-4863-aed8-50ad957fb987",
+                "assetId": "64607749",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/64607749",
+                "curie": "http://www.bbc.co.uk/asset/69f7cee2-caf5-4863-aed8-50ad957fb987"
+              },
+              "summary": "Sau trận động đất ở Thổ Nhĩ Kỳ và Syria, trên mạng xã hội đã lan truyền những video cho rằng các loài động vật đã dự đoán được thiên tai.",
+              "timestamp": 1676089769000,
+              "language": "vi",
+              "passport": {
+                "language": "vi",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+                "locator": "urn:bbc:cps:curie:asset:69f7cee2-caf5-4863-aed8-50ad957fb987",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "vi",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                      "thingLabel": "Khoa học",
+                      "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                      "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q336",
+                        "http://dbpedia.org/resource/Science"
+                      ],
+                      "thingEnglishLabel": "Science",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+                      "thingLabel": "Động vật",
+                      "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+                      "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q729",
+                        "http://dbpedia.org/resource/Animal"
+                      ],
+                      "thingEnglishLabel": "Animals",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2h4c1",
+                "subType": "clip",
+                "format": "video",
+                "title": "Động vật có thể dự đoán được động đất không?",
+                "synopses": {
+                  "short": "Động vật có thể dự đoán được động đất không?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2h4dn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Động vật có thể dự đoán được động đất không?",
+                "versions": [
+                  {
+                    "versionId": "p0f2h4c5",
+                    "types": ["Original"],
+                    "duration": 125,
+                    "durationISO8601": "PT2M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676089525000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128599260",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/189B/production/_128599260_p0f2h4dn.jpg",
+                "path": "/cpsprodpb/189B/production/_128599260_p0f2h4dn.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "dong vat",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/64607749",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3e2b5a2c-1371-459e-8704-baa4973f0f6b",
+            "rank": 4,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:3e2b5a2c-1371-459e-8704-baa4973f0f6b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Đại Nga' là động lực sâu xa cho cuộc xâm lược Ukraine của Tổng thống Putin?",
+                "headline": "'Đại Nga' là động lực sâu xa cho cuộc xâm lược Ukraine của Tổng thống Putin?"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/media-64593829",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:3e2b5a2c-1371-459e-8704-baa4973f0f6b",
+                "assetId": "64593829",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-64593829",
+                "curie": "http://www.bbc.co.uk/asset/3e2b5a2c-1371-459e-8704-baa4973f0f6b"
+              },
+              "summary": "Viện nghiên cứu Chatham House ở London đánh giá Putin theo chủ nghĩa Đại Nga, một hệ tư tưởng có từ thời đế quốc Nga.",
+              "timestamp": 1676016395000,
+              "language": "vi",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "vi",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+                "locator": "urn:bbc:cps:curie:asset:3e2b5a2c-1371-459e-8704-baa4973f0f6b",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "vi",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "Nước Nga",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingLabel": "Ukraine",
+                      "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Ukraine",
+                        "http://www.wikidata.org/entity/Q212",
+                        "http://sws.geonames.org/690791/"
+                      ],
+                      "thingEnglishLabel": "Ukraine",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f28k4d",
+                "subType": "clip",
+                "format": "video",
+                "title": "Hệ tư tưởng ‘Đại Nga’ là động lực sâu xa đằng sau cuộc xâm lược Ukraine của Tổng thống Putin?",
+                "synopses": {
+                  "short": "Hệ tư tưởng ‘Đại Nga’ là động lực đằng sau cuộc xâm lược Ukraine của Tổng thống Putin?",
+                  "long": "Hệ tư tưởng ‘Đại Nga’ là động lực sâu xa đằng sau cuộc xâm lược Ukraine của Tổng thống Putin?",
+                  "medium": "Hệ tư tưởng ‘Đại Nga’ là động lực sâu xa đằng sau cuộc xâm lược Ukraine của Tổng thống Putin?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f28kjv.png",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Hệ tư tưởng 'Đại Nga' là động lực sâu xa đằng sau cuộc xâm lược Ukraine của Tổng thống Putin?",
+                "versions": [
+                  {
+                    "versionId": "p0f28k4l",
+                    "types": ["Original"],
+                    "duration": 407,
+                    "durationISO8601": "PT6M47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676015084000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128586348",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14990/production/_128586348_p0f28kjv.png",
+                "path": "/cpsprodpb/14990/production/_128586348_p0f28kjv.png",
+                "height": 549,
+                "width": 976,
+                "altText": "Putin",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/media-64593829",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dbf4fb04-cec0-457c-93a1-bdbf5c9b7a5f",
+            "rank": 5,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:dbf4fb04-cec0-457c-93a1-bdbf5c9b7a5f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Xe tăng Leopard 2 liệu có thể thay đổi cục diện cuộc chiến Ukraine?",
+                "headline": "Xe tăng Leopard 2 liệu có thể thay đổi cục diện cuộc chiến Ukraine?"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/64439572",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:dbf4fb04-cec0-457c-93a1-bdbf5c9b7a5f",
+                "assetId": "64439572",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/64439572",
+                "curie": "http://www.bbc.co.uk/asset/dbf4fb04-cec0-457c-93a1-bdbf5c9b7a5f"
+              },
+              "summary": "Sau nhiều tuần do dự, Đức cuối cùng đã xác nhận sẽ gửi một số xe tăng chiến đấu Leopard 2 tới Ukraine.",
+              "timestamp": 1674956375000,
+              "language": "vi",
+              "passport": {
+                "language": "vi",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+                "locator": "urn:bbc:cps:curie:asset:dbf4fb04-cec0-457c-93a1-bdbf5c9b7a5f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "vi",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dzjccl",
+                "subType": "clip",
+                "format": "video",
+                "title": "Xe tăng Leopard 2 liệu có thể thay đổi cục diện cuộc chiến Ukraine?",
+                "synopses": {
+                  "short": "Xe tăng Leopard 2 liệu có thể thay đổi cục diện cuộc chiến Ukraine?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dzjcnc.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Xe tăng Leopard 2 liệu có thể thay đổi cục diện cuộc chiến Ukraine?",
+                "versions": [
+                  {
+                    "versionId": "p0dzjccq",
+                    "types": ["Original"],
+                    "duration": 98,
+                    "durationISO8601": "PT1M38S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1674916697000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128447090",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/2372/production/_128447090_p0dzjcnc.jpg",
+                "path": "/cpsprodpb/2372/production/_128447090_p0dzjcnc.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "tank",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/64439572",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "021bfbf3-7fff-448e-8a12-b1b76d5d543f",
+            "rank": 6,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:021bfbf3-7fff-448e-8a12-b1b76d5d543f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Trung tâm thương mại Sapa, chợ của người Việt ở Prague, CH Czech",
+                "headline": "Trung tâm thương mại Sapa, chợ của người Việt ở Prague, CH Czech"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/culture-social-64465650",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:021bfbf3-7fff-448e-8a12-b1b76d5d543f",
+                "assetId": "64465650",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/culture-social-64465650",
+                "curie": "http://www.bbc.co.uk/asset/021bfbf3-7fff-448e-8a12-b1b76d5d543f"
+              },
+              "summary": "Còn được gọi là Little Hanoi, chợ Sapa nằm cách trung tâm Prague khoảng 10km về phía nam, và rất rộng nếu so với các chợ khác của người Việt ở châu Âu.",
+              "timestamp": 1675172941000,
+              "language": "vi",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "vi",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+                "locator": "urn:bbc:cps:curie:asset:021bfbf3-7fff-448e-8a12-b1b76d5d543f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/88119577-886f-471f-ba5e-ce518f0ea04f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/95be9761-5d75-4e12-a6d5-ebee92098844#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0b0bfd5a-81b8-43fa-91fc-57f1fcd24487#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "vi",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0b0bfd5a-81b8-43fa-91fc-57f1fcd24487#id",
+                      "thingLabel": "Châu Âu",
+                      "thingUri": "http://www.bbc.co.uk/things/0b0bfd5a-81b8-43fa-91fc-57f1fcd24487#id",
+                      "thingId": "0b0bfd5a-81b8-43fa-91fc-57f1fcd24487",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q46",
+                        "http://dbpedia.org/resource/Europe"
+                      ],
+                      "thingEnglishLabel": "Europe",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/88119577-886f-471f-ba5e-ce518f0ea04f#id",
+                      "thingLabel": "Người Việt Nam Toàn Cầu",
+                      "thingUri": "http://www.bbc.co.uk/things/88119577-886f-471f-ba5e-ce518f0ea04f#id",
+                      "thingId": "88119577-886f-471f-ba5e-ce518f0ea04f",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Overseas_Vietnamese"
+                      ],
+                      "thingEnglishLabel": "Vietnamese diaspora",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/95be9761-5d75-4e12-a6d5-ebee92098844#id",
+                      "thingLabel": "Cộng hòa Czech",
+                      "thingUri": "http://www.bbc.co.uk/things/95be9761-5d75-4e12-a6d5-ebee92098844#id",
+                      "thingId": "95be9761-5d75-4e12-a6d5-ebee92098844",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/3077311/"],
+                      "thingEnglishLabel": "Czech Republic",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f01gcw",
+                "subType": "clip",
+                "format": "video",
+                "title": "Trung tâm thương mại Sapa, chợ của người Việt ở Prague, CH Czech",
+                "synopses": {
+                  "short": "Trung tâm thương mại Sapa, chợ của người Việt ở Prague, CH Czech",
+                  "long": "Còn được gọi là Little Hanoi, chợ Sapa nằm cách trung tâm Prague khoảng 10km về phía nam, và rất rộng nếu so với các chợ khác của người Việt ở châu Âu.",
+                  "medium": "Còn được gọi là Little Hanoi, chợ Sapa nằm cách trung tâm Prague khoảng 10km về phía nam, và rất rộng nếu so với các chợ khác của người Việt ở châu Âu."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f028cb.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Trung tâm thương mại Sapa, chợ của người Việt ở Prague, CH Czech",
+                "versions": [
+                  {
+                    "versionId": "p0f01gd0",
+                    "types": ["Original"],
+                    "duration": 518,
+                    "durationISO8601": "PT8M38S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675172064000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128471132",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5A4D/production/_128471132_7823182d-95f1-4078-b546-fac5684cc1c0.jpg",
+                "path": "/cpsprodpb/5A4D/production/_128471132_7823182d-95f1-4078-b546-fac5684cc1c0.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "BBC",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/culture-social-64465650",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fd302af8-bb49-11e4-951c-23e13db9bd6e",
+            "rank": 7,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:fd302af8-bb49-11e4-951c-23e13db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Cuộc đời em gái Tổng thống Ngô Đình Diệm",
+                "headline": "Cuộc đời em gái Tổng thống Ngô Đình Diệm"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/multimedia/2015/02/150223_nguyenvanchau_ngodinhthihiep_1",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/multimedia/2015/02/150223_nguyenvanchau_ngodinhthihiep_1",
+                "curie": "http://www.bbc.co.uk/asset/fd302af8-bb49-11e4-951c-23e13db9bd6e",
+                "assetId": "37478263"
+              },
+              "summary": "10 năm ngày mất của bà Ngô Đình Thị Hiệp, người em gái ít được công chúng biết đến của Tổng thống Việt Nam Cộng Hòa Ngô Đình Diệm.",
+              "timestamp": 1424690642000,
+              "language": "vi",
+              "media": {
+                "id": "37478263",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "37478263",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/02/23/150223111714_ngo_dinh_thi_hiep_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/02/23/150223111714_ngo_dinh_thi_hiep_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2015/02/emp/150223_nguyenvanchau_ngodinhthihiep_1.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/02/ngodinhthihiep1_150223_nguyenvanchau_ngodinhthihiep_1_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e254",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/02/23/150223111714_ngo_dinh_thi_hiep_640x360_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/02/23/150223111714_ngo_dinh_thi_hiep_640x360_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/multimedia/2015/02/150223_nguyenvanchau_ngodinhthihiep_1",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f64d88b2-f1b2-11e4-a8d3-a5813db9bd6e",
+            "rank": 8,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f64d88b2-f1b2-11e4-a8d3-a5813db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Làng Mai - một di sản 'tranh cãi'?",
+                "headline": "Làng Mai - một di sản 'tranh cãi'?"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/multimedia/2015/05/150503_vovanai_langmai_part1",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/multimedia/2015/05/150503_vovanai_langmai_part1",
+                "curie": "http://www.bbc.co.uk/asset/f64d88b2-f1b2-11e4-a8d3-a5813db9bd6e",
+                "assetId": "38562717"
+              },
+              "summary": "Nhà nghiên cứu Phật học Võ Văn Ái từ Paris nêu quan điểm về di sản của Hòa thượng, Thiền sư Thích Nhất Hạnh và Làng Mai.",
+              "timestamp": 1430672261000,
+              "language": "vi",
+              "media": {
+                "id": "38562717",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "38562717",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/05/03/150503165443_vo_van_ai_640x360_queme.net_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/05/03/150503165443_vo_van_ai_640x360_queme.net_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Ông Võ Văn Ái",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2015/05/emp/150503_vovanai_langmai_part1.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/05/vovanai-langmai-part1_150503_vovanai_langmai_part1_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e295",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/05/03/150503165443_vo_van_ai_640x360_queme.net_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/05/03/150503165443_vo_van_ai_640x360_queme.net_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Ông Võ Văn Ái",
+                "copyrightHolder": "queme.net",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/multimedia/2015/05/150503_vovanai_langmai_part1",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e6caecdb-7c4b-451d-a0ab-955e4b8096b0",
+            "rank": 9,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:e6caecdb-7c4b-451d-a0ab-955e4b8096b0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Nga xâm lược Ukraine: Xuất hiện khái niệm 'Chiến tranh Lạnh mới'",
+                "headline": "Nga xâm lược Ukraine: Xuất hiện khái niệm 'Chiến tranh Lạnh mới'"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/media-61146757",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-61146757",
+                "curie": "http://www.bbc.co.uk/asset/e6caecdb-7c4b-451d-a0ab-955e4b8096b0",
+                "assetId": "61146757"
+              },
+              "summary": "Khi Nga bắt đầu xâm lược Ukraine thì một khái niệm về một cuộc 'Chiến tranh Lạnh mới' đã xuất hiện.",
+              "timestamp": 1650344908000,
+              "language": "vi",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  }
+                ],
+                "language": "vi",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+                "locator": "urn:bbc:cps:curie:asset:e6caecdb-7c4b-451d-a0ab-955e4b8096b0",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/2bf6a241-3569-428f-8268-767e9d3b5e16#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+                    "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "campaign": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id",
+                      "type": "campaign"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "vi",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c1x96w",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ukraine: Xuất hiện khái niệm 'Chiến tranh Lạnh mới'",
+                "synopses": {
+                  "short": "Ukraine: Xuất hiện khái niệm 'Chiến tranh Lạnh mới'",
+                  "long": "Khi Nga bắt đầu xâm lược Ukraine thì một khái niệm về một cuộc Chiến tranh Lạnh mới đã xuất hiện.",
+                  "medium": "Khi Nga bắt đầu xâm lược Ukraine thì một khái niệm về một cuộc Chiến tranh Lạnh mới đã xuất hiện."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c1xdbd.png",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ukraine: Xuất hiện khái niệm 'Chiến tranh Lạnh mới'",
+                "versions": [
+                  {
+                    "versionId": "p0c1x970",
+                    "types": ["Original"],
+                    "duration": 58,
+                    "durationISO8601": "PT58S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1650344471000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124206620",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0A64/production/_124206620_p0c1xdbd.png",
+                "path": "/cpsprodpb/0A64/production/_124206620_p0c1xdbd.png",
+                "height": 549,
+                "width": 976,
+                "altText": "Chiến tranh Lạnh",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/media-61146757",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b644f3dc-7d64-11e7-8293-73cb3db9bd6e",
+            "rank": 10,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:b644f3dc-7d64-11e7-8293-73cb3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Thoát chết khi nhảy bungee bị đứt dây",
+                "headline": "Thoát chết khi nhảy bungee bị đứt dây"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/english/2012/01/120111_exv_elt_bungee_jump",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/english/2012/01/120111_exv_elt_bungee_jump",
+                "curie": "http://www.bbc.co.uk/asset/b644f3dc-7d64-11e7-8293-73cb3db9bd6e",
+                "assetId": "14949377"
+              },
+              "summary": "Học tiếng Anh qua video: Một cô gái Úc thoát chết khi nhảy bungee xuống sông Zambezi từ độ cao trên 100 thước và dây bị đứt. ",
+              "timestamp": 1326303059000,
+              "language": "vi",
+              "media": {
+                "id": "14949377",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "14949377",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/01/10/120110161433_le_vwitn_bungee_background_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2012/01/10/120110161433_le_vwitn_bungee_background_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2012/01/emp/120111_exv_elt_bungee_jump.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2012/01/120111_vwitn_bungee_viet_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2012/01/120111_vwitn_bungee_viet_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2012/01/120111_vwitn_bungee_viet_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e232",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/01/10/120110161434_le_vwitn_bungee_background_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/01/10/120110161434_le_vwitn_bungee_background_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "Nhảy bungee",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/english/2012/01/120111_exv_elt_bungee_jump",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9d33c0d5-dcd0-814f-992e-7cb7436def22",
+            "rank": 11,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:9d33c0d5-dcd0-814f-992e-7cb7436def22",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Chế Linh 'hát vo' cho BBC trước giờ diễn",
+                "headline": "Chế Linh 'hát vo' cho BBC trước giờ diễn"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/vietnam-44039989",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vietnam-44039989",
+                "curie": "http://www.bbc.co.uk/asset/9d33c0d5-dcd0-814f-992e-7cb7436def22",
+                "assetId": "44039989"
+              },
+              "summary": "Ca sỹ Chế Linh hát vo tặng khán thính giả BBC Tiếng Việt ca khúc 'Ai cho tôi tình yêu' khi đến Anh.",
+              "timestamp": 1525787634000,
+              "language": "vi",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p066k51r",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ca sỹ Chế Linh hát \"Ai cho tôi tình yêu\"",
+                "synopses": {
+                  "short": "Ca sỹ Chế Linh hát \"Ai cho tôi tình yêu\""
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p066k586.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ca sỹ Chế Linh hát \"Ai cho tôi tình yêu\"",
+                "versions": [
+                  {
+                    "versionId": "p066k51v",
+                    "types": ["Original"],
+                    "duration": 64,
+                    "durationISO8601": "PT1M4S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1525783455000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "101216265",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/DBC5/production/_101216265_p066k586.jpg",
+                "path": "/cpsprodpb/DBC5/production/_101216265_p066k586.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/vietnam-44039989",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7c0b3829-532a-4ecb-bc47-db06f694bf6d",
+            "rank": 12,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:7c0b3829-532a-4ecb-bc47-db06f694bf6d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Quân nổi dậy Myanmar: đơn vị chiến đấu toàn nữ",
+                "headline": "Quân nổi dậy Myanmar: đơn vị chiến đấu toàn nữ"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/business-61194051",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/business-61194051",
+                "curie": "http://www.bbc.co.uk/asset/7c0b3829-532a-4ecb-bc47-db06f694bf6d",
+                "assetId": "61194051"
+              },
+              "summary": "Mahura, một người chỉ huy của đơn vị, phải bỏ lại hai con trai 5 và 8 tuổi ở nhà khi đi tham gia làm cách mạng.",
+              "timestamp": 1650699244000,
+              "language": "vi",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "vi",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+                "locator": "urn:bbc:cps:curie:asset:7c0b3829-532a-4ecb-bc47-db06f694bf6d",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "vi",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "Miến Điện",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c2pyrn",
+                "subType": "clip",
+                "format": "video",
+                "title": "Quân nổi dậy Myamar: đơn vị chiến đấu toàn nữ",
+                "synopses": {
+                  "short": "Quân nổi dậy Myamar: đơn vị chiến đấu toàn nữ"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c2pzvj.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Quân nổi dậy Myamar: đơn vị chiến đấu toàn nữ",
+                "versions": [
+                  {
+                    "versionId": "p0c2pyrs",
+                    "types": ["Original"],
+                    "duration": 285,
+                    "durationISO8601": "PT4M45S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1650636752000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124252978",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/15775/production/_124252978_p0c2pzvj.jpg",
+                "path": "/cpsprodpb/15775/production/_124252978_p0c2pzvj.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Myanmar resistance thumb",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/business-61194051",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7b975ea3-c37b-4770-9409-515b0bb7de0a",
+            "rank": 13,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:7b975ea3-c37b-4770-9409-515b0bb7de0a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Việt Á: Chiến dịch 'đốt lò' của TBT Nguyễn Phú Trọng lại đỏ lửa",
+                "headline": "Việt Á: Chiến dịch 'đốt lò' của TBT Nguyễn Phú Trọng lại đỏ lửa"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/media-61730851",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-61730851",
+                "curie": "http://www.bbc.co.uk/asset/7b975ea3-c37b-4770-9409-515b0bb7de0a",
+                "assetId": "61730851"
+              },
+              "summary": "Trong ngày 07/06, ông Nguyễn Thanh Long bị bãi nhiệm Bộ trưởng Y tế, và ông Chu Ngọc Anh mất ghế Chủ tịch UBND Thành phố Hà Nội.",
+              "timestamp": 1654677818000,
+              "language": "vi",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "vi",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
+                "locator": "urn:bbc:cps:curie:asset:7b975ea3-c37b-4770-9409-515b0bb7de0a",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/946a7fe8-f135-46df-a58d-37469b0b280b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/70a07303-4001-4f1b-90b4-0c1350b10249#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/b8531a4d-7de6-4b29-b5f2-34f77b47b359#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/1ed5e5d2-fb53-4ea2-a561-1c8228610be9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/0fa08493-cc07-44df-aa26-d248b10eee7d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/cd3aa361-2e5a-40fe-910e-746f67b61343#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "vi",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0cckthh",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ông Nguyễn Thanh Long, Chu Ngọc Anh bị khởi tố, tạm giam, khám nhà",
+                "synopses": {
+                  "short": "Ông Nguyễn Thanh Long, Chu Ngọc Anh bị khởi tố, tạm giam, khám nhà",
+                  "long": "Trong ngày 7/6, ông Nguyễn Thanh Long bị bãi nhiệm bộ trưởng y tế, và ông Chu Ngọc Anh mất ghế chủ tịch Hà Nội.",
+                  "medium": "Trong ngày 7/6, ông Nguyễn Thanh Long bị bãi nhiệm bộ trưởng y tế, và ông Chu Ngọc Anh mất ghế chủ tịch Hà Nội."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0cckvxy.png",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ông Nguyễn Thanh Long, Chu Ngọc Anh bị khởi tố, tạm giam, khám nhà",
+                "versions": [
+                  {
+                    "versionId": "p0cckthm",
+                    "types": ["Original"],
+                    "duration": 226,
+                    "durationISO8601": "PT3M46S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1654675030000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125322076",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/105CE/production/_125322076_p0cckvxy.png",
+                "path": "/cpsprodpb/105CE/production/_125322076_p0cckvxy.png",
+                "height": 549,
+                "width": 976,
+                "altText": "Ông Nguyễn Thanh Long và ông Chu Ngọc Anh",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/media-61730851",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "77082299-1958-1048-97a7-12d08dbe8363",
+            "rank": 14,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:77082299-1958-1048-97a7-12d08dbe8363",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Trở về Quảng trường Thiên An Môn sau 30 năm",
+                "headline": "Thiên An Môn: Khoảnh khắc trở về của một lãnh đạo sinh viên"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/media-48508311",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-48508311",
+                "curie": "http://www.bbc.co.uk/asset/77082299-1958-1048-97a7-12d08dbe8363",
+                "assetId": "48508311"
+              },
+              "summary": "Vương Trị Tân, cựu lãnh đạo sinh viên biểu tình 30 năm trước về thăm lại quảng trường Thiên An Môn và nói chuyện với BBC.",
+              "timestamp": 1559720395000,
+              "language": "vi",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07c5tqq",
+                "subType": "clip",
+                "format": "video",
+                "title": "Trở về Thiên An Môn",
+                "synopses": {
+                  "short": "Trở về Thiên An Môn"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07c60vf.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Trở về Thiên An Môn",
+                "versions": [
+                  {
+                    "versionId": "p07c60hw",
+                    "types": ["Editorial"],
+                    "duration": 267,
+                    "durationISO8601": "PT4M27S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1559636580000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "107222438",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/145DE/production/_107222438_p07c5vb3.jpg",
+                "path": "/cpsprodpb/145DE/production/_107222438_p07c5vb3.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Trở về Thiên An Môn",
+                "caption": "Trở về Thiên An Môn",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/media-48508311",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6cf81532-9f40-11e5-899f-db963db9bd6e",
+            "rank": 15,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:6cf81532-9f40-11e5-899f-db963db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Bản đồ các nước đảng XHCN cầm quyền",
+                "headline": "Bản đồ các nước đảng XHCN cầm quyền"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/multimedia/2015/12/151210_wold_socialism_video",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/multimedia/2015/12/151210_wold_socialism_video",
+                "curie": "http://www.bbc.co.uk/asset/6cf81532-9f40-11e5-899f-db963db9bd6e",
+                "assetId": "41690345"
+              },
+              "summary": "Bản đồ cho thấy Việt Nam là trong số vài nước ít ỏi có đảng cầm quyền theo đường lối Xã hội chủ nghĩa còn lại trên thế giới.",
+              "timestamp": 1449753877000,
+              "language": "vi",
+              "media": {
+                "id": "41690345",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "41690345",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/12/10/151210132234_map_of_world_scicalism_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/12/10/151210132234_map_of_world_scicalism_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Bản đồ các nước xã hội chủ nghĩa trên thế giới",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2015/12/emp/151210_wold_socialism_video.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/12/viet~fsocialism~f1330~f10~f12_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/12/viet~fsocialism~f1330~f10~f12_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/12/viet~fsocialism~f1330~f10~f12_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e277",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/12/10/151210132234_map_of_world_scicalism_640x360_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/12/10/151210132234_map_of_world_scicalism_640x360_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Bản đồ các nước xã hội chủ nghĩa trên thế giới",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/multimedia/2015/12/151210_wold_socialism_video",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "411bb07c-a0c2-11e4-a50f-fce63db9bd6e",
+            "rank": 16,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:411bb07c-a0c2-11e4-a50f-fce63db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Thu hẹp khoảng cách giàu nghèo",
+                "headline": "Thu hẹp khoảng cách giàu nghèo"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/english/2015/01/150120_elt_vwitn_currency",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/english/2015/01/150120_elt_vwitn_currency",
+                "curie": "http://www.bbc.co.uk/asset/411bb07c-a0c2-11e4-a50f-fce63db9bd6e",
+                "assetId": "36943694"
+              },
+              "summary": "Học tiếng Anh qua video: Cần thu hẹp khoảng cách giàu nghèo khi 50% tài sản toàn cầu thuộc về người giàu chiếm 1% dân số thế giới.",
+              "timestamp": 1421858274000,
+              "language": "vi",
+              "media": {
+                "id": "36943694",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "36943694",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/01/20/150120165740_currency_bbc_640x360.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/01/20/150120165740_currency_bbc_640x360.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Tiền tệ",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2015/01/emp/150120_elt_vwitn_currency.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/01/witn_richandpoor_english_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/01/witn_richandpoor_english_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2015/01/witn_richandpoor_english_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e254",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/01/21/150121161550_currency_304x171_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/01/21/150121161550_currency_304x171_bbc_nocredit.jpg",
+                "height": 171,
+                "width": 304,
+                "altText": "Tiền tệ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/english/2015/01/150120_elt_vwitn_currency",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "40bd9491-863a-b94d-9cb4-d4a2379a613c",
+            "rank": 17,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:40bd9491-863a-b94d-9cb4-d4a2379a613c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Di chúc Hồ Chí Minh - 50 năm nhìn lại",
+                "headline": "Di chúc Hồ Chí Minh - 50 năm nhìn lại"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/media-49575460",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-49575460",
+                "curie": "http://www.bbc.co.uk/asset/40bd9491-863a-b94d-9cb4-d4a2379a613c",
+                "assetId": "49575460"
+              },
+              "summary": "BBC nhìn lại những vấn đề tranh cãi xoay quanh di chúc của Chủ tịch Hồ Chí Minh.",
+              "timestamp": 1567572453000,
+              "language": "vi",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07mcr3w",
+                "subType": "clip",
+                "format": "video",
+                "title": "Di chúc Hồ Chí Minh - 50 năm nhìn lại",
+                "synopses": {
+                  "short": "Di chúc Hồ Chí Minh - 50 năm nhìn lại"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mcrbh.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Di chúc Hồ Chí Minh - 50 năm nhìn lại",
+                "versions": [
+                  {
+                    "versionId": "p07mcr3z",
+                    "types": ["Original"],
+                    "duration": 242,
+                    "durationISO8601": "PT4M2S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1567568000000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "108606555",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/D908/production/_108606555_p07mcrbh.jpg",
+                "path": "/cpsprodpb/D908/production/_108606555_p07mcrbh.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #4",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/media-49575460",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "19dde917-6151-0549-8356-6ae3cdf5c61f",
+            "rank": 18,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:19dde917-6151-0549-8356-6ae3cdf5c61f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Tự đạo văn' thực sự nghĩa là gì?",
+                "headline": "'Tự đạo văn' thực sự nghĩa là gì?"
+              },
+              "locators": {
+                "assetUri": "/vietnamese/media-43281095",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/media-43281095",
+                "curie": "http://www.bbc.co.uk/asset/19dde917-6151-0549-8356-6ae3cdf5c61f",
+                "assetId": "43281095"
+              },
+              "summary": "GS Vũ Minh Giang, thành viên Hội đồng nhà nước về chức danh Giáo sư, nói về 'tự đạo văn' và một tranh luận có liên quan.",
+              "timestamp": 1520185818000,
+              "language": "vi",
+              "media": {
+                "id": "p0602c1r",
+                "subType": "clip",
+                "format": "audio",
+                "title": "'Tự đạo văn' thực sự nghĩa là gì?",
+                "synopses": {
+                  "short": "GS Vũ Minh Giang, thành viên Hội đồng nhà nước về Giáo sư, Phó Giáo sư nói về 'tự đạo văn'",
+                  "medium": "GS Vũ Minh Giang, thành viên Hội đồng nhà nước về chức danh Giáo sư, Phó Giáo sư nói về 'tự đạo văn' và chất lượng, xét duyệt các chức danh giảng dạy cao cấp ở Việt Nam.",
+                  "long": "Giáo sư Vũ Minh Giang, thành viên Hội đồng nhà nước về chức danh Giáo sư, Phó Giáo sư nói về 'tự đạo văn' và chất lượng, xét duyệt các chức danh giảng dạy cao cấp này ở Việt Nam."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0602cd5.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "GS Vũ Minh Giang, thành viên Hội đồng nhà nước về Giáo sư, Phó Giáo sư nói về 'tự đạo văn'",
+                "versions": [
+                  {
+                    "versionId": "p0602c1t",
+                    "types": ["Original"],
+                    "duration": 1067,
+                    "durationISO8601": "PT17M47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1520184522000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100272726",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F507/production/_100272726_p0602cd5.jpg",
+                "path": "/cpsprodpb/F507/production/_100272726_p0602cd5.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "GS. TSKH. Vũ Minh Giang",
+                "copyrightHolder": "VNU",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/media-43281095",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "04870f4e-7d65-11e7-8293-73cb3db9bd6e",
+            "rank": 19,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:04870f4e-7d65-11e7-8293-73cb3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ông Vươn \"chỉ mời luật sư Nguyễn Việt Hùng\"",
+                "headline": "Ông Vươn \"chỉ mời luật sư Nguyễn Việt Hùng\""
+              },
+              "locators": {
+                "assetUri": "/vietnamese/multimedia/2012/02/120203_doanvanvuon_lawyer",
+                "cpsUrn": "urn:bbc:content:assetUri:vietnamese/multimedia/2012/02/120203_doanvanvuon_lawyer",
+                "curie": "http://www.bbc.co.uk/asset/04870f4e-7d65-11e7-8293-73cb3db9bd6e",
+                "assetId": "15384990"
+              },
+              "summary": "Luật sư Nguyễn Việt Hùng, người từng tư vấn cho các gia đình Tiên Lãng khiếu kiện, nói đã nhận được tin ông Vươn nhờ bào chữa.",
+              "timestamp": 1328280188000,
+              "language": "vi",
+              "media": {
+                "id": "15384990",
+                "subType": "primary",
+                "format": "audio",
+                "live": false,
+                "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2012/02/emp/120203_doanvanvuon_lawyer.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/vietnamese/dps/2012/02/doanvanvuon_lawyer_2012_02_03t13_35_09_181_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e212",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/02/03/120203123309_nguyen_viet_hung_112x63_vnexpress_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/02/03/120203123309_nguyen_viet_hung_112x63_vnexpress_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "",
+                "copyrightHolder": "vnexpress",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:vietnamese/multimedia/2012/02/120203_doanvanvuon_lawyer",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

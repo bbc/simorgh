@@ -1,118 +1,3034 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-    "locators": {
-      "assetUri": "/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-      "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-      "curie": "http://www.bbc.co.uk/asset/0d680c18-580d-11e6-b7b8-14a33db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "bengali",
-    "language": "bn",
-    "lastUpdated": 1550217083788,
-    "firstPublished": 1470129105,
-    "lastPublished": 1470129105,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "allowAdvertising": true,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_id": "44752897", "cps_asset_type": "map" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "44752897",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/bengali/meta/dps/2016/08/emp/160801_baghdad_rashid_street_100yrs_video.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+        "locators": {
+          "assetUri": "/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+          "curie": "http://www.bbc.co.uk/asset/0d680c18-580d-11e6-b7b8-14a33db9bd6e",
+          "assetId": "44752897"
+        },
+        "type": "MAP",
+        "createdBy": "bengali",
+        "language": "bn",
+        "lastUpdated": 1649895012821,
+        "firstPublished": 1470129105000,
+        "lastPublished": 1470129105000,
+        "timestamp": 1470129105000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "44752897",
+          "contentId": "urn:bbc:topcat:curie:asset:0d680c18-580d-11e6-b7b8-14a33db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/bengali",
+        "mediaType": "video"
       },
-      {
-        "text": "বাগদাদের সবচেয়ে পুরনো রাস্তা রশীদ স্ট্রিট তার শতবর্ষ পূরণ করেছে।",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "44752897",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "44752897",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/01/160801173404_rashid_street_baghdad_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2016/08/01/160801173404_rashid_street_baghdad_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "rashid_street_baghdad",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/bengali/meta/dps/2016/08/emp/160801_baghdad_rashid_street_100yrs_video.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/bengali/dps/2016/08/rashid_st_baghdad_100_160801_baghdad_rashid_street_100yrs_video_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/bengali/dps/2016/08/rashid_st_baghdad_100_160801_baghdad_rashid_street_100yrs_video_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/bengali/dps/2016/08/rashid_st_baghdad_100_160801_baghdad_rashid_street_100yrs_video_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "বাগদাদের সবচেয়ে পুরনো রাস্তা রশীদ স্ট্রিট তার শতবর্ষ পূরণ করেছে।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "অটোমান শাসনের পর ইরাকী ইতিহাসের বহু গুরুত্বপূর্ণ ঘটনার সাক্ষী এই রাস্তা।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "এই রাস্তার হৃত গৌরব ফিরিয়ে আনতে ব্যাপক সংস্কারের পরিকল্পনা হাতে নেওয়া হয়েছে।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "মধ্যপ্রাচ্যে বহু জাতিবর্ণ ভিত্তিক সমাজের অন্যতম সবচেয়ে প্রকৃষ্ট স্থান ছিল ইরাকের এই সড়ক।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "এই সড়কের একাল ও সেকাল নিয়ে এই ভিডিও তৈরি করেছে বিবিসির আরবী বিভাগ।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "অটোমান শাসনের পর ইরাকী ইতিহাসের বহু গুরুত্বপূর্ণ ঘটনার সাক্ষী এই রাস্তা।",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট",
+          "headline": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট"
+        },
+        "locators": {
+          "assetUri": "/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+          "curie": "http://www.bbc.co.uk/asset/0d680c18-580d-11e6-b7b8-14a33db9bd6e",
+          "assetId": "44752897"
+        },
+        "summary": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট",
+        "timestamp": 1470129105000,
+        "language": "bn",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+          "taggings": []
+        },
+        "media": {
+          "id": "44752897",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "44752897",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/01/160801173404_rashid_street_baghdad_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2016/08/01/160801173404_rashid_street_baghdad_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "rashid_street_baghdad",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/bengali/meta/dps/2016/08/emp/160801_baghdad_rashid_street_100yrs_video.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/bengali/dps/2016/08/rashid_st_baghdad_100_160801_baghdad_rashid_street_100yrs_video_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/bengali/dps/2016/08/rashid_st_baghdad_100_160801_baghdad_rashid_street_100yrs_video_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/bengali/dps/2016/08/rashid_st_baghdad_100_160801_baghdad_rashid_street_100yrs_video_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e220",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/01/160801173405_rashid_street_baghdad_144x81_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2016/08/01/160801173405_rashid_street_baghdad_144x81_bbc_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
+        "type": "cps"
       },
-      {
-        "text": "এই রাস্তার হৃত গৌরব ফিরিয়ে আনতে ব্যাপক সংস্কারের পরিকল্পনা হাতে নেওয়া হয়েছে।",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "মধ্যপ্রাচ্যে বহু জাতিবর্ণ ভিত্তিক সমাজের অন্যতম সবচেয়ে প্রকৃষ্ট স্থান ছিল ইরাকের এই সড়ক।",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "এই সড়কের একাল ও সেকাল নিয়ে এই ভিডিও তৈরি করেছে বিবিসির আরবী বিভাগ।",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "মাল্টিমিডিয়া",
+          "uri": "/bengali/multimedia",
+          "urlIdentifier": "/bengali/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCBangla.com",
+          "uri": "/bengali",
+          "urlIdentifier": "/bengali",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট",
-      "headline": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট"
     },
-    "locators": {
-      "assetUri": "/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-      "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-      "curie": "http://www.bbc.co.uk/asset/0d680c18-580d-11e6-b7b8-14a33db9bd6e"
-    },
-    "summary": "একশ' বছরে বাগদাদের রশীদ স্ট্রিট",
-    "timestamp": 1550217083788,
-    "passport": {},
-    "media": {
-      "id": "44752897",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/bengali/meta/dps/2016/08/emp/160801_baghdad_rashid_street_100yrs_video.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e220",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/01/160801173405_rashid_street_baghdad_144x81_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2016/08/01/160801173405_rashid_street_baghdad_144x81_bbc_nocredit.jpg",
-      "height": 81,
-      "width": 144,
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "মাল্টিমিডিয়া",
-      "uri": "/bengali/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCBangla.com",
-      "uri": "/bengali",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:38:03.677Z",
+        "lastRecordTimeStamp": "2023-02-15T09:36:00Z",
+        "firstRecordTimeStamp": "2023-02-15T07:36:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "c239a223-1e82-4db0-9138-3d70a21319cd",
+            "rank": 1,
+            "count": 157,
+            "urn": "urn:bbc:curie:asset:c239a223-1e82-4db0-9138-3d70a21319cd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "কেনিয়ায় লাখ লাখ পাখি মেরে ফসল রক্ষার চেষ্টা",
+                "headline": "কেনিয়ায় ৬০ লাখ কোয়েলা পাখি নিশ্চিহ্ণ করে ফসল রক্ষার চেষ্টা"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-64630885",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c239a223-1e82-4db0-9138-3d70a21319cd",
+                "assetId": "64630885",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-64630885",
+                "curie": "http://www.bbc.co.uk/asset/c239a223-1e82-4db0-9138-3d70a21319cd"
+              },
+              "summary": "প্রতি বছর আফ্রিকায় হাজার হাজার টন ফসল নষ্ট করছে কোয়েলা পাখি। এজন্যে কেনিয়ার সরকার প্রায় ৬০ লাখ কোয়েলা পাখি মেরে ফেলার এক কর্মসূচি নিয়েছে।",
+              "timestamp": 1676307243000,
+              "language": "bn",
+              "passport": {
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:c239a223-1e82-4db0-9138-3d70a21319cd",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b6313976-a311-480f-a813-08caddad7a2f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                      "thingLabel": "পরিবেশ",
+                      "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                      "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q43619",
+                        "http://dbpedia.org/resource/Natural_environment"
+                      ],
+                      "thingEnglishLabel": "Environment",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b6313976-a311-480f-a813-08caddad7a2f#id",
+                      "thingLabel": "কৃষি",
+                      "thingUri": "http://www.bbc.co.uk/things/b6313976-a311-480f-a813-08caddad7a2f#id",
+                      "thingId": "b6313976-a311-480f-a813-08caddad7a2f",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Agriculture"
+                      ],
+                      "thingEnglishLabel": "Agriculture",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                      "thingLabel": "আফ্রিকা",
+                      "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                      "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q15",
+                        "http://dbpedia.org/resource/Africa",
+                        "http://sws.geonames.org/6255146/"
+                      ],
+                      "thingEnglishLabel": "Africa",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                      "thingLabel": "জলবায়ু পরিবর্তন",
+                      "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                      "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q125928",
+                        "http://dbpedia.org/resource/Climate_change"
+                      ],
+                      "thingEnglishLabel": "Climate change",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2wm21",
+                "subType": "clip",
+                "format": "video",
+                "title": "কেনিয়ায় লাখ লাখ পাখি মেরে ফসল রক্ষার চেষ্টা",
+                "synopses": {
+                  "short": "কেনিয়ায় ৬০ লাখ কোয়েলা পাখি নিশ্চিহ্ণ করে ফসল রক্ষার চেষ্টা",
+                  "long": "কেনিয়ায় ফসলের ক্ষেতে কোয়েলা পাখির উৎপাতে অতিষ্ঠ হয়ে উঠেছেন কৃষকরা, প্রতি বছর আফ্রিকায় হাজার হাজার টন ফসল নষ্ট করছে এই পাখি। এজন্যে কেনিয়ার সরকার প্রায় ৬০ লাখ কোয়েলা পাখি মেরে ফেলার এক কর্মসূচী নিয়েছে। কিন্তু পরিবেশ বিজ্ঞানী এবং বন্য প্রাণী সংস্থাগুলো উদ্বেগ প্রকাশ করে বলেছে, রাসায়নিক ছিটিয়ে পাখি মেরে ফেলার এই কর্মসূচী হিতে বিপরীত হতে পারে। কারণ এতে একদিকে জীববৈচিত্র্য নষ্ট হবে, অন্যদিকে এই রাসায়নিক মানব দেহের জন্যও ক্ষতিকর হতে পারে। কেনিয়ার কিসুমু হতে বিবিসির ডরকাস ওয়াঙ্গিরার রিপোর্ট:",
+                  "medium": "প্রতি বছর আফ্রিকায় হাজার হাজার টন ফসল নষ্ট করছে কোয়েলা পাখি। এজন্যে কেনিয়ার সরকার প্রায় ৬০ লাখ কোয়েলা পাখি মেরে ফেলার এক কর্মসূচী নিয়েছে।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2wmhx.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "কেনিয়ায় ৬০ লাখ কোয়েলা পাখি নিশ্চিহ্ণ করে ফসল রক্ষার চেষ্টা",
+                "versions": [
+                  {
+                    "versionId": "p0f2wm25",
+                    "types": ["Original"],
+                    "duration": 185,
+                    "durationISO8601": "PT3M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676305983000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128620033",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/80EA/production/_128620033_picture1.jpg",
+                "path": "/cpsprodpb/80EA/production/_128620033_picture1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "কোয়েলা পাখি",
+                "caption": "কোয়েলা পাখি",
+                "copyrightHolder": "Getty Images",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-64630885",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dc35d971-2a3d-4310-9a1f-7638f481513f",
+            "rank": 2,
+            "count": 108,
+            "urn": "urn:bbc:curie:asset:dc35d971-2a3d-4310-9a1f-7638f481513f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "যৌন কাজের বিনিময়ে খাবার পানি",
+                "headline": "সেক্স বা যৌন কাজে বাধ্য করে কেনিয়ায় যেসব মহিলা ও নারীকে খাবার পানি দেয়া হচ্ছে"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-61273735",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-61273735",
+                "curie": "http://www.bbc.co.uk/asset/dc35d971-2a3d-4310-9a1f-7638f481513f",
+                "assetId": "61273735"
+              },
+              "summary": "কেনিয়ার রাজধানী নাইরোবির কোথাও কোথাও চরম পানির সংকট দেখা দিয়েছে। পানি কিনতে গিয়ে অনেক মেয়ে ও নারী তাদের সম্মান বিক্রি করতে বাধ্য হচ্ছেন।",
+              "timestamp": 1651234726000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:dc35d971-2a3d-4310-9a1f-7638f481513f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7d7c35fa-f724-4b36-90a0-21f71d99857d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/9a147376-bd7a-45b4-92aa-7c4d3f806dd2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/9a147376-bd7a-45b4-92aa-7c4d3f806dd2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/7d7c35fa-f724-4b36-90a0-21f71d99857d#id",
+                      "thingLabel": "কেনিয়া",
+                      "thingUri": "http://www.bbc.co.uk/things/7d7c35fa-f724-4b36-90a0-21f71d99857d#id",
+                      "thingId": "7d7c35fa-f724-4b36-90a0-21f71d99857d",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/192950/"],
+                      "thingEnglishLabel": "Kenya",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/9a147376-bd7a-45b4-92aa-7c4d3f806dd2#id",
+                      "thingLabel": "যৌনতা",
+                      "thingUri": "http://www.bbc.co.uk/things/9a147376-bd7a-45b4-92aa-7c4d3f806dd2#id",
+                      "thingId": "9a147376-bd7a-45b4-92aa-7c4d3f806dd2",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q5873",
+                        "http://dbpedia.org/resource/Sexual_intercourse"
+                      ],
+                      "thingEnglishLabel": "Sex",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id",
+                      "thingLabel": "পানি",
+                      "thingUri": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id",
+                      "thingId": "b214dc4c-d30e-4ef7-9da3-33858396aa2b",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Water",
+                        "http://www.wikidata.org/entity/Q283"
+                      ],
+                      "thingEnglishLabel": "Water",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c3z7k0",
+                "subType": "clip",
+                "format": "video",
+                "title": "যৌন কাজের বিনিময়ে খাবার পানি",
+                "synopses": {
+                  "short": "যৌন কাজে বাধ্য করে যেখানে মহিলা ও নারীদের খাবার পানি দেওয়া হয়",
+                  "long": "কেনিয়ার রাজধানী নাইরোবিতে চরম পানির সংকট দেখা যাচ্ছে। \nসরকারি উদ্যোগে যে খাবার পানি সরবরাহ করা হয়, তা প্রয়োজনের তুলনায় অপ্রতুল। তাই ব্যক্তি পর্যায়ে অনেকে বিভিন্ন স্থানে পানি বিক্রি করছে।\nকিন্তু সেখান থেকে পানি আনতে গিয়ে অনেক মেয়ে ও নারী যা দিচ্ছে সেটির মূল্য অর্থ থেকেও অনেক বেশি। \nবিস্তারিত দেখুন ভিডিওতে।",
+                  "medium": "কেনিয়ার রাজধানী নাইরোবিতে চরম পানির সংকট দেখা যাচ্ছে। পানি কিনতে গিয়ে অনেক মেয়ে ও নারী যা দিচ্ছে সেটির মূল্য অর্থ থেকেও অনেক বেশি।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c405wt.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "যৌন কাজের বিনিময়ে খাবার পানি",
+                "versions": [
+                  {
+                    "versionId": "p0c3z7k4",
+                    "types": ["Original"],
+                    "duration": 191,
+                    "durationISO8601": "PT3M11S",
+                    "warnings": {
+                      "short": "Contains some upsetting scenes.",
+                      "long": "Contains some scenes which some viewers may find upsetting."
+                    },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1651233223000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124361152",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/621C/production/_124361152_p0c405qj.jpg",
+                "path": "/cpsprodpb/621C/production/_124361152_p0c405qj.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "পানি সংগ্রহ করছেন কয়েকজন",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-61273735",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "64bc8e43-6197-4ff1-82a0-e0ff65f05e75",
+            "rank": 3,
+            "count": 51,
+            "urn": "urn:bbc:curie:asset:64bc8e43-6197-4ff1-82a0-e0ff65f05e75",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ভূমিকম্পের কয়েকদিন পরেও অলৌকিক উদ্ধার",
+                "headline": "তুরস্ক সিরিয়ায় ভূমিকম্প: কয়েকদিন পরেও অলৌকিক উদ্ধার"
+              },
+              "locators": {
+                "assetUri": "/bengali/64618665",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:64bc8e43-6197-4ff1-82a0-e0ff65f05e75",
+                "assetId": "64618665",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/64618665",
+                "curie": "http://www.bbc.co.uk/asset/64bc8e43-6197-4ff1-82a0-e0ff65f05e75"
+              },
+              "summary": "তুরস্কে সোমবারের ভূমিকম্পে যেসব ভবন ধসে পড়েছে সেগুলোর নির্মাণকাজের সঙ্গে যারা জড়িত ছিলেন, এরকম একশরও বেশি ব্যক্তির বিরুদ্ধে গ্রেফতারি পরোয়ানা জারি করা হয়েছে।",
+              "timestamp": 1676214983000,
+              "language": "bn",
+              "passport": {
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:64bc8e43-6197-4ff1-82a0-e0ff65f05e75",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/2d8561aa-e070-4d10-b199-107b5919def6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/193b0992-cee1-45ae-863e-c8ce4059cbd1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/193b0992-cee1-45ae-863e-c8ce4059cbd1#id",
+                      "thingLabel": "মানবিক ত্রাণ",
+                      "thingUri": "http://www.bbc.co.uk/things/193b0992-cee1-45ae-863e-c8ce4059cbd1#id",
+                      "thingId": "193b0992-cee1-45ae-863e-c8ce4059cbd1",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Humanitarian_aid",
+                        "http://www.wikidata.org/entity/Q826745"
+                      ],
+                      "thingEnglishLabel": "Humanitarian aid",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingLabel": "সিরিয়া",
+                      "thingUri": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingId": "28b0a95e-89d3-4fdf-bad0-8565eb549233",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/163843/"],
+                      "thingEnglishLabel": "Syria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/2d8561aa-e070-4d10-b199-107b5919def6#id",
+                      "thingLabel": "আন্তর্জাতিক ত্রাণ",
+                      "thingUri": "http://www.bbc.co.uk/things/2d8561aa-e070-4d10-b199-107b5919def6#id",
+                      "thingId": "2d8561aa-e070-4d10-b199-107b5919def6",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Aid",
+                        "http://www.wikidata.org/entity/Q2827815"
+                      ],
+                      "thingEnglishLabel": "International aid",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "ভূমিকম্প",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "তুরস্ক",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
+                      "thingLabel": "জাতিসংঘ",
+                      "thingUri": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
+                      "thingId": "b79ae056-59b1-49c7-8630-50f7e223e906",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "core:Organisation",
+                        "tagging:Agent",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q1065",
+                        "http://dbpedia.org/resource/United_Nations"
+                      ],
+                      "thingEnglishLabel": "United Nations",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2pn13",
+                "subType": "clip",
+                "format": "video",
+                "title": "ভূমিকম্পের কয়েকদিন পরেও অলৌকিক উদ্ধার",
+                "synopses": {
+                  "short": "ভূমিকম্পের কয়েকদিন পরেও অলৌকিক উদ্ধার",
+                  "long": "তুরস্কে সোমবারের ভূমিকম্পে যেসব ভবন ধসে পড়েছে সেগুলোর নির্মাণকাজের সঙ্গে যারা জড়িত ছিলেন, এরকম একশরও বেশি ব্যক্তির বিরুদ্ধে গ্রেফতারি পরোয়ানা জারি করা হয়েছে। \nভূমিকম্পের ছ’দিন পর তুরস্ক ও সিরিয়ায় নিহতের সংখ্যা ২৮ হাজার ছাড়িয়ে গেছে। \nবিশ্ব স্বাস্থ্য সংস্থা বলছে, ভয়াবহ এই বিপর্যয়ে দুই কোটি ৬০ লাখ মানুষ ক্ষতিগ্রস্ত হয়েছে। \nভূমিকম্পটির কেন্দ্র ছিল গাজিয়ানটেপ শহরের কাছেই। \nসেখান থেকে পাঠানো বিবিসির নিক বিকের প্রতিবেদন:",
+                  "medium": "তুরস্কে সোমবারের ভূমিকম্পে যেসব ভবন ধসে পড়েছে সেগুলোর নির্মাণকাজের সঙ্গে যারা জড়িত ছিলেন, এরকম একশরও বেশি ব্যক্তির বিরুদ্ধে গ্রেফতারি পরোয়ানা জারি করা হয়েছে।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2pn2s.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ভূমিকম্পের কয়েকদিন পরেও অলৌকিক উদ্ধার",
+                "versions": [
+                  {
+                    "versionId": "p0f2pn17",
+                    "types": ["Original"],
+                    "duration": 130,
+                    "durationISO8601": "PT2M10S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676213659000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128608897",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13808/production/_128608897_de32.jpg",
+                "path": "/cpsprodpb/13808/production/_128608897_de32.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "rescue work",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/64618665",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3197112f-ce6f-4f53-b2d4-7a513d3f8d1e",
+            "rank": 4,
+            "count": 39,
+            "urn": "urn:bbc:curie:asset:3197112f-ce6f-4f53-b2d4-7a513d3f8d1e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "অবৈধ জেলে নৌকার সন্ধানে অ্যালব্যাট্রস পাখি",
+                "headline": "সাগরে অবৈধ মাছ ধরার নৌকা খুঁজে বের করবে অ্যালব্যাট্রস পাখি"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-64616837",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:3197112f-ce6f-4f53-b2d4-7a513d3f8d1e",
+                "assetId": "64616837",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-64616837",
+                "curie": "http://www.bbc.co.uk/asset/3197112f-ce6f-4f53-b2d4-7a513d3f8d1e"
+              },
+              "summary": "অ্যালব্যাট্রসের দেহে জিপিএস যুক্ত করে বিজ্ঞানীরা আকাশ থেকে অবৈধ মাছ ধরার নৌকার ওপর নজরদারি চালাতে পারছেন।",
+              "timestamp": 1676199425000,
+              "language": "bn",
+              "passport": {
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:3197112f-ce6f-4f53-b2d4-7a513d3f8d1e",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                      "thingLabel": "প্রকৃতি",
+                      "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                      "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "tagging:Genre",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Nature"],
+                      "thingEnglishLabel": "Nature",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id",
+                      "thingLabel": "সংরক্ষণ (প্রকৃতি)",
+                      "thingUri": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id",
+                      "thingId": "bce059a1-1a05-4b8d-aac8-381699aaa2f0",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Conservation_(ethic)",
+                        "http://www.wikidata.org/entity/Q628403"
+                      ],
+                      "thingEnglishLabel": "Conservation",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2nv3g",
+                "subType": "clip",
+                "format": "video",
+                "title": "অবৈধ জেলে নৌকার সন্ধানে অ্যালব্যাট্রস পাখি",
+                "synopses": {
+                  "short": "সাগরে অবৈধ মাছ ধরা নৌকা খুঁজে বের করবে অ্যালব্যাট্রস পাখি",
+                  "long": "অ্যালব্যাট্রস পাখি দক্ষিণ মহাসাগরের ওপর দিয়ে হাজার হাজার মাইল পথ পাড়ি দিতে পারে। বিজ্ঞানীরা এখন এই পাখি ব্যবহার করছেন অবৈধ মাছ ধরা জাহাজ খুঁজে বের করার কাজে। অবৈধ জেলে নৌকা কেবল মৎস্য সম্পদই ধ্বংস করছে না, এগুলো পাখিদের জীবনও বিপন্ন করছে। অ্যালব্যাট্রসের দেহে জিপিএস যুক্ত করে বিজ্ঞানীরা আকাশ থেকেই এসব অবৈধ মাছ ধরা নৌকার ওপর নজরদারি চালাতে পারছেন। বিস্তারিত এই প্রতিবেদনে:",
+                  "medium": "সাগরে অবৈধ মাছ ধরা নৌকা খুঁজে বের করবে অ্যালব্যাট্রস পাখি"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2nvk0.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "সাগরে অবৈধ মাছ ধরা নৌকা খুঁজে বের করবে অ্যালব্যাট্রস পাখি",
+                "versions": [
+                  {
+                    "versionId": "p0f2nv3l",
+                    "types": ["Original"],
+                    "duration": 144,
+                    "durationISO8601": "PT2M24S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676198769000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128607065",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/DB06/production/_128607065_gettyimages-1246896995.jpg",
+                "path": "/cpsprodpb/DB06/production/_128607065_gettyimages-1246896995.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "অ্যালব্যাট্রস",
+                "caption": "অ্যালব্যাট্রস",
+                "copyrightHolder": "Wolfgang Kaehler",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-64616837",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "597327bf-4af8-4e46-b9b6-806c524ffb76",
+            "rank": 5,
+            "count": 23,
+            "urn": "urn:bbc:curie:asset:597327bf-4af8-4e46-b9b6-806c524ffb76",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "মানুষের সাথে যোগাযোগ করতে পারে ঘোড়াও",
+                "headline": "মানুষের সাথে যোগাযোগ করতে পারে ঘোড়াও"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-37473401",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-37473401",
+                "curie": "http://www.bbc.co.uk/asset/597327bf-4af8-4e46-b9b6-806c524ffb76",
+                "assetId": "37473401"
+              },
+              "summary": "মানুষের সাথে যোগাযোগ করতে পারে ঘোড়াও",
+              "timestamp": 1474974598000,
+              "language": "bn",
+              "media": {
+                "id": "p0492dk0",
+                "subType": "clip",
+                "format": "audio",
+                "title": "বিজ্ঞানের আসর",
+                "synopses": {
+                  "short": "মানুষের সাথে যোগাযোগ করতে পারে ঘোড়াও"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0492dyj.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "মানুষের সাথে যোগাযোগ করতে পারে ঘোড়াও",
+                "versions": [
+                  {
+                    "versionId": "p0492dk5",
+                    "types": ["Original"],
+                    "duration": 661,
+                    "durationISO8601": "PT11M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1474887579000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "91381096",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10D9A/production/_91381096_p0492dyj.jpg",
+                "path": "/cpsprodpb/10D9A/production/_91381096_p0492dyj.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ঘোড়া",
+                "caption": "ঘোড়া",
+                "copyrightHolder": "Thinkstock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-37473401",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e725afd4-6f1f-4738-a7f7-078452a5b8c6",
+            "rank": 6,
+            "count": 22,
+            "urn": "urn:bbc:curie:asset:e725afd4-6f1f-4738-a7f7-078452a5b8c6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ভূমিকম্পে লাইট ভেঙে পড়ায় ঘুম থেকে জেগে ওঠেন ইশরাত",
+                "headline": "ভূমিকম্পে লাইট ভেঙে পড়ায় ঘুম থেকে জেগে ওঠেন ইশরাত"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-64597129",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e725afd4-6f1f-4738-a7f7-078452a5b8c6",
+                "assetId": "64597129",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-64597129",
+                "curie": "http://www.bbc.co.uk/asset/e725afd4-6f1f-4738-a7f7-078452a5b8c6"
+              },
+              "summary": "ইশরাত ফাতেমা জান্নাত, যিনি গাজিয়ানটেপ থেকে আঙ্কারায় পৌঁছেছেন বৃহস্পতিবার সকালে। ভূমিকম্পের পর থেকে আঙ্কারা পৌঁছানো পর্যন্ত তার অভিজ্ঞতা ছিল ভয়াবহ।",
+              "timestamp": 1676025907000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:e725afd4-6f1f-4738-a7f7-078452a5b8c6",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "ভূমিকম্প",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "তুরস্ক",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id",
+                      "thingLabel": "বাংলাদেশ",
+                      "thingUri": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id",
+                      "thingId": "f7cb7586-737a-419d-b569-15b25da5a2c1",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1210997/"],
+                      "thingEnglishLabel": "Bangladesh",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f29gf3",
+                "subType": "clip",
+                "format": "video",
+                "title": "ভূমিকম্প থেকে বেঁচে ফেরার ভয়াবহ কথা জানালেন তুরস্কে বাংলাদেশি ছাত্রী",
+                "synopses": {
+                  "short": "ভূমিকম্প থেকে বেঁচে ফেরার ভয়াবহ কথা জানালেন তুরস্কে বাংলাদেশি ছাত্রী",
+                  "long": "তুরস্কের গাজিয়ানটেপ, কাহরামানমারাস, মালাতিয়াসহ ভূমিকম্প কবলিত এলাকায় থাকা বাংলাদেশিদের অনেকে এখন ইস্তাম্বুল, আঙ্কারায় থাকা বাংলাদেশিদের বাসায় অবস্থান করছেন।",
+                  "medium": "তুরস্কের গাজিয়ানটেপ, কাহরামানমারাস, মালাতিয়াসহ ভূমিকম্প কবলিত এলাকায় থাকা বাংলাদেশিদের অনেকে এখন ইস্তাম্বুল, আঙ্কারায় থাকা বাংলাদেশিদের বাসায় অবস্থান করছেন।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f29j8v.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ভূমিকম্প থেকে বেঁচে ফেরার ভয়াবহ কথা জানালেন তুরস্কে বাংলাদেশি ছাত্রী",
+                "versions": [
+                  {
+                    "versionId": "p0f29gf7",
+                    "types": ["Original"],
+                    "duration": 399,
+                    "durationISO8601": "PT6M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676025332000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128585425",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CCEA/production/_128585425_p0f29j8v.jpg",
+                "path": "/cpsprodpb/CCEA/production/_128585425_p0f29j8v.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #2",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-64597129",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "95705dfe-9ea8-4b64-8ee2-7bb8b5a71ae3",
+            "rank": 7,
+            "count": 22,
+            "urn": "urn:bbc:curie:asset:95705dfe-9ea8-4b64-8ee2-7bb8b5a71ae3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "শিশুদের নিউমোনিয়ার কারণ এবং লক্ষণ গুলো কী কী?",
+                "headline": "নিউমোনিয়া: কেন হয়, লক্ষণ কী, আর হলে কী করবেন?"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-54920749",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-54920749",
+                "curie": "http://www.bbc.co.uk/asset/95705dfe-9ea8-4b64-8ee2-7bb8b5a71ae3",
+                "assetId": "54920749"
+              },
+              "summary": "নিউমোনিয়ার জীবাণু মানুষের ফুসফুস এবং শ্বাসতন্ত্রকে আক্রান্ত করে। ভাইরাস, ব্যাকটেরিয়া, ফাঙ্গাস এবং টিবি'র জীবাণুর মাধ্যমে নিউমোনিয়া ছড়ায়। কিন্তু এর কারণ ও লক্ষণগুলো কী কী?",
+              "timestamp": 1605190228000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08y71bt",
+                "subType": "clip",
+                "format": "video",
+                "title": "শিশুদের নিউমোনিয়ার কারণ এবং লক্ষণ গুলো কী কী?",
+                "synopses": {
+                  "short": "নিউমোনিয়া: কেন হয়, লক্ষণ কী, আর হলে কী করবেন?",
+                  "long": "নিউমোনিয়ার জীবাণু মানুষের ফুসফুস এবং শ্বাসতন্ত্রকে আক্রান্ত করে। ভাইরাস, ব্যাকটেরিয়া, ফাঙ্গাস এবং টিবি'র জীবাণুর মাধ্যমে নিউমোনিয়া ছড়ায়।\nশীতকালে শিশুদের মধ্যে এই রোগের প্রাদুর্ভাব বেশি দেখা দেয়।\nআর এসব কারণেই বর্তমান করোনাভাইরাস পরিস্থিতিতে নিউমোনিয়া এক আতঙ্কের কারণও হয়ে দাঁড়িয়েছে। \nচলুন জেনে নেই নিউমোনিয়া কেন হয়, কীভাবে বুঝবেন আপনার নিউমোনিয়া হয়েছে কি-না আর এই নিউমোনিয়া যদি হয়েই থাকে, তাহলে করণীয় কী?",
+                  "medium": "নিউমোনিয়ার জীবাণু মানুষের ফুসফুস এবং শ্বাসতন্ত্রকে আক্রান্ত করে। ভাইরাস, ব্যাকটেরিয়া, ফাঙ্গাস এবং টিবি'র জীবাণুর মাধ্যমে নিউমোনিয়া ছড়ায়। কিন্তু এর কারণ ও লক্ষণগুলো কী কী?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08y743v.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "শিশুদের নিউমোনিয়ার কারণ এবং লক্ষণ গুলো কী কী?",
+                "versions": [
+                  {
+                    "versionId": "p08y71bw",
+                    "types": ["Original"],
+                    "duration": 339,
+                    "durationISO8601": "PT5M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1605189649000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "115385160",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/180E/production/_115385160_p08y72nf.jpg",
+                "path": "/cpsprodpb/180E/production/_115385160_p08y72nf.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "শিশু",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-54920749",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "94db0a0d-063b-cb4e-afc5-57516b9e4a9a",
+            "rank": 8,
+            "count": 21,
+            "urn": "urn:bbc:curie:asset:94db0a0d-063b-cb4e-afc5-57516b9e4a9a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "১১ বছরের মেয়ে, ইউটিউবে ১৩ কোটি ভক্ত: কেমন তার জীবন?",
+                "headline": "১১ বছরের মেয়ে, ১৩ কোটি ভক্ত: কেমন তার জীবন?"
+              },
+              "locators": {
+                "assetUri": "/bengali/46841492",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/46841492",
+                "curie": "http://www.bbc.co.uk/asset/94db0a0d-063b-cb4e-afc5-57516b9e4a9a",
+                "assetId": "46841492"
+              },
+              "summary": "১১ বছরের মেয়ে, ইউটিউবে ১৩ কোটি ভক্ত: কেমন তার জীবন?",
+              "timestamp": 1547220659000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "CS"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06xvdgb",
+                "subType": "clip",
+                "format": "video",
+                "title": "ইউটিউব স্টার",
+                "synopses": {
+                  "short": "ইউটিউব স্টার"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06xvdtp.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ইউটিউব স্টার",
+                "versions": [
+                  {
+                    "versionId": "p06xvdgk",
+                    "types": ["Original"],
+                    "duration": 194,
+                    "durationISO8601": "PT3M14S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1547219787000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105150899",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/185DD/production/_105150899_p06xvdtp.jpg",
+                "path": "/cpsprodpb/185DD/production/_105150899_p06xvdtp.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ইউটিউব স্টার",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/46841492",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "82146bda-5056-4dde-bc56-fcb41e2aba99",
+            "rank": 9,
+            "count": 17,
+            "urn": "urn:bbc:curie:asset:82146bda-5056-4dde-bc56-fcb41e2aba99",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "আমেরিকায় বাঙালি সেনেটরের জীবন কেমন?",
+                "headline": "শেখ রাহমান: আমেরিকায় বাঙালি সেনেটরের জীবন কেমন?"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-63881793",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:82146bda-5056-4dde-bc56-fcb41e2aba99",
+                "assetId": "63881793",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-63881793",
+                "curie": "http://www.bbc.co.uk/asset/82146bda-5056-4dde-bc56-fcb41e2aba99"
+              },
+              "summary": "সেনেটর শেখ রাহমান একজন বাংলাদেশি-আমেরিকান। তিনি যুক্তরাষ্ট্রের জর্জিয়া অঙ্গরাজ্যের স্টেট সেনেটর। তিনি ঐ রাজ্যের প্রথম কোন মুসলমান আইন প্রণেতা, ২০১৯ সাল থেকে যিনি দায়িত্ব পালন করে আসছেন।",
+              "timestamp": 1670387261000,
+              "language": "bn",
+              "passport": {
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:82146bda-5056-4dde-bc56-fcb41e2aba99",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/83a45ff0-d5b2-4cdb-be7e-523c6001751b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingLabel": "রাজনীতি",
+                      "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingEnglishLabel": "Politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "যুক্তরাষ্ট্র",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/83a45ff0-d5b2-4cdb-be7e-523c6001751b#id",
+                      "thingLabel": "অভিবাসন",
+                      "thingUri": "http://www.bbc.co.uk/things/83a45ff0-d5b2-4cdb-be7e-523c6001751b#id",
+                      "thingId": "83a45ff0-d5b2-4cdb-be7e-523c6001751b",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "tagging:NarrativeTheme",
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Human_migration",
+                        "http://www.wikidata.org/entity/Q177626"
+                      ],
+                      "thingEnglishLabel": "Migration",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id",
+                      "thingLabel": "বাংলাদেশ",
+                      "thingUri": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id",
+                      "thingId": "f7cb7586-737a-419d-b569-15b25da5a2c1",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1210997/"],
+                      "thingEnglishLabel": "Bangladesh",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dmbmxz",
+                "subType": "clip",
+                "format": "video",
+                "title": "আমেরিকায় বাঙালি সিনেটারের জীবন কেমন?",
+                "synopses": {
+                  "short": "আমেরিকায় বাঙালি সিনেটারের জীবন কেমন?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dmbqqm.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "আমেরিকায় বাঙালি সেনেটরের জীবন কেমন?",
+                "versions": [
+                  {
+                    "versionId": "p0dmbmyk",
+                    "types": ["Original"],
+                    "duration": 783,
+                    "durationISO8601": "PT13M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1670355407000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "127911179",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17B57/production/_127911179_rahman2.jpg",
+                "path": "/cpsprodpb/17B57/production/_127911179_rahman2.jpg",
+                "height": 737,
+                "width": 1310,
+                "altText": "সিনেটার শেখ রাহমান",
+                "copyrightHolder": "সিনেটার শেখ রাহমান",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-63881793",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "da96cb04-353e-11e5-b142-5af43db9bd6e",
+            "rank": 10,
+            "count": 16,
+            "urn": "urn:bbc:curie:asset:da96cb04-353e-11e5-b142-5af43db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ভিডিও",
+                "headline": "ভিডিও"
+              },
+              "locators": {
+                "assetUri": "/bengali/multimedia/2015/07/150728_mk_human_trafficking_video",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2015/07/150728_mk_human_trafficking_video",
+                "curie": "http://www.bbc.co.uk/asset/da96cb04-353e-11e5-b142-5af43db9bd6e",
+                "assetId": "39836987"
+              },
+              "summary": "ভিডিও",
+              "timestamp": 1438098021000,
+              "language": "bn",
+              "media": {
+                "id": "39836987",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "39836987",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/07/28/150728151913_150728102218_human_trafficking_pic4.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/07/28/150728151913_150728102218_human_trafficking_pic4.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "ভিডিও",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/bengali/meta/dps/2015/07/emp/150728_mk_human_trafficking_video.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/bengali/dps/2015/07/bbc_sh_slaves_bengali_150728_mk_human_trafficking_video_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/bengali/dps/2015/07/bbc_sh_slaves_bengali_150728_mk_human_trafficking_video_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/bengali/dps/2015/07/bbc_sh_slaves_bengali_150728_mk_human_trafficking_video_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e204",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/07/28/150728152134_human_trafficking_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/07/28/150728152134_human_trafficking_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/multimedia/2015/07/150728_mk_human_trafficking_video",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c3ef4535-5851-4a39-8612-5accb0b943c9",
+            "rank": 11,
+            "count": 14,
+            "urn": "urn:bbc:curie:asset:c3ef4535-5851-4a39-8612-5accb0b943c9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ভূমিকম্পের পর তুরস্কে বাংলাদেশিরা কী পরিস্থিতিতে আছেন?",
+                "headline": "ভূমিকম্পের পর তুরস্কে বাংলাদেশিরা কী পরিস্থিতিতে আছেন?"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-64537562",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c3ef4535-5851-4a39-8612-5accb0b943c9",
+                "assetId": "64537562",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-64537562",
+                "curie": "http://www.bbc.co.uk/asset/c3ef4535-5851-4a39-8612-5accb0b943c9"
+              },
+              "summary": "বিশ্ব স্বাস্থ্য সংস্থার ধারণা, তুরস্ক ও সিরিয়ায় আড়াই কোটিরও বেশি মানুষ ভূমিকম্পের শিকার হয়েছেন। তুরস্কে অনেক বাংলাদেশি থাকেন, কেউ শিক্ষার্থী, কেউ হয়তো চাকরির সুবাদে। তারা এখন কী পরিস্থিতিতে আছেন?",
+              "timestamp": 1675849379000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:c3ef4535-5851-4a39-8612-5accb0b943c9",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingLabel": "সিরিয়া",
+                      "thingUri": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingId": "28b0a95e-89d3-4fdf-bad0-8565eb549233",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/163843/"],
+                      "thingEnglishLabel": "Syria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "ভূমিকম্প",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "তুরস্ক",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1qxgq",
+                "subType": "clip",
+                "format": "video",
+                "title": "ভূমিকম্পের পর তুরস্কে বাংলাদেশিরা কী পরিস্থিতিতে আছেন?",
+                "synopses": {
+                  "short": "ভূমিকম্পের পর তুরস্কে বাংলাদেশিরা কী পরিস্থিতিতে আছেন?",
+                  "long": "দক্ষিণ তুরস্ক এবং উত্তর সিরিয়ায় বিধ্বংসী ভূমিকম্পে ব্যাপক প্রাণহানির পর সেখানে আন্তর্জাতিক সাহায্য প্রচেষ্টা জোরদার করা হচ্ছে। \nবিশ্ব স্বাস্থ্য সংস্থা ধারণা করছে, তুরস্ক এবং সিরিয়া জুড়ে আড়াই কোটিরও বেশি মানুষ এই ভূমিকম্পের শিকার হয়েছেন। \nদুটি দেশেই হাজার হাজার ভবন ধসে পড়েছে এবং ধ্বংসস্তূপের নিচে আটকে পড়া মানুষদের বাঁচাতে উদ্ধারকর্মীরা প্রাণপণ প্রচেষ্টা চালাচ্ছেন। \nতুরস্কে অনেক বাংলাদেশি থাকেন। কেউ শিক্ষার্থী, কেউ হয়তো চাকরির সুবাদে আছেন তুরস্কে। তাদের কী পরিস্থিতি জানার চেষ্টা করেছেন আফরোজা নীলা। ভিডিওটি দেখতে পাবেন আমাদের ইউটিউব চ্যানেলেও।",
+                  "medium": "তুরস্কে অনেক বাংলাদেশি থাকেন, কেউ শিক্ষার্থী, কেউ হয়তো চাকরির সুবাদে আছেন। ভূমিকম্পের পর তারা এখন কী পরিস্থিতিতে আছেন?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1qz3m.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ভূমিকম্পের পর তুরস্কে বাংলাদেশিরা কী পরিস্থিতিতে আছেন?",
+                "versions": [
+                  {
+                    "versionId": "p0f1qxgx",
+                    "types": ["Original"],
+                    "duration": 273,
+                    "durationISO8601": "PT4M33S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675848027000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128534990",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/26D7/production/_128534990_turkey_aftermathup.jpg",
+                "path": "/cpsprodpb/26D7/production/_128534990_turkey_aftermathup.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "তুরস্কে থাকা বাংলাদেশি",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-64537562",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "62b45dc0-73f8-7843-8401-a48a22b22771",
+            "rank": 12,
+            "count": 9,
+            "urn": "urn:bbc:curie:asset:62b45dc0-73f8-7843-8401-a48a22b22771",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "হঠাৎ সবকিছুতেই যখন দুর্গন্ধ",
+                "headline": "পোরোজমিয়া: হঠাৎ সবকিছুতেই যখন দুর্গন্ধ"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-39420898",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-39420898",
+                "curie": "http://www.bbc.co.uk/asset/62b45dc0-73f8-7843-8401-a48a22b22771",
+                "assetId": "39420898"
+              },
+              "summary": "পোরোজমিয়া: হঠাৎ সবকিছুতেই যখন দুর্গন্ধ",
+              "timestamp": 1490703175000,
+              "language": "bn",
+              "media": {
+                "id": "p04y92jp",
+                "subType": "clip",
+                "format": "audio",
+                "title": "হঠাৎ সবকিছুতেই যখন দুর্গন্ধ",
+                "synopses": {
+                  "short": "হঠাৎ সবকিছুতেই যখন দুর্গন্ধ",
+                  "medium": "হঠাৎ সবকিছুতেই যখন দুর্গন্ধ",
+                  "long": "হঠাৎ সবকিছুতেই যখন দুর্গন্ধ"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04y92rt.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "হঠাৎ সবকিছুতেই যখন দুর্গন্ধ",
+                "versions": [
+                  {
+                    "versionId": "p04y92js",
+                    "types": ["Original"],
+                    "duration": 608,
+                    "durationISO8601": "PT10M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1490702289000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95356520",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0A05/production/_95356520_5.png",
+                "path": "/cpsprodpb/0A05/production/_95356520_5.png",
+                "height": 549,
+                "width": 976,
+                "altText": "আমরা যখন কিছুর গন্ধ নেই তখন বাতাস থেকে কিছু অণু নাকের মাধ্যমে ভেতরে টেনে নেই। এসব অণুর মধ্যে থাকে গন্ধ",
+                "caption": "আমরা যখন কিছুর গন্ধ নেই তখন বাতাস থেকে কিছু অণু নাকের মাধ্যমে ভেতরে টেনে নেই। এসব অণুর মধ্যে থাকে গন্ধ।",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-39420898",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "829d2b2e-ec48-2c47-81c5-2b0c0c5bcbbd",
+            "rank": 13,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:829d2b2e-ec48-2c47-81c5-2b0c0c5bcbbd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "সৌদি নারীর যে কাজে পুরুষের অনুমতি লাগে",
+                "headline": "সৌদি আরবে মেয়েদের যেসব কাজের জন্য পুরুষদের অনুমতির প্রয়োজন হয়"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-46854591",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-46854591",
+                "curie": "http://www.bbc.co.uk/asset/829d2b2e-ec48-2c47-81c5-2b0c0c5bcbbd",
+                "assetId": "46854591"
+              },
+              "summary": "সৌদি আরবে নারীদের অনেক গূরুত্বপূর্ণ সিদ্ধান্তের ক্ষেত্রে পুরুষ অভিভাবকের অনুমতি নিতে হয়।",
+              "timestamp": 1547369624000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "CS"
+                  },
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06xz510",
+                "subType": "clip",
+                "format": "video",
+                "title": "সৌদি আরবে নারীদের যে যে অনুমতি প্রয়োজন",
+                "synopses": {
+                  "short": "সৌদি আরবে যেসব কাজের জন্য পুরুষদের অনুমতির প্রয়োজন হয় নারীদের"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06xz563.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "সৌদি আরব থেকে পালিয়ে সম্প্রতি আলোচনায় আসেন কিশোরী রাহাফ",
+                "versions": [
+                  {
+                    "versionId": "p06xz512",
+                    "types": ["Original"],
+                    "duration": 47,
+                    "durationISO8601": "PT47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1547360544000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105164970",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1F0A/production/_105164970_p06xz563.jpg",
+                "path": "/cpsprodpb/1F0A/production/_105164970_p06xz563.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "রাহাফ মোহাম্মেদ আল কুনুন",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-46854591",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1f3ac7d5-1c6b-1e49-9c3d-4901a3a67512",
+            "rank": 14,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:1f3ac7d5-1c6b-1e49-9c3d-4901a3a67512",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "পারকিনসন্স রোগের চিকিৎসায় বড় ধরনের অগ্রগতি ও সুই ছাড়া ইঞ্জেকশন দেওয়ার যন্ত্র",
+                "headline": "পারকিনসন্স রোগের চিকিৎসায় বড় ধরনের অগ্রগতি ও সুই ছাড়া ইঞ্জেকশন দেওয়ার যন্ত্র"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-39340670",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-39340670",
+                "curie": "http://www.bbc.co.uk/asset/1f3ac7d5-1c6b-1e49-9c3d-4901a3a67512",
+                "assetId": "39340670"
+              },
+              "summary": "পারকিনসন্স রোগের চিকিৎসায় বড় ধরনের অগ্রগতি",
+              "timestamp": 1490094916000,
+              "language": "bn",
+              "media": {
+                "id": "p04xk85p",
+                "subType": "clip",
+                "format": "audio",
+                "title": "পারকিনসন্স রোগের চিকিৎসায় বড় ধরনের অগ্রগতি",
+                "synopses": {
+                  "short": "পারকিনসন্স রোগের চিকিৎসায় বড় ধরনের অগ্রগতি",
+                  "medium": "পারকিনসন্স রোগের চিকিৎসায় বড় ধরনের অগ্রগতি",
+                  "long": "পারকিনসন্স রোগের চিকিৎসায় বড় ধরনের অগ্রগতি"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04xk8c3.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "পারকিনসন্স রোগের চিকিৎসায় বড় ধরনের অগ্রগতি",
+                "versions": [
+                  {
+                    "versionId": "p04xk85r",
+                    "types": ["Original"],
+                    "duration": 648,
+                    "durationISO8601": "PT10M48S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1490094103000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95251888",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/15AEF/production/_95251888_p04xk8c3.jpg",
+                "path": "/cpsprodpb/15AEF/production/_95251888_p04xk8c3.jpg",
+                "height": 575,
+                "width": 1024,
+                "altText": "parkinsons",
+                "copyrightHolder": "THINKSTOCK",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-39340670",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8569a65b-ecf3-4cf4-b572-1125d4b8e262",
+            "rank": 15,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:8569a65b-ecf3-4cf4-b572-1125d4b8e262",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "বিদেশি শিক্ষার্থীরা মেডিকেল পড়াশুনার জন্য বাংলাদেশে আসে কেন?",
+                "headline": "বিদেশি শিক্ষার্থীরা মেডিকেল পড়াশুনার জন্য বাংলাদেশে আসে কেন?"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-64495379",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:8569a65b-ecf3-4cf4-b572-1125d4b8e262",
+                "assetId": "64495379",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-64495379",
+                "curie": "http://www.bbc.co.uk/asset/8569a65b-ecf3-4cf4-b572-1125d4b8e262"
+              },
+              "summary": "বাংলাদেশে সরকারি বেসরকারি মেডিকেল কলেজে এখন অনেক বিদেশি শিক্ষার্থী আছে। যাদের বেশিরভাগ এসেছেন পাকিস্তান, নেপাল এবং ভারত থেকে।",
+              "timestamp": 1675324298000,
+              "language": "bn",
+              "passport": {
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:8569a65b-ecf3-4cf4-b572-1125d4b8e262",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingLabel": "শিক্ষা",
+                      "thingUri": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingId": "6942cb29-9d3f-4c9c-9806-0a0578c286d6",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8434",
+                        "http://dbpedia.org/resource/Education"
+                      ],
+                      "thingEnglishLabel": "Education",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingLabel": "স্বাস্থ্য",
+                      "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health",
+                        "http://www.wikidata.org/entity/Q12147"
+                      ],
+                      "thingEnglishLabel": "Health",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id",
+                      "thingLabel": "বাংলাদেশ",
+                      "thingUri": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id",
+                      "thingId": "f7cb7586-737a-419d-b569-15b25da5a2c1",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1210997/"],
+                      "thingEnglishLabel": "Bangladesh",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f0h6hf",
+                "subType": "clip",
+                "format": "video",
+                "title": "বিদেশি শিক্ষার্থীরা মেডিকেল পড়াশুনার জন্য বাংলাদেশে আসছে কেন?",
+                "synopses": {
+                  "short": "বিদেশি শিক্ষার্থীরা মেডিকেল পড়াশুনার জন্য বাংলাদেশে আসছে কেন?",
+                  "long": "বাংলাদেশে সরকারি বেসরকারি মেডিকেল কলেজ এখন অনেক বিদেশি শিক্ষার্থী আছে। এদের বেশিরভাগ এসেছেন পাকিস্তান, নেপাল এবং ভারতে থেকে। বেশিরভাগই পড়াশুনা করছেন বেসরকারি মেডিকেল কলেজগুলোতে। গত কয়েক বছর ধরে বিদেশি শিক্ষার্থীদের আসার সংখ্যা বেড়েই চলেছে। পাকিস্তান থেকে আসা শিক্ষার্থীরা বলছেন অনেক বৃত্তি নিয়ে মেডিকেল কলেজগুলোতে পড়তে আসেন ।",
+                  "medium": "বাংলাদেশে সরকারি বেসরকারি মেডিকেল কলেজ এখন অনেক বিদেশি শিক্ষার্থী আছে। এদের বেশিরভাগ এসেছেন পাকিস্তান, নেপাল এবং ভারতে থেকে।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f0h907.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "বিদেশি শিক্ষার্থীরা মেডিকেল পড়াশুনার জন্য বাংলাদেশে আসছে কেন?",
+                "versions": [
+                  {
+                    "versionId": "p0f0h6hm",
+                    "types": ["Original"],
+                    "duration": 294,
+                    "durationISO8601": "PT4M54S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675321705000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128496086",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/109E5/production/_128496086_capture.jpg",
+                "path": "/cpsprodpb/109E5/production/_128496086_capture.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "বিদেশি মেডিকেল শিক্ষার্থী",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-64495379",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f0b75f5e-055e-9f43-a3f5-a298073a274d",
+            "rank": 16,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:f0b75f5e-055e-9f43-a3f5-a298073a274d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "নেপালে দেবী জীবন শেষ হবার পর কী করেন নারীরা?",
+                "headline": "নেপালে দেবী জীবন শেষ হবার পর কী করেন নারীরা?"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-38199279",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-38199279",
+                "curie": "http://www.bbc.co.uk/asset/f0b75f5e-055e-9f43-a3f5-a298073a274d",
+                "assetId": "38199279"
+              },
+              "summary": "নেপালে কুমারী দেবী বাছাই করার একটা প্রক্রিয়া আছে, আবার শেষ করারও একটা প্রক্রিয়া আছে।",
+              "timestamp": 1480846793000,
+              "language": "bn",
+              "media": {
+                "id": "p04k3ntd",
+                "subType": "clip",
+                "format": "video",
+                "title": "নেপালে দেবী জীবন বাস করার পর কী করেন নারীরা?",
+                "synopses": {
+                  "short": "নেপালে দেবী জীবন বাস করার পর কী করেন নারীরা?",
+                  "medium": "নেপালে কুমারী দেবী বাছাই করার একটা প্রক্রিয়া আছে, আবার শেষ করারও একটা প্রক্রিয়া আছে।",
+                  "long": "নেপালে কুমারী দেবী বাছাই করার একটা প্রক্রিয়া আছে, আবার শেষ করারও একটা প্রক্রিয়া আছে।\nশত বছর ধরে নেপালের হিন্দু আর বৌদ্ধরা এই কুমারি দেবীকে পূজা করে আসছেন।\nকিন্তু এই কুমারি দেবীদের জীবনও শেষ হয়ে যায় তাড়াতাড়ি, কারণ প্রথম ঋতুস্রাবের পর তাদের শুরু করতে হয় স্বাভাবিক জীবনযাপন।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04k3r17.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "নেপালে দেবী জীবন বাস করার পর কী করেন নারীরা?",
+                "versions": [
+                  {
+                    "versionId": "p04k3ntj",
+                    "types": ["Original"],
+                    "duration": 35,
+                    "durationISO8601": "PT35S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1480845763000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "92824105",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/C3DE/production/_92824105_p04k3r17.jpg",
+                "path": "/cpsprodpb/C3DE/production/_92824105_p04k3r17.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "কিশোরী দেবী",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-38199279",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "01dc4fca-7874-11e7-8850-1c823db9bd6e",
+            "rank": 17,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:01dc4fca-7874-11e7-8850-1c823db9bd6e",
+            "promo": {
+              "headlines": {
+                "headline": "গ্রামীন ব্যাংক প্রতিষ্ঠা"
+              },
+              "locators": {
+                "assetUri": "/bengali/multimedia/2012/02/120205_aho_bd40_grameenbank",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2012/02/120205_aho_bd40_grameenbank",
+                "curie": "http://www.bbc.co.uk/asset/01dc4fca-7874-11e7-8850-1c823db9bd6e",
+                "assetId": "15413365"
+              },
+              "summary": "১৯৮৩ সালের ২রা অক্টোবর ব্যাংক হিসেবে আনুষ্ঠানিক জন্ম হয় গ্রামীণ ব্যাংকের। কিন্তু এর ভিত্তি রচিত হয়েছিলো ১৯৭৬ সালে, চট্টগ্রামের জোবরা গ্রামে।",
+              "timestamp": 1328452435000,
+              "language": "bn",
+              "media": {
+                "id": "15413365",
+                "subType": "primary",
+                "format": "audio",
+                "live": false,
+                "href": "http://www.bbc.co.uk/bengali/meta/dps/2012/02/emp/120205_aho_bd40_grameenbank.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/mp3/bengali/2012/02/birthofgrameenbank_final_120205_aho_bd40_grameenbank_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e286",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/02/05/120205141453_grameen_logo_206x116_no_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/02/05/120205141453_grameen_logo_206x116_no_nocredit.jpg",
+                "height": 116,
+                "width": 206,
+                "altText": "grameen bank",
+                "copyrightHolder": "no",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/multimedia/2012/02/120205_aho_bd40_grameenbank",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ee831d23-dc7e-4d4d-843f-3a99f10a5265",
+            "rank": 18,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:ee831d23-dc7e-4d4d-843f-3a99f10a5265",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "নজিরবিহীন গরম আর খরায় বিপর্যস্ত পাকিস্তানের যে অঞ্চল",
+                "headline": "পাকিস্তান: নজিরবিহীন খরার কবলে পাকিস্তানের চোলিস্তান, পানির জন্য হাহাকার"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-61874427",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-61874427",
+                "curie": "http://www.bbc.co.uk/asset/ee831d23-dc7e-4d4d-843f-3a99f10a5265",
+                "assetId": "61874427"
+              },
+              "summary": "দক্ষিণপূর্ব পাকিস্তানের চোলিস্তানে তাপমাত্রা ৫০ ডিগ্রি সেলসিয়াস ছাড়িয়ে গেছে। তীব্র খরায় হিমশিম খাচ্ছে স্থানীয় মানুষ- পানির জন্য চলছে হাহাকার। পানির অভাবে মারা যাচ্ছে গবাদি পশু।",
+              "timestamp": 1655778676000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:ee831d23-dc7e-4d4d-843f-3a99f10a5265",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/73099490-1a7e-4ee9-99c3-02fb1c7ca4a4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/cd832879-ac76-4842-8c33-be2be67e53b8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/73099490-1a7e-4ee9-99c3-02fb1c7ca4a4#id",
+                      "thingLabel": "খরা",
+                      "thingUri": "http://www.bbc.co.uk/things/73099490-1a7e-4ee9-99c3-02fb1c7ca4a4#id",
+                      "thingId": "73099490-1a7e-4ee9-99c3-02fb1c7ca4a4",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q43059",
+                        "http://dbpedia.org/resource/Drought"
+                      ],
+                      "thingEnglishLabel": "Drought",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/cd832879-ac76-4842-8c33-be2be67e53b8#id",
+                      "thingLabel": "পাকিস্তান",
+                      "thingUri": "http://www.bbc.co.uk/things/cd832879-ac76-4842-8c33-be2be67e53b8#id",
+                      "thingId": "cd832879-ac76-4842-8c33-be2be67e53b8",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1168579/"],
+                      "thingEnglishLabel": "Pakistan",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0cg3cx1",
+                "subType": "clip",
+                "format": "video",
+                "title": "নজিরবিহীন খরার কবলে পাকিস্তানের যে অঞ্চল",
+                "synopses": {
+                  "short": "নজিরবিহীন খরার কবলে পাকিস্তানের চোলিস্তান, পানির জন্য হাহাকার"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0cg3fcl.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "নজিরবিহীন খরার কবলে পাকিস্তানের চোলিস্তান, পানির জন্য হাহাকার",
+                "versions": [
+                  {
+                    "versionId": "p0cg3cx7",
+                    "types": ["Original"],
+                    "duration": 196,
+                    "durationISO8601": "PT3M16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1655749437000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125549924",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/A7F2/production/_125549924_pakistan_drought-b64b0a72-a78b-4b7c-be45-981b9599411b.mov_04.jpg",
+                "path": "/cpsprodpb/A7F2/production/_125549924_pakistan_drought-b64b0a72-a78b-4b7c-be45-981b9599411b.mov_04.jpg",
+                "height": 1080,
+                "width": 1920,
+                "altText": "গরু",
+                "caption": "চোলিস্তানে অস্বাভাবিক গরমে মারা গেছে অনেক গবাদি পশু",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-61874427",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e397ec7b-b4d3-45cf-808c-b98989f5616b",
+            "rank": 19,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:e397ec7b-b4d3-45cf-808c-b98989f5616b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "শক্তিশালী ভূমিকম্পে তুরস্ক ও সিরিয়ায় শত শত নিহত",
+                "headline": "শক্তিশালী ভূমিকম্পে তুরস্ক ও সিরিয়ায় শত শত নিহত"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-64537556",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e397ec7b-b4d3-45cf-808c-b98989f5616b",
+                "assetId": "64537556",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-64537556",
+                "curie": "http://www.bbc.co.uk/asset/e397ec7b-b4d3-45cf-808c-b98989f5616b"
+              },
+              "summary": "তুরস্কের দক্ষিণ-পূর্বাঞ্চলে সিরিয়া সীমান্তের কাছে শক্তিশালী ভূমিকম্প আঘাত হেনেছে। এতে এ পর্যন্ত সিরিয়া এবং তুরস্ক মিলিয়ে অন্তত ৫০০ জনের মৃত্যুর খবর পাওয়া গেছে।",
+              "timestamp": 1675677752000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:e397ec7b-b4d3-45cf-808c-b98989f5616b",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingLabel": "সিরিয়া",
+                      "thingUri": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingId": "28b0a95e-89d3-4fdf-bad0-8565eb549233",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/163843/"],
+                      "thingEnglishLabel": "Syria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "তুরস্ক",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f194dm",
+                "subType": "clip",
+                "format": "video",
+                "title": "শক্তিশালী ভূমিকম্পে তুরস্ক ও সিরিয়ায় শত শত নিহত",
+                "synopses": {
+                  "short": "শক্তিশালী ভূমিকম্পে তুরস্ক ও সিরিয়ায় শত শত নিহত",
+                  "long": "শক্তিশালী ভূমিকম্পে তুরস্ক এবং সিরিয়ায় মৃতের সংখ্যা দ্রুতই বাড়ছে।\nমার্কিন ভূ-তাত্ত্বিক জরিপ সংস্থা বলছে, ভূমিকম্পের মাত্রা ছিল ৭.৮ এবং এটি স্থানীয় সময় ভোর সোয়া চারটার দিকে আঘাত হানে। গাজিয়ানতেপ শহরের কাছে এর গভীরতা ছিল মাত্র ১৭.৯ কিলোমিটার।\nশক্তিশালী এই ভূমিকম্পে তুরস্ক ও সিরিয়া উভয় দেশেই অনেক ভবন ধসে পড়েছে এবং বহু মানুষ ভেতরে আটকা পড়ে আছে। \nফলে প্রাণহানি আরও বাড়তে পারে বলে আশঙ্কা করছেন কর্মকর্তারা। \nতুরস্ক জরুরি অবস্থা ঘোষণা করেছে। এছাড়া- উদ্ধারকাজে যেন কর্মীরা পরস্পরের মধ্যে সমন্বয় করতে পারেন সেকারণে জনসাধারণকে মোবাইল ফোন ব্যবহার না করার আহ্বান জানিয়েছে কর্তৃপক্ষ।\nবিস্তারিত এই ভিডিও প্রতিবেদনে। বিবিসি বাংলার ইউটিউব চ্যানেলেও দেখতে পাবেন এই প্রতিবেদনটি।",
+                  "medium": "তুরস্কের দক্ষিণ-পূর্বাঞ্চলে সিরিয়া সীমান্তের কাছে শক্তিশালী ভূমিকম্প আঘাত হেনেছে। এতে এ পর্যন্ত সিরিয়া এবং তুরস্ক মিলিয়ে অন্তত ৫০০ জনের মৃত্যুর খবর পাওয়া গেছে।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f194yz.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "শক্তিশালী ভূমিকম্পে তুরস্ক ও সিরিয়ায় শত শত নিহত",
+                "versions": [
+                  {
+                    "versionId": "p0f194dr",
+                    "types": ["Original"],
+                    "duration": 193,
+                    "durationISO8601": "PT3M13S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675673888000
+                  }
+                ],
+                "imageCopyright": "AFP",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128534985",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E63F/production/_128534985_p0f194yz.jpg",
+                "path": "/cpsprodpb/E63F/production/_128534985_p0f194yz.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "তুরস্কে ভূমিকম্প",
+                "copyrightHolder": "AFP",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-64537556",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "da0341bc-06e1-3648-a7b4-53e96e73e4fc",
+            "rank": 20,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:da0341bc-06e1-3648-a7b4-53e96e73e4fc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "বাংলাদেশে যৌন শিক্ষার ক্লাসে কী শিখছে শিক্ষার্থীরা?",
+                "headline": "পশ্চিমা বিশ্বের সেক্স এডুকেশনের মতোই 'জেনারেশন ব্রেকথ্রু' প্রকল্পটি"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-47694960",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-47694960",
+                "curie": "http://www.bbc.co.uk/asset/da0341bc-06e1-3648-a7b4-53e96e73e4fc",
+                "assetId": "47694960"
+              },
+              "summary": "সিক, স্বপ্নদোষ, কনডম-ইত্যাদি বাংলাদেশের সামাজিক বাস্তবতায় অনেকটা নিষিদ্ধ শব্দ। কিন্তু বাংলাদেশের সাড়ে তিনশটি বিদ্যালয়ের শিক্ষার্থীরা এখন ক্লাসরুমে অবলীলায় চর্চ্চা করছে এসব। সামাজিক সংস্কার কতটা কাটিয়ে উঠতে পারছে তারা?",
+              "timestamp": 1553516772000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "bn",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "locator": "urn:bbc:cps:curie:asset:da0341bc-06e1-3648-a7b4-53e96e73e4fc",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/9a147376-bd7a-45b4-92aa-7c4d3f806dd2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingLabel": "শিক্ষা",
+                      "thingUri": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingId": "6942cb29-9d3f-4c9c-9806-0a0578c286d6",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8434",
+                        "http://dbpedia.org/resource/Education"
+                      ],
+                      "thingEnglishLabel": "Education",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/9a147376-bd7a-45b4-92aa-7c4d3f806dd2#id",
+                      "thingLabel": "যৌনতা",
+                      "thingUri": "http://www.bbc.co.uk/things/9a147376-bd7a-45b4-92aa-7c4d3f806dd2#id",
+                      "thingId": "9a147376-bd7a-45b4-92aa-7c4d3f806dd2",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q5873",
+                        "http://dbpedia.org/resource/Sexual_intercourse"
+                      ],
+                      "thingEnglishLabel": "Sex",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id",
+                      "thingLabel": "বাংলাদেশ",
+                      "thingUri": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id",
+                      "thingId": "f7cb7586-737a-419d-b569-15b25da5a2c1",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1210997/"],
+                      "thingEnglishLabel": "Bangladesh",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "bn",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8593fb27-cbfb-4598-b1b2-75cf8eca63ae#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p074j1fh",
+                "subType": "clip",
+                "format": "video",
+                "title": "‘জেনারেশন ব্রেকথ্রু’র যৌন শিক্ষা ক্লাসে কি পড়ানো হচ্ছে",
+                "synopses": {
+                  "short": "‘জেনারেশন ব্রেকথ্রু’র যৌন শিক্ষা ক্লাসে কি পড়ানো হচ্ছে",
+                  "long": "‘জেনারেশন ব্রেকথ্রু’র যৌন শিক্ষা ক্লাসে কি পড়ানো হচ্ছে",
+                  "medium": "‘জেনারেশন ব্রেকথ্রু’র যৌন শিক্ষা ক্লাসে কি পড়ানো হচ্ছে"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074jbs7.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "বাংলাদেশে যৌন শিক্ষার ক্লাসে কী শিখছে শিক্ষার্থীরা?",
+                "versions": [
+                  {
+                    "versionId": "p074j1fk",
+                    "types": ["Original"],
+                    "duration": 279,
+                    "durationISO8601": "PT4M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1553514387000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106169896",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11108/production/_106169896_p074jbs7.jpg",
+                "path": "/cpsprodpb/11108/production/_106169896_p074jbs7.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "বিদ্যালয়ে যৌন শিক্ষা",
+                "caption": "ক্লাসরুমে মনোপলির আদলে একটি বোর্ডগেমের মাধ্যমে বয়ঃসন্ধিকালীন নানা শারিরীক পরিবর্তন সম্পর্কে জানছে শিক্ষার্থীরা।",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-47694960",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

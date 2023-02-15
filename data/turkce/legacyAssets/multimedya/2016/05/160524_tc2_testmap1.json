@@ -1,137 +1,277 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/turkce/meta/dps/junk/2016/05/emp/160524_tc2_testmap1.emp.xml",
-        "id": "17697357",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:turkce/multimedya/2016/05/160524_tc2_testmap1",
+        "locators": {
+          "assetUri": "/turkce/multimedya/2016/05/160524_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:3fcfce28-21c3-11e6-acd0-649b984e8732",
+          "assetId": "17697357",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/05/160524_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/3fcfce28-21c3-11e6-acd0-649b984e8732"
+        },
+        "type": "MAP",
+        "createdBy": "turkish",
+        "language": "tr",
+        "lastUpdated": 1665420088032,
+        "firstPublished": 1464103796000,
+        "lastPublished": 1464103796000,
+        "timestamp": 1464103796000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17697357",
+          "contentId": "urn:bbc:topcat:curie:asset:3fcfce28-21c3-11e6-acd0-649b984e8732"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/turkce",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "Suriye'nin kuzeyinde Türkiye sınırındaki Rakka'dan bir grup genç, kenti kontrol altında tutan IŞİD'le internet yoluyla savaşıyor.",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17697357",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17697357",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/turkce/meta/dps/junk/2016/05/emp/160524_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/turkce/dps/junk/2016/05/hd_ash_beetle_1220_23_3_105_5386092_toprores_160524_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/turkce/dps/junk/2016/05/hd_ash_beetle_1220_23_3_105_5386092_toprores_160524_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/turkce/dps/junk/2016/05/hd_ash_beetle_1220_23_3_105_5386092_toprores_160524_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "Suriye'nin kuzeyinde Türkiye sınırındaki Rakka'dan bir grup genç, kenti kontrol altında tutan IŞİD'le internet yoluyla savaşıyor.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Gençler hayatları pahasına kentte yaşananları videoya çekip, dünyaya duyuruyor...",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Birkaçı bu yolda öldürüldü, bazıları aile üyelerini kaybetti.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "IŞİD, grubun liderlerinin başına ödül koyduğu için şimdi başka bir yerde gizleniyor ancak Rakka'daki yurttaş gazeteciler sayesinde kentte yaşananları dışarıya duyurmaya devam ediyorlar.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "5 bölümlük video animasyon serimizin ikincisinde bu gençler IŞİD'e karşı oluşturdukları haber ağını ve IŞİD'in peşlerine düşüşünü anlatıyor...",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "BÖLÜM 1: IŞİD Rakka'yı ele geçirdi BÖLÜM 3: IŞİD'den karşı atak",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Prodüktör/Muhabir: Chloe HadjimatheouArapça prodüktörü: Faisal IrshaidKamera: Tony JolliffeVideo editörü: Amanda GunnYapımcı: Richard Knight",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "Gençler hayatları pahasına kentte yaşananları videoya çekip, dünyaya duyuruyor...",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "test map IŞİD'e direnen Rakkalı gençler 2: Mücadelenin bedeli",
+          "headline": "test map IŞİD'e direnen Rakkalı gençler 2: Mücadelenin bedeli"
+        },
+        "locators": {
+          "assetUri": "/turkce/multimedya/2016/05/160524_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:3fcfce28-21c3-11e6-acd0-649b984e8732",
+          "assetId": "17697357",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/05/160524_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/3fcfce28-21c3-11e6-acd0-649b984e8732"
+        },
+        "summary": "IŞİD'e direnen Rakkalı gençler 2: Mücadelenin bedeli summary",
+        "timestamp": 1464103796000,
+        "language": "tr",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+          "taggings": []
+        },
+        "media": {
+          "id": "17697357",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17697357",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/turkce/meta/dps/junk/2016/05/emp/160524_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/turkce/dps/junk/2016/05/hd_ash_beetle_1220_23_3_105_5386092_toprores_160524_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/turkce/dps/junk/2016/05/hd_ash_beetle_1220_23_3_105_5386092_toprores_160524_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/turkce/dps/junk/2016/05/hd_ash_beetle_1220_23_3_105_5386092_toprores_160524_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e217",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "Getty",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:turkce/multimedya/2016/05/160524_tc2_testmap1",
+        "type": "cps"
       },
-      {
-        "markupType": "plain_text",
-        "text": "Birkaçı bu yolda öldürüldü, bazıları aile üyelerini kaybetti.",
-        "type": "paragraph"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "IŞİD, grubun liderlerinin başına ödül koyduğu için şimdi başka bir yerde gizleniyor ancak Rakka'daki yurttaş gazeteciler sayesinde kentte yaşananları dışarıya duyurmaya devam ediyorlar.",
-        "type": "paragraph"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "5 bölümlük video animasyon serimizin ikincisinde bu gençler IŞİD'e karşı oluşturdukları haber ağını ve IŞİD'in peşlerine düşüşünü anlatıyor...",
-        "type": "paragraph"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "BÖLÜM 1: IŞİD Rakka'yı ele geçirdi BÖLÜM 3: IŞİD'den karşı atak",
-        "type": "paragraph"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "Prodüktör/Muhabir: Chloe HadjimatheouArapça prodüktörü: Faisal IrshaidKamera: Tony JolliffeVideo editörü: Amanda GunnYapımcı: Richard Knight",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Multimedya",
+          "uri": "/turkce/multimedya",
+          "urlIdentifier": "/turkce/multimedya",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCTurkce.com",
+          "uri": "/turkce",
+          "urlIdentifier": "/turkce",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "cps_asset_id": "17697357",
-      "cps_asset_type": "map"
     },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "turkish",
-    "firstPublished": 1464103796000,
-    "id": "urn:bbc:ares::asset:turkce/multimedya/2016/05/160524_tc2_testmap1",
-    "includeComments": false,
-    "language": "tr",
-    "lastPublished": 1464103796000,
-    "lastUpdated": 1583244042157,
-    "locators": {
-      "assetId": "17697357",
-      "assetUri": "/turkce/multimedya/2016/05/160524_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/05/160524_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/3fcfce28-21c3-11e6-acd0-649b984e8732"
-    },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1464103796000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "test map IŞİD'e direnen Rakkalı gençler 2: Mücadelenin bedeli",
-      "shortHeadline": "test map IŞİD'e direnen Rakkalı gençler 2: Mücadelenin bedeli"
-    },
-    "id": "urn:bbc:ares::asset:turkce/multimedya/2016/05/160524_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "Getty",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
-      "id": "d5e217",
-      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "tr",
-    "locators": {
-      "assetId": "17697357",
-      "assetUri": "/turkce/multimedya/2016/05/160524_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/05/160524_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/3fcfce28-21c3-11e6-acd0-649b984e8732"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/turkce/meta/dps/junk/2016/05/emp/160524_tc2_testmap1.emp.xml",
-      "id": "17697357",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "summary": "IŞİD'e direnen Rakkalı gençler 2: Mücadelenin bedeli summary",
-    "timestamp": 1464103796000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Multimedya",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/turkce/multimedya"
-    },
-    "site": {
-      "name": "BBCTurkce.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/turkce"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:24:57.897Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 1,
+        "records": [
+          {
+            "id": "498c4962-df15-9c42-8093-59dc25ec5423",
+            "rank": 1,
+            "count": 2263,
+            "urn": "urn:bbc:curie:asset:498c4962-df15-9c42-8093-59dc25ec5423",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Yarasa kanat'la Çin Seddi'nin üzerinden uçtu vertıcal",
+                "headline": "'Yarasa kanat'la Çin Seddi'nin üzerinden uçtu short"
+              },
+              "locators": {
+                "assetUri": "/turkce/dergi-23049850",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:498c4962-df15-9c42-8093-59dc25ec5423",
+                "assetId": "23049850",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/dergi-23049850",
+                "curie": "http://www.bbc.co.uk/asset/498c4962-df15-9c42-8093-59dc25ec5423"
+              },
+              "summary": "ABD'li serbest paraşütçü Jeb Corliss, 'kanatlı elbise'si (wingsuit) ile bir helikopterden atlayarak Çin Seddi'nin üzerinde 'süzüldü'.",
+              "timestamp": 1465212645000,
+              "language": "tr",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+                "taggings": []
+              },
+              "media": {
+                "id": "23049461",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p013p0yc",
+                "entityType": "Clip",
+                "caption": "'Yarasa kanat'la Çin Seddi'nin üzerinden uçtu short",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63487677",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/12F6E/test/_63487677_p013p10c.jpg",
+                "path": "/cpsdevpb/12F6E/test/_63487677_p013p10c.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Hızla yaptığı uçuşta",
+                "caption": "Hızla yaptığı uçuşta",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/dergi-23049850",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

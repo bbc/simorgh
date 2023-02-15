@@ -1,111 +1,4042 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
-    "locators": {
-      "assetUri": "/zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
-      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
-      "curie": "http://www.bbc.co.uk/asset/6145ddd6-1782-11e6-bf35-2e7d3db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "chinese_traditional",
-    "language": "zh-Hant",
-    "lastUpdated": 1550916062616,
-    "firstPublished": 1462975922,
-    "lastPublished": 1462976617,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": true,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "cps_asset_id": "43781435"
-    },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "43781435",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/zhongwen/simp/meta/dps/2016/05/emp/160511_vid_cultural_revolution_explainer.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+        "locators": {
+          "assetUri": "/zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+          "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+          "curie": "http://www.bbc.co.uk/asset/6145ddd6-1782-11e6-bf35-2e7d3db9bd6e",
+          "assetId": "43781435"
+        },
+        "type": "MAP",
+        "createdBy": "chinese_traditional",
+        "language": "zh-Hant",
+        "lastUpdated": 1649861980293,
+        "firstPublished": 1462975922000,
+        "lastPublished": 1462975922000,
+        "timestamp": 1462975922000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "43781435",
+          "contentId": "urn:bbc:topcat:curie:asset:6145ddd6-1782-11e6-bf35-2e7d3db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/zhongwen/trad",
+        "mediaType": "video"
       },
-      {
-        "text": "中共領導人毛澤東50年前發動的「無產階級文化大革命」，掀起了一場持續10年的瘋狂運動，改變了至少一代人的命運。",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "43781435",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "43781435",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_640x360__nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_640x360__nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "文革",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/zhongwen/simp/meta/dps/2016/05/emp/160511_vid_cultural_revolution_explainer.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/2016/05/cult_rev_160511_vid_cultural_revolution_explainer_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/2016/05/cult_rev_160511_vid_cultural_revolution_explainer_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/2016/05/cult_rev_160511_vid_cultural_revolution_explainer_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "中共領導人毛澤東50年前發動的「無產階級文化大革命」，掀起了一場持續10年的瘋狂運動，改變了至少一代人的命運。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "多少人顛沛流離、家破人亡、迫害致死；又有多少人在革命的口號中瘋狂。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "50年過去了，我們一起回顧這段歷史。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "多少人顛沛流離、家破人亡、迫害致死；又有多少人在革命的口號中瘋狂。",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "視頻：毛澤東發動文革來龍去脈",
+          "headline": "視頻：毛澤東發動文革來龍去脈"
+        },
+        "locators": {
+          "assetUri": "/zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+          "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+          "curie": "http://www.bbc.co.uk/asset/6145ddd6-1782-11e6-bf35-2e7d3db9bd6e",
+          "assetId": "43781435"
+        },
+        "summary": "中共領導人毛澤東發動「無產階級文化大革命」，掀起了一場持續10年的瘋狂政治運動。50年過去了，我們一起來回顧這段歷史。",
+        "timestamp": 1462975922000,
+        "language": "zh-Hant",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+          "taggings": []
+        },
+        "media": {
+          "id": "43781435",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "43781435",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_640x360__nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_640x360__nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "文革",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/zhongwen/simp/meta/dps/2016/05/emp/160511_vid_cultural_revolution_explainer.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/2016/05/cult_rev_160511_vid_cultural_revolution_explainer_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/2016/05/cult_rev_160511_vid_cultural_revolution_explainer_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/2016/05/cult_rev_160511_vid_cultural_revolution_explainer_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e225",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_144x81__nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_144x81__nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "文革",
+          "copyrightHolder": " ",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+        "type": "cps"
       },
-      {
-        "text": "50年過去了，我們一起回顧這段歷史。",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "多媒體",
+          "uri": "/zhongwen/trad/multimedia",
+          "urlIdentifier": "/zhongwen/trad/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "bbcchinese.com",
+          "uri": "/zhongwen/trad",
+          "urlIdentifier": "/zhongwen/trad",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "視頻：毛澤東發動文革來龍去脈",
-      "headline": "視頻：毛澤東發動文革來龍去脈"
     },
-    "locators": {
-      "assetUri": "/zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
-      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
-      "curie": "http://www.bbc.co.uk/asset/6145ddd6-1782-11e6-bf35-2e7d3db9bd6e"
-    },
-    "summary": "中共領導人毛澤東發動「無產階級文化大革命」，掀起了一場持續10年的瘋狂政治運動。50年過去了，我們一起來回顧這段歷史。",
-    "timestamp": 1550916062616,
-    "passport": {},
-    "media": {
-      "id": "43781435",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/zhongwen/simp/meta/dps/2016/05/emp/160511_vid_cultural_revolution_explainer.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e225",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_144x81__nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_144x81__nocredit.jpg",
-      "height": 81,
-      "width": 144,
-      "altText": "文革",
-      "copyrightHolder": " ",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "多媒體",
-      "uri": "/zhongwen/trad/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "bbcchinese.com",
-      "uri": "/zhongwen/trad",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T10:15:59.959Z",
+        "lastRecordTimeStamp": "2023-02-15T10:14:00Z",
+        "firstRecordTimeStamp": "2023-02-15T06:14:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "d8e41546-c78e-477f-8fff-3d4f1df590fa",
+            "rank": 1,
+            "count": 715,
+            "urn": "urn:bbc:curie:asset:d8e41546-c78e-477f-8fff-3d4f1df590fa",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "土耳其叙利亚大地震：为何叙利亚灾区难以获得国际援助",
+                "headline": "土耳其叙利亚大地震：为何叙利亚灾区难以获得国际援助"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/world-64646170",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d8e41546-c78e-477f-8fff-3d4f1df590fa",
+                "assetId": "64646170",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-64646170",
+                "curie": "http://www.bbc.co.uk/asset/d8e41546-c78e-477f-8fff-3d4f1df590fa"
+              },
+              "summary": "靠近叙利亚边境的土耳其东南部发生的强烈地震已造成至少4万人丧生。在受灾最严重的叙利亚西北部地区，因为连年战火和国际制裁，震后救援和各类物资都难以到达。",
+              "timestamp": 1676434441000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:d8e41546-c78e-477f-8fff-3d4f1df590fa",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/193b0992-cee1-45ae-863e-c8ce4059cbd1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/193b0992-cee1-45ae-863e-c8ce4059cbd1#id",
+                      "thingLabel": "人道主义援助",
+                      "thingUri": "http://www.bbc.co.uk/things/193b0992-cee1-45ae-863e-c8ce4059cbd1#id",
+                      "thingId": "193b0992-cee1-45ae-863e-c8ce4059cbd1",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Humanitarian_aid",
+                        "http://www.wikidata.org/entity/Q826745"
+                      ],
+                      "thingEnglishLabel": "Humanitarian aid",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingLabel": "叙利亚",
+                      "thingUri": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingId": "28b0a95e-89d3-4fdf-bad0-8565eb549233",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/163843/"],
+                      "thingEnglishLabel": "Syria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "美国",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "地震",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "土耳其",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f35btq",
+                "subType": "clip",
+                "format": "video",
+                "title": "土叙地震：为何叙利亚灾区难以获得国际援助？",
+                "synopses": {
+                  "short": "土叙地震：为何叙利亚灾区难以获得国际援助？",
+                  "long": "2023年2月6日，靠近叙利亚边境的土耳其东南部发生强烈地震，目前已造成至少4万人丧生。在受灾最严重的叙利亚西北部地区，因为连年战火和国际制裁，震后救援和各类物资却无法到达。联合国官员称，已经和叙利亚政府达成共识，并开闢两条新的线路儘快将援助物资送抵灾区。",
+                  "medium": "2023年2月6日，靠近叙利亚边境的土耳其东南部发生强烈地震，目前已造成至少4万人丧生。在受灾最严重的叙利亚西北部地区，因为连年战火和国际制裁，震后救援和各类物资却无法到达。联合国官员称，已经和叙利亚政府达成共识，并开闢两条新的线路儘快将援助物资送抵灾区。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f35bvk.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "土耳其叙利亚大地震：为何叙利亚灾区难以获得国际援助",
+                "versions": [
+                  {
+                    "versionId": "p0f35btv",
+                    "types": ["Original"],
+                    "duration": 225,
+                    "durationISO8601": "PT3M45S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676432667000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128633732",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5CB5/production/_128633732_p0f35bvk.jpg",
+                "path": "/cpsprodpb/5CB5/production/_128633732_p0f35bvk.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "叙利亚地震灾民",
+                "copyrightHolder": "Reuters",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/world-64646170",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "21851956-a25c-4a85-9f1e-b905ab7885c9",
+            "rank": 2,
+            "count": 494,
+            "urn": "urn:bbc:curie:asset:21851956-a25c-4a85-9f1e-b905ab7885c9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "BBC专访西藏流亡政府主席边巴次仁：必须怀有希望",
+                "headline": "西藏流亡政府主席边巴次仁做客BBC中文：与北京重启对话“必须怀有希望”"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/chinese-news-64625745",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:21851956-a25c-4a85-9f1e-b905ab7885c9",
+                "assetId": "64625745",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-64625745",
+                "curie": "http://www.bbc.co.uk/asset/21851956-a25c-4a85-9f1e-b905ab7885c9"
+              },
+              "summary": "西藏流亡政府主席边巴次仁访英之际做客BBC中文，谈论与北京关系现状、英美西藏政策和中国境内藏人处境。",
+              "timestamp": 1676291649000,
+              "language": "zh-Hans",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:21851956-a25c-4a85-9f1e-b905ab7885c9",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f8694a4e-7ffd-4fc1-ab94-6d1d5597528a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/ac90f011-0779-4da9-8ac5-4de96fcc2b93#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b06e12f4-afb3-4f7b-9ec9-7d1b1a7c73e4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/d422d03a-ac5e-4d3f-b18b-c28b227375fc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
+                      "thingLabel": "Opinion",
+                      "thingUri": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
+                      "thingId": "654e1609-7a9f-470a-bd87-fb8e8144c374",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "tagging:Format"
+                      ],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+                        "http://www.wikidata.org/entity/Q3962655",
+                        "http://dbpedia.org/resource/Opinion"
+                      ],
+                      "thingEnglishLabel": "Opinion",
+                      "thingPreferredLabel": "Opinion",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
+                      "thingLabel": "Interview",
+                      "thingUri": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
+                      "thingId": "b3c67683-6ada-46da-a329-16fbd4a12c96",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q178651",
+                        "http://dbpedia.org/resource/Interview"
+                      ],
+                      "thingEnglishLabel": "Interview",
+                      "thingPreferredLabel": "Interview",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                      "thingLabel": "英国",
+                      "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                      "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2635167/"],
+                      "thingEnglishLabel": "United Kingdom",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingLabel": "中國",
+                      "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1814991/",
+                        "http://dbpedia.org/resource/China",
+                        "http://www.wikidata.org/entity/Q148"
+                      ],
+                      "thingEnglishLabel": "China",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "美国",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b06e12f4-afb3-4f7b-9ec9-7d1b1a7c73e4#id",
+                      "thingLabel": "西藏",
+                      "thingUri": "http://www.bbc.co.uk/things/b06e12f4-afb3-4f7b-9ec9-7d1b1a7c73e4#id",
+                      "thingId": "b06e12f4-afb3-4f7b-9ec9-7d1b1a7c73e4",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1279685/"],
+                      "thingEnglishLabel": "Tibet",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f8694a4e-7ffd-4fc1-ab94-6d1d5597528a#id",
+                      "thingLabel": "族群",
+                      "thingUri": "http://www.bbc.co.uk/things/f8694a4e-7ffd-4fc1-ab94-6d1d5597528a#id",
+                      "thingId": "f8694a4e-7ffd-4fc1-ab94-6d1d5597528a",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7552863",
+                        "http://dbpedia.org/resource/Sociology_of_race_and_ethnic_relations"
+                      ],
+                      "thingEnglishLabel": "Race and ethnicity",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2sty3",
+                "subType": "clip",
+                "format": "video",
+                "title": "BBC专访西藏流亡政府主席边巴次仁：必须怀有希望",
+                "synopses": {
+                  "short": "西藏流亡政府主席边巴次仁做客BBC中文：与北京重启对话“必须怀有希望”",
+                  "long": "西藏流亡政府主席（藏人行政中央司政）边巴次仁（Penpa Tsering）近日趁全球新冠病毒病（COVID-19）疫情基本结束后首次走访英国、加拿大和美国。他在英国期间接受BBC中文访问。\n\n边巴次仁谈到此行目的，与北京关系现状与未来，评价美国和英国的西藏政策，以及回应了诸如人权组织有关中国当局“收集”藏人DNA指称等问题。",
+                  "medium": "西藏流亡政府主席边巴次仁近日访问英国之际做客BBC中文，谈论与北京关系现状、英美西藏政策和中国境内藏人处境。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2trjk.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "西藏流亡政府主席边巴次仁接受BBC中文专访谈与北京中断对话现状：希望必须要有，否则流亡藏人的诉求将失去生命。",
+                "versions": [
+                  {
+                    "versionId": "p0f2sty7",
+                    "types": ["Original"],
+                    "duration": 926,
+                    "durationISO8601": "PT15M26S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676286030000
+                  }
+                ],
+                "imageCopyright": "BBC News Chinese",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128615554",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B1EF/production/_128615554_p0f2tbc9.jpg",
+                "path": "/cpsprodpb/B1EF/production/_128615554_p0f2tbc9.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "西藏流亡政府主席边巴次仁",
+                "copyrightHolder": "BBC News Chinese",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-64625745",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "230c61f1-7a53-41a1-8929-6de9c56f0f28",
+            "rank": 3,
+            "count": 449,
+            "urn": "urn:bbc:curie:asset:230c61f1-7a53-41a1-8929-6de9c56f0f28",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "美国德州拟禁华人买房 华裔游行抗议称“美国梦碎”",
+                "headline": "美国德州拟禁华人买房 华裔游行抗议称“美国梦碎”"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/world-64633862",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:230c61f1-7a53-41a1-8929-6de9c56f0f28",
+                "assetId": "64633862",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-64633862",
+                "curie": "http://www.bbc.co.uk/asset/230c61f1-7a53-41a1-8929-6de9c56f0f28"
+              },
+              "summary": "美国德克萨斯州议员提出一项法案，禁止包括中国、伊朗、朝鲜和俄罗斯四国的政府、公司和个人购买德州的地产。州长表示，如果法案获得州议会通过，他会签署执行。休斯顿的抗议者发起游行反对此项法案。",
+              "timestamp": 1676346713000,
+              "language": "zh-Hans",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:230c61f1-7a53-41a1-8929-6de9c56f0f28",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/86862bb2-3d45-44c5-9156-a0c8982cd0c7#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "美国",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/86862bb2-3d45-44c5-9156-a0c8982cd0c7#id",
+                      "thingLabel": "华人社区",
+                      "thingUri": "http://www.bbc.co.uk/things/86862bb2-3d45-44c5-9156-a0c8982cd0c7#id",
+                      "thingId": "86862bb2-3d45-44c5-9156-a0c8982cd0c7",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Overseas_Chinese"
+                      ],
+                      "thingEnglishLabel": "Chinese diaspora",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2ytdy",
+                "subType": "clip",
+                "format": "video",
+                "title": "美国德州议员提案“禁中国人买房” 华裔游行抗议：我的美国梦碎了",
+                "synopses": {
+                  "short": "美国德州议员提案“禁中国人买房” 华裔游行抗议：我的美国梦碎了",
+                  "long": "美国德克萨斯州议员提出一项法案，禁止包括中国、伊朗、朝鲜和俄罗斯四国的政府、公司和个人购买德州的地产。州长表示，如果法案获得州议会通过，他会签署执行。休斯顿的抗议者发起游行反对此项法案。\n\n“气球事件”后，许多人担心美中矛盾将加速该法案获得通过，势进一步激起美国及其各州对亚裔的仇恨和暴力。\n\n德克萨斯州有2880万公民，是美国人口第二多的州。美国人口普查数据显示，其中有140万人将其种族定义为亚裔，有22.35万人说他们是华裔。",
+                  "medium": "美国德克萨斯州议员提出一项法案，禁止包括中国、伊朗、朝鲜和俄罗斯四国的政府、公司和个人购买德州的地产。州长表示，如果法案获得州议会通过，他会签署执行。休斯顿的抗议者发起游行反对此项法案。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2ytts.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "美国德州议员提案“禁中国人买房” 华裔游行抗议：我的美国梦碎了",
+                "versions": [
+                  {
+                    "versionId": "p0f2ytf2",
+                    "types": ["Original"],
+                    "duration": 230,
+                    "durationISO8601": "PT3M50S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676344218000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128622854",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B2FE/production/_128622854_p0f2ytts.jpg",
+                "path": "/cpsprodpb/B2FE/production/_128622854_p0f2ytts.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Texas, US, Chinese",
+                "caption": "Texas, other US states mull ban on Chinese buying land",
+                "copyrightHolder": "Getty Images",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/world-64633862",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cba01467-db8e-424b-a6bb-b8a0c723a523",
+            "rank": 4,
+            "count": 77,
+            "urn": "urn:bbc:curie:asset:cba01467-db8e-424b-a6bb-b8a0c723a523",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "柬埔寨首相关闭该国仅存独立媒体 人权组织指洪森为七月大选做准备",
+                "headline": "柬埔寨首相关闭该国仅存独立媒体 人权组织指洪森为七月大选做准备"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/world-64635910",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:cba01467-db8e-424b-a6bb-b8a0c723a523",
+                "assetId": "64635910",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-64635910",
+                "curie": "http://www.bbc.co.uk/asset/cba01467-db8e-424b-a6bb-b8a0c723a523"
+              },
+              "summary": "柬埔寨首相洪森关闭了国内最后仅存的独立媒体之一“民主之声”。",
+              "timestamp": 1676366241000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:cba01467-db8e-424b-a6bb-b8a0c723a523",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/667ecf35-a325-4eed-adf9-80aac7d58eaf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/667ecf35-a325-4eed-adf9-80aac7d58eaf#id",
+                      "thingLabel": "新闻自由",
+                      "thingUri": "http://www.bbc.co.uk/things/667ecf35-a325-4eed-adf9-80aac7d58eaf#id",
+                      "thingId": "667ecf35-a325-4eed-adf9-80aac7d58eaf",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Freedom_of_the_press",
+                        "http://www.wikidata.org/entity/Q22688"
+                      ],
+                      "thingEnglishLabel": "Press freedom",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2zrcy",
+                "subType": "clip",
+                "format": "video",
+                "title": "柬埔寨总理关闭国内最后独立媒体之一 人权组织指洪森为七月大选做准备",
+                "synopses": {
+                  "short": "柬埔寨总理洪森于2023年2月13日关闭了国内最后仅存的独立媒体之一「民主之声」（Voice of Democracy ）。",
+                  "long": "柬埔寨总理洪森于2023年2月13日关闭了国内最后仅存的独立媒体之一「民主之声」（Voice of Democracy ）。人权组织指此举是洪森为报復该媒体最近一篇引发其子越权疑虑的报导，并且为七月的国内选举清除异议声音。\n\n从1985年到现在已担任了六任总理，洪森是全球在位最久的威权国家领导人之一。许多反对派政治人物在他任内被逮捕或流亡国外，2017、2018年针对言论自由的打压也让柬埔寨的独立新闻机构所剩无几。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f35k22.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "柬埔寨首相洪森关闭了国内最后仅存的独立媒体之一“民主之声”",
+                "versions": [
+                  {
+                    "versionId": "p0f35jyq",
+                    "types": ["Editorial"],
+                    "duration": 178,
+                    "durationISO8601": "PT2M58S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676364120000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128624768",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/152D6/production/_128624768_p0f2zrxz.jpg",
+                "path": "/cpsprodpb/152D6/production/_128624768_p0f2zrxz.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "柬埔寨首相关闭国内最后独立媒体之一",
+                "copyrightHolder": "柬埔寨总理洪森于2023年2月13日关闭了国内最后仅存的独立媒体之一「民主之声」（Voice of ",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/world-64635910",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a6eac323-4a74-44ec-8528-16627b132645",
+            "rank": 5,
+            "count": 70,
+            "urn": "urn:bbc:curie:asset:a6eac323-4a74-44ec-8528-16627b132645",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "中国气球事件：中美民众怎么看？",
+                "headline": "中国气球事件：中美民众怎么看？"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/world-64537178",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a6eac323-4a74-44ec-8528-16627b132645",
+                "assetId": "64537178",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-64537178",
+                "curie": "http://www.bbc.co.uk/asset/a6eac323-4a74-44ec-8528-16627b132645"
+              },
+              "summary": "过去几天，中美紧张局势因气球事件而升温。美方怀疑气球用于间谍活动，中方则称气球是民用性质。",
+              "timestamp": 1675673240000,
+              "language": "zh-Hans",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:a6eac323-4a74-44ec-8528-16627b132645",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
+                      "thingLabel": "Opinion",
+                      "thingUri": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
+                      "thingId": "654e1609-7a9f-470a-bd87-fb8e8144c374",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "tagging:Format"
+                      ],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+                        "http://www.wikidata.org/entity/Q3962655",
+                        "http://dbpedia.org/resource/Opinion"
+                      ],
+                      "thingEnglishLabel": "Opinion",
+                      "thingPreferredLabel": "Opinion",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingLabel": "中國",
+                      "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1814991/",
+                        "http://dbpedia.org/resource/China",
+                        "http://www.wikidata.org/entity/Q148"
+                      ],
+                      "thingEnglishLabel": "China",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "美国",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f192c0",
+                "subType": "clip",
+                "format": "video",
+                "title": "中美“间谍气球”风波： 美方称侵犯主权 中方强调“民用”并抗议",
+                "synopses": {
+                  "short": "中美“间谍气球”风波： 美方称侵犯主权 中方强调“民用”并抗议",
+                  "medium": "过去几天，中美紧张局势因气球事件而升温。该气球在过去的一周里，自西向东“穿越”美国本土。美方怀疑气球用于间谍活动，中方则称气球是民用性质。\n\n美国国务卿布林肯已推迟原定于2月5日至2月6日的访华行程，并认为中方的做法公然侵犯美国主权和国际法。\n\n中国和美国的民众怎么看？"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f193js.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "中美“间谍气球”风波： 美方称侵犯主权 中方强调“民用”并抗议",
+                "versions": [
+                  {
+                    "versionId": "p0f192cb",
+                    "types": ["Original"],
+                    "duration": 183,
+                    "durationISO8601": "PT3M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675672712000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128534622",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5873/production/_128534622_p0f193js.jpg",
+                "path": "/cpsprodpb/5873/production/_128534622_p0f193js.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "China balloon, china spy",
+                "copyrightHolder": "Reuters",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/world-64537178",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b83ca067-b31d-46ee-b1fe-e6ce05f6595b",
+            "rank": 6,
+            "count": 55,
+            "urn": "urn:bbc:curie:asset:b83ca067-b31d-46ee-b1fe-e6ce05f6595b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ChatGPT能撰写BBC节目开场白，但人工智能可以拯救科技巨头吗？",
+                "headline": "ChatGPT能撰写BBC节目开场白，但人工智能可以拯救科技巨头吗？"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/business-64579732",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:b83ca067-b31d-46ee-b1fe-e6ce05f6595b",
+                "assetId": "64579732",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/business-64579732",
+                "curie": "http://www.bbc.co.uk/asset/b83ca067-b31d-46ee-b1fe-e6ce05f6595b"
+              },
+              "summary": "ChatGPT可以根据2021年以前的资料信息，以文本形式回答问题和执行请求。但专家认为，聊天机器人的最终目的在于互联网搜索，用一个明确的答案取代数页的搜索答案。",
+              "timestamp": 1675928548000,
+              "language": "zh-Hans",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:b83ca067-b31d-46ee-b1fe-e6ce05f6595b",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6a57de69-8b35-4777-9a42-621da0e39310#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingLabel": "Explainer",
+                      "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+                      ],
+                      "thingEnglishLabel": "Explainer",
+                      "thingPreferredLabel": "Explainer",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingLabel": "技术新知",
+                      "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Technology",
+                        "http://www.wikidata.org/entity/Q4456888"
+                      ],
+                      "thingEnglishLabel": "Technology",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a57de69-8b35-4777-9a42-621da0e39310#id",
+                      "thingLabel": "人工智能",
+                      "thingUri": "http://www.bbc.co.uk/things/6a57de69-8b35-4777-9a42-621da0e39310#id",
+                      "thingId": "6a57de69-8b35-4777-9a42-621da0e39310",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q11660",
+                        "http://dbpedia.org/resource/Artificial_intelligence"
+                      ],
+                      "thingEnglishLabel": "Artificial intelligence",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1zj97",
+                "subType": "clip",
+                "format": "video",
+                "title": "ChatGPT能写出《新闻之夜》的开场白，但人工智能可以拯救科技巨头吗？",
+                "synopses": {
+                  "short": "ChatGPT能写出《新闻之夜》的开场白，但人工智能可以拯救科技巨头吗？",
+                  "medium": "ChatGPT可以根据2021年以前的资料信息，以文本形式回答问题和执行请求。但专家认为，聊天机器人的最终目的在于互联网搜索，用一个明确的答案取代数页的搜索答案。\n\nChatGPT能写出《新闻之夜》的开场白，但人工智能可以拯救科技巨头吗？"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1zjl6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ChatGPT能写出《新闻之夜》的开场白，但人工智能可以拯救科技巨头吗？",
+                "versions": [
+                  {
+                    "versionId": "p0f1zj9c",
+                    "types": ["Original"],
+                    "duration": 262,
+                    "durationISO8601": "PT4M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675920286000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128572749",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17207/production/_128572749_p0f1zjl6.jpg",
+                "path": "/cpsprodpb/17207/production/_128572749_p0f1zjl6.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "chatgpt",
+                "caption": "chatgpt",
+                "copyrightHolder": "Getty Images",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/business-64579732",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0bd10855-0066-42cf-98aa-c1a410d2f67f",
+            "rank": 7,
+            "count": 50,
+            "urn": "urn:bbc:curie:asset:0bd10855-0066-42cf-98aa-c1a410d2f67f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "在寸土寸金的香港 庞大的临时隔离设施将何去何从",
+                "headline": "香港：新冠疫情期间兴建的大量隔离设施将何去何从"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/chinese-news-64552019",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:0bd10855-0066-42cf-98aa-c1a410d2f67f",
+                "assetId": "64552019",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-64552019",
+                "curie": "http://www.bbc.co.uk/asset/0bd10855-0066-42cf-98aa-c1a410d2f67f"
+              },
+              "summary": "香港一度跟从中国大陆的抗疫模式大兴土木，修建被称为“方舱医院”的社区隔离设施。但大部分项目只仅仅使用了两个月，落马洲的隔离营甚至从未启用。",
+              "timestamp": 1675756252000,
+              "language": "zh-Hans",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:0bd10855-0066-42cf-98aa-c1a410d2f67f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingLabel": "Explainer",
+                      "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+                      ],
+                      "thingEnglishLabel": "Explainer",
+                      "thingPreferredLabel": "Explainer",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                      "thingLabel": "新冠病毒疫情",
+                      "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                      "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/COVID-19_pandemic",
+                        "http://www.wikidata.org/entity/Q81068910"
+                      ],
+                      "thingEnglishLabel": "Coronavirus pandemic",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+                      "thingLabel": "香港",
+                      "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+                      "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1819729/"],
+                      "thingEnglishLabel": "Hong Kong",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1hcv6",
+                "subType": "clip",
+                "format": "video",
+                "title": "抗疫三年：香港社区隔离设施被批浪费 政府称未来用途将“适时公布”",
+                "synopses": {
+                  "short": "抗疫三年：香港社区隔离设施被批浪费 政府称未来用途将“适时公布”",
+                  "long": "自新冠病毒大流行开始后，香港便跟从中国大陆的抗疫模式大兴土木，修建被称为“方舱医院”的社区隔离及治疗设施。但大部分项目只仅仅使用了两个月，落马洲的隔离营甚至从未启用，这被不少人质疑存在资源浪费。而对于未来如何善用这些土地和临时设施，政府方面称会“适时公布”改建方案和工程总开支。",
+                  "medium": "自新冠病毒大流行开始后，香港便跟从中国大陆的抗疫模式大兴土木，修建被称为“方舱医院”的社区隔离及治疗设施。但大部分项目只仅仅使用了两个月，落马洲的隔离营甚至从未启用，这被不少人质疑存在资源浪费。而对于未来如何善用这些土地和临时设施，政府方面称会“适时公布”改建方案和工程总开支。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1hdc6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "抗疫三年：香港社区隔离设施被批浪费 政府称未来用途将“适时公布”",
+                "versions": [
+                  {
+                    "versionId": "p0f1hcvb",
+                    "types": ["Original"],
+                    "duration": 270,
+                    "durationISO8601": "PT4M30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675754750000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128547142",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5E6E/production/_128547142_p0f1hdc6.jpg",
+                "path": "/cpsprodpb/5E6E/production/_128547142_p0f1hdc6.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Drone shot of Hong Kong's isolation camps",
+                "copyrightHolder": "Getty Images",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-64552019",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fa6a46d2-b604-4c79-943a-08502c925c33",
+            "rank": 8,
+            "count": 33,
+            "urn": "urn:bbc:curie:asset:fa6a46d2-b604-4c79-943a-08502c925c33",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "武汉封城三周年：喜悦与悲伤交织的农历新年",
+                "headline": "武汉封城三周年：喜悦与悲伤交织的农历新年"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/chinese-news-64382674",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:fa6a46d2-b604-4c79-943a-08502c925c33",
+                "assetId": "64382674",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-64382674",
+                "curie": "http://www.bbc.co.uk/asset/fa6a46d2-b604-4c79-943a-08502c925c33"
+              },
+              "summary": "2020年1月23日，中国武汉在毫无预警的情况下进入全面封锁。三年后，人们用烟花庆祝农历新年的到来，用鲜花与祭品缅怀逝去的亲人。",
+              "timestamp": 1674540135000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:fa6a46d2-b604-4c79-943a-08502c925c33",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                      "thingLabel": "新冠病毒疫情",
+                      "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                      "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/COVID-19_pandemic",
+                        "http://www.wikidata.org/entity/Q81068910"
+                      ],
+                      "thingEnglishLabel": "Coronavirus pandemic",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingLabel": "中國",
+                      "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1814991/",
+                        "http://dbpedia.org/resource/China",
+                        "http://www.wikidata.org/entity/Q148"
+                      ],
+                      "thingEnglishLabel": "China",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dycnmf",
+                "subType": "clip",
+                "format": "video",
+                "title": "武汉封城三周年：喜悦与悲伤交织的农历新年",
+                "synopses": {
+                  "short": "武汉封城三周年：喜悦与悲伤交织的农历新年",
+                  "long": "2020年1月23日，中国武汉在毫无预警的情况下进入全面封锁。\n\n三年后，人们用烟花庆祝农历新年的到来，用鲜花与祭品缅怀逝去的亲人。",
+                  "medium": "2020年1月23日，中国武汉在毫无预警的情况下进入全面封锁。三年后，人们用烟花庆祝农历新年的到来，用鲜花与祭品缅怀逝去的亲人。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dys4h6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "武汉封城三周年：喜悦与悲伤交织的农历新年",
+                "versions": [
+                  {
+                    "versionId": "p0dycnmk",
+                    "types": ["Original"],
+                    "duration": 211,
+                    "durationISO8601": "PT3M31S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1674528414000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128397683",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9717/production/_128397683_wuhan.jpg",
+                "path": "/cpsprodpb/9717/production/_128397683_wuhan.jpg",
+                "height": 1080,
+                "width": 1920,
+                "altText": "中国疫情",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-64382674",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "55e85b56-bdfc-4ba0-b58d-17a83b6ed45f",
+            "rank": 9,
+            "count": 30,
+            "urn": "urn:bbc:curie:asset:55e85b56-bdfc-4ba0-b58d-17a83b6ed45f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "土耳其叙利亚大地震：灾民瓦砾堆中绝望寻找家人",
+                "headline": "土耳其叙利亚大地震：灾民瓦砾堆中绝望寻找家人"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/world-64567425",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:55e85b56-bdfc-4ba0-b58d-17a83b6ed45f",
+                "assetId": "64567425",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-64567425",
+                "curie": "http://www.bbc.co.uk/asset/55e85b56-bdfc-4ba0-b58d-17a83b6ed45f"
+              },
+              "summary": "土耳其大地震的救援行动即将进入第三天，由于寒冷天气、道路阻断与余震等因素，搜救队寻找幸存者的过程充满阻滞。",
+              "timestamp": 1675848246000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:55e85b56-bdfc-4ba0-b58d-17a83b6ed45f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "地震",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "土耳其",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1qsry",
+                "subType": "clip",
+                "format": "video",
+                "title": "土耳其大地震搜救困難 災民瓦礫堆中尋找親屬",
+                "synopses": {
+                  "short": "土耳其大地震的救援行动即将进入第三天，由于寒冷天气、道路阻断与馀震等因素，搜救队寻找倖存者的过程充满阻滞。",
+                  "long": "土耳其大地震的救援行动即将进入第三天，由于寒冷天气、道路阻断与馀震等因素，搜救队寻找倖存者的过程充满阻滞。有灾民因救援人员来不及赶到灾区，自行于瓦砾堆中翻找、寻找家人。\n\n此次地震是土耳其有记录以来最大的地震之一，截至2月8日的统计，死亡人数已超过9000人，专家表示死亡人数会继续攀升。超过65个国家和地区宣布提供金钱、救灾援助；包括美国、韩国、日本、中国以及台湾在内等政府已派出搜救队前往灾区支援。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1qw25.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "土耳其叙利亚大地震：灾民瓦砾堆中绝望寻找家人",
+                "versions": [
+                  {
+                    "versionId": "p0f1qss4",
+                    "types": ["Original"],
+                    "duration": 236,
+                    "durationISO8601": "PT3M56S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675846832000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128560773",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/934A/production/_128560773_p0f1qtks.jpg",
+                "path": "/cpsprodpb/934A/production/_128560773_p0f1qtks.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "土耳其大地震",
+                "copyrightHolder": "Reuters",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/world-64567425",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "93a2ddac-0eed-4579-bc46-aaec5adb2ea6",
+            "rank": 10,
+            "count": 29,
+            "urn": "urn:bbc:curie:asset:93a2ddac-0eed-4579-bc46-aaec5adb2ea6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "藏人组织领袖边巴次仁专访：“希望重启与北京的对话”",
+                "headline": "藏人组织领袖边巴次仁专访：“希望重启与北京的对话”"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/chinese-news-58405507",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-58405507",
+                "curie": "http://www.bbc.co.uk/asset/93a2ddac-0eed-4579-bc46-aaec5adb2ea6",
+                "assetId": "58405507"
+              },
+              "summary": "藏人行政中央新任司政边巴次仁接受BBC中文访问时表示，希望与北京重启对话，并强调会继续与美国、印度合作。",
+              "timestamp": 1630548391000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:93a2ddac-0eed-4579-bc46-aaec5adb2ea6",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b06e12f4-afb3-4f7b-9ec9-7d1b1a7c73e4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingLabel": "中國",
+                      "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1814991/",
+                        "http://dbpedia.org/resource/China",
+                        "http://www.wikidata.org/entity/Q148"
+                      ],
+                      "thingEnglishLabel": "China",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b06e12f4-afb3-4f7b-9ec9-7d1b1a7c73e4#id",
+                      "thingLabel": "西藏",
+                      "thingUri": "http://www.bbc.co.uk/things/b06e12f4-afb3-4f7b-9ec9-7d1b1a7c73e4#id",
+                      "thingId": "b06e12f4-afb3-4f7b-9ec9-7d1b1a7c73e4",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1279685/"],
+                      "thingEnglishLabel": "Tibet",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09tq3fp",
+                "subType": "clip",
+                "format": "video",
+                "title": "BBC中文专访边巴次仁： “希望重启与北京的对话”",
+                "synopses": {
+                  "short": "BBC中文专访边巴次仁： “希望重启与北京的对话”",
+                  "medium": "每年九月二日，是许多流亡在世界各地藏人纪念的“民主日”。今年，藏人行政中央新任司政边巴次仁（Penpa Tsering）将迎来任内的第一次民主日。BBC中文最近专访藏人行政中央新任司政边巴次仁，他在就职演说中重点强调希望重启与北京的对话，论述了与中国、美国与印度的关系，也介绍了数十年流亡海外并分布世界各地的藏人社团，如何长期维系联系和向心力等问题。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09tq4gw.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "BBC中文专访边巴次仁： “希望重启与北京的对话”",
+                "versions": [
+                  {
+                    "versionId": "p09tq3fr",
+                    "types": ["Original"],
+                    "duration": 949,
+                    "durationISO8601": "PT15M49S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1630467740000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "120349822",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/596E/production/_120349822_p09tq4gw.jpg",
+                "path": "/cpsprodpb/596E/production/_120349822_p09tq4gw.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": ",",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-58405507",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fbb2e556-1231-4432-9a08-c4c537f1c22f",
+            "rank": 11,
+            "count": 28,
+            "urn": "urn:bbc:curie:asset:fbb2e556-1231-4432-9a08-c4c537f1c22f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "放弃“清零”之后，中国经济还需多久才能复苏",
+                "headline": "放弃“清零”之后，中国经济还需多久才能复苏"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/business-64344491",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:fbb2e556-1231-4432-9a08-c4c537f1c22f",
+                "assetId": "64344491",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/business-64344491",
+                "curie": "http://www.bbc.co.uk/asset/fbb2e556-1231-4432-9a08-c4c537f1c22f"
+              },
+              "summary": "BBC北京分社的麦笛文（Stephen McDonell）对话中国全球化智库理事长王辉耀，中国经济还需多久才能复苏？",
+              "timestamp": 1674272185000,
+              "language": "zh-Hans",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:fbb2e556-1231-4432-9a08-c4c537f1c22f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                      "thingLabel": "新冠病毒疫情",
+                      "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                      "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/COVID-19_pandemic",
+                        "http://www.wikidata.org/entity/Q81068910"
+                      ],
+                      "thingEnglishLabel": "Coronavirus pandemic",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingLabel": "中國",
+                      "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1814991/",
+                        "http://dbpedia.org/resource/China",
+                        "http://www.wikidata.org/entity/Q148"
+                      ],
+                      "thingEnglishLabel": "China",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingLabel": "经济",
+                      "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+                      "thingEnglishLabel": "Economics",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dxnscf",
+                "subType": "clip",
+                "format": "video",
+                "title": "放弃“清零”之后，中国经济还需多久才能复苏？",
+                "synopses": {
+                  "short": "放弃“清零”之后，中国经济还需多久才能复苏？",
+                  "medium": "随着中国放松新冠清零政策并转向重新开放，中国也将政策重点放回经济增长。经济学家最近指出，中国在完全摆脱清零政策之前还有一段路要走，中国经济增长在未来数月可能仍然疲软。 \n\nBBC北京分社的麦笛文（Stephen McDonell）对话中国全球化智库理事长王辉耀，中国经济还需多久才能复苏？"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dxnt4m.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "放弃“清零”之后，中国经济还需多久才能复苏？",
+                "versions": [
+                  {
+                    "versionId": "p0dxnsck",
+                    "types": ["Original"],
+                    "duration": 139,
+                    "durationISO8601": "PT2M19S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1674203786000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128358442",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5FA5/production/_128358442_p0dxnt4m.jpg",
+                "path": "/cpsprodpb/5FA5/production/_128358442_p0dxnt4m.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "中国女工",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/business-64344491",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "79581748-51a0-42e5-accb-05431670c548",
+            "rank": 12,
+            "count": 22,
+            "urn": "urn:bbc:curie:asset:79581748-51a0-42e5-accb-05431670c548",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "中国游客的“回归”能否为全球商家带来新生机？",
+                "headline": "中国游客的“回归”能否为全球商家带来新生机？"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/chinese-news-64386206",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:79581748-51a0-42e5-accb-05431670c548",
+                "assetId": "64386206",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-64386206",
+                "curie": "http://www.bbc.co.uk/asset/79581748-51a0-42e5-accb-05431670c548"
+              },
+              "summary": "中国疫情防控放开之后，首个农历新年假期过半。中国大陆游客正在“报复性”出游。出境游、跨省游、省内游等多样的出行方式，让中国的旅游业快速复苏。 中国大陆游客都去了哪些热门旅游地？",
+              "timestamp": 1674556870000,
+              "language": "zh-Hans",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:79581748-51a0-42e5-accb-05431670c548",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d967f9d-c73a-4698-95c4-dfd344b42f9b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
+                      "thingLabel": "Opinion",
+                      "thingUri": "http://www.bbc.co.uk/things/654e1609-7a9f-470a-bd87-fb8e8144c374#id",
+                      "thingId": "654e1609-7a9f-470a-bd87-fb8e8144c374",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "tagging:Format"
+                      ],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+                        "http://www.wikidata.org/entity/Q3962655",
+                        "http://dbpedia.org/resource/Opinion"
+                      ],
+                      "thingEnglishLabel": "Opinion",
+                      "thingPreferredLabel": "Opinion",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                      "thingLabel": "泰国",
+                      "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+                      "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1605651/"],
+                      "thingEnglishLabel": "Thailand",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d967f9d-c73a-4698-95c4-dfd344b42f9b#id",
+                      "thingLabel": "春节",
+                      "thingUri": "http://www.bbc.co.uk/things/3d967f9d-c73a-4698-95c4-dfd344b42f9b#id",
+                      "thingId": "3d967f9d-c73a-4698-95c4-dfd344b42f9b",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Chinese_New_Year",
+                        "http://www.wikidata.org/entity/Q131772"
+                      ],
+                      "thingEnglishLabel": "Chinese New Year",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingLabel": "中國",
+                      "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1814991/",
+                        "http://dbpedia.org/resource/China",
+                        "http://www.wikidata.org/entity/Q148"
+                      ],
+                      "thingEnglishLabel": "China",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+                      "thingLabel": "香港",
+                      "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+                      "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1819729/"],
+                      "thingEnglishLabel": "Hong Kong",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dydzpn",
+                "subType": "clip",
+                "format": "video",
+                "title": "中国游客的“回归”能否为全球商家带来新生机？",
+                "synopses": {
+                  "short": "中国游客的“回归”能否为全球商家带来新生机？",
+                  "long": "中国疫情防控放开之后，首个农历新年假期过半。中国大陆游客正在“报复性”出游。出境游、跨省游、省内游等多样的出行方式，让中国的旅游业快速复苏。 \n\n中国在新冠疫情前是全球最大的出境旅行客源国，每年出国旅游人次达1.5亿，年均全球旅游市场消费高达2,550亿美元（约2万亿港元）。有业内人士称，中国游客人数恢复至疫情前，可能还需要2023年一整年的沉淀。 \n\n中国大陆游客都去了哪些热门旅游地？",
+                  "medium": "中国疫情防控放开之后，首个农历新年假期过半。中国大陆游客正在“报复性”出游。出境游、跨省游、省内游等多样的出行方式，让中国的旅游业快速复苏。 \n\n中国大陆游客都去了哪些热门旅游地？"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dyf0n4.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "中国游客的“回归”能否为全球商家带来新生机？",
+                "versions": [
+                  {
+                    "versionId": "p0dydzpv",
+                    "types": ["Original"],
+                    "duration": 241,
+                    "durationISO8601": "PT4M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1674554624000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128392019",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/16395/production/_128392019_p0dyf0n4.jpg",
+                "path": "/cpsprodpb/16395/production/_128392019_p0dyf0n4.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "中国游客",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-64386206",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dd308d40-9faa-4f6a-9a44-886a51ec2a1e",
+            "rank": 13,
+            "count": 19,
+            "urn": "urn:bbc:curie:asset:dd308d40-9faa-4f6a-9a44-886a51ec2a1e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "世界领导人互相赠送的奇特礼物",
+                "headline": "世界领导人互相赠送的奇特礼物"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/world-64556929",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:dd308d40-9faa-4f6a-9a44-886a51ec2a1e",
+                "assetId": "64556929",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-64556929",
+                "curie": "http://www.bbc.co.uk/asset/dd308d40-9faa-4f6a-9a44-886a51ec2a1e"
+              },
+              "summary": "世界领导人官方访问经常会互相赠送特别的礼物，有熊猫，骆驼，还有写错字的红色按钮。",
+              "timestamp": 1675778434000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:dd308d40-9faa-4f6a-9a44-886a51ec2a1e",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "俄国",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "美国",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1k94v",
+                "subType": "clip",
+                "format": "video",
+                "title": "世界领导人互相赠送的奇特礼物",
+                "synopses": {
+                  "short": "世界领导人互相赠送的奇特礼物",
+                  "long": "白俄罗斯总统卢卡申科最近访问津巴布韦的时候，获赠一只狮子标本，作为回礼，他送给津巴布韦总统姆南加古瓦一辆拖拉机。世界领导人官方访问经常会互相赠送特别的礼物，有熊猫，骆驼，还有写错字的红色按钮。",
+                  "medium": "世界领导人官方访问经常会互相赠送特别的礼物，有熊猫，骆驼，还有写错字的红色按钮。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1k9zn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "世界领导人互相赠送的奇特礼物",
+                "versions": [
+                  {
+                    "versionId": "p0f1k953",
+                    "types": ["Original"],
+                    "duration": 93,
+                    "durationISO8601": "PT1M33S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675772936000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128551479",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17C87/production/_128551479_p0f1k9zn.jpg",
+                "path": "/cpsprodpb/17C87/production/_128551479_p0f1k9zn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "狮子标本",
+                "copyrightHolder": "Reuters",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/world-64556929",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9de634c8-343d-4656-bdbd-5df3668a5219",
+            "rank": 14,
+            "count": 15,
+            "urn": "urn:bbc:curie:asset:9de634c8-343d-4656-bdbd-5df3668a5219",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "英国爆发十年来最大规模罢工，50万人上街要求加薪",
+                "headline": "英国爆发十年来最大规模罢工，50万人上街要求加薪"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/uk-64508211",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:9de634c8-343d-4656-bdbd-5df3668a5219",
+                "assetId": "64508211",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/uk-64508211",
+                "curie": "http://www.bbc.co.uk/asset/9de634c8-343d-4656-bdbd-5df3668a5219"
+              },
+              "summary": "当地时间周三（2月1日），英国爆发自2011年以来最大规模罢工，教师、火车司机、公务员等多个行业要求增加薪资以应对高通胀。工会估计当日参与人数多达50万人。",
+              "timestamp": 1675403026000,
+              "language": "zh-Hans",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:9de634c8-343d-4656-bdbd-5df3668a5219",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                      "thingLabel": "英国",
+                      "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                      "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2635167/"],
+                      "thingEnglishLabel": "United Kingdom",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f0rc4y",
+                "subType": "clip",
+                "format": "video",
+                "title": "英国爆十年来最大规模罢工，五十万人上街要求加薪",
+                "synopses": {
+                  "short": "英国爆十年来最大规模罢工，五十万人上街要求加薪",
+                  "medium": "当地时间周三（2月1日），英国爆发自2011年以来最大规模罢工，教师、火车司机、公务员等多个行业要求增加薪资以应对高通胀。工会估计当日参与人数多达五十万人。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f0rjth.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "英国爆十年来最大规模罢工，50万人上街要求加薪",
+                "versions": [
+                  {
+                    "versionId": "p0f0rj68",
+                    "types": ["Editorial"],
+                    "duration": 138,
+                    "durationISO8601": "PT2M18S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675397108000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128507009",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/15FD6/production/_128507009_p0f0rcnp.jpg",
+                "path": "/cpsprodpb/15FD6/production/_128507009_p0f0rcnp.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "2月1日，约有50万英国劳工上街罢工",
+                "copyrightHolder": "Getty Images",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/uk-64508211",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2c98e290-5a9c-471e-bf03-fc830ef08999",
+            "rank": 15,
+            "count": 14,
+            "urn": "urn:bbc:curie:asset:2c98e290-5a9c-471e-bf03-fc830ef08999",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "中共“援藏”项目加强“中华民族共同体意识” 西藏人叹拉萨失去原貌",
+                "headline": "中共“援藏”项目加强“中华民族共同体意识” 西藏人叹拉萨失去原貌"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/chinese-news-57836812",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-57836812",
+                "curie": "http://www.bbc.co.uk/asset/2c98e290-5a9c-471e-bf03-fc830ef08999",
+                "assetId": "57836812"
+              },
+              "summary": "西藏首府拉萨平均房价，在过去六年间翻倍。要负担得起高昂的房价，在西藏只能从事政府部门的工作。但据部分西藏人透露，成为公务员将面临更严苛的审查，更会受到当局的压力而放弃藏传佛教。",
+              "timestamp": 1626261476000,
+              "language": "zh-Hans",
+              "media": {
+                "id": "p09pd12k",
+                "subType": "clip",
+                "format": "video",
+                "title": "中共“援藏”加强“中华民族共同体意识” 西藏人叹已失去原貌",
+                "synopses": {
+                  "short": "中共“援藏”加强“中华民族共同体意识” 西藏人叹已失去原貌",
+                  "long": "在西藏首府拉萨，距离布达拉宫不远的地方，可以看到一个又一个公寓建筑工地。 中国近年大力发展西藏，认为借此可加强西藏的“中华民族共同体意识”，“促进民族团结、维护国家统一”，“有利于提升各族群众获得感、幸福感、安全感”。\n\n2021年5月，中国政府指已协助62万贫困人口脱贫，“历史性消除绝对贫困问题”。不过，这些新楼盘的售价，远超过当地人可负担的水平。拉萨的平均房价，在过去六年间翻倍。\n\n在西藏要负担得起高昂的房价，只能从事政府部门的工作。不过，据部份西藏人透露，成为公务员将面临更严苛的审查，更会受到当局的压力而放弃藏传佛教。西藏人出于忧虑他们的宗教及传统文化受侵蚀，而放弃成为公务员。",
+                  "medium": "西藏首府拉萨平均房价，在过去六年间翻倍。要负担得起高昂的房价，在西藏只能从事政府部门的工作。但据部份西藏人透露，成为公务员将面临更严苛的审查，更会受到当局的压力而放弃藏传佛教。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09pddxb.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "中共“援藏”加强“中华民族共同体意识” 西藏人叹已失去原貌",
+                "versions": [
+                  {
+                    "versionId": "p09pddrv",
+                    "types": ["Editorial"],
+                    "duration": 159,
+                    "durationISO8601": "PT2M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1626260121000
+                  }
+                ],
+                "imageCopyright": "AFP",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119400679",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17D40/production/_119400679_p09pd15q.jpg",
+                "path": "/cpsprodpb/17D40/production/_119400679_p09pd15q.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "西藏",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-57836812",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3757250e-7396-4e5d-a012-e0341e384fd4",
+            "rank": 16,
+            "count": 13,
+            "urn": "urn:bbc:curie:asset:3757250e-7396-4e5d-a012-e0341e384fd4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "叙利亚地震：局势紧张阻救援　联合国物资耗四日才送抵",
+                "headline": "叙利亚地震：局势紧张阻救援　联合国物资耗四日才送抵"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/world-64596719",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:3757250e-7396-4e5d-a012-e0341e384fd4",
+                "assetId": "64596719",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-64596719",
+                "curie": "http://www.bbc.co.uk/asset/3757250e-7396-4e5d-a012-e0341e384fd4"
+              },
+              "summary": "大地震发生后，叙利亚持续的内战让国际支援难以进入当地。该国北部在灾区范围内，但由于反对派和政府分别控制不同区域，分裂的情势让物资与人员流动变得複杂。",
+              "timestamp": 1676025560000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:3757250e-7396-4e5d-a012-e0341e384fd4",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "地震",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2940v",
+                "subType": "clip",
+                "format": "video",
+                "title": "国际支援难进叙利亚 首批联合国物资地震四天后抵达",
+                "synopses": {
+                  "short": "大地震发生后，叙利亚持续的内战让国际支援难以进入当地。该国北部在灾区范围内，但由于反对派和政府分别控制不同区域，分裂的情势让物资与人员流动变得複杂。",
+                  "long": "大地震发生后，叙利亚持续的内战让国际支援难以进入当地。该国北部在灾区范围内，但由于反对派和政府分别控制不同区域，分裂的情势让物资与人员流动变得複杂。灾区主要仰赖民防组织「白头盔」（white helmets）的救援，联合国物资直到震后四天才抵达当地。\n\n截至2月10日为止，叙利亚因为此次地震罹难的人数已超过3300人。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f29677.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "大地震发生后，叙利亚持续的内战让国际支援难以进入当地。该国北部在灾区范围内，但由于反对派和政府分别控制不同区域，分裂的情势让物资与人员流动变得複杂。",
+                "versions": [
+                  {
+                    "versionId": "p0f2940z",
+                    "types": ["Original"],
+                    "duration": 129,
+                    "durationISO8601": "PT2M9S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676023140000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128588325",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CCA4/production/_128588325_p0f29677.jpg",
+                "path": "/cpsprodpb/CCA4/production/_128588325_p0f29677.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "叙利亚",
+                "copyrightHolder": "Reuters",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/world-64596719",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9bf85f50-e941-4820-94e9-559aa1913f56",
+            "rank": 17,
+            "count": 12,
+            "urn": "urn:bbc:curie:asset:9bf85f50-e941-4820-94e9-559aa1913f56",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "南北极鲜有人听过的声音",
+                "headline": "南北极鲜有人听过的声音"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/science-64553388",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:9bf85f50-e941-4820-94e9-559aa1913f56",
+                "assetId": "64553388",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/science-64553388",
+                "curie": "http://www.bbc.co.uk/asset/9bf85f50-e941-4820-94e9-559aa1913f56"
+              },
+              "summary": "冰川的“歌声”，像海豹在外太空的叫声，还有勘探油气的气枪发出的炸弹般的轰响，这些都是两家海上声学实验室发布的声音。",
+              "timestamp": 1675832771000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:9bf85f50-e941-4820-94e9-559aa1913f56",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                      "thingLabel": "科学天地",
+                      "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                      "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q336",
+                        "http://dbpedia.org/resource/Science"
+                      ],
+                      "thingEnglishLabel": "Science",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+                      "thingLabel": "动物",
+                      "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+                      "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q729",
+                        "http://dbpedia.org/resource/Animal"
+                      ],
+                      "thingEnglishLabel": "Animals",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1hpph",
+                "subType": "clip",
+                "format": "video",
+                "title": "南北极鲜有人听过的声音",
+                "synopses": {
+                  "short": "南北极鲜有人听过的声音",
+                  "long": "当你想到起南北极时，脑海裡会是什麽声音呢？冰川的“歌声”，像海豹在外太空的叫声，还有勘探油气的气枪发出的炸弹般的轰响，这些都是两家海上声学实验室发布的声音。这个新的计划发现了极地既奇怪又奇妙的声音，并向公众展示了50段罕见的极地水下录音。",
+                  "medium": "当你想到起南北极时，脑海裡会是什麽声音呢？冰川的“歌声”，像海豹在外太空的叫声，还有勘探油气的气枪发出的炸弹般的轰响，这些都是两家海上声学实验室发布的声音。这个新的计划发现了极地既奇怪又奇妙的声音，并向公众展示了50段罕见的极地水下录音。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1hszf.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "南北极鲜有人听过的声音",
+                "versions": [
+                  {
+                    "versionId": "p0f1hppm",
+                    "types": ["Original"],
+                    "duration": 81,
+                    "durationISO8601": "PT1M21S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675761078000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128547108",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1392E/production/_128547108_p0f1hszf.jpg",
+                "path": "/cpsprodpb/1392E/production/_128547108_p0f1hszf.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "海豹",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/science-64553388",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "47eaa51f-e337-4813-98e4-984441565fd2",
+            "rank": 18,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:47eaa51f-e337-4813-98e4-984441565fd2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "BBC纪录片：香港的自由之战（上）",
+                "headline": "BBC纪录片：香港的自由之战（上）"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/chinese-news-63998388",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:47eaa51f-e337-4813-98e4-984441565fd2",
+                "assetId": "63998388",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-63998388",
+                "curie": "http://www.bbc.co.uk/asset/47eaa51f-e337-4813-98e4-984441565fd2"
+              },
+              "summary": "2019年香港政府宣布修订《逃犯条例》，在香港引发极大争议，人们担忧香港的自治将面临威胁。本片讲述了四名参与抗议的香港年轻人的故事。",
+              "timestamp": 1671183993000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:47eaa51f-e337-4813-98e4-984441565fd2",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4ad591cb-c2a8-4e28-931f-c8edadee1f43#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4ad591cb-c2a8-4e28-931f-c8edadee1f43#id",
+                      "thingLabel": "香港版国安法",
+                      "thingUri": "http://www.bbc.co.uk/things/4ad591cb-c2a8-4e28-931f-c8edadee1f43#id",
+                      "thingId": "4ad591cb-c2a8-4e28-931f-c8edadee1f43",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Hong_Kong_national_security_law",
+                        "http://www.wikidata.org/entity/Q95976070"
+                      ],
+                      "thingEnglishLabel": "Hong Kong national security law",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e#id",
+                      "thingLabel": "逃犯条例",
+                      "thingUri": "http://www.bbc.co.uk/things/5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e#id",
+                      "thingId": "5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q63412799"
+                      ],
+                      "thingEnglishLabel": "Hong Kong extradition bill",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingLabel": "中國",
+                      "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1814991/",
+                        "http://dbpedia.org/resource/China",
+                        "http://www.wikidata.org/entity/Q148"
+                      ],
+                      "thingEnglishLabel": "China",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingLabel": "政治",
+                      "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingEnglishLabel": "Politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+                      "thingLabel": "香港",
+                      "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+                      "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1819729/"],
+                      "thingEnglishLabel": "Hong Kong",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dpmkp6",
+                "subType": "clip",
+                "format": "video",
+                "title": "BBC纪录片：香港的自由之战（上）",
+                "synopses": {
+                  "short": "BBC纪录片：香港的自由之战（上）",
+                  "long": "2019年香港政府宣布修订《逃犯条例》，允许将罚罪嫌疑人由香港引渡至中国大陆。该法案在香港引发极大争议，人们担忧香港的自治将面临威胁。\n\n本片讲述了四名参与城市大规模抗议，并对政府日渐失望的香港年轻人的故事。他们很快就发现自己陷入了一场可能令城市四分五裂的的暴力恶性循环。\n\n片中使用了开创性的人工智能技术以保护示威者身份。",
+                  "medium": "2019年香港政府宣布修订《逃犯条例》，在香港引发极大争议，人们担忧香港的自治将面临威胁。本片讲述了四名参与抗议的香港年轻人的故事。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dpmm2c.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "BBC纪录片：香港的自由之战（上）",
+                "versions": [
+                  {
+                    "versionId": "p0dpmkpj",
+                    "types": ["Original"],
+                    "duration": 3063,
+                    "durationISO8601": "PT51M3S",
+                    "warnings": {
+                      "short": "Contains some violence.",
+                      "long": "Contains some violent scenes."
+                    },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1671181256000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128024759",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/175FE/production/_128024759_p0dpmm2c.jpg",
+                "path": "/cpsprodpb/175FE/production/_128024759_p0dpmm2c.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "2019年香港政府宣布修订《逃犯条例》，在香港引发极大争议，人们担忧香港的自治将面临威胁。本片讲述了四名参与抗议的香港年轻人的故事。",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-63998388",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "74ba322a-d385-4967-94c1-33d4a24580bb",
+            "rank": 19,
+            "count": 10,
+            "urn": "urn:bbc:curie:asset:74ba322a-d385-4967-94c1-33d4a24580bb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "中港台搜救队进入土耳其地震灾区 已救出受困民众",
+                "headline": "土耳其地震：中港台搜救队进入地震灾区，已救出受困民众"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/world-64580264",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:74ba322a-d385-4967-94c1-33d4a24580bb",
+                "assetId": "64580264",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-64580264",
+                "curie": "http://www.bbc.co.uk/asset/74ba322a-d385-4967-94c1-33d4a24580bb"
+              },
+              "summary": "土耳其与叙利亚大地震的救援行动已进入第四天，许多国际支援纷纷到达当地，其中中港台也分别派出搜救队前往灾区。",
+              "timestamp": 1675932077000,
+              "language": "zh-Hans",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:74ba322a-d385-4967-94c1-33d4a24580bb",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/7a48b6e0-9074-4303-ae82-011003058e16#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "地震",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "土耳其",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2033c",
+                "subType": "clip",
+                "format": "video",
+                "title": "中港台皆派搜救队进土耳其地震灾区 已有受困民众被救出",
+                "synopses": {
+                  "short": "土耳其与叙利亚大地震的救援行动已进入第四天，截至2月9日为止，两国的死亡数字已超过15,000人。许多国际支援纷纷到达当地，其中中港台也分别派出搜救队前往灾区。",
+                  "long": "土耳其与叙利亚大地震的救援行动已进入第四天，截至2月9日为止，两国的死亡数字已超过15,000人。许多国际支援纷纷到达当地，其中中港台也分别派出搜救队前往灾区。\n\n台湾共派出130人，第一批队伍于7日抵达土耳其南部、展开搜救。根据中国官媒报导，中国救援队的82人在8日抵达后已救出一名受困孕妇；香港的一组跨部门搜救队伍则在8日晚间出发。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f204vm.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "土耳其与叙利亚大地震的救援行动已进入第四天，截至2月9日为止，两国的死亡数字已超过15,000人。许多国际支援纷纷到达当地，其中中港台也分别派出搜救队前往灾区。",
+                "versions": [
+                  {
+                    "versionId": "p0f2033k",
+                    "types": ["Original"],
+                    "duration": 142,
+                    "durationISO8601": "PT2M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675931047000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128573276",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/106A5/production/_128573276_p0f204vm.jpg",
+                "path": "/cpsprodpb/106A5/production/_128573276_p0f204vm.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "中港台搜救队",
+                "copyrightHolder": "土耳其与叙利亚大地震的救援行动已进入第四天，截至2月9日为止，两国的死亡数字已超过15,000人。许",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/world-64580264",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "07ff1b49-c26a-4b38-8eec-069a6f6e5c7b",
+            "rank": 20,
+            "count": 9,
+            "urn": "urn:bbc:curie:asset:07ff1b49-c26a-4b38-8eec-069a6f6e5c7b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "上海民众街头高喊“习近平下台”，中国多地现反封控抗议",
+                "headline": "上海民众街头高喊“习近平下台”，中国多地现反封控抗议"
+              },
+              "locators": {
+                "assetUri": "/zhongwen/simp/chinese-news-63772807",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:07ff1b49-c26a-4b38-8eec-069a6f6e5c7b",
+                "assetId": "63772807",
+                "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-63772807",
+                "curie": "http://www.bbc.co.uk/asset/07ff1b49-c26a-4b38-8eec-069a6f6e5c7b"
+              },
+              "summary": "11月27日凌晨，上海乌鲁木齐中路大批民众走上街头，高喊“共产党下台”“习近平下台”等口号，抗议中国严苛的新冠限制措施。",
+              "timestamp": 1669544475000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+                "locator": "urn:bbc:cps:curie:asset:07ff1b49-c26a-4b38-8eec-069a6f6e5c7b",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/597ce03d-e3ea-4a39-bf7e-6546e4a5791e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/146990fa-6cf4-4696-8aca-be013f3c5c05#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/597ce03d-e3ea-4a39-bf7e-6546e4a5791e#id",
+                      "thingLabel": "抗议",
+                      "thingUri": "http://www.bbc.co.uk/things/597ce03d-e3ea-4a39-bf7e-6546e4a5791e#id",
+                      "thingId": "597ce03d-e3ea-4a39-bf7e-6546e4a5791e",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Protest",
+                        "http://www.wikidata.org/entity/Q273120"
+                      ],
+                      "thingEnglishLabel": "Protest",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                      "thingLabel": "新冠病毒疫情",
+                      "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+                      "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/COVID-19_pandemic",
+                        "http://www.wikidata.org/entity/Q81068910"
+                      ],
+                      "thingEnglishLabel": "Coronavirus pandemic",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingLabel": "中國",
+                      "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1814991/",
+                        "http://dbpedia.org/resource/China",
+                        "http://www.wikidata.org/entity/Q148"
+                      ],
+                      "thingEnglishLabel": "China",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dk2yy9",
+                "subType": "clip",
+                "format": "video",
+                "title": "上海民众街头高喊“习近平下台”，中国多地现反封控抗议",
+                "synopses": {
+                  "short": "上海民众街头高喊“习近平下台”，中国多地现反封控抗议",
+                  "long": "11月27日凌晨，上海乌鲁木齐中路大批民众走上街头，抗议中国严苛的新冠限制措施并缅怀新疆乌鲁木齐公寓大火的死难者。\n\n愤怒的群众手举白纸，高喊“共产党下台”“习近平下台”等口号，这是公开场合下，民众罕有表达对中共最高领导层的不满。",
+                  "medium": "11月27日凌晨，上海乌鲁木齐中路大批民众走上街头，高喊“共产党下台”“习近平下台”等口号抗议中国严苛的新冠限制措施。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dk2zhn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "上海民众街头高喊“习近平下台”，中国多地现反封控抗议",
+                "versions": [
+                  {
+                    "versionId": "p0dk2yyf",
+                    "types": ["Original"],
+                    "duration": 193,
+                    "durationISO8601": "PT3M13S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1669542723000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "127795616",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F0DB/production/_127795616_p0dk2zhn.jpg",
+                "path": "/cpsprodpb/F0DB/production/_127795616_p0dk2zhn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "上海民众街头集会抗议中国防疫政策",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-63772807",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

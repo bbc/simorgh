@@ -1,107 +1,424 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/bengali/meta/dps/junk/2016/08/emp/160803_tc2_testmap1.emp.xml",
-        "id": "17698019",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160803_tc2_testmap1",
+        "locators": {
+          "assetUri": "/bengali/multimedia/2016/08/160803_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:3c82f130-5988-11e6-b206-41dae1cf6e69",
+          "assetId": "17698019",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160803_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/3c82f130-5988-11e6-b206-41dae1cf6e69"
+        },
+        "type": "MAP",
+        "createdBy": "bengali",
+        "language": "bn",
+        "lastUpdated": 1665420075991,
+        "firstPublished": 1470237945000,
+        "lastPublished": 1470237945000,
+        "timestamp": 1470237945000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17698019",
+          "contentId": "urn:bbc:topcat:curie:asset:3c82f130-5988-11e6-b206-41dae1cf6e69"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/bengali",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "বাংলাদেশের প্রেক্ষাগৃহে অবাধে ভারতের ছবি মুক্তির প্রতিবাদে আন্দোলনে নেমেছে চলচ্চিত্রের সঙ্গে যুক্ত সব সংগঠন। ২০ জুলাই ঢাকায় প্রতিবাদ সমাবেশ ও মানববন্ধন করেছেন শিল্পী, পরিচালক, প্রযোজক এবং কলাকুশলীরা। কেলোর কীর্তি নামে কলকাতার একটি বাংলা চলচ্চিত্র ঢাকায় বাণিজ্যিকভাবে প্রদর্শনের পরিকল্পনার প্রতিবাদে এই আন্দোলন শুরু করেছেন তারা। যদিও আদালত ছবিটি প্রদর্শনের ওপর অস্থায়ী নিষেধাজ্ঞা দিয়েছে, কিন্তু ঢাকার চলচ্চিত্র শিল্পের সাথে জড়িত লোকজন আশঙ্কা করছেন নিয়মিত ভারতীয় বাংলা ছবি আমদানি ও প্রদর্শনের পরিকল্পনা করা হচ্ছে।",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17698019",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17698019",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/bengali/meta/dps/junk/2016/08/emp/160803_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/bengali/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160803_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/bengali/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160803_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/bengali/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160803_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "বাংলাদেশের প্রেক্ষাগৃহে অবাধে ভারতের ছবি মুক্তির প্রতিবাদে আন্দোলনে নেমেছে চলচ্চিত্রের সঙ্গে যুক্ত সব সংগঠন। ২০ জুলাই ঢাকায় প্রতিবাদ সমাবেশ ও মানববন্ধন করেছেন শিল্পী, পরিচালক, প্রযোজক এবং কলাকুশলীরা। কেলোর কীর্তি নামে কলকাতার একটি বাংলা চলচ্চিত্র ঢাকায় বাণিজ্যিকভাবে প্রদর্শনের পরিকল্পনার প্রতিবাদে এই আন্দোলন শুরু করেছেন তারা। যদিও আদালত ছবিটি প্রদর্শনের ওপর অস্থায়ী নিষেধাজ্ঞা দিয়েছে, কিন্তু ঢাকার চলচ্চিত্র শিল্পের সাথে জড়িত লোকজন আশঙ্কা করছেন নিয়মিত ভারতীয় বাংলা ছবি আমদানি ও প্রদর্শনের পরিকল্পনা করা হচ্ছে।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "ভারতীয় ছবির অবাধ মুক্তিতে বাংলাদেশি চলচ্চিত্রকর্মীদের বিক্ষোভ",
+          "headline": "ভারতীয় ছবির অবাধ মুক্তিতে বাংলাদেশি চলচ্চিত্রকর্মীদের বিক্ষোভ"
+        },
+        "locators": {
+          "assetUri": "/bengali/multimedia/2016/08/160803_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:3c82f130-5988-11e6-b206-41dae1cf6e69",
+          "assetId": "17698019",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160803_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/3c82f130-5988-11e6-b206-41dae1cf6e69"
+        },
+        "summary": "বাংলাদেশের প্রেক্ষাগৃহে অবাধে ভারতের ছবি মুক্তির প্রতিবাদে আন্দোলনে নেমেছে চলচ্চিত্রের সঙ্গে যুক্ত সব সংগঠন।",
+        "timestamp": 1470237945000,
+        "language": "bn",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+          "taggings": []
+        },
+        "media": {
+          "id": "17698019",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17698019",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/bengali/meta/dps/junk/2016/08/emp/160803_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/bengali/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160803_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/bengali/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160803_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/bengali/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160803_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e212",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "Getty",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160803_tc2_testmap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "মাল্টিমিডিয়া",
+          "uri": "/bengali/multimedia",
+          "urlIdentifier": "/bengali/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCBangla.com",
+          "uri": "/bengali",
+          "urlIdentifier": "/bengali",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "cps_asset_id": "17698019",
-      "cps_asset_type": "map"
     },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "bengali",
-    "firstPublished": 1470237945000,
-    "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160803_tc2_testmap1",
-    "includeComments": false,
-    "language": "bn",
-    "lastPublished": 1470237945000,
-    "lastUpdated": 1583254550677,
-    "locators": {
-      "assetId": "17698019",
-      "assetUri": "/bengali/multimedia/2016/08/160803_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160803_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/3c82f130-5988-11e6-b206-41dae1cf6e69"
-    },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1470237945000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "ভারতীয় ছবির অবাধ মুক্তিতে বাংলাদেশি চলচ্চিত্রকর্মীদের বিক্ষোভ",
-      "shortHeadline": "ভারতীয় ছবির অবাধ মুক্তিতে বাংলাদেশি চলচ্চিত্রকর্মীদের বিক্ষোভ"
-    },
-    "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160803_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "Getty",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
-      "id": "d5e212",
-      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "bn",
-    "locators": {
-      "assetId": "17698019",
-      "assetUri": "/bengali/multimedia/2016/08/160803_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:bengali/multimedia/2016/08/160803_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/3c82f130-5988-11e6-b206-41dae1cf6e69"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/bengali/meta/dps/junk/2016/08/emp/160803_tc2_testmap1.emp.xml",
-      "id": "17698019",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "summary": "বাংলাদেশের প্রেক্ষাগৃহে অবাধে ভারতের ছবি মুক্তির প্রতিবাদে আন্দোলনে নেমেছে চলচ্চিত্রের সঙ্গে যুক্ত সব সংগঠন।",
-    "timestamp": 1470237945000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "মাল্টিমিডিয়া",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/bengali/multimedia"
-    },
-    "site": {
-      "name": "BBCBangla.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/bengali"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:20:57.837Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 4,
+        "records": [
+          {
+            "id": "be7c3955-a895-154d-9d05-eed86509a13a",
+            "rank": 1,
+            "count": 6351,
+            "urn": "urn:bbc:curie:asset:be7c3955-a895-154d-9d05-eed86509a13a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Audio: ক্যান্সার মানেই মৃত্যু ঘনিয়ে আসা নয়",
+                "headline": "ক্যান্সার মানেই মৃত্যু ঘনিয়ে আসা নয় short synopsis"
+              },
+              "locators": {
+                "assetUri": "/bengali/media-23066857",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/media-23066857",
+                "curie": "http://www.bbc.co.uk/asset/be7c3955-a895-154d-9d05-eed86509a13a",
+                "assetId": "23066857"
+              },
+              "summary": "ক্যান্সারে আক্রান্ত হওয়া মানেই আয়ু প্রায় শেষ, এই ধারণা শেষ হতে চলল বলে। আজকাল শরীরে ক্যান্সার ধরা পড়ার পরও অনেকে বছরের পর বছর বাঁচছেন সঠিক ও উন্নত চিকিৎসার সুবাদে।",
+              "timestamp": 1470826304000,
+              "language": "bn",
+              "media": {
+                "id": "23066858",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p0152dbg",
+                "entityType": "Clip",
+                "caption": "ক্যান্সার মানেই মৃত্যু ঘনিয়ে আসা নয় short synopsis overtype জচজ",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63502751",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3D68/test/_63502751_p012zl0f.jpg",
+                "path": "/cpsdevpb/3D68/test/_63502751_p012zl0f.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "হগড়হটগ টহযগড়হট পটদতকদক",
+                "caption": "ড়ড়হডপটজ দতকটপটজহ সানব",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/media-23066857",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "01014d01-dda7-884b-89ff-4795088d7632",
+            "rank": 2,
+            "count": 4640,
+            "urn": "urn:bbc:curie:asset:01014d01-dda7-884b-89ff-4795088d7632",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "The short headline; with a Quala in it",
+                "headline": "The summary"
+              },
+              "locators": {
+                "assetUri": "/bengali/content-23164015",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/content-23164015",
+                "curie": "http://www.bbc.co.uk/asset/01014d01-dda7-884b-89ff-4795088d7632",
+                "assetId": "23164015"
+              },
+              "summary": "Synopsis",
+              "timestamp": 1510550255000,
+              "language": "bn",
+              "media": {
+                "id": "p01dyx4r",
+                "subType": "clip",
+                "format": "video",
+                "title": "The short headline",
+                "synopses": {
+                  "short": "The summary",
+                  "medium": "Synopsis",
+                  "long": "Synopsissssss"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01dyxhq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "The summary",
+                "versions": [
+                  {
+                    "versionId": "p01dyx4t",
+                    "types": ["Original"],
+                    "duration": 32,
+                    "durationISO8601": "PT32S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1510548859000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63599605",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/C60B/test/_63599605_p01dyxhq.jpg",
+                "path": "/cpsdevpb/C60B/test/_63599605_p01dyxhq.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Quala",
+                "caption": "Cap",
+                "copyrightHolder": "BBC Sport",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/content-23164015",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "73c58aaf-3794-c546-a486-4be3ee930787",
+            "rank": 3,
+            "count": 2571,
+            "urn": "urn:bbc:curie:asset:73c58aaf-3794-c546-a486-4be3ee930787",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "How beautiful wild life is? = short healine",
+                "headline": "Widllife: Isn;t it beautiful? = long headilne"
+              },
+              "locators": {
+                "assetUri": "/bengali/23165145",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:73c58aaf-3794-c546-a486-4be3ee930787",
+                "assetId": "23165145",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/23165145",
+                "curie": "http://www.bbc.co.uk/asset/73c58aaf-3794-c546-a486-4be3ee930787"
+              },
+              "summary": "This is the summary so can be much longer - up to 120 characters",
+              "timestamp": 1510722796000,
+              "language": "bn",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01f1153",
+                "subType": "clip",
+                "format": "video",
+                "title": "How beautiful wild life is? = short healine",
+                "synopses": {
+                  "short": "Widllife: Isn;t it beautiful? = long headilne",
+                  "medium": "This is the summary so can be much longer - up to 120 characters",
+                  "long": "Whatever you write in here goes into the body of the story"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01f11dz.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Widllife: Is not it beautiful?",
+                "versions": [
+                  {
+                    "versionId": "p01f1155",
+                    "types": ["Original"],
+                    "duration": 30,
+                    "durationISO8601": "PT30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1510721941000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63600423",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7E90/test/_63600423_p01f11dz.jpg",
+                "path": "/cpsdevpb/7E90/test/_63600423_p01f11dz.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Wild Life",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/23165145",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "106b637b-efe8-2046-939c-cec9e63a40ad",
+            "rank": 4,
+            "count": 1985,
+            "urn": "urn:bbc:curie:asset:106b637b-efe8-2046-939c-cec9e63a40ad",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "রিও'র জনপ্রিয় পথ চিত্রশিল্পীর হাতে থাকবে অলিম্পিক মশাল BBC updated",
+                "headline": "রিও'র জনপ্রিয় পথ চিত্রশিল্পীর হাতে থাকবে অলিম্পিক মশাল BBC full headline overtype updated"
+              },
+              "locators": {
+                "assetUri": "/bengali/media-23066148",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/media-23066148",
+                "curie": "http://www.bbc.co.uk/asset/106b637b-efe8-2046-939c-cec9e63a40ad",
+                "assetId": "23066148"
+              },
+              "summary": "মার্কোস রদ্রিগো নেভেস যিনি ওয়ার্ক রোকিনহা নামেও পরিচিত, রিও শহরজুড়ে রয়েছে তাঁর পথ চিত্রকর্ম। updated",
+              "timestamp": 1470844771000,
+              "language": "bn",
+              "media": {
+                "id": "23066149",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0151b5p",
+                "entityType": "Clip",
+                "caption": "রিও'র জনপ্রিয় পথ চিত্রশিল্পীর হাতে থাকবে অলিম্পিক মশাল BBC overtype caption updated",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63502976",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/10950/test/_63502976_ebcea40b-cb5d-4eba-a8a4-cb1d720311fc.jpg",
+                "path": "/cpsdevpb/10950/test/_63502976_ebcea40b-cb5d-4eba-a8a4-cb1d720311fc.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "কারা এই হামলা চালিয়েছে সেটা স্পষ্ট নয়।",
+                "caption": "updated যডপটযটয",
+                "copyrightHolder": "বিবিমি",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/media-23066148",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

@@ -1,158 +1,331 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/ukrainian/meta/dps/junk/2016/10/emp/161025_tc2_testmap1.emp.xml",
-        "id": "17698757",
-        "image": {
-          "altText": "",
-          "copyrightHolder": "",
-          "height": 360,
-          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
-          "id": "17698757",
-          "path": "/amz/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
-          "subType": "thumbnail",
-          "type": "image",
-          "width": 640
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+        "locators": {
+          "assetUri": "/ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/f8d96b70-9a9c-11e6-82b9-3462d7e7dbc4",
+          "assetId": "17698757"
         },
-        "live": false,
-        "playlist": [
+        "type": "MAP",
+        "createdBy": "ukrainian",
+        "language": "uk",
+        "lastUpdated": 1654014549708,
+        "firstPublished": 1477391044000,
+        "lastPublished": 1477391044000,
+        "timestamp": 1477391044000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17698757",
+          "contentId": "urn:bbc:topcat:curie:asset:f8d96b70-9a9c-11e6-82b9-3462d7e7dbc4"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.4",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/ukrainian",
+        "mediaType": "video"
+      },
+      "content": {
+        "blocks": [
           {
-            "bitrate": "168000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_lo.mp4"
+            "id": "17698757",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17698757",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
+              "path": "/amz/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/ukrainian/meta/dps/junk/2016/10/emp/161025_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
           },
           {
-            "bitrate": "320000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_med.mp4"
-          },
-          {
-            "bitrate": "904000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_hi.mp4"
+            "text": "Цивільні мешканці міста Мосул два роки жили за жорстокими правилами, які встановили бойовики так званої Ісламської Держави. Зараз мешканців очікує ще одне випробування - урядові війська готують штурм Мосула. Ці голоси людей з фронтового міста записали журналісти радіостанції Аль-Гхад, що мовить із міста Ірбіл на півночі Іраку. Відеоматеріал журналістів ВВС Надера Ібрахіма і Діни Демрдаш.",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
-        ],
-        "subType": "primary",
-        "type": "legacyMedia"
+        ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "Цивільні мешканці міста Мосул два роки жили за жорстокими правилами, які встановили бойовики так званої Ісламської Держави. Зараз мешканців очікує ще одне випробування - урядові війська готують штурм Мосула. Ці голоси людей з фронтового міста записали журналісти радіостанції Аль-Гхад, що мовить із міста Ірбіл на півночі Іраку. Відеоматеріал журналістів ВВС Надера Ібрахіма і Діни Демрдаш.",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Вчені: титанозаври прийшли в Австралію через Антарктиду",
+          "headline": "Вчені: титанозаври прийшли в Австралію через Антарктиду"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/f8d96b70-9a9c-11e6-82b9-3462d7e7dbc4",
+          "assetId": "17698757"
+        },
+        "summary": "Австралійській вчені повідомили про відкриття нового виду величезних травоїдних динозаврів – савванозаврів (Savannasaurus), що належать до родини титанозаврів.",
+        "timestamp": 1477391044000,
+        "language": "uk",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+          "taggings": []
+        },
+        "media": {
+          "id": "17698757",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17698757",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
+            "path": "/amz/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/ukrainian/meta/dps/junk/2016/10/emp/161025_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e214",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226143043_bruce_forsyth_144x81_bbc.jpg",
+          "path": "/amz/worldservice/test/assets/images/2015/02/26/150226143043_bruce_forsyth_144x81_bbc.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Життя",
+          "uri": "/ukrainian/entertainment",
+          "urlIdentifier": "/ukrainian/entertainment",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCUkrainian.com",
+          "uri": "/ukrainian",
+          "urlIdentifier": "/ukrainian",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17698757", "cps_asset_type": "map" },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "ukrainian",
-    "firstPublished": 1477391044000,
-    "id": "urn:bbc:ares::asset:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
-    "includeComments": false,
-    "language": "uk",
-    "lastPublished": 1477404195000,
-    "lastUpdated": 1585065298491,
-    "locators": {
-      "assetId": "17698757",
-      "assetUri": "/ukrainian/entertainment/2016/10/161025_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/f8d96b70-9a9c-11e6-82b9-3462d7e7dbc4"
     },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1477391044000,
-    "type": "MAP",
-    "version": "v1.1.8"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "Вчені: титанозаври прийшли в Австралію через Антарктиду",
-      "shortHeadline": "Вчені: титанозаври прийшли в Австралію через Антарктиду"
-    },
-    "id": "urn:bbc:ares::asset:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226143043_bruce_forsyth_144x81_bbc.jpg",
-      "id": "d5e214",
-      "path": "/amz/worldservice/test/assets/images/2015/02/26/150226143043_bruce_forsyth_144x81_bbc.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "uk",
-    "locators": {
-      "assetId": "17698757",
-      "assetUri": "/ukrainian/entertainment/2016/10/161025_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/f8d96b70-9a9c-11e6-82b9-3462d7e7dbc4"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/ukrainian/meta/dps/junk/2016/10/emp/161025_tc2_testmap1.emp.xml",
-      "id": "17698757",
-      "image": {
-        "altText": "",
-        "copyrightHolder": "",
-        "height": 360,
-        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
-        "id": "17698757",
-        "path": "/amz/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
-        "subType": "thumbnail",
-        "type": "image",
-        "width": 640
-      },
-      "live": false,
-      "playlist": [
-        {
-          "bitrate": "168000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_lo.mp4"
-        },
-        {
-          "bitrate": "320000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_med.mp4"
-        },
-        {
-          "bitrate": "904000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_hi.mp4"
-        }
-      ],
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": { "taggings": [] },
-    "summary": "Австралійській вчені повідомили про відкриття нового виду величезних травоїдних динозаврів – савванозаврів (Savannasaurus), що належать до родини титанозаврів.",
-    "timestamp": 1477391044000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Життя",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/ukrainian/entertainment"
-    },
-    "site": {
-      "name": "BBCUkrainian.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/ukrainian"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:25:59.229Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T03:53:00Z",
+        "totalRecords": 2,
+        "records": [
+          {
+            "id": "e346fdd6-fbe7-7145-80a3-88ae47d62342",
+            "rank": 1,
+            "count": 9217,
+            "urn": "urn:bbc:curie:asset:e346fdd6-fbe7-7145-80a3-88ae47d62342",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Чому росіяни віддали б голоси за Трампа? (Russian TEST)",
+                "headline": "Чому росіяни віддали б голоси за Трампа? (Russian TEST)"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/world-23087423",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e346fdd6-fbe7-7145-80a3-88ae47d62342",
+                "assetId": "23087423",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/world-23087423",
+                "curie": "http://www.bbc.co.uk/asset/e346fdd6-fbe7-7145-80a3-88ae47d62342"
+              },
+              "summary": "Росія - єдина країна \"Великої двадцятки\", окрім самих США, в якій на майбутніх президентських виборах у Сполучених Штатах проголосували б не за Гіларі Клінтон.",
+              "timestamp": 1477664959000,
+              "language": "ru",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01k6msm",
+                "subType": "clip",
+                "format": "video",
+                "title": "Five things ants can teach us about management",
+                "synopses": {
+                  "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+                "versions": [
+                  {
+                    "versionId": "p01k6msp",
+                    "types": ["Original"],
+                    "duration": 191,
+                    "durationISO8601": "PT3M11S",
+                    "warnings": {
+                      "short": "Contains strong language and adult humour.",
+                      "long": "Contains strong language and adult humour."
+                    },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1540218932000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63519926",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/F60F/test/_63519926_p016cr26.jpg",
+                "path": "/cpsdevpb/F60F/test/_63519926_p016cr26.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "цуу уйцу єждґячсю",
+                "copyrightHolder": "Magnum Photos",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/world-23087423",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ec9db30d-70a8-e047-acf7-d54a16573a1f",
+            "rank": 2,
+            "count": 9081,
+            "urn": "urn:bbc:curie:asset:ec9db30d-70a8-e047-acf7-d54a16573a1f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Live TV bulletin",
+                "headline": "Live TV bulletin"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/23188133",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:ec9db30d-70a8-e047-acf7-d54a16573a1f",
+                "assetId": "23188133",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/23188133",
+                "curie": "http://www.bbc.co.uk/asset/ec9db30d-70a8-e047-acf7-d54a16573a1f"
+              },
+              "summary": "Live TV bulletin",
+              "timestamp": 1519141675000,
+              "language": "uk",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "taggings": []
+              },
+              "media": {
+                "id": "63501296",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "journalism_world_service_stream_01",
+                "duration": "PT0S",
+                "caption": "bbc",
+                "image": {
+                  "id": "63501296",
+                  "subType": "thumbnail",
+                  "href": "http://b.files.bbci.co.uk/7D4B/test/_63657023__100102369_kfc_closed_reuters.jpg",
+                  "path": "/cpsdevpb/7D4B/test/_63657023__100102369_kfc_closed_reuters.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "bbc",
+                  "copyrightHolder": "(C) British Broadcasting Corporation",
+                  "type": "image"
+                },
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63657028",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1409B/test/_63657028__100102369_kfc_closed_reuters.jpg",
+                "path": "/cpsdevpb/1409B/test/_63657028__100102369_kfc_closed_reuters.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "bbc",
+                "caption": "bbc",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/23188133",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

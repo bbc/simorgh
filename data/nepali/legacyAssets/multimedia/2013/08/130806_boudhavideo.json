@@ -1,105 +1,3938 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:nepali/multimedia/2013/08/130806_boudhavideo",
-    "locators": {
-      "assetUri": "/nepali/multimedia/2013/08/130806_boudhavideo",
-      "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2013/08/130806_boudhavideo",
-      "curie": "http://www.bbc.co.uk/asset/15e3a16a-feb3-11e2-9142-5fbf3db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "nepali",
-    "language": "ne",
-    "lastUpdated": 1569320152312,
-    "firstPublished": 1375805582,
-    "lastPublished": 1375806507,
-    "options": {
-      "allowDateStamp": true,
-      "includeComments": false,
-      "allowAdvertising": false,
-      "suitableForSyndication": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map" },
-    "tags": {},
-    "version": "v1.0.10",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "26308269",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/nepali/meta/dps/2013/08/emp/130806_boudhavideo.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:nepali/multimedia/2013/08/130806_boudhavideo",
+        "locators": {
+          "assetUri": "/nepali/multimedia/2013/08/130806_boudhavideo",
+          "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2013/08/130806_boudhavideo",
+          "curie": "http://www.bbc.co.uk/asset/15e3a16a-feb3-11e2-9142-5fbf3db9bd6e"
+        },
+        "type": "MAP",
+        "createdBy": "nepali",
+        "language": "ne",
+        "lastUpdated": 1649948816758,
+        "firstPublished": 1375805582000,
+        "lastPublished": 1375806507000,
+        "timestamp": 1375806507000,
+        "options": {
+          "allowDateStamp": true,
+          "includeComments": false,
+          "allowAdvertising": false,
+          "suitableForSyndication": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "contentId": "urn:bbc:topcat:curie:asset:15e3a16a-feb3-11e2-9142-5fbf3db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/nepali"
       },
-      {
-        "text": "काठमाण्डूको बौध्दनाथ स्तुपमा अगष्ट ६ तारीख मंगलबार एक तिब्बती शरणार्थीले आफ्नो शरीरमा आगो लगाएर आत्मदाह गरेका छन्।",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "26308269",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "26308269",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/08/06/130806144553_self_immolation_640x360_ap.jpg",
+              "path": "/amz/worldservice/live/assets/images/2013/08/06/130806144553_self_immolation_640x360_ap.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/nepali/meta/dps/2013/08/emp/130806_boudhavideo.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/nepali/dps/2013/08/nepal_monk_130806_boudhavideo_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/nepali/dps/2013/08/nepal_monk_130806_boudhavideo_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/nepali/dps/2013/08/nepal_monk_130806_boudhavideo_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "काठमाण्डूको बौध्दनाथ स्तुपमा अगष्ट ६ तारीख मंगलबार एक तिब्बती शरणार्थीले आफ्नो शरीरमा आगो लगाएर आत्मदाह गरेका छन्।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "बौध्द स्तुप परिसरमा पुजा गर्न गएका ठानिएका ती व्यक्तिलाई तत्कालै त्यहाँ तैनाथ प्रहरीले उपचारको लागि अस्पताल पुर्‍याएका थिए।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "तर शरिरको अधिकांश भाग नराम्ररी जलेका  ३८ वर्षिय तिब्बती भिक्षु कर्मा निदोन् ग्यात्सोको काठमान्डू स्थित शिक्षण अस्पतालमा उपचारका क्रममा मृत्यु भएको प्रहरीले जनाएको छ।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "उनले तिब्बतमा चिनीयाँ साशनको विरोधमा आत्मदाह गरेका हुन् वा आत्महत्या भन्ने कुरा खुलिनसेकेको प्रहरी प्रवक्ता नवराज सिलवालले बताएका छन्।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "यस अघि पनि बौद्धमै दुई जना तिब्बती शरणार्थीले आत्मदाहको प्रयास गरेका थिए जसमध्ये जलेर एक जनाको जलेर मृत्यु भएको थियो।",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "बौध्द स्तुप परिसरमा पुजा गर्न गएका ठानिएका ती व्यक्तिलाई तत्कालै त्यहाँ तैनाथ प्रहरीले उपचारको लागि अस्पताल पुर्\u200dयाएका थिए।",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "बौद्धमा एक भिक्षुबाट आत्मदाह",
+          "headline": "बौद्धमा एक भिक्षुबाट आत्मदाह"
+        },
+        "locators": {
+          "assetUri": "/nepali/multimedia/2013/08/130806_boudhavideo",
+          "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2013/08/130806_boudhavideo",
+          "curie": "http://www.bbc.co.uk/asset/15e3a16a-feb3-11e2-9142-5fbf3db9bd6e"
+        },
+        "summary": "काठमाण्डूको बौध्दनाथ स्तुपमा अगष्ट ६ तारीख मंगलबार एक तिब्बती शरणार्थीले आफ्नो शरीरमा आगो लगाएर आत्मदाह गरेको स्थलको भीडियो",
+        "timestamp": 1375806507000,
+        "language": "ne",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+          "taggings": []
+        },
+        "media": {
+          "id": "26308269",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "26308269",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/08/06/130806144553_self_immolation_640x360_ap.jpg",
+            "path": "/amz/worldservice/live/assets/images/2013/08/06/130806144553_self_immolation_640x360_ap.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/nepali/meta/dps/2013/08/emp/130806_boudhavideo.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/nepali/dps/2013/08/nepal_monk_130806_boudhavideo_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/nepali/dps/2013/08/nepal_monk_130806_boudhavideo_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/nepali/dps/2013/08/nepal_monk_130806_boudhavideo_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e204",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/08/06/130806144409_boudhanath_shrine_144x81_ap_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2013/08/06/130806144409_boudhanath_shrine_144x81_ap_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "बौद्धनाथ स्तुप",
+          "copyrightHolder": "",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:nepali/multimedia/2013/08/130806_boudhavideo",
+        "type": "cps"
       },
-      {
-        "text": "तर शरिरको अधिकांश भाग नराम्ररी जलेका  ३८ वर्षिय तिब्बती भिक्षु कर्मा निदोन् ग्यात्सोको काठमान्डू स्थित शिक्षण अस्पतालमा उपचारका क्रममा मृत्यु भएको प्रहरीले जनाएको छ।",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "उनले तिब्बतमा चिनीयाँ साशनको विरोधमा आत्मदाह गरेका हुन् वा आत्महत्या भन्ने कुरा खुलिनसेकेको प्रहरी प्रवक्ता नवराज सिलवालले बताएका छन्।",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "यस अघि पनि बौद्धमै दुई जना तिब्बती शरणार्थीले आत्मदाहको प्रयास गरेका थिए जसमध्ये जलेर एक जनाको जलेर मृत्यु भएको थियो।",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Multimedia",
+          "uri": "/nepali/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCNepali.com",
+          "uri": "/nepali",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "बौद्धमा एक भिक्षुबाट आत्मदाह",
-      "headline": "बौद्धमा एक भिक्षुबाट आत्मदाह"
     },
-    "locators": {
-      "assetUri": "/nepali/multimedia/2013/08/130806_boudhavideo",
-      "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2013/08/130806_boudhavideo",
-      "curie": "http://www.bbc.co.uk/asset/15e3a16a-feb3-11e2-9142-5fbf3db9bd6e"
-    },
-    "summary": "काठमाण्डूको बौध्दनाथ स्तुपमा अगष्ट ६ तारीख मंगलबार एक तिब्बती शरणार्थीले आफ्नो शरीरमा आगो लगाएर आत्मदाह गरेको स्थलको भीडियो",
-    "timestamp": 1569320152312,
-    "passport": {},
-    "media": {
-      "id": "26308269",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/nepali/meta/dps/2013/08/emp/130806_boudhavideo.emp.xml",
-      "type": "legacyMedia"
-    },
-    "id": "urn:bbc:ares::asset:nepali/multimedia/2013/08/130806_boudhavideo",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Multimedia",
-      "uri": "/nepali/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCNepali.com",
-      "uri": "/nepali",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:45:34.983Z",
+        "lastRecordTimeStamp": "2023-02-15T09:43:00Z",
+        "firstRecordTimeStamp": "2023-02-15T05:43:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "3bdf86c4-5edd-4943-ac8f-87bb4c5e2c4f",
+            "rank": 1,
+            "count": 2340,
+            "urn": "urn:bbc:curie:asset:3bdf86c4-5edd-4943-ac8f-87bb4c5e2c4f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "आकाशमा देखियो उज्यालोको रहस्यमय ताँती",
+                "headline": "स्टारलिङ्कः राति आकाशमा देखिएको उज्यालोको यो रहस्यमय ताँती के हो?"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-64647399",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:3bdf86c4-5edd-4943-ac8f-87bb4c5e2c4f",
+                "assetId": "64647399",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-64647399",
+                "curie": "http://www.bbc.co.uk/asset/3bdf86c4-5edd-4943-ac8f-87bb4c5e2c4f"
+              },
+              "summary": "इलोन मस्कको स्वामित्वमा रहेको स्पेसएक्स कम्पनीले पठाएका भूउपग्रहहरू युरोपमा त्यहाँको आकाशमा राति सजिलै देखिएका थिए।",
+              "timestamp": 1676448790000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:3bdf86c4-5edd-4943-ac8f-87bb4c5e2c4f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/bc0b91dc-0475-486a-95c5-3f47194dd1eb#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/72d243a7-687b-4e7d-a022-1e36a138b0be#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+                    "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "campaign": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id",
+                      "type": "campaign"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingLabel": "प्रविधि",
+                      "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Technology",
+                        "http://www.wikidata.org/entity/Q4456888"
+                      ],
+                      "thingEnglishLabel": "Technology",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/72d243a7-687b-4e7d-a022-1e36a138b0be#id",
+                      "thingLabel": "इन्टरनेट",
+                      "thingUri": "http://www.bbc.co.uk/things/72d243a7-687b-4e7d-a022-1e36a138b0be#id",
+                      "thingId": "72d243a7-687b-4e7d-a022-1e36a138b0be",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Internet"],
+                      "thingEnglishLabel": "Internet",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/bc0b91dc-0475-486a-95c5-3f47194dd1eb#id",
+                      "thingLabel": "इलोन मस्क",
+                      "thingUri": "http://www.bbc.co.uk/things/bc0b91dc-0475-486a-95c5-3f47194dd1eb#id",
+                      "thingId": "bc0b91dc-0475-486a-95c5-3f47194dd1eb",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "tagging:Agent",
+                        "core:Person",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Elon_Musk",
+                        "http://www.wikidata.org/entity/Q317521"
+                      ],
+                      "thingEnglishLabel": "Elon Musk",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f3663p",
+                "subType": "clip",
+                "format": "video",
+                "title": "राति आकाशमा देखियो उज्यालोको रहस्यमय ताँती",
+                "synopses": {
+                  "short": "स्टारलिङ्कः राति आकाशमा देखिएको उज्यालोको यो रहस्यमय ताँती के हो?",
+                  "long": "पृथ्वीबाट प्रक्षेपित भूउपग्रहहरूले आफ्नो गन्तव्यमा जाने क्रममा रात्रिकालीन आकाशमा एउटा गतिशील र चम्किलो ताँती बनाएका छन्। \nइलोन मस्कको स्वामित्वमा रहेको स्पेसएक्स कम्पनीले पठाएका ती भूउपग्रहहरू युरोपमा राति सजिलै देखिएका थिए। \nस्पेसएक्सको स्टारलिङ्क परियोजनाका ३,८०० वटाभन्दा बढी भूउपग्रहले पृथ्वीको परिक्रमा गरिरहेका छन्। गत आइतवार प्रक्षेपित नयाँ भूउपग्रहरू पनि त्यही परियोजनाका भाग हुन्। \nअन्तरिक्षबाट विश्वभरि उपलब्ध हुनेगरी तीव्र गतिको इन्टरनेट सेवा उपलब्ध गराउने उद्देश्यले एउटा सबल र प्रभावकारी सञ्जाल बनाउन ती भूउपग्रहहरूको प्रयोग भइरहेको छ। \nती भूउपग्रहहरूले 'लो-अर्थ अर्बिट' अर्थात् पृथ्वीवरिपरि रहेको तल्लो कक्षमा रहेर पृथ्वीको परिक्रमा गरिरहेका छन्। \nहेर्नुहोस् यो भिडिओ। \nअनि यो पनि",
+                  "medium": "इलोन मस्कको स्वामित्वमा रहेको स्पेसएक्स कम्पनीले पठाएका भूउपग्रहहरू युरोपमा त्यहाँको आकाशमा राति सजिलै देखिएका थिए।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f366kt.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "राति आकाशमा देखिएको उज्यालोको यो रहस्यमय ताँती के हो?",
+                "versions": [
+                  {
+                    "versionId": "p0f3663t",
+                    "types": ["Original"],
+                    "duration": 51,
+                    "durationISO8601": "PT51S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676448235000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128634126",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F2BF/production/_128634126_p0f366kt.jpg",
+                "path": "/cpsprodpb/F2BF/production/_128634126_p0f366kt.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "स्टारलिङ्क",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-64647399",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6cab0a4b-181a-4216-a8bf-53073a936526",
+            "rank": 2,
+            "count": 44,
+            "urn": "urn:bbc:curie:asset:6cab0a4b-181a-4216-a8bf-53073a936526",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "भूतपूर्व माओवादी लडाकु भन्छन्, 'हाम्रो पीडा कसले बुझ्छ र?'",
+                "headline": "नेपालको सशस्त्र द्वन्द्व: भूतपूर्व माओवादी लडाकु भन्छन्, 'हाम्रो पीडा कसैले बुझेन'"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-64626035",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:6cab0a4b-181a-4216-a8bf-53073a936526",
+                "assetId": "64626035",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-64626035",
+                "curie": "http://www.bbc.co.uk/asset/6cab0a4b-181a-4216-a8bf-53073a936526"
+              },
+              "summary": "लडाइँका क्रममा तत्कालीन माओवादीको छैटौँ डिभिजनका जुम्लाका अशोक तिरुवाका दुवै खुट्टामा गोली लाग्यो र हाल औषधोपचार गर्न आफूलाई गाह्रो भएको उनी गुनासो गर्छन्।",
+              "timestamp": 1676289875000,
+              "language": "ne",
+              "passport": {
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:6cab0a4b-181a-4216-a8bf-53073a936526",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b6876881-f4ac-434d-a441-d2752ff6ef25#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0da4a069-afad-436f-9a1c-be56e095f0ad#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0da4a069-afad-436f-9a1c-be56e095f0ad#id",
+                      "thingLabel": "नेकपा माओवादी केन्द्र",
+                      "thingUri": "http://www.bbc.co.uk/things/0da4a069-afad-436f-9a1c-be56e095f0ad#id",
+                      "thingId": "0da4a069-afad-436f-9a1c-be56e095f0ad",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Organisation",
+                        "core:Thing",
+                        "tagging:Agent",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Communist_Party_of_Nepal_(Maoist_Centre)",
+                        "http://www.wikidata.org/entity/Q506537"
+                      ],
+                      "thingEnglishLabel": "Communist Party of Nepal (Maoist Centre)",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingLabel": "नेपाल",
+                      "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1282988/"],
+                      "thingEnglishLabel": "Nepal",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingLabel": "राजनीति",
+                      "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingEnglishLabel": "Politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b6876881-f4ac-434d-a441-d2752ff6ef25#id",
+                      "thingLabel": "नेपालको सशस्त्र द्वन्द्व",
+                      "thingUri": "http://www.bbc.co.uk/things/b6876881-f4ac-434d-a441-d2752ff6ef25#id",
+                      "thingId": "b6876881-f4ac-434d-a441-d2752ff6ef25",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q2002975",
+                        "http://dbpedia.org/resource/Nepalese_Civil_War"
+                      ],
+                      "thingEnglishLabel": "Nepalese Civil War",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2tdz8",
+                "subType": "clip",
+                "format": "video",
+                "title": "'हाम्रो पीडा कसले बुझ्छ र?'",
+                "synopses": {
+                  "short": "नेपालको सशस्त्र द्वन्द्व: माओवादीका पूर्वलडाकु भन्छन्, 'हाम्रो पीडा कसैले बुझेन'",
+                  "long": "नेपालमा माओवादीले सशस्त्र विद्रोह सुरु गरेको सम्झनामा सरकारले फागुन १ गते 'जनयुद्ध दिवस' मनाउन सार्वजनिक बिदा नै दियो। तर केही नेपालको सशस्त्र द्वन्द्वमा माओवादीबाट सहभागी भएका केही पूर्वलडाकुहरूले भने आफूलाई राज्य र माओवादी पार्टीबाट पर्याप्त सहायता नपाएको गुनासो गरेका छन्।\nलडाइँका क्रममा तत्कालीन माओवादीको छैटौँ डिभिजनका जुम्लाका अशोक तिरुवाका दुवै खुट्टामा गोली लाग्यो। गोली लागेकै कारण आफू अशक्त भएको र जीवन निकै कष्टकर बनेको बीबीसी सँगको कुराकानीमा बताएका छन्।\nतर कसैले पनि आफ्नो पीडा नबुझेको र औषधोपचार गर्न आफूलाई गाह्रो भएको उनी गुनासो गर्छन्। \nविसं २०५२ साल फागुन १ गते तत्कालीन नेपाल कम्युनिस्ट पार्टी (माओवादी) ले तत्कालीन राज्यविरुद्ध सशस्त्र विद्रोह थालेको थियो। दश वर्ष चलेको द्वन्द्वमा कम्तीमा १७ हजार नेपालीले ज्यान गुमाएका थिए भने कम्तीमा १४ सय बेपत्ता भएका थिए।\nहेर्नुहोस् कमल परियारले बनाएको यो भिडिओ।\n\nअनि यो पनि",
+                  "medium": "लडाइँका क्रममा तत्कालीन माओवादीको छैटौँ डिभिजनका जुम्लाका अशोक तिरुवाका दुवै खुट्टामा गोली लाग्यो र हाल औषधोपचार गर्न आफूलाई गाह्रो भएको उनी गुनासो गर्छन्।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2tgfm.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "नेपालको सशस्त्र द्वन्द्व: माओवादीका पूर्वलडाकु भन्छन्, 'हाम्रो पीडा कसैले बुझेन'",
+                "versions": [
+                  {
+                    "versionId": "p0f2tdzd",
+                    "types": ["Original"],
+                    "duration": 241,
+                    "durationISO8601": "PT4M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676287106000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128615372",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6AD7/production/_128615372_p0f2tgfm.jpg",
+                "path": "/cpsprodpb/6AD7/production/_128615372_p0f2tgfm.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "जुम्लाका पूर्व माओवादी लडाकु अशोक तिरुवा।",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-64626035",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "933600f5-3118-43d5-8209-db6e5cab4562",
+            "rank": 3,
+            "count": 23,
+            "urn": "urn:bbc:curie:asset:933600f5-3118-43d5-8209-db6e5cab4562",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'हामी नपुगीकनै भाइको शव गाडिदिए'",
+                "headline": "टर्की भूकम्पः 'हामी नपुगीकनै मेरो भाइको शव गाडिदिए'"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-64634576",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:933600f5-3118-43d5-8209-db6e5cab4562",
+                "assetId": "64634576",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-64634576",
+                "curie": "http://www.bbc.co.uk/asset/933600f5-3118-43d5-8209-db6e5cab4562"
+              },
+              "summary": "भूकम्पबाट प्रभावित टर्कीमा मानिसहरू आफ्ना परिवारजन र आफन्तलाई खोज्न वा भेट्न र मृत्यु भएका व्यक्तिको अन्तिम संस्कार गर्न एक ठाउँबाट अर्को ठाउँ गइरहेका छन्।",
+              "timestamp": 1676358868000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:933600f5-3118-43d5-8209-db6e5cab4562",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+                    "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "campaign": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id",
+                      "type": "campaign"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "भूकम्प",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "टर्की",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2zkh5",
+                "subType": "clip",
+                "format": "video",
+                "title": "'हामी नपुगीकनै भाइको शव गाडिदिए'",
+                "synopses": {
+                  "short": "टर्की भूकम्पः 'हामी नपुगीकनै मेरो भाइको शव गाडिदिए'",
+                  "long": "गत साता आएका विनाशकारी भूकम्पहरूपछि टर्कीमा मानिसहरू आफ्ना परिवार र आफन्तलाई खोज्न वा भेट्न र मृत्यु भएका व्यक्तिको अन्तिम संस्कार गर्न एक ठाउँबाट अर्को ठाउँ गइरहेका छन्। \nबीबीसीकी सेलिन गिरिट त्यस्ता केही मानिसहरूसँगै दोस्रो ठूलो भूकम्पको केन्द्रबिन्दुनजिकै अवस्थित मराश सहरतिर गइन्। \nहेर्नुहोस् यो भिडिओ। \nअनि यो पनि"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2zkwf.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "'हामी नपुगीकनै भाइको शव गाडिदिए'",
+                "versions": [
+                  {
+                    "versionId": "p0f2zkh9",
+                    "types": ["Original"],
+                    "duration": 85,
+                    "durationISO8601": "PT1M25S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676358356000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128623238",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14520/production/_128623238_p0f2zkwf.jpg",
+                "path": "/cpsprodpb/14520/production/_128623238_p0f2zkwf.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "टर्कीको भूकम्प",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-64634576",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "69e6cf74-4836-46ac-85f0-976f9723ca19",
+            "rank": 4,
+            "count": 19,
+            "urn": "urn:bbc:curie:asset:69e6cf74-4836-46ac-85f0-976f9723ca19",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "यूएफओ: 'उडनतस्तरीको विज्ञान हामी बुझ्दैनौँ'",
+                "headline": "यूएफओ: 'उडनतस्तरीको विज्ञान हामी बुझ्दैनौँ'"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-57746225",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-57746225",
+                "curie": "http://www.bbc.co.uk/asset/69e6cf74-4836-46ac-85f0-976f9723ca19",
+                "assetId": "57746225"
+              },
+              "summary": "हालै अमेरिकाले उडनतस्तरीसम्बन्धी बहुप्रतिक्षित प्रतिवेदन सार्वजनिक गरेको छ। तर त्यसले धेरै प्रश्नको उत्तर दिएको छैन।",
+              "timestamp": 1625713023000,
+              "language": "ne",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:69e6cf74-4836-46ac-85f0-976f9723ca19",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/58d96fa3-becf-4fb9-8d1d-3a772bf88f59#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id",
+                      "thingLabel": "खगोलशास्त्र",
+                      "thingUri": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id",
+                      "thingId": "4fdf1711-6845-4344-98cc-1a382ed91b65",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q333",
+                        "http://dbpedia.org/resource/Astronomy"
+                      ],
+                      "thingEnglishLabel": "Astronomy",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/58d96fa3-becf-4fb9-8d1d-3a772bf88f59#id",
+                      "thingLabel": "बाहिरी अन्तरिक्ष",
+                      "thingUri": "http://www.bbc.co.uk/things/58d96fa3-becf-4fb9-8d1d-3a772bf88f59#id",
+                      "thingId": "58d96fa3-becf-4fb9-8d1d-3a772bf88f59",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Outer_space",
+                        "http://www.wikidata.org/entity/Q4169"
+                      ],
+                      "thingEnglishLabel": "Outer space",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id",
+                      "thingLabel": "अन्तरिक्ष अन्वेषण",
+                      "thingUri": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id",
+                      "thingId": "84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q180046",
+                        "http://dbpedia.org/resource/Space_exploration"
+                      ],
+                      "thingEnglishLabel": "Space exploration",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09nnvqr",
+                "subType": "clip",
+                "format": "video",
+                "title": "यूएफओ: 'उडनतस्तरीको विज्ञान हामी बुझ्दैनौँ'",
+                "synopses": {
+                  "short": "यूएफओ: 'उडनतस्तरीको विज्ञान हामी बुझ्दैनौँ'",
+                  "long": "अमेरिकी सरकारले हालै सार्वजनिक गरेको यूएफओ भनिने उडनतस्तरीसम्बन्धी प्रतिवेदनमा रहेका अनुत्तरित प्रश्नहरू के-के हुन्? एक विज्ञले त्यसको चिरफार गरेका छन्।\n\nउनी भन्छन्, \"यहाँ नभनिएको धेरै कुरा त्यहाँ भइरहेको छ।\" \n\nएक लडाकु विमान पाइलटले आफूले देखेको यूएफओको अनुभव बाँडेकी छन्।\n\nहेर्नुहोस् यो भिडिओ।",
+                  "medium": "यूएफओ: 'उडनतस्तरीको विज्ञान हामी बुझ्दैनौँ'"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nnvvd.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "यूएफओ: 'उडनतस्तरीको विज्ञान हामी बुझ्दैनौँ'",
+                "versions": [
+                  {
+                    "versionId": "p09nnvqz",
+                    "types": ["Original"],
+                    "duration": 209,
+                    "durationISO8601": "PT3M29S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1625658517000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119299048",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14883/production/_119299048_p09nnvvd.jpg",
+                "path": "/cpsprodpb/14883/production/_119299048_p09nnvvd.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "यूएफओ: 'उडनतस्तरीको विज्ञान हामी बुझ्दैनौँ'",
+                "copyrightHolder": "अमेरिकी सरकारले हालै सार्वजनिक गरेको यूएफओ भनिने उ",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-57746225",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0e8a345c-434e-2d4b-bca4-99aa34659beb",
+            "rank": 5,
+            "count": 13,
+            "urn": "urn:bbc:curie:asset:0e8a345c-434e-2d4b-bca4-99aa34659beb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "यसरी गरिन्छ अन्तरिक्षमा शौच",
+                "headline": "यसरी गरिन्छ अन्तरिक्षमा शौच"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-43840666",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-43840666",
+                "curie": "http://www.bbc.co.uk/asset/0e8a345c-434e-2d4b-bca4-99aa34659beb",
+                "assetId": "43840666"
+              },
+              "summary": "नासाका उडान प्रशिक्षण निर्देशक अन्तरिक्षयात्रीहरूले कसरी शौच गर्छन् भनेर व्याख्या गर्दैछन्। हेर्नुहोस् यो भिडिओ।",
+              "timestamp": 1524226456000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p064x23k",
+                "subType": "clip",
+                "format": "video",
+                "title": "अन्तरिक्षमा शौच",
+                "synopses": {
+                  "short": "यसरी गरिन्छ अन्तरिक्षमा शौच...",
+                  "long": "अन्तरिक्षयात्रीहरूले शून्य गुरुत्वमा शौचालय प्रयोग गर्नुपर्छ। र त्यो त्यति सजिलो काम हैन। \n\nनासाका उडान प्रशिक्षण निर्देशक एउटा अन्तरिक्षयानमा रहेको शौचालय हामीलाई देखाउँदै त्यसबारे व्याख्या गर्दैछन्।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p064x2k8.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "यसरी गरिन्छ अन्तरिक्षमा शौच",
+                "versions": [
+                  {
+                    "versionId": "p064x23s",
+                    "types": ["Original"],
+                    "duration": 81,
+                    "durationISO8601": "PT1M21S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1524225532000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100958201",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/282D/production/_100958201_astronauts.jpg",
+                "path": "/cpsprodpb/282D/production/_100958201_astronauts.jpg",
+                "height": 794,
+                "width": 1412,
+                "altText": "अन्तरिक्षयात्री",
+                "caption": "अन्तरिक्षयात्री",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-43840666",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c3566192-df6f-4404-83aa-8ae42ee075f4",
+            "rank": 6,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:c3566192-df6f-4404-83aa-8ae42ee075f4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "किन अति-धनाढ्यहरूले तिनका सम्पत्तिबाट अर्बौँ रकम गुमाइरहेका छन्?",
+                "headline": "पैसाः किन विश्वका अति धनाढ्यहरूले अर्बौँ रकम गुमाइरहेका छन्?"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-64592975",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c3566192-df6f-4404-83aa-8ae42ee075f4",
+                "assetId": "64592975",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-64592975",
+                "curie": "http://www.bbc.co.uk/asset/c3566192-df6f-4404-83aa-8ae42ee075f4"
+              },
+              "summary": "भारतदेखि अमेरिकाको सिलिकन भ्यालीसम्मका अति-धनाढ्यहरूले पछिल्लो समय अर्बौँ गुमाइरहेका छन्, किन होला त?",
+              "timestamp": 1676169933000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:c3566192-df6f-4404-83aa-8ae42ee075f4",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+                    "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "campaign": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id",
+                      "type": "campaign"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+                      "thingLabel": "जीवनशैली",
+                      "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+                      "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Life",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingLabel": "अर्थतन्त्र",
+                      "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+                      "thingEnglishLabel": "Economics",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f20cbd",
+                "subType": "clip",
+                "format": "video",
+                "title": "धनाढ्यहरू सम्पत्ति गुमाउँदैछन् किन",
+                "synopses": {
+                  "short": "धनाढ्यहरू सम्पत्ति गुमाउँदैछन् किन",
+                  "long": "धनाढ्यहरू सम्पत्ति गुमाउँदैछन् किन",
+                  "medium": "धनाढ्यहरू सम्पत्ति गुमाउँदैछन् किन"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2155v.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "धनाढ्यहरू सम्पत्ति गुमाउँदैछन् किन",
+                "versions": [
+                  {
+                    "versionId": "p0f20cbj",
+                    "types": ["Original"],
+                    "duration": 77,
+                    "durationISO8601": "PT1M17S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675940714000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128585618",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13EFA/production/_128585618_p0f2155v.jpg",
+                "path": "/cpsprodpb/13EFA/production/_128585618_p0f2155v.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "rich people",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-64592975",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f1cacd3e-76f4-fa4d-89de-46770c515ed4",
+            "rank": 7,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:f1cacd3e-76f4-fa4d-89de-46770c515ed4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "आत्महत्या किन गर्छन्, कसरी रोक्ने",
+                "headline": "आत्महत्या रोकथाम गर्न डा. ओझाले देखेका उपाय"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-49583640",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-49583640",
+                "curie": "http://www.bbc.co.uk/asset/f1cacd3e-76f4-fa4d-89de-46770c515ed4",
+                "assetId": "49583640"
+              },
+              "summary": "एउटा व्यक्ति आत्महत्या गर्ने स्थितिमा पुग्नुको कारण र उसलाई त्यसो गर्नबाट जोगाउने उपाय के हुन सक्छन्? मनोचिकित्सक डा. ओझाले देखेका उपाय सुन्नुहोस्।",
+              "timestamp": 1567611162000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07mdx70",
+                "subType": "clip",
+                "format": "audio",
+                "title": "आत्महत्या किन गर्छन्, कसरी रोक्ने",
+                "synopses": {
+                  "short": "आत्महत्या रोकथाम गर्न डा. ओझाले देखेका उपाय",
+                  "long": "आत्महत्या रोकथाम गर्न डा. सरोजप्रसाद ओझाले देखेका उपाय",
+                  "medium": "आत्महत्या रोकथाम गर्न डा. ओझाले देखेका उपाय"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mdz5m.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "आत्महत्या रोकथाम गर्न डा. ओझाले देखेका उपाय",
+                "versions": [
+                  {
+                    "versionId": "p07mdx75",
+                    "types": ["Original"],
+                    "duration": 600,
+                    "durationISO8601": "PT10M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1567604326000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "108614506",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/EC7D/production/_108614506_p07mdz5m.jpg",
+                "path": "/cpsprodpb/EC7D/production/_108614506_p07mdz5m.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "डा. सरोजप्रसाद ओझा",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-49583640",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1d1b0257-ebd1-4352-b720-0f1995ef87a3",
+            "rank": 8,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:1d1b0257-ebd1-4352-b720-0f1995ef87a3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "के इन्टरने‍ट बन्द गर्न सकिन्छ",
+                "headline": "इरानमा इन्टरने‍ट बन्दः के कसैले चाह्यो भने बन्द गरिदिन सक्छ?"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-59131921",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:1d1b0257-ebd1-4352-b720-0f1995ef87a3",
+                "assetId": "59131921",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-59131921",
+                "curie": "http://www.bbc.co.uk/asset/1d1b0257-ebd1-4352-b720-0f1995ef87a3"
+              },
+              "summary": "कुनै पनि देशको सरकारले सजिलै समाचार र सूचनाको हाम्रो सबैभन्दा ठूलो स्रोतलाई रोकिदिन सक्छ। तर कसरी?",
+              "timestamp": 1663933440000,
+              "language": "ne",
+              "passport": {
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:1d1b0257-ebd1-4352-b720-0f1995ef87a3",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/72d243a7-687b-4e7d-a022-1e36a138b0be#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+                    "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d422d03a-ac5e-4d3f-b18b-c28b227375fc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "campaign": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id",
+                      "type": "campaign"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingLabel": "प्रविधि",
+                      "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Technology",
+                        "http://www.wikidata.org/entity/Q4456888"
+                      ],
+                      "thingEnglishLabel": "Technology",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/72d243a7-687b-4e7d-a022-1e36a138b0be#id",
+                      "thingLabel": "इन्टरनेट",
+                      "thingUri": "http://www.bbc.co.uk/things/72d243a7-687b-4e7d-a022-1e36a138b0be#id",
+                      "thingId": "72d243a7-687b-4e7d-a022-1e36a138b0be",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Internet"],
+                      "thingEnglishLabel": "Internet",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/d422d03a-ac5e-4d3f-b18b-c28b227375fc#id",
+                      "thingLabel": "सेन्सरशिप",
+                      "thingUri": "http://www.bbc.co.uk/things/d422d03a-ac5e-4d3f-b18b-c28b227375fc#id",
+                      "thingId": "d422d03a-ac5e-4d3f-b18b-c28b227375fc",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q543",
+                        "http://dbpedia.org/resource/Censorship"
+                      ],
+                      "thingEnglishLabel": "Censorship",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0b1rb7k",
+                "subType": "clip",
+                "format": "video",
+                "title": "के इन्टरने‍ट बन्द गर्न सकिन्छ?",
+                "synopses": {
+                  "short": "के इन्टरने‍ट बन्द गर्न सकिन्छ?",
+                  "long": "इन्टरनेट हाम्रो दैनिक जीवनको अभिन्न अङ्ग बनेको छ।\nतर कुनै पनि देशको सरकारले सजिलै समाचार र सूचनाको हाम्रो सबैभन्दा ठूलो स्रोतलाई रोकिदिन सक्छ।\nसरकारले चाहेका कसरी इन्टरनेट बन्द गर्न सक्छ?\nहेर्नुहोस् एउटा भिडिओ।",
+                  "medium": "कुनै पनि देशको सरकारले सजिलै समाचार र सूचनाको हाम्रो सबैभन्दा ठूलो स्रोतलाई रोकिदिन सक्छ। तर कसरी?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b1rfmn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "के इन्टरने‍ट बन्द गर्न सकिन्छ?",
+                "versions": [
+                  {
+                    "versionId": "p0b1rb7p",
+                    "types": ["Original"],
+                    "duration": 88,
+                    "durationISO8601": "PT1M28S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1635846617000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "121309777",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12FDE/production/_121309777_p0b1rfmn.jpg",
+                "path": "/cpsprodpb/12FDE/production/_121309777_p0b1rfmn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "इन्टरनेट",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-59131921",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "60f3d0c7-bbd6-4d16-bde1-16cf3ccd1fd8",
+            "rank": 9,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:60f3d0c7-bbd6-4d16-bde1-16cf3ccd1fd8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "विश्व यूएफओ दिवस: किन नासाले उडनतस्तरीको खोजी गरिरहेको छ?",
+                "headline": "यूएफओ: किन नासाले उडनतस्तरीको खोजी गरिरहेको छ?"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-62019676",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:60f3d0c7-bbd6-4d16-bde1-16cf3ccd1fd8",
+                "assetId": "62019676",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-62019676",
+                "curie": "http://www.bbc.co.uk/asset/60f3d0c7-bbd6-4d16-bde1-16cf3ccd1fd8"
+              },
+              "summary": "अमेरिकी अन्तरिक्ष निकाय नासाले वैज्ञानिकहरूको विशेष समूह गठन गरेर उडनतस्तरीको खोजी गर्ने भएको छ।",
+              "timestamp": 1656761445000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:60f3d0c7-bbd6-4d16-bde1-16cf3ccd1fd8",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/58d96fa3-becf-4fb9-8d1d-3a772bf88f59#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingLabel": "मनोरञ्जन",
+                      "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entertainment",
+                        "http://www.wikidata.org/entity/Q173799"
+                      ],
+                      "thingEnglishLabel": "Entertainment",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id",
+                      "thingLabel": "खगोलशास्त्र",
+                      "thingUri": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id",
+                      "thingId": "4fdf1711-6845-4344-98cc-1a382ed91b65",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q333",
+                        "http://dbpedia.org/resource/Astronomy"
+                      ],
+                      "thingEnglishLabel": "Astronomy",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/58d96fa3-becf-4fb9-8d1d-3a772bf88f59#id",
+                      "thingLabel": "बाहिरी अन्तरिक्ष",
+                      "thingUri": "http://www.bbc.co.uk/things/58d96fa3-becf-4fb9-8d1d-3a772bf88f59#id",
+                      "thingId": "58d96fa3-becf-4fb9-8d1d-3a772bf88f59",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Outer_space",
+                        "http://www.wikidata.org/entity/Q4169"
+                      ],
+                      "thingEnglishLabel": "Outer space",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id",
+                      "thingLabel": "अन्तरिक्ष अन्वेषण",
+                      "thingUri": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id",
+                      "thingId": "84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q180046",
+                        "http://dbpedia.org/resource/Space_exploration"
+                      ],
+                      "thingEnglishLabel": "Space exploration",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0cjhmk4",
+                "subType": "clip",
+                "format": "video",
+                "title": "उडनतस्तरी",
+                "synopses": {
+                  "short": "उडनतस्तरी",
+                  "long": "उडनतस्तरी",
+                  "medium": "उडनतस्तरी"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0cjhmn7.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "उडनतस्तरी",
+                "versions": [
+                  {
+                    "versionId": "p0cjhmk8",
+                    "types": ["Original"],
+                    "duration": 84,
+                    "durationISO8601": "PT1M24S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1656758422000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125729120",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0890/production/_125729120_p0cjhmn7.jpg",
+                "path": "/cpsprodpb/0890/production/_125729120_p0cjhmn7.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "उडनतस्तरी",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-62019676",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c7b1a256-b8ec-4e4c-b305-de2dae75cd49",
+            "rank": 10,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:c7b1a256-b8ec-4e4c-b305-de2dae75cd49",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "अमेरिकाको अन्तरिक्ष अभियान",
+                "headline": "अमेरिकाको अन्तरिक्ष अभियान"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-42346551",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-42346551",
+                "curie": "http://www.bbc.co.uk/asset/c7b1a256-b8ec-4e4c-b305-de2dae75cd49",
+                "assetId": "42346551"
+              },
+              "summary": "अमेरिकी राष्ट्रपति ट्रम्पले आफ्नो देशको अन्तरिक्ष अभियानलाई फेरि अगाडि बढाउने घोषणा गरेका छन्। बीबीसी रिपोर्ट (भिडिओ)",
+              "timestamp": 1513194848000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05r0qgs",
+                "subType": "clip",
+                "format": "video",
+                "title": "अमेरिकाको अन्तरिक्ष अभियान",
+                "synopses": {
+                  "short": "अमेरिकाको अन्तरिक्ष अभियान",
+                  "medium": "अमेरिकी राष्ट्रपति ट्रम्पले आफ्नो देशको अन्तरिक्ष अभियानलाई फेरि अगाडि बढाउने घोषणा गरेका छन्। बीबीसी रिपोर्ट (भिडिओ)",
+                  "long": "संयुक्त राज्य अमेरिकाले सन् १९६९ मा पहिलोपटक आफ्ना अन्तरिक्षयात्रीलाई चन्द्रमाको सतहमा उतारेको थियो।\n\nराष्ट्रपति ट्रम्पले अमेरिकी अन्तरिक्ष संस्था (नासा) लाई फेरि चन्द्रमामा मानवसहितको यान पठाउने तर्फ काम गर्न भनेका छन्।\n\nतर त्यस्तो अभियान कहिले शुरु हुनेछ र त्यसमा कति खर्च लाग्नेछ भन्ने खुलाइएको छैन। \n\nनासाले मंगलग्रहमा एउटा मानवरहित यान पठाएको छ र त्यहाँ आउँदो तीन वर्षमा अर्को यान पठाउने बताएको छ।\n\nराष्ट्रपति ट्रम्पको घोषणाको वैज्ञानिकहरुले स्वागत गरेका छन्।\n\nतर अमेरिकाले त्यसकालागि लाग्ने करोडौ डलरबराबरको खर्च थेग्न सक्छ कि सक्दैन भन्ने प्रश्नहरु पनि उठेका छन्।\n\nबीबीसी रिपोर्ट (भिडिओ)"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05r0qp8.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "अमेरिकाको अन्तरिक्ष अभियान",
+                "versions": [
+                  {
+                    "versionId": "p05r0qgv",
+                    "types": ["Original"],
+                    "duration": 101,
+                    "durationISO8601": "PT1M41S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1513194713000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99198999",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/18695/production/_99198999_p05r0qp8.jpg",
+                "path": "/cpsprodpb/18695/production/_99198999_p05r0qp8.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "अमेरिकी राष्ट्रपति ट्रम्पले आफ्नो देशको अन्तरिक्ष अभियानलाई फेरि अगाडि बढाउने घोषणा गरेका छन्। बीबीसी रिपोर्ट (भिडिओ)",
+                "copyrightHolder": "संयुक्त राज्य अमेरिकाले सन् १९६९ मा पहिलोपटक आफ्ना",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-42346551",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b4638e98-d0b0-45fc-ac6a-b1bd77347974",
+            "rank": 11,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:b4638e98-d0b0-45fc-ac6a-b1bd77347974",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "अपाङ्गता भएका खेलाडीको राष्ट्रिय क्रिकेट टोली",
+                "headline": "अपाङ्गता भएका खेलाडीको क्रिकेट: 'सरकारको प्राथमिकतामा परे पदक ल्याउँछौँ'"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-61064125",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-61064125",
+                "curie": "http://www.bbc.co.uk/asset/b4638e98-d0b0-45fc-ac6a-b1bd77347974",
+                "assetId": "61064125"
+              },
+              "summary": "क्रिकेट महँगो भएको र जीविकोपार्जनको समस्याका कारण खेलाडीहरू जम्मा पार्न र टिकाउन कठिन भएको उनीहरूको भनाइ छ।",
+              "timestamp": 1649657552000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:b4638e98-d0b0-45fc-ac6a-b1bd77347974",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/bb2d8784-45cb-4358-b506-7832b01831fd#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingLabel": "नेपाल",
+                      "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1282988/"],
+                      "thingEnglishLabel": "Nepal",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id",
+                      "thingLabel": "अपाङ्गता",
+                      "thingUri": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id",
+                      "thingId": "a1c14222-e7ab-45a2-a074-3cdc1045607c",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "tagging:Genre",
+                        "core:Thing",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q12131",
+                        "http://dbpedia.org/resource/Disability"
+                      ],
+                      "thingEnglishLabel": "Disability",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb2d8784-45cb-4358-b506-7832b01831fd#id",
+                      "thingLabel": "क्रिकेट",
+                      "thingUri": "http://www.bbc.co.uk/things/bb2d8784-45cb-4358-b506-7832b01831fd#id",
+                      "thingId": "bb2d8784-45cb-4358-b506-7832b01831fd",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "sport:SportsDiscipline",
+                        "core:Thing",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Cricket",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c0gglk",
+                "subType": "clip",
+                "format": "video",
+                "title": "नेपालका लागि खेल्दै शारीरिक अशक्तता भएका क्रिकेट खेलाडी",
+                "synopses": {
+                  "short": "शारीरिक अशक्तता क्रिकेट: 'सरकारको प्राथमिकतामा परे पदक ल्याउँछौँ'",
+                  "long": "शारीरिक अशक्तता भएका क्रिकेट खेलाडीहरूले सहयोगबिना क्रिकेट खेलिरहँदा लक्ष्य अनुसार खेलमा सुधार गर्न नसकेको बताएका छन्। \nक्रिकेट महँगो भएको र जीविकोपार्जनको समस्याका कारण खेलाडीहरू जम्मा पार्न र टिकाउन कठिन भएको उनीहरूको भनाइ छ।\nहालै नेपाल, श्रीलङ्का, भारत र बङ्गलादेशका शारीरिक अशक्तता भएका खेलाडीबीच बङ्गलादेशमा क्रिकेट प्रतियोगिता सम्पन्न भएको छ। \nनेपाल ह्विलचियर क्रिकेट सङ्घका अध्यक्ष छुल्ठिम शेर्पाले शारीरिक रूपमा अशक्त खेलाडीहरू राज्यको प्राथमिकतामा नपरेकोमा दुःख व्यक्त गरेका छन्।\nहेर्नुहोस् कमल परियारले बनाएको यो भिडिओ। \nअनि यो पनि।",
+                  "medium": "क्रिकेट महँगो भएको र जीविकोपार्जनको समस्याका कारण खेलाडीहरू जम्मा पार्न र टिकाउन कठिन भएको उनीहरूको भनाइ छ।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c0khpb.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "अपाङ्गता भएका खेलाडीको राष्ट्रिय क्रिकेट टोली",
+                "versions": [
+                  {
+                    "versionId": "p0c0k9z7",
+                    "types": ["Editorial"],
+                    "duration": 192,
+                    "durationISO8601": "PT3M12S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1649587456000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124113759",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/175F3/production/_124113759_p0c0ggqr.jpg",
+                "path": "/cpsprodpb/175F3/production/_124113759_p0c0ggqr.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "शारीरिक अशक्तता भएका क्रिकेट खेलाडीहरू।",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-61064125",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f6dbc3b5-bb58-4907-93d6-a23c6e5825a5",
+            "rank": 12,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:f6dbc3b5-bb58-4907-93d6-a23c6e5825a5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "अन्तर्राष्ट्रिय क्रिकेट प्रतियोगिता खेलेर सीता रानाले के सिकिन्?",
+                "headline": "सीता राना मगर: क्रिकेटमा 'हामी मेहनत गर्छौँ तर सही तरिकाले गर्दैनौँ'"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-61552184",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-61552184",
+                "curie": "http://www.bbc.co.uk/asset/f6dbc3b5-bb58-4907-93d6-a23c6e5825a5",
+                "assetId": "61552184"
+              },
+              "summary": "सीता राना मगरले फेयरब्रेक अन्तर्राष्ट्रिय क्रिकेट प्रतियोगिताबाट आफूले धेरै कुरा सिक्न पाएको बताउँदै आफ्नो खेलमा सुधार गर्दै टिमलाई नयाँ उचाइँमा पुर्याउने प्रतिबद्धता व्यक्त गरेकी छन्। हेर्नुहोस् भिडिओ।",
+              "timestamp": 1653354685000,
+              "language": "ne",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:f6dbc3b5-bb58-4907-93d6-a23c6e5825a5",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/bb2d8784-45cb-4358-b506-7832b01831fd#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/755f36fe-2126-4225-92bf-ac459c3c8832#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0d205538-c52e-41c7-a4a1-50efd6c1da59#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0d205538-c52e-41c7-a4a1-50efd6c1da59#id",
+                      "thingLabel": "ओलिम्पिक्स",
+                      "thingUri": "http://www.bbc.co.uk/things/0d205538-c52e-41c7-a4a1-50efd6c1da59#id",
+                      "thingId": "0d205538-c52e-41c7-a4a1-50efd6c1da59",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "sport:MultiDisciplineRecurringCompetition",
+                        "tagging:TagConcept",
+                        "sport:Competition",
+                        "tagging:Genre",
+                        "sport:RecurringCompetition",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Olympics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingLabel": "नेपाल",
+                      "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1282988/"],
+                      "thingEnglishLabel": "Nepal",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/755f36fe-2126-4225-92bf-ac459c3c8832#id",
+                      "thingLabel": "दक्षिण एशिया",
+                      "thingUri": "http://www.bbc.co.uk/things/755f36fe-2126-4225-92bf-ac459c3c8832#id",
+                      "thingId": "755f36fe-2126-4225-92bf-ac459c3c8832",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/7729895/",
+                        "http://dbpedia.org/resource/South_Asia"
+                      ],
+                      "thingEnglishLabel": "South Asia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb2d8784-45cb-4358-b506-7832b01831fd#id",
+                      "thingLabel": "क्रिकेट",
+                      "thingUri": "http://www.bbc.co.uk/things/bb2d8784-45cb-4358-b506-7832b01831fd#id",
+                      "thingId": "bb2d8784-45cb-4358-b506-7832b01831fd",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "sport:SportsDiscipline",
+                        "core:Thing",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Cricket",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "महिला",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c8g4v5",
+                "subType": "clip",
+                "format": "video",
+                "title": "अन्तर्राष्ट्रिय क्रिकेट प्रतियोगिता खेलेर मैले के सिकेँ?",
+                "synopses": {
+                  "short": "सीता राना मगर: ''हामी मेहनत गर्छौँ तर सही तरिकाले गर्दैनौँ''",
+                  "long": "यूएईमा भएको अन्तर्राष्ट्रिय क्रिकेट प्रतियोगितामा पहिलो पटक खेलेकी क्रिकेट खेलाडी सीता राना मगर आफ्नो 'सेलिब्रेसनका' कारण चर्चामा रहिन्। \nफेयरब्रेक आमन्त्रण प्रतियोगितामा ७ खेल खेलेर चार विकेट लिएकी राना मगर सन् २००७ देखि नेपाली राष्ट्रिय टोलीबाट क्रिकेट खेलिरहेकी छन्। \nराना मगरले उक्त अन्तर्राष्ट्रिय क्रिकेट प्रतियोगिताबाट आफूले धेरै कुरा सिक्न पाएको बताउँदै भनिन्, ''हामी मेहनत गर्छौँ तर सही तरिकाले गर्दैनौँ''\nमगरले आफ्नो खेल सुधार गर्दै टिमलाई नयाँ उचाइमा पुर्याउन प्रयत्न जारी राख्ने प्रतिबद्धता व्यक्त गरेकी छन्। \nहेर्नुहोस् कमल परियारले बनाएको यो भिडिओमा।",
+                  "medium": "राना मगरले उक्त अन्तर्राष्ट्रिय क्रिकेट प्रतियोगिताबाट आफूले धेरै कुरा सिक्न पाएको बताउँदै आफ्नो खेलमा सुधार गर्दै टिमलाई नयाँ उचाइमा पुर्याउने प्रतिबद्धता व्यक्त गरेकी छन्।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c8g63v.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "सीता राना मगर: ''हामी मेहनत गर्छौँ तर सही तरिकाले गर्दैनौँ''",
+                "versions": [
+                  {
+                    "versionId": "p0c8g4vh",
+                    "types": ["Original"],
+                    "duration": 261,
+                    "durationISO8601": "PT4M21S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1653301711000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124874491",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4BF7/production/_124874491_p0c8g63v.jpg",
+                "path": "/cpsprodpb/4BF7/production/_124874491_p0c8g63v.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "क्रिकेट खेलाडी सीता राना मगर।",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-61552184",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d16c513f-2467-415a-9313-4bb0ce0ef432",
+            "rank": 13,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:d16c513f-2467-415a-9313-4bb0ce0ef432",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "पानी किन्न पैसा तिरेर मात्रै पुग्दैन, महिलाले शरीर पनि सुम्पिनुपर्छ",
+                "headline": "केन्याः पानीको हाहाकार हुँदा शरीर बेच्न बाध्य छन् महिलाहरू"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-61254582",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-61254582",
+                "curie": "http://www.bbc.co.uk/asset/d16c513f-2467-415a-9313-4bb0ce0ef432",
+                "assetId": "61254582"
+              },
+              "summary": "किबेराजस्ता सुकुम्बासी बस्तीमा पानीविक्रेता शक्तिशाली बनेका छन् र महिलाहरू पानी किन्न पैसा तिर्न मात्रै होइन, शरीर बेच्न पनि बाध्य भएका छन्।",
+              "timestamp": 1651128077000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:d16c513f-2467-415a-9313-4bb0ce0ef432",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7d7c35fa-f724-4b36-90a0-21f71d99857d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+                    "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/12eb8b72-282b-40b4-86d5-8da3c1855176#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/46179660-2af3-49c7-a80b-b483412fbfb6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/9a147376-bd7a-45b4-92aa-7c4d3f806dd2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "campaign": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id",
+                      "type": "campaign"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/12eb8b72-282b-40b4-86d5-8da3c1855176#id",
+                      "thingLabel": "महिलाविरुद्ध हिंसा",
+                      "thingUri": "http://www.bbc.co.uk/things/12eb8b72-282b-40b4-86d5-8da3c1855176#id",
+                      "thingId": "12eb8b72-282b-40b4-86d5-8da3c1855176",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q1800556",
+                        "http://dbpedia.org/resource/Violence_against_women"
+                      ],
+                      "thingEnglishLabel": "Violence against women",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/46179660-2af3-49c7-a80b-b483412fbfb6#id",
+                      "thingLabel": "यौन हिंसा",
+                      "thingUri": "http://www.bbc.co.uk/things/46179660-2af3-49c7-a80b-b483412fbfb6#id",
+                      "thingId": "46179660-2af3-49c7-a80b-b483412fbfb6",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q558075",
+                        "http://dbpedia.org/resource/Sexual_violence"
+                      ],
+                      "thingEnglishLabel": "Sexual violence",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7d7c35fa-f724-4b36-90a0-21f71d99857d#id",
+                      "thingLabel": "केन्या",
+                      "thingUri": "http://www.bbc.co.uk/things/7d7c35fa-f724-4b36-90a0-21f71d99857d#id",
+                      "thingId": "7d7c35fa-f724-4b36-90a0-21f71d99857d",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/192950/"],
+                      "thingEnglishLabel": "Kenya",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                      "thingLabel": "महिला अधिकार",
+                      "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                      "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Women%27s_rights",
+                        "http://www.wikidata.org/entity/Q223569"
+                      ],
+                      "thingEnglishLabel": "Women's rights",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/9a147376-bd7a-45b4-92aa-7c4d3f806dd2#id",
+                      "thingLabel": "यौन",
+                      "thingUri": "http://www.bbc.co.uk/things/9a147376-bd7a-45b4-92aa-7c4d3f806dd2#id",
+                      "thingId": "9a147376-bd7a-45b4-92aa-7c4d3f806dd2",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q5873",
+                        "http://dbpedia.org/resource/Sexual_intercourse"
+                      ],
+                      "thingEnglishLabel": "Sex",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id",
+                      "thingLabel": "पानी",
+                      "thingUri": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id",
+                      "thingId": "b214dc4c-d30e-4ef7-9da3-33858396aa2b",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Water",
+                        "http://www.wikidata.org/entity/Q283"
+                      ],
+                      "thingEnglishLabel": "Water",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "महिला",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c3phrt",
+                "subType": "clip",
+                "format": "video",
+                "title": "पानीका लागि शरीर बेच्न बाध्य महिला",
+                "synopses": {
+                  "short": "पानीका लागि शरीर बेच्न बाध्य केन्याका महिलाहरू",
+                  "long": "केन्याको राजधानी नैरोबीमा लामो समयदेखि पानीको हाहाकार छ।\nबदलिँदो मौसम प्रणाली र खानेपानीको पुरानो पूर्वाधारमा सुधारको अभावका कारण त्यहाँका थुप्रै बासिन्दा पानी किन्न बाध्य छन्।\nकिबेराजस्ता सुकुम्बासी बस्तीमा पानी बिक्रेता शक्तिशाली बनेका छन् र केही महिलाहरूले पानी किन्न पैसा मात्रै होइन शरीर पनि बेच्न बाध्य भएका छन्।\nहेर्नुहोस् एउटा भिडिओ स्टोरी।",
+                  "medium": "किबेराजस्ता सुकुम्बासी बस्तीमा पानी बिक्रेता शक्तिशाली बनेका छन् र केही महिलाहरूले पानी किन्न पैसा मात्रै होइन शरीर पनि बेच्न बाध्य भएका छन्।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c3pjn9.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "पानीका लागि शरीर बेच्न बाध्य केन्याका महिलाहरू",
+                "versions": [
+                  {
+                    "versionId": "p0c3phs0",
+                    "types": ["Original"],
+                    "duration": 188,
+                    "durationISO8601": "PT3M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1651126803000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124339217",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1167D/production/_124339217_p0c3pjn9.jpg",
+                "path": "/cpsprodpb/1167D/production/_124339217_p0c3pjn9.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "पानी",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-61254582",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "87b5d04c-33a8-4c05-b1c7-1e1fed2420ea",
+            "rank": 14,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:87b5d04c-33a8-4c05-b1c7-1e1fed2420ea",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "मधुमेह भएको कसरी थाहा पाउने र यसको उपचार कसरी गर्ने",
+                "headline": "मधुमेह भएको कसरी थाहा पाउने र यसको उपचार कसरी गर्ने?"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-59262053",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-59262053",
+                "curie": "http://www.bbc.co.uk/asset/87b5d04c-33a8-4c05-b1c7-1e1fed2420ea",
+                "assetId": "59262053"
+              },
+              "summary": "बोलीचालीको भाषामा सुगर पनि भनिने मधुमेहलाई चिकित्सकीय भाषामा डायबिजिट भनिन्छ। यो रोगका लक्षण के हुन् र कसरी उपचार गरिन्छ?",
+              "timestamp": 1636864231000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:87b5d04c-33a8-4c05-b1c7-1e1fed2420ea",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/acc2ab56-b335-4666-ba18-87eed47a3bd5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingLabel": "नेपाल",
+                      "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1282988/"],
+                      "thingEnglishLabel": "Nepal",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/acc2ab56-b335-4666-ba18-87eed47a3bd5#id",
+                      "thingLabel": "मधुमेह",
+                      "thingUri": "http://www.bbc.co.uk/things/acc2ab56-b335-4666-ba18-87eed47a3bd5#id",
+                      "thingId": "acc2ab56-b335-4666-ba18-87eed47a3bd5",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Diabetes_mellitus",
+                        "http://www.wikidata.org/entity/Q12206"
+                      ],
+                      "thingEnglishLabel": "Diabetes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id",
+                      "thingLabel": "खाना तथा पोषण",
+                      "thingUri": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id",
+                      "thingId": "b5a68823-bb0c-4229-b142-d6d5e09e113f",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Diet"],
+                      "thingEnglishLabel": "Diet & nutrition",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingLabel": "स्वास्थ्य",
+                      "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health",
+                        "http://www.wikidata.org/entity/Q12147"
+                      ],
+                      "thingEnglishLabel": "Health",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingLabel": "Explainer",
+                      "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+                      ],
+                      "thingEnglishLabel": "Explainer",
+                      "thingPreferredLabel": "Explainer",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0b3tmgp",
+                "subType": "clip",
+                "format": "video",
+                "title": "तपाईँलाई मधुमेह भए कसरी थाहा पाउने र यसको उपचार कसरी गर्ने?",
+                "synopses": {
+                  "short": "तपाईँलाई मधुमेह भए कसरी थाहा पाउने र यसको उपचार कसरी गर्ने?",
+                  "long": "यदि कोही व्यक्तिलाई मधुमेह भयो भने उसको तौल घट्ने, पिसाब धेरै लाग्ने र तिर्खा धेरै लाग्ने जस्ता लक्षणहरू देखिन सक्छन्। \n५० प्रतिशत मधुमेहका विरामीहरूमा लक्षण नदेखिए पनि अन्यमा भने कुनै घाउ भएमा राम्ररी निको नहुने, हात खुट्टा झमझमाउने र शरीर थाक्ने जस्ता लक्षणहरू देखिने मधुमेह विशेषज्ञ प्रियादर्शनी योञ्जनले बीबीसी न्युज नेपालीलाई बताएकी छिन्। \nमधुमेय भनेको, के हो यो, कसरी हुन्छ र यसको उपचार कसरी गर्ने?\nहेर्नुस् सृजना श्रेष्ठले डाक्टर प्रियादर्शनी योञ्जनसँग कुराकानी गरेर तयार पारेको यो भिडिओ।",
+                  "medium": "तपाईँलाई मधुमेह भए कसरी थाहा पाउने र यसको उपचार कसरी गर्ने?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b3ttbc.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "तपाईँलाई मधुमेह भए कसरी थाहा पाउने र यसको उपचार कसरी गर्ने?",
+                "versions": [
+                  {
+                    "versionId": "p0b3tt41",
+                    "types": ["Editorial"],
+                    "duration": 183,
+                    "durationISO8601": "PT3M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1636716476000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "121535869",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17A55/production/_121535869_p0b3ttbc.jpg",
+                "path": "/cpsprodpb/17A55/production/_121535869_p0b3ttbc.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "तपाईँलाई मधुमेह भए कसरी थाहा पाउने र यसको उपचार कसरी गर्ने?",
+                "copyrightHolder": "यदि कोही व्यक्तिलाई मधुमेह भयो भने उसको तौल घट्ने,",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-59262053",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "79faca1c-fb54-474e-9687-c3e6532fff42",
+            "rank": 15,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:79faca1c-fb54-474e-9687-c3e6532fff42",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "महारानी एलिजाबेथ द्वितीयाको निधन",
+                "headline": "महारानी एलिजाबेथ द्वितीयाः महारानीको ९६ वर्षको उमेरमा निधन"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-62845489",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:79faca1c-fb54-474e-9687-c3e6532fff42",
+                "assetId": "62845489",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-62845489",
+                "curie": "http://www.bbc.co.uk/asset/79faca1c-fb54-474e-9687-c3e6532fff42"
+              },
+              "summary": "महारानी एलिजाबेथ द्वितीयाको ९६ वर्षको उमेरमा स्कटल्यान्डको बाल्मोरलमा निधन भएको छ।",
+              "timestamp": 1662695503000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:79faca1c-fb54-474e-9687-c3e6532fff42",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1a7d4ccf-4d2a-49fc-9eaf-2c65d4c575a9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1ff657f2-0bc9-4172-a198-fda306e611f4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1a7d4ccf-4d2a-49fc-9eaf-2c65d4c575a9#id",
+                      "thingLabel": "ब्रिटिश राजपरिवार",
+                      "thingUri": "http://www.bbc.co.uk/things/1a7d4ccf-4d2a-49fc-9eaf-2c65d4c575a9#id",
+                      "thingId": "1a7d4ccf-4d2a-49fc-9eaf-2c65d4c575a9",
+                      "thingType": [
+                        "tagging:Agent",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Organisation",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/British_Royal_Family"
+                      ],
+                      "thingEnglishLabel": "UK Royal Family",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/1ff657f2-0bc9-4172-a198-fda306e611f4#id",
+                      "thingLabel": "महारानी एलिजाबेथ द्वितीया",
+                      "thingUri": "http://www.bbc.co.uk/things/1ff657f2-0bc9-4172-a198-fda306e611f4#id",
+                      "thingId": "1ff657f2-0bc9-4172-a198-fda306e611f4",
+                      "thingType": [
+                        "core:Person",
+                        "tagging:Agent",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Elizabeth_II",
+                        "http://rdf.freebase.com/ns/m.0d1_f",
+                        "http://www.wikidata.org/entity/Q9682"
+                      ],
+                      "thingEnglishLabel": "Queen Elizabeth II",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                      "thingLabel": "संयुक्त अधिराज्य",
+                      "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                      "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2635167/"],
+                      "thingEnglishLabel": "United Kingdom",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0czcj4b",
+                "subType": "clip",
+                "format": "video",
+                "title": "महारानी एलिजाबेथ द्वितीयाको निधन",
+                "synopses": {
+                  "short": "महारानी एलिजाबेथ द्वितीयाको ९६ वर्षको उमेरमा निधन भएको छ",
+                  "long": "ब्रिटेनकी महारानी एलिजाबेथ द्वितीयाको ९६ वर्षको उमेरमा निधन भएको छ।\n\nउनी गत ७० वर्षदेखि ब्रिटेनमा राजगद्दीनसिन थिइन्।\n\nहेर्नुहोस् एक भिडिओ।",
+                  "medium": "महारानी एलिजाबेथ द्वितीयाको ९६ वर्षको उमेरमा स्कटल्यान्डको बाल्मोरलमा निधन भएको छ।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0czd289.png",
+                "embedding": true,
+                "advertising": true,
+                "caption": "महारानी एलिजाबेथ द्वितीयाको निधन",
+                "versions": [
+                  {
+                    "versionId": "p0czczb2",
+                    "types": ["Editorial"],
+                    "duration": 188,
+                    "durationISO8601": "PT3M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1662675682000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "126649034",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/A856/production/_126649034_p0czd1xn.png",
+                "path": "/cpsprodpb/A856/production/_126649034_p0czd1xn.png",
+                "height": 576,
+                "width": 1024,
+                "altText": "महारानी एलिजाबेथ द्वितीया",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-62845489",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "12d45258-bf0f-4cf7-af40-12994ee56338",
+            "rank": 16,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:12d45258-bf0f-4cf7-af40-12994ee56338",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "लकडाउनले जसलाई उद्यमी बनायो",
+                "headline": "लकडाउनका बेला एघार थरीका चटपटे बनाएर र घर घरमा 'बारवीक्यु पुर्‍याएर उद्यमी बनेका युवाहरू"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-56206343",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-56206343",
+                "curie": "http://www.bbc.co.uk/asset/12d45258-bf0f-4cf7-af40-12994ee56338",
+                "assetId": "56206343"
+              },
+              "summary": "लकडाउनका बेला एघार थरीका चटपटे बनाएर र घर घरमा बारवीक्यु पुर्‍याइदिने उपाय लगाएर उद्यमी बनेका छन् यी युवाहरू।",
+              "timestamp": 1614314775000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:12d45258-bf0f-4cf7-af40-12994ee56338",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id"
+                  }
+                ],
+                "schemaVersion": "1.2.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingLabel": "नेपाल",
+                      "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1282988/"],
+                      "thingEnglishLabel": "Nepal",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+                      "thingLabel": "व्यापार व्यवसाय",
+                      "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+                      "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q21857788",
+                        "http://dbpedia.org/resource/Business"
+                      ],
+                      "thingEnglishLabel": "Business",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                      "thingLabel": "उद्यमशीलता",
+                      "thingUri": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                      "thingId": "41d87885-664f-4d92-931e-470b8fd7b16b",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entrepreneurship"
+                      ],
+                      "thingEnglishLabel": "Entrepreneurship",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0980gng",
+                "subType": "clip",
+                "format": "video",
+                "title": "लकडाउनले जसलाई उद्यमी बनाए",
+                "synopses": {
+                  "short": "लकडाउनका बेला एघार थरीका चटपटे बनाउने र घर घरमा बारवीक्यु पुर्‍याएर उद्यमी बनेका युवाहरू।",
+                  "long": "कोरोनाभाइरस महामारीका कारण संसारकै अर्थतन्त्रमा ठुलो असर परेको भने धेरै मानिसहरूले जागिर गुमाएका छन्। \nविदेशमा कार्यरत धेरै नेपालीहरूले पनि जागिर गुमाएका कारण स्वदेश नै फर्किएका छन्। केही युवाहरूले लकडाउनका बेला व्यवसाय गर्ने उपाय ल्याई उद्यमी समेत बनेका छन्। \nलकडाउनकै बेला एघार थरीका चटपटे बनाउने उपाय ल्याएर चटपटेको व्यवसाय गरेकी छिन् अन्सु रानी राजथलाले। \nबैङ्ककबाट पढाई सकेर नेपाल फर्किएका सुशान्त कक्षपतिले साथीसँग मिलेर घरघरमा बारबीक्यु पुर्‍याउने व्यवसाय गर्न सुरु गरेँ। \nयसै गरी चीनमा १८ वर्ष काम गरेका बिष्णु मगरले महामारीकै कारण जागिर गुमाए। तर नेपालमा उनले आफ्नै रेष्टुरा खोले र अरूलाई समेत रोजगारी दिए। \nहेर्नुस् सृजना श्रेष्ठले उनीहरूसँग कुराकानी गरेर बनाएको यो भिडियो।",
+                  "medium": "लकडाउनका बेला एघार थरीका चटपटे बनाउने र घर घरमा बारवीक्यु पुर्‍याइदिने उपाय लगाई उद्यमी बनेका छन् यी युवाहरू।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0980jvn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "लकडाउनका बेला एघार थरीका चटपटे बनाउने र घर घरमा बारवीक्यु पुर्‍याएर उद्यमी बनेका युवाहरू।",
+                "versions": [
+                  {
+                    "versionId": "p0980gnk",
+                    "types": ["Original"],
+                    "duration": 158,
+                    "durationISO8601": "PT2M38S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1614252819000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "117306482",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6F2C/production/_117306482_p0980jvn.jpg",
+                "path": "/cpsprodpb/6F2C/production/_117306482_p0980jvn.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "लकडाउनका बेला एघार थरीका चटपटे बनाउने र घर घरमा बारवीक्यु पुर्‍याइदिने उपाय लगाई उद्यमी बनेका छन् यी युवाहरू।",
+                "copyrightHolder": "कोरोनाभाइरस महामारीका कारण संसारकै अर्थतन्त्रमा ठु",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-56206343",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fb7d33a9-fc8f-4489-a7a3-b213fac5357d",
+            "rank": 17,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:fb7d33a9-fc8f-4489-a7a3-b213fac5357d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "पेट्रोलिअम पदार्थको मूल्य किन बढेकोबढ्यै छ",
+                "headline": "पेट्रोलिअम पदार्थको मूल्य किन बढेकोबढ्यै छ"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-61104424",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-61104424",
+                "curie": "http://www.bbc.co.uk/asset/fb7d33a9-fc8f-4489-a7a3-b213fac5357d",
+                "assetId": "61104424"
+              },
+              "summary": "नेपालमा पछिल्लो १२ महिनामा पेट्रोलिअम पदार्थमा १८ पटक मूल्य समायोजन भएको छ। किन यति धेरै पटक मूल्य बढ्यो? कसरी कम हुन सक्छ?",
+              "timestamp": 1649917398000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:fb7d33a9-fc8f-4489-a7a3-b213fac5357d",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b3f4238f-ae69-4c19-8f0e-8bef7d4f359c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingLabel": "नेपाल",
+                      "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                      "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1282988/"],
+                      "thingEnglishLabel": "Nepal",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b3f4238f-ae69-4c19-8f0e-8bef7d4f359c#id",
+                      "thingLabel": "तेल तथा ग्यास उद्योग",
+                      "thingUri": "http://www.bbc.co.uk/things/b3f4238f-ae69-4c19-8f0e-8bef7d4f359c#id",
+                      "thingId": "b3f4238f-ae69-4c19-8f0e-8bef7d4f359c",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Petroleum_industry"
+                      ],
+                      "thingEnglishLabel": "Oil & Gas industry",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c17w7p",
+                "subType": "clip",
+                "format": "video",
+                "title": "पेट्रोलिअम पदार्थको मूल्य किन बढेको बढ्यै छ",
+                "synopses": {
+                  "short": "पेट्रोलिअम पदार्थको मूल्य किन बढेको बढ्यै छ",
+                  "long": "नेपालमा पछिल्लो १२ महिनामा पेट्रोलिअम पदार्थमा १८ पटक मूल्य समायोजन भएको छ।\n\n२०७७ चैत २२ गते १२० रुपैयाँ प्रतिलिटर रहेको पेट्रोलको मूल्य एक वर्षपछि २०७८ चैत २२ गते १६० रुपैयाँ पुगेको छ।\n\nकिन यति धेरै पटक मूल्य बढ्यो? कसरी कम हुन सक्छ? वैकल्पिक उपाय के? \n\nहेर्नुहोस् विजय गजमेरले बनाएको भिडिओ एक्सप्लेनर।",
+                  "medium": "नेपालमा पछिल्लो १२ महिनामा पेट्रोलिअम पदार्थमा १८ पटक मूल्य समायोजन भएको छ। किन यति धेरै पटक मूल्य बढ्यो? कसरी कम हुन सक्छ?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c17wbs.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "पेट्रोलिअम पदार्थको मूल्य किन बढेको बढ्यै छ",
+                "versions": [
+                  {
+                    "versionId": "p0c17w7t",
+                    "types": ["Original"],
+                    "duration": 313,
+                    "durationISO8601": "PT5M13S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1649915650000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124164741",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/399A/production/_124164741_p0c17wbs.jpg",
+                "path": "/cpsprodpb/399A/production/_124164741_p0c17wbs.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "पेट्रोल",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-61104424",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ec31edc7-524c-3b47-98c4-58d0a318ba96",
+            "rank": 18,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:ec31edc7-524c-3b47-98c4-58d0a318ba96",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "म्यान्मारका खानीको फोहोरमा भाग्य खोज्दै",
+                "headline": "म्यान्मार जेड खानी: फोहोरमा बहमूल्य रत्न भेटिने आशा"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-49705889",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-49705889",
+                "curie": "http://www.bbc.co.uk/asset/ec31edc7-524c-3b47-98c4-58d0a318ba96",
+                "assetId": "49705889"
+              },
+              "summary": "म्यान्मारको जेड खानीबाट वार्षिक ३० अर्ब डलरभन्दा बढी मूल्यको बहुमूल्य रत्न उत्पादन हुन्छ। तर त्यहाँ मानिसहरू ज्यान जोखिममा पारेर काम गर्न बाध्य छन्।",
+              "timestamp": 1568532149000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07ndf12",
+                "subType": "clip",
+                "format": "video",
+                "title": "खानीको फोहोरमा भाग्य खोज्दै",
+                "synopses": {
+                  "short": "म्यान्मार जेड खानीको फोहोरमा बहमूल्य रत्न भेटिने आशा",
+                  "long": "म्यान्मारको कचिन प्रान्तमा संसारकै सबैभन्दा विशाल जेड खानीहरू छन्। \nबीबीसी बर्मिजले त्यहाँ विशेष पहुँच पाएको छ। \nबर्माको जेड खानीबाट वार्षिक ३० अर्ब डलरभन्दा बढी मूल्यको बहुमूल्य रत्न उत्पादन हुन्छ। \nतर त्यहाँ मानिसहरू ज्यान जोखिममा पारेर काम गर्छन्। \nहेर्नुहोस् यो भिडिओ। \nअनि यो पनि"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07ndf8z.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "जेड खानीको फोहोरमा बहमूल्य रत्न भेटिने आशा",
+                "versions": [
+                  {
+                    "versionId": "p07ndf16",
+                    "types": ["Original"],
+                    "duration": 151,
+                    "durationISO8601": "PT2M31S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1568529290000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "108815046",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/FA33/production/_108815046_p07ndf8z.jpg",
+                "path": "/cpsprodpb/FA33/production/_108815046_p07ndf8z.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "जेड खानी",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-49705889",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "eb57dc0b-b4f1-4513-975a-1870aa402603",
+            "rank": 19,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:eb57dc0b-b4f1-4513-975a-1870aa402603",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "खाजामा झ्याउँकीरीको 'स्वादिष्ट व्यञ्जन'",
+                "headline": "झ्याउँकीरी पकाएर 'स्वादिष्ट व्यञ्जन' बनाउँछन् यी शेफ"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-57395763",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-57395763",
+                "curie": "http://www.bbc.co.uk/asset/eb57dc0b-b4f1-4513-975a-1870aa402603",
+                "assetId": "57395763"
+              },
+              "summary": "सत्र वर्ष जमिनमुनि बसेका झ्याउँकीरीहरू पहिलो पटक बाहिर निस्किँदा न्यूयोर्कमा काम गर्ने शेफ जोसेफ यून ती कीराबाट व्यञ्जन बनाउन व्यस्त छन्।",
+              "timestamp": 1623129974000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:eb57dc0b-b4f1-4513-975a-1870aa402603",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id"
+                  }
+                ],
+                "schemaVersion": "1.2.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+                      "thingLabel": "जीवनशैली",
+                      "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+                      "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Life",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+                      "thingLabel": "जनावरहरू",
+                      "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+                      "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q729",
+                        "http://dbpedia.org/resource/Animal"
+                      ],
+                      "thingEnglishLabel": "Animals",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+                      "thingLabel": "खाना",
+                      "thingUri": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+                      "thingId": "99fb9bbd-9150-4e13-a3ac-3fa0610683f8",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q2095",
+                        "http://dbpedia.org/resource/Food"
+                      ],
+                      "thingEnglishLabel": "Food",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id",
+                      "thingLabel": "खाना तथा पोषण",
+                      "thingUri": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id",
+                      "thingId": "b5a68823-bb0c-4229-b142-d6d5e09e113f",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Diet"],
+                      "thingEnglishLabel": "Diet & nutrition",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09kvmzx",
+                "subType": "clip",
+                "format": "video",
+                "title": "खाजामा झ्याउँकीरीको 'स्वादिष्ट व्यञ्जन'",
+                "synopses": {
+                  "short": "झ्याउँकीरी पकाएर 'स्वादिष्ट व्यञ्जन' बनाउँछन् यी शेफ",
+                  "long": "पूर्वी अमेरिकामा १७ वर्ष जमिनमुनि बसेका झ्याउँकीरीहरू पहिलो पटक बाहिर निस्किँदा  \nन्यूयोर्कमा काम गर्ने शेफ जोसेफ यून ती कीराबाट व्यञ्जन बनाउन व्यस्त छन्।\nझ्याउँकीरी र अन्य कीराफट्याङ्ग्राको स्वाद र तिनबाट प्राप्त हुने प्रोटीनको बखान गर्दै उनी भन्छन्, \"विश्वमा दुई अर्ब मानिसले खाने कुरा हामी किन खाइरहेका छैनौँ?\" \nके विशेषता छ त कीटजन्य प्रोटीनको?\nहेर्नुहोस् यो भिडिओ।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09kvn3m.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "झ्याउँकीरी पकाएर 'स्वादिष्ट व्यञ्जन'",
+                "versions": [
+                  {
+                    "versionId": "p09kvn03",
+                    "types": ["Original"],
+                    "duration": 116,
+                    "durationISO8601": "PT1M56S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1623128985000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "118837506",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/EC9D/production/_118837506_p09kvn3m.jpg",
+                "path": "/cpsprodpb/EC9D/production/_118837506_p09kvn3m.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "झ्याउँकीरी",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-57395763",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e7eb0b17-ef96-48e0-96d6-a85656f986b3",
+            "rank": 20,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:e7eb0b17-ef96-48e0-96d6-a85656f986b3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "टर्कीमा भग्नावशेषमुनि पुरिएकी बालिकाको उद्धार",
+                "headline": "टर्की भूकम्पः भत्किएको भवनको भग्नावशेषबाट यसरी जीवितै उद्धार गरियो"
+              },
+              "locators": {
+                "assetUri": "/nepali/news-64565112",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e7eb0b17-ef96-48e0-96d6-a85656f986b3",
+                "assetId": "64565112",
+                "cpsUrn": "urn:bbc:content:assetUri:nepali/news-64565112",
+                "curie": "http://www.bbc.co.uk/asset/e7eb0b17-ef96-48e0-96d6-a85656f986b3"
+              },
+              "summary": "दक्षिणी टर्कीमा एउटा घरको भग्नावशेषबाट एक बालिकालाई जीवितै उद्धार गरिएको छ।",
+              "timestamp": 1675836622000,
+              "language": "ne",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "ne",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Nepali",
+                "locator": "urn:bbc:cps:curie:asset:e7eb0b17-ef96-48e0-96d6-a85656f986b3",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+                    "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2af024c9-0d02-486e-8c88-344aade1b570#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "campaign": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id",
+                      "type": "campaign"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ne",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "भूकम्प",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "टर्की",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1pz81",
+                "subType": "clip",
+                "format": "video",
+                "title": "भत्किएको भवनको भग्नावशेषबाट यसरी जीवितै उद्धार गरियो",
+                "synopses": {
+                  "short": "टर्की भूकम्पः भत्किएको भवनको भग्नावशेषबाट यसरी जीवितै उद्धार गरियो",
+                  "long": "टर्की र उत्तरी सिरियामा विनाशकारी भूकम्पले ठूलो क्षति पुर्‍याएको छ। त्यहाँ भूकम्पका कारण हजारौँ मानिसको ज्यान गएको छ। \nभूकम्पका कारण घरहरू भत्किएका छन्। ती स्थानमा खोजी तथा उद्धारकार्य जारी छ। \nदक्षिणी टर्कीमा एउटा घरको भग्नावशेषबाट एक बालिकालाई जीवितै उद्धार गरिएको छ। \nहेर्नुहोस् यो भिडिओ।",
+                  "medium": "दक्षिणी टर्कीमा एउटा घरको भग्नावशेषबाट एक बालिकालाई जीवितै उद्धार गरिएको छ।"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1pzcv.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "भत्किएको भवनको भग्नावशेषबाट यसरी जीवितै उद्धार गरियो",
+                "versions": [
+                  {
+                    "versionId": "p0f1pz85",
+                    "types": ["Original"],
+                    "duration": 46,
+                    "durationISO8601": "PT46S",
+                    "warnings": {
+                      "short": "Contains some upsetting scenes.",
+                      "long": "Contains some scenes which some viewers may find upsetting."
+                    },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675832324000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128559038",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14497/production/_128559038_p0f1pzcv.jpg",
+                "path": "/cpsprodpb/14497/production/_128559038_p0f1pzcv.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "टर्की",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:nepali/news-64565112",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

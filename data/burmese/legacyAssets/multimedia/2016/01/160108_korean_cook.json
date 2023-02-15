@@ -1,98 +1,3303 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:burmese/multimedia/2016/01/160108_korean_cook",
-    "locators": {
-      "assetUri": "/burmese/multimedia/2016/01/160108_korean_cook",
-      "cpsUrn": "urn:bbc:content:assetUri:burmese/multimedia/2016/01/160108_korean_cook",
-      "curie": "http://www.bbc.co.uk/asset/37956914-b622-11e5-9dda-5b823db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "burmese",
-    "language": "my",
-    "lastUpdated": 1559036248915,
-    "firstPublished": 1452269598,
-    "lastPublished": 1452269598,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": true,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "42072173" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "42072173",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/burmese/meta/dps/2016/01/emp/160108_korean_cook.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:burmese/multimedia/2016/01/160108_korean_cook",
+        "locators": {
+          "assetUri": "/burmese/multimedia/2016/01/160108_korean_cook",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/multimedia/2016/01/160108_korean_cook",
+          "curie": "http://www.bbc.co.uk/asset/37956914-b622-11e5-9dda-5b823db9bd6e",
+          "assetId": "42072173"
+        },
+        "type": "MAP",
+        "createdBy": "burmese",
+        "language": "my",
+        "lastUpdated": 1649928877521,
+        "firstPublished": 1452269598000,
+        "lastPublished": 1452269598000,
+        "timestamp": 1452269598000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "42072173",
+          "contentId": "urn:bbc:topcat:curie:asset:37956914-b622-11e5-9dda-5b823db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/burmese",
+        "mediaType": "video"
       },
-      {
-        "text": "တောင်ကိုရီးယားက တီဗွီလိုင်းတွေထဲက ချက်နည်းပြုတ်နည်း အစီအစဉ်တွေမှာ နာမည်ကြီး စားဖိုမှူးတွေက အမျိုးသားတွေက လွှမ်းမိုးထားပါတယ်။ အချက်အပြုတ် ပြိုင်ပွဲတွေမှာ ပါဝင်ကြတဲ့ သူအများစုက အမျိုးသားတွေပဲ ဖြစ်ပါတယ်။ ကိုမိုးမြင့်က ပြောပြထားပါတယ်။",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "42072173",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "42072173",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "korean_chef",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/burmese/meta/dps/2016/01/emp/160108_korean_cook.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/burmese/dps/2016/01/burm_fkorean_cook_f1536_f8_f1_160108_korean_cook_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/burmese/dps/2016/01/burm_fkorean_cook_f1536_f8_f1_160108_korean_cook_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/burmese/dps/2016/01/burm_fkorean_cook_f1536_f8_f1_160108_korean_cook_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "တောင်ကိုရီးယားက တီဗွီလိုင်းတွေထဲက ချက်နည်းပြုတ်နည်း အစီအစဉ်တွေမှာ နာမည်ကြီး စားဖိုမှူးတွေက အမျိုးသားတွေက လွှမ်းမိုးထားပါတယ်။ အချက်အပြုတ် ပြိုင်ပွဲတွေမှာ ပါဝင်ကြတဲ့ သူအများစုက အမျိုးသားတွေပဲ ဖြစ်ပါတယ်။ ကိုမိုးမြင့်က ပြောပြထားပါတယ်။",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "တောင်ကိုရီးယား ဟင်းချက်အစီအစဉ်မှာ အမျိုးသားတွေစိုးမိုး",
+          "headline": "တောင်ကိုရီးယား ဟင်းချက်အစီအစဉ်မှာ အမျိုးသားတွေစိုးမိုး"
+        },
+        "locators": {
+          "assetUri": "/burmese/multimedia/2016/01/160108_korean_cook",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/multimedia/2016/01/160108_korean_cook",
+          "curie": "http://www.bbc.co.uk/asset/37956914-b622-11e5-9dda-5b823db9bd6e",
+          "assetId": "42072173"
+        },
+        "summary": "တောင်ကိုရီးယားနိုင်ငံမှာ ရုပ်မြင်က အချက်အပြုတ်အစီအစဉ်မှာ ပါဝင်သူတွေက အမျိုးသားတွေပဲ ဖြစ်ကြပါတယ်။",
+        "timestamp": 1452269598000,
+        "language": "my",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+          "taggings": []
+        },
+        "media": {
+          "id": "42072173",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "42072173",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "korean_chef",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/burmese/meta/dps/2016/01/emp/160108_korean_cook.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/burmese/dps/2016/01/burm_fkorean_cook_f1536_f8_f1_160108_korean_cook_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/burmese/dps/2016/01/burm_fkorean_cook_f1536_f8_f1_160108_korean_cook_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/burmese/dps/2016/01/burm_fkorean_cook_f1536_f8_f1_160108_korean_cook_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e200",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_112x63_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_112x63_bbc_nocredit.jpg",
+          "height": 63,
+          "width": 112,
+          "altText": "korean_chef",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:burmese/multimedia/2016/01/160108_korean_cook",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "မာလ်တီမီဒီယာ",
+          "uri": "/burmese/multimedia",
+          "urlIdentifier": "/burmese/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCBurmese.com",
+          "uri": "/burmese",
+          "urlIdentifier": "/burmese",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "တောင်ကိုရီးယား ဟင်းချက်အစီအစဉ်မှာ အမျိုးသားတွေစိုးမိုး",
-      "headline": "တောင်ကိုရီးယား ဟင်းချက်အစီအစဉ်မှာ အမျိုးသားတွေစိုးမိုး"
     },
-    "locators": {
-      "assetUri": "/burmese/multimedia/2016/01/160108_korean_cook",
-      "cpsUrn": "urn:bbc:content:assetUri:burmese/multimedia/2016/01/160108_korean_cook",
-      "curie": "http://www.bbc.co.uk/asset/37956914-b622-11e5-9dda-5b823db9bd6e"
-    },
-    "summary": "တောင်ကိုရီးယားနိုင်ငံမှာ ရုပ်မြင်က အချက်အပြုတ်အစီအစဉ်မှာ ပါဝင်သူတွေက အမျိုးသားတွေပဲ ဖြစ်ကြပါတယ်။",
-    "timestamp": 1559036248915,
-    "passport": {},
-    "media": {
-      "id": "42072173",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/burmese/meta/dps/2016/01/emp/160108_korean_cook.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e200",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_112x63_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2016/01/08/160108160606_korean_chef_112x63_bbc_nocredit.jpg",
-      "height": 63,
-      "width": 112,
-      "altText": "korean_chef",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:burmese/multimedia/2016/01/160108_korean_cook",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "မာလ်တီမီဒီယာ",
-      "uri": "/burmese/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCBurmese.com",
-      "uri": "/burmese",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:39:26.074Z",
+        "lastRecordTimeStamp": "2023-02-15T09:37:00Z",
+        "firstRecordTimeStamp": "2023-02-15T05:37:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "0aae786e-19e0-4b6e-8f35-02c5a36fd7fe",
+            "rank": 1,
+            "count": 22,
+            "urn": "urn:bbc:curie:asset:0aae786e-19e0-4b6e-8f35-02c5a36fd7fe",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဝါရှင်တန်မှာ NUG နိုင်ငံခြားရေး ရုံးဖွင့်လှစ်",
+                "headline": "ဝါရှင်တန်မှာ NUG နိုင်ငံခြားရေး ရုံးဖွင့်လှစ်"
+              },
+              "locators": {
+                "assetUri": "/burmese/institutional-64642379",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:0aae786e-19e0-4b6e-8f35-02c5a36fd7fe",
+                "assetId": "64642379",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/institutional-64642379",
+                "curie": "http://www.bbc.co.uk/asset/0aae786e-19e0-4b6e-8f35-02c5a36fd7fe"
+              },
+              "summary": "သက်ဆိုင်ရာ နိုင်ငံတွေရဲ့ အသိအမှတ်ပြုမှု ဘယ်လောက်အထိ ရှိနေပါလဲ။",
+              "timestamp": 1676391217000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:0aae786e-19e0-4b6e-8f35-02c5a36fd7fe",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/387c7d70-4870-49ca-af55-5d1925dfcf21#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/387c7d70-4870-49ca-af55-5d1925dfcf21#id",
+                      "thingLabel": "အများအကြိုက်ဆောင်ဝါဒ",
+                      "thingUri": "http://www.bbc.co.uk/things/387c7d70-4870-49ca-af55-5d1925dfcf21#id",
+                      "thingId": "387c7d70-4870-49ca-af55-5d1925dfcf21",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q180490",
+                        "http://dbpedia.org/resource/Populism"
+                      ],
+                      "thingEnglishLabel": "Populism",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingLabel": "နိုင်ငံရေး",
+                      "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingEnglishLabel": "Politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "အမေရိကန်",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id",
+                      "thingLabel": "လွှတ်တော်",
+                      "thingUri": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id",
+                      "thingId": "95448167-ad02-4aae-82c0-75f1f765554e",
+                      "thingType": [
+                        "core:Organisation",
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "tagging:Agent",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Assembly_of_the_Union"
+                      ],
+                      "thingEnglishLabel": "Assembly of the Union",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingLabel": "၂၀၂၀ ရွေးကောက်ပွဲ",
+                      "thingUri": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingId": "e8095862-8fb1-42e3-b65b-84c1517841ea",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Myanmar general election 2020",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f32r18",
+                "subType": "clip",
+                "format": "video",
+                "title": "ဝါရှင်တန်မှာ NUG နိုင်ငံခြားရေး ရုံးဖွင့်လှစ်",
+                "synopses": {
+                  "short": "ဝါရှင်တန်မှာ NUG နိုင်ငံခြားရေး ရုံးဖွင့်လှစ်",
+                  "long": "အမျိုးသားညီညွတ်ရေးအစိုးရ NUG နိုင်ငံခြားရေးဝန်ကြီးဌာနဟာ အမေရိကန်အစိုးရ ရုံးစိုက်ရာ ဝါရှင်တန်ဒီစီမြို့မှာ ရုံးခန်းဖွင့်လှစ်လိုက်ပြီဖြစ်ပါတယ်။\n\nတစ်ဖက်မှာလည်း နော်‌ဝေ၊ ‌ဗြိတိန်၊ ပြင်သစ်၊ ချက်သမ္မတနိုင်ငံ၊ သြစတေးလျ၊  ဂျပန်နဲ့ တောင်ကိုရီးယားနိုင်ငံတို့မှာ ကိုယ်စားလှယ်ရုံးတွေ ဖွင့်လှစ်ထားပြီးဖြစ်ပါတယ်။\n\nဒီကိုယ်စားလှယ်ရုံးတွေဟာ သက်ဆိုင်ရာ မြန်မာနိုင်ငံသားတွေကို ဘယ်လိုအကူအညီပေးတာတွေလုပ်နေပါလဲ။ သက်ဆိုင်ရာ နိုင်ငံတွေရဲ့ အသိအမှတ်ပြုမှု ဘယ်လောက်အထိ ရှိနေပါလဲ။ ကိုဇေယျာထွန်းက ပြောပြမှာပါ။",
+                  "medium": "သက်ဆိုင်ရာ နိုင်ငံတွေရဲ့ အသိအမှတ်ပြုမှု ဘယ်လောက်အထိ ရှိနေပါလဲ။"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f32xn2.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ဝါရှင်တန်မှာ NUG နိုင်ငံခြားရေး ရုံးဖွင့်လှစ်",
+                "versions": [
+                  {
+                    "versionId": "p0f32r1j",
+                    "types": ["Original"],
+                    "duration": 152,
+                    "durationISO8601": "PT2M32S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676390991000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128630026",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F233/production/_128630026_p0f32xn2.jpg",
+                "path": "/cpsprodpb/F233/production/_128630026_p0f32xn2.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "ဝါရှင်တန်မှာ NUG နိုင်ငံခြားရေး ရုံးဖွင့်လှစ်",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/institutional-64642379",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a9bd4e14-2193-4735-8327-d6e9858b7d16",
+            "rank": 2,
+            "count": 21,
+            "urn": "urn:bbc:curie:asset:a9bd4e14-2193-4735-8327-d6e9858b7d16",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ပလုံကောက်သူတွေ အကြောင်း",
+                "headline": "ပလုံကောက်သူတွေ အကြောင်း"
+              },
+              "locators": {
+                "assetUri": "/burmese/institutional-64642376",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a9bd4e14-2193-4735-8327-d6e9858b7d16",
+                "assetId": "64642376",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/institutional-64642376",
+                "curie": "http://www.bbc.co.uk/asset/a9bd4e14-2193-4735-8327-d6e9858b7d16"
+              },
+              "summary": "လမ်းပေါ်မှာမဟုတ်ဘဲ ချောင်းထဲမှာ ပလုံကောက်ကြသူတွေ",
+              "timestamp": 1676391127000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:a9bd4e14-2193-4735-8327-d6e9858b7d16",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e21003da-2b5c-443f-9d1f-1ca9d4f88557#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                      "thingLabel": "သဘာဝပတ်ဝန်းကျင်",
+                      "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                      "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q43619",
+                        "http://dbpedia.org/resource/Natural_environment"
+                      ],
+                      "thingEnglishLabel": "Environment",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e21003da-2b5c-443f-9d1f-1ca9d4f88557#id",
+                      "thingLabel": "ဆင်းရဲမွဲတေမှု",
+                      "thingUri": "http://www.bbc.co.uk/things/e21003da-2b5c-443f-9d1f-1ca9d4f88557#id",
+                      "thingId": "e21003da-2b5c-443f-9d1f-1ca9d4f88557",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:NarrativeTheme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q10294",
+                        "http://dbpedia.org/resource/Poverty"
+                      ],
+                      "thingEnglishLabel": "Poverty",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                      "thingLabel": "ရာသီဥတုပြောင်းလဲမှု",
+                      "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                      "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q125928",
+                        "http://dbpedia.org/resource/Climate_change"
+                      ],
+                      "thingEnglishLabel": "Climate change",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f32r4k",
+                "subType": "clip",
+                "format": "video",
+                "title": "ပလုံကောက်သူတွေ အကြောင်း",
+                "synopses": {
+                  "short": "ပလုံကောက်သူတွေ အကြောင်း",
+                  "long": "နိုင်ငံရေးရော စီးပွားရေးပါ ကျဆင်းနေတဲ့ မြန်မာနိုင်ငံမှာ အခြေခံလူတန်းစားတွေရဲ့ နေ့စဥ်လူမှုဘဝ ရှင်သန်မှုက ပိုလို့ခက်ခဲလာပါတယ်။ ‘ပလုံ ကောက်တယ်’ လို့ ခေါ်ဝေါ်ကြတဲ့ စွန့်ပစ်အမှိုက်တွေထဲက ရေသန့်ဘူးနဲ့ အအေးဘူးခွံတွေကို အမှိုက်ပုံနဲ့ လမ်းမတွေပေါ်မှာ လိုက်ကောက်ရင်း အသက်မွေးကြသူတွေက မြို့ပြရဲ့ အစိတ်အပိုင်းတစ်ခုလို ဖြစ်လာနေပါတယ်။ လမ်းပေါ်မှာမဟုတ်ဘဲ ချောင်းထဲမှာ ပလုံကောက်ကြသူတွေအကြောင်းကို ရှုစားကြရမှာပါ။ ကိုတင်အောင်ကျော်ကပြောပြပေးမှာပါ။",
+                  "medium": "လမ်းပေါ်မှာမဟုတ်ဘဲ ချောင်းထဲမှာ ပလုံကောက်ကြသူတွေ"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f32x02.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ပလုံကောက်သူတွေ အကြောင်း",
+                "versions": [
+                  {
+                    "versionId": "p0f32r4p",
+                    "types": ["Original"],
+                    "duration": 186,
+                    "durationISO8601": "PT3M6S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676390847000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128630023",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/7D03/production/_128630023_p0f32x02.jpg",
+                "path": "/cpsprodpb/7D03/production/_128630023_p0f32x02.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "ပလုံကောက်သူတွေ အကြောင်း",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/institutional-64642376",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ffc8abd2-f6a6-9f48-97d3-c5ef5d154e74",
+            "rank": 3,
+            "count": 15,
+            "urn": "urn:bbc:curie:asset:ffc8abd2-f6a6-9f48-97d3-c5ef5d154e74",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဂျပန်က ကားဝါသနာအိုးများ",
+                "headline": "ဂျပန်က ကားဝါသနာအိုးများ"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-49285279",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-49285279",
+                "curie": "http://www.bbc.co.uk/asset/ffc8abd2-f6a6-9f48-97d3-c5ef5d154e74",
+                "assetId": "49285279"
+              },
+              "summary": "ရှေးရိုးစွဲဆန်တယ်ဆိုတဲ့ အမြင်တွေကိုလည်း သူတို့ လက်ခံပါဘူး။",
+              "timestamp": 1565279425000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07k4453",
+                "subType": "clip",
+                "format": "video",
+                "title": "ဂျပန်က ကားဝါသနာအိုးများ",
+                "synopses": {
+                  "short": "ဂျပန်က ကားဝါသနာအိုးများ",
+                  "long": "ဂျပန်နိုင်ငံမှာ ကား ဝါသနာအိုးတွေဟာ သူတို့စိတ်ကြိုက် ကားတွေကို ရှေးဟောင်းပုံစံအတိုင်း စီးလေ့ရှိပါတယ်။ \nဒါဟာ ရှေးရိုးစွဲဆန်တယ်ဆိုတဲ့ အမြင်တွေကိုလည်း သူတို့ လက်ခံပါဘူး။ \nသူတို့ကားတွေဟာ အများအမြင်မှာ ဆန်းကြယ်သလို ကားရဲ့ စွမ်းဆောင်ရည်ပိုင်းကိုလည်း အကောင်းဆုံးဖြစ်အောင် ပြင်ဆင်မွမ်းမံထားပါတယ်။ \nကိုအောင်သွင်က ဆက်ပြောပြမှာပါ။",
+                  "medium": "ဒါဟာ ရှေးရိုးစွဲဆန်တယ်ဆိုတဲ့ အမြင်တွေကိုလည်း သူတို့ လက်ခံပါဘူး။"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07k44cp.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ဂျပန်က ကားဝါသနာအိုးများ",
+                "versions": [
+                  {
+                    "versionId": "p07k4456",
+                    "types": ["Original"],
+                    "duration": 116,
+                    "durationISO8601": "PT1M56S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1565279196000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "108247509",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/161CE/production/_108247509_p07k44cp.jpg",
+                "path": "/cpsprodpb/161CE/production/_108247509_p07k44cp.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "ဂျပန်က ကားဝါသနာအိုးများ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-49285279",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7638bdcc-ea56-4822-a8a1-e279cd2606b8",
+            "rank": 4,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:7638bdcc-ea56-4822-a8a1-e279cd2606b8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ထန်တလန်မှာ ချင်းကာကွယ်ရေးတပ်တွေ တိုက်ခိုက်",
+                "headline": "ထန်တလန်တမြို့လုံးကို ထိန်းချုပ်ထားလိုက်နိုင်ပြီလို့ဆို"
+              },
+              "locators": {
+                "assetUri": "/burmese/institutional-64587821",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:7638bdcc-ea56-4822-a8a1-e279cd2606b8",
+                "assetId": "64587821",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/institutional-64587821",
+                "curie": "http://www.bbc.co.uk/asset/7638bdcc-ea56-4822-a8a1-e279cd2606b8"
+              },
+              "summary": "စစ်တပ်က စစ်ကြောင်းထိုးဖို့ပြင်နေသလို လေကြောင်းတိုက်ခိုက်တာလည်းရှိနေပါတယ်။",
+              "timestamp": 1675957315000,
+              "language": "my",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:7638bdcc-ea56-4822-a8a1-e279cd2606b8",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f8694a4e-7ffd-4fc1-ab94-6d1d5597528a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingLabel": "စစ်တပ်",
+                      "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingEnglishLabel": "Military",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f8694a4e-7ffd-4fc1-ab94-6d1d5597528a#id",
+                      "thingLabel": "လူမျိုး နှင့် တိုင်းရင်းသားရေးရာ",
+                      "thingUri": "http://www.bbc.co.uk/things/f8694a4e-7ffd-4fc1-ab94-6d1d5597528a#id",
+                      "thingId": "f8694a4e-7ffd-4fc1-ab94-6d1d5597528a",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7552863",
+                        "http://dbpedia.org/resource/Sociology_of_race_and_ethnic_relations"
+                      ],
+                      "thingEnglishLabel": "Race and ethnicity",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f23s3f",
+                "subType": "clip",
+                "format": "video",
+                "title": "ထန်တလန်မှာ ချင်းကာကွယ်ရေးတိုက်တွေ တိုက်ခိုက်",
+                "synopses": {
+                  "short": "ထန်တလန်တမြို့လုံးကို ထိန်းချုပ်ထားလိုက်နိုင်ပြီလို့ဆို",
+                  "long": "ချင်းပြည်နယ် ထန်တလန် ရဲစခန်းထဲက စစ်ကောင်စီတပ်တွေကို ချင်းကာကွယ်ရေးတပ်တွေက  တိုက်ခိုက်ပြီး စခန်းကို သိမ်းလိုက်နိုင်တဲ့အပြင် ထန်တလန်တမြို့လုံးကိုလည်း ထိန်းချုပ်ထားလိုက်နိုင်ပြီလို့  ချင်းကာကွယ်ရေးတပ်တွေက ပြောပါတယ်။ \n\nစစ်တပ်က စစ်ကြောင်းထိုးဖို့ပြင်နေသလို လေကြောင်းတိုက်ခိုက်တာလည်းရှိနေပါတယ်။ ချင်းပြည်နယ်ဘက်က စစ်ရေးပြင်းထန်နေမှုအကြောင်းတွေကို ကိုကျော်ဇေယျ ပြောပြမှာပါ။",
+                  "medium": "စစ်တပ်က စစ်ကြောင်းထိုးဖို့ပြင်နေသလို လေကြောင်းတိုက်ခိုက်တာလည်းရှိနေပါတယ်။"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f23tpq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ထန်တလန်တမြို့လုံးကို ထိန်းချုပ်ထားလိုက်နိုင်ပြီလို့ဆို",
+                "versions": [
+                  {
+                    "versionId": "p0f23s3m",
+                    "types": ["Original"],
+                    "duration": 168,
+                    "durationISO8601": "PT2M48S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675956149000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128579640",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1259/production/_128579640_p0f23tpq.jpg",
+                "path": "/cpsprodpb/1259/production/_128579640_p0f23tpq.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #2",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/institutional-64587821",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b4aa3ffe-ae65-4e56-b5ce-5c8261898170",
+            "rank": 5,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:b4aa3ffe-ae65-4e56-b5ce-5c8261898170",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "စစ်အုပ်ချုပ်ရေးကြေညာထားတဲ့ မြို့နယ်တွေက ဒေသခံတွေရဲ့ ဒုက္ခ",
+                "headline": "ညမထွက်ရ အမိန့်တွေပါ ထပ်မံ ကြေညာထား"
+              },
+              "locators": {
+                "assetUri": "/burmese/institutional-64587823",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:b4aa3ffe-ae65-4e56-b5ce-5c8261898170",
+                "assetId": "64587823",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/institutional-64587823",
+                "curie": "http://www.bbc.co.uk/asset/b4aa3ffe-ae65-4e56-b5ce-5c8261898170"
+              },
+              "summary": "စစ်ကိုင်းတိုင်း၊ မကွေးတိုင်းနဲ့ ကယားပြည်နယ် အပါအ၀င် တိုင်းနဲ့ပြည်နယ် ၈ ခုက မြို့နယ် ၃၇ မြို့နယ်ကို စစ်အုပ်ချုပ်ရေး ကြေညာလိုက်တာ တစ်ပတ် ပြည့်သွားပါပြီ။",
+              "timestamp": 1675957540000,
+              "language": "my",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:b4aa3ffe-ae65-4e56-b5ce-5c8261898170",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingLabel": "စစ်တပ်",
+                      "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingEnglishLabel": "Military",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f23s71",
+                "subType": "clip",
+                "format": "video",
+                "title": "စစ်အုပ်ချုပ်ရေးကြေညာထားတဲ့ မြို့နယ်တွေက ဒေသခံတွေ ဒုက္ခ",
+                "synopses": {
+                  "short": "ညမထွက်ရ အမိန့်တွေပါ ထပ်မံ ကြေညာ",
+                  "long": "ဒေသကာကွယ်ရေးတပ်တွေနဲ့ စစ်ကောင်စီကြား တိုက်ပွဲတွေ ပြင်းထန်နေတဲ့ စစ်ကိုင်းတိုင်း၊ မကွေတိုင်းနဲ့ ကယားပြည်နယ် အပါအ၀င် တိုင်းနဲ့ပြည်နယ် ၈ ခုက မြို့နယ် ၃၇ မြို့နယ်ကို စစ်အုပ်ချုပ်ရေး ကြေညာလိုက်တာ တစ်ပတ် ပြည့်သွားပါပြီ။ \n\nနောက်ပိုင်းမှာ ညမထွက်ရ အမိန့်တွေပါ ထပ်မံ ကြေညာ လာခဲ့တာကြောင့် အဲဒီက ဒေသခံတွေ ဘယ်လို အခက်အခဲ ကြုံတွေ့လာကြရပါသလဲ။ \n\nမညိုလဲ့ရည် ပြောပြပေးမှာပါ။",
+                  "medium": "စစ်ကိုင်းတိုင်း၊ မကွေတိုင်းနဲ့ ကယားပြည်နယ် အပါအ၀င် တိုင်းနဲ့ပြည်နယ် ၈ ခုက မြို့နယ် ၃၇ မြို့နယ်ကို စစ်အုပ်ချုပ်ရေး ကြေညာလိုက်တာ တစ်ပတ် ပြည့်သွားပါပြီ။"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f23vnd.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ညမထွက်ရ အမိန့်တွေပါ ထပ်မံ ကြေညာ",
+                "versions": [
+                  {
+                    "versionId": "p0f23s7m",
+                    "types": ["Original"],
+                    "duration": 169,
+                    "durationISO8601": "PT2M49S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675956405000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128579642",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6079/production/_128579642_p0f23vnd.jpg",
+                "path": "/cpsprodpb/6079/production/_128579642_p0f23vnd.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #5",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/institutional-64587823",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "35cf36ba-f2cc-0646-95d6-637c5f5e7cdd",
+            "rank": 6,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:35cf36ba-f2cc-0646-95d6-637c5f5e7cdd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဟိဂျပ်ဝတ်တဲ့ တရုတ်မိန်းကလေး",
+                "headline": "ဟိဂျပ်ဝတ်တဲ့ တရုတ်မိန်းကလေး"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-39699118",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-39699118",
+                "curie": "http://www.bbc.co.uk/asset/35cf36ba-f2cc-0646-95d6-637c5f5e7cdd",
+                "assetId": "39699118"
+              },
+              "summary": "ဟိဂျပ်ဝတ်တဲ့ တရုတ်မိန်းကလေး",
+              "timestamp": 1493050596000,
+              "language": "my",
+              "media": {
+                "id": "p0510jjt",
+                "subType": "clip",
+                "format": "video",
+                "title": "ဟိဂျပ်ဝတ်တဲ့ တရုတ်မိန်းကလေး",
+                "synopses": {
+                  "short": "ဟိဂျပ်ဝတ်တဲ့ တရုတ်မိန်းကလေး",
+                  "medium": "ဟိဂျပ်ဝတ်တဲ့ တရုတ်မိန်းကလေး",
+                  "long": "ရာမာ ဟာ တရုတ်မွတ်စလင် အမျိုးသမီးငယ်တဦးဖြစ်ပြီး အသက်၂၀ ကျော်လောက်မှာ ဟိဂျပ်ကိုစပြီး ဝတ်လာခဲ့တာဖြစ်ပါတယ်။ \n\nသူတို့ဆီမှာ မွတ်စလင် ၂၃ သန်းလောက် ရှိပေမယ့် အမျိုးသမီးတွေ ခေါင်းမှာ ပုဝါပတ်လာရင်တောင် တချို့အတွက် ထူးဆန်းသလို ဖြစ်နေတတ်ပါတယ်။ \n\nရာမာကတော့ သူ့ဘာသာရေး ယုံကြည်ချက်အတိုင်း နေထိုင်နေပြီး တခြားမွတ်စလင် အမျိုးသမီးတွေကိုလည်း သူတို့ရဲ့ကိုင်ပိုင်သွင်ပြင် တွေမပျောက်သွားစေဖို့တိုက်တွန်းနေပါတယ်။ \n\nသူပြောပြတာကိုရှုစားရအောင်ပါ။"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0510mnc.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "ဟိဂျပ်ဝတ်တဲ့ တရုတ်မိန်းကလေး",
+                "versions": [
+                  {
+                    "versionId": "p0510jjy",
+                    "types": ["Original"],
+                    "duration": 128,
+                    "durationISO8601": "PT2M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1493049910000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95770162",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/65FB/production/_95770162_p0510mnc.jpg",
+                "path": "/cpsprodpb/65FB/production/_95770162_p0510mnc.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ဟိဂျပ်ဝတ်တဲ့ တရုတ်မိန်းကလေး",
+                "caption": "ဟိဂျပ်ဝတ်တဲ့ တရုတ်မိန်းကလေး",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-39699118",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ab362055-e742-e948-9ed8-6037810c7667",
+            "rank": 7,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:ab362055-e742-e948-9ed8-6037810c7667",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "အလင်္ကာပုလဲပန်း ဗိုလ်ချုပ်အောင်ဆန်းကဗျာ",
+                "headline": "အလင်္ကာပုလဲပန်း ဗိုလ်ချုပ်အောင်ဆန်းကဗျာ"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-44041228",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-44041228",
+                "curie": "http://www.bbc.co.uk/asset/ab362055-e742-e948-9ed8-6037810c7667",
+                "assetId": "44041228"
+              },
+              "summary": "ဗိုလ်ချုပ်အောင်ဆန်း ကျောင်းသားဘဝက ရေးခဲ့တဲ့ ပဲကောက်ချိန် ကဗျာအကြောင်း တင်ဆက်ထား",
+              "timestamp": 1525779960000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p066jvhz",
+                "subType": "clip",
+                "format": "audio",
+                "title": "အလင်္ကာပုလဲပန်း ဗိုလ်ချုပ်အောင်ဆန်းကဗျာ",
+                "synopses": {
+                  "short": "အလင်္ကာပုလဲပန်း ဗိုလ်ချုပ်အောင်ဆန်းကဗျာ"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p066s0hk.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "အလင်္ကာပုလဲပန်း ဗိုလ်ချုပ်အောင်ဆန်းကဗျာ",
+                "versions": [
+                  {
+                    "versionId": "p066jvjh",
+                    "types": ["Original"],
+                    "duration": 503,
+                    "durationISO8601": "PT8M23S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1525779338000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "101217259",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17427/production/_101217259_p066jx3h.jpg",
+                "path": "/cpsprodpb/17427/production/_101217259_p066jx3h.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "burma",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-44041228",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7721b855-1503-4a19-a89e-4165b2815979",
+            "rank": 8,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:7721b855-1503-4a19-a89e-4165b2815979",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "နိုင်ငံကူးလက်မှတ်လျှောက်ထားသူများပြား",
+                "headline": "အာဏာသိမ်းပြီးနောက်ပိတ်ထားတဲ့ နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံး ဒီနေ့ ပြန်ဖွင့်"
+              },
+              "locators": {
+                "assetUri": "/burmese/institutional-57106265",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/institutional-57106265",
+                "curie": "http://www.bbc.co.uk/asset/7721b855-1503-4a19-a89e-4165b2815979",
+                "assetId": "57106265"
+              },
+              "summary": "စစ်တပ်ကအာဏာသိမ်းခဲ့တဲ့ ဖေဖော်ဝါရီလကတည်းက ပိတ်ထားတဲ့ ရန်ကုန်မြို့ က နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံးကို ဒီကနေ့ ပြန်ဖွင့်လှစ်လိုက်ပါတယ်။",
+              "timestamp": 1620923716000,
+              "language": "my",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:7721b855-1503-4a19-a89e-4165b2815979",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.2.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingLabel": "စစ်တပ်",
+                      "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingEnglishLabel": "Military",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09hhd0r",
+                "subType": "clip",
+                "format": "video",
+                "title": "နိုင်ငံကူးလက်မှတ်လျှောက်ထားသူများပြား",
+                "synopses": {
+                  "short": "အာဏာသိမ်းပြီးနောက်ပိတ်ထားတဲ့ နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံး ဒီနေ့ ပြန်ဖွင့်",
+                  "long": "စစ်တပ်ကအာဏာသိမ်းခဲ့တဲ့ ဖေဖော်ဝါရီလကတည်းက ပိတ်ထားတဲ့ ရန်ကုန်မြို့ က နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံးကို ဒီကနေ့ ပြန်ဖွင့်လှစ်လိုက်ပါတယ်။ \n\nဖွင့်တဲ့နေ့မှာပဲ လာလျှောက်သူ ရာနဲ့ချီရှိပြီး တချို့ဆို ရုံးထဲတောင် ဝင်ခွင့်မရလို့ လှည့်ပြန်ခဲ့ကြရသူတွေ ရှိတယ်လို့ ကိုယ်တိုင်သွားလျှောက်ခဲ့သူတွေက ပြောပါတယ်။\nဘာကြောင့် ဒီလောက် ကြိတ်ကြိတ်တိုး ပတ်စပို့တွေလာလျှောက် နေကြတာပါလဲ။ \n\nကိုနန္ဒပြောပြပေးပါမယ်။",
+                  "medium": "စစ်တပ်ကအာဏာသိမ်းခဲ့တဲ့ ဖေဖော်ဝါရီလကတည်းက ပိတ်ထားတဲ့ ရန်ကုန်မြို့ က နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံးကို ဒီကနေ့ ပြန်ဖွင့်လှစ်လိုက်ပါတယ်။"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09hhgt0.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "အာဏာသိမ်းပြီးနောက်ပိတ်ထားတဲ့ နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံး ဒီနေ့ ပြန်ဖွင့်",
+                "versions": [
+                  {
+                    "versionId": "p09hhd0w",
+                    "types": ["Original"],
+                    "duration": 145,
+                    "durationISO8601": "PT2M25S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1620920376000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "118496307",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/112E1/production/_118496307_p09hhgt0.jpg",
+                "path": "/cpsprodpb/112E1/production/_118496307_p09hhgt0.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/institutional-57106265",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6cc95f44-a7d6-4feb-8f22-5fd1eff7d281",
+            "rank": 9,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:6cc95f44-a7d6-4feb-8f22-5fd1eff7d281",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "မဲပေးစက်သုံးဖို့ စစ်ကောင်စီ ပြင်ဆင်လာ",
+                "headline": "မဲပေးစက်သုံးဖို့ စစ်ကောင်စီ ပြင်ဆင်လာ"
+              },
+              "locators": {
+                "assetUri": "/burmese/institutional-64602885",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:6cc95f44-a7d6-4feb-8f22-5fd1eff7d281",
+                "assetId": "64602885",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/institutional-64602885",
+                "curie": "http://www.bbc.co.uk/asset/6cc95f44-a7d6-4feb-8f22-5fd1eff7d281"
+              },
+              "summary": "မဲပေးစက်သုံးဖို့ စစ်ကောင်စီ ပြင်ဆင်လာ",
+              "timestamp": 1676045079000,
+              "language": "my",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:6cc95f44-a7d6-4feb-8f22-5fd1eff7d281",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingLabel": "၂၀၂၀ ရွေးကောက်ပွဲ",
+                      "thingUri": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingId": "e8095862-8fb1-42e3-b65b-84c1517841ea",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Myanmar general election 2020",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2cxpp",
+                "subType": "clip",
+                "format": "video",
+                "title": "မဲပေးစက်သုံးဖို့ စစ်ကောင်စီ ပြင်ဆင်လာ",
+                "synopses": {
+                  "short": "မဲပေးစက်သုံးဖို့ စစ်ကောင်စီ ပြင်ဆင်လာ",
+                  "medium": "မဲပေးစက်သုံးဖို့ စစ်ကောင်စီ ပြင်ဆင်လာ"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2d5j4.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "မဲပေးစက်သုံးဖို့ စစ်ကောင်စီ ပြင်ဆင်လာ",
+                "versions": [
+                  {
+                    "versionId": "p0f2cxq0",
+                    "types": ["Original"],
+                    "duration": 178,
+                    "durationISO8601": "PT2M58S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676044524000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128593892",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/748F/production/_128593892_p0f2d5j4.jpg",
+                "path": "/cpsprodpb/748F/production/_128593892_p0f2d5j4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "မဲပေးစက်သုံးဖို့ စစ်ကောင်စီ ပြင်ဆင်လာ",
+                "caption": "မဲပေးစက်သုံးဖို့ စစ်ကောင်စီ ပြင်ဆင်လာ",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/institutional-64602885",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "28b4c564-9f29-43ee-8356-4dea83868500",
+            "rank": 10,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:28b4c564-9f29-43ee-8356-4dea83868500",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "မြန်မာ နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံး ယာယီပိတ်",
+                "headline": "မြန်မာ နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံး ယာယီပိတ်"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-64147049",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:28b4c564-9f29-43ee-8356-4dea83868500",
+                "assetId": "64147049",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-64147049",
+                "curie": "http://www.bbc.co.uk/asset/28b4c564-9f29-43ee-8356-4dea83868500"
+              },
+              "summary": "ဘယ်တော့ပြန်ဖွင့်မယ်ဆိုတာလည်း တိတိကျကျမထုတ်ပြန်",
+              "timestamp": 1672673810000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:28b4c564-9f29-43ee-8356-4dea83868500",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1efe463f-bbe1-40ff-bd0a-9dc5c78a8c29#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7194d0fb-e410-4563-81c3-b623373c644b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1efe463f-bbe1-40ff-bd0a-9dc5c78a8c29#id",
+                      "thingLabel": "လူ့အခွင့်အရေးစောင့်ကြည့်ရေးအဖွဲ့",
+                      "thingUri": "http://www.bbc.co.uk/things/1efe463f-bbe1-40ff-bd0a-9dc5c78a8c29#id",
+                      "thingId": "1efe463f-bbe1-40ff-bd0a-9dc5c78a8c29",
+                      "thingType": [
+                        "core:Organisation",
+                        "tagging:TagConcept",
+                        "tagging:Agent",
+                        "tagging:AmbiguousTerm",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Human_Rights_Watch"
+                      ],
+                      "thingEnglishLabel": "Human Rights Watch",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7194d0fb-e410-4563-81c3-b623373c644b#id",
+                      "thingLabel": "ရန်ကုန်",
+                      "thingUri": "http://www.bbc.co.uk/things/7194d0fb-e410-4563-81c3-b623373c644b#id",
+                      "thingId": "7194d0fb-e410-4563-81c3-b623373c644b",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1298824/"],
+                      "thingEnglishLabel": "Yangon",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id",
+                      "thingLabel": "လွှတ်တော်",
+                      "thingUri": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id",
+                      "thingId": "95448167-ad02-4aae-82c0-75f1f765554e",
+                      "thingType": [
+                        "core:Organisation",
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "tagging:Agent",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Assembly_of_the_Union"
+                      ],
+                      "thingEnglishLabel": "Assembly of the Union",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingLabel": "၂၀၂၀ ရွေးကောက်ပွဲ",
+                      "thingUri": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingId": "e8095862-8fb1-42e3-b65b-84c1517841ea",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Myanmar general election 2020",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dsngmp",
+                "subType": "clip",
+                "format": "video",
+                "title": "မြန်မာ နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံး ယာယီပိတ်",
+                "synopses": {
+                  "short": "မြန်မာ နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံး ယာယီပိတ်",
+                  "long": "ရန်ကုန်မှာရှိတဲ့ မြန်မာနိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံးကို ယာယီပိတ်ထားလိုက်လို့ နိုင်ငံကူး လက်မှတ် လာရောက် လျှောက်ထားသူတွေ ရုံးထဲဝင်ခွင့်မရခဲ့ကြပါဘူး။\n\nဘယ်တော့ပြန်ဖွင့်မယ်ဆိုတာလည်း တိတိကျကျမထုတ်ပြန်လို့ ရက်ချိန်းရထားသူတွေနဲ့ နိုင်ငံခြားမှာ အလုပ်သွားလုပ်မယ့်သူတွေ အခက်ကြုံနေကြရပါတယ်။ အကြောင်းစုံကို ကိုတင်အောင်ကျော် ပြောပြမှာပါ။",
+                  "medium": "ဘယ်တော့ပြန်ဖွင့်မယ်ဆိုတာလည်း တိတိကျကျမထုတ်ပြန်"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dsnny1.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "မြန်မာ နိုင်ငံကူးလက်မှတ်ထုတ်ပေးရေးရုံး ယာယီပိတ်",
+                "versions": [
+                  {
+                    "versionId": "p0dsngmt",
+                    "types": ["Original"],
+                    "duration": 142,
+                    "durationISO8601": "PT2M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1672671556000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-64147049",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "15bf4768-7c0d-4c26-a67d-929cbf49b992",
+            "rank": 11,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:15bf4768-7c0d-4c26-a67d-929cbf49b992",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ကြားကာလ ပညာသင်ကြားရေး အခက်အခဲ",
+                "headline": "ကြားကာလ ပညာသင်ကြားရေး အခက်အခဲ"
+              },
+              "locators": {
+                "assetUri": "/burmese/institutional-64602887",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:15bf4768-7c0d-4c26-a67d-929cbf49b992",
+                "assetId": "64602887",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/institutional-64602887",
+                "curie": "http://www.bbc.co.uk/asset/15bf4768-7c0d-4c26-a67d-929cbf49b992"
+              },
+              "summary": "ကြားကာလ ပညာသင်ကြားရေး အခက်အခဲ",
+              "timestamp": 1676045311000,
+              "language": "my",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:15bf4768-7c0d-4c26-a67d-929cbf49b992",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingLabel": "၂၀၂၀ ရွေးကောက်ပွဲ",
+                      "thingUri": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingId": "e8095862-8fb1-42e3-b65b-84c1517841ea",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Myanmar general election 2020",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2cx60",
+                "subType": "clip",
+                "format": "video",
+                "title": "ကြားကာလ ပညာသင်ကြားရေး အခက်အခဲ",
+                "synopses": {
+                  "short": "ကြားကာလ ပညာသင်ကြားရေး အခက်အခဲ",
+                  "medium": "ကြားကာလ ပညာသင်ကြားရေး အခက်အခဲ"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2d6gw.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ကြားကာလ ပညာသင်ကြားရေး အခက်အခဲ",
+                "versions": [
+                  {
+                    "versionId": "p0f2cx64",
+                    "types": ["Original"],
+                    "duration": 142,
+                    "durationISO8601": "PT2M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676044607000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128593894",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/C2AF/production/_128593894_p0f2d6gw.jpg",
+                "path": "/cpsprodpb/C2AF/production/_128593894_p0f2d6gw.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "ကြားကာလ ပညာသင်ကြားရေး အခက်အခဲ",
+                "caption": "ကြားကာလ ပညာသင်ကြားရေး အခက်အခဲ",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/institutional-64602887",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fb9b649b-ce8c-4305-a1b5-890cbacdf3bd",
+            "rank": 12,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:fb9b649b-ce8c-4305-a1b5-890cbacdf3bd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ကရင်နီဒေသမှာ ဆန်ရိက္ခာပြတ်လပ်ပြီး ရေရှားပါးနေ",
+                "headline": "ကရင်နီဒေသမှာ ဆန်ရိက္ခာပြတ်လပ်ပြီး ရေရှားပါးနေ"
+              },
+              "locators": {
+                "assetUri": "/burmese/institutional-64574662",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:fb9b649b-ce8c-4305-a1b5-890cbacdf3bd",
+                "assetId": "64574662",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/institutional-64574662",
+                "curie": "http://www.bbc.co.uk/asset/fb9b649b-ce8c-4305-a1b5-890cbacdf3bd"
+              },
+              "summary": "ကရင်နီဒေသမှာ ဆန်ရိက္ခာပြတ်လပ်တာအပြင် ရေရှားပါးနေတယ်လို့ စစ်ဘေးရှောင်တွေကို ကူညီပေးနေသူတွေပြော",
+              "timestamp": 1675872603000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:fb9b649b-ce8c-4305-a1b5-890cbacdf3bd",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f8694a4e-7ffd-4fc1-ab94-6d1d5597528a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a9a254fe-0059-441c-9d75-fab5997d371e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+                      "thingLabel": "အစားအစာ",
+                      "thingUri": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+                      "thingId": "99fb9bbd-9150-4e13-a3ac-3fa0610683f8",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q2095",
+                        "http://dbpedia.org/resource/Food"
+                      ],
+                      "thingEnglishLabel": "Food",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a9a254fe-0059-441c-9d75-fab5997d371e#id",
+                      "thingLabel": "အစားအစာ ဘေးကင်းရေး",
+                      "thingUri": "http://www.bbc.co.uk/things/a9a254fe-0059-441c-9d75-fab5997d371e#id",
+                      "thingId": "a9a254fe-0059-441c-9d75-fab5997d371e",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q909821",
+                        "http://dbpedia.org/resource/Food_safety"
+                      ],
+                      "thingEnglishLabel": "Food safety",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id",
+                      "thingLabel": "ရေ",
+                      "thingUri": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id",
+                      "thingId": "b214dc4c-d30e-4ef7-9da3-33858396aa2b",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Water",
+                        "http://www.wikidata.org/entity/Q283"
+                      ],
+                      "thingEnglishLabel": "Water",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingLabel": "၂၀၂၀ ရွေးကောက်ပွဲ",
+                      "thingUri": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingId": "e8095862-8fb1-42e3-b65b-84c1517841ea",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Myanmar general election 2020",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f8694a4e-7ffd-4fc1-ab94-6d1d5597528a#id",
+                      "thingLabel": "လူမျိုး နှင့် တိုင်းရင်းသားရေးရာ",
+                      "thingUri": "http://www.bbc.co.uk/things/f8694a4e-7ffd-4fc1-ab94-6d1d5597528a#id",
+                      "thingId": "f8694a4e-7ffd-4fc1-ab94-6d1d5597528a",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7552863",
+                        "http://dbpedia.org/resource/Sociology_of_race_and_ethnic_relations"
+                      ],
+                      "thingEnglishLabel": "Race and ethnicity",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1v0gn",
+                "subType": "clip",
+                "format": "video",
+                "title": "ကရင်နီဒေသမှာ ဆန်ရိက္ခာပြတ်လပ်ပြီး ရေရှားပါးနေ",
+                "synopses": {
+                  "short": "ကရင်နီဒေသမှာ ဆန်ရိက္ခာပြတ်လပ်ပြီး ရေရှားပါးနေ",
+                  "long": "ကယားပြည်နယ် ကရင်နီဒေသမှာ ဆန်ရိက္ခာပြတ်လပ်တာအပြင် ရေရှားပါးတာကြောင့် ရေအတွက်ပိုပြီး အရေးကြီး လိုအပ်နေတယ်လို့ စစ်ဘေးရှောင်တွေကို ကူညီပေးနေသူတွေက ပြောကြပါတယ်။ ကယားပြည် နယ်က စစ်ဘေးရှောင်တွေ ရေအတွက် ဘယ်လောက် ခက်ခဲနေလဲဆိုတာကို ကိုဇေယျာထွန်းက ပြောပြပေး မှာပါ။",
+                  "medium": "ကရင်နီဒေသမှာ ဆန်ရိက္ခာပြတ်လပ်တာအပြင် ရေရှားပါးနေတယ်လို့ \nစစ်ဘေးရှောင်တွေကို ကူညီပေးနေသူတွေပြော"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1v2nj.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ကရင်နီဒေသမှာ ဆန်ရိက္ခာပြတ်လပ်ပြီး ရေရှားပါးနေ",
+                "versions": [
+                  {
+                    "versionId": "p0f1v0gv",
+                    "types": ["Original"],
+                    "duration": 142,
+                    "durationISO8601": "PT2M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675870001000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128567415",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/C914/production/_128567415_p0f1v2nj.jpg",
+                "path": "/cpsprodpb/C914/production/_128567415_p0f1v2nj.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "ကရင်နီဒေသမှာ ဆန်ရိက္ခာပြတ်လပ်ပြီး ရေရှားပါးနေ",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/institutional-64574662",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f4d775cb-3f11-9840-8495-1b6b03a010b3",
+            "rank": 13,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f4d775cb-3f11-9840-8495-1b6b03a010b3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "အပြာမင်းသမီးက ဒေါ်နယ်ထရမ့်နဲ့ ပတ်သက်မိကြောင်းပြော",
+                "headline": "အပြာမင်းသမီးက ဒေါ်နယ်ထရမ့်နဲ့ ပတ်သက်မိကြောင်းပြော"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-43548879",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-43548879",
+                "curie": "http://www.bbc.co.uk/asset/f4d775cb-3f11-9840-8495-1b6b03a010b3",
+                "assetId": "43548879"
+              },
+              "summary": "အပြာမင်းသမီးက ဒေါ်နယ်ထရမ့်နဲ့ ပတ်သက်မိကြောင်းပြော",
+              "timestamp": 1522081900000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p062ddxk",
+                "subType": "clip",
+                "format": "video",
+                "title": "အပြာမင်းသမီးက ဒေါ်နယ်ထရမ့်နဲ့ ပတ်သက်မိကြောင်းပြော",
+                "synopses": {
+                  "short": "အပြာမင်းသမီးက ဒေါ်နယ်ထရမ့်နဲ့ ပတ်သက်မိကြောင်းပြော",
+                  "long": "အမေရိကန်က လိင်ဖျော်ဖြေရေး ဇာတ်ကားတွေက သရုပ်ဆောင် တဦးဖြစ်တဲ့ \nStormy Daniels က သူဟာ ဒေါ်နယ်ထရမ့်နဲ့ တကြိမ် လိင်ဆက်ဆံ ခဲ့ဖူးတယ်လို့ ပြောသလို အဲဒီ ကိစ္စနဲ့ပတ်သက်လို့ ရေငုံနှုတ်ပိတ်နေဖို့အတွက်လည်း ခြိမ်းခြောက်ခံရတယ်လို့ ဆိုပါတယ်။ မစ္စတာ ထရမ့်ရဲ့ ရှေ့နေက ပြီးခဲ့တဲ့ ၂၀၁၆ ရွေးကောက်ပွဲ မတိုင်ခင်၁၁ ရက်အလိုမှာ သူ့ကို ဒေါ်လာ ၁၃၀ ၀၀၀၀  ပေးခဲ့တယ်လို့လည်း ဆိုပါတယ်။ မစ္စတာ ထရမ့်ကတော့Stormy Daniels နဲ့ ဘာအရှုပ်အရှင်းမှ မရှိခဲ့ဘူးလို့ငြင်းဆိုထားပါတယ်။ ကိုအောင်သွင်က ပြောပြမှာပါ။",
+                  "medium": "အပြာမင်းသမီးက ဒေါ်နယ်ထရမ့်နဲ့ ပတ်သက်မိကြောင်းပြော"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p062dffj.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "အပြာမင်းသမီးက ဒေါ်နယ်ထရမ့်နဲ့ ပတ်သက်မိကြောင်းပြော",
+                "versions": [
+                  {
+                    "versionId": "p062ddxm",
+                    "types": ["Original"],
+                    "duration": 137,
+                    "durationISO8601": "PT2M17S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1522081408000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100576608",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13B1B/production/_100576608_p062dffj.jpg",
+                "path": "/cpsprodpb/13B1B/production/_100576608_p062dffj.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "အပြာမင်းသမီးက ဒေါ်နယ်ထရမ့်နဲ့ ပတ်သက်မိကြောင်းပြော",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-43548879",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dd38bbe0-08b0-45a1-860c-ffda48599d9b",
+            "rank": 14,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:dd38bbe0-08b0-45a1-860c-ffda48599d9b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "စစ်ကောင်စီအဖွဲ့မှာ အဖွဲ့ဝင်တချို့ ပြောင်းလဲ",
+                "headline": "ဝန်ကြီးတွေထဲ အငြိမ်းစား စစ်ဗိုလ်ချုပ်တွေ ပါလာတာ တွေ့ရ"
+              },
+              "locators": {
+                "assetUri": "/burmese/institutional-64503062",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:dd38bbe0-08b0-45a1-860c-ffda48599d9b",
+                "assetId": "64503062",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/institutional-64503062",
+                "curie": "http://www.bbc.co.uk/asset/dd38bbe0-08b0-45a1-860c-ffda48599d9b"
+              },
+              "summary": "ကာလုံက အရေးပေါ်ကာလသက်တမ်း ၆ လ ထပ် တိုးပေးပြီးနောက် စစ်ကောင်စီ အဖွဲ့ဝင်တချို့ အပြောင်းအလဲလုပ်၊",
+              "timestamp": 1675351660000,
+              "language": "my",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:dd38bbe0-08b0-45a1-860c-ffda48599d9b",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingLabel": "နိုင်ငံရေး",
+                      "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingEnglishLabel": "Politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingLabel": "စစ်တပ်",
+                      "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingEnglishLabel": "Military",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f0lys0",
+                "subType": "clip",
+                "format": "video",
+                "title": "စစ်ကောင်စီအဖွဲ့က အဖွဲ့ဝင်တချို့ ပြောင်းလဲ",
+                "synopses": {
+                  "short": "ဝန်ကြီးတွေထဲမှာ အငြိမ်းစား စစ်ဗိုလ်ချုပ်တွေ ပါလာတာ တွေ့ရ",
+                  "long": "အမျိုးသား ကာကွယ်ရေးနဲ့လုံခြုံရေးကောင်စီက အရေးပေါ်ကာလကို နောက်ထပ် ခြောက်လ သက်တမ်းတိုးပေးပြီးနောက်မှာ စစ်ကောင်စီအဖွဲ့ဝင်တွေနဲ့ ဝန်ကြီးတချို့အပြောင်းအလဲတွေ ဖြစ်ပေါ်ခဲ့ပါတယ်။\n\nအရပ်ဘက် စစ်ကောင်စီဝင်တွေ အပြောင်းအလဲဖြစ်ခဲ့သလို ဝန်ကြီးတွေထဲမှာလည်း အငြိမ်းစား စစ်ဗိုလ်ချုပ်တွေ ပါလာတာ တွေ့ရပါတယ်။ \n\nကိုတင်အောင်ကျော် ပြောပြမှာပါ။",
+                  "medium": "ကာလုံက အရေးပေါ်ကာလသက်တမ်း ၆ လ ထပ် တိုးပေးပြီးနောက် စစ်ကောင်စီ အဖွဲ့ဝင်တချို့ အပြောင်းအလဲလုပ်၊"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f0lzdm.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ဝန်ကြီးတွေထဲ အငြိမ်းစား စစ်ဗိုလ်ချုပ်တွေ ပါလာတာ တွေ့ရ",
+                "versions": [
+                  {
+                    "versionId": "p0f0lysb",
+                    "types": ["Original"],
+                    "duration": 176,
+                    "durationISO8601": "PT2M56S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675349666000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128500993",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9BDC/production/_128500993_p0f0lzdm.jpg",
+                "path": "/cpsprodpb/9BDC/production/_128500993_p0f0lzdm.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #4",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/institutional-64503062",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dc5cddd1-c8d5-49a6-9baa-52eef4b0ab22",
+            "rank": 15,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:dc5cddd1-c8d5-49a6-9baa-52eef4b0ab22",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "အာဖဂန်က ကန်တပ်တွေ ဆုတ်ခွာတဲ့အပေါ် ဂျိုးဘိုင်ဒန်ကာကွယ်",
+                "headline": "အာဖဂန်က ကန်တပ်တွေ ဆုတ်ခွာတဲ့အပေါ် ဂျိုးဘိုင်ဒန်ကာကွယ်"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-58249781",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-58249781",
+                "curie": "http://www.bbc.co.uk/asset/dc5cddd1-c8d5-49a6-9baa-52eef4b0ab22",
+                "assetId": "58249781"
+              },
+              "summary": "တာလီဘန်က အစိုးရ အမှုထမ်းတွေကို လွတ်ငြိမ်းချမ်းသာခွင့်ပေးတယ် ဆိုပြီး လုပ်ငန်းခွင်ကို ပြန်လာကြဖို့ ကြေညာ",
+              "timestamp": 1629215286000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:dc5cddd1-c8d5-49a6-9baa-52eef4b0ab22",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+                      "thingLabel": "၂၀၂၀ အမေရိကန်ရွေးကောက်ပွဲ",
+                      "thingUri": "http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+                      "thingId": "10f9cc6b-0a52-46d3-bce6-9cd78b34600f",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Event",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q22019872",
+                        "http://dbpedia.org/resource/2020_United_States_elections"
+                      ],
+                      "thingEnglishLabel": "US election 2020",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+                      "thingLabel": "အာဖဂန်နစ္စတန်",
+                      "thingUri": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+                      "thingId": "1a5696c5-07d0-4a08-8b54-41ad5cd534b6",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1149361/"],
+                      "thingEnglishLabel": "Afghanistan",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id",
+                      "thingLabel": "တာလီဘန်",
+                      "thingUri": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id",
+                      "thingId": "304deb8b-74ea-4a9c-94d1-d4b2c9806d92",
+                      "thingType": [
+                        "core:Organisation",
+                        "tagging:AmbiguousTerm",
+                        "core:Thing",
+                        "tagging:Agent",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Taliban",
+                        "http://www.wikidata.org/entity/Q42418"
+                      ],
+                      "thingEnglishLabel": "Taliban",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingLabel": "အမေရိကန်",
+                      "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                      "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingEnglishLabel": "United States",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingLabel": "စစ်တပ်",
+                      "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingEnglishLabel": "Military",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09sgj9y",
+                "subType": "clip",
+                "format": "video",
+                "title": "အာဖဂန်နစ္စတန်ကနေ အမေရိကန် တပ်တွေ ဆုတ်ခွာတဲ့အပေါ် ဂျိုးဘိုင်ဒန်က ကာကွယ်ပြောဆို",
+                "synopses": {
+                  "short": "အာဖဂန်နစ္စတန်ကနေ အမေရိကန် တပ်တွေ ဆုတ်ခွာတဲ့အပေါ် ဂျိုးဘိုင်ဒန်က ကာကွယ်ပြောဆို",
+                  "long": "တာလီဘန်က အစိုးရ အမှုထမ်းတွေကို လွတ်ငြိမ်းချမ်းသာခွင့်ပေးတယ် ဆိုပြီး လုပ်ငန်းခွင်ကို ပြန်လာကြဖို့ ကြေညာခဲ့ပါတယ်။ ကဘူးလ်မြို့ခံတွေကတော့ မြို့ထဲမှာ အသွားအလာ နည်းနည်း ပြန်ရှိလာနေပေမယ့် ဘာအစိုးရမှာ မရှိတဲ့ မရေရာတဲ့ အခြေအနေအတွက် စိုးရိမ်မှုတွေ ရှိနေဆဲ ဖြစ်တယ်လို့ ပြောပါတယ်။ တချိန်တည်းမှာပဲ အမေရိကန် ပြည်ထောင်စုမှာတော့ သမ္မတ ဂျိုးဘိုင်ဒဲန်ဟာ အာဖဂန်နစ္စတန်ထဲက အမေရိကန် တပ်ဖွဲ့တွေ ရုပ်သိမ်းပုံနဲ့ ပတ်သက်လို့ ခုခံပြောကြားနေရပေမယ့် သူ့ဆုံးဖြတ်ချက်အတိုင်း ဆက်လက်ရပ်တည်သွားမယ် တပ်ရုပ်သိမ်းဖို့က ဘယ်တုန်းကမှ အကောင်းဆုံး အနေအထားမျိုး ရှိနေခဲ့တာမဟုတ်ဘူးလို့ လို့ ပြောခဲ့ပါတယ်။ \nကိုထက်အောင်က ဆက်ပြောပြမှာပါ။",
+                  "medium": "တာလီဘန်က အစိုးရ အမှုထမ်းတွေကို လွတ်ငြိမ်းချမ်းသာခွင့်ပေးတယ် ဆိုပြီး လုပ်ငန်းခွင်ကို ပြန်လာကြဖို့ ကြေညာ"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09sgncs.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "အာဖဂန်နစ္စတန်ကနေ အမေရိကန် တပ်တွေ ဆုတ်ခွာတဲ့အပေါ် ဂျိုးဘိုင်ဒန်က ကာကွယ်ပြောဆို",
+                "versions": [
+                  {
+                    "versionId": "p09sgjb0",
+                    "types": ["Original"],
+                    "duration": 176,
+                    "durationISO8601": "PT2M56S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1629214000000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119970426",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F3C7/production/_119970426_p09sgncs.jpg",
+                "path": "/cpsprodpb/F3C7/production/_119970426_p09sgncs.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "အာဖဂန်နစ္စတန်ကနေ အမေရိကန် တပ်တွေ ဆုတ်ခွာတဲ့အပေါ် ဂျိုးဘိုင်ဒန်က ကာကွယ်ပြောဆို",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-58249781",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c660e182-ff92-a341-aba6-a716498464bb",
+            "rank": 16,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:c660e182-ff92-a341-aba6-a716498464bb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ရှားစောင်းလက်ပတ်သုံးရင် သတိပြုစရာ",
+                "headline": "ရှားစောင်းလက်ပတ်သုံးရင် သတိပြုစရာ"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-43030588",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-43030588",
+                "curie": "http://www.bbc.co.uk/asset/c660e182-ff92-a341-aba6-a716498464bb",
+                "assetId": "43030588"
+              },
+              "summary": "ဆေးဖက်ဝင် ရှားစောင်းလက်ပတ် အသုံးပြုရင် သတိပြုရမယ့် အချက် တခု",
+              "timestamp": 1518432410000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05xwrdq",
+                "subType": "clip",
+                "format": "video",
+                "title": "ရှားစောင်းလက်ပတ်သုံးရင် သတိပြုစရာ",
+                "synopses": {
+                  "short": "ရှားစောင်းလက်ပတ်သုံးရင် သတိပြုစရာ",
+                  "medium": "ရှားစောင်းလက်ပတ်က ဆေးဖက်ဝင်တဲ့ သတ္တိရှိတယ် ဆိုပြီး ကျော်ကြားပါတယ်။  ဒါပေမယ့် ဒါကို ဆေးသိပ္ပံ သုတေသနတွေက အပြည့်အဝ မထောက်ခံပါဘူး။  ရှားစောင်းလက်ပတ်ကို ဘာ အတွက် မသုံးသင့်ပါသလဲ။",
+                  "long": "ရှားစောင်းလက်ပတ် အပင်က ဆေးဖက်ဝင်တဲ့ သတ္တိရှိတယ် ဆိုပြီး ကျော်ကြားပါတယ်။  ဒါပေမယ့် ဒါကို ဆေးသိပ္ပံ သုတေသနတွေက အပြည့်အဝ မထောက်ခံပါဘူး။  ရှားစောင်းလက်ပတ်ကို ဘာ အတွက် မသုံးသင့်ပါသလဲ။ ရုပ်သံမှာ ရှုစားပါ။"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05xww8v.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ရှားစောင်းလက်ပတ်သုံးရင် သတိပြုစရာ",
+                "versions": [
+                  {
+                    "versionId": "p05xwrdt",
+                    "types": ["Original"],
+                    "duration": 64,
+                    "durationISO8601": "PT1M4S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1518431470000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99995204",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9D43/production/_99995204_p05xwtwm.jpg",
+                "path": "/cpsprodpb/9D43/production/_99995204_p05xwtwm.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ရှားစောင်းလက်ပတ်သုံးရင် သတိပြုစရာ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-43030588",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a3e957c2-7879-11e7-8eb1-b5d33db9bd6e",
+            "rank": 17,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:a3e957c2-7879-11e7-8eb1-b5d33db9bd6e",
+            "promo": {
+              "headlines": {
+                "headline": "လိင်တူချစ်သူနဲ့ condom "
+              },
+              "locators": {
+                "assetUri": "/burmese/programmes/2011/07/110704_unreportedworld_21",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/programmes/2011/07/110704_unreportedworld_21",
+                "curie": "http://www.bbc.co.uk/asset/a3e957c2-7879-11e7-8eb1-b5d33db9bd6e",
+                "assetId": "11586956"
+              },
+              "summary": "အမျိုးသား အချင်းချင်း လိင် ဆက်ဆံတဲ့သူတွေ HIV ရောဂါ ဖြစ်ပွားမှု များလာ",
+              "timestamp": 1309746036000,
+              "language": "my",
+              "media": {
+                "id": "11586956",
+                "subType": "primary",
+                "format": "audio",
+                "live": false,
+                "href": "http://www.bbc.co.uk/burmese/meta/dps/2011/07/emp/110704_unreportedworld_21.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/mp3/burmese/2011/07/unreportedworld21msm_110704_unreportedworld_21_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e201",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2009/12/08/091208214331_condoms106.jpg",
+                "path": "/amz/worldservice/live/assets/images/2009/12/08/091208214331_condoms106.jpg",
+                "height": 60,
+                "width": 106,
+                "altText": "",
+                "copyrightHolder": "",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/programmes/2011/07/110704_unreportedworld_21",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "955c4519-246a-0e40-a075-2efbd44b7891",
+            "rank": 18,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:955c4519-246a-0e40-a075-2efbd44b7891",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ကိုယ်မသိဘဲ ရလိုက်တဲ့ ရောဂါ",
+                "headline": "ကိုယ်မသိဘဲ ရလိုက်တဲ့ ရောဂါ"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-46408053",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-46408053",
+                "curie": "http://www.bbc.co.uk/asset/955c4519-246a-0e40-a075-2efbd44b7891",
+                "assetId": "46408053"
+              },
+              "summary": "အေအိုင်ဒီအက်စ် ရောဂါသည်တစ်ဦးပြောပြတဲ့ ကြေကွဲစရာဇာတ်လမ်း",
+              "timestamp": 1543608178000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06tbw28",
+                "subType": "clip",
+                "format": "video",
+                "title": "ကိုယ်မသိဘဲ ရလိုက်တဲ့ ရောဂါ",
+                "synopses": {
+                  "short": "ကိုယ်မသိဘဲ ရလိုက်တဲ့ ရောဂါ",
+                  "long": "အေအိုင်ဒီအက်စ် ရောဂါသည်တစ်ဦးပြောပြတဲ့ ကြေကွဲစရာဇာတ်လမ်း",
+                  "medium": "အေအိုင်ဒီအက်စ် ရောဂါသည်တစ်ဦးပြောပြတဲ့ ကြေကွဲစရာဇာတ်လမ်း"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06tbwgz.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ကိုယ်မသိဘဲ ရလိုက်တဲ့ ရောဂါ",
+                "versions": [
+                  {
+                    "versionId": "p06tbw2b",
+                    "types": ["Original"],
+                    "duration": 163,
+                    "durationISO8601": "PT2M43S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1543607986000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104573289",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17FBD/production/_104573289_p06tbwgz.jpg",
+                "path": "/cpsprodpb/17FBD/production/_104573289_p06tbwgz.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-46408053",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "908ad743-fd6e-44ea-b926-01feefc7b77f",
+            "rank": 19,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:908ad743-fd6e-44ea-b926-01feefc7b77f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ကာလုံအစည်းအဝေးက စစ်ကောင်စီကို ၆ လ သက်တမ်းတိုး",
+                "headline": "ကာလုံအစည်းအဝေးက စစ်ကောင်စီကို ၆ လ သက်တမ်းတိုး"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-64489615",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:908ad743-fd6e-44ea-b926-01feefc7b77f",
+                "assetId": "64489615",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-64489615",
+                "curie": "http://www.bbc.co.uk/asset/908ad743-fd6e-44ea-b926-01feefc7b77f"
+              },
+              "summary": "ကာလုံက ဘာကြောင့် စစ်ကောင်စီကို သက်တမ်းတိုးပေးခဲ့သလဲ",
+              "timestamp": 1675265005000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "language": "my",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "locator": "urn:bbc:cps:curie:asset:908ad743-fd6e-44ea-b926-01feefc7b77f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "my",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingLabel": "နိုင်ငံရေး",
+                      "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingEnglishLabel": "Politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id",
+                      "thingLabel": "လွှတ်တော်",
+                      "thingUri": "http://www.bbc.co.uk/things/95448167-ad02-4aae-82c0-75f1f765554e#id",
+                      "thingId": "95448167-ad02-4aae-82c0-75f1f765554e",
+                      "thingType": [
+                        "core:Organisation",
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "tagging:Agent",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Assembly_of_the_Union"
+                      ],
+                      "thingEnglishLabel": "Assembly of the Union",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingLabel": "မြန်မာ",
+                      "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
+                      "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1327865/"],
+                      "thingEnglishLabel": "Myanmar",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingLabel": "စစ်တပ်",
+                      "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingEnglishLabel": "Military",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingLabel": "၂၀၂၀ ရွေးကောက်ပွဲ",
+                      "thingUri": "http://www.bbc.co.uk/things/e8095862-8fb1-42e3-b65b-84c1517841ea#id",
+                      "thingId": "e8095862-8fb1-42e3-b65b-84c1517841ea",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Myanmar general election 2020",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f09tz5",
+                "subType": "clip",
+                "format": "video",
+                "title": "ကာလုံအစည်းအဝေးက စစ်ကောင်စီကို ၆ လ သက်တမ်းတိုး",
+                "synopses": {
+                  "short": "ကာလုံအစည်းအဝေးက စစ်ကောင်စီကို ၆ လ သက်တမ်းတိုး",
+                  "long": "အရေးပေါ်ကာလ ၂ နှစ်ကုန်ဆုံးချိန်မှာပြုလုပ်တဲ့ အမျိုးသားကာကွယ်ရေးနဲ့လုံခြုံရေးကောင်စီ က စစ်ကောင်စီကို နောက်ထပ် ခြောက်လ သက်တမ်းတိုးပေးလိုက်ပါတယ်။ ဘာကြောင့်အခုလို တိုးပေးခဲ့တာပါလဲ။ အကြောင်းစုံကို ကိုတင်အောင်ကျော်ကပြောပြပေးမှာပါ။",
+                  "medium": "ကာလုံက ဘာကြောင့် စစ်ကောင်စီကို သက်တမ်းတိုးပေးခဲ့သလဲ"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f09wwq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "ကာလုံအစည်းအဝေးက စစ်ကောင်စီကို ၆ လ သက်တမ်းတိုး",
+                "versions": [
+                  {
+                    "versionId": "p0f09tzc",
+                    "types": ["Original"],
+                    "duration": 159,
+                    "durationISO8601": "PT2M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675263919000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128490064",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B3B9/production/_128490064_p0f09wwq.jpg",
+                "path": "/cpsprodpb/B3B9/production/_128490064_p0f09wwq.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "ကာလုံအစည်းအဝေးက စစ်ကောင်စီကို ၆ လ သက်တမ်းတိုး",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-64489615",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7eb20891-0cc2-914f-aa42-e3a8d9bdc43b",
+            "rank": 20,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:7eb20891-0cc2-914f-aa42-e3a8d9bdc43b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "၂၅ နှစ်ကြာ အေးခဲထားတဲ့ သန္ဓေသားနဲ့ ကလေးမွေးဖွားနိုင်",
+                "headline": "၂၅ နှစ်ကြာ အေးခဲထားတဲ့ သန္ဓေသားနဲ့ ကလေးမွေးဖွားနိုင်"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-42447537",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-42447537",
+                "curie": "http://www.bbc.co.uk/asset/7eb20891-0cc2-914f-aa42-e3a8d9bdc43b",
+                "assetId": "42447537"
+              },
+              "summary": "၂၅ နှစ်ကြာ အေးခဲထားတဲ့ သန္ဓေသားနဲ့ ကလေးမွေးဖွားနိုင်",
+              "timestamp": 1513872020000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05rqtvs",
+                "subType": "clip",
+                "format": "video",
+                "title": "၂၅ နှစ်ကြာ အေးခဲထားတဲ့ သန္ဓေသားနဲ့ ကလေးမွေးဖွားနိုင်",
+                "synopses": {
+                  "short": "၂၅ နှစ်ကြာ အေးခဲထားတဲ့ သန္ဓေသားနဲ့ ကလေးမွေးဖွားနိုင်",
+                  "medium": "၂၅ နှစ်ကြာ အေးခဲထားတဲ့ သန္ဓေသားနဲ့ ကလေးမွေးဖွားနိုင်",
+                  "long": "ခန္ဓာကိုယ်ပြင်ပမှာ သန္ဓေအောင်ပြီးသား မျိုးဥကို ၂၅ နှစ်လောက် အေးခဲထားပြီးမှ ကလေးတဦးကို မွေးဖွားနိုင်ခဲ့ပြီဖြစ်ပါတယ်။ ဒီလို နည်းပညာနဲ့ မျိုးဥကို အေးခဲထားစေတာဟာ ဒီတခါအရှည်ကြာဆုံးလို့တောင်ပြောနိုင်ပါတယ်။ \n\nဒီကလေးရဲ့ မိခင်ဟာလည်း အဲဒီမျိုဥသန္ဓေအောင်စဉ်အချိန်က တနှစ်အရွယ်ပဲ ရှိသေးတာဖြစ်ပါတယ်။ ကိုမိုးမြင့်က ပြောပြမှာပါ။"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05rqvn7.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "၂၅ နှစ်ကြာ အေးခဲထားတဲ့ သန္ဓေသားနဲ့ ကလေးမွေးဖွားနိုင်",
+                "versions": [
+                  {
+                    "versionId": "p05rqtvw",
+                    "types": ["Original"],
+                    "duration": 107,
+                    "durationISO8601": "PT1M47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1513871258000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99320596",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10F7E/production/_99320596_p05rqvn7.jpg",
+                "path": "/cpsprodpb/10F7E/production/_99320596_p05rqvn7.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "၂၅ နှစ်ကြာ အေးခဲထားတဲ့ သန္ဓေသားနဲ့ ကလေးမွေးဖွားနိုင်",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-42447537",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

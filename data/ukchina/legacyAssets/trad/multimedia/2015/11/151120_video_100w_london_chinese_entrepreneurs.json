@@ -1,131 +1,1430 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-    "locators": {
-      "assetUri": "/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "curie": "http://www.bbc.co.uk/asset/5225b412-8f73-11e5-b663-a5a63db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "ukchina_traditional",
-    "language": "zh-Hant",
-    "lastUpdated": 1555696045559,
-    "firstPublished": 1448016091,
-    "lastPublished": 1448017134,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": true,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "cps_asset_id": "41406410"
-    },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "41406410",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+        "locators": {
+          "assetUri": "/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+          "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+          "curie": "http://www.bbc.co.uk/asset/5225b412-8f73-11e5-b663-a5a63db9bd6e",
+          "assetId": "41406410"
+        },
+        "type": "MAP",
+        "createdBy": "ukchina_traditional",
+        "language": "zh-Hant",
+        "lastUpdated": 1649922482142,
+        "firstPublished": 1448016091000,
+        "lastPublished": 1448016091000,
+        "timestamp": 1448016091000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "41406410",
+          "contentId": "urn:bbc:topcat:curie:asset:5225b412-8f73-11e5-b663-a5a63db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/UKChina",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/ukchina/trad",
+        "mediaType": "video"
       },
-      {
-        "text": "BBC2015年度「巾幗百名」 （100 Women）系列節目上演，這也是BBC連續第三年推出這個節目。",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "41406410",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "41406410",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "BBC2015年度「巾幗百名」 （100 Women）系列節目上演，這也是BBC連續第三年推出這個節目。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "BBC在這個節目中列出了世界上最具激勵精神的100名婦女。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "在今年的「巾幗百名」名單中有30名30歲以下的企業家，還有年齡超過80歲的巾幗英雄。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "BBC英倫網也將目光投向在倫敦的華裔女性，聽聽她們的創業故事和心得。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Dara Huang是位於倫敦的建築和市內設計公司Design Haus Liberty的創始人，哈佛研究生，白手起家在倫敦創業。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "她的公司三年裏迅速發展，有20多位建築設計師。Dara的父母從台灣移民美國，她在美國長大。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "另一位創業女性是Sally Wang，來自中國安徽。在英國留學畢業後，她專注英國房地產業，有自己的公司，目前潛心寫書，解讀英國房地產市場和投資置業。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "BBC在這個節目中列出了世界上最具激勵精神的100名婦女。",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "視頻：倫敦華裔女性談海外創業",
+          "headline": "視頻：倫敦華裔女性談海外創業"
+        },
+        "locators": {
+          "assetUri": "/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+          "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+          "curie": "http://www.bbc.co.uk/asset/5225b412-8f73-11e5-b663-a5a63db9bd6e",
+          "assetId": "41406410"
+        },
+        "summary": "BBC「巾幗百人」特別報道之際，兩位在倫敦創業的華裔女性分享她們的經驗。",
+        "timestamp": 1448016091000,
+        "language": "zh-Hant",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/UKChina",
+          "taggings": []
+        },
+        "media": {
+          "id": "41406410",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "41406410",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e213",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+        "type": "cps"
       },
-      {
-        "text": "在今年的「巾幗百名」名單中有30名30歲以下的企業家，還有年齡超過80歲的巾幗英雄。",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "BBC英倫網也將目光投向在倫敦的華裔女性，聽聽她們的創業故事和心得。",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Dara Huang是位於倫敦的建築和市內設計公司Design Haus Liberty的創始人，哈佛研究生，白手起家在倫敦創業。",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "她的公司三年裏迅速發展，有20多位建築設計師。Dara的父母從台灣移民美國，她在美國長大。",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "另一位創業女性是Sally Wang，來自中國安徽。在英國留學畢業後，她專注英國房地產業，有自己的公司，目前潛心寫書，解讀英國房地產市場和投資置業。",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "音視圖片",
+          "uri": "/ukchina/trad/multimedia",
+          "urlIdentifier": "/ukchina/trad/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "bbcukchina.com",
+          "uri": "/ukchina/trad",
+          "urlIdentifier": "/ukchina/trad",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "視頻：倫敦華裔女性談海外創業",
-      "headline": "視頻：倫敦華裔女性談海外創業"
     },
-    "locators": {
-      "assetUri": "/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "curie": "http://www.bbc.co.uk/asset/5225b412-8f73-11e5-b663-a5a63db9bd6e"
-    },
-    "summary": "BBC「巾幗百人」特別報道之際，兩位在倫敦創業的華裔女性分享她們的經驗。",
-    "timestamp": 1555696045559,
-    "passport": {},
-    "media": {
-      "id": "41406410",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e213",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
-      "height": 81,
-      "width": 144,
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "音視圖片",
-      "uri": "/ukchina/trad/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "bbcukchina.com",
-      "uri": "/ukchina/trad",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T10:03:08.58Z",
+        "lastRecordTimeStamp": "2023-02-15T10:01:00Z",
+        "firstRecordTimeStamp": "2023-02-15T02:01:00Z",
+        "totalRecords": 18,
+        "records": [
+          {
+            "id": "6c3ade21-1fa7-4e9b-9949-2e4e57c2ad22",
+            "rank": 1,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:6c3ade21-1fa7-4e9b-9949-2e4e57c2ad22",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "為什麼美國千禧一代正在離開大城市",
+                "headline": "為什麼美國千禧一代正在離開大城市"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/media-57554668",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/media-57554668",
+                "curie": "http://www.bbc.co.uk/asset/6c3ade21-1fa7-4e9b-9949-2e4e57c2ad22",
+                "assetId": "57554668"
+              },
+              "summary": "為吸引年輕人移居，美國各地的小城市正在推出不同的刺激政策，有些地方的獎勵高達一萬五千美元。",
+              "timestamp": 1624271487000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "p09lw54s",
+                "subType": "clip",
+                "format": "video",
+                "title": "为什么美国千禧一代正在离开大城市",
+                "synopses": {
+                  "short": "为什么美国千禧一代正在离开大城市",
+                  "long": "为吸引年轻人移居，美国各地的小城市正在推出不同的刺激政策，有些地方的奖励高达一万五千美元。\n\n随着远程办公的兴起，人们将可以更加自由地搬迁。\n\n未来几年内，近四分之一的美国人预计将完全成为远程工作者。",
+                  "medium": "为吸引年轻人移居，美国各地的小城市正在推出不同的刺激政策，有些地方的奖励高达一万五千美元。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09lw6n1.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "為什麼美國千禧一代正在離開大城市",
+                "versions": [
+                  {
+                    "versionId": "p09lw552",
+                    "types": ["Original"],
+                    "duration": 173,
+                    "durationISO8601": "PT2M53S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1624015970000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "118979035",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CF69/production/_118979035_p09lw6n1.jpg",
+                "path": "/cpsprodpb/CF69/production/_118979035_p09lw6n1.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "萊康特·李和伴侶決定從華盛頓特區搬到俄克拉荷馬的塔爾薩試試運氣",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/media-57554668",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "aff18a48-915f-5f44-9444-118c447483ec",
+            "rank": 2,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:aff18a48-915f-5f44-9444-118c447483ec",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "SpaceX：商業機構首次成功完成載人航天任務",
+                "headline": "SpaceX：商業機構首次成功完成載人航天任務"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/52970385",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/52970385",
+                "curie": "http://www.bbc.co.uk/asset/aff18a48-915f-5f44-9444-118c447483ec",
+                "assetId": "52970385"
+              },
+              "summary": "SpaceX與美國太空總署（NASA）合作的這一次太空任務，將是商業機構提供航天技術服務的一個開端。",
+              "timestamp": 1591629822000,
+              "language": "zh-Hant",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08fhs3q",
+                "subType": "clip",
+                "format": "video",
+                "title": "SpaceX：商业机构首次载人航天任务的关注点",
+                "synopses": {
+                  "short": "SpaceX：商业机构首次载人航天任务的关注点",
+                  "long": "伊隆·马斯克（Elon Musk）的公司SpaceX即将发射它的太空船载人龙（Crew Dragon），并首次载人上天。\n\n因天气原因，SpaceX原定于2020年5月27日的发射计划需要推迟进行。\n\n此次与美国太空总署（NASA）的合作将是第一次由私人企业载人上太空。载人龙从佛罗里达州升空，亦将标志着九年来第一次有太空人从美国本土升空。",
+                  "medium": "SpaceX与美国太空总署（NASA）合作的这一次太空任务，将是商业机构提供航天技术服务的一个开端。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08fhtbz.png",
+                "embedding": true,
+                "advertising": true,
+                "caption": "SpaceX：商業機構首次載人航天任務的關注點",
+                "versions": [
+                  {
+                    "versionId": "p08fhs3v",
+                    "types": ["Original"],
+                    "duration": 135,
+                    "durationISO8601": "PT2M15S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1590739553000
+                  }
+                ],
+                "imageCopyright": "SpaceX/Nasa Animation",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "112551082",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6D6F/production/_112551082_p08fhtbz.png",
+                "path": "/cpsprodpb/6D6F/production/_112551082_p08fhtbz.png",
+                "height": 576,
+                "width": 1024,
+                "altText": "SpaceX：商業機構首次載人航天任務的關注點",
+                "copyrightHolder": "SpaceX/Nasa Animation",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/52970385",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a67943f8-4cb6-11e5-b985-b0993db9bd6e",
+            "rank": 3,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:a67943f8-4cb6-11e5-b985-b0993db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Audio: A barrel of laughs 「開心果」",
+                "headline": "Audio: A barrel of laughs 「開心果」"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/elt/2015/08/150908_are_326_barrel_of_laughs_audio",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/elt/2015/08/150908_are_326_barrel_of_laughs_audio",
+                "curie": "http://www.bbc.co.uk/asset/a67943f8-4cb6-11e5-b985-b0993db9bd6e",
+                "assetId": "40240875"
+              },
+              "summary": "Audio: A barrel of laughs 「開心果」",
+              "timestamp": 1440678290000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "40240875",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "40240875",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/27/150827122407_are_barrel_laughs_640x360_thinkstock_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/08/27/150827122407_are_barrel_laughs_640x360_thinkstock_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Images of wooden barrels pulling funny faces",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/08/emp/150908_are_326_barrel_of_laughs_audio.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/08/bbc_are_326_barrel_of_laughs_150908_are_326_barrel_of_laughs_audio_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/elt/2015/08/150908_are_326_barrel_of_laughs_audio",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2d89d2b6-cd61-11e4-93b2-fec33db9bd6e",
+            "rank": 4,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:2d89d2b6-cd61-11e4-93b2-fec33db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Can you see the light?  你能看見亮光嗎？",
+                "headline": "Can you see the light?  你能看見亮光嗎？"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/elt/english_now/2015/03/150318_sotw_light",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/elt/english_now/2015/03/150318_sotw_light",
+                "curie": "http://www.bbc.co.uk/asset/2d89d2b6-cd61-11e4-93b2-fec33db9bd6e",
+                "assetId": "37849868"
+              },
+              "summary": "Children who can't see get more active by playing with light and sound",
+              "timestamp": 1426677778000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "37849868",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "37849868",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/03/18/150318104455_light-640x360.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/03/18/150318104455_light-640x360.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "A boy plays with light",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/03/emp/150318_sotw_light.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/03/sotw light chinese_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/03/sotw light chinese_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/03/sotw light chinese_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e246",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/03/18/150318104455_light-144x81.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/03/18/150318104455_light-144x81.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "A boy plays with light",
+                "copyrightHolder": "BBC World Service",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/elt/english_now/2015/03/150318_sotw_light",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c65dc4e0-5ab4-11e4-aa28-5c8f3db9bd6e",
+            "rank": 5,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:c65dc4e0-5ab4-11e4-aa28-5c8f3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Audio: Relation vs Relationship 表達不同「關係」的英語單詞",
+                "headline": "Audio: Relation vs Relationship 表達不同「關係」的英語單詞"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/elt/2014/10/141030_qanda_316_relation_audio",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/elt/2014/10/141030_qanda_316_relation_audio",
+                "curie": "http://www.bbc.co.uk/asset/c65dc4e0-5ab4-11e4-aa28-5c8f3db9bd6e",
+                "assetId": "35456961"
+              },
+              "summary": "Audio: Relation vs Relationship 表達不同「關係」的英語單詞",
+              "timestamp": 1414069297000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "35456961",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "35456961",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/03/17/140317110804_140211152241_bbc_generic_video.png",
+                  "path": "/amz/worldservice/live/assets/images/2014/03/17/140317110804_140211152241_bbc_generic_video.png",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "BBC",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2014/10/emp/141030_qanda_316_relation_audio.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2014/10/bbc_qanda_316_relation_relationship_141030_qanda_316_relation_audio_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/elt/2014/10/141030_qanda_316_relation_audio",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fc28e202-3f35-11e4-a01c-538f3db9bd6e",
+            "rank": 6,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:fc28e202-3f35-11e4-a01c-538f3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Audio: Comic and comical 兩個都帶有喜劇含義的詞 ",
+                "headline": "Audio: Comic and comical 兩個都帶有喜劇含義的詞 "
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/elt/2014/09/140918_qanda_310_comic_comical_audio2",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/elt/2014/09/140918_qanda_310_comic_comical_audio2",
+                "curie": "http://www.bbc.co.uk/asset/fc28e202-3f35-11e4-a01c-538f3db9bd6e",
+                "assetId": "34788133"
+              },
+              "summary": "Audio: Comic and comical 兩個都帶有喜劇含義的詞 ",
+              "timestamp": 1411046146000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "34788133",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "34788133",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/02/17/140217102937_140211152241_bbc_generic_640x360.png",
+                  "path": "/amz/worldservice/live/assets/images/2014/02/17/140217102937_140211152241_bbc_generic_640x360.png",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "BBC",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2014/09/emp/140918_qanda_310_comic_comical_audio2.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2014/09/bbc_qanda_310_comic_comical_140918_qanda_310_comic_comical_audio2_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/elt/2014/09/140918_qanda_310_comic_comical_audio2",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f6c732ca-bd0a-11e4-9f33-37d93db9bd6e",
+            "rank": 7,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f6c732ca-bd0a-11e4-9f33-37d93db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "The 'No Tears' onion 不會讓你流淚的洋蔥",
+                "headline": "The 'No Tears' onion 不會讓你流淚的洋蔥"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/elt/english_now/2015/02/150225_sotw_onion",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/elt/english_now/2015/02/150225_sotw_onion",
+                "curie": "http://www.bbc.co.uk/asset/f6c732ca-bd0a-11e4-9f33-37d93db9bd6e",
+                "assetId": "37516495"
+              },
+              "summary": "A new type of onion has been developed that tastes good and won't make you cry",
+              "timestamp": 1424881528000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "37516495",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "37516495",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/02/25/150225101502_chopped_onion_640x360.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/02/25/150225101502_chopped_onion_640x360.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "A chopped onion",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/02/emp/150225_sotw_onion.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/02/bbc_sotw_onion_chinese_150225_sotw_onion_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/02/bbc_sotw_onion_chinese_150225_sotw_onion_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/02/bbc_sotw_onion_chinese_150225_sotw_onion_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e250",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/02/25/150225101502_chopped_onion_144x81.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/02/25/150225101502_chopped_onion_144x81.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "A chopped onion",
+                "copyrightHolder": "Other",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/elt/english_now/2015/02/150225_sotw_onion",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "db81acd4-73f9-11e4-a8d4-4e9d3db9bd6e",
+            "rank": 8,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:db81acd4-73f9-11e4-a8d4-4e9d3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Audio: Temporary, tentative, provisional and interim 「臨時」的多種說法",
+                "headline": "Audio: Temporary, tentative, provisional and interim 「臨時」的多種說法"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/elt/2014/11/141204_qanda_321_temporary_audio",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/elt/2014/11/141204_qanda_321_temporary_audio",
+                "curie": "http://www.bbc.co.uk/asset/db81acd4-73f9-11e4-a8d4-4e9d3db9bd6e",
+                "assetId": "36014547"
+              },
+              "summary": "Audio: Temporary, tentative, provisional and interim 「臨時」的多種說法",
+              "timestamp": 1416847749000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "36014547",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "36014547",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/02/17/140217102937_140211152241_bbc_generic_640x360.png",
+                  "path": "/amz/worldservice/live/assets/images/2014/02/17/140217102937_140211152241_bbc_generic_640x360.png",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "BBC",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2014/11/emp/141204_qanda_321_temporary_audio.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2014/11/bbc_qanda_321_temporary_141204_qanda_321_temporary_audio_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/elt/2014/11/141204_qanda_321_temporary_audio",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c30b716c-ff6b-d849-9cc8-0f68e40c74e2",
+            "rank": 9,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:c30b716c-ff6b-d849-9cc8-0f68e40c74e2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "李小牧：東京紅燈區走出的華裔政治參選人",
+                "headline": "李小牧：東京紅燈區走出的華裔政治參選人"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/49375846",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/49375846",
+                "curie": "http://www.bbc.co.uk/asset/c30b716c-ff6b-d849-9cc8-0f68e40c74e2",
+                "assetId": "49375846"
+              },
+              "summary": "他出生中國，移民日本後長期在東京紅燈區裏做拉客的案內人，甚至曾遭黑道綁架勒索，但他現在走上了從政的道路。",
+              "timestamp": 1565970259000,
+              "language": "zh-Hant",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+                  "categoryName": "Interactive"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07ksjjp",
+                "subType": "clip",
+                "format": "video",
+                "title": "东京红灯区走出的华裔政治家",
+                "synopses": {
+                  "short": "李小牧：东京红灯区走出的华裔政治家",
+                  "long": "他出生中国，移民日本后长期在东京红灯区里做拉客的案内人，甚至曾遭黑道绑架勒索，被认为是电影《新宿事件》的原型。\n他就是在日本华人群体中家喻户晓的李小牧。近年来，他走上从政之路，两次参选议员。虽然竞选失败，但他说，这是为了“还爸爸一个心愿”。",
+                  "medium": "他出生中国，移民日本后长期在东京红灯区里做拉客的案内人，甚至曾遭黑道绑架勒索，但他现在走上了从政的道路。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07kskwc.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "李小牧：東京紅燈區走出的華裔政治家",
+                "versions": [
+                  {
+                    "versionId": "p07ksjjr",
+                    "types": ["Original"],
+                    "duration": 132,
+                    "durationISO8601": "PT2M12S",
+                    "warnings": {
+                      "short": "Contains some sexual content.",
+                      "long": "Contains some scenes of a sexual nature."
+                    },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1565921621000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "108333670",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1DD1/production/_108333670_p07ksjvw.jpg",
+                "path": "/cpsprodpb/1DD1/production/_108333670_p07ksjvw.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "他出生中國，移民日本後長期在東京紅燈區裏做拉客的案內人，甚至曾遭黑道綁架勒索，但他現在走上了從政的道路。",
+                "copyrightHolder": "他出生中國，移民日本後長期在東京紅燈區裏做拉客的案內人，甚至曾遭黑道綁架勒索，被認為是電影《新宿事件",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/49375846",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bb6f780d-ff5f-8b4d-b44f-5f39aa421317",
+            "rank": 10,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:bb6f780d-ff5f-8b4d-b44f-5f39aa421317",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "肺炎疫情：對比疫情爆發前後的威尼斯",
+                "headline": "肺炎疫情：對比疫情爆發前後的威尼斯"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/51946276",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/51946276",
+                "curie": "http://www.bbc.co.uk/asset/bb6f780d-ff5f-8b4d-b44f-5f39aa421317",
+                "assetId": "51946276"
+              },
+              "summary": "在肺炎疫情爆發後，威尼斯居民帶大家走遍觀光客喜愛的景點和拍照打卡勝地，對比18個月前人山人海的威尼斯。",
+              "timestamp": 1584531756000,
+              "language": "zh-Hant",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p086v83l",
+                "subType": "clip",
+                "format": "video",
+                "title": "对比疫情前后的威尼斯 居民终可欣赏水乡风貌",
+                "synopses": {
+                  "short": "肺炎疫情：对比疫情前后的威尼斯 居民终可欣赏水乡风貌",
+                  "long": "意大利旅游热点城市之一的威尼斯，每年都有数以千万计的旅客到访。但在新冠疫情下现正处于封城状态。威尼斯居民带大家走遍打卡胜地，对比18个月前人山人海的威尼斯。",
+                  "medium": "意大利旅游热点城市之一的威尼斯，每年都有数以千万计的旅客到访。但在新冠疫情下现正处于封城状态。威尼斯居民带大家走遍打卡胜地，对比18个月前人山人海的威尼斯。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p086v8bj.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "肺炎疫情：對比疫情前後的威尼斯 居民終可欣賞水鄉風貌",
+                "versions": [
+                  {
+                    "versionId": "p086v83n",
+                    "types": ["Original"],
+                    "duration": 74,
+                    "durationISO8601": "PT1M14S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1584429990000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111324756",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/100CE/production/_111324756_p086v8bj.jpg",
+                "path": "/cpsprodpb/100CE/production/_111324756_p086v8bj.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "對比疫情前後的威尼斯",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/51946276",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a6718200-d53f-bd4a-8828-2504d113c9cf",
+            "rank": 11,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:a6718200-d53f-bd4a-8828-2504d113c9cf",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "植入式隆胸的安全性到底如何？",
+                "headline": "植入式隆胸的安全性到底如何？"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/52836905",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/52836905",
+                "curie": "http://www.bbc.co.uk/asset/a6718200-d53f-bd4a-8828-2504d113c9cf",
+                "assetId": "52836905"
+              },
+              "summary": "乳房增大術是世界上最受歡迎的整形手術之一，不過它並非全無風險。",
+              "timestamp": 1590670906000,
+              "language": "zh-Hant",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+                  "categoryName": "Interactive"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08d8gsg",
+                "subType": "clip",
+                "format": "video",
+                "title": "植入式隆胸的安全性到底如何？",
+                "synopses": {
+                  "short": "植入式隆胸的安全性到底如何？",
+                  "long": "乳房增大术是世界上最受欢迎的整形手术之一，全球有数以百万计接受过这一手术的人对此感到满意。\n不过，它的安全性到底有多高，病人需要面临怎样的风险？",
+                  "medium": "乳房增大术是世界上最受欢迎的整形手术之一，不过它并非全无风险。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08d8hg3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "植入式隆胸的安全性到底如何？",
+                "versions": [
+                  {
+                    "versionId": "p08d8gsk",
+                    "types": ["Original"],
+                    "duration": 164,
+                    "durationISO8601": "PT2M44S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1589539199000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "112287454",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B1A6/production/_112287454_p08d8hg3.jpg",
+                "path": "/cpsprodpb/B1A6/production/_112287454_p08d8hg3.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/52836905",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "979d8cf2-7dc1-11e7-b51c-cd9b3db9bd6e",
+            "rank": 12,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:979d8cf2-7dc1-11e7-b51c-cd9b3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "視頻：劉翔奧運受傷出局父母談感受",
+                "headline": "视频：刘翔奥运受伤出局父母谈感受"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/multimedia/2012/08/120809_vid_olympics_liuxiangparents",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2012/08/120809_vid_olympics_liuxiangparents",
+                "curie": "http://www.bbc.co.uk/asset/979d8cf2-7dc1-11e7-b51c-cd9b3db9bd6e",
+                "assetId": "19169607"
+              },
+              "summary": "刘翔父母接受采访，谈刘翔受伤“梦断奥运”，并对他是否该退役发表看法。",
+              "timestamp": 1344479480000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "19169607",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "19169607",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/08/09/120809022006_liuxiangparents_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2012/08/09/120809022006_liuxiangparents_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2012/08/emp/120809_vid_olympics_liuxiangparents.emp.xml",
+                "playlist": [
+                  {
+                    "format": "3gp",
+                    "bitrate": "80000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/3gp/2012/08/liuxiangfamilybbc_120809_vid_olympics_liuxiangparents_16x9_lo.3gp"
+                  },
+                  {
+                    "format": "3gp",
+                    "bitrate": "160000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/3gp/2012/08/liuxiangfamilybbc_120809_vid_olympics_liuxiangparents_16x9_hi.3gp"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2012/08/liuxiangfamilybbc_120809_vid_olympics_liuxiangparents_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2012/08/liuxiangfamilybbc_120809_vid_olympics_liuxiangparents_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2012/08/liuxiangfamilybbc_120809_vid_olympics_liuxiangparents_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e224",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/08/09/120809022006_liuxiangparents_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/08/09/120809022006_liuxiangparents_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "劉翔父母",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2012/08/120809_vid_olympics_liuxiangparents",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8e7b5814-8118-11e4-8fd0-18c13db9bd6e",
+            "rank": 13,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:8e7b5814-8118-11e4-8fd0-18c13db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Audio: In advance, beforehand, upfront 表達「提前、預先」的英語詞組",
+                "headline": "Audio: In advance, beforehand, upfront 表達「提前、預先」的英語詞組"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/elt/2014/12/141211_qanda_322_in_advance_audio",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/elt/2014/12/141211_qanda_322_in_advance_audio",
+                "curie": "http://www.bbc.co.uk/asset/8e7b5814-8118-11e4-8fd0-18c13db9bd6e",
+                "assetId": "36313384"
+              },
+              "summary": "Audio: In advance, beforehand, upfront 表達「提前、預先」的英語詞組",
+              "timestamp": 1418290307000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "36313384",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "36313384",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/02/11/140211152241_bbc_generic_video.png",
+                  "path": "/amz/worldservice/live/assets/images/2014/02/11/140211152241_bbc_generic_video.png",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "BBC",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2014/12/emp/141211_qanda_322_in_advance_audio.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2014/12/bbc_qanda_322_in_advance_141211_qanda_322_in_advance_audio_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/elt/2014/12/141211_qanda_322_in_advance_audio",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "66418ee7-4491-454f-9b0a-f5070407fc82",
+            "rank": 14,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:66418ee7-4491-454f-9b0a-f5070407fc82",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "跨境工作媽媽憂帶病毒回家 將母乳冰凍寄回國",
+                "headline": "肺炎疫情：跨境工作媽媽憂帶病毒回家 將母乳冰凍寄回國"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/52814739",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/52814739",
+                "curie": "http://www.bbc.co.uk/asset/66418ee7-4491-454f-9b0a-f5070407fc82",
+                "assetId": "52814739"
+              },
+              "summary": "新加坡疫情持續，有在當地工作的馬來西亞籍母親因為擔心把病毒帶回家，不敢返回馬來西亞，令到母子分隔兩地。母親想盡辦法，召集其他處於相同困境的媽媽們，將母乳冰凍送回國。",
+              "timestamp": 1590523519000,
+              "language": "zh-Hant",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08dnkkv",
+                "subType": "clip",
+                "format": "video",
+                "title": "跨境工作妈妈忧带病毒回家 将母乳冰冻寄回国",
+                "synopses": {
+                  "short": "肺炎疫情：跨境工作妈妈忧带病毒回家 将母乳冰冻寄回国",
+                  "long": "新加坡疫情持续，有在当地工作的马来西亚籍母亲因为担心把病毒带回家，不敢返回马来西亚，令到母子分隔两地。虽然有外婆帮忙照顾宝宝，但该如何将母乳从新加坡送回马来西亚？\n\n母亲想尽办法，召集其他处于相同困境的妈妈们，将母乳送回国。在马来西亚议员曾笳恩帮助下，已有7千公斤的人奶运到马来西亚，协助了大约200名在新加坡工作的母亲。",
+                  "medium": "新加坡疫情持续，有在当地工作的马来西亚籍母亲因为担心把病毒带回家，不敢返回马来西亚，令到母子分隔两地。母亲想尽办法，召集其他处于相同困境的妈妈们，将冰凍母乳送回国。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08dnltr.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "肺炎疫情：跨境工作媽媽憂帶病毒回家 將母乳冰凍寄回國",
+                "versions": [
+                  {
+                    "versionId": "p08dnkl2",
+                    "types": ["Original"],
+                    "duration": 140,
+                    "durationISO8601": "PT2M20S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1589966182000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "112377392",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/72C1/production/_112377392_p08dnltr.jpg",
+                "path": "/cpsprodpb/72C1/production/_112377392_p08dnltr.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "冰凍母乳",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/52814739",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "41c71987-fbd0-9f4d-927f-85388603e59b",
+            "rank": 15,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:41c71987-fbd0-9f4d-927f-85388603e59b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "肺炎疫情中五個暖心感人的故事",
+                "headline": "肺炎疫情中五個暖心感人的故事"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/52466080",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/52466080",
+                "curie": "http://www.bbc.co.uk/asset/41c71987-fbd0-9f4d-927f-85388603e59b",
+                "assetId": "52466080"
+              },
+              "summary": "這是新冠肺炎疫情中，世界各地五個令人感動的故事。",
+              "timestamp": 1588107418000,
+              "language": "zh-Hant",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08bcpvj",
+                "subType": "clip",
+                "format": "video",
+                "title": "五个新型肺炎疫情中为人送暖的故事",
+                "synopses": {
+                  "short": "五个新型肺炎疫情中为人送暖的故事",
+                  "medium": "用遥控车请邻居吃薄饼、在阳台播放音乐与邻居跳舞、为贫民窟居民送上食物 ... 这是新型肺炎疫情中，世界各地五个令人窝心的故事。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08bcpz2.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "五個新型肺炎疫情中為人送暖的故事",
+                "versions": [
+                  {
+                    "versionId": "p08bcpvq",
+                    "types": ["Original"],
+                    "duration": 201,
+                    "durationISO8601": "PT3M21S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1587719371000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111922855",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/DA0E/production/_111922855_p08bcpz2.jpg",
+                "path": "/cpsprodpb/DA0E/production/_111922855_p08bcpz2.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "世界各地五個令人窩心的故事。",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/52466080",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1d1ec062-dde2-11e4-b0d6-d8cc3db9bd6e",
+            "rank": 16,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:1d1ec062-dde2-11e4-b0d6-d8cc3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "3D paintings 三維立體畫",
+                "headline": "3D paintings 三維立體畫"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/elt/english_now/2015/04/150408_sotw_3d_paintings",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/elt/english_now/2015/04/150408_sotw_3d_paintings",
+                "curie": "http://www.bbc.co.uk/asset/1d1ec062-dde2-11e4-b0d6-d8cc3db9bd6e",
+                "assetId": "38181786"
+              },
+              "summary": "A museum in the Philippines wants visitors to be part of the picture",
+              "timestamp": 1428492375000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "38181786",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "38181786",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/04/08/150408093531_brushes_002173560_640x360.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/04/08/150408093531_brushes_002173560_640x360.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Paint brushes",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/04/emp/150408_sotw_3d_paintings.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/04/sotw_3d_paintings_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/04/sotw_3d_paintings_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/04/sotw_3d_paintings_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e243",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/04/08/150408093531_paintings_144x81_reuters.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/04/08/150408093531_paintings_144x81_reuters.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "3D paintings museum in Manila",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/elt/english_now/2015/04/150408_sotw_3d_paintings",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "18c4ade0-7dbf-11e7-b51c-cd9b3db9bd6e",
+            "rank": 17,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:18c4ade0-7dbf-11e7-b51c-cd9b3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Alistair Brownlee 英國鐵人三項運動員",
+                "headline": "Alistair Brownlee 英国铁人三项运动员"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/elt/uk_life/2012/06/120612_ts47_alistair_brownlee",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/elt/uk_life/2012/06/120612_ts47_alistair_brownlee",
+                "curie": "http://www.bbc.co.uk/asset/18c4ade0-7dbf-11e7-b51c-cd9b3db9bd6e",
+                "assetId": "17908716"
+              },
+              "summary": "This week we follow the training of the British triathlete team, including Alistair Brownlee.",
+              "timestamp": 1339516855000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "17908716",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "17908716",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/06/12/120612155151_le_ts_47_alistair_brownlee_640x360_getty_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2012/06/12/120612155151_le_ts_47_alistair_brownlee_640x360_getty_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2012/06/emp/120612_ts47_alistair_brownlee.emp.xml",
+                "playlist": [
+                  {
+                    "format": "3gp",
+                    "bitrate": "80000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/3gp/2012/06/bbc_ts_wk_47_alistair_brownlee_chinese_120612_ts47_alistair_brownlee_16x9_lo.3gp"
+                  },
+                  {
+                    "format": "3gp",
+                    "bitrate": "160000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/3gp/2012/06/bbc_ts_wk_47_alistair_brownlee_chinese_120612_ts47_alistair_brownlee_16x9_hi.3gp"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2012/06/bbc_ts_wk_47_alistair_brownlee_chinese_120612_ts47_alistair_brownlee_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2012/06/bbc_ts_wk_47_alistair_brownlee_chinese_120612_ts47_alistair_brownlee_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2012/06/bbc_ts_wk_47_alistair_brownlee_chinese_120612_ts47_alistair_brownlee_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e225",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/06/12/120612155153_le_ts_47_alistair_brownlee_112x63_getty_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/06/12/120612155153_le_ts_47_alistair_brownlee_112x63_getty_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "Alistair Brownlee",
+                "copyrightHolder": "Getty",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/elt/uk_life/2012/06/120612_ts47_alistair_brownlee",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "06bb1f5a-e454-11e4-b107-c8803db9bd6e",
+            "rank": 18,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:06bb1f5a-e454-11e4-b107-c8803db9bd6e",
+            "promo": {
+              "headlines": {
+                "headline": "Audio: Implement vs enforce 實施和強制實施"
+              },
+              "locators": {
+                "assetUri": "/ukchina/trad/elt/2015/04/150416_qanda_340_implement_enforce_audio",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/elt/2015/04/150416_qanda_340_implement_enforce_audio",
+                "curie": "http://www.bbc.co.uk/asset/06bb1f5a-e454-11e4-b107-c8803db9bd6e",
+                "assetId": "38312827"
+              },
+              "summary": "Audio: Implement vs enforce 實施和強制實施",
+              "timestamp": 1429201016000,
+              "language": "zh-Hant",
+              "media": {
+                "id": "38312827",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "38312827",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/04/16/150416161141_qanda_340_implement_enforce_camera_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/04/16/150416161141_qanda_340_implement_enforce_camera_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Street camera",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/04/emp/150416_qanda_340_implement_enforce_audio.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/04/bbc_qanda_340_implement_enforce_150416_qanda_340_implement_enforce_audio_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/trad/elt/2015/04/150416_qanda_340_implement_enforce_audio",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

@@ -1,121 +1,1102 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151201_100womenburundi",
-    "locators": {
-      "assetUri": "/gahuza/video/2015/12/151201_100womenburundi",
-      "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151201_100womenburundi",
-      "curie": "http://www.bbc.co.uk/asset/20eca0f4-983d-11e5-8063-fed53db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "greatlakes",
-    "language": "rw",
-    "lastUpdated": 1550780605362,
-    "firstPublished": 1448982902,
-    "lastPublished": 1448983018,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": true,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "41561035" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "image", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "41561035",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/gahuza/meta/dps/2015/12/emp/151201_100womenburundi.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151201_100womenburundi",
+        "locators": {
+          "assetUri": "/gahuza/video/2015/12/151201_100womenburundi",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151201_100womenburundi",
+          "curie": "http://www.bbc.co.uk/asset/20eca0f4-983d-11e5-8063-fed53db9bd6e",
+          "assetId": "41561035"
+        },
+        "type": "MAP",
+        "createdBy": "greatlakes",
+        "language": "rw",
+        "lastUpdated": 1649938898472,
+        "firstPublished": 1448982902000,
+        "lastPublished": 1448982902000,
+        "timestamp": 1448982902000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "41561035",
+          "contentId": "urn:bbc:topcat:curie:asset:20eca0f4-983d-11e5-8063-fed53db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "image", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/gahuza",
+        "mediaType": "video"
       },
-      {
-        "id": "d5e512",
-        "subType": "body",
-        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/12/01/151201150123_lucie_nzorijana_512x288_bbc.jpg",
-        "path": "/amz/worldservice/live/assets/images/2015/12/01/151201150123_lucie_nzorijana_512x288_bbc.jpg",
-        "height": 288,
-        "width": 512,
-        "altText": "Lucie Nzorijana",
-        "caption": "Lucie Nzorijana",
-        "copyrightHolder": "BBC",
-        "positionHint": "full-width",
-        "type": "image"
+      "content": {
+        "blocks": [
+          {
+            "id": "41561035",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "41561035",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/30/151130172913_100women_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2015/11/30/151130172913_100women_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "Guha agaciro abagore",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/gahuza/meta/dps/2015/12/emp/151201_100womenburundi.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/gahuza/dps/2015/12/gl~fwomen~f1349~f1~f12_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/gahuza/dps/2015/12/gl~fwomen~f1349~f1~f12_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/gahuza/dps/2015/12/gl~fwomen~f1349~f1~f12_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "id": "d5e512",
+            "subType": "body",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/12/01/151201150123_lucie_nzorijana_512x288_bbc.jpg",
+            "path": "/amz/worldservice/live/assets/images/2015/12/01/151201150123_lucie_nzorijana_512x288_bbc.jpg",
+            "height": 288,
+            "width": 512,
+            "altText": "Lucie Nzorijana",
+            "caption": "Lucie Nzorijana",
+            "copyrightHolder": "BBC",
+            "positionHint": "full-width",
+            "type": "image"
+          },
+          {
+            "text": "Inyuma yo kubona ko abakenyezi n'abakobwa bagize ica kabiri c'isi batagaragara ku rugero rumwe n'abagabo mu binyamakuru, BBC imaze imyaka itatu yaratanguye kubaha umwanya ukwiye.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Lucie Nzorijana ni umushingwamanza(avocat), akaba n'umushumba (pasitori) mw'ishengero mu Burundi.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Aravuga akamaro n'agaciro k'umugore mu rugo, mu kazi no mu gihugu.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "Inyuma yo kubona ko abakenyezi n'abakobwa bagize ica kabiri c'isi batagaragara ku rugero rumwe n'abagabo mu binyamakuru, BBC imaze imyaka itatu yaratanguye kubaha umwanya ukwiye.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Agaciro k'abagore n'abakobwa",
+          "headline": "Agaciro k'abagore n'abakobwa"
+        },
+        "locators": {
+          "assetUri": "/gahuza/video/2015/12/151201_100womenburundi",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151201_100womenburundi",
+          "curie": "http://www.bbc.co.uk/asset/20eca0f4-983d-11e5-8063-fed53db9bd6e",
+          "assetId": "41561035"
+        },
+        "summary": "BBC imaze iminsi iha ijambo abagore n'abakobwa kugirango bamenyekanishe agaciro kabo",
+        "timestamp": 1448982902000,
+        "language": "rw",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+          "taggings": []
+        },
+        "media": {
+          "id": "41561035",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "41561035",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/30/151130172913_100women_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2015/11/30/151130172913_100women_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "Guha agaciro abagore",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/gahuza/meta/dps/2015/12/emp/151201_100womenburundi.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/gahuza/dps/2015/12/gl~fwomen~f1349~f1~f12_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/gahuza/dps/2015/12/gl~fwomen~f1349~f1~f12_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/gahuza/dps/2015/12/gl~fwomen~f1349~f1~f12_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e235",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/12/01/151201144722_lucie_nzorijana_144x81_b_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2015/12/01/151201144722_lucie_nzorijana_144x81_b_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "Lucie Nzorijana",
+          "copyrightHolder": "b",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151201_100womenburundi",
+        "type": "cps"
       },
-      {
-        "text": "Lucie Nzorijana ni umushingwamanza(avocat), akaba n'umushumba (pasitori) mw'ishengero mu Burundi.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Aravuga akamaro n'agaciro k'umugore mu rugo, mu kazi no mu gihugu.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Video",
+          "uri": "/gahuza/video",
+          "urlIdentifier": "/gahuza/video",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCGahuza.com",
+          "uri": "/gahuza",
+          "urlIdentifier": "/gahuza",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Agaciro k'abagore n'abakobwa",
-      "headline": "Agaciro k'abagore n'abakobwa"
     },
-    "locators": {
-      "assetUri": "/gahuza/video/2015/12/151201_100womenburundi",
-      "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151201_100womenburundi",
-      "curie": "http://www.bbc.co.uk/asset/20eca0f4-983d-11e5-8063-fed53db9bd6e"
-    },
-    "summary": "BBC imaze iminsi iha ijambo abagore n'abakobwa kugirango bamenyekanishe agaciro kabo",
-    "timestamp": 1550780605362,
-    "passport": {},
-    "media": {
-      "id": "41561035",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/gahuza/meta/dps/2015/12/emp/151201_100womenburundi.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e235",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/12/01/151201144722_lucie_nzorijana_144x81_b_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2015/12/01/151201144722_lucie_nzorijana_144x81_b_nocredit.jpg",
-      "height": 81,
-      "width": 144,
-      "altText": "Lucie Nzorijana",
-      "copyrightHolder": "b",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151201_100womenburundi",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Video",
-      "uri": "/gahuza/video",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCGahuza.com",
-      "uri": "/gahuza",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:38:26.464Z",
+        "lastRecordTimeStamp": "2023-02-15T09:36:00Z",
+        "firstRecordTimeStamp": "2023-02-15T01:36:00Z",
+        "totalRecords": 8,
+        "records": [
+          {
+            "id": "f840275d-2802-4bb4-9497-cb9d43967d1f",
+            "rank": 1,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:f840275d-2802-4bb4-9497-cb9d43967d1f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Imvo n'imvano ku gitabo \"Spare\", cy'igikomangoma Harry ku buzima bwe bwite",
+                "headline": "Imvo n'imvano ku gitabo \"Spare\", cy'igikomangoma Harry ku buzima bwe bwite"
+              },
+              "locators": {
+                "assetUri": "/gahuza/64608286",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:f840275d-2802-4bb4-9497-cb9d43967d1f",
+                "assetId": "64608286",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/64608286",
+                "curie": "http://www.bbc.co.uk/asset/f840275d-2802-4bb4-9497-cb9d43967d1f"
+              },
+              "summary": "Iki gitabo cy'impapuro 416, cyanditse mu Cyongereza no mu rurimi rw'Icyespanyol, cyashyizwe ku mugaragaro kimaze amezi gitegererezanyijwe amatsiko n'amashyushyu menshi, ahanini kubera uwacyanditse.",
+              "timestamp": 1676097409000,
+              "language": "rw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+                "taggings": []
+              },
+              "media": {
+                "id": "p0f2hqmm",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Imvo n'imvano ku gitabo \"Spare\", cy'igikomangoma Harry ku buzima bwe bwite",
+                "synopses": {
+                  "short": "Imvo n'imvano ku gitabo \"Spare\", cy'igikomangoma Harry ku buzima bwe bwite"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2hr7v.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Imvo n'imvano ku gitabo \"Spare\", cy'igikomangoma Harry ku buzima bwe bwite",
+                "versions": [
+                  {
+                    "versionId": "p0f2hqmr",
+                    "types": ["Original"],
+                    "duration": 3540,
+                    "durationISO8601": "PT59M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676097131000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128599462",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6783/production/_128599462_p0f2hr7v.jpg",
+                "path": "/cpsprodpb/6783/production/_128599462_p0f2hr7v.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Meghan na Prince Harry",
+                "copyrightHolder": "Getty Images",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/64608286",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8e665469-7995-4215-9f7f-aa9d8239a2d4",
+            "rank": 2,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:8e665469-7995-4215-9f7f-aa9d8239a2d4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Imvo n'Imvano ku buzima mu nkambi z'abanyecongo barimo guhungira mu Rwanda",
+                "headline": "Ikiganiro Imvo n'Imvano ku buzima mu nkambi z'abanyecongo barimo guhungira mu Rwanda"
+              },
+              "locators": {
+                "assetUri": "/gahuza/64528075",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:8e665469-7995-4215-9f7f-aa9d8239a2d4",
+                "assetId": "64528075",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/64528075",
+                "curie": "http://www.bbc.co.uk/asset/8e665469-7995-4215-9f7f-aa9d8239a2d4"
+              },
+              "summary": "Izi mpunzi zivuga ko zavuye muri Rutshuru na Masisi mu burasirazuba bwa Repubulika ya demokarasi ya Congo zihunga ubwicanyi bw'imitwe yitwaje intwaro izita Abatutsi b'abanyarwanda cyangwa abo mu mutwe wa M23.",
+              "timestamp": 1675601632000,
+              "language": "rw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+                "taggings": []
+              },
+              "media": {
+                "id": "p0f15y66",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Imvo n'Imvano ku buzima mu nkambi z'abanyekongo barimo guhungira mu Rwanda",
+                "synopses": {
+                  "short": "Ikiganiro Imvo n'Imvano ku buzima mu nkambi z'abanyekongo barimo guhungira mu Rwanda"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f15yfm.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ikiganiro Imvo n'Imvano ku buzima mu nkambi z'abanyekongo barimo guhungira mu Rwanda",
+                "versions": [
+                  {
+                    "versionId": "p0f15y6d",
+                    "types": ["Original"],
+                    "duration": 3540,
+                    "durationISO8601": "PT59M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675601162000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128526728",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1434A/production/_128526728_p0f15yfm.jpg",
+                "path": "/cpsprodpb/1434A/production/_128526728_p0f15yfm.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Impunzi z'abanyecongo mu nkambi y'agateganyo ya Nkamira mu karere ka Nyabihu mu Rwanda",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/64528075",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5989c0b2-f273-43c9-9ae3-2e96017bd98e",
+            "rank": 3,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:5989c0b2-f273-43c9-9ae3-2e96017bd98e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Imvo n'Imvano ku mpamvu imirwano yongeye kubura hagati y'ingabo za DR Congo na M23",
+                "headline": "Imvo n'Imvano ku mpamvu imirwano yongeye kubura hagati y'ingabo za DR Congo n'inyeshyamba za M23"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-61199537",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-61199537",
+                "curie": "http://www.bbc.co.uk/asset/5989c0b2-f273-43c9-9ae3-2e96017bd98e",
+                "assetId": "61199537"
+              },
+              "summary": "Imvo n'Imvano y'uyu munsi iragerageza gucukumbura impamvu imirwano yongeye kubura hagati y'ingabo za leta ya Repubulika ya Demokarasi ya Congo n'umutwe w'inyeshyamba wa M23 mu karere ka Rutshuru mu ntara ya Kivu ya ruguru.",
+              "timestamp": 1650690593000,
+              "language": "rw",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "rw",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+                "locator": "urn:bbc:cps:curie:asset:5989c0b2-f273-43c9-9ae3-2e96017bd98e",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/c8be50bc-7d45-43f5-8523-2207a650f600#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7d7c35fa-f724-4b36-90a0-21f71d99857d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/88d0ee06-84eb-4b06-827c-2525ca37ecb5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c8be50bc-7d45-43f5-8523-2207a650f600#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+                      "thingLabel": "Analysis",
+                      "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+                      "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
+                      ],
+                      "thingEnglishLabel": "Analysis",
+                      "thingPreferredLabel": "Analysis",
+                      "thingLabelLanguage": "rw",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                      "thingLabel": "Ibiyaga binini",
+                      "thingUri": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+                      "thingId": "30ae1f57-adee-458c-86ca-a15489f23e43",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://www.wikidata.org/entity/Q87982"],
+                      "thingEnglishLabel": "African Great Lakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                      "thingLabel": "Republika Iharanira Demokrasi ya Kongo",
+                      "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
+                      "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/203312/"],
+                      "thingEnglishLabel": "Democratic Republic of Congo",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingLabel": "Politike",
+                      "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingEnglishLabel": "Politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7d7c35fa-f724-4b36-90a0-21f71d99857d#id",
+                      "thingLabel": "Kenya",
+                      "thingUri": "http://www.bbc.co.uk/things/7d7c35fa-f724-4b36-90a0-21f71d99857d#id",
+                      "thingId": "7d7c35fa-f724-4b36-90a0-21f71d99857d",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/192950/"],
+                      "thingEnglishLabel": "Kenya",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                      "thingLabel": "Rwanda",
+                      "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                      "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/49518/"],
+                      "thingEnglishLabel": "Rwanda",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/88d0ee06-84eb-4b06-827c-2525ca37ecb5#id",
+                      "thingLabel": "Uganda",
+                      "thingUri": "http://www.bbc.co.uk/things/88d0ee06-84eb-4b06-827c-2525ca37ecb5#id",
+                      "thingId": "88d0ee06-84eb-4b06-827c-2525ca37ecb5",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/226074/"],
+                      "thingEnglishLabel": "Uganda",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingLabel": "Igisirikare",
+                      "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingEnglishLabel": "Military",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c2t02v",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Imvo n'Imvano ku mpamvu imirwano yongeye kubura hagati y'ingabo za DR Congo na M23",
+                "synopses": {
+                  "short": "Imvo n'Imvano ku mpamvu imirwano yongeye kubura hagati y'ingabo za DR Congo na M23"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c2t4fw.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Imvo n'Imvano ku mpamvu imirwano yongeye kubura hagati y'ingabo za DR Congo na M23",
+                "versions": [
+                  {
+                    "versionId": "p0c2t031",
+                    "types": ["Original"],
+                    "duration": 3540,
+                    "durationISO8601": "PT59M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1650690231000
+                  }
+                ],
+                "imageCopyright": "AFP",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124261538",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1463C/production/_124261538_p0c2t4fw.jpg",
+                "path": "/cpsprodpb/1463C/production/_124261538_p0c2t4fw.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Sultani Makenga",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-61199537",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4a5095c6-234b-11e4-83bb-068f3db9bd6e",
+            "rank": 4,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:4a5095c6-234b-11e4-83bb-068f3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Live radio",
+                "headline": "Live radio"
+              },
+              "locators": {
+                "assetUri": "/gahuza/umviriza_kandi/2014/08/000001_live_radio",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/umviriza_kandi/2014/08/000001_live_radio",
+                "curie": "http://www.bbc.co.uk/asset/4a5095c6-234b-11e4-83bb-068f3db9bd6e",
+                "assetId": "33999362"
+              },
+              "summary": "Summary",
+              "timestamp": 1407976708000,
+              "language": "rw",
+              "media": {
+                "id": "33999362",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "33999362",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/11/28/131128071339_microphone_640x360.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2013/11/28/131128071339_microphone_640x360.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Microphone",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": true,
+                "href": "http://wsdownload.bbc.co.uk/worldservice/meta/live/smp/krwna.xml",
+                "playlist": [],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e229",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/19/131219122804_microphone_144x81.jpg",
+                "path": "/amz/worldservice/live/assets/images/2013/12/19/131219122804_microphone_144x81.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "Microphone",
+                "copyrightHolder": "BBC World Service",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/umviriza_kandi/2014/08/000001_live_radio",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "968a3cbf-6121-1f48-812c-9893d5b73806",
+            "rank": 5,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:968a3cbf-6121-1f48-812c-9893d5b73806",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Amenyo y'ibijigo ya muzitsa haba hari ibibazo ateza?",
+                "headline": "Ikiganiro Bazamuganga ku menyo ya muzitsa."
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-41617279",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-41617279",
+                "curie": "http://www.bbc.co.uk/asset/968a3cbf-6121-1f48-812c-9893d5b73806",
+                "assetId": "41617279"
+              },
+              "summary": "Mu kiganiro Bazamuganga, BBC yaganiriye na muganga Josee Uwamariya ku menyo yitwa muzitsa. Ni amenyo y'ibijigo amera nyuma y'ayandi. Ayo menyo amaze iki? Haba se hari ibibazo ateza?",
+              "timestamp": 1507920526000,
+              "language": "rw",
+              "media": {
+                "id": "p05jwkvw",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Amenyo y'ibijigo ya muzitsa haba hari ibibazo atera?",
+                "synopses": {
+                  "short": "Ikiganiro Bazamuganga ku menyo ya muzitsa.",
+                  "medium": "Ikiganiro Bazamuganga ku menyo ya muzitsa.",
+                  "long": "Mu kiganiro Bazamuganga, BBC yaganiriye na muganga Josee Uwamariya ku menyo yitwa muzitsa. Ni amenyo y'ibijigo amera nyuma y'ayandi. Ayo menyo amaze iki? Haba se hari ibibazo ateza?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05jwl0w.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Ikiganiro Bazamuganga ku menyo ya muzitsa.",
+                "versions": [
+                  {
+                    "versionId": "p05jwkvz",
+                    "types": ["Original"],
+                    "duration": 305,
+                    "durationISO8601": "PT5M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1507920048000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "98310805",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/C671/production/_98310805_p05jwl0w.jpg",
+                "path": "/cpsprodpb/C671/production/_98310805_p05jwl0w.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "Ikiganiro Bazamuganga ku menyo ya muzitsa.",
+                "copyrightHolder": "Mu kiganiro Bazamuganga, BBC yaganiriye na muganga",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-41617279",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2a796ed0-f9b3-8249-b0a1-2e65b5842054",
+            "rank": 6,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:2a796ed0-f9b3-8249-b0a1-2e65b5842054",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ikiganiro ku rupfu rwa Jenerali Majoro Fred Rwigema",
+                "headline": "Imvo n'Imvano ku rupfu rwa Jenerali Majoro Fred Rwigema"
+              },
+              "locators": {
+                "assetUri": "/gahuza/amakuru-50107013",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-50107013",
+                "curie": "http://www.bbc.co.uk/asset/2a796ed0-f9b3-8249-b0a1-2e65b5842054",
+                "assetId": "50107013"
+              },
+              "summary": "Imvo n'Imvano ya none yibanze ku rupfu rwa Jenerali Majoro Fred Rwigema wari umuyobozi w'ingabo za FPR INKOTANYI, n'ibyegera bye bibiri, Majoro Peter Bayingana na Majoro Chris Bunyenyezi.",
+              "timestamp": 1571461831000,
+              "language": "rw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                  "categoryName": "Analysis"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07rh4sb",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Ikiganiro ku rupfu rwa Jenerali Majoro Fred Rwigema",
+                "synopses": {
+                  "short": "Imvo n'Imvano ku rupfu rwa Jenerali Majoro Fred Rwigema",
+                  "long": "Imvo n'Imvano yibanze ku rupfu rwa Jenerali Majoro Fred Rwigema wari umuyobozi w'ingabo za FPR INKOTANYI n'ibyegera bye bibiri, Majoro Peter Bayingana na Majoro Chris Bunyenyezi.",
+                  "medium": "Imvo n'Imvano yibanze ku rupfu rwa Jenerali Majoro Fred Rwigema wari umuyobozi w'ingabo za FPR INKOTANYI n'ibyegera bye bibiri, Major Peter Bayingana na Major Chris Bunyenyezi."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07rh51d.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Imvo n'Imvano ku rupfu rwa Jenerali Majoro Fred Rwigema",
+                "versions": [
+                  {
+                    "versionId": "p07rh4sd",
+                    "types": ["Original"],
+                    "duration": 3540,
+                    "durationISO8601": "PT59M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1571460890000
+                  }
+                ],
+                "imageCopyright": "Google",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109293346",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/FB53/production/_109293346_p07rh51d.jpg",
+                "path": "/cpsprodpb/FB53/production/_109293346_p07rh51d.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "Jenerali Majoro Fred Rwigema",
+                "copyrightHolder": "Google",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/amakuru-50107013",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f1d4987a-1508-49f3-a6e6-e8786f9c5897",
+            "rank": 7,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f1d4987a-1508-49f3-a6e6-e8786f9c5897",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "King James avuga impamvu yashyize Claudine Mukarusine mu mashusho y'indirimbo",
+                "headline": "King James avuga impamvu yashyize Claudine Mukarusine mu mashusho y'indirimbo"
+              },
+              "locators": {
+                "assetUri": "/gahuza/56045551",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/56045551",
+                "curie": "http://www.bbc.co.uk/asset/f1d4987a-1508-49f3-a6e6-e8786f9c5897",
+                "assetId": "56045551"
+              },
+              "summary": "Guhohoterwa kw'abafite ubumuga bw'uruhu bakunze kwitwa ba \"nyamweru\" ngo ni kimwe mu byatumye Rumuhiriza James, azwi nka King Jame, ashyira umukobwa afite ubwo bumuga mu ndirimwo ye",
+              "timestamp": 1613143285000,
+              "language": "rw",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "language": "rw",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+                "locator": "urn:bbc:cps:curie:asset:f1d4987a-1508-49f3-a6e6-e8786f9c5897",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/c8be50bc-7d45-43f5-8523-2207a650f600#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id"
+                  }
+                ],
+                "schemaVersion": "1.2.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c8be50bc-7d45-43f5-8523-2207a650f600#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "rw",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                      "thingLabel": "Rwanda",
+                      "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+                      "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/49518/"],
+                      "thingEnglishLabel": "Rwanda",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id",
+                      "thingLabel": "Ubumuga",
+                      "thingUri": "http://www.bbc.co.uk/things/a1c14222-e7ab-45a2-a074-3cdc1045607c#id",
+                      "thingId": "a1c14222-e7ab-45a2-a074-3cdc1045607c",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "tagging:Genre",
+                        "core:Thing",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q12131",
+                        "http://dbpedia.org/resource/Disability"
+                      ],
+                      "thingEnglishLabel": "Disability",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "Abagore",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p096ttz0",
+                "subType": "clip",
+                "format": "audio",
+                "title": "King James avuga impamvu yashyize Clodine Mukarusine mu mashusho y'indirimbo",
+                "synopses": {
+                  "short": "King James avuga impamvu yashyize Clodine Mukarusine mu mashusho y'indirimbo"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p096tvtf.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "King James avuga impamvu yashyize Clodine Mukarusine mu mashusho y'indirimbo",
+                "versions": [
+                  {
+                    "versionId": "p096ttz6",
+                    "types": ["Original"],
+                    "duration": 272,
+                    "durationISO8601": "PT4M32S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1613142380000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "116933116",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/EECD/production/_116933116_p096tvtf.jpg",
+                "path": "/cpsprodpb/EECD/production/_116933116_p096tvtf.jpg",
+                "height": 571,
+                "width": 1015,
+                "altText": "Kingi James na Clodine Mukarusine mu mashusho y'indirimbo 'Igitekerezo'",
+                "copyrightHolder": "Kinga James",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/56045551",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9eb550ed-04f0-5242-8bd7-aff911430811",
+            "rank": 8,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:9eb550ed-04f0-5242-8bd7-aff911430811",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Umunyamakuru wa Bwiza.com yabwiye BBC ibyabaye muri Nyungwe",
+                "headline": "Umunyamakuru wa Bwiza.com, Bahuwiyongera Sylvestre, yabwiye BBC ibyabaye muri Nyungwe"
+              },
+              "locators": {
+                "assetUri": "/gahuza/47639911",
+                "cpsUrn": "urn:bbc:content:assetUri:gahuza/47639911",
+                "curie": "http://www.bbc.co.uk/asset/9eb550ed-04f0-5242-8bd7-aff911430811",
+                "assetId": "47639911"
+              },
+              "summary": "Umunyamakuru wa Bwiza.com, Bahuwiyongera Sylvestre, yabwiye BBC ibyabaye muri Nyungwe",
+              "timestamp": 1553098877000,
+              "language": "rw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07432p7",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Umunyamakuru wa Rwiza.com yabwiye BBC ibyabaye muri Nyungwe",
+                "synopses": {
+                  "short": "Umunyamakuru wa Rwiza.com, Bahuwiyongera Sylvestre, yabwiye BBC ibyabaye muri Nyungwe",
+                  "long": "Umunyamakuru wa Rwiza.com, Bahuwiyongera Sylvestre, yabwiye BBC ibyabaye muri Nyungwe",
+                  "medium": "Umunyamakuru wa Rwiza.com, Bahuwiyongera Sylvestre, yabwiye BBC ibyabaye muri Nyungwe"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07433n9.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Umunyamakuru wa Bwiza.com, Bahuwiyongera Sylvestre, yabwiye BBC ibyabaye muri Nyungwe",
+                "versions": [
+                  {
+                    "versionId": "p07432pj",
+                    "types": ["Original"],
+                    "duration": 163,
+                    "durationISO8601": "PT2M43S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1553098057000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106107011",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/2B3E/production/_106107011_p07433n9.jpg",
+                "path": "/cpsprodpb/2B3E/production/_106107011_p07433n9.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Nyungwe",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:gahuza/47639911",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

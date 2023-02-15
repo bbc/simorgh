@@ -1,107 +1,461 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/somali/meta/dps/junk/2016/06/emp/160628_tc2_testmap1.emp.xml",
-        "id": "17697751",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+        "locators": {
+          "assetUri": "/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:b204250e-3d46-11e6-a639-d4813ba0532c",
+          "assetId": "17697751",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/b204250e-3d46-11e6-a639-d4813ba0532c"
+        },
+        "type": "MAP",
+        "createdBy": "somali",
+        "language": "so",
+        "lastUpdated": 1665420086031,
+        "firstPublished": 1467128537000,
+        "lastPublished": 1467128537000,
+        "timestamp": 1467128537000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17697751",
+          "contentId": "urn:bbc:topcat:curie:asset:b204250e-3d46-11e6-a639-d4813ba0532c"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/somali",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "16-kii bishii June 1976, kumanyaal ardey Koonfur Afrika ah ayaa isugu soo baxay jidadka magalaada Soweto si ay uga mudaharaadaan xukunkii caddaankii tirada yaraa ee dalkaasi. Boqolaal ayaa booliisku ay ku dileen taasi oo wax weyn ka beddeshay xaaladdii bulsho iyo siyaasadeed ee Koonfur Afrika. Weriyaha BBC Chris Parkinson ayaa ku laabtay isla jidadkii banaanbaxo ka dhacay oo la kulmay qaar ka mid ah dadkii badbaaday.",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17697751",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17697751",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+              "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/somali/meta/dps/junk/2016/06/emp/160628_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/somali/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160628_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/somali/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160628_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/somali/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160628_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "16-kii bishii June 1976, kumanyaal ardey Koonfur Afrika ah ayaa isugu soo baxay jidadka magalaada Soweto si ay uga mudaharaadaan xukunkii caddaankii tirada yaraa ee dalkaasi. Boqolaal ayaa booliisku ay ku dileen taasi oo wax weyn ka beddeshay xaaladdii bulsho iyo siyaasadeed ee Koonfur Afrika. Weriyaha BBC Chris Parkinson ayaa ku laabtay isla jidadkii banaanbaxo ka dhacay oo la kulmay qaar ka mid ah dadkii badbaaday.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Maxaa xiga ka bixista UK ee EU?",
+          "headline": "Maxaa xiga ka bixista UK ee EU?"
+        },
+        "locators": {
+          "assetUri": "/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:b204250e-3d46-11e6-a639-d4813ba0532c",
+          "assetId": "17697751",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/b204250e-3d46-11e6-a639-d4813ba0532c"
+        },
+        "summary": "Markii ugu danbaysay ee la cusbooneysiiyay.",
+        "timestamp": 1467128537000,
+        "language": "so",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+          "taggings": []
+        },
+        "media": {
+          "id": "17697751",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17697751",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+            "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/somali/meta/dps/junk/2016/06/emp/160628_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/somali/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160628_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/somali/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160628_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/somali/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160628_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e212",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+          "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Maqal iyo Muuqaal",
+          "uri": "/somali/maqal_iyo_muuqaal",
+          "urlIdentifier": "/somali/maqal_iyo_muuqaal",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCSomali.com",
+          "uri": "/somali",
+          "urlIdentifier": "/somali",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "cps_asset_id": "17697751",
-      "cps_asset_type": "map"
     },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "somali",
-    "firstPublished": 1467128537000,
-    "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
-    "includeComments": false,
-    "language": "so",
-    "lastPublished": 1467297186000,
-    "lastUpdated": 1583316623062,
-    "locators": {
-      "assetId": "17697751",
-      "assetUri": "/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/b204250e-3d46-11e6-a639-d4813ba0532c"
-    },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1467128537000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "Maxaa xiga ka bixista UK ee EU?",
-      "shortHeadline": "Maxaa xiga ka bixista UK ee EU?"
-    },
-    "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
-      "id": "d5e212",
-      "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "so",
-    "locators": {
-      "assetId": "17697751",
-      "assetUri": "/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/b204250e-3d46-11e6-a639-d4813ba0532c"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/somali/meta/dps/junk/2016/06/emp/160628_tc2_testmap1.emp.xml",
-      "id": "17697751",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "summary": "Markii ugu danbaysay ee la cusbooneysiiyay.",
-    "timestamp": 1467128537000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Maqal iyo Muuqaal",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/somali/maqal_iyo_muuqaal"
-    },
-    "site": {
-      "name": "BBCSomali.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/somali"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:20:00.163Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 5,
+        "records": [
+          {
+            "id": "172022bb-2241-a745-90a2-f2589defdc4b",
+            "rank": 1,
+            "count": 9485,
+            "urn": "urn:bbc:curie:asset:172022bb-2241-a745-90a2-f2589defdc4b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Test 1 - Magari yasiyotumia mafuta yaanza kazi ivertype",
+                "headline": "Test 2 - Magari yasiyotumia mafuta yaanza kazi Kenya"
+              },
+              "locators": {
+                "assetUri": "/bengali/news-23063597",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:172022bb-2241-a745-90a2-f2589defdc4b",
+                "assetId": "23063597",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/news-23063597",
+                "curie": "http://www.bbc.co.uk/asset/172022bb-2241-a745-90a2-f2589defdc4b"
+              },
+              "summary": "Test 3 - Magari yasiyotumia mafuta yaanza kazi Kenya",
+              "timestamp": 1469800474000,
+              "language": "bn",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "taggings": []
+              },
+              "media": {
+                "id": "23062547",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p014t04t",
+                "entityType": "Clip",
+                "caption": "Test 2 - Magari yasiyotumia mafuta yaanza kazi Kenya",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63498089",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/17F29/test/_63498089_p012zl0f.jpg",
+                "path": "/cpsdevpb/17F29/test/_63498089_p012zl0f.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Logo",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/news-23063597",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "562203d3-286e-7140-ad85-142dd7e8f601",
+            "rank": 2,
+            "count": 8533,
+            "urn": "urn:bbc:curie:asset:562203d3-286e-7140-ad85-142dd7e8f601",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Uganda oo sheegtay ka baxida Soomaaliya 30",
+                "headline": "Uganda oo sheegtay ka baxida Soomaaliya 30"
+              },
+              "locators": {
+                "assetUri": "/somali/23055894",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:562203d3-286e-7140-ad85-142dd7e8f601",
+                "assetId": "23055894",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/23055894",
+                "curie": "http://www.bbc.co.uk/asset/562203d3-286e-7140-ad85-142dd7e8f601"
+              },
+              "summary": "Uganda oo sheegtay ka baxida Soomaaliya 30",
+              "timestamp": 1466782420000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "63485393",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "bbc_world_service_west_africa",
+                "duration": "PT0S",
+                "caption": "Uganda oo sheegtay ka baxida Soomaaliya 30",
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63492875",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/E1E5/test/_63492875_160605152839_radio_station_640x360_bbc_nocredit.jpg",
+                "path": "/cpsdevpb/E1E5/test/_63492875_160605152839_radio_station_640x360_bbc_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Uganda oo sheegtay ka baxida Soomaaliya 30",
+                "caption": "Uganda oo sheegtay ka baxida Soomaaliya 30",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/23055894",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "00bbf54d-ae1a-5340-9e6c-2d6eeeee5daf",
+            "rank": 3,
+            "count": 7395,
+            "urn": "urn:bbc:curie:asset:00bbf54d-ae1a-5340-9e6c-2d6eeeee5daf",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Biyo la'aan ka taagan deegaanka Siyeelow",
+                "headline": "Biyo la'aan ka taagan deegaanka Siyeelow"
+              },
+              "locators": {
+                "assetUri": "/somali/ka-qayb-gal-23057597",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:00bbf54d-ae1a-5340-9e6c-2d6eeeee5daf",
+                "assetId": "23057597",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/ka-qayb-gal-23057597",
+                "curie": "http://www.bbc.co.uk/asset/00bbf54d-ae1a-5340-9e6c-2d6eeeee5daf"
+              },
+              "summary": "Magaalada Siyeelo ayaa laga soo sheegayaa biyo la'aan kadib markii roobabkii ay u di'i waayeen sidii la filayey.",
+              "timestamp": 1467642123000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "23057598",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p014cn4t",
+                "entityType": "Clip",
+                "caption": "Biyo la'aan ka taagan deegaanka Siyeelow audio",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63494267",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/129D9/test/_63494267_p014cn5h.jpg",
+                "path": "/cpsdevpb/129D9/test/_63494267_p014cn5h.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "audio",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/ka-qayb-gal-23057597",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8acee938-41a4-9942-81ea-5665918885b2",
+            "rank": 4,
+            "count": 1183,
+            "urn": "urn:bbc:curie:asset:8acee938-41a4-9942-81ea-5665918885b2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Daawo: Xoola-dhaqato abaaro iyo daadad isugu xigsadeen",
+                "headline": "Daawo: Xoola-dhaqato abaaro iyo daadad isugu xigsadeen"
+              },
+              "locators": {
+                "assetUri": "/somali/media-23057594",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:8acee938-41a4-9942-81ea-5665918885b2",
+                "assetId": "23057594",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/media-23057594",
+                "curie": "http://www.bbc.co.uk/asset/8acee938-41a4-9942-81ea-5665918885b2"
+              },
+              "summary": "Malaayin qof oo ku nool geeska afrika ayaa waxa saamaysay abaar daba dheeraatay, taasi oo ku qaaday in ay u baahdaan gargaar bani’aadanimo.",
+              "timestamp": 1467641886000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "23057596",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p014cn2n",
+                "entityType": "Clip",
+                "caption": "Daawo: Xoola-dhaqato abaaro iyo daadad isugu xigsadeen",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63494119",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1640D/test/_63494119_p014cn38.jpg",
+                "path": "/cpsdevpb/1640D/test/_63494119_p014cn38.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Daawo: Xoola-dhaqato abaaro iyo daadad isugu xigsadeen",
+                "copyrightHolder": "Magnum Photos",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/media-23057594",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bee9a732-c1aa-764f-b056-c1d38f15d626",
+            "rank": 5,
+            "count": 794,
+            "urn": "urn:bbc:curie:asset:bee9a732-c1aa-764f-b056-c1d38f15d626",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Toos u daawo Euro 2016 live stream",
+                "headline": "Toos u daawo Euro 2016 live stream"
+              },
+              "locators": {
+                "assetUri": "/somali/media-23058074",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:bee9a732-c1aa-764f-b056-c1d38f15d626",
+                "assetId": "23058074",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/media-23058074",
+                "curie": "http://www.bbc.co.uk/asset/bee9a732-c1aa-764f-b056-c1d38f15d626"
+              },
+              "summary": "Kumanyaal ruux ayaa taagan hareeraha wadooyinka Louisville ee Kentucky si ay u daawadaan aaska Maxamed Cali.",
+              "timestamp": 1467803504000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "63485389",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "journalism_world_service_stream_01",
+                "duration": "PT0S",
+                "caption": "Toos u daawo Euro 2016",
+                "image": {
+                  "id": "63485389",
+                  "subType": "thumbnail",
+                  "href": "http://b.files.bbci.co.uk/0DDD/test/_63494530_160223150754_turkey_team_redcard_640x360_reuters_nocredit.jpg",
+                  "path": "/cpsdevpb/0DDD/test/_63494530_160223150754_turkey_team_redcard_640x360_reuters_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Euro 2016",
+                  "copyrightHolder": "Alamy",
+                  "type": "image"
+                },
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63494523",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/7F25/test/_63494523_160223150754_turkey_team_redcard_640x360_reuters_nocredit.jpg",
+                "path": "/cpsdevpb/7F25/test/_63494523_160223150754_turkey_team_redcard_640x360_reuters_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "Euro 2016",
+                "caption": "Euro 2016",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/media-23058074",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

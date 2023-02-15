@@ -1,129 +1,2109 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
-    "locators": {
-      "assetUri": "/mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
-      "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
-      "curie": "http://www.bbc.co.uk/asset/b013a8ba-108b-11e6-86c7-c88b3db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "mundo",
-    "language": "es",
-    "lastUpdated": 1550159966544,
-    "firstPublished": 1462287598,
-    "lastPublished": 1462349898,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "allowAdvertising": true,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_id": "43666343", "cps_asset_type": "map" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph", "list"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "43666343",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/mundo/meta/dps/2016/05/emp/160502_video_apnea_record_rubridge_nezolandes_amv.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+        "locators": {
+          "assetUri": "/mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+          "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+          "curie": "http://www.bbc.co.uk/asset/b013a8ba-108b-11e6-86c7-c88b3db9bd6e",
+          "assetId": "43666343"
+        },
+        "type": "MAP",
+        "createdBy": "mundo",
+        "language": "es",
+        "lastUpdated": 1649905821550,
+        "firstPublished": 1462287598000,
+        "lastPublished": 1462287598000,
+        "timestamp": 1462287598000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "43666343",
+          "contentId": "urn:bbc:topcat:curie:asset:b013a8ba-108b-11e6-86c7-c88b3db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph", "list"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/mundo",
+        "mediaType": "video"
       },
-      {
-        "text": "El neozelandés William Trubridge rompió este lunes el récord mundial de apnea: alcanzó 124 metros en 4 minutos y 34 segundos.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Trubridge ha roto 17 veces su propio récord. Este fue conseguido en las playas de la isla de Bahamas, cerca de Estados Unidos.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Fue bastante difícil, especialmente el ascenso. Algo se me enredo después de tocar el fondo donde debía llegar metros. Fue terrible&quot;, posteó en la <link type=\"page\"><caption>\n\npágina de Facebook de Vertical Club</caption><url href=\"https://www.facebook.com/verticalblue/?fref=ts\" platform=\"highweb\"/></link>.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Durante el fin de semana el neozelandés había roto el récord mundial cuando alcanzó los 122 metros. Pero en un nuevo intento el lunes llegó dos metros más profundo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Estas son las imágenes del descenso que realizó el fin de semana.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
+      "content": {
+        "blocks": [
           {
-            "text": "<link type=\"page\"><caption>\n\nDesaparece en el mar Natalia Molchanova, la apneísta con más récords de la historia</caption><url href=\"http://www.bbc.com/mundo/noticias/2015/08/150804_deportes_desaparece_buzo_apnea_natalia_molchanova_ng\" platform=\"highweb\"/></link>",
+            "id": "43666343",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "43666343",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/02/160502172014_vertical_club_vertical_640x360_verticalclub_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2016/05/02/160502172014_vertical_club_vertical_640x360_verticalclub_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "vertical club",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/mundo/meta/dps/2016/05/emp/160502_video_apnea_record_rubridge_nezolandes_amv.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/apnea_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/apnea_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/apnea_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "El neozelandés William Trubridge rompió este lunes el récord mundial de apnea: alcanzó 124 metros en 4 minutos y 34 segundos.",
             "markupType": "plain_text",
-            "type": "listItem"
+            "type": "paragraph"
+          },
+          {
+            "text": "Trubridge ha roto 17 veces su propio récord. Este fue conseguido en las playas de la isla de Bahamas, cerca de Estados Unidos.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "&quot;Fue bastante difícil, especialmente el ascenso. Algo se me enredo después de tocar el fondo donde debía llegar metros. Fue terrible&quot;, posteó en la <link type=\"page\"><caption>\n\npágina de Facebook de Vertical Club</caption><url href=\"https://www.facebook.com/verticalblue/?fref=ts\" platform=\"highweb\"/></link>.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Durante el fin de semana el neozelandés había roto el récord mundial cuando alcanzó los 122 metros. Pero en un nuevo intento el lunes llegó dos metros más profundo.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Estas son las imágenes del descenso que realizó el fin de semana.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "numbered": false,
+            "items": [
+              {
+                "text": "<link type=\"page\"><caption>\n\nDesaparece en el mar Natalia Molchanova, la apneísta con más récords de la historia</caption><url href=\"http://www.bbc.com/mundo/noticias/2015/08/150804_deportes_desaparece_buzo_apnea_natalia_molchanova_ng\" platform=\"highweb\"/></link>",
+                "markupType": "plain_text",
+                "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/noticias/2015/08/150804_deportes_desaparece_buzo_apnea_natalia_molchanova_ng",
+                "type": "listItem"
+              }
+            ],
+            "type": "list"
           }
-        ],
-        "type": "list"
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "El increíble récord mundial de apnea",
+          "headline": "El increíble récord mundial de apnea"
+        },
+        "locators": {
+          "assetUri": "/mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+          "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+          "curie": "http://www.bbc.co.uk/asset/b013a8ba-108b-11e6-86c7-c88b3db9bd6e",
+          "assetId": "43666343"
+        },
+        "summary": "El apneísta neozelandés William Trubridge ha roto su récord 16 veces. En esta ocasión alcanzó una profundidad de 122 metros en 4 minutos y 24 segundos en la isla de Bahamas, en el mar Caribe. ",
+        "timestamp": 1462287598000,
+        "language": "es",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+          "taggings": []
+        },
+        "media": {
+          "id": "43666343",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "43666343",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/02/160502172014_vertical_club_vertical_640x360_verticalclub_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2016/05/02/160502172014_vertical_club_vertical_640x360_verticalclub_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "vertical club",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/mundo/meta/dps/2016/05/emp/160502_video_apnea_record_rubridge_nezolandes_amv.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/apnea_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/apnea_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/apnea_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e232",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/02/160502172014_vertical_club_vertical_144x81_verticalclub_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2016/05/02/160502172014_vertical_club_vertical_144x81_verticalclub_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "vertical",
+          "copyrightHolder": "Vertical Club",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Video y Fotos",
+          "uri": "/mundo/video_fotos",
+          "urlIdentifier": "/mundo/video_fotos",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCMundo.com",
+          "uri": "/mundo",
+          "urlIdentifier": "/mundo",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "El increíble récord mundial de apnea",
-      "headline": "El increíble récord mundial de apnea"
     },
-    "locators": {
-      "assetUri": "/mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
-      "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
-      "curie": "http://www.bbc.co.uk/asset/b013a8ba-108b-11e6-86c7-c88b3db9bd6e"
-    },
-    "summary": "El apneísta neozelandés William Trubridge ha roto su récord 16 veces. En esta ocasión alcanzó una profundidad de 122 metros en 4 minutos y 24 segundos en la isla de Bahamas, en el mar Caribe. ",
-    "timestamp": 1550159966544,
-    "passport": {},
-    "media": {
-      "id": "43666343",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/mundo/meta/dps/2016/05/emp/160502_video_apnea_record_rubridge_nezolandes_amv.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e232",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/02/160502172014_vertical_club_vertical_144x81_verticalclub_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2016/05/02/160502172014_vertical_club_vertical_144x81_verticalclub_nocredit.jpg",
-      "height": 81,
-      "width": 144,
-      "altText": "vertical",
-      "copyrightHolder": "Vertical Club",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:mundo/video_fotos/2016/05/160502_video_apnea_record_rubridge_nezolandes_amv",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Video y Fotos",
-      "uri": "/mundo/video_fotos",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCMundo.com",
-      "uri": "/mundo",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:44:35.653Z",
+        "lastRecordTimeStamp": "2023-02-15T09:42:00Z",
+        "firstRecordTimeStamp": "2023-02-15T07:42:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "b467d0ea-f35b-8948-ae7b-e20ea4056f05",
+            "rank": 1,
+            "count": 43,
+            "urn": "urn:bbc:curie:asset:b467d0ea-f35b-8948-ae7b-e20ea4056f05",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "El video privado que una joven envió a su novio y se volvió viral en Egipto",
+                "headline": "El video privado que una joven envió a su novio y él publicó para humillarla"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-37780063",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-37780063",
+                "curie": "http://www.bbc.co.uk/asset/b467d0ea-f35b-8948-ae7b-e20ea4056f05",
+                "assetId": "37780063"
+              },
+              "summary": "Una joven en Egipto grabó un video en el que se la veía bailando. Se lo envió a su novio. Cuando se separaron, él decidió compartirlo en internet para humillarla y el video se volvió viral.",
+              "timestamp": 1477500521000,
+              "language": "es",
+              "media": {
+                "id": "p04d74l4",
+                "subType": "clip",
+                "format": "video",
+                "title": "El video íntimo que una joven envió a su novio y que se volvió viral en Egipto",
+                "synopses": {
+                  "short": "El video íntimo que una joven envió a su novio y que se volvió viral en Egipto",
+                  "medium": "Una joven en Egipto grabó un video en el que se la veía bailando. Se lo envió a su novio. Cuando se separaron, él decidió compartirlo en internet, con consecuencias inesperadas.",
+                  "long": "En 2009, una joven egipcia de 18 años grabó un video en la casa de una de sus amigas en el que aparecía bailando.\n\nLas imágenes no contenían ningún material explícito: sólo se la veía moviéndose al ritmo de la música, alegre y sensual. \n\nGhadeer Ahmed le envió el video a su novio. Años más tarde, cuando se separaron, en un acto de venganza, él publicó el video en internet. \n\nAhmed lo llevó a la corte donde él fue hallado culpable de difamación. \n\nPese a haber ganado el juicio, el video siguió circulando por internet. \n\nAhmed decidió publicarlo en su página de Facebook.\n\nEn una entrevista con la BBC, contó por qué lo hizo y por qué cree que hace falta conquistar más derechos para las mujeres en su país."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04d75q3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "El video íntimo que una joven envió a su novio y que se volvió viral en Egipto",
+                "versions": [
+                  {
+                    "versionId": "p04d74l6",
+                    "types": ["Original"],
+                    "duration": 189,
+                    "durationISO8601": "PT3M9S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1477489886000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "92100126",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F294/production/_92100126_p04d75q3.jpg",
+                "path": "/cpsprodpb/F294/production/_92100126_p04d75q3.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ghadeer Ahmed",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-37780063",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f370285a-0406-472d-9900-1ec0604209f8",
+            "rank": 2,
+            "count": 19,
+            "urn": "urn:bbc:curie:asset:f370285a-0406-472d-9900-1ec0604209f8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "En video: la destrucción que dejan los dos terremotos en Turquía y Siria",
+                "headline": "Terremoto en Turquía y Siria | En video: la destrucción que dejan los dos fuertes sismos"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-internacional-64549104",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:f370285a-0406-472d-9900-1ec0604209f8",
+                "assetId": "64549104",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-64549104",
+                "curie": "http://www.bbc.co.uk/asset/f370285a-0406-472d-9900-1ec0604209f8"
+              },
+              "summary": "El presidente de Turquía, Recep Tayyip Erdogan, lo ha llamado \"el peor desastre que ha vivido el país en el último siglo después del terremoto de 1939 en Erzincan\".",
+              "timestamp": 1675720499000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "es",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+                "locator": "urn:bbc:cps:curie:asset:f370285a-0406-472d-9900-1ec0604209f8",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "es",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingLabel": "Siria",
+                      "thingUri": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingId": "28b0a95e-89d3-4fdf-bad0-8565eb549233",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/163843/"],
+                      "thingEnglishLabel": "Syria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "Terremotos",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "Turquía",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1fydv",
+                "subType": "clip",
+                "format": "video",
+                "title": "Por qué Turquía es un \"hervidero de terremotos\"",
+                "synopses": {
+                  "short": "Te explicamos las razones geológicas que hacen de Turquía un centro de terremotos."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1g0dl.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Terremotos en Turquía y Siria dejan más de mil muertos",
+                "versions": [
+                  {
+                    "versionId": "p0f1fyf3",
+                    "types": ["Original"],
+                    "duration": 75,
+                    "durationISO8601": "PT1M15S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675717943000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128544829",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/16AAC/production/_128544829_324220535_737550047756436_7992761491377500150_n.jpg",
+                "path": "/cpsprodpb/16AAC/production/_128544829_324220535_737550047756436_7992761491377500150_n.jpg",
+                "height": 1080,
+                "width": 1920,
+                "altText": "Miles de muertos en el terremoto en Turquía y Siria",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-internacional-64549104",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "54fa6f30-1e97-11e6-8c94-079e3db9bd6e",
+            "rank": 3,
+            "count": 14,
+            "urn": "urn:bbc:curie:asset:54fa6f30-1e97-11e6-8c94-079e3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Quién era Nicholas Winton, el hombre que salvó a casi 700 niños judíos de los nazis?",
+                "headline": "¿Quién era Nicholas Winton, el hombre que salvó a casi 700 niños judíos de los nazis?"
+              },
+              "locators": {
+                "assetUri": "/mundo/video_fotos/2016/05/160520_video_nicholas_winton_nazis_holocausto_lp",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2016/05/160520_video_nicholas_winton_nazis_holocausto_lp",
+                "curie": "http://www.bbc.co.uk/asset/54fa6f30-1e97-11e6-8c94-079e3db9bd6e",
+                "assetId": "43912414"
+              },
+              "summary": "Durante la ocupación nazi de Praga, Winton era un joven que trabajaba como corredor de bolsa en Londres. Pero estos acontecimientos hicieron que lo abandonara todo y se dedicara a sacar por tren a niños judíos de Praga para enviarlos a Reino Unido.",
+              "timestamp": 1463757782000,
+              "language": "es",
+              "media": {
+                "id": "43912414",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "43912414",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/20/160520144059_winton_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2016/05/20/160520144059_winton_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Nicholas Winton ",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/mundo/meta/dps/2016/05/emp/160520_video_nicholas_winton_nazis_holocausto_lp.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/video_mundo_winton_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/video_mundo_winton_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2016/05/video_mundo_winton_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e298",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/20/160520144059_winton_640x360_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2016/05/20/160520144059_winton_640x360_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Nicholas Winton ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/video_fotos/2016/05/160520_video_nicholas_winton_nazis_holocausto_lp",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0962c208-9064-9d45-9c80-2fb07c9c0a47",
+            "rank": 4,
+            "count": 12,
+            "urn": "urn:bbc:curie:asset:0962c208-9064-9d45-9c80-2fb07c9c0a47",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Animación creada por David Hockney",
+                "headline": "La animación de uno de los dibujos de David Hockney creado en Normandía"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-52123665",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-52123665",
+                "curie": "http://www.bbc.co.uk/asset/0962c208-9064-9d45-9c80-2fb07c9c0a47",
+                "assetId": "52123665"
+              },
+              "summary": "La animación de uno de los dibujos de David Hockney creado en Normandía",
+              "timestamp": 1585746911000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08884y1",
+                "subType": "clip",
+                "format": "video",
+                "title": "David Hockney animation from Normandy",
+                "synopses": {
+                  "short": "One of David Hockney's animated paintings from Normandy",
+                  "long": "One of David Hockney's animated paintings from Normandy",
+                  "medium": "One of David Hockney's animated paintings from Normandy"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0889gkq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "La animación de uno de los dibujos de David Hockney creado en Normandía",
+                "versions": [
+                  {
+                    "versionId": "p08884y6",
+                    "types": ["Original"],
+                    "duration": 45,
+                    "durationISO8601": "PT45S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1585719158000
+                  }
+                ],
+                "imageCopyright": "David Hockney",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111495397",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/135FF/production/_111495397_p0889gkq.jpg",
+                "path": "/cpsprodpb/135FF/production/_111495397_p0889gkq.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "David Hockney animation",
+                "copyrightHolder": "David Hockney",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-52123665",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ad541c8d-24f9-d248-8e76-19fb882c45e4",
+            "rank": 5,
+            "count": 10,
+            "urn": "urn:bbc:curie:asset:ad541c8d-24f9-d248-8e76-19fb882c45e4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Así reconstruyeron el rostro de San Valentín, el santo que se asocia al amor",
+                "headline": "Así reconstruyeron el rostro de San Valentín, el santo que se asocia al amor"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-43046208",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-43046208",
+                "curie": "http://www.bbc.co.uk/asset/ad541c8d-24f9-d248-8e76-19fb882c45e4",
+                "assetId": "43046208"
+              },
+              "summary": "Gracias al trabajo de un equipo multidisciplinar, los restos del santo fueron reconstruidos por medio de computación gráfica y transformados en un rostro fiel al del hombre.",
+              "timestamp": 1518606097000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05y14wg",
+                "subType": "clip",
+                "format": "video",
+                "title": "Así era el verdadero rostro de San Valentín",
+                "synopses": {
+                  "short": "A partir de los restos del santo, expertos lograron reconstruir su rostro.",
+                  "medium": "Gracias al trabajo de un equipo multidisciplinar, los restos del santo fueron reconstruidos por medio de computación gráfica y transformados en un rostro fiel al del hombre.",
+                  "long": "¿Cómo era el verdadero rostro de San Valentín?\n\nA diferencia de como es retratado tradicionalmente, no se trata de un señor de aspecto delicado y edad avanzada, sino un hombre de facciones rústicas y relativamente joven.\n\nUn diseñador brasileño, Cícero Moraes, fue el responsable de la reconstrucción en 3D del rostro del santo patrón de los enamorados.\n\nEl trabajo comenzó el año pasado, a partir de los restos mortales atribuidos al santo, que descansan en una tumba en la Iglesia de San Jorge, en Monselice, en la provincia italiana de Padua.\n\nSe cree que San Valentín era un obispo que probablemente vivió en el siglo III de la era cristiana. \n\nLa Iglesia le atribuyó a San Valentín la capacidad de proteger a los enamorados y por eso en muchos países el 14 de febrero se celebra el Día de los Enamorados. \n\nSin embargo, el origen del festejo no tiene que ver con el catolicismo, sino con leyendas romanas previas a la cristianización."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05y15c0.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Así reconstruyeron el rostro de San Valentín a partir de sus restos mortales",
+                "versions": [
+                  {
+                    "versionId": "p05y14wj",
+                    "types": ["Original"],
+                    "duration": 38,
+                    "durationISO8601": "PT38S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1518532854000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100011883",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/979B/production/_100011883_p05y15c0.jpg",
+                "path": "/cpsprodpb/979B/production/_100011883_p05y15c0.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Gracias al trabajo de un equipo multidisciplinar, los restos del santo fueron reconstruidos por medio de computación gráfica y transformados en un rostro fiel al del hombre.",
+                "copyrightHolder": "¿Cómo era el verdadero rostro de San Valentín?  A ",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-43046208",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b9badb90-6131-4444-9cb0-91b411cf9500",
+            "rank": 6,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:b9badb90-6131-4444-9cb0-91b411cf9500",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Quiero un pene más grande\": los hombres que se rellenan el miembro para engrosarlo",
+                "headline": "\"Quiero un pene más grande\": los hombres que se rellenan el miembro para engrosarlo"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-46062916",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-46062916",
+                "curie": "http://www.bbc.co.uk/asset/b9badb90-6131-4444-9cb0-91b411cf9500",
+                "assetId": "46062916"
+              },
+              "summary": "Cada vez más hombres se someten en Reino Unido a procedimientos de engrosamiento de pene. Expertos alertan de los riesgos, en especial si se usan versiones caseras.",
+              "timestamp": 1541157282000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "CS"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06qhrtk",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Quiero un pene más grande\": los hombres que se rellenan el miembro para agrandarlo",
+                "synopses": {
+                  "short": "\"Quiero un pene más grande\": los hombres que se rellenan el miembro para agrandarlo",
+                  "long": "Cada vez más hombres se someten en Reino Unido a procedimientos de engrosamiento de pene. Expertos alertan de los riesgos, en especial si se usan versiones caseras.",
+                  "medium": "Cada vez más hombres se someten en Reino Unido a procedimientos de engrosamiento de pene. Expertos alertan de los riesgos, en especial si se usan versiones caseras."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06qmhg0.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "\"Quiero un pene más grande\": los hombres que se rellenan el miembro para agrandarlo",
+                "versions": [
+                  {
+                    "versionId": "p06qmhbd",
+                    "types": ["Editorial"],
+                    "duration": 159,
+                    "durationISO8601": "PT2M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1541082745000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104146774",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/BA94/production/_104146774_p06qlmtb.jpg",
+                "path": "/cpsprodpb/BA94/production/_104146774_p06qlmtb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Pareja en Reino Unido",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-46062916",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a2848bda-ce17-456b-baa5-bec369223833",
+            "rank": 7,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:a2848bda-ce17-456b-baa5-bec369223833",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"No creo en el término paratleta, soy un atleta\": Daniel Dias, el nadador paralímpico más condecorado de la historia",
+                "headline": "Daniel Dias, el nadador paralímpico más condecorado de la historia: \"No creo en el término paratleta, yo soy un atleta\":"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-58357869",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-58357869",
+                "curie": "http://www.bbc.co.uk/asset/a2848bda-ce17-456b-baa5-bec369223833",
+                "assetId": "58357869"
+              },
+              "summary": "Tras 24 medallas en tres Juegos Paralímpicos, el nadador brasileño Daniel Dias se despide en Tokio con el objetivo de lograr más medallas y algún récord.",
+              "timestamp": 1630081778000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  },
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "language": "es",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+                "locator": "urn:bbc:cps:curie:asset:a2848bda-ce17-456b-baa5-bec369223833",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a922e938-91e3-40a0-adba-097983a7d38e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/256b153b-5a34-4320-8c4a-a1cc8544d7fc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+                      "thingLabel": "Brasil",
+                      "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
+                      "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/3469034/"],
+                      "thingEnglishLabel": "Brazil",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/256b153b-5a34-4320-8c4a-a1cc8544d7fc#id",
+                      "thingLabel": "Tokio 2020",
+                      "thingUri": "http://www.bbc.co.uk/things/256b153b-5a34-4320-8c4a-a1cc8544d7fc#id",
+                      "thingId": "256b153b-5a34-4320-8c4a-a1cc8544d7fc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "sport:DivisionalCompetition",
+                        "core:Thing",
+                        "core:Event",
+                        "sport:Competition"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/2020_Summer_Olympics",
+                        "http://www.wikidata.org/entity/Q181278"
+                      ],
+                      "thingEnglishLabel": "Tokyo 2020",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a922e938-91e3-40a0-adba-097983a7d38e#id",
+                      "thingLabel": "Deportes paralímpicos",
+                      "thingUri": "http://www.bbc.co.uk/things/a922e938-91e3-40a0-adba-097983a7d38e#id",
+                      "thingId": "a922e938-91e3-40a0-adba-097983a7d38e",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Disability Sport",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "es",
+                      "type": "formats"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id",
+                      "type": "contributor"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09tdrsn",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"No creo en el término para-atleta, soy un atleta\". Daniel Dias, 24 medallas y una despedida en Tokio",
+                "synopses": {
+                  "short": "Daniel Dias, el mejor nadador de la historia se despide en Tokio con ganas de más medallas"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09tdzd8.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Daniel Dias, el mejor nadador de la historia se despide en Tokio con ganas de más medallas",
+                "versions": [
+                  {
+                    "versionId": "p09tdrsq",
+                    "types": ["Original"],
+                    "duration": 185,
+                    "durationISO8601": "PT3M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1630079458000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "120304642",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6040/production/_120304642_p09tdsk6.jpg",
+                "path": "/cpsprodpb/6040/production/_120304642_p09tdsk6.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Juegos Paralímpicos: Daniel Dias, el mejor nadador de la historia se despide en Tokio con ganas de más medallas",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-58357869",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e2e02e95-8ff3-0047-9e63-29f1b37a6b5b",
+            "rank": 8,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:e2e02e95-8ff3-0047-9e63-29f1b37a6b5b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Qué pasó en el campo de concentración de Auschwitz?",
+                "headline": "¿Qué pasó en el campo de concentración de Auschwitz?"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-51239995",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-51239995",
+                "curie": "http://www.bbc.co.uk/asset/e2e02e95-8ff3-0047-9e63-29f1b37a6b5b",
+                "assetId": "51239995"
+              },
+              "summary": "Uno de los lugares más lúgubres de la historia reciente, fue un sitio de tortura, trabajos forzados, deshumanización sistemática y exterminio, particularmente de judíos.",
+              "timestamp": 1580121776000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08194m2",
+                "subType": "clip",
+                "format": "video",
+                "title": "¿Qué pasó en el campo de concentración de Auschwitz?",
+                "synopses": {
+                  "short": "¿Qué pasó en el campo de concentración de Auschwitz?",
+                  "long": "Líderes mundiales se reúnen en Israel para conmemorar el 75 aniversario de la liberación del campo de concentración nazi de Auschwitz.\n\nEl campo, construido en 1940 en la Polonia ocupada, recluyó incialmente a líderes políticos, miembros de la resisitencia pero, luego, se convirtió en parte del plan nazi para el exterminio de los judíos.\n\nEl lugar fue escenario de torturas, trabajos forzados, deshumanización sistemática, ejecuciones y muerte en masa en cámaras de gas.\n\nAl menos 1,1 millón de personas, 90% judías, murieron allí, antes de que el campamento fuera liberado, el 27 de enero de 1945, por tropas soviéticas.\n\nDesde 2005, ese día se observa como parte de los actos anuales del Día Internacional en Conmemoración de las Víctimas del Holocausto.",
+                  "medium": "Uno de los lugares más lúgubres de la reciente historia, fue un sitio de tortura, trabajos forzados, deshumanización sistemática y exterminio, particularmente de judíos."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08194xw.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "¿Qué pasó en el campo de concentración de Auschwitz?",
+                "versions": [
+                  {
+                    "versionId": "p08194m5",
+                    "types": ["Original"],
+                    "duration": 167,
+                    "durationISO8601": "PT2M47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1579872188000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110635976",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10971/production/_110635976_p08194xw.jpg",
+                "path": "/cpsprodpb/10971/production/_110635976_p08194xw.jpg",
+                "height": 575,
+                "width": 1024,
+                "altText": "Prisioneros en el campo de Auschwitz",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-51239995",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6d745333-c79d-e245-a5b2-f4acb7de35e1",
+            "rank": 9,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:6d745333-c79d-e245-a5b2-f4acb7de35e1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Qué es el albur en México y cómo puedes saber si te están \"albureando\"?",
+                "headline": "¿Qué es el albur en México y cómo puedes saber si te están \"albureando\"?"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-41174775",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-41174775",
+                "curie": "http://www.bbc.co.uk/asset/6d745333-c79d-e245-a5b2-f4acb7de35e1",
+                "assetId": "41174775"
+              },
+              "summary": "Un juego de palabras, el arte del doble sentido. El albur en México es un lenguaje popular lleno de picardía. Lourdes Ruiz, más conocida como la “reina del albur”, explica su origen, cómo crear albures y cuáles son sus favoritos.",
+              "timestamp": 1505398154000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05fb33s",
+                "subType": "clip",
+                "format": "video",
+                "title": "¿Qué es el albur en México y cómo puedes saber si te están albureando?",
+                "synopses": {
+                  "short": "¿Qué es el albur en México y cómo puedes saber si te están albureando?",
+                  "medium": "Un juego de palabras, el arte del doble sentido, el albur en México es un lenguaje popular lleno de picardía. Lourdes Ruiz, más conocida como la “reina del albur”, lo explica.",
+                  "long": "Es como una esgrima verbal en la que gana el más rápido, dicen los que saben.\nY Lourdes Ruiz sabe: ella ha sido campeona en el torneo nacional de albures, un género antes reservado solo para hombres. \nEn el albur no se puede insultar, ni decir palabras soeces. Eso sí, el doble sentido, en la gran mayoría de los casos, alude al sexo. \nSu origen es prehispánico, se cocina en la calle y en años recientes ha habido una reivindicación de su valor cultural y de su estrecha relación con el “ser mexicano”. \nRuiz, quien es puestera en el mercado de Tepito, en Ciudad de México, incluso imparte talleres de “albures finos”. \nElla ofrece algunas claves para entender mejor la picardía mexicana.\nEste video es parte de la versión digital del Hay Festival Querétaro, un encuentro de escritores y pensadores que se realiza en esa ciudad mexicana entre el 7 y el 10 de septiembre."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05fb4z6.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "¿Qué es el albur en México y cómo puedes saber si te están albureando?",
+                "versions": [
+                  {
+                    "versionId": "p05fb33w",
+                    "types": ["Original"],
+                    "duration": 138,
+                    "durationISO8601": "PT2M18S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1504715453000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "97687659",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/175BE/production/_97687659_p05fb4hj.jpg",
+                "path": "/cpsprodpb/175BE/production/_97687659_p05fb4hj.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Ilustración con emoji",
+                "copyrightHolder": "BBC/Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-41174775",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b2815e06-c2e0-c048-958a-2032ba5a5f99",
+            "rank": 10,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:b2815e06-c2e0-c048-958a-2032ba5a5f99",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Maté a mi violador cuando quiso abusar de mi hermana menor",
+                "headline": "Maté a mi violador cuando quiso abusar de mi hermana menor (y mi padre nunca me perdonó)"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-37799795",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-37799795",
+                "curie": "http://www.bbc.co.uk/asset/b2815e06-c2e0-c048-958a-2032ba5a5f99",
+                "assetId": "37799795"
+              },
+              "summary": "Una joven tunecina fue abusada por un amigo de su padre. Él la extorsionó sacándole fotos desnuda. La joven aguantó la situación, hasta que el hombre quiso ir un paso más allá.",
+              "timestamp": 1477650968000,
+              "language": "es",
+              "media": {
+                "id": "p04df5ch",
+                "subType": "clip",
+                "format": "video",
+                "title": "Maté a mi violador cuando quiso abusar de mi hermana menor",
+                "synopses": {
+                  "short": "Maté a mi violador cuando quiso abusar de mi hermana menor",
+                  "medium": "Una joven tunecina fue abusada por un amigo de su padre. Él la extorsionó sacándole fotos desnunda. La joven toleró la situación, hasta que el hombre quiso ir un paso más allá.",
+                  "long": "Una joven tunecina fue fotografiada desnuda por un amigo de su padre. \n\nÉl la violó y la amenazó con mostrar estas fotografías, si le contaba a alguien lo que había ocurrido. \n\nCada día, Amal debía además darle dinero. \n\nLa joven decidió tolerar esta situación por la vergüenza que sentía hasta que un día, cuando el hombre amenazó con abusar de su hermana, decidió matarlo.\n\nEsta es la historia contada por su protagonista. \n\nPor razones de seguridad, el nombre y la voz de la joven han sido cambiados."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04df8rm.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Maté a mi violador cuando quiso abusar de mi hermana menor",
+                "versions": [
+                  {
+                    "versionId": "p04df5cl",
+                    "types": ["Original"],
+                    "duration": 309,
+                    "durationISO8601": "PT5M9S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1477648117000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "92124376",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1070E/production/_92124376_p04df8rm.jpg",
+                "path": "/cpsprodpb/1070E/production/_92124376_p04df8rm.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Animación",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-37799795",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7226a151-27c5-3342-9b87-f8aab33434e1",
+            "rank": 11,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:7226a151-27c5-3342-9b87-f8aab33434e1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Así pinta Metro, el caballo que financia su tratamiento médico con sus \"obras de arte\"",
+                "headline": "Así pinta Metro, el caballo que financia su tratamiento médico con sus \"obras de arte\""
+              },
+              "locators": {
+                "assetUri": "/mundo/media-39779836",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-39779836",
+                "curie": "http://www.bbc.co.uk/asset/7226a151-27c5-3342-9b87-f8aab33434e1",
+                "assetId": "39779836"
+              },
+              "summary": "Metro era un caballo de carreras, pero tras sufrir lesiones en sus rodillas dejó esta profesión. Ahora se dedica al arte.",
+              "timestamp": 1493726543000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p051qrlg",
+                "subType": "clip",
+                "format": "video",
+                "title": "Así pinta Metro, el caballo que se financia su tratamiento médico pintando",
+                "synopses": {
+                  "short": "Así pinta Metro, el caballo que se financia su tratamiento médico pintando",
+                  "medium": "Metro era un caballo de carreras, pero tras sufrir lesiones en sus rodillas dejó esta profesión.",
+                  "long": "Metro acostumbraba a correr en las carreras. Pero esta actividad le provocó lesiones en las rodillas. \n\nSu nuevo dueño, que sabía que la enfermedad acabaría por matarlo, decidió pasar más tiempo con él y le enseñó a pintar. \n\nGracias a la venta de los cuadros del caballo, su dueño Ron pudo pagarle un nuevo tratamiento experimental que mejoró enormemente su estado de salu. \n\nMetro vive feliz y no deja de producir \"obras de arte\". \n\nMira cómo lo hace."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p051qv5x.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Así pinta Metro, el caballo que se financia su tratamiento médico con sus \"obras de arte\"",
+                "versions": [
+                  {
+                    "versionId": "p051qrlj",
+                    "types": ["Original"],
+                    "duration": 34,
+                    "durationISO8601": "PT34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1493725062000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95868783",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9782/production/_95868783_p051qv5x.jpg",
+                "path": "/cpsprodpb/9782/production/_95868783_p051qv5x.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Metro, el caballo pintor",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-39779836",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6e391de4-7bf1-11e7-87fe-51e53db9bd6e",
+            "rank": 12,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:6e391de4-7bf1-11e7-87fe-51e53db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Una ciudad de EE.UU. que invita a los inmigrantes",
+                "headline": "Una ciudad de EE.UU. que invita a los inmigrantes"
+              },
+              "locators": {
+                "assetUri": "/mundo/video_fotos/2012/08/120813_video_hisoanos_baltimore_rg",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/video_fotos/2012/08/120813_video_hisoanos_baltimore_rg",
+                "curie": "http://www.bbc.co.uk/asset/6e391de4-7bf1-11e7-87fe-51e53db9bd6e",
+                "assetId": "19259098"
+              },
+              "summary": "Para compensar el éxodo de habitantes, las autoridades de Baltimore invitan a los inmigrantes, en su mayoría  de origen latinoamericano, a que se instalen allí y echen raíces. Vea los detalles.",
+              "timestamp": 1344977800000,
+              "language": "es",
+              "media": {
+                "id": "19259098",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "19259098",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/08/13/120813085310_hispanos_en_baltimore_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2012/08/13/120813085310_hispanos_en_baltimore_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/mundo/meta/dps/2012/08/emp/120813_video_hisoanos_baltimore_rg.emp.xml",
+                "playlist": [
+                  {
+                    "format": "3gp",
+                    "bitrate": "80000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/3gp/2012/08/mundo~fbaltimore marquez~f0935~f13~f8_16x9_lo.3gp"
+                  },
+                  {
+                    "format": "3gp",
+                    "bitrate": "160000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/3gp/2012/08/mundo~fbaltimore marquez~f0935~f13~f8_16x9_hi.3gp"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2012/08/mundo~fbaltimore marquez~f0935~f13~f8_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2012/08/mundo~fbaltimore marquez~f0935~f13~f8_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/mundo/dps/2012/08/mundo~fbaltimore marquez~f0935~f13~f8_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e223",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/08/13/120813085311_hispanos_en_baltimore_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/08/13/120813085311_hispanos_en_baltimore_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "Hispanos en Baltimore",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/video_fotos/2012/08/120813_video_hisoanos_baltimore_rg",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6ccca6ec-f6a7-4be6-b848-91a8a05e7273",
+            "rank": 13,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:6ccca6ec-f6a7-4be6-b848-91a8a05e7273",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Cómo una joven india superó sus miedos y se convirtió en referencia del bádminton adaptado",
+                "headline": "“He transformado mi discapacidad en una superhabilidad”: la increíble historia de la paralímpica Palak Kohli"
+              },
+              "locators": {
+                "assetUri": "/mundo/noticias-58272444",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-58272444",
+                "curie": "http://www.bbc.co.uk/asset/6ccca6ec-f6a7-4be6-b848-91a8a05e7273",
+                "assetId": "58272444"
+              },
+              "summary": "Con solo 18 años, la jugadora india de bádminton adaptado Palak Kohli competirá en los Juegos Paralímpicos de Tokio 2020, tras nacer con un brazo sin desarrollar.",
+              "timestamp": 1629730340000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "language": "es",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+                "locator": "urn:bbc:cps:curie:asset:6ccca6ec-f6a7-4be6-b848-91a8a05e7273",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a922e938-91e3-40a0-adba-097983a7d38e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/256b153b-5a34-4320-8c4a-a1cc8544d7fc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/21c45f67-36da-874e-ab36-02650add8311#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/21c45f67-36da-874e-ab36-02650add8311#id",
+                      "thingLabel": "Bádminton",
+                      "thingUri": "http://www.bbc.co.uk/things/21c45f67-36da-874e-ab36-02650add8311#id",
+                      "thingId": "21c45f67-36da-874e-ab36-02650add8311",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "sport:SportsDiscipline",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Badminton",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/256b153b-5a34-4320-8c4a-a1cc8544d7fc#id",
+                      "thingLabel": "Tokio 2020",
+                      "thingUri": "http://www.bbc.co.uk/things/256b153b-5a34-4320-8c4a-a1cc8544d7fc#id",
+                      "thingId": "256b153b-5a34-4320-8c4a-a1cc8544d7fc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "sport:DivisionalCompetition",
+                        "core:Thing",
+                        "core:Event",
+                        "sport:Competition"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/2020_Summer_Olympics",
+                        "http://www.wikidata.org/entity/Q181278"
+                      ],
+                      "thingEnglishLabel": "Tokyo 2020",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                      "thingLabel": "Deportes",
+                      "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                      "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Sport",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingLabel": "India",
+                      "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/India",
+                        "http://sws.geonames.org/1269750/",
+                        "http://www.wikidata.org/entity/Q668"
+                      ],
+                      "thingEnglishLabel": "India",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a922e938-91e3-40a0-adba-097983a7d38e#id",
+                      "thingLabel": "Deportes paralímpicos",
+                      "thingUri": "http://www.bbc.co.uk/things/a922e938-91e3-40a0-adba-097983a7d38e#id",
+                      "thingId": "a922e938-91e3-40a0-adba-097983a7d38e",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Disability Sport",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "es",
+                      "type": "formats"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id",
+                      "type": "contributor"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09snwh5",
+                "subType": "clip",
+                "format": "video",
+                "title": "“He transformado mi discapacidad en una súper habilidad”: la increíble historia de la paralímpica Palak Kohli",
+                "synopses": {
+                  "short": "Cómo una joven india superó sus miedos y se convirtió en referencia del bádminton adaptado",
+                  "long": "Con solo 18 años, Palak Kohli es una de las grandes promesas del deporte paralímpico en la India. Esta joven jugadora de bádminton adaptado competirá en los Juegos Paralímpicos de Tokio 2020 hasta en tres categorías diferentes, la única de su país que lo hará.",
+                  "medium": "Con solo 18 años, la jugadora india de bádminton adaptado Palak Kohli competirá en los Juegos Paralímpicos de Tokio 2020, tras nacer con un brazo sin desarrollar."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09szr58.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "“He transformado mi discapacidad en una superhabilidad”: la increíble historia de la paralímpica Palak Kohli",
+                "versions": [
+                  {
+                    "versionId": "p09snwhd",
+                    "types": ["Original"],
+                    "duration": 155,
+                    "durationISO8601": "PT2M35S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1629382719000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "120031109",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/16001/production/_120031109_p09sny48.jpg",
+                "path": "/cpsprodpb/16001/production/_120031109_p09sny48.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "La jugadora india de bádminton adaptado Palak Kohli",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/noticias-58272444",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c8a93eaa-b7eb-a945-b420-3bb78186a57d",
+            "rank": 14,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:c8a93eaa-b7eb-a945-b420-3bb78186a57d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Estos son algunos de los sonidos más espeluznantes del universo, según la NASA",
+                "headline": "Estos son algunos de los sonidos más espeluznantes del universo, según la NASA"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-41819389",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-41819389",
+                "curie": "http://www.bbc.co.uk/asset/c8a93eaa-b7eb-a945-b420-3bb78186a57d",
+                "assetId": "41819389"
+              },
+              "summary": "Es Halloween y, para celebrarlo, la agencia espacial estadounidense publicó una lista con los sonidos más inquietantes grabados por las sondas que viajan por el espacio.",
+              "timestamp": 1509453832000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05lkc3p",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Esos son algunos de los sonidos más espeluznantes del universo, según la NASA",
+                "synopses": {
+                  "short": "Esos son algunos de los sonidos más espeluznantes del universo, según la NASA",
+                  "medium": "Es Halloween y, para celebrarlo, la agencia espacial estadounidense publicó una lista con los sonidos más inquietantes grabados por las sondas que viajan por el espacio.",
+                  "long": "Para celebrar Halloween, la NASA publicó una lista con algunos de los sonidos más espeluznantes del universo. \n\nLa lista está compuesta por sonidos recogidos por sondas espaciales a lo largo de sus viajes, entre los que se incluyen misiones a Júpiter, Saturno y otros cuerpos celestes en los confines del Sistema Solar. \n\nSi bien los sonidos en realidad no se escuchan en el espacio porque no hay una atmósfera que pueda llevar las ondas sonoras, los instrumentos de las naves tienen la habilidad de captar las emisiones de radio de estos cuerpos, que luego se traducen en ondas sonoras una vez en la Tierra. \n\n“Cuando los científicos convierten estas señales de radio en ondas sonoras, los resultados son escalofriantes”, dice la NASA en su página. \n\nEl sonido con el que comienza la lista captura el momento en el que la sonda Juno atraviesa los límites del inmenso campo magnético de Júpiter.\n\nLa sonda grabó estos sonidos durante dos horas el 24 de junio de 2016.\n\nTambién podemos escuchar en la lista olas de plasma, que crean una cacofonía rítmica que puede oírse por el espacio. \n\nEstas olas fueron captadas con el instrumento EMFISIS, a bordo de las zondas de la NASA Van Allen."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05lkfrj.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Esos son algunos de los sonidos más espeluznantes del universo, según la NASA",
+                "versions": [
+                  {
+                    "versionId": "p05lkc3r",
+                    "types": ["Original"],
+                    "duration": 99,
+                    "durationISO8601": "PT1M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1509449465000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "98552372",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6ABD/production/_98552372_p05lkfrj.jpg",
+                "path": "/cpsprodpb/6ABD/production/_98552372_p05lkfrj.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Dibujo de un fantasma",
+                "caption": "Sonidos inquietantes para celebrar la Noche de Brujas.",
+                "copyrightHolder": "NASA",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-41819389",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b951dfdc-5642-7442-8f98-dc96e3c25700",
+            "rank": 15,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:b951dfdc-5642-7442-8f98-dc96e3c25700",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "El impactante momento en que una patera llena de inmigrantes llega a playa repleta de veraneantes en España",
+                "headline": "El impactante momento en que una patera llena de inmigrantes llega a playa repleta de veraneantes en Cádiz, España"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-40889883",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-40889883",
+                "curie": "http://www.bbc.co.uk/asset/b951dfdc-5642-7442-8f98-dc96e3c25700",
+                "assetId": "40889883"
+              },
+              "summary": "El bote llegó hasta la costa y sus ocupantes salieron corriendo ante la sorprendida mirada de los veraneantes de la concurrida Playa de los Alemanes, en Cádiz, España. Más de 100.000 personas llegaron a Europa provenientes del norte de África y Medio Oriente entre enero y junio de este año, según la Organización Internacional para las Migraciones.",
+              "timestamp": 1502369062000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05c0wlg",
+                "subType": "clip",
+                "format": "video",
+                "title": "El impactante momento en que una patera llena de inmigrantes llega a playa española repleta de veraneantes",
+                "synopses": {
+                  "short": "El momento en que una patera de inmigrantes llega a playa turística de Cádiz",
+                  "medium": "El bote llegó hasta la costa y sus ocupantes salieron corriendo ante la sorprendida mirada de los veraneantes de Playa de los Alemanes, en Cádiz, España.",
+                  "long": "Mientras algunos veraneantes pasean tranquilos por la orilla, al fondo puede verse la agitada llegada de una patera llena de inmigrantes que saltan a la arena y salen corriendo. \nEl bote con decenas de migrantes llegó el miércoles hasta Playa de los Alemanes, en la localidad de Zahara de los Atunes, una zona popular de veraneo en la provincia española de Cádiz, tras cruzar el Estrecho de Gibraltar.\nLas imágenes grabadas con celulares y difundidas en las redes sociales muestran el momento en que los ocupantes del bote saltan a la arena y salen corriendo. \nEn las últimas semanas y debido a las buenas condiciones climáticas, se ha registrado un aumento de los intentos de migrantes de llegar a las costas españolas.\nSegún informa la agencia de noticias Reuters, más de 100.000 personas han llegado a Europa provenientes del norte de África y de Medio Oriente. La enorme mayoría de ellos lo hizo por vía marítima, según la Organización Internacional para las Migraciones."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05c0yl6.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "El impactante momento en que una patera llena de inmigrantes llega a playa española repleta de veraneantes",
+                "versions": [
+                  {
+                    "versionId": "p05c0wlj",
+                    "types": ["Original"],
+                    "duration": 37,
+                    "durationISO8601": "PT37S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1502368447000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "97284086",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/109D0/production/_97284086_p05c0yl6.jpg",
+                "path": "/cpsprodpb/109D0/production/_97284086_p05c0yl6.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Patera llega a una playa de Cádiz",
+                "copyrightHolder": "Javier Neira",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-40889883",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b2d7d8cc-b419-b940-a44f-422ffd4ab1ab",
+            "rank": 16,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:b2d7d8cc-b419-b940-a44f-422ffd4ab1ab",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Quién tuvo la culpa de la crisis financiera de 2008?",
+                "headline": "Colapso de Lehman Brothers en 2008: ¿quién tuvo la culpa de la crisis financiera?"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-45509222",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-45509222",
+                "curie": "http://www.bbc.co.uk/asset/b2d7d8cc-b419-b940-a44f-422ffd4ab1ab",
+                "assetId": "45509222"
+              },
+              "summary": "Han pasado 10 desde la crisis financiera global, de la que aún hoy día se sienten sus efectos. Esta animación explora cómo se desencadenó y quiénes fueron los responsables.",
+              "timestamp": 1536917530000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "CS"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06l1ffg",
+                "subType": "clip",
+                "format": "video",
+                "title": "¿Quién tuvo la culpa de la crisis financiera de 2008?",
+                "synopses": {
+                  "short": "¿Quién tuvo la culpa de la crisis financiera de 2008?",
+                  "long": "Este mes se cumplen 10 años del colapso de Lehman Brothers, que en 2008 era el cuarto banco más grande de Estados Unidos. \n\nLa quiebra de esta institución financiera jugó un papel clave en el desencadenamiento de una crisis financiera global.\n\nLos efectos de esta crisis aún pueden sentirse hoy día.\n\n¿Pero qué factores provocaron en principio la caída de estos grandes jugadores de la economía mundial?\n\nEn esta animación, el editor de Economía de la BBC Simon Jack explora quién es el culpable de la crisis financiera global.",
+                  "medium": "Han pasado 10 desde la crisis financiera global, de la que aún hoy día se sienten sus efectos. Esta animación explora cómo se desencadenó y quienes fueron los responsables."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06l4726.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "¿Quién tuvo la culpa de la crisis financiera de 2008?",
+                "versions": [
+                  {
+                    "versionId": "p06l1ffl",
+                    "types": ["Original"],
+                    "duration": 147,
+                    "durationISO8601": "PT2M27S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1536831901000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "103423827",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11C80/production/_103423827_crisis.jpg",
+                "path": "/cpsprodpb/11C80/production/_103423827_crisis.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ilustración crisis 2008",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-45509222",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9fcc457f-90e4-bd48-9a0c-79152c6e7db7",
+            "rank": 17,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:9fcc457f-90e4-bd48-9a0c-79152c6e7db7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Muñecas para niñas y robots para niños?: el experimento que muestra cómo los estereotipos de género pueden marcar los juguetes que elegimos",
+                "headline": "¿Muñecas para niñas y robots para niños?: el experimento que muestra cómo los estereotipos de género pueden marcar los juguetes que elegimos"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-40999708",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-40999708",
+                "curie": "http://www.bbc.co.uk/asset/9fcc457f-90e4-bd48-9a0c-79152c6e7db7",
+                "assetId": "40999708"
+              },
+              "summary": "Los juguetes de los niños tienen un impacto no solo en cómo se ven a ellos mismos y qué habilidades aprenden, sino también en cómo se desarrolla su cerebro.",
+              "timestamp": 1503401048000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05cz3j0",
+                "subType": "clip",
+                "format": "video",
+                "title": "Niño o niña: ¿con qué juguete crees que quieren jugar?",
+                "synopses": {
+                  "short": "Niño o niña, ¿con qué juguete crees que quieren jugar?",
+                  "medium": "Los juguetes de los niños tienen un impacto no solo en cómo se ven a ellos mismos y qué habilidades aprenden, sino también en cómo se desarrolla su cerebro.",
+                  "long": "Los juguetes de los niños tienen un impacto no solo en cómo se ven a ellos mismos y qué habilidades aprenden, sino también en cómo se desarrolla su cerebro.\nAlgunos psicólogos defienden que esto ayuda a explicar por qué algunas profesiones están dominadas por hombres.\nUn número cada vez mayor de padres y cuidadores dicen que intentan evitar juegos que estereotipan a los niños según su género. \nPero como muestra este experimento de la BBC, no siempre es fácil superar tus propios prejuicios."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05d2339.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Niño o niña, ¿con qué juguete crees que quieren jugar?",
+                "versions": [
+                  {
+                    "versionId": "p05cz3j3",
+                    "types": ["Original"],
+                    "duration": 205,
+                    "durationISO8601": "PT3M25S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1503333367000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "97474467",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12A9F/production/_97474467_p05cftxp.jpg",
+                "path": "/cpsprodpb/12A9F/production/_97474467_p05cftxp.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Niña",
+                "caption": "Niña",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-40999708",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9d7281a7-68be-6047-9973-edcb01d59f9f",
+            "rank": 18,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:9d7281a7-68be-6047-9973-edcb01d59f9f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "¿Qué significan las figuras del cuadro Guernica, la obra maestra de Pablo Picasso?",
+                "headline": "¿Qué significan las figuras del cuadro Guernica, la obra maestra de Pablo Picasso?"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-39706314",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-39706314",
+                "curie": "http://www.bbc.co.uk/asset/9d7281a7-68be-6047-9973-edcb01d59f9f",
+                "assetId": "39706314"
+              },
+              "summary": "El pintor malagueño decía que el Guernica significaba lo que cada persona viera en él. Pero los expertos siempre han intentado desentrañar el significado de la famosa pintura.",
+              "timestamp": 1493144057000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p0510mjp",
+                "subType": "clip",
+                "format": "video",
+                "title": "¿Qué significan las figuras del cuadro Guernica, la obra maestra de Pablo Picasso?",
+                "synopses": {
+                  "short": "¿Qué significan las figuras del cuadro Guernica, la obra maestra de Pablo Picasso?",
+                  "medium": "El pintor malagueño decía que el Guernica significaba lo que cada persona viera en él. Pero los expertos siempre han intentado desentrañar el significado del famoso cuadro.",
+                  "long": "Se sabe que cuando Picasso se enteró en París del brutal bombardeo a Guernica se lanzó indignado a pintar el enorme cuadro que abriría el pabellón de la República Española en la Exposición Internacional de París de 1937. \n\nTardó poco más de un mes en plasmar sobre el lienzo las desgarradas figuras en blanco, negro y gris que conmueven, 80 años después, a quien observa una de las pinturas más famosas del mundo. \n\nAlegato contra la guerra, símbolo del horror, del dolor... El Guernica representa todo eso. \n\nPero si bien el propio Picasso quería dejar abierta la lectura de su obra y nunca quiso definir el simbolismo de cada una de sus figuras, críticos y expertos han intentado desentrañar su significado a lo largo de los años. \n\nCon motivo de los 80 años del bombardeo a Gernika y de la creación del cuadro que lleva su nombre en español, Rosario Peiró, Jefa de Colecciones del Museo Reina Sofía de Madrid, compartió con BBC Mundo algunas de estas interpretaciones."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0513qpp.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Mira aquí qué significan las figuras del Guernica.",
+                "versions": [
+                  {
+                    "versionId": "p0513qjy",
+                    "types": ["Editorial"],
+                    "duration": 160,
+                    "durationISO8601": "PT2M40S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1493115224000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95777610",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/068D/production/_95777610_guernica_promo3.jpg",
+                "path": "/cpsprodpb/068D/production/_95777610_guernica_promo3.jpg",
+                "height": 1080,
+                "width": 1920,
+                "altText": "Fragmento del Guernica",
+                "caption": "Fragmento del Guernica",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-39706314",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "91f5fc32-f6fb-424a-b90b-0f89c5990dc8",
+            "rank": 19,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:91f5fc32-f6fb-424a-b90b-0f89c5990dc8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Las imágenes que muestran cómo Chernobyl se ha convertido en un paraíso para animales salvajes",
+                "headline": "Los animales salvajes de Chernobyl: cómo la zona de exclusión se ha convertido en un paraíso de vida silvestre"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-54162842",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-54162842",
+                "curie": "http://www.bbc.co.uk/asset/91f5fc32-f6fb-424a-b90b-0f89c5990dc8",
+                "assetId": "54162842"
+              },
+              "summary": "A pesar de los altos niveles de radiación en la zona de exclusión de Chernobyl, la vida silvestre ha prosperado. Un investigador documentó con su cámara cómo viven los animales salvajes en el lugar abandonado por los humanos.",
+              "timestamp": 1600168236000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08rfywn",
+                "subType": "clip",
+                "format": "video",
+                "title": "Los animales salvajes de Chernobyl: captan en cámara a los habitantes del lugar del accidente nuclear",
+                "synopses": {
+                  "short": "Pese a los elevados niveles de radiación en Chernobyl, la vida silvestre ha prosperado."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08rg060.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Pese a los elevados niveles de radiación en Chernobyl, la vida silvestre ha prosperado.",
+                "versions": [
+                  {
+                    "versionId": "p08rfyws",
+                    "types": ["Original"],
+                    "duration": 224,
+                    "durationISO8601": "PT3M44S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1600094450000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "114381788",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/15A8E/production/_114381788_chernobylanimalcopyrightserhiyhashchak.png",
+                "path": "/cpsprodpb/15A8E/production/_114381788_chernobylanimalcopyrightserhiyhashchak.png",
+                "height": 870,
+                "width": 1547,
+                "altText": "Gato en Chernobyl",
+                "copyrightHolder": "Serhiy Hashchak",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-54162842",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7e8cda60-6b4c-3c4f-86c5-5094104cb8f3",
+            "rank": 20,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:7e8cda60-6b4c-3c4f-86c5-5094104cb8f3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Cómo es el corazón más grande jamás visto",
+                "headline": "Cómo es el corazón más grande jamás visto"
+              },
+              "locators": {
+                "assetUri": "/mundo/media-40851758",
+                "cpsUrn": "urn:bbc:content:assetUri:mundo/media-40851758",
+                "curie": "http://www.bbc.co.uk/asset/7e8cda60-6b4c-3c4f-86c5-5094104cb8f3",
+                "assetId": "40851758"
+              },
+              "summary": "Pertenece a una ballena azul, el animal más grande más grande del mundo. Tras un largo proceso para conservarlo, el impresionante órgano se exhibe ahora en un museo de Canadá.",
+              "timestamp": 1502120953000,
+              "language": "es",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05bsfvg",
+                "subType": "clip",
+                "format": "video",
+                "title": "Cómo es el corazón más grande jamás visto",
+                "synopses": {
+                  "short": "Cómo es el corazón más grande jamás visto",
+                  "medium": "Pertenece a una ballena azul, el animal más pesado que jamás haya vivido. Tras un largo proceso para conservarlo, el impresionante órgano se exhibe ahora en un museo de Canadá.",
+                  "long": "El corazón de una ballena azul que murió en una costa de Canadá se exhibe en el Museo Real de Ontario.\n\nEl enorme órgano de 181 kilos pasó por un proceso conocido como plastinación, que reemplaza la materia orgánica por un polímero de silicona. \n\nLa ballena azul es el animal más pesado que jamás haya vivido, explican los expertos, y su gran corazón es el más grande del mundo. \n\nLa nueva pieza en exhibición permitirá a los científicos conocer con mucha más precisión la fisiología de estos gigantes."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05bsjmq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Cómo es el corazón más grande jamás visto",
+                "versions": [
+                  {
+                    "versionId": "p05bsfvk",
+                    "types": ["Original"],
+                    "duration": 94,
+                    "durationISO8601": "PT1M34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1502120418000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "97237506",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/EC9D/production/_97237506_p05bsjmq.jpg",
+                "path": "/cpsprodpb/EC9D/production/_97237506_p05bsjmq.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Corazón de una ballena azul en exibición",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:mundo/media-40851758",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

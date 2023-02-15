@@ -1,134 +1,1861 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:azeri/multimedia/2012/09/120919_georgia_prison_video",
-    "locators": {
-      "assetUri": "/azeri/multimedia/2012/09/120919_georgia_prison_video",
-      "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2012/09/120919_georgia_prison_video",
-      "curie": "http://www.bbc.co.uk/asset/ae2c2c32-786a-11e7-b89b-72943db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "azeri",
-    "language": "az",
-    "lastUpdated": 1550232332010,
-    "firstPublished": 1348052917,
-    "lastPublished": 1348053367,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "previouslyArchived": null,
-      "allowAdvertising": false,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_id": "20005826", "cps_asset_type": "map" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "20005826",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/azeri/meta/dps/2012/09/emp/120919_georgia_prison_video.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:azeri/multimedia/2012/09/120919_georgia_prison_video",
+        "locators": {
+          "assetUri": "/azeri/multimedia/2012/09/120919_georgia_prison_video",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2012/09/120919_georgia_prison_video",
+          "curie": "http://www.bbc.co.uk/asset/ae2c2c32-786a-11e7-b89b-72943db9bd6e",
+          "assetId": "20005826"
+        },
+        "type": "MAP",
+        "createdBy": "azeri",
+        "language": "az",
+        "lastUpdated": 1649899607317,
+        "firstPublished": 1348052917000,
+        "lastPublished": 1348053367000,
+        "timestamp": 1348053367000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "previouslyArchived": null,
+          "allowAdvertising": false,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "20005826",
+          "contentId": "urn:bbc:topcat:curie:asset:ae2c2c32-786a-11e7-b89b-72943db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/azeri",
+        "mediaType": "video"
       },
-      {
-        "text": "Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "20005826",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "20005826",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/09/19/120919110953_georgia_prison_violence_640x360_reutersvideostill_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2012/09/19/120919110953_georgia_prison_violence_640x360_reutersvideostill_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/azeri/meta/dps/2012/09/emp/120919_georgia_prison_video.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/09/georgia~fprison violence~f1206~f19~f9_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/09/georgia~fprison violence~f1206~f19~f9_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/09/georgia~fprison violence~f1206~f19~f9_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Milli telekanallarda yayımlanan video zabitlərin məhbusları zorakılıqla döydüyünü göstərir.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Gecə saatlarında müxalifətin TV9 telekanalında yayımlanan göruntü bir zabitin məhbusa qarşı süpürgə ilə cinsi zorakılıq etdiyini göstərir.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Həbsxanalara məsul olan nazir Xatuna Kalmaxelidze istefa verib. “8 nömrəli həbsxanada baş verənlər dəhşətlidir və mən Baş Nazirə istefa ərizəmi vermişəm,” - o deyib.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Gürcüstan prezidenti Mixail Saakaşvili bu hadisədən sarsıldığını və qəzəbləndiyini, həmçinin zorakılığa görə məsuliyyət daşıyanları cəzalandıracağını söyləyib.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Çərşənbə axşamı yayımdan sonra yüzlərlə etirazçı Gürcüstanın paytaxtı Tbilisidə yürüş keçirib və nazirin istefasını tələb edib.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Məlumata görə on nəfər, o cümlədən həbsxananın rəisi həbs olunub.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Gürcüstanda gələn ay prezident seçkiləri keçiriləcək. Prezident Saakaşvilinin ən böyük rəqibi Gürcüstanın ən varlı adamı Bidzina İvanişvili sayılır.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "Milli telekanallarda yayımlanan video zabitlərin məhbusları zorakılıqla döydüyünü göstərir.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Həbsxanada zorlama videosu gürcüstanlıları qəzəbləndirib",
+          "headline": "Həbsxanada zorlama videosu gürcüstanlıları qəzəbləndirib"
+        },
+        "locators": {
+          "assetUri": "/azeri/multimedia/2012/09/120919_georgia_prison_video",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2012/09/120919_georgia_prison_video",
+          "curie": "http://www.bbc.co.uk/asset/ae2c2c32-786a-11e7-b89b-72943db9bd6e",
+          "assetId": "20005826"
+        },
+        "summary": "Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.",
+        "timestamp": 1348053367000,
+        "language": "az",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
+          "taggings": []
+        },
+        "media": {
+          "id": "20005826",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "20005826",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/09/19/120919110953_georgia_prison_violence_640x360_reutersvideostill_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2012/09/19/120919110953_georgia_prison_violence_640x360_reutersvideostill_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/azeri/meta/dps/2012/09/emp/120919_georgia_prison_video.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/09/georgia~fprison violence~f1206~f19~f9_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/09/georgia~fprison violence~f1206~f19~f9_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/09/georgia~fprison violence~f1206~f19~f9_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d7e216",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/09/19/120919091538_georgia_prison_violence_112x63_reutersvideostill_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2012/09/19/120919091538_georgia_prison_violence_112x63_reutersvideostill_nocredit.jpg",
+          "height": 63,
+          "width": 112,
+          "altText": "Gürcüstan həbsxanalarında zorakılıq",
+          "copyrightHolder": "reuters video still",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:azeri/multimedia/2012/09/120919_georgia_prison_video",
+        "type": "cps"
       },
-      {
-        "text": "Gecə saatlarında müxalifətin TV9 telekanalında yayımlanan göruntü bir zabitin məhbusa qarşı süpürgə ilə cinsi zorakılıq etdiyini göstərir.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Həbsxanalara məsul olan nazir Xatuna Kalmaxelidze istefa verib. “8 nömrəli həbsxanada baş verənlər dəhşətlidir və mən Baş Nazirə istefa ərizəmi vermişəm,” - o deyib.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Gürcüstan prezidenti Mixail Saakaşvili bu hadisədən sarsıldığını və qəzəbləndiyini, həmçinin zorakılığa görə məsuliyyət daşıyanları cəzalandıracağını söyləyib.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Çərşənbə axşamı yayımdan sonra yüzlərlə etirazçı Gürcüstanın paytaxtı Tbilisidə yürüş keçirib və nazirin istefasını tələb edib.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Məlumata görə on nəfər, o cümlədən həbsxananın rəisi həbs olunub.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Gürcüstanda gələn ay prezident seçkiləri keçiriləcək. Prezident Saakaşvilinin ən böyük rəqibi Gürcüstanın ən varlı adamı Bidzina İvanişvili sayılır.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Multimedia",
+          "uri": "/azeri/multimedia",
+          "urlIdentifier": "/azeri/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCAzeri.com",
+          "uri": "/azeri",
+          "urlIdentifier": "/azeri",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Həbsxanada zorlama videosu gürcüstanlıları qəzəbləndirib",
-      "headline": "Həbsxanada zorlama videosu gürcüstanlıları qəzəbləndirib"
     },
-    "locators": {
-      "assetUri": "/azeri/multimedia/2012/09/120919_georgia_prison_video",
-      "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2012/09/120919_georgia_prison_video",
-      "curie": "http://www.bbc.co.uk/asset/ae2c2c32-786a-11e7-b89b-72943db9bd6e"
-    },
-    "summary": "Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.",
-    "timestamp": 1550232332010,
-    "passport": {},
-    "media": {
-      "id": "20005826",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/azeri/meta/dps/2012/09/emp/120919_georgia_prison_video.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d7e216",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/09/19/120919091538_georgia_prison_violence_112x63_reutersvideostill_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2012/09/19/120919091538_georgia_prison_violence_112x63_reutersvideostill_nocredit.jpg",
-      "height": 63,
-      "width": 112,
-      "altText": "Gürcüstan həbsxanalarında zorakılıq",
-      "copyrightHolder": "reuters video still",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:azeri/multimedia/2012/09/120919_georgia_prison_video",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Multimedia",
-      "uri": "/azeri/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCAzeri.com",
-      "uri": "/azeri",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:37:10.636Z",
+        "lastRecordTimeStamp": "2023-02-15T09:35:00Z",
+        "firstRecordTimeStamp": "2023-02-15T01:35:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "b8858fac-6e45-11e4-974d-37ae3db9bd6e",
+            "rank": 1,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:b8858fac-6e45-11e4-974d-37ae3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dünyanın ən hündür və ən qısa boylu adamları bir arada",
+                "headline": "Dünyanın ən hündür və ən qısa boylu adamları bir arada"
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2014/11/141117_tallest_smallest_guinnes_bwr",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2014/11/141117_tallest_smallest_guinnes_bwr",
+                "curie": "http://www.bbc.co.uk/asset/b8858fac-6e45-11e4-974d-37ae3db9bd6e",
+                "assetId": "35883564"
+              },
+              "summary": "Guinness Rekordlar Kitabının 60 illiyi münasibətilə \"Dünyanın ən hündür adamı\" titulunu qazanmış 2,51 metrlik Sultan Kösen və ən qısa boylu adamı, boyu 54,6 santimetr olan nepallı Çandra Bahadur Dangi Londonda görüşüblər.",
+              "timestamp": 1416223061000,
+              "language": "az",
+              "media": {
+                "id": "35883564",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "35883564",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/17/141117105216_kosen_and_chandra_640x360_afp_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/11/17/141117105216_kosen_and_chandra_640x360_afp_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Kosen, Chanrda",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2014/11/emp/141117_tallest_smallest_guinnes_bwr.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2014/11/azeri_fguinness-bwr_f1725_f14_f11_141117_tallest_smallest_guinnes_bwr_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2014/11/azeri_fguinness-bwr_f1725_f14_f11_141117_tallest_smallest_guinnes_bwr_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2014/11/azeri_fguinness-bwr_f1725_f14_f11_141117_tallest_smallest_guinnes_bwr_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e339",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/17/141117105216_kosen_and_chandra_512x288_afp_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/11/17/141117105216_kosen_and_chandra_512x288_afp_nocredit.jpg",
+                "height": 288,
+                "width": 512,
+                "altText": "Kosen, Chanrda",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2014/11/141117_tallest_smallest_guinnes_bwr",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a51b5d58-9584-a046-932e-1d051c50a3f6",
+            "rank": 2,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:a51b5d58-9584-a046-932e-1d051c50a3f6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Niyə bu neft quyusu \"dünyada ilk\" hesab edilir?",
+                "headline": "Niyə bu neft quyusu \"dünyada ilk\" hesab edilir?"
+              },
+              "locators": {
+                "assetUri": "/azeri/azerbaijan-40344556",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-40344556",
+                "curie": "http://www.bbc.co.uk/asset/a51b5d58-9584-a046-932e-1d051c50a3f6",
+                "assetId": "40344556"
+              },
+              "summary": "Bütün dünyada sənaye üsulu ilə qazılmış ilk neft quyusunun ABŞ-ın Pennsylvania ştatında olduğu deyilsə də, Azərbaycan bu tipli ilk quyunun məhz öz ərazisində qazıldığını bildirir.",
+              "timestamp": 1497965472000,
+              "language": "az",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p056fvsx",
+                "subType": "clip",
+                "format": "video",
+                "title": "Bibiheybətdə dünyada sənaye üsulu ilə qazılmış ilk quyu bərpa edilib",
+                "synopses": {
+                  "short": "Bibiheybətdə dünyada sənaye üsulu ilə qazılmış ilk quyu bərpa edilib",
+                  "medium": "Bu ilin aprelində Bibiheybət mədəninin ərazisində 1846-cı ildə dünyada sənaye üsulu ilə qazılmış ilk quyu bərpa edilib.",
+                  "long": "Bu ilin aprelində Bibiheybət mədəninin ərazisində 1846-cı ildə dünyada sənaye üsulu ilə qazılmış ilk quyu bərpa edilib.\n \nBütün dünyada sənaye üsulu ilə qazılmış ilk quyunun ABŞ-ın Pensilvaniya ştatında olduğu deyilsə də, Azərbaycan bu tipli ilk quyunun məhz öz ərazisində qazıldığını bildirir.\n\nMuzey mütəxəssisi Aygün Şamçıyeva deyir ki, Azərbaycanda bu quyu ABŞ-dan 13 il əvvəl qazılıb.\nDünyada daha çox ABŞ-da qazılan quyunun tanınmasının səbəbini isə o belə izah edir:\n\n“Amerikadakı quyudan sənaye həcmində neft aşkar olunub, Bakıda isə 21 metr dərinliyindən neft aşkar olunsa da həcmi çox az idi. Ona görə bu üsula çox diqqət etmədilər. Əl üsulu ilə işləməyə davam etdilər və illər sonra yenidən bu üsula qayıtdılar.”\n\nXanım Şamçıyeva bərpa edilmiş quyunun artıq turistlərin ziyarət etdiyi məkana çevrildiyini də qeyd edir. \n\nAzərbaycanda sənaye üsulu ilə neft hasilatına XIX əsrin ortalarından başlanılıb.\n\n1900-cü illərədək Azərbaycan dünya neftinin 50 faizini təmin edib."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p056g72x.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Niyə bu neft quyusu \"dünyada ilk\" hesab edilir?",
+                "versions": [
+                  {
+                    "versionId": "p056fvsz",
+                    "types": ["Original"],
+                    "duration": 159,
+                    "durationISO8601": "PT2M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1497962743000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "96565764",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B6A4/production/_96565764_bibiheybet.jpg",
+                "path": "/cpsprodpb/B6A4/production/_96565764_bibiheybet.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "bibiheybət",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/azerbaijan-40344556",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ae2c2c32-786a-11e7-b89b-72943db9bd6e",
+            "rank": 3,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:ae2c2c32-786a-11e7-b89b-72943db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Həbsxanada zorlama videosu gürcüstanlıları qəzəbləndirib",
+                "headline": "Həbsxanada zorlama videosu gürcüstanlıları qəzəbləndirib"
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2012/09/120919_georgia_prison_video",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2012/09/120919_georgia_prison_video",
+                "curie": "http://www.bbc.co.uk/asset/ae2c2c32-786a-11e7-b89b-72943db9bd6e",
+                "assetId": "20005826"
+              },
+              "summary": "Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.",
+              "timestamp": 1348053367000,
+              "language": "az",
+              "media": {
+                "id": "20005826",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "20005826",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/09/19/120919110953_georgia_prison_violence_640x360_reutersvideostill_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2012/09/19/120919110953_georgia_prison_violence_640x360_reutersvideostill_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2012/09/emp/120919_georgia_prison_video.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/09/georgia~fprison violence~f1206~f19~f9_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/09/georgia~fprison violence~f1206~f19~f9_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/09/georgia~fprison violence~f1206~f19~f9_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e216",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/09/19/120919091538_georgia_prison_violence_112x63_reutersvideostill_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/09/19/120919091538_georgia_prison_violence_112x63_reutersvideostill_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "Gürcüstan həbsxanalarında zorakılıq",
+                "copyrightHolder": "reuters video still",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2012/09/120919_georgia_prison_video",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b0b8c12e-14fb-11e5-8b94-65a73db9bd6e",
+            "rank": 4,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:b0b8c12e-14fb-11e5-8b94-65a73db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Durham Universitetinin azərbaycanlı professoru",
+                "headline": "Durham Universitetinin azərbaycanlı professoru"
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2015/06/150617_azeri_professor_durham",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/06/150617_azeri_professor_durham",
+                "curie": "http://www.bbc.co.uk/asset/b0b8c12e-14fb-11e5-8b94-65a73db9bd6e",
+                "assetId": "39246820"
+              },
+              "summary": "Professor Nigar Həşimzadə Böyük Britaniyanın Durham Universitetində iqtisadiyyat üzrə dərs deyir.",
+              "timestamp": 1434551179000,
+              "language": "az",
+              "media": {
+                "id": "39246820",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "39246820",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/06/17/150617141550_nigar_hashimzade_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/06/17/150617141550_nigar_hashimzade_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Nigar Həşimzadə",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2015/06/emp/150617_azeri_professor_durham.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/06/azeri~fnigar~f1458~f17~f6_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/06/azeri~fnigar~f1458~f17~f6_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/06/azeri~fnigar~f1458~f17~f6_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e265",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/06/17/150617141624_nigar_hashimzade_512x288_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/06/17/150617141624_nigar_hashimzade_512x288_bbc_nocredit.jpg",
+                "height": 288,
+                "width": 512,
+                "altText": "Nigar Həşimzadə",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2015/06/150617_azeri_professor_durham",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "17dc6284-f94f-11e4-8909-56d03db9bd6e",
+            "rank": 5,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:17dc6284-f94f-11e4-8909-56d03db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Nadir yaqut daşı rekord qiymətə satılıb",
+                "headline": "Nadir yaqut daşı rekord qiymətə satılıb"
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2015/05/150513_ruby_record_price",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/05/150513_ruby_record_price",
+                "curie": "http://www.bbc.co.uk/asset/17dc6284-f94f-11e4-8909-56d03db9bd6e",
+                "assetId": "38712682"
+              },
+              "summary": "25,59 karat çəkisi olan yaqut daşı Cenevrədəki hərracda rekord təşkil edən 30,42 milyon dollara satılıb.",
+              "timestamp": 1431513869000,
+              "language": "az",
+              "media": {
+                "id": "38712682",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "38712682",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/05/13/150513095806_ruby_reuters_640x360_reuters_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/05/13/150513095806_ruby_reuters_640x360_reuters_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2015/05/emp/150513_ruby_record_price.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/05/azeri~fruby~f1043~f13~f5_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/05/azeri~fruby~f1043~f13~f5_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/05/azeri~fruby~f1043~f13~f5_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e249",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/05/13/150513095806_ruby_reuters_512x288_reuters_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/05/13/150513095806_ruby_reuters_512x288_reuters_nocredit.jpg",
+                "height": 288,
+                "width": 512,
+                "altText": "",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2015/05/150513_ruby_record_price",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e66444b0-d149-11e4-86f3-0fda3db9bd6e",
+            "rank": 6,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:e66444b0-d149-11e4-86f3-0fda3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Kabul: Kişilərin yandırdığı qadını qadınlar dəfn etdilər",
+                "headline": "Kabul: Kişilərin yandırdığı qadını qadınlar dəfn etdilər"
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2015/03/150323_afghanistan_farkhunda_burial",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/03/150323_afghanistan_farkhunda_burial",
+                "curie": "http://www.bbc.co.uk/asset/e66444b0-d149-11e4-86f3-0fda3db9bd6e",
+                "assetId": "37923165"
+              },
+              "summary": "Kabulda qadınlar qaragüruh tərəfindən “yanlış ittihamla” öldürüldüyü düşünülən qadının cənazəsini əfqan dəfn adətlərinin xilafına olaraq özləri qaldırıblar.",
+              "timestamp": 1427109438000,
+              "language": "az",
+              "media": {
+                "id": "37923165",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "37923165",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/03/23/150323064859_afghan_daily__640x360_afghandaily_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/03/23/150323064859_afghan_daily__640x360_afghandaily_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Kabul",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2015/03/emp/150323_afghanistan_farkhunda_burial.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/03/azeri~fafghanburial~f1103~f23~f3_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/03/azeri~fafghanburial~f1103~f23~f3_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/03/azeri~fafghanburial~f1103~f23~f3_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e250",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/03/23/150323111623_afghan_burial_512x288_ap_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/03/23/150323111623_afghan_burial_512x288_ap_nocredit.jpg",
+                "height": 288,
+                "width": 512,
+                "altText": "",
+                "copyrightHolder": "AP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2015/03/150323_afghanistan_farkhunda_burial",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9b947dca-ef25-4185-9514-382da5e80e1d",
+            "rank": 7,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:9b947dca-ef25-4185-9514-382da5e80e1d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Qeyri-adi gənclər: 18 yaş, informasiya texnologiyası çempionu, öz-özünə öyrənən azərbaycanlı Azelma",
+                "headline": "Qeyri-adi gənclər: 18 yaş, informasiya texnologiyası çempionu, öz-özünə öyrənən azərbaycanlı Azelma"
+              },
+              "locators": {
+                "assetUri": "/azeri/azerbaijan-60079634",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-60079634",
+                "curie": "http://www.bbc.co.uk/asset/9b947dca-ef25-4185-9514-382da5e80e1d",
+                "assetId": "60079634"
+              },
+              "summary": "Azelma Ağakişiyeva orta məktəbi ötən il bitirib, amma artıq ikinci kurs tələbəsidir. Yerli və beynəlxalq olimpiadalarda yüksək nəticələrinə görə, 18 yaşlı Azelma müsabiqədənkənar qəbulla Bakı Ali Neft Məktəbinə daxil olub.",
+              "timestamp": 1642779642000,
+              "language": "az",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "az",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
+                "locator": "urn:bbc:cps:curie:asset:9b947dca-ef25-4185-9514-382da5e80e1d",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0f8e45e2-6499-44b1-be1f-1a3dd81e8af7#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/233a47cb-7020-4685-a795-7ad1609df937#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/233a47cb-7020-4685-a795-7ad1609df937#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "az",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0f8e45e2-6499-44b1-be1f-1a3dd81e8af7#id",
+                      "thingLabel": "Azərbaycan",
+                      "thingUri": "http://www.bbc.co.uk/things/0f8e45e2-6499-44b1-be1f-1a3dd81e8af7#id",
+                      "thingId": "0f8e45e2-6499-44b1-be1f-1a3dd81e8af7",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/587116/"],
+                      "thingEnglishLabel": "Azerbaijan",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingLabel": "Texnologiya",
+                      "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Technology",
+                        "http://www.wikidata.org/entity/Q4456888"
+                      ],
+                      "thingEnglishLabel": "Technology",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                      "thingLabel": "Cəmiyyət",
+                      "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                      "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Society",
+                        "http://www.wikidata.org/entity/Q8425"
+                      ],
+                      "thingEnglishLabel": "Society",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingLabel": "Təhsil",
+                      "thingUri": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingId": "6942cb29-9d3f-4c9c-9806-0a0578c286d6",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8434",
+                        "http://dbpedia.org/resource/Education"
+                      ],
+                      "thingEnglishLabel": "Education",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id",
+                      "thingLabel": "Gənclər",
+                      "thingUri": "http://www.bbc.co.uk/things/f6ec89fd-3823-498e-a888-572e96f791b2#id",
+                      "thingId": "f6ec89fd-3823-498e-a888-572e96f791b2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Youth",
+                        "http://www.wikidata.org/entity/Q190007"
+                      ],
+                      "thingEnglishLabel": "Young people",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0bjkw60",
+                "subType": "clip",
+                "format": "video",
+                "title": "Qeyri-adi gənclər: 18 yaş, informasiya texnologiyası çempionu, öz-özünə öyrənən azərbaycanlı Azelma",
+                "synopses": {
+                  "short": "Azelma Ağakişiyeva orta məktəbi ötən il bitirib, amma artıq ikinci kurs tələbəsidir",
+                  "long": "O, aşağı siniflərdən yerli və beynəlxalq olimpiadalara qatılıb və Azərbaycan üçün yeni olan informasiya texnologiyaları sahəsində beynəlxalq olimpiadalarda qalib olub. Uğurları sayəsində ali məktəbə imtahansız qəbul edilib, amma bununla kifayətlənməyib, yenidən imtahan verərək, ikinci kursa keçib. \nAzelma Ağakişiyeva olimpiadalara getmək üçün nələr etmək lazım olduğundan, uğurlarının səbəblərindən danışıb.",
+                  "medium": "Yerli və beynəlxalq olimpiadalarda yüksək nəticələrinə görə 18 yaşlı Azelma növbədənkənar qəbulla Bakı Ali Neft Məktəbinə daxil olub."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bw2fx2.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Azelma Ağakişiyeva orta məktəbi ötən il bitirib, amma artıq ikinci kurs tələbəsidir",
+                "versions": [
+                  {
+                    "versionId": "p0bw2dwz",
+                    "types": ["Editorial"],
+                    "duration": 157,
+                    "durationISO8601": "PT2M37S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1642774206000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "122926555",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/D90A/production/_122926555_p0bjl6w5.jpg",
+                "path": "/cpsprodpb/D90A/production/_122926555_p0bjl6w5.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #4",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/azerbaijan-60079634",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "60aa8850-61d3-11e5-b300-f4e93db9bd6e",
+            "rank": 8,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:60aa8850-61d3-11e5-b300-f4e93db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Londonda Qız Qalası restoranı ",
+                "headline": "Londonda Qız Qalası restoranı "
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2012/08/120816_maiden_tower",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2012/08/120816_maiden_tower",
+                "curie": "http://www.bbc.co.uk/asset/60aa8850-61d3-11e5-b300-f4e93db9bd6e",
+                "assetId": "19337890"
+              },
+              "summary": "Lonc-barın sahibi deyir ki, Maiden Tower azərbaycanlıların görüşüb, tanış olması üçün əlverişli məkandır. ",
+              "timestamp": 1345633142000,
+              "language": "az",
+              "media": {
+                "id": "19337890",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "19337890",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/08/22/120822104041_maiden_tower_restaurant_london_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2012/08/22/120822104041_maiden_tower_restaurant_london_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Maiden Tower",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2012/08/emp/120816_maiden_tower.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/08/azeri~fmaiden tower restaurant~f1608~f16~f8_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/08/azeri~fmaiden tower restaurant~f1608~f16~f8_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2012/08/azeri~fmaiden tower restaurant~f1608~f16~f8_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e229",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/08/22/120822103812_maiden_tower_restaurant_london_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/08/22/120822103812_maiden_tower_restaurant_london_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "Maiden Tower",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2012/08/120816_maiden_tower",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2408d096-8012-cc42-97fa-6e516d482b8f",
+            "rank": 9,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:2408d096-8012-cc42-97fa-6e516d482b8f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Super qidalar: mədədə həzm olunmama və qıcqırmanın qarşısı necə alına bilər?",
+                "headline": "Super qidalar: mədədə həzm olunmama və qıcqırmanın qarşısı necə alına bilər?"
+              },
+              "locators": {
+                "assetUri": "/azeri/international-42961961",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/international-42961961",
+                "curie": "http://www.bbc.co.uk/asset/2408d096-8012-cc42-97fa-6e516d482b8f",
+                "assetId": "42961961"
+              },
+              "summary": "Mədənizdə həzm olunmama və qıcqırma hiss etmisinizsə, bu qidaları yeməməyə çalışın: sosis və bekon, qaymaq, karri, sitrus meyvələri və kola içkiləri.",
+              "timestamp": 1517988203000,
+              "language": "az",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05x8z0b",
+                "subType": "clip",
+                "format": "video",
+                "title": "Super qidalar: mədədə həzm olunmama və qıcqırmanın qarşısı necə alına bilər?",
+                "synopses": {
+                  "short": "Super qidalar: mədədə həzm olunmama və qıcqırmanın qarşısı necə alına bilər?",
+                  "medium": "Mədənizdə həzm olunmama və qıcqırma hiss etmisinizsə, bu qidaları yeməməyə çalışın: sosis və bekon, qaymaq, karri, sitrus meyvələri və kola içkiləri.",
+                  "long": "Mədənizdə həzm olunmama və qıcqırma hiss etmisinizsə, bu qidaları yeməməyə çalışın: sosis və bekon, qaymaq, karri, sitrus meyvələri və kola içkiləri."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05x90b9.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Super qidalar: mədədə həzm olunmama və qıcqırmanın qarşısı necə alına bilər?",
+                "versions": [
+                  {
+                    "versionId": "p05x8z0f",
+                    "types": ["Original"],
+                    "duration": 54,
+                    "durationISO8601": "PT54S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1517924807000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99909369",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17886/production/_99909369_p05x90b9.jpg",
+                "path": "/cpsprodpb/17886/production/_99909369_p05x90b9.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #3",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/international-42961961",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f1bd905a-f67a-a44a-9ec9-732ccdbd1fc4",
+            "rank": 10,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f1bd905a-f67a-a44a-9ec9-732ccdbd1fc4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Xadimə satışı: Silikon Vadisinin onlayn qul bazarı",
+                "headline": "Xadimə satışı: Silikon Vadisinin onlayn qul bazarı"
+              },
+              "locators": {
+                "assetUri": "/azeri/50268909",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/50268909",
+                "curie": "http://www.bbc.co.uk/asset/f1bd905a-f67a-a44a-9ec9-732ccdbd1fc4",
+                "assetId": "50268909"
+              },
+              "summary": "BBC News Ərəbcə Küveytə gedərək Silikon Vadisinin böyük oyunçuları tərəfindən imkan verilən qanunsuz onlayn qul bazarını aşkarlayıb.",
+              "timestamp": 1572626515000,
+              "language": "az",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07sr2h4",
+                "subType": "clip",
+                "format": "video",
+                "title": "Xadimə satışı: Silikon Vadisinin onlayn qul bazarı",
+                "synopses": {
+                  "short": "Xadimə satışı: Silikon Vadisinin onlayn qul bazarı",
+                  "long": "BBC News Ərəbcə Küveytə gedərək Silikon Vadisinin böyük oyunçuları tərəfindən imkan verilən qanunsuz onlayn qul bazarını aşkarlayıb.",
+                  "medium": "BBC News Ərəbcə Küveytə gedərək Silikon Vadisinin böyük oyunçuları tərəfindən imkan verilən qanunsuz onlayn qul bazarını aşkarlayıb."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07sr57t.png",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Xadimə satışı: Silikon Vadisinin onlayn qul bazarı",
+                "versions": [
+                  {
+                    "versionId": "p07sr2h7",
+                    "types": ["Original"],
+                    "duration": 237,
+                    "durationISO8601": "PT3M57S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1572624817000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109497452",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6387/production/_109497452_meyd.jpg",
+                "path": "/cpsprodpb/6387/production/_109497452_meyd.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Küveyt",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/50268909",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ecc58eca-8213-11e4-b58f-78bc3db9bd6e",
+            "rank": 11,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:ecc58eca-8213-11e4-b58f-78bc3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "13 yaşlı azərbaycanlı London sakini BBC-də, kamançada ifa edib",
+                "headline": "13 yaşlı azərbaycanlı London sakini BBC-də, kamançada ifa edib"
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2014/12/141212_girl_plays_kamancha",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2014/12/141212_girl_plays_kamancha",
+                "curie": "http://www.bbc.co.uk/asset/ecc58eca-8213-11e4-b58f-78bc3db9bd6e",
+                "assetId": "36339770"
+              },
+              "summary": "Londonda yaşayan Aida Məmmədova kamança ilə babasının ad günündə tanış olub. ",
+              "timestamp": 1418401522000,
+              "language": "az",
+              "media": {
+                "id": "36339770",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "36339770",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/12/12/141212153642_aida_kamancha_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/12/12/141212153642_aida_kamancha_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Aida kamancha",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2014/12/emp/141212_girl_plays_kamancha.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2014/12/azeri_fkamancha3_f1554_f12_f12_141212_girl_plays_kamancha_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2014/12/azeri_fkamancha3_f1554_f12_f12_141212_girl_plays_kamancha_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2014/12/azeri_fkamancha3_f1554_f12_f12_141212_girl_plays_kamancha_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e275",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/12/12/141212153740_aida_kamancha_512x288_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/12/12/141212153740_aida_kamancha_512x288_bbc_nocredit.jpg",
+                "height": 288,
+                "width": 512,
+                "altText": "Aida kamancha",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2014/12/141212_girl_plays_kamancha",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dd3ce746-1c05-11e5-b0fa-97a93db9bd6e",
+            "rank": 12,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:dd3ce746-1c05-11e5-b0fa-97a93db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "İngiltərədə gözəllik müsabiqəsinin azərbaycanlı iştirakçısı",
+                "headline": "İngiltərədə gözəllik müsabiqəsinin azərbaycanlı iştirakçısı"
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2015/06/150626_umida_ibrahimova",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/06/150626_umida_ibrahimova",
+                "curie": "http://www.bbc.co.uk/asset/dd3ce746-1c05-11e5-b0fa-97a93db9bd6e",
+                "assetId": "39380688"
+              },
+              "summary": "Bu il Cardiff şəhərində keçirilən \"Miss Universe GB\" gözəllik yarışmasında Londonda yaşayan Umida İbrahimova da iştirak edir.",
+              "timestamp": 1435325789000,
+              "language": "az",
+              "media": {
+                "id": "39380688",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "39380688",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/06/26/150626131736_umida_ibrahimova_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/06/26/150626131736_umida_ibrahimova_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Umida",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2015/06/emp/150626_umida_ibrahimova.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/06/azeri~fumida~f1212~f26~f6_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/06/azeri~fumida~f1212~f26~f6_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/06/azeri~fumida~f1212~f26~f6_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e256",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/06/26/150626131802_umida_ibrahimova_512x288_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/06/26/150626131802_umida_ibrahimova_512x288_bbc_nocredit.jpg",
+                "height": 288,
+                "width": 512,
+                "altText": "Umida İbrahimova",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2015/06/150626_umida_ibrahimova",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dbe50628-8ab8-11e4-b47f-f77a3db9bd6e",
+            "rank": 13,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:dbe50628-8ab8-11e4-b47f-f77a3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "İD-nin seks köləsi yezidi qadınlar: ölmək istəyirdik ",
+                "headline": "İD-nin seks köləsi yezidi qadınlar: ölmək istəyirdik "
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2014/12/141223_is_sex_slavery",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2014/12/141223_is_sex_slavery",
+                "curie": "http://www.bbc.co.uk/asset/dbe50628-8ab8-11e4-b47f-f77a3db9bd6e",
+                "assetId": "36514520"
+              },
+              "summary": "İraqdakı yezidi azlığı bildirir ki, onların 3500 qadın və qızı hələ də İslam Dövləti adlanan təşkilatın əsirliyindədir. ",
+              "timestamp": 1419351213000,
+              "language": "az",
+              "media": {
+                "id": "36514520",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "36514520",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/12/23/141223154246_is_yazidi_death_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/12/23/141223154246_is_yazidi_death_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2014/12/emp/141223_is_sex_slavery.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2014/12/azeri~fyazidis_wood~f1600~f23~f12_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2014/12/azeri~fyazidis_wood~f1600~f23~f12_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2014/12/azeri~fyazidis_wood~f1600~f23~f12_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e254",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/12/23/141223154244_is_yazidi_death_512x288_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/12/23/141223154244_is_yazidi_death_512x288_bbc_nocredit.jpg",
+                "height": 288,
+                "width": 512,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2014/12/141223_is_sex_slavery",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "db5567f0-5776-43c8-9d2d-0b8f2ecf851d",
+            "rank": 14,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:db5567f0-5776-43c8-9d2d-0b8f2ecf851d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "İsrail Qərb Sahilini işğal edir: Qərb Sahili nədir?",
+                "headline": "İsrail Qərb Sahilini işğal edir: Qərb Sahili nədir?"
+              },
+              "locators": {
+                "assetUri": "/azeri/international-53237358",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/international-53237358",
+                "curie": "http://www.bbc.co.uk/asset/db5567f0-5776-43c8-9d2d-0b8f2ecf851d",
+                "assetId": "53237358"
+              },
+              "summary": "Qərb Sahili İsrail və İordan çayı arasında dar, əsasən, təpəli ərazidir. Bu ərazi İsrail ilə fələstinlilər arasında yaranmış dərin uçurumun mərkəzindədir.",
+              "timestamp": 1593613150000,
+              "language": "az",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08jjm15",
+                "subType": "clip",
+                "format": "video",
+                "title": "İsrail Qərb Sahili işğal edir: Qərb Sahili nədir?",
+                "synopses": {
+                  "short": "Qərb Sahili İsrail və İordan çayı arasında dar, əsasən, təpəli ərazidir.",
+                  "long": "Qərb Sahili İsrail və İordan çayı arasında dar, əsasən, təpəli ərazidir. Bu ərazi İsrail ilə fələstinlilər arasında yaranmış dərin uçurumun mərkəzindədir. \n1967-ci ildə Yaxın Şərq müharibəsindən bəri bu torpaq İsrail tərəfindən işğal olunub.\nBundan əvvəl həmin ərazi İordaniya, daha əvvəl Britaniya, ondan da əvvəl isə Osmanlı İmperiyası tərəfindən idarə olunurdu. 1967-ci ilin müharibəsindən sonrakı illərdə israilli mülki əhali – köçkünlər - Qərb Sahilində məskunlaşmağa başladılar. Onlar bunu qədim, dini vətənlərinə gecikmiş qayıdış hesab edirlər. Əvvəl bu proses yavaş gedib, lakin 1980-ci illərin ortalarından sonra getdikcə güclənib. Tez bir zamanda bütün Qərb Sahili boyu qəsəbələr peyda olub.",
+                  "medium": "Qərb Sahili İsrail və İordan çayı arasında dar, əsasən, təpəli ərazidir. Bu ərazi İsrail ilə fələstinlilər arasında yaranmış dərin uçurumun mərkəzindədir."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08jjndf.png",
+                "embedding": true,
+                "advertising": true,
+                "caption": "İsrail Qərb Sahilini işğal edir: Qərb Sahili nədir?",
+                "versions": [
+                  {
+                    "versionId": "p08jjm1c",
+                    "types": ["Original"],
+                    "duration": 273,
+                    "durationISO8601": "PT4M33S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1593602162000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "113171042",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5DD1/production/_113171042_p08jjndf.png",
+                "path": "/cpsprodpb/5DD1/production/_113171042_p08jjndf.png",
+                "height": 549,
+                "width": 976,
+                "altText": "İsrail Qərb Sahili işğal edir: Qərb Sahili nədir?",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/international-53237358",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d4e847fc-74e2-f645-9043-fbec47c3dccd",
+            "rank": 15,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:d4e847fc-74e2-f645-9043-fbec47c3dccd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "“Zimbabve əsgərləri məni zorladılar”",
+                "headline": "“Zimbabve əsgərləri məni zorladılar”"
+              },
+              "locators": {
+                "assetUri": "/azeri/47103259",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/47103259",
+                "curie": "http://www.bbc.co.uk/asset/d4e847fc-74e2-f645-9043-fbec47c3dccd",
+                "assetId": "47103259"
+              },
+              "summary": "Zimbabve paytaxtı Hararedə keçirilən nümayişlərdən sonra şəhərə yeridilən əsgərlər kütləvi həbs, işgəncə və cinsi təcavüzdə ittiham olunurlar. Zimbabve hökuməti qayda-qanunu bərpa etdiyini bildirir. Polis iddiaları araşdırmaq üçün zərərçəkənləri ifadə verməyə səsləyib.",
+              "timestamp": 1549115606000,
+              "language": "az",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+                  "categoryName": "Opinion"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06zssnj",
+                "subType": "clip",
+                "format": "video",
+                "title": "“Zimbabve əsgərlər məni zorladılar”",
+                "synopses": {
+                  "short": "“Zimbabve əsgərlər məni zorladılar”",
+                  "long": "Zimbabve paytaxtı Hararedə keçirilən nümayişlərdən sonra şəhərə yeridilən əsgərlər kütləvi həbs, işgəncə və cinsi təcavüzdə ittiham olunurlar. \n\nZimbabve hökuməti qayda-qanunu bərpa etdiyini bildirir. \n\nBBC zorlandığını iddia edən qadınlarla söhbət edib.",
+                  "medium": "Zimbabve paytaxtı Hararedə keçirilən nümayişlərdən sonra şəhərə yeridilən əsgərlər kütləvi həbs, işgəncə və cinsi təcavüzdə ittiham olunurlar."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06zstjh.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "“Zimbabve əsgərlər məni zorladılar”",
+                "versions": [
+                  {
+                    "versionId": "p06zssnl",
+                    "types": ["Original"],
+                    "duration": 85,
+                    "durationISO8601": "PT1M25S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1549115000000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105438212",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5323/production/_105438212_p06zstjh.jpg",
+                "path": "/cpsprodpb/5323/production/_105438212_p06zstjh.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #2",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/47103259",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c7cf901d-b8a7-104c-b3f5-2c849cca0548",
+            "rank": 16,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:c7cf901d-b8a7-104c-b3f5-2c849cca0548",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Azərbaycanın beynəlxalq təşəbbüsdə statusuna yenidən baxılacaq",
+                "headline": "Azərbaycanın beynəlxalq təşəbbüsdə statusuna yenidən baxılacaq"
+              },
+              "locators": {
+                "assetUri": "/azeri/azerbaijan-37634927",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-37634927",
+                "curie": "http://www.bbc.co.uk/asset/c7cf901d-b8a7-104c-b3f5-2c849cca0548",
+                "assetId": "37634927"
+              },
+              "summary": "Azərbaycanın Mədən Sənayesində Şəffaflıq Təşəbbüsündə (EITI) statusuna bu ayın sonlarında yenidən baxılacaq, hökumət rəsmisi bildirir.",
+              "timestamp": 1476285457000,
+              "language": "az",
+              "media": {
+                "id": "p04bt19q",
+                "subType": "clip",
+                "format": "video",
+                "title": "Azərbaycanın beynəlxalq təşəbbüsdə statusuna yenidən baxılacaq",
+                "synopses": {
+                  "short": "Azərbaycanın beynəlxalq təşəbbüsdə statusuna yenidən baxılacaq",
+                  "medium": "Azərbaycanın Mədən Sənayesində Şəffaflıq Təşəbbüsündə (EITI) statusuna bu ayın sonlarında yenidən baxılacaq, hökumət rəsmisi bildirir.",
+                  "long": "Azərbaycanın Mədən Sənayesində Şəffaflıq Təşəbbüsündə (EITI) statusuna bu ayın sonlarında yenidən baxılacaq, hökumət rəsmisi bildirir. \n\nAzərbaycanda vətəndaş cəmiyyətinə təzyiqlərlə bağlı məlumatlardan sonra ölkə ötən il bu beynəlxalq təşəbbüsdə \"tamhüquqlu üzv\" statusundan məhrum edilib və \"namizəd\" statusu alıb.  \n\nBundan sonra həbsdə olan vətəndaş cəmiyyəti nümayəndələri - Leyla və Aruf Yunuslar və digərləri azadlığa buraxılıb və Prezident Əliyev  \"Açıq hökumətin təşviqinə dair 2016-2018-ci illər üçün Milli Fəaliyyət Planı\"nın təsdiq edilməsi haqqında sərəncam imzalayıb. \n\nNeft Fondunun İcraçı Direktoru Şahmar Mövsümov çərşənbə günü jurnalistlərə deyib ki, \"Azərbaycan böyük irəliləyişlər əldə edib, amma hələ də, müəyyən məsələlər qalır\". \n\n\"Qanunvericilikdə dəyişikliklər olmuşdu və bu, qeyri-hökumət təşkilatlarının bu prosesdə iştirakını müəyyən mənada məhdudlaşdırmışdı, çətinliklər yaratmışdı\", Şahmar Mövsümov bildirib. \n\nO, oktyabrın 20-də Qazaxıstanda keçiriləcək növbəti iclasda EITI idarə heyətinin Azərbaycanın statusuna yenidən baxacağını da bildirib. \n\nBBC Azərbaycanca müxbiri Elnarə Məmmədovanın reportajı."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04bt3sk.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Azərbaycanın beynəlxalq təşəbbüsdə statusuna yenidən baxılacaq",
+                "versions": [
+                  {
+                    "versionId": "p04bt1b8",
+                    "types": ["Original"],
+                    "duration": 126,
+                    "durationISO8601": "PT2M6S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1476285026000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "91885418",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13E32/production/_91885418_p04bt3sk.jpg",
+                "path": "/cpsprodpb/13E32/production/_91885418_p04bt3sk.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Mədən Sənayesində Şəffaflıq Təşəbbüsü",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/azerbaijan-37634927",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c0f1b5b6-d228-11e4-ab46-74d13db9bd6e",
+            "rank": 17,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:c0f1b5b6-d228-11e4-ab46-74d13db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Çətənə yağı xərçəng kimi ciddi xəstəliyə çarə ola bilərmi?",
+                "headline": "Çətənə yağı xərçəng kimi ciddi xəstəliyə çarə ola bilərmi?"
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2015/03/150324_cannabis_oil",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/03/150324_cannabis_oil",
+                "curie": "http://www.bbc.co.uk/asset/c0f1b5b6-d228-11e4-ab46-74d13db9bd6e",
+                "assetId": "37944785"
+              },
+              "summary": "Çətənənin ağrıkəsici və rahatlayıcı xüsusiyyətlərə malik olması çoxdandır ki, məlumdur. Bəs görəsən o xərçəng kimi ciddi xəstəliklərin müalicəsində istifadə oluna bilərmi?",
+              "timestamp": 1427211672000,
+              "language": "az",
+              "media": {
+                "id": "37944785",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "37944785",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/03/24/150324153319_canabis_oil_bbc_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/03/24/150324153319_canabis_oil_bbc_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2015/03/emp/150324_cannabis_oil.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/03/azeri_fcanabis_oil_f1514_f24_f3_150324_cannabis_oil_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/03/azeri_fcanabis_oil_f1514_f24_f3_150324_cannabis_oil_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2015/03/azeri_fcanabis_oil_f1514_f24_f3_150324_cannabis_oil_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e260",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/03/24/150324153319_canabis_oil_bbc_512x288_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/03/24/150324153319_canabis_oil_bbc_512x288_bbc_nocredit.jpg",
+                "height": 288,
+                "width": 512,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2015/03/150324_cannabis_oil",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bce1e066-f2e8-11e2-afdd-32a73db9bd6e",
+            "rank": 18,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:bce1e066-f2e8-11e2-afdd-32a73db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Londonda Ramazan: azərbaycanlılar iftarı necə açır?",
+                "headline": "Londonda Ramazan: azərbaycanlılar iftarı necə açır?"
+              },
+              "locators": {
+                "assetUri": "/azeri/multimedia/2013/07/130722_london_azeris_iftar",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2013/07/130722_london_azeris_iftar",
+                "curie": "http://www.bbc.co.uk/asset/bce1e066-f2e8-11e2-afdd-32a73db9bd6e"
+              },
+              "summary": "Londonda yaşayan azərbaycanlılar üçün Ramazan ayını asan və ya çətin edən cəhətlər haqqında. ",
+              "timestamp": 1374569376000,
+              "language": "az",
+              "media": {
+                "id": "26013121",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "26013121",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/07/23/130723084505_azeri_ramadan_london_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2013/07/23/130723084505_azeri_ramadan_london_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/azeri/meta/dps/2013/07/emp/130722_london_azeris_iftar.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2013/07/azeri~fiftar~f1718~f22~f7_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2013/07/azeri~fiftar~f1718~f22~f7_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/azeri/dps/2013/07/azeri~fiftar~f1718~f22~f7_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e224",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/07/23/130723084503_azeri_ramadan_london_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2013/07/23/130723084503_azeri_ramadan_london_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "Londonda iftar",
+                "copyrightHolder": "",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/multimedia/2013/07/130722_london_azeris_iftar",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9c1d7a40-07f3-bd43-b632-aad6f9d87282",
+            "rank": 19,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:9c1d7a40-07f3-bd43-b632-aad6f9d87282",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Sorğu: Gediş haqqı artandan sonra avtobusların keyfiyyəti dəyişibmi?",
+                "headline": "Sorğu: Gediş haqqı artandan sonra avtobusların keyfiyyəti dəyişibmi?"
+              },
+              "locators": {
+                "assetUri": "/azeri/azerbaijan-45222626",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-45222626",
+                "curie": "http://www.bbc.co.uk/asset/9c1d7a40-07f3-bd43-b632-aad6f9d87282",
+                "assetId": "45222626"
+              },
+              "summary": "Metro və avtobuslarda gediş haqqının dəyərinin 50 faiz qaldırılmasından sonra ictimai nəqliyyatda keyfiyyət dəyişibmi?",
+              "timestamp": 1534501931000,
+              "language": "az",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p06hqbgn",
+                "subType": "clip",
+                "format": "video",
+                "title": "Sorğu: Gediş haqqı artandan sonra avtobusların keyfiyyəti dəyişibmi?",
+                "synopses": {
+                  "short": "Sorğu: Gediş haqqı artandan sonra avtobusların keyfiyyəti dəyişibmi?",
+                  "long": "Ötən ay Tariş Şurasının qərarilə Bakı şəhərində, eləcə də digər şəhər və rayonlarda metro və avtobuslarda gediş haqqı azı 50 faiz qaldırılıb.\nBəs görəsən bu qiymət artımından sonra avtobusların keyfiyyəti dəyişibmi?\n\nBakı sakinləri BBC News Azərbaycancanın suallarını cavablandırıb.",
+                  "medium": "Metro və avtobuslarda gediş haqqının dəyərinin 50 faiz qaldırılmasından sonra ictimai nəqliyyatda keyfiyyət dəyişibmi?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hqdh5.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "Sorğu: Gediş haqqı artandan sonra avtobusların keyfiyyəti dəyişibmi?",
+                "versions": [
+                  {
+                    "versionId": "p06hqbgq",
+                    "types": ["Original"],
+                    "duration": 101,
+                    "durationISO8601": "PT1M41S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1534501153000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "103057404",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9E1B/production/_103057404_p06hqdh5.jpg",
+                "path": "/cpsprodpb/9E1B/production/_103057404_p06hqdh5.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #4",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/azerbaijan-45222626",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9b8f161f-1477-c549-b4e5-f3186574566f",
+            "rank": 20,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:9b8f161f-1477-c549-b4e5-f3186574566f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Qazaxıstan: bərpa edilən enerjiyə keçid realdırmı?",
+                "headline": "Qazaxıstan: bərpa edilən enerjiyə keçid realdırmı?"
+              },
+              "locators": {
+                "assetUri": "/azeri/international-40432605",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/international-40432605",
+                "curie": "http://www.bbc.co.uk/asset/9b8f161f-1477-c549-b4e5-f3186574566f",
+                "assetId": "40432605"
+              },
+              "summary": "Mərkəzi Asiyanın ən iri iqtisadiyyatı bərpa olunan enerji mənbələri sahəsində strategiyasını ev sahibliyi etdiyi sərgidə nümayiş etdirir.",
+              "timestamp": 1498663502000,
+              "language": "az",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p0576d9c",
+                "subType": "clip",
+                "format": "video",
+                "title": "Qazaxstan: bərpa edilən enerjiyə keçid realdırmı?",
+                "synopses": {
+                  "short": "Qazaxstan: bərpa edilən enerjiyə keçid realdırmı?",
+                  "medium": "Mərkəzi Asiyanın ən iri iqtisadiyyatı bərpa olunan enerji mənbələri sahəsində strategiyasını bu ay ev sahibliyi etdiyi  sərgidə nümayiş etdirir.",
+                  "long": "Mərkəzi Asiyanın ən iri iqtisadiyyatı bərpa olunan enerji mənbələri sahəsində strategiyasını bu ay ev sahibliyi etdiyi  sərgidə nümayiş etdirir.   \n\nNeft və qaz ölkənin ənənəvi gəlir mənbəyidir. Lakin hasil edilən yanacağın ucuzlaşmasından sonra bu gəlirlər azalıb.  \n\nHazırda Qazaxıstan artıma bərpa olunan enerji mənbələri hesabına nail olmaq niyyətindədir. \n\n2050-ci ilədək o, külək, günəş, su və atom enerjisinin həcmini 50 faizə çatdırmaq istəyir.\n\nBəs görəsən bu planlar nə dərəcədə realdır.  \n\nBu suala cavab tapmağa çalışan BBC-nin Asiya bölgəsi üzrə biznes müxbiri Karishma Vaswani Astanaya üz tutub."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0576fgq.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Qazaxstan: bərpa edilən enerjiyə keçid realdırmı?",
+                "versions": [
+                  {
+                    "versionId": "p0576d9f",
+                    "types": ["Original"],
+                    "duration": 132,
+                    "durationISO8601": "PT2M12S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1498662737000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "96717307",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/112E3/production/_96717307_p0576fgq.jpg",
+                "path": "/cpsprodpb/112E3/production/_96717307_p0576fgq.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Turbinlər",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/international-40432605",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

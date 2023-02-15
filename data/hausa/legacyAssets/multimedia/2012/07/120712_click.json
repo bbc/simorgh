@@ -1,94 +1,2052 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:hausa/multimedia/2012/07/120712_click",
-    "locators": {
-      "assetUri": "/hausa/multimedia/2012/07/120712_click",
-      "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2012/07/120712_click",
-      "curie": "http://www.bbc.co.uk/asset/f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "hausa",
-    "language": "ha",
-    "lastUpdated": 1554262764423,
-    "firstPublished": 1342109473,
-    "lastPublished": 1342109541,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "previouslyArchived": null,
-      "allowAdvertising": false,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "18556827" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "18556827",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/hausa/meta/dps/2012/07/emp/120712_click.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:hausa/multimedia/2012/07/120712_click",
+        "locators": {
+          "assetUri": "/hausa/multimedia/2012/07/120712_click",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2012/07/120712_click",
+          "curie": "http://www.bbc.co.uk/asset/f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e",
+          "assetId": "18556827"
+        },
+        "type": "MAP",
+        "createdBy": "hausa",
+        "language": "ha",
+        "lastUpdated": 1649914364296,
+        "firstPublished": 1342109473000,
+        "lastPublished": 1342109541000,
+        "timestamp": 1342109541000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "previouslyArchived": null,
+          "allowAdvertising": false,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "18556827",
+          "contentId": "urn:bbc:topcat:curie:asset:f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "siteUri": "/hausa",
+        "mediaType": "video"
+      },
+      "content": {
+        "blocks": [
+          {
+            "id": "18556827",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "18556827",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/07/12/120712160934_pearly_king_of_peckham_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2012/07/12/120712160934_pearly_king_of_peckham_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/hausa/meta/dps/2012/07/emp/120712_click.emp.xml",
+            "playlist": [
+              {
+                "format": "3gp",
+                "bitrate": "80000",
+                "url": "https://wsodprogrf.akamaized.net/hausa/3gp/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_lo.3gp"
+              },
+              {
+                "format": "3gp",
+                "bitrate": "160000",
+                "url": "https://wsodprogrf.akamaized.net/hausa/3gp/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_hi.3gp"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/hausa/dps/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/hausa/dps/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/hausa/dps/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Yadda birnin Landan yake —Peckham",
+          "headline": "Yadda birnin Landan yake —Peckham"
+        },
+        "locators": {
+          "assetUri": "/hausa/multimedia/2012/07/120712_click",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2012/07/120712_click",
+          "curie": "http://www.bbc.co.uk/asset/f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e",
+          "assetId": "18556827"
+        },
+        "summary": "Pecham daya ce daga cikin unguwannin birnin Landan.",
+        "timestamp": 1342109541000,
+        "language": "ha",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+          "taggings": []
+        },
+        "media": {
+          "id": "18556827",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "18556827",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/07/12/120712160934_pearly_king_of_peckham_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2012/07/12/120712160934_pearly_king_of_peckham_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/hausa/meta/dps/2012/07/emp/120712_click.emp.xml",
+          "playlist": [
+            {
+              "format": "3gp",
+              "bitrate": "80000",
+              "url": "https://wsodprogrf.akamaized.net/hausa/3gp/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_lo.3gp"
+            },
+            {
+              "format": "3gp",
+              "bitrate": "160000",
+              "url": "https://wsodprogrf.akamaized.net/hausa/3gp/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_hi.3gp"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/hausa/dps/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/hausa/dps/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/hausa/dps/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d7e206",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/07/12/120712160932_pearly_king_of_peckham_112x63_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2012/07/12/120712160932_pearly_king_of_peckham_112x63_bbc_nocredit.jpg",
+          "height": 63,
+          "width": 112,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:hausa/multimedia/2012/07/120712_click",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Hotuna da Bidiyo",
+          "uri": "/hausa/multimedia",
+          "urlIdentifier": "/hausa/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCHausa.com",
+          "uri": "/hausa",
+          "urlIdentifier": "/hausa",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Yadda birnin Landan yake —Peckham",
-      "headline": "Yadda birnin Landan yake —Peckham"
     },
-    "locators": {
-      "assetUri": "/hausa/multimedia/2012/07/120712_click",
-      "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2012/07/120712_click",
-      "curie": "http://www.bbc.co.uk/asset/f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e"
-    },
-    "summary": "Pecham daya ce daga cikin unguwannin birnin Landan.",
-    "timestamp": 1554262764423,
-    "passport": {},
-    "media": {
-      "id": "18556827",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/hausa/meta/dps/2012/07/emp/120712_click.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d7e206",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/07/12/120712160932_pearly_king_of_peckham_112x63_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2012/07/12/120712160932_pearly_king_of_peckham_112x63_bbc_nocredit.jpg",
-      "height": 63,
-      "width": 112,
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:hausa/multimedia/2012/07/120712_click",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Hotuna da Bidiyo",
-      "uri": "/hausa/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCHausa.com",
-      "uri": "/hausa",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:41:04.056Z",
+        "lastRecordTimeStamp": "2023-02-15T09:39:00Z",
+        "firstRecordTimeStamp": "2023-02-15T07:39:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "add25272-eae1-11e2-a5c2-93da3db9bd6e",
+            "rank": 1,
+            "count": 39,
+            "urn": "urn:bbc:curie:asset:add25272-eae1-11e2-a5c2-93da3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Shirin Safe",
+                "headline": "Shirin Safe"
+              },
+              "locators": {
+                "assetUri": "/hausa/multimedia/2013/07/000000_shirin_safe",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2013/07/000000_shirin_safe",
+                "curie": "http://www.bbc.co.uk/asset/add25272-eae1-11e2-a5c2-93da3db9bd6e",
+                "assetId": "25827080"
+              },
+              "summary": "Da karfe 05.30 GMT akan Mita 49 da 41. ",
+              "timestamp": 1375442823000,
+              "language": "ha",
+              "media": {
+                "id": "25827080",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "25827080",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/07/12/130712101348_p01blrc3_640_360.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2013/07/12/130712101348_p01blrc3_640_360.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Microphone",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://wsdownload.bbc.co.uk/hausa/meta/tx/smp/hau0530.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/css/32mp3/latest/safe.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e337",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/07/12/130712103029_p01blrc3_144_81.jpg",
+                "path": "/amz/worldservice/live/assets/images/2013/07/12/130712103029_p01blrc3_144_81.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "Mircrophone",
+                "copyrightHolder": "BBC World Service",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/multimedia/2013/07/000000_shirin_safe",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8428a0b7-f5ea-4115-b50c-7a60136e1aca",
+            "rank": 2,
+            "count": 28,
+            "urn": "urn:bbc:curie:asset:8428a0b7-f5ea-4115-b50c-7a60136e1aca",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Bayanai dalla-dalla kan sabon nau'in kudin Najeriya na laturoni",
+                "headline": "e-Naira: Bayanai dalla-dalla kan sabon nau'in kudin Najeriya na laturoni"
+              },
+              "locators": {
+                "assetUri": "/hausa/media-59081623",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/media-59081623",
+                "curie": "http://www.bbc.co.uk/asset/8428a0b7-f5ea-4115-b50c-7a60136e1aca",
+                "assetId": "59081623"
+              },
+              "summary": "A wannan bidiyon Umar Mikail ya mana bayani kan yadda tsarin zai yi aiki.",
+              "timestamp": 1635439685000,
+              "language": "ha",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "language": "ha",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+                "locator": "urn:bbc:cps:curie:asset:8428a0b7-f5ea-4115-b50c-7a60136e1aca",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4b823ebe-b36c-4940-9bba-ac3733b8d018#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Najeriya",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingLabel": "Tattalin Arziki",
+                      "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+                      "thingEnglishLabel": "Economics",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingLabel": "Explainer",
+                      "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+                      ],
+                      "thingEnglishLabel": "Explainer",
+                      "thingPreferredLabel": "Explainer",
+                      "thingLabelLanguage": "ha",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4b823ebe-b36c-4940-9bba-ac3733b8d018#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0b0xq3k",
+                "subType": "clip",
+                "format": "video",
+                "title": "Bayanai dalla-dalla kan sabon nau'in kudin Najeriya na laturoni",
+                "synopses": {
+                  "short": "e-naira: Bayanai dalla-dalla kan sabon nau'in kudin Najeriya na laturoni",
+                  "long": "Ku latsa hoton da ke sama don kallon bidiyon:\n\nBabban bankin Najeriya ya bayyana hanyoyin da za a yi amfani da sabon nau'in kudin Najeriya na laturoni \nna eNaira.\n\nA ranar Litinin ne shugaba Muhammadu Buhari na Najeriya ya ƙaddamar da kuɗin.\n\nA wannan bidiyon Umar Mikail ya mana bayani kan yadda tsarin zai yi aiki.",
+                  "medium": "A wannan bidiyon Umar Mikail ya mana bayani kan yadda tsarin zai yi aiki."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b0y45g.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "e-naira: Bayanai dalla-dalla kan sabon nau'in kudin Najeriya na laturoni",
+                "versions": [
+                  {
+                    "versionId": "p0b0xq40",
+                    "types": ["Original"],
+                    "duration": 134,
+                    "durationISO8601": "PT2M14S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1635433373000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "121256353",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8A25/production/_121256353_p0b0y45g.jpg",
+                "path": "/cpsprodpb/8A25/production/_121256353_p0b0y45g.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Umar Mikail",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/media-59081623",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "575b6d8e-4399-11e6-a6d6-30943db9bd6e",
+            "rank": 3,
+            "count": 25,
+            "urn": "urn:bbc:curie:asset:575b6d8e-4399-11e6-a6d6-30943db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Yaron da ya fi sauran yara kiba a duniya",
+                "headline": "Yaron da ya fi sauran yara kiba a duniya"
+              },
+              "locators": {
+                "assetUri": "/hausa/multimedia/2016/07/160706_video_boy_obesity",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2016/07/160706_video_boy_obesity",
+                "curie": "http://www.bbc.co.uk/asset/575b6d8e-4399-11e6-a6d6-30943db9bd6e",
+                "assetId": "44492322"
+              },
+              "summary": "Iyayen wani yaro dan shekara 10 da aka yi amannar ya fi kowanne yaro kiba a duniya, suna kokarin hana shi cin abincin da ya fi sa kiba, don tsoron lafiyarsa.",
+              "timestamp": 1467823661000,
+              "language": "ha",
+              "media": {
+                "id": "44492322",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "44492322",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/07/05/160705114859_indonesian_boy_permana_weighs_almost_200kg_bbc_indonesia_640x360_bbcindonesian_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2016/07/05/160705114859_indonesian_boy_permana_weighs_almost_200kg_bbc_indonesia_640x360_bbcindonesian_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/hausa/meta/dps/2016/07/emp/160706_video_boy_obesity.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/07/bbcshorts_obysity_hausa_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/07/bbcshorts_obysity_hausa_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/07/bbcshorts_obysity_hausa_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e218",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/07/05/160705114859_indonesian_boy_permana_weighs_almost_200kg_bbc_indonesia_144x81_bbcindonesian_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2016/07/05/160705114859_indonesian_boy_permana_weighs_almost_200kg_bbc_indonesia_144x81_bbcindonesian_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "BBC Indonesian",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/multimedia/2016/07/160706_video_boy_obesity",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "228aceb6-0319-3141-b105-d49e660e902b",
+            "rank": 4,
+            "count": 18,
+            "urn": "urn:bbc:curie:asset:228aceb6-0319-3141-b105-d49e660e902b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ana biya na ₦180 don a yi jima'i da ni – Fatmata",
+                "headline": "Ana biya na ₦180 don a yi jima'i da ni – Fatmata"
+              },
+              "locators": {
+                "assetUri": "/hausa/labarai-48389160",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-48389160",
+                "curie": "http://www.bbc.co.uk/asset/228aceb6-0319-3141-b105-d49e660e902b",
+                "assetId": "48389160"
+              },
+              "summary": "Bincike ya nuna cewa an samu karuwar karuwai a Saliyo tun bayan barkewar cutar Ebola a kasar.",
+              "timestamp": 1558637059000,
+              "language": "ha",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07b4pwd",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ana jima'i da ni a kan N180 na tsawon rana- Fatmata",
+                "synopses": {
+                  "short": "Ana jima'i da ni a kan N180 na tsawon rana- Fatmata",
+                  "long": "Ana jima'i da ni a kan N180 na tsawon rana- Fatmata",
+                  "medium": "Ana jima'i da ni a kan N180 na tsawon rana- Fatmata"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07b4q6b.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ana jima'i da ni a kan N180 na tsawon rana- Fatmata",
+                "versions": [
+                  {
+                    "versionId": "p07b4pwg",
+                    "types": ["Original"],
+                    "duration": 221,
+                    "durationISO8601": "PT3M41S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1558626458000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "107085654",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B25A/production/_107085654_p07b4q6b.jpg",
+                "path": "/cpsprodpb/B25A/production/_107085654_p07b4q6b.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/labarai-48389160",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "bae1e1ec-3b4e-4411-b4dc-d86e4d088e2a",
+            "rank": 5,
+            "count": 17,
+            "urn": "urn:bbc:curie:asset:bae1e1ec-3b4e-4411-b4dc-d86e4d088e2a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Minti Daya Da BBC Hausa Na Yamma 22/10/2020",
+                "headline": "Minti Daya Da BBC Hausa Na Yamma 22/10/2020"
+              },
+              "locators": {
+                "assetUri": "/hausa/labarai-54640367",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-54640367",
+                "curie": "http://www.bbc.co.uk/asset/bae1e1ec-3b4e-4411-b4dc-d86e4d088e2a",
+                "assetId": "54640367"
+              },
+              "summary": "Minti Daya Da BBC Hausa Na Yamma 22/10/2020",
+              "timestamp": 1603351649000,
+              "language": "ha",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08w2df8",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Minti Daya Da BBC Hausa 22/10/2020",
+                "synopses": {
+                  "short": "Minti Daya Da BBC Hausa 22/10/2020",
+                  "long": "Minti Daya Da BBC Hausa 22/10/2020",
+                  "medium": "Minti Daya Da BBC Hausa 22/10/2020"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08w2dx4.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Minti Daya Da BBC Hausa 22/10/2020",
+                "versions": [
+                  {
+                    "versionId": "p08w2dfb",
+                    "types": ["Original"],
+                    "duration": 60,
+                    "durationISO8601": "PT1M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1603393963000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "115038203",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/764B/production/_115038203_p08w2dx4.jpg",
+                "path": "/cpsprodpb/764B/production/_115038203_p08w2dx4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Minti Daya",
+                "caption": "Minti Daya",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/labarai-54640367",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c8a0b763-0ad6-e544-b7f7-ef8a4deb6b62",
+            "rank": 6,
+            "count": 16,
+            "urn": "urn:bbc:curie:asset:c8a0b763-0ad6-e544-b7f7-ef8a4deb6b62",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Kalli kunkuru mai shekara 100 da ya haifi 'ya'ya 800",
+                "headline": "Kalli bidiyon kunkuru mai shekara 100 da ya haifi 'ya'ya 800"
+              },
+              "locators": {
+                "assetUri": "/hausa/labarai-51622389",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-51622389",
+                "curie": "http://www.bbc.co.uk/asset/c8a0b763-0ad6-e544-b7f7-ef8a4deb6b62",
+                "assetId": "51622389"
+              },
+              "summary": "Kunkurun da mata 12 ne suka haifi 'ya'yan domin kara yawan irinsa.",
+              "timestamp": 1582604337000,
+              "language": "ha",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p084mf3t",
+                "subType": "clip",
+                "format": "video",
+                "title": "Kunkuru mai shekara 100 ya haifi 'ya'ya 800",
+                "synopses": {
+                  "short": "Kunkuru mai shekara 100 ya haifi 'ya'ya 800",
+                  "long": "Ga wani kunkuru mai suna Diego, wanda ya haifi 'ya'ya 800. Kunkurun wanda aka kada da mata 12 ne suka haifi 'ya'yan domin kaucewa karewa irinsa.",
+                  "medium": "Kunkurun da mata 12 ne suka haifi 'ya'yan domin kara yawan irin na wannan kunkurun"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p084mfh0.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Kunkuru mai shekara 100 ya haifi 'ya'ya 800",
+                "versions": [
+                  {
+                    "versionId": "p084mf3x",
+                    "types": ["Original"],
+                    "duration": 76,
+                    "durationISO8601": "PT1M16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1582567229000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111023010",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0408/production/_111023010_p084mfh0.jpg",
+                "path": "/cpsprodpb/0408/production/_111023010_p084mfh0.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/labarai-51622389",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "41f543d8-4bac-40c4-bfa9-9356a2661635",
+            "rank": 7,
+            "count": 15,
+            "urn": "urn:bbc:curie:asset:41f543d8-4bac-40c4-bfa9-9356a2661635",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Minti Daya Da BBC Na Rana 15/02/2022",
+                "headline": "Minti Daya Da BBC Na Rana 15/02/2022"
+              },
+              "locators": {
+                "assetUri": "/hausa/labarai-60342915",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-60342915",
+                "curie": "http://www.bbc.co.uk/asset/41f543d8-4bac-40c4-bfa9-9356a2661635",
+                "assetId": "60342915"
+              },
+              "summary": "Minti Daya Da BBC Na Rana 15/02/2022",
+              "timestamp": 1644825276000,
+              "language": "ha",
+              "media": {
+                "id": "p0bp7czr",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Minti Daya Da BBC Na Rana 15/02/2022",
+                "synopses": {
+                  "short": "Minti Daya Da BBC Na Rana 15/02/2022",
+                  "long": "Minti Daya Da BBC Na Rana 15/02/2022",
+                  "medium": "Minti Daya Da BBC Na Rana 15/02/2022"
+                },
+                "imageUrl": null,
+                "embedding": true,
+                "advertising": true,
+                "caption": "Minti Daya Da BBC Na Rana 15/02/2022",
+                "versions": [
+                  {
+                    "versionId": "p0bp7d00",
+                    "types": ["Original"],
+                    "duration": 69,
+                    "durationISO8601": "PT1M9S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1644933210000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "123267991",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4E08/production/_123267991_p09xpqkb.png",
+                "path": "/cpsprodpb/4E08/production/_123267991_p09xpqkb.png",
+                "height": 576,
+                "width": 1024,
+                "altText": "Minti Daya Da BBC Na Rana 15/2/22",
+                "caption": "Minti Daya",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/labarai-60342915",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2026bc10-2c5a-45c4-a910-f549377a9ce0",
+            "rank": 8,
+            "count": 15,
+            "urn": "urn:bbc:curie:asset:2026bc10-2c5a-45c4-a910-f549377a9ce0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Yadda aka kafa Abuja babban birnin tarayyar Najeriya",
+                "headline": "Yadda aka kafa Abuja babban birnin tarayyar Najeriya"
+              },
+              "locators": {
+                "assetUri": "/hausa/media-61955682",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:2026bc10-2c5a-45c4-a910-f549377a9ce0",
+                "assetId": "61955682",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/media-61955682",
+                "curie": "http://www.bbc.co.uk/asset/2026bc10-2c5a-45c4-a910-f549377a9ce0"
+              },
+              "summary": "An samar da birnin Abuja ne domin ya maye gurbin Lagos a matsayin babban birnin Najeriya.",
+              "timestamp": 1656389085000,
+              "language": "ha",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "language": "ha",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+                "locator": "urn:bbc:cps:curie:asset:2026bc10-2c5a-45c4-a910-f549377a9ce0",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4b823ebe-b36c-4940-9bba-ac3733b8d018#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/9760ca9c-1313-4e0e-bd0b-f423b34ff8d8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4b823ebe-b36c-4940-9bba-ac3733b8d018#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingLabel": "Explainer",
+                      "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+                      ],
+                      "thingEnglishLabel": "Explainer",
+                      "thingPreferredLabel": "Explainer",
+                      "thingLabelLanguage": "ha",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Najeriya",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/9760ca9c-1313-4e0e-bd0b-f423b34ff8d8#id",
+                      "thingLabel": "Abuja",
+                      "thingUri": "http://www.bbc.co.uk/things/9760ca9c-1313-4e0e-bd0b-f423b34ff8d8#id",
+                      "thingId": "9760ca9c-1313-4e0e-bd0b-f423b34ff8d8",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2352777/"],
+                      "thingEnglishLabel": "Abuja",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0chg912",
+                "subType": "clip",
+                "format": "video",
+                "title": "Yadda aka kafa Abuja babban birnin tarayyar Najeriya",
+                "synopses": {
+                  "short": "Yadda aka kafa Abuja babban birnin tarayyar Najeriya",
+                  "long": "Abuja babban birnin tarayyar Najeriya na daya daga cikin birane wadanda suka fi bunkasa a nahiyar Afirka.\n\nAn tsara tare da gina birnin Abuja ne a wani tankamemen yanki da aka debo daga wasu jihohi na tsakiyar kasar. \n\nWannan ya sha bam-bam ne da sauran biranen kasar wadanda suka kafu shekaru aru-aru da suka gabata ba.\n\nAn samar da birnin Abuja ne domin ya maye gurbin Lagos a matsayin babban birnin Najeriya.\nDaga yau Talata BBC Hausa za ta fara gabatar muku jerin bidiyo kan babban birnin na Najeriya Abuja.\n\nBidiyonmu na yau ya mayarda hankali ne kan yadda aka samo birnin Abuja.",
+                  "medium": "An samar da birnin Abuja ne domin ya maye gurbin Lagos a matsayin babban birnin Najeriya."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0chgjsj.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Bidiyon yadda aka samo Abuja",
+                "versions": [
+                  {
+                    "versionId": "p0chg918",
+                    "types": ["Original"],
+                    "duration": 347,
+                    "durationISO8601": "PT5M47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1656349140000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125667218",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13D7C/production/_125667218_p0chgjsj.jpg",
+                "path": "/cpsprodpb/13D7C/production/_125667218_p0chgjsj.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/media-61955682",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fdf959e5-2a84-f546-a399-c00ca15596e2",
+            "rank": 9,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:fdf959e5-2a84-f546-a399-c00ca15596e2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Yadda cutar Sikila ta hana Aisha aure",
+                "headline": "Yadda cutar Sikila ta hana Aisha aure"
+              },
+              "locators": {
+                "assetUri": "/hausa/labarai-49809719",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-49809719",
+                "curie": "http://www.bbc.co.uk/asset/fdf959e5-2a84-f546-a399-c00ca15596e2",
+                "assetId": "49809719"
+              },
+              "summary": "Aisha Bello Yusuf tana dauke da cutar Sikila ta kuma koka kan yadda cutar Sikila ta hana ta aure.",
+              "timestamp": 1570443054000,
+              "language": "ha",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07p4zcf",
+                "subType": "clip",
+                "format": "video",
+                "title": "Yadda cutar Sikila ya hana ni aure",
+                "synopses": {
+                  "short": "Yadda cutar Sikila ya hana ni aure"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07p4zgn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Yadda cutar Sikila ya hana ni aure",
+                "versions": [
+                  {
+                    "versionId": "p07p4zck",
+                    "types": ["Original"],
+                    "duration": 89,
+                    "durationISO8601": "PT1M29S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1569314323000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "108925494",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/C12C/production/_108925494_p07p4zgn.jpg",
+                "path": "/cpsprodpb/C12C/production/_108925494_p07p4zgn.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Yadda cutar Sikila ya hana ni aure",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/labarai-49809719",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "94b55f6c-f502-45c1-87df-e1cabbbacd36",
+            "rank": 10,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:94b55f6c-f502-45c1-87df-e1cabbbacd36",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dogon Sisco ya buge Garkuwan Cindo, an doke Ramadan",
+                "headline": "Dogon Sisco ya buge Garkuwan Cindo, an doke Ramadan"
+              },
+              "locators": {
+                "assetUri": "/hausa/61466420",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/61466420",
+                "curie": "http://www.bbc.co.uk/asset/94b55f6c-f502-45c1-87df-e1cabbbacd36",
+                "assetId": "61466420"
+              },
+              "summary": "Dogon Sisco ya yi nasarar doke Garkuwan Cindo a damben da suka yi ranar Lahadi a gidan wasa da ke Ado Bayero Square a Kano, Najeriya.",
+              "timestamp": 1652698840000,
+              "language": "ha",
+              "media": {
+                "id": "p0c71fcp",
+                "subType": "clip",
+                "format": "video",
+                "title": "Dogon Sisco ya buge Garkuwan Cindo, an doke Ramadan",
+                "synopses": {
+                  "short": "Dogon Sisco ya buge Garkuwan Cindo, an doke Ramadan"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c71gxr.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Dogon Sisco ya buge Garkuwan Cindo, an doke Ramadan",
+                "versions": [
+                  {
+                    "versionId": "p0c71fcw",
+                    "types": ["Original"],
+                    "duration": 337,
+                    "durationISO8601": "PT5M37S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1652698038000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124764476",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10776/production/_124764476_p0c71gxr.jpg",
+                "path": "/cpsprodpb/10776/production/_124764476_p0c71gxr.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Damben Gargajiya",
+                "copyrightHolder": "BBC Hausa",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/61466420",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "771d8efa-1611-11e6-b119-2ce73db9bd6e",
+            "rank": 11,
+            "count": 10,
+            "urn": "urn:bbc:curie:asset:771d8efa-1611-11e6-b119-2ce73db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Labarin dan Nigeria da ya koma mace a Turai",
+                "headline": "Labarin dan Nigeria da ya koma mace a Turai"
+              },
+              "locators": {
+                "assetUri": "/hausa/news/2016/05/160509_video_nigeria_transgender",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/news/2016/05/160509_video_nigeria_transgender",
+                "curie": "http://www.bbc.co.uk/asset/771d8efa-1611-11e6-b119-2ce73db9bd6e",
+                "assetId": "43756664"
+              },
+              "summary": "Bari mu gabatar muku da Miss Sahhara, wani namiji da ya koma mace.  An haife ta kuma ta girma a Nigeria. ",
+              "timestamp": 1462818410000,
+              "language": "ha",
+              "media": {
+                "id": "43756664",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "43756664",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/04/19/160419081721_rehana_transgender_bbc_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2016/04/19/160419081721_rehana_transgender_bbc_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/hausa/meta/dps/2016/05/emp/160509_video_nigeria_transgender.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/05/hau~fnigeria_od~f1604~f7~f5_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/05/hau~fnigeria_od~f1604~f7~f5_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/05/hau~fnigeria_od~f1604~f7~f5_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e215",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/09/160509182530_transgender__144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2016/05/09/160509182530_transgender__144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/news/2016/05/160509_video_nigeria_transgender",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c3c31fb4-af45-11e5-8581-b1c03db9bd6e",
+            "rank": 12,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:c3c31fb4-af45-11e5-8581-b1c03db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Labaran Talabijin",
+                "headline": "Labaran Talabijin"
+              },
+              "locators": {
+                "assetUri": "/hausa/multimedia/2015/12/151230_backupondemand3012",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2015/12/151230_backupondemand3012",
+                "curie": "http://www.bbc.co.uk/asset/c3c31fb4-af45-11e5-8581-b1c03db9bd6e",
+                "assetId": "41965337"
+              },
+              "summary": "Ku kalli labaran talabijin a duk lokacin da ku ke bukata wanda mu ke gabatarwa daga ranar Litinin zuwa Juma'a da karfe takwas na dare a agogon GMT.",
+              "timestamp": 1451515019000,
+              "language": "ha",
+              "media": {
+                "id": "41965337",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "41965337",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/09/03/140903173725_bbchausatv_logo_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/09/03/140903173725_bbchausatv_logo_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/hausa/meta/dps/2015/12/emp/151230_backupondemand3012.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2015/12/haurot3f20003012_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2015/12/haurot3f20003012_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2015/12/haurot3f20003012_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e206",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/09/03/140903173725_bbchausatv_logo_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/09/03/140903173725_bbchausatv_logo_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/multimedia/2015/12/151230_backupondemand3012",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4e066634-3715-11e6-bb61-89ef3db9bd6e",
+            "rank": 13,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:4e066634-3715-11e6-bb61-89ef3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Tasirin sabon tsarin CBN kan musayar kudi",
+                "headline": "Tasirin sabon tsarin CBN kan musayar kudi"
+              },
+              "locators": {
+                "assetUri": "/hausa/multimedia/2016/06/160620_video_cbn_new_policy",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2016/06/160620_video_cbn_new_policy",
+                "curie": "http://www.bbc.co.uk/asset/4e066634-3715-11e6-bb61-89ef3db9bd6e",
+                "assetId": "44298771"
+              },
+              "summary": "Ko kun san tasirin sabon tsarin da babban bankin Najeriya CBN ya fitar kan musayar dala a kasar.",
+              "timestamp": 1466447558000,
+              "language": "ha",
+              "media": {
+                "id": "44298771",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "44298771",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/03/24/160324192538_bank_dollars_640x360_bbcbangla_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2016/03/24/160324192538_bank_dollars_640x360_bbcbangla_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/hausa/meta/dps/2016/06/emp/160620_video_cbn_new_policy.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/06/nigeria_hu_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/06/nigeria_hu_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/06/nigeria_hu_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e215",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/03/24/160324192538_bank_dollars_144x81_bbcbangla_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2016/03/24/160324192538_bank_dollars_144x81_bbcbangla_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "bbc bangla",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/multimedia/2016/06/160620_video_cbn_new_policy",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4085e511-d302-47f0-8fd3-f0150e86df46",
+            "rank": 14,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:4085e511-d302-47f0-8fd3-f0150e86df46",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Yadda sunayen ranakun mako bakwai suka samo asali",
+                "headline": "Yadda sunayen ranakun mako bakwai suka samo asali"
+              },
+              "locators": {
+                "assetUri": "/hausa/shirye-shirye-na-musamman-62114810",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:4085e511-d302-47f0-8fd3-f0150e86df46",
+                "assetId": "62114810",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/shirye-shirye-na-musamman-62114810",
+                "curie": "http://www.bbc.co.uk/asset/4085e511-d302-47f0-8fd3-f0150e86df46"
+              },
+              "summary": "Yadda sunayen ranakun mako bakwai suka samo asali",
+              "timestamp": 1657471120000,
+              "language": "ha",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "ha",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+                "locator": "urn:bbc:cps:curie:asset:4085e511-d302-47f0-8fd3-f0150e86df46",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4b823ebe-b36c-4940-9bba-ac3733b8d018#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4b823ebe-b36c-4940-9bba-ac3733b8d018#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ha",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                      "thingLabel": "Kimiyya",
+                      "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                      "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q336",
+                        "http://dbpedia.org/resource/Science"
+                      ],
+                      "thingEnglishLabel": "Science",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingLabel": "Najeriya",
+                      "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+                      "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
+                      "thingEnglishLabel": "Nigeria",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0cl1pfj",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Yadda sunayen ranakun mako bakwai suka samo asali",
+                "synopses": {
+                  "short": "Yadda sunayen ranakun mako bakwai suka samo asali",
+                  "medium": "Yadda sunayen ranakun mako bakwai suka samo asali"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0cl1pmv.png",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Yadda sunayen ranakun mako bakwai suka samo asali",
+                "versions": [
+                  {
+                    "versionId": "p0cl1pfn",
+                    "types": ["Original"],
+                    "duration": 571,
+                    "durationISO8601": "PT9M31S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1657470850000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125852498",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/15D51/production/_125852498_p0cl1pmv.png",
+                "path": "/cpsprodpb/15D51/production/_125852498_p0cl1pmv.png",
+                "height": 576,
+                "width": 1024,
+                "altText": "Yadda sunayen ranakun mako bakwai suka samo asali",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/shirye-shirye-na-musamman-62114810",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cea7a222-0271-11e6-a95d-9ecf3db9bd6e",
+            "rank": 15,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:cea7a222-0271-11e6-a95d-9ecf3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mataccen Kifi",
+                "headline": "Mataccen Kifi"
+              },
+              "locators": {
+                "assetUri": "/hausa/multimedia/2016/04/160414_dead_fish_video",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2016/04/160414_dead_fish_video",
+                "curie": "http://www.bbc.co.uk/asset/cea7a222-0271-11e6-a95d-9ecf3db9bd6e",
+                "assetId": "43431949"
+              },
+              "summary": "An samu dubban kifayen da suka mutu suna yawo a saman ruwa  a gabar kogin Chile.",
+              "timestamp": 1460660181000,
+              "language": "ha",
+              "media": {
+                "id": "43431949",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "43431949",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/18/150818190222_dead_fish_640x360_afp_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/08/18/150818190222_dead_fish_640x360_afp_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Mataccen Kifi",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/hausa/meta/dps/2016/04/emp/160414_dead_fish_video.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/04/bbcshorts_dead_fish_hausa_160414_dead_fish_video_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/04/bbcshorts_dead_fish_hausa_160414_dead_fish_video_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/04/bbcshorts_dead_fish_hausa_160414_dead_fish_video_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e215",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/04/12/160412065416_dead_fish_144x81_reuters_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2016/04/12/160412065416_dead_fish_144x81_reuters_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/multimedia/2016/04/160414_dead_fish_video",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "584e1836-d01c-4d19-a196-4eda74fa9365",
+            "rank": 16,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:584e1836-d01c-4d19-a196-4eda74fa9365",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Kun san nisan da ke tsakanin duniyarmu da duniyar Mars?",
+                "headline": "Kun san nisan da ke tsakanin duniyarmu da duniyar Mars?"
+              },
+              "locators": {
+                "assetUri": "/hausa/53567191",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/53567191",
+                "curie": "http://www.bbc.co.uk/asset/584e1836-d01c-4d19-a196-4eda74fa9365",
+                "assetId": "53567191"
+              },
+              "summary": "Wannan bidiyon yana bayani kan yadda ake sauka a duniyar Mars, wacce ake yi wa lakabi da jar duniya.",
+              "timestamp": 1595929532000,
+              "language": "ha",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08m138y",
+                "subType": "clip",
+                "format": "video",
+                "title": "Kun san nisan da ke tsakanin duniyarmu da ta Mars?",
+                "synopses": {
+                  "short": "Kun san nisan da ke tsakanin duniyarmu da ta Mars?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08m14z3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Kun san nisan da ke tsakanin duniyarmu da ta Mars?",
+                "versions": [
+                  {
+                    "versionId": "p08m1392",
+                    "types": ["Original"],
+                    "duration": 137,
+                    "durationISO8601": "PT2M17S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1595926809000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "113672338",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1457F/production/_113672338_p08m14z3.jpg",
+                "path": "/cpsprodpb/1457F/production/_113672338_p08m14z3.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/53567191",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e",
+            "rank": 17,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Yadda birnin Landan yake —Peckham",
+                "headline": "Yadda birnin Landan yake —Peckham"
+              },
+              "locators": {
+                "assetUri": "/hausa/multimedia/2012/07/120712_click",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2012/07/120712_click",
+                "curie": "http://www.bbc.co.uk/asset/f8d0514e-7b5f-11e7-bb5d-9cc73db9bd6e",
+                "assetId": "18556827"
+              },
+              "summary": "Pecham daya ce daga cikin unguwannin birnin Landan.",
+              "timestamp": 1342109541000,
+              "language": "ha",
+              "media": {
+                "id": "18556827",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "18556827",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/07/12/120712160934_pearly_king_of_peckham_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2012/07/12/120712160934_pearly_king_of_peckham_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/hausa/meta/dps/2012/07/emp/120712_click.emp.xml",
+                "playlist": [
+                  {
+                    "format": "3gp",
+                    "bitrate": "80000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/3gp/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_lo.3gp"
+                  },
+                  {
+                    "format": "3gp",
+                    "bitrate": "160000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/3gp/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_hi.3gp"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2012/07/hausa~fmylondon peckham~f1048~f12~f7_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e206",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/07/12/120712160932_pearly_king_of_peckham_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/07/12/120712160932_pearly_king_of_peckham_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/multimedia/2012/07/120712_click",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e511ae78-4020-11e4-9414-9fd23db9bd6e",
+            "rank": 18,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:e511ae78-4020-11e4-9414-9fd23db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ra'ayi Riga: Cece-kuce kan zaben 2015",
+                "headline": "Ra'ayi Riga: Cece-kuce kan zaben 2015"
+              },
+              "locators": {
+                "assetUri": "/hausa/multimedia/2014/09/140919_raayiriga190914",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2014/09/140919_raayiriga190914",
+                "curie": "http://www.bbc.co.uk/asset/e511ae78-4020-11e4-9414-9fd23db9bd6e",
+                "assetId": "34822778"
+              },
+              "summary": "A Nigeria batun zaben 2015 a soma janyo cece-kuce saboda zargin cewar rashin tsaro ka iya tilastawa a kasa gudanar da zabe.",
+              "timestamp": 1411160626000,
+              "language": "ha",
+              "media": {
+                "id": "34822778",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "34822778",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/11/22/131122204925_election_nigeria_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2013/11/22/131122204925_election_nigeria_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/hausa/meta/dps/2014/09/emp/140919_raayiriga190914.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2014/09/raayi_kanzabe_140919_raayiriga190914_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e218",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/07/14/120714152630_nigeria_election_144x81_b_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/07/14/120714152630_nigeria_election_144x81_b_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "b",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/multimedia/2014/09/140919_raayiriga190914",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ccf08588-3578-4530-91e3-68ddd6f95144",
+            "rank": 19,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:ccf08588-3578-4530-91e3-68ddd6f95144",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "An gama duk wani yabo da za a yi wa manzon Allah – Bashir Ɗan Musa",
+                "headline": "An gama duk wani yabo da za a yi wa manzon Allah – Bashir Ɗan Musa"
+              },
+              "locators": {
+                "assetUri": "/hausa/media-58143356",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/media-58143356",
+                "curie": "http://www.bbc.co.uk/asset/ccf08588-3578-4530-91e3-68ddd6f95144",
+                "assetId": "58143356"
+              },
+              "summary": "Fitaccen mawaƙin begen Annabi Muhammad SAW, Malam Bashir Ɗan Musa ya ce yana matukar takaicin yadda aka lalata yabon manzon Allah (SAW) a shekarun nan.",
+              "timestamp": 1628492346000,
+              "language": "ha",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "language": "ha",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+                "locator": "urn:bbc:cps:curie:asset:ccf08588-3578-4530-91e3-68ddd6f95144",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1b3d2a47-78c9-4fc9-aeb6-746063169674#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/4b823ebe-b36c-4940-9bba-ac3733b8d018#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a0d7e0d8-2d01-4178-bb61-3922db2c0112#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4b823ebe-b36c-4940-9bba-ac3733b8d018#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "ha",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1b3d2a47-78c9-4fc9-aeb6-746063169674#id",
+                      "thingLabel": "Musulunci",
+                      "thingUri": "http://www.bbc.co.uk/things/1b3d2a47-78c9-4fc9-aeb6-746063169674#id",
+                      "thingId": "1b3d2a47-78c9-4fc9-aeb6-746063169674",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Islam"],
+                      "thingEnglishLabel": "Islam",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a0d7e0d8-2d01-4178-bb61-3922db2c0112#id",
+                      "thingLabel": "Kano",
+                      "thingUri": "http://www.bbc.co.uk/things/a0d7e0d8-2d01-4178-bb61-3922db2c0112#id",
+                      "thingId": "a0d7e0d8-2d01-4178-bb61-3922db2c0112",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2335204/"],
+                      "thingEnglishLabel": "Kano",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09rqf7g",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ina takaicin yadda aka lalata yabon manzon Allah – Bashir Ɗan Musa",
+                "synopses": {
+                  "short": "Ina takaicin yadda aka lalata yabon manzon Allah – Bashir Ɗan Musa",
+                  "long": "Fitaccen mawaƙin begen Annabi Muhammad SAW, Malam Bashir Ɗan Musa ya ce yana matukar takaicin yadda aka lalata yabon manzon Allah (SAW) a shekarun nan.\nBashir Ɗan Musa ya bayyana haka ne a wata tattaunawa da ya yi da BBC Hausa, inda ya ce rashin ilimi da kuma son rai ne ya kai masu yabo \"suka faɗa duhun jahilci\" a wannan lokaci.\n\"A baya mukan rubuta waƙa mu bai wa junanmu kamar ni da Rabi'u Usman Baba da Rufa'i Ayagi da Bashir Tashi da sauransu, idan akwai kuskure mu gyara wa juna.\n\"Za a duba idan ka bai wa Annabi haƙƙin Allah sai a gyara, in kuma ka bai wa wani waliyyi hakkin da ba nasa ba shi ma a gyra maka,\" in ji Malam Bashir. \nYa ce idan kana buƙatar yabon Annabi ba sai ka kushe wanda suke tare da shi ba ko kuma 'yan uwansa annabawa \"saboda kowa matsayinsa daban\". \n\"Idan mutum yana so ya yi bege kamar yadda ya kamata a kan turbar gaskiya to sai ya bi sawun magabata.\n\"An gama duk wani yabo da za a yi wa ma'aiki, mafi kyau sai mutum ya bi turbar da magata suka bi sai a dace. Amma da ka yi yadda kake so to sai ka zame.\n\"Da akwai waɗanda suke yin yabo karshe ba sa samun ladan komai, saboda ba sa yin sa kamar yadda ya kamata.\"",
+                  "medium": "Fitaccen mawaƙin begen Annabi Muhammad SAW, Malam Bashir Ɗan Musa ya ce yana matukar takaicin yadda aka lalata yabon manzon Allah (SAW) a shekarun nan."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09rqf8k.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ina takaicin yadda aka lalata yabon manzon Allah – Bashir Ɗan Musa",
+                "versions": [
+                  {
+                    "versionId": "p09rqf7j",
+                    "types": ["Original"],
+                    "duration": 459,
+                    "durationISO8601": "PT7M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1628492032000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119838538",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1467F/production/_119838538_p09rqf8k.jpg",
+                "path": "/cpsprodpb/1467F/production/_119838538_p09rqf8k.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Fitaccen mawaƙin begen Annabi Muhammad SAW, Malam Bashir Ɗan Musa ya ce yana matukar takaicin yadda aka lalata yabon manzon Allah (SAW) a shekarun nan.",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/media-58143356",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6bae2182-16da-11e6-9d52-fee93db9bd6e",
+            "rank": 20,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:6bae2182-16da-11e6-9d52-fee93db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Bidiyon katobarar da Cameron ya yi kan Nigeria",
+                "headline": "Bidiyon katobarar da Cameron ya yi kan Nigeria"
+              },
+              "locators": {
+                "assetUri": "/hausa/multimedia/2016/05/160510_video_cameron_nig_corruption",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/multimedia/2016/05/160510_video_cameron_nig_corruption",
+                "curie": "http://www.bbc.co.uk/asset/6bae2182-16da-11e6-9d52-fee93db9bd6e",
+                "assetId": "43770501"
+              },
+              "summary": "An dauki Firai ministan Biritaniya David Cameron a bidiyo yana shaida wa sarauniyar Ingila cewa Nigeria ta shahara wajen cin hanci da rashawa.",
+              "timestamp": 1462903814000,
+              "language": "ha",
+              "media": {
+                "id": "43770501",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "43770501",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/10/160510163710_buckingham_640x360_afp_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2016/05/10/160510163710_buckingham_640x360_afp_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/hausa/meta/dps/2016/05/emp/160510_video_cameron_nig_corruption.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/05/hau_cameron_nigeria_1822_10_5_105_5601782_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/05/hau_cameron_nigeria_1822_10_5_105_5601782_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/hausa/dps/2016/05/hau_cameron_nigeria_1822_10_5_105_5601782_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e209",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/10/160510154030_cameron_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2016/05/10/160510154030_cameron_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/multimedia/2016/05/160510_video_cameron_nig_corruption",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

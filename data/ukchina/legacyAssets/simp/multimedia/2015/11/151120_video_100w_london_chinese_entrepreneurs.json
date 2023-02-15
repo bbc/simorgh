@@ -1,131 +1,743 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-    "locators": {
-      "assetUri": "/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "curie": "http://www.bbc.co.uk/asset/2383c460-8f72-11e5-82c3-08ef3db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "ukchina_simplified",
-    "language": "zh-Hans",
-    "lastUpdated": 1561042947383,
-    "firstPublished": 1448016091,
-    "lastPublished": 1448017134,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": true,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "map",
-      "cps_asset_id": "41406410"
-    },
-    "tags": {},
-    "version": "v1.0.10",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "41406410",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+        "locators": {
+          "assetUri": "/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+          "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+          "curie": "http://www.bbc.co.uk/asset/2383c460-8f72-11e5-82c3-08ef3db9bd6e",
+          "assetId": "41406410"
+        },
+        "type": "MAP",
+        "createdBy": "ukchina_simplified",
+        "language": "zh-Hans",
+        "lastUpdated": 1649936348394,
+        "firstPublished": 1448016091000,
+        "lastPublished": 1448016091000,
+        "timestamp": 1448016091000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "41406410",
+          "contentId": "urn:bbc:topcat:curie:asset:2383c460-8f72-11e5-82c3-08ef3db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/UKChina",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/ukchina/simp",
+        "mediaType": "video"
       },
-      {
-        "text": "BBC2015年度“巾帼百名” （100 Women）系列节目上演，这也是BBC连续第三年推出这个节目。",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "41406410",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "41406410",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "BBC2015年度“巾帼百名” （100 Women）系列节目上演，这也是BBC连续第三年推出这个节目。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "BBC在这个节目中列出了世界上最具激励精神的100名妇女。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "在今年的“巾帼百名”名单中有30名30岁以下的企业家，还有年龄超过80岁的巾帼英雄。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "BBC英伦网也将目光投向在伦敦的华裔女性，听听她们的创业故事和心得。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Dara Huang是位于伦敦的建筑和市内设计公司Design Haus Liberty的创始人，哈佛研究生，白手起家在伦敦创业。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "她的公司三年里迅速发展，有20多位建筑设计师。Dara的父母从台湾移民美国，她在美国长大。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "另一位创业女性是Sally Wang，来自中国安徽。在英国留学毕业后，她专注英国房地产业，有自己的公司，目前潜心写书，解读英国房地产市场和投资置业。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "BBC在这个节目中列出了世界上最具激励精神的100名妇女。",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "视频：伦敦华裔女性谈海外创业",
+          "headline": "视频：伦敦华裔女性谈海外创业"
+        },
+        "locators": {
+          "assetUri": "/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+          "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+          "curie": "http://www.bbc.co.uk/asset/2383c460-8f72-11e5-82c3-08ef3db9bd6e",
+          "assetId": "41406410"
+        },
+        "summary": "BBC“巾帼百人”特别报道之际，两位在伦敦创业的华裔女性分享她们的经验。",
+        "timestamp": 1448016091000,
+        "language": "zh-Hans",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/UKChina",
+          "taggings": []
+        },
+        "media": {
+          "id": "41406410",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "41406410",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/2015/11/chinabizwomen_151120_video_100w_london_chinese_entrepreneurs_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e213",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+        "type": "cps"
       },
-      {
-        "text": "在今年的“巾帼百名”名单中有30名30岁以下的企业家，还有年龄超过80岁的巾帼英雄。",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "BBC英伦网也将目光投向在伦敦的华裔女性，听听她们的创业故事和心得。",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Dara Huang是位于伦敦的建筑和市内设计公司Design Haus Liberty的创始人，哈佛研究生，白手起家在伦敦创业。",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "她的公司三年里迅速发展，有20多位建筑设计师。Dara的父母从台湾移民美国，她在美国长大。",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "另一位创业女性是Sally Wang，来自中国安徽。在英国留学毕业后，她专注英国房地产业，有自己的公司，目前潜心写书，解读英国房地产市场和投资置业。",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "音视图片",
+          "uri": "/ukchina/simp/multimedia",
+          "urlIdentifier": "/ukchina/simp/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "bbcukchina.com",
+          "uri": "/ukchina/simp",
+          "urlIdentifier": "/ukchina/simp",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "视频：伦敦华裔女性谈海外创业",
-      "headline": "视频：伦敦华裔女性谈海外创业"
     },
-    "locators": {
-      "assetUri": "/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-      "curie": "http://www.bbc.co.uk/asset/2383c460-8f72-11e5-82c3-08ef3db9bd6e"
-    },
-    "summary": "BBC“巾帼百人”特别报道之际，两位在伦敦创业的华裔女性分享她们的经验。",
-    "timestamp": 1561042947383,
-    "passport": {},
-    "media": {
-      "id": "41406410",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e213",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
-      "height": 81,
-      "width": 144,
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "音视图片",
-      "uri": "/ukchina/simp/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "bbcukchina.com",
-      "uri": "/ukchina/simp",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T10:03:04.185Z",
+        "lastRecordTimeStamp": "2023-02-15T10:01:00Z",
+        "firstRecordTimeStamp": "2023-02-15T02:01:00Z",
+        "totalRecords": 6,
+        "records": [
+          {
+            "id": "6c3ade21-1fa7-4e9b-9949-2e4e57c2ad21",
+            "rank": 1,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:6c3ade21-1fa7-4e9b-9949-2e4e57c2ad21",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "为什么美国千禧一代正在离开大城市",
+                "headline": "为什么美国千禧一代正在离开大城市"
+              },
+              "locators": {
+                "assetUri": "/ukchina/simp/media-57554668",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/media-57554668",
+                "curie": "http://www.bbc.co.uk/asset/6c3ade21-1fa7-4e9b-9949-2e4e57c2ad21",
+                "assetId": "57554668"
+              },
+              "summary": "为吸引年轻人移居，美国各地的小城市正在推出不同的刺激政策，有些地方的奖励高达一万五千美元。",
+              "timestamp": 1624271487000,
+              "language": "zh-Hans",
+              "media": {
+                "id": "p09lw54s",
+                "subType": "clip",
+                "format": "video",
+                "title": "为什么美国千禧一代正在离开大城市",
+                "synopses": {
+                  "short": "为什么美国千禧一代正在离开大城市",
+                  "long": "为吸引年轻人移居，美国各地的小城市正在推出不同的刺激政策，有些地方的奖励高达一万五千美元。\n\n随着远程办公的兴起，人们将可以更加自由地搬迁。\n\n未来几年内，近四分之一的美国人预计将完全成为远程工作者。",
+                  "medium": "为吸引年轻人移居，美国各地的小城市正在推出不同的刺激政策，有些地方的奖励高达一万五千美元。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09lw6n1.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "为什么美国千禧一代正在离开大城市",
+                "versions": [
+                  {
+                    "versionId": "p09lw552",
+                    "types": ["Original"],
+                    "duration": 173,
+                    "durationISO8601": "PT2M53S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1624015970000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "118979035",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CF69/production/_118979035_p09lw6n1.jpg",
+                "path": "/cpsprodpb/CF69/production/_118979035_p09lw6n1.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "莱康特·李和伴侣决定从华盛顿特区搬到俄克拉荷马的塔尔萨试试运气",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/simp/media-57554668",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0d507895-5393-9946-8d70-c267bab9e25a",
+            "rank": 2,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:0d507895-5393-9946-8d70-c267bab9e25a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "高清的震撼 太阳表面原来是这样的",
+                "headline": "你从未见过的太阳表面真实面貌"
+              },
+              "locators": {
+                "assetUri": "/ukchina/simp/51329851",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/51329851",
+                "curie": "http://www.bbc.co.uk/asset/0d507895-5393-9946-8d70-c267bab9e25a",
+                "assetId": "51329851"
+              },
+              "summary": "美国夏威夷的先进技术太阳望远镜拍摄到太阳表面的真实面貌，这是迄今为止最高清显示，揭示你从未见过的太阳真面貌。",
+              "timestamp": 1580478793000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p081xlzy",
+                "subType": "clip",
+                "format": "video",
+                "title": "高清的震撼 太阳表面原来是这样的",
+                "synopses": {
+                  "short": "高清的震撼 太阳表面原来是这样的"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p081xm92.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "高清的震撼 太阳表面原来是这样的",
+                "versions": [
+                  {
+                    "versionId": "p081xm03",
+                    "types": ["Original"],
+                    "duration": 68,
+                    "durationISO8601": "PT1M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1580472420000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110721730",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0E80/production/_110721730_p081xm92.jpg",
+                "path": "/cpsprodpb/0E80/production/_110721730_p081xm92.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "NASA",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/simp/51329851",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f1563b3f-b3d6-439b-925a-f835b38b4b8a",
+            "rank": 3,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f1563b3f-b3d6-439b-925a-f835b38b4b8a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "穆斯林女性与“适度时尚”：最新潮流时装你认识多少？",
+                "headline": "穆斯林女性与“适度时尚”：最新潮流时装你认识多少？"
+              },
+              "locators": {
+                "assetUri": "/ukchina/simp/media-57499749",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/media-57499749",
+                "curie": "http://www.bbc.co.uk/asset/f1563b3f-b3d6-439b-925a-f835b38b4b8a",
+                "assetId": "57499749"
+              },
+              "summary": "最近，穆斯林的年轻女性正追求一种“适度时尚”（Modest Fashion），你有听过吗？",
+              "timestamp": 1623843151000,
+              "language": "zh-Hans",
+              "media": {
+                "id": "p09lm06b",
+                "subType": "clip",
+                "format": "video",
+                "title": "穆斯林最新潮流时装",
+                "synopses": {
+                  "short": "穆斯林最新潮流时装",
+                  "long": "穆斯林最新潮流时装",
+                  "medium": "穆斯林最新潮流时装"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09lm0ln.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "穆斯林最新潮流时装",
+                "versions": [
+                  {
+                    "versionId": "p09lm06d",
+                    "types": ["Original"],
+                    "duration": 121,
+                    "durationISO8601": "PT2M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1623826184000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "118945296",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10E86/production/_118945296_p09lm0ln.jpg",
+                "path": "/cpsprodpb/10E86/production/_118945296_p09lm0ln.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "fashion",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/simp/media-57499749",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9a0cdddf-5444-45bb-a9b8-b2463b4e410f",
+            "rank": 4,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:9a0cdddf-5444-45bb-a9b8-b2463b4e410f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "泰国度假胜地普吉岛的新冠噩梦",
+                "headline": "新冠疫情：泰国度假胜地普吉岛的噩梦"
+              },
+              "locators": {
+                "assetUri": "/ukchina/simp/media-57470371",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/media-57470371",
+                "curie": "http://www.bbc.co.uk/asset/9a0cdddf-5444-45bb-a9b8-b2463b4e410f",
+                "assetId": "57470371"
+              },
+              "summary": "如今这里因新冠疫情正在经历一场已经一年半的经济噩梦。",
+              "timestamp": 1623667030000,
+              "language": "zh-Hans",
+              "media": {
+                "id": "p09l29q5",
+                "subType": "clip",
+                "format": "video",
+                "title": "度假胜地普吉岛的新冠噩梦",
+                "synopses": {
+                  "short": "度假胜地普吉岛的新冠噩梦",
+                  "long": "泰国普吉岛曾是无数人心目中的理想度假地，如今这里却因新冠正在经历一场已经一年半的经济噩梦。",
+                  "medium": "如今这里因新冠正在经历一场已经一年半的经济噩梦。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09l2b1m.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "度假胜地普吉岛的新冠噩梦",
+                "versions": [
+                  {
+                    "versionId": "p09l29q7",
+                    "types": ["Original"],
+                    "duration": 148,
+                    "durationISO8601": "PT2M28S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1623310171000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "118870619",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/165D7/production/_118870619_p09l2b1m.jpg",
+                "path": "/cpsprodpb/165D7/production/_118870619_p09l2b1m.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "普吉岛",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/simp/media-57470371",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "23916b55-ed16-4973-a112-790a43397568",
+            "rank": 5,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:23916b55-ed16-4973-a112-790a43397568",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "奥斯卡：《少年的你》获提名 导演曾国祥说“香港电影没有死”",
+                "headline": "奥斯卡：《少年的你》获提名 导演曾国祥说“香港电影没有死”"
+              },
+              "locators": {
+                "assetUri": "/ukchina/simp/media-56833203",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/media-56833203",
+                "curie": "http://www.bbc.co.uk/asset/23916b55-ed16-4973-a112-790a43397568",
+                "assetId": "56833203"
+              },
+              "summary": "导演曾国祥在专访中说：“我确认，电影制作人和艺术家，都不希望“自我审查”，要努力追求自己的信念，而你的热情和信念将反映在你的作品中。不要再说香港电影已死，只要有人，就有好故事。”",
+              "timestamp": 1619003875000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "language": "zh-hans",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/UKChina",
+                "locator": "urn:bbc:cps:curie:asset:23916b55-ed16-4973-a112-790a43397568",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/9cf7d42a-4f08-4d5d-a8b8-8e98369a408f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id"
+                  }
+                ],
+                "schemaVersion": "1.2.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+                      "thingLabel": "电影",
+                      "thingUri": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+                      "thingId": "2611f753-ece7-47ea-9782-f912bc1e4088",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q11424",
+                        "http://dbpedia.org/resource/Film"
+                      ],
+                      "thingEnglishLabel": "Film",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+                      "thingLabel": "香港",
+                      "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+                      "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1819729/"],
+                      "thingEnglishLabel": "Hong Kong",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "zh-hans",
+                      "type": "formats"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/9cf7d42a-4f08-4d5d-a8b8-8e98369a408f#id",
+                      "type": "contributor"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09f8ny9",
+                "subType": "clip",
+                "format": "video",
+                "title": "奥斯卡中的香港话题：《少年的你》获提名“香港电影没有死”",
+                "synopses": {
+                  "short": "奥斯卡中的香港话题：《少年的你》获提名“香港电影没有死”",
+                  "medium": "导演曾国祥在专访中说：“我确认，电影制作人和艺术家，都不希望“自我审查”，要努力追求自己的信念，而你的热情和信念将反映在你的作品中。不要再说香港电影已死，只要有人，就有好故事。”"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09f8p1q.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "奥斯卡中的香港话题：《少年的你》获提名“香港电影没有死”",
+                "versions": [
+                  {
+                    "versionId": "p09f8nyc",
+                    "types": ["Original"],
+                    "duration": 138,
+                    "durationISO8601": "PT2M18S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1618973370000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "118137402",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4FF9/production/_118137402_p09f8p1q.jpg",
+                "path": "/cpsprodpb/4FF9/production/_118137402_p09f8p1q.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "。",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/simp/media-56833203",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "04bb8612-77d3-9745-9887-ea59738f82cc",
+            "rank": 6,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:04bb8612-77d3-9745-9887-ea59738f82cc",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "医学奇葩：英国女子边拉琴边做开颅手术",
+                "headline": "医学奇葩：英国女子边拉琴边做开颅手术"
+              },
+              "locators": {
+                "assetUri": "/ukchina/simp/51599840",
+                "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/51599840",
+                "curie": "http://www.bbc.co.uk/asset/04bb8612-77d3-9745-9887-ea59738f82cc",
+                "assetId": "51599840"
+              },
+              "summary": "英国小提琴家特纳女士脑癌肿瘤复发，需要再次接受开颅手术。她需要在医生实施手术，割除她脑内的肿瘤时演奏小提琴曲。",
+              "timestamp": 1582631712000,
+              "language": "zh-Hans",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p084l8z3",
+                "subType": "clip",
+                "format": "video",
+                "title": "医学奇葩：英国女子边拉琴边做开颅手术",
+                "synopses": {
+                  "short": "医学奇葩：英国女子边拉琴边做开颅手术",
+                  "long": "英国小提琴家特纳女士脑癌肿瘤复发，需要再次接受开颅手术。而此次手术的不同之处在于，她需要在医生实施手术，割除她脑内的肿瘤时演奏小提琴曲。\n这听上去好像是天方夜谭，而医生为什么让特纳在手术时还拉小提琴呢？\n警告：详尽手术场面，请慎入！",
+                  "medium": "英国小提琴家特纳女士脑癌肿瘤复发，需要再次接受开颅手术。她需要在医生实施手术，割除她脑内的肿瘤时演奏小提琴曲。"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p084l9v9.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "特纳女士在医生给她做手术切除肿瘤时演奏小提琴（详尽手术场面，请慎入）",
+                "versions": [
+                  {
+                    "versionId": "p084l8z7",
+                    "types": ["Original"],
+                    "duration": 63,
+                    "durationISO8601": "PT1M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1582550225000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111025339",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/16CA8/production/_111025339_p084l9v9.jpg",
+                "path": "/cpsprodpb/16CA8/production/_111025339_p084l9v9.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "特纳女士在医生给她做手术切除肿瘤时演奏小提琴",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukchina/simp/51599840",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

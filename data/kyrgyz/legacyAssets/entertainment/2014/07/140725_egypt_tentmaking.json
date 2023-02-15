@@ -1,91 +1,1206 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
-    "locators": {
-      "assetUri": "/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
-      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
-      "curie": "http://www.bbc.co.uk/asset/26d70558-1414-11e4-ab51-ec853db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "kyrgyz",
-    "language": "ky",
-    "lastUpdated": 1569476636134,
-    "firstPublished": 1406304132,
-    "lastPublished": 1406304657,
-    "options": {
-      "allowDateStamp": true,
-      "includeComments": false,
-      "allowAdvertising": false,
-      "suitableForSyndication": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map" },
-    "tags": {},
-    "version": "v1.0.10",
-    "blockTypes": ["legacyMedia"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "33618708",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2014/07/emp/140725_egypt_tentmaking.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+        "locators": {
+          "assetUri": "/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+          "curie": "http://www.bbc.co.uk/asset/26d70558-1414-11e4-ab51-ec853db9bd6e"
+        },
+        "type": "MAP",
+        "createdBy": "kyrgyz",
+        "language": "ky",
+        "lastUpdated": 1649944547031,
+        "firstPublished": 1406304132000,
+        "lastPublished": 1406304132000,
+        "timestamp": 1406304132000,
+        "options": {
+          "allowDateStamp": true,
+          "includeComments": false,
+          "allowAdvertising": false,
+          "suitableForSyndication": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "contentId": "urn:bbc:topcat:curie:asset:26d70558-1414-11e4-ab51-ec853db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "siteUri": "/kyrgyz"
+      },
+      "content": {
+        "blocks": [
+          {
+            "id": "33618708",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "33618708",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/07/24/140724172050_egypt_tents_decoration_640x360__nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2014/07/24/140724172050_egypt_tents_decoration_640x360__nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2014/07/emp/140725_egypt_tentmaking.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2014/07/kyrgyz_egypt_tent_140725_egypt_tentmaking_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2014/07/kyrgyz_egypt_tent_140725_egypt_tentmaking_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2014/07/kyrgyz_egypt_tent_140725_egypt_tentmaking_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Египет элинин байыркы өнөрү коркунучта",
+          "headline": "Египет элинин байыркы өнөрү коркунучта"
+        },
+        "locators": {
+          "assetUri": "/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+          "curie": "http://www.bbc.co.uk/asset/26d70558-1414-11e4-ab51-ec853db9bd6e"
+        },
+        "summary": "Өзгөчө оймо чийме, түркүн түстөр менен чатырларды кооздоо египеттиктердин байыркы өнөрү. Бирок арзан товарлар массалык түрдө чыга баштагандан бери анын келечеги коркунучка кептелүүдө.",
+        "timestamp": 1406304132000,
+        "language": "ky",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+          "taggings": []
+        },
+        "media": {
+          "id": "33618708",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "33618708",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/07/24/140724172050_egypt_tents_decoration_640x360__nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2014/07/24/140724172050_egypt_tents_decoration_640x360__nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2014/07/emp/140725_egypt_tentmaking.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2014/07/kyrgyz_egypt_tent_140725_egypt_tentmaking_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2014/07/kyrgyz_egypt_tent_140725_egypt_tentmaking_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2014/07/kyrgyz_egypt_tent_140725_egypt_tentmaking_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e211",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/07/24/140724172052_egypt_tents_decoration_144x81__nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2014/07/24/140724172052_egypt_tents_decoration_144x81__nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": " ",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Маданий жаңылыктар",
+          "uri": "/kyrgyz/entertainment",
+          "urlIdentifier": "/kyrgyz/entertainment",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCkyrgyz.com",
+          "uri": "/kyrgyz",
+          "urlIdentifier": "/kyrgyz",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Египет элинин байыркы өнөрү коркунучта",
-      "headline": "Египет элинин байыркы өнөрү коркунучта"
     },
-    "locators": {
-      "assetUri": "/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
-      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
-      "curie": "http://www.bbc.co.uk/asset/26d70558-1414-11e4-ab51-ec853db9bd6e"
-    },
-    "summary": "Өзгөчө оймо чийме, түркүн түстөр менен чатырларды кооздоо египеттиктердин байыркы өнөрү. Бирок арзан товарлар массалык түрдө чыга баштагандан бери анын келечеги коркунучка кептелүүдө.",
-    "timestamp": 1569476636134,
-    "passport": {},
-    "media": {
-      "id": "33618708",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2014/07/emp/140725_egypt_tentmaking.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e211",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/07/24/140724172052_egypt_tents_decoration_144x81__nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2014/07/24/140724172052_egypt_tents_decoration_144x81__nocredit.jpg",
-      "height": 81,
-      "width": 144,
-      "altText": "",
-      "copyrightHolder": " ",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Маданий жаңылыктар",
-      "uri": "/kyrgyz/entertainment",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCkyrgyz.com",
-      "uri": "/kyrgyz",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:43:37.196Z",
+        "lastRecordTimeStamp": "2023-02-15T09:43:00Z",
+        "firstRecordTimeStamp": "2023-02-14T21:41:00Z",
+        "totalRecords": 16,
+        "records": [
+          {
+            "id": "e4727a3a-b2d3-11e4-9733-e1de3db9bd6e",
+            "rank": 1,
+            "count": 52,
+            "urn": "urn:bbc:curie:asset:e4727a3a-b2d3-11e4-9733-e1de3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Рахманкул хандын таржымалы",
+                "headline": "Рахманкул хандын таржымалы"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/multimedia/2015/02/150212_rahmankul_han_history_pages",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/multimedia/2015/02/150212_rahmankul_han_history_pages",
+                "curie": "http://www.bbc.co.uk/asset/e4727a3a-b2d3-11e4-9733-e1de3db9bd6e",
+                "assetId": "37315306"
+              },
+              "summary": "Тарыхчы-окумуштуулар Тынчтыкбек Чоротегин менен Кыяс Молдокасымов Рахманкул хандын таржымалын сөз кылышат.  ",
+              "timestamp": 1423758717000,
+              "language": "ky",
+              "media": {
+                "id": "37315306",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "37315306",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/02/12/150212162323_kyrgyz_rahmankul_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/02/12/150212162323_kyrgyz_rahmankul_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2015/02/emp/150212_rahmankul_han_history_pages.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2015/02/history_pages_rahmankul_han_150212_rahmankul_han_history_pages_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e204",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/02/12/150212162323_kyrgyz_rahmankul_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/02/12/150212162323_kyrgyz_rahmankul_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/multimedia/2015/02/150212_rahmankul_han_history_pages",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b1568bd0-ee5e-f44e-80db-fe765e3af746",
+            "rank": 2,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:b1568bd0-ee5e-f44e-80db-fe765e3af746",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Геноцид\" сөзү кайдан чыккан?",
+                "headline": "\"Геноцид\" сөзү кайдан чыккан?"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/world-48048814",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-48048814",
+                "curie": "http://www.bbc.co.uk/asset/b1568bd0-ee5e-f44e-80db-fe765e3af746",
+                "assetId": "48048814"
+              },
+              "summary": "24-апрелде \"армян геноцидинин\" курмандыктары эскерилди. Геноцид байыркы грек жана латын сөзүнөн алынган. Терминди 75 жыл мурун жөөт адвокат Рафаэль Лемкин киргизген. Анын бүлөөсү нацисттер тарабынан өлтүрүлгөн.",
+              "timestamp": 1556613998000,
+              "language": "ky",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p077vghk",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Геноцид\" сөзү кайдан чыккан?",
+                "synopses": {
+                  "short": "\"Геноцид\" сөзү кайдан чыккан?",
+                  "long": "24-апрелде \"армян геноцидинин\" курмандыктары эскерилди. Геноцид байыркы грек жана латын сөзүнөн алынган. Бул терминди 75 жыл мурун жөөт адвокат Рафаэль Лемкин киргизген. Анын бүлөөсү нацисттер тарабынан өлтүрүлгөн.",
+                  "medium": "24-апрелде \"армян геноцидинин\" курмандыктары эскерилди. Геноцид байыркы грек жана латын сөзүнөн алынган."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p077vgpf.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "\"Геноцид\" сөзү кайдан чыккан?",
+                "versions": [
+                  {
+                    "versionId": "p077vghm",
+                    "types": ["Original"],
+                    "duration": 205,
+                    "durationISO8601": "PT3M25S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1556612791000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106646301",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/287C/production/_106646301_p077vgpf.jpg",
+                "path": "/cpsprodpb/287C/production/_106646301_p077vgpf.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "жыгылган аял",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/world-48048814",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b30f7e20-a261-11e4-af55-a9f13db9bd6e",
+            "rank": 3,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:b30f7e20-a261-11e4-af55-a9f13db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Боромбай жана анын доору",
+                "headline": "Боромбай жана анын доору"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/kyrgyzstan/2015/01/150122_borombai_history_pages",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan/2015/01/150122_borombai_history_pages",
+                "curie": "http://www.bbc.co.uk/asset/b30f7e20-a261-11e4-af55-a9f13db9bd6e",
+                "assetId": "36981056"
+              },
+              "summary": "Tарыхчылар Тынчтыкбек Чоротегин менен Кыяз Молдокасымов Боромбай Меңмурат уулу жана анын доору тууралуу талкуу курушат.",
+              "timestamp": 1421950690000,
+              "language": "ky",
+              "media": {
+                "id": "36981056",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "36981056",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/01/22/150122181337_kyrgyz_borombai_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/01/22/150122181337_kyrgyz_borombai_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2015/01/emp/150122_borombai_history_pages.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2015/01/history_pages_boromai_mengmurat__150122_borombai_history_pages_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e204",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/01/22/150122181337_kyrgyz_borombai_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/01/22/150122181337_kyrgyz_borombai_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan/2015/01/150122_borombai_history_pages",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9feaf278-0dcb-11e4-be83-7be33db9bd6e",
+            "rank": 4,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:9feaf278-0dcb-11e4-be83-7be33db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Кокон хандыгына каршы көтөрүлүш",
+                "headline": "Кокон хандыгына каршы көтөрүлүш"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/multimedia/2014/07/140717_history_talks_khokand_russia",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/multimedia/2014/07/140717_history_talks_khokand_russia",
+                "curie": "http://www.bbc.co.uk/asset/9feaf278-0dcb-11e4-be83-7be33db9bd6e"
+              },
+              "summary": "Падышалык Орусиянын курамындагы Жети-Суу облусунун аскер губернатору Калпаковский 1874-жылдын 17-июлунда Кокон ханы Кудаярга кат жазып, хандыктан Токмок уездине качкан кыргыздарды кайрадан Анжиянга көчүрүү тууралуу буйрук берген. ",
+              "timestamp": 1405613137000,
+              "language": "ky",
+              "media": {
+                "id": "33447761",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "33447761",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/07/17/140717160353_prokudin_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/07/17/140717160353_prokudin_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2014/07/emp/140717_history_talks_khokand_russia.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2014/07/kyrgyz_history_disco170714_140717_history_talks_khokand_russia_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e202",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/03/21/120321154541_samarkand_archive_picture_1912_prokudin_gorsky_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/03/21/120321154541_samarkand_archive_picture_1912_prokudin_gorsky_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/multimedia/2014/07/140717_history_talks_khokand_russia",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "82c32517-6492-2244-a46c-7debde9f488a",
+            "rank": 5,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:82c32517-6492-2244-a46c-7debde9f488a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Классикалык музыка: \"Карол\" чыгармалары",
+                "headline": "Классикалык музыка: \"Карол\" чыгармалары"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/entertainment-38420422",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-38420422",
+                "curie": "http://www.bbc.co.uk/asset/82c32517-6492-2244-a46c-7debde9f488a",
+                "assetId": "38420422"
+              },
+              "summary": "Азыр классикалык музыканын залкар өкүлдөрүнүн чыгармачылык жолу жөнүндө берүүгө кезек берели.",
+              "timestamp": 1482505085000,
+              "language": "ky",
+              "media": {
+                "id": "p04mblxr",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Кристмас Карол  чыгармалары",
+                "synopses": {
+                  "short": "Кристмас Карол чыгармалары",
+                  "long": "Азыр классикалык музыканын залкар өкүлдөрүнүн чыгармачылык жолу жөнүндө берүүгө кезек берели"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04mbqpv.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Классикалык музыка: \"Карол\" чыгармалары",
+                "versions": [
+                  {
+                    "versionId": "p04mblxw",
+                    "types": ["Original"],
+                    "duration": 419,
+                    "durationISO8601": "PT6M59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1482503487000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "93110432",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5B69/production/_93110432_p04mbqpv.jpg",
+                "path": "/cpsprodpb/5B69/production/_93110432_p04mbqpv.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Кристмас Карол чыгармалары",
+                "caption": "Кристмас Карол чыгармалары",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/entertainment-38420422",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ec979b8b-20c9-42e7-a0d3-372c5ed0563f",
+            "rank": 6,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:ec979b8b-20c9-42e7-a0d3-372c5ed0563f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Тарыхчы Орунбай Ахмедов кыргыз-тажик чек ара таржымалы жөнүндө",
+                "headline": "Тарыхчы Орунбай Ахмедов кыргыз-тажик чек ара таржымалы жөнүндө"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/kyrgyzstan-56991048",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-56991048",
+                "curie": "http://www.bbc.co.uk/asset/ec979b8b-20c9-42e7-a0d3-372c5ed0563f",
+                "assetId": "56991048"
+              },
+              "summary": "Тарыхчы Орунбай Ахмедов кыргыз-тажик чек ара таржымалы жөнүндө Би-БИ-Си радиосуна сереп салып берди",
+              "timestamp": 1620225014000,
+              "language": "ky",
+              "media": {
+                "id": "p09gnfd6",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Тарыхчы Орунбай Ахмедов кыргыз-тажик чек ара таржымалы жөнүндө",
+                "synopses": {
+                  "short": "Тарыхчы Орунбай Ахмедов кыргыз-тажик чек ара таржымалы жөнүндө",
+                  "long": "Тарыхчы Орунбай Ахмедов кыргыз-тажик чек ара таржымалы жөнүндө Би-БИ-Си радиосуна сереп салып берди",
+                  "medium": "Тарыхчы Орунбай Ахмедов кыргыз-тажик чек ара таржымалы жөнүндө Би-БИ-Си радиосуна сереп салып берди"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09gnhkz.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Тарыхчы Орунбай Ахмедов кыргыз-тажик чек ара таржымалы жөнүндө Би-БИ-Си радиосуна сереп салып берди",
+                "versions": [
+                  {
+                    "versionId": "p09gnfd8",
+                    "types": ["Original"],
+                    "duration": 307,
+                    "durationISO8601": "PT5M7S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1620192376000
+                  }
+                ],
+                "imageCopyright": "Google",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "118371130",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0C2D/production/_118371130_p09gnhkz.jpg",
+                "path": "/cpsprodpb/0C2D/production/_118371130_p09gnhkz.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Тарыхчы Орунбай Ахмедов",
+                "copyrightHolder": "Google",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-56991048",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c50ab228-7baa-11e7-a546-89b13db9bd6e",
+            "rank": 7,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:c50ab228-7baa-11e7-a546-89b13db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Асылбек Айтманбетов: “Бейкуттук” деген сөз терс мааниде колдонулган ",
+                "headline": "Асылбек Айтманбетов: “Бейкуттук” деген сөз терс мааниде колдонулган "
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/multimedia/2012/02/120221_iv_aitmanbetov",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/multimedia/2012/02/120221_iv_aitmanbetov",
+                "curie": "http://www.bbc.co.uk/asset/c50ab228-7baa-11e7-a546-89b13db9bd6e",
+                "assetId": "15712264"
+              },
+              "summary": "Кыргызстанда парламент тарабынан мамлекеттик символикаларды карап чыгуу боюнча түзүлгөн коммисия гимндеги беш сөздү алмаштыруу боюнча  сунуштар түшүп жатканын билдирди. Коммисияга коомчулуктан жүздөгөн ар кандай сунуштар түшкөн экен.",
+              "timestamp": 1329838689000,
+              "language": "ky",
+              "byline": {
+                "name": "Гүлнара Касмамбетова",
+                "title": "Би-Би-Си Кыргыз кызматынын башкы продюсери",
+                "persons": [
+                  {
+                    "name": "Гүлнара Касмамбетова",
+                    "function": "Би-Би-Си Кыргыз кызматынын башкы продюсери",
+                    "thumbnail": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2011/05/31/110531174556_gulnara_kasmambet_144x81_bbc_nocredit.jpg"
+                  }
+                ]
+              },
+              "media": {
+                "id": "15712264",
+                "subType": "primary",
+                "format": "audio",
+                "live": false,
+                "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2012/02/emp/120221_iv_aitmanbetov.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2012/02/iv_aitmanbetov_120221_iv_aitmanbetov_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e208",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2011/08/17/110817134529_kyrgyz_flag_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2011/08/17/110817134529_kyrgyz_flag_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/multimedia/2012/02/120221_iv_aitmanbetov",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "762104fc-8654-7c48-a0ac-a14c995eb08f",
+            "rank": 8,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:762104fc-8654-7c48-a0ac-a14c995eb08f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ленинград блокадасы: курмандыктар, каармандар эскерилди",
+                "headline": "Ленинград блокадасы: курмандыктар, каармандар эскерилди"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/kyrgyzstan-42734784",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-42734784",
+                "curie": "http://www.bbc.co.uk/asset/762104fc-8654-7c48-a0ac-a14c995eb08f",
+                "assetId": "42734784"
+              },
+              "summary": "Мындан 75 жыл мурда, тагыраагы 1943-жылдын 18-январында Ленинград шаары курчоодон бошотулган.",
+              "timestamp": 1516278251000,
+              "language": "ky",
+              "media": {
+                "id": "p05v91gy",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ленинград блокадасы: курмандыктар, каармандар эскерилди",
+                "synopses": {
+                  "short": "Ленинград блокадасы: курмандыктар, каармандар эскерилди",
+                  "medium": "Мындан 75 жыл мурда, тагыраагы 1943-жылдын 18-январында Ленинград шаары курчоодон бошотулган.",
+                  "long": "Мындан 75 жыл мурда, тагыраагы 1943-жылдын 18-январында Ленинград шаары курчоодон бошотулган. Бул датага арналып, Бишкекте Ленинград блокадасынын курмандыктары менен каармандары эскерилди. Ага согуш ардагерлери жана шаар жетекчилиги катышты."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05v9389.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ленинград блокадасы: курмандыктар, каармандар эскерилди",
+                "versions": [
+                  {
+                    "versionId": "p05v91h0",
+                    "types": ["Original"],
+                    "duration": 126,
+                    "durationISO8601": "PT2M6S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1516277267000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99648716",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F158/production/_99648716_p05v9389.jpg",
+                "path": "/cpsprodpb/F158/production/_99648716_p05v9389.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "Жүрөк титиреткен Ленинград окуяларынын күбөлөрү жокчулук эмне экенин дагы бир жолу жаштардын эсине салды",
+                "caption": "Жүрөк титиреткен Ленинград окуяларынын күбөлөрү жокчулук эмне экенин дагы бир жолу жаштардын эсине салды",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-42734784",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e6f1cfdd-dd41-f440-b4a7-27ce16e56cbd",
+            "rank": 9,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:e6f1cfdd-dd41-f440-b4a7-27ce16e56cbd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Классикалык музыка\": Моцарттын скрипка үчүн чыгармалары",
+                "headline": "\"Классикалык музыка\": Моцарттын скрипка үчүн чыгармалары"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/entertainment-39657814",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-39657814",
+                "curie": "http://www.bbc.co.uk/asset/e6f1cfdd-dd41-f440-b4a7-27ce16e56cbd",
+                "assetId": "39657814"
+              },
+              "summary": "Бул жуманын \"Классикалык музыка\" түрмөгүбүздө дагы бир ирет Моцарттын скрипка үчүн чыгармаларына музыка адиси Айнура Дурусалиева менен продюсер Гулнара Касмамбетова токтолушат",
+              "timestamp": 1492787798000,
+              "language": "ky",
+              "media": {
+                "id": "p050rb6r",
+                "subType": "clip",
+                "format": "audio",
+                "title": "\"Классикалык музыка\": Моцарттын скрипка үчүн чыгармалары",
+                "synopses": {
+                  "short": "\"Классикалык музыка\": Моцарттын скрипка үчүн чыгармалары",
+                  "medium": "Бул жуманын \"Классикалык музыка\" түрмөгүбүздө дагы бир ирет Моцарттын скрипка үчүн чыгармаларына музыка адиси Айнура Дурусалиева менен продюсер Гулнара Касмамбетова токтолушат"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p050rbnf.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "\"Классикалык музыка\": Моцарттын скрипка үчүн чыгармалары",
+                "versions": [
+                  {
+                    "versionId": "p050rb6v",
+                    "types": ["Original"],
+                    "duration": 420,
+                    "durationISO8601": "PT7M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1492787283000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95738352",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6327/production/_95738352_p050rbnf.jpg",
+                "path": "/cpsprodpb/6327/production/_95738352_p050rbnf.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Моцарт",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/entertainment-39657814",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b783238c-1dc9-11e6-b888-22f03db9bd6e",
+            "rank": 10,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:b783238c-1dc9-11e6-b888-22f03db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Тарых: Алымбек датканын доору",
+                "headline": "Тарых: Алымбек датканын доору"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/entertainment/2016/05/160518_alymbek_datka",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment/2016/05/160518_alymbek_datka",
+                "curie": "http://www.bbc.co.uk/asset/b783238c-1dc9-11e6-b888-22f03db9bd6e",
+                "assetId": "43895849"
+              },
+              "summary": "Ош мамлекеттик университетинде 20-майда айтылуу Алымбек-датканын 215 жылдыгына байланыштуу жумурияттык илимий  конференция өткөнү турат. ",
+              "timestamp": 1463666513000,
+              "language": "ky",
+              "media": {
+                "id": "43895849",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "43895849",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/12/26/141226171247_kyrgyz_kurmanjan_datka_640x360_kurmanjan.com.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/12/26/141226171247_kyrgyz_kurmanjan_datka_640x360_kurmanjan.com.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2016/05/emp/160518_alymbek_datka.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2016/05/alymbek_160518_alymbek_datka_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e211",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/10/07/141007145918_kurmanjan_datka_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/10/07/141007145918_kurmanjan_datka_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/entertainment/2016/05/160518_alymbek_datka",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "94218eb3-ea74-4e40-941c-9441689274b5",
+            "rank": 11,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:94218eb3-ea74-4e40-941c-9441689274b5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Чала уйкунун кандай зыяны бар?",
+                "headline": "Чала уйкунун кандай зыяны бар?"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/entertainment-40434433",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-40434433",
+                "curie": "http://www.bbc.co.uk/asset/94218eb3-ea74-4e40-941c-9441689274b5",
+                "assetId": "40434433"
+              },
+              "summary": "Канадалык окумуштуулар уйку канбай калганда анын мээге кандай таасири бар экенин аныктоо боюнча чоң изилдөөнү башташты.",
+              "timestamp": 1498666674000,
+              "language": "ky",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p0576mf3",
+                "subType": "clip",
+                "format": "video",
+                "title": "Чала уйкунун кандай зыяны бар?",
+                "synopses": {
+                  "short": "Чала уйкунун кандай зыяны бар?",
+                  "medium": "Канадалык окумуштуулар уйку канбай калганда анын мээге кандай таасири бар экенин аныктоо боюнча чоң изилдөөнү башташты. Батыш Онтарио Университетинин изилдөөчүлөрү бүт дүйнөдөн каа",
+                  "long": "Канадалык окумуштуулар уйку канбай калганда анын мээге кандай таасири бар экенин аныктоо боюнча чоң изилдөөнү башташты. Батыш Онтарио Университетинин изилдөөчүлөрү бүт дүйнөдөн каалоочуларды Интернетте тесттик сыноолорго катышууга чакырууда."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0576nfg.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Чала уйкунун кандай зыяны бар?",
+                "versions": [
+                  {
+                    "versionId": "p0576mf6",
+                    "types": ["Original"],
+                    "duration": 58,
+                    "durationISO8601": "PT58S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1498666220000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "96723980",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/22E4/production/_96723980_p0573v0j.jpg",
+                "path": "/cpsprodpb/22E4/production/_96723980_p0573v0j.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Чала уйкунун зыяны",
+                "copyrightHolder": "Thinkstock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/entertainment-40434433",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8c07f65b-24e8-2742-b04c-9d89fc359004",
+            "rank": 12,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:8c07f65b-24e8-2742-b04c-9d89fc359004",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Дүйнө чабыт\": 14-февраль Ыйык Валентин күнү",
+                "headline": "\"Дүйнө чабыт\": 14-февраль Ыйык Валентин күнү"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/38986423",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/38986423",
+                "curie": "http://www.bbc.co.uk/asset/8c07f65b-24e8-2742-b04c-9d89fc359004",
+                "assetId": "38986423"
+              },
+              "summary": "14-февраль Ыйык Валентин күнүнө эл аралык коомчулуктун мамиелси кандай деген темада талкуубузду угуңуз.",
+              "timestamp": 1487176570000,
+              "language": "ky",
+              "media": {
+                "id": "p04t0sjm",
+                "subType": "clip",
+                "format": "audio",
+                "title": "\"Дүйнө чабыт\": 14-февраль Ыйык Валентин күнү",
+                "synopses": {
+                  "short": "\"Дүйнө чабыт\": 14-февраль Ыйык Валентин күнү",
+                  "medium": "14-февраль Ыйык Валентин күнүнө эл аралык коомчулуктун мамиелси кандай деген темада талкуубузду угуңуз.",
+                  "long": "14-февраль Ыйык Валентин күнүнө эл аралык коомчулуктун мамиелси кандай деген темада талкуубузду угуңуз."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04t0t6f.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "\"Дүйнө чабыт\": 14-февраль Ыйык Валентин күнү",
+                "versions": [
+                  {
+                    "versionId": "p04t0sjp",
+                    "types": ["Original"],
+                    "duration": 385,
+                    "durationISO8601": "PT6M25S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1487176373000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "94660326",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F362/production/_94660326_p04t0t6f.jpg",
+                "path": "/cpsprodpb/F362/production/_94660326_p04t0t6f.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ыйык Валентин",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/38986423",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "47565942-4d44-4847-ac7d-1e3d33d0122e",
+            "rank": 13,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:47565942-4d44-4847-ac7d-1e3d33d0122e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Тарых: Белек Солтоноев",
+                "headline": "Тарых: Белек Солтоноев"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/entertainment-38601973",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-38601973",
+                "curie": "http://www.bbc.co.uk/asset/47565942-4d44-4847-ac7d-1e3d33d0122e",
+                "assetId": "38601973"
+              },
+              "summary": "100 жыл мурда Белек Солтоноевдин кыргыз-казак тарыхы деген эмгегинин алгачкы редакцияланган бөлүгү бүткөн.",
+              "timestamp": 1484235549000,
+              "language": "ky",
+              "media": {
+                "id": "p04p7hzd",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Тарых: Белек Солтоноев",
+                "synopses": {
+                  "short": "Тарых: Белек Солтоноев",
+                  "medium": "100 жыл мурда Белек Солтоноевдин кыргыз-казак тарыхы деген эмгегинин алгачкы редакцияланган бөлүгү бүткөн.",
+                  "long": "100 жыл мурда Белек Солтоноевдин кыргыз-казак тарыхы деген эмгегинин алгачкы редакцияланган бөлүгү бүткөн. Тарыхчы окумуштуулар Тынчтыкбек Чоротегин менен Кыяз Молдокасымов ушул эмгектин таржымалына токтолушат."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04p7mf7.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Тарых: Белек Солтоноев",
+                "versions": [
+                  {
+                    "versionId": "p04p7hzj",
+                    "types": ["Original"],
+                    "duration": 421,
+                    "durationISO8601": "PT7M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1484234621000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "93544356",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/FF40/production/_93544356_p04p7mf7.jpg",
+                "path": "/cpsprodpb/FF40/production/_93544356_p04p7mf7.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "100 жыл мурда Белек Солтоноевдин кыргыз-казак тарыхы деген эмгегинин алгачкы редакцияланган бөлүгү бүткөн.",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/entertainment-38601973",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "447ed170-234a-11e6-930b-84783db9bd6e",
+            "rank": 14,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:447ed170-234a-11e6-930b-84783db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Тарых: Манас эпосун кагазга түшүрүүдө Чокон Валихановдун салымы",
+                "headline": "Тарых: Манас эпосун кагазга түшүрүүдө Чокон Валихановдун салымы"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/entertainment/2016/05/160526_epic_manas_valihanov",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment/2016/05/160526_epic_manas_valihanov",
+                "curie": "http://www.bbc.co.uk/asset/447ed170-234a-11e6-930b-84783db9bd6e",
+                "assetId": "43989637"
+              },
+              "summary": "Мындан 160 жыл мурда 1856-жылдын 26-майында казак элинин чыгаан окумуштуусу Чокон Валиханов Каркыра жайлоосунда “Манас” дастанынын үзүндүсүн жаздырып алган. ",
+              "timestamp": 1464271915000,
+              "language": "ky",
+              "media": {
+                "id": "43989637",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "43989637",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/21/150821093929_manas_monument_osh_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/08/21/150821093929_manas_monument_osh_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2016/05/emp/160526_epic_manas_valihanov.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2016/05/manas_160526_epic_manas_valihanov_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e211",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/21/150821073948_manas_monument_osh_144x81_v_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/08/21/150821073948_manas_monument_osh_144x81_v_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "v",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/entertainment/2016/05/160526_epic_manas_valihanov",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "30d514d8-80fd-6348-a231-6c3c1de6a256",
+            "rank": 15,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:30d514d8-80fd-6348-a231-6c3c1de6a256",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ислам: дүйнөдөгү эң тез жайылып жаткан дин",
+                "headline": "Ислам: дүйнөдөгү эң тез жайылып жаткан дин"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/media-39298509",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/media-39298509",
+                "curie": "http://www.bbc.co.uk/asset/30d514d8-80fd-6348-a231-6c3c1de6a256",
+                "assetId": "39298509"
+              },
+              "summary": "2070-жылы Ислам Христианчылыктан ашып, дүйнөдөгү эң ири динге айланышы мүмкүн. Кайсы өлкөдө мусулмандар тездик менен көбөйүүдө?",
+              "timestamp": 1489687405000,
+              "language": "ky",
+              "media": {
+                "id": "p04x259n",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ислам: дүйнөдөгү эң тез жайылып жаткан дин",
+                "synopses": {
+                  "short": "Ислам: дүйнөдөгү эң тез жайылып жаткан дин",
+                  "medium": "2070-жылы Ислам Христианчылыктан ашып, дүйнөдөгү эң ири динге айланышы мүмкүн. Кайсы өлкөдө мусулмандар тездик менен көбөйүүдө?",
+                  "long": "Азыркы учурда Ислам дүйнөдөгү Христианчылыктан кийинки экинчи ири дин деп саналат. \nБирок учурдагы демографиялык өзгөрүүлөр сактала берсе мусулмандар саны боюнча дүйнөдө биринчи орунга чыгышы мүмкүн. Бул иликтөөнү АКШдагы изилдөө борбору жүргүзгөн."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04x25j4.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Ислам: дүйнөдөгү эң тез жайылып жаткан дин",
+                "versions": [
+                  {
+                    "versionId": "p04x259r",
+                    "types": ["Original"],
+                    "duration": 53,
+                    "durationISO8601": "PT53S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1489687208000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "95187938",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1480A/production/_95187938_p04x25j4.jpg",
+                "path": "/cpsprodpb/1480A/production/_95187938_p04x25j4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Ислам дини",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/media-39298509",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0eeae65a-ce66-11e4-9f93-cef13db9bd6e",
+            "rank": 16,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:0eeae65a-ce66-11e4-9f93-cef13db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Руна сымал жазмасы кыргызга таандыкпы?",
+                "headline": "Руна сымал жазмасы кыргызга таандыкпы?"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/multimedia/2015/03/150319_history_pgaes_kyrgyz_writing",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/multimedia/2015/03/150319_history_pgaes_kyrgyz_writing",
+                "curie": "http://www.bbc.co.uk/asset/0eeae65a-ce66-11e4-9f93-cef13db9bd6e",
+                "assetId": "37878241"
+              },
+              "summary": "Айрым коомдук уюмдар руна сымал жазмаларын мындан ары орхон-энесай жазмалары дебей эле кыргыздын жазмалары деп атайлы деген пикирин билдирген. Теманы тарыхчылар Тынчтыкбек Чоротегин менен Кыяс Молдокасымов улантат.",
+              "timestamp": 1426790056000,
+              "language": "ky",
+              "media": {
+                "id": "37878241",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "37878241",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/03/19/150319183020_kyrgyz_runic_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/03/19/150319183020_kyrgyz_runic_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2015/03/emp/150319_history_pgaes_kyrgyz_writing.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/2015/03/histoary_pages_150319_history_pgaes_kyrgyz_writing_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e204",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/03/19/150319183020_kyrgyz_runic_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/03/19/150319183020_kyrgyz_runic_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/multimedia/2015/03/150319_history_pgaes_kyrgyz_writing",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

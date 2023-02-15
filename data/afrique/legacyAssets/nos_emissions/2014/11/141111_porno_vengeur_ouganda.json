@@ -1,132 +1,2423 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
-    "locators": {
-      "assetUri": "/afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
-      "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
-      "curie": "http://www.bbc.co.uk/asset/edf9ebc6-69ca-11e4-b167-0ea63db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "afrique",
-    "language": "fr",
-    "lastUpdated": 1550148508980,
-    "firstPublished": 1415728482,
-    "lastPublished": 1417671433,
-    "options": {
-      "includeComments": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": false,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_id": "35793410", "cps_asset_type": "map" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "35793410",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/afrique/meta/dps/2014/11/emp/141111_porno_vengeur_ouganda.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+        "locators": {
+          "assetUri": "/afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+          "curie": "http://www.bbc.co.uk/asset/edf9ebc6-69ca-11e4-b167-0ea63db9bd6e",
+          "assetId": "35793410"
+        },
+        "type": "MAP",
+        "createdBy": "afrique",
+        "language": "fr",
+        "lastUpdated": 1649846765253,
+        "firstPublished": 1415728482000,
+        "lastPublished": 1415728482000,
+        "timestamp": 1415728482000,
+        "options": {
+          "includeComments": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": false,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "35793410",
+          "contentId": "urn:bbc:topcat:curie:asset:edf9ebc6-69ca-11e4-b167-0ea63db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/afrique"
       },
-      {
-        "text": "Le &quot;porno vengeur&quot; arrive en Afrique. Première victime de marque de ce phénomène venu des Etats-Unis: une star ougandaise de la chanson, Desire Luzinda, dont l'ex-petit-ami a publié des photos compromettantes d'elle sur internet, juste pour se venger.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "35793410",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "35793410",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_640x360__nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_640x360__nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/afrique/meta/dps/2014/11/emp/141111_porno_vengeur_ouganda.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "Le &quot;porno vengeur&quot; arrive en Afrique. Première victime de marque de ce phénomène venu des Etats-Unis: une star ougandaise de la chanson, Desire Luzinda, dont l'ex-petit-ami a publié des photos compromettantes d'elle sur internet, juste pour se venger.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Il l’accusait d'être infidèle.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Les photos ont fait le tour des réseaux sociaux et été publiées dans les journaux, suscitant un torrent de commentaires.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Desire Luzinda a demandé pardon à ses fans.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Elle a expliqué que les clichés avaient été pris par son ex-amant nigerian, dans un “moment de folie”.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "“Ma confiance a été trahie”, dit-elle.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "L’ex-petit-ami est désormais recherché par la police.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "La chanteuse aussi a été convoquée par la police.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "Il l’accusait d'être infidèle.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Une star ougandaise victime de “porno vengeur”",
+          "headline": "Une star ougandaise victime de “porno vengeur”"
+        },
+        "locators": {
+          "assetUri": "/afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+          "curie": "http://www.bbc.co.uk/asset/edf9ebc6-69ca-11e4-b167-0ea63db9bd6e",
+          "assetId": "35793410"
+        },
+        "summary": "Le \"porno vengeur\" arrive en Afrique. Première victime de marque de ce phénomène: une star ougandaise de la chanson, Desire Luzinda.",
+        "timestamp": 1415728482000,
+        "language": "fr",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+          "taggings": []
+        },
+        "media": {
+          "id": "35793410",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "35793410",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_640x360__nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_640x360__nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/afrique/meta/dps/2014/11/emp/141111_porno_vengeur_ouganda.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e495",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_304x171__nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_304x171__nocredit.jpg",
+          "height": 171,
+          "width": 304,
+          "altText": "",
+          "copyrightHolder": " ",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+        "type": "cps"
       },
-      {
-        "text": "Les photos ont fait le tour des réseaux sociaux et été publiées dans les journaux, suscitant un torrent de commentaires.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Desire Luzinda a demandé pardon à ses fans.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Elle a expliqué que les clichés avaient été pris par son ex-amant nigerian, dans un “moment de folie”.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "“Ma confiance a été trahie”, dit-elle.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "L’ex-petit-ami est désormais recherché par la police.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "La chanteuse aussi a été convoquée par la police.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Nos émissions",
+          "uri": "/afrique/nos_emissions",
+          "urlIdentifier": "/afrique/nos_emissions",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCAfrique.com",
+          "uri": "/afrique",
+          "urlIdentifier": "/afrique",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Une star ougandaise victime de “porno vengeur”",
-      "headline": "Une star ougandaise victime de “porno vengeur”"
     },
-    "locators": {
-      "assetUri": "/afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
-      "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
-      "curie": "http://www.bbc.co.uk/asset/edf9ebc6-69ca-11e4-b167-0ea63db9bd6e"
-    },
-    "summary": "Le \"porno vengeur\" arrive en Afrique. Première victime de marque de ce phénomène: une star ougandaise de la chanson, Desire Luzinda.",
-    "timestamp": 1550148508980,
-    "passport": {},
-    "media": {
-      "id": "35793410",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/afrique/meta/dps/2014/11/emp/141111_porno_vengeur_ouganda.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e495",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_304x171__nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_304x171__nocredit.jpg",
-      "height": 171,
-      "width": 304,
-      "altText": "",
-      "copyrightHolder": " ",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Nos émissions",
-      "uri": "/afrique/nos_emissions",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCAfrique.com",
-      "uri": "/afrique",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:35:15.927Z",
+        "lastRecordTimeStamp": "2023-02-15T09:33:00Z",
+        "firstRecordTimeStamp": "2023-02-15T05:33:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "bd174bc3-4065-cb43-a224-6eff60d2a6d3",
+            "rank": 1,
+            "count": 11,
+            "urn": "urn:bbc:curie:asset:bd174bc3-4065-cb43-a224-6eff60d2a6d3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Tennis: 'Les soeurs Williams' du Cameroun",
+                "headline": "Tennis: 'Les soeurs Williams' du Cameroun"
+              },
+              "locators": {
+                "assetUri": "/afrique/monde-49500638",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
+                "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3",
+                "assetId": "49500638"
+              },
+              "summary": "Linda et Manuella Eloundou sont des jumelles camerounaise de 16 ans, elles parcourent leur pays et la sous-régions pour agrandir leurs collections de trophées de Tennis.",
+              "timestamp": 1567684700000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  },
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07m7zw4",
+                "subType": "clip",
+                "format": "video",
+                "title": "Tennis: 'Les soeurs Williams' du Cameroun",
+                "synopses": {
+                  "short": "Tennis: 'Les soeurs Williams' du Cameroun",
+                  "long": "Linda et Manuella Eloundou ont 16 ans.\nElles se font appeler les Soeurs Williams. \nD'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. \n\nUn reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
+                "versions": [
+                  {
+                    "versionId": "p07m7zw7",
+                    "types": ["Original"],
+                    "duration": 143,
+                    "durationISO8601": "PT2M23S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1567437159000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "108627113",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/79C4/production/_108627113_mediaitem108627110.jpg",
+                "path": "/cpsprodpb/79C4/production/_108627113_mediaitem108627110.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "Tennis: 'Les soeurs Williams' du Cameroun",
+                "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/monde-49500638",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fc208e13-1cb6-c341-beeb-2a7699d70bd9",
+            "rank": 2,
+            "count": 10,
+            "urn": "urn:bbc:curie:asset:fc208e13-1cb6-c341-beeb-2a7699d70bd9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "17 corps déposés devant le siège de la Minusca",
+                "headline": "17 corps déposés devant le siège de la Minusca à Bangui"
+              },
+              "locators": {
+                "assetUri": "/afrique/region-43725363",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/region-43725363",
+                "curie": "http://www.bbc.co.uk/asset/fc208e13-1cb6-c341-beeb-2a7699d70bd9",
+                "assetId": "43725363"
+              },
+              "summary": "Des manifestants du quartier musulman de Bangui, le PK5, ont déposé des corps devant le Quartier Général de la mission de l'ONU en Centrafrique.",
+              "timestamp": 1523452443000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p063z32w",
+                "subType": "clip",
+                "format": "audio",
+                "title": "17 corps déposés devant le siège de la Minusca",
+                "synopses": {
+                  "short": "17 corps déposés devant le siège de la Minusca",
+                  "long": "Des manifestants du quartier musulman de  Bangui, le PK5, déposent des corps devant le Quartier Général  de la mission de  l'ONU en Centrafrique.\n\nCe sont des corps de 17 personnes tuées lors des violences lundi à Bangui.\n\nDes affrontements ont opposé une patrouille de Casques bleus et des forces forces armées centrafricaines à des milices armées du PK5.\n\nVladimir Monteiro, porte-parole de la minusca, explique l'incident."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p063z4dk.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "17 corps déposés devant le siège de la Minusca",
+                "versions": [
+                  {
+                    "versionId": "p063z32y",
+                    "types": ["Original"],
+                    "duration": 85,
+                    "durationISO8601": "PT1M25S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1523450019000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100807744",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/AEE2/production/_100807744_p063z4dk.jpg",
+                "path": "/cpsprodpb/AEE2/production/_100807744_p063z4dk.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Vladimir Monteiro, porte-parole de la Minusca, explique l'incident.",
+                "caption": "Vladimir Monteiro, porte-parole de la Minusca, explique l'incident.",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/region-43725363",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fd3cc923-ec7d-e048-a48e-8fbf72fdbe4b",
+            "rank": 3,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:fd3cc923-ec7d-e048-a48e-8fbf72fdbe4b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Tunisie: à la rencontre de victimes de la traite humaine",
+                "headline": "Tunisie: à la rencontre de victimes de la traite humaine"
+              },
+              "locators": {
+                "assetUri": "/afrique/region-42835588",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/region-42835588",
+                "curie": "http://www.bbc.co.uk/asset/fd3cc923-ec7d-e048-a48e-8fbf72fdbe4b",
+                "assetId": "42835588"
+              },
+              "summary": "En Tunisie, malgré les avancées en matière de droits humains dans le pays, la traite humaine moderne est encore pratiquée et inquiète la société civile.",
+              "timestamp": 1516971884000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05w5ldd",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Tunise: à la rencontre de victimes de la traite humaine",
+                "synopses": {
+                  "short": "Tunise: à la rencontre de victimes de la traite humaine",
+                  "long": "La Tunisie commémore cette semaine les 172 ans de l'abolition de l'esclavage par le prince Ahmed 1er Bey.\n\nMalgré les avancées en matière de droits humains dans le pays, la traite humaine moderne est encore pratiquée et inquiète la société civile. \n\nAlors qui sont les victimes  de ces formes d'exploitations?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y5lv6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Tunise: à la rencontre de victimes de la traite humaine",
+                "versions": [
+                  {
+                    "versionId": "p05w5ldg",
+                    "types": ["Original"],
+                    "duration": 236,
+                    "durationISO8601": "PT3M56S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1516971525000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99764402",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4FDE/production/_99764402_mediaitem99764147.jpg",
+                "path": "/cpsprodpb/4FDE/production/_99764402_mediaitem99764147.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "Malgré les avancées en matière de droits humains dans le pays, la traite humaine moderne est encore pratiquée et inquiète la société civile.",
+                "caption": "Malgré les avancées en matière de droits humains dans le pays, la traite humaine moderne est encore pratiquée et inquiète la société civile.",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/region-42835588",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4e910034-faf4-b34e-b23e-15c3f53d5a1a",
+            "rank": 4,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:4e910034-faf4-b34e-b23e-15c3f53d5a1a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Conférences nationales : 30 ans après \"un reflux anti-démocratique\"",
+                "headline": "Conférences nationales : 30 ans après \"un reflux anti-démocratique\""
+              },
+              "locators": {
+                "assetUri": "/afrique/media-51648426",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-51648426",
+                "curie": "http://www.bbc.co.uk/asset/4e910034-faf4-b34e-b23e-15c3f53d5a1a",
+                "assetId": "51648426"
+              },
+              "summary": "Le Bénin a organisé la première d'une série de conférences nationales tenues en Afrique, ayant précédé un vent de multipartisme. Robert Dossou nous en parle.",
+              "timestamp": 1582734624000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p084tvgk",
+                "subType": "clip",
+                "format": "video",
+                "title": "be",
+                "synopses": {
+                  "short": "be",
+                  "long": "be",
+                  "medium": "be"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p084twmx.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "be",
+                "versions": [
+                  {
+                    "versionId": "p084tvgq",
+                    "types": ["Original"],
+                    "duration": 139,
+                    "durationISO8601": "PT2M19S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1582725772000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111047451",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/3C72/production/_111047451_p084twmx.jpg",
+                "path": "/cpsprodpb/3C72/production/_111047451_p084twmx.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Robert Dossou était au centre du projet de la conférence nationale au Bénin.",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-51648426",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9dfce9b4-59a4-fd47-a2dc-fbda2e87c86f",
+            "rank": 5,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:9dfce9b4-59a4-fd47-a2dc-fbda2e87c86f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Tanzanie: la crise du sucre",
+                "headline": "En Tanzanie, l'interdiction de l'importation de sucre fait grincer des dents."
+              },
+              "locators": {
+                "assetUri": "/afrique/37065648",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/37065648",
+                "curie": "http://www.bbc.co.uk/asset/9dfce9b4-59a4-fd47-a2dc-fbda2e87c86f",
+                "assetId": "37065648"
+              },
+              "summary": "Les producteurs de boissons sucrées se disent très affectés et les pâtissiers aussi se plaignent.",
+              "timestamp": 1471023717000,
+              "language": "fr",
+              "media": {
+                "id": "p044hnxj",
+                "subType": "clip",
+                "format": "video",
+                "title": "Tanzanie: la crise du sucre",
+                "synopses": {
+                  "short": "En Tanzanie, l'interdiction de l'importation de sucre fait grincer des dents.",
+                  "medium": "Les producteurs de boissons sucrées se disent très affectés et les pâtissiers aussi se plaignent.",
+                  "long": "En Tanzanie, l'interdiction de l'importation de sucre fait grincer des dents. Les producteurs de boissons sucrées se disent très affectés et les pâtissiers aussi se plaignent. Le sucre que produisent les agriculteurs tanzaniens ne suffit pas pour répondre à la demande. Mila Kimbuini"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p044hpp0.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "En Tanzanie, l'interdiction de l'importation de sucre fait grincer des dents.",
+                "versions": [
+                  {
+                    "versionId": "p044hnxr",
+                    "types": ["Original"],
+                    "duration": 105,
+                    "durationISO8601": "PT1M45S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1471023516000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "90772244",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/ACC3/production/_90772244_p044hpp0.jpg",
+                "path": "/cpsprodpb/ACC3/production/_90772244_p044hpp0.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Les producteurs de boissons sucrées se disent très affectés et les pâtissiers aussi se plaignent.",
+                "copyrightHolder": "En Tanzanie, l'interdiction de l'importation de su",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/37065648",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d97c60b8-392e-4c03-a283-781c9ac11562",
+            "rank": 6,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:d97c60b8-392e-4c03-a283-781c9ac11562",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Soeur catholique de Birmanie : \"Tuez-moi plutôt\"",
+                "headline": "Religieuse de Birmanie : Sœur Ann Rose Nu Tawng demande à la police de ne pas blesser les manifestants"
+              },
+              "locators": {
+                "assetUri": "/afrique/monde-60214312",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-60214312",
+                "curie": "http://www.bbc.co.uk/asset/d97c60b8-392e-4c03-a283-781c9ac11562",
+                "assetId": "60214312"
+              },
+              "summary": "Dans une image qui a résonné dans le monde entier en 2021, une religieuse catholique s'agenouille devant la police en Birmanie",
+              "timestamp": 1643716682000,
+              "language": "fr",
+              "media": {
+                "id": "p0bkwfnk",
+                "subType": "clip",
+                "format": "video",
+                "title": "Myanmar Catholic nun: 'Kill me instead'",
+                "synopses": {
+                  "short": "Myanmar nun: Sister Ann Rose Nu Tawng pleads with police not to harm protesters",
+                  "long": "In an image that has resonated around the world in 2021, a Catholic nun kneels in front of police in Myanmar.\nShe is trying to protect a group of young protesters seeking refuge in the clinic she works at.\nLargely Buddhist Myanmar continues to be rocked by protests against the 1 February military coup.",
+                  "medium": "In an image that resonated around the world in 2021, a Catholic nun kneels in front of police in Myanmar."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bkxx1z.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Sœur Ann Rose Nu Tawng supplie la police de ne pas faire de mal aux manifestants",
+                "versions": [
+                  {
+                    "versionId": "p0bkwfnt",
+                    "types": ["Original"],
+                    "duration": 72,
+                    "durationISO8601": "PT1M12S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1643372674000
+                  }
+                ],
+                "imageCopyright": "Myitkyina News Journal",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "123039448",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14A0D/production/_123039448_p0bkwmcq.jpg",
+                "path": "/cpsprodpb/14A0D/production/_123039448_p0bkwmcq.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Sœur Ann Rose Ny Tawng à genoux devant des policiers armés, dont deux sont à genoux devant elle",
+                "copyrightHolder": "Myitkyina News Journal",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/monde-60214312",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6014afb2-f048-8a4a-8bcd-ede6bfec66b6",
+            "rank": 7,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:6014afb2-f048-8a4a-8bcd-ede6bfec66b6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "L'ampoule, une brillante invention",
+                "headline": "L'ampoule, une brillante invention"
+              },
+              "locators": {
+                "assetUri": "/afrique/47713170",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/47713170",
+                "curie": "http://www.bbc.co.uk/asset/6014afb2-f048-8a4a-8bcd-ede6bfec66b6",
+                "assetId": "47713170"
+              },
+              "summary": "Nous utilisons presque tous des ampoules chez nous, mais savez-vous qui les a créés ? La réponse ici.",
+              "timestamp": 1553623454000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p074ms30",
+                "subType": "clip",
+                "format": "video",
+                "title": "L'ampoule",
+                "synopses": {
+                  "short": "L'ampoule",
+                  "long": "L'ampoule. Une brillante invention qui a révolutionné le monde, comment a-t-elle été inventée ? Voici l'idée à un million de cette semaine.",
+                  "medium": "L'ampoule"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p074n2c3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "L'ampoule, une brillante invention",
+                "versions": [
+                  {
+                    "versionId": "p074ms33",
+                    "types": ["Original"],
+                    "duration": 111,
+                    "durationISO8601": "PT1M51S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1553618977000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106183185",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E31A/production/_106183185_p074n2c3.jpg",
+                "path": "/cpsprodpb/E31A/production/_106183185_p074n2c3.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "L'ampoule, une brillante invention.",
+                "caption": "L'ampoule, une brillante invention.",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/47713170",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1a7ef07a-22ad-e347-a347-374127e72860",
+            "rank": 8,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:1a7ef07a-22ad-e347-a347-374127e72860",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ousmane Mbaye Design: \"le secret de ma réussite\"",
+                "headline": "Ousmane Mbaye Design: \"le secret de ma réussite\""
+              },
+              "locators": {
+                "assetUri": "/afrique/media-50347801",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-50347801",
+                "curie": "http://www.bbc.co.uk/asset/1a7ef07a-22ad-e347-a347-374127e72860",
+                "assetId": "50347801"
+              },
+              "summary": "Le designer sénégalais donne les clés de sa réussite à Raissa Okoi pour l'émission Questions d'argent de la BBC.",
+              "timestamp": 1573293550000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07tbzbp",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ousmane Mbaye Design: \"le secret de ma réussite\"",
+                "synopses": {
+                  "short": "Ousmane Mbaye Design: \"le secret de ma réussite\"",
+                  "long": "Du mobilier Art Deco à la fois moderne et élégant, sévère et coloré, alliant ferraille raffinée, textiles locaux, et bois 100% Africains : c’est ce que propose le désigner sénégalais Ousmane Mbaye dans son showroom de la populaire Médina dakaroise. Il nous confie les clés de sa réussite!"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07tc159.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ousmane Mbaye Design: \"Lqe secret de ma réussite\"",
+                "versions": [
+                  {
+                    "versionId": "p07tbzbv",
+                    "types": ["Original"],
+                    "duration": 234,
+                    "durationISO8601": "PT3M54S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1573211712000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109580154",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B034/production/_109580154_p07tc159.jpg",
+                "path": "/cpsprodpb/B034/production/_109580154_p07tc159.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Ousmane Mbaye Design: \"le secret de ma réussite\"",
+                "caption": "Ousmane Mbaye Design: \"le secret de ma réussite\"",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-50347801",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5373bd90-650b-484b-88ae-c8b8e120eb80",
+            "rank": 9,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:5373bd90-650b-484b-88ae-c8b8e120eb80",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "L'homme le plus gros au monde tente de perdre du poids",
+                "headline": "L'homme le plus gros au monde tente de perdre du poids"
+              },
+              "locators": {
+                "assetUri": "/afrique/media-42641289",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-42641289",
+                "curie": "http://www.bbc.co.uk/asset/5373bd90-650b-484b-88ae-c8b8e120eb80",
+                "assetId": "42641289"
+              },
+              "summary": "Juan Pedro Franco détient le record Guinness de l'homme le plus gros au monde encore vivant.",
+              "timestamp": 1515601516000,
+              "language": "fr",
+              "media": {
+                "id": "p05tdrp7",
+                "subType": "clip",
+                "format": "video",
+                "title": "L'homme le plus gros au monde tente de perdre du poids",
+                "synopses": {
+                  "short": "L'homme le plus gros au monde tente de perdre du poids",
+                  "medium": "Juan Pedro Franco détient le record Guinness de l'homme le plus gros au monde encore vivant.",
+                  "long": "Juan Pedro Franco détient le record Guinness de l'homme le plus gros au monde encore vivant. \n\nMais il essaie de perdre du poids, grâce à l'aide de médecins au Mexique, où il vit. \n\nLa BBC a suivi son voyage pendant plusieurs jours."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05tds88.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "L'homme le plus gros au monde tente de perdre du poids",
+                "versions": [
+                  {
+                    "versionId": "p05tdrpb",
+                    "types": ["Original"],
+                    "duration": 291,
+                    "durationISO8601": "PT4M51S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1515596107000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99543063",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8CC2/production/_99543063_p05tds88.jpg",
+                "path": "/cpsprodpb/8CC2/production/_99543063_p05tds88.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "bbc",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-42641289",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dc83d2c5-e475-e049-b060-d6ad47014ef3",
+            "rank": 10,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:dc83d2c5-e475-e049-b060-d6ad47014ef3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Les faiseurs de pluie contrôlent-ils vraiment la météo?",
+                "headline": "Au Nigeria, les \"faiseurs de pluie\" ont-ils vraiment le pouvoir de contrôler le temps?"
+              },
+              "locators": {
+                "assetUri": "/afrique/45491252",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/45491252",
+                "curie": "http://www.bbc.co.uk/asset/dc83d2c5-e475-e049-b060-d6ad47014ef3",
+                "assetId": "45491252"
+              },
+              "summary": "Dans certaines régions du Nigeria, les \"faiseurs de pluie\" sont tenus en haute estime. Mais ont-ils vraiment le pouvoir de contrôler le temps?",
+              "timestamp": 1536774338000,
+              "language": "fr",
+              "media": {
+                "id": "p06l01hr",
+                "subType": "clip",
+                "format": "video",
+                "title": "Les faiseurs de pluie contrôlent-ils vraiment la météo?",
+                "synopses": {
+                  "short": "Au Nigeria, les \"faiseurs de pluie\" ont-ils vraiement le pouvoir  de contrôler le temps?",
+                  "long": "Dans certaines régions du Nigeria, les \"faiseurs de pluie\" sont tenus en haute estime. Ils sont payés pour faire tomber la pluie ou l'arrêter lors d'événements importants comme les mariages. Mais ont-ils vraiment le pouvoir de contrôler le temps? La BBC est allée vérifier, parapluie en main. Récit de Rémy Nsabimana.",
+                  "medium": "Dans certaines régions du Nigeria, les \"faiseurs de pluie\" sont tenus en haute estime. Mais ont-ils vraiment le pouvoir de contrôler le temps?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06l02r5.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Au Nigeria, les \"faiseurs de pluie\" ont-ils vraiement le pouvoir de contrôler le temps?",
+                "versions": [
+                  {
+                    "versionId": "p06l01ht",
+                    "types": ["Original"],
+                    "duration": 132,
+                    "durationISO8601": "PT2M12S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1536774084000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "103401904",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9FCE/production/_103401904_p06l02r5.jpg",
+                "path": "/cpsprodpb/9FCE/production/_103401904_p06l02r5.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Dans certaines régions du Nigeria, les \"faiseurs de pluie\" sont tenus en haute estime. Mais ont-ils vraiment le pouvoir de contrôler le temps?",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/45491252",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "da450c17-9b6b-446e-b274-c9516033eb27",
+            "rank": 11,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:da450c17-9b6b-446e-b274-c9516033eb27",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"La différence, c'est ce qu'il y a de plus magnifique\"",
+                "headline": "Lutte contre le racisme : \" la différence, c'est ce qu'il y a de plus magnifique\""
+              },
+              "locators": {
+                "assetUri": "/afrique/media-55419505",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-55419505",
+                "curie": "http://www.bbc.co.uk/asset/da450c17-9b6b-446e-b274-c9516033eb27",
+                "assetId": "55419505"
+              },
+              "summary": "Elisabeth Ogoula, styliste, estime qu'il faut cesser de se juger en se basant sur les apparences et utilise sa collection de vêtements pour lutter contre la xénophobie.",
+              "timestamp": 1609696512000,
+              "language": "fr",
+              "passport": {
+                "language": "fr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "locator": "urn:bbc:cps:curie:asset:da450c17-9b6b-446e-b274-c9516033eb27",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b712cf42-5a41-4263-879d-5ec4717d7798#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d1383ec4-791c-410f-974e-95864e50bde7#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/18ea2cd2-2860-433f-bd4d-ff5bbd241d7e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b541a17f-f101-43f2-b56c-34cd909cc1cc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4af71fbe-41e3-4210-9f72-05b8ee8d0c96#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/95cd76d1-ba6b-4450-bbe2-eadf82f57e5a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "fr",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/18ea2cd2-2860-433f-bd4d-ff5bbd241d7e#id",
+                      "thingLabel": "Racisme",
+                      "thingUri": "http://www.bbc.co.uk/things/18ea2cd2-2860-433f-bd4d-ff5bbd241d7e#id",
+                      "thingId": "18ea2cd2-2860-433f-bd4d-ff5bbd241d7e",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Racism",
+                        "http://www.wikidata.org/entity/Q8461"
+                      ],
+                      "thingEnglishLabel": "Racism",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/4af71fbe-41e3-4210-9f72-05b8ee8d0c96#id",
+                      "thingLabel": "Gabon",
+                      "thingUri": "http://www.bbc.co.uk/things/4af71fbe-41e3-4210-9f72-05b8ee8d0c96#id",
+                      "thingId": "4af71fbe-41e3-4210-9f72-05b8ee8d0c96",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2400553/"],
+                      "thingEnglishLabel": "Gabon",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/95cd76d1-ba6b-4450-bbe2-eadf82f57e5a#id",
+                      "thingLabel": "Côte d'Ivoire",
+                      "thingUri": "http://www.bbc.co.uk/things/95cd76d1-ba6b-4450-bbe2-eadf82f57e5a#id",
+                      "thingId": "95cd76d1-ba6b-4450-bbe2-eadf82f57e5a",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2287781/"],
+                      "thingEnglishLabel": "Ivory Coast",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b541a17f-f101-43f2-b56c-34cd909cc1cc#id",
+                      "thingLabel": "Mode",
+                      "thingUri": "http://www.bbc.co.uk/things/b541a17f-f101-43f2-b56c-34cd909cc1cc#id",
+                      "thingId": "b541a17f-f101-43f2-b56c-34cd909cc1cc",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Fashion"],
+                      "thingEnglishLabel": "Fashion",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b712cf42-5a41-4263-879d-5ec4717d7798#id",
+                      "thingLabel": "Afrique de l'Ouest",
+                      "thingUri": "http://www.bbc.co.uk/things/b712cf42-5a41-4263-879d-5ec4717d7798#id",
+                      "thingId": "b712cf42-5a41-4263-879d-5ec4717d7798",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/West_Africa"
+                      ],
+                      "thingEnglishLabel": "West Africa",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/d1383ec4-791c-410f-974e-95864e50bde7#id",
+                      "thingLabel": "Industrie du vêtement",
+                      "thingUri": "http://www.bbc.co.uk/things/d1383ec4-791c-410f-974e-95864e50bde7#id",
+                      "thingId": "d1383ec4-791c-410f-974e-95864e50bde7",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q21643372",
+                        "http://dbpedia.org/resource/Clothing_industry"
+                      ],
+                      "thingEnglishLabel": "Clothing industry",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                      "thingLabel": "Afrique",
+                      "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                      "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q15",
+                        "http://dbpedia.org/resource/Africa",
+                        "http://sws.geonames.org/6255146/"
+                      ],
+                      "thingEnglishLabel": "Africa",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0927cg5",
+                "subType": "clip",
+                "format": "video",
+                "title": "G",
+                "synopses": {
+                  "short": "G",
+                  "long": "G",
+                  "medium": "G"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0927d5z.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "G",
+                "versions": [
+                  {
+                    "versionId": "p0927cg7",
+                    "types": ["Original"],
+                    "duration": 112,
+                    "durationISO8601": "PT1M52S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1608671201000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "116225256",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/FEE4/production/_116225256_p0927d5z.jpg",
+                "path": "/cpsprodpb/FEE4/production/_116225256_p0927d5z.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Collection de Elisabeth Ogoula",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-55419505",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c274635a-2a1d-11e5-9a5b-8cdf3db9bd6e",
+            "rank": 12,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:c274635a-2a1d-11e5-9a5b-8cdf3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Qui est Hissène Habré ?",
+                "headline": "Qui est Hissène Habré ?"
+              },
+              "locators": {
+                "assetUri": "/afrique/institutionelles/2015/07/150714_hissene_habre_explainer",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c274635a-2a1d-11e5-9a5b-8cdf3db9bd6e",
+                "assetId": "39636834",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/institutionelles/2015/07/150714_hissene_habre_explainer",
+                "curie": "http://www.bbc.co.uk/asset/c274635a-2a1d-11e5-9a5b-8cdf3db9bd6e"
+              },
+              "summary": " Le verdit dans le procès de Hissène Habré sera connu ce lundi. L'ancien président tchadien est poursuivi devant les chambres africaines extraordinaires pour crimes contre l'humanité, torture et crimes de guerre.",
+              "timestamp": 1464544059000,
+              "language": "fr",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "taggings": []
+              },
+              "media": {
+                "id": "39636834",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "39636834",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/07/14/150714114834_hissene_habre_bbc_640x360__nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/07/14/150714114834_hissene_habre_bbc_640x360__nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/afrique/meta/dps/2015/07/emp/150714_hissene_habre_explainer.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2015/07/afr~fhabre explainer~f1122~f14~f7_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2015/07/afr~fhabre explainer~f1122~f14~f7_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2015/07/afr~fhabre explainer~f1122~f14~f7_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e232",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/07/14/150714114834_hissene_habre_bbc_144x81__nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/07/14/150714114834_hissene_habre_bbc_144x81__nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "  ",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/institutionelles/2015/07/150714_hissene_habre_explainer",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "941adaaa-63a6-4b5e-be30-f6d721a7e12e",
+            "rank": 13,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:941adaaa-63a6-4b5e-be30-f6d721a7e12e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+                "headline": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan"
+              },
+              "locators": {
+                "assetUri": "/afrique/64605886",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:941adaaa-63a6-4b5e-be30-f6d721a7e12e",
+                "assetId": "64605886",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/64605886",
+                "curie": "http://www.bbc.co.uk/asset/941adaaa-63a6-4b5e-be30-f6d721a7e12e"
+              },
+              "summary": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+              "timestamp": 1676062386000,
+              "language": "fr",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "taggings": []
+              },
+              "media": {
+                "id": "p0f2g53f",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+                "synopses": {
+                  "short": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+                  "long": "Le Débat BBC Afrique-Africa Radio, 52 minutes pour comprendre l'Afrique et ses changements, vus d'ici et de là-bas.\n\nDeux journalistes passent en revue les événements de la semaine avec un invité au cœur de l'actualité.\n\nCette semaine, notre invité est Mohamed Elmaouloud Ramadan, porte-parole de la coordination des mouvements de l'Azawad (CMA)",
+                  "medium": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2g5q0.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+                "versions": [
+                  {
+                    "versionId": "p0f2g53k",
+                    "types": ["Original"],
+                    "duration": 3310,
+                    "durationISO8601": "PT55M10S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676062118000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128598400",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/01E9/production/_128598400_p0f2g5q0.jpg",
+                "path": "/cpsprodpb/01E9/production/_128598400_p0f2g5q0.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Le Débat BBC Afrique - Africa Radio avec Mohamed Elmaouloud Ramadan",
+                "copyrightHolder": "Le Débat BBC Afrique-Africa Radio, 52 minutes pour",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/64605886",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1f7104ac-4ba4-df43-9cb5-c9ece6fb5a9b",
+            "rank": 14,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:1f7104ac-4ba4-df43-9cb5-c9ece6fb5a9b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "De grosses fesses ? Oui, mais à quel prix ?",
+                "headline": "De grosses fesses ? Oui, mais à quel prix ?"
+              },
+              "locators": {
+                "assetUri": "/afrique/media-48230633",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-48230633",
+                "curie": "http://www.bbc.co.uk/asset/1f7104ac-4ba4-df43-9cb5-c9ece6fb5a9b",
+                "assetId": "48230633"
+              },
+              "summary": "Shami, jeune femme d'origine africaine vivant à Londres, voudrait passer par la chirurgie des fesses, l'une des plus dangereuses de la chirurgie esthétique.",
+              "timestamp": 1557511257000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p078wbg2",
+                "subType": "clip",
+                "format": "video",
+                "title": "Butt lift",
+                "synopses": {
+                  "short": "Butt lift",
+                  "long": "Butt lift",
+                  "medium": "Butt lift"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p078wch9.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Butt lift",
+                "versions": [
+                  {
+                    "versionId": "p078wbg4",
+                    "types": ["Original"],
+                    "duration": 184,
+                    "durationISO8601": "PT3M4S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1557509621000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106904939",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/16EF4/production/_106904939_p078wch9.jpg",
+                "path": "/cpsprodpb/16EF4/production/_106904939_p078wch9.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Shami, jeune femme d'origine africaine vivant à Londres, voudrait passer par la chirurgie des fesses, l'une des plus dangereuses.",
+                "caption": "Shami, jeune femme d'origine africaine vivant à Londres, voudrait passer par la chirurgie des fesses, l'une des plus dangereuses.",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-48230633",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9f9312fa-89e8-024b-9ee3-d8b7d3e66aba",
+            "rank": 15,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:9f9312fa-89e8-024b-9ee3-d8b7d3e66aba",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Travailler de la maison, quand les enfants s'en mêlent!",
+                "headline": "Coronavirus : Robert Kelly parle du télétravail avec des enfants à la maison"
+              },
+              "locators": {
+                "assetUri": "/afrique/media-52121324",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-52121324",
+                "curie": "http://www.bbc.co.uk/asset/9f9312fa-89e8-024b-9ee3-d8b7d3e66aba",
+                "assetId": "52121324"
+              },
+              "summary": "Le travail à domicile selon Robert Kelly - dont les enfants se sont glissés à l'antenne lors d'une interview en direct avec la BBC.",
+              "timestamp": 1585744907000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  },
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p088bg52",
+                "subType": "clip",
+                "format": "video",
+                "title": "Coronavirus : combien de temps faudra-t-il pour developer un vaccin Covid-19 ?",
+                "synopses": {
+                  "short": "Coronavirus : combien de temps faudra-t-il pour developer un vaccin Covid-19 ?",
+                  "long": "Alors que l'épidémie de coronavirus se propage à travers le monde, de nombreuses personnes se demandent combien de temps il faudra pour trouver un vaccin.",
+                  "medium": "Alors que l'épidémie de coronavirus se propage à travers le monde, de nombreuses personnes se demandent combien de temps il faudra pour trouver un vaccin."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p088bhcw.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Coronavirus : Robert Kelly parle du télétravail avec des enfants à la maison",
+                "versions": [
+                  {
+                    "versionId": "p088bg56",
+                    "types": ["Original"],
+                    "duration": 64,
+                    "durationISO8601": "PT1M4S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1585739826000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111498987",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1348D/production/_111498987_p088bhcw.jpg",
+                "path": "/cpsprodpb/1348D/production/_111498987_p088bhcw.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #3",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-52121324",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9969c652-4b05-4b19-a8bf-1894611409d5",
+            "rank": 16,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:9969c652-4b05-4b19-a8bf-1894611409d5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Voici comment rédiger un CV efficace",
+                "headline": "Emploi : comment rédiger un CV efficace ?"
+              },
+              "locators": {
+                "assetUri": "/afrique/media-59609750",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/media-59609750",
+                "curie": "http://www.bbc.co.uk/asset/9969c652-4b05-4b19-a8bf-1894611409d5",
+                "assetId": "59609750"
+              },
+              "summary": "Deux experts répondent à ces questions que l'on se pose tous.",
+              "timestamp": 1639490935000,
+              "language": "fr",
+              "passport": {
+                "language": "fr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "locator": "urn:bbc:cps:curie:asset:9969c652-4b05-4b19-a8bf-1894611409d5",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee4d5541-afdc-4511-9ba6-a42823b19429#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/20aba194-8360-4cda-b1b9-720656cde54e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/61da8e70-0be5-4cc0-96be-099bc396c960#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "fr",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/20aba194-8360-4cda-b1b9-720656cde54e#id",
+                      "thingLabel": "Chômage",
+                      "thingUri": "http://www.bbc.co.uk/things/20aba194-8360-4cda-b1b9-720656cde54e#id",
+                      "thingId": "20aba194-8360-4cda-b1b9-720656cde54e",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q41171",
+                        "http://dbpedia.org/resource/Unemployment"
+                      ],
+                      "thingEnglishLabel": "Unemployment",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/61da8e70-0be5-4cc0-96be-099bc396c960#id",
+                      "thingLabel": "Carrière",
+                      "thingUri": "http://www.bbc.co.uk/things/61da8e70-0be5-4cc0-96be-099bc396c960#id",
+                      "thingId": "61da8e70-0be5-4cc0-96be-099bc396c960",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/career"],
+                      "thingEnglishLabel": "Careers",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingLabel": "Economie",
+                      "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+                      "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+                      "thingEnglishLabel": "Economics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee4d5541-afdc-4511-9ba6-a42823b19429#id",
+                      "thingLabel": "Emploi",
+                      "thingUri": "http://www.bbc.co.uk/things/ee4d5541-afdc-4511-9ba6-a42823b19429#id",
+                      "thingId": "ee4d5541-afdc-4511-9ba6-a42823b19429",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Employment",
+                        "http://www.wikidata.org/entity/Q656365"
+                      ],
+                      "thingEnglishLabel": "Employment",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0b99dhk",
+                "subType": "clip",
+                "format": "video",
+                "title": "cv",
+                "synopses": {
+                  "short": "cv",
+                  "long": "cv",
+                  "medium": "cv"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b99ff6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "cv",
+                "versions": [
+                  {
+                    "versionId": "p0b99dhp",
+                    "types": ["Original"],
+                    "duration": 245,
+                    "durationISO8601": "PT4M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1639155341000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "122052007",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11189/production/_122052007_p0b99ff6.jpg",
+                "path": "/cpsprodpb/11189/production/_122052007_p0b99ff6.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "SOFIA NASSA, SPÉCIALISTE EN ACQUISITION DE TALENT.",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/media-59609750",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "58405f31-aa89-4e11-b224-947282ee708f",
+            "rank": 17,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:58405f31-aa89-4e11-b224-947282ee708f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Afrique Avenir : Entre conception de jeux de société et livres pour enfants, l'univers de Cissé Diambissy",
+                "headline": "Afrique Avenir : Entre conception de jeux de société et livres pour enfants, l'univers de Cissé Diambissy"
+              },
+              "locators": {
+                "assetUri": "/afrique/region-64265313",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:58405f31-aa89-4e11-b224-947282ee708f",
+                "assetId": "64265313",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/region-64265313",
+                "curie": "http://www.bbc.co.uk/asset/58405f31-aa89-4e11-b224-947282ee708f"
+              },
+              "summary": "Afrique Avenir reçoit Reçoit Cissé Diambissy conceptrice de jeux de société sur l’histoire et les cultures en Afrique et auteure de livres de jeunesse.",
+              "timestamp": 1673614479000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "language": "fr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "locator": "urn:bbc:cps:curie:asset:58405f31-aa89-4e11-b224-947282ee708f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "fr",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                      "thingLabel": "Entrepreneur",
+                      "thingUri": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                      "thingId": "41d87885-664f-4d92-931e-470b8fd7b16b",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entrepreneurship"
+                      ],
+                      "thingEnglishLabel": "Entrepreneurship",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dw4rv6",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Afrique Avenir : Jeu de société, litterature de jeunesse, le parcours de Cissé Diambissy",
+                "synopses": {
+                  "short": "Afrique Avenir : Jeu de société, litterature de jeunesse, le parcours de Cissé Diambissy",
+                  "long": "Bienvenue dans Afrique Avenir, l’émission des entrepreneurs sur BBC Afrique\n\nLa découverte de cette semaine dans Afrique Avenir est un jeu de société et l'univers professionnel de sa conceptrice ; Un jeu pour faciliter l’éducation financière. C’est le fruit d’une collaboration entre deux entrepreneurs passionnés de l’Afrique et soucieux de son développement par le biais de la transmission et la formation. \n\nJe reçois pour ce numéro d’Afrique Avenir, Cissé Diambissy qui nous rejoins depuis la France. \nBonjour, Cissé\n\nVous avez un profil assez intéressant de par votre créativité et la diversité de vos activités, entrepreneure en série, auteure de livre de jeunesse et conceptrice de jeux de société sur l’histoire et les cultures en Afrique. Vous êtes l’une des auteurs du jeu Wetchi Wetchi qui met l’accent sur le commerce, l’échange, la négociation et l’investissement. \n\nApprendre  par le divertissement, vous nous expliquez le bien-fondé de ce jeu, ce qui fait sa particularité, l’idée derrière sa création, comment y jouer, où s’en procurer...\n\nBienvenue !",
+                  "medium": "Afrique Avenir reçoit Reçoit Cissé Diambissy conceptrice de jeux de société sur l’histoire et les cultures en Afrique et auteure de livres de jeunesse."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dwltnq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Afrique Avenir : Jeu de société, litterature de jeunesse, le parcours de Cissé Diambissy",
+                "versions": [
+                  {
+                    "versionId": "p0dw4rvb",
+                    "types": ["Original"],
+                    "duration": 1770,
+                    "durationISO8601": "PT29M30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1673613192000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128308687",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13358/production/_128308687_p0dwltnq.jpg",
+                "path": "/cpsprodpb/13358/production/_128308687_p0dwltnq.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Afrique Avenir reçoit Reçoit Cissé Diambissy conceptrice de jeux de société sur l’histoire et les cultures en Afrique et auteure de livres de jeunesse.",
+                "copyrightHolder": "Bienvenue dans Afrique Avenir, l’émission des entr",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/region-64265313",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "45292e1a-1bb4-4647-97ef-d0ce647eddfd",
+            "rank": 18,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:45292e1a-1bb4-4647-97ef-d0ce647eddfd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Afrique Avenir : RETICE, la solution du Dr Victor Agbégnénou pour une école numérique",
+                "headline": "Afrique Avenir : RETICE, la solution du Dr Victor Agbégnénou pour une école numérique"
+              },
+              "locators": {
+                "assetUri": "/afrique/region-56042996",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/region-56042996",
+                "curie": "http://www.bbc.co.uk/asset/45292e1a-1bb4-4647-97ef-d0ce647eddfd",
+                "assetId": "56042996"
+              },
+              "summary": "Afrique Avenir reçoit Dr Victor Agbégnénou, président du Groupe KA Technologies, auteur du programme RETICE avec son projet phare, le cartable numérique.",
+              "timestamp": 1613134807000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  },
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "fr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "locator": "urn:bbc:cps:curie:asset:45292e1a-1bb4-4647-97ef-d0ce647eddfd",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ac88c4a9-f6e6-42df-a886-e9f5e8e1ced5#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+                  }
+                ],
+                "schemaVersion": "1.2.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingLabel": "Technologie",
+                      "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Technology",
+                        "http://www.wikidata.org/entity/Q4456888"
+                      ],
+                      "thingEnglishLabel": "Technology",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingLabel": "Éducation",
+                      "thingUri": "http://www.bbc.co.uk/things/6942cb29-9d3f-4c9c-9806-0a0578c286d6#id",
+                      "thingId": "6942cb29-9d3f-4c9c-9806-0a0578c286d6",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8434",
+                        "http://dbpedia.org/resource/Education"
+                      ],
+                      "thingEnglishLabel": "Education",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ac88c4a9-f6e6-42df-a886-e9f5e8e1ced5#id",
+                      "thingLabel": "Togo",
+                      "thingUri": "http://www.bbc.co.uk/things/ac88c4a9-f6e6-42df-a886-e9f5e8e1ced5#id",
+                      "thingId": "ac88c4a9-f6e6-42df-a886-e9f5e8e1ced5",
+                      "thingType": [
+                        "core:Place",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2363686/"],
+                      "thingEnglishLabel": "Togo",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "fr",
+                      "type": "formats"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id",
+                      "type": "contributor"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p096sq7d",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Afrique Avenir : RETICE, la solution de Victor Agbégnénou pour une école numérisée",
+                "synopses": {
+                  "short": "Afrique Avenir : RETICE, la solution de Victor Agbégnénou pour une école numérisée",
+                  "long": "Dr Victor Agbegnenou, scientifique et chercheur, a pour ambition de lutter contre les fractures énergétiques et numériques et apporter de l’énergie renouvelable et de la Connectivité à tous et partout en un temps record. \n\nIl crée de ce fait des technologies adaptées au contexte africain dont le programme RETICE.\n\nLe Réseau Énergie, Technologie de l’information et de la Communication en Education,  est une solution destinée à apporter du numérique à des structures données, des écoles notamment. \n\nIl permet, dans un établissement scolaire par exemple, aux enseignants et aux étudiants de pouvoir communiquer à travers des communaux numériques sans connexion internet grâce à une innovation nommée « 80/20 ».\n\n«  80% des besoins de communications sont satisfaits par ce réseau local et par conséquent les besoins en internet et d’opérateurs tiers pour communiquer baissent dans la même proportion et avec eux les coûts de connectivité. Les besoins pour les interconnexions et l’internet se résumant à moins de 20%. »\n\nL’exploitation du RETICE, selon son auteur, génère d’importantes richesses et d’emplois et permet de lutter contre l’exode rural et les migrations.\n\nLe RETICE a été testé en France, au Sénégal et est en cours d’implémentation à l’Institut Supérieur d’Administration et de Gestion (ESAG-NDE) au Togo.  \n\nAlexandrine Holognon reçoit pour Afrique Avenir :\n\n-\tDr Victor Agbégnénou, président du Groupe KA Technologies, auteur du programme RETICE\n-\tSœur Louise de Jésus afiyo Assivon, directrice de l’ESAG NDE",
+                  "medium": "Afrique Avenir reçoit Dr Victor Agbégnénou, président du Groupe KA Technologies, auteur du programme RETICE avec son projet phare, le cartable numérique."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p096t8db.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Afrique Avenir : RETICE, la solution du Dr Victor Agbégnénou pour une école numérique",
+                "versions": [
+                  {
+                    "versionId": "p096sq7g",
+                    "types": ["Original"],
+                    "duration": 1770,
+                    "durationISO8601": "PT29M30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1613133027000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "116930918",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13FEF/production/_116930918_p096t8db.jpg",
+                "path": "/cpsprodpb/13FEF/production/_116930918_p096t8db.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Dr Victor Agbégnénou, président du Groupe KA Technologies, auteur du programme RETICE avec son projet phare, le cartable numérique.",
+                "caption": "Dr Victor Agbégnénou, président du Groupe KA Technologies, auteur du programme RETICE avec son projet phare, le cartable numérique.",
+                "copyrightHolder": "Dr Victor Agbegnenou",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/region-56042996",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2a2d83ea-61a4-11e2-864d-3f4fa79c3f60",
+            "rank": 19,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:2a2d83ea-61a4-11e2-864d-3f4fa79c3f60",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mali: les renforts africains arrivent",
+                "headline": "Mali: les renforts africains arrivent"
+              },
+              "locators": {
+                "assetUri": "/afrique/nos_emissions/2013/01/130118_mali_soldats_pack",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2013/01/130118_mali_soldats_pack",
+                "curie": "http://www.bbc.co.uk/asset/2a2d83ea-61a4-11e2-864d-3f4fa79c3f60"
+              },
+              "summary": "La Cédéao veut accélérer le déploiement de sa force militaire au Mali. Une centaine de militaires Togolais et de Nigérians, premiers éléments de la force, sont arrivés jeudi soir à Bamako. ",
+              "timestamp": 1358536966000,
+              "language": "fr",
+              "media": {
+                "id": "22432244",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "22432244",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/01/18/130118192216_mali_soldier_640x360__nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2013/01/18/130118192216_mali_soldier_640x360__nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "href": "http://www.bbc.co.uk/afrique/meta/dps/2013/01/emp/130118_mali_soldats_pack.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2013/01/mali~fassefeh~f1855~f18~f1_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2013/01/mali~fassefeh~f1855~f18~f1_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/afrique/dps/2013/01/mali~fassefeh~f1855~f18~f1_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e211",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/01/18/130118113217_mali_soldado_144x81_reuters_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2013/01/18/130118113217_mali_soldado_144x81_reuters_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/nos_emissions/2013/01/130118_mali_soldats_pack",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fe284ea8-b4d7-45a9-8b12-d37258ef4d62",
+            "rank": 20,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:fe284ea8-b4d7-45a9-8b12-d37258ef4d62",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Afrique Avenir : Mbombo Home Care, la HealthTech qui s’occupe des personnes âgées et dépendantes au Cameroun",
+                "headline": "Afrique Avenir : Mbombo Home Care, la HealthTech qui s’occupe des personnes âgées et dépendantes au Cameroun"
+              },
+              "locators": {
+                "assetUri": "/afrique/region-60680593",
+                "cpsUrn": "urn:bbc:content:assetUri:afrique/region-60680593",
+                "curie": "http://www.bbc.co.uk/asset/fe284ea8-b4d7-45a9-8b12-d37258ef4d62",
+                "assetId": "60680593"
+              },
+              "summary": "Afrique Avenir reçoit Dr Péguy Nanfack, fondatrice de la HealthTech Mbombo Home Care au Cameroun",
+              "timestamp": 1646835934000,
+              "language": "fr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "language": "fr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+                "locator": "urn:bbc:cps:curie:asset:fe284ea8-b4d7-45a9-8b12-d37258ef4d62",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/3892335e-43d8-489b-b0a1-9e2cf25ff486#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6ae05645-a3cf-4c86-a194-fdd98389a670#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "fr",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingLabel": "Technologie",
+                      "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+                      "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Technology",
+                        "http://www.wikidata.org/entity/Q4456888"
+                      ],
+                      "thingEnglishLabel": "Technology",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/3892335e-43d8-489b-b0a1-9e2cf25ff486#id",
+                      "thingLabel": "Personnes âgées",
+                      "thingUri": "http://www.bbc.co.uk/things/3892335e-43d8-489b-b0a1-9e2cf25ff486#id",
+                      "thingId": "3892335e-43d8-489b-b0a1-9e2cf25ff486",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q191089",
+                        "http://dbpedia.org/resource/Old_age"
+                      ],
+                      "thingEnglishLabel": "Elderly people",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                      "thingLabel": "Entrepreneur",
+                      "thingUri": "http://www.bbc.co.uk/things/41d87885-664f-4d92-931e-470b8fd7b16b#id",
+                      "thingId": "41d87885-664f-4d92-931e-470b8fd7b16b",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entrepreneurship"
+                      ],
+                      "thingEnglishLabel": "Entrepreneurship",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/6ae05645-a3cf-4c86-a194-fdd98389a670#id",
+                      "thingLabel": "Cameroun",
+                      "thingUri": "http://www.bbc.co.uk/things/6ae05645-a3cf-4c86-a194-fdd98389a670#id",
+                      "thingId": "6ae05645-a3cf-4c86-a194-fdd98389a670",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2233387/"],
+                      "thingEnglishLabel": "Cameroon",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingLabel": "Santé",
+                      "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+                      "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "tagging:Genre"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Health",
+                        "http://www.wikidata.org/entity/Q12147"
+                      ],
+                      "thingEnglishLabel": "Health",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "Femmes",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0btbz1b",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Afrique Avenir : Mbombo Home Care, la healthTech qui s’occupe des personnes âgées et dépendantes au Cameroun",
+                "synopses": {
+                  "short": "Afrique Avenir : Mbombo Home Care, la healthTech qui s’occupe des personnes âgées",
+                  "long": "L’initiative est née d’une expérience personnelle de Dr Peguy Nanfack, médecin anesthésiste vivant en France, d’origine camerounaise. \n\nFace au constat de la quasi absence de soins appropriés à domicile pour des personnes souffrant de pathologies chroniques, elle décide de créer une Mbombo Home care. \n\nLa start-up offre l’aide à domicile à toute personne dépendante et âgée et également des services de garde-malade dans les hôpitaux.  \n\nPour Afrique Avenir, Dr Peguy Nanfack revient au micro d’Alexandrine Holognon sur le bien-fondé et les objectifs de Mbombo Home Care.",
+                  "medium": "Afrique Avenir reçoit Dr Peguy Nanfack, fondatrice de la HealthTech Mbombo Home Care au Cameroun"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0btc9y4.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Afrique Avenir : Mbombo Home Care, la HealthTech qui s’occupe des personnes âgées",
+                "versions": [
+                  {
+                    "versionId": "p0btbz1j",
+                    "types": ["Original"],
+                    "duration": 1771,
+                    "durationISO8601": "PT29M31S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1646834844000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "123614201",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/2801/production/_123614201_p0btc9y4.jpg",
+                "path": "/cpsprodpb/2801/production/_123614201_p0btc9y4.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Mbombo Home Care offre des soins à domicile aux personnes âgées et dépendantes au Cameroun",
+                "caption": "Mbombo Home Care offre des soins à domicile aux personnes âgées et dépendantes au Cameroun",
+                "copyrightHolder": "Mbombo Home Care",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:afrique/region-60680593",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

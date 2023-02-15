@@ -1,84 +1,352 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/azeri/meta/dps/junk/2015/08/emp/150804_azeri_test.emp.xml",
-        "id": "17692696",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:azeri/multimedia/2015/08/150804_azeri_test",
+        "locators": {
+          "assetUri": "/azeri/multimedia/2015/08/150804_azeri_test",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:dd784ca2-3a99-11e5-9d74-f6fa66e7eb9d",
+          "assetId": "17692696",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/08/150804_azeri_test",
+          "curie": "http://www.bbc.co.uk/asset/dd784ca2-3a99-11e5-9d74-f6fa66e7eb9d"
+        },
+        "type": "MAP",
+        "createdBy": "azeri",
+        "language": "az",
+        "lastUpdated": 1665420075212,
+        "firstPublished": 1438686912000,
+        "lastPublished": 1438686912000,
+        "timestamp": 1438686912000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17692696",
+          "contentId": "urn:bbc:topcat:curie:asset:dd784ca2-3a99-11e5-9d74-f6fa66e7eb9d"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/azeri",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      { "markupType": "plain_text", "text": "blah blah", "type": "paragraph" }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17692696", "cps_asset_type": "map" },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "azeri",
-    "firstPublished": 1438686912000,
-    "id": "urn:bbc:ares::asset:azeri/multimedia/2015/08/150804_azeri_test",
-    "includeComments": false,
-    "language": "az",
-    "lastPublished": 1452178359000,
-    "lastUpdated": 1581959937665,
-    "locators": {
-      "assetId": "17692696",
-      "assetUri": "/azeri/multimedia/2015/08/150804_azeri_test",
-      "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/08/150804_azeri_test",
-      "curie": "http://www.bbc.co.uk/asset/dd784ca2-3a99-11e5-9d74-f6fa66e7eb9d"
+      "content": {
+        "blocks": [
+          {
+            "id": "17692696",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17692696",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+              "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/azeri/meta/dps/junk/2015/08/emp/150804_azeri_test.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/azeri/dps/junk/2015/08/mandelson_test2_150804_azeri_test_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/azeri/dps/junk/2015/08/mandelson_test2_150804_azeri_test_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/azeri/dps/junk/2015/08/mandelson_test2_150804_azeri_test_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "blah blah",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "headline": "test1"
+        },
+        "locators": {
+          "assetUri": "/azeri/multimedia/2015/08/150804_azeri_test",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:dd784ca2-3a99-11e5-9d74-f6fa66e7eb9d",
+          "assetId": "17692696",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/08/150804_azeri_test",
+          "curie": "http://www.bbc.co.uk/asset/dd784ca2-3a99-11e5-9d74-f6fa66e7eb9d"
+        },
+        "summary": "test2",
+        "timestamp": 1438686912000,
+        "language": "az",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
+          "taggings": []
+        },
+        "media": {
+          "id": "17692696",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17692696",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+            "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/azeri/meta/dps/junk/2015/08/emp/150804_azeri_test.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/azeri/dps/junk/2015/08/mandelson_test2_150804_azeri_test_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/azeri/dps/junk/2015/08/mandelson_test2_150804_azeri_test_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/azeri/dps/junk/2015/08/mandelson_test2_150804_azeri_test_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "id": "urn:bbc:ares::asset:azeri/multimedia/2015/08/150804_azeri_test",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Multimedia",
+          "uri": "/azeri/multimedia",
+          "urlIdentifier": "/azeri/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCAzeri.com",
+          "uri": "/azeri",
+          "urlIdentifier": "/azeri",
+          "type": "simple"
+        },
+        "groups": []
+      }
     },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1438686912000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": { "headline": "test1" },
-    "id": "urn:bbc:ares::asset:azeri/multimedia/2015/08/150804_azeri_test",
-    "language": "az",
-    "locators": {
-      "assetId": "17692696",
-      "assetUri": "/azeri/multimedia/2015/08/150804_azeri_test",
-      "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2015/08/150804_azeri_test",
-      "curie": "http://www.bbc.co.uk/asset/dd784ca2-3a99-11e5-9d74-f6fa66e7eb9d"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/azeri/meta/dps/junk/2015/08/emp/150804_azeri_test.emp.xml",
-      "id": "17692696",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": { "taggings": [] },
-    "summary": "test2",
-    "timestamp": 1438686912000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Multimedia",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/azeri/multimedia"
-    },
-    "site": {
-      "name": "BBCAzeri.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/azeri"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:19:59.762Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T03:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "a537fb30-a364-8a4e-8c53-266f6ce60126",
+            "rank": 1,
+            "count": 9142,
+            "urn": "urn:bbc:curie:asset:a537fb30-a364-8a4e-8c53-266f6ce60126",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Bayıl sakinləri: \"Biz mənzildən çıxmayanda birinci işığımızı kəsdilər\" reürite",
+                "headline": "Bayıl sakinləri: \"Biz mənzildən çıxmayanda birinci işığımızı kəsdilər\" reürite"
+              },
+              "locators": {
+                "assetUri": "/azeri/region-23067447",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a537fb30-a364-8a4e-8c53-266f6ce60126",
+                "assetId": "23067447",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/region-23067447",
+                "curie": "http://www.bbc.co.uk/asset/a537fb30-a364-8a4e-8c53-266f6ce60126"
+              },
+              "summary": "Bayıl qəsəbəsində Qurban Abbasov küçəsi 27 ünvanında yaşayan sakinlər binalarının sökülərək yerində yenisinin inşa olunmasına etiraz edir.",
+              "timestamp": 1471277428000,
+              "language": "az",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
+                "taggings": []
+              },
+              "media": {
+                "id": "23067253",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0153fn9",
+                "entityType": "Clip",
+                "caption": "Bayıl sakinləri: \"Biz mənzildən çıxmayanda birinci işığımızı kəsdilər\"",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63503079",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/17B06/test/_63503079_p0153j11.jpg",
+                "path": "/cpsdevpb/17B06/test/_63503079_p0153j11.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Bayıl qəsəbəsində Qurban Abbasov",
+                "copyrightHolder": "Rüstəm",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/region-23067447",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4cd8c0a7-e57b-754a-b10f-703df07b6eae",
+            "rank": 2,
+            "count": 6609,
+            "urn": "urn:bbc:curie:asset:4cd8c0a7-e57b-754a-b10f-703df07b6eae",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ddd",
+                "headline": "ddd"
+              },
+              "locators": {
+                "assetUri": "/azeri/other-news-23066959",
+                "cpsUrn": "urn:bbc:content:assetUri:azeri/other-news-23066959",
+                "curie": "http://www.bbc.co.uk/asset/4cd8c0a7-e57b-754a-b10f-703df07b6eae",
+                "assetId": "23066959"
+              },
+              "summary": "Clip medium synopsis - e2e test 2016-08-10T08:51:03+00:00",
+              "timestamp": 1470836084000,
+              "language": "az",
+              "media": {
+                "id": "23066960",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0152c68",
+                "entityType": "Clip",
+                "caption": "Clip short synopsis - e2e test 2016-08-10T08:51:03+00:00",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63502889",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18204/test/_63502889_p012zl0f.jpg",
+                "path": "/cpsdevpb/18204/test/_63502889_p012zl0f.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "dd",
+                "caption": "dd",
+                "copyrightHolder": "dd",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:azeri/other-news-23066959",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "57e1c448-6782-f546-8e95-eeb9256db24f",
+            "rank": 3,
+            "count": 1159,
+            "urn": "urn:bbc:curie:asset:57e1c448-6782-f546-8e95-eeb9256db24f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "This is the short headline I can change or add to this as like",
+                "headline": "SEO relevant on your long headline"
+              },
+              "locators": {
+                "assetUri": "/bengali/content-23164032",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/content-23164032",
+                "curie": "http://www.bbc.co.uk/asset/57e1c448-6782-f546-8e95-eeb9256db24f",
+                "assetId": "23164032"
+              },
+              "summary": "This is the summary",
+              "timestamp": 1510550245000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p01dyx5x",
+                "subType": "clip",
+                "format": "video",
+                "title": "This is the short headline",
+                "synopses": {
+                  "short": "This is the long headline",
+                  "medium": "This is the summary",
+                  "long": "This is the body text and I would write lots of words about the video but not too many."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01dyxhn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "This will appear under the video on a story page",
+                "versions": [
+                  {
+                    "versionId": "p01dyx5z",
+                    "types": ["Original"],
+                    "duration": 90,
+                    "durationISO8601": "PT1M30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1510548856000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63599651",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3D53/test/_63599651_p01dyxhn.jpg",
+                "path": "/cpsdevpb/3D53/test/_63599651_p01dyxhn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "A koala",
+                "copyrightHolder": "Rex Features",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/content-23164032",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

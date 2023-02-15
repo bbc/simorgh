@@ -1,90 +1,335 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "entityType": "Clip",
-        "externalId": "p010l641",
-        "format": "video",
-        "id": "17694770",
-        "statusCode": 404,
-        "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
-        "subType": "primary",
-        "type": "external_vpid"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151217_test_long",
+        "locators": {
+          "assetUri": "/gahuza/video/2015/12/151217_test_long",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:fe263dc8-a4ad-11e5-a72f-33a878c49305",
+          "assetId": "17694770",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151217_test_long",
+          "curie": "http://www.bbc.co.uk/asset/fe263dc8-a4ad-11e5-a72f-33a878c49305"
+        },
+        "type": "MAP",
+        "createdBy": "greatlakes",
+        "language": "rw",
+        "lastUpdated": 1665420077201,
+        "firstPublished": 1450350361000,
+        "lastPublished": 1450350361000,
+        "timestamp": 1450350361000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17694770",
+          "contentId": "urn:bbc:topcat:curie:asset:fe263dc8-a4ad-11e5-a72f-33a878c49305"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["external_vpid", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/gahuza",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "Test Panorama (Long synopsis)",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17694770",
+            "subType": "primary",
+            "format": "video",
+            "externalId": "p010l641",
+            "entityType": "Clip",
+            "statusCode": 404,
+            "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+            "type": "external_vpid"
+          },
+          {
+            "text": "Test Panorama (Long synopsis)",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "headline": "Test Panorama"
+        },
+        "locators": {
+          "assetUri": "/gahuza/video/2015/12/151217_test_long",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:fe263dc8-a4ad-11e5-a72f-33a878c49305",
+          "assetId": "17694770",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151217_test_long",
+          "curie": "http://www.bbc.co.uk/asset/fe263dc8-a4ad-11e5-a72f-33a878c49305"
+        },
+        "summary": "Test Panorama (Short synopsis) ",
+        "timestamp": 1450350361000,
+        "language": "rw",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+          "taggings": []
+        },
+        "media": {
+          "id": "17694770",
+          "subType": "primary",
+          "format": "video",
+          "externalId": "p010l641",
+          "entityType": "Clip",
+          "statusCode": 404,
+          "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+          "type": "external_vpid"
+        },
+        "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151217_test_long",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Video",
+          "uri": "/gahuza/video",
+          "urlIdentifier": "/gahuza/video",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCGahuza.com",
+          "uri": "/gahuza",
+          "urlIdentifier": "/gahuza",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17694770", "cps_asset_type": "map" },
-    "blockTypes": ["external_vpid", "paragraph"],
-    "createdBy": "greatlakes",
-    "firstPublished": 1450350361000,
-    "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151217_test_long",
-    "includeComments": false,
-    "language": "rw",
-    "lastPublished": 1455103442000,
-    "lastUpdated": 1582030676261,
-    "locators": {
-      "assetId": "17694770",
-      "assetUri": "/gahuza/video/2015/12/151217_test_long",
-      "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151217_test_long",
-      "curie": "http://www.bbc.co.uk/asset/fe263dc8-a4ad-11e5-a72f-33a878c49305"
     },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1450350361000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": { "headline": "Test Panorama" },
-    "id": "urn:bbc:ares::asset:gahuza/video/2015/12/151217_test_long",
-    "language": "rw",
-    "locators": {
-      "assetId": "17694770",
-      "assetUri": "/gahuza/video/2015/12/151217_test_long",
-      "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2015/12/151217_test_long",
-      "curie": "http://www.bbc.co.uk/asset/fe263dc8-a4ad-11e5-a72f-33a878c49305"
-    },
-    "media": {
-      "entityType": "Clip",
-      "externalId": "p010l641",
-      "format": "video",
-      "id": "17694770",
-      "statusCode": 404,
-      "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
-      "subType": "primary",
-      "type": "external_vpid"
-    },
-    "passport": { "taggings": [] },
-    "summary": "Test Panorama (Short synopsis) ",
-    "timestamp": 1450350361000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Video",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/gahuza/video"
-    },
-    "site": {
-      "name": "BBCGahuza.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/gahuza"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:08:58.129Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 4,
+        "records": [
+          {
+            "id": "8e99293e-5a50-9d4d-a834-c16497360fb8",
+            "rank": 1,
+            "count": 9329,
+            "urn": "urn:bbc:curie:asset:8e99293e-5a50-9d4d-a834-c16497360fb8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ina son habaka tattalin arzikin Nigeria — Murtala fp update",
+                "headline": "Ina son habaka tattalin arzikin Nigeria — Murtala 1 update"
+              },
+              "locators": {
+                "assetUri": "/hausa/23061964",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23061964",
+                "curie": "http://www.bbc.co.uk/asset/8e99293e-5a50-9d4d-a834-c16497360fb8",
+                "assetId": "23061964"
+              },
+              "summary": "Ina son habaka tattalin arzikin Nigeria — Murtala medium synopsis 1 summary",
+              "timestamp": 1469118012000,
+              "language": "ha",
+              "media": {
+                "id": "23061487",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p014p0pr",
+                "entityType": "Clip",
+                "caption": "Ina son habaka tattalin arzikin Nigeria — Murtala caption overtype",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63497204",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/9D57/test/_63497204_d07e0f33-b9e9-42b2-a92f-932e1010d255.jpg",
+                "path": "/cpsdevpb/9D57/test/_63497204_d07e0f33-b9e9-42b2-a92f-932e1010d255.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Amurka na binciken hadarin mota marar matuki",
+                "caption": "caption added",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23061964",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ed6aede6-c0fe-b247-82f7-dc256c141526",
+            "rank": 2,
+            "count": 8062,
+            "urn": "urn:bbc:curie:asset:ed6aede6-c0fe-b247-82f7-dc256c141526",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Gane Mani Hanya: Tsaro a yankin Diffa - 16/07/2016",
+                "headline": "Gane Mani Hanya: Tsaro a yankin Diffa - 16/07/2016"
+              },
+              "locators": {
+                "assetUri": "/hausa/media-23061640",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/media-23061640",
+                "curie": "http://www.bbc.co.uk/asset/ed6aede6-c0fe-b247-82f7-dc256c141526",
+                "assetId": "23061640"
+              },
+              "summary": "Baya ga Najeriya, za a iya cewa Jamhuriyar Nijar wadda ita ce makwabciyar Najeriyar ta kusa, ta kasance kasa ta biyu da ta fuskanci hare-haren kungiyar Boko Haram.",
+              "timestamp": 1468945336000,
+              "language": "ha",
+              "media": {
+                "id": "23061641",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p014p205",
+                "entityType": "Clip",
+                "caption": "Gane Mani Hanya: Tsaro a yankin Diffa - 16/07/2016",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63496938",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14801/test/_63496938_p014p267.jpg",
+                "path": "/cpsdevpb/14801/test/_63496938_p014p267.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Gane Mani Hanya: Tsaro a yankin Diffa - 16/07/2016",
+                "caption": "Gane Mani Hanya: Tsaro a yankin Diffa - 16/07/2016",
+                "copyrightHolder": "Empics",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/media-23061640",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "939fe657-b46c-fc44-b620-b5ff7113c17f",
+            "rank": 3,
+            "count": 7306,
+            "urn": "urn:bbc:curie:asset:939fe657-b46c-fc44-b620-b5ff7113c17f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "France beat England in a friendly",
+                "headline": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."
+              },
+              "locators": {
+                "assetUri": "/hausa/23132710",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/23132710",
+                "curie": "http://www.bbc.co.uk/asset/939fe657-b46c-fc44-b620-b5ff7113c17f",
+                "assetId": "23132710"
+              },
+              "summary": "hgasjkgdja jkghd hkdh gyebnawh duiagd uw qwjdgufg bdfagafms c bgfiubaggd doiabnasmbfui",
+              "timestamp": 1497442123000,
+              "language": "ha",
+              "media": {
+                "id": "p01b7w2r",
+                "subType": "clip",
+                "format": "audio",
+                "title": "पुणे सुपरजायंट्स आयपीएलच्या अंतिम फेरीत!",
+                "synopses": {
+                  "short": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w9z.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे.",
+                "versions": [
+                  {
+                    "versionId": "p01b7w2z",
+                    "types": ["Original"],
+                    "duration": 16,
+                    "durationISO8601": "PT16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1495467503000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63542408",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13A28/test/_63542408_p01b7w9z.jpg",
+                "path": "/cpsdevpb/13A28/test/_63542408_p01b7w9z.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "सेहवागनं 'असा' पाहिला मुंबई-पुणे सामना",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/23132710",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2c0f5dc1-d7e5-aa47-9a00-fe7f14c01911",
+            "rank": 4,
+            "count": 6491,
+            "urn": "urn:bbc:curie:asset:2c0f5dc1-d7e5-aa47-9a00-fe7f14c01911",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ina son habaka tattalin arzikin Nigeria — Murtala",
+                "headline": "Ina son habaka tattalin arzikin Nigeria — Murtala full headline"
+              },
+              "locators": {
+                "assetUri": "/hausa/media-23061485",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:2c0f5dc1-d7e5-aa47-9a00-fe7f14c01911",
+                "assetId": "23061485",
+                "cpsUrn": "urn:bbc:content:assetUri:hausa/media-23061485",
+                "curie": "http://www.bbc.co.uk/asset/2c0f5dc1-d7e5-aa47-9a00-fe7f14c01911"
+              },
+              "summary": "Ina son habaka tattalin arzikin Nigeria — Murtala medium synopsis summary",
+              "timestamp": 1468935900000,
+              "language": "ha",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
+                "taggings": []
+              },
+              "media": {
+                "id": "23061487",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p014p0pr",
+                "entityType": "Clip",
+                "caption": "Ina son habaka tattalin arzikin Nigeria — Murtala caption",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63496901",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/2AD9/test/_63496901_p014p0q4.jpg",
+                "path": "/cpsdevpb/2AD9/test/_63496901_p014p0q4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Amurka na binciken hadarin mota marar matuki",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:hausa/media-23061485",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

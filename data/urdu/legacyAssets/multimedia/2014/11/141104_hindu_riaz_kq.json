@@ -1,148 +1,2134 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
-    "locators": {
-      "assetUri": "/urdu/multimedia/2014/11/141104_hindu_riaz_kq",
-      "cpsUrn": "urn:bbc:content:assetUri:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
-      "curie": "http://www.bbc.co.uk/asset/322bd766-6438-11e4-88bd-d1de3db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "urdu",
-    "language": "ur",
-    "lastUpdated": 1562271173791,
-    "firstPublished": 1415122981,
-    "lastPublished": 1417646660,
-    "options": {
-      "includeComments": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": false,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "35668404" },
-    "tags": {},
-    "version": "v1.0.10",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "35668404",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/urdu/meta/dps/2014/11/emp/141104_hindu_riaz_kq.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+        "locators": {
+          "assetUri": "/urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+          "cpsUrn": "urn:bbc:content:assetUri:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+          "curie": "http://www.bbc.co.uk/asset/322bd766-6438-11e4-88bd-d1de3db9bd6e",
+          "assetId": "35668404"
+        },
+        "type": "MAP",
+        "createdBy": "urdu",
+        "language": "ur",
+        "lastUpdated": 1649916535511,
+        "firstPublished": 1415122981000,
+        "lastPublished": 1415122981000,
+        "timestamp": 1415122981000,
+        "options": {
+          "includeComments": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": false,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "35668404",
+          "contentId": "urn:bbc:topcat:curie:asset:322bd766-6438-11e4-88bd-d1de3db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Urdu",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/urdu"
       },
-      {
-        "text": "گزشتہ ایک عشرے میں پاکستان میں فرقہ ورانہ تشدد بھی بڑھا ہے۔ لیکن صوبہ سندھ میں کچھ ایسے علاقے بھی ہیں جہاں یہ عشرہ اِتنے امن و امان اور مذہبی ہم آہنگی سے منایا جاتا ہے کہ اِس میں صرف مسلمان ہي نہیں بلکہ ہندو عقیدت مند بھی شریک ہوتے ہیں۔ عمرکوٹ سے ریاض سہیل کی رپورٹ۔",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "سندھ کے ہندو عزادار",
-      "headline": "سندھ کے ہندو عزادار"
-    },
-    "locators": {
-      "assetUri": "/urdu/multimedia/2014/11/141104_hindu_riaz_kq",
-      "cpsUrn": "urn:bbc:content:assetUri:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
-      "curie": "http://www.bbc.co.uk/asset/322bd766-6438-11e4-88bd-d1de3db9bd6e"
-    },
-    "summary": "صوبہ سندھ میں کچھ ایسے علاقے بھی ہیں جہاں یہ عشرہ اِتنے امن و امان اور مذہبی ہم آہنگی سے منایا جاتا ہے کہ اِس میں صرف مسلمان ہي نہیں بلکہ ہندو عقیدت مند  بھی شریک ہوتے ہیں۔ ",
-    "timestamp": 1562271173791,
-    "passport": {},
-    "media": {
-      "id": "35668404",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/urdu/meta/dps/2014/11/emp/141104_hindu_riaz_kq.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e225",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/04/141104181306_hindu_azadar_sindh_640x360_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2014/11/04/141104181306_hindu_azadar_sindh_640x360_bbc_nocredit.jpg",
-      "height": 360,
-      "width": 640,
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "ملٹی میڈیا",
-      "uri": "/urdu/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCUrdu.com",
-      "uri": "/urdu",
-      "type": "simple"
-    },
-    "groups": [
-      {
-        "type": "see-alsos",
-        "promos": [
+      "content": {
+        "blocks": [
           {
-            "headlines": {
-              "shortHeadline": "عاشورہ: تعزیے اور ماتمی جلوس   ",
-              "headline": "عاشورہ: تعزیے اور ماتمی جلوس   "
+            "id": "35668404",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "35668404",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/04/141104181306_hindu_azadar_sindh_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2014/11/04/141104181306_hindu_azadar_sindh_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
             },
-            "locators": {
-              "assetUri": "/urdu/multimedia/2014/11/141104_ashura_around_world_sq",
-              "cpsUrn": "urn:bbc:content:assetUri:/urdu/multimedia/2014/11/141104_ashura_around_world_sq"
-            },
-            "summary": "مختلف ممالک سے عاشورہ کے اجتماعات کی چند جھلکیاں",
-            "timestamp": 1415115158,
-            "cpsType": "PGL",
-            "id": "urn:bbc:ares::asset:urdu/multimedia/2014/11/141104_ashura_around_world_sq",
-            "type": "cps"
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/urdu/meta/dps/2014/11/emp/141104_hindu_riaz_kq.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/urdu/dps/2014/11/hindu~fonline~friaz~f1515~f4~f11_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/urdu/dps/2014/11/hindu~fonline~friaz~f1515~f4~f11_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/urdu/dps/2014/11/hindu~fonline~friaz~f1515~f4~f11_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
           },
           {
-            "headlines": {
-              "shortHeadline": "عاشورہ کے ماتمی جلوسوں کا پرامن اختتام",
-              "headline": "عاشورہ کے ماتمی جلوسوں کا پرامن اختتام"
-            },
-            "locators": {
-              "assetUri": "/urdu/pakistan/2014/11/141104_pak_ashura_security_zz",
-              "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan/2014/11/141104_pak_ashura_security_zz"
-            },
-            "summary": "پاکستان میں سخت سکیورٹی انتظامات میں یومِ عاشور روایتی عقیدت سے منایا گیا اور ملک کے مختلف شہروں میں ماتمی جلوس اختتام پذیر ہو گئے ہیں۔ پورے ملک سے کسی ناخوشگوار واقعے کی اطلاع نہیں ملی۔",
-            "timestamp": 1415074871,
-            "cpsType": "STY",
-            "id": "urn:bbc:ares::asset:urdu/pakistan/2014/11/141104_pak_ashura_security_zz",
-            "type": "cps"
+            "text": "گزشتہ ایک عشرے میں پاکستان میں فرقہ ورانہ تشدد بھی بڑھا ہے۔ لیکن صوبہ سندھ میں کچھ ایسے علاقے بھی ہیں جہاں یہ عشرہ اِتنے امن و امان اور مذہبی ہم آہنگی سے منایا جاتا ہے کہ اِس میں صرف مسلمان ہي نہیں بلکہ ہندو عقیدت مند بھی شریک ہوتے ہیں۔ عمرکوٹ سے ریاض سہیل کی رپورٹ۔",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "سندھ کے ہندو عزادار",
+          "headline": "سندھ کے ہندو عزادار"
+        },
+        "locators": {
+          "assetUri": "/urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+          "cpsUrn": "urn:bbc:content:assetUri:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+          "curie": "http://www.bbc.co.uk/asset/322bd766-6438-11e4-88bd-d1de3db9bd6e",
+          "assetId": "35668404"
+        },
+        "summary": "صوبہ سندھ میں کچھ ایسے علاقے بھی ہیں جہاں یہ عشرہ اِتنے امن و امان اور مذہبی ہم آہنگی سے منایا جاتا ہے کہ اِس میں صرف مسلمان ہي نہیں بلکہ ہندو عقیدت مند  بھی شریک ہوتے ہیں۔ ",
+        "timestamp": 1415122981000,
+        "language": "ur",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Urdu",
+          "taggings": []
+        },
+        "media": {
+          "id": "35668404",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "35668404",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/04/141104181306_hindu_azadar_sindh_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2014/11/04/141104181306_hindu_azadar_sindh_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
           },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/urdu/meta/dps/2014/11/emp/141104_hindu_riaz_kq.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/urdu/dps/2014/11/hindu~fonline~friaz~f1515~f4~f11_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/urdu/dps/2014/11/hindu~fonline~friaz~f1515~f4~f11_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/urdu/dps/2014/11/hindu~fonline~friaz~f1515~f4~f11_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e225",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/04/141104181306_hindu_azadar_sindh_640x360_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2014/11/04/141104181306_hindu_azadar_sindh_640x360_bbc_nocredit.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "ملٹی میڈیا",
+          "uri": "/urdu/multimedia",
+          "urlIdentifier": "/urdu/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCUrdu.com",
+          "uri": "/urdu",
+          "urlIdentifier": "/urdu",
+          "type": "simple"
+        },
+        "groups": [
           {
-            "headlines": {
-              "shortHeadline": "بھارت: عزاداری اور تعزیہ داری میں ہندو بھی پیش پیش",
-              "headline": "بھارت: عزاداری اور تعزیہ داری میں ہندو بھی پیش پیش"
-            },
-            "locators": {
-              "assetUri": "/urdu/regional/2014/11/141104_india_hindu_ashura_muharram_mb",
-              "cpsUrn": "urn:bbc:content:assetUri:/urdu/regional/2014/11/141104_india_hindu_ashura_muharram_mb"
-            },
-            "summary": "عام طور پر محرم کے جلوسوں کے سبب بھارت کے بیشتر علاقوں میں کشیدگی کے آثار رہتے ہیں تاہم بہت سی جگہوں پر ہندو نہ صرف اس میں شریک ہوتے ہیں بلکہ عقیدت و احترام میں تعزیے بناتے اور نکالتے ہیں۔",
-            "timestamp": 1415087484,
-            "cpsType": "STY",
-            "id": "urn:bbc:ares::asset:urdu/regional/2014/11/141104_india_hindu_ashura_muharram_mb",
-            "type": "cps"
+            "type": "see-alsos",
+            "promos": [
+              {
+                "headlines": {
+                  "shortHeadline": "عاشورہ: تعزیے اور ماتمی جلوس   ",
+                  "headline": "عاشورہ: تعزیے اور ماتمی جلوس   "
+                },
+                "locators": {
+                  "assetUri": "/urdu/multimedia/2014/11/141104_ashura_around_world_sq",
+                  "cpsUrn": "urn:bbc:content:assetUri:/urdu/multimedia/2014/11/141104_ashura_around_world_sq"
+                },
+                "summary": "مختلف ممالک سے عاشورہ کے اجتماعات کی چند جھلکیاں",
+                "timestamp": 1415115158000,
+                "language": "ur",
+                "cpsType": "PGL",
+                "id": "urn:bbc:ares::asset:urdu/multimedia/2014/11/141104_ashura_around_world_sq",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "shortHeadline": "عاشورہ کے ماتمی جلوسوں کا پرامن اختتام",
+                  "headline": "عاشورہ کے ماتمی جلوسوں کا پرامن اختتام"
+                },
+                "locators": {
+                  "assetUri": "/urdu/pakistan/2014/11/141104_pak_ashura_security_zz",
+                  "cpsUrn": "urn:bbc:content:assetUri:/urdu/pakistan/2014/11/141104_pak_ashura_security_zz"
+                },
+                "summary": "پاکستان میں سخت سکیورٹی انتظامات میں یومِ عاشور روایتی عقیدت سے منایا گیا اور ملک کے مختلف شہروں میں ماتمی جلوس اختتام پذیر ہو گئے ہیں۔ پورے ملک سے کسی ناخوشگوار واقعے کی اطلاع نہیں ملی۔",
+                "timestamp": 1415074871000,
+                "language": "ur",
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:urdu/pakistan/2014/11/141104_pak_ashura_security_zz",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "shortHeadline": "بھارت: عزاداری اور تعزیہ داری میں ہندو بھی پیش پیش",
+                  "headline": "بھارت: عزاداری اور تعزیہ داری میں ہندو بھی پیش پیش"
+                },
+                "locators": {
+                  "assetUri": "/urdu/regional/2014/11/141104_india_hindu_ashura_muharram_mb",
+                  "cpsUrn": "urn:bbc:content:assetUri:/urdu/regional/2014/11/141104_india_hindu_ashura_muharram_mb"
+                },
+                "summary": "عام طور پر محرم کے جلوسوں کے سبب بھارت کے بیشتر علاقوں میں کشیدگی کے آثار رہتے ہیں تاہم بہت سی جگہوں پر ہندو نہ صرف اس میں شریک ہوتے ہیں بلکہ عقیدت و احترام میں تعزیے بناتے اور نکالتے ہیں۔",
+                "timestamp": 1415087484000,
+                "language": "ur",
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:urdu/regional/2014/11/141104_india_hindu_ashura_muharram_mb",
+                "type": "cps"
+              }
+            ]
           }
         ]
       }
-    ]
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T10:12:57.479Z",
+        "lastRecordTimeStamp": "2023-02-15T10:11:00Z",
+        "firstRecordTimeStamp": "2023-02-15T08:11:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "d4d97d1d-5132-3c45-843f-7008fd045909",
+            "rank": 1,
+            "count": 45,
+            "urn": "urn:bbc:curie:asset:d4d97d1d-5132-3c45-843f-7008fd045909",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "’والدین، اساتذہ، رشتہ دار، سب تنقید کرتے ہیں‘",
+                "headline": "باڈی شیمنگ: ’ہر کمی آپ کی طاقت بن سکتی ہے‘"
+              },
+              "locators": {
+                "assetUri": "/urdu/pakistan-47907997",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-47907997",
+                "curie": "http://www.bbc.co.uk/asset/d4d97d1d-5132-3c45-843f-7008fd045909",
+                "assetId": "47907997"
+              },
+              "summary": "جہاں موٹاپے کا شکار خواتین کے لیے باڈی شیمنگ ایک بڑا مسئلہ ہے وہیں ایسی خواتین جو دبلی ہوں یا جن کا قد قدرے کم ہو، انھیں بھی ایسے ہی تضحیک آمیز رویے کا سامنا کرنا پڑتا ہے۔",
+              "timestamp": 1555400642000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p076hyj8",
+                "subType": "clip",
+                "format": "video",
+                "title": "’ہر کمی آپ کی طاقت بن سکتی ہے‘",
+                "synopses": {
+                  "short": "باڈی شیمنگ: ’ہر کمی آپ کی طاقت بن سکتی ہے‘",
+                  "medium": "باڈی شیمنگ پر بی بی سی اردو کی سیریز میں چند ایسی ہی خواتین سے بات کی گئی، جنھیں ان کی جسمانی ساخت کی بنا پر، یا اپنا حلیہ تبدیل کرنے پر تنقید کا نشانہ بنایا گیا۔",
+                  "long": "باڈی شیمنگ پر بی بی سی اردو کی سیریز میں چند ایسی ہی خواتین سے بات کی گئی، جنھیں ان کی جسمانی ساخت کی بنا پر، یا اپنا حلیہ تبدیل کرنے پر تنقید کا نشانہ بنایا گیا۔ ان خواتین نے اس تنقید کا نہ صرف سامنا کیا بلکہ اسے اپنی طاقت میں بدل دیا۔"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p076j05v.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "باڈی شیمنگ: ’ہر کمی آپ کی طاقت بن سکتی ہے‘",
+                "versions": [
+                  {
+                    "versionId": "p076hyjj",
+                    "types": ["Original"],
+                    "duration": 86,
+                    "durationISO8601": "PT1M26S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1555376400000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106423435",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/D0B8/production/_106423435_p076j05v.jpg",
+                "path": "/cpsprodpb/D0B8/production/_106423435_p076j05v.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "باڈی شیمنگ پر بی بی سی اردو کی سیریز میں چند ایسی ہی خواتین سے بات کی گئی، جنھیں ان کی جسمانی ساخت کی بنا پر، یا اپنا حلیہ تبدیل کرنے پر تنقید کا نشانہ بنایا گیا۔",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/pakistan-47907997",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6dd7b506-7339-8245-acb8-c85e48091b7d",
+            "rank": 2,
+            "count": 39,
+            "urn": "urn:bbc:curie:asset:6dd7b506-7339-8245-acb8-c85e48091b7d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "بچپن سے لوگ مجھے ’اوئے موٹی‘ کہہ کر بلاتے تھے!",
+                "headline": "باڈی شیمنگ: ملیے آرٹ کے ذریعے موٹاپے اور ڈپریشن کا مقابلہ کرنے والی حرا سے"
+              },
+              "locators": {
+                "assetUri": "/urdu/entertainment-50298742",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-50298742",
+                "curie": "http://www.bbc.co.uk/asset/6dd7b506-7339-8245-acb8-c85e48091b7d",
+                "assetId": "50298742"
+              },
+              "summary": "لاہور سے تعلق رکھنے والی آرٹسٹ حرا مسرور فیٹ شیمنگ کا شکار رہی ہیں۔ انھوں نے اپنے فن پاروں کے ذریعے یہ پیغام دینے کی کوشش کی کہ جب آپ کسی کے حجم کا مذاق اڑاتے ہیں تو اس انسان پر کیا گزرتی ہے۔",
+              "timestamp": 1573016034000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07t0byd",
+                "subType": "clip",
+                "format": "video",
+                "title": "اوئے موٹی",
+                "synopses": {
+                  "short": "اوئے موٹی"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07t5gz9.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "اوئے موٹی",
+                "versions": [
+                  {
+                    "versionId": "p07t5fz0",
+                    "types": ["Editorial"],
+                    "duration": 121,
+                    "durationISO8601": "PT2M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1572927195000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109528709",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1629E/production/_109528709_p07t0c23.jpg",
+                "path": "/cpsprodpb/1629E/production/_109528709_p07t0c23.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "اوئے موٹی",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/entertainment-50298742",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5e1a290c-07e3-4c49-a24a-15f49b11ab13",
+            "rank": 3,
+            "count": 36,
+            "urn": "urn:bbc:curie:asset:5e1a290c-07e3-4c49-a24a-15f49b11ab13",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "’مجھے جسم سےمُہر مِٹانی ہے کہ میں کسی کی ملکیت ہوں‘",
+                "headline": "امریکہ میں جنسی غلام رہنے والی خواتین اور ان کے ٹیٹُو"
+              },
+              "locators": {
+                "assetUri": "/urdu/world-50551597",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/world-50551597",
+                "curie": "http://www.bbc.co.uk/asset/5e1a290c-07e3-4c49-a24a-15f49b11ab13",
+                "assetId": "50551597"
+              },
+              "summary": "اقوام متحدہ کا کہنا ہے کہ انسانی سمگلنگ سے سب سے زیادہ متاثر وہ لڑکیاں اور خواتین ہوتی ہیں جنہیں جنسی مقاصد کے لیے استعمال کیا جاتا ہے۔",
+              "timestamp": 1574703632000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07w0kh3",
+                "subType": "clip",
+                "format": "video",
+                "title": "میرے جسم پر ملکیت کی مُہر نہیں ہونی چاہیے",
+                "synopses": {
+                  "short": "امریکہ میں جنسی غلام رہنے والی خواتین اور ان کے ٹیٹُو",
+                  "long": "اقوام متحدہ کا کہنا ہے کہ انسانی سمگلنگ سے سب سے زیادہ متاثر وہ لڑکیںا اور خواتین ہوتی ہیں جنہیں جنسی مقاصد کے لیے استعمال کیا جاتا ہے۔ سنہ 2018  کے جائزے کے مطابق  امریکہ ان ممالک میں شامل ہے جہاں ہیومن ٹریفکِنگ سے سب سے زیادہ خواتین متاثر ہوتی ہیں۔\nامریکہ میں سیکس ٹریفکِنگ کا سب سے بڑا مرکز ریاست اوہایو  ہے جہاں  کئی خواتین کو جسم فروشی اور جنسی غلامی پر مجبور کیا جاتا ہے۔ تاریخ میں ملنے والی غلامی کی مثالوں کی طرح، مختلف گروہ خواتین  کے جسموں پر گروہ سے وفاداری کی مہریں ٹیٹُو کی شکل میں لگا دیتے ہیں۔",
+                  "medium": "امریکہ: جنسی غلامی کی زندگی پر مجبور خواتین کے جسم پر بنے ٹیٹُو"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07w0kv7.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "امریکہ میں جنسی غلام رہنے والی خواتین اور ان کے ٹیٹُو",
+                "versions": [
+                  {
+                    "versionId": "p07w0khp",
+                    "types": ["Original"],
+                    "duration": 190,
+                    "durationISO8601": "PT3M10S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1574701990000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109887599",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/184FA/production/_109887599_p07w0kv7.jpg",
+                "path": "/cpsprodpb/184FA/production/_109887599_p07w0kv7.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "امریکہ: جنسی غلامی کی زندگی پر مجبور خواتین کے جسم پر بنے ٹیٹُو",
+                "copyrightHolder": "اقوام متحدہ کا کہنا ہے کہ انسانی سمگلنگ سے سب سے ز",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/world-50551597",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5ec12f83-a251-4c2e-a02e-47138245a017",
+            "rank": 4,
+            "count": 16,
+            "urn": "urn:bbc:curie:asset:5ec12f83-a251-4c2e-a02e-47138245a017",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "حبا بخاری: ’چائے والے پٹھان سے پشتو لہجہ سیکھنے کی کوشش کی‘",
+                "headline": "حبا بخاری: ’چائے والے پٹھان سے پشتو لہجہ سیکھنے کی کوشش کی‘"
+              },
+              "locators": {
+                "assetUri": "/urdu/entertainment-63140714",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:5ec12f83-a251-4c2e-a02e-47138245a017",
+                "assetId": "63140714",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-63140714",
+                "curie": "http://www.bbc.co.uk/asset/5ec12f83-a251-4c2e-a02e-47138245a017"
+              },
+              "summary": "بی بی سی کے ساتھ انٹرویو میں حبا بُخاری نے بتایا کہ ڈرامہ سیریل 'میرے ہم نشین' سے اُنھیں زیادہ توقعات نہیں تھیں۔",
+              "timestamp": 1665044440000,
+              "language": "ur",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "ur",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Urdu",
+                "locator": "urn:bbc:cps:curie:asset:5ec12f83-a251-4c2e-a02e-47138245a017",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/5831df96-8fb3-4ba6-8cbf-ae637be42a3d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c85b2a53-395d-4055-829a-f042f4d3ec0d#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/5831df96-8fb3-4ba6-8cbf-ae637be42a3d#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "ur",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingLabel": "فن فنکار",
+                      "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entertainment",
+                        "http://www.wikidata.org/entity/Q173799"
+                      ],
+                      "thingEnglishLabel": "Entertainment",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/c85b2a53-395d-4055-829a-f042f4d3ec0d#id",
+                      "thingLabel": "ٹی وی",
+                      "thingUri": "http://www.bbc.co.uk/things/c85b2a53-395d-4055-829a-f042f4d3ec0d#id",
+                      "thingId": "c85b2a53-395d-4055-829a-f042f4d3ec0d",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Television",
+                        "http://www.wikidata.org/entity/Q289"
+                      ],
+                      "thingEnglishLabel": "Television",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0d4pjyj",
+                "subType": "clip",
+                "format": "video",
+                "title": "‘حبا بخاری نے ڈرامے کی خاطر ’چائے والے پٹھان سے پشتو لہجہ سیکھنے کی کوشش کی",
+                "synopses": {
+                  "short": "‘حبا بخاری نے ڈرامے کی خاطر ’چائے والے پٹھان سے پشتو لہجہ سیکھنے کی کوشش کی"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0d4pkkc.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "‘حبا بخاری نے ڈرامے کی خاطر ’چائے والے پٹھان سے پشتو لہجہ سیکھنے کی کوشش کی",
+                "versions": [
+                  {
+                    "versionId": "p0d4pjyn",
+                    "types": ["Original"],
+                    "duration": 509,
+                    "durationISO8601": "PT8M29S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1664965546000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "126978220",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/08EF/production/_126978220_p0d4pkkc.jpg",
+                "path": "/cpsprodpb/08EF/production/_126978220_p0d4pkkc.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "حبا بُخاری",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/entertainment-63140714",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "558bb79b-5a2e-774e-bf04-bc58124e5a67",
+            "rank": 5,
+            "count": 16,
+            "urn": "urn:bbc:curie:asset:558bb79b-5a2e-774e-bf04-bc58124e5a67",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "دنیا کا سب سے ’سیکسی‘ ڈانس",
+                "headline": "دنیا کا سب سے ’سیکسی‘ ڈانس"
+              },
+              "locators": {
+                "assetUri": "/urdu/entertainment-42459024",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-42459024",
+                "curie": "http://www.bbc.co.uk/asset/558bb79b-5a2e-774e-bf04-bc58124e5a67",
+                "assetId": "42459024"
+              },
+              "summary": "افریقہ میں شروع ہونے والا ’اینگولن‘ ڈانس اب دنیا بھر میں معروف ہے مگر ماہرین کا کہنا ہے کہ اب یہ ڈانس کافی بدل چکا ہے۔",
+              "timestamp": 1513959639000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05rtr1q",
+                "subType": "clip",
+                "format": "video",
+                "title": "دنیا کا سیکسی ترین ڈانس کون سا ہے؟",
+                "synopses": {
+                  "short": "دنیا کا سیکسی ترین ڈانس کون سا ہے؟"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05rv5tk.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "دنیا کا سیکسی ترین ڈانس کون سا ہے؟",
+                "versions": [
+                  {
+                    "versionId": "p05rv512",
+                    "types": ["Editorial"],
+                    "duration": 78,
+                    "durationISO8601": "PT1M18S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1513951972000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99334777",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12FAF/production/_99334777_p05rtrn8.jpg",
+                "path": "/cpsprodpb/12FAF/production/_99334777_p05rtrn8.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/entertainment-42459024",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c6ce3566-dd38-d84b-bfd5-05c446934fc9",
+            "rank": 6,
+            "count": 13,
+            "urn": "urn:bbc:curie:asset:c6ce3566-dd38-d84b-bfd5-05c446934fc9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "پھانسی چڑھنے سے 24 گھنٹے پہلے۔۔۔",
+                "headline": "پھانسی چڑھنے سے 24 گھنٹے پہلے۔۔۔"
+              },
+              "locators": {
+                "assetUri": "/urdu/entertainment-45806126",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-45806126",
+                "curie": "http://www.bbc.co.uk/asset/c6ce3566-dd38-d84b-bfd5-05c446934fc9",
+                "assetId": "45806126"
+              },
+              "summary": "سزائے موت کے خلاف عالمی دن کے موقع پر اپنی نوعیت کی پہلی اور منفرد پرفارمنس منگل کی رات 12 بجے سے بغیر کسی وقفے کے جاری ہے اور 24 گھنٹے تک جاری رہے گی۔",
+              "timestamp": 1539137003000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "Keep me on trend"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06nf48l",
+                "subType": "clip",
+                "format": "video",
+                "title": "پھانسے چڑھنے سے 24 گھنٹے پہلے۔۔۔",
+                "synopses": {
+                  "short": "پھانسے چڑھنے سے 24 گھنٹے پہلے۔۔۔",
+                  "long": "سزائے موت کے عالمی دن کے موقع پر اپنی نوعیت کی پہلی اور منفرد پرفارمنس کل رات 12 بجے سے بغیر کسی وقفے کے جاری ہے۔ یہ 24 گھنٹے کی پرفارمنس ذوالفقار علی خان کے بارے میں ہے جو سزائے موت کے قیدی تھے اور جنھیں سال 2015 میں لاہور کی کوٹ لکھپت جیل میں پھانسی دی گئی تھی۔  ذوالفقار علی خان کے کردار کو نامور ہدایت کار اور اداکار سرمد کھوسٹ ادا کررہے ہیں جن سے ہمارے نمائندے موسیٰ یاوری نے بات کی اور ان سے اس پرفارمنس کا مقصد پوچھا۔"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06nf4rt.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "سرمد کھوسٹ نے 2018 میں سزائے موت کے ایک قیدی کی زندگی کے آخری 24 گھنٹے کا احوال ڈرامائی انداز میں پیش کیا تھا",
+                "versions": [
+                  {
+                    "versionId": "p06nf48q",
+                    "types": ["Original"],
+                    "duration": 140,
+                    "durationISO8601": "PT2M20S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1539119159000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "103789014",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/A08A/production/_103789014_p06nf4rt.jpg",
+                "path": "/cpsprodpb/A08A/production/_103789014_p06nf4rt.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "سرمد کھوسٹ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/entertainment-45806126",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9d754f01-a045-e34d-b73e-9bda44e9ea88",
+            "rank": 7,
+            "count": 12,
+            "urn": "urn:bbc:curie:asset:9d754f01-a045-e34d-b73e-9bda44e9ea88",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "سر پر کونڈوم کا تاج، مگر کیوں؟",
+                "headline": "محفوظ جنسی تعلق کی ترویج کےلیے انوکھے طریقوں کا استعمال"
+              },
+              "locators": {
+                "assetUri": "/urdu/world-40357810",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/world-40357810",
+                "curie": "http://www.bbc.co.uk/asset/9d754f01-a045-e34d-b73e-9bda44e9ea88",
+                "assetId": "40357810"
+              },
+              "summary": "محفوظ جنسی تعلق کی ترویج کےلیے تھائی لینڈ کے معروف سیاستدان انوکھے طریقے استعمال کررہے ہیں اسی لیے انہیں کونڈوم کِنگ یعنی کنڈوم کے بادشاہ کا خطاب دیا گیا ہے۔",
+              "timestamp": 1498109093000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p056k5vq",
+                "subType": "clip",
+                "format": "video",
+                "title": "سر پر کنڈوم کا تاج، مگر کیوں؟",
+                "synopses": {
+                  "short": "محفوظ جنسی تعلق کی ترویج کےلیے تھائی لینڈ کے معروف سیاستدان انوکھے طریقے استعمال کررہے ہیں"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p056k6xn.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "محفوظ جنسی تعلق کی ترویج کےلیے تھائی لینڈ کے معروف سیاستدان انوکھے طریقے استعمال کررہے ہیں",
+                "versions": [
+                  {
+                    "versionId": "p056k5vv",
+                    "types": ["Original"],
+                    "duration": 46,
+                    "durationISO8601": "PT46S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1498055820000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "96580253",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8988/production/_96580253_p056k6xn.jpg",
+                "path": "/cpsprodpb/8988/production/_96580253_p056k6xn.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "کنڈوم کِنگ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/world-40357810",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "efa86e63-89ef-1746-9c3e-07defab2edd5",
+            "rank": 8,
+            "count": 10,
+            "urn": "urn:bbc:curie:asset:efa86e63-89ef-1746-9c3e-07defab2edd5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "شادیوں کی تقریبات میں کون ٹھمکے انجوائے نہیں کرتا؟",
+                "headline": "شادیوں کی تقریبات میں کون ٹھمکے انجوائے نہیں کرتا؟"
+              },
+              "locators": {
+                "assetUri": "/urdu/pakistan-51260521",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-51260521",
+                "curie": "http://www.bbc.co.uk/asset/efa86e63-89ef-1746-9c3e-07defab2edd5",
+                "assetId": "51260521"
+              },
+              "summary": "آج کے زمانے کے جدید ویڈنگ ڈانس کوریوگرافرز ایک عام سی شادی کی تقریب میں ایسا رنگ بھرتے ہیں کہ بالی ووڈ فلم کا گمان ہونے لگتا ہے۔ ایسے ہی ایک کوریوگرافر سے ملوا رہے ہیں کریم الاسلام اس ڈیجیٹل ویڈیو میں۔",
+              "timestamp": 1580109057000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p081gzfj",
+                "subType": "clip",
+                "format": "video",
+                "title": "شادیوں کا سیزن زوروں پر ہو تو کون ہے جو اِن تقریبات میں چند ٹھمکے لگانا انجوائے نہیں کرتا؟",
+                "synopses": {
+                  "short": "شادیوں کا سیزن زوروں پر ہو تو کون ہے جو اِن تقریبات میں چند ٹھمکے لگانا انجوائے نہیں کرتا؟",
+                  "long": "شادیوں کا سیزن زوروں پر ہو تو کون ہے جو اِن تقریبات میں چند ٹھمکے لگانا انجوائے نہیں کرتا؟ لیکن آج کے زمانے کے جدید ویڈنگ ڈانس کوریوگرافرز ایک عام سی شادی کی تقریب میں ایسا رنگ بھرتے ہیں کہ اُس پر بالی ووڈ فلم کا گمان ہونے لگتا ہے۔ ایسے ہی ایک کوریوگرافر سے ملوا رہے ہیں ہمارے ساتھی کریم الاسلام اپنی اِس ڈیجیٹل ویڈیو میں۔",
+                  "medium": "شادیوں کا سیزن زوروں پر ہو تو کون ہے جو اِن تقریبات میں چند ٹھمکے لگانا انجوائے نہیں کرتا؟"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p081h22d.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "شادیوں کا سیزن زوروں پر ہو تو کون ہے جو اِن تقریبات میں چند ٹھمکے لگانا انجوائے نہیں کرتا؟",
+                "versions": [
+                  {
+                    "versionId": "p081gzfl",
+                    "types": ["Original"],
+                    "duration": 127,
+                    "durationISO8601": "PT2M7S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1580107804000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110657793",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9B5F/production/_110657793_p081h22d.jpg",
+                "path": "/cpsprodpb/9B5F/production/_110657793_p081h22d.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "شادیوں کا سیزن",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/pakistan-51260521",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fb553149-94a1-5c4c-bbfb-3ecab4c4bc5c",
+            "rank": 9,
+            "count": 9,
+            "urn": "urn:bbc:curie:asset:fb553149-94a1-5c4c-bbfb-3ecab4c4bc5c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "’ہمارے مذہب کا متبادل مضمون کوئی نہیں ہے‘",
+                "headline": "ہندو بچوں کو اسلامیات پڑھانے کا مقصد ’انھیں تبلیغ دے کر مسلمان کرنا ہے‘"
+              },
+              "locators": {
+                "assetUri": "/urdu/pakistan-46942469",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-46942469",
+                "curie": "http://www.bbc.co.uk/asset/fb553149-94a1-5c4c-bbfb-3ecab4c4bc5c",
+                "assetId": "46942469"
+              },
+              "summary": "رحیم یار خان کے ایک گاؤں میں ہندو اقلیتی برادری سرکاری سکول کی تعلیم سے خوفزدہ کیوں ہے؟",
+              "timestamp": 1548134911000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06ynd98",
+                "subType": "clip",
+                "format": "video",
+                "title": "’ہندو بچوں کو اسلامیات پڑھائی جا رہی ہے‘",
+                "synopses": {
+                  "short": "’ہندو بچوں کو اسلامیات پڑھائی جا رہی ہے‘",
+                  "long": "رحیم یار خان کے ایک گاؤں میں ہندو اقلیتی برادری ایک سرکاری سکول کی تعلیم سے خوفزدہ کیوں ہے؟ دیکھیے ہمارے ساتھی عمر دراز کی رپورٹ",
+                  "medium": "رحیم یار خان کے ایک گاؤں میں ہندو اقلیتی برادری ایک سرکاری سکول کی تعلیم سے خوفزدہ کیوں ہے؟"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06yp26k.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "رحیم یار خان کی تحصیل لیاقت پورمیں سرکاری سکول میں ہندو بچوں کو مجبوراً اسلامیات پڑھنا پڑ رہی ہے",
+                "versions": [
+                  {
+                    "versionId": "p06ynd9b",
+                    "types": ["Original"],
+                    "duration": 134,
+                    "durationISO8601": "PT2M14S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1548070442000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105263307",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/112C0/production/_105263307_p06yp26k.jpg",
+                "path": "/cpsprodpb/112C0/production/_105263307_p06yp26k.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ہندو بچے",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/pakistan-46942469",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "66b7d051-c549-4a48-9f3f-64c7dbb7ffc5",
+            "rank": 10,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:66b7d051-c549-4a48-9f3f-64c7dbb7ffc5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "پلس سائز خواتین کی فیشن ڈیزائنر سے ملیے",
+                "headline": "باڈی شیمنگ: پلس سائز خواتین کی فیشن ڈیزائنر سے ملیے"
+              },
+              "locators": {
+                "assetUri": "/urdu/pakistan-47931416",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-47931416",
+                "curie": "http://www.bbc.co.uk/asset/66b7d051-c549-4a48-9f3f-64c7dbb7ffc5",
+                "assetId": "47931416"
+              },
+              "summary": "پاکستان میں باڈی شیمنگ پر زیادہ بات نہیں کی جاتی، یہاں تک کہ عام طور پر کسی بھی شخص کی جسمانی ساخت سے متعلق رائے دینا، ہتک آمیز رویہ اختیار کرنا، مذاق اڑانا عام سی بات سمجھی جاتی ہے۔",
+              "timestamp": 1555303071000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p076hg5t",
+                "subType": "clip",
+                "format": "video",
+                "title": "باڈی شیمنگ: کیا آپ کو بھی پلس سائز لباس پورا آتا ہے؟",
+                "synopses": {
+                  "short": "پاکستان میں باڈی شیمنگ کے خلاف آگاہی پھیلانے والی سرگرم خاتون ڈیزائنر",
+                  "long": "پاکستان میں باڈی شیمنگ پر زیادہ بات نہیں کی جاتی، یہاں تک کہ عام طور پر کسی بھی شخص کی جسمانی ساخت سے متعلق رائے دینا، ہتک آمیز رویہ اختیار کرنا، مذاق اڑانا عام سی بات سمجھی جاتی ہے۔ اس رویے کے خلاف سرگرم کراچی سے تعلق رکھنے والی ڈاکٹر زہرہ حسین ان خواتین کے لیے جدید لباس ڈیزائن کرنے کے علاوہ ایسی خواتین کی تھراپی بھی کرتی ہیں جو اپنے جسم اور ظاہری شکل و صورت سے متعلق اپنے اردگرد موجود لوگوں کے رویوں کی وجہ سے پریشان ہوں۔ مزید جانیے بی بی سی کی نامہ نگار فرحت جاوید کی اس ڈیجیٹل ویڈیو میں"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p076hgh4.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "پاکستان میں باڈی شیمنگ کے خلاف آگاہی پھیلانے والی سرگرم خاتون ڈیزائنر",
+                "versions": [
+                  {
+                    "versionId": "p076hg5w",
+                    "types": ["Original"],
+                    "duration": 82,
+                    "durationISO8601": "PT1M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1555301197000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106451904",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9FD3/production/_106451904_p076hgh4.jpg",
+                "path": "/cpsprodpb/9FD3/production/_106451904_p076hgh4.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "باڈی شیمنگ",
+                "copyrightHolder": "Dr Zahra Hussain",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/pakistan-47931416",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "50d65c08-165b-7845-ada0-0deae7f01e87",
+            "rank": 11,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:50d65c08-165b-7845-ada0-0deae7f01e87",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "’کعبے کس منھ سے جاؤ گے غالب۔۔۔‘",
+                "headline": "مرزا اسداللہ خاں غالب کا 150واں یومِ وفات: ’ہیں اور بھی دنیا میں سخنور بہت اچھے، کہتے ہیں کہ غالب کا ہے انداز بیاں اور‘"
+              },
+              "locators": {
+                "assetUri": "/urdu/entertainment-47243649",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-47243649",
+                "curie": "http://www.bbc.co.uk/asset/50d65c08-165b-7845-ada0-0deae7f01e87",
+                "assetId": "47243649"
+              },
+              "summary": "مرزا اسداللہ خاں غالب کے 150ویں یومِ وفات کے موقع پر بی بی سی اردو کی ٹیم نے اپنے پسندیدہ اشعار پڑھے ہیں۔ ان کے ذوق سے مستفید ہونے کے لیے دیکھیے یہ دلچسپ ڈجیٹل ویڈیو۔",
+              "timestamp": 1550205448000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p070vyg2",
+                "subType": "clip",
+                "format": "video",
+                "title": "غالب",
+                "synopses": {
+                  "short": "غالب"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p070zgtn.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "’ہیں اور بھی دنیا میں سخنور بہت اچھے، کہتے ہیں کہ غالب کا ہے انداز بیاں اور‘",
+                "versions": [
+                  {
+                    "versionId": "p070zgm7",
+                    "types": ["Editorial"],
+                    "duration": 177,
+                    "durationISO8601": "PT2M57S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1550155463000
+                  }
+                ],
+                "imageCopyright": "Ghalib Academy",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105649253",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/89DE/production/_105649253_p070vz1q.jpg",
+                "path": "/cpsprodpb/89DE/production/_105649253_p070vz1q.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "غالب",
+                "copyrightHolder": "Ghalib Academy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/entertainment-47243649",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "941863e0-5972-534a-87f8-e33d4e975303",
+            "rank": 12,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:941863e0-5972-534a-87f8-e33d4e975303",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "’تم جیسی لڑکیاں صرف بستر پر اچھی لگتی ہیں‘",
+                "headline": "باڈی شیمنگ: ’تم جیسی لڑکیاں صرف بستر پر اچھی لگتی ہیں‘"
+              },
+              "locators": {
+                "assetUri": "/urdu/regional-47977506",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-47977506",
+                "curie": "http://www.bbc.co.uk/asset/941863e0-5972-534a-87f8-e33d4e975303",
+                "assetId": "47977506"
+              },
+              "summary": "باڈی شیمنگ کا شکار اکثر افراد ذہنی اذیت اور ڈپریشن کا شکار ہو جاتے ہیں لیکن کچھ ایسی باہمت خواتین بھی موجود ہیں جنھیں باڈی شیمنگ آگے بڑھنے سے روک نہیں پائی۔",
+              "timestamp": 1555675968000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p076vn12",
+                "subType": "clip",
+                "format": "video",
+                "title": "’تم جیسی لڑکیاں صرف بستر پر اچھی لگتی ہیں‘",
+                "synopses": {
+                  "short": "باڈی شیمنگ: ’تم جیسی لڑکیاں صرف بستر پر اچھی لگتی ہیں‘",
+                  "long": "باڈی شیمنگ کا شکار اکثر افراد ذہنی اذیت اور ڈپریشن کا شکار ہو جاتے ہیں جن سے ان کی روزمرہ زندگی متاثر ہونے لگتی ہے۔ لیکن کچھ باہمت خواتین ایسی بھی ہیں جنھوں نے باڈی شیمنگ کو کبھی اپنی منزل کے حصول کے راستے میں رکاوٹ بننے نہیں دیا۔ دیکھیے یہ ڈیجیٹل ویڈیو۔۔",
+                  "medium": "باڈی شیمنگ کا شکار اکثر افراد ذہنی اذیت اور ڈپریشن کا شکار ہو جاتے ہیں لیکن کچھ ایسی باہمت خواتین بھی موجود ہیں جنھیں باڈی شیمنگ آگے بڑھنے سے روک نہیں پائی۔"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p076vrq6.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "باڈی شیمنگ",
+                "versions": [
+                  {
+                    "versionId": "p076vn15",
+                    "types": ["Original"],
+                    "duration": 145,
+                    "durationISO8601": "PT2M25S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1555585221000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106501775",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E16E/production/_106501775_p076vrq6.jpg",
+                "path": "/cpsprodpb/E16E/production/_106501775_p076vrq6.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "باڈی شیمنگ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/regional-47977506",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fdd0d64f-71e1-7c40-bcd2-17ad0e34b268",
+            "rank": 13,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:fdd0d64f-71e1-7c40-bcd2-17ad0e34b268",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "شادی سے پہلے ضروری چار ٹیسٹ کون سے ہیں؟",
+                "headline": "شادی سے پہلے ضروری چار ٹیسٹ کون سے ہیں؟"
+              },
+              "locators": {
+                "assetUri": "/urdu/science-51144122",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/science-51144122",
+                "curie": "http://www.bbc.co.uk/asset/fdd0d64f-71e1-7c40-bcd2-17ad0e34b268",
+                "assetId": "51144122"
+              },
+              "summary": "شادی طے ہونے کے بعد جینیاتی، موروثی، جراثیمی اور بانجھ پن کے ٹیسٹ اس لیے بھی ضروری ہیں کہ تاکہ کہیں شادی کا خوشگوار احساس مشکلات کی نظر نہ ہو جائے۔",
+              "timestamp": 1579238297000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p080lxpj",
+                "subType": "clip",
+                "format": "video",
+                "title": "شادی سے پہلے یہ چار ٹیسٹ ضرور کروا لیں",
+                "synopses": {
+                  "short": "شادی سے پہلے یہ چار ٹیسٹ ضرور کروا لیں",
+                  "long": "ایسے متعدد خاندان ہیں جن کی شادیاں تو بڑی خوشیوں اور چاہ سے ہوئیں لیکن شادی کے بعد کسی کو بیماریوں نے گھیر لیا، کوئی معاشرتی مسائل کا شکار ہوا اور کسی کی اولاد تھیلیسیمیا اور دیگر امراض میں مبتلا ہو گئی۔\n\nاگر آپ شادی کرنے جا رہے ہیں تو چند اہم احتیاطی تدابیر اب انتہائی ضروری قرار دی جا رہی ہیں جن میں چار ایسے ٹیسٹ بھی ہیں جن کی مدد سے آپ شادی کے بعد پیدا ہونے والی پریشانیوں سے بچ سکتے ہیں۔ یہ چار ٹیسٹ کون سے ہیں، جانیے عزیز اللہ خان کی اس ویڈیو میں۔",
+                  "medium": "شادی طے ہونے کے بعد جینیاتی، موروثی، جراثیمی اور بانجھ پن کے ٹیسٹ اس لیے بھی ضروری ہیں کہ تاکہ کہیں شادی کا خوشگوار احساس مشکلات کی نظر نہ ہو جائے۔"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p080ly1h.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "شادی سے پہلے یہ چار ٹیسٹ ضرور کروا لیں",
+                "versions": [
+                  {
+                    "versionId": "p080lxpl",
+                    "types": ["Original"],
+                    "duration": 96,
+                    "durationISO8601": "PT1M36S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1579218941000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110542296",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10E68/production/_110542296_p080ly1h.jpg",
+                "path": "/cpsprodpb/10E68/production/_110542296_p080ly1h.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "تصویر",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/science-51144122",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a4e5ef49-4500-4508-a085-84f08261cc9f",
+            "rank": 14,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:a4e5ef49-4500-4508-a085-84f08261cc9f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "جب بیٹی نے ماں کی شادی کی تیاریاں کروائیں",
+                "headline": "جب بیٹی نے ماں کی شادی کی تیاریاں کروائیں"
+              },
+              "locators": {
+                "assetUri": "/urdu/regional-63140712",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a4e5ef49-4500-4508-a085-84f08261cc9f",
+                "assetId": "63140712",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-63140712",
+                "curie": "http://www.bbc.co.uk/asset/a4e5ef49-4500-4508-a085-84f08261cc9f"
+              },
+              "summary": "نرملی ایک سفر کے دوران اپنے ہونے والے شوہر سے ملی تھیں، شادی کے بارے میں سوچ کر اُن کو اپنی بیس سال کی بیٹی کا خیال آتا تھا۔",
+              "timestamp": 1664965274000,
+              "language": "ur",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "language": "ur",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Urdu",
+                "locator": "urn:bbc:cps:curie:asset:a4e5ef49-4500-4508-a085-84f08261cc9f",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/5831df96-8fb3-4ba6-8cbf-ae637be42a3d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/f7f69688-712a-4e57-94df-998ac40df82f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/5831df96-8fb3-4ba6-8cbf-ae637be42a3d#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "ur",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingLabel": "بھارت",
+                      "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                      "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/India",
+                        "http://sws.geonames.org/1269750/",
+                        "http://www.wikidata.org/entity/Q668"
+                      ],
+                      "thingEnglishLabel": "India",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/f7f69688-712a-4e57-94df-998ac40df82f#id",
+                      "thingLabel": "شادی",
+                      "thingUri": "http://www.bbc.co.uk/things/f7f69688-712a-4e57-94df-998ac40df82f#id",
+                      "thingId": "f7f69688-712a-4e57-94df-998ac40df82f",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Marriage",
+                        "http://www.wikidata.org/entity/Q8445"
+                      ],
+                      "thingEnglishLabel": "Marriage",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0d4pfj8",
+                "subType": "clip",
+                "format": "video",
+                "title": "جب بیٹی نے ماں کی شادی کی تیاریاں کروائیں",
+                "synopses": {
+                  "short": "جب بیٹی نے ماں کی شادی کی تیاریاں کروائیں"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0d4phg2.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "جب بیٹی نے ماں کی شادی کی تیاریاں کروائیں",
+                "versions": [
+                  {
+                    "versionId": "p0d4pfjl",
+                    "types": ["Original"],
+                    "duration": 246,
+                    "durationISO8601": "PT4M6S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1664964835000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "126978217",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11677/production/_126978217_p0d4phg2.jpg",
+                "path": "/cpsprodpb/11677/production/_126978217_p0d4phg2.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "انڈیا",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/regional-63140712",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "395c99b9-36b0-6341-b946-473176c94061",
+            "rank": 15,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:395c99b9-36b0-6341-b946-473176c94061",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "سیکس کی خاطر ہم کتنے جھوٹ بولتے ہیں؟",
+                "headline": "سیکس کی خاطر ہم کتنے جھوٹ بولتے ہیں؟"
+              },
+              "locators": {
+                "assetUri": "/urdu/science-50459343",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/science-50459343",
+                "curie": "http://www.bbc.co.uk/asset/395c99b9-36b0-6341-b946-473176c94061",
+                "assetId": "50459343"
+              },
+              "summary": "ایک تازہ تحقیق سے معلوم ہوا ہے کہ جب لوگ سیکس کے بارے میں سوچ رہے ہوتے ہیں تو وہ زیادہ ناقابل اعتبار ہوتے ہیں۔",
+              "timestamp": 1574079346000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07v9l69",
+                "subType": "clip",
+                "format": "video",
+                "title": "کیا آپ سیکس کے لیے کچھ بھی کہنے کو تیار ہیں؟",
+                "synopses": {
+                  "short": "کیا آپ سیکس کے لیے کچھ بھی کہنے کو تیار ہیں؟",
+                  "long": "مغربی دنیا میں کہا جاتا ہے کہ مردوں کے ذہن پر ہر وقت سیکس کا بھوت سوار رہتا ہے۔ \nلیکن ایک تازہ تحقیق سے معلوم ہوا ہے کہ جب لوگ سیکس کے بارے نیں سوچ رہے ہوتے ہیں تو وہ زیادہ ناقابل اعتبار ہوتے ہیں۔\nاس بارے میں مزید جاننے کے لیے دیکھیے یہ ویڈیو۔",
+                  "medium": "ایک تازہ تحقیق سے معلوم ہوا ہے کہ جب لوگ سیکس کے بارے نیں سوچ رہے ہوتے ہیں تو وہ زیادہ ناقابل اعتبار ہوتے ہیں۔"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07v9tnr.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "ایک تازہ تحقیق سے معلوم ہوا ہے کہ جب لوگ سیکس کے بارے نیں سوچ رہے ہوتے ہیں تو وہ زیادہ ناقابل اعتبار ہوتے ہیں۔",
+                "versions": [
+                  {
+                    "versionId": "p07v9l6c",
+                    "types": ["Original"],
+                    "duration": 71,
+                    "durationISO8601": "PT1M11S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1574079137000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109730597",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1368F/production/_109730597_gettyimages-1032793348.jpg",
+                "path": "/cpsprodpb/1368F/production/_109730597_gettyimages-1032793348.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ayka",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/science-50459343",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2230ef2e-2481-6942-aaf4-43d51ecf168e",
+            "rank": 16,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:2230ef2e-2481-6942-aaf4-43d51ecf168e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "’کسی کی زندگی کے قیمتی لمحے آپ کے ہاتھ میں ہیں‘",
+                "headline": "ٹریفک میں پھنسی ایمبولینس کا منزل تک پہنچنا کتنا ضروری ہوتا ہے؟"
+              },
+              "locators": {
+                "assetUri": "/urdu/pakistan-51717374",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-51717374",
+                "curie": "http://www.bbc.co.uk/asset/2230ef2e-2481-6942-aaf4-43d51ecf168e",
+                "assetId": "51717374"
+              },
+              "summary": "ایمبولینس میں موجود مریض یا زخمی کے پاس اکثر چند ’گولڈن منٹس‘ ہوتے ہیں جن میں ایک قیمتی جان بچائی جا سکتی ہے۔",
+              "timestamp": 1583217314000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p085gw96",
+                "subType": "clip",
+                "format": "video",
+                "title": "’کسی کی زندگی کے قیمتی لمحے آپ کے ہاتھ میں ہیں‘",
+                "synopses": {
+                  "short": "ٹریفک میں پھنسی ایمبولینس کا منزل تک پہنچنا کتنا ضروری ہوتا ہے؟",
+                  "long": "ٹریفک میں پھنسی ایمبولینس کا منزل تک پہنچنا کتنا ضروری ہوتا ہے۔ ایمبولینس میں موجود مریض یا زخمی کے پاس اکثر چند ’گولڈن منٹس‘ ہوتے ہیں جن میں ایک قیمتی جان بچائی جا سکتی ہے۔\n کسی کی جان بچانے کے لیے ہم کیا کردار ادا کرتے ہیں دیکھیے عزیزاللہ خان کی اس ڈیجیٹل ویڈیو میں۔",
+                  "medium": "ایمبولینس میں موجود مریض یا زخمی کے پاس اکثر چند ’گولڈن منٹس‘ ہوتے ہیں جن میں ایک قیمتی جان بچائی جا سکتی ہے۔"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p085gwkt.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "ایمبولینس میں موجود مریض یا زخمی کے پاس اکثر چند ’گولڈن منٹس‘ ہوتے ہیں جن میں ایک قیمتی جان بچائی جا سکتی ہے",
+                "versions": [
+                  {
+                    "versionId": "p085gw98",
+                    "types": ["Original"],
+                    "duration": 133,
+                    "durationISO8601": "PT2M13S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1583213905000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111118592",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/738D/production/_111118592_p085gwkt.jpg",
+                "path": "/cpsprodpb/738D/production/_111118592_p085gwkt.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "ایمبولینس",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/pakistan-51717374",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1f74c1da-cf84-a643-8c7c-4ba99605c300",
+            "rank": 17,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:1f74c1da-cf84-a643-8c7c-4ba99605c300",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "کونڈوم کا منفرد استعمال",
+                "headline": "کینیا کے مچھیروں کے لیے کونڈوم کی کیا افادیت ہے؟"
+              },
+              "locators": {
+                "assetUri": "/urdu/science-45445121",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/science-45445121",
+                "curie": "http://www.bbc.co.uk/asset/1f74c1da-cf84-a643-8c7c-4ba99605c300",
+                "assetId": "45445121"
+              },
+              "summary": "کونڈوم عام طور پر مانع حمل کے لیے استعمال ہوتے ہیں، لیکن افریقہ کے ملک کینیا میں ان کو ذرا مختلف طور پر استعمال کیا جاتا ہے۔",
+              "timestamp": 1536379801000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "CS"
+                  },
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06kkb95",
+                "subType": "clip",
+                "format": "video",
+                "title": "کونڈوم کا منفرد استعمال",
+                "synopses": {
+                  "short": "کینیا کے مچھیروں کے لیے کونڈوم کی کیا افادیت ہے؟",
+                  "long": "کونڈوم عام طور پر مانع حمل کے لیے استعمال ہوتے ہیں، لیکن افریقہ کے ملک کینیا میں ان کو ذرا مختلف طور پر استعمال کیا جاتا ہے۔ دیکھیے کونڈوم  ممباسا کے مچھیروے کی جانیں کیسے بچا رہے ہیں، اس ویڈیو میں۔",
+                  "medium": "کونڈوم عام طور پر مانع حمل کے لیے استعمال ہوتے ہیں، لیکن افریقہ کے ملک کینیا میں ان کو ذرا مختلف طور پر استعمال کیا جاتا ہے۔"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06kkcft.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "کینیا کے مچھیروں کے لیے کونڈوم کی کیا افادیت ہے؟",
+                "versions": [
+                  {
+                    "versionId": "p06kkb98",
+                    "types": ["Original"],
+                    "duration": 103,
+                    "durationISO8601": "PT1M43S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1536318482000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "103334843",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/881B/production/_103334843_p06kkcft.jpg",
+                "path": "/cpsprodpb/881B/production/_103334843_p06kkcft.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "کونڈوم",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/science-45445121",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fda2a6d9-dac3-2641-9950-081c0b229632",
+            "rank": 18,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:fda2a6d9-dac3-2641-9950-081c0b229632",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "’ایک امیر بڈھا اور ایک ہاٹ جوان بچی‘",
+                "headline": "شوبز راؤنڈ اپ: ’ایک امیر بڈھا اور ایک ہاٹ جوان بچی‘"
+              },
+              "locators": {
+                "assetUri": "/urdu/entertainment-48318958",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-48318958",
+                "curie": "http://www.bbc.co.uk/asset/fda2a6d9-dac3-2641-9950-081c0b229632",
+                "assetId": "48318958"
+              },
+              "summary": "رنبیر کپور کی مشکل کیا ہے؟ کپور خاندان کی میراث کے بارے میں کرینہ کپور کیا کہتی ہیں اور ’ایک امیر بڈھے اور ہاٹ جوان بچی‘ کا کیا معاملہ ہے۔ شوبز راؤنڈ اپ میں آج یہ سب سنیے نصرت جہاں کے ساتھ۔۔۔۔",
+              "timestamp": 1558149503000,
+              "language": "ur",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p079lj15",
+                "subType": "clip",
+                "format": "audio",
+                "title": "’دیوانہ سینکڑوں میں پہچانا جائے گا‘",
+                "synopses": {
+                  "short": "’دیوانہ سینکڑوں میں پہچانا جائے گا‘",
+                  "long": "شوبز ڈائری: ’دیوانہ سینکڑوں میں پہچانا جائے گا‘",
+                  "medium": "شوبز ڈائری: ’دیوانہ سینکڑوں میں پہچانا جائے گا‘"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p079ljc6.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "’ایک امیر بڈھا اور ایک ہاٹ جوان بچی‘",
+                "versions": [
+                  {
+                    "versionId": "p079lj17",
+                    "types": ["Original"],
+                    "duration": 292,
+                    "durationISO8601": "PT4M52S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1558147840000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "107009953",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8C96/production/_107009953_gettyimages-1067395376.jpg",
+                "path": "/cpsprodpb/8C96/production/_107009953_gettyimages-1067395376.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "کرینہ",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/entertainment-48318958",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9809fa4d-99e4-304c-833b-96ad0ba1760d",
+            "rank": 19,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:9809fa4d-99e4-304c-833b-96ad0ba1760d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "’اس فلم پر برطانیہ اور پاکستان کو فخر ہے‘",
+                "headline": "پاکستانی نژاد برطانوی ڈائریکٹر کی فلم ’میری پاک زمین‘ آسکر کے لیے منتخب کی گئی ہے۔"
+              },
+              "locators": {
+                "assetUri": "/urdu/entertainment-41301902",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-41301902",
+                "curie": "http://www.bbc.co.uk/asset/9809fa4d-99e4-304c-833b-96ad0ba1760d",
+                "assetId": "41301902"
+              },
+              "summary": "پاکستانی نژاد برطانوی ڈائریکٹر سرمد مسعود کی فلم ’میری پاک زمین‘ برطانیہ کی جانب سے آسکر کی غیر ملکی فلموں کی کیٹگری کے لیے منتخب کی گئی ہے۔",
+              "timestamp": 1505678507000,
+              "language": "ur",
+              "media": {
+                "id": "p05gd59y",
+                "subType": "clip",
+                "format": "audio",
+                "title": "’اس فلم پر برطانیہ اور پاکستان کو فخر ہے‘",
+                "synopses": {
+                  "short": "پاکستانی نژاد برطانوی ڈائریکٹر کی فلم ’میری پاک زمین‘ آسکر کے لیے منتخب کی گئی ہے۔",
+                  "medium": "پاکستانی نژاد برطانوی ڈائریکٹر سرمد مسعود کی فلم ’میری پاک زمین‘ برطانیہ کی جانب سے آسکر کی غیر ملکی فلموں کی کیٹگری کے لیے منتخب کی گئی ہے۔"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gd5qc.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "پاکستانی نژاد برطانوی ڈائریکٹر کی فلم ’میری پاک زمین‘ آسکر کے لیے منتخب کی گئی ہے۔",
+                "versions": [
+                  {
+                    "versionId": "p05gd5b1",
+                    "types": ["Original"],
+                    "duration": 696,
+                    "durationISO8601": "PT11M36S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1505678062000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "97841526",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F432/production/_97841526_nazo-saedalonggrass-reduced.jpg",
+                "path": "/cpsprodpb/F432/production/_97841526_nazo-saedalonggrass-reduced.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "فلم",
+                "copyrightHolder": "MERI PAK ZAMEEN",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/entertainment-41301902",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "644dae8b-914c-4132-8793-8a3a74638aca",
+            "rank": 20,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:644dae8b-914c-4132-8793-8a3a74638aca",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ضیا محی الدین: ’میں ٹی وی دیکھتا ہی نہیں، بھونڈی زبان کی وجہ سے‘",
+                "headline": "ضیا محی الدین: ’میں ٹی وی دیکھتا ہی نہیں، بھونڈی زبان کی وجہ سے‘"
+              },
+              "locators": {
+                "assetUri": "/urdu/entertainment-61934394",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:644dae8b-914c-4132-8793-8a3a74638aca",
+                "assetId": "61934394",
+                "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-61934394",
+                "curie": "http://www.bbc.co.uk/asset/644dae8b-914c-4132-8793-8a3a74638aca"
+              },
+              "summary": "ناپا تھیٹر میں معروف اداکار اور ڈائریکٹر، ضیا محی الدین، مشہور ڈرامہ ’رومیو اینڈ جولیئٹ‘ اردو زبان میں ڈائریکٹ کر رہے ہیں۔ اس پلے کو پیش کرنے کا مقصد کیا ہے، اور کیا ضیا محی الدین اپنے کام سے مطمئن ہیں؟",
+              "timestamp": 1656134918000,
+              "language": "ur",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "ur",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Urdu",
+                "locator": "urn:bbc:cps:curie:asset:644dae8b-914c-4132-8793-8a3a74638aca",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/5831df96-8fb3-4ba6-8cbf-ae637be42a3d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/5831df96-8fb3-4ba6-8cbf-ae637be42a3d#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "ur",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingLabel": "فن فنکار",
+                      "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+                      "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Entertainment",
+                        "http://www.wikidata.org/entity/Q173799"
+                      ],
+                      "thingEnglishLabel": "Entertainment",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                      "thingLabel": "معاشرہ",
+                      "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+                      "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Society",
+                        "http://www.wikidata.org/entity/Q8425"
+                      ],
+                      "thingEnglishLabel": "Society",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0ch2sv0",
+                "subType": "clip",
+                "format": "video",
+                "title": "ضیا محی الدین سے ایک ملاقات",
+                "synopses": {
+                  "short": "ضیا محی الدین سے ایک ملاقات"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0ch2t0r.jpg",
+                "embedding": false,
+                "advertising": false,
+                "caption": "ضیا محی الدین سے ایک ملاقات",
+                "versions": [
+                  {
+                    "versionId": "p0ch2sv6",
+                    "types": ["Original"],
+                    "duration": 380,
+                    "durationISO8601": "PT6M20S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1656134313000
+                  }
+                ],
+                "imageCopyright": "@ReadinWakil ·",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125613643",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8747/production/_125613643_p0ch2t0r.jpg",
+                "path": "/cpsprodpb/8747/production/_125613643_p0ch2t0r.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "@ReadinWakil",
+                "copyrightHolder": "Twitter @ReadinWakil",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:urdu/entertainment-61934394",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

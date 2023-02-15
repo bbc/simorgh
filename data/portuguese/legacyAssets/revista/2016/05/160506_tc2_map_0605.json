@@ -1,158 +1,332 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/portuguese/meta/dps/junk/2016/05/emp/160506_tc2_map_0605.emp.xml",
-        "id": "17697275",
-        "image": {
-          "altText": "",
-          "copyrightHolder": "",
-          "height": 360,
-          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
-          "id": "17697275",
-          "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
-          "subType": "thumbnail",
-          "type": "image",
-          "width": 640
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:portuguese/revista/2016/05/160506_tc2_map_0605",
+        "locators": {
+          "assetUri": "/portuguese/revista/2016/05/160506_tc2_map_0605",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:8ed065a2-1384-11e6-9f7e-020733e45519",
+          "assetId": "17697275",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/revista/2016/05/160506_tc2_map_0605",
+          "curie": "http://www.bbc.co.uk/asset/8ed065a2-1384-11e6-9f7e-020733e45519"
         },
-        "live": false,
-        "playlist": [
+        "type": "MAP",
+        "createdBy": "portuguese",
+        "language": "pt-BR",
+        "lastUpdated": 1665420084386,
+        "firstPublished": 1462537207000,
+        "lastPublished": 1462537207000,
+        "timestamp": 1462537207000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17697275",
+          "contentId": "urn:bbc:topcat:curie:asset:8ed065a2-1384-11e6-9f7e-020733e45519"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/portuguese",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
           {
-            "bitrate": "168000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_lo.mp4"
+            "id": "17697275",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17697275",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/portuguese/meta/dps/junk/2016/05/emp/160506_tc2_map_0605.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
           },
           {
-            "bitrate": "320000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_med.mp4"
-          },
-          {
-            "bitrate": "904000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_hi.mp4"
+            "text": "A primeira mensagem chegou por e-mail, de forma anônima, há mais de um ano: &quot;Olá, aqui é o fulano. Interessam alguns dados?&quot; &quot;Estamos muito interessados&quot;, respondeu Bastian Obermayer, repórter do jornal alemão Suddeutsche Zeitung. &quot;Há algumas precondições. Minha vida corre perigo&quot;, alertou a fonte, segundo confirmou à BBC Frederik Obermaier, outro repórter do jornal alemão. Leia também: Panama Papers: em seis pontos, como offshores podem esconder bilhões de origem ilegal Siga a BBC Brasil no Facebook e no Twitter &quot;A única coisa que não podemos revelar é o idioma em que se deu o diálogo original&quot;, desculpou-se Obermaier, um dos integrantes da equipe de investigação que recebeu os chamados Panama Papers, o maior vazamento de documentos confidenciais da história.",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
-        ],
-        "subType": "primary",
-        "type": "legacyMedia"
+        ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "A primeira mensagem chegou por e-mail, de forma anônima, há mais de um ano: &quot;Olá, aqui é o fulano. Interessam alguns dados?&quot; &quot;Estamos muito interessados&quot;, respondeu Bastian Obermayer, repórter do jornal alemão Suddeutsche Zeitung. &quot;Há algumas precondições. Minha vida corre perigo&quot;, alertou a fonte, segundo confirmou à BBC Frederik Obermaier, outro repórter do jornal alemão. Leia também: Panama Papers: em seis pontos, como offshores podem esconder bilhões de origem ilegal Siga a BBC Brasil no Facebook e no Twitter &quot;A única coisa que não podemos revelar é o idioma em que se deu o diálogo original&quot;, desculpou-se Obermaier, um dos integrantes da equipe de investigação que recebeu os chamados Panama Papers, o maior vazamento de documentos confidenciais da história.",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "map 'Minha vida corre perigo': a troca de e-mails que desencadeou os Panama Papers",
+          "headline": "map 'Minha vida corre perigo': a troca de e-mails que desencadeou os Panama Papers"
+        },
+        "locators": {
+          "assetUri": "/portuguese/revista/2016/05/160506_tc2_map_0605",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:8ed065a2-1384-11e6-9f7e-020733e45519",
+          "assetId": "17697275",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/revista/2016/05/160506_tc2_map_0605",
+          "curie": "http://www.bbc.co.uk/asset/8ed065a2-1384-11e6-9f7e-020733e45519"
+        },
+        "summary": "Fonte que revelou escândalo global de suspeitas de lavagem de dinheiro e evasão fiscal exigiu apenas medidas de segurança para ceder material sigiloso.",
+        "timestamp": 1462537207000,
+        "language": "pt-BR",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+          "taggings": []
+        },
+        "media": {
+          "id": "17697275",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17697275",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/portuguese/meta/dps/junk/2016/05/emp/160506_tc2_map_0605.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e212",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+          "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:portuguese/revista/2016/05/160506_tc2_map_0605",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Revista",
+          "uri": "/portuguese/revista",
+          "urlIdentifier": "/portuguese/revista",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCBrasil.com",
+          "uri": "/portuguese",
+          "urlIdentifier": "/portuguese",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17697275", "cps_asset_type": "map" },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "portuguese",
-    "firstPublished": 1462537207000,
-    "id": "urn:bbc:ares::asset:portuguese/revista/2016/05/160506_tc2_map_0605",
-    "includeComments": false,
-    "language": "pt-BR",
-    "lastPublished": 1462537207000,
-    "lastUpdated": 1585590833664,
-    "locators": {
-      "assetId": "17697275",
-      "assetUri": "/portuguese/revista/2016/05/160506_tc2_map_0605",
-      "cpsUrn": "urn:bbc:content:assetUri:portuguese/revista/2016/05/160506_tc2_map_0605",
-      "curie": "http://www.bbc.co.uk/asset/8ed065a2-1384-11e6-9f7e-020733e45519"
     },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1462537207000,
-    "type": "MAP",
-    "version": "v1.1.10"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "map 'Minha vida corre perigo': a troca de e-mails que desencadeou os Panama Papers",
-      "shortHeadline": "map 'Minha vida corre perigo': a troca de e-mails que desencadeou os Panama Papers"
-    },
-    "id": "urn:bbc:ares::asset:portuguese/revista/2016/05/160506_tc2_map_0605",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
-      "id": "d5e212",
-      "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "pt-BR",
-    "locators": {
-      "assetId": "17697275",
-      "assetUri": "/portuguese/revista/2016/05/160506_tc2_map_0605",
-      "cpsUrn": "urn:bbc:content:assetUri:portuguese/revista/2016/05/160506_tc2_map_0605",
-      "curie": "http://www.bbc.co.uk/asset/8ed065a2-1384-11e6-9f7e-020733e45519"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/portuguese/meta/dps/junk/2016/05/emp/160506_tc2_map_0605.emp.xml",
-      "id": "17697275",
-      "image": {
-        "altText": "",
-        "copyrightHolder": "",
-        "height": 360,
-        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
-        "id": "17697275",
-        "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
-        "subType": "thumbnail",
-        "type": "image",
-        "width": 640
-      },
-      "live": false,
-      "playlist": [
-        {
-          "bitrate": "168000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_lo.mp4"
-        },
-        {
-          "bitrate": "320000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_med.mp4"
-        },
-        {
-          "bitrate": "904000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_hi.mp4"
-        }
-      ],
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": { "taggings": [] },
-    "summary": "Fonte que revelou escândalo global de suspeitas de lavagem de dinheiro e evasão fiscal exigiu apenas medidas de segurança para ceder material sigiloso.",
-    "timestamp": 1462537207000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Revista",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/portuguese/revista"
-    },
-    "site": {
-      "name": "BBCBrasil.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/portuguese"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:18:00.434Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "84d71d4b-3222-7145-8a16-af72f6049586",
+            "rank": 1,
+            "count": 8623,
+            "urn": "urn:bbc:curie:asset:84d71d4b-3222-7145-8a16-af72f6049586",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "brasil media title Bebê é resgatado de escombros após terremoto no Jãpao",
+                "headline": "brasil short Bebê é resgatado de escombros após terremoto no Jãpao"
+              },
+              "locators": {
+                "assetUri": "/portuguese/media-23035861",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23035861",
+                "curie": "http://www.bbc.co.uk/asset/84d71d4b-3222-7145-8a16-af72f6049586",
+                "assetId": "23035861"
+              },
+              "summary": "brasil medium Bebê é resgatado de escombros após terremoto no Jãpao. Na quinta-feira, um tremor de magnitude 6 atingiu o sul do país.",
+              "timestamp": 1461232489000,
+              "language": "pt-BR",
+              "media": {
+                "id": "23034846",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p012vc7h",
+                "entityType": "Clip",
+                "caption": "brasil short Bebê é resgatado de escombros após terremoto no Jãpao",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63481008",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13892/test/_63481008_p012vchb.jpg",
+                "path": "/cpsdevpb/13892/test/_63481008_p012vchb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "test brasil video áéíóú âêîôû àèìòù",
+                "copyrightHolder": "BBC Brasília",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/media-23035861",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "18fd7c68-68e0-fe4e-9ae1-85a1f220ffe0",
+            "rank": 2,
+            "count": 3752,
+            "urn": "urn:bbc:curie:asset:18fd7c68-68e0-fe4e-9ae1-85a1f220ffe0",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Cameron fala sobre ataques aereos na Siria",
+                "headline": "Cameron discursa sobre ataques aereos na Siria"
+              },
+              "locators": {
+                "assetUri": "/portuguese/internacional-23040500",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-23040500",
+                "curie": "http://www.bbc.co.uk/asset/18fd7c68-68e0-fe4e-9ae1-85a1f220ffe0",
+                "assetId": "23040500"
+              },
+              "summary": "Primeiro-ministro do Reino Unido faz pronunciamento no Parlamento sobre ofensiva",
+              "timestamp": 1463145187000,
+              "language": "pt-BR",
+              "media": {
+                "id": "23015436",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p0107ljs",
+                "entityType": "Clip",
+                "caption": "Cameron discursa sobre ataques na Siria",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63482806",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/ED9C/test/_63482806_p0107lk3.jpg",
+                "path": "/cpsdevpb/ED9C/test/_63482806_p0107lk3.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "David Cameron",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/internacional-23040500",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8e96738f-0306-ed4b-971e-94bb3b9e168b",
+            "rank": 3,
+            "count": 3295,
+            "urn": "urn:bbc:curie:asset:8e96738f-0306-ed4b-971e-94bb3b9e168b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "test brasil audio Bebê panda faz primeira aparição pública em zôo dos EUA edit",
+                "headline": "short Bebê panda faz primeira aparição pública em zôo dos EUA edit"
+              },
+              "locators": {
+                "assetUri": "/portuguese/salasocial-23034850",
+                "cpsUrn": "urn:bbc:content:assetUri:portuguese/salasocial-23034850",
+                "curie": "http://www.bbc.co.uk/asset/8e96738f-0306-ed4b-971e-94bb3b9e168b",
+                "assetId": "23034850"
+              },
+              "summary": "medium Bebê panda faz primeira aparição pública em zôo dos EUA. O filhote de panda-gigante tem cinco meses e, desde que nasceu, só podia ser visto pela internet edit.",
+              "timestamp": 1460996592000,
+              "language": "pt-BR",
+              "media": {
+                "id": "23034945",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p012vcml",
+                "entityType": "Clip",
+                "caption": "short Bebê panda faz primeira aparição pública em zôo dos EUA edit",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63481075",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/DEBA/test/_63481075_p012vcqs.jpg",
+                "path": "/cpsdevpb/DEBA/test/_63481075_p012vcqs.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "test brasil audio áéíóú âêîôû àèìòù cãõ",
+                "caption": "caption áéíóú âêîôû àèìòù cãõ",
+                "copyrightHolder": "BBC Brasília",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:portuguese/salasocial-23034850",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

@@ -1,102 +1,349 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/pashto/meta/dps/junk/2016/09/emp/160921_tc2_testmap1.emp.xml",
-        "id": "17698414",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:pashto/world/2016/09/160921_tc2_testmap1",
+        "locators": {
+          "assetUri": "/pashto/world/2016/09/160921_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:cb3cbe10-8011-11e6-a923-003d34ba44a4",
+          "assetId": "17698414",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/world/2016/09/160921_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/cb3cbe10-8011-11e6-a923-003d34ba44a4"
+        },
+        "type": "MAP",
+        "createdBy": "pashto",
+        "language": "ps",
+        "lastUpdated": 1665415769815,
+        "firstPublished": 1474472581000,
+        "lastPublished": 1474472581000,
+        "timestamp": 1474472581000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17698414",
+          "contentId": "urn:bbc:topcat:curie:asset:cb3cbe10-8011-11e6-a923-003d34ba44a4"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/pashto",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "په افغانستان کې د ملي وحدت پر اوسني حکومت دوه کاله اوړي. دا حکومت له لانجمنو ټاکنو وروسته واک ته ورسېد. خو دا چې عام ولس د دې حکومت لاسته راوړنې څه گڼي او په کومو برخو کې يې پاتې بولي په همدې تړاو د بي بي سي ازاده جرگه جوړه شوې ده.",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17698414",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17698414",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+              "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/pashto/meta/dps/junk/2016/09/emp/160921_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/pashto/dps/junk/2016/09/hd_ash_beetle_1220_23_3_105_5386092_toprores_160921_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/pashto/dps/junk/2016/09/hd_ash_beetle_1220_23_3_105_5386092_toprores_160921_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/pashto/dps/junk/2016/09/hd_ash_beetle_1220_23_3_105_5386092_toprores_160921_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "په افغانستان کې د ملي وحدت پر اوسني حکومت دوه کاله اوړي. دا حکومت له لانجمنو ټاکنو وروسته واک ته ورسېد. خو دا چې عام ولس د دې حکومت لاسته راوړنې څه گڼي او په کومو برخو کې يې پاتې بولي په همدې تړاو د بي بي سي ازاده جرگه جوړه شوې ده.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "ازاده جرګه: د ملي وحدت حکومت لاسته راوړنې او نيمګړتياوې",
+          "headline": "ازاده جرګه: د ملي وحدت حکومت لاسته راوړنې او نيمګړتياوې"
+        },
+        "locators": {
+          "assetUri": "/pashto/world/2016/09/160921_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:cb3cbe10-8011-11e6-a923-003d34ba44a4",
+          "assetId": "17698414",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/world/2016/09/160921_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/cb3cbe10-8011-11e6-a923-003d34ba44a4"
+        },
+        "summary": "په افغانستان کې د ملي وحدت پر اوسني حکومت دوه کاله اوړي. دا حکومت له لانجمنو ټاکنو وروسته واک ته ورسېد.",
+        "timestamp": 1474472581000,
+        "language": "ps",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
+          "taggings": []
+        },
+        "media": {
+          "id": "17698414",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17698414",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+            "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/pashto/meta/dps/junk/2016/09/emp/160921_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/pashto/dps/junk/2016/09/hd_ash_beetle_1220_23_3_105_5386092_toprores_160921_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/pashto/dps/junk/2016/09/hd_ash_beetle_1220_23_3_105_5386092_toprores_160921_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/pashto/dps/junk/2016/09/hd_ash_beetle_1220_23_3_105_5386092_toprores_160921_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e212",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+          "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:pashto/world/2016/09/160921_tc2_testmap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "نړۍ",
+          "uri": "/pashto/world",
+          "urlIdentifier": "/pashto/world",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCPashto.com",
+          "uri": "/pashto",
+          "urlIdentifier": "/pashto",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17698414", "cps_asset_type": "map" },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "pashto",
-    "firstPublished": 1474472581000,
-    "id": "urn:bbc:ares::asset:pashto/world/2016/09/160921_tc2_testmap1",
-    "includeComments": false,
-    "language": "ps",
-    "lastPublished": 1474472581000,
-    "lastUpdated": 1582030879332,
-    "locators": {
-      "assetId": "17698414",
-      "assetUri": "/pashto/world/2016/09/160921_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:pashto/world/2016/09/160921_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/cb3cbe10-8011-11e6-a923-003d34ba44a4"
     },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1474472581000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "ازاده جرګه: د ملي وحدت حکومت لاسته راوړنې او نيمګړتياوې",
-      "shortHeadline": "ازاده جرګه: د ملي وحدت حکومت لاسته راوړنې او نيمګړتياوې"
-    },
-    "id": "urn:bbc:ares::asset:pashto/world/2016/09/160921_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
-      "id": "d5e212",
-      "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "ps",
-    "locators": {
-      "assetId": "17698414",
-      "assetUri": "/pashto/world/2016/09/160921_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:pashto/world/2016/09/160921_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/cb3cbe10-8011-11e6-a923-003d34ba44a4"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/pashto/meta/dps/junk/2016/09/emp/160921_tc2_testmap1.emp.xml",
-      "id": "17698414",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": { "taggings": [] },
-    "summary": "په افغانستان کې د ملي وحدت پر اوسني حکومت دوه کاله اوړي. دا حکومت له لانجمنو ټاکنو وروسته واک ته ورسېد.",
-    "timestamp": 1474472581000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "نړۍ",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/pashto/world"
-    },
-    "site": {
-      "name": "BBCPashto.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/pashto"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:15:57.794Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "83b95896-bf07-d24d-9e8b-956f6aa2aac7",
+            "rank": 1,
+            "count": 9757,
+            "urn": "urn:bbc:curie:asset:83b95896-bf07-d24d-9e8b-956f6aa2aac7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د ملي يووالي حکومت دویمه کليزه، د عبدالله برخليک",
+                "headline": "د روانې مياشتې سپټمبر له پای سره افغانستان کې د ملي يوالی حکومت دوه کاله پوره کېږي."
+              },
+              "locators": {
+                "assetUri": "/pashto/afghanistan-23078849",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:83b95896-bf07-d24d-9e8b-956f6aa2aac7",
+                "assetId": "23078849",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/afghanistan-23078849",
+                "curie": "http://www.bbc.co.uk/asset/83b95896-bf07-d24d-9e8b-956f6aa2aac7"
+              },
+              "summary": "دا حکومت چې د ټاکنو له ناندره ييزه پايلو سره له لانجو او ستونزو وروسته جوړ شو، تېرو دوو کلونو کې تر لوړو ژورو تېر شوی.",
+              "timestamp": 1474969523000,
+              "language": "ps",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
+                "taggings": []
+              },
+              "media": {
+                "id": "23078850",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015r5kc",
+                "entityType": "Clip",
+                "caption": "حشسىبت ئشحفهخر د ملي يووالي حکومت دویمه کليزه، د عبدالله برخليک ىت",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63512609",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/161FD/test/_63512609_p015r8dr.jpg",
+                "path": "/cpsdevpb/161FD/test/_63512609_p015r8dr.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "شمف فشل فښېف",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/afghanistan-23078849",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "abbd660a-dbed-0c46-ae28-cb98a9ca3e3c",
+            "rank": 2,
+            "count": 5135,
+            "urn": "urn:bbc:curie:asset:abbd660a-dbed-0c46-ae28-cb98a9ca3e3c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "اوونیز بحث: د هند او افغانستان اړیکو ارزښت او پر سیمه یې اغېز",
+                "headline": "هند ته د ولسمشر غني وروستي سفرد دواړو هېوادونو تر منځ د اړیکو پراختیا ښیي."
+              },
+              "locators": {
+                "assetUri": "/pashto/afghanistan-23078853",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/afghanistan-23078853",
+                "curie": "http://www.bbc.co.uk/asset/abbd660a-dbed-0c46-ae28-cb98a9ca3e3c",
+                "assetId": "23078853"
+              },
+              "summary": "دا په داسې حال کې ده چې په دې وروستیو کې د کابل او اسلام آباد اړیکې خړ پړ شوي دي.",
+              "timestamp": 1474972969000,
+              "language": "ps",
+              "media": {
+                "id": "23078854",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p015rn9k",
+                "entityType": "Clip",
+                "caption": "د سیمه ییزو چارو څېړونکی، غفور لېوال",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63512642",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/602D/test/_63512642_p015rnby.jpg",
+                "path": "/cpsdevpb/602D/test/_63512642_p015rnby.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "ززئ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/afghanistan-23078853",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6180031e-9aa3-7647-b9a8-495a98af4e9c",
+            "rank": 3,
+            "count": 4542,
+            "urn": "urn:bbc:curie:asset:6180031e-9aa3-7647-b9a8-495a98af4e9c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076868",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076868",
+                "curie": "http://www.bbc.co.uk/asset/6180031e-9aa3-7647-b9a8-495a98af4e9c",
+                "assetId": "23076868"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474538434000,
+              "language": "ps",
+              "media": {
+                "id": "63501296",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "journalism_world_service_stream_01",
+                "duration": "PT0S",
+                "caption": "شوي",
+                "image": {
+                  "id": "63501296",
+                  "subType": "thumbnail",
+                  "href": "http://b.files.bbci.co.uk/1624D/test/_63510709_160919042836_paralympic_976x549_gettyimages.jpg",
+                  "path": "/cpsdevpb/1624D/test/_63510709_160919042836_paralympic_976x549_gettyimages.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "شوي",
+                  "copyrightHolder": "Getty Images",
+                  "type": "image"
+                },
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63510710",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/06A5/test/_63510710_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/06A5/test/_63510710_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "شوي",
+                "caption": "شوي",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076868",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

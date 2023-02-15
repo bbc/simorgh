@@ -1,102 +1,341 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/persian/meta/dps/junk/2016/09/emp/160907_tc2_testmap1.emp.xml",
-        "id": "17698244",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:persian/iran/2016/09/160907_tc2_testmap1",
+        "locators": {
+          "assetUri": "/persian/iran/2016/09/160907_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b",
+          "assetId": "17698244",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/iran/2016/09/160907_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b"
+        },
+        "type": "MAP",
+        "createdBy": "persian",
+        "language": "fa",
+        "lastUpdated": 1665414991499,
+        "firstPublished": 1473242019000,
+        "lastPublished": 1473242019000,
+        "timestamp": 1473242019000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17698244",
+          "contentId": "urn:bbc:topcat:curie:asset:6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/persian",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "میسر عالی سازمان ملل در امور حقوق بشر به تندی از سیاستمدارهایی که آنها را عوام‌فریب و خیال‌پرداز خوانده، انتقاد کرده است. زید رعد حسین گفته است افرادی مثل دونالد ترامپ، نامزد ریاست جمهوری آمریکا و خرت ویلدرز، سیاستمدار راست گرای هلندی و نایجل فراژ، سیاستمدار بریتانیایی از شیوه های تبلیغاتی داعش استفاده می کنند. سعیده هاشمی گزارش می دهد.",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17698244",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17698244",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/persian/meta/dps/junk/2016/09/emp/160907_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "میسر عالی سازمان ملل در امور حقوق بشر به تندی از سیاستمدارهایی که آنها را عوام‌فریب و خیال‌پرداز خوانده، انتقاد کرده است. زید رعد حسین گفته است افرادی مثل دونالد ترامپ، نامزد ریاست جمهوری آمریکا و خرت ویلدرز، سیاستمدار راست گرای هلندی و نایجل فراژ، سیاستمدار بریتانیایی از شیوه های تبلیغاتی داعش استفاده می کنند. سعیده هاشمی گزارش می دهد.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
+          "headline": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد"
+        },
+        "locators": {
+          "assetUri": "/persian/iran/2016/09/160907_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b",
+          "assetId": "17698244",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/iran/2016/09/160907_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b"
+        },
+        "summary": "دفتر جامعه جهانی بهایی در سازمان ملل متحد، با انتشار نامه ای سرگشاده خطاب به حسن روحانی رئیس جمهور ایران خواستار رسیدگی به \"بی عدالتی های اقتصادی وارده بر بهاییان\" در ایرن کشور شد.",
+        "timestamp": 1473242019000,
+        "language": "fa",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+          "taggings": []
+        },
+        "media": {
+          "id": "17698244",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17698244",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/persian/meta/dps/junk/2016/09/emp/160907_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/persian/dps/junk/2016/09/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160907_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e237",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "Getty",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:persian/iran/2016/09/160907_tc2_testmap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "ايران",
+          "uri": "/persian/iran",
+          "urlIdentifier": "/persian/iran",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCPersian.com",
+          "uri": "/persian",
+          "urlIdentifier": "/persian",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17698244", "cps_asset_type": "map" },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "persian",
-    "firstPublished": 1473242019000,
-    "id": "urn:bbc:ares::asset:persian/iran/2016/09/160907_tc2_testmap1",
-    "includeComments": false,
-    "language": "fa",
-    "lastPublished": 1473242019000,
-    "lastUpdated": 1582019287717,
-    "locators": {
-      "assetId": "17698244",
-      "assetUri": "/persian/iran/2016/09/160907_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:persian/iran/2016/09/160907_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b"
     },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1473242019000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
-      "shortHeadline": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد"
-    },
-    "id": "urn:bbc:ares::asset:persian/iran/2016/09/160907_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "Getty",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-      "id": "d5e237",
-      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "fa",
-    "locators": {
-      "assetId": "17698244",
-      "assetUri": "/persian/iran/2016/09/160907_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:persian/iran/2016/09/160907_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/persian/meta/dps/junk/2016/09/emp/160907_tc2_testmap1.emp.xml",
-      "id": "17698244",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": { "taggings": [] },
-    "summary": "دفتر جامعه جهانی بهایی در سازمان ملل متحد، با انتشار نامه ای سرگشاده خطاب به حسن روحانی رئیس جمهور ایران خواستار رسیدگی به \"بی عدالتی های اقتصادی وارده بر بهاییان\" در ایرن کشور شد.",
-    "timestamp": 1473242019000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "ايران",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/persian/iran"
-    },
-    "site": {
-      "name": "BBCPersian.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/persian"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:16:59.523Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 3,
+        "records": [
+          {
+            "id": "8ccdbd83-a87f-1547-add1-819750072744",
+            "rank": 1,
+            "count": 6458,
+            "urn": "urn:bbc:curie:asset:8ccdbd83-a87f-1547-add1-819750072744",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "فثسف RTL تلاستنلیانلتایل سلتاستیلاسنت بلتنا test2 فاهسبی ثقاسنتا سباسبتنب",
+                "headline": "بش (BBC) صاحبان کسب و کار در آمریکا درباره حال و آینده اقتصاد ایالات متحده چه فکر می کنند؟"
+              },
+              "locators": {
+                "assetUri": "/persian/media-23072692",
+                "cpsUrn": "urn:bbc:content:assetUri:persian/media-23072692",
+                "curie": "http://www.bbc.co.uk/asset/8ccdbd83-a87f-1547-add1-819750072744",
+                "assetId": "23072692"
+              },
+              "summary": "یتسباسیتباستنباشسیبن @ sahas بتاتلابلایبتللینبتل س سینتابنتاس نیتبسی سیباسنبتاسنت",
+              "timestamp": 1473353045000,
+              "language": "fa",
+              "media": {
+                "id": "23072693",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015hmg1",
+                "entityType": "Clip",
+                "caption": "بش (BBC) صاحبان کسب و کار در آمریکا درباره حال و آینده اقتصاد ایالات متحده چه فکر می کنند؟",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63507466",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/103A6/test/_63507466_p015hn07.jpg",
+                "path": "/cpsdevpb/103A6/test/_63507466_p015hn07.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "شمف فثطف زشسفشصشغ alt tag",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:persian/media-23072692",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f888ea07-4108-1940-94c2-2ca711fbf278",
+            "rank": 2,
+            "count": 4955,
+            "urn": "urn:bbc:curie:asset:f888ea07-4108-1940-94c2-2ca711fbf278",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "فعالیت های حزب راست افراطی آلمان، شرایط را برای بعضی مهاجران نا امن کرده",
+                "headline": "فعالیت های حزب راست افراطی آلمان، شرایط را برای بعضی مهاجران نا امن کرده short"
+              },
+              "locators": {
+                "assetUri": "/persian/sport-23072986",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:f888ea07-4108-1940-94c2-2ca711fbf278",
+                "assetId": "23072986",
+                "cpsUrn": "urn:bbc:content:assetUri:persian/sport-23072986",
+                "curie": "http://www.bbc.co.uk/asset/f888ea07-4108-1940-94c2-2ca711fbf278"
+              },
+              "summary": "در بین کشورهای اروپایی، آلمان، بیشترین پناهجو را پذیرفته. اما با فعالیت های حزب راست افراطی و سیاست های ضد مهاجرتی آن حالا بعضی شهرها دیگر جای امنی برای پناهجوها نیستند.",
+              "timestamp": 1473414341000,
+              "language": "fa",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+                "taggings": []
+              },
+              "media": {
+                "id": "23072987",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015hmrp",
+                "entityType": "Clip",
+                "caption": "فعالیت های حزب راست افراطی آلمان، شرایط را برای بعضی مهاجران نا امن کرده short",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63507659",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/175B6/test/_63507659_p015j1nq.jpg",
+                "path": "/cpsdevpb/175B6/test/_63507659_p015j1nq.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "سیامک و باقر نمازی",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:persian/sport-23072986",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a4f1d2bb-6544-2e48-a860-945ea73e8743",
+            "rank": 3,
+            "count": 2153,
+            "urn": "urn:bbc:curie:asset:a4f1d2bb-6544-2e48-a860-945ea73e8743",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "فاهس هس بشقسه فثطف mixed English text ثدی فهفمث",
+                "headline": "،اهس هس ساخقف سغدخحسهس added English text ثدی"
+              },
+              "locators": {
+                "assetUri": "/persian/world-23072946",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a4f1d2bb-6544-2e48-a860-945ea73e8743",
+                "assetId": "23072946",
+                "cpsUrn": "urn:bbc:content:assetUri:persian/world-23072946",
+                "curie": "http://www.bbc.co.uk/asset/a4f1d2bb-6544-2e48-a860-945ea73e8743"
+              },
+              "summary": "بشقسه فثطف قهلاف شمهلدثی english text بشقسه",
+              "timestamp": 1473354254000,
+              "language": "fa",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+                "taggings": []
+              },
+              "media": {
+                "id": "23072947",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p015hnbc",
+                "entityType": "Clip",
+                "caption": "،اهس هس ساخقف سغدخحسهس added English text ثدی",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63507618",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/13F06/test/_63507618_p015hnw4.jpg",
+                "path": "/cpsdevpb/13F06/test/_63507618_p015hnw4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "فاهس هس بشقسه alt tag شمف",
+                "copyrightHolder": "Alamy",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:persian/world-23072946",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

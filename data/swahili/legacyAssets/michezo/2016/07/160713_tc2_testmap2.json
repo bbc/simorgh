@@ -1,110 +1,299 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "format": "audio",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/swahili/meta/dps/junk/2016/07/emp/160713_tc2_testmap2.emp.xml",
-        "id": "17697825",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:swahili/michezo/2016/07/160713_tc2_testmap2",
+        "locators": {
+          "assetUri": "/swahili/michezo/2016/07/160713_tc2_testmap2",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:cf2add30-48fe-11e6-b31c-9b7a16b40aaf",
+          "assetId": "17697825",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo/2016/07/160713_tc2_testmap2",
+          "curie": "http://www.bbc.co.uk/asset/cf2add30-48fe-11e6-b31c-9b7a16b40aaf"
+        },
+        "type": "MAP",
+        "createdBy": "swahili",
+        "language": "sw",
+        "lastUpdated": 1665415021501,
+        "firstPublished": 1468417021000,
+        "lastPublished": 1468417021000,
+        "timestamp": 1468417021000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17697825",
+          "contentId": "urn:bbc:topcat:curie:asset:cf2add30-48fe-11e6-b31c-9b7a16b40aaf"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/swahili",
+        "mediaType": "audio",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "sdadad",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17697825",
+            "subType": "primary",
+            "format": "audio",
+            "image": {
+              "id": "17697825",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/swahili/meta/dps/junk/2016/07/emp/160713_tc2_testmap2.emp.xml",
+            "playlist": [
+              {
+                "format": "mp3",
+                "bitrate": "96000",
+                "url": "https://wsodprogrf.akamaized.net/swahili/dps/junk/2016/07/shorts-holocaust_f10_160713_tc2_testmap2_au_bb.mp3"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "sdadad",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "ghfghfh",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "ghfghfh",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Matangazo ya Dira ya Dunia audio",
+          "headline": "Matangazo ya Dira ya Dunia audio"
+        },
+        "locators": {
+          "assetUri": "/swahili/michezo/2016/07/160713_tc2_testmap2",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:cf2add30-48fe-11e6-b31c-9b7a16b40aaf",
+          "assetId": "17697825",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo/2016/07/160713_tc2_testmap2",
+          "curie": "http://www.bbc.co.uk/asset/cf2add30-48fe-11e6-b31c-9b7a16b40aaf"
+        },
+        "summary": "Matangazo ya Dira ya Dunia audio summary",
+        "timestamp": 1468417021000,
+        "language": "sw",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+          "taggings": []
+        },
+        "media": {
+          "id": "17697825",
+          "subType": "primary",
+          "format": "audio",
+          "image": {
+            "id": "17697825",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/swahili/meta/dps/junk/2016/07/emp/160713_tc2_testmap2.emp.xml",
+          "playlist": [
+            {
+              "format": "mp3",
+              "bitrate": "96000",
+              "url": "https://wsodprogrf.akamaized.net/swahili/dps/junk/2016/07/shorts-holocaust_f10_160713_tc2_testmap2_au_bb.mp3"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e214",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145635_duarte_dois_144x81_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145635_duarte_dois_144x81_bbc_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:swahili/michezo/2016/07/160713_tc2_testmap2",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Michezo",
+          "uri": "/swahili/michezo",
+          "urlIdentifier": "/swahili/michezo",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCSwahili.com",
+          "uri": "/swahili",
+          "urlIdentifier": "/swahili",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "cps_asset_id": "17697825",
-      "cps_asset_type": "map"
     },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "swahili",
-    "firstPublished": 1468417021000,
-    "id": "urn:bbc:ares::asset:swahili/michezo/2016/07/160713_tc2_testmap2",
-    "includeComments": false,
-    "language": "sw",
-    "lastPublished": 1468428742000,
-    "lastUpdated": 1583261910363,
-    "locators": {
-      "assetId": "17697825",
-      "assetUri": "/swahili/michezo/2016/07/160713_tc2_testmap2",
-      "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo/2016/07/160713_tc2_testmap2",
-      "curie": "http://www.bbc.co.uk/asset/cf2add30-48fe-11e6-b31c-9b7a16b40aaf"
-    },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1468417021000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "Matangazo ya Dira ya Dunia audio",
-      "shortHeadline": "Matangazo ya Dira ya Dunia audio"
-    },
-    "id": "urn:bbc:ares::asset:swahili/michezo/2016/07/160713_tc2_testmap2",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145635_duarte_dois_144x81_bbc_nocredit.jpg",
-      "id": "d5e214",
-      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145635_duarte_dois_144x81_bbc_nocredit.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "sw",
-    "locators": {
-      "assetId": "17697825",
-      "assetUri": "/swahili/michezo/2016/07/160713_tc2_testmap2",
-      "cpsUrn": "urn:bbc:content:assetUri:swahili/michezo/2016/07/160713_tc2_testmap2",
-      "curie": "http://www.bbc.co.uk/asset/cf2add30-48fe-11e6-b31c-9b7a16b40aaf"
-    },
-    "media": {
-      "format": "audio",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/swahili/meta/dps/junk/2016/07/emp/160713_tc2_testmap2.emp.xml",
-      "id": "17697825",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "summary": "Matangazo ya Dira ya Dunia audio summary",
-    "timestamp": 1468417021000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Michezo",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/swahili/michezo"
-    },
-    "site": {
-      "name": "BBCSwahili.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/swahili"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:05:57.555Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 2,
+        "records": [
+          {
+            "id": "7b08019d-64c1-6d42-a6f2-2ff018698824",
+            "rank": 1,
+            "count": 5502,
+            "urn": "urn:bbc:curie:asset:7b08019d-64c1-6d42-a6f2-2ff018698824",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ethiopian singer Teddy Afro goes global",
+                "headline": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."
+              },
+              "locators": {
+                "assetUri": "/swahili/23132728",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:7b08019d-64c1-6d42-a6f2-2ff018698824",
+                "assetId": "23132728",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23132728",
+                "curie": "http://www.bbc.co.uk/asset/7b08019d-64c1-6d42-a6f2-2ff018698824"
+              },
+              "summary": "jaf;djs jsdlka;f lksdajf lkdjfd lkfsdjalkf jlkadfjdlk jflksda jflkdajsflk dalkfdjslk fjdaslkfjdsk flksda jflkdsjalkf sdalk fjlds jflkdsajf jasdlk fjlkd jfd.",
+              "timestamp": 1497442114000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01b7w2r",
+                "subType": "clip",
+                "format": "audio",
+                "title": "पुणे सुपरजायंट्स आयपीएलच्या अंतिम फेरीत!",
+                "synopses": {
+                  "short": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे."
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w9z.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "मुंबई इंडियन्सला आता दुसऱ्या क्वॉलिफायर लढतीत खेळावे लागणार आहे.",
+                "versions": [
+                  {
+                    "versionId": "p01b7w2z",
+                    "types": ["Original"],
+                    "duration": 16,
+                    "durationISO8601": "PT16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1495467503000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63542378",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1551C/test/_63542378_p01b7w9z.jpg",
+                "path": "/cpsdevpb/1551C/test/_63542378_p01b7w9z.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "सेहवागनं 'असा' पाहिला मुंबई-पुणे सामना",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23132728",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c6ce1538-fc56-6042-be8e-4b56bab9f0b6",
+            "rank": 2,
+            "count": 4220,
+            "urn": "urn:bbc:curie:asset:c6ce1538-fc56-6042-be8e-4b56bab9f0b6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 43",
+                "headline": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki 43"
+              },
+              "locators": {
+                "assetUri": "/swahili/23057235",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:c6ce1538-fc56-6042-be8e-4b56bab9f0b6",
+                "assetId": "23057235",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/23057235",
+                "curie": "http://www.bbc.co.uk/asset/c6ce1538-fc56-6042-be8e-4b56bab9f0b6"
+              },
+              "summary": "Mahujaji Waislamu kuvalishwa bangili za kielektroniki",
+              "timestamp": 1467385790000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "media": {
+                "id": "63485393",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "bbc_world_service_west_africa",
+                "duration": "PT0S",
+                "caption": "BBC",
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63493625",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/CD9F/test/_63493625_160529154036_hajj_624x351_getty.jpg",
+                "path": "/cpsdevpb/CD9F/test/_63493625_160529154036_hajj_624x351_getty.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "BBC",
+                "caption": "BBC",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/23057235",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

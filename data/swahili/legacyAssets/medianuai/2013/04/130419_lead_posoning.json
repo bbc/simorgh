@@ -1,100 +1,2013 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:swahili/medianuai/2013/04/130419_lead_posoning",
-    "locators": {
-      "assetUri": "/swahili/medianuai/2013/04/130419_lead_posoning",
-      "cpsUrn": "urn:bbc:content:assetUri:swahili/medianuai/2013/04/130419_lead_posoning",
-      "curie": "http://www.bbc.co.uk/asset/00c7e7fc-a8c6-11e2-8167-d819a79c3f60"
-    },
-    "type": "MAP",
-    "createdBy": "swahili",
-    "language": "sw",
-    "lastUpdated": 1552484259277,
-    "firstPublished": 1366357913,
-    "lastPublished": 1366357939,
-    "options": {
-      "allowDateStamp": true,
-      "includeComments": false,
-      "allowAdvertising": false,
-      "suitableForSyndication": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "24199072",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/swahili/meta/dps/2013/04/emp/130419_lead_posoning.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:swahili/medianuai/2013/04/130419_lead_posoning",
+        "locators": {
+          "assetUri": "/swahili/medianuai/2013/04/130419_lead_posoning",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/medianuai/2013/04/130419_lead_posoning",
+          "curie": "http://www.bbc.co.uk/asset/00c7e7fc-a8c6-11e2-8167-d819a79c3f60"
+        },
+        "type": "MAP",
+        "createdBy": "swahili",
+        "language": "sw",
+        "lastUpdated": 1649963560073,
+        "firstPublished": 1366357913000,
+        "lastPublished": 1366357939000,
+        "timestamp": 1366357939000,
+        "options": {
+          "allowDateStamp": true,
+          "includeComments": false,
+          "allowAdvertising": false,
+          "suitableForSyndication": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "contentId": "urn:bbc:topcat:curie:asset:00c7e7fc-a8c6-11e2-8167-d819a79c3f60"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/swahili"
       },
-      {
-        "text": "Shughuli ya kusafisha mazingira inaendelea katika jimbo la Zamfara, ambako watoto zaidi ya 450 wamefariki kutokana na sumu ya madini ya chuma tangu mwaka 2009.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "24199072",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "24199072",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/04/12/130412145741_nigeria_lead_640x360_other_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2013/04/12/130412145741_nigeria_lead_640x360_other_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/swahili/meta/dps/2013/04/emp/130419_lead_posoning.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/swahili/dps/2013/04/swahili~flead~f1715~f18~f4_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/swahili/dps/2013/04/swahili~flead~f1715~f18~f4_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/swahili/dps/2013/04/swahili~flead~f1715~f18~f4_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "Shughuli ya kusafisha mazingira inaendelea katika jimbo la Zamfara, ambako watoto zaidi ya 450 wamefariki kutokana na sumu ya madini ya chuma tangu mwaka 2009.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Maelfu ya waathiriwa wangali wanapokea matibabu baada ya vijiji vyao kuathirika kutokana na madini yenye sumu ya Lead na sumu inayotokana na migodi ya dhahabu.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Shirika la madaktari wasio na mipaka, limetuhumu serikali ya Nigeria kwa kujikokota katika kuchukua hatua za kushughulikia swala hilo.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Na kama inavyosimulia taarifa hii, miaka minne baadaye bado kuna kibarua kigumu.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "Maelfu ya waathiriwa wangali wanapokea matibabu baada ya vijiji vyao kuathirika kutokana na madini yenye sumu ya Lead na sumu inayotokana na migodi ya dhahabu.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Athari za madini ya Lead Nigeria",
+          "headline": "Athari za madini ya Lead Nigeria"
+        },
+        "locators": {
+          "assetUri": "/swahili/medianuai/2013/04/130419_lead_posoning",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/medianuai/2013/04/130419_lead_posoning",
+          "curie": "http://www.bbc.co.uk/asset/00c7e7fc-a8c6-11e2-8167-d819a79c3f60"
+        },
+        "summary": "Maelfu ya waathiriwa wanapokea matibabu baada ya vijiji vyao kuathirika kutokana na madini yenye sumu ya Lead na sumu inayotokana na migodi ya dhahabu.",
+        "timestamp": 1366357939000,
+        "language": "sw",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+          "taggings": []
+        },
+        "media": {
+          "id": "24199072",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "24199072",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/04/12/130412145741_nigeria_lead_640x360_other_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2013/04/12/130412145741_nigeria_lead_640x360_other_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/swahili/meta/dps/2013/04/emp/130419_lead_posoning.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/swahili/dps/2013/04/swahili~flead~f1715~f18~f4_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/swahili/dps/2013/04/swahili~flead~f1715~f18~f4_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/swahili/dps/2013/04/swahili~flead~f1715~f18~f4_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e217",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/04/12/130412145741_nigeria_lead_144x81_other_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2013/04/12/130412145741_nigeria_lead_144x81_other_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:swahili/medianuai/2013/04/130419_lead_posoning",
+        "type": "cps"
       },
-      {
-        "text": "Shirika la madaktari wasio na mipaka, limetuhumu serikali ya Nigeria kwa kujikokota katika kuchukua hatua za kushughulikia swala hilo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Na kama inavyosimulia taarifa hii, miaka minne baadaye bado kuna kibarua kigumu.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Medianuai",
+          "uri": "/swahili/medianuai",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCSwahili.com",
+          "uri": "/swahili",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Athari za madini ya Lead Nigeria",
-      "headline": "Athari za madini ya Lead Nigeria"
     },
-    "locators": {
-      "assetUri": "/swahili/medianuai/2013/04/130419_lead_posoning",
-      "cpsUrn": "urn:bbc:content:assetUri:swahili/medianuai/2013/04/130419_lead_posoning",
-      "curie": "http://www.bbc.co.uk/asset/00c7e7fc-a8c6-11e2-8167-d819a79c3f60"
-    },
-    "summary": "Maelfu ya waathiriwa wanapokea matibabu baada ya vijiji vyao kuathirika kutokana na madini yenye sumu ya Lead na sumu inayotokana na migodi ya dhahabu.",
-    "timestamp": 1552484259277,
-    "passport": {},
-    "media": {
-      "id": "24199072",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/swahili/meta/dps/2013/04/emp/130419_lead_posoning.emp.xml",
-      "type": "legacyMedia"
-    },
-    "id": "urn:bbc:ares::asset:swahili/medianuai/2013/04/130419_lead_posoning",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Medianuai",
-      "uri": "/swahili/medianuai",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCSwahili.com",
-      "uri": "/swahili",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T10:07:07.063Z",
+        "lastRecordTimeStamp": "2023-02-15T10:05:00Z",
+        "firstRecordTimeStamp": "2023-02-15T08:05:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "56271599-ede8-4c2a-b6a5-febd9b4cc1b9",
+            "rank": 1,
+            "count": 35,
+            "urn": "urn:bbc:curie:asset:56271599-ede8-4c2a-b6a5-febd9b4cc1b9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Matangazo ya Dira ya Dunia TV",
+                "headline": "Matangazo ya Dira ya Dunia TV"
+              },
+              "locators": {
+                "assetUri": "/swahili/dira-tv-64644762",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:56271599-ede8-4c2a-b6a5-febd9b4cc1b9",
+                "assetId": "64644762",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/dira-tv-64644762",
+                "curie": "http://www.bbc.co.uk/asset/56271599-ede8-4c2a-b6a5-febd9b4cc1b9"
+              },
+              "summary": "Matangazo ya Dira ya Dunia TV na Esther Kahumbi",
+              "timestamp": 1676407753000,
+              "language": "sw",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "taggings": []
+              },
+              "media": {
+                "id": "p0f348vs",
+                "subType": "clip",
+                "format": "video",
+                "title": "Matangazo ya Dira ya Dunia TV",
+                "synopses": {
+                  "short": "Matangazo ya Dira ya Dunia TV",
+                  "medium": "Matangazo ya Dira ya Dunia TV na Esther Kahumbi",
+                  "long": "Matangazo ya Dira ya Dunia TV na Esther Kahumbi"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f349rs.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Matangazo ya Dira ya Dunia TV",
+                "versions": [
+                  {
+                    "versionId": "p0f348w1",
+                    "types": ["Original"],
+                    "duration": 1447,
+                    "durationISO8601": "PT24M7S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676407515000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128632359",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1745B/production/_128632359_p0f349rs.jpg",
+                "path": "/cpsprodpb/1745B/production/_128632359_p0f349rs.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Esther Kahumbi",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/dira-tv-64644762",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b91a7b58-8b36-df4d-ac6a-3a8552427550",
+            "rank": 2,
+            "count": 19,
+            "urn": "urn:bbc:curie:asset:b91a7b58-8b36-df4d-ac6a-3a8552427550",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Marehemu wanaofunga ndoa Tanzania",
+                "headline": "Marehemu wanaofunga ndoa Tanzania"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-39051986",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-39051986",
+                "curie": "http://www.bbc.co.uk/asset/b91a7b58-8b36-df4d-ac6a-3a8552427550",
+                "assetId": "39051986"
+              },
+              "summary": "Je umewahi kusikia marehemu wakitafutiwa mchumba na kuoa?",
+              "timestamp": 1613816927000,
+              "language": "sw",
+              "media": {
+                "id": "p04tqjp5",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Marehemu wanaofunga ndoa Tanzania",
+                "synopses": {
+                  "short": "Marehemu wanaofunga ndoa Tanzania",
+                  "medium": "Je umewahi kusikia marehemu wakitafutiwa mchumba na kuoa?.",
+                  "long": "Bara la Afrika husifika kwa utajiri wa tamaduni mbalimbali, zipo tamaduni za kufanana baina ya makabila lakini pia kuna tamaduni za kushangaza na kukuacha mdomo wazi, sasa je  umewahi kusikia marehemu kutafutiwa mchumba na kuoa.\n\nHiyo ni moja ya taratibu katika baadhi ya koo za jamii ya wakurya nchini Tanzania.\n\nMarehemu anaoa vipi? Munira Hussein anaarifu zaidi."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04tqlcb.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Marehemu wanaofunga ndoa Tanzania",
+                "versions": [
+                  {
+                    "versionId": "p04tqjp8",
+                    "types": ["Original"],
+                    "duration": 140,
+                    "durationISO8601": "PT2M20S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1487785785000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "115142024",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/A428/production/_115142024_jeneza.jpg",
+                "path": "/cpsprodpb/A428/production/_115142024_jeneza.jpg",
+                "height": 450,
+                "width": 800,
+                "altText": "Jeneza",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-39051986",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "121c5fc0-3441-4c1e-94df-0132d14c9d92",
+            "rank": 3,
+            "count": 18,
+            "urn": "urn:bbc:curie:asset:121c5fc0-3441-4c1e-94df-0132d14c9d92",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Tetemeko la ardhi la Syria-Uturuki:Kamera ya CCTV yanasa picha za tetemeko lilipotokea Uturuki na Syria",
+                "headline": "Tetemeko la ardhi la Syria-Uturuki:Kamera ya CCTV yanasa picha za tetemeko lilipotokea Uturuki na Syria"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-64539266",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:121c5fc0-3441-4c1e-94df-0132d14c9d92",
+                "assetId": "64539266",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-64539266",
+                "curie": "http://www.bbc.co.uk/asset/121c5fc0-3441-4c1e-94df-0132d14c9d92"
+              },
+              "summary": "Tetemeko hilo la ardhi lina ukubwa wa 7.8 katika kipimo cha Richter",
+              "timestamp": 1675688968000,
+              "language": "sw",
+              "passport": {
+                "language": "sw",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "locator": "urn:bbc:cps:curie:asset:121c5fc0-3441-4c1e-94df-0132d14c9d92",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/fe8599ff-fd09-4e03-8f36-d25cf5a8a988#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe8599ff-fd09-4e03-8f36-d25cf5a8a988#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "sw",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f18v4j",
+                "subType": "clip",
+                "format": "video",
+                "title": "CCTV captures moment deadly earthquake struck",
+                "synopses": {
+                  "short": "CCTV captures moment deadly earthquake struck",
+                  "long": "A 7.8 magnitude earthquake has rocked Turkey and Syria, killing scores of people.\n\nCCTV footage from Siverek, Turkey, shows the moment the quake struck.",
+                  "medium": "A 7.8 magnitude earthquake rocks Turkey and Syria, killing scores of people."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f18wgm.jpg",
+                "embedding": true,
+                "advertising": false,
+                "caption": "CCTV footage from Siverek, Turkey, captures moment earthquake struck",
+                "versions": [
+                  {
+                    "versionId": "p0f18v4n",
+                    "types": ["Original"],
+                    "duration": 30,
+                    "durationISO8601": "PT30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675667840000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128533471",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4419/production/_128533471_p0f18wgm.jpg",
+                "path": "/cpsprodpb/4419/production/_128533471_p0f18wgm.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "CCTV captures moment earthquake struck",
+                "copyrightHolder": "BBC",
+                "allowSyndication": false,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-64539266",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d1ba5f66-9e87-469a-a1d5-4ddc1013d672",
+            "rank": 4,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:d1ba5f66-9e87-469a-a1d5-4ddc1013d672",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Viumbe wa ajabu waliothibitishwa na Marekani kuwepo angani",
+                "headline": "Tazama viumbe wa ajabu waliothibitishwa na Marekani kuwepo angani"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-57588475",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-57588475",
+                "curie": "http://www.bbc.co.uk/asset/d1ba5f66-9e87-469a-a1d5-4ddc1013d672",
+                "assetId": "57588475"
+              },
+              "summary": "Viumbe vya ajabu vyathibitishwa kuwepo angani. Je nini kinafahamika kuvihusu?",
+              "timestamp": 1624780745000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "sw",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "locator": "urn:bbc:cps:curie:asset:d1ba5f66-9e87-469a-a1d5-4ddc1013d672",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/fe8599ff-fd09-4e03-8f36-d25cf5a8a988#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "sw",
+                      "type": "formats"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe8599ff-fd09-4e03-8f36-d25cf5a8a988#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09mbfp6",
+                "subType": "clip",
+                "format": "video",
+                "title": "Jeshi la Marekani lathibitisha uwepo wa viumbe wa ajabu angani",
+                "synopses": {
+                  "short": "Jeshi la Marekani lathibitisha uwepo wa viumbe wa ajabu angani",
+                  "medium": "Viumbe via ajabu vyathibitishwa kuwepo angani. Je nini kinafahamika kuvihusu?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09mbl0d.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Viumbe wa ajabu waliothibitishwa na Marekani kuwepo angani",
+                "versions": [
+                  {
+                    "versionId": "p09mbfp9",
+                    "types": ["Original"],
+                    "duration": 166,
+                    "durationISO8601": "PT2M46S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1624465713000
+                  }
+                ],
+                "imageCopyright": "US Department of Defence",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119064236",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F70E/production/_119064236_p09mbl0d.jpg",
+                "path": "/cpsprodpb/F70E/production/_119064236_p09mbl0d.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "US Department of Defence",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-57588475",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4efeeddc-82ec-904d-a0c5-5199874f758b",
+            "rank": 5,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:4efeeddc-82ec-904d-a0c5-5199874f758b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ulaji wa nyanya huongeza nguvu za kiume",
+                "headline": "Ulaji wa nyanya huongeza nguvu za kiume"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-49984827",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-49984827",
+                "curie": "http://www.bbc.co.uk/asset/4efeeddc-82ec-904d-a0c5-5199874f758b",
+                "assetId": "49984827"
+              },
+              "summary": "Utafiti umebainisha kuwa Madini ya Lycopene yanayopatikana katika nyanya husaidia sana kuimarisha viwango vya mbegu za kiume.",
+              "timestamp": 1570620321000,
+              "language": "sw",
+              "media": {
+                "id": "p07qhk8x",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Ulaji wa nyanya huongeza nguvu za kiume",
+                "synopses": {
+                  "short": "Ulaji wa nyanya huongeza nguvu za kiume",
+                  "long": "Utafiti umebainisha kuwa Madini ya Lycopene  yanayopatikana katika nyanya husaidia sana kuimarisha viwango vya mbegu za kiume. Watafiti wamegundua kuwa wanaume ambao hutumia madini hayo ya nyanya kila siku waligunduliwa kuwa na viwango vya juu vya mbegu za kiume.Utafiti umebainisha kuwa madini ya Lycopene  yanayopatikana katika nyanya husaidia sana kuimarisha viwango vya mbegu za kiume. Watafiti wamegundua kuwa wanaume ambao hutumia madini hayo ya nyanya kila siku waligunduliwa kuwa na viwango vya juu vya mbegu za kiume.",
+                  "medium": "Utafiti umebainisha kuwa Madini ya Lycopene yanayopatikana katika nyanya husaidia sana kuimarisha viwango vya mbegu za kiume."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07qhkm1.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ulaji wa nyanya huongeza nguvu za kiume",
+                "versions": [
+                  {
+                    "versionId": "p07qhk8z",
+                    "types": ["Original"],
+                    "duration": 118,
+                    "durationISO8601": "PT1M58S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1570608016000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109161833",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8418/production/_109161833_p07qhkm1.jpg",
+                "path": "/cpsprodpb/8418/production/_109161833_p07qhkm1.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Supu ya nyanya",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-49984827",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3197fe56-d718-c641-a242-d61b5813c5c3",
+            "rank": 6,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:3197fe56-d718-c641-a242-d61b5813c5c3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Unafahamu nini kuhusu binadamu wa kale?",
+                "headline": "Fuvu la binadamu wa kale liligunduliwa miaka 60 iliyopita nchini Tanzania"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-49067877",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-49067877",
+                "curie": "http://www.bbc.co.uk/asset/3197fe56-d718-c641-a242-d61b5813c5c3",
+                "assetId": "49067877"
+              },
+              "summary": "Ugunduzi huo uliofanyika saa nne asubuhi Julai 22, 1959 eneo la Olduvai",
+              "timestamp": 1563786525000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07hhsmd",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Binadamu wa kale",
+                "synopses": {
+                  "short": "binadamu wa kale Tanganyika"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07hhwhg.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Binadamu wa kale Tanganyika",
+                "versions": [
+                  {
+                    "versionId": "p07hhsmk",
+                    "types": ["Original"],
+                    "duration": 501,
+                    "durationISO8601": "PT8M21S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1563785083000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "107967992",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/7518/production/_107967992_p07hhwhg.jpg",
+                "path": "/cpsprodpb/7518/production/_107967992_p07hhwhg.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "fuvu",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-49067877",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "198b5514-7ccd-11e7-8f55-2fd63db9bd6e",
+            "rank": 7,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:198b5514-7ccd-11e7-8f55-2fd63db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Angalia matiti uongeze umri",
+                "headline": "Angalia matiti uongeze umri"
+              },
+              "locators": {
+                "assetUri": "/swahili/medianuai/2012/09/120925_kisa_mkasa_220912",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/medianuai/2012/09/120925_kisa_mkasa_220912",
+                "curie": "http://www.bbc.co.uk/asset/198b5514-7ccd-11e7-8f55-2fd63db9bd6e",
+                "assetId": "20134365"
+              },
+              "summary": "Jaji amfunga jamaa kwa kuvaa suruale mlegezo",
+              "timestamp": 1348577844000,
+              "language": "sw",
+              "media": {
+                "id": "20134365",
+                "subType": "primary",
+                "format": "audio",
+                "live": false,
+                "href": "http://www.bbc.co.uk/swahili/meta/dps/2012/09/emp/120925_kisa_mkasa_220912.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/swahili/dps/2012/09/e584414a_kisa_mkasa_220912_120925_kisa_mkasa_220912_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e209",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/09/23/120923160451_matiti_kisa_144x81_internet_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/09/23/120923160451_matiti_kisa_144x81_internet_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "matiti sio saizi moja",
+                "copyrightHolder": "INTERNET",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/medianuai/2012/09/120925_kisa_mkasa_220912",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9b1f4a74-01cd-b74c-a85e-befa5b678fef",
+            "rank": 8,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:9b1f4a74-01cd-b74c-a85e-befa5b678fef",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Je, filamu za kiswahili kupenya kimataifa?",
+                "headline": "Swahiliflix kunadi filamu za kiswahili kimataifa"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-49875129",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-49875129",
+                "curie": "http://www.bbc.co.uk/asset/9b1f4a74-01cd-b74c-a85e-befa5b678fef",
+                "assetId": "49875129"
+              },
+              "summary": "Waendeshaji wa programu hii tumishi wanahitaji filamu 14 kila juma lakini sasa wanapata fiilamu moja pekee yenye ubora.",
+              "timestamp": 1569816037000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+                  "categoryName": "Fact Check"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  },
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07pnzj9",
+                "subType": "clip",
+                "format": "video",
+                "title": "Je, filamu za kiswahili kupenya kimataifa?",
+                "synopses": {
+                  "short": "Swahiliflix kunadi filamu za kiswahili kimataifa",
+                  "long": "Katika jitihada za kukuza soko la filamu nchini Tanzania, wasanii nchini humo wameanzisha programu tumishi inayojulikana kama Swahiliflix, ikiwalenga zaidi wapenzi wa filamu hizi walioko maeneo mbalimbali duniani.",
+                  "medium": "Waendeshaji wa programu hii tumishi wanahitaji filamu 14 kila juma lakini sasa wanapata fiilamu moja pekee yenye ubora."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07pnzmt.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Swahiliflix kunadi filamu za kiswahili kimataifa",
+                "versions": [
+                  {
+                    "versionId": "p07pnzjc",
+                    "types": ["Original"],
+                    "duration": 106,
+                    "durationISO8601": "PT1M46S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1569815717000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109021433",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8284/production/_109021433_p07pnzmt.jpg",
+                "path": "/cpsprodpb/8284/production/_109021433_p07pnzmt.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "filamu",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-49875129",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "de3fd36c-66f0-aa45-bc0a-b5e2aadf19ab",
+            "rank": 9,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:de3fd36c-66f0-aa45-bc0a-b5e2aadf19ab",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dully Sykes alivyobadilisha muziki wa kizazi kipya Tanzania",
+                "headline": "Dully Sykes alivyobadilisha muziki wa kizazi kipya Tanzania"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-37260903",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-37260903",
+                "curie": "http://www.bbc.co.uk/asset/de3fd36c-66f0-aa45-bc0a-b5e2aadf19ab",
+                "assetId": "37260903"
+              },
+              "summary": "Muziki wa kizazi kipya nchini Tanzania umepitia katika mabadiliko kadhaa mara kwa mara, lakini mabadiliko makubwa ya kukumbukwa ni mwishoni mwa miaka ya 90 muziki huo ulipobadilika kutoka kurap kwenda kuimba.",
+              "timestamp": 1472829737000,
+              "language": "sw",
+              "media": {
+                "id": "p046mxqv",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Dully Sykes alivyobadilisha muziki wa kizazi kipya Tanzania",
+                "synopses": {
+                  "short": "Dully Sykes alivyobadilisha muziki wa kizazi kipya Tanzania",
+                  "long": "Muziki wa kizazi kipya nchini Tanzania umepitia katika mabadiliko kadhaa mara kwa mara, lakini mabadiliko makubwa ya kukumbukwa ni mwishoni mwa miaka ya 90 muziki huo ulipobadilika kutoka kurap kwenda kuimba.\n\nDully Sykes wakati huo akiwa na miaka 16 ndiye aliamua kufanya tofauti na wenzake. Karibia miaka 20 baadaye vijana wengi zaidi wamejiunga katika aina hii ya Muziki.\nArnold Kayanda ametuandalia taarifa ifuatayo."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p046myfk.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Dully Sykes alivyobadilisha muziki wa kizazi kipya Tanzania",
+                "versions": [
+                  {
+                    "versionId": "p046mxr0",
+                    "types": ["Original"],
+                    "duration": 338,
+                    "durationISO8601": "PT5M38S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1472829177000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "91011340",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10D7/production/_91011340_p046myfk.jpg",
+                "path": "/cpsprodpb/10D7/production/_91011340_p046myfk.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Msanii Dully Sykes",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-37260903",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "83679a15-1c3b-7b43-b03b-421bf47d29bb",
+            "rank": 10,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:83679a15-1c3b-7b43-b03b-421bf47d29bb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Msanii anayepigana vita dhidi ya uhalifu Mombasa",
+                "headline": "Ohms Law Montana: Msanii anayepigana vita dhidi ya uhalifu Mombasa Kenya"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-47060639",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-47060639",
+                "curie": "http://www.bbc.co.uk/asset/83679a15-1c3b-7b43-b03b-421bf47d29bb",
+                "assetId": "47060639"
+              },
+              "summary": "Msanii mmoja wa muziki wa hip hop mjini Kisauni Mombasa ameanza kampeni kwa jina ''Acha Gun Shika Mike'' ili kuwarai wenzake ambao wamejiunga na magenge ya uhalifu kujiunga na sana.",
+              "timestamp": 1548854229000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06zh5jz",
+                "subType": "clip",
+                "format": "video",
+                "title": "Msanii anayepigana vita dhidi ya uhalifu Mombasa Kenya",
+                "synopses": {
+                  "short": "Ohms Law Montana: Msanii anayepigana vita dhidi ya uhalifu Mombasa Kenya",
+                  "long": "Msanii mmoja wa muziki wa hip hop mjini Kisauni Mombasa ameanza kampeni kwa jina ''Acha Gun Shika Mike'' ili kuwarai wenzake ambao wamejiunga na magenge ya uhalifu kujiunga na sanaa hiyo ya muziki. Msanii huyo kwa jina Ohms law Montana tayari ametoa nyimbo zinazogonga vichwa vya habari katika eneo la pwani ya Kenya. Eneo la kisauni lina vijana wengi waliojiunga na magenge ya uhalifu kutokana na visa vingi vya utumiaji wa mihadarati .",
+                  "medium": "Msanii mmoja wa muziki wa hip hop mjini Kisauni Mombasa ameanza kampeni kwa jina ''Acha Gun Shika Mike'' ili kuwarai wenzake ambao wamejiunga na magenge ya uhalifu kujiunga na sana"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06zh7rh.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ohms Law Montana: Msanii anayepigana vita dhidi ya uhalifu Mombasa Kenya",
+                "versions": [
+                  {
+                    "versionId": "p06zh5k1",
+                    "types": ["Original"],
+                    "duration": 70,
+                    "durationISO8601": "PT1M10S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1548853966000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105401638",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1469A/production/_105401638_p06zh7rh.jpg",
+                "path": "/cpsprodpb/1469A/production/_105401638_p06zh7rh.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-47060639",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2b18a26a-ebaf-46a0-bcde-b661ef22cdc9",
+            "rank": 11,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:2b18a26a-ebaf-46a0-bcde-b661ef22cdc9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Serikali iwe wazi katika suala la Loliondo - LHRC",
+                "headline": "LHRC yataka uwazi zaidi katika suala la Loliondo"
+              },
+              "locators": {
+                "assetUri": "/swahili/61783090",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/61783090",
+                "curie": "http://www.bbc.co.uk/asset/2b18a26a-ebaf-46a0-bcde-b661ef22cdc9",
+                "assetId": "61783090"
+              },
+              "summary": "Kituo cha sheria na haki za binadamu Tanzania, LHRC kinataka uwazi zaidi katika mzozo wa Loliondo kaskazini mwa nchi hiyo, uliosababisha kifo cha polisi mmoja mwishoni mwa wiki.",
+              "timestamp": 1655112179000,
+              "language": "sw",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "sw",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "locator": "urn:bbc:cps:curie:asset:2b18a26a-ebaf-46a0-bcde-b661ef22cdc9",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/fe8599ff-fd09-4e03-8f36-d25cf5a8a988#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe8599ff-fd09-4e03-8f36-d25cf5a8a988#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "sw",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0cdkzjb",
+                "subType": "clip",
+                "format": "audio",
+                "title": "'Serikali iwe wazi katika suala la Loliondo - LHRC",
+                "synopses": {
+                  "short": "LHRC yataka uwazi zaidi katika suala la Loliondo",
+                  "long": "Kituo cha Sheria na haki za binadamu nchini Tanzania, LHRC kinataka uwazi zaidi katika mzozo wa Loliondo kaskazini mwa nchi hiyo, uliosababisha kifo cha polisi mmoja mwishoni mwa wiki.\n\nKatika taarifa yake, iliyotolewa na Kaimu Mkurugenzi Mtendaji wa kituo hicho , Fulgence Massawe, mbali na kulaani matukio ya ukiukwaji ya haki za binadamu kwenye zoezi la kuweka mipaka Loliondo, hatua za kisheria zinapaswa kuchukuliwa dhidi ya waliotoa uhai wa polisi huyo.\n\nJana msemaji wa Serikali, Gerson Msigwa, alisisitiza hali ni shwari Loliondo, na kilichotokea mpaka kusababisha mauaji ni wananchi kuwafuata Polisi na si Polisi kuwafuata wananchi, wakati wa zoezi la kuweka mpaka, kilometa 8, kutoka kwenye makazi ya watu.\n\nMwandisi wa BBC, Yusuph Mazimu amezungumza na Massawe na kwanz alimuuliza kama watetezi wa binadamu wameona nini Loliondo kiasi cha kuja na tamko la kulaani kinachoendelea.",
+                  "medium": "Kituo cha sheria na haki za binadamu Tanzania, LHRC kinataka uwazi zaidi katika mzozo wa Loliondo kaskazini mwa nchi hiyo, uliosababisha kifo cha polisi mmoja mwishoni mwa wiki."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0cdl6zt.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "LHRC yataka uwazi zaidi katika suala la Loliondo",
+                "versions": [
+                  {
+                    "versionId": "p0cdkzjg",
+                    "types": ["Original"],
+                    "duration": 256,
+                    "durationISO8601": "PT4M16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1655108841000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125373536",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F831/production/_125373536_p0cdl6zt.jpg",
+                "path": "/cpsprodpb/F831/production/_125373536_p0cdl6zt.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Masaai",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/61783090",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ffff11e4-e063-42a3-8c33-aceac0b39722",
+            "rank": 12,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:ffff11e4-e063-42a3-8c33-aceac0b39722",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mfahamu mwanariadha nyota wa Kenya Eliud Kipchoge",
+                "headline": "Eliud Kipchoge: Mwanariadha wa mbio za Marathon"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-59544511",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-59544511",
+                "curie": "http://www.bbc.co.uk/asset/ffff11e4-e063-42a3-8c33-aceac0b39722",
+                "assetId": "59544511"
+              },
+              "summary": "Anadaiwa kuwa mwanariadha bora zaidi wa mbio za marathon mwaka huu, Eliud Kipchoge aliimarisha hadhi yake zaidi katika maili 26.2 baada ya kushinda dhahabu yake ya pili ya Olimpiki",
+              "timestamp": 1638774507000,
+              "language": "sw",
+              "passport": {
+                "language": "sw",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "locator": "urn:bbc:cps:curie:asset:ffff11e4-e063-42a3-8c33-aceac0b39722",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/b3a086df-ab42-2b44-be8b-76b600bfcdce#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/fe8599ff-fd09-4e03-8f36-d25cf5a8a988#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.3.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe8599ff-fd09-4e03-8f36-d25cf5a8a988#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "sw",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                      "thingLabel": "Michezo",
+                      "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+                      "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Sport",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/b3a086df-ab42-2b44-be8b-76b600bfcdce#id",
+                      "thingLabel": "Riadha",
+                      "thingUri": "http://www.bbc.co.uk/things/b3a086df-ab42-2b44-be8b-76b600bfcdce#id",
+                      "thingId": "b3a086df-ab42-2b44-be8b-76b600bfcdce",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "tagging:Genre",
+                        "core:Theme",
+                        "core:Thing",
+                        "sport:SportsDiscipline"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Athletics",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0b8b7mg",
+                "subType": "clip",
+                "format": "video",
+                "title": "Eliud Kipchoge",
+                "synopses": {
+                  "short": "Eliud Kipchoge: Mwanariadha wa mbio za Marathon",
+                  "long": "Mwanariadha wa mbio za Marathon\nAnadaiwa kuwa mwanariadha bora zaidi wa mbio za marathon mwaka huu, Eliud Kipchoge aliimarisha hadhi yake zaidi katika maili 26.2 baada ya kushinda dhahabu yake ya pili ya Olimpiki katika mashindano hayo.\nAkiwa mtu wa tatu kufanikiwa kutetea taji la Olimpiki , raia huyo wa Kenya baadaye alichaguliwa kuwa mwanariadha bora wa kiume na kamati ya kimataifa ya michezo ya Olimpiki.\nUshindi wake mjini Tokyo  una maana kwamba ameshinda mara 13 kati ya mbio 15 za Marathon alizokimbia tangu alipoanza kukimbia mbio hizo 2013 , huku akijiongezea sifa za kuvunja rekodi ya dunia ya 2:01:39 aliyoweka mjini Berlin 2018.\nAkiwa na umri wa miaka 36, alikuwa mwanariadha mwenye umri mkubwa zaidi kushinda taji la Olimpiki tangu mwanariadha wa Ureno Carlos Lopes wakati huo akiwa na umri wa miaka 37 mwaka 1984 na kupata uhsindi mkubwa zaidi tanagu 1972.",
+                  "medium": "Anadaiwa kuwa mwanariadha bora zaidi wa mbio za marathon mwaka huu, Eliud Kipchoge aliimarisha hadhi yake zaidi katika maili 26.2 baada ya kushinda dhahabu yake ya pili ya Olimpiki"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b8b96w.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Eliud Kipchoge: Mwanariadha wa mbio za Marathon",
+                "versions": [
+                  {
+                    "versionId": "p0b8b7ml",
+                    "types": ["Original"],
+                    "duration": 99,
+                    "durationISO8601": "PT1M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1638774333000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "121980035",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CF10/production/_121980035_p0b8b8l4.jpg",
+                "path": "/cpsprodpb/CF10/production/_121980035_p0b8b8l4.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #3",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-59544511",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dd87239c-db44-42e8-b0d3-0336bf8954a7",
+            "rank": 13,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:dd87239c-db44-42e8-b0d3-0336bf8954a7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Wafanyabiashara ya ngono wanavyopigwa na kuuawa Sierra Leone",
+                "headline": "Biashara ya ngono inavyowagharimu makahaba Sierra Leone"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-55976089",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-55976089",
+                "curie": "http://www.bbc.co.uk/asset/dd87239c-db44-42e8-b0d3-0336bf8954a7",
+                "assetId": "55976089"
+              },
+              "summary": "Biashara ya ngono inavyogharimu maisha ya makahaba Sierra Leone",
+              "timestamp": 1612753894000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "sw",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Swahili",
+                "locator": "urn:bbc:cps:curie:asset:dd87239c-db44-42e8-b0d3-0336bf8954a7",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/fe8599ff-fd09-4e03-8f36-d25cf5a8a988#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  }
+                ],
+                "schemaVersion": "1.2.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                      "thingLabel": "Haki za Wanawake",
+                      "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                      "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Women%27s_rights",
+                        "http://www.wikidata.org/entity/Q223569"
+                      ],
+                      "thingEnglishLabel": "Women's rights",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                      "thingLabel": "Afrika",
+                      "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+                      "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q15",
+                        "http://dbpedia.org/resource/Africa",
+                        "http://sws.geonames.org/6255146/"
+                      ],
+                      "thingEnglishLabel": "Africa",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "Wanawake",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "sw",
+                      "type": "formats"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe8599ff-fd09-4e03-8f36-d25cf5a8a988#id",
+                      "type": "contributor"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p096bk48",
+                "subType": "clip",
+                "format": "video",
+                "title": "Wafanyabiashara ya ngono wanavyopigwa na kuuawa Sierra Leone",
+                "synopses": {
+                  "short": "Biashara ya ngono inavyowagharimu makahaba Sierra Leone",
+                  "long": "Nchini Sierra Leone, wafanyabiashara ya ngono mara nyingi huonekana kama watu wasio na maadili wanaopaswa kutengwa na kuepukwa. \n\nBBC Africa Eye inachunguza madhila wanayopitia wafanyabiashara ya ngono nchini humo na kugundua kuwa wengi wananyanyaswa, kusafirishwa na hata kuuawa. \n\nNa kama Tyson Conteh anavyoripoti kutoka Makeni, Kaskazini mwa Sierra Leone, maisha yao yamekuwa hatarini zaidi tangu kuibuka kwa janga la corona.",
+                  "medium": "Biashara ya ngono inavyogharimu maisha ya makahaba Sierra Leone"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p096bkhn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Biashara ya ngono inavyowagharimu makahaba Sierra Leone",
+                "versions": [
+                  {
+                    "versionId": "p096bk4b",
+                    "types": ["Original"],
+                    "duration": 783,
+                    "durationISO8601": "PT13M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1612753687000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "116859535",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/D15B/production/_116859535_p096bkhn.jpg",
+                "path": "/cpsprodpb/D15B/production/_116859535_p096bkhn.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Biashara ya ngono inavyowagharimu makahaba Sierra Leone",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-55976089",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e31ff280-1c2b-11e6-8cd3-66a63db9bd6e",
+            "rank": 14,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:e31ff280-1c2b-11e6-8cd3-66a63db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Wimbo wa Rangi ya Chungwa ulivyopata jina",
+                "headline": "Wimbo wa Rangi ya Chungwa ulivyopata jina"
+              },
+              "locators": {
+                "assetUri": "/swahili/medianuai/2016/05/160517_apatae_fatacky",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/medianuai/2016/05/160517_apatae_fatacky",
+                "curie": "http://www.bbc.co.uk/asset/e31ff280-1c2b-11e6-8cd3-66a63db9bd6e",
+                "assetId": "43860331"
+              },
+              "summary": "Wimbo wa Rangi ya Chungwa ukielekea kutimiza miaka hamsini bado unazikonga nyoyo za walio wengi ingawa kwa miaka mingi haikufahamika ni nani hasa aliongoza katika kuuimba.",
+              "timestamp": 1463488658000,
+              "language": "sw",
+              "media": {
+                "id": "43860331",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "43860331",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/17/160517122538_apatae_fatacky_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2016/05/17/160517122538_apatae_fatacky_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Fatacky",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/swahili/meta/dps/2016/05/emp/160517_apatae_fatacky.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/swahili/dps/2016/05/tzamusician_160517_apatae_fatacky_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e224",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/17/160517122537_apatae_fatacky_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2016/05/17/160517122537_apatae_fatacky_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "Fatacky",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/medianuai/2016/05/160517_apatae_fatacky",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c4fa85c3-3cc5-c24d-aab9-934de66e14c9",
+            "rank": 15,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:c4fa85c3-3cc5-c24d-aab9-934de66e14c9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Je, ugonjwa huu utasababisha ndizi kupotea duniani?",
+                "headline": "Ugonjwa hatari utakaomaliza mmea wa ndizi."
+              },
+              "locators": {
+                "assetUri": "/swahili/gnb-51703829",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/gnb-51703829",
+                "curie": "http://www.bbc.co.uk/asset/c4fa85c3-3cc5-c24d-aab9-934de66e14c9",
+                "assetId": "51703829"
+              },
+              "summary": "Wanasayansi kote duniani wanashughulikia mbinu za kuzuia ndizi kupotea dunianai kufwatia ugonjwa wa Panama.",
+              "timestamp": 1583139999000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p085c877",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Ugonjwa hatari utakaomaliza mmea wa ndizi.",
+                "synopses": {
+                  "short": "Je, ugonjwa huu utasababisha ndizi kupotea duniani?",
+                  "long": "Wanasayansi kote duniani wanashughulikia mbinu za kuzuia ndizi kupotea dunianai kufwatia ugonjwa wa  Panama.. Ugonjwa huu ambao umeathiri mashamba unafikia mmea wa ndizi kupitia kwa mchanga. Je nini maoni yako kuhusu uwezekano wa ndizi kupotea kabisa duniani? sema nasi kwenye ukurasa wa Facebook, BBCNewsSwahili.",
+                  "medium": "Wanasayansi kote duniani wanashughulikia mbinu za kuzuia ndizi kupotea dunianai kufwatia ugonjwa wa  Panama."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p085cbk7.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Je, ugonjwa huu utasababisha ndizi kupotea duniani?",
+                "versions": [
+                  {
+                    "versionId": "p085c879",
+                    "types": ["Original"],
+                    "duration": 123,
+                    "durationISO8601": "PT2M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1583136473000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "111100570",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1D4C/production/_111100570_p085cbk7.jpg",
+                "path": "/cpsprodpb/1D4C/production/_111100570_p085cbk7.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ndizi",
+                "caption": "Ndizi",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/gnb-51703829",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3938b082-2d57-4eb3-b002-816ff517883a",
+            "rank": 16,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:3938b082-2d57-4eb3-b002-816ff517883a",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Unazifahamu dhana potovu kuhusu hedhi?",
+                "headline": "Hedhi:Ni zipi dhana za kupotosha kuhusu hedhi?"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-57967751",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-57967751",
+                "curie": "http://www.bbc.co.uk/asset/3938b082-2d57-4eb3-b002-816ff517883a",
+                "assetId": "57967751"
+              },
+              "summary": "Umeskia mengi kuhusu hedhi na hasa dhana za kupotosha –Lakini je ukweli ni upi katika kila kinachosemwa kuhusu hedhi?",
+              "timestamp": 1627287032000,
+              "language": "sw",
+              "media": {
+                "id": "p09qfmf1",
+                "subType": "clip",
+                "format": "video",
+                "title": "Dhana potovu kuhusu hedhi",
+                "synopses": {
+                  "short": "Ni zipi dhana za kupotosha  kuhusu hedhi?",
+                  "medium": "Umeskia mengi kuhusu hedhi na hasa dhana za kupotosha –Lakini je ukweli ni upi katika kila kinachosemwa kuhusu heshi?",
+                  "long": "Umeskia mengi kuhusu hedhi na hasa dhana za kupotosha –Lakini je ukweli ni upi katika kila kinachosemwa kuhusu heshi?BBC inakufafanulia ukweli kuhusu yote unayofaa kujua kuhusu heshi"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09qfn9q.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ni zipi dhana za kupotosha kuhusu hedhi?",
+                "versions": [
+                  {
+                    "versionId": "p09qfmf3",
+                    "types": ["Original"],
+                    "duration": 192,
+                    "durationISO8601": "PT3M12S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1627286595000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "119571954",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B35D/production/_119571954_p09qfn9q.jpg",
+                "path": "/cpsprodpb/B35D/production/_119571954_p09qfn9q.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "hedhi",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-57967751",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fa5ee0b6-2821-11e2-bf7d-6b39a79c3f60",
+            "rank": 17,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:fa5ee0b6-2821-11e2-bf7d-6b39a79c3f60",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dira ya Dunia",
+                "headline": "Dira ya Dunia"
+              },
+              "locators": {
+                "assetUri": "/swahili/medianuai/2011/10/000002_dira_ya_dunia_fri",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/medianuai/2011/10/000002_dira_ya_dunia_fri",
+                "curie": "http://www.bbc.co.uk/asset/fa5ee0b6-2821-11e2-bf7d-6b39a79c3f60",
+                "assetId": "13335917"
+              },
+              "summary": "Dira ya Dunia",
+              "timestamp": 1318439389000,
+              "language": "sw",
+              "media": {
+                "id": "13335917",
+                "subType": "primary",
+                "format": "audio",
+                "live": false,
+                "href": "http://wsdownload.bbc.co.uk/swahili/meta/tx/smp/swahili_1530_fri.xml",
+                "playlist": [],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e202",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2011/10/04/111004155231_dira_ya_dunia_112.jpg",
+                "path": "/amz/worldservice/live/assets/images/2011/10/04/111004155231_dira_ya_dunia_112.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "Dira ya Dunia",
+                "copyrightHolder": "BBC World Service",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/medianuai/2011/10/000002_dira_ya_dunia_fri",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f687dcff-5613-7e45-a490-4f2d6375183f",
+            "rank": 18,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:f687dcff-5613-7e45-a490-4f2d6375183f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Njia za kukabili habari feki mtandaoni",
+                "headline": "Solomon Mugera: Hizi ndizo njia bora za kukabili habari feki mtandaoni"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-46650120",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-46650120",
+                "curie": "http://www.bbc.co.uk/asset/f687dcff-5613-7e45-a490-4f2d6375183f",
+                "assetId": "46650120"
+              },
+              "summary": "Habari za uzushi au habari feki zimekuwa zinasambazwa haraka, hasa katika mtandao wa internet. Vipi waandishi wa habari wazikabili.",
+              "timestamp": 1545394785000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06w8x88",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Njia za kukabili habari feki mtandaoni",
+                "synopses": {
+                  "short": "Solomon Mugera: Hizi ndizo njia bora za kukabili habari feki mtandaoni",
+                  "long": "Habari za uzushi au habari feki zimekuwa zinasambazwa haraka, hasa katika mtandao wa internet. Vipi waandishi wa habari wazikabili.\nMwandishi wa BBC Ayisha Yahya amezungumza na mkuu wa Idara ya Lugha za Afrika  katika BBC, Solomon Mugera.",
+                  "medium": "Habari za uzushi au habari feki zimekuwa zinasambazwa haraka, hasa katika mtandao wa internet. Vipi waandishi wa habari wazikabili."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06w8xz2.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Solomon Mugera: Hizi ndizo njia bora za kukabili habari feki mtandaoni",
+                "versions": [
+                  {
+                    "versionId": "p06w8x8c",
+                    "types": ["Original"],
+                    "duration": 417,
+                    "durationISO8601": "PT6M57S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1545394624000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104907309",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/16102/production/_104907309_p06w8xz2.jpg",
+                "path": "/cpsprodpb/16102/production/_104907309_p06w8xz2.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Mugera",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-46650120",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ebbcecfc-44f2-2349-9094-e181bf32e7aa",
+            "rank": 19,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:ebbcecfc-44f2-2349-9094-e181bf32e7aa",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Je wajua kwamba sumu ya nyoka ina faida kubwa?",
+                "headline": "Kilimo cha ufugaji nyoka: Je wajua kwamba sumu ya nyoka ina faida kubwa?"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-49958231",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-49958231",
+                "curie": "http://www.bbc.co.uk/asset/ebbcecfc-44f2-2349-9094-e181bf32e7aa",
+                "assetId": "49958231"
+              },
+              "summary": "Ukulima wa nyoka ni biashara yenye faida kubwa nchini Kenya ambapo wakulima hutoa sumu ya nyoka na kutengeza dawa",
+              "timestamp": 1570441218000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07qb1sq",
+                "subType": "clip",
+                "format": "video",
+                "title": "Je wajua kwamba sumu ya nyoka ina faida kubwa?",
+                "synopses": {
+                  "short": "Kilimo cha ufugaji nyoka: Je wajua kwamba sumu ya nyoka ina faida kubwa?",
+                  "long": "Ukulima wa ufugaji nyoka ni biashara yenye faida kubwa nchini Kenya ambapo wakulima hutoa sumu ya nyoka na  kutengeza dawa ya kukabiliana na majeraha ya mnyama huyo punde tu anapomng'ata binadamu. \n\nGharama ya dawa moja ni kati ya dola 800$-3000$ ikitegemea aina ya nyoka.\n\nHamisi Arafat Chiboga na  Boniface Momanyi walianza biashara hiyo ambapo kufikia sasa na nyoka 20 aina tofauti katika shamba lake. \n\nAnasema kwamba gharama kubwa ya biashara yake inakuja wakati anapofyonza sumu hiyo kutoka ka nyoka kwa kuwa vifaa vinavyotumiwa ni ghali mno.",
+                  "medium": "Ukulima wa nyoka ni biashara yenye faida kubwa nchini Kenya ambapo wakulima hutoa sumu ya nyoka na  kutengeza dawa"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07qb4k9.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Kilimo cha ufugaji nyoka: Je wajua kwamba sumu ya nyoka ina faida kubwa?",
+                "versions": [
+                  {
+                    "versionId": "p07qb1ss",
+                    "types": ["Original"],
+                    "duration": 103,
+                    "durationISO8601": "PT1M43S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1570440973000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109128190",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/23DE/production/_109128190_p07qb4k9.jpg",
+                "path": "/cpsprodpb/23DE/production/_109128190_p07qb4k9.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #4",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-49958231",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cb69108f-70ca-1c46-8283-3e54f3f1efef",
+            "rank": 20,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:cb69108f-70ca-1c46-8283-3e54f3f1efef",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Wafahamu baadhi ya waandishi wa BBC Swahili",
+                "headline": "Wafahamu baadhi ya waandishi wa BBC Swahili"
+              },
+              "locators": {
+                "assetUri": "/swahili/habari-40429019",
+                "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-40429019",
+                "curie": "http://www.bbc.co.uk/asset/cb69108f-70ca-1c46-8283-3e54f3f1efef",
+                "assetId": "40429019"
+              },
+              "summary": "Idhaa ya Kiswahili ya BBC inasikika katika mataifa mengi na ina waandishi Burundi, Rwanda, Jamhuri ya Kidemokrasia ya Congo, Uganda na Afrika Kusini.",
+              "timestamp": 1498659366000,
+              "language": "sw",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p057666b",
+                "subType": "clip",
+                "format": "video",
+                "title": "Wafahamu baadhi ya waandishi wa BBC Swahili",
+                "synopses": {
+                  "short": "Wafahamu baadhi ya waandishi wa BBC Swahili",
+                  "medium": "Idhaa ya Kiswahili ya BBC inasikika katika mataifa mengi na ina waandishi Burundi, Rwanda, Jamhuri ya Kidemokrasia ya Congo, Uganda na Afrika Kusini.",
+                  "long": "Idhaa ya Kiswahili ya BBC inasikika katika mataifa mengi na ina waandishi Burundi, Rwanda, Jamhuri ya Kidemokrasia ya Congo, Uganda na Afrika Kusini.\nWafahamu waandishi hao."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05766s9.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Wafahamu baadhi ya waandishi wa BBC Swahili",
+                "versions": [
+                  {
+                    "versionId": "p057666d",
+                    "types": ["Original"],
+                    "duration": 56,
+                    "durationISO8601": "PT56S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1498658701000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "96717731",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/35CB/production/_96717731_p05766s9.jpg",
+                "path": "/cpsprodpb/35CB/production/_96717731_p05766s9.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Waandishi",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:swahili/habari-40429019",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

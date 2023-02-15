@@ -1,107 +1,484 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/burmese/meta/dps/junk/2016/08/emp/160811_tc2_testmap1.emp.xml",
-        "id": "17698099",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:burmese/sport/2016/08/160811_tc2_testmap1",
+        "locators": {
+          "assetUri": "/burmese/sport/2016/08/160811_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:236c11c0-5fcf-11e6-8341-9f9f1e3e95e6",
+          "assetId": "17698099",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/sport/2016/08/160811_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/236c11c0-5fcf-11e6-8341-9f9f1e3e95e6"
+        },
+        "type": "MAP",
+        "createdBy": "burmese",
+        "language": "my",
+        "lastUpdated": 1665420076720,
+        "firstPublished": 1470925531000,
+        "lastPublished": 1470925531000,
+        "timestamp": 1470925531000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17698099",
+          "contentId": "urn:bbc:topcat:curie:asset:236c11c0-5fcf-11e6-8341-9f9f1e3e95e6"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/burmese",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "ဗင်နီဇွဲလား နိုင်ငံမှာ စားနပ်ရိက္ခာ ပြတ်လပ်မှုတွေနဲ့ရင်ဆိုင်နေရပါတယ်။ သမ္မတ နစ်ကိုးလပ်စ် မဒူရိုကတော့ ပြည်ပ အင်အားကြီးတွေနဲ့ စီးပွားရေး သမားတွေက သူ့ဆိုရှယ်လစ် အစိုးရ ပြိုလဲအောင် ထိုးနှက်နေတဲ့ စီးပွားရေးစစ်ပွဲကြောင့် ဖြစ်တယ်လို့ အပြစ်ဖို့ပါတယ်။ ဝေဖန်သူတွေကတော့ ရေနံကြွယ်ဝတဲ့ တိုင်းပြည်ကို သူအုပ်ချုပ်တာ မဟုတ်လို့ ဒီလိုဖြစ်ရတာလို့ ဆိုနေကြပါတယ်။ ကိုဘိုဘိုက ပြောပြမှာပါ။",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17698099",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17698099",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/burmese/meta/dps/junk/2016/08/emp/160811_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/burmese/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160811_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/burmese/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160811_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/burmese/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160811_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "ဗင်နီဇွဲလား နိုင်ငံမှာ စားနပ်ရိက္ခာ ပြတ်လပ်မှုတွေနဲ့ရင်ဆိုင်နေရပါတယ်။ သမ္မတ နစ်ကိုးလပ်စ် မဒူရိုကတော့ ပြည်ပ အင်အားကြီးတွေနဲ့ စီးပွားရေး သမားတွေက သူ့ဆိုရှယ်လစ် အစိုးရ ပြိုလဲအောင် ထိုးနှက်နေတဲ့ စီးပွားရေးစစ်ပွဲကြောင့် ဖြစ်တယ်လို့ အပြစ်ဖို့ပါတယ်။ ဝေဖန်သူတွေကတော့ ရေနံကြွယ်ဝတဲ့ တိုင်းပြည်ကို သူအုပ်ချုပ်တာ မဟုတ်လို့ ဒီလိုဖြစ်ရတာလို့ ဆိုနေကြပါတယ်။ ကိုဘိုဘိုက ပြောပြမှာပါ။",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "ဗင်နီဇွဲလားမှာ စားနပ်ရိက္ခာ ပြတ်လပ်",
+          "headline": "ဗင်နီဇွဲလားမှာ စားနပ်ရိက္ခာ ပြတ်လပ်"
+        },
+        "locators": {
+          "assetUri": "/burmese/sport/2016/08/160811_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:236c11c0-5fcf-11e6-8341-9f9f1e3e95e6",
+          "assetId": "17698099",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/sport/2016/08/160811_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/236c11c0-5fcf-11e6-8341-9f9f1e3e95e6"
+        },
+        "summary": "ဗင်နီဇွဲလား နိုင်ငံမှာ စားနပ်ရိက္ခာ ပြတ်လပ်မှုတွေနဲ့ရင်ဆိုင်နေရပါတယ်။ သမ္မတ နစ်ကိုးလပ်စ် မဒူရိုကတော့ ပြည်ပ အင်အားကြီးတွေနဲ့ စီးပွားရေး သမားတွေက သူ့ဆိုရှယ်လစ် အစိုးရ ပြိုလဲအောင် ထိုးနှက်နေတဲ့ စီးပွားရေးစစ်ပွဲကြောင့် ဖြစ်တယ်လို့ အပြစ်ဖို့ပါတယ်။ ဝေဖန်သူတွေကတ",
+        "timestamp": 1470925531000,
+        "language": "my",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+          "taggings": []
+        },
+        "media": {
+          "id": "17698099",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17698099",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/burmese/meta/dps/junk/2016/08/emp/160811_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/burmese/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160811_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/burmese/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160811_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/burmese/dps/junk/2016/08/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_160811_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e210",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "Getty",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:burmese/sport/2016/08/160811_tc2_testmap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "အားကစား",
+          "uri": "/burmese/sport",
+          "urlIdentifier": "/burmese/sport",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCBurmese.com",
+          "uri": "/burmese",
+          "urlIdentifier": "/burmese",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "cps_asset_id": "17698099",
-      "cps_asset_type": "map"
     },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "burmese",
-    "firstPublished": 1470925531000,
-    "id": "urn:bbc:ares::asset:burmese/sport/2016/08/160811_tc2_testmap1",
-    "includeComments": false,
-    "language": "my",
-    "lastPublished": 1470925531000,
-    "lastUpdated": 1583261160518,
-    "locators": {
-      "assetId": "17698099",
-      "assetUri": "/burmese/sport/2016/08/160811_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:burmese/sport/2016/08/160811_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/236c11c0-5fcf-11e6-8341-9f9f1e3e95e6"
-    },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1470925531000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "ဗင်နီဇွဲလားမှာ စားနပ်ရိက္ခာ ပြတ်လပ်",
-      "shortHeadline": "ဗင်နီဇွဲလားမှာ စားနပ်ရိက္ခာ ပြတ်လပ်"
-    },
-    "id": "urn:bbc:ares::asset:burmese/sport/2016/08/160811_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "Getty",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-      "id": "d5e210",
-      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "my",
-    "locators": {
-      "assetId": "17698099",
-      "assetUri": "/burmese/sport/2016/08/160811_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:burmese/sport/2016/08/160811_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/236c11c0-5fcf-11e6-8341-9f9f1e3e95e6"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/burmese/meta/dps/junk/2016/08/emp/160811_tc2_testmap1.emp.xml",
-      "id": "17698099",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "summary": "ဗင်နီဇွဲလား နိုင်ငံမှာ စားနပ်ရိက္ခာ ပြတ်လပ်မှုတွေနဲ့ရင်ဆိုင်နေရပါတယ်။ သမ္မတ နစ်ကိုးလပ်စ် မဒူရိုကတော့ ပြည်ပ အင်အားကြီးတွေနဲ့ စီးပွားရေး သမားတွေက သူ့ဆိုရှယ်လစ် အစိုးရ ပြိုလဲအောင် ထိုးနှက်နေတဲ့ စီးပွားရေးစစ်ပွဲကြောင့် ဖြစ်တယ်လို့ အပြစ်ဖို့ပါတယ်။ ဝေဖန်သူတွေကတ",
-    "timestamp": 1470925531000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "အားကစား",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/burmese/sport"
-    },
-    "site": {
-      "name": "BBCBurmese.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/burmese"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:21:57.359Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T07:53:00Z",
+        "totalRecords": 5,
+        "records": [
+          {
+            "id": "d7b07cf3-9195-8c47-ad79-8d46fcc70796",
+            "rank": 1,
+            "count": 9077,
+            "urn": "urn:bbc:curie:asset:d7b07cf3-9195-8c47-ad79-8d46fcc70796",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ပြည်ထောင်စု ငြိမ်းချမ်းရေးဆွေးနွေးမှု ပူးတွဲကော်မတီ (UPDJC) အစည်းအဝေး ကနေ ၂၁ ရာစု ပင်လုံညီလာခံမှာ RD",
+                "headline": "ပြည်ထောင်စု ငြိမ်းချမ်းရေးဆွေးနွေးမှု ပူးတွဲကော်မတီ (UPDJC) အစည်းအဝေး ကနေ ၂၁ ရာစု test RD"
+              },
+              "locators": {
+                "assetUri": "/burmese/burma-23069327",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d7b07cf3-9195-8c47-ad79-8d46fcc70796",
+                "assetId": "23069327",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-23069327",
+                "curie": "http://www.bbc.co.uk/asset/d7b07cf3-9195-8c47-ad79-8d46fcc70796"
+              },
+              "summary": "ပြည်ထောင်စု ငြိမ်းချမ်းရေးဆွေးနွေးမှု ပူးတွဲကော်မတီ ( UPDJC ) အစည်းအဝေး ကနေ ၂၁ ရာစု ပင်လုံညီလာခံမှာ တနိုင်ငံလုံး အပစ်ရပ်ရေး စာချုပ် NCA",
+              "timestamp": 1472050995000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "media": {
+                "id": "23068031",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p01564ts",
+                "entityType": "Clip",
+                "caption": "ပြည်ထောင်စု ငြိမ်းချမ်းရေးဆွေးနွေးမှု ပူးတွဲကော်မတီ (UPDJC) အစည်းအဝေး ကနေ ၂၁ ရာစု short",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63504536",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/F834/test/_63504536_p015654n.jpg",
+                "path": "/cpsdevpb/F834/test/_63504536_p015654n.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "၂၁ ရာစု ပင်လုံ NCA မှာ လက်မှတ် မထိုးတဲ့ အဖွဲ့တွေ တက်ရောက်နိုင်",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/burma-23069327",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4c37b813-4d33-e745-bc35-762899b1cffd",
+            "rank": 2,
+            "count": 6998,
+            "urn": "urn:bbc:curie:asset:4c37b813-4d33-e745-bc35-762899b1cffd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "လင်းလက်ကြယ်စင်-အစိုးရသစ်ရဲ့ ရက် ၁၀၀",
+                "headline": "လင်းလက်ကြယ်စင်-အစိုးရသစ်ရဲ့ ရက် ၁၀၀ overtype"
+              },
+              "locators": {
+                "assetUri": "/burmese/media-23068193",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:4c37b813-4d33-e745-bc35-762899b1cffd",
+                "assetId": "23068193",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/media-23068193",
+                "curie": "http://www.bbc.co.uk/asset/4c37b813-4d33-e745-bc35-762899b1cffd"
+              },
+              "summary": "အစိုးရသစ် ရက် ၁၀၀ အတွင်း လုပ်ဆောင်ချက်တွေကို ပြည်သူတွေ အမှတ် ဘယ်လောက်ပေးကြလဲ",
+              "timestamp": 1471606448000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "media": {
+                "id": "23068194",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p0156lnf",
+                "entityType": "Clip",
+                "caption": "လင်းလက်ကြယ်စင်-အစိုးရသစ်ရဲ့ ရက် ၁၀၀ overtype",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63503619",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/165EE/test/_63503619_p0156lsl.jpg",
+                "path": "/cpsdevpb/165EE/test/_63503619_p0156lsl.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "လင်းလက်ကြယ်စင်-အစိုးရသစ်ရဲ့",
+                "copyrightHolder": "၁၀၀",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/media-23068193",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b4075550-c740-3748-a4d6-958112b310a9",
+            "rank": 3,
+            "count": 6035,
+            "urn": "urn:bbc:curie:asset:b4075550-c740-3748-a4d6-958112b310a9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ပြည်ထောင်စု ငြိမ်းချမ်းရေးဆွေးနွေးမှု ပူးတွဲကော်မတီ (UPDJC) အစည်းအဝေး ကနေ ၂၁ ရာစု ပင်လုံညီလာခံမှာ updated",
+                "headline": "ပြည်ထောင်စု ငြိမ်းချမ်းရေးဆွေးနွေးမှု ပူးတွဲကော်မတီ (UPDJC) အစည်းအဝေး ကနေ ၂၁ ရာစု short updated"
+              },
+              "locators": {
+                "assetUri": "/burmese/burma-23068030",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:b4075550-c740-3748-a4d6-958112b310a9",
+                "assetId": "23068030",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-23068030",
+                "curie": "http://www.bbc.co.uk/asset/b4075550-c740-3748-a4d6-958112b310a9"
+              },
+              "summary": "ပြည်ထောင်စု ငြိမ်းချမ်းရေးဆွေးနွေးမှု ပူးတွဲကော်မတီ ( UPDJC ) အစည်းအဝေး ကနေ ၂၁ ရာစု ပင်လုံညီလာခံမှာ တနိုင်ငံလုံး အပစ်ရပ်ရေး စာချုပ် NCA",
+              "timestamp": 1471622151000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "media": {
+                "id": "23068031",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p01564ts",
+                "entityType": "Clip",
+                "caption": "ပြည်ထောင်စု ငြိမ်းချမ်းရေးဆွေးနွေးမှု ပူးတွဲကော်မတီ (UPDJC) အစည်းအဝေး ကနေ ၂၁ ရာစု short update",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63503458",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14DB6/test/_63503458_p015654n.jpg",
+                "path": "/cpsdevpb/14DB6/test/_63503458_p015654n.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "၂၁ ရာစု ပင်လုံ NCA မှာ လက်မှတ် မထိုးတဲ့ အဖွဲ့တွေ တက်ရောက်နိုင်",
+                "caption": "စသင မသငတနကမ ဩွ္ွဪ၎ဥဤ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/burma-23068030",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3c2d1aec-279d-e44a-9821-5338d86ef200",
+            "rank": 4,
+            "count": 2647,
+            "urn": "urn:bbc:curie:asset:3c2d1aec-279d-e44a-9821-5338d86ef200",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "এ কি বললেন তিনি",
+                "headline": "এ কি বললেন জার্মান নারী টুকটুকি"
+              },
+              "locators": {
+                "assetUri": "/bengali/content-23164031",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:3c2d1aec-279d-e44a-9821-5338d86ef200",
+                "assetId": "23164031",
+                "cpsUrn": "urn:bbc:content:assetUri:bengali/content-23164031",
+                "curie": "http://www.bbc.co.uk/asset/3c2d1aec-279d-e44a-9821-5338d86ef200"
+              },
+              "summary": "এ কি বললেন তিনিএ কি বললেন তিনি",
+              "timestamp": 1510550313000,
+              "language": "bn",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
+                "taggings": []
+              },
+              "media": {
+                "id": "p01dyx3m",
+                "subType": "clip",
+                "format": "video",
+                "title": "এ কি বললেন তিনি",
+                "synopses": {
+                  "short": "এ কি বললেন তিনি",
+                  "medium": "এ কি বললেন তিনিএ কি বললেন তিনি",
+                  "long": "এ কি বললেন তিনিএ কি বললেন তিনিএ কি বললেন তিনিএ কি বললেন তিনিএ কি বললেন তিনিএ কি বললেন তিনিএ কি বললেন তিনিএ কি বললেন তিনিএ কি বললেন তিনি"
+                },
+                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01dyxjk.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "এ কি বললেন",
+                "versions": [
+                  {
+                    "versionId": "p01dyx3p",
+                    "types": ["Original"],
+                    "duration": 39,
+                    "durationISO8601": "PT39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1510548861000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "63599598",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/15DFF/test/_63599598_p01dyxjk.jpg",
+                "path": "/cpsdevpb/15DFF/test/_63599598_p01dyxjk.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "A koala",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:bengali/content-23164031",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a36f8db0-54e1-0f43-8f76-66b52fee4f9c",
+            "rank": 5,
+            "count": 682,
+            "urn": "urn:bbc:curie:asset:a36f8db0-54e1-0f43-8f76-66b52fee4f9c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+                "headline": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်"
+              },
+              "locators": {
+                "assetUri": "/burmese/23066973",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a36f8db0-54e1-0f43-8f76-66b52fee4f9c",
+                "assetId": "23066973",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23066973",
+                "curie": "http://www.bbc.co.uk/asset/a36f8db0-54e1-0f43-8f76-66b52fee4f9c"
+              },
+              "summary": "ဘီဘီစီ မြန်မာတီဗီ အစီအစဉ်",
+              "timestamp": 1470835542000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "media": {
+                "id": "63501296",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "journalism_world_service_stream_01",
+                "duration": "PT0S",
+                "caption": "ဘီဘီစီ",
+                "image": {
+                  "id": "63501296",
+                  "subType": "thumbnail",
+                  "href": "http://b.files.bbci.co.uk/AB90/test/_63502934__90725791_photo6-wild_freeranging_crow-stclair.jpg",
+                  "path": "/cpsdevpb/AB90/test/_63502934__90725791_photo6-wild_freeranging_crow-stclair.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "ဘီဘီစီ",
+                  "copyrightHolder": "(C) British Broadcasting Corporation",
+                  "type": "image"
+                },
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63502929",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/16AF8/test/_63502929__90725791_photo6-wild_freeranging_crow-stclair.jpg",
+                "path": "/cpsdevpb/16AF8/test/_63502929__90725791_photo6-wild_freeranging_crow-stclair.jpg",
+                "height": 351,
+                "width": 624,
+                "altText": "ဘီဘီစီ",
+                "caption": "ဘီဘီစီ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23066973",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

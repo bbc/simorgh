@@ -1,108 +1,1795 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
-    "locators": {
-      "assetUri": "/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
-      "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
-      "curie": "http://www.bbc.co.uk/asset/99609098-d4b2-11e5-bba5-fba23db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "turkish",
-    "language": "tr",
-    "lastUpdated": 1550157931009,
-    "firstPublished": 1455632912,
-    "lastPublished": 1455633296,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "allowAdvertising": true,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_id": "42616726", "cps_asset_type": "map" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "42616726",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/turkce/meta/dps/2016/02/emp/160216_vid_genclerde_depresyon.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+        "locators": {
+          "assetUri": "/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+          "curie": "http://www.bbc.co.uk/asset/99609098-d4b2-11e5-bba5-fba23db9bd6e",
+          "assetId": "42616726"
+        },
+        "type": "MAP",
+        "createdBy": "turkish",
+        "language": "tr",
+        "lastUpdated": 1649975336978,
+        "firstPublished": 1455632912000,
+        "lastPublished": 1455632912000,
+        "timestamp": 1455632912000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "42616726",
+          "contentId": "urn:bbc:topcat:curie:asset:99609098-d4b2-11e5-bba5-fba23db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/turkce",
+        "mediaType": "video"
       },
-      {
-        "text": "Uzmanlar gençlerin en sık yaşadığı ruhsal sorunlardan birinin depresyon olduğunu söylüyor.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "42616726",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "42616726",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/02/16/160216134014_genclik_depresyon_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2016/02/16/160216134014_genclik_depresyon_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/turkce/meta/dps/2016/02/emp/160216_vid_genclerde_depresyon.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/turkce/dps/2016/02/turkish~fdepresyon~f1329~f16~f2_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/turkce/dps/2016/02/turkish~fdepresyon~f1329~f16~f2_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/turkce/dps/2016/02/turkish~fdepresyon~f1329~f16~f2_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "Uzmanlar gençlerin en sık yaşadığı ruhsal sorunlardan birinin depresyon olduğunu söylüyor.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Gençlerde depresyon kendini nasıl gösteriyor? Depresyondaki gençlere yardımcı olmak için neler yapılabilir?",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Genç yaşlarda görülen depresyonun detayları video animasyonumuzda...",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "Gençlerde depresyon kendini nasıl gösteriyor? Depresyondaki gençlere yardımcı olmak için neler yapılabilir?",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Gençlerde depresyon belirtileri nelerdir? ",
+          "headline": "Gençlerde depresyon belirtileri nelerdir? "
+        },
+        "locators": {
+          "assetUri": "/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+          "curie": "http://www.bbc.co.uk/asset/99609098-d4b2-11e5-bba5-fba23db9bd6e",
+          "assetId": "42616726"
+        },
+        "summary": "Uzmanlar gençlerin en sık yaşadığı ruhsal sorunlardan birinin depresyon olduğunu söylüyor. Gençlerde depresyon kendini nasıl gösteriyor? Depresyondaki gençlere yardımcı olmak için neler yapılabilir?",
+        "timestamp": 1455632912000,
+        "language": "tr",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+          "taggings": []
+        },
+        "media": {
+          "id": "42616726",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "42616726",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/02/16/160216134014_genclik_depresyon_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2016/02/16/160216134014_genclik_depresyon_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/turkce/meta/dps/2016/02/emp/160216_vid_genclerde_depresyon.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/turkce/dps/2016/02/turkish~fdepresyon~f1329~f16~f2_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/turkce/dps/2016/02/turkish~fdepresyon~f1329~f16~f2_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/turkce/dps/2016/02/turkish~fdepresyon~f1329~f16~f2_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e280",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/02/16/160216134014_genclik_depresyon_640x360_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2016/02/16/160216134014_genclik_depresyon_640x360_bbc_nocredit.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+        "type": "cps"
       },
-      {
-        "text": "Genç yaşlarda görülen depresyonun detayları video animasyonumuzda...",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Multimedya",
+          "uri": "/turkce/multimedya",
+          "urlIdentifier": "/turkce/multimedya",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCTurkce.com",
+          "uri": "/turkce",
+          "urlIdentifier": "/turkce",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Gençlerde depresyon belirtileri nelerdir? ",
-      "headline": "Gençlerde depresyon belirtileri nelerdir? "
     },
-    "locators": {
-      "assetUri": "/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
-      "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
-      "curie": "http://www.bbc.co.uk/asset/99609098-d4b2-11e5-bba5-fba23db9bd6e"
-    },
-    "summary": "Uzmanlar gençlerin en sık yaşadığı ruhsal sorunlardan birinin depresyon olduğunu söylüyor. Gençlerde depresyon kendini nasıl gösteriyor? Depresyondaki gençlere yardımcı olmak için neler yapılabilir?",
-    "timestamp": 1550157931009,
-    "passport": {},
-    "media": {
-      "id": "42616726",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/turkce/meta/dps/2016/02/emp/160216_vid_genclerde_depresyon.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e280",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/02/16/160216134014_genclik_depresyon_640x360_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2016/02/16/160216134014_genclik_depresyon_640x360_bbc_nocredit.jpg",
-      "height": 360,
-      "width": 640,
-      "altText": "",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Multimedya",
-      "uri": "/turkce/multimedya",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCTurkce.com",
-      "uri": "/turkce",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T10:10:50.517Z",
+        "lastRecordTimeStamp": "2023-02-15T10:08:00Z",
+        "firstRecordTimeStamp": "2023-02-15T06:08:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "dffdcce1-443b-47c7-b1d6-830328ab6e28",
+            "rank": 1,
+            "count": 13,
+            "urn": "urn:bbc:curie:asset:dffdcce1-443b-47c7-b1d6-830328ab6e28",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Rusya 'dünyanın en büyük nükleer patlaması'nın görüntülerini yayınladı",
+                "headline": "Rusya 'dünyanın en büyük nükleer patlaması'nın görüntülerini yayınladı"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-dunya-53948750",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-dunya-53948750",
+                "curie": "http://www.bbc.co.uk/asset/dffdcce1-443b-47c7-b1d6-830328ab6e28",
+                "assetId": "53948750"
+              },
+              "summary": "Rusya, 1961 yılındaki nükleer denemenin daha önce yayınlanmamış görüntülerini paylaştı.",
+              "timestamp": 1598616297000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08px0s4",
+                "subType": "clip",
+                "format": "video",
+                "title": "Rusya 'dünyanın en büyük nükleer patlaması'nın görüntülerini yayınladı",
+                "synopses": {
+                  "short": "Rusya 'dünyanın en büyük nükleer patlaması'nın görüntülerini yayınladı"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08px0zd.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Rusya 'dünyanın en büyük nükleer patlaması'nın görüntülerini yayınladı",
+                "versions": [
+                  {
+                    "versionId": "p08px0s6",
+                    "types": ["Original"],
+                    "duration": 170,
+                    "durationISO8601": "PT2M50S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1598615153000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "114157119",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/16427/production/_114157119_p08px0zd.jpg",
+                "path": "/cpsprodpb/16427/production/_114157119_p08px0zd.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Nükleer patlama",
+                "copyrightHolder": "Rosatom",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-dunya-53948750",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "362bff5c-9a40-11e3-8d34-4cae3db9bd6e",
+            "rank": 2,
+            "count": 9,
+            "urn": "urn:bbc:curie:asset:362bff5c-9a40-11e3-8d34-4cae3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Saati 80 dolara profesyonel kucaklama",
+                "headline": "Saati 80 dolara profesyonel kucaklama"
+              },
+              "locators": {
+                "assetUri": "/turkce/multimedya/2014/02/140220_vid_kucaklasma_sirketi",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2014/02/140220_vid_kucaklasma_sirketi",
+                "curie": "http://www.bbc.co.uk/asset/362bff5c-9a40-11e3-8d34-4cae3db9bd6e"
+              },
+              "summary": "Kucaklaşmak ya da birine sarılmak için para ödeyen olur mu? New York'ta Ali C. adlı bir kadın, saati 80 dolara kucaklaşma, sarılma hizmet veren bir şirket kurdu. Ali C. verdiği hizmetin kucaklaşmadan öteye gitmeyen bir iş olduğunu önemle vurguluyor.",
+              "timestamp": 1392908648000,
+              "language": "tr",
+              "media": {
+                "id": "30287947",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "30287947",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/02/20/140220145251_cuddle_640x360_reuters_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/02/20/140220145251_cuddle_640x360_reuters_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/turkce/meta/dps/2014/02/emp/140220_vid_kucaklasma_sirketi.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2014/02/turkish~fcuddle~f1454~f20~f2_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2014/02/turkish~fcuddle~f1454~f20~f2_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2014/02/turkish~fcuddle~f1454~f20~f2_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e225",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/02/20/140220145251_cuddle_112x63_reuters_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/02/20/140220145251_cuddle_112x63_reuters_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/multimedya/2014/02/140220_vid_kucaklasma_sirketi",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e01f34ea-ddb0-11e2-90ed-1fbe3db9bd6e",
+            "rank": 3,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:e01f34ea-ddb0-11e2-90ed-1fbe3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dubai'de depreme karşı önlemler",
+                "headline": "Dubai'de depreme karşı önlemler"
+              },
+              "locators": {
+                "assetUri": "/turkce/multimedya/2013/06/130625_dg_dubai",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2013/06/130625_dg_dubai",
+                "curie": "http://www.bbc.co.uk/asset/e01f34ea-ddb0-11e2-90ed-1fbe3db9bd6e"
+              },
+              "summary": "İran'da geçen Nisan'da meydana gelen depremin sarsıntıları Dubai'ye kadar uzandı. Şimdi mühendisler, mevcut gökdelenleri ve çok katlı binaları güçlendirme işine girişirken yeni binalar da, sıkılaştırılan deprem yönetmeliğine uygun inşa edilecek.",
+              "timestamp": 1372176810000,
+              "language": "tr",
+              "media": {
+                "id": "25501977",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "25501977",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/06/25/130625150949_dubai_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2013/06/25/130625150949_dubai_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/turkce/meta/dps/2013/06/emp/130625_dg_dubai.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2013/06/dg_fonline_3_dubai_f1429_f25_f6_130625_dg_dubai_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2013/06/dg_fonline_3_dubai_f1429_f25_f6_130625_dg_dubai_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2013/06/dg_fonline_3_dubai_f1429_f25_f6_130625_dg_dubai_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e230",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/06/25/130625150949_dubai_112x63_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2013/06/25/130625150949_dubai_112x63_bbc_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "Dubai",
+                "copyrightHolder": "",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/multimedya/2013/06/130625_dg_dubai",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cad3fc8e-f2a5-7e4c-a652-f81d4f7b1ba5",
+            "rank": 4,
+            "count": 7,
+            "urn": "urn:bbc:curie:asset:cad3fc8e-f2a5-7e4c-a652-f81d4f7b1ba5",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Yardım çalışanı: Suriye'de seks karşılığı yardım dağıtıldı",
+                "headline": "Yardım çalışanı: Suriye'de seks karşılığı yardım dağıtıldı"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-dunya-43203910",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-dunya-43203910",
+                "curie": "http://www.bbc.co.uk/asset/cad3fc8e-f2a5-7e4c-a652-f81d4f7b1ba5",
+                "assetId": "43203910"
+              },
+              "summary": "Suriye'nin güneyindeki yardım çalışmalarına katılan Danielle Spencer, Birleşmiş Milletler ve uluslararası yardım kuruluşlarında çalışan bazı erkeklerin, yardım karşılığında Suriyeli kadınlardan cinsel ilişki talep ettiğini söyledi.",
+              "timestamp": 1519729334000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05zhyqb",
+                "subType": "clip",
+                "format": "video",
+                "title": "Yardım çalışanı Suriye'de seks karşılığı yardımı anlattı",
+                "synopses": {
+                  "short": "Yardım çalışanı Suriye'de seks karşılığı yardımı anlattı"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05zhys9.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Yardım çalışanı Suriye'de seks karşılığı yardımı anlattı",
+                "versions": [
+                  {
+                    "versionId": "p05zhyqd",
+                    "types": ["Original"],
+                    "duration": 142,
+                    "durationISO8601": "PT2M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1519728944000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100186637",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11FC4/production/_100186637_p05zhys9.jpg",
+                "path": "/cpsprodpb/11FC4/production/_100186637_p05zhys9.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Danielle Spencer",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-dunya-43203910",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dbb69fbb-3f35-c243-a405-5b84034aa2b7",
+            "rank": 5,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:dbb69fbb-3f35-c243-a405-5b84034aa2b7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "1976 yılında İstanbul, İzmir, Pamukkale, Efes ve Kapadokya",
+                "headline": "1976 yılında İstanbul, İzmir, Pamukkale, Efes ve Kapadokya"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-turkiye-44974959",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-44974959",
+                "curie": "http://www.bbc.co.uk/asset/dbb69fbb-3f35-c243-a405-5b84034aa2b7",
+                "assetId": "44974959"
+              },
+              "summary": "BBC Arşivlerinde Türkiye'de bu hafta, BBC'nin \"Blue Peter\" programının 1976 yılında İstanbul ile ilgili hazırladığı özel gezi paketini yayımlıyoruz. 1976'daki yayında İstanbul, İzmir, Pamukkale, Efes ve Kapadokya'dan görüntüler yer alıyor.",
+              "timestamp": 1532667549000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06ftc6k",
+                "subType": "clip",
+                "format": "video",
+                "title": "1976 yılında İstanbul, İzmir, Pamukkale, Efes ve Kapadokya",
+                "synopses": {
+                  "short": "1976 yılında İstanbul, İzmir, Pamukkale, Efes ve Kapadokya"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06ftc7p.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "1976 yılında İstanbul, İzmir, Pamukkale, Efes ve Kapadokya",
+                "versions": [
+                  {
+                    "versionId": "p06ftc6m",
+                    "types": ["Original"],
+                    "duration": 1388,
+                    "durationISO8601": "PT23M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1532645599000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "102710411",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/2C89/production/_102710411_p06ftc7p.jpg",
+                "path": "/cpsprodpb/2C89/production/_102710411_p06ftc7p.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "İzmir",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-44974959",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5b56021a-801e-11e2-8605-7520a79c3f60",
+            "rank": 6,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:5b56021a-801e-11e2-8605-7520a79c3f60",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dünya Gündemi: Haftaya bakış",
+                "headline": "Dünya Gündemi: Haftaya bakış"
+              },
+              "locators": {
+                "assetUri": "/turkce/multimedya/2010/10/000001_dunya_gundemi_sat",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2010/10/000001_dunya_gundemi_sat",
+                "curie": "http://www.bbc.co.uk/asset/5b56021a-801e-11e2-8605-7520a79c3f60"
+              },
+              "summary": "BBC Türkçe Servisi'nin haftanın haberlerinden derlediği Dünya Gündemi programı Cumartesi günleri TSİ 19:30'da NTV'de yayınlanıyor. Dünya Gündemi'ni hafta içinde de her gün aynı saatte izleyebilirsiniz.",
+              "timestamp": 1287084524000,
+              "language": "tr",
+              "media": {
+                "id": "6954335",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "6954335",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2009/07/21/090721151622_world_agenda_512.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2009/07/21/090721151622_world_agenda_512.jpg",
+                  "height": 288,
+                  "width": 512,
+                  "altText": "Dünya Gündemi",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://wsdownload.bbc.co.uk/turkce/meta/tx/flash/dunya_gundemi_sat.xml",
+                "playlist": [
+                  {
+                    "format": "x-flv",
+                    "bitrate": "0",
+                    "url": "rtmpt://cp48502.edgefcs.net/ondemand/48502/turkce/flash/2010/10/turkce_trail_40_16x9_bb.flv"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e383",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/02/25/130225160808_dunya_gundemi_640x360_none_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2013/02/25/130225160808_dunya_gundemi_640x360_none_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "",
+                "copyrightHolder": "none",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/multimedya/2010/10/000001_dunya_gundemi_sat",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1d65df5c-4a65-11e5-832a-bb8d3db9bd6e",
+            "rank": 7,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:1d65df5c-4a65-11e5-832a-bb8d3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Kadın Viagrası' etkisini nasıl gösteriyor?",
+                "headline": "'Kadın Viagrası' etkisini nasıl gösteriyor?"
+              },
+              "locators": {
+                "assetUri": "/turkce/multimedya/2015/08/150820_vid_kadin_viagrasi",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2015/08/150820_vid_kadin_viagrasi",
+                "curie": "http://www.bbc.co.uk/asset/1d65df5c-4a65-11e5-832a-bb8d3db9bd6e",
+                "assetId": "40196862"
+              },
+              "summary": "ABD Gıda ve İlaç Dairesi (FDA), 'Kadın Viagrası' ya da 'Pembe Viagra' olarak da bilinen ve kadın libidosunu artırmaya yardımcı olduğu belirtilen ilacın satışına izin verdi. Peki ilacın erkekler için üretilmiş olan Viagra ile benzerliği var mı? ",
+              "timestamp": 1440423555000,
+              "language": "tr",
+              "media": {
+                "id": "40196862",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "40196862",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/24/150824133237_kadin_viagrasi_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/08/24/150824133237_kadin_viagrasi_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/turkce/meta/dps/2015/08/emp/150820_vid_kadin_viagrasi.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2015/08/turkish~fkadinviagra~f1428~f24~f8_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2015/08/turkish~fkadinviagra~f1428~f24~f8_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2015/08/turkish~fkadinviagra~f1428~f24~f8_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e271",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/24/150824133237_kadin_viagrasi_640x360_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/08/24/150824133237_kadin_viagrasi_640x360_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/multimedya/2015/08/150820_vid_kadin_viagrasi",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dbe83605-d0d8-2c48-ab1b-98c461c79fc4",
+            "rank": 8,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:dbe83605-d0d8-2c48-ab1b-98c461c79fc4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "1980'li yıllarda Ege kıyıları",
+                "headline": "1980'li yıllarda Ege kıyıları"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-turkiye-44459194",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-44459194",
+                "curie": "http://www.bbc.co.uk/asset/dbe83605-d0d8-2c48-ab1b-98c461c79fc4",
+                "assetId": "44459194"
+              },
+              "summary": "BBC Arşivlerinde Türkiye'de bu hafta, 1988 yılında BBC'de yayımlanan bir tatil programının Ege'deki tatil beldelerini tanıttığı bölümü var. Programda İngiliz turistler için Ege'deki Bodrum, Marmaris, Altınkum, İçmeler ve Kuşadası gibi yerler tanıtılıyor.",
+              "timestamp": 1531458956000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p06dkt3k",
+                "subType": "clip",
+                "format": "video",
+                "title": "1980'li yıllarda Ege kıyıları",
+                "synopses": {
+                  "short": "1980'li yıllarda Ege kıyıları"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06dkv1z.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "1980'li yıllarda Ege kıyıları",
+                "versions": [
+                  {
+                    "versionId": "p06dkt3m",
+                    "types": ["Original"],
+                    "duration": 643,
+                    "durationISO8601": "PT10M43S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1531408250000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "102476459",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/174EB/production/_102476459_p06dkv1z.jpg",
+                "path": "/cpsprodpb/174EB/production/_102476459_p06dkv1z.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Ege kıyıları",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-44459194",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "eb4207d5-8a54-7f40-a17a-bfb6db2de497",
+            "rank": 9,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:eb4207d5-8a54-7f40-a17a-bfb6db2de497",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mor Çatı'nın hikayesi",
+                "headline": "Mor Çatı'nın hikayesi"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-turkiye-43902672",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-43902672",
+                "curie": "http://www.bbc.co.uk/asset/eb4207d5-8a54-7f40-a17a-bfb6db2de497",
+                "assetId": "43902672"
+              },
+              "summary": "BBC'nin 1991'de yayımladığı \"Schofield'ın Avrupası\" programının Türkiye ile ilgili programında Mor Çatı'nın öyküsüne de yer veriliyor. Mor Çatı, Çankırı'da bir hakimin, \"Kadının sırtından sopayı, karnından sıpayı eksik etmemek gerekir\" diyerek bir kadının boşanma talebini reddetmi üzerine yükselen kadın hareketinin içinden 1990 yılında doğmuştu.",
+              "timestamp": 1524802270000,
+              "language": "tr",
+              "media": {
+                "id": "p065cx4d",
+                "subType": "clip",
+                "format": "video",
+                "title": "Mor Çatı'nın hikayesi",
+                "synopses": {
+                  "short": "Mor Çatı'nın hikayesi"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p065cy1n.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Mor Çatı'nın hikayesi",
+                "versions": [
+                  {
+                    "versionId": "p065cx4h",
+                    "types": ["Original"],
+                    "duration": 188,
+                    "durationISO8601": "PT3M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1524700762000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "101046059",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17358/production/_101046059_morcati.jpg",
+                "path": "/cpsprodpb/17358/production/_101046059_morcati.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Mor Çatı kurucularından Canan Arın",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-43902672",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "db875413-4a35-6445-b797-7863f94cb985",
+            "rank": 10,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:db875413-4a35-6445-b797-7863f94cb985",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Kadınlar için en tehlikeli 10 ülke",
+                "headline": "Kadınlar için en tehlikeli 10 ülke"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-dunya-44608916",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-dunya-44608916",
+                "curie": "http://www.bbc.co.uk/asset/db875413-4a35-6445-b797-7863f94cb985",
+                "assetId": "44608916"
+              },
+              "summary": "Thomson Reuters Vakfı'nın yaptığı ankete göre Hindistan dünyada kadınlar için en tehlikeli ülke. Cinsel tacize karşı kadınların #MeToo kampanyasını başlattığı ABD de listede.",
+              "timestamp": 1530099865000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06c6m9c",
+                "subType": "clip",
+                "format": "video",
+                "title": "Kadınlar için en tehlikeli 10 ülke",
+                "synopses": {
+                  "short": "Kadınlar için en tehlikeli 10 ülke"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06c6md3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Kadınlar için en tehlikeli 10 ülke",
+                "versions": [
+                  {
+                    "versionId": "p06c6m9f",
+                    "types": ["Original"],
+                    "duration": 107,
+                    "durationISO8601": "PT1M47S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1530096632000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "102201161",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/3EEE/production/_102201161_p06c6md3.jpg",
+                "path": "/cpsprodpb/3EEE/production/_102201161_p06c6md3.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Hint kadınlar",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-dunya-44608916",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ce81aea7-8d56-4170-ad30-79a6d87640a6",
+            "rank": 11,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:ce81aea7-8d56-4170-ad30-79a6d87640a6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Çin'in kamplarda tuttuğu Uygur Türkleri: 'Sistematik tecavüz ve işkence vardı'",
+                "headline": "Çin'in kamplarda tuttuğu Uygur Türkleri BBC'ye konuştu: 'Sistematik tecavüz ve işkence vardı'"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-turkiye-55922214",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-55922214",
+                "curie": "http://www.bbc.co.uk/asset/ce81aea7-8d56-4170-ad30-79a6d87640a6",
+                "assetId": "55922214"
+              },
+              "summary": "BBC'ye konuşan bazı eski tutuklular ve bekçiler, Sincan'daki kamplarda organize bir şekilde yürütülen kitlesel tecavüz, cinsel taciz ve işkence olduğunu, bunu kendilerinin de yaşadığını veya gördüğünü söylüyor. Çin, iddiaları reddediyor.",
+              "timestamp": 1612370709000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "tr",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+                "locator": "urn:bbc:cps:curie:asset:ce81aea7-8d56-4170-ad30-79a6d87640a6",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/770ec69a-dada-49ae-a833-ee00bd860912#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/06c730cd-79e2-4c05-9b16-b40e5bd53952#id"
+                  }
+                ],
+                "schemaVersion": "1.2.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingLabel": "Çin",
+                      "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+                      "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1814991/",
+                        "http://dbpedia.org/resource/China",
+                        "http://www.wikidata.org/entity/Q148"
+                      ],
+                      "thingEnglishLabel": "China",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/770ec69a-dada-49ae-a833-ee00bd860912#id",
+                      "thingLabel": "Orta Asya ve Kafkaslar",
+                      "thingUri": "http://www.bbc.co.uk/things/770ec69a-dada-49ae-a833-ee00bd860912#id",
+                      "thingId": "770ec69a-dada-49ae-a833-ee00bd860912",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/7729893/",
+                        "http://dbpedia.org/resource/Central_Asia",
+                        "http://www.wikidata.org/entity/Q27275"
+                      ],
+                      "thingEnglishLabel": "Central Asia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                      "thingLabel": "Kadın hakları",
+                      "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+                      "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Women%27s_rights",
+                        "http://www.wikidata.org/entity/Q223569"
+                      ],
+                      "thingEnglishLabel": "Women's rights",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
+                      "thingLabel": "İnsan Hakları",
+                      "thingUri": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
+                      "thingId": "8b04c2e8-5409-4e7d-9877-3ccaf04727af",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q8458",
+                        "http://dbpedia.org/resource/Human_rights"
+                      ],
+                      "thingEnglishLabel": "Human rights",
+                      "type": "about"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "tr",
+                      "type": "formats"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/06c730cd-79e2-4c05-9b16-b40e5bd53952#id",
+                      "type": "contributor"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p095xgl5",
+                "subType": "clip",
+                "format": "video",
+                "title": "Çin'deki kamplardan çıkan Uygurlar tecavüze uğradıklarını anlatıyor",
+                "synopses": {
+                  "short": "Çin'deki kamplardan çıkan Uygurlar tecavüze uğradıklarını anlatıyor"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p095xhb7.png",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Çin'deki kamplardan çıkan Uygurlar tecavüze uğradıklarını anlatıyor",
+                "versions": [
+                  {
+                    "versionId": "p095xgl7",
+                    "types": ["Original"],
+                    "duration": 275,
+                    "durationISO8601": "PT4M35S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1612357548000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "116792933",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8489/production/_116792933_p095xhb7.png",
+                "path": "/cpsprodpb/8489/production/_116792933_p095xhb7.png",
+                "height": 549,
+                "width": 976,
+                "altText": "uygurlar",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-55922214",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c7491f7c-62d0-45ad-880a-bb05c3ca4dbe",
+            "rank": 12,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:c7491f7c-62d0-45ad-880a-bb05c3ca4dbe",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Diyarbakır’ın Bağlar ilçesinde kentsel dönüşüm: 7 bin kişiyi etkileyecek proje için taraflar ne diyor?",
+                "headline": "Diyarbakır’ın Bağlar ilçesinde kentsel dönüşüm: 7 bin kişiyi etkileyecek proje için taraflar ne diyor?"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-turkiye-54620158",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-54620158",
+                "curie": "http://www.bbc.co.uk/asset/c7491f7c-62d0-45ad-880a-bb05c3ca4dbe",
+                "assetId": "54620158"
+              },
+              "summary": "Diyarbakır'ın gelir seviyesi en düşük ilçesi Bağlar'ın Kaynartepe Mahallesi, riskli bölge ilan edilerek kentsel dönüşüm kapsamına alındı. 60 yıllık tarihi olan ve daha çok göçle şekillenen bu ilçenin nüfusu, resmi rakamlara göre 396 binden fazla. BBC Türkçe'den Hatice Kamer, mahalle sakinleri ve konunun tarafları ile konuştu, endişeleri ve istekleri dinledi.",
+              "timestamp": 1603274987000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08vwcf6",
+                "subType": "clip",
+                "format": "video",
+                "title": "Bağlar’da kentsel dönüşüm: Diyarbakır’da 7000 kişiyi etkileyecek proje için taraflar ne diyor?",
+                "synopses": {
+                  "short": "Bağlar’da kentsel dönüşüm",
+                  "long": "Diyarbakır'ın merkez Bağlar ilçesi Kaynartepe Mahallesi sınırlarında yer alan 53 dönümlük alan, 25 Eylül tarihinde Resmi Gazete'de Cumhurbaşkanı kararıyla riskli bölge ilan edilerek kentsel dönüşüm kapsamına alındı.",
+                  "medium": "Bağlar’da kentsel dönüşüm: Diyarbakır’da 7000 kişiyi etkileyecek proje için taraflar ne diyor?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08vwwql.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Bağlar’da kentsel dönüşüm",
+                "versions": [
+                  {
+                    "versionId": "p08vww6h",
+                    "types": ["Editorial"],
+                    "duration": 243,
+                    "durationISO8601": "PT4M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1603267069000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "115013678",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1564F/production/_115013678_p08vwd1v.jpg",
+                "path": "/cpsprodpb/1564F/production/_115013678_p08vwd1v.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "Bağlar",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-54620158",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a35bf6f8-2f5a-f440-a737-247a87af032e",
+            "rank": 13,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:a35bf6f8-2f5a-f440-a737-247a87af032e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Einstein'ın Genel Görelilik Kuramı neden devrim niteliğindeydi?",
+                "headline": "Albert Einstein: Genel Görelilik Kuramı neden devrim niteliğindeydi?"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-48446515",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-48446515",
+                "curie": "http://www.bbc.co.uk/asset/a35bf6f8-2f5a-f440-a737-247a87af032e",
+                "assetId": "48446515"
+              },
+              "summary": "Yaşadığımız evrenle ilgili bildiğimiz hemen her şey, Alman bilim insanı Albert Einstein'ın 1905-1915 yıllarında geliştirdiği Genel Görelilik Kuramı ile değişti. Peki gezegenlerin yörüngede kalmasından kara deliklere, hatta her gün kullandığımız navigasyon cihazlarına kadar etki eden bu kuramı ne kadar biliyoruz?",
+              "timestamp": 1559144854000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07bnjbl",
+                "subType": "clip",
+                "format": "video",
+                "title": "Einstein'ın genel görelilik kuramı neden devrim niteliğindeydi?",
+                "synopses": {
+                  "short": "Einstein'ın genel görelilik kuramı neden devrim niteliğindeydi?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07bnkhb.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Einstein'ın genel görelilik kuramı neden devrim niteliğindeydi?",
+                "versions": [
+                  {
+                    "versionId": "p07bnjbq",
+                    "types": ["Original"],
+                    "duration": 237,
+                    "durationISO8601": "PT3M57S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1559142788000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "107149181",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/4712/production/_107149181_p07bnkhb.jpg",
+                "path": "/cpsprodpb/4712/production/_107149181_p07bnkhb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "grafik",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-48446515",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a25376f4-ebd7-11e3-bc2c-31b73db9bd6e",
+            "rank": 14,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:a25376f4-ebd7-11e3-bc2c-31b73db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Koalalar ağaçlara neden sarılıyor? ",
+                "headline": "Koalalar ağaçlara neden sarılıyor? "
+              },
+              "locators": {
+                "assetUri": "/turkce/multimedya/2014/06/140604_vid_koala_agac",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2014/06/140604_vid_koala_agac",
+                "curie": "http://www.bbc.co.uk/asset/a25376f4-ebd7-11e3-bc2c-31b73db9bd6e"
+              },
+              "summary": "Avustralya'da yapılan bir araştırma, koalaların ağaçlara sarılmalarının tek nedeninin 'tutunmak' olmadığını ortaya koydu. Koalalar, ağaçlara sarılarak vücut ısılarını da ayarlıyor. ",
+              "timestamp": 1401883077000,
+              "language": "tr",
+              "media": {
+                "id": "32435814",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "32435814",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/06/04/140604113338_koala_640x360_reuters_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/06/04/140604113338_koala_640x360_reuters_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/turkce/meta/dps/2014/06/emp/140604_vid_koala_agac.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2014/06/turkish~fkoala~f1241~f4~f6_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2014/06/turkish~fkoala~f1241~f4~f6_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2014/06/turkish~fkoala~f1241~f4~f6_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e216",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/06/04/140604113337_koala_112x63_reuters_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/06/04/140604113337_koala_112x63_reuters_nocredit.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/multimedya/2014/06/140604_vid_koala_agac",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a19fa8b3-4fc3-074d-b90d-92e170734066",
+            "rank": 15,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:a19fa8b3-4fc3-074d-b90d-92e170734066",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "45 yıl sonra internette ilk kez yayımlanan Türkiye'den Almanya'ya göç belgeseli",
+                "headline": "45 yıl sonra internette ilk kez yayımlanan Türkiye'den Almanya'ya göç belgeseli"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-turkiye-46309952",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-46309952",
+                "curie": "http://www.bbc.co.uk/asset/a19fa8b3-4fc3-074d-b90d-92e170734066",
+                "assetId": "46309952"
+              },
+              "summary": "BBC Arşivlerinde Türkiye programında bu hafta, BBC'nin 1973 yılında hazırladığı, Türkiye'den Almanya'ya işçi göçünü anlatan belgesel var. \"Mustafa: Misafir İşçi - No: 569716\" adlı belgesel ilk kez internet ortamında ve Türkçe altyazılı olarak yayımlanıyor.",
+              "timestamp": 1542991396000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06sl04j",
+                "subType": "clip",
+                "format": "video",
+                "title": "45 yıl sonra internette ilk kez yayımlanan Türkiye'den Almanya'ya göç belgeseli",
+                "synopses": {
+                  "short": "45 yıl sonra internette ilk kez yayımlanan Türkiye'den Almanya'ya göç belgeseli"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06sl08v.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "45 yıl sonra internette ilk kez yayımlanan Türkiye'den Almanya'ya göç belgeseli",
+                "versions": [
+                  {
+                    "versionId": "p06sl04n",
+                    "types": ["Original"],
+                    "duration": 2990,
+                    "durationISO8601": "PT49M50S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1542907621000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104415013",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/794B/production/_104415013_p06sl08v.jpg",
+                "path": "/cpsprodpb/794B/production/_104415013_p06sl08v.jpg",
+                "height": 261,
+                "width": 464,
+                "altText": "Almanya göç",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-46309952",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "60ae5b68-3b7e-11e5-acd7-90973db9bd6e",
+            "rank": 16,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:60ae5b68-3b7e-11e5-acd7-90973db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Atom bombasının Hiroşima'ya düştüğü an'",
+                "headline": "'Atom bombasının Hiroşima'ya düştüğü an'"
+              },
+              "locators": {
+                "assetUri": "/turkce/multimedya/2015/08/150805_vid_atom_bombasi_animasyon",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2015/08/150805_vid_atom_bombasi_animasyon",
+                "curie": "http://www.bbc.co.uk/asset/60ae5b68-3b7e-11e5-acd7-90973db9bd6e",
+                "assetId": "39946800"
+              },
+              "summary": "Dünya, insanlığın en acımasız silahlarından biriyle tam 70 yıl önce tanıştı. ABD'nin 6 Ağustos 1945'te Japonya'nın Hiroşima kentine attığı atom bombası 140 binden fazla kişiyi öldürdü. Hiroşima'daki saldırıyı yaşayan Şair Bun Hashizume o günü anlatıyor...",
+              "timestamp": 1438833797000,
+              "language": "tr",
+              "media": {
+                "id": "39946800",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "39946800",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/05/150805161143_hiroshima_animasyon_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/08/05/150805161143_hiroshima_animasyon_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/turkce/meta/dps/2015/08/emp/150805_vid_atom_bombasi_animasyon.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2015/08/turkish~fhirosimaani~f1646~f5~f8_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2015/08/turkish~fhirosimaani~f1646~f5~f8_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/turkce/dps/2015/08/turkish~fhirosimaani~f1646~f5~f8_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e276",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/08/05/150805161143_hiroshima_animasyon_640x360_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/08/05/150805161143_hiroshima_animasyon_640x360_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/multimedya/2015/08/150805_vid_atom_bombasi_animasyon",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "27897510-68a7-f047-958d-84ee00492fe9",
+            "rank": 17,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:27897510-68a7-f047-958d-84ee00492fe9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Yıl 1969: Maria Callas ve Pier Pasolini Türkiye'de",
+                "headline": "Pasolini'nin yönettiği, Maria Callas'ın başrolünde oynadığı Medea'nın hikayesi var"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-turkiye-42449261",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-42449261",
+                "curie": "http://www.bbc.co.uk/asset/27897510-68a7-f047-958d-84ee00492fe9",
+                "assetId": "42449261"
+              },
+              "summary": "BBC Arşivlerinde Türkiye'de bu hafta, 1969 yılında Türkiye'de çekilen, Pier Pasolini'nin yönettiği, efsanevi opera sanatçısı Maria Callas'ın başrolünde oynadığı Medea filminin hikayesi var.",
+              "timestamp": 1513917061000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05rrdwh",
+                "subType": "clip",
+                "format": "video",
+                "title": "Maria Callas ve Pier Pasolini Türkiye'de",
+                "synopses": {
+                  "short": "Pasolini'nin yönettiği, Maria Callas'ın başrolünde oynadığı Medea'nın hikayesi var."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05rrf6b.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Pasolini'nin yönettiği, Maria Callas'ın başrolünde oynadığı Medea'nın hikayesi var.",
+                "versions": [
+                  {
+                    "versionId": "p05rrdwm",
+                    "types": ["Original"],
+                    "duration": 1510,
+                    "durationISO8601": "PT25M10S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1513882103000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99322969",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17A9A/production/_99322969_maricallas.jpg",
+                "path": "/cpsprodpb/17A9A/production/_99322969_maricallas.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Maria Callas filmin çekimleri sırasında",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-42449261",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "08489155-47b7-514f-855e-7b547e47f734",
+            "rank": 18,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:08489155-47b7-514f-855e-7b547e47f734",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Türkiye'deki Suriyeliler: Gidenler ve kalanlar ne düşünüyor, onları istemeyenler ne diyor?",
+                "headline": "Türkiye'deki Suriyeliler: Gidenler ve kalanlar ne düşünüyor, onları istemeyenler ne diyor?"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-turkiye-46744287",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-46744287",
+                "curie": "http://www.bbc.co.uk/asset/08489155-47b7-514f-855e-7b547e47f734",
+                "assetId": "46744287"
+              },
+              "summary": "Türkiye'de son dönemde Suriyelilere tepkiler artı. Yılbaşı gecesi Taksim Meydanı’nda ÖSO bayrağıyla kutlama yapanların görüntülerinin sosyal medyaya yansıması üzerine #ÜlkemdeSuriyeliİstemiyorum Twitter’da en çok konuşulan başlıklar arasına girdi. Peki giden ve kalan Suriyeliler ne düşünüyor, onları istemeyenler ne diyor? İstanbul'dan Selin Girit'in haberi.",
+              "timestamp": 1546507162000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06x25qd",
+                "subType": "clip",
+                "format": "video",
+                "title": "Türkiye'deki Suriyeliler: Gidenler ve kalanlar ne düşünüyor, onları istemeyenler ne diyor?",
+                "synopses": {
+                  "short": "Türkiye'deki Suriyeliler: Gidenler ve kalanlar ne düşünüyor, onları istemeyenler ne diyor?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06x25sx.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Türkiye'deki Suriyeliler: Gidenler ve kalanlar ne düşünüyor, onları istemeyenler ne diyor?",
+                "versions": [
+                  {
+                    "versionId": "p06x25qg",
+                    "types": ["Original"],
+                    "duration": 752,
+                    "durationISO8601": "PT12M32S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1546495361000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105046048",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14860/production/_105046048_p06x25sx.jpg",
+                "path": "/cpsprodpb/14860/production/_105046048_p06x25sx.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Türkiye'deki Suriyeliler haberi",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-46744287",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fdda0c17-0a3c-d34b-8368-c651a9f44401",
+            "rank": 19,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:fdda0c17-0a3c-d34b-8368-c651a9f44401",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "BBC Arşivlerinde Türkiye: 2 çocuğun gözünden 1971'de İstanbul ve Bristol",
+                "headline": "BBC Arşivlerinde Türkiye: 2 çocuğun gözünden 1971'de İstanbul ve Bristol"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-turkiye-46229564",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-46229564",
+                "curie": "http://www.bbc.co.uk/asset/fdda0c17-0a3c-d34b-8368-c651a9f44401",
+                "assetId": "46229564"
+              },
+              "summary": "BBC Arşivlerinde Türkiye'de bu hafta 1971 yılında çekilmiş, biri İngiliz biri Türk 2 çocuğun gözünden İstanbul ve Bristol kentlerinin anlatıldığı TV programı var.",
+              "timestamp": 1542362538000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "Inspire me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06rwp46",
+                "subType": "clip",
+                "format": "video",
+                "title": "İki çocuğun gözünden 1971 yılında İstanbul ve Bristol",
+                "synopses": {
+                  "short": "İki çocuğun gözünden 1971 yılında İstanbul ve Bristol"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06rwplr.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "İki çocuğun gözünden 1971 yılında İstanbul ve Bristol",
+                "versions": [
+                  {
+                    "versionId": "p06rwp48",
+                    "types": ["Original"],
+                    "duration": 1439,
+                    "durationISO8601": "PT23M59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1542306625000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104240336",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F748/production/_104240336_ist1.jpg",
+                "path": "/cpsprodpb/F748/production/_104240336_ist1.jpg",
+                "height": 418,
+                "width": 744,
+                "altText": "İstanbul",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-46229564",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fc5487b3-dd08-5f4c-b3a6-5152d5591ae1",
+            "rank": 20,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:fc5487b3-dd08-5f4c-b3a6-5152d5591ae1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Yemek yiyerek bir milyon dolar kazanan YouTuber: Blove",
+                "headline": "Yemek yiyerek bir milyon dolar kazanan YouTuber: Blove"
+              },
+              "locators": {
+                "assetUri": "/turkce/haberler-dunya-49401220",
+                "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-dunya-49401220",
+                "curie": "http://www.bbc.co.uk/asset/fc5487b3-dd08-5f4c-b3a6-5152d5591ae1",
+                "assetId": "49401220"
+              },
+              "summary": "Kamera karşısında yemek yerken çektiği videolarla YouTube'da 2 milyondan fazla takipçi sayısına ulaşan Bethany Gaskin yıllık 1 milyon dolardan fazla kazanıyor. Sağlıksız beslenmeyi teşvik ettiği eleştirilerine ise \"Kaygı bozukluğu olanlara va yalnızlıktan şikayetçilere destek oluyorum\" karşılığını veriyor.",
+              "timestamp": 1566898442000,
+              "language": "tr",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07lq2tj",
+                "subType": "clip",
+                "format": "video",
+                "title": "YouTuber: Blove",
+                "synopses": {
+                  "short": "YouTuber: Blove"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lq3g3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "YouTuber: Blove",
+                "versions": [
+                  {
+                    "versionId": "p07lq2tq",
+                    "types": ["Original"],
+                    "duration": 116,
+                    "durationISO8601": "PT1M56S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1566897105000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "108504675",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E128/production/_108504675_p07lq3g3.jpg",
+                "path": "/cpsprodpb/E128/production/_108504675_p07lq3g3.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Bloveslife",
+                "copyrightHolder": "Bloveslife",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:turkce/haberler-dunya-49401220",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

@@ -1,104 +1,240 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "format": "audio",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/kyrgyz/meta/dps/junk/2015/03/emp/150330_map_test.emp.xml",
-        "id": "17692134",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:kyrgyz/multimedia/2015/03/150330_map_test",
+        "locators": {
+          "assetUri": "/kyrgyz/multimedia/2015/03/150330_map_test",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:3a722316-d6f3-11e4-b8fa-be05f7c8d5b8",
+          "assetId": "17692134",
+          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/multimedia/2015/03/150330_map_test",
+          "curie": "http://www.bbc.co.uk/asset/3a722316-d6f3-11e4-b8fa-be05f7c8d5b8"
+        },
+        "type": "MAP",
+        "createdBy": "kyrgyz",
+        "language": "ky",
+        "lastUpdated": 1665420080218,
+        "firstPublished": 1427730161000,
+        "lastPublished": 1427730161000,
+        "timestamp": 1427730161000,
+        "options": {
+          "includeComments": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": false,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17692134",
+          "contentId": "urn:bbc:topcat:curie:asset:3a722316-d6f3-11e4-b8fa-be05f7c8d5b8"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/kyrgyz",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "Жерүй алтын кенин иштетүүгө конкурстун биринчи айлампасы жыйынтыкталды. Документтерин тапшырган үч компаниянын баары экинчиси айлампага өттү. Көп чырга аралашып келген, Кыргызстандагы экинчи ири алтын кенин иштетчү компания май айында аныкталып калат деп күтүлүүдө.",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17692134",
+            "subType": "primary",
+            "format": "audio",
+            "image": {
+              "id": "17692134",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "dsds",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/kyrgyz/meta/dps/junk/2015/03/emp/150330_map_test.emp.xml",
+            "playlist": [
+              {
+                "format": "mp3",
+                "bitrate": "96000",
+                "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/junk/2015/03/radio_dummy_150330_map_test_au_bb.mp3"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "Жерүй алтын кенин иштетүүгө конкурстун биринчи айлампасы жыйынтыкталды. Документтерин тапшырган үч компаниянын баары экинчиси айлампага өттү. Көп чырга аралашып келген, Кыргызстандагы экинчи ири алтын кенин иштетчү компания май айында аныкталып калат деп күтүлүүдө.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Таластагы Жерүй алтын кенин иштетүү каалоосу менен Британиядан инвестор тапкан жергиликтүү “Кыргызалтын” жана Орусиянын “Всток-геолдобыча”, “Алдан золото ГРК” деген эки ишканасы кайрылган. Февралда башталган кабыл алуунун жыйынтыгы кечээ чыгарылып, үч компания тең экинчи айлампага ат салышууга киришти.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "Таластагы Жерүй алтын кенин иштетүү каалоосу менен Британиядан инвестор тапкан жергиликтүү “Кыргызалтын” жана Орусиянын “Всток-геолдобыча”, “Алдан золото ГРК” деген эки ишканасы кайрылган. Февралда башталган кабыл алуунун жыйынтыгы кечээ чыгарылып, үч компания тең экинчи айлампага ат салышууга киришти.",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "\"Сапар\": Биринчи дүйнөлүк согуштун 100 жылдыгы",
+          "headline": "\"Сапар\": Биринчи дүйнөлүк согуштун 100 жылдыгы"
+        },
+        "locators": {
+          "assetUri": "/kyrgyz/multimedia/2015/03/150330_map_test",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:3a722316-d6f3-11e4-b8fa-be05f7c8d5b8",
+          "assetId": "17692134",
+          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/multimedia/2015/03/150330_map_test",
+          "curie": "http://www.bbc.co.uk/asset/3a722316-d6f3-11e4-b8fa-be05f7c8d5b8"
+        },
+        "summary": "Жерүй алтын кенин иштетүүгө конкурстун биринчи айлампасы жыйынтыкталды. Документтерин тапшырган үч компаниянын баары экинчиси айлампага өттү.",
+        "timestamp": 1427730161000,
+        "language": "ky",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+          "taggings": []
+        },
+        "media": {
+          "id": "17692134",
+          "subType": "primary",
+          "format": "audio",
+          "image": {
+            "id": "17692134",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "dsds",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/kyrgyz/meta/dps/junk/2015/03/emp/150330_map_test.emp.xml",
+          "playlist": [
+            {
+              "format": "mp3",
+              "bitrate": "96000",
+              "url": "https://wsodprogrf.akamaized.net/kyrgyz/dps/junk/2015/03/radio_dummy_150330_map_test_au_bb.mp3"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e206",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/09/22/140922130100_112x63.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/09/22/140922130100_112x63.jpg",
+          "height": 63,
+          "width": 112,
+          "altText": "ds",
+          "copyrightHolder": "BBC World Service",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:kyrgyz/multimedia/2015/03/150330_map_test",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Мультимедиа",
+          "uri": "/kyrgyz/multimedia",
+          "urlIdentifier": "/kyrgyz/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCkyrgyz.com",
+          "uri": "/kyrgyz",
+          "urlIdentifier": "/kyrgyz",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17692134", "cps_asset_type": "map" },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "kyrgyz",
-    "firstPublished": 1427730161000,
-    "id": "urn:bbc:ares::asset:kyrgyz/multimedia/2015/03/150330_map_test",
-    "includeComments": false,
-    "language": "ky",
-    "lastPublished": 1427730161000,
-    "lastUpdated": 1582030793390,
-    "locators": {
-      "assetId": "17692134",
-      "assetUri": "/kyrgyz/multimedia/2015/03/150330_map_test",
-      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/multimedia/2015/03/150330_map_test",
-      "curie": "http://www.bbc.co.uk/asset/3a722316-d6f3-11e4-b8fa-be05f7c8d5b8"
     },
-    "options": {
-      "allowAdvertising": false,
-      "allowDateStamp": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1427730161000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "\"Сапар\": Биринчи дүйнөлүк согуштун 100 жылдыгы",
-      "shortHeadline": "\"Сапар\": Биринчи дүйнөлүк согуштун 100 жылдыгы"
-    },
-    "id": "urn:bbc:ares::asset:kyrgyz/multimedia/2015/03/150330_map_test",
-    "indexImage": {
-      "altText": "ds",
-      "copyrightHolder": "BBC World Service",
-      "height": 63,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/09/22/140922130100_112x63.jpg",
-      "id": "d5e206",
-      "path": "/amz/worldservice/test/assets/images/2014/09/22/140922130100_112x63.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 112
-    },
-    "language": "ky",
-    "locators": {
-      "assetId": "17692134",
-      "assetUri": "/kyrgyz/multimedia/2015/03/150330_map_test",
-      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/multimedia/2015/03/150330_map_test",
-      "curie": "http://www.bbc.co.uk/asset/3a722316-d6f3-11e4-b8fa-be05f7c8d5b8"
-    },
-    "media": {
-      "format": "audio",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/kyrgyz/meta/dps/junk/2015/03/emp/150330_map_test.emp.xml",
-      "id": "17692134",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": { "taggings": [] },
-    "summary": "Жерүй алтын кенин иштетүүгө конкурстун биринчи айлампасы жыйынтыкталды. Документтерин тапшырган үч компаниянын баары экинчиси айлампага өттү.",
-    "timestamp": 1427730161000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Мультимедиа",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/kyrgyz/multimedia"
-    },
-    "site": {
-      "name": "BBCkyrgyz.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/kyrgyz"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:27:58.059Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-03T23:53:00Z",
+        "totalRecords": 1,
+        "records": [
+          {
+            "id": "44bc555d-b357-7847-b7fa-bdec7c84e7bb",
+            "rank": 1,
+            "count": 4034,
+            "urn": "urn:bbc:curie:asset:44bc555d-b357-7847-b7fa-bdec7c84e7bb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле AV",
+                "headline": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле AV"
+              },
+              "locators": {
+                "assetUri": "/kyrgyz/kyrgyzstan-23095373",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:44bc555d-b357-7847-b7fa-bdec7c84e7bb",
+                "assetId": "23095373",
+                "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23095373",
+                "curie": "http://www.bbc.co.uk/asset/44bc555d-b357-7847-b7fa-bdec7c84e7bb"
+              },
+              "summary": "Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле AV",
+              "timestamp": 1480947048000,
+              "language": "ky",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
+                "taggings": []
+              },
+              "media": {
+                "id": "63501296",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "journalism_world_service_stream_01",
+                "duration": "PT0S",
+                "caption": "мамиле",
+                "image": {
+                  "id": "63501296",
+                  "subType": "thumbnail",
+                  "href": "http://b.files.bbci.co.uk/073C/test/_63525810_160602105814_kyrgyz_bbc_512x288_bbc_nocredit.jpg",
+                  "path": "/cpsdevpb/073C/test/_63525810_160602105814_kyrgyz_bbc_512x288_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "мамиле",
+                  "copyrightHolder": "BBC",
+                  "type": "image"
+                },
+                "embedding": false,
+                "available": true,
+                "live": true,
+                "type": "version"
+              },
+              "indexImage": {
+                "id": "63525811",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/2E4C/test/_63525811_160602105814_kyrgyz_bbc_512x288_bbc_nocredit.jpg",
+                "path": "/cpsdevpb/2E4C/test/_63525811_160602105814_kyrgyz_bbc_512x288_bbc_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "мамиле",
+                "caption": "мамиле",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23095373",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

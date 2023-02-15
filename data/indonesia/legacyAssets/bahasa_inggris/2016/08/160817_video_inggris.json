@@ -1,133 +1,2145 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-    "locators": {
-      "assetUri": "/indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-      "cpsUrn": "urn:bbc:content:assetUri:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-      "curie": "http://www.bbc.co.uk/asset/f426c328-64b6-11e6-8148-16b63db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "indonesia",
-    "language": "id",
-    "lastUpdated": 1553663515344,
-    "firstPublished": 1471465080,
-    "lastPublished": 1471465080,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "allowAdvertising": true,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "44902668" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "crosshead", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "44902668",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/indonesia/meta/dps/2016/08/emp/160817_video_inggris.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+        "locators": {
+          "assetUri": "/indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+          "curie": "http://www.bbc.co.uk/asset/f426c328-64b6-11e6-8148-16b63db9bd6e",
+          "assetId": "44902668"
+        },
+        "type": "MAP",
+        "createdBy": "indonesia",
+        "language": "id",
+        "lastUpdated": 1649941778328,
+        "firstPublished": 1471465080000,
+        "lastPublished": 1471465080000,
+        "timestamp": 1471465080000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "44902668",
+          "contentId": "urn:bbc:topcat:curie:asset:f426c328-64b6-11e6-8148-16b63db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "crosshead", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/indonesia",
+        "mediaType": "video"
       },
-      {
-        "text": "Transcript:",
-        "markupType": "plain_text",
-        "type": "crosshead"
+      "content": {
+        "blocks": [
+          {
+            "id": "44902668",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "44902668",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "Jason Kenny dan Laura Trott ",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/indonesia/meta/dps/2016/08/emp/160817_video_inggris.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/indonesia/dps/2016/08/inggris_160817_video_inggris_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/indonesia/dps/2016/08/inggris_160817_video_inggris_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/indonesia/dps/2016/08/inggris_160817_video_inggris_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "Transcript:",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "text": "British couple ride into Olympic history British cycling's Olympic golden couple Jason Kenny and Laura Trott have ridden into the record books.They've now taken their collective gold <bold>medal tally</bold> to ten, winning five in Rio. Also on Tuesday 19-year-old Simone Biles became only the fourth competitor to win four gymnastic gold medals. She won the women's floor final.",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Scientists discover 400-year-old shark  The Greenland shark lives in the icy Arctic waters and <bold>feeds on</bold> fish and seals. But until now no one knew exactly how long they live. Researchers have found one that could be 400 years old, making it the oldest vertebrate animal.",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Pigeon race champion banned for life A racing pigeon champion has been banned for life from the sport, after claims he admitted <bold>cheating</bold> to win a major international race. Eamon Kelly, who lives in Oxfordshire, is accused of not sending the pigeons to the start line in France – instead, hiding the birds in the loft of his home. Now the sports chairman in the county wants other big-race results to be investigated.",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "Words and definitions:",
+            "markupType": "plain_text",
+            "type": "crosshead"
+          },
+          {
+            "text": "<bold>medal tally</bold>: jumlah medali yang diraih",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold>feeds on</bold>: makan, mengkonsumsi (khususnya untuk satwa) ",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<bold>cheating</bold>: melanggar peraturan pertandingan",
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          }
+        ]
       },
-      {
-        "text": "British couple ride into Olympic history British cycling's Olympic golden couple Jason Kenny and Laura Trott have ridden into the record books.They've now taken their collective gold <bold>medal tally</bold> to ten, winning five in Rio. Also on Tuesday 19-year-old Simone Biles became only the fourth competitor to win four gymnastic gold medals. She won the women's floor final.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "British couple ride into Olympic history",
+          "headline": "British couple ride into Olympic history"
+        },
+        "locators": {
+          "assetUri": "/indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+          "curie": "http://www.bbc.co.uk/asset/f426c328-64b6-11e6-8148-16b63db9bd6e",
+          "assetId": "44902668"
+        },
+        "summary": "British cycling's Olympic golden couple Jason Kenny and Laura Trott have ridden into the record books.",
+        "timestamp": 1471465080000,
+        "language": "id",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+          "taggings": []
+        },
+        "media": {
+          "id": "44902668",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "44902668",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "Jason Kenny dan Laura Trott ",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/indonesia/meta/dps/2016/08/emp/160817_video_inggris.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/indonesia/dps/2016/08/inggris_160817_video_inggris_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/indonesia/dps/2016/08/inggris_160817_video_inggris_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/indonesia/dps/2016/08/inggris_160817_video_inggris_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e276",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "Jason Kenny dan Laura Trott ",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
+        "type": "cps"
       },
-      {
-        "text": "Scientists discover 400-year-old shark  The Greenland shark lives in the icy Arctic waters and <bold>feeds on</bold> fish and seals. But until now no one knew exactly how long they live. Researchers have found one that could be 400 years old, making it the oldest vertebrate animal.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Pigeon race champion banned for life A racing pigeon champion has been banned for life from the sport, after claims he admitted <bold>cheating</bold> to win a major international race. Eamon Kelly, who lives in Oxfordshire, is accused of not sending the pigeons to the start line in France – instead, hiding the birds in the loft of his home. Now the sports chairman in the county wants other big-race results to be investigated.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "Words and definitions:",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "<bold>medal tally</bold>: jumlah medali yang diraih",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>feeds on</bold>: makan, mengkonsumsi (khususnya untuk satwa) ",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold>cheating</bold>: melanggar peraturan pertandingan",
-        "markupType": "candy_xml",
-        "type": "paragraph"
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Bahasa Inggris",
+          "uri": "/indonesia/bahasa_inggris",
+          "urlIdentifier": "/indonesia/bahasa_inggris",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCIndonesia.com",
+          "uri": "/indonesia",
+          "urlIdentifier": "/indonesia",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "British couple ride into Olympic history",
-      "headline": "British couple ride into Olympic history"
     },
-    "locators": {
-      "assetUri": "/indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-      "cpsUrn": "urn:bbc:content:assetUri:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-      "curie": "http://www.bbc.co.uk/asset/f426c328-64b6-11e6-8148-16b63db9bd6e"
-    },
-    "summary": "British cycling's Olympic golden couple Jason Kenny and Laura Trott have ridden into the record books.",
-    "timestamp": 1553663515344,
-    "passport": {},
-    "media": {
-      "id": "44902668",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/indonesia/meta/dps/2016/08/emp/160817_video_inggris.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e276",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2016/08/17/160817201647_jason_kenny_and_laura_trott__640x360_bbc_nocredit.jpg",
-      "height": 360,
-      "width": 640,
-      "altText": "Jason Kenny dan Laura Trott ",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:indonesia/bahasa_inggris/2016/08/160817_video_inggris",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Bahasa Inggris",
-      "uri": "/indonesia/bahasa_inggris",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCIndonesia.com",
-      "uri": "/indonesia",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:56:35.692Z",
+        "lastRecordTimeStamp": "2023-02-15T09:54:00Z",
+        "firstRecordTimeStamp": "2023-02-15T07:54:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "7cc1ddbc-04b1-486c-8284-1f2743394564",
+            "rank": 1,
+            "count": 12,
+            "urn": "urn:bbc:curie:asset:7cc1ddbc-04b1-486c-8284-1f2743394564",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Gempa Turki: Penyelamatan balita yang terjebak reruntuhan - 'Kamu hebat Muhammed'",
+                "headline": "Gempa Turki: Penyelamatan balita yang terjebak reruntuhan - 'Kamu hebat Muhammed'"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-64581112",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:7cc1ddbc-04b1-486c-8284-1f2743394564",
+                "assetId": "64581112",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-64581112",
+                "curie": "http://www.bbc.co.uk/asset/7cc1ddbc-04b1-486c-8284-1f2743394564"
+              },
+              "summary": "Tim penyelamat menggunakan tutup botol untuk memberi minum seorang anak kecil, bernama Muhammed, yang bertahan hidup selama 45 jam di balik reruntuhan bangunan, akibat gempa Turki.",
+              "timestamp": 1675942238000,
+              "language": "id",
+              "passport": {
+                "language": "id",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "locator": "urn:bbc:cps:curie:asset:7cc1ddbc-04b1-486c-8284-1f2743394564",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/e5309204-528f-46a9-a78f-ca792f8515d8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/9350fcb3-b8d0-4365-ab1d-542f9b4e103c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/e5309204-528f-46a9-a78f-ca792f8515d8#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "id",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingLabel": "Suriah",
+                      "thingUri": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingId": "28b0a95e-89d3-4fdf-bad0-8565eb549233",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/163843/"],
+                      "thingEnglishLabel": "Syria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "Gempa bumi",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/9350fcb3-b8d0-4365-ab1d-542f9b4e103c#id",
+                      "thingLabel": "Gempa Turki-Suriah 2023",
+                      "thingUri": "http://www.bbc.co.uk/things/9350fcb3-b8d0-4365-ab1d-542f9b4e103c#id",
+                      "thingId": "9350fcb3-b8d0-4365-ab1d-542f9b4e103c",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q116691303"
+                      ],
+                      "thingEnglishLabel": "Turkey–Syria earthquakes 2023",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "Turki",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2063v",
+                "subType": "clip",
+                "format": "video",
+                "title": "Gempa Turki: Anak kecil yang bertahan hidup 45 jam di balik reruntuhan bangunan",
+                "synopses": {
+                  "short": "Muhammed diselamatkan usai terjebak selama 45 jam di balik reruntuhan, akibat gempa Turki.",
+                  "long": "Tim penyelamat menggunakan tutup botol untuk memberi minum seorang anak kecil, bernama Muhammed, yang bertahan hidup selama 45 jam di balik reruntuhan bangunan, akibat gempa Turki, pada Senin (6/2).\n\nEvakuasi korban gempa terus dilakukan, tapi tim penyelamat dan ribuan korban yang masih tertimbun reruntuhan, akan berhadapan dengan kendala cuaca buruk. Suhu udara di sekitar lokasi gempa diperkirakan akan turun hingga 0°C pada malam hari.",
+                  "medium": "Tim penyelamat menggunakan tutup botol untuk memberi minum seorang anak kecil, bernama Muhammed, yang bertahan hidup selama 45 jam di balik reruntuhan bangunan, akibat gempa Turki."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f206k6.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Muhammed diselamatkan usai terjebak selama 45 jam di balik reruntuhan, akibat gempa Turki.",
+                "versions": [
+                  {
+                    "versionId": "p0f2063z",
+                    "types": ["Original"],
+                    "duration": 119,
+                    "durationISO8601": "PT1M59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675932395000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128575863",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8FF9/production/_128575863_p0f206k6.jpg",
+                "path": "/cpsprodpb/8FF9/production/_128575863_p0f206k6.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Turkey",
+                "copyrightHolder": "Reuters",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-64581112",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "32e56f0e-e8fd-5c4c-8f05-006ca5c06c96",
+            "rank": 2,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:32e56f0e-e8fd-5c4c-8f05-006ca5c06c96",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Formulir A5 untuk pemilu, mudah atau susah?",
+                "headline": "Formulir A5 untuk pemilu, mudah atau susah?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-47440001",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-47440001",
+                "curie": "http://www.bbc.co.uk/asset/32e56f0e-e8fd-5c4c-8f05-006ca5c06c96",
+                "assetId": "47440001"
+              },
+              "summary": "Pemilih yang tidak bisa mencoblos di TPS asal dan ingin menggunakan hak pilihnya di tempat lain, wajib mengajukan formulir A5 sebagai surat pengantar untuk Pemilu 17 April 2019.",
+              "timestamp": 1551698726000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p072j3p1",
+                "subType": "clip",
+                "format": "video",
+                "title": "Membuat formulir A5 untuk pemilu 2019, mudah atau susah?",
+                "synopses": {
+                  "short": "Bagaimana prosedur pengajuan formulir A5 untuk pemilu 2019? Berikut video penjelasannya.",
+                  "long": "Pemilih yang tidak bisa mencoblos di TPS asal dan ingin menggunakan hak pilihnya di tempat lain, wajib mengajukan formulir A5 sebagai surat pengantar untuk Pemilu 17 April 2019. \n\nWarga dapat mengurus pembuatan surat A5 di kantor KPU Daerah yang dekat dengan domisili rumah atau kantor. Syaratnya dengan membawa bukti telah terdaftar dalam daftar pemilih tetap (DPT), foto copy kartu tanda penduduk elektronik dan kartu keluarga.\n\nRumitkah proses pengajuan formulir A5 ini? BBC News Indonesia menyambangi langsung KPUD Jakarta Selatan untuk mencoba membuat formulir ini dan menemui beberapa warga perantau yang tengah melakukan proses yang sama.",
+                  "medium": "Pemilih yang tidak bisa mencoblos di TPS asal dan ingin menggunakan hak pilihnya di tempat lain, wajib mengajukan formulir A5 sebagai surat pengantar untuk Pemilu 17 April 2019."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p072j4qb.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Formulir A5 untuk Pemilu 2019, bagaimana prosedur pengajuannya?",
+                "versions": [
+                  {
+                    "versionId": "p072j3p3",
+                    "types": ["Original"],
+                    "duration": 168,
+                    "durationISO8601": "PT2M48S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1551689196000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105880516",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/F044/production/_105880516_p072j4qb.jpg",
+                "path": "/cpsprodpb/F044/production/_105880516_p072j4qb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-47440001",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2849fb03-dedd-134e-9eb3-705d6d7bb448",
+            "rank": 3,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:2849fb03-dedd-134e-9eb3-705d6d7bb448",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "TKW Indonesia mengalami penyerangan seksual di Taiwan",
+                "headline": "TKW Indonesia di Taiwan: 'Saya diperkosa lima kali seminggu'"
+              },
+              "locators": {
+                "assetUri": "/indonesia/majalah-38714819",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/majalah-38714819",
+                "curie": "http://www.bbc.co.uk/asset/2849fb03-dedd-134e-9eb3-705d6d7bb448",
+                "assetId": "38714819"
+              },
+              "summary": "Setiap tahun, lebih dari 100 kasus penyerangan seksual terhadap pekerja migran dilaporkan di Taiwan. TKW Indonesia turut menjadi korban.",
+              "timestamp": 1485141968000,
+              "language": "id",
+              "media": {
+                "id": "p04qf0p6",
+                "subType": "clip",
+                "format": "video",
+                "title": "Rahasia kelam seorang pekerja migran Indonesia di Taiwan",
+                "synopses": {
+                  "short": "Kisah pekerja asal Indonesia di Taiwan yang mengalami penyerangan seksual.",
+                  "medium": "Setiap tahun, lebih dari 100 kasus penyerangan seksual terhadap pekerja migran yang dilaporkan di Taiwan.",
+                  "long": "Setiap tahun, lebih dari 100 kasus penyerangan seksual terhadap pekerja migran yang dilaporkan di Taiwan. Inilah kisah yang dituturkan Ery (bukan nama sebenarnya), seorang pekerja asal Indonesia saat bekerja di Taiwan."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04qf0r4.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Kisah pekerja asal Indonesia di Taiwan yang mengalami penyerangan seksual.",
+                "versions": [
+                  {
+                    "versionId": "p04qf0p8",
+                    "types": ["Original"],
+                    "duration": 238,
+                    "durationISO8601": "PT3M58S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1485130041000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "93768366",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10352/production/_93768366_p04qf0r4.jpg",
+                "path": "/cpsprodpb/10352/production/_93768366_p04qf0r4.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Taiwan",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/majalah-38714819",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e69343ca-6387-3d4c-ba85-281d8c397319",
+            "rank": 4,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:e69343ca-6387-3d4c-ba85-281d8c397319",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "'Ancaman pembunuhan selalu ada', kisah perakit bom yang 'mendakwahkan' deradikalisasi",
+                "headline": "Perang kelompok yang mendakwahkan 'deradikalisasi' dan menyuarakan 'radikalisasi': Cerita perakit bom yang menghadapi ancaman pembunuhan"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-52851576",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-52851576",
+                "curie": "http://www.bbc.co.uk/asset/e69343ca-6387-3d4c-ba85-281d8c397319",
+                "assetId": "52851576"
+              },
+              "summary": "Ali Fauzi Manzi, adik pelaku Bom Bali 1, mengatakan dalam perjalanannya dari perakit bom ulung menjadi pihak yang ia sebut \"mendakwahkan deradikalisasi\", ia selalu menghadapi berbagai ancaman, termasuk pembunuhan.",
+              "timestamp": 1590818679000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08fjmbs",
+                "subType": "clip",
+                "format": "video",
+                "title": "Ali Fauzi",
+                "synopses": {
+                  "short": "Ali Fauzi",
+                  "long": "Ali Fauzi",
+                  "medium": "Ali Fauzi"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08fjmqj.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Ali Fauzi",
+                "versions": [
+                  {
+                    "versionId": "p08fjmbv",
+                    "types": ["Original"],
+                    "duration": 457,
+                    "durationISO8601": "PT7M37S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1590754188000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "112555486",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10B67/production/_112555486_p08fjmqj.jpg",
+                "path": "/cpsprodpb/10B67/production/_112555486_p08fjmqj.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Ali Fauzi",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-52851576",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b41b7083-f17a-a34b-b336-50e601056646",
+            "rank": 5,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:b41b7083-f17a-a34b-b336-50e601056646",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Manokwari rusuh : 'Kami orang Papua dikatakan sebagai monyet'",
+                "headline": "Manokwari rusuh : 'Kami orang Papua dikatakan sebagai monyet'"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-49399008",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-49399008",
+                "curie": "http://www.bbc.co.uk/asset/b41b7083-f17a-a34b-b336-50e601056646",
+                "assetId": "49399008"
+              },
+              "summary": "Pengunjuk rasa dalam protes di Manokwari, Papua Barat menyatakan alasan mereka turun ke jalan, aksi yang berakhir rusuh, karena antara lain pernyataan negatif, Kami orang Papua dikatakan sebagai monyet.\"",
+              "timestamp": 1566226193000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07l1pq7",
+                "subType": "clip",
+                "format": "video",
+                "title": "Kerusuhan Manokwari : Apa yang sebenarnya terjadi?",
+                "synopses": {
+                  "short": "Kerusuhan Manokwari : Apa yang sebenarnya terjadi?",
+                  "long": "Massa membakar Gedung DPRD Papua Barat dan sebuah gedung penjualan mobil di Kota Manokwari, Senin (19/08) pagi, menyusul unjuk rasa memprotes tindakan kekerasan aparat kepolisian atas demo mahasiswa Papua di sejumlah kota di Jawa dan tempat lainnya.\n\nKapolri Jenderal Tito Karnavian mengakui mobilisasi massa di Manokwari dan Jayapura dipicu dari kasus penangkapan mahasiswa Papua di Malang dan Surabaya, Sabtu (17/08) lalu.\n\nSelain di Manokwari dan Jayapura, laporan-laporan media menyebutkan bahwa aksi unjuk rasa juga digelar oleh sekompok orang di Kota Merauke, Provinsi Papua dan Kota Sorong, Provinsi Papua Barat.\n\nBeberapa kendaraan, termasuk kendaraan milik kepolisian dilaporkan dibakar sejumlah orang, di area sekitar Bandara Deo Sorong. Sejumlah bagian bandara pun dikabarkan dirusak oleh massa.\n\nNamun, pada Senin sore, situasi keamanan di Manokwari dilaporkan berangsur kondusif, meskipun aparat keamanan masih melakukan penjagaan di sejumlah titik.\n\nSejumlah pejabat Jawa Timur, termasuk Gubernur Khofifah Indar Parawansa meminta maaf terkait insiden tersebut.\n\n\"Kami telepon gubernur Papua, mohon maaf. Sama sekali itu bukan suara Jatim. Harus bedakan letupan bersifat personal dengan apa yang menjadi komiten Jatim,\" kata Khofifah.",
+                  "medium": "Kerusuhan pecah di Manokwari, Papua Barat, pada Senin (19/08) pagi menyusul unjuk rasa memprotes tindak kekerasan aparat terhadap mahasiswa Papua di Surabaya dan Malang."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07l1r06.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Kerusuhan Manokwari : Apa yang sebenarnya terjadi?",
+                "versions": [
+                  {
+                    "versionId": "p07l1pqc",
+                    "types": ["Original"],
+                    "duration": 228,
+                    "durationISO8601": "PT3M48S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1566221460000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "108368081",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/46A6/production/_108368081_p07l1r06.jpg",
+                "path": "/cpsprodpb/46A6/production/_108368081_p07l1r06.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Kerusuhan Manokwari",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-49399008",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8e32495c-82d5-11e5-81d4-b9e23db9bd6e",
+            "rank": 6,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:8e32495c-82d5-11e5-81d4-b9e23db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Ketika anjing dan manusia menari satu panggung ",
+                "headline": "Ketika anjing dan manusia menari satu panggung "
+              },
+              "locators": {
+                "assetUri": "/indonesia/multimedia/2015/11/151104_video_kompetisi_tari_anjing",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/multimedia/2015/11/151104_video_kompetisi_tari_anjing",
+                "curie": "http://www.bbc.co.uk/asset/8e32495c-82d5-11e5-81d4-b9e23db9bd6e",
+                "assetId": "41178489"
+              },
+              "summary": "Kompetisi internasional anjing menari digelar di Jerman dan Alex Weber, penyelenggara acara, menjelaskan bagaimana kompetisi ini berlangsung.",
+              "timestamp": 1446630365000,
+              "language": "id",
+              "media": {
+                "id": "41178489",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "41178489",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/04/151104093333_anjing_kompetisi_menari_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/11/04/151104093333_anjing_kompetisi_menari_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/indonesia/meta/dps/2015/11/emp/151104_video_kompetisi_tari_anjing.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/indonesia/dps/2015/11/cfguguk_151104_video_kompetisi_tari_anjing_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/indonesia/dps/2015/11/cfguguk_151104_video_kompetisi_tari_anjing_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/indonesia/dps/2015/11/cfguguk_151104_video_kompetisi_tari_anjing_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e284",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/04/151104093333_anjing_kompetisi_menari_640x360_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/11/04/151104093333_anjing_kompetisi_menari_640x360_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Video, anjing, kompetisi, menari, dansa, jerman",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/multimedia/2015/11/151104_video_kompetisi_tari_anjing",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "870e66f9-50e3-774d-a8b0-c4a11a091bfd",
+            "rank": 7,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:870e66f9-50e3-774d-a8b0-c4a11a091bfd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Belajar bahasa Wakanda ala Black Panther",
+                "headline": "Belajar bahasa Wakanda ala Black Panther"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-43222115",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-43222115",
+                "curie": "http://www.bbc.co.uk/asset/870e66f9-50e3-774d-a8b0-c4a11a091bfd",
+                "assetId": "43222115"
+              },
+              "summary": "Ingin mengobrol dengan Black Panther? Belajar dulu bahasa Wakanda. Simak di video ini.",
+              "timestamp": 1519791453000,
+              "language": "id",
+              "media": {
+                "id": "p05zls9v",
+                "subType": "clip",
+                "format": "video",
+                "title": "Belajar bahasa Wakanda ala Black Panther",
+                "synopses": {
+                  "short": "Belajar bahasa Wakanda ala Black Panther",
+                  "long": "Film terbaru Marvel, Black Panther, mendulang banyak pujian. Film pahlawan super tersebut sukses merekam potret kemiskinan, pergulatan politik, sekaligus ragam budaya di Benua Afrika, melalui sebuah negara fiksi, Wakanda.\n\nWakanda memang hanya khayalan, namun bahasa yang mereka gunakan di film itu, sungguh ada. Mereka menggunakan bahasa Xhosa, salah satu bahasa suku Bantu di Afrika Selatan. \n\nXhosa masih digunakan oleh lebih dari 8,2 juta orang di Afrika Selatan dan bahasa tersebut terdengar unik karena memiliki konsonan klik di dalamnya. Penasaran dan ingin belajar? Simak di video ini.",
+                  "medium": "Ingin mengobrol dengan Black Panther? Belajar dulu bahasa Wakanda. Simak di video ini."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05zlsq1.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Belajar bahasa Wakanda ala Black Panther",
+                "versions": [
+                  {
+                    "versionId": "p05zls9x",
+                    "types": ["Original"],
+                    "duration": 115,
+                    "durationISO8601": "PT1M55S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1519790951000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100209871",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/45E2/production/_100209871_p05zlsq1.jpg",
+                "path": "/cpsprodpb/45E2/production/_100209871_p05zlsq1.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #2",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-43222115",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "50e0ad9a-f7ed-11e5-98f4-03a53db9bd6e",
+            "rank": 8,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:50e0ad9a-f7ed-11e5-98f4-03a53db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Bagaimana upaya konservasi terumbu karang di Pulau Pramuka?",
+                "headline": "Bagaimana upaya konservasi terumbu karang di Pulau Pramuka?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/multimedia/2016/04/160401_audio_terumbu_karang",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/multimedia/2016/04/160401_audio_terumbu_karang",
+                "curie": "http://www.bbc.co.uk/asset/50e0ad9a-f7ed-11e5-98f4-03a53db9bd6e",
+                "assetId": "43242910"
+              },
+              "summary": "Sejumlah masyarakat di Pulau Pramuka melestarikan terumbu karang di kawasan gosong pasir,  sebagian besar dari mereka sebelumnya adalah perusak karang.  Bagaimana mereka tergerak untuk merawat karang dan apa tantangannya?",
+              "timestamp": 1459504160000,
+              "language": "id",
+              "media": {
+                "id": "43242910",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "43242910",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/04/01/160401094145_010416_pramuka_terumbu_karang_apl2_640x360_bbcindonesia_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2016/04/01/160401094145_010416_pramuka_terumbu_karang_apl2_640x360_bbcindonesia_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Terumbu karang ",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/indonesia/meta/dps/2016/04/emp/160401_audio_terumbu_karang.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/indonesia/dps/2016/04/slterumbukarang_160401_audio_terumbu_karang_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e273",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/04/01/160401094145_010416_pramuka_terumbu_karang_apl2_640x360_bbcindonesia_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2016/04/01/160401094145_010416_pramuka_terumbu_karang_apl2_640x360_bbcindonesia_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Terumbu karang",
+                "copyrightHolder": "BBC Indonesia",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/multimedia/2016/04/160401_audio_terumbu_karang",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "3616eb70-ff0f-1348-bc27-aafc6ce33162",
+            "rank": 9,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:3616eb70-ff0f-1348-bc27-aafc6ce33162",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Investigasi BBC ungkap pelacuran gadis-gadis muda berkedok kawin kontrak oleh sejumlah ulama di Irak",
+                "headline": "Investigasi BBC ungkap pelacuran gadis-gadis muda berkedok kawin kontrak oleh sejumlah ulama di Irak"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-49957637",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-49957637",
+                "curie": "http://www.bbc.co.uk/asset/3616eb70-ff0f-1348-bc27-aafc6ce33162",
+                "assetId": "49957637"
+              },
+              "summary": "BBC melakukan investigasi selama 11 bulan untuk mengungkap praktik pelacuran gadis-gadis muda berkedok kawin kontrak yang dilakukan ulama Irak.",
+              "timestamp": 1570429005000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07q9nyq",
+                "subType": "clip",
+                "format": "video",
+                "title": "Investigasi BBC ungkap pelacuran gadis-gadis muda berkedok kawin kontrak di Irak",
+                "synopses": {
+                  "short": "Investigasi BBC ungkap pelacuran gadis-gadis muda berkedok kawin kontrak di Irak",
+                  "long": "BBC melakukan investigasi selama 11 bulan untuk mengungkap praktik pelacuran gadis-gadis muda berkedok kawin kontrak yang dilakukan ulama Irak. Praktik ini bahkan secara luas dilakukan di dua tempat paling suci di Irak, yakni Khadimiya di Baghdad dan Karbala.\n\nKawin kontrak, yang disebut nikah mut'ah dalam hukum Syiah, adalah praktik keagamaan kontroversial yang digunakan untuk melangsungkan pernikahan sementara, di mana sang perempuan mendapatkan bayaran.\n\nKini, hal tersebut disalahgunakan agar laki-laki dan perempuan dapat melakukan hubungan seks selama jangka waktu tertentu.\n\nTim BBC Arabic dan Inggris menemui para gadis dan perempuan yang pernah dieksploitasi secara seksual, sekaligus berbincang dengan para pria yang membayar para ulama untuk mencarikan mereka \"pengantin kontrak\". Tim BBC juga merekam pembicaraan dengan para ulama secara rahasia. \n\nTidak hanya itu, praktik tersebut juga menjadi legitimasi seks dengan anak di bawah umur. Syaratnya hanya satu: tidak boleh ada penetrasi. Selain itu, boleh dilakukan.\n\nSheikh Salawi, ulama dari Karbala, ditanya oleh reporter investigatif kami - dan direkam menggunakan kamera rahasia - apakah anak perempuan berusia 12 tahun diperbolehkan kawin kontrak? \"Ya, di atas sembilan tahun - tak ada masalah sama sekali. Menurut Syariah tak ada masalah,\" ujarnya.\n\nDi sisi lain, kawin kontrak dilarang oleh hukum negara Irak dan bahkan Ayatollah Sistani, tokoh Islam Syiah paling senior mengecam praktik tersebut dalam sebuah pernyataan resmi yang berbunyi: \"Jika praktik-praktik ini terjadi seperti yang Anda sampaikan, maka kami mengutuknya tanpa syarat. Kawin kontrak tidak diizinkan untuk dijadikan alat memperdagangkan seks yang meremehkan martabat dan kemanusiaan perempuan.\"",
+                  "medium": "BBC melakukan investigasi selama 11 bulan untuk mengungkap praktik pelacuran gadis-gadis muda berkedok kawin kontrak yang dilakukan ulama Irak."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07q9pky.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Investigasi BBC ungkap pelacuran gadis-gadis muda berkedok kawin kontrak di Irak",
+                "versions": [
+                  {
+                    "versionId": "p07q9nyv",
+                    "types": ["Original"],
+                    "duration": 230,
+                    "durationISO8601": "PT3M50S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1570427893000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109126669",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17996/production/_109126669_p07q9pky.jpg",
+                "path": "/cpsprodpb/17996/production/_109126669_p07q9pky.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-49957637",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1c99962c-8707-a146-a334-9c7eba327481",
+            "rank": 10,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:1c99962c-8707-a146-a334-9c7eba327481",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Sejarah 70 tahun konflik Iran-AS: Dari minyak, nuklir hingga pembunuhan Qasem Soleimani",
+                "headline": "Sejarah 70 tahun konflik Iran-AS: Dari minyak, nuklir hingga pembunuhan Qasem Soleimani"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-51006674",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-51006674",
+                "curie": "http://www.bbc.co.uk/asset/1c99962c-8707-a146-a334-9c7eba327481",
+                "assetId": "51006674"
+              },
+              "summary": "Hubungan antara Amerika Serikat dan Iran semakin meruncing setelah pemimpin militer Iran, Jenderal Qasem Soleimani, dibunuh tentara AS. Pemimpin Iran Ali Khameini bersumpah 'membalas dendam'.",
+              "timestamp": 1578305809000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07zm8y9",
+                "subType": "clip",
+                "format": "video",
+                "title": "Sejarah 70 tahun konflik Iran-AS: Dari minyak, nuklir hingga pembunuhan Qasem Soleimani",
+                "synopses": {
+                  "short": "Sejarah 70 tahun konflik Iran-AS: Dari minyak, nuklir hingga pembunuhan Qasem Soleimani",
+                  "long": "Sejarah 70 tahun konflik Iran-AS: Dari minyak, nuklir hingga pembunuhan Qasem Soleimani",
+                  "medium": "Sejarah 70 tahun konflik Iran-AS: Dari minyak, nuklir hingga pembunuhan Qasem Soleimani"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07zm9b7.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Sejarah 70 tahun konflik Iran-AS: Dari minyak, nuklir hingga pembunuhan Qasem Soleimani",
+                "versions": [
+                  {
+                    "versionId": "p07zm8yc",
+                    "types": ["Original"],
+                    "duration": 348,
+                    "durationISO8601": "PT5M48S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1578301117000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "110405657",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12782/production/_110405657_p07zm9b7.jpg",
+                "path": "/cpsprodpb/12782/production/_110405657_p07zm9b7.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Donald Trump-Ali Khameini",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-51006674",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ee855441-f338-8749-8200-3a64e5746c19",
+            "rank": 11,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:ee855441-f338-8749-8200-3a64e5746c19",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Rahaf Mohammed al-Qunun: Menyatakan murtad, kabur, mengaku hidupnya 'diselamatkan Twitter'",
+                "headline": "Rahaf Mohammed al-Qunun: Menyatakan murtad, kabur, mengaku hidupnya 'diselamatkan Twitter'"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-46834476",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-46834476",
+                "curie": "http://www.bbc.co.uk/asset/ee855441-f338-8749-8200-3a64e5746c19",
+                "assetId": "46834476"
+              },
+              "summary": "Beberapa hari belakangan, sosial media dihebohkan dengan kasus Rahaf Mohammed al-Qunun. Dia melarikan diri dari keluarganya, mengaku murtad dan meminta suaka dari Australia.",
+              "timestamp": 1547187826000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p06xsmfn",
+                "subType": "clip",
+                "format": "video",
+                "title": "Rahaf Mohammed al-Qunun: Kabur, mengaku murtad dan minta suaka di Australia",
+                "synopses": {
+                  "short": "Rahaf Mohammed al-Qunun: Kabur, mengaku murtad dan minta suaka di Australia",
+                  "long": "Beberapa hari belakangan, sosial media dihebohkan dengan kasus Rahaf Mohammed al-Qunun. Dia melarikan diri dari keluarganya, mengaku murtad dan meminta suaka dari Australia.\n\nRahaf melaporkan kondisi yang dia alami secara langsung melalui Twitter.\n\nDia membuat akun saat kabur dari keluarganya pada 5 Januari 2019. Hanya berselang tiga hari, akunnya telah diikuti oleh lebih dari 90 ribu orang.\n\nNetizen menuntut Rahaf dilindungi dan diberi suaka. Bahkan badan pengungsi PBB, UNHCR pun turun tangan.\nKini kasus Rahaf dilimpahkan pada Australia. \n\nRahaf menyebut Twitter adalah 'penyelamat hidupnya'. Dia pun mencuit: \"Jangan biarkan siapapun mematahkan sayapmu.\"",
+                  "medium": "Beberapa hari belakangan, sosial media dihebohkan dengan kasus Rahaf Mohammed al-Qunun. Dia melarikan diri dari keluarganya, mengaku murtad dan meminta suaka dari Australia."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06xspsk.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Rahaf Mohammed al-Qunun: Kabur, mengaku murtad dan minta suaka di Australia",
+                "versions": [
+                  {
+                    "versionId": "p06xsmfq",
+                    "types": ["Original"],
+                    "duration": 113,
+                    "durationISO8601": "PT1M53S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1547186346000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105140869",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17A24/production/_105140869_p06xspsk.jpg",
+                "path": "/cpsprodpb/17A24/production/_105140869_p06xspsk.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Rahaf Mohammed al-Qunun",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-46834476",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dd72dec3-39e6-5440-b3c6-253b7ad754ae",
+            "rank": 12,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:dd72dec3-39e6-5440-b3c6-253b7ad754ae",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "‘Hotline’ bagi perempuan yang membutuhkan layanan aborsi aman",
+                "headline": "‘Hotline’ bagi perempuan yang membutuhkan layanan aborsi aman"
+              },
+              "locators": {
+                "assetUri": "/indonesia/majalah-38259773",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/majalah-38259773",
+                "curie": "http://www.bbc.co.uk/asset/dd72dec3-39e6-5440-b3c6-253b7ad754ae",
+                "assetId": "38259773"
+              },
+              "summary": "Aborsi di Indonesia dianggap tabu dan ilegal, padahal ada jutaan perempuan Indonesia yang melakukannya setiap tahun. Sebuah organisasi di Yogyakarta, mendirikan layanan hotline untuk memberi informasi dan konseling soal aborsi aman.",
+              "timestamp": 1481533358000,
+              "language": "id",
+              "media": {
+                "id": "p04kr7tg",
+                "subType": "clip",
+                "format": "video",
+                "title": "‘Hotline’ bagi perempuan yang membutuhkan layanan aborsi aman",
+                "synopses": {
+                  "short": "Sebuah organisasi di Yogyakarta, mendirikan layanan konseling tentang aborsi yang aman",
+                  "long": "Aborsi di Indonesia dianggap tabu dan ilegal, padahal ada jutaan perempuan Indonesia yang melakukannya setiap tahun. \n\nMaka wajar jika permintaan tersebut ‘disuplai' oleh klinik-klinik yang terselip di gang-gang perkotaan dan terlindungi pagar tinggi, sampai jamu dan ramuan tradisional - yang sulit untuk dipastikan keamanannya.\n\nSebuah organisasi di Yogyakarta, mendirikan layanan hotline untuk memberi informasi dan konseling soal aborsi aman."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04kr95k.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Sebuah organisasi di Yogyakarta, mendirikan layanan konseling tentang aborsi yang aman",
+                "versions": [
+                  {
+                    "versionId": "p04kr7tn",
+                    "types": ["Original"],
+                    "duration": 215,
+                    "durationISO8601": "PT3M35S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1481263403000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "92897542",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6003/production/_92897542_p04kr95k.jpg",
+                "path": "/cpsprodpb/6003/production/_92897542_p04kr95k.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #2",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/majalah-38259773",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d9926788-05b7-442b-8ea6-79d2664e0829",
+            "rank": 13,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:d9926788-05b7-442b-8ea6-79d2664e0829",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "G30S: Sejarah Gerwani, propaganda dan stigma yang melekat padanya",
+                "headline": "Sejarah Gerwani sebagai organisasi perempuan progresif pasca peristiwa G30S"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-58731310",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-58731310",
+                "curie": "http://www.bbc.co.uk/asset/d9926788-05b7-442b-8ea6-79d2664e0829",
+                "assetId": "58731310"
+              },
+              "summary": "Pada 1965, Gerwani, organisasi yang berhaluan sosialis-feminis ini mengalami fitnah seksual secara bertubi-tubi, dengan digambarkan sebagai 'kelompok perempuan asusila dan kejam'.",
+              "timestamp": 1632982864000,
+              "language": "id",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "id",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "locator": "urn:bbc:cps:curie:asset:d9926788-05b7-442b-8ea6-79d2664e0829",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7b53ee4a-02ea-4a4a-af75-01398f0e8fff#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/e5309204-528f-46a9-a78f-ca792f8515d8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/4aa966f9-091e-4dd1-8f10-a44ca20aec5d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/e5309204-528f-46a9-a78f-ca792f8515d8#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "id",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
+                      "thingLabel": "Sejarah",
+                      "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
+                      "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/History",
+                        "http://www.wikidata.org/entity/Q309"
+                      ],
+                      "thingEnglishLabel": "History",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/4aa966f9-091e-4dd1-8f10-a44ca20aec5d#id",
+                      "thingLabel": "Indonesia",
+                      "thingUri": "http://www.bbc.co.uk/things/4aa966f9-091e-4dd1-8f10-a44ca20aec5d#id",
+                      "thingId": "4aa966f9-091e-4dd1-8f10-a44ca20aec5d",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Place",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/1643084/"],
+                      "thingEnglishLabel": "Indonesia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingLabel": "Politik",
+                      "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                      "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                      "thingType": [
+                        "tagging:Genre",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingEnglishLabel": "Politics",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7b53ee4a-02ea-4a4a-af75-01398f0e8fff#id",
+                      "thingLabel": "1965",
+                      "thingUri": "http://www.bbc.co.uk/things/7b53ee4a-02ea-4a4a-af75-01398f0e8fff#id",
+                      "thingId": "7b53ee4a-02ea-4a4a-af75-01398f0e8fff",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Indonesian_mass_killings_of_1965%E2%80%9366"
+                      ],
+                      "thingEnglishLabel": "Indonesian mass killings of 1965–66",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p09x6zrx",
+                "subType": "clip",
+                "format": "video",
+                "title": "G30S: Sejarah Gerwani, propaganda dan stigma yang melekat padanya",
+                "synopses": {
+                  "short": "Sejarah Gerwani sebagai organisasi perempuan progresif pasca peristiwa G30S",
+                  "long": "Pasca meletusnya peristiwa G30S, propaganda Orde Baru melalui surat kabar, buku pelajaran hingga film populer membuat berbagai kelompok masyarakat mengalami stigma yang melekat bahkan hingga kini.\n\nSalah satunya Gerwani, atau Gerakan Wanita Indonesia, yang merupakan organisasi perempuan terbesar di Indonesia pada tahun 1965. Organisasi yang berhaluan sosialis-feminis ini mengalami fitnah seksual secara bertubi-tubi, dengan digambarkan sebagai 'kelompok perempuan asusila dan kejam'.\n\nBagaimana sejarah organisasi ini yang sebenarnya?\n\nGerwis — yang pada 1954 berganti nama menjadi Gerwani — mencurahkan perhatian pada masalah pemberantasan buta huruf dan pendirian sekolah.\n\n\"Banyak perempuan yang tidak bisa baca, tidak bisa tulis apa-apa dan orang Gerwani membantu. Anggota Gerwani juga selalu aktif di dalam perjuangan di dalam rumah tangga,\" ungkap Saskia Wieringa, antropolog Universitas Amsterdam di Belanda, yang bertahun-tahun meneliti tentang Peristiwa 65.\n\nOrganisasi itu juga menuntut perlunya hak-hak perempuan, termasuk tentang poligami.\n\nTak hanya berfokus pada isu perempuan, Gerwani juga menjadi organisasi paling aktif dalam politik nasional juga isu internasional.\n\nPada 1964, pemerintah Indonesia menginstruksikan organisasi massa agar mengikatkan diri pada partai politik.\n\nGerwani — yang berideologi feminis dan sosialis — menyatakan diri berada dalam kubu komunis, yang akan diresmikan dalam kongres yang digelar Desember 1965.\n\nNamun, kongres itu urung digelar, Peristiwa 65 meletus dan sejak saat itu Gerwani \"dihancurkan\".\n\nPropaganda yang berpusat pada \"penyimpangan seksual anggota Gerwani\", serta penggambaran PKI sebagai ateis dan anti-nasionalis tak hanya memicu pada pembunuhan massal orang-orang berhaluan kiri, tapi juga penghancuran gerakan perempuan progresif.\n\n\"Saya rasa sesudah propaganda [Joseph] Goebbels [Menteri Penerangan Publik dan Propaganda Nazi Jerman] dalam Perang Dunia II tentang orang Yahudi, propaganda terhadap Gerwani adalah yang mungkin lebih efektif lagi, karena mungkin 50 tahun sesudah itu terjadi orang masih percaya. Sampai sekarang pun Gerwani punya nama jelek,\" kata Saskia.",
+                  "medium": "Pada 1965, Gerwani sebagai organisasi perempuan terbesar di Indonesia yang berakar pada nilai progresif dan feminis, hancur tak bersisa akibat propaganda seksual Orde Baru"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09x75rz.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Sejarah Gerwani sebagai organisasi perempuan progresif pasca peristiwa G30S",
+                "versions": [
+                  {
+                    "versionId": "p09x6zrz",
+                    "types": ["Original"],
+                    "duration": 357,
+                    "durationISO8601": "PT5M57S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1632890508000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "120731513",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/7B19/production/_120731513_p09x7020.jpg",
+                "path": "/cpsprodpb/7B19/production/_120731513_p09x7020.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Pada 1965, Gerwani sebagai organisasi perempuan terbesar di Indonesia yang berakar pada nilai progresif dan feminis, hancur tak bersisa akibat propaganda seksual Orde Baru",
+                "copyrightHolder": "Pasca meletusnya peristiwa G30S, propaganda Orde B",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-58731310",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b1dae395-e329-fd4e-a2df-6724c9309390",
+            "rank": 14,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:b1dae395-e329-fd4e-a2df-6724c9309390",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Mengintip kehidupan di rumah pelacuran terbesar di dunia",
+                "headline": "Mengintip kehidupan di rumah pelacuran terbesar di dunia, dengan banyak pekerja seks di bawah umur"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-49932353",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-49932353",
+                "curie": "http://www.bbc.co.uk/asset/b1dae395-e329-fd4e-a2df-6724c9309390",
+                "assetId": "49932353"
+              },
+              "summary": "Rumah bordil di Bangladesh adalah salah satu yang terbesar di dunia. Pekerja seks adalah legal bagi yang berusia 18 tahun ke atas, tetapi masih banyak ditemukan anak di bawah umur.",
+              "timestamp": 1570183094000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07q2hkz",
+                "subType": "clip",
+                "format": "video",
+                "title": "Mengintip kehidupan di rumah pelacuran terbesar di dunia",
+                "synopses": {
+                  "short": "Mengintip kehidupan di rumah pelacuran terbesar di dunia",
+                  "long": "Rumah bordil di Banglaedsh adalah salah satu yang terbesar di dunia. \n\nBekerja seks legal bagi mereka yang berusia 18 tahun ke atas. Tapi, masih banyak ditemukan anak di bawah umur.\n\nMereka sudah dipersiapkan untuk menjadi pekerja seks komersial sejak usia tujuh tahun. Bahkan, tidak jarang PSK yang lahir dan tumbuh di rumah pelacuran tersebut.\n\nSebuah rumah singgah bagi anak-anak perempuan usia 7-17 tahun didirikan di dekat rumah bordil demi memutus lingkaran setan tersebut. \n\nNamun, tidak semua anak para pekerja seks komersial bisa ditampung di sana.\n\nSalah seorang anak yang kini tinggal di rumah singgah menyesal karena temannya tidak bisa ikut dengannya.\n\n\"Rumah singgah tidak bisa menampung lebih banyak anak waktu itu,\" katanya. \"Dia anak yang cerdas dan cantik. Dia tidak ingin bekerja di rumah bordil, tapi dia dipaksa.\"\n\n\"Suatu malam, ibunya memaksa dia melayani pelanggan. Saat pelanggan itu pergi, dia gantung diri,\" tuturnya.\n\nDi sisi lain, rumah singgah itu pun tidak cuma-cuma. Sebagian biaya ditanggung donasi, sementara para pekerja seks komersial membayar iuran bulanan-agar anak-anak mereka punya kehidupan yang lebih baik-dengan satu-satunya cara yang mereka tahu: menjual diri.",
+                  "medium": "Rumah bordil di Banglaedsh adalah salah satu yang terbesar di dunia. Bekerja seks legal bagi mereka yang berusia 18 tahun ke atas. Tapi, masih banyak ditemukan anak di bawah umur."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07q2lsr.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Mengintip kehidupan di rumah pelacuran terbesar di dunia, banyak pekerja seks di bawah umur",
+                "versions": [
+                  {
+                    "versionId": "p07q2hl2",
+                    "types": ["Original"],
+                    "duration": 157,
+                    "durationISO8601": "PT2M37S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1570174715000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109098958",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14FE5/production/_109098958_p07q2lsr.jpg",
+                "path": "/cpsprodpb/14FE5/production/_109098958_p07q2lsr.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Pekerja seks komersial di Bangladesh",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-49932353",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a214e9d8-600f-406a-abc8-3dd9f9791e43",
+            "rank": 15,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:a214e9d8-600f-406a-abc8-3dd9f9791e43",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Novel Baswedan: 'Saya akan tetap melawan, kejahatan tak boleh dibiarkan'",
+                "headline": "Novel Baswedan: 'Saya akan tetap melawan, bersuara, protes karena kejahatan tak boleh dibiarkan'"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-53435485",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-53435485",
+                "curie": "http://www.bbc.co.uk/asset/a214e9d8-600f-406a-abc8-3dd9f9791e43",
+                "assetId": "53435485"
+              },
+              "summary": "BBC News Indonesia mewawancarai Novel Baswedan di kediamannya, tak jauh dari tempat dia disiram air keras sepulang dari salat subuh di masjid tiga tahun lalu. Penyidik senior KPK itu membawa kami menyusuri jalan di mana penyerangan itu terjadi.",
+              "timestamp": 1594910621000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p08kzbr3",
+                "subType": "clip",
+                "format": "video",
+                "title": "NB",
+                "synopses": {
+                  "short": "NB",
+                  "long": "NB",
+                  "medium": "NB"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08kzc0p.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Novel Baswedan",
+                "versions": [
+                  {
+                    "versionId": "p08kzbr6",
+                    "types": ["Original"],
+                    "duration": 549,
+                    "durationISO8601": "PT9M9S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1594908237000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "113458985",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/E669/production/_113458985_p08kzc0p.jpg",
+                "path": "/cpsprodpb/E669/production/_113458985_p08kzc0p.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Novel Baswedan",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-53435485",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "96ca0137-af16-5c41-9627-6f9b6e346c54",
+            "rank": 16,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:96ca0137-af16-5c41-9627-6f9b6e346c54",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Kosmetik dari industri minyak sawit berkelanjutan, bisakah jadi solusi?",
+                "headline": "Kosmetik dari industri minyak sawit berkelanjutan, bisakah jadi solusi?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-50499890",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-50499890",
+                "curie": "http://www.bbc.co.uk/asset/96ca0137-af16-5c41-9627-6f9b6e346c54",
+                "assetId": "50499890"
+              },
+              "summary": "Kosmetik dari industri minyak sawit berkelanjutan, bisakah jadi solusi?",
+              "timestamp": 1574321502000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07vmnmj",
+                "subType": "clip",
+                "format": "video",
+                "title": "Kosmetik dari minyak sawit berkelanjutan, bisakah jadi solusi?",
+                "synopses": {
+                  "short": "Kosmetik dari minyak sawit berkelanjutan, bisakah jadi solusi?",
+                  "long": "Kosmetik dari minyak sawit berkelanjutan, bisakah jadi solusi?",
+                  "medium": "Kosmetik dari minyak sawit berkelanjutan, bisakah jadi solusi?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07vmrbb.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Kosmetik dari minyak sawit berkelanjutan, bisakah jadi solusi?",
+                "versions": [
+                  {
+                    "versionId": "p07vmnmm",
+                    "types": ["Original"],
+                    "duration": 330,
+                    "durationISO8601": "PT5M30S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1574318082000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109769168",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/150B4/production/_109769168_p07vmrbb.jpg",
+                "path": "/cpsprodpb/150B4/production/_109769168_p07vmrbb.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #1",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-50499890",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9136c84e-6b55-490c-a744-f0e9cd4cc586",
+            "rank": 17,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:9136c84e-6b55-490c-a744-f0e9cd4cc586",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Amina wadud, imam perempuan yang perjuangkan kesetaraan gender dalam Islam",
+                "headline": "Amina wadud, imam perempuan yang perjuangkan kesetaraan gender dalam Islam"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-61117458",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-61117458",
+                "curie": "http://www.bbc.co.uk/asset/9136c84e-6b55-490c-a744-f0e9cd4cc586",
+                "assetId": "61117458"
+              },
+              "summary": "Nama amina wadud atau 'the Lady Imam' mendunia setelah menulis buku 'Quran and Woman' pada tahun 1992 dan semakin bergaung setelah dia memimpin salat Jumat untuk jamaah laki-laki dan perempuan di New York dan Oxford.",
+              "timestamp": 1650007800000,
+              "language": "id",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "id",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "locator": "urn:bbc:cps:curie:asset:9136c84e-6b55-490c-a744-f0e9cd4cc586",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5098b057-41c4-48dd-b8a8-56673822a206#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1b3d2a47-78c9-4fc9-aeb6-746063169674#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/e5309204-528f-46a9-a78f-ca792f8515d8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/e5309204-528f-46a9-a78f-ca792f8515d8#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "id",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1b3d2a47-78c9-4fc9-aeb6-746063169674#id",
+                      "thingLabel": "Islam",
+                      "thingUri": "http://www.bbc.co.uk/things/1b3d2a47-78c9-4fc9-aeb6-746063169674#id",
+                      "thingId": "1b3d2a47-78c9-4fc9-aeb6-746063169674",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Theme",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Islam"],
+                      "thingEnglishLabel": "Islam",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5098b057-41c4-48dd-b8a8-56673822a206#id",
+                      "thingLabel": "Muslim",
+                      "thingUri": "http://www.bbc.co.uk/things/5098b057-41c4-48dd-b8a8-56673822a206#id",
+                      "thingId": "5098b057-41c4-48dd-b8a8-56673822a206",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Muslim",
+                        "http://www.wikidata.org/entity/Q47740"
+                      ],
+                      "thingEnglishLabel": "Muslims",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingLabel": "Perempuan",
+                      "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+                      "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q467",
+                        "http://dbpedia.org/resource/Woman"
+                      ],
+                      "thingEnglishLabel": "Women",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0c1fvy0",
+                "subType": "clip",
+                "format": "video",
+                "title": "Amina Wadud, the lady imam",
+                "synopses": {
+                  "short": "Amina Wadud, the lady imam",
+                  "long": "Amina Wadud, the lady imam",
+                  "medium": "Amina Wadud, the lady imam"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c1fwbz.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Amina Wadud, the lady imam",
+                "versions": [
+                  {
+                    "versionId": "p0c1fvy4",
+                    "types": ["Original"],
+                    "duration": 454,
+                    "durationISO8601": "PT7M34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1650004891000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124177344",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/AD59/production/_124177344_gettyimages-52449297.jpg",
+                "path": "/cpsprodpb/AD59/production/_124177344_gettyimages-52449297.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "amina wadud, the Lady Imam",
+                "caption": "amina wadud memimpin salat Jumat di AS pada 2005",
+                "copyrightHolder": "DON EMMERT/GETTY",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-61117458",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "903d8ae9-d6a9-1046-bbac-bd1524ec0528",
+            "rank": 18,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:903d8ae9-d6a9-1046-bbac-bd1524ec0528",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Menengok panti jompo waria pertama di Indonesia",
+                "headline": "Menengok panti jompo waria pertama di Indonesia"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-48308362",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-48308362",
+                "curie": "http://www.bbc.co.uk/asset/903d8ae9-d6a9-1046-bbac-bd1524ec0528",
+                "assetId": "48308362"
+              },
+              "summary": "Didirikan tahun 2010, panti jompo sekaligus rumah singgah khusus transgender ini merupakan yang pertama di Indonesia.",
+              "timestamp": 1558082797000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p079h3sh",
+                "subType": "clip",
+                "format": "video",
+                "title": "Panti jompo waria pertama di dunia ada di Depok",
+                "synopses": {
+                  "short": "Panti jompo waria pertama di dunia ada di Depok",
+                  "long": "Didirikan tahun 2010, panti jompo sekaligus rumah singgah khusus transgender ini merupakan yang pertama di dunia. \n\nYulianus Rettoblaut mengatakan panti tersebut didirikan karena keprihatiannya melihat banyak waria lansia yang meninggal dan harus dikuburkan secara massal karena tidak punya identitas ataupun keluarga.\n\nSalah satu lansia waria yang tinggal di panti tersebut adalah Oma Yotti yang kini berusia 74 tahun. Dia sudah tidak lagi punya sanak saudara.\n\n\"Semua sudah dipanggil ke rumah Bapa,\" katanya saat diwawancara wartawan BBC News Indonesia, Dwiki Marta.\n\nSelain menampung para waria lansia, panti tersebut juga menjadi rumah singgah bagi ratusan transgender, di mana mereka diberi pelatihan keterampilan agar bisa terus produktif hingga usia senja.",
+                  "medium": "Didirikan tahun 2010, panti jompo sekaligus rumah singgah khusus transgender ini merupakan yang pertama di dunia."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p079h6ky.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Panti jompo waria pertama di dunia ada di Depok",
+                "versions": [
+                  {
+                    "versionId": "p079h3sn",
+                    "types": ["Original"],
+                    "duration": 186,
+                    "durationISO8601": "PT3M6S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1558080918000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106997499",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/18497/production/_106997499_p079h6ky.jpg",
+                "path": "/cpsprodpb/18497/production/_106997499_p079h6ky.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Panti waria di Depok",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-48308362",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "845f3ec7-2cbd-db43-ad75-f42155f2b7f1",
+            "rank": 19,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:845f3ec7-2cbd-db43-ad75-f42155f2b7f1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Payudara palsu untuk pengidap kanker payudara",
+                "headline": "Payudara palsu untuk pengidap kanker payudara"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-48251367",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-48251367",
+                "curie": "http://www.bbc.co.uk/asset/845f3ec7-2cbd-db43-ad75-f42155f2b7f1",
+                "assetId": "48251367"
+              },
+              "summary": "Sebuah klinik di Ciputat, Tangerang Selatan, membuat payudara palsu dari bahan silikon.",
+              "timestamp": 1557727659000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p0790rw6",
+                "subType": "clip",
+                "format": "video",
+                "title": "Payudara palsu untuk pengidap kanker payudara",
+                "synopses": {
+                  "short": "Payudara palsu untuk pengidap kanker payudara",
+                  "long": "Sebuah klinik di Ciputat, Tangerang Selatan, membuat payudara palsu dari bahan silikon untuk perempuan yang payudaranya sudah diangkat melalui operasi karena terkena kanker payudara.",
+                  "medium": "Sebuah klinik di Ciputat, Tangerang Selatan, membuat payudara palsu dari bahan silikon"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0790sl3.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Payudara palsu untuk pengidap kanker payudara",
+                "versions": [
+                  {
+                    "versionId": "p0790rwb",
+                    "types": ["Original"],
+                    "duration": 184,
+                    "durationISO8601": "PT3M4S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1557725154000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106929417",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11744/production/_106929417_p0790sl3.jpg",
+                "path": "/cpsprodpb/11744/production/_106929417_p0790sl3.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "#payudarapalsu",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-48251367",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "771b2226-9a1f-de4d-920e-954cd2b50964",
+            "rank": 20,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:771b2226-9a1f-de4d-920e-954cd2b50964",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Hiyori Kon, perempuan yang menantang tradisi sumo Jepang",
+                "headline": "Hiyori Kon, perempuan yang menantang tradisi sumo Jepang"
+              },
+              "locators": {
+                "assetUri": "/indonesia/media-50372005",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-50372005",
+                "curie": "http://www.bbc.co.uk/asset/771b2226-9a1f-de4d-920e-954cd2b50964",
+                "assetId": "50372005"
+              },
+              "summary": "\"Saya memang perempuan, namun saat di ring, saya adalah pesumo,\" kata Hiyori Kon, perempuan yang menantang tradisi sumo Jepang yang didominasi pria.",
+              "timestamp": 1573452112000,
+              "language": "id",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p07tldq1",
+                "subType": "clip",
+                "format": "video",
+                "title": "BBC 100 Women: Hiyori Kon, perempuan yang menantang tradisi sumo Jepang",
+                "synopses": {
+                  "short": "BBC 100 Women: Hiyori Kon, perempuan yang menantang tradisi sumo Jepang",
+                  "long": "\"Saya memang perempuan, namun saat di ring, saya adalah pesumo,\" kata Hiyori Kon, perempuan yang menantang tradisi sumo Jepang yang didominasi pria.",
+                  "medium": "\"Saya memang perempuan, namun saat di ring, saya adalah pesumo,\" kata Hiyori Kon, perempuan yang menantang tradisi sumo Jepang yang didominasi pria."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07tldvh.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "BBC 100 Women: Hiyori Kon, perempuan yang menantang tradisi sumo Jepang",
+                "versions": [
+                  {
+                    "versionId": "p07tldq3",
+                    "types": ["Original"],
+                    "duration": 146,
+                    "durationISO8601": "PT2M26S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1573450815000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "109606413",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/7AE4/production/_109606413_p07tldvh.jpg",
+                "path": "/cpsprodpb/7AE4/production/_109606413_p07tldvh.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #3",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/media-50372005",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

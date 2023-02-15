@@ -1,157 +1,3387 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
-    "locators": {
-      "assetUri": "/ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
-      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
-      "curie": "http://www.bbc.co.uk/asset/1aed307c-df77-11e3-a678-7db43db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "ukrainian",
-    "language": "uk",
-    "lastUpdated": 1550260586924,
-    "firstPublished": 1400518838,
-    "lastPublished": 1400519347,
-    "options": {
-      "allowDateStamp": true,
-      "includeComments": false,
-      "allowAdvertising": false,
-      "suitableForSyndication": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "32104630",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2014/05/emp/140508_biggest_dinosaur_found_ag.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+        "locators": {
+          "assetUri": "/ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+          "curie": "http://www.bbc.co.uk/asset/1aed307c-df77-11e3-a678-7db43db9bd6e"
+        },
+        "type": "MAP",
+        "createdBy": "ukrainian",
+        "language": "uk",
+        "lastUpdated": 1649867051452,
+        "firstPublished": 1400518838000,
+        "lastPublished": 1400519347000,
+        "timestamp": 1400519347000,
+        "options": {
+          "allowDateStamp": true,
+          "includeComments": false,
+          "allowAdvertising": false,
+          "suitableForSyndication": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "contentId": "urn:bbc:topcat:curie:asset:1aed307c-df77-11e3-a678-7db43db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/ukrainian"
       },
-      {
-        "text": "В Аргентині палеонтологи знайшли кістки динозавра, який ймовірно був найбільшою істотою, що будь-коли існувала на Землі.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Археологи кажуть, що за попередніми підрахунками, ящур мав 20 метрів заввишки, що дорівнює висоті семиповерхового будинку.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Важив він 77 тон, що можна порівняти із вагою 14 африканських слонів.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Репортаж кореспондента ВВС Паллаба Гоша.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Як виглядав найбільший динозавр у світі",
-      "headline": "Як виглядав найбільший динозавр у світі"
-    },
-    "locators": {
-      "assetUri": "/ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
-      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
-      "curie": "http://www.bbc.co.uk/asset/1aed307c-df77-11e3-a678-7db43db9bd6e"
-    },
-    "summary": "В Аргентині палеонтологи знайшли кістки динозавра, який ймовірно був найбільшою істотою, що будь-коли існувала на Землі.",
-    "timestamp": 1550260586924,
-    "passport": {},
-    "media": {
-      "id": "32104630",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2014/05/emp/140508_biggest_dinosaur_found_ag.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d5e239",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/05/19/140519162906_biggest_dinosaur_bones_144x81_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2014/05/19/140519162906_biggest_dinosaur_bones_144x81_bbc_nocredit.jpg",
-      "height": 81,
-      "width": 144,
-      "altText": "кістка найбільшого динозавра у світі",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Відео і Фото",
-      "uri": "/ukrainian/multimedia",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCUkrainian.com",
-      "uri": "/ukrainian",
-      "type": "simple"
-    },
-    "groups": [
-      {
-        "type": "see-alsos",
-        "promos": [
+      "content": {
+        "blocks": [
           {
-            "headlines": {
-              "shortHeadline": "В Токіо показали робота-динозавра і змію",
-              "headline": "В Токіо показали робота-динозавра і змію"
+            "id": "32104630",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "32104630",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/05/19/140519162906_biggest_dinosaur_bones_640x360_bbc_nocredit.jpg",
+              "path": "/amz/worldservice/live/assets/images/2014/05/19/140519162906_biggest_dinosaur_bones_640x360_bbc_nocredit.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "кістка найбільшого динозавра у світі",
+              "copyrightHolder": "",
+              "type": "image"
             },
-            "locators": {
-              "assetUri": "/ukrainian/multimedia/2013/11/131108_robots_japan_expo_video_as",
-              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/multimedia/2013/11/131108_robots_japan_expo_video_as"
-            },
-            "summary": "У Міжнародній токійській виставці роботів цього року бере участь рекордна кількість компаній-розробників. ",
-            "timestamp": 1383900407,
-            "cpsType": "MAP",
-            "id": "urn:bbc:ares::asset:ukrainian/multimedia/2013/11/131108_robots_japan_expo_video_as",
-            "type": "cps"
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2014/05/emp/140508_biggest_dinosaur_found_ag.emp.xml",
+            "playlist": [
+              {
+                "format": "3gp",
+                "bitrate": "80000",
+                "url": "https://wsodprogrf.akamaized.net/ukrainian/3gp/2014/05/dinosaur_ukr_16x9_lo.3gp"
+              },
+              {
+                "format": "3gp",
+                "bitrate": "160000",
+                "url": "https://wsodprogrf.akamaized.net/ukrainian/3gp/2014/05/dinosaur_ukr_16x9_hi.3gp"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2014/05/dinosaur_ukr_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2014/05/dinosaur_ukr_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2014/05/dinosaur_ukr_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
           },
           {
-            "name": "У Росії знайшли найкраще збереженого мамонта",
-            "uri": "http://www.bbc.co.uk/ukrainian/multimedia/2012/10/121005_mammoth_russia_find_video_ak.shtml",
-            "type": "link"
+            "text": "В Аргентині палеонтологи знайшли кістки динозавра, який ймовірно був найбільшою істотою, що будь-коли існувала на Землі.",
+            "markupType": "plain_text",
+            "type": "paragraph"
           },
           {
-            "headlines": {
-              "shortHeadline": "Болгарія: археологи знайшли стародавні прикраси ",
-              "headline": "Болгарія: археологи знайшли стародавні прикраси "
-            },
-            "locators": {
-              "assetUri": "/ukrainian/multimedia/2012/11/121112_bulgaria_treasure_ek",
-              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/multimedia/2012/11/121112_bulgaria_treasure_ek"
-            },
-            "summary": "У Болгарії археологи виявили старовинні золоті артефакти під час розкопок на півночі країни.",
-            "timestamp": 1352721005,
-            "cpsType": "MAP",
-            "id": "urn:bbc:ares::asset:ukrainian/multimedia/2012/11/121112_bulgaria_treasure_ek",
-            "type": "cps"
+            "text": "Археологи кажуть, що за попередніми підрахунками, ящур мав 20 метрів заввишки, що дорівнює висоті семиповерхового будинку.",
+            "markupType": "plain_text",
+            "type": "paragraph"
           },
           {
-            "name": "Археологи кажуть, що знайшли найстаріший бюстгальтер",
-            "uri": "http://www.bbc.co.uk/ukrainian/multimedia/2012/07/120731_oldest_bra_video_ak.shtml",
-            "type": "link"
+            "text": "Важив він 77 тон, що можна порівняти із вагою 14 африканських слонів.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "Репортаж кореспондента ВВС Паллаба Гоша.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Як виглядав найбільший динозавр у світі",
+          "headline": "Як виглядав найбільший динозавр у світі"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+          "curie": "http://www.bbc.co.uk/asset/1aed307c-df77-11e3-a678-7db43db9bd6e"
+        },
+        "summary": "В Аргентині палеонтологи знайшли кістки динозавра, який ймовірно був найбільшою істотою, що будь-коли існувала на Землі.",
+        "timestamp": 1400519347000,
+        "language": "uk",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+          "taggings": []
+        },
+        "media": {
+          "id": "32104630",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "32104630",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/05/19/140519162906_biggest_dinosaur_bones_640x360_bbc_nocredit.jpg",
+            "path": "/amz/worldservice/live/assets/images/2014/05/19/140519162906_biggest_dinosaur_bones_640x360_bbc_nocredit.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "кістка найбільшого динозавра у світі",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2014/05/emp/140508_biggest_dinosaur_found_ag.emp.xml",
+          "playlist": [
+            {
+              "format": "3gp",
+              "bitrate": "80000",
+              "url": "https://wsodprogrf.akamaized.net/ukrainian/3gp/2014/05/dinosaur_ukr_16x9_lo.3gp"
+            },
+            {
+              "format": "3gp",
+              "bitrate": "160000",
+              "url": "https://wsodprogrf.akamaized.net/ukrainian/3gp/2014/05/dinosaur_ukr_16x9_hi.3gp"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2014/05/dinosaur_ukr_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2014/05/dinosaur_ukr_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2014/05/dinosaur_ukr_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e239",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/05/19/140519162906_biggest_dinosaur_bones_144x81_bbc_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2014/05/19/140519162906_biggest_dinosaur_bones_144x81_bbc_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "кістка найбільшого динозавра у світі",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Відео і Фото",
+          "uri": "/ukrainian/multimedia",
+          "urlIdentifier": "/ukrainian/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCUkrainian.com",
+          "uri": "/ukrainian",
+          "urlIdentifier": "/ukrainian",
+          "type": "simple"
+        },
+        "groups": [
+          {
+            "type": "see-alsos",
+            "promos": [
+              {
+                "headlines": {
+                  "shortHeadline": "В Токіо показали робота-динозавра і змію",
+                  "headline": "В Токіо показали робота-динозавра і змію"
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/multimedia/2013/11/131108_robots_japan_expo_video_as",
+                  "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/multimedia/2013/11/131108_robots_japan_expo_video_as"
+                },
+                "summary": "У Міжнародній токійській виставці роботів цього року бере участь рекордна кількість компаній-розробників. ",
+                "timestamp": 1383900407000,
+                "language": "uk",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "32104630",
+                  "subType": "primary",
+                  "format": "video",
+                  "image": {
+                    "id": "32104630",
+                    "subType": "thumbnail",
+                    "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/11/08/131108081953_robots_tokyo_640x360_bbc_nocredit.jpg",
+                    "path": "/amz/worldservice/live/assets/images/2013/11/08/131108081953_robots_tokyo_640x360_bbc_nocredit.jpg",
+                    "height": 360,
+                    "width": 640,
+                    "altText": "робот-змія",
+                    "copyrightHolder": "",
+                    "type": "image"
+                  },
+                  "aspectRatio": "16:9",
+                  "live": false,
+                  "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2013/11/emp/131108_robots_japan_expo_video_as.emp.xml",
+                  "playlist": [
+                    {
+                      "format": "3gp",
+                      "bitrate": "80000",
+                      "url": "https://wsodprogrf.akamaized.net/ukrainian/3gp/2013/11/robots_japan_16x9_lo.3gp"
+                    },
+                    {
+                      "format": "3gp",
+                      "bitrate": "160000",
+                      "url": "https://wsodprogrf.akamaized.net/ukrainian/3gp/2013/11/robots_japan_16x9_hi.3gp"
+                    },
+                    {
+                      "format": "mp4",
+                      "bitrate": "168000",
+                      "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2013/11/robots_japan_16x9_lo.mp4"
+                    },
+                    {
+                      "format": "mp4",
+                      "bitrate": "320000",
+                      "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2013/11/robots_japan_16x9_med.mp4"
+                    },
+                    {
+                      "format": "mp4",
+                      "bitrate": "904000",
+                      "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2013/11/robots_japan_16x9_hi.mp4"
+                    }
+                  ],
+                  "type": "legacyMedia"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/multimedia/2013/11/131108_robots_japan_expo_video_as",
+                "type": "cps"
+              },
+              {
+                "name": "У Росії знайшли найкраще збереженого мамонта",
+                "uri": "http://www.bbc.co.uk/ukrainian/multimedia/2012/10/121005_mammoth_russia_find_video_ak.shtml",
+                "type": "link"
+              },
+              {
+                "headlines": {
+                  "shortHeadline": "Болгарія: археологи знайшли стародавні прикраси ",
+                  "headline": "Болгарія: археологи знайшли стародавні прикраси "
+                },
+                "locators": {
+                  "assetUri": "/ukrainian/multimedia/2012/11/121112_bulgaria_treasure_ek",
+                  "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/multimedia/2012/11/121112_bulgaria_treasure_ek"
+                },
+                "summary": "У Болгарії археологи виявили старовинні золоті артефакти під час розкопок на півночі країни.",
+                "timestamp": 1352721005000,
+                "language": "uk",
+                "cpsType": "MAP",
+                "media": {
+                  "id": "32104630",
+                  "subType": "primary",
+                  "format": "video",
+                  "image": {
+                    "id": "32104630",
+                    "subType": "thumbnail",
+                    "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/11/12/121112113751_bulgaria_gold_640x360_bbc_nocredit.jpg",
+                    "path": "/amz/worldservice/live/assets/images/2012/11/12/121112113751_bulgaria_gold_640x360_bbc_nocredit.jpg",
+                    "height": 360,
+                    "width": 640,
+                    "altText": "",
+                    "copyrightHolder": "",
+                    "type": "image"
+                  },
+                  "aspectRatio": "16:9",
+                  "live": false,
+                  "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2012/11/emp/121112_bulgaria_treasure_ek.emp.xml",
+                  "playlist": [
+                    {
+                      "format": "3gp",
+                      "bitrate": "80000",
+                      "url": "https://wsodprogrf.akamaized.net/ukrainian/3gp/2012/11/12_11_bulgaria_gold_ukr_16x9_lo.3gp"
+                    },
+                    {
+                      "format": "3gp",
+                      "bitrate": "160000",
+                      "url": "https://wsodprogrf.akamaized.net/ukrainian/3gp/2012/11/12_11_bulgaria_gold_ukr_16x9_hi.3gp"
+                    },
+                    {
+                      "format": "mp4",
+                      "bitrate": "168000",
+                      "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2012/11/12_11_bulgaria_gold_ukr_16x9_lo.mp4"
+                    },
+                    {
+                      "format": "mp4",
+                      "bitrate": "320000",
+                      "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2012/11/12_11_bulgaria_gold_ukr_16x9_med.mp4"
+                    },
+                    {
+                      "format": "mp4",
+                      "bitrate": "904000",
+                      "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2012/11/12_11_bulgaria_gold_ukr_16x9_hi.mp4"
+                    }
+                  ],
+                  "type": "legacyMedia"
+                },
+                "id": "urn:bbc:ares::asset:ukrainian/multimedia/2012/11/121112_bulgaria_treasure_ek",
+                "type": "cps"
+              },
+              {
+                "name": "Археологи кажуть, що знайшли найстаріший бюстгальтер",
+                "uri": "http://www.bbc.co.uk/ukrainian/multimedia/2012/07/120731_oldest_bra_video_ak.shtml",
+                "type": "link"
+              }
+            ]
           }
         ]
       }
-    ]
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T10:11:59.277Z",
+        "lastRecordTimeStamp": "2023-02-15T10:10:00Z",
+        "firstRecordTimeStamp": "2023-02-15T02:10:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "3f7d9a33-da99-4199-87ff-6a40d0206169",
+            "rank": 1,
+            "count": 797,
+            "urn": "urn:bbc:curie:asset:3f7d9a33-da99-4199-87ff-6a40d0206169",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Чи можуть тварини передбачити землетрус?",
+                "headline": "Чи можуть тварини передбачити землетрус?"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-64627277",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:3f7d9a33-da99-4199-87ff-6a40d0206169",
+                "assetId": "64627277",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-64627277",
+                "curie": "http://www.bbc.co.uk/asset/3f7d9a33-da99-4199-87ff-6a40d0206169"
+              },
+              "summary": "Після смертельних землетрусів у Туреччині та Сирії мережею почали гуляти вірусні відео, на яких тварини нібито дивно поводяться, сповіщаючи нас про майбутнє лихо.",
+              "timestamp": 1676293212000,
+              "language": "uk",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "uk",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "locator": "urn:bbc:cps:curie:asset:3f7d9a33-da99-4199-87ff-6a40d0206169",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+                      "thingLabel": "Analysis",
+                      "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+                      "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
+                      ],
+                      "thingEnglishLabel": "Analysis",
+                      "thingPreferredLabel": "Analysis",
+                      "thingLabelLanguage": "uk",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                      "thingLabel": "Наука",
+                      "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+                      "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q336",
+                        "http://dbpedia.org/resource/Science"
+                      ],
+                      "thingEnglishLabel": "Science",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                      "thingLabel": "Природа",
+                      "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                      "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+                      "thingType": [
+                        "tagging:AmbiguousTerm",
+                        "core:Theme",
+                        "tagging:Genre",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Nature"],
+                      "thingEnglishLabel": "Nature",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingLabel": "Сирія",
+                      "thingUri": "http://www.bbc.co.uk/things/28b0a95e-89d3-4fdf-bad0-8565eb549233#id",
+                      "thingId": "28b0a95e-89d3-4fdf-bad0-8565eb549233",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/163843/"],
+                      "thingEnglishLabel": "Syria",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingLabel": "Землетруси",
+                      "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+                      "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+                      "thingType": [
+                        "core:Thing",
+                        "core:Theme",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q7944",
+                        "http://dbpedia.org/resource/Earthquake"
+                      ],
+                      "thingEnglishLabel": "Earthquakes",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "Туреччина",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2v0sf",
+                "subType": "clip",
+                "format": "video",
+                "title": "Чи можуть тварини передбачити землетрус?",
+                "synopses": {
+                  "short": "Чи можуть тварини передбачити землетрус?",
+                  "long": "Після смертельних землетрусів у Туреччині та Сирії мережею почали гуляти вірусні відео, на яких тварини нібито дивно поводяться, сповіщаючи нас про майбутнє лихо. \n\nЦі відео зібрали мільйони переглядів, але наскільки вони близькі до реальності? Чи справді тварини здатні відчути наближення природних катастроф на кшталт землетрусів і завчасно нас попередити? \n\nМи показали зібрані у мережі відео експерту з поведінки тварин і попросили його проаналізувати їх з точки зору науки.",
+                  "medium": "Після смертельних землетрусів у Туреччині та Сирії мережею почали гуляти вірусні відео, на яких тварини нібито дивно поводяться, сповіщаючи нас про майбутнє лихо."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2v15p.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Чи можуть тварини передбачити землетрус?",
+                "versions": [
+                  {
+                    "versionId": "p0f2v0st",
+                    "types": ["Original"],
+                    "duration": 125,
+                    "durationISO8601": "PT2M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676292132000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128616570",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1D89/production/_128616570_p0f2v15p.jpg",
+                "path": "/cpsprodpb/1D89/production/_128616570_p0f2v15p.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "тварини і землетрус",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-64627277",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "57d8086a-aacb-44dc-80c9-14bce2999276",
+            "rank": 2,
+            "count": 138,
+            "urn": "urn:bbc:curie:asset:57d8086a-aacb-44dc-80c9-14bce2999276",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Битва за Бахмут. Репортаж з міста-фортеці",
+                "headline": "Битва за Бахмут. Репортаж з міста-фортеці"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-64636750",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:57d8086a-aacb-44dc-80c9-14bce2999276",
+                "assetId": "64636750",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-64636750",
+                "curie": "http://www.bbc.co.uk/asset/57d8086a-aacb-44dc-80c9-14bce2999276"
+              },
+              "summary": "Місто Бахмут на Донеччині вже стало символом українського опору у війні проти Росії.",
+              "timestamp": 1676372794000,
+              "language": "uk",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "uk",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "locator": "urn:bbc:cps:curie:asset:57d8086a-aacb-44dc-80c9-14bce2999276",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+                    "value": "http://www.bbc.co.uk/things/00aae251-4be8-4d40-a36a-c6689805c102#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/00aae251-4be8-4d40-a36a-c6689805c102#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "uk",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/00aae251-4be8-4d40-a36a-c6689805c102#id",
+                      "thingLabel": "Донбас",
+                      "thingUri": "http://www.bbc.co.uk/things/00aae251-4be8-4d40-a36a-c6689805c102#id",
+                      "thingId": "00aae251-4be8-4d40-a36a-c6689805c102",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/709718/",
+                        "http://dbpedia.org/resource/Donets_Basin",
+                        "http://www.wikidata.org/entity/Q605714"
+                      ],
+                      "thingEnglishLabel": "Donbas",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingLabel": "Російсько-українська війна",
+                      "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q110254389"
+                      ],
+                      "thingEnglishLabel": "Russia-Ukraine war",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "Росія",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingLabel": "Збройні сили",
+                      "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+                      "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Theme"
+                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingEnglishLabel": "Military",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingLabel": "Україна",
+                      "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Ukraine",
+                        "http://www.wikidata.org/entity/Q212",
+                        "http://sws.geonames.org/690791/"
+                      ],
+                      "thingEnglishLabel": "Ukraine",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f304fk",
+                "subType": "clip",
+                "format": "video",
+                "title": "Битва за Бахмут. Репортаж з міста-фортеці",
+                "synopses": {
+                  "short": "Місто Бахмут на Донеччині вже стало символом українського опору у війні проти Росії.",
+                  "long": "Місто Бахмут на Донеччині вже стало символом українського опору у війні проти Росії.\n\nВже протягом кількох місяців росіяни відчайдушно намагаються захопити місто, але поки що їхні спроби марні. \n\nНатомість вони нещадно руйнують обстрілами те, що не можуть взяти під контроль. \n\nВулиці Бахмута перетворилися на згарища і руїни, а рухатися містом можна тільки по одному і швидкими перебіжками – росіяни всього за пару кілометрів звідси, і все, що рухається, може стати мішенню.\n\nНаша знімальна група провела день із бійцями 93-ї бригади, які боронять Бахмут. \n\nЦі військові ведуть боротьбу не лише із росіянами, але й з часом – хлопці якнайшвидше потребують нового озброєння, адже зараз вони відбиваються від ворога старими снарядами.  \n\nМатеріал Орли Герін."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f306lq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Місто Бахмут на Донеччині вже стало символом українського опору у війні проти Росії.",
+                "versions": [
+                  {
+                    "versionId": "p0f304fy",
+                    "types": ["Original"],
+                    "duration": 259,
+                    "durationISO8601": "PT4M19S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676369515000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128625415",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/C8FC/production/_128625415_p0f306lq.jpg",
+                "path": "/cpsprodpb/C8FC/production/_128625415_p0f306lq.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "день у Бахмуті",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-64636750",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "177e5359-5bca-4eb9-9078-42040e730d37",
+            "rank": 3,
+            "count": 97,
+            "urn": "urn:bbc:curie:asset:177e5359-5bca-4eb9-9078-42040e730d37",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Чому прикордонний Білгород у Росії так сильно підтримує Путіна, але боїться війни",
+                "headline": "Чому прикордонний Білгород у Росії так сильно підтримує Путіна, але боїться війни"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-64625169",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:177e5359-5bca-4eb9-9078-42040e730d37",
+                "assetId": "64625169",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-64625169",
+                "curie": "http://www.bbc.co.uk/asset/177e5359-5bca-4eb9-9078-42040e730d37"
+              },
+              "summary": "Для більшості росіян війна в Україні – явище скоріше віртуальне, а от жителі Білгорода, що поблизу українського кордону, мають про війну більш реалістичне уявлення.",
+              "timestamp": 1676370330000,
+              "language": "uk",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "language": "uk",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "locator": "urn:bbc:cps:curie:asset:177e5359-5bca-4eb9-9078-42040e730d37",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "uk",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingLabel": "Російсько-українська війна",
+                      "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q110254389"
+                      ],
+                      "thingEnglishLabel": "Russia-Ukraine war",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "Росія",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingLabel": "Україна",
+                      "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Ukraine",
+                        "http://www.wikidata.org/entity/Q212",
+                        "http://sws.geonames.org/690791/"
+                      ],
+                      "thingEnglishLabel": "Ukraine",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f2sy8z",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Мир – це війна\": як живе прикордонний Білгород у Росії",
+                "synopses": {
+                  "short": "\"Мир – це війна\": як живе прикордонний Білгород у Росії",
+                  "long": "Для більшості росіян війна в Україні – явище скоріше віртуальне, про яке знають здебільшого з новин по телевізору.\n\nА от жителі Білгорода, що за кількадесят кілометрів від українського кордону, мають про війну більш реалістичне уявлення.\n\nДеякі райони тут зазнають постійних обстрілів, а в українському інформпросторі Білгород відомий як місто так званої \"бавовни\", де вибухають нафтобази, горять склади та фіксуються \"прильоти\". Україна заперечує причетність до цих випадків.\n\nУсі, з ким наші кореспонденти спілкувалися у Білгороді, кажуть, що живуть у страху перед українськими обстрілами. Але при цьому забувають згадати, що це їхня країна напала на Україну.\n\nМатеріал Стіва Розенберга та Вілла Вернона.",
+                  "medium": "Для більшості росіян війна в Україні – явище скоріше віртуальне, а от жителі Білгорода, що поблизу українського кордону, мають про війну більш реалістичне уявлення."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f2t1yl.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "\"Мир – це війна\": як живе прикордонний Білгород у Росії",
+                "versions": [
+                  {
+                    "versionId": "p0f2sy99",
+                    "types": ["Original"],
+                    "duration": 196,
+                    "durationISO8601": "PT3M16S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1676283840000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128614707",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11455/production/_128614707_p0f2t1yl.jpg",
+                "path": "/cpsprodpb/11455/production/_128614707_p0f2t1yl.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "життя у Бєлгороді",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-64625169",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "557935e2-44dc-cf4a-8b58-a2065c55392f",
+            "rank": 4,
+            "count": 28,
+            "urn": "urn:bbc:curie:asset:557935e2-44dc-cf4a-8b58-a2065c55392f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "100 американцев против НАСА: \"И все-таки Земля плоская!\"",
+                "headline": "100 американцев против НАСА: \"И все-таки Земля плоская!\""
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-42062596",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-42062596",
+                "curie": "http://www.bbc.co.uk/asset/557935e2-44dc-cf4a-8b58-a2065c55392f",
+                "assetId": "42062596"
+              },
+              "summary": "Они отвергают гелиоцентрическую систему мира, не считая верным представление о том, что Солнце является центральным небесным телом, вокруг которого обращаются Земля и другие планеты.",
+              "timestamp": 1511246108000,
+              "language": "ru",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05ncy9j",
+                "subType": "clip",
+                "format": "video",
+                "title": "Верите, что Земля плоская? Вам в Северную Каролину",
+                "synopses": {
+                  "short": "Верите, что Земля плоская? Вам в Северную Каролину",
+                  "long": "В США состоялась первая конференция сторонников теории плоской Земли.\nОрганизаторы Flat Earth International Conference в Северной Каролине надеются, что конференция станет ежегодным событием.\nУчастников мероприятия объединяет убеждение, что поверхность Земли - плоская.\nОни отвергают гелиоцентрическую систему мира, не считая верным представление о том, что Солнце является центральным небесным телом, вокруг которого обращается Земля и другие планеты."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05nd4j5.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Земля круглая или нет? Участники конференции в США убеждены, что нет",
+                "versions": [
+                  {
+                    "versionId": "p05ncy9m",
+                    "types": ["Original"],
+                    "duration": 92,
+                    "durationISO8601": "PT1M32S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1510936098000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "98803187",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13132/production/_98803187_p05nd2ts.jpg",
+                "path": "/cpsprodpb/13132/production/_98803187_p05nd2ts.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "модель плоской земли",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-42062596",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5893d970-8854-4b8e-88e8-911300f7b94e",
+            "rank": 5,
+            "count": 16,
+            "urn": "urn:bbc:curie:asset:5893d970-8854-4b8e-88e8-911300f7b94e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Як Зеленський обійняв журналістку ВВС Україна",
+                "headline": "Як Зеленський обійняв журналістку ВВС Україна"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-64576789",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:5893d970-8854-4b8e-88e8-911300f7b94e",
+                "assetId": "64576789",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-64576789",
+                "curie": "http://www.bbc.co.uk/asset/5893d970-8854-4b8e-88e8-911300f7b94e"
+              },
+              "summary": "Кореспондентка не очікувала, що президент відреагує на її слова.",
+              "timestamp": 1675927671000,
+              "language": "uk",
+              "passport": {
+                "language": "uk",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "locator": "urn:bbc:cps:curie:asset:5893d970-8854-4b8e-88e8-911300f7b94e",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1808a59a-896b-4112-89c1-b713b991a1d1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "uk",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1808a59a-896b-4112-89c1-b713b991a1d1#id",
+                      "thingLabel": "Володимир Зеленський",
+                      "thingUri": "http://www.bbc.co.uk/things/1808a59a-896b-4112-89c1-b713b991a1d1#id",
+                      "thingId": "1808a59a-896b-4112-89c1-b713b991a1d1",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Agent",
+                        "core:Person",
+                        "core:Thing",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q3874799"
+                      ],
+                      "thingEnglishLabel": "Volodymyr Zelensky",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingLabel": "Російсько-українська війна",
+                      "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q110254389"
+                      ],
+                      "thingEnglishLabel": "Russia-Ukraine war",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                      "thingLabel": "Британія",
+                      "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                      "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2635167/"],
+                      "thingEnglishLabel": "United Kingdom",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingLabel": "Україна",
+                      "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Ukraine",
+                        "http://www.wikidata.org/entity/Q212",
+                        "http://sws.geonames.org/690791/"
+                      ],
+                      "thingEnglishLabel": "Ukraine",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1xc9d",
+                "subType": "clip",
+                "format": "video",
+                "title": "Зеленський обійняв журналістку ВВС Україна",
+                "synopses": {
+                  "short": "Кореспондентка не очікувала, що президент відреагує на її бажання.",
+                  "long": "Володимир Зеленський обійняв журналістку ВВС Україна Наталю Гончарову.\nЦе сталося у Лондоні на спільній пресконференції з прем'єр-міністром Великої Британії Ріші Сунаком.\nПерш ніж поставити британському прем'єру запитання кореспондентка висловила бажання обійнятися з українським президентом. Той зреагував блискавично."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1xhyb.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Кореспондентка не очікувала, що президент відреагує на її бажання.",
+                "versions": [
+                  {
+                    "versionId": "p0f1xc9v",
+                    "types": ["Original"],
+                    "duration": 34,
+                    "durationISO8601": "PT34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675883838000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128570037",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11D2F/production/_128570037_zelenskyhugytcover.jpg",
+                "path": "/cpsprodpb/11D2F/production/_128570037_zelenskyhugytcover.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "обійми",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-64576789",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8d7bc8ca-1c64-11e6-8afc-21f33db9bd6e",
+            "rank": 6,
+            "count": 9,
+            "urn": "urn:bbc:curie:asset:8d7bc8ca-1c64-11e6-8afc-21f33db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Що таке китайська \"культурна революція\"?",
+                "headline": "Що таке китайська \"культурна революція\"?"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/multimedia/2016/05/160517_china_cultural_revolution_expl_she",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/multimedia/2016/05/160517_china_cultural_revolution_expl_she",
+                "curie": "http://www.bbc.co.uk/asset/8d7bc8ca-1c64-11e6-8afc-21f33db9bd6e",
+                "assetId": "43866751"
+              },
+              "summary": "\"Культурна революція\", яку Мао Цзедун почав у Китаї 50 років тому, обернулися хвилею насильства в країні.",
+              "timestamp": 1463635912000,
+              "language": "uk",
+              "media": {
+                "id": "43866751",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "43866751",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/17/160517193729_what_was_chinas_cultural_revolution_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2016/05/17/160517193729_what_was_chinas_cultural_revolution_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Що таке китайська \"культурна революція\"?",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2016/05/emp/160517_china_cultural_revolution_expl_she.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2016/05/china_revolution_exp_16x9_lo.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2016/05/china_revolution_exp_16x9_med.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/2016/05/china_revolution_exp_16x9_hi.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e239",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/17/160517193700_what_was_chinas_cultural_revolution_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2016/05/17/160517193700_what_was_chinas_cultural_revolution_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "Що таке китайська \"культурна революція\"?",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/multimedia/2016/05/160517_china_cultural_revolution_expl_she",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "78c3b3a0-cb3a-784c-8610-0212283bd68e",
+            "rank": 7,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:78c3b3a0-cb3a-784c-8610-0212283bd68e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Як я хотіла зробити бразильську підтяжку сідниць\"",
+                "headline": "\"Як я хотіла зробити бразильську підтяжку сідниць\""
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-48300150",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-48300150",
+                "curie": "http://www.bbc.co.uk/asset/78c3b3a0-cb3a-784c-8610-0212283bd68e",
+                "assetId": "48300150"
+              },
+              "summary": "Що таке бразильська підтяжка сідниць і наскільки безпечна ця процедура?",
+              "timestamp": 1558206919000,
+              "language": "uk",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e1739461b000e9dabf6",
+                    "campaignName": "WS - CS"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p079f3vc",
+                "subType": "clip",
+                "format": "video",
+                "title": "Як я хотіла зробити бразильську підтяжку сідниць",
+                "synopses": {
+                  "short": "Що таке бразильська підтяжка сідниць і наскільки безпечна ця процедура?",
+                  "long": "Шафі хоче збільшити сідниці. \nЗаради бажаного об'єму дівчина розмірковує про пластичну операцію.\nА саме - бразильську підтяжку сідниць, яку вперше зробив хірург Іво Пітангі.\nЇї роблять у два етапи. Спершу відкачують жир з небажанох ділянок тіла, а тоді вводять його в сідниці.\nОднак 1 на 3000 таких операцій завершуються смертю пацієнтів. Це трапляється, коли лікар зачіпає судину і закачує туди жир, що спричиняє жирову емболію.\nТо чи готова Шафі піти на такий ризик?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p079f9nm.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Що таке бразильська підтяжка сідниць і наскільки безпечна ця процедура?",
+                "versions": [
+                  {
+                    "versionId": "p079f3vp",
+                    "types": ["Original"],
+                    "duration": 181,
+                    "durationISO8601": "PT3M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1558020658000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "106988321",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/3064/production/_106988321_p079f9nm.jpg",
+                "path": "/cpsprodpb/3064/production/_106988321_p079f9nm.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "\"Як я хотіла зробити бразильську підтяжку сідниць\"",
+                "caption": "Вперше бразильську підтяжку сідниць зробив лікар із, звісно, Бразилії",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-48300150",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "38cf3ed9-196b-40f3-804d-e186150af508",
+            "rank": 8,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:38cf3ed9-196b-40f3-804d-e186150af508",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Фортеця Бахмут. На що перетворилося місто внаслідок російських атак",
+                "headline": "Фортеця Бахмут. На що перетворилося місто внаслідок російських атак"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-64158373",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:38cf3ed9-196b-40f3-804d-e186150af508",
+                "assetId": "64158373",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-64158373",
+                "curie": "http://www.bbc.co.uk/asset/38cf3ed9-196b-40f3-804d-e186150af508"
+              },
+              "summary": "У зруйнованому місті залишився лише кожен десятий цивільний мешканець.",
+              "timestamp": 1672775516000,
+              "language": "uk",
+              "passport": {
+                "language": "uk",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "locator": "urn:bbc:cps:curie:asset:38cf3ed9-196b-40f3-804d-e186150af508",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5737116b-5122-49f1-9cf1-0a04b6ca53e7#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1808a59a-896b-4112-89c1-b713b991a1d1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0567f96b-b9b4-4be7-83be-0f874fec16ff#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/00aae251-4be8-4d40-a36a-c6689805c102#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "uk",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/00aae251-4be8-4d40-a36a-c6689805c102#id",
+                      "thingLabel": "Донбас",
+                      "thingUri": "http://www.bbc.co.uk/things/00aae251-4be8-4d40-a36a-c6689805c102#id",
+                      "thingId": "00aae251-4be8-4d40-a36a-c6689805c102",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/709718/",
+                        "http://dbpedia.org/resource/Donets_Basin",
+                        "http://www.wikidata.org/entity/Q605714"
+                      ],
+                      "thingEnglishLabel": "Donbas",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/0567f96b-b9b4-4be7-83be-0f874fec16ff#id",
+                      "thingLabel": "Мобілізація в Росії",
+                      "thingUri": "http://www.bbc.co.uk/things/0567f96b-b9b4-4be7-83be-0f874fec16ff#id",
+                      "thingId": "0567f96b-b9b4-4be7-83be-0f874fec16ff",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Mobilisation in Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/1808a59a-896b-4112-89c1-b713b991a1d1#id",
+                      "thingLabel": "Володимир Зеленський",
+                      "thingUri": "http://www.bbc.co.uk/things/1808a59a-896b-4112-89c1-b713b991a1d1#id",
+                      "thingId": "1808a59a-896b-4112-89c1-b713b991a1d1",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Agent",
+                        "core:Person",
+                        "core:Thing",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q3874799"
+                      ],
+                      "thingEnglishLabel": "Volodymyr Zelensky",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingLabel": "Російсько-українська війна",
+                      "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q110254389"
+                      ],
+                      "thingEnglishLabel": "Russia-Ukraine war",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "Росія",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5737116b-5122-49f1-9cf1-0a04b6ca53e7#id",
+                      "thingLabel": "Санкції проти Росії",
+                      "thingUri": "http://www.bbc.co.uk/things/5737116b-5122-49f1-9cf1-0a04b6ca53e7#id",
+                      "thingId": "5737116b-5122-49f1-9cf1-0a04b6ca53e7",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Russia sanctions",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                      "thingLabel": "Володимир Путін",
+                      "thingUri": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                      "thingId": "7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:Agent",
+                        "tagging:TagConcept",
+                        "core:Person",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://www.imdb.com/name/nm1269884/",
+                        "http://dbpedia.org/resource/Vladimir_Putin",
+                        "http://musicbrainz.org/artist/833f5372-a2a5-4932-8a5c-399184f29541#_",
+                        "http://www.wikidata.org/entity/Q7747"
+                      ],
+                      "thingEnglishLabel": "Vladimir Putin",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingLabel": "Україна",
+                      "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Ukraine",
+                        "http://www.wikidata.org/entity/Q212",
+                        "http://sws.geonames.org/690791/"
+                      ],
+                      "thingEnglishLabel": "Ukraine",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dsx0r3",
+                "subType": "clip",
+                "format": "video",
+                "title": "Фортеця Бахмут. На що перетворилося місто внаслідок російських атак",
+                "synopses": {
+                  "short": "У зруйнованому місті залишився кожен десятий цивільний мешканець.",
+                  "long": "До 24 лютого 2022 року в Бахмуті мешкали 70 тисяч людей.\nЗараз у місті залишилося вдесятеро менше мешканців.\nБахмут перетворився на найгарячішу точку війни Росії проти України.\nЯк для України, так і для РФ контроль над містом є ключовим у битві за Донбас, адже Бахмут є важливим транспортним вузлом."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dsx1m8.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "У зруйнованому місті залишився кожен десятий цивільний мешканець.",
+                "versions": [
+                  {
+                    "versionId": "p0dsx0r7",
+                    "types": ["Original"],
+                    "duration": 117,
+                    "durationISO8601": "PT1M57S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1672773481000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128190166",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1023D/production/_128190166_p0dsx1m8.jpg",
+                "path": "/cpsprodpb/1023D/production/_128190166_p0dsx1m8.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Бахмут",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-64158373",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e889021e-8d47-4da9-ad69-a66f204c43df",
+            "rank": 9,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:e889021e-8d47-4da9-ad69-a66f204c43df",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Землетрус у Туреччині: страшні кадри катастрофи",
+                "headline": "Землетрус у Туреччині: страшні кадри катастрофи"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-64541174",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e889021e-8d47-4da9-ad69-a66f204c43df",
+                "assetId": "64541174",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-64541174",
+                "curie": "http://www.bbc.co.uk/asset/e889021e-8d47-4da9-ad69-a66f204c43df"
+              },
+              "summary": "Потужний землетрус стався на південному сході Туреччини, недалеко від кордону із Сирією.",
+              "timestamp": 1675685288000,
+              "language": "uk",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "language": "uk",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "locator": "urn:bbc:cps:curie:asset:e889021e-8d47-4da9-ad69-a66f204c43df",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "uk",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingLabel": "Туреччина",
+                      "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+                      "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingEnglishLabel": "Turkey",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f1bmx9",
+                "subType": "clip",
+                "format": "video",
+                "title": "Землетрус у Туреччині: кадри катастрофи",
+                "synopses": {
+                  "short": "Землетрус у Туреччині: кадри катастрофи",
+                  "long": "Потужний землетрус стався на південному сході Туреччини, недалеко від кордону із Сирією.  Загальна кількість загиблих перевищила 1200. Ще кілька тисяч людей поранені.",
+                  "medium": "Потужний землетрус стався на південному сході Туреччини, недалеко від кордону із Сирією."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f1bn7t.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Землетрус у Туреччині: кадри катастрофи",
+                "versions": [
+                  {
+                    "versionId": "p0f1bmxm",
+                    "types": ["Original"],
+                    "duration": 75,
+                    "durationISO8601": "PT1M15S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675684519000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128537657",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/12799/production/_128537657_p0f1bn7t.jpg",
+                "path": "/cpsprodpb/12799/production/_128537657_p0f1bn7t.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Землетрус",
+                "copyrightHolder": "Reuters",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-64541174",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "423d449e-c864-4201-9355-f561fff2d58c",
+            "rank": 10,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:423d449e-c864-4201-9355-f561fff2d58c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Дмитро Кулеба: \"У Лаврова сталися прикрі несподіванки\"",
+                "headline": "Дмитро Кулеба: \"У Лаврова сталися прикрі несподіванки\""
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-64515970",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:423d449e-c864-4201-9355-f561fff2d58c",
+                "assetId": "64515970",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-64515970",
+                "curie": "http://www.bbc.co.uk/asset/423d449e-c864-4201-9355-f561fff2d58c"
+              },
+              "summary": "Дмитро Кулеба в інтерв'ю ВВС розповів про Росію, ПВК \"Вагнер\" і F-16.",
+              "timestamp": 1675668640000,
+              "language": "uk",
+              "passport": {
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  }
+                ],
+                "language": "uk",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "locator": "urn:bbc:cps:curie:asset:423d449e-c864-4201-9355-f561fff2d58c",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5737116b-5122-49f1-9cf1-0a04b6ca53e7#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "uk",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingLabel": "Російсько-українська війна",
+                      "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q110254389"
+                      ],
+                      "thingEnglishLabel": "Russia-Ukraine war",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "Росія",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5737116b-5122-49f1-9cf1-0a04b6ca53e7#id",
+                      "thingLabel": "Санкції проти Росії",
+                      "thingUri": "http://www.bbc.co.uk/things/5737116b-5122-49f1-9cf1-0a04b6ca53e7#id",
+                      "thingId": "5737116b-5122-49f1-9cf1-0a04b6ca53e7",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Russia sanctions",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingLabel": "Україна",
+                      "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Ukraine",
+                        "http://www.wikidata.org/entity/Q212",
+                        "http://sws.geonames.org/690791/"
+                      ],
+                      "thingEnglishLabel": "Ukraine",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0f0r5xh",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"У Лаврова сталися прикрі несподіванки\"",
+                "synopses": {
+                  "short": "Дмитро Кулеба в інтерв'ю ВВС розповів про Росію, ПВК \"Вагнер\", Іран, Ізраїль й F-16.",
+                  "long": "Росія має проблеми не лише на воєнному, але й на дипломатичному фронті. \nПро це в інтерв'ю кореспонденту ВВС Георгію Ерману заявив міністр закордонних справ України Дмитро Кулеба. \nЗа приклад головний дипломат України навів нещодавнє турне Лаврова Африкою,.\nПан Кулеба також  відповів на запитання щодо ролі Андрія Єрмака в українській зовнішній політиці та пояснив скандальний вибір посла до Болгарії.\nУ питанні постачання бойових літаків та дальнобійних ракет Україна, на переконання міністра, виходить на фінішну пряму. \nНе оминула розмова й теми потенційної допомоги Ізраїлю з системами ППО, а також перспектив для Ірану в разі його подальшої підтримки російської війни проти України.\nУ розпал війни Україна активізує співпрацю та готується відкривати нові диппредставництва у країнах так званого \"глобального півдня\" - Африки, Азії та Південної Америки. Міністр Кулеба розповів ВВС, чому вважає розвиток діалогу з цими регіонами пріоритетним для України."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0f0r66q.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Дмитро Кулеба в інтерв'ю ВВС розповів про Росію, ПВК \"Вагнер\", Іран, Ізраїль й F-16.",
+                "versions": [
+                  {
+                    "versionId": "p0f0r5xr",
+                    "types": ["Original"],
+                    "duration": 3905,
+                    "durationISO8601": "PT1H5M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1675387266000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128513960",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1B13/production/_128513960_p0f0r66q.jpg",
+                "path": "/cpsprodpb/1B13/production/_128513960_p0f0r66q.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "кулеба",
+                "copyrightHolder": "BBC",
+                "allowSyndication": true,
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-64515970",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d39bd68e-24d4-ea47-82d5-4ee6675d9600",
+            "rank": 11,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:d39bd68e-24d4-ea47-82d5-4ee6675d9600",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Чорне море – це холодильник\". Український археолог про знайдений на дні корабель",
+                "headline": "\"Чорне море – це холодильник\". Український археолог про знайдений на дні корабель"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-45997864",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-45997864",
+                "curie": "http://www.bbc.co.uk/asset/d39bd68e-24d4-ea47-82d5-4ee6675d9600",
+                "assetId": "45997864"
+              },
+              "summary": "Українського археолога Дмитра Кобалію покликали приєднатися до міжнародної експедиції у Чорному морі, коли там знайшли 12 затонулих човнів, схожих на козацьку флотилію.",
+              "timestamp": 1540641792000,
+              "language": "uk",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "Keep me on trend"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p06pzyjd",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Чорне море – це холодильник\". Український археолог про знайдений на дні корабель",
+                "synopses": {
+                  "short": "\"Чорне море – це холодильник\". Український археолог про знайдений на дні корабель",
+                  "long": "Українського археолога Дмитра Кобалію покликали приєднатися до міжнародної експедиції у Чорному морі, коли там знайшли 12 затонулих човнів, схожих на козацьку флотилію.\nКоли стало відомо про знахідку, як вважають, найстарішого корабля на дні Чорного моря, ми зв'язалися із паном Кобалією - він саме був у Брюсселі на міжнародній конференції. \nВін розповів нам про деталі експедиції: чому корабель віком у 2400 років так добре зберігся і чому я експедиція є такою важливою.",
+                  "medium": "Українського археолога Дмитра Кобалію покликали приєднатися до міжнародної експедиції у Чорному морі, коли там знайшли 12 затонулих човнів, схожих на козацьку флотилію."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06pzzc7.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "\"Чорне море – це холодильник\". Український археолог про знайдений корабель",
+                "versions": [
+                  {
+                    "versionId": "p06pzyjk",
+                    "types": ["Original"],
+                    "duration": 85,
+                    "durationISO8601": "PT1M25S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1540575635000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "104050624",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/A66D/production/_104050624_p06pzzc7.jpg",
+                "path": "/cpsprodpb/A66D/production/_104050624_p06pzzc7.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "\"Чорне море – це холодильник\". Український археолог про знайдений корабель",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-45997864",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "83e560ef-e4b9-4bc2-8f9d-a4cb700f4cdf",
+            "rank": 12,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:83e560ef-e4b9-4bc2-8f9d-a4cb700f4cdf",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"Металева бочка\". Як працює модульне укриття для бійців в окопах на фронті",
+                "headline": "\"Металева бочка\". Як працює модульне укриття для бійців в окопах на фронті"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-64430806",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:83e560ef-e4b9-4bc2-8f9d-a4cb700f4cdf",
+                "assetId": "64430806",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-64430806",
+                "curie": "http://www.bbc.co.uk/asset/83e560ef-e4b9-4bc2-8f9d-a4cb700f4cdf"
+              },
+              "summary": "Українські військові на передовій, отримують новий захист від артилерійських обстрілів.",
+              "timestamp": 1674910736000,
+              "language": "uk",
+              "passport": {
+                "language": "uk",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "locator": "urn:bbc:cps:curie:asset:83e560ef-e4b9-4bc2-8f9d-a4cb700f4cdf",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingLabel": "Feature",
+                      "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+                      "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+                      ],
+                      "thingEnglishLabel": "Feature",
+                      "thingPreferredLabel": "Feature",
+                      "thingLabelLanguage": "uk",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingLabel": "Російсько-українська війна",
+                      "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q110254389"
+                      ],
+                      "thingEnglishLabel": "Russia-Ukraine war",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dz9st8",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"Металева бочка\" - модульне укриття для бійців ЗСУ",
+                "synopses": {
+                  "short": "Українські військові на передовій, отримують новий захист від артилерійських обстрілів."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dz9vpq.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Українські військові на передовій, отримують новий захист від артилерійських обстрілів.",
+                "versions": [
+                  {
+                    "versionId": "p0dz9std",
+                    "types": ["Original"],
+                    "duration": 115,
+                    "durationISO8601": "PT1M55S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1674831613000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128439494",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/C155/production/_128439494_p0dz9vpq.jpg",
+                "path": "/cpsprodpb/C155/production/_128439494_p0dz9vpq.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "\"Металева бочка\" - модульне укриття для бійців ЗСУ",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-64430806",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6374bece-543b-4f37-b951-f60f7c7d4e86",
+            "rank": 13,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:6374bece-543b-4f37-b951-f60f7c7d4e86",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Життя королівської родини: спогади про Єлизавету ІІ",
+                "headline": "Життя королівської родини: спогади про Єлизавету ІІ"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/news-62849587",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:6374bece-543b-4f37-b951-f60f7c7d4e86",
+                "assetId": "62849587",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-62849587",
+                "curie": "http://www.bbc.co.uk/asset/6374bece-543b-4f37-b951-f60f7c7d4e86"
+              },
+              "summary": "Королева Єлизавета ІІ завжди плекала спогади про своє виховання в дружній і люблячій родині і намагалася збалансувати вимоги монархії з потребами свого чоловіка та дітей.",
+              "timestamp": 1662714988000,
+              "language": "uk",
+              "passport": {
+                "language": "uk",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "locator": "urn:bbc:cps:curie:asset:6374bece-543b-4f37-b951-f60f7c7d4e86",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1a7d4ccf-4d2a-49fc-9eaf-2c65d4c575a9#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1ff657f2-0bc9-4172-a198-fda306e611f4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "uk",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1a7d4ccf-4d2a-49fc-9eaf-2c65d4c575a9#id",
+                      "thingLabel": "Британська королівська родина",
+                      "thingUri": "http://www.bbc.co.uk/things/1a7d4ccf-4d2a-49fc-9eaf-2c65d4c575a9#id",
+                      "thingId": "1a7d4ccf-4d2a-49fc-9eaf-2c65d4c575a9",
+                      "thingType": [
+                        "tagging:Agent",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Organisation",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/British_Royal_Family"
+                      ],
+                      "thingEnglishLabel": "UK Royal Family",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/1ff657f2-0bc9-4172-a198-fda306e611f4#id",
+                      "thingLabel": "Королева Єлизавета ІІ",
+                      "thingUri": "http://www.bbc.co.uk/things/1ff657f2-0bc9-4172-a198-fda306e611f4#id",
+                      "thingId": "1ff657f2-0bc9-4172-a198-fda306e611f4",
+                      "thingType": [
+                        "core:Person",
+                        "tagging:Agent",
+                        "tagging:TagConcept",
+                        "tagging:AmbiguousTerm",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Elizabeth_II",
+                        "http://rdf.freebase.com/ns/m.0d1_f",
+                        "http://www.wikidata.org/entity/Q9682"
+                      ],
+                      "thingEnglishLabel": "Queen Elizabeth II",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                      "thingLabel": "Британія",
+                      "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+                      "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Place",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2635167/"],
+                      "thingEnglishLabel": "United Kingdom",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0czf1hv",
+                "subType": "clip",
+                "format": "video",
+                "title": "Життя королівської родини: спогади про Єлизавету ІІ",
+                "synopses": {
+                  "short": "Життя королівської родини: спогади про Єлизавету ІІ",
+                  "long": "Королева Єлизавета ІІ завжди плекала спогади про своє виховання в дружній і люблячій родині і намагалася збалансувати вимоги монархії з потребами свого чоловіка та дітей. Як і в усіх сім’ях, існувала напруга, але її відданість сім’ї була важливою частиною її життя та правління."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0czf1rn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Життя королівської родини: спогади про Єлизавету ІІ",
+                "versions": [
+                  {
+                    "versionId": "p0czf1hz",
+                    "types": ["Original"],
+                    "duration": 149,
+                    "durationISO8601": "PT2M29S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1662713719000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "126651873",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/93B7/production/_126651873_p0czf1rn.jpg",
+                "path": "/cpsprodpb/93B7/production/_126651873_p0czf1rn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Royal Family",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/news-62849587",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4ebb5415-336e-7042-a90b-a74167741ea6",
+            "rank": 14,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:4ebb5415-336e-7042-a90b-a74167741ea6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "\"У що ви були одягнуті?\": виставка одягу жертв зґвалтування",
+                "headline": "\"У що ви були одягнуті?\": виставка одягу жертв зґвалтування"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-42751344",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-42751344",
+                "curie": "http://www.bbc.co.uk/asset/4ebb5415-336e-7042-a90b-a74167741ea6",
+                "assetId": "42751344"
+              },
+              "summary": "\"У що ви були одягнуті?\" – це питання часто ставлять жертвам зґвалтування. Та чи доречно про це запитувати?",
+              "timestamp": 1516375968000,
+              "language": "uk",
+              "media": {
+                "id": "p05vfxq2",
+                "subType": "clip",
+                "format": "video",
+                "title": "\"У що ви були одягнуті?\": виставка одягу жертв зґвалтування",
+                "synopses": {
+                  "short": "\"У що ви були одягнуті?\": виставка одягу жертв зґвалтування",
+                  "medium": "\"У що ви були одягнуті?\" – це питання часто ставлять жертвам зґвалтування. Та чи доречно про це запитувати?",
+                  "long": "\"У що ви були одягнуті?\" – це питання часто ставлять жертвам зґвалтування поліцейські, слідчі, друзі та навіть члени родини.\n\nУ Брюсселі відкрилася виставка під назвою \"Чи це моя провина?\", присвячена тим, хто став жертвами сексуального насильства. \n\nНа експозиції представлений одяг, який був на людях у той день, коли їх зґвалтували. \n\nНа думку її організаторів, запитання про те, у що людина була одягнута, може підштовхнути її до думки, що вона сама винна у тому, що сталося."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05vg2zb.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "\"У що ви були одягнуті?\": виставка одягу жертв зґвалтування",
+                "versions": [
+                  {
+                    "versionId": "p05vg2sf",
+                    "types": ["Editorial"],
+                    "duration": 67,
+                    "durationISO8601": "PT1M7S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1516371526000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99667719",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/16680/production/_99667719_p05vfz64.jpg",
+                "path": "/cpsprodpb/16680/production/_99667719_p05vfz64.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #3",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-42751344",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "11178620-0b62-cc49-b425-0bd4803dbeed",
+            "rank": 15,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:11178620-0b62-cc49-b425-0bd4803dbeed",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Британська пара збудувала хатинку в деревах",
+                "headline": "Хатинка як порятунок від \"алергії на сучасне життя\""
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-39143993",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-39143993",
+                "curie": "http://www.bbc.co.uk/asset/11178620-0b62-cc49-b425-0bd4803dbeed",
+                "assetId": "39143993"
+              },
+              "summary": "Кейт і Аллан самостійно побудувала хатинку між трьома стовбурами дерев у британському графстві Девон, щоб утекти від сучасного життя.",
+              "timestamp": 1488525153000,
+              "language": "uk",
+              "media": {
+                "id": "p04vkwlv",
+                "subType": "clip",
+                "format": "video",
+                "title": "Хатинка як порятунок від \"алергії на сучасне життя\"",
+                "synopses": {
+                  "short": "Хатинка як порятунок від \"алергії на сучасне життя\"",
+                  "medium": "Кейт і Аллан самостійно побудувала хатинку між трьома стовбурами дерев у британському графстві Девон, щоб утекти від сучасного життя.",
+                  "long": "Кейт і Аллан самостійно побудувала хатинку між трьома стовбурами дерев у британському графстві Девон, щоб утекти від сучасного життя.\nКейт каже, що живучи на природі, почувається значно краще, ніж у звичайному помешканні.\nОднак місцева влада вважає таке будівництво незаконним."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04vkwx8.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Хатинка як порятунок від \"алергії на сучасне життя\"",
+                "versions": [
+                  {
+                    "versionId": "p04vkwly",
+                    "types": ["Original"],
+                    "duration": 55,
+                    "durationISO8601": "PT55S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1488481221000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "94915753",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/8BA7/production/_94915753_p04vkwx8.jpg",
+                "path": "/cpsprodpb/8BA7/production/_94915753_p04vkwx8.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "хатинка",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-39143993",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e59f24f6-cd61-914e-a418-f02bade71050",
+            "rank": 16,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:e59f24f6-cd61-914e-a418-f02bade71050",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Коломойський: Україні треба не один Зеленський, а мільйон зеленських",
+                "headline": "Коломойський: Україні треба не один Зеленський, а мільйон зеленських"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-47462483",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-47462483",
+                "curie": "http://www.bbc.co.uk/asset/e59f24f6-cd61-914e-a418-f02bade71050",
+                "assetId": "47462483"
+              },
+              "summary": "Олігарх розповів ВВС про \"Приватбанк\", Зеленського і Порошенка. А також покатав на своєму авто.",
+              "timestamp": 1551806403000,
+              "language": "uk",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "media": {
+                "id": "p072nq6x",
+                "subType": "clip",
+                "format": "video",
+                "title": "Коломойський: \"Україна потребує не одного Зеленського, а мільйонів Зеленських\"",
+                "synopses": {
+                  "short": "Олігарх розповів ВВС про \"Приватбанк\", Зеленського і Порошенка",
+                  "long": "Наприкінці 2016 року - посередині каденції Петра Порошенка - Ігор Коломойський втратив \"Приватбанк\". \nВлада тоді націоналізувала його після визнання НБУ структури неплатоспроможною.\nВідтоді пан Коломойський осів за межами України.\nЗараз президентські рейтинги очолює Володимир Зеленський - комік, шоу і передвиборчу кампанію якого активно висвітлює телеканал \"1+1\", який належить Ігорю Коломойському.\nНапередодні президентських виборів з олігархом поспілкувався кореспондент ВВС Джона Фішер."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p072nrc0.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Олігарх розповів ВВС про \"Приватбанк\", Зеленського і Порошенка",
+                "versions": [
+                  {
+                    "versionId": "p072nq70",
+                    "types": ["Original"],
+                    "duration": 309,
+                    "durationISO8601": "PT5M9S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1551805079000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "105903827",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11C7E/production/_105903827_p072nrc0.jpg",
+                "path": "/cpsprodpb/11C7E/production/_105903827_p072nrc0.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Із кореспондентом ВВС Джоною Фішером Ігор Коломойський зустрівся в Ізраїлі",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-47462483",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d636548c-b383-3142-9d5c-2afe6e6e3039",
+            "rank": 17,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:d636548c-b383-3142-9d5c-2afe6e6e3039",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Що таке \"ядерна кнопка\"?",
+                "headline": "Що таке \"ядерна кнопка\"?"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-42618639",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-42618639",
+                "curie": "http://www.bbc.co.uk/asset/d636548c-b383-3142-9d5c-2afe6e6e3039",
+                "assetId": "42618639"
+              },
+              "summary": "Яку термінологію вживають у США щодо засобів, за допомогою яких американський президент може віддати наказ про ядерний удар.",
+              "timestamp": 1515494782000,
+              "language": "uk",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05t83sb",
+                "subType": "clip",
+                "format": "video",
+                "title": "Нахвалялись “ядерними кнопками”: але що це таке\"?",
+                "synopses": {
+                  "short": "Нахвалялись “ядерними кнопками”: але що це таке\"?",
+                  "medium": "Президент США Дональд Трамп заявив, що його \"ядерна кнопка\" більша за ту, яку має лідер Північної Кореї Кім Чен Ин.",
+                  "long": "Президент США Дональд Трамп заявив, що його \"ядерна кнопка\" більша за ту, яку має лідер Північної Кореї Кім Чен Ин.\nЦе викликало цілу хвилю \"чорного гумору\" на тему амбіцій, загроз та ядерного потенціалу країн.\nОднак яку термінологію вживають у США стосовно засобів, за допомогою яких американський президент може віддати наказ про ядерний удар?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05t84jx.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Нахвалялись “ядерними кнопками”: але що це таке\"?",
+                "versions": [
+                  {
+                    "versionId": "p05t83sh",
+                    "types": ["Original"],
+                    "duration": 99,
+                    "durationISO8601": "PT1M39S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1515489805000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "99518819",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/166E9/production/_99518819_p05t84bq.jpg",
+                "path": "/cpsprodpb/166E9/production/_99518819_p05t84bq.jpg",
+                "height": 575,
+                "width": 1024,
+                "altText": "ядерна зброя сша і кореї",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-42618639",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "be884e99-afd0-544b-9387-492b5a97bf81",
+            "rank": 18,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:be884e99-afd0-544b-9387-492b5a97bf81",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Зсув повільно руйнує селище в Італії",
+                "headline": "Зсув повільно руйнує селище в Італії"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-39062161",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-39062161",
+                "curie": "http://www.bbc.co.uk/asset/be884e99-afd0-544b-9387-492b5a97bf81",
+                "assetId": "39062161"
+              },
+              "summary": "У селищі Понзано в центральній Італії приблизно сотня людей залишилась без даху над головою через зсув ґрунту.",
+              "timestamp": 1487834368000,
+              "language": "uk",
+              "media": {
+                "id": "p04trr75",
+                "subType": "clip",
+                "format": "video",
+                "title": "Зсув повільно руйнує селище в Італії",
+                "synopses": {
+                  "short": "Зсув повільно руйнує селище в Італії",
+                  "medium": "У селищі Понзано в центральній Італії приблизно сотня людей залишились без даху над головою через зсув ґрунту.",
+                  "long": "У селищі Понзано в центральній Італії приблизно сотня людей залишились без даху над головою через зсув ґрунту. \n33 будинків евакуювали із селища, яке розділяється на дві частини.\nЗа даними влади, зсув просувається зі швидкістю метр на день.\nСелище розташоване в регіоні Абруццо, який постраждав він низки землетрусів минулого року."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04trrhd.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Зсув повільно руйнує селище в Італії",
+                "versions": [
+                  {
+                    "versionId": "p04trr7r",
+                    "types": ["Original"],
+                    "duration": 35,
+                    "durationISO8601": "PT35S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1487833839000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "94809528",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1429E/production/_94809528_p04trrhd.jpg",
+                "path": "/cpsprodpb/1429E/production/_94809528_p04trrhd.jpg",
+                "height": 575,
+                "width": 1024,
+                "altText": "Італія",
+                "copyrightHolder": "Radiotelevisione Italiana",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-39062161",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "8fa58960-ec33-40de-a12c-5fb019f7dd03",
+            "rank": 19,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:8fa58960-ec33-40de-a12c-5fb019f7dd03",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Як українські військові зустріли Новий рік в окопах на фронті",
+                "headline": "Як українські військові зустріли Новий рік в окопах на фронті"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/media-64148513",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:8fa58960-ec33-40de-a12c-5fb019f7dd03",
+                "assetId": "64148513",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-64148513",
+                "curie": "http://www.bbc.co.uk/asset/8fa58960-ec33-40de-a12c-5fb019f7dd03"
+              },
+              "summary": "Мінометний розрахунок ЗСУ зустрів Новий 2023 рік на Донбасі - знайшли хвильку для відзначення.",
+              "timestamp": 1672744941000,
+              "language": "uk",
+              "passport": {
+                "language": "uk",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
+                "locator": "urn:bbc:cps:curie:asset:8fa58960-ec33-40de-a12c-5fb019f7dd03",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/5737116b-5122-49f1-9cf1-0a04b6ca53e7#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/1808a59a-896b-4112-89c1-b713b991a1d1#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/0567f96b-b9b4-4be7-83be-0f874fec16ff#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/00aae251-4be8-4d40-a36a-c6689805c102#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d8c3e6f0-064d-4f3b-b087-7e4e631e440f#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "uk",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/00aae251-4be8-4d40-a36a-c6689805c102#id",
+                      "thingLabel": "Донбас",
+                      "thingUri": "http://www.bbc.co.uk/things/00aae251-4be8-4d40-a36a-c6689805c102#id",
+                      "thingId": "00aae251-4be8-4d40-a36a-c6689805c102",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/709718/",
+                        "http://dbpedia.org/resource/Donets_Basin",
+                        "http://www.wikidata.org/entity/Q605714"
+                      ],
+                      "thingEnglishLabel": "Donbas",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/0567f96b-b9b4-4be7-83be-0f874fec16ff#id",
+                      "thingLabel": "Мобілізація в Росії",
+                      "thingUri": "http://www.bbc.co.uk/things/0567f96b-b9b4-4be7-83be-0f874fec16ff#id",
+                      "thingId": "0567f96b-b9b4-4be7-83be-0f874fec16ff",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept",
+                        "core:Event"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Mobilisation in Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/1808a59a-896b-4112-89c1-b713b991a1d1#id",
+                      "thingLabel": "Володимир Зеленський",
+                      "thingUri": "http://www.bbc.co.uk/things/1808a59a-896b-4112-89c1-b713b991a1d1#id",
+                      "thingId": "1808a59a-896b-4112-89c1-b713b991a1d1",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Agent",
+                        "core:Person",
+                        "core:Thing",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q3874799"
+                      ],
+                      "thingEnglishLabel": "Volodymyr Zelensky",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingLabel": "Російсько-українська війна",
+                      "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+                      "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Event",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://www.wikidata.org/entity/Q110254389"
+                      ],
+                      "thingEnglishLabel": "Russia-Ukraine war",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingLabel": "Росія",
+                      "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+                      "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingEnglishLabel": "Russia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/5737116b-5122-49f1-9cf1-0a04b6ca53e7#id",
+                      "thingLabel": "Санкції проти Росії",
+                      "thingUri": "http://www.bbc.co.uk/things/5737116b-5122-49f1-9cf1-0a04b6ca53e7#id",
+                      "thingId": "5737116b-5122-49f1-9cf1-0a04b6ca53e7",
+                      "thingType": [
+                        "core:Theme",
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Russia sanctions",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                      "thingLabel": "Володимир Путін",
+                      "thingUri": "http://www.bbc.co.uk/things/7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f#id",
+                      "thingId": "7fd6ee44-38a3-4fe3-a40f-7b4f8f72c67f",
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:Agent",
+                        "tagging:TagConcept",
+                        "core:Person",
+                        "tagging:AmbiguousTerm"
+                      ],
+                      "thingSameAs": [
+                        "http://www.imdb.com/name/nm1269884/",
+                        "http://dbpedia.org/resource/Vladimir_Putin",
+                        "http://musicbrainz.org/artist/833f5372-a2a5-4932-8a5c-399184f29541#_",
+                        "http://www.wikidata.org/entity/Q7747"
+                      ],
+                      "thingEnglishLabel": "Vladimir Putin",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingLabel": "Україна",
+                      "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+                      "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing",
+                        "core:Place"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Ukraine",
+                        "http://www.wikidata.org/entity/Q212",
+                        "http://sws.geonames.org/690791/"
+                      ],
+                      "thingEnglishLabel": "Ukraine",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dsp13y",
+                "subType": "clip",
+                "format": "video",
+                "title": "Як мінометний розрахунок ЗСУ зустрів Новий 2023 рік на Донбасі",
+                "synopses": {
+                  "short": "Репортаж з передової на Донеччині.",
+                  "long": "Бойові дії на лінії фронту не зупиняються ні на мить. Та цей мінометний розрахунок, який боронить Україну на Донбасі, знайшов хвилинку для зустрічі Нового 2023 року."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dsp46y.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Репортаж з передової на Донеччині.",
+                "versions": [
+                  {
+                    "versionId": "p0dsp142",
+                    "types": ["Original"],
+                    "duration": 192,
+                    "durationISO8601": "PT3M12S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1672682468000
+                  }
+                ],
+                "imageCopyright": "Reuters",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128180970",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1EE4/production/_128180970_p0dsp46y.jpg",
+                "path": "/cpsprodpb/1EE4/production/_128180970_p0dsp46y.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "зсу, донбас",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/media-64148513",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "756ebe93-b170-0046-90ce-3d8fafa53191",
+            "rank": 20,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:756ebe93-b170-0046-90ce-3d8fafa53191",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Урок англійської мови Lingohack: море пластику",
+                "headline": "Урок англійської мови Lingohack: море пластику"
+              },
+              "locators": {
+                "assetUri": "/ukrainian/learningenglish-41598433",
+                "cpsUrn": "urn:bbc:content:assetUri:ukrainian/learningenglish-41598433",
+                "curie": "http://www.bbc.co.uk/asset/756ebe93-b170-0046-90ce-3d8fafa53191",
+                "assetId": "41598433"
+              },
+              "summary": "У тижневому уроці англійської мови з циклу Lingohack вивчаємо лексику на тему переробки відходів і подолання кризи із забрудненням світового океану пластиком.",
+              "timestamp": 1507810709000,
+              "language": "uk",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "media": {
+                "id": "p05jqwt4",
+                "subType": "clip",
+                "format": "video",
+                "title": "Урок англійської мови Lingohack: море пластику",
+                "synopses": {
+                  "short": "Урок англійської мови Lingohack: море пластику",
+                  "medium": "У тижневому уроці англійської мови з циклу Lingohack вивчаємо лексику на тему переробки відходів і подолання кризи із забрудненням світового океану пластиком.",
+                  "long": "У тижневому уроці англійської мови з циклу Lingohack вивчаємо лексику на тему переробки відходів і подолання кризи із забрудненням світового океану пластиком.\n\nНовина:\n\nTackling the sea of plastic\n\nВивчаємо лексику на тему:\n\nRecycling\n\nКорисні слова і вислови\n\ndumped – (діємлово) викинутий, покинутий\ncollections – час, коли щось збирають і вивозять \nsustainable materials – (іменник) речовини, які придатні до тривалого використання і не шкодять навколишньому середовищу \nbreak down – (дієслово) поділити на меші частини, складові \nmicro level –  рівень дуже дрібних складових \n\nДайте відповідь на таке питання: \n\nCan only people living in coastal communities solve the problem of plastic waste?\n\nТекст:\n\nReducing the eight million tons of plastic dumped in the world’s oceans every year is now a priority around the globe and closing the loop by recycling is one answer. \nThese are deposit return-or-reverse vending machines. You put used plastic bottles in and they pay out. It scans the bar code on the label and offers the chance to make a donation to charity or credit in this supermarket.  Collections are made across Sweden and brought here to this plant 90 minutes south of Stockholm. They handle plastic and glass bottles as well as aluminium cans. The Swedes have been using this type of system since the mid-eighties.  \nBut the country is no stranger to the scourge of plastic pollution, especially in the sea.  It’s a major problem here but one the environment minister insists is solvable. \n\nKarolina Skog - Swedish Environment Minister\n“There are many interesting new materials coming up from research and innovation and I see that once we have knowledge on really sustainable materials we can enter them into market rather quickly because there is a public demand and we have legal tools to use if needed. So yes, I am optimistic if we work together policy and industry.”\nAnd people too. As plastics break down to micro level and enter the food chain in our oceans, it’s not just an issue for coastal communities. It’s a problem that affects all of us and can only be solved by all of us. \n\nЗнайшли відповідь?\n\nCan only people living in coastal communities solve the problem of plastic waste?\n\nВідповідь: \nNo. It’s not just an issue for coastal communities - it’s a problem that affects all of us and can only be solved by all of us. \n\nЧи знаєте таке?\n\nUS scientists have calculated the total amount of plastic ever made and put the number at 8.3 billion tonnes. That is as heavy as 25,000 Empire State Buildings in New York, or a billion elephants."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05jr2vt.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Урок англійської мови Lingohack: море пластику",
+                "versions": [
+                  {
+                    "versionId": "p05jqwt8",
+                    "types": ["Original"],
+                    "duration": 203,
+                    "durationISO8601": "PT3M23S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1507808736000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "98284404",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/9E00/production/_98284404_p05jr2vt.jpg",
+                "path": "/cpsprodpb/9E00/production/_98284404_p05jr2vt.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Море пластику",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:ukrainian/learningenglish-41598433",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

@@ -1,99 +1,1722 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
-    "locators": {
-      "assetUri": "/somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
-      "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
-      "curie": "http://www.bbc.co.uk/asset/2f538cba-7cc6-11e7-9ef6-4e843db9bd6e"
-    },
-    "type": "MAP",
-    "createdBy": "somali",
-    "language": "so",
-    "lastUpdated": 1550415991760,
-    "firstPublished": 1343718151,
-    "lastPublished": 1343719646,
-    "options": {
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "allowDateStamp": true,
-      "suitableForSyndication": false,
-      "previouslyArchived": null,
-      "allowAdvertising": false,
-      "isBreakingNews": false
-    },
-    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "18949484" },
-    "tags": {},
-    "version": "v1.0.0",
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "18949484",
-        "subType": "primary",
-        "format": "video",
-        "aspectRatio": "16:9",
-        "live": false,
-        "href": "http://www.bbc.co.uk/somali/meta/dps/2012/07/emp/120731_olympicvideo.emp.xml",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+        "locators": {
+          "assetUri": "/somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+          "curie": "http://www.bbc.co.uk/asset/2f538cba-7cc6-11e7-9ef6-4e843db9bd6e",
+          "assetId": "18949484"
+        },
+        "type": "MAP",
+        "createdBy": "somali",
+        "language": "so",
+        "lastUpdated": 1649762778908,
+        "firstPublished": 1343718151000,
+        "lastPublished": 1343719646000,
+        "timestamp": 1343719646000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "previouslyArchived": null,
+          "allowAdvertising": false,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "18949484",
+          "contentId": "urn:bbc:topcat:curie:asset:2f538cba-7cc6-11e7-9ef6-4e843db9bd6e"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.2",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/somali",
+        "mediaType": "video"
       },
-      {
-        "text": "Orodyahaanka Kenya ayaa ku tabaranayey magaalada Iten, ka hor inta aanay u ambabixin magaalada London si ay ugu qeyb-galaan cayaaraha Olympics-ka.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "18949484",
+            "subType": "primary",
+            "format": "video",
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://www.bbc.co.uk/somali/meta/dps/2012/07/emp/120731_olympicvideo.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/somali/dps/2012/07/somolympics_120731_olympicvideo_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/somali/dps/2012/07/somolympics_120731_olympicvideo_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/somali/dps/2012/07/somolympics_120731_olympicvideo_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "Orodyahaanka Kenya ayaa ku tabaranayey magaalada Iten, ka hor inta aanay u ambabixin magaalada London si ay ugu qeyb-galaan cayaaraha Olympics-ka.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Video: Halkey ku tababaranayeen orodyahanka Kenya?",
+          "headline": "Video: Halkey ku tababaranayeen orodyahanka Kenya?"
+        },
+        "locators": {
+          "assetUri": "/somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+          "curie": "http://www.bbc.co.uk/asset/2f538cba-7cc6-11e7-9ef6-4e843db9bd6e",
+          "assetId": "18949484"
+        },
+        "summary": "Magaalada Iten oo ah magaalo ku taallo goob aad u sareysa ayay orodyaanka Kenya ku tababaranayeen.",
+        "timestamp": 1343719646000,
+        "language": "so",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+          "taggings": []
+        },
+        "media": {
+          "id": "18949484",
+          "subType": "primary",
+          "format": "video",
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://www.bbc.co.uk/somali/meta/dps/2012/07/emp/120731_olympicvideo.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/somali/dps/2012/07/somolympics_120731_olympicvideo_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/somali/dps/2012/07/somolympics_120731_olympicvideo_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/somali/dps/2012/07/somolympics_120731_olympicvideo_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d7e216",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2010/10/13/101013122548_kenyan_athletes_144x81_nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2010/10/13/101013122548_kenyan_athletes_144x81_nocredit.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "Ordyahaanka Kenya",
+          "copyrightHolder": "",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Maqal iyo Muuqaal",
+          "uri": "/somali/maqal_iyo_muuqaal",
+          "urlIdentifier": "/somali/maqal_iyo_muuqaal",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCSomali.com",
+          "uri": "/somali",
+          "urlIdentifier": "/somali",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "Video: Halkey ku tababaranayeen orodyahanka Kenya?",
-      "headline": "Video: Halkey ku tababaranayeen orodyahanka Kenya?"
     },
-    "locators": {
-      "assetUri": "/somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
-      "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
-      "curie": "http://www.bbc.co.uk/asset/2f538cba-7cc6-11e7-9ef6-4e843db9bd6e"
-    },
-    "summary": "Magaalada Iten oo ah magaalo ku taallo goob aad u sareysa ayay orodyaanka Kenya ku tababaranayeen.",
-    "timestamp": 1550415991760,
-    "passport": {},
-    "media": {
-      "id": "18949484",
-      "subType": "primary",
-      "format": "video",
-      "aspectRatio": "16:9",
-      "live": false,
-      "href": "http://www.bbc.co.uk/somali/meta/dps/2012/07/emp/120731_olympicvideo.emp.xml",
-      "type": "legacyMedia"
-    },
-    "indexImage": {
-      "id": "d7e277",
-      "subType": "index",
-      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/08/10/120810132353_rudisha_640_640x360_bbc_nocredit.jpg",
-      "path": "/amz/worldservice/live/assets/images/2012/08/10/120810132353_rudisha_640_640x360_bbc_nocredit.jpg",
-      "height": 360,
-      "width": 640,
-      "altText": "Kenya",
-      "copyrightHolder": "BBC",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2012/07/120731_olympicvideo",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Maqal iyo Muuqaal",
-      "uri": "/somali/maqal_iyo_muuqaal",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBCSomali.com",
-      "uri": "/somali",
-      "type": "simple"
-    },
-    "groups": []
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-15T09:51:00.974Z",
+        "lastRecordTimeStamp": "2023-02-15T09:49:00Z",
+        "firstRecordTimeStamp": "2023-02-15T05:49:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "c6b2ce6c-68c6-11e3-8b00-26c53db9bd6e",
+            "rank": 1,
+            "count": 22,
+            "urn": "urn:bbc:curie:asset:c6b2ce6c-68c6-11e3-8b00-26c53db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Idaacadda Subaxnimo",
+                "headline": "Idaacadda Subaxnimo"
+              },
+              "locators": {
+                "assetUri": "/somali/maqal_iyo_muuqaal/2013/12/000010_idaacadda_subaxnimo",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2013/12/000010_idaacadda_subaxnimo",
+                "curie": "http://www.bbc.co.uk/asset/c6b2ce6c-68c6-11e3-8b00-26c53db9bd6e",
+                "assetId": "29021173"
+              },
+              "summary": "Maalin walba 07:00 SGA 04:00 GMT",
+              "timestamp": 1387469065000,
+              "language": "so",
+              "media": {
+                "id": "29021173",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "29021173",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/19/131219122811_microphone_640x360.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2013/12/19/131219122811_microphone_640x360.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "Microphone",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://wsdownload.bbc.co.uk/somali/meta/tx/smp/somali_0400.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/somali/css/32mp3/latest/idaacaddasubaxnimo.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e384",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2013/12/19/131219122804_microphone_144x81.jpg",
+                "path": "/amz/worldservice/live/assets/images/2013/12/19/131219122804_microphone_144x81.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "Microphone",
+                "copyrightHolder": "BBC World Service",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2013/12/000010_idaacadda_subaxnimo",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d60ae19d-bfae-4571-9b78-95a3b314b31b",
+            "rank": 2,
+            "count": 16,
+            "urn": "urn:bbc:curie:asset:d60ae19d-bfae-4571-9b78-95a3b314b31b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Muuse Biixi: Somaliland ayaa ku filan Laascaanood",
+                "headline": "Muuse Biixi: Somaliland ayaa ku filan Laascaanood"
+              },
+              "locators": {
+                "assetUri": "/somali/64154653",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d60ae19d-bfae-4571-9b78-95a3b314b31b",
+                "assetId": "64154653",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/64154653",
+                "curie": "http://www.bbc.co.uk/asset/d60ae19d-bfae-4571-9b78-95a3b314b31b"
+              },
+              "summary": "Xaaladda Magaalada laascaanood ayaa maalintii labaad deggan ka dib rabshadihii ka qarxay Talaadadii.",
+              "timestamp": 1672753481000,
+              "language": "so",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  }
+                ],
+                "language": "so",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "locator": "urn:bbc:cps:curie:asset:d60ae19d-bfae-4571-9b78-95a3b314b31b",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+                    "value": "http://www.bbc.co.uk/things/d6f9e1cd-1ac7-41f1-8850-03da4f9ae876#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1f64d369-e74d-4ac6-bde1-ce97356c362d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1f64d369-e74d-4ac6-bde1-ce97356c362d#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "campaign": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/d6f9e1cd-1ac7-41f1-8850-03da4f9ae876#id",
+                      "type": "campaign"
+                    }
+                  ],
+                  "motivation": [],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "so",
+                      "type": "formats"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dstj03",
+                "subType": "clip",
+                "format": "video",
+                "title": "Muuse Biixi oo ka hadlay xaaladda Laascaanood",
+                "synopses": {
+                  "short": "Muuse Biixi oo ka hadlay xaaladda Laascaanood"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dstjtn.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Muuse Biixi oo ka hadlay xaaladda Laascaanood",
+                "versions": [
+                  {
+                    "versionId": "p0dstj09",
+                    "types": ["Original"],
+                    "duration": 206,
+                    "durationISO8601": "PT3M26S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1672753011000
+                  }
+                ],
+                "imageCopyright": "Getty Images",
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "128177660",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1A15/production/_128177660_p0dstjtn.jpg",
+                "path": "/cpsprodpb/1A15/production/_128177660_p0dstjtn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Biixi",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/64154653",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "363e37a7-6765-4423-adcc-cee5186d9cf9",
+            "rank": 3,
+            "count": 10,
+            "urn": "urn:bbc:curie:asset:363e37a7-6765-4423-adcc-cee5186d9cf9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Dadkii ku xannibmay weerarrada Al-Shabaab ee uu badbaadiyay Jeneraal Farxaan Qaroole",
+                "headline": "Dadkii ku xannibmay weerarrada Al-Shabaab ee uu badbaadiyay Jeneraal Farxaan Qaroole"
+              },
+              "locators": {
+                "assetUri": "/somali/63390897",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:363e37a7-6765-4423-adcc-cee5186d9cf9",
+                "assetId": "63390897",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/63390897",
+                "curie": "http://www.bbc.co.uk/asset/363e37a7-6765-4423-adcc-cee5186d9cf9"
+              },
+              "summary": "Halkan ka daawo muuqaal ku saabsan dadkii ku xannibmay weerarrada Al-Shabaab ay ku qabsatay goobaha ay dadku ku kulmaan iyo hoteellada ee uu badbaadiyay Jeneraal Farxaan Qaroole",
+              "timestamp": 1666716292000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "p0d9frfn",
+                "subType": "clip",
+                "format": "video",
+                "title": "Dadkii u badbaadiyay Gen Farxaan",
+                "synopses": {
+                  "short": "Dadkii u badbaadiyay Gen Farxaan"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0d9frrl.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Dadkii u badbaadiyay Gen Farxaan",
+                "versions": [
+                  {
+                    "versionId": "p0d9frfs",
+                    "types": ["Original"],
+                    "duration": 423,
+                    "durationISO8601": "PT7M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1666707886000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "127332910",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0783/production/_127332910_p0d9frrl.jpg",
+                "path": "/cpsprodpb/0783/production/_127332910_p0d9frrl.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Jeneraal Farxaan Qaroole",
+                "copyrightHolder": "Sources",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/63390897",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cf8d7620-6270-4e49-96d0-111d05ead595",
+            "rank": 4,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:cf8d7620-6270-4e49-96d0-111d05ead595",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Daawo gabdhaha Soomaalida ee ciyaara chess-ka, tartamo caalami ahna ka qeyb galay",
+                "headline": "Gabdha ciyaaraha chess-ka ee tartamada caalamiga ah ka qeyb galay"
+              },
+              "locators": {
+                "assetUri": "/somali/63148019",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:cf8d7620-6270-4e49-96d0-111d05ead595",
+                "assetId": "63148019",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/63148019",
+                "curie": "http://www.bbc.co.uk/asset/cf8d7620-6270-4e49-96d0-111d05ead595"
+              },
+              "summary": "Safarro dibadda ah ayey u aadeen si ay uga qeyb galaan tartammo caalami ah.",
+              "timestamp": 1664974179000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "p0d4pcx6",
+                "subType": "clip",
+                "format": "video",
+                "title": "Gabdhaha Soomaalida ee ciyaara chess ka",
+                "synopses": {
+                  "short": "Gabdha ciyaaraha chess ka."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0d5c057.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Gabdha ciyaaraha chess ka.",
+                "versions": [
+                  {
+                    "versionId": "p0d4pcxg",
+                    "types": ["Original"],
+                    "duration": 248,
+                    "durationISO8601": "PT4M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1664964759000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "126981502",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/5026/production/_126981502_p0d4ph24.jpg",
+                "path": "/cpsprodpb/5026/production/_126981502_p0d4ph24.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Gabdhaha Soomaalida ee ciyaara chess ka",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/63148019",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "766a5e91-ef8b-6247-84cf-4cd89a814c73",
+            "rank": 5,
+            "count": 8,
+            "urn": "urn:bbc:curie:asset:766a5e91-ef8b-6247-84cf-4cd89a814c73",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Daawo: 13 jir xaas iyo arday ah",
+                "headline": "Daawo:13 jir xaas iyo arday ah"
+              },
+              "locators": {
+                "assetUri": "/somali/aqoon-guud-37630285",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/aqoon-guud-37630285",
+                "curie": "http://www.bbc.co.uk/asset/766a5e91-ef8b-6247-84cf-4cd89a814c73",
+                "assetId": "37630285"
+              },
+              "summary": "Xaliimo waa gabar 13 jir oo ku nool duleedka Wajir. Waa xaas waxna way barataa. Waxay hadda dhiiragelisaa gabdhaha faceeda ah oo waliba waxay ku hamineysaa in ay noqoto macallin mustaqbalka.",
+              "timestamp": 1476283031000,
+              "language": "so",
+              "media": {
+                "id": "p04bsy8q",
+                "subType": "clip",
+                "format": "video",
+                "title": "Daawo: 13 jir  xaas iyo arday ah",
+                "synopses": {
+                  "short": "Daawo:13 jir xaas iyo arday ah",
+                  "long": "Xaliimo waa gabar 13 jir oo ku nool duleedka Wajir. Waa xaas waxna way barataa. Waxay hadda dhiiragelisaa gabdhaha faceeda ah oo waliba waxay ku hamineysaa in ay noqoto macallin mustaqbalka. Halkan ka daawo warbixintan oo uu soo jeedinaya Cabdifitah Ibrahim Cagayare"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04bsyg9.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Daawo:13 jir xaas iyo arday ah",
+                "versions": [
+                  {
+                    "versionId": "p04bsy8v",
+                    "types": ["Original"],
+                    "duration": 110,
+                    "durationISO8601": "PT1M50S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": false,
+                      "nonUk": false
+                    },
+                    "availableFrom": 1476282497000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "91885662",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/6822/production/_91885662_p04bsyg9.jpg",
+                "path": "/cpsprodpb/6822/production/_91885662_p04bsyg9.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Keyframe #2",
+                "caption": "dumar",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/aqoon-guud-37630285",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a47ae19e-2737-11e2-ab27-4568a79c3f60",
+            "rank": 6,
+            "count": 6,
+            "urn": "urn:bbc:curie:asset:a47ae19e-2737-11e2-ab27-4568a79c3f60",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Idaacada Subaxnimo",
+                "headline": "Idaacada Subaxnimo"
+              },
+              "locators": {
+                "assetUri": "/somali/maqal_iyo_muuqaal/2011/11/000001_idaacada_subaxnimo_wed",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2011/11/000001_idaacada_subaxnimo_wed",
+                "curie": "http://www.bbc.co.uk/asset/a47ae19e-2737-11e2-ab27-4568a79c3f60",
+                "assetId": "13826944"
+              },
+              "summary": "Idaacada Subaxnimo",
+              "timestamp": 1320751886000,
+              "language": "so",
+              "media": {
+                "id": "13826944",
+                "subType": "primary",
+                "format": "audio",
+                "live": false,
+                "href": "http://wsdownload.bbc.co.uk/somali/meta/tx/smp/somali_0400_wed.xml",
+                "playlist": [],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e197",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2011/11/03/111103150435_early_morning_112.jpg",
+                "path": "/amz/worldservice/live/assets/images/2011/11/03/111103150435_early_morning_112.jpg",
+                "height": 63,
+                "width": 112,
+                "altText": "Idaacada Subaxnimo",
+                "copyrightHolder": "BBC World Service",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2011/11/000001_idaacada_subaxnimo_wed",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2bde7c55-5802-5d41-be7f-22d9424a80a2",
+            "rank": 7,
+            "count": 5,
+            "urn": "urn:bbc:curie:asset:2bde7c55-5802-5d41-be7f-22d9424a80a2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Maxaa ka mid ah faa'iidooyinka geedka Mawe",
+                "headline": "Maxaa ka mid ah faa'iidooyinka geedka Mawe"
+              },
+              "locators": {
+                "assetUri": "/somali/war-43193075",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/war-43193075",
+                "curie": "http://www.bbc.co.uk/asset/2bde7c55-5802-5d41-be7f-22d9424a80a2",
+                "assetId": "43193075"
+              },
+              "summary": "Isku daawaynta dhirta iyo garashada faa'idadeeda caafimaad ba waa aqoon dheer oo aadamuhu qarniyo badan iska soo dhaxlayey, ummad waliba deegaanka ay ku nooshahay dhirta ka baxday ayay hadba si u adeegsataa oo cunno mooyee siyaabo kale uga faa'iidaysataa oo qaarkeed isku dawaysaa.",
+              "timestamp": 1519616182000,
+              "language": "so",
+              "media": {
+                "id": "p05zbjwy",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Faa'iidada geedka Wammaha ama Mawe",
+                "synopses": {
+                  "short": "Faa'iidada geedka Wammaha ama Mawe",
+                  "medium": "Faa'iidada geedka Wammaha ama Mawe",
+                  "long": "Isku daawaynta dhirta iyo garashada faa'idadeeda caafimaad ba waa aqoon dheer oo aadamuhu qarniyo badan iska soo dhaxlayey, ummad waliba deegaanka ay ku nooshahay dhirta ka baxday ayay hadba si u adeegsataa oo cunno mooyee siyaabo kale uga faa'iidaysataa oo qaarkeed isku dawaysaa. \n\nDhirta ay Soomaalidu aadka u isticmaasho waxa ka mid ah geedka la yidhaa MAWADA oo faa'iidooyin badan in uu leeyahay Soomaalidu aaminsantahay. \n\nHadaba Siciid Abdi Boqorre oo ah sarkaal ka tirsan xafiiska cilmi baadhista beeraha ee dawlad deegaanka Soomalida Ethiopia, ayaa waxa uu sharaxaad ka bixinayaa geedka Mawada ee afka qalaad lagu yidhaa Moringa. Weriyahayaga Jigjiga Cabdinaasir Sheekh Maxamed Xikam ayuu u waramay."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05zbk6x.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Faa'iidada geedka Wammaha ama Mawe",
+                "versions": [
+                  {
+                    "versionId": "p05zbjx0",
+                    "types": ["Original"],
+                    "duration": 234,
+                    "durationISO8601": "PT3M54S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1519592611000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "100177498",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/15D85/production/_100177498_p05zbk6x.jpg",
+                "path": "/cpsprodpb/15D85/production/_100177498_p05zbk6x.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "Wamme",
+                "caption": "Geedka Wamme ama Mawe ayaa dawo ahaan looga isticmaalaa qeybo badan oo caalamka ka mid ah.",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/war-43193075",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d437039f-fd18-4dbf-b1cb-6207ae27157b",
+            "rank": 8,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:d437039f-fd18-4dbf-b1cb-6207ae27157b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Waa kuma 34 jirka la wareegay talada Burkin Faso?",
+                "headline": "Waa kuma 34 jirka la wareegay talada Burkin Faso?"
+              },
+              "locators": {
+                "assetUri": "/somali/63173453",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d437039f-fd18-4dbf-b1cb-6207ae27157b",
+                "assetId": "63173453",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/63173453",
+                "curie": "http://www.bbc.co.uk/asset/d437039f-fd18-4dbf-b1cb-6207ae27157b"
+              },
+              "summary": "Waa kuma 34 jirka la wareegay talada Burkin Faso?",
+              "timestamp": 1665139173000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "p0d5byft",
+                "subType": "clip",
+                "format": "video",
+                "title": "34 jirka la wareegay talada Burkin Faso.",
+                "synopses": {
+                  "short": "34 jirka la wareegay talada Burkin Faso."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0d5byqd.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "34 jirka la wareegay talada Burkin Faso.",
+                "versions": [
+                  {
+                    "versionId": "p0d5byg2",
+                    "types": ["Original"],
+                    "duration": 345,
+                    "durationISO8601": "PT5M45S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1665138898000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "127005827",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11C92/production/_127005827_p0d5byqd.jpg",
+                "path": "/cpsprodpb/11C92/production/_127005827_p0d5byqd.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Burkina Faso",
+                "caption": "Afgambiga Burkina faso",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/63173453",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "610cf7b4-c110-407c-b369-82a36007ea09",
+            "rank": 9,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:610cf7b4-c110-407c-b369-82a36007ea09",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Xagee ku yaallaa hotel Villa Rose?",
+                "headline": "Xagee ku yaallaa hotel Villa Rose?"
+              },
+              "locators": {
+                "assetUri": "/somali/63807448",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:610cf7b4-c110-407c-b369-82a36007ea09",
+                "assetId": "63807448",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/63807448",
+                "curie": "http://www.bbc.co.uk/asset/610cf7b4-c110-407c-b369-82a36007ea09"
+              },
+              "summary": "Weerar qaatay in ka badan labaatan saacadood ayaa ka dhacay hotel Villa Rose",
+              "timestamp": 1669804493000,
+              "language": "so",
+              "passport": {
+                "language": "so",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "locator": "urn:bbc:cps:curie:asset:610cf7b4-c110-407c-b369-82a36007ea09",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                    "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1f64d369-e74d-4ac6-bde1-ce97356c362d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1f64d369-e74d-4ac6-bde1-ce97356c362d#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingLabel": "Explainer",
+                      "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+                      "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingSameAs": [
+                        "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+                      ],
+                      "thingEnglishLabel": "Explainer",
+                      "thingPreferredLabel": "Explainer",
+                      "thingLabelLanguage": "so",
+                      "type": "formats"
+                    }
+                  ],
+                  "editorialSensitivity": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                      "type": "editorialSensitivity"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0dk9bt1",
+                "subType": "clip",
+                "format": "video",
+                "title": "Weerarka Hotel Villa Rays",
+                "synopses": {
+                  "short": "Weerarka Hotel Villa Rays"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0dk9cg1.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Weerarka Hotel Villa Rays",
+                "versions": [
+                  {
+                    "versionId": "p0dk9bt5",
+                    "types": ["Original"],
+                    "duration": 102,
+                    "durationISO8601": "PT1M42S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1669642725000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "127831435",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/D0A5/production/_127831435_thumbnail.jpg",
+                "path": "/cpsprodpb/D0A5/production/_127831435_thumbnail.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Hotel Villa Rays ee Muqdisho.",
+                "caption": "Hotel Villa Rays ee Muqdisho.",
+                "copyrightHolder": "Facebook",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/63807448",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "2ca64027-2561-7946-9b3c-2a6e8cdf4001",
+            "rank": 10,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:2ca64027-2561-7946-9b3c-2a6e8cdf4001",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Soo degso BBC Somali App-ka cusub",
+                "headline": "BBC Somali App"
+              },
+              "locators": {
+                "assetUri": "/somali/war-38386944",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/war-38386944",
+                "curie": "http://www.bbc.co.uk/asset/2ca64027-2561-7946-9b3c-2a6e8cdf4001",
+                "assetId": "38386944"
+              },
+              "summary": "Laanta Af-Soomaaliga ee BBC waxay sameysay App cusub",
+              "timestamp": 1482263529000,
+              "language": "so",
+              "media": {
+                "id": "p04m1ygn",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Soo degso BBC Somali App-ka cusub",
+                "synopses": {
+                  "short": "BBC Somali"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p04m1yt4.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "BBC Somali",
+                "versions": [
+                  {
+                    "versionId": "p04m1ygq",
+                    "types": ["Original"],
+                    "duration": 208,
+                    "durationISO8601": "PT3M28S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1482263007000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "93055808",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/13BD7/production/_93055808_p04m1yt4.jpg",
+                "path": "/cpsprodpb/13BD7/production/_93055808_p04m1yt4.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "BBC Somali",
+                "caption": "BBC Somali",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/war-38386944",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1bb1c9b6-be0b-4522-a99b-4fa94fe6f314",
+            "rank": 11,
+            "count": 4,
+            "urn": "urn:bbc:curie:asset:1bb1c9b6-be0b-4522-a99b-4fa94fe6f314",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Guddoomiyaha Gobolka Hiiraan oo aan ka wareysannay qaraxyadii Beledweyne",
+                "headline": "Guddoomiye Cali Jeyte Cismaan oo aan ka wareysannay qaraxyadii Beledweyne"
+              },
+              "locators": {
+                "assetUri": "/somali/63114722",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:1bb1c9b6-be0b-4522-a99b-4fa94fe6f314",
+                "assetId": "63114722",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/63114722",
+                "curie": "http://www.bbc.co.uk/asset/1bb1c9b6-be0b-4522-a99b-4fa94fe6f314"
+              },
+              "summary": "Guddoomiyaha Gobolka Hiiraan, Cali Jeyte Cismaan oo aan ka wareysannay qaraxyadii Beledweyne",
+              "timestamp": 1664793880000,
+              "language": "so",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "taggings": []
+              },
+              "media": {
+                "id": "p0d47q0m",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Guddoomiyaha Gobolka Hiiraan oo aan ka wareysannay qaraxyadii Beledweyne",
+                "synopses": {
+                  "short": "Guddoomiye Cali Jeyte Cismaan oo aan ka wareysannay qaraxyadii Beledweyne",
+                  "long": "Guddoomiyaha Gobolka Hiiraan, Cali Jeyte Cismaan oo aan ka wareysannay qaraxyadii Beledweyne",
+                  "medium": "Guddoomiyaha Gobolka Hiiraan, Cali Jeyte Cismaan oo aan ka wareysannay qaraxyadii Beledweyne"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0d47qxr.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Guddoomiyaha Gobolka Hiiraan, Cali Jeyte Cismaan oo aan ka wareysannay qaraxyadii Beledweyne",
+                "versions": [
+                  {
+                    "versionId": "p0d47q0r",
+                    "types": ["Original"],
+                    "duration": 230,
+                    "durationISO8601": "PT3M50S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1664792682000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "126932625",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/CD8F/production/_126932625_p0d47qxr.jpg",
+                "path": "/cpsprodpb/CD8F/production/_126932625_p0d47qxr.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Guddoomiyaha Gobolka Hiiraan, Cali Jeyte Cismaan oo aan ka wareysannay qaraxyadii Beledweyne",
+                "copyrightHolder": "SNTV",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/63114722",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "61e5bf23-de9e-4ca3-b07b-7f2586ae2fe3",
+            "rank": 12,
+            "count": 3,
+            "urn": "urn:bbc:curie:asset:61e5bf23-de9e-4ca3-b07b-7f2586ae2fe3",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Daawo: Fanaan Baastow oo waaiyihiisa ka sheekeynaya",
+                "headline": "Daawo: Fanaan Baastow oo waaiyihiisa ka sheekeynaya"
+              },
+              "locators": {
+                "assetUri": "/somali/war-61674778",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/war-61674778",
+                "curie": "http://www.bbc.co.uk/asset/61e5bf23-de9e-4ca3-b07b-7f2586ae2fe3",
+                "assetId": "61674778"
+              },
+              "summary": "Daawo: Fanaan Baastow oo waaiyihiisa ka sheekeynaya",
+              "timestamp": 1654169734000,
+              "language": "so",
+              "media": {
+                "id": "p0cbn4z1",
+                "subType": "clip",
+                "format": "video",
+                "title": "Daawo: Fanaan Baastow oo waaiyihiisa ka sheekeynaya",
+                "synopses": {
+                  "short": "Daawo: Fanaan Baastow oo waaiyihiisa ka sheekeynaya",
+                  "long": "Daawo: Fanaan Baastow oo waaiyihiisa ka sheekeynaya",
+                  "medium": "Daawo: Fanaan Baastow oo waaiyihiisa ka sheekeynaya"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0cbn60c.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Daawo: Fanaan Baastow oo waaiyihiisa ka sheekeynaya",
+                "versions": [
+                  {
+                    "versionId": "p0cbn4z5",
+                    "types": ["Original"],
+                    "duration": 174,
+                    "durationISO8601": "PT2M54S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1654169496000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "125013032",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/59F7/production/_125013032_p0cbn60c.jpg",
+                "path": "/cpsprodpb/59F7/production/_125013032_p0cbn60c.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Keyframe #6",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/war-61674778",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "fdb76899-a603-4064-a6c4-b2651cea34bb",
+            "rank": 13,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:fdb76899-a603-4064-a6c4-b2651cea34bb",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Codka halaasiga ah ee siyaasi Cabdiweli Gaas iyo heesaha uu jecel yahay",
+                "headline": "Codka halaasiga ah ee siyaasi Cabdiweli Gaas iyo heesaha uu jecel yahay"
+              },
+              "locators": {
+                "assetUri": "/somali/war-59414203",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/war-59414203",
+                "curie": "http://www.bbc.co.uk/asset/fdb76899-a603-4064-a6c4-b2651cea34bb",
+                "assetId": "59414203"
+              },
+              "summary": "Cabdiweli Maxamed Cali Gaas, wuxuu ka sheekeeyay heesaha uu jecel yahay iyo ruwaayadaha.",
+              "timestamp": 1637827093000,
+              "language": "so",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  },
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "language": "so",
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Somali",
+                "locator": "urn:bbc:cps:curie:asset:fdb76899-a603-4064-a6c4-b2651cea34bb",
+                "availability": "AVAILABLE",
+                "taggings": [
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+                    "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+                    "value": "http://www.bbc.co.uk/things/c4baf2ae-4576-40ad-a041-be4498e4c6fa#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+                    "value": "http://www.bbc.co.uk/things/1f64d369-e74d-4ac6-bde1-ce97356c362d#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+                    "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+                    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+                  },
+                  {
+                    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                    "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id"
+                  }
+                ],
+                "schemaVersion": "1.4.0",
+                "publishedState": "PUBLISHED",
+                "predicates": {
+                  "contributor": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/1f64d369-e74d-4ac6-bde1-ce97356c362d#id",
+                      "type": "contributor"
+                    }
+                  ],
+                  "assetType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                      "type": "assetType"
+                    }
+                  ],
+                  "primaryMediaType": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4#id",
+                      "type": "primaryMediaType"
+                    }
+                  ],
+                  "formats": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingLabel": "News report",
+                      "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                      "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingSameAs": [],
+                      "thingEnglishLabel": "Report",
+                      "thingPreferredLabel": "Report",
+                      "thingLabelLanguage": "so",
+                      "type": "formats"
+                    }
+                  ],
+                  "about": [
+                    {
+                      "value": "http://www.bbc.co.uk/things/c4baf2ae-4576-40ad-a041-be4498e4c6fa#id",
+                      "thingLabel": "Soomaaliya",
+                      "thingUri": "http://www.bbc.co.uk/things/c4baf2ae-4576-40ad-a041-be4498e4c6fa#id",
+                      "thingId": "c4baf2ae-4576-40ad-a041-be4498e4c6fa",
+                      "thingType": [
+                        "core:Place",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": ["http://sws.geonames.org/51537/"],
+                      "thingEnglishLabel": "Somalia",
+                      "type": "about"
+                    },
+                    {
+                      "value": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id",
+                      "thingLabel": "Muusiko",
+                      "thingUri": "http://www.bbc.co.uk/things/de648736-7268-454c-a7b1-dbff416f2865#id",
+                      "thingId": "de648736-7268-454c-a7b1-dbff416f2865",
+                      "thingType": [
+                        "core:Theme",
+                        "tagging:Genre",
+                        "tagging:AmbiguousTerm",
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Music",
+                        "http://www.wikidata.org/entity/Q638"
+                      ],
+                      "thingEnglishLabel": "Music",
+                      "type": "about"
+                    }
+                  ]
+                }
+              },
+              "media": {
+                "id": "p0b68glj",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Codka halaasiga ah ee siyaasi Cabdiweli Gaas iyo heesaha uu jecel yahay",
+                "synopses": {
+                  "short": "Codka halaasiga ah ee siyaasi Cabdiweli Gaas iyo heesaha uu jecel yahay",
+                  "long": "Ra’isul Wasaarihii  hore ee Soomaaliya, Cabdiweli Maxamed Cali Gaas, oo u warramay barnaamijka Muusiga iyo Salaamaha ee BBC-da ayaa ka sheekeeyey wax uu qabto wakhtiga uu firaaqada yahay, intii uu yaraa, noloshiisii ka hor siyaasadda iyo waxyabao kale.\n\nHaddaba waraysigaan waxaa la yeellatay wariyaha BBC-da Faadumo Taxadar Yusuf, Waana tan sheekadii dhexmartay."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b68gxb.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Codka halaasiga ah ee siyaasi Cabdiweli Gaas iyo heesaha uu jecel yahay",
+                "versions": [
+                  {
+                    "versionId": "p0b68gln",
+                    "types": ["Original"],
+                    "duration": 286,
+                    "durationISO8601": "PT4M46S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1637826499000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "121791180",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1FB7/production/_121791180_p0b68gxb.jpg",
+                "path": "/cpsprodpb/1FB7/production/_121791180_p0b68gxb.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Cabdiweli Gaas",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/war-59414203",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f4a88a92-0716-11e5-8fd7-a5d03db9bd6e",
+            "rank": 14,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:f4a88a92-0716-11e5-8fd7-a5d03db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Maxay yihiin dhibaatooyinka ka dhalan kara tubaakada?",
+                "headline": "Maxay yihiin dhibaatooyinka ka dhalan kara tubaakada?"
+              },
+              "locators": {
+                "assetUri": "/somali/maqal_iyo_muuqaal/2015/05/150530_world_tubacco_day",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2015/05/150530_world_tubacco_day",
+                "curie": "http://www.bbc.co.uk/asset/f4a88a92-0716-11e5-8fd7-a5d03db9bd6e",
+                "assetId": "38977853"
+              },
+              "summary": "Dunida oo dhan maanta waxaa laga xusayaa maalinta ka hortagga dhibaatada tubaakada. Dadka Soomaalida waxa ay ka mdi yihiin dadyowga caalamka ee dhibaatada ba'an ay ku hayso isticmaalka tubaakada iyo sigaarka. Halkan ka dhageyso.",
+              "timestamp": 1433046955000,
+              "language": "so",
+              "media": {
+                "id": "38977853",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "38977853",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/03/01/150301163713_dufle640.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2015/03/01/150301163713_dufle640.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/somali/meta/dps/2015/05/emp/150530_world_tubacco_day.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/somali/dps/2015/05/drdufleontobaccointv_150530_world_tubacco_day_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e214",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/01/02/150102080619_cigarette_144x81_reuters_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2015/01/02/150102080619_cigarette_144x81_reuters_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2015/05/150530_world_tubacco_day",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "abbad9f6-162f-48ff-a829-f82bcf406411",
+            "rank": 15,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:abbad9f6-162f-48ff-a829-f82bcf406411",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Wararka ugu dambeeyey ciyaaraha Koobka Afrika ee ka socda Cameroon",
+                "headline": "Wararka ugu dambeeyey ciyaaraha Koobka Afrika ee ka socda Cameroon"
+              },
+              "locators": {
+                "assetUri": "/somali/59944136",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/59944136",
+                "curie": "http://www.bbc.co.uk/asset/abbad9f6-162f-48ff-a829-f82bcf406411",
+                "assetId": "59944136"
+              },
+              "summary": "Wararka ugu dambeeyey ciyaaraha Koobka Afrika ee ka socda Cameroon",
+              "timestamp": 1641831779000,
+              "language": "so",
+              "media": {
+                "id": "p0bgdm03",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Wararka ugu dambeeyey ciyaaraha Koobka Afrika ee ka socda Cameroon",
+                "synopses": {
+                  "short": "Wararka ugu dambeeyey ciyaaraha Koobka Afrika ee ka socda Cameroon",
+                  "long": "Wariyaha BBC Maxamed Xarare ayaa ka warramaya Wararka ugu dambeeyey ciyaaraha Koobka Afrika ee ka socda Cameroon",
+                  "medium": "Wararka ugu dambeeyey ciyaaraha Koobka Afrika ee ka socda Cameroon"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bgf0dt.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Wararka ugu dambeeyey ciyaaraha Koobka Afrika ee ka socda Cameroon",
+                "versions": [
+                  {
+                    "versionId": "p0bgdm09",
+                    "types": ["Original"],
+                    "duration": 175,
+                    "durationISO8601": "PT2M55S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1641831215000
+                  }
+                ],
+                "imageCopyright": "BBC",
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "122646684",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/BE18/production/_122646684_p0bgf0dt.jpg",
+                "path": "/cpsprodpb/BE18/production/_122646684_p0bgf0dt.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Mid ka mid ah garoommada ay ciyaaruhu ka dhacayaan",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/59944136",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "836c520a-5d1c-465e-b046-44e1cbf5d0ca",
+            "rank": 16,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:836c520a-5d1c-465e-b046-44e1cbf5d0ca",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Daawo: Waayeelka ‘kitaabbada xooray’ si uu caan uga noqdo Tiktok",
+                "headline": "Daawo: Waayeelka ‘kitaabbada xooray’ si uu caan uga noqdo Tiktok"
+              },
+              "locators": {
+                "assetUri": "/somali/war-61333907",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/war-61333907",
+                "curie": "http://www.bbc.co.uk/asset/836c520a-5d1c-465e-b046-44e1cbf5d0ca",
+                "assetId": "61333907"
+              },
+              "summary": "Sababta ay dad badan u daawadaan muuqaalladiisa waa inuu baedelay hab-dhaqankiisa. Beddelkii wacdiga iyo xadrada wuxuu hadda sameeyaa muuqaallo madaddaallo iyo qoob-ka-cayaar ah.",
+              "timestamp": 1651743808000,
+              "language": "so",
+              "media": {
+                "id": "p0c50h41",
+                "subType": "clip",
+                "format": "video",
+                "title": "Daawo: Waayeelka ‘kitaabbada xooray’ si uu caan uga noqdo iktok",
+                "synopses": {
+                  "short": "Daawo: Waayeelka ‘kitaabbada xooray’ si uu caan uga noqdo iktok",
+                  "long": "Shariif Xuseen oo 58 jir ah, wuxuu caan ku noqday muuqaallo madaddaalo ah oo uu soo galiyo barta uu ku leeyahay Tiktok, laakiin sababta ay dad badan u daawadaan muuqaalladiisa ayaa ah, hab-dhaqankiisa oo uu beddelay.",
+                  "medium": "Sababta ay dad badan u daawadaan muuqaalladiisa waa inuu baedelay hab-dhaqankiisa. Beddelkii wacdiga iyo xadrada wuxuu hadda sameeyaa muuqaallo madaddaallo iyo qoob-ka-cayaar ah."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0c50jh7.jpg",
+                "embedding": true,
+                "advertising": true,
+                "caption": "Daawo: Waayeelka ‘kitaabbada xooray’ si uu caan uga noqdo iktok",
+                "versions": [
+                  {
+                    "versionId": "p0c50h45",
+                    "types": ["Original"],
+                    "duration": 172,
+                    "durationISO8601": "PT2M52S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1651743526000
+                  }
+                ],
+                "smpKind": "programme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "124429606",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/ED14/production/_124429606_p0c50jh7.jpg",
+                "path": "/cpsprodpb/ED14/production/_124429606_p0c50jh7.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Sababta ay dad badan u daawadaan muuqaalladiisa waa inuu baedelay hab-dhaqankiisa. Beddelkii wacdiga iyo xadrada wuxuu hadda sameeyaa muuqaallo madaddaallo iyo qoob-ka-cayaar ah.",
+                "copyrightHolder": "Shariif Xuseen oo 58 jir ah, wuxuu caan ku noqday ",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/war-61333907",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "610aed12-6210-11e4-baab-649b3db9bd6e",
+            "rank": 17,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:610aed12-6210-11e4-baab-649b3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Soomaali soo saaray Barnaamij lagu isticmaali karo Moobaylka",
+                "headline": "Soomaali soo saaray Barnaamij lagu isticmaali karo Moobaylka"
+              },
+              "locators": {
+                "assetUri": "/somali/maqal_iyo_muuqaal/2014/11/141101_somali_apps",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2014/11/141101_somali_apps",
+                "curie": "http://www.bbc.co.uk/asset/610aed12-6210-11e4-baab-649b3db9bd6e",
+                "assetId": "35622443"
+              },
+              "summary": "Injineer Axmed-Kaafi, waa wiil dhalinyaro ah oo dagan magaalada London waxa uu dhawaan sameeyay barnaamij cusub oo Afsoomaali ku howlgala.",
+              "timestamp": 1414879298000,
+              "language": "so",
+              "media": {
+                "id": "35622443",
+                "subType": "primary",
+                "format": "audio",
+                "image": {
+                  "id": "35622443",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/01/141101213120_ahmed-kafi_app_designer_and_farhan_jimale_640x360_bbc_nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/11/01/141101213120_ahmed-kafi_app_designer_and_farhan_jimale_640x360_bbc_nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "live": false,
+                "href": "http://www.bbc.co.uk/somali/meta/dps/2014/11/emp/141101_somali_apps.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/somali/dps/2014/11/somaliappdesignerivonline_141101_somali_apps_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e220",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/01/141101213119_ahmed-kafi_app_designer_and_farhan_jimale_144x81_bbc_nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/11/01/141101213119_ahmed-kafi_app_designer_and_farhan_jimale_144x81_bbc_nocredit.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2014/11/141101_somali_apps",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4ae131b2-7cc6-11e7-9ef6-4e843db9bd6e",
+            "rank": 18,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:4ae131b2-7cc6-11e7-9ef6-4e843db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Weriye Axmed Taajir oo geeriyooday",
+                "headline": "Weriye Axmed Taajir oo geeriyooday"
+              },
+              "locators": {
+                "assetUri": "/somali/maqal_iyo_muuqaal/2012/09/120914_axmed_taajir",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2012/09/120914_axmed_taajir",
+                "curie": "http://www.bbc.co.uk/asset/4ae131b2-7cc6-11e7-9ef6-4e843db9bd6e",
+                "assetId": "19905594"
+              },
+              "summary": "Allaha u naxariistee waxaa xalay ku geeriyooday magaalada Isiolo ee Kenya weriyihii caanka ahaa ee BBC u soo warrami jiray Axmed Maxamed Taajir oo muddo xanuunsanaa. Halkan ka dhageyso taariikhdiisi.",
+              "timestamp": 1347617931000,
+              "language": "so",
+              "media": {
+                "id": "19905594",
+                "subType": "primary",
+                "format": "audio",
+                "live": false,
+                "href": "http://www.bbc.co.uk/somali/meta/dps/2012/09/emp/120914_axmed_taajir.emp.xml",
+                "playlist": [
+                  {
+                    "format": "mp3",
+                    "bitrate": "96000",
+                    "url": "https://wsodprogrf.akamaized.net/somali/dps/2012/09/fabda0f9_axmed_taajir_120914_axmed_taajir_au_bb.mp3"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d7e234",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/09/14/120914095314_ahmed144.jpg",
+                "path": "/amz/worldservice/live/assets/images/2012/09/14/120914095314_ahmed144.jpg",
+                "height": 81,
+                "width": 144,
+                "altText": "Axmed Taajir",
+                "copyrightHolder": "BBC World Service",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2012/09/120914_axmed_taajir",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "4734e3f0-5400-11e6-9780-14bf3db9bd6e",
+            "rank": 19,
+            "count": 2,
+            "urn": "urn:bbc:curie:asset:4734e3f0-5400-11e6-9780-14bf3db9bd6e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "TV Bulletin",
+                "headline": "Caawa Iyo Caalamka"
+              },
+              "locators": {
+                "assetUri": "/somali/maqal_iyo_muuqaal/2016/07/000000_tvbulletin",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/maqal_iyo_muuqaal/2016/07/000000_tvbulletin",
+                "curie": "http://www.bbc.co.uk/asset/4734e3f0-5400-11e6-9780-14bf3db9bd6e",
+                "assetId": "44706520"
+              },
+              "summary": "La soco wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
+              "timestamp": 1469628534000,
+              "language": "so",
+              "media": {
+                "id": "44706520",
+                "subType": "primary",
+                "format": "video",
+                "image": {
+                  "id": "44706520",
+                  "subType": "thumbnail",
+                  "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/01/14/140114102605_afrique_globe_640x360__nocredit.jpg",
+                  "path": "/amz/worldservice/live/assets/images/2014/01/14/140114102605_afrique_globe_640x360__nocredit.jpg",
+                  "height": 360,
+                  "width": 640,
+                  "altText": "",
+                  "copyrightHolder": "",
+                  "type": "image"
+                },
+                "aspectRatio": "16:9",
+                "live": false,
+                "href": "http://wsdownload.bbc.co.uk/somali/meta/tx/smp/tv/tvbulletin.xml",
+                "playlist": [
+                  {
+                    "format": "mp4",
+                    "bitrate": "168000",
+                    "url": "https://wsodprogrf.akamaized.net/somali/tx/tvbulletin_200000.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "320000",
+                    "url": "https://wsodprogrf.akamaized.net/somali/tx/tvbulletin_400000.mp4"
+                  },
+                  {
+                    "format": "mp4",
+                    "bitrate": "904000",
+                    "url": "https://wsodprogrf.akamaized.net/somali/tx/tvbulletin_800000.mp4"
+                  }
+                ],
+                "type": "legacyMedia"
+              },
+              "indexImage": {
+                "id": "d5e257",
+                "subType": "index",
+                "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/01/14/140114102605_afrique_globe_640x360__nocredit.jpg",
+                "path": "/amz/worldservice/live/assets/images/2014/01/14/140114102605_afrique_globe_640x360__nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "",
+                "copyrightHolder": "    ",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/maqal_iyo_muuqaal/2016/07/000000_tvbulletin",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "e8bb93d1-6598-bb42-8794-4d3e66e8c122",
+            "rank": 20,
+            "count": 1,
+            "urn": "urn:bbc:curie:asset:e8bb93d1-6598-bb42-8794-4d3e66e8c122",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Wasaaradaha dowladda Soomaaliya oo markii ugu horreysay helay internet lacag la'aan ah",
+                "headline": "Wasaaradaha dowladda Soomaaliya oo markii ugu horreysay helay internet lacag la'aan ah"
+              },
+              "locators": {
+                "assetUri": "/somali/41064979",
+                "cpsUrn": "urn:bbc:content:assetUri:somali/41064979",
+                "curie": "http://www.bbc.co.uk/asset/e8bb93d1-6598-bb42-8794-4d3e66e8c122",
+                "assetId": "41064979"
+              },
+              "summary": "Wasaaradaha dowladda Soomaaliya ayaa markii ugu horreysay helay internet lacag la'aan ah ka dib markii shalay ahayd la daah furay mashruuca internet-ka lacag la'aanta ah.",
+              "timestamp": 1503804758000,
+              "language": "so",
+              "media": {
+                "id": "p05ddsqx",
+                "subType": "clip",
+                "format": "audio",
+                "title": "Wasaaradaha dowladda Soomaaliya oo markii ugu horreysay helay internet lacag la'aan ah",
+                "synopses": {
+                  "short": "Wasaaradaha dowladda Soomaaliya oo markii ugu horreysay helay internet lacag la'aan ah",
+                  "medium": "Wasaaradaha dowladda Soomaaliya ayaa markii ugu horreysay helay internet lacag la'aan ah ka dib markii shalay ahayd la daah furay mashruuca internet-ka lacag la'aanta ah.",
+                  "long": "Ra'isul wasaare kuxigeenka Soomaaliya Mahdi Maxamuud Guuleed ayaa daahfuray mashruuc internet lacag la'aana ay ku helayaan wasaaraddaha iyo hay'adaha dawladda kaas oo uu maalgaliyay Baanka Aduunka.\n\nHannaanka internet-ka oo la dhigay xarunta wasaaradda boostada iyo isgaarsiinta ayaa la filayaa in hay'adaha dawladdu uga maarmaan internet-kii gaarka ahaa ee lacagaha looga qaadi jiray.\n\nWeriyaha BBC-da ee Muqdisho Ibraahim Maxamad Aadan oo tagay dhismaha wasaaradda soona arkay habka uu u shaqaynayo hannaankan cusub ayaa waraystay Wasiirka Boostada iyo Isgaarsiinta Injineer Cabdi Canshuur Xasan."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05df2kx.jpg",
+                "embedding": false,
+                "advertising": true,
+                "caption": "Wasaaradaha dowladda Soomaaliya oo markii ugu horreysay helay internet lacag la'aan ah",
+                "versions": [
+                  {
+                    "versionId": "p05ddsqz",
+                    "types": ["Original"],
+                    "duration": 218,
+                    "durationISO8601": "PT3M38S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1503784290000
+                  }
+                ],
+                "smpKind": "radioProgramme",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "97561587",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/132B4/production/_97561587_p05df2kx.jpg",
+                "path": "/cpsprodpb/132B4/production/_97561587_p05df2kx.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "INTARNEED",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:somali/41064979",
+              "type": "cps"
+            }
+          }
+        ]
+      }
+    }
   }
 }

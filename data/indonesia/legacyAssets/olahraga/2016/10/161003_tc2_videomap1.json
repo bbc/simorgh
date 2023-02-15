@@ -1,107 +1,445 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/indonesia/meta/dps/junk/2016/10/emp/161003_tc2_videomap1.emp.xml",
-        "id": "17698522",
-        "live": false,
-        "subType": "primary",
-        "type": "legacyMedia"
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:indonesia/olahraga/2016/10/161003_tc2_videomap1",
+        "locators": {
+          "assetUri": "/indonesia/olahraga/2016/10/161003_tc2_videomap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:d52a9014-894e-11e6-8973-adfd122641ab",
+          "assetId": "17698522",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/olahraga/2016/10/161003_tc2_videomap1",
+          "curie": "http://www.bbc.co.uk/asset/d52a9014-894e-11e6-8973-adfd122641ab"
+        },
+        "type": "MAP",
+        "createdBy": "indonesia",
+        "language": "id",
+        "lastUpdated": 1665420079940,
+        "firstPublished": 1475488380000,
+        "lastPublished": 1475489454000,
+        "timestamp": 1475489454000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17698522",
+          "contentId": "urn:bbc:topcat:curie:asset:d52a9014-894e-11e6-8973-adfd122641ab"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/indonesia",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
-      {
-        "markupType": "plain_text",
-        "text": "Seorang anak laki-laki berusia enam tahun menulis surat kepada Presiden Barack Obama, menawarkan tempat di rumahnya untuk anak Suriah. Alex yang berasal dari New York menulis surat setelah melihat foto anak lima tahun Omran Dagneesh, yang luka-luka dan berdarah. Foto itu membuat marah banyak orang. Obama mengatakan surat itu dari seorang anak &quot;yang belum belajar cara menjadi sinis, atau curiga atau takut dengan orang lain karena asal mereka atau cara mereka beribadah.&quot;",
-        "type": "paragraph"
+      "content": {
+        "blocks": [
+          {
+            "id": "17698522",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17698522",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/indonesia/meta/dps/junk/2016/10/emp/161003_tc2_videomap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/indonesia/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161003_tc2_videomap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/indonesia/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161003_tc2_videomap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/indonesia/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161003_tc2_videomap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
+          },
+          {
+            "text": "Seorang anak laki-laki berusia enam tahun menulis surat kepada Presiden Barack Obama, menawarkan tempat di rumahnya untuk anak Suriah. Alex yang berasal dari New York menulis surat setelah melihat foto anak lima tahun Omran Dagneesh, yang luka-luka dan berdarah. Foto itu membuat marah banyak orang. Obama mengatakan surat itu dari seorang anak &quot;yang belum belajar cara menjadi sinis, atau curiga atau takut dengan orang lain karena asal mereka atau cara mereka beribadah.&quot;",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ]
+      },
+      "promo": {
+        "headlines": {
+          "shortHeadline": "Surat Alex, anak usia enam tahun: Pak Presiden Obama, tolong jemput anak Suriah",
+          "headline": "Surat Alex, anak usia enam tahun: Pak Presiden Obama, tolong jemput anak Suriah"
+        },
+        "locators": {
+          "assetUri": "/indonesia/olahraga/2016/10/161003_tc2_videomap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:d52a9014-894e-11e6-8973-adfd122641ab",
+          "assetId": "17698522",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/olahraga/2016/10/161003_tc2_videomap1",
+          "curie": "http://www.bbc.co.uk/asset/d52a9014-894e-11e6-8973-adfd122641ab"
+        },
+        "summary": "Seorang anak laki-laki berusia enam tahun menulis surat kepada Presiden Barack Obama, menawarkan tempat di rumahnya untuk anak Suriah.",
+        "timestamp": 1475489454000,
+        "language": "id",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+          "taggings": []
+        },
+        "media": {
+          "id": "17698522",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17698522",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/indonesia/meta/dps/junk/2016/10/emp/161003_tc2_videomap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/indonesia/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161003_tc2_videomap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/indonesia/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161003_tc2_videomap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/indonesia/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161003_tc2_videomap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e222",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "Getty",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:indonesia/olahraga/2016/10/161003_tc2_videomap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "Olahraga",
+          "uri": "/indonesia/olahraga",
+          "urlIdentifier": "/indonesia/olahraga",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "BBCIndonesia.com",
+          "uri": "/indonesia",
+          "urlIdentifier": "/indonesia",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "cps_asset_id": "17698522",
-      "cps_asset_type": "map"
     },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "indonesia",
-    "firstPublished": 1475488380000,
-    "id": "urn:bbc:ares::asset:indonesia/olahraga/2016/10/161003_tc2_videomap1",
-    "includeComments": false,
-    "language": "id",
-    "lastPublished": 1475489454000,
-    "lastUpdated": 1583244419880,
-    "locators": {
-      "assetId": "17698522",
-      "assetUri": "/indonesia/olahraga/2016/10/161003_tc2_videomap1",
-      "cpsUrn": "urn:bbc:content:assetUri:indonesia/olahraga/2016/10/161003_tc2_videomap1",
-      "curie": "http://www.bbc.co.uk/asset/d52a9014-894e-11e6-8973-adfd122641ab"
-    },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1475489454000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "Surat Alex, anak usia enam tahun: Pak Presiden Obama, tolong jemput anak Suriah",
-      "shortHeadline": "Surat Alex, anak usia enam tahun: Pak Presiden Obama, tolong jemput anak Suriah"
-    },
-    "id": "urn:bbc:ares::asset:indonesia/olahraga/2016/10/161003_tc2_videomap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "Getty",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-      "id": "d5e222",
-      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "id",
-    "locators": {
-      "assetId": "17698522",
-      "assetUri": "/indonesia/olahraga/2016/10/161003_tc2_videomap1",
-      "cpsUrn": "urn:bbc:content:assetUri:indonesia/olahraga/2016/10/161003_tc2_videomap1",
-      "curie": "http://www.bbc.co.uk/asset/d52a9014-894e-11e6-8973-adfd122641ab"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/indonesia/meta/dps/junk/2016/10/emp/161003_tc2_videomap1.emp.xml",
-      "id": "17698522",
-      "live": false,
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": {
-      "taggings": []
-    },
-    "summary": "Seorang anak laki-laki berusia enam tahun menulis surat kepada Presiden Barack Obama, menawarkan tempat di rumahnya untuk anak Suriah.",
-    "timestamp": 1475489454000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "Olahraga",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/indonesia/olahraga"
-    },
-    "site": {
-      "name": "BBCIndonesia.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/indonesia"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-01T23:25:58.931Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
+        "totalRecords": 5,
+        "records": [
+          {
+            "id": "cda12ca7-634b-554d-8f23-9d17f6d12eae",
+            "rank": 1,
+            "count": 8093,
+            "urn": "urn:bbc:curie:asset:cda12ca7-634b-554d-8f23-9d17f6d12eae",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "10 Beli tiket pesawat demi iPhone?",
+                "headline": "10 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077173",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:cda12ca7-634b-554d-8f23-9d17f6d12eae",
+                "assetId": "23077173",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077173",
+                "curie": "http://www.bbc.co.uk/asset/cda12ca7-634b-554d-8f23-9d17f6d12eae"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474554494000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "media": {
+                "id": "23077174",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p0157fjl",
+                "entityType": "Episode",
+                "caption": "The latest five minute news bulletin from BBC World Service.",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077173",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "25a43e21-9c60-8a4b-b495-2c37cfed36b2",
+            "rank": 2,
+            "count": 7276,
+            "urn": "urn:bbc:curie:asset:25a43e21-9c60-8a4b-b495-2c37cfed36b2",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Keluarga nelayan asal Tegal yang meninggal akibat disiksa di Taiwan minta keadilan minor update",
+                "headline": "Walaupun ada kasus seperti ini, masih ada nelayan migran yang menuju Taiwan untuk bekerja minor update."
+              },
+              "locators": {
+                "assetUri": "/indonesia/olahraga-23080663",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:25a43e21-9c60-8a4b-b495-2c37cfed36b2",
+                "assetId": "23080663",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/olahraga-23080663",
+                "curie": "http://www.bbc.co.uk/asset/25a43e21-9c60-8a4b-b495-2c37cfed36b2"
+              },
+              "summary": "Video yang direkam dengan telepon seluler oleh kawannya memperlihatkan kondisinya yang menyedihkan, kepalanya bocor, kakinya lebam hingga susah berjalan minor update.",
+              "timestamp": 1475595041000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "media": {
+                "id": "23080664",
+                "subType": "primary",
+                "format": "video",
+                "externalId": "p015wtcs",
+                "entityType": "Clip",
+                "caption": "Keluarga nelayan asal Tegal yang meninggal akibat",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63514180",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1FCD/test/_63514180_p015wtpn.jpg",
+                "path": "/cpsdevpb/1FCD/test/_63514180_p015wtpn.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Taiwan minta keadilan",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/olahraga-23080663",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a6df0842-e54d-d040-b5c3-4a826cc32021",
+            "rank": 3,
+            "count": 6981,
+            "urn": "urn:bbc:curie:asset:a6df0842-e54d-d040-b5c3-4a826cc32021",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "11 Beli tiket pesawat demi iPhone?",
+                "headline": "11 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077175",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a6df0842-e54d-d040-b5c3-4a826cc32021",
+                "assetId": "23077175",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077175",
+                "curie": "http://www.bbc.co.uk/asset/a6df0842-e54d-d040-b5c3-4a826cc32021"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474554548000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "media": {
+                "id": "23077174",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p0157fjl",
+                "entityType": "Episode",
+                "caption": "The latest five minute news bulletin from BBC World Service.",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077175",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "66e4995d-c921-374f-b76a-9c015531fc63",
+            "rank": 4,
+            "count": 4417,
+            "urn": "urn:bbc:curie:asset:66e4995d-c921-374f-b76a-9c015531fc63",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Halau buaya dengan sandal jepit, seorang perempuan Australia dikritik",
+                "headline": "Halau buaya dengan sandal jepit, seorang perempuan Australia dikritik short"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23080665",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:66e4995d-c921-374f-b76a-9c015531fc63",
+                "assetId": "23080665",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23080665",
+                "curie": "http://www.bbc.co.uk/asset/66e4995d-c921-374f-b76a-9c015531fc63"
+              },
+              "summary": "Lewat referendum warga Kolombia tolak kesepakatan damai dengan pemberontak FARC summary.",
+              "timestamp": 1475595995000,
+              "language": "id",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+                "taggings": []
+              },
+              "media": {
+                "id": "23080666",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p015wtrw",
+                "entityType": "Clip",
+                "caption": "Dibawakan oleh Rafki Hidayat updated.",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63514187",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1313D/test/_63514187_p015wtsz.jpg",
+                "path": "/cpsdevpb/1313D/test/_63514187_p015wtsz.jpg",
+                "height": 576,
+                "width": 1024,
+                "altText": "Australia dikritik",
+                "caption": "image caption added",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23080665",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6274de98-6b98-6d43-95e8-e6c82439e37e",
+            "rank": 5,
+            "count": 2723,
+            "urn": "urn:bbc:curie:asset:6274de98-6b98-6d43-95e8-e6c82439e37e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "12 Beli tiket pesawat demi iPhone?",
+                "headline": "12 Beli tiket pesawat demi iPhone?"
+              },
+              "locators": {
+                "assetUri": "/indonesia/23077176",
+                "cpsUrn": "urn:bbc:content:assetUri:indonesia/23077176",
+                "curie": "http://www.bbc.co.uk/asset/6274de98-6b98-6d43-95e8-e6c82439e37e",
+                "assetId": "23077176"
+              },
+              "summary": "Polisi Singapura mendakwa dua orang yang membeli tiket pesawat agar bisa masuk ruang tunggu keberangkatan demi untuk membeli iPhone 7.",
+              "timestamp": 1474554577000,
+              "language": "id",
+              "media": {
+                "id": "23077174",
+                "subType": "primary",
+                "format": "audio",
+                "externalId": "p0157fjl",
+                "entityType": "Episode",
+                "caption": "The latest five minute news bulletin from BBC World Service.",
+                "statusCode": 404,
+                "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+                "type": "external_vpid"
+              },
+              "indexImage": {
+                "id": "63510891",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "path": "/cpsdevpb/4D59/test/_63510891_21e0c61d-e324-4f93-b423-bdc539eae28e.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "caption": "Ruang tunggu keberangkatan Bandara Changi termasuk 'tempat yang dilindungi'.",
+                "copyrightHolder": "iStock",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/23077176",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   }
 }

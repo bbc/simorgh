@@ -1,158 +1,195 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "aspectRatio": "16:9",
-        "format": "video",
-        "href": "http://a.files.bbci.co.uk/worldservice/test/ukchina/simp/meta/dps/junk/2016/11/emp/161104_tc2_testmap1.emp.xml",
-        "id": "17698867",
-        "image": {
-          "altText": "",
-          "copyrightHolder": "",
-          "height": 360,
-          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-          "id": "17698867",
-          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-          "subType": "thumbnail",
-          "type": "image",
-          "width": 640
+  "data": {
+    "article": {
+      "metadata": {
+        "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+        "locators": {
+          "assetUri": "/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:4883e9c0-a2a4-11e6-826b-7e22ae65fd85",
+          "assetId": "17698867",
+          "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/4883e9c0-a2a4-11e6-826b-7e22ae65fd85"
         },
-        "live": false,
-        "playlist": [
+        "type": "MAP",
+        "createdBy": "ukchina_traditional",
+        "language": "zh-Hant",
+        "lastUpdated": 1665415050661,
+        "firstPublished": 1478273688000,
+        "lastPublished": 1478273688000,
+        "timestamp": 1478273688000,
+        "options": {
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "allowDateStamp": true,
+          "suitableForSyndication": false,
+          "allowAdvertising": true,
+          "isBreakingNews": false
+        },
+        "analyticsLabels": {
+          "cps_asset_type": "map",
+          "cps_asset_id": "17698867",
+          "contentId": "urn:bbc:topcat:curie:asset:4883e9c0-a2a4-11e6-826b-7e22ae65fd85"
+        },
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/UKChina",
+          "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.7",
+        "blockTypes": ["legacyMedia", "paragraph"],
+        "includeComments": false,
+        "atiAnalytics": {},
+        "readTime": 1,
+        "siteUri": "/ukchina/trad",
+        "mediaType": "video",
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
+      },
+      "content": {
+        "blocks": [
           {
-            "bitrate": "168000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_lo.mp4"
+            "id": "17698867",
+            "subType": "primary",
+            "format": "video",
+            "image": {
+              "id": "17698867",
+              "subType": "thumbnail",
+              "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "",
+              "copyrightHolder": "",
+              "type": "image"
+            },
+            "aspectRatio": "16:9",
+            "live": false,
+            "href": "http://a.files.bbci.co.uk/worldservice/test/ukchina/simp/meta/dps/junk/2016/11/emp/161104_tc2_testmap1.emp.xml",
+            "playlist": [
+              {
+                "format": "mp4",
+                "bitrate": "168000",
+                "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_lo.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "320000",
+                "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_med.mp4"
+              },
+              {
+                "format": "mp4",
+                "bitrate": "904000",
+                "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_hi.mp4"
+              }
+            ],
+            "type": "legacyMedia"
           },
           {
-            "bitrate": "320000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_med.mp4"
-          },
-          {
-            "bitrate": "904000",
-            "format": "mp4",
-            "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_hi.mp4"
+            "text": "BBC在春節期間派出攝製隊到中國拍攝，華裔英國演員陸思敬作為主持人之一，向BBC中文吐露感想與喜好。",
+            "markupType": "plain_text",
+            "type": "paragraph"
           }
-        ],
-        "subType": "primary",
-        "type": "legacyMedia"
+        ]
       },
-      {
-        "markupType": "plain_text",
-        "text": "BBC在春節期間派出攝製隊到中國拍攝，華裔英國演員陸思敬作為主持人之一，向BBC中文吐露感想與喜好。",
-        "type": "paragraph"
+      "promo": {
+        "headlines": {
+          "shortHeadline": "視頻：英國華人演員陸思敬談《中國春節》",
+          "headline": "視頻：英國華人演員陸思敬談《中國春節》"
+        },
+        "locators": {
+          "assetUri": "/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+          "curieCpsUrn": "urn:bbc:cps:curie:asset:4883e9c0-a2a4-11e6-826b-7e22ae65fd85",
+          "assetId": "17698867",
+          "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+          "curie": "http://www.bbc.co.uk/asset/4883e9c0-a2a4-11e6-826b-7e22ae65fd85"
+        },
+        "summary": "BBC在春節期間派出攝製隊到中國拍攝，華裔英國演員陸思敬作為主持人之一，向BBC中文吐露感想與喜好。",
+        "timestamp": 1478273688000,
+        "language": "zh-Hant",
+        "passport": {
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/UKChina",
+          "taggings": []
+        },
+        "media": {
+          "id": "17698867",
+          "subType": "primary",
+          "format": "video",
+          "image": {
+            "id": "17698867",
+            "subType": "thumbnail",
+            "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "",
+            "copyrightHolder": "",
+            "type": "image"
+          },
+          "aspectRatio": "16:9",
+          "live": false,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/ukchina/simp/meta/dps/junk/2016/11/emp/161104_tc2_testmap1.emp.xml",
+          "playlist": [
+            {
+              "format": "mp4",
+              "bitrate": "168000",
+              "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_lo.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "320000",
+              "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_med.mp4"
+            },
+            {
+              "format": "mp4",
+              "bitrate": "904000",
+              "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_hi.mp4"
+            }
+          ],
+          "type": "legacyMedia"
+        },
+        "indexImage": {
+          "id": "d5e216",
+          "subType": "index",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+          "height": 81,
+          "width": 144,
+          "altText": "",
+          "copyrightHolder": "Getty",
+          "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+        "type": "cps"
+      },
+      "relatedContent": {
+        "section": {
+          "subType": "index",
+          "name": "音視圖片",
+          "uri": "/ukchina/trad/multimedia",
+          "urlIdentifier": "/ukchina/trad/multimedia",
+          "type": "simple"
+        },
+        "site": {
+          "subType": "site",
+          "name": "bbcukchina.com",
+          "uri": "/ukchina/trad",
+          "urlIdentifier": "/ukchina/trad",
+          "type": "simple"
+        },
+        "groups": []
       }
-    ]
-  },
-  "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17698867", "cps_asset_type": "map" },
-    "blockTypes": ["legacyMedia", "paragraph"],
-    "createdBy": "ukchina_traditional",
-    "firstPublished": 1478273688000,
-    "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
-    "includeComments": false,
-    "language": "zh-Hant",
-    "lastPublished": 1478273688000,
-    "lastUpdated": 1585927999900,
-    "locators": {
-      "assetId": "17698867",
-      "assetUri": "/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/4883e9c0-a2a4-11e6-826b-7e22ae65fd85"
     },
-    "options": {
-      "allowAdvertising": true,
-      "allowDateStamp": true,
-      "allowRightHandSide": true,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "suitableForSyndication": false
-    },
-    "tags": {},
-    "timestamp": 1478273688000,
-    "type": "MAP",
-    "version": "v1.1.10"
-  },
-  "promo": {
-    "headlines": {
-      "headline": "視頻：英國華人演員陸思敬談《中國春節》",
-      "shortHeadline": "視頻：英國華人演員陸思敬談《中國春節》"
-    },
-    "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
-    "indexImage": {
-      "altText": "",
-      "copyrightHolder": "Getty",
-      "height": 81,
-      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-      "id": "d5e216",
-      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 144
-    },
-    "language": "zh-Hant",
-    "locators": {
-      "assetId": "17698867",
-      "assetUri": "/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
-      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
-      "curie": "http://www.bbc.co.uk/asset/4883e9c0-a2a4-11e6-826b-7e22ae65fd85"
-    },
-    "media": {
-      "aspectRatio": "16:9",
-      "format": "video",
-      "href": "http://a.files.bbci.co.uk/worldservice/test/ukchina/simp/meta/dps/junk/2016/11/emp/161104_tc2_testmap1.emp.xml",
-      "id": "17698867",
-      "image": {
-        "altText": "",
-        "copyrightHolder": "",
-        "height": 360,
-        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-        "id": "17698867",
-        "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
-        "subType": "thumbnail",
-        "type": "image",
-        "width": 640
-      },
-      "live": false,
-      "playlist": [
-        {
-          "bitrate": "168000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_lo.mp4"
-        },
-        {
-          "bitrate": "320000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_med.mp4"
-        },
-        {
-          "bitrate": "904000",
-          "format": "mp4",
-          "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_hi.mp4"
-        }
-      ],
-      "subType": "primary",
-      "type": "legacyMedia"
-    },
-    "passport": { "taggings": [] },
-    "summary": "BBC在春節期間派出攝製隊到中國拍攝，華裔英國演員陸思敬作為主持人之一，向BBC中文吐露感想與喜好。",
-    "timestamp": 1478273688000,
-    "type": "cps"
-  },
-  "relatedContent": {
-    "groups": [],
-    "section": {
-      "name": "音視圖片",
-      "subType": "index",
-      "type": "simple",
-      "uri": "/ukchina/trad/multimedia"
-    },
-    "site": {
-      "name": "bbcukchina.com",
-      "subType": "site",
-      "type": "simple",
-      "uri": "/ukchina/trad"
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "mostWatched": {
+        "generated": "2023-02-02T03:17:00.048Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T03:53:00Z",
+        "totalRecords": 0,
+        "records": []
+      }
     }
   }
 }
