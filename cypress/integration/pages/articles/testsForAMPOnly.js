@@ -1,6 +1,11 @@
 import path from 'ramda/src/path';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import { getBlockData, getVideoEmbedUrl, getMostReadUrl } from './helpers';
+import {
+  getBlockData,
+  getVideoEmbedUrl,
+  getMostReadUrlRecords,
+  getMostReadUrlList,
+} from './helpers';
 import config from '../../../support/config/services';
 import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
 
@@ -167,9 +172,14 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           });
         });
 
-        // Test is not complete.
-        it(`Most read list hrefs should link to article of same name`, done => {
+        // to refactor
+        it(`Most read list should contain hrefs that match JSON data`, () => {
           cy.request(mostReadPath).then(({ body: mostReadJson }) => {
+            // get records object
+            const records = getMostReadUrlRecords(mostReadJson);
+            // get list of Most Read urls including CPS and optimo articles from JSON
+            const ListOfMostReadUrlsInOrder = getMostReadUrlList(records);
+            // checks if there should be most read (copied from above)
             const mostReadRecords = mostReadJson.totalRecords;
             cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
               const mostReadIsEnabled = path(['mostRead', 'enabled'], toggles);
@@ -177,43 +187,19 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                 `Most read container toggle enabled? ${mostReadIsEnabled}`,
               );
               if (mostReadIsEnabled && mostReadRecords >= 5) {
-                let currentURL = null;
                 cy.get('[data-e2e="most-read"]').scrollIntoView();
                 cy.get('[data-e2e="most-read"] > amp-list div')
-                  .find('li a')
-                  .each($el => {
-                    const txt = $el.text();
-                    cy.log(`URL text ${txt}`);
-                    cy.get('a')
-                      .should('have.attr', 'href')
-                      .then(href => {
-                        cy.request({
-                          url: href,
-                          failOnStatusCode: false,
-                        }).then(resp => {
-                          expect(resp.status).to.not.equal(404);
-                        });
-                      });
-                    cy.url().then(url => {
-                      currentURL = url;
-                      cy.get('h1').should('contain', txt);
-                      cy.go('back');
-                      cy.url().should('eq', currentURL);
-                      done();
+                  .next()
+                  .within(() => {
+                    // checks each A element href contains the Most Read Urls in the JSON
+                    cy.get('a').each(($el, index) => {
+                      cy.wrap($el)
+                        .should('have.attr', 'href')
+                        .and('contain', ListOfMostReadUrlsInOrder[index]);
                     });
                   });
               }
             });
-          });
-        });
-
-        // Test is not complete. Undefined
-        it(`Most read list should contain hrefs that match JSON data`, () => {
-          cy.request(mostReadPath).then(({ body: mostReadJson }) => {
-            const mostReadRecords = mostReadJson.records[0];
-            cy.log(`Most read url? ${mostReadRecords}`);
-            const mostReadUrl = getMostReadUrl(mostReadRecords);
-            cy.log(`Most read url? ${mostReadUrl}`);
           });
         });
 
