@@ -3699,7 +3699,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/kyrgyz/topics/cvpv9djp9qqt?renderer_env=test'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
