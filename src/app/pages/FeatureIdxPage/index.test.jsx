@@ -7,7 +7,6 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import urduPageData from '#data/urdu/cpsAssets/science-51314202';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
-import * as fetchPageData from '../../routes/utils/fetchPageData';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 import FeatureIdxPage from '.';
@@ -135,13 +134,7 @@ jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
   return CanonicalAdBootstrapJs;
 });
 
-const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
-fetchDataSpy.mockImplementation(() =>
-  Promise.resolve({
-    status: 200,
-    json: urduPageData,
-  }),
-);
+fetch.mockResponse(JSON.stringify(urduPageData));
 
 describe('Feature Idx Page', () => {
   let pageData;

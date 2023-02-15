@@ -23,9 +23,7 @@ import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/12
 import photoGalleryPageJson from '#data/indonesia/cpsAssets/indonesia-41635759.json';
 import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689.json';
 import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
-import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
-import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
 import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import routes from '.';
@@ -306,8 +304,7 @@ it('should route to and render a most watched page', async () => {
 it('should route to and render a media asset page', async () => {
   process.env.SIMORGH_APP_ENV = 'local';
   const pathname = '/yoruba/media-23256797';
-  fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
-  fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
+  fetch.mockResponse(JSON.stringify(mediaAssetPageJson));
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
@@ -331,8 +328,7 @@ it('should route to and render a media asset page', async () => {
 
 it('should route to and render a media asset page', async () => {
   const pathname = '/yoruba/media-23256797';
-  fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
-  fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
+  fetch.mockResponse(JSON.stringify(mediaAssetPageJson));
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
@@ -359,8 +355,7 @@ it('should route to and render a media asset page', async () => {
 it('should route to and render a legacy media asset page', async () => {
   process.env.SIMORGH_APP_ENV = 'local';
   const pathname = '/azeri/multimedia/2012/09/120919_georgia_prison_video';
-  fetchMock.mock(`http://localhost${pathname}.json`, legacyMediaAssetPage);
-  fetchMock.mock('http://localhost/azeri/mostwatched.json', mostWatchedData);
+  fetch.mockResponse(JSON.stringify(legacyMediaAssetPage));
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
@@ -386,7 +381,7 @@ it('should route to and render a legacy media asset page', async () => {
 
 it('should route to and render a photo gallery page', async () => {
   const pathname = '/indonesia/indonesia-41635759';
-  fetchMock.mock(`http://localhost${pathname}.json`, photoGalleryPageJson);
+  fetch.mockResponse(JSON.stringify(photoGalleryPageJson));
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
@@ -409,12 +404,7 @@ it('should route to and render a photo gallery page', async () => {
 
 it('should route to and render a story page', async () => {
   const pathname = '/mundo/noticias-internacional-51266689';
-  fetchMock.mock(`http://localhost${pathname}.json`, storyPageJson);
-  fetchMock.mock(`http://localhost/mundo/mostread.json`, storyPageMostReadData);
-  fetchMock.mock(
-    `http://localhost${pathname}/recommendations.json`,
-    storyPageRecommendationsData,
-  );
+  fetch.mockResponse(JSON.stringify(storyPageJson));
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
@@ -461,7 +451,7 @@ it('should route to and render an index page', async () => {
 // skipping this test until FIX pages are fully featured with correct metadata and Chartbeat
 it.skip('should route to and render a feature index page', async () => {
   const pathname = '/afrique/48465371';
-  fetchMock.mock(`http://localhost${pathname}.json`, featureIndexPageJson);
+  fetch.mockResponse(JSON.stringify(featureIndexPageJson));
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({

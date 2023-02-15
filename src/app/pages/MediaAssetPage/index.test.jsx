@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import fetchMock from 'fetch-mock';
 import { render, waitFor } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
@@ -28,28 +27,26 @@ jest.mock('#containers/ComscoreAnalytics', () => {
 
 jest.mock('../../components/ThemeProvider');
 
-const createAssetPage = ({ pageData }, service) => {
-  return (
-    <StaticRouter>
-      <ThemeProvider service={service} variant="default">
-        <ToggleContextProvider>
-          <ServiceContextProvider service={service}>
-            <RequestContextProvider
-              bbcOrigin="https://www.test.bbc.co.uk"
-              isAmp={false}
-              pageType={pageData.metadata.type}
-              pathname={pageData.metadata.locators.assetUri}
-              service={service}
-              statusCode={200}
-            >
-              <MediaAssetPage service={service} pageData={pageData} />
-            </RequestContextProvider>
-          </ServiceContextProvider>
-        </ToggleContextProvider>
-      </ThemeProvider>
-    </StaticRouter>
-  );
-};
+const createAssetPage = ({ pageData }, service) => (
+  <StaticRouter>
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider>
+        <ServiceContextProvider service={service}>
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={false}
+            pageType={pageData.metadata.type}
+            pathname={pageData.metadata.locators.assetUri}
+            service={service}
+            statusCode={200}
+          >
+            <MediaAssetPage service={service} pageData={pageData} />
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
+  </StaticRouter>
+);
 
 jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
@@ -124,17 +121,13 @@ const getBlockTextAtIndex = (index, originalPageData) => {
   );
 };
 
-const pageType = 'cpsAsset';
-
-fetchMock.config.overwriteRoutes = true;
-
 const mockInitialData = ({ service, assetId, pageData }) => {
   fetch.mockResponse(JSON.stringify(pageData));
 
   return getInitialData({
     path: assetId,
     service,
-    pageType,
+    pageType: 'cpsAsset',
   });
 };
 

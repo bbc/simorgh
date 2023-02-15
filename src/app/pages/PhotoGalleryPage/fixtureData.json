@@ -1,17 +1,1904 @@
 {
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "id": "3e78689c",
+          "model": {
+            "blocks": [
+              {
+                "id": "c16ca813",
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "1c8efbcb",
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Azərbaycan Xalq Cümhuriyyəti - Fotolarda",
+                        "blocks": [
+                          {
+                            "id": "2bea11ae",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Azərbaycan Xalq Cümhuriyyəti - Fotolarda",
+                              "attributes": []
+                            },
+                            "position": [1, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [1, 1, 1]
+                    }
+                  ]
+                },
+                "position": [1, 1]
+              }
+            ]
+          },
+          "type": "headline",
+          "position": [1]
+        },
+        {
+          "id": "294d052e",
+          "type": "timestamp",
+          "model": {
+            "firstPublished": 1527410055000,
+            "lastPublished": 1527410055000
+          },
+          "position": [2]
+        },
+        {
+          "id": "e9c8ace4",
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "id": "f2df734f",
+                "type": "paragraph",
+                "model": {
+                  "text": "Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca həmin dövrün siyasi xadimlərinin və hadisələrin arxiv fotolarını təqdim edir.",
+                  "blocks": [
+                    {
+                      "id": "40fc5c29",
+                      "type": "fragment",
+                      "model": {
+                        "text": "Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca həmin dövrün siyasi xadimlərinin və hadisələrin arxiv fotolarını təqdim edir.",
+                        "attributes": []
+                      },
+                      "position": [3, 1, 1]
+                    }
+                  ]
+                },
+                "position": [3, 1]
+              }
+            ]
+          },
+          "position": [3]
+        },
+        {
+          "id": "a1a521ae",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "49af1b78",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "d5dc867e",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "753637a5",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC parlamentinin birinci iclasının açılışı. Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir.",
+                              "blocks": [
+                                {
+                                  "id": "210d5e55",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC parlamentinin birinci iclasının açılışı. Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir.",
+                                    "attributes": []
+                                  },
+                                  "position": [4, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [4, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [4, 1, 1]
+                    }
+                  ]
+                },
+                "position": [4, 1]
+              },
+              {
+                "id": "16610f0a",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "c24acbb7",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "54632623",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC parlamentinin birinci iclasının açılışı",
+                              "blocks": [
+                                {
+                                  "id": "d8155c0b",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC parlamentinin birinci iclasının açılışı",
+                                    "attributes": []
+                                  },
+                                  "position": [4, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [4, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [4, 2, 1]
+                    }
+                  ]
+                },
+                "position": [4, 2]
+              },
+              {
+                "id": "3cecb5e0",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 650,
+                  "locator": "1DBC/production/_101621670_0-158827.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "position": [4, 3]
+              }
+            ]
+          },
+          "position": [4]
+        },
+        {
+          "id": "fa6874b2",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "34defdbe",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "798de1d6",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "5ef668c3",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "28 may 1918-ci il suverenliyi haqqında bəyənnamə. Azərbaycan Xalq Cümhuriyyəti cəmi 2 ildən sonra süquta uğrasa da, ölkə tarixinin ən mühüm hadisələrindən biri sayılır.",
+                              "blocks": [
+                                {
+                                  "id": "8f655bf0",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "28 may 1918-ci il suverenliyi haqqında bəyənnamə. Azərbaycan Xalq Cümhuriyyəti cəmi 2 ildən sonra süquta uğrasa da, ölkə tarixinin ən mühüm hadisələrindən biri sayılır.",
+                                    "attributes": []
+                                  },
+                                  "position": [5, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [5, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [5, 1, 1]
+                    }
+                  ]
+                },
+                "position": [5, 1]
+              },
+              {
+                "id": "ca6e72aa",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "7f731a99",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "a8f89c0f",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "28 may 1918-ci il suverenliyi haqqında bəyənnamə",
+                              "blocks": [
+                                {
+                                  "id": "a9865c15",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "28 may 1918-ci il suverenliyi haqqında bəyənnamə",
+                                    "attributes": []
+                                  },
+                                  "position": [5, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [5, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [5, 2, 1]
+                    }
+                  ]
+                },
+                "position": [5, 2]
+              },
+              {
+                "id": "8c7dea8e",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli arxiv",
+                  "height": 1700,
+                  "locator": "14D4A/production/_101622358_1-14573.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 1000
+                },
+                "position": [5, 3]
+              }
+            ]
+          },
+          "position": [5]
+        },
+        {
+          "id": "7c96f5dd",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "20852283",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "e351a964",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "144f6883",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC Nazrilər Şurasının sədri və daxili işlər naziri vəzifələrini icra etmiş Fətəli Xan Xoyski. 1875-ci ildə doğulan Xoyski ADR-nin (Azərbaycan Demokratik Respublikası) yaradıcılarından biridir. O, Zaqafqaziya Federativ Respublikası hökumətində maarif naziri, Milli Hökumətin birinci və üçüncü kabinetlərində baş nazir, beşinci kabinetində isə xarici işlər naziri vəzifəsini tutub. Xoyski türk (Azərbaycan) dilinin dövlət dili elan edilməsi haqqında 27 iyun 1918-ci il tarixli qərara imza atıb. O, 1920-ci ildə qətlə yetirilib.",
+                              "blocks": [
+                                {
+                                  "id": "965aa7a0",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC Nazrilər Şurasının sədri və daxili işlər naziri vəzifələrini icra etmiş Fətəli Xan Xoyski. 1875-ci ildə doğulan Xoyski ADR-nin (Azərbaycan Demokratik Respublikası) yaradıcılarından biridir. O, Zaqafqaziya Federativ Respublikası hökumətində maarif naziri, Milli Hökumətin birinci və üçüncü kabinetlərində baş nazir, beşinci kabinetində isə xarici işlər naziri vəzifəsini tutub. Xoyski türk (Azərbaycan) dilinin dövlət dili elan edilməsi haqqında 27 iyun 1918-ci il tarixli qərara imza atıb. O, 1920-ci ildə qətlə yetirilib.",
+                                    "attributes": []
+                                  },
+                                  "position": [6, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [6, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [6, 1, 1]
+                    }
+                  ]
+                },
+                "position": [6, 1]
+              },
+              {
+                "id": "85873402",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "232d1d00",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "f24dd4d7",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Fətəli Xan Xoyski",
+                              "blocks": [
+                                {
+                                  "id": "c297df78",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Fətəli Xan Xoyski",
+                                    "attributes": []
+                                  },
+                                  "position": [6, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [6, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [6, 2, 1]
+                    }
+                  ]
+                },
+                "position": [6, 2]
+              },
+              {
+                "id": "84339db0",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 1400,
+                  "locator": "DD24/production/_101621665_0-154461.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 900
+                },
+                "position": [6, 3]
+              }
+            ]
+          },
+          "position": [6]
+        },
+        {
+          "id": "4e725a16",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "2c1fa183",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "4703c1f4",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "57749aa2",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Məmməd Əmin Rəsulzadə - Müsavat partiyasının lideri, AXC Milli şurasının sədri.",
+                              "blocks": [
+                                {
+                                  "id": "71a92431",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Məmməd Əmin Rəsulzadə - Müsavat partiyasının lideri, AXC Milli şurasının sədri.",
+                                    "attributes": []
+                                  },
+                                  "position": [7, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [7, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [7, 1, 1]
+                    }
+                  ]
+                },
+                "position": [7, 1]
+              },
+              {
+                "id": "49101532",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "d2a15d72",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "20fa8913",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Məmməd Əmin Rəsulzadə Müsavat partiyasının lideri, AXC Milli şurasının sədri",
+                              "blocks": [
+                                {
+                                  "id": "84dd2e4a",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Məmməd Əmin Rəsulzadə Müsavat partiyasının lideri, AXC Milli şurasının sədri",
+                                    "attributes": []
+                                  },
+                                  "position": [7, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [7, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [7, 2, 1]
+                    }
+                  ]
+                },
+                "position": [7, 2]
+              },
+              {
+                "id": "2872bac2",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 1570,
+                  "locator": "17A90/production/_101621969_0-192365.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 900
+                },
+                "position": [7, 3]
+              }
+            ]
+          },
+          "position": [7]
+        },
+        {
+          "id": "abfaced0",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "e582867a",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "ed462895",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "35b0c76c",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Əlimərdan bəy Topşubaşov - AXC hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.",
+                              "blocks": [
+                                {
+                                  "id": "1cb1161b",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Əlimərdan bəy Topşubaşov - AXC hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.",
+                                    "attributes": []
+                                  },
+                                  "position": [8, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [8, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [8, 1, 1]
+                    }
+                  ]
+                },
+                "position": [8, 1]
+              },
+              {
+                "id": "a61ea7e5",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "82fdb727",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "a102e9e9",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Əlimərdan bəy Topşubaşov - ADR hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.",
+                              "blocks": [
+                                {
+                                  "id": "afd89d66",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Əlimərdan bəy Topşubaşov - ADR hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.",
+                                    "attributes": []
+                                  },
+                                  "position": [8, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [8, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [8, 2, 1]
+                    }
+                  ]
+                },
+                "position": [8, 2]
+              },
+              {
+                "id": "ed4773f7",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 841,
+                  "locator": "11EA1/production/_101677337_topcu.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 600
+                },
+                "position": [8, 3]
+              }
+            ]
+          },
+          "position": [8]
+        },
+        {
+          "id": "14584475",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "d98f478b",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "618a8012",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "0a22ffee",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Həsən bəy Ağayev Müsavat partiyasının üzvü olub. 1918-ci ildə ADR parlament sədrinin ilk müavini seçilir. Qafqazda kifayət qədər nüfuzlu şəxs sayılıb və Azərbaycanı Şimali Qafqaz Dağlılar qurultayında təmsil edib. O, 1919-cu ildə vəzifəsinə yenidən seçilə bilmir və Məmməd Yusif Cəfərov onun yerinə sədr müavini olur.",
+                              "blocks": [
+                                {
+                                  "id": "72d5d9a8",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Həsən bəy Ağayev Müsavat partiyasının üzvü olub. 1918-ci ildə ADR parlament sədrinin ilk müavini seçilir. Qafqazda kifayət qədər nüfuzlu şəxs sayılıb və Azərbaycanı Şimali Qafqaz Dağlılar qurultayında təmsil edib. O, 1919-cu ildə vəzifəsinə yenidən seçilə bilmir və Məmməd Yusif Cəfərov onun yerinə sədr müavini olur.",
+                                    "attributes": []
+                                  },
+                                  "position": [9, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [9, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [9, 1, 1]
+                    }
+                  ]
+                },
+                "position": [9, 1]
+              },
+              {
+                "id": "61ac5114",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "feae7b48",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "6f361f09",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Həsən bəy Ağaev Azərbaycan parlamenti sədrinin 1-ci müavini sədr əvəzi",
+                              "blocks": [
+                                {
+                                  "id": "c55700a3",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Həsən bəy Ağaev Azərbaycan parlamenti sədrinin 1-ci müavini sədr əvəzi",
+                                    "attributes": []
+                                  },
+                                  "position": [9, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [9, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [9, 2, 1]
+                    }
+                  ]
+                },
+                "position": [9, 2]
+              },
+              {
+                "id": "e71c81c1",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 1400,
+                  "locator": "12B44/production/_101621667_0-154588.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 900
+                },
+                "position": [9, 3]
+              }
+            ]
+          },
+          "position": [9]
+        },
+        {
+          "id": "eabf58fc",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "9c18f389",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "0bb6873b",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "66498743",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Məmməd Yusif Cəfərov da Qafqazdakı nüfuzlu siyasi xadimlərdən biri idi. O, Milli Şuraya daxil olmuşdu. Rusiya Müəssislər Məclisinə keçirilən seçkilərdə uğur qazanmışdı. Həsən bəy Ağayevdən sonra ADR parlamentinin sədrinin birinci müavini vəzifəsinə seçilir. Bundan başqa cumhuriyyət dövründə o, müxtəlif vaxtlarda daxili və xarici işlər naziri vəzifələrində də olub.",
+                              "blocks": [
+                                {
+                                  "id": "a2c6a62f",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Məmməd Yusif Cəfərov da Qafqazdakı nüfuzlu siyasi xadimlərdən biri idi. O, Milli Şuraya daxil olmuşdu. Rusiya Müəssislər Məclisinə keçirilən seçkilərdə uğur qazanmışdı. Həsən bəy Ağayevdən sonra ADR parlamentinin sədrinin birinci müavini vəzifəsinə seçilir. Bundan başqa cumhuriyyət dövründə o, müxtəlif vaxtlarda daxili və xarici işlər naziri vəzifələrində də olub.",
+                                    "attributes": []
+                                  },
+                                  "position": [10, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [10, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [10, 1, 1]
+                    }
+                  ]
+                },
+                "position": [10, 1]
+              },
+              {
+                "id": "532b7167",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "b63f6869",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "1c048bdd",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Məmməd Yusif Cəfərov",
+                              "blocks": [
+                                {
+                                  "id": "d992e530",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Məmməd Yusif Cəfərov",
+                                    "attributes": []
+                                  },
+                                  "position": [10, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [10, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [10, 2, 1]
+                    }
+                  ]
+                },
+                "position": [10, 2]
+              },
+              {
+                "id": "f5c2b2e3",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "MİLLİ ARXİV",
+                  "height": 1409,
+                  "locator": "7BD6/production/_101620713_0-153757.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 900
+                },
+                "position": [10, 3]
+              }
+            ]
+          },
+          "position": [10]
+        },
+        {
+          "id": "3ad05cbe",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "5c55eb94",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "00092eb3",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "d2120dfd",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC parlamentinin iclasından foto. Birinci sırada ADR-in Milli Şurasının sədri Məmməd Əmin Rəsulzadə əyləşib.",
+                              "blocks": [
+                                {
+                                  "id": "5e44c747",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC parlamentinin iclasından foto. Birinci sırada ADR-in Milli Şurasının sədri Məmməd Əmin Rəsulzadə əyləşib.",
+                                    "attributes": []
+                                  },
+                                  "position": [11, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [11, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [11, 1, 1]
+                    }
+                  ]
+                },
+                "position": [11, 1]
+              },
+              {
+                "id": "58cd414d",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "96282e17",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "4b7062d7",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC parlamentinin iclası - Birinci sırada ADR-in Milli Şurasının sədri M. Rəsulzadə",
+                              "blocks": [
+                                {
+                                  "id": "ecf8a2ad",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC parlamentinin iclası - Birinci sırada ADR-in Milli Şurasının sədri M. Rəsulzadə",
+                                    "attributes": []
+                                  },
+                                  "position": [11, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [11, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [11, 2, 1]
+                    }
+                  ]
+                },
+                "position": [11, 2]
+              },
+              {
+                "id": "9b13644e",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli arxiv",
+                  "height": 549,
+                  "locator": "12BA8/production/_101621767_0-159043.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 970
+                },
+                "position": [11, 3]
+              }
+            ]
+          },
+          "position": [11]
+        },
+        {
+          "id": "98bd83eb",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "29cd51af",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "1eb2c75f",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "99e03b99",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Azərbaycan nümayəndə heyəti üzvlərinin Paris sülh konfransı günlərində iclası.",
+                              "blocks": [
+                                {
+                                  "id": "9da09726",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Azərbaycan nümayəndə heyəti üzvlərinin Paris sülh konfransı günlərində iclası.",
+                                    "attributes": []
+                                  },
+                                  "position": [12, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [12, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [12, 1, 1]
+                    }
+                  ]
+                },
+                "position": [12, 1]
+              },
+              {
+                "id": "0612919d",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "3c253824",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "5ef1fdc5",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Azərbaycan nümayəndə üzvlərinin Parisdə sülh konfransı günlərində iclası",
+                              "blocks": [
+                                {
+                                  "id": "1e10f864",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Azərbaycan nümayəndə üzvlərinin Parisdə sülh konfransı günlərində iclası",
+                                    "attributes": []
+                                  },
+                                  "position": [12, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [12, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [12, 2, 1]
+                    }
+                  ]
+                },
+                "position": [12, 2]
+              },
+              {
+                "id": "d4e898d4",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 450,
+                  "locator": "0DC2/production/_101622530_k-30551.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 580
+                },
+                "position": [12, 3]
+              }
+            ]
+          },
+          "position": [12]
+        },
+        {
+          "id": "9b85556b",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "b5d8c962",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "dab2e4ca",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "786e4f7a",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Səməd bəy Mehmandarov, hərbi və dövlət xadimi, artilleriya generalı olub. 15 fevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli Hökumətin hərbi naziri vəzifəsini icra edib.",
+                              "blocks": [
+                                {
+                                  "id": "48500460",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Səməd bəy Mehmandarov, hərbi və dövlət xadimi, artilleriya generalı olub. 15 fevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli Hökumətin hərbi naziri vəzifəsini icra edib.",
+                                    "attributes": []
+                                  },
+                                  "position": [13, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [13, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [13, 1, 1]
+                    }
+                  ]
+                },
+                "position": [13, 1]
+              },
+              {
+                "id": "3ecbcac7",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "eeee001b",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "b76da121",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Səməd bəy Mehmandarov- hərbi və dövlət xadimi, artilleriya generalı, 15 fgevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli hökumətin hərbi naziri, 1920",
+                              "blocks": [
+                                {
+                                  "id": "b5e9d163",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Səməd bəy Mehmandarov- hərbi və dövlət xadimi, artilleriya generalı, 15 fgevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli hökumətin hərbi naziri, 1920",
+                                    "attributes": []
+                                  },
+                                  "position": [13, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [13, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [13, 2, 1]
+                    }
+                  ]
+                },
+                "position": [13, 2]
+              },
+              {
+                "id": "ce73d317",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 1500,
+                  "locator": "FF2A/production/_101622356_1-14571.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 950
+                },
+                "position": [13, 3]
+              }
+            ]
+          },
+          "position": [13]
+        },
+        {
+          "id": "0575b868",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "34f27f50",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "8bfab978",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "7a5877e2",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Əli Ağa Şıxlınski - Rusiya İmperiyası ordusunda general-leytenant, Azərbaycan Xalq Cümhuriyyətinin Hərbi nazirinin müavini 1917.",
+                              "blocks": [
+                                {
+                                  "id": "da4c76a5",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Əli Ağa Şıxlınski - Rusiya İmperiyası ordusunda general-leytenant, Azərbaycan Xalq Cümhuriyyətinin Hərbi nazirinin müavini 1917.",
+                                    "attributes": []
+                                  },
+                                  "position": [14, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [14, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [14, 1, 1]
+                    }
+                  ]
+                },
+                "position": [14, 1]
+              },
+              {
+                "id": "b5c6264f",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "f84f74da",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "112282c4",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Əli Ağa Şıxlınski -artilleriyanın general leytinantı, 1917",
+                              "blocks": [
+                                {
+                                  "id": "dda12f0c",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Əli Ağa Şıxlınski -artilleriyanın general leytinantı, 1917",
+                                    "attributes": []
+                                  },
+                                  "position": [14, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [14, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [14, 2, 1]
+                    }
+                  ]
+                },
+                "position": [14, 2]
+              },
+              {
+                "id": "97692838",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 1400,
+                  "locator": "B10A/production/_101622354_1-14569.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 1000
+                },
+                "position": [14, 3]
+              }
+            ]
+          },
+          "position": [14]
+        },
+        {
+          "id": "f9226f63",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "3c60228b",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "cd1a6d86",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "427b7629",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC ordusunun zabit və əsgərləri.",
+                              "blocks": [
+                                {
+                                  "id": "3b2a8abc",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC ordusunun zabit və əsgərləri.",
+                                    "attributes": []
+                                  },
+                                  "position": [15, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [15, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [15, 1, 1]
+                    }
+                  ]
+                },
+                "position": [15, 1]
+              },
+              {
+                "id": "451aa39d",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "97345e33",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "0b397ae4",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC ordusunun zabit və əsgərləri",
+                              "blocks": [
+                                {
+                                  "id": "0a4c6268",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC ordusunun zabit və əsgərləri",
+                                    "attributes": []
+                                  },
+                                  "position": [15, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [15, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [15, 2, 1]
+                    }
+                  ]
+                },
+                "position": [15, 2]
+              },
+              {
+                "id": "f92d10eb",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli arxiv",
+                  "height": 750,
+                  "locator": "66D2/production/_101622362_2-1398.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 990
+                },
+                "position": [15, 3]
+              }
+            ]
+          },
+          "position": [15]
+        },
+        {
+          "id": "96a1f1a8",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "d077185e",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "68b3f240",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "772e80a4",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Gəncə yunkerlər məktəbinin zabit və kursantları.",
+                              "blocks": [
+                                {
+                                  "id": "95a3813f",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Gəncə yunkerlər məktəbinin zabit və kursantları.",
+                                    "attributes": []
+                                  },
+                                  "position": [16, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [16, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [16, 1, 1]
+                    }
+                  ]
+                },
+                "position": [16, 1]
+              },
+              {
+                "id": "3b1f32d4",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "369109be",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "1a82e9a4",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Gəncə yunkerlər məktəbinin zabit və kursantları",
+                              "blocks": [
+                                {
+                                  "id": "e81fc4a0",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Gəncə yunkerlər məktəbinin zabit və kursantları",
+                                    "attributes": []
+                                  },
+                                  "position": [16, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [16, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [16, 2, 1]
+                    }
+                  ]
+                },
+                "position": [16, 2]
+              },
+              {
+                "id": "1bc98d50",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli arxiv",
+                  "height": 640,
+                  "locator": "18B2/production/_101622360_2-1396.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "position": [16, 3]
+              }
+            ]
+          },
+          "position": [16]
+        },
+        {
+          "id": "06803f08",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "68fd5759",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "78f49571",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "5d56e5f8",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Azərbaycan Xalq Cümhuriyyəti parlamentinin binası, 1919-cu il.",
+                              "blocks": [
+                                {
+                                  "id": "545e35c4",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Azərbaycan Xalq Cümhuriyyəti parlamentinin binası, 1919-cu il.",
+                                    "attributes": []
+                                  },
+                                  "position": [17, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [17, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [17, 1, 1]
+                    }
+                  ]
+                },
+                "position": [17, 1]
+              },
+              {
+                "id": "b1e6cf54",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "6620b92c",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "1b92ae86",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Azərbaycan Xalq Cumhuriyyəti parlamentinin binası, 1919",
+                              "blocks": [
+                                {
+                                  "id": "5cfef94e",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Azərbaycan Xalq Cumhuriyyəti parlamentinin binası, 1919",
+                                    "attributes": []
+                                  },
+                                  "position": [17, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [17, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [17, 2, 1]
+                    }
+                  ]
+                },
+                "position": [17, 2]
+              },
+              {
+                "id": "d8a96e95",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli arxiv ",
+                  "height": 670,
+                  "locator": "F43A/production/_101622526_2-13370.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 996
+                },
+                "position": [17, 3]
+              }
+            ]
+          },
+          "position": [17]
+        },
+        {
+          "id": "b54f68aa",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "e20604c6",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "0762848a",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "14d61b5c",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı, 1919-cu il.",
+                              "blocks": [
+                                {
+                                  "id": "8924c286",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı, 1919-cu il.",
+                                    "attributes": []
+                                  },
+                                  "position": [18, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [18, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [18, 1, 1]
+                    }
+                  ]
+                },
+                "position": [18, 1]
+              },
+              {
+                "id": "7b2e5c46",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "d5e0a3bd",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "b6c097d7",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı",
+                              "blocks": [
+                                {
+                                  "id": "1d08d3f1",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı",
+                                    "attributes": []
+                                  },
+                                  "position": [18, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [18, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [18, 2, 1]
+                    }
+                  ]
+                },
+                "position": [18, 2]
+              },
+              {
+                "id": "5c10a0a6",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 560,
+                  "locator": "34D2/production/_101622531_5-841.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 996
+                },
+                "position": [18, 3]
+              }
+            ]
+          },
+          "position": [18]
+        },
+        {
+          "id": "18059065",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "3da91dbd",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "c10ea1a8",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "b1f18340",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC Nazirlər Sovetinin heyəti. Ortada - Nazirlər Sovetinin sədri Usub bəy Nəsirbəyov, hərbi nazir Səməd ağa Mehmandarov. Sağdan-sola: maliyyə naziri Əliağa Həsənov, xarici işlər naziri Fətəli xan Xoyski, əmək və ədliyyə naziri A. Səfirkürdski, portfelsiz nazir Amastor, səhiyyə naziri Taskanov, Nazirlər Sovetinin iş icraçısı Mirzə Qacar. Soldan-sağa: yol-nəqliyyat naziri Məlik Aslanov, teleqraf naziri Camo bəy Hacınski, nəzarət naziri Nəriman bəy Nərimanbəyov, ədliyyə nazirinin köməkçisi Teymur bəy Makinski, yol-nəqliyyat nazirinin köməkçisi Yusif Məmmədbəyov, əkinçilik nazirinin köməkçisi Hidayət bəy Sultanov, xarici işlər nazirinin köməkçisi Adilxan Ziyadxanov, 1919-cu il.",
+                              "blocks": [
+                                {
+                                  "id": "7801371a",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC Nazirlər Sovetinin heyəti. Ortada - Nazirlər Sovetinin sədri Usub bəy Nəsirbəyov, hərbi nazir Səməd ağa Mehmandarov. Sağdan-sola: maliyyə naziri Əliağa Həsənov, xarici işlər naziri Fətəli xan Xoyski, əmək və ədliyyə naziri A. Səfirkürdski, portfelsiz nazir Amastor, səhiyyə naziri Taskanov, Nazirlər Sovetinin iş icraçısı Mirzə Qacar. Soldan-sağa: yol-nəqliyyat naziri Məlik Aslanov, teleqraf naziri Camo bəy Hacınski, nəzarət naziri Nəriman bəy Nərimanbəyov, ədliyyə nazirinin köməkçisi Teymur bəy Makinski, yol-nəqliyyat nazirinin köməkçisi Yusif Məmmədbəyov, əkinçilik nazirinin köməkçisi Hidayət bəy Sultanov, xarici işlər nazirinin köməkçisi Adilxan Ziyadxanov, 1919-cu il.",
+                                    "attributes": []
+                                  },
+                                  "position": [19, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [19, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [19, 1, 1]
+                    }
+                  ]
+                },
+                "position": [19, 1]
+              },
+              {
+                "id": "71fe2547",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "2d9e38df",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "ee2929d2",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "AXC Nazirlər sovetinin heyəti",
+                              "blocks": [
+                                {
+                                  "id": "64f59b07",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "AXC Nazirlər sovetinin heyəti",
+                                    "attributes": []
+                                  },
+                                  "position": [19, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [19, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [19, 2, 1]
+                    }
+                  ]
+                },
+                "position": [19, 2]
+              },
+              {
+                "id": "e9d2c251",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli arxiv",
+                  "height": 650,
+                  "locator": "A61A/production/_101622524_2-13335.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "position": [19, 3]
+              }
+            ]
+          },
+          "position": [19]
+        },
+        {
+          "id": "c3660ca5",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "e8ac4de2",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "4004ca0d",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "d05453b8",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Azərbaycan parlamentinin üzvləri: Ortada: AXC Nazirlər Sovetinin sədri Fətəli xan Xoyski və Azərbaycan parlamentinin sədr müavini Həsənbəy Ağayev.",
+                              "blocks": [
+                                {
+                                  "id": "000d5690",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Azərbaycan parlamentinin üzvləri: Ortada: AXC Nazirlər Sovetinin sədri Fətəli xan Xoyski və Azərbaycan parlamentinin sədr müavini Həsənbəy Ağayev.",
+                                    "attributes": []
+                                  },
+                                  "position": [20, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [20, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [20, 1, 1]
+                    }
+                  ]
+                },
+                "position": [20, 1]
+              },
+              {
+                "id": "3a86cda4",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "93dc14cd",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "029f41db",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Azərbaycan parlamentinin üzvləri: Ortada - AXC Nazirlər Sovetinin sədri F. Xoyski və Azərbaycan parlamentinin sədr müavini H. Ağayev",
+                              "blocks": [
+                                {
+                                  "id": "4ffa489c",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Azərbaycan parlamentinin üzvləri: Ortada - AXC Nazirlər Sovetinin sədri F. Xoyski və Azərbaycan parlamentinin sədr müavini H. Ağayev",
+                                    "attributes": []
+                                  },
+                                  "position": [20, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [20, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [20, 2, 1]
+                    }
+                  ]
+                },
+                "position": [20, 2]
+              },
+              {
+                "id": "59c7dfad",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 700,
+                  "locator": "6BDC/production/_101621672_0-158834.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 976
+                },
+                "position": [20, 3]
+              }
+            ]
+          },
+          "position": [20]
+        },
+        {
+          "id": "b4d1bdd0",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "93fae081",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "035f9327",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "cc7d1548",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Əhməd bəy Ağayev - 1875-1939. Azərbaycanın 20-ci əsr ictimai-siyasi tarixinin fikir nəhənglərindən biri, publisist maarifçi, 1918-ci ildə Azərbaycanı xilas etməyə gələn türk ordusunun komandanı Nuru Paşanın müavini kimi vətənə dönmüş, milli parlamentin üzvü olmuşdur. Milli Hökumət dövründə xüsusi qərarla Türkiyədən ölkəmizə müəllim dəvət olunmasında, dərslik gətirilməsində böyük xidmətləri var.",
+                              "blocks": [
+                                {
+                                  "id": "249b9a98",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Əhməd bəy Ağayev - 1875-1939. Azərbaycanın 20-ci əsr ictimai-siyasi tarixinin fikir nəhənglərindən biri, publisist maarifçi, 1918-ci ildə Azərbaycanı xilas etməyə gələn türk ordusunun komandanı Nuru Paşanın müavini kimi vətənə dönmüş, milli parlamentin üzvü olmuşdur. Milli Hökumət dövründə xüsusi qərarla Türkiyədən ölkəmizə müəllim dəvət olunmasında, dərslik gətirilməsində böyük xidmətləri var.",
+                                    "attributes": []
+                                  },
+                                  "position": [21, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [21, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [21, 1, 1]
+                    }
+                  ]
+                },
+                "position": [21, 1]
+              },
+              {
+                "id": "f4548aef",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "49b8beff",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "d9ec82f6",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Əhməd bəy Ağayev",
+                              "blocks": [
+                                {
+                                  "id": "0addadb1",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Əhməd bəy Ağayev",
+                                    "attributes": []
+                                  },
+                                  "position": [21, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [21, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [21, 2, 1]
+                    }
+                  ]
+                },
+                "position": [21, 2]
+              },
+              {
+                "id": "01cae0d6",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 1400,
+                  "locator": "6D08/production/_101621972_0-210162.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 900
+                },
+                "position": [21, 3]
+              }
+            ]
+          },
+          "position": [21]
+        },
+        {
+          "id": "e640a093",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "75913349",
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "4925905c",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "97a66226",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Məmməd Həsən Hacinski AXC-nin birinci və ikinci kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri vəzifəsini icra edib. Hacınski Müsavat partiyasın üzvü olub, parlamentdə fraksiyalardan birinin lideri olub. Tarixçi-alim Altay Göyüşovun sözlərinə görə, 1920-ci ilin əvvəllərində Nazirlər Şurasının sədri Nəsib bəy Yusifbəyov istefaya getdikdən sonra yeni hökumətin təşkili Hacınskiyə tapşırılıb.",
+                              "blocks": [
+                                {
+                                  "id": "2ef7f01a",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Məmməd Həsən Hacinski AXC-nin birinci və ikinci kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri vəzifəsini icra edib. Hacınski Müsavat partiyasın üzvü olub, parlamentdə fraksiyalardan birinin lideri olub. Tarixçi-alim Altay Göyüşovun sözlərinə görə, 1920-ci ilin əvvəllərində Nazirlər Şurasının sədri Nəsib bəy Yusifbəyov istefaya getdikdən sonra yeni hökumətin təşkili Hacınskiyə tapşırılıb.",
+                                    "attributes": []
+                                  },
+                                  "position": [22, 1, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [22, 1, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [22, 1, 1]
+                    }
+                  ]
+                },
+                "position": [22, 1]
+              },
+              {
+                "id": "1b88b264",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "0c2f84ca",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "899d7217",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "M.H. Hacinski AXC-nin 1, 2 kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri",
+                              "blocks": [
+                                {
+                                  "id": "9db9660b",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "M.H. Hacinski AXC-nin 1, 2 kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri",
+                                    "attributes": []
+                                  },
+                                  "position": [22, 2, 1, 1, 1]
+                                }
+                              ]
+                            },
+                            "position": [22, 2, 1, 1]
+                          }
+                        ]
+                      },
+                      "position": [22, 2, 1]
+                    }
+                  ]
+                },
+                "position": [22, 2]
+              },
+              {
+                "id": "3684761e",
+                "type": "rawImage",
+                "model": {
+                  "copyrightHolder": "Milli Arxiv",
+                  "height": 1400,
+                  "locator": "10560/production/_101621966_0-173322.jpg",
+                  "originCode": "cpsprodpb",
+                  "width": 900
+                },
+                "position": [22, 3]
+              }
+            ]
+          },
+          "position": [22]
+        }
+      ]
+    }
+  },
   "metadata": {
     "firstPublished": 1527410055000,
-    "lastPublished": 1527410057000,
-    "lastUpdated": 1563926718369,
+    "lastPublished": 1527410055000,
+    "lastUpdated": 1644503920910,
     "id": "urn:bbc:ares::asset:azeri/azerbaijan-44208474",
     "locators": {
       "assetUri": "/azeri/azerbaijan-44208474",
       "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-44208474",
-      "curie": "http://www.bbc.co.uk/asset/38229308-a0fb-654a-a274-19bec0414560"
+      "curie": "http://www.bbc.co.uk/asset/38229308-a0fb-654a-a274-19bec0414560",
+      "assetId": "44208474"
     },
     "type": "PGL",
     "createdBy": "azeri-v6",
     "language": "az",
+    "timestamp": 1527410055000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -31,154 +1918,27 @@
     "analyticsLabels": {
       "cps_asset_type": "pgl",
       "counterName": "azeri.azerbaijan.photo_gallery.44208474.page",
-      "cps_asset_id": "44208474"
+      "cps_asset_id": "44208474",
+      "contentId": "urn:bbc:cps:curie:asset:38229308-a0fb-654a-a274-19bec0414560"
     },
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName": "News"
-      }
+      },
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
+      "taggings": []
     },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "History",
-          "thingEnglishLabel": "History",
-          "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
-          "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
-          "thingType": ["Theme", "Thing"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/History",
-            "http://www.wikidata.org/entity/Q309"
-          ],
-          "topicName": "Tarix",
-          "topicId": "c1gdq3g12z4t",
-          "curationList": [
-            {
-              "curationId": "e0778aeb-ca1f-4e0b-8151-a03f165dda71",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Azerbaijan",
-          "thingEnglishLabel": "Azerbaijan",
-          "thingUri": "http://www.bbc.co.uk/things/0f8e45e2-6499-44b1-be1f-1a3dd81e8af7#id",
-          "thingId": "0f8e45e2-6499-44b1-be1f-1a3dd81e8af7",
-          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/587116/"],
-          "topicName": "Azərbaycan",
-          "topicId": "c7zp571g7y7t",
-          "curationList": [
-            {
-              "curationId": "75322881-0734-4d20-8822-499b41745d11",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Society",
-          "thingEnglishLabel": "Society",
-          "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
-          "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
-          "thingType": ["Theme", "Thing"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Society",
-            "http://www.wikidata.org/entity/Q8425"
-          ]
-        },
-        {
-          "thingLabel": "Culture",
-          "thingEnglishLabel": "Culture",
-          "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
-          "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
-          "thingType": ["Theme", "Thing"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Culture",
-            "http://www.wikidata.org/entity/Q11042"
-          ]
-        },
-        {
-          "thingLabel": "Politics",
-          "thingEnglishLabel": "Politics",
-          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": ["Theme", "Thing"],
-          "thingSameAs": ["http://dbpedia.org/resource/Politics"],
-          "topicName": "Siyasət",
-          "topicId": "cpzd41kyk1gt",
-          "curationList": [
-            {
-              "curationId": "435f5574-fc78-4243-9a28-3d9b58d4afc1",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Human rights",
-          "thingEnglishLabel": "Human rights",
-          "thingUri": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
-          "thingId": "8b04c2e8-5409-4e7d-9877-3ccaf04727af",
-          "thingType": ["Theme", "Thing"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Human_rights",
-            "http://www.wikidata.org/entity/Q8458"
-          ],
-          "topicName": "İnsan haqları",
-          "topicId": "c340qj46dz0t",
-          "curationList": [
-            {
-              "curationId": "cf6ad166-447f-420b-bb57-f47ff861472b",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Azerbaijan Democratic Republic 100th anniversary",
-          "thingEnglishLabel": "Azerbaijan Democratic Republic 100th anniversary",
-          "thingUri": "http://www.bbc.co.uk/things/9e6f8e15-894a-45cb-9db9-d8881e8e6ae2#id",
-          "thingId": "9e6f8e15-894a-45cb-9db9-d8881e8e6ae2",
-          "thingType": ["Event", "Thing"],
-          "thingSameAs": [],
-          "topicName": "ADR-100",
-          "topicId": "cr50yv616gxt",
-          "curationList": [
-            {
-              "curationId": "05ebe157-8641-40c7-905f-8f0a84ef7601",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Caucasus",
-          "thingEnglishLabel": "Caucasus",
-          "thingUri": "http://www.bbc.co.uk/things/a86bc15e-ccd0-4ea9-9903-df3d4575a176#id",
-          "thingId": "a86bc15e-ccd0-4ea9-9903-df3d4575a176",
-          "thingType": ["Place", "Thing"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Caucasus",
-            "http://www.wikidata.org/entity/Q18869"
-          ]
-        },
-        {
-          "thingLabel": "Law and order",
-          "thingEnglishLabel": "Law and order",
-          "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
-          "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
-          "thingType": ["Theme", "Thing"],
-          "thingSameAs": ["http://dbpedia.org/resource/Law"]
-        }
-      ]
-    },
-    "version": "v1.0.10",
+    "tags": {},
+    "version": "v1.4.0",
     "blockTypes": ["image"],
     "includeComments": false,
-    "topics": [
-      {
-        "topicName": "Eurovision",
-        "topicId": "topicId"
-      }
-    ]
+    "atiAnalytics": {
+      "producerName": "AZERI",
+      "producerId": "6"
+    },
+    "readTime": 2,
+    "siteUri": "/azeri"
   },
   "relatedContent": {
     "groups": [
@@ -196,6 +1956,7 @@
             },
             "summary": "Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edir.",
             "timestamp": 1526553848000,
+            "language": "az",
             "cpsType": "STY",
             "indexImage": {
               "id": "100713334",
@@ -223,6 +1984,7 @@
             },
             "summary": "ADR-100 layihəmizdə növbəti yazı: 1918-ci il martın 3-də Bolşeviklər Almaniya, Bolqarıstan, Avstriya-Macarıstan və Osmanlı nümayəndələri ilə Brest-Litovsk Sülh Sazişi imzalayır. İmzalanma Bakının azadlığı ilə nəticələnən bir sıra hadisələrə səbəb olur.",
             "timestamp": 1522167836000,
+            "language": "az",
             "cpsType": "STY",
             "indexImage": {
               "id": "100567146",
@@ -250,6 +2012,7 @@
             },
             "summary": "#ADR100 layihəmizdə: 1918-1920-ci illərdə Gürcüstanla Azərbaycan arasında əməkdaşlıq yeni respublikalar üçün olduqca mühüm idi. Eyni zamanda Bakı ilə Tbilisi arasında gərginlik yaradan məsələlər mövcud idi. Belə məsələlərdən biri də ərazi mübahisələri idi.",
             "timestamp": 1525930091000,
+            "language": "az",
             "cpsType": "STY",
             "indexImage": {
               "id": "101240680",
@@ -277,6 +2040,7 @@
             },
             "summary": "1918-ci il mayın 28-də Azərbaycanın istiqlaliyyəti elan olunanda bu hadisədən bir gün əvvəl dağılmış Zaqafqaziya Seyminin 44 nəfər müsəlman nümayəndəsi Tiflisdə toplanır və özlərini Azərbaycanın Milli Şurası elan edirlər.",
             "timestamp": 1523357059000,
+            "language": "az",
             "cpsType": "STY",
             "indexImage": {
               "id": "100780968",
@@ -304,6 +2068,7 @@
             },
             "summary": "25 il əvvəl bu gün Azərbaycan çökməkdə olan Sovet İttifaqından özünün müstəqillyini bəyan edib. Bu, Azərbaycan Respublikasının ikinci doğuluşu idi.",
             "timestamp": 1476780870000,
+            "language": "az",
             "cpsType": "STY",
             "indexImage": {
               "id": "91964456",
@@ -331,7 +2096,17 @@
             },
             "summary": "Çərşənbə axşamı şəhər sakinləri BBC Azərbaycancanın \"Müstəqillik sizə nə verib?\" sualını cavablandırıb.",
             "timestamp": 1476806574000,
+            "language": "az",
             "cpsType": "MAP",
+            "media": {
+              "id": "37697331",
+              "subType": "primary",
+              "format": "video",
+              "externalId": "p04cfdk9",
+              "entityType": "Clip",
+              "caption": "Bakı sakinləri müstəqillik barədə danışır",
+              "type": "external_vpid"
+            },
             "indexImage": {
               "id": "91973882",
               "subType": "index",
@@ -343,6 +2118,7 @@
               "copyrightHolder": "BBC",
               "type": "image"
             },
+            "mediaType": "Video",
             "id": "urn:bbc:ares::asset:azeri/azerbaijan-37691096",
             "type": "cps"
           },
@@ -357,6 +2133,7 @@
             },
             "summary": "Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edəcək.",
             "timestamp": 1521736027000,
+            "language": "az",
             "cpsType": "STY",
             "indexImage": {
               "id": "100522730",
@@ -384,6 +2161,7 @@
             },
             "summary": "Bir çox azərbaycanlı və gürcüstanlı siyasətçiləri anlayırdılar ki, onların içində olduğu həssas dövrdən salamat çıxmaq üçün iqtisadi, siyasi və hərbi müttəfiqlik vacibdir. Eyni zamanda hər iki respublika arasında bir sıra mübahisələr də mövcud idi.",
             "timestamp": 1525432932000,
+            "language": "az",
             "cpsType": "STY",
             "indexImage": {
               "id": "101168620",
@@ -410,6 +2188,7 @@
             },
             "summary": "İranın Xəzər sahilinə çıxan bölgələrində Azərbaycan Respublikasını böyük ticari imkanlar gözləyirdi. İran ixracatının 60-70 faizinin istehsalı ənənəvi olaraq məhz həmin regionun payına düşüb. Azərbaycan və xüsusilə Bakı-Batumi dəhlizi isə Avropa bazarına aparan təbii çıxış idi. Bəs milli hökümət iqtisadi imkanları gəlirli xarici ticarətə çevirə bildimi?",
             "timestamp": 1524969295000,
+            "language": "az",
             "cpsType": "STY",
             "indexImage": {
               "id": "101070770",
@@ -433,1898 +2212,15 @@
       "subType": "index",
       "name": "Azərbaycan",
       "uri": "/azeri/azerbaijan",
+      "urlIdentifier": "/azeri/azerbaijan",
       "type": "simple"
     },
     "site": {
       "subType": "site",
       "name": "BBC Azərbaycanca",
       "uri": "/azeri",
+      "urlIdentifier": "/azeri",
       "type": "simple"
-    }
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Azərbaycan Xalq Cümhuriyyəti - Fotolarda",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Azərbaycan Xalq Cümhuriyyəti - Fotolarda",
-                              "attributes": []
-                            },
-                            "id": "a3f717ca-d156-4cef-bdd1-47d7f7d12fa0",
-                            "position": [1, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "1d5932e6-4cdd-482b-80ee-20f4c11d72f9",
-                      "position": [1, 1, 1]
-                    }
-                  ]
-                },
-                "id": "e69226ea-6091-43ef-b384-6752914d298f",
-                "position": [1, 1]
-              }
-            ]
-          },
-          "type": "headline",
-          "id": "36687563-7b07-4325-99d8-58fdbfda2f35",
-          "position": [1]
-        },
-        {
-          "type": "timestamp",
-          "model": {
-            "firstPublished": 1527410055000,
-            "lastPublished": 1527410057000
-          },
-          "id": "72ac3b19-4e82-49a5-a945-fa1114da1060",
-          "position": [2]
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca həmin dövrün siyasi xadimlərinin və hadisələrin arxiv fotolarını təqdim edir.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca həmin dövrün siyasi xadimlərinin və hadisələrin arxiv fotolarını təqdim edir.",
-                        "attributes": []
-                      },
-                      "id": "4546bc68-63d0-42d9-beac-2be86e649831",
-                      "position": [3, 1, 1]
-                    }
-                  ]
-                },
-                "id": "54b27a39-ad90-47d5-a0f0-e80e473787d0",
-                "position": [3, 1]
-              }
-            ]
-          },
-          "id": "5faa3ed2-4fd1-4778-be74-26da793c51ea",
-          "position": [3]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC parlamentinin birinci iclasının açılışı. Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC parlamentinin birinci iclasının açılışı. Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir.",
-                                    "attributes": []
-                                  },
-                                  "id": "cc179180-42fd-4064-be3a-849ae3b85f8e",
-                                  "position": [4, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "985f12d2-f1c7-4974-8bce-b67c3e1f63c5",
-                            "position": [4, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "188ac5a5-80b6-41be-9875-f8b9859ce2ee",
-                      "position": [4, 1, 1]
-                    }
-                  ]
-                },
-                "id": "1652aca9-234c-4a04-bd7c-53ae23f4a285",
-                "position": [4, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC parlamentinin birinci iclasının açılışı",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC parlamentinin birinci iclasının açılışı",
-                                    "attributes": []
-                                  },
-                                  "id": "4d47da42-7f39-4854-8fcc-a3c28f536dff",
-                                  "position": [4, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "bcf0e453-b54b-486b-83c6-546e08f40e12",
-                            "position": [4, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "ab5da5c9-1db1-46d2-99d5-3caf8fe61894",
-                      "position": [4, 2, 1]
-                    }
-                  ]
-                },
-                "id": "1efeba22-b942-4b9f-b930-e8cff2e25b02",
-                "position": [4, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 650,
-                  "locator": "1DBC/production/_101621670_0-158827.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 976
-                },
-                "id": "6ec283f8-b348-4b54-bfe7-51f26f9c76de",
-                "position": [4, 3]
-              }
-            ]
-          },
-          "id": "ea3c051e-09ba-4a7d-a19f-edb17a4230ca",
-          "position": [4]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "28 may 1918-ci il suverenliyi haqqında bəyənnamə. Azərbaycan Xalq Cümhuriyyəti cəmi 2 ildən sonra süquta uğrasa da, ölkə tarixinin ən mühüm hadisələrindən biri sayılır.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "28 may 1918-ci il suverenliyi haqqında bəyənnamə. Azərbaycan Xalq Cümhuriyyəti cəmi 2 ildən sonra süquta uğrasa da, ölkə tarixinin ən mühüm hadisələrindən biri sayılır.",
-                                    "attributes": []
-                                  },
-                                  "id": "c22c7bc4-efda-4c34-b566-6b9a28a538ff",
-                                  "position": [5, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "a73975c1-de1f-4622-9282-414eade1c584",
-                            "position": [5, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "f11826f9-da1f-41e5-9309-5e24bda39602",
-                      "position": [5, 1, 1]
-                    }
-                  ]
-                },
-                "id": "4725f522-74ec-4683-83b1-f57b5ae53bf4",
-                "position": [5, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "28 may 1918-ci il suverenliyi haqqında bəyənnamə",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "28 may 1918-ci il suverenliyi haqqında bəyənnamə",
-                                    "attributes": []
-                                  },
-                                  "id": "d47deb83-7a81-4ada-a3b3-a8679eb0c6e4",
-                                  "position": [5, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "2f48f67c-8918-4b17-9617-37504cd3c029",
-                            "position": [5, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "0985c5cb-215b-482d-9e01-f1b5b8c67403",
-                      "position": [5, 2, 1]
-                    }
-                  ]
-                },
-                "id": "2ea82d64-7c44-41da-a818-665272c20708",
-                "position": [5, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli arxiv",
-                  "height": 1700,
-                  "locator": "14D4A/production/_101622358_1-14573.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 1000
-                },
-                "id": "ae67fae5-1fe3-4c6c-ab00-a430b65ca953",
-                "position": [5, 3]
-              }
-            ]
-          },
-          "id": "506ab273-8c70-4ebc-9613-ec7f333284c3",
-          "position": [5]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC Nazrilər Şurasının sədri və daxili işlər naziri vəzifələrini icra etmiş Fətəli Xan Xoyski. 1875-ci ildə doğulan Xoyski ADR-nin (Azərbaycan Demokratik Respublikası) yaradıcılarından biridir. O, Zaqafqaziya Federativ Respublikası hökumətində maarif naziri, Milli Hökumətin birinci və üçüncü kabinetlərində baş nazir, beşinci kabinetində isə xarici işlər naziri vəzifəsini tutub. Xoyski türk (Azərbaycan) dilinin dövlət dili elan edilməsi haqqında 27 iyun 1918-ci il tarixli qərara imza atıb. O, 1920-ci ildə qətlə yetirilib.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC Nazrilər Şurasının sədri və daxili işlər naziri vəzifələrini icra etmiş Fətəli Xan Xoyski. 1875-ci ildə doğulan Xoyski ADR-nin (Azərbaycan Demokratik Respublikası) yaradıcılarından biridir. O, Zaqafqaziya Federativ Respublikası hökumətində maarif naziri, Milli Hökumətin birinci və üçüncü kabinetlərində baş nazir, beşinci kabinetində isə xarici işlər naziri vəzifəsini tutub. Xoyski türk (Azərbaycan) dilinin dövlət dili elan edilməsi haqqında 27 iyun 1918-ci il tarixli qərara imza atıb. O, 1920-ci ildə qətlə yetirilib.",
-                                    "attributes": []
-                                  },
-                                  "id": "b640c85c-fb9f-4076-ae82-ba9ca05ef945",
-                                  "position": [6, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "7c0e3ca8-0740-42e9-bf0a-ab504924cbb0",
-                            "position": [6, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "7a2487ef-d7ad-43f0-a1b1-2c738c16acbb",
-                      "position": [6, 1, 1]
-                    }
-                  ]
-                },
-                "id": "6fd4707b-8686-42ae-994f-5963da08f116",
-                "position": [6, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Fətəli Xan Xoyski",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Fətəli Xan Xoyski",
-                                    "attributes": []
-                                  },
-                                  "id": "74e48336-bfc1-4a30-97a3-a69c1e6d4a78",
-                                  "position": [6, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "4305915a-af02-49fa-99e0-965f1777c5d9",
-                            "position": [6, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "43e26326-7461-4668-b557-9f7d8f3be566",
-                      "position": [6, 2, 1]
-                    }
-                  ]
-                },
-                "id": "fed47956-ac20-450f-9984-c6cacb898b50",
-                "position": [6, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 1400,
-                  "locator": "DD24/production/_101621665_0-154461.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 900
-                },
-                "id": "b91c644a-7579-4ebd-93a3-8597b4581004",
-                "position": [6, 3]
-              }
-            ]
-          },
-          "id": "cf3b6a7b-2db9-4a60-a3f6-46c0f322eb0a",
-          "position": [6]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Məmməd Əmin Rəsulzadə - Müsavat partiyasının lideri, AXC Milli şurasının sədri.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Məmməd Əmin Rəsulzadə - Müsavat partiyasının lideri, AXC Milli şurasının sədri.",
-                                    "attributes": []
-                                  },
-                                  "id": "3eb90231-6920-4f8a-bd10-a28e57100475",
-                                  "position": [7, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "3671f7e5-d465-4d90-8f14-d8dfa3e9c670",
-                            "position": [7, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "ec7ddfa9-4ac6-40e0-865c-6457d18765d6",
-                      "position": [7, 1, 1]
-                    }
-                  ]
-                },
-                "id": "43df54eb-40ab-4dbe-b65a-cad036ffb583",
-                "position": [7, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Məmməd Əmin Rəsulzadə Müsavat partiyasının lideri, AXC Milli şurasının sədri",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Məmməd Əmin Rəsulzadə Müsavat partiyasının lideri, AXC Milli şurasının sədri",
-                                    "attributes": []
-                                  },
-                                  "id": "43d92c58-221f-41ab-b0e8-4a13c1e1c143",
-                                  "position": [7, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "db01667e-781c-42ab-90ed-ebd617f6e5a3",
-                            "position": [7, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "49249f51-13c9-45d6-b3a9-063d1557a1dd",
-                      "position": [7, 2, 1]
-                    }
-                  ]
-                },
-                "id": "bf7e0318-213b-41eb-b602-9b810016e28a",
-                "position": [7, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 1570,
-                  "locator": "17A90/production/_101621969_0-192365.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 900
-                },
-                "id": "905e4906-d2c7-4807-828a-a6ce06ed0f11",
-                "position": [7, 3]
-              }
-            ]
-          },
-          "id": "2ca5e96a-20cf-4885-a61f-4bdd391db87a",
-          "position": [7]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Əlimərdan bəy Topşubaşov - AXC hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Əlimərdan bəy Topşubaşov - AXC hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.",
-                                    "attributes": []
-                                  },
-                                  "id": "1c499087-8cb6-49eb-84bf-e0b1c0477189",
-                                  "position": [8, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "4ef60299-c05c-40c9-a406-a0a57a8f4ecf",
-                            "position": [8, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "d4069b90-0c71-4cd7-a2a3-94e660651477",
-                      "position": [8, 1, 1]
-                    }
-                  ]
-                },
-                "id": "67b6fca2-7606-41fa-b91c-6ec4448a4bd3",
-                "position": [8, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Əlimərdan bəy Topşubaşov - ADR hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Əlimərdan bəy Topşubaşov - ADR hökumətinin üzvü və parlamentin sədri. Paris sülh konfransına getmiş nümayəndə heyətinin üzvü.",
-                                    "attributes": []
-                                  },
-                                  "id": "22259769-09be-462b-8130-826de221ee9a",
-                                  "position": [8, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "2f1bf0e1-df04-45b1-8bf1-b5d38157c777",
-                            "position": [8, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "4446b62d-2e89-4f93-9cea-3c20700de222",
-                      "position": [8, 2, 1]
-                    }
-                  ]
-                },
-                "id": "75b8dbf9-f08f-490f-bf7d-e0b593edca95",
-                "position": [8, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 841,
-                  "locator": "11EA1/production/_101677337_topcu.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 600
-                },
-                "id": "7e4f3027-3ff3-4e5e-a4e3-328f730ba913",
-                "position": [8, 3]
-              }
-            ]
-          },
-          "id": "b32a0062-4ea7-4f06-97ab-fff162136028",
-          "position": [8]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Həsən bəy Ağayev Müsavat partiyasının üzvü olub. 1918-ci ildə ADR parlament sədrinin ilk müavini seçilir. Qafqazda kifayət qədər nüfuzlu şəxs sayılıb və Azərbaycanı Şimali Qafqaz Dağlılar qurultayında təmsil edib. O, 1919-cu ildə vəzifəsinə yenidən seçilə bilmir və Məmməd Yusif Cəfərov onun yerinə sədr müavini olur.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Həsən bəy Ağayev Müsavat partiyasının üzvü olub. 1918-ci ildə ADR parlament sədrinin ilk müavini seçilir. Qafqazda kifayət qədər nüfuzlu şəxs sayılıb və Azərbaycanı Şimali Qafqaz Dağlılar qurultayında təmsil edib. O, 1919-cu ildə vəzifəsinə yenidən seçilə bilmir və Məmməd Yusif Cəfərov onun yerinə sədr müavini olur.",
-                                    "attributes": []
-                                  },
-                                  "id": "669a6e0d-8a23-4fb6-b11a-2884d28a6041",
-                                  "position": [9, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "021a1550-3372-476c-9518-e34a5c02a9c5",
-                            "position": [9, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "09024c3e-dd42-42f3-85f4-1cc67f4250d1",
-                      "position": [9, 1, 1]
-                    }
-                  ]
-                },
-                "id": "49114a33-e86b-4edb-bd32-8c890df5979a",
-                "position": [9, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Həsən bəy Ağaev Azərbaycan parlamenti sədrinin 1-ci müavini sədr əvəzi",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Həsən bəy Ağaev Azərbaycan parlamenti sədrinin 1-ci müavini sədr əvəzi",
-                                    "attributes": []
-                                  },
-                                  "id": "36786502-877b-4a66-95d6-bec076e7742c",
-                                  "position": [9, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "42aa5b1d-0c68-4750-b1ad-a95561e77990",
-                            "position": [9, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "f0f08d0d-0c35-4812-b473-b94fdf8c7720",
-                      "position": [9, 2, 1]
-                    }
-                  ]
-                },
-                "id": "22651586-dbcb-49b7-a844-f219a5c733b0",
-                "position": [9, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 1400,
-                  "locator": "12B44/production/_101621667_0-154588.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 900
-                },
-                "id": "02704d13-7212-47fc-b39e-dccf4f094141",
-                "position": [9, 3]
-              }
-            ]
-          },
-          "id": "c26170bb-1a4c-4e35-82e7-33e08c14a914",
-          "position": [9]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Məmməd Yusif Cəfərov da Qafqazdakı nüfuzlu siyasi xadimlərdən biri idi. O, Milli Şuraya daxil olmuşdu. Rusiya Müəssislər Məclisinə keçirilən seçkilərdə uğur qazanmışdı. Həsən bəy Ağayevdən sonra ADR parlamentinin sədrinin birinci müavini vəzifəsinə seçilir. Bundan başqa cumhuriyyət dövründə o, müxtəlif vaxtlarda daxili və xarici işlər naziri vəzifələrində də olub.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Məmməd Yusif Cəfərov da Qafqazdakı nüfuzlu siyasi xadimlərdən biri idi. O, Milli Şuraya daxil olmuşdu. Rusiya Müəssislər Məclisinə keçirilən seçkilərdə uğur qazanmışdı. Həsən bəy Ağayevdən sonra ADR parlamentinin sədrinin birinci müavini vəzifəsinə seçilir. Bundan başqa cumhuriyyət dövründə o, müxtəlif vaxtlarda daxili və xarici işlər naziri vəzifələrində də olub.",
-                                    "attributes": []
-                                  },
-                                  "id": "dc7df8e1-9ab9-45d4-bd57-933125981292",
-                                  "position": [10, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "6ed4b32d-c320-4be0-ace5-f1c3c063392c",
-                            "position": [10, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "0a192660-0c0d-4601-893b-e4fbe98f5e6c",
-                      "position": [10, 1, 1]
-                    }
-                  ]
-                },
-                "id": "b1f6d576-0131-4b2f-b1fa-15473b83bf82",
-                "position": [10, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Məmməd Yusif Cəfərov",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Məmməd Yusif Cəfərov",
-                                    "attributes": []
-                                  },
-                                  "id": "f124a8c2-634f-4ff3-aa9d-b33d725be161",
-                                  "position": [10, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "ddac50b6-2a33-407a-8e2f-8616287abb61",
-                            "position": [10, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "6136e94d-b033-487a-982e-c05fb41406bc",
-                      "position": [10, 2, 1]
-                    }
-                  ]
-                },
-                "id": "8cb25acc-9dfa-4436-a5ab-72a1920ecf3d",
-                "position": [10, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "MİLLİ ARXİV",
-                  "height": 1409,
-                  "locator": "7BD6/production/_101620713_0-153757.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 900
-                },
-                "id": "a254e75b-5955-46cf-bf99-e4fe6f6cdeee",
-                "position": [10, 3]
-              }
-            ]
-          },
-          "id": "8ddaca9b-c1fc-4224-ae85-0db8b407d668",
-          "position": [10]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC parlamentinin iclasından foto. Birinci sırada ADR-in Milli Şurasının sədri Məmməd Əmin Rəsulzadə əyləşib.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC parlamentinin iclasından foto. Birinci sırada ADR-in Milli Şurasının sədri Məmməd Əmin Rəsulzadə əyləşib.",
-                                    "attributes": []
-                                  },
-                                  "id": "fe025b82-99cd-4b50-8ce7-9e3cab2f1d34",
-                                  "position": [11, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "2ba96cda-030c-4345-aaf0-7b38997a38df",
-                            "position": [11, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "3257078a-99bb-45cd-adc3-cef1492b5110",
-                      "position": [11, 1, 1]
-                    }
-                  ]
-                },
-                "id": "3bfd5273-5e5a-46e7-b62e-9a52f0785438",
-                "position": [11, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC parlamentinin iclası - Birinci sırada ADR-in Milli Şurasının sədri M. Rəsulzadə",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC parlamentinin iclası - Birinci sırada ADR-in Milli Şurasının sədri M. Rəsulzadə",
-                                    "attributes": []
-                                  },
-                                  "id": "2798b1d2-e736-4c37-8485-984eabfc20c5",
-                                  "position": [11, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "4762e8ad-cb78-4352-bf24-0978333eeedb",
-                            "position": [11, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "9fd096b6-b4fe-41b8-ac9a-76f2709e3216",
-                      "position": [11, 2, 1]
-                    }
-                  ]
-                },
-                "id": "4babd7b9-53fb-4c16-9c17-bda31054bb96",
-                "position": [11, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli arxiv",
-                  "height": 549,
-                  "locator": "12BA8/production/_101621767_0-159043.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 970
-                },
-                "id": "54d59b5e-a0a5-49a7-b191-33e49e86ff57",
-                "position": [11, 3]
-              }
-            ]
-          },
-          "id": "b0a8adfa-d604-4838-8584-3fffdbae9abe",
-          "position": [11]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Azərbaycan nümayəndə heyəti üzvlərinin Paris sülh konfransı günlərində iclası.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Azərbaycan nümayəndə heyəti üzvlərinin Paris sülh konfransı günlərində iclası.",
-                                    "attributes": []
-                                  },
-                                  "id": "534c417f-3d59-4996-aab3-e06d10371ecf",
-                                  "position": [12, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "5302565f-c98d-481a-a557-04d6f5b94ea5",
-                            "position": [12, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "27537d1a-ac49-4761-89a5-44c9698bb664",
-                      "position": [12, 1, 1]
-                    }
-                  ]
-                },
-                "id": "cc58a985-fd61-4ef9-bf39-e687ac25d4e1",
-                "position": [12, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Azərbaycan nümayəndə üzvlərinin Parisdə sülh konfransı günlərində iclası",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Azərbaycan nümayəndə üzvlərinin Parisdə sülh konfransı günlərində iclası",
-                                    "attributes": []
-                                  },
-                                  "id": "2aab2413-9bb2-4d62-81ec-8ad69158a56b",
-                                  "position": [12, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "f60c4960-63f3-4c33-aacc-7b9694ea4fdb",
-                            "position": [12, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "d290efcb-8164-4931-8154-1b937c389ce2",
-                      "position": [12, 2, 1]
-                    }
-                  ]
-                },
-                "id": "6cb3891b-03d2-47ee-9674-733a724a6b1f",
-                "position": [12, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 450,
-                  "locator": "0DC2/production/_101622530_k-30551.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 580
-                },
-                "id": "e0594b78-af10-43b7-8f80-fcc16d8c6fdf",
-                "position": [12, 3]
-              }
-            ]
-          },
-          "id": "3919d315-e643-4e86-9805-10fecfb30dff",
-          "position": [12]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Səməd bəy Mehmandarov, hərbi və dövlət xadimi, artilleriya generalı olub. 15 fevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli Hökumətin hərbi naziri vəzifəsini icra edib.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Səməd bəy Mehmandarov, hərbi və dövlət xadimi, artilleriya generalı olub. 15 fevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli Hökumətin hərbi naziri vəzifəsini icra edib.",
-                                    "attributes": []
-                                  },
-                                  "id": "be16dd1b-8ad8-4728-a2d8-d3fd4893b5cb",
-                                  "position": [13, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "72bc9f5d-beee-43a2-8172-3897b5e88fa8",
-                            "position": [13, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "0b1fef91-f94b-45d4-8cc0-43d315708423",
-                      "position": [13, 1, 1]
-                    }
-                  ]
-                },
-                "id": "3bafafb4-f1a8-45fd-96eb-97d07ed0e385",
-                "position": [13, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Səməd bəy Mehmandarov- hərbi və dövlət xadimi, artilleriya generalı, 15 fgevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli hökumətin hərbi naziri, 1920",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Səməd bəy Mehmandarov- hərbi və dövlət xadimi, artilleriya generalı, 15 fgevral 1918-ci ildən 27 aprel 1920-ci ilə qədər Milli hökumətin hərbi naziri, 1920",
-                                    "attributes": []
-                                  },
-                                  "id": "16f3ed2c-cb72-4ce0-bc49-8192411fe287",
-                                  "position": [13, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "d6541764-84eb-462e-b9ce-3ca75b299f9e",
-                            "position": [13, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "68c0fb2d-6579-48a5-9153-3ae95de3c0af",
-                      "position": [13, 2, 1]
-                    }
-                  ]
-                },
-                "id": "dabc92ee-49c3-4dc5-b3cf-3deb58459ccf",
-                "position": [13, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 1500,
-                  "locator": "FF2A/production/_101622356_1-14571.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 950
-                },
-                "id": "9d15eb78-9c7b-4fd1-89d2-f265db7d1b6d",
-                "position": [13, 3]
-              }
-            ]
-          },
-          "id": "3408cbd1-8a95-4269-894d-0611259581b5",
-          "position": [13]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Əli Ağa Şıxlınski - Rusiya İmperiyası ordusunda general-leytenant, Azərbaycan Xalq Cümhuriyyətinin Hərbi nazirinin müavini 1917.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Əli Ağa Şıxlınski - Rusiya İmperiyası ordusunda general-leytenant, Azərbaycan Xalq Cümhuriyyətinin Hərbi nazirinin müavini 1917.",
-                                    "attributes": []
-                                  },
-                                  "id": "8631d384-542a-4886-86c2-ab6cd6695f62",
-                                  "position": [14, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "3c4a1c64-9774-46cc-b0d8-1a8d18b49b59",
-                            "position": [14, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "32c40763-647d-4956-8c51-56cd0a2e5e6f",
-                      "position": [14, 1, 1]
-                    }
-                  ]
-                },
-                "id": "102f2f3f-051d-47d8-a2e5-2453260660aa",
-                "position": [14, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Əli Ağa Şıxlınski -artilleriyanın general leytinantı, 1917",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Əli Ağa Şıxlınski -artilleriyanın general leytinantı, 1917",
-                                    "attributes": []
-                                  },
-                                  "id": "dc79f1a8-f668-4db9-b799-f9de012ed3bd",
-                                  "position": [14, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "c0be515c-d9a2-4b2a-a0c5-5d348d9c511a",
-                            "position": [14, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "d4f4d115-6cf6-4168-b4ff-2ffd64877a46",
-                      "position": [14, 2, 1]
-                    }
-                  ]
-                },
-                "id": "6850420f-41fc-4606-b470-c2903e40fbcf",
-                "position": [14, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 1400,
-                  "locator": "B10A/production/_101622354_1-14569.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 1000
-                },
-                "id": "fe7b6912-3afc-4fa1-931d-06b00772e37e",
-                "position": [14, 3]
-              }
-            ]
-          },
-          "id": "f6031209-568d-46ee-800c-018516a68b4a",
-          "position": [14]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC ordusunun zabit və əsgərləri.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC ordusunun zabit və əsgərləri.",
-                                    "attributes": []
-                                  },
-                                  "id": "2b4fdbf2-0bb4-490b-a855-8d1e2934e7c1",
-                                  "position": [15, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "f34e155c-a538-43ec-bb07-271c5b0ce440",
-                            "position": [15, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "ae5322ca-31a2-4fee-be1d-1a94db37eb1e",
-                      "position": [15, 1, 1]
-                    }
-                  ]
-                },
-                "id": "956b7eef-6bae-41a7-9aee-c51781c01e7c",
-                "position": [15, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC ordusunun zabit və əsgərləri",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC ordusunun zabit və əsgərləri",
-                                    "attributes": []
-                                  },
-                                  "id": "817efdbc-c02a-49b5-9e59-35d03f090b8f",
-                                  "position": [15, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "2306e4a2-1350-404e-b0aa-f9b110c8e88b",
-                            "position": [15, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "7b1216b4-f984-43fb-b025-8ea88d691813",
-                      "position": [15, 2, 1]
-                    }
-                  ]
-                },
-                "id": "6d4a4343-f963-41d4-a373-ee1d4ce1c0e8",
-                "position": [15, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli arxiv",
-                  "height": 750,
-                  "locator": "66D2/production/_101622362_2-1398.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 990
-                },
-                "id": "8f6bcff0-6697-404e-a0f8-e861796ab180",
-                "position": [15, 3]
-              }
-            ]
-          },
-          "id": "4f8be73e-dfa9-4b39-9893-e5a00d658ed1",
-          "position": [15]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Gəncə yunkerlər məktəbinin zabit və kursantları.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Gəncə yunkerlər məktəbinin zabit və kursantları.",
-                                    "attributes": []
-                                  },
-                                  "id": "e28f93bc-1c43-4798-9a4e-cbbf2ef1dbc0",
-                                  "position": [16, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "8d961a89-64cf-4f06-934b-addc88b592da",
-                            "position": [16, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "14a251a5-c947-4216-8392-83f35aed1294",
-                      "position": [16, 1, 1]
-                    }
-                  ]
-                },
-                "id": "96cf56df-f8c3-4faf-973d-d0f12839344c",
-                "position": [16, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Gəncə yunkerlər məktəbinin zabit və kursantları",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Gəncə yunkerlər məktəbinin zabit və kursantları",
-                                    "attributes": []
-                                  },
-                                  "id": "a10b4689-6509-4c20-ade2-37bda1ad5bb6",
-                                  "position": [16, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "0331725f-b524-4f92-8468-d4b1168b8051",
-                            "position": [16, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "2ef27ca3-07ec-42ea-9739-d1facf8da905",
-                      "position": [16, 2, 1]
-                    }
-                  ]
-                },
-                "id": "3178617b-b653-4779-9645-f61b802ed4e7",
-                "position": [16, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli arxiv",
-                  "height": 640,
-                  "locator": "18B2/production/_101622360_2-1396.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 976
-                },
-                "id": "49793637-b2b5-4d7c-b75c-7865b41428b9",
-                "position": [16, 3]
-              }
-            ]
-          },
-          "id": "3311ecc6-8499-4fa2-833b-08d0bb683118",
-          "position": [16]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Azərbaycan Xalq Cümhuriyyəti parlamentinin binası, 1919-cu il.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Azərbaycan Xalq Cümhuriyyəti parlamentinin binası, 1919-cu il.",
-                                    "attributes": []
-                                  },
-                                  "id": "5e0053f9-15fe-4102-8316-0b784118fa7f",
-                                  "position": [17, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "fa2a4a1c-9724-4cd7-8ecb-4be4a52366a9",
-                            "position": [17, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "13eee0c8-2428-4fe3-beb0-d3a07daefaa9",
-                      "position": [17, 1, 1]
-                    }
-                  ]
-                },
-                "id": "30f3c704-d801-4053-b020-db5b9ae4cbf9",
-                "position": [17, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Azərbaycan Xalq Cumhuriyyəti parlamentinin binası, 1919",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Azərbaycan Xalq Cumhuriyyəti parlamentinin binası, 1919",
-                                    "attributes": []
-                                  },
-                                  "id": "5e327d2c-68c9-4f0f-aa0f-20e9a66992ec",
-                                  "position": [17, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "6f44a79e-c454-411f-a604-8810304607a6",
-                            "position": [17, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "7eedf912-905f-4b64-86ca-73860c2a05f8",
-                      "position": [17, 2, 1]
-                    }
-                  ]
-                },
-                "id": "3aa23619-d365-4d1b-bac8-611edf2bb375",
-                "position": [17, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli arxiv ",
-                  "height": 670,
-                  "locator": "F43A/production/_101622526_2-13370.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 996
-                },
-                "id": "2203550b-36cc-4af9-bf56-e79d570319f7",
-                "position": [17, 3]
-              }
-            ]
-          },
-          "id": "b45ee077-ec69-4d1c-b723-ac07a1a36803",
-          "position": [17]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı, 1919-cu il.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı, 1919-cu il.",
-                                    "attributes": []
-                                  },
-                                  "id": "16b65a7f-baab-43e6-92ac-86ded117236c",
-                                  "position": [18, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "1146068d-216f-4da0-bbc3-0f4c4a914ae0",
-                            "position": [18, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "904793f4-a504-4008-8f33-26c5e39cd3d8",
-                      "position": [18, 1, 1]
-                    }
-                  ]
-                },
-                "id": "6bed9ce7-1e81-4cda-8b25-fab52ec24b39",
-                "position": [18, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC-nin yaradılmasının ildönümünə həsr edilmiş Azərbaycan ordusunun hərbi paradı",
-                                    "attributes": []
-                                  },
-                                  "id": "74f9993b-840b-483a-b504-33dfb7ba8c4c",
-                                  "position": [18, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "195c9698-bd36-485c-9290-358e6fc16e20",
-                            "position": [18, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "3e37c340-0836-4a5e-8697-fcc53be58464",
-                      "position": [18, 2, 1]
-                    }
-                  ]
-                },
-                "id": "4e995135-78df-4bf7-9621-90c9650aea6c",
-                "position": [18, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 560,
-                  "locator": "34D2/production/_101622531_5-841.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 996
-                },
-                "id": "e33e46cb-4a71-4960-bcd7-e400c1c160d0",
-                "position": [18, 3]
-              }
-            ]
-          },
-          "id": "bb8a553a-0a40-454f-b0aa-db888daeb77a",
-          "position": [18]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC Nazirlər Sovetinin heyəti. Ortada - Nazirlər Sovetinin sədri Usub bəy Nəsirbəyov, hərbi nazir Səməd ağa Mehmandarov. Sağdan-sola: maliyyə naziri Əliağa Həsənov, xarici işlər naziri Fətəli xan Xoyski, əmək və ədliyyə naziri A. Səfirkürdski, portfelsiz nazir Amastor, səhiyyə naziri Taskanov, Nazirlər Sovetinin iş icraçısı Mirzə Qacar. Soldan-sağa: yol-nəqliyyat naziri Məlik Aslanov, teleqraf naziri Camo bəy Hacınski, nəzarət naziri Nəriman bəy Nərimanbəyov, ədliyyə nazirinin köməkçisi Teymur bəy Makinski, yol-nəqliyyat nazirinin köməkçisi Yusif Məmmədbəyov, əkinçilik nazirinin köməkçisi Hidayət bəy Sultanov, xarici işlər nazirinin köməkçisi Adilxan Ziyadxanov, 1919-cu il.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC Nazirlər Sovetinin heyəti. Ortada - Nazirlər Sovetinin sədri Usub bəy Nəsirbəyov, hərbi nazir Səməd ağa Mehmandarov. Sağdan-sola: maliyyə naziri Əliağa Həsənov, xarici işlər naziri Fətəli xan Xoyski, əmək və ədliyyə naziri A. Səfirkürdski, portfelsiz nazir Amastor, səhiyyə naziri Taskanov, Nazirlər Sovetinin iş icraçısı Mirzə Qacar. Soldan-sağa: yol-nəqliyyat naziri Məlik Aslanov, teleqraf naziri Camo bəy Hacınski, nəzarət naziri Nəriman bəy Nərimanbəyov, ədliyyə nazirinin köməkçisi Teymur bəy Makinski, yol-nəqliyyat nazirinin köməkçisi Yusif Məmmədbəyov, əkinçilik nazirinin köməkçisi Hidayət bəy Sultanov, xarici işlər nazirinin köməkçisi Adilxan Ziyadxanov, 1919-cu il.",
-                                    "attributes": []
-                                  },
-                                  "id": "ae896d08-1dec-41fa-8ba7-e7721ae8df8f",
-                                  "position": [19, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "23870289-eb1f-41f5-966f-871f0810fd0c",
-                            "position": [19, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "4b9ca728-6255-4e0b-81f0-c95f5d2766c5",
-                      "position": [19, 1, 1]
-                    }
-                  ]
-                },
-                "id": "a54fe5b3-3df2-4a58-97f8-eb86e4c29cdd",
-                "position": [19, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "AXC Nazirlər sovetinin heyəti",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "AXC Nazirlər sovetinin heyəti",
-                                    "attributes": []
-                                  },
-                                  "id": "6bfb6ec2-ce56-4911-922f-82d3e23e5698",
-                                  "position": [19, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "496d5e19-2720-4309-adad-21a6045223d7",
-                            "position": [19, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "83c17636-6082-4190-b6c4-4b5f3a935abd",
-                      "position": [19, 2, 1]
-                    }
-                  ]
-                },
-                "id": "02a12119-dbc4-4ab7-bd04-4790bd2463db",
-                "position": [19, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli arxiv",
-                  "height": 650,
-                  "locator": "A61A/production/_101622524_2-13335.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 976
-                },
-                "id": "8302927d-d77c-4a19-8647-a1cd3cec3fd8",
-                "position": [19, 3]
-              }
-            ]
-          },
-          "id": "b2581959-103d-4c71-9712-cd01f3af7eae",
-          "position": [19]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Azərbaycan parlamentinin üzvləri: Ortada: AXC Nazirlər Sovetinin sədri Fətəli xan Xoyski və Azərbaycan parlamentinin sədr müavini Həsənbəy Ağayev.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Azərbaycan parlamentinin üzvləri: Ortada: AXC Nazirlər Sovetinin sədri Fətəli xan Xoyski və Azərbaycan parlamentinin sədr müavini Həsənbəy Ağayev.",
-                                    "attributes": []
-                                  },
-                                  "id": "d9d1a856-0281-4269-acaa-24aa9a90bff7",
-                                  "position": [20, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "2c93f143-7781-4e8a-8ced-17bb9ad01617",
-                            "position": [20, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "b0699268-0afb-4a65-8b4c-c54902a8b380",
-                      "position": [20, 1, 1]
-                    }
-                  ]
-                },
-                "id": "2bdb1f9e-30d8-451c-b9b4-4862741a4990",
-                "position": [20, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Azərbaycan parlamentinin üzvləri: Ortada - AXC Nazirlər Sovetinin sədri F. Xoyski və Azərbaycan parlamentinin sədr müavini H. Ağayev",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Azərbaycan parlamentinin üzvləri: Ortada - AXC Nazirlər Sovetinin sədri F. Xoyski və Azərbaycan parlamentinin sədr müavini H. Ağayev",
-                                    "attributes": []
-                                  },
-                                  "id": "72ab9792-1681-44a4-9cbe-c678f1f89db6",
-                                  "position": [20, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "2715db65-307d-468d-8d83-591613f21999",
-                            "position": [20, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "97e9c2bd-c0a9-4f89-9426-0b52fe2c5134",
-                      "position": [20, 2, 1]
-                    }
-                  ]
-                },
-                "id": "1db3476f-6655-4db1-827b-e2534ed0d0ed",
-                "position": [20, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 700,
-                  "locator": "6BDC/production/_101621672_0-158834.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 976
-                },
-                "id": "ab8b40bc-15c2-4a23-97d4-05858a364d1e",
-                "position": [20, 3]
-              }
-            ]
-          },
-          "id": "f089ed16-b854-4397-8a6d-5384287104b5",
-          "position": [20]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Əhməd bəy Ağayev - 1875-1939. Azərbaycanın 20-ci əsr ictimai-siyasi tarixinin fikir nəhənglərindən biri, publisist maarifçi, 1918-ci ildə Azərbaycanı xilas etməyə gələn türk ordusunun komandanı Nuru Paşanın müavini kimi vətənə dönmüş, milli parlamentin üzvü olmuşdur. Milli Hökumət dövründə xüsusi qərarla Türkiyədən ölkəmizə müəllim dəvət olunmasında, dərslik gətirilməsində böyük xidmətləri var.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Əhməd bəy Ağayev - 1875-1939. Azərbaycanın 20-ci əsr ictimai-siyasi tarixinin fikir nəhənglərindən biri, publisist maarifçi, 1918-ci ildə Azərbaycanı xilas etməyə gələn türk ordusunun komandanı Nuru Paşanın müavini kimi vətənə dönmüş, milli parlamentin üzvü olmuşdur. Milli Hökumət dövründə xüsusi qərarla Türkiyədən ölkəmizə müəllim dəvət olunmasında, dərslik gətirilməsində böyük xidmətləri var.",
-                                    "attributes": []
-                                  },
-                                  "id": "ab52ec12-c6f3-4f8b-b149-05e3842a00f0",
-                                  "position": [21, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "5986ef2a-7491-48dd-9102-19401c9c1e40",
-                            "position": [21, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "f90d0461-71b0-4c28-86ce-4eec78f98abf",
-                      "position": [21, 1, 1]
-                    }
-                  ]
-                },
-                "id": "6a2608ba-730d-4534-8c4e-05ab81c8cb47",
-                "position": [21, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Əhməd bəy Ağayev",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Əhməd bəy Ağayev",
-                                    "attributes": []
-                                  },
-                                  "id": "3487141a-8782-49cd-b376-6dfc2b81c4c4",
-                                  "position": [21, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "0e46baa3-bdb4-450e-85a6-39775cfbac88",
-                            "position": [21, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "d7fc06be-8a8e-47b5-b537-a69c383782ad",
-                      "position": [21, 2, 1]
-                    }
-                  ]
-                },
-                "id": "4d8f655c-6895-4bbc-be6c-462e0a552a6f",
-                "position": [21, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 1400,
-                  "locator": "6D08/production/_101621972_0-210162.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 900
-                },
-                "id": "e5b3bc92-099c-4eb3-b431-9d5fcdde633c",
-                "position": [21, 3]
-              }
-            ]
-          },
-          "id": "4437803f-d848-46ed-aac3-357704a81583",
-          "position": [21]
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Məmməd Həsən Hacinski AXC-nin birinci və ikinci kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri vəzifəsini icra edib. Hacınski Müsavat partiyasın üzvü olub, parlamentdə fraksiyalardan birinin lideri olub. Tarixçi-alim Altay Göyüşovun sözlərinə görə, 1920-ci ilin əvvəllərində Nazirlər Şurasının sədri Nəsib bəy Yusifbəyov istefaya getdikdən sonra yeni hökumətin təşkili Hacınskiyə tapşırılıb.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Məmməd Həsən Hacinski AXC-nin birinci və ikinci kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri vəzifəsini icra edib. Hacınski Müsavat partiyasın üzvü olub, parlamentdə fraksiyalardan birinin lideri olub. Tarixçi-alim Altay Göyüşovun sözlərinə görə, 1920-ci ilin əvvəllərində Nazirlər Şurasının sədri Nəsib bəy Yusifbəyov istefaya getdikdən sonra yeni hökumətin təşkili Hacınskiyə tapşırılıb.",
-                                    "attributes": []
-                                  },
-                                  "id": "e3e44d8f-80a3-40ca-9467-6f33759f9334",
-                                  "position": [22, 1, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "a0120923-a6e8-4684-990b-608becc6c980",
-                            "position": [22, 1, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "15f45ee9-de72-461a-b8b3-cfeef6f23c91",
-                      "position": [22, 1, 1]
-                    }
-                  ]
-                },
-                "id": "67d4a5c0-ded1-4d0b-8d69-3ca8343b45f3",
-                "position": [22, 1]
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "M.H. Hacinski AXC-nin 1, 2 kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "M.H. Hacinski AXC-nin 1, 2 kabinetlərində XİN rəhbəri, 2-ci kabinetində maliyyə naziri",
-                                    "attributes": []
-                                  },
-                                  "id": "d4d37dba-c52f-424a-8993-2262e5d21721",
-                                  "position": [22, 2, 1, 1, 1]
-                                }
-                              ]
-                            },
-                            "id": "3672524c-a2c9-4e78-9409-653c184c49b1",
-                            "position": [22, 2, 1, 1]
-                          }
-                        ]
-                      },
-                      "id": "5b772358-3075-45c7-aea4-3c43df5eca4d",
-                      "position": [22, 2, 1]
-                    }
-                  ]
-                },
-                "id": "01a3e1af-556f-49d8-bc67-20813da096ce",
-                "position": [22, 2]
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "copyrightHolder": "Milli Arxiv",
-                  "height": 1400,
-                  "locator": "10560/production/_101621966_0-173322.jpg",
-                  "originCode": "cpsprodpb",
-                  "width": 900
-                },
-                "id": "e0afcf56-f75c-460e-9ef2-d0463f198412",
-                "position": [22, 3]
-              }
-            ]
-          },
-          "id": "cfab0903-0fed-4ffe-b72c-c5e7b7070dfd",
-          "position": [22]
-        }
-      ]
     }
   },
   "promo": {
@@ -2335,15 +2231,19 @@
     "locators": {
       "assetUri": "/azeri/azerbaijan-44208474",
       "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-44208474",
-      "curie": "http://www.bbc.co.uk/asset/38229308-a0fb-654a-a274-19bec0414560"
+      "curie": "http://www.bbc.co.uk/asset/38229308-a0fb-654a-a274-19bec0414560",
+      "assetId": "44208474"
     },
     "summary": "Bu il mayın 28-də Azərbaycan Xalq Cümhuriyyətinin elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca həmin dövrün siyasi xadimlərinin və hadisələrin arxiv fotolarını təqdim edir.",
-    "timestamp": 1563926718369,
+    "timestamp": 1527410055000,
+    "language": "az",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName": "News"
-      }
+      },
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Azeri",
+      "taggings": []
     },
     "indexImage": {
       "id": "101678223",
@@ -2354,9 +2254,17 @@
       "width": 976,
       "altText": "AXC parlamentinin birinci iclasının açılışı",
       "copyrightHolder": "Milli Arxiv",
+      "originCode": "cpsprodpb",
       "type": "image"
     },
     "id": "urn:bbc:ares::asset:azeri/azerbaijan-44208474",
     "type": "cps"
-  }
+  },
+  "secondaryColumn": {
+    "topStories": null,
+    "features": null
+  },
+  "mostRead": null,
+  "mostWatched": null,
+  "recommendations": []
 }
