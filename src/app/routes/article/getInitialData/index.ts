@@ -83,12 +83,13 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
+    const removeAmpAndRenderSuffixes = /(\.|\?).*/g;
     const wsojData = await getAdditionalPageData({
       pageData: json,
       service,
       variant,
       env,
-      path: pathname.replace(/(\.|\?).*/g, ''),
+      path: pathname.replace(removeAmpAndRenderSuffixes, ''),
     });
 
     if (!json?.data?.article) {
