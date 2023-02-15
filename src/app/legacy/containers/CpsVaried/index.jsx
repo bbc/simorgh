@@ -10,7 +10,7 @@ const optimizelyMappings = {
 const CpsVaried = ({ pageData, renderFunction, experimentID }) => {
   let unirecsHybridRecommendationData = null;
   const variation = useOptimizelyMvtVariation(experimentID);
-  console.log('OPTIMIZELY CHECK', variation);
+
   if (variation && variation !== 'control') {
     unirecsHybridRecommendationData = pathOr(
       null,
