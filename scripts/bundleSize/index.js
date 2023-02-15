@@ -11,6 +11,7 @@ const {
   getPageBundleData,
   getServiceConfigBundleData,
   getServiceThemeBundleData,
+  getServiceTranslationBundleData,
 } = require('./getBundleData');
 const { MIN_SIZE, MAX_SIZE } = require('./bundleSizeConfig');
 
@@ -21,10 +22,16 @@ const serviceConfigBundleData = sortByBundlesTotalAscending(
 const serviceThemeBundleData = sortByBundlesTotalAscending(
   getServiceThemeBundleData(),
 );
+const serviceTranslationBundleData = sortByBundlesTotalAscending(
+  getServiceTranslationBundleData(),
+);
 const serviceConfigBundlesTotals = serviceConfigBundleData.map(
   ({ totalSize }) => totalSize,
 );
 const serviceThemeBundlesTotals = serviceThemeBundleData.map(
+  ({ totalSize }) => totalSize,
+);
+const serviceTranslationBundlesTotals = serviceTranslationBundleData.map(
   ({ totalSize }) => totalSize,
 );
 const smallestServiceConfigBundleSize = Math.min(...serviceConfigBundlesTotals);
@@ -39,6 +46,12 @@ const averageServiceThemeBundleSize = getAverageBundleSize(
   serviceThemeBundlesTotals,
 );
 
+const smallestServiceTranslationBundleSize = Math.min(...serviceTranslationBundlesTotals);
+const largestServiceTranslationBundleSize = Math.max(...serviceTranslationBundlesTotals);
+const averageServiceTranslationBundleSize = getAverageBundleSize(
+  serviceTranslationBundlesTotals,
+);
+
 const pageBundleData = sortByBundlesTotalAscending(getPageBundleData());
 
 const pageBundlesTotals = pageBundleData.map(({ totalSize }) => totalSize);
@@ -49,10 +62,12 @@ const averagePageBundleSize = getAverageBundleSize(pageBundlesTotals);
 const largestPagePlusServiceBundleSize =
   largestServiceConfigBundleSize +
   largestServiceThemeBundleSize +
+  largestServiceTranslationBundleSize +
   largestPageBundleSize;
 const smallestPagePlusServiceBundleSize =
   smallestServiceConfigBundleSize +
   smallestServiceThemeBundleSize +
+  smallestServiceTranslationBundleSize +
   smallestPageBundleSize;
 
 const removeBundleTypePrefix = name => name.replace(`${bundleType}.`, '');
@@ -64,6 +79,11 @@ const serviceConfigBundlesTable = new Table({
 const serviceThemeBundlesTable = new Table({
   head: ['Service name', 'bundles', 'Total size (Bytes)', 'Total size (kB)'],
 });
+
+const serviceTranslationBundlesTable = new Table({
+  head: ['Service name', 'bundles', 'Total size (Bytes)', 'Total size (kB)'],
+});
+
 
 const pageBundlesTable = new Table({
   head: [
@@ -138,6 +158,20 @@ serviceThemeBundleData.forEach(
   },
 );
 
+serviceTranslationBundleData.forEach(
+  ({ serviceName, bundles, totalSizeInBytes, totalSize }) => {
+    const getFileInfo = ({ name, size }) =>
+      `${removeBundleTypePrefix(name)} (${size}kB)`;
+
+      serviceTranslationBundlesTable.push([
+      serviceName,
+      bundles.map(getFileInfo).join('\n'),
+      totalSizeInBytes,
+      totalSize,
+    ]);
+  },
+);
+
 const pageSummaryTable = new Table();
 pageSummaryTable.push(
   { 'Smallest total bundle size (kB)': smallestPageBundleSize },
@@ -156,6 +190,13 @@ serviceThemeSummaryTable.push(
   { 'Smallest total bundle size (kB)': smallestServiceThemeBundleSize },
   { 'Largest total bundle size (kB)': largestServiceThemeBundleSize },
   { 'Average total bundle size (kB)': averageServiceThemeBundleSize },
+);
+
+const serviceTranslationSummaryTable = new Table();
+serviceTranslationSummaryTable.push(
+  { 'Smallest total bundle size (kB)': smallestServiceTranslationBundleSize },
+  { 'Largest total bundle size (kB)': largestServiceTranslationBundleSize },
+  { 'Average total bundle size (kB)': averageServiceTranslationBundleSize },
 );
 
 const servicePageSummaryTable = new Table();
@@ -201,6 +242,17 @@ console.log(
 console.log(serviceThemeSummaryTable.toString());
 
 console.log(
+  chalk.bold(`\n${styledBundleTypeTitle} service translation bundle sizes\n`),
+);
+console.log(serviceTranslationBundlesTable.toString());
+console.log(
+  chalk.bold(
+    `\n\n${styledBundleTypeTitle} service Translation bundle sizes summary\n`,
+  ),
+);
+console.log(serviceTranslationSummaryTable.toString());
+
+console.log(
   chalk.bold(`\n\n${styledBundleTypeTitle} page type bundle sizes\n`),
 );
 console.log(pageBundlesTable.toString());
@@ -215,7 +267,7 @@ console.log(pageSummaryTable.toString());
 
 console.log(
   chalk.bold(
-    `\n\n${styledBundleTypeTitle} service config & theme + page bundle sizes summary\n`,
+    `\n\n${styledBundleTypeTitle} service config & theme & translation + page bundle sizes summary\n`,
   ),
 );
 console.log(servicePageSummaryTable.toString());

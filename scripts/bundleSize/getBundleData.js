@@ -136,6 +136,29 @@ const getServiceThemeBundleData = () =>
       ),
     }));
 
+const getServiceTranslationBundleData = () =>
+  services
+    .map(service => {
+      const bundlesData = getBundlesData(
+        jsFiles.filter(file =>
+          file.startsWith(`${bundleType}.translations-${service}`),
+        ),
+      );
+
+      return { serviceName: service, bundles: bundlesData };
+    })
+    .filter(({ bundles }) => bundles.length)
+    .map(({ serviceName, bundles }) => ({
+      serviceName,
+      bundles,
+      totalSize: bundles.reduce((acc, { size }) => acc + size, 0),
+      totalSizeInBytes: bundles.reduce(
+        (acc, { sizeInBytes }) => acc + sizeInBytes,
+        0,
+      ),
+    }));
+
 exports.getPageBundleData = getPageBundleData;
 exports.getServiceConfigBundleData = getServiceConfigBundleData;
 exports.getServiceThemeBundleData = getServiceThemeBundleData;
+exports.getServiceTranslationBundleData = getServiceTranslationBundleData;

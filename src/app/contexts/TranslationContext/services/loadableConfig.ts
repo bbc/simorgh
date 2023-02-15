@@ -2,104 +2,104 @@ import loadable from '@loadable/component';
 
 const loadableConfig = {
   afaanoromoo: loadable(
-    () => import(/* webpackChunkName: "afaanoromoo" */ './afaanoromoo'),
+    () => import(/* webpackChunkName: "translations-afaanoromoo" */ './afaanoromoo'),
   ),
   afrique: loadable(
-    () => import(/* webpackChunkName: "afrique" */ './afrique'),
+    () => import(/* webpackChunkName: "translations-afrique" */ './afrique'),
   ),
   amharic: loadable(
-    () => import(/* webpackChunkName: "amharic" */ './amharic'),
+    () => import(/* webpackChunkName: "translations-amharic" */ './amharic'),
   ),
-  arabic: loadable(() => import(/* webpackChunkName: "arabic" */ './arabic')),
+  arabic: loadable(() => import(/* webpackChunkName: "translations-arabic" */ './arabic')),
   archive: loadable(
-    () => import(/* webpackChunkName: "archive" */ './archive'),
+    () => import(/* webpackChunkName: "translations-archive" */ './archive'),
   ),
-  azeri: loadable(() => import(/* webpackChunkName: "azeri" */ './azeri')),
+  azeri: loadable(() => import(/* webpackChunkName: "translations-azeri" */ './azeri')),
   bengali: loadable(
-    () => import(/* webpackChunkName: "bengali" */ './bengali'),
+    () => import(/* webpackChunkName: "translations-bengali" */ './bengali'),
   ),
   burmese: loadable(
-    () => import(/* webpackChunkName: "burmese" */ './burmese'),
+    () => import(/* webpackChunkName: "translations-burmese" */ './burmese'),
   ),
   cymrufyw: loadable(
-    () => import(/* webpackChunkName: "cymrufyw" */ './cymrufyw'),
+    () => import(/* webpackChunkName: "translations-cymrufyw" */ './cymrufyw'),
   ),
-  gahuza: loadable(() => import(/* webpackChunkName: "gahuza" */ './gahuza')),
+  gahuza: loadable(() => import(/* webpackChunkName: "translations-gahuza" */ './gahuza')),
   gujarati: loadable(
-    () => import(/* webpackChunkName: "gujarati" */ './gujarati'),
+    () => import(/* webpackChunkName: "translations-gujarati" */ './gujarati'),
   ),
-  hausa: loadable(() => import(/* webpackChunkName: "hausa" */ './hausa')),
-  hindi: loadable(() => import(/* webpackChunkName: "hindi" */ './hindi')),
-  igbo: loadable(() => import(/* webpackChunkName: "igbo" */ './igbo')),
+  hausa: loadable(() => import(/* webpackChunkName: "translations-hausa" */ './hausa')),
+  hindi: loadable(() => import(/* webpackChunkName: "translations-hindi" */ './hindi')),
+  igbo: loadable(() => import(/* webpackChunkName: "translations-igbo" */ './igbo')),
   indonesia: loadable(
-    () => import(/* webpackChunkName: "indonesia" */ './indonesia'),
+    () => import(/* webpackChunkName: "translations-indonesia" */ './indonesia'),
   ),
   japanese: loadable(
-    () => import(/* webpackChunkName: "japanese" */ './japanese'),
+    () => import(/* webpackChunkName: "translations-japanese" */ './japanese'),
   ),
-  korean: loadable(() => import(/* webpackChunkName: "korean" */ './korean')),
-  kyrgyz: loadable(() => import(/* webpackChunkName: "kyrgyz" */ './kyrgyz')),
+  korean: loadable(() => import(/* webpackChunkName: "translations-korean" */ './korean')),
+  kyrgyz: loadable(() => import(/* webpackChunkName: "translations-kyrgyz" */ './kyrgyz')),
   marathi: loadable(
-    () => import(/* webpackChunkName: "marathi" */ './marathi'),
+    () => import(/* webpackChunkName: "translations-marathi" */ './marathi'),
   ),
-  mundo: loadable(() => import(/* webpackChunkName: "mundo" */ './mundo')),
+  mundo: loadable(() => import(/* webpackChunkName: "translations-mundo" */ './mundo')),
   naidheachdan: loadable(
-    () => import(/* webpackChunkName: "naidheachdan" */ './naidheachdan'),
+    () => import(/* webpackChunkName: "translations-naidheachdan" */ './naidheachdan'),
   ),
-  nepali: loadable(() => import(/* webpackChunkName: "nepali" */ './nepali')),
-  news: loadable(() => import(/* webpackChunkName: "news" */ './news')),
+  nepali: loadable(() => import(/* webpackChunkName: "translations-nepali" */ './nepali')),
+  news: loadable(() => import(/* webpackChunkName: "translations-news" */ './news')),
   newsround: loadable(
-    () => import(/* webpackChunkName: "newsround" */ './newsround'),
+    () => import(/* webpackChunkName: "translations-newsround" */ './newsround'),
   ),
-  pashto: loadable(() => import(/* webpackChunkName: "pashto" */ './pashto')),
+  pashto: loadable(() => import(/* webpackChunkName: "translations-pashto" */ './pashto')),
   persian: loadable(
-    () => import(/* webpackChunkName: "persian" */ './persian'),
+    () => import(/* webpackChunkName: "translations-persian" */ './persian'),
   ),
-  pidgin: loadable(() => import(/* webpackChunkName: "pidgin" */ './pidgin')),
+  pidgin: loadable(() => import(/* webpackChunkName: "translations-pidgin" */ './pidgin')),
   portuguese: loadable(
-    () => import(/* webpackChunkName: "portuguese" */ './portuguese'),
+    () => import(/* webpackChunkName: "translations-portuguese" */ './portuguese'),
   ),
   punjabi: loadable(
-    () => import(/* webpackChunkName: "punjabi" */ './punjabi'),
+    () => import(/* webpackChunkName: "translations-punjabi" */ './punjabi'),
   ),
   russian: loadable(
-    () => import(/* webpackChunkName: "russian" */ './russian'),
+    () => import(/* webpackChunkName: "translations-russian" */ './russian'),
   ),
   scotland: loadable(
-    () => import(/* webpackChunkName: "scotland" */ './scotland'),
+    () => import(/* webpackChunkName: "translations-scotland" */ './scotland'),
   ),
   serbian: loadable(
-    () => import(/* webpackChunkName: "serbian" */ './serbian'),
+    () => import(/* webpackChunkName: "translations-serbian" */ './serbian'),
   ),
   sinhala: loadable(
-    () => import(/* webpackChunkName: "sinhala" */ './sinhala'),
+    () => import(/* webpackChunkName: "translations-sinhala" */ './sinhala'),
   ),
-  somali: loadable(() => import(/* webpackChunkName: "somali" */ './somali')),
-  sport: loadable(() => import(/* webpackChunkName: "sport" */ './sport')),
+  somali: loadable(() => import(/* webpackChunkName: "translations-somali" */ './somali')),
+  sport: loadable(() => import(/* webpackChunkName: "translations-sport" */ './sport')),
   swahili: loadable(
-    () => import(/* webpackChunkName: "swahili" */ './swahili'),
+    () => import(/* webpackChunkName: "translations-swahili" */ './swahili'),
   ),
-  tamil: loadable(() => import(/* webpackChunkName: "tamil" */ './tamil')),
-  telugu: loadable(() => import(/* webpackChunkName: "telugu" */ './telugu')),
-  thai: loadable(() => import(/* webpackChunkName: "thai" */ './thai')),
+  tamil: loadable(() => import(/* webpackChunkName: "translations-tamil" */ './tamil')),
+  telugu: loadable(() => import(/* webpackChunkName: "translations-telugu" */ './telugu')),
+  thai: loadable(() => import(/* webpackChunkName: "translations-thai" */ './thai')),
   tigrinya: loadable(
-    () => import(/* webpackChunkName: "tigrinya" */ './tigrinya'),
+    () => import(/* webpackChunkName: "translations-tigrinya" */ './tigrinya'),
   ),
-  turkce: loadable(() => import(/* webpackChunkName: "turkce" */ './turkce')),
+  turkce: loadable(() => import(/* webpackChunkName: "translations-turkce" */ './turkce')),
   ukchina: loadable(
-    () => import(/* webpackChunkName: "ukchina" */ './ukchina'),
+    () => import(/* webpackChunkName: "translations-ukchina" */ './ukchina'),
   ),
   ukrainian: loadable(
-    () => import(/* webpackChunkName: "ukrainian" */ './ukrainian'),
+    () => import(/* webpackChunkName: "translations-ukrainian" */ './ukrainian'),
   ),
-  urdu: loadable(() => import(/* webpackChunkName: "urdu" */ './urdu')),
-  uzbek: loadable(() => import(/* webpackChunkName: "uzbek" */ './uzbek')),
+  urdu: loadable(() => import(/* webpackChunkName: "translations-urdu" */ './urdu')),
+  uzbek: loadable(() => import(/* webpackChunkName: "translations-uzbek" */ './uzbek')),
   vietnamese: loadable(
-    () => import(/* webpackChunkName: "vietnamese" */ './vietnamese'),
+    () => import(/* webpackChunkName: "translations-vietnamese" */ './vietnamese'),
   ),
-  yoruba: loadable(() => import(/* webpackChunkName: "yoruba" */ './yoruba')),
+  yoruba: loadable(() => import(/* webpackChunkName: "translations-yoruba" */ './yoruba')),
   zhongwen: loadable(
-    () => import(/* webpackChunkName: "zhongwen" */ './zhongwen'),
+    () => import(/* webpackChunkName: "translations-zhongwen" */ './zhongwen'),
   ),
 };
 
