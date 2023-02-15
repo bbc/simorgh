@@ -10,7 +10,7 @@ Add enabled experiments objects inside this array in this format:
 const enabledExperimentList = [
   {
     name: 'test_2',
-    services: ['portuguese'],
+    services: ['pidgin'],
     pageTypes: ['STY', 'article'],
   },
 ];
