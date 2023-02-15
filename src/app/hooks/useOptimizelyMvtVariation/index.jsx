@@ -7,7 +7,9 @@ const useOptimizelyMvtVariation = id => {
   const { optimizely } = useContext(OptimizelyContext);
   const { mvtExperiments } = useContext(RequestContext);
 
-  if (!mvtExperiments || mvtExperiments.length === 0) return null;
+  if (!mvtExperiments || mvtExperiments.length === 0 || id === null) {
+    return null;
+  }
 
   const experiment = mvtExperiments.find(
     ({ experimentName }) => experimentName === id,

@@ -1,4 +1,4 @@
-import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import useOptimizelyMvtVariation from '../../../hooks/useOptimizelyMvtVariation';
 
 // 004_brasil_recommendations_experiment
@@ -7,17 +7,18 @@ const optimizelyMappings = {
   hybrid_recs: 'datalabHybridRecommendations',
 };
 
-const CpsVaried = ({ pageData, recommendationsData, renderFunction }) => {
+const CpsVaried = ({ pageData, renderFunction, experimentID }) => {
   let unirecsHybridRecommendationData = null;
-  const variation = useOptimizelyMvtVariation('test_2');
+  const variation = useOptimizelyMvtVariation(experimentID);
+  console.log('OPTIMIZELY CHECK', variation);
   if (variation && variation !== 'control') {
-    unirecsHybridRecommendationData = path(
+    unirecsHybridRecommendationData = pathOr(
+      null,
       [optimizelyMappings[variation]],
       pageData,
     );
   }
-  const data = unirecsHybridRecommendationData ?? recommendationsData;
-  return renderFunction(data);
+  return renderFunction(unirecsHybridRecommendationData);
 };
 
 export default CpsVaried;

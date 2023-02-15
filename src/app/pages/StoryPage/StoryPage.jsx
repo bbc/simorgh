@@ -199,9 +199,11 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props =>
       CpsVaried({
+        experimentID: null,
         pageData,
-        recommendationsData,
-        renderFunction: data => <CpsRecommendations {...props} items={data} />,
+        renderFunction: data => (
+          <CpsRecommendations {...props} items={data ?? recommendationsData} />
+        ),
       }),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -323,7 +325,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <NielsenAnalytics />
-      <OptimizelyPageViewTracking />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
@@ -343,6 +344,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
             <OptimizelyArticleCompleteTracking />
+            <OptimizelyPageViewTracking />
           </main>
 
           {showRelatedTopics && topics && (
@@ -366,10 +368,16 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           {topStoriesInitialData && (
             <ResponsiveComponentWrapper>
-              <TopStories
-                content={topStoriesInitialData}
-                parentColumns={gridColsSecondary}
-              />
+              {CpsVaried({
+                experimentID: 'test_2',
+                pageData,
+                renderFunction: () => (
+                  <TopStories
+                    content={topStoriesInitialData}
+                    parentColumns={gridColsSecondary}
+                  />
+                ),
+              })}
             </ResponsiveComponentWrapper>
           )}
           {featuresInitialData && (
