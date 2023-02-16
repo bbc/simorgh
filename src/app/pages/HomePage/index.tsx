@@ -1,6 +1,9 @@
+import pipe from 'ramda/src/pipe';
 import HomePage from './HomePage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
-export default applyBasicPageHandlers({
-  addVariantHandling: true,
-})(HomePage);
+export default pipe(
+  applyBasicPageHandlers({
+    addVariantHandling: true,
+  }),
+)(HomePage);
