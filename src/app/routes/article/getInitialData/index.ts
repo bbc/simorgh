@@ -3,6 +3,7 @@ import { Agent } from 'https';
 import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
 import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
+import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData';
 import nodeLogger from '../../../lib/logger.node';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -44,7 +45,7 @@ type Props = {
   getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
-  pageType: string;
+  pageType: 'article' | 'cpsAsset';
   variant?: Variants;
 };
 
@@ -112,13 +113,25 @@ export default async ({
       logger.error('Recommendations JSON malformed', error);
     }
 
-    // Ensure all local fixture data is in the correct format
-    if (isLocal && !json?.data?.article) {
+    // Ensure all local CPS fixture and test data is in the correct format
+    if (isLocal && pageType === 'cpsAsset') {
+      const secondaryData = await getAdditionalPageData({
+        pageData: json,
+        service,
+        variant,
+        env,
+      });
+
       json = {
         data: {
           article: json,
-          secondaryData: json?.secondaryData,
-          // Get secondaryColumn fixture data somehow
+          // Checks for data mocked in tests, or data from fixture data
+          secondaryData: json?.secondaryData ?? {
+            topStories: secondaryData?.secondaryColumn?.topStories,
+            features: secondaryData?.secondaryColumn?.features,
+            mostRead: secondaryData?.mostRead,
+            mostWatched: secondaryData?.mostWatched,
+          },
         },
       };
     }
