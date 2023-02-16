@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -148,7 +147,6 @@ describe('Feature Idx Page', () => {
   });
 
   afterEach(() => {
-    fetchMock.restore();
     jest.clearAllMocks();
   });
 

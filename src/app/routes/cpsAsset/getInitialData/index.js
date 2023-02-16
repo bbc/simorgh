@@ -102,7 +102,7 @@ export default async ({
       path: pathname,
       service,
       variant,
-      pageType,
+      pageType: 'cpsAsset',
     });
 
     const processedAdditionalData = processMostWatched({
