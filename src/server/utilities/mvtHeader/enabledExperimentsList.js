@@ -11,7 +11,7 @@ const enabledExperimentList = [
   {
     name: 'test_2',
     services: ['pidgin'],
-    pageTypes: ['STY', 'article'],
+    pageTypes: ['article'],
   },
 ];
 
