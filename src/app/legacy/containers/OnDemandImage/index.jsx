@@ -28,7 +28,7 @@ const getSrcSet = ({ imageUrl, sizes }) =>
   sizes.map(size => `${getSrc({ imageUrl, size })} ${size}w`).join(',');
 
 const smallImageSize = 128;
-const mediumImageSize = 240;
+const mediumImageSize = 256;
 const largeImageSize = 480;
 
 const OnDemandImage = ({ imageUrl, alt: altFromProps, dir }) => {
@@ -36,7 +36,7 @@ const OnDemandImage = ({ imageUrl, alt: altFromProps, dir }) => {
 
   const alt = is(String, altFromProps) ? altFromProps : defaultImageAltText;
 
-  const src = getSrc({ imageUrl, size: smallImageSize });
+  const src = getSrc({ imageUrl, size: mediumImageSize });
   const srcset = getSrcSet({
     imageUrl,
     sizes: [smallImageSize, mediumImageSize, largeImageSize],

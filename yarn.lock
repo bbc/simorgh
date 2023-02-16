@@ -15512,13 +15512,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:7.7.1":
-  version: 7.7.1
-  resolution: "lru-cache@npm:7.7.1"
-  checksum: f362c5a2cfa8ad6fe557ec43dc1b7a9695cce84a5652a43ff813609f782f5da576631e7dfad41878bf19a7a69438f38375178635ee80de269aa314280ca2f59e
-  languageName: node
-  linkType: hard
-
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -15534,6 +15527,13 @@ __metadata:
   dependencies:
     yallist: ^4.0.0
   checksum: f97f499f898f23e4585742138a22f22526254fdba6d75d41a1c2526b3b6cc5747ef59c5612ba7375f42aca4f8461950e925ba08c991ead0651b4918b7c978297
+  languageName: node
+  linkType: hard
+
+"lru-cache@npm:^7.14.1":
+  version: 7.14.1
+  resolution: "lru-cache@npm:7.14.1"
+  checksum: d72c6713c6a6d86836a7a6523b3f1ac6764768cca47ec99341c3e76db06aacd4764620e5e2cda719a36848785a52a70e531822dc2b33fb071fa709683746c104
   languageName: node
   linkType: hard
 
@@ -20041,7 +20041,7 @@ __metadata:
     js-cookie: 3.0.1
     jsdom: 19.0.0
     json5: 2.2.2
-    lru-cache: 7.7.1
+    lru-cache: ^7.14.1
     minimist: 1.2.7
     mkdirp: 1.0.4
     mocha: 9.2.2
