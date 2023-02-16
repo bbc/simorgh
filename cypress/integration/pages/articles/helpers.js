@@ -1,5 +1,5 @@
 import paths from 'ramda/src/paths';
-import path from 'ramda/src/path';
+// import path from 'ramda/src/path';
 import envConfig from '../../../support/config/envs';
 
 export const getBlockByType = (blocks, blockType) => {
@@ -53,13 +53,7 @@ export const getVideoEmbedUrl = (body, language, isAmp = false) => {
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-export const getMostReadUrlRecords = jsonData => {
-  const records = path(['records'], jsonData);
-
-  return records;
-};
-
-const extractUrl = record => {
+export const getMostReadUrl = record => {
   const [cpsUrl, optimoUrl] = paths(
     [
       ['promo', 'locators', 'assetUri'],
@@ -69,16 +63,4 @@ const extractUrl = record => {
   );
 
   return cpsUrl || optimoUrl;
-};
-
-// to refactor
-export const getMostReadUrlList = records => {
-  const myArray = [];
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < records.length; i++) {
-    const myVar = extractUrl(records[i]);
-    myArray.push(myVar);
-  }
-
-  return myArray;
 };

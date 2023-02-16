@@ -39,6 +39,7 @@ const rankTranslationScript = (endpoint, service) => {
         if(!item.promo.locators.assetUri) {
           item.promo.locators.assetUri = item.promo.locators.canonicalUrl;
         }
+
       });
 
       return data;
