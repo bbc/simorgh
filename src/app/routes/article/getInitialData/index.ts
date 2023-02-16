@@ -12,9 +12,11 @@ import { Services, Variants } from '../../../models/types/global';
 const logger = nodeLogger(__filename);
 
 const removeAmp = (path: string) => path.split('.')[0];
-const popId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
+const getOptimoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
+const getCpsId = (path: string) => path;
 
-const getId = pipe(getUrlPath, removeAmp, popId);
+const getId = (pageType: string) =>
+  pipe(getUrlPath, removeAmp, pageType === 'article' ? getOptimoId : getCpsId);
 
 const getEnvironment = (pathname: string) => {
   if (pathname.includes('renderer_env=test')) {
@@ -42,21 +44,23 @@ type Props = {
   getAgent: () => Promise<Agent>;
   service: Services;
   path: string;
+  pageType: string;
   variant?: Variants;
 };
 
 export default async ({
   getAgent,
   service,
+  pageType,
   path: pathname,
   variant,
 }: Props) => {
   try {
     const env = getEnvironment(pathname);
-    const isLocal = env === 'local';
+    const isLocal = !env || env === 'local';
 
     const agent = !isLocal ? await getAgent() : null;
-    const id = getId(pathname);
+    const id = getId(pageType)(pathname);
 
     if (!id) throw handleError('Article ID is invalid', 500);
 
@@ -66,19 +70,26 @@ export default async ({
       ...(variant && {
         variant,
       }),
-      pageType: 'article',
+      pageType,
     });
 
     const optHeaders = { 'ctx-service-env': env };
 
     if (isLocal) {
-      fetchUrl = Url(
-        `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
-      );
+      if (pageType === 'article') {
+        fetchUrl = Url(
+          `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
+        );
+      }
+
+      if (pageType === 'cpsAsset') {
+        fetchUrl = Url(id);
+      }
     }
 
     // @ts-ignore - Ignore fetchPageData argument types
-    const { status, json } = await fetchPageData({
+    // eslint-disable-next-line prefer-const
+    let { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
       ...(!isLocal && { agent, optHeaders }),
     });
@@ -91,13 +102,25 @@ export default async ({
 
     let wsojData = [];
     try {
+      // @ts-ignore - Ignore fetchPageData argument types
       const { json: wsojJson = [] } = await fetchPageData({
         path: wsojURL,
-        ...({ agent, optHeaders } as any),
+        ...{ agent, optHeaders },
       });
       wsojData = wsojJson;
     } catch (error) {
       logger.error('Recommendations JSON malformed', error);
+    }
+
+    // Ensure all local fixture data is in the correct format
+    if (isLocal && !json?.data?.article) {
+      json = {
+        data: {
+          article: json,
+          secondaryData: json?.secondaryData,
+          // Get secondaryColumn fixture data somehow
+        },
+      };
     }
 
     if (!json?.data?.article) {

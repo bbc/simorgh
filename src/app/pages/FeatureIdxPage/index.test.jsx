@@ -139,10 +139,7 @@ describe('Feature Idx Page', () => {
   let pageData;
 
   beforeEach(async () => {
-    fetchMock.mock(
-      'http://localhost/some-feature-idx-page-path.json',
-      JSON.stringify(urduPageData),
-    );
+    fetch.mockResponse(JSON.stringify(urduPageData));
 
     ({ pageData } = await getInitialData({
       path: 'some-feature-idx-page-path',
