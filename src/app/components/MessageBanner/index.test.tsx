@@ -111,11 +111,16 @@ describe('MessageBanner', () => {
       expect(image).toBeInTheDocument();
     });
     describe('Presence on live environment', () => {
-      it('should not render banner when SIMORGH_APP_ENV is live and isLive is set to render null', () => {
+      const originalEnvironment = process.env.SIMORGH_APP_ENV;
+
+      afterEach(() => {
+        process.env.SIMORGH_APP_ENV = originalEnvironment;
+      });
+      it('should not render banner when the environment is live', () => {
         process.env.SIMORGH_APP_ENV = 'live';
 
-        // if islive is true, show banner
-        render(
+        // if islive is true, do not show banner
+        const { container } = render(
           <MessageBanner
             heading={kyrgyzMessageBannerOnePromo.title}
             description={summary.description}
@@ -124,15 +129,14 @@ describe('MessageBanner', () => {
             image={summary.imageUrl}
           />,
         );
-        expect(
-          document.querySelectorAll("[id^='message-banner']"),
-        ).toHaveLength(0);
+        expect(container).toBeEmptyDOMElement();
         expect(isLive()).toBe(true);
       });
 
-      it('should render banner when SIMORGH_APP_ENV is not live', () => {
+      it('should render banner when the environment is not live', () => {
         process.env.SIMORGH_APP_ENV = 'non-live';
-        render(
+        // if isLive is false do show banner
+        const { container } = render(
           <MessageBanner
             heading={kyrgyzMessageBannerOnePromo.title}
             description={summary.description}
@@ -141,15 +145,8 @@ describe('MessageBanner', () => {
             image={summary.imageUrl}
           />,
         );
-        expect(
-          document.querySelectorAll("[id^='message-banner']"),
-        ).toHaveLength(1);
-        // if isLive is false do not show banner
+        expect(container).not.toBeEmptyDOMElement();
         expect(isLive()).toBe(false);
-      });
-
-      afterAll(() => {
-        delete process.env.SIMORGH_APP_ENV;
       });
     });
   });
