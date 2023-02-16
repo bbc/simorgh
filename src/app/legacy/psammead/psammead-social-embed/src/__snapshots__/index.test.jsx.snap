@@ -127,7 +127,7 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-unknown-content"
     >
       <span>
@@ -343,6 +343,10 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   text-decoration: underline;
 }
 
+.emotion-7:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 .emotion-8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -359,7 +363,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-facebook-content"
     >
       <span>
@@ -384,6 +388,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
         This article contains content provided by Facebook.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Facebook 
         <a
           aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
           href="https://www.facebook.com/privacy/policies/cookies"
         >
           cookie policy
@@ -391,6 +396,7 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
          and 
         <a
           aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
           href="https://www.facebook.com/privacy/policy/"
         >
           privacy policy
@@ -609,6 +615,10 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   text-decoration: underline;
 }
 
+.emotion-7:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 .emotion-8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -625,7 +635,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-instagram-content"
     >
       <span>
@@ -650,6 +660,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
         This article contains content provided by Instagram.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Instagram 
         <a
           aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
           href="https://privacycenter.instagram.com/policies/cookies/"
         >
           cookie policy
@@ -657,6 +668,7 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
          and 
         <a
           aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
           href="https://privacycenter.instagram.com/policy"
         >
           privacy policy
@@ -876,6 +888,10 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   text-decoration: underline;
 }
 
+.emotion-7:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 .emotion-8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -892,7 +908,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-twitter-content"
     >
       <span>
@@ -917,6 +933,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
         This article contains content provided by Twitter.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Twitter 
         <a
           aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
           href="https://help.twitter.com/en/rules-and-policies/twitter-cookies"
         >
           cookie policy
@@ -924,6 +941,7 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
          and 
         <a
           aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
           href="https://twitter.com/en/privacy"
         >
           privacy policy
@@ -1147,6 +1165,10 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   text-decoration: underline;
 }
 
+.emotion-9:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 .emotion-10 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1196,7 +1218,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-youtube-content"
     >
       <span>
@@ -1224,6 +1246,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
           This article contains content provided by Google YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google YouTube 
           <a
             aria-label="cookie policy, external"
+            class="focusIndicatorReducedWidth"
             href="https://policies.google.com/technologies/cookies"
           >
             cookie policy
@@ -1231,6 +1254,7 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
            and 
           <a
             aria-label="privacy policy, external"
+            class="focusIndicatorReducedWidth"
             href="https://policies.google.com/privacy"
           >
             privacy policy
@@ -1365,7 +1389,7 @@ exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`
   class="emotion-0 emotion-1"
 >
   <a
-    class="emotion-2 emotion-3"
+    class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-instagram-content"
   >
     <span>
@@ -1646,7 +1670,7 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
-    class="emotion-2 emotion-3"
+    class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-twitter-content"
   >
     <span>
@@ -1818,7 +1842,7 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
   class="emotion-0 emotion-1"
 >
   <a
-    class="emotion-2 emotion-3"
+    class="focusIndicatorRemove emotion-2 emotion-3"
     href="#skip-youtube-content"
   >
     <span>
@@ -1986,7 +2010,7 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-unknown-content"
     >
       <span>
@@ -2149,7 +2173,7 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
     class="emotion-0 emotion-1"
   >
     <a
-      class="emotion-2 emotion-3"
+      class="focusIndicatorRemove emotion-2 emotion-3"
       href="#skip-twitter-content"
     >
       <span>

@@ -38,6 +38,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -136,7 +137,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
       >
         <a
           aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-          class="emotion-8 emotion-9"
+          class="focusIndicatorDisplayInlineBlock emotion-8 emotion-9"
           href="/hausa/labarai-48916590"
         >
           <div
@@ -192,7 +193,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
         role="listitem"
       >
         <a
-          class="emotion-8 emotion-9"
+          class="focusIndicatorDisplayInlineBlock emotion-8 emotion-9"
           href="/hausa/labarai-42837051"
         >
           <span>
@@ -237,6 +238,7 @@ exports[`Index Alsos should render one correctly 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -330,7 +332,7 @@ exports[`Index Alsos should render one correctly 1`] = `
     >
       <a
         aria-labelledby="IndexAlsosLink-hausalabarai48916590"
-        class="emotion-6 emotion-7"
+        class="focusIndicatorDisplayInlineBlock emotion-6 emotion-7"
         href="/hausa/labarai-48916590"
       >
         <div

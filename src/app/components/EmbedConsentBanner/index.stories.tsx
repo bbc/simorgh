@@ -4,6 +4,8 @@ import { jsx, css } from '@emotion/react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { C_GREY_2 } from '../../legacy/psammead/psammead-styles/src/colours';
 import { Services, Variants } from '../../models/types/global';
+import metadata from './metadata.json';
+import md from './README.md';
 
 import {
   EmbedConsentBannerCanonical,
@@ -49,7 +51,16 @@ const Component = ({
 export default {
   title: 'Containers/Social Embed/Consent Banner',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: {
+    chromatic: { disable: true },
+    metadata,
+    docs: {
+      component: {
+        title: 'Consent Banner',
+      },
+      page: md,
+    },
+  },
 };
 
 export const CanonicalYoutube = (props: Props) => (

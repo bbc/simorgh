@@ -59,6 +59,7 @@ const ScriptLink = ({ children, script, service, href, variant, onClick }) => (
     href={href}
     data-variant={variant}
     onClick={onClick}
+    className="focusIndicatorRemove"
   >
     <StyledSpan>{children}</StyledSpan>
   </StyledLink>

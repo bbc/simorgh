@@ -223,7 +223,7 @@ describe('Topic Page', () => {
       );
     });
 
-    it('should only render the first summary if there are more than one', () => {
+    it('should only render the first summary if there is more than one summary in the curation', () => {
       const messageBannerCuration =
         kyrgyzTopicWithMessageBanners.curations.find(
           ({ visualStyle, visualProminence, summaries }) =>

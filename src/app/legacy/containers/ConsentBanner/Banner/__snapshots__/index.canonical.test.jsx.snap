@@ -226,6 +226,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   text-decoration: underline;
 }
 
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-12 {
     width: 17.3125rem;
@@ -257,6 +261,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         >
           We use 
           <a
+            class="focusIndicatorReducedWidth"
             href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
             cookies
@@ -525,6 +530,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   text-decoration: underline;
 }
 
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
 @media (min-width: 25rem) {
   .emotion-12 {
     width: 17.3125rem;
@@ -556,6 +565,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         >
           نستخدم 
           <a
+            class="focusIndicatorReducedWidth"
             href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
             ملفات ارتباط
@@ -822,6 +832,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 .emotion-12 button:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
 }
 
 @media (min-width: 25rem) {
@@ -1115,6 +1129,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
 .emotion-12 button:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.emotion-12 button:focus-visible {
+  outline: 0.1875rem solid #000000;
 }
 
 @media (min-width: 25rem) {
