@@ -1,8 +1,6 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
+import HomePage from './HomePage';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
-const HomePage = () => {
-  return <div>Hi, I am a Home Page component</div>;
-};
-export default HomePage;
+export default applyBasicPageHandlers({
+  addVariantHandling: true,
+})(HomePage);
