@@ -4,7 +4,6 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import brandSVG from '../../chameleonLogos/persian';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
@@ -294,6 +293,7 @@ export const service: DefaultServiceConfig = {
         consentBanner: {
           heading: `اجازه نشان دادن محتوای [social_media_site]  را می دهید؟`,
           body: `این مطلب شامل محتوایی از [social_media_site]  است. قبل از بارگیری این محتوا از شما اجازه می گیریم، زیرا ممکن است این سایت ها از کوکی ها و یا سایر انواع فن آوری استفاده کنند. می توانید سیاست [link]  [social_media_site]  را درباره کوکی ها [/link] و  [link] سیاست مربوط به حفظ حریم خصوصی[/link]  را پیش از موافقت بخوانید. برای دیدن این محتوا روی "موافقت و ادامه"‌کلیک کنید.`,
+          button: 'موافقت و ادامه',
         },
       },
       include: {
@@ -304,7 +304,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
     },
-    brandSVG,
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
       lastUpdated: 'به روز شده در',
@@ -325,7 +324,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% المدة الزمنية',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

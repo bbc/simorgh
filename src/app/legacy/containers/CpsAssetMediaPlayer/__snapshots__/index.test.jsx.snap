@@ -357,9 +357,12 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
           allow="autoplay"
           allowfullscreen=""
           class="emotion-7 emotion-8"
+          height="362.953125"
+          loading="lazy"
           scrolling="no"
           src="/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB"
           title="Media player"
+          width="645.25"
         />
         <noscript />
       </div>
@@ -725,9 +728,12 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
           allow="autoplay"
           allowfullscreen=""
           class="emotion-7 emotion-8"
+          height="362.953125"
+          loading="lazy"
           scrolling="no"
           src="/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB"
           title="Media player"
+          width="645.25"
         />
         <noscript />
       </div>

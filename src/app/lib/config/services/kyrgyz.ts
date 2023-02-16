@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
-import brandSVG from '../../chameleonLogos/kyrgyz';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ky';
 import withContext from '../../../contexts/utils/withContext';
@@ -269,7 +268,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Башкы кабарлар',
       featuresAnalysisTitle: 'Редактордун тандоосу',
     },
-    brandSVG,
     mostRead: {
       header: 'Эң көп окулгандар',
       lastUpdated: 'Акыркы жаңылоо:',

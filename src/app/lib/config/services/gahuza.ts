@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import brandSVG from '../../chameleonLogos/gahuza';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/rw';
 import withContext from '../../../contexts/utils/withContext';
@@ -282,7 +281,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: "Inkuru iri kw'isonga",
       featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
     },
-    brandSVG,
     mostRead: {
       header: 'Ibisomwa cane',
       lastUpdated: 'Ibiheruka kuvugururwa:',

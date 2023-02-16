@@ -1,5 +1,4 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/archive';
 import {
   C_ARCHIVE_BLUE,
   C_WHITE,
@@ -206,7 +205,6 @@ export const service: DefaultServiceConfig = {
       },
       socialEmbed: {},
     },
-    brandSVG,
     mostRead: {
       header: 'Most read',
       lastUpdated: 'Last updated:',
@@ -219,6 +217,9 @@ export const service: DefaultServiceConfig = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

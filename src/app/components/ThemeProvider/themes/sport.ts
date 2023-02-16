@@ -13,6 +13,7 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/sport';
 
 const sportTheme = {
   palette: {
@@ -32,6 +33,7 @@ const sportTheme = {
       REITH_SERIF_LIGHT,
     ],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(sportTheme);

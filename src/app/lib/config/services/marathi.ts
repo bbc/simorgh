@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
-import brandSVG from '../../chameleonLogos/marathi';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import '#psammead/psammead-locales/moment/mr';
 import withContext from '../../../contexts/utils/withContext';
@@ -82,6 +81,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'जाहिरात',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'सर्व पाहा',
       home: 'बातम्या',
       currentPage: 'सध्याचे पान',
@@ -278,7 +278,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'मोठ्या बातम्या',
       featuresAnalysisTitle: 'Features',
     },
-    brandSVG,
     mostRead: {
       header: 'सर्वाधिक वाचलेले',
       lastUpdated: 'शेवटचा अपडेट:',
@@ -294,7 +293,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

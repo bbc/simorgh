@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
 
-exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
+exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
@@ -230,8 +230,6 @@ Object {
 exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172xh267fpn19l"`;
 
 exports[`Canonical On Demand Audio Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`Canonical On Demand Audio Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical On Demand Audio Page SEO FB app ID 1`] = `"1609039196070050"`;
 

@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import brandSVG from '../../chameleonLogos/turkish';
 import '#psammead/moment-timezone-include/tz/Asia/Istanbul';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/tr';
@@ -265,7 +264,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Manşet haber',
       featuresAnalysisTitle: 'Seçtiklerimiz',
     },
-    brandSVG,
     mostRead: {
       header: 'En çok okunanlar',
       lastUpdated: 'Son güncelleme:',
@@ -330,6 +328,10 @@ export const service: DefaultServiceConfig = {
         url: '/turkce',
       },
       {
+        title: '6 Şubat Depremi',
+        url: '/turkce/topics/c383emwewmqt',
+      },
+      {
         title: 'Türkiye',
         url: '/turkce/topics/ckdxn2xk95gt',
       },
@@ -344,10 +346,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Sağlık',
         url: '/turkce/topics/cnq68n6wgzdt',
-      },
-      {
-        title: 'İngiltere',
-        url: '/turkce/topics/c95y3wy7842t',
       },
       {
         title: 'Bilim',

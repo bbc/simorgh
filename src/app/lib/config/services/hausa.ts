@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import brandSVG from '../../chameleonLogos/hausa';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ha';
 import withContext from '../../../contexts/utils/withContext';
@@ -288,7 +287,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Babban Labari',
       featuresAnalysisTitle: 'Minti Daya Da BBC',
     },
-    brandSVG,
     mostRead: {
       header: 'Wanda aka fi karantawa',
       lastUpdated: 'Na baya-bayan nan:',

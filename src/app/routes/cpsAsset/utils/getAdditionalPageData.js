@@ -17,6 +17,7 @@ import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
 import hasMostRead from './hasMostRead';
 import fetchPageData from '../../utils/fetchPageData';
+import withCache from '../../utils/fetchPageData/withCache';
 
 const noop = () => {};
 const logger = nodeLogger(__filename);
@@ -24,17 +25,13 @@ const logger = nodeLogger(__filename);
 // 004_brasil_recommendations_experiment
 const getRecommendations = (service, assetUri) => {
   if (service !== 'portuguese') {
-    const UNIRECS_ALLOW_LIST = ['indonesia', 'mundo', 'turkce'];
-
     return [
       {
         name: 'recommendations',
         attachAgent: true,
         path: getRecommendationsUrl({
           assetUri,
-          ...(UNIRECS_ALLOW_LIST.includes(service) && {
-            engine: 'unirecs_datalab',
-          }),
+          engine: 'unirecs_datalab',
         }),
         assetUri,
         api: 'recommendations',
@@ -49,7 +46,7 @@ const getRecommendations = (service, assetUri) => {
       attachAgent: true,
       path: getRecommendationsUrl({
         assetUri,
-        engine: 'unirecs_camino',
+        engine: 'unirecs_datalab',
       }),
       assetUri,
       api: 'recommendations',
@@ -149,7 +146,19 @@ const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   try {
     const agent = attachAgent ? await getAgent() : null;
 
-    return fetchPageData({
+    if (name.toLowerCase().includes('recommendations')) {
+      return fetchPageData({
+        path,
+        timeout: SECONDARY_DATA_TIMEOUT,
+        agent,
+        cache: null,
+        ...loggerArgs,
+      })
+        .then(response => validateResponse(response, name))
+        .catch(noop);
+    }
+
+    return withCache({
       path,
       timeout: SECONDARY_DATA_TIMEOUT,
       agent,

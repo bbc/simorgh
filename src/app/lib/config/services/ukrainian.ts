@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
-import brandSVG from '../../chameleonLogos/ukrainian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
@@ -280,7 +279,6 @@ const baseServiceConfig = {
     relatedTopics: 'Також на цю тему',
     ...secondaryColumnTranslations,
   },
-  brandSVG,
   mostRead: {
     header: 'Найпопулярніше',
     lastUpdated: 'Останнє оновлення:',

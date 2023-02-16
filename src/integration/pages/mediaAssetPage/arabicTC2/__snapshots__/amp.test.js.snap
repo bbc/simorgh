@@ -203,7 +203,7 @@ Object {
 
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
@@ -363,8 +363,6 @@ Object {
 exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av"`;
 
 exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
-
-exports[`AMP Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 

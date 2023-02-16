@@ -2,6 +2,7 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import devanagariScript from '../fontScripts/devanagari';
 import gujaratiFontVariants from '../fontVariants/gujarati';
 import withThemeProvider from '../withThemeProvider';
+import brandSVG from '../chameleonLogos/gujarati';
 
 const gujaratiTheme = {
   palette: {
@@ -16,6 +17,7 @@ const gujaratiTheme = {
     fontVariants: gujaratiFontVariants,
     fontFaces: [],
   },
+  brandSVG,
 };
 
 export default withThemeProvider(gujaratiTheme);

@@ -155,6 +155,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
 }
 
 .emotion-19 {
+  display: block;
   line-height: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -393,7 +394,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
         >
           <a
             aria-labelledby="episodeLinkIndex-0"
-            class="emotion-19 emotion-20"
+            class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
             href="/indonesia/bbc_indonesian_radio/w172xnm8j4tz686"
           >
             <div
@@ -490,18 +491,18 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
                    Durasi 15:30
                 </span>
               </span>
+              <div
+                class="emotion-39 emotion-40"
+              >
+                <time
+                  class="emotion-38 emotion-42 emotion-43 emotion-44"
+                  datetime="2020-11-17"
+                >
+                  17 November 2020
+                </time>
+              </div>
             </span>
           </a>
-          <div
-            class="emotion-39 emotion-40"
-          >
-            <time
-              class="emotion-38 emotion-42 emotion-43 emotion-44"
-              datetime="2020-11-17"
-            >
-              17 November 2020
-            </time>
-          </div>
         </div>
       </li>
       <li
@@ -514,7 +515,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
         >
           <a
             aria-labelledby="episodeLinkIndex-1"
-            class="emotion-19 emotion-20"
+            class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjrkv2"
           >
             <div
@@ -625,7 +626,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
         >
           <a
             aria-labelledby="episodeLinkIndex-2"
-            class="emotion-19 emotion-20"
+            class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjrg2y"
           >
             <div
@@ -736,7 +737,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
         >
           <a
             aria-labelledby="episodeLinkIndex-3"
-            class="emotion-19 emotion-20"
+            class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjgw3s"
           >
             <div
@@ -833,18 +834,18 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
                    Durasi 15:30
                 </span>
               </span>
+              <div
+                class="emotion-39 emotion-40"
+              >
+                <time
+                  class="emotion-38 emotion-42 emotion-43 emotion-44"
+                  datetime="2020-11-13"
+                >
+                  13 November 2020
+                </time>
+              </div>
             </span>
           </a>
-          <div
-            class="emotion-39 emotion-40"
-          >
-            <time
-              class="emotion-38 emotion-42 emotion-43 emotion-44"
-              datetime="2020-11-13"
-            >
-              13 November 2020
-            </time>
-          </div>
         </div>
       </li>
     </ul>

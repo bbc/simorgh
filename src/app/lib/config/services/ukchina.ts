@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
-import brandSVG from '../../chameleonLogos/zhongwen';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
@@ -36,7 +35,6 @@ const baseServiceConfig = {
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  brandSVG,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,

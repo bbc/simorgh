@@ -147,6 +147,7 @@ export interface Translations {
     duration?: string;
     recentEpisodes?: string;
     podcastExternalLinks?: string;
+    download?: string;
   };
   socialEmbed: {
     caption?: {

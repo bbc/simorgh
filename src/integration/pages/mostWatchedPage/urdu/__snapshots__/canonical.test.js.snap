@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
-exports[`Canonical Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+exports[`Canonical Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`Canonical Most Watched Page Header I can see the branding 1`] = `"BBC News, اردو"`;
 
@@ -226,8 +226,6 @@ Object {
 exports[`Canonical Most Watched Page SEO Canonical link 1`] = `"http://localhost:7080/urdu/media/video"`;
 
 exports[`Canonical Most Watched Page SEO Dir attribute 1`] = `"rtl"`;
-
-exports[`Canonical Most Watched Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Most Watched Page SEO FB app ID 1`] = `"1609039196070050"`;
 

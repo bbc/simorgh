@@ -523,6 +523,7 @@ HTMLCollection [
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -972,7 +973,7 @@ HTMLCollection [
                       alt="Image Alt text 1"
                       class="emotion-27"
                       height="1152"
-                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                      sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg 660w"
                       width="2048"
@@ -993,7 +994,7 @@ HTMLCollection [
               >
                 <a
                   aria-labelledby="promo-1"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayInlineBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -1042,7 +1043,7 @@ HTMLCollection [
                       class="emotion-27"
                       height="1152"
                       loading="lazy"
-                      sizes="(max-width: 1008px) 33vw, 321px"
+                      sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image2.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image2.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image2.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image2.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image2.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image2.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image2.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image2.jpg 660w"
                       width="2048"
@@ -1063,7 +1064,7 @@ HTMLCollection [
               >
                 <a
                   aria-labelledby="promo-top-stories-1"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayInlineBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -1112,7 +1113,7 @@ HTMLCollection [
                       class="emotion-27"
                       height="1152"
                       loading="lazy"
-                      sizes="(max-width: 1008px) 33vw, 321px"
+                      sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image3.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image3.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image3.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image3.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image3.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image3.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image3.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image3.jpg 660w"
                       width="2048"
@@ -1133,7 +1134,7 @@ HTMLCollection [
               >
                 <a
                   aria-labelledby="promo-top-stories-2"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayInlineBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -1182,7 +1183,7 @@ HTMLCollection [
                       class="emotion-27"
                       height="1152"
                       loading="lazy"
-                      sizes="(max-width: 1008px) 33vw, 321px"
+                      sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image4.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image4.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image4.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image4.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image4.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image4.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image4.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image4.jpg 660w"
                       width="2048"
@@ -1203,7 +1204,7 @@ HTMLCollection [
               >
                 <a
                   aria-labelledby="promo-top-stories-3"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayInlineBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -1252,7 +1253,7 @@ HTMLCollection [
                       class="emotion-27"
                       height="1152"
                       loading="lazy"
-                      sizes="(max-width: 1008px) 33vw, 321px"
+                      sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image5.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image5.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image5.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image5.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image5.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image5.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image5.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image5.jpg 660w"
                       width="2048"
@@ -1273,7 +1274,7 @@ HTMLCollection [
               >
                 <a
                   aria-labelledby="promo-top-stories-4"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayInlineBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -1823,6 +1824,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -2273,7 +2275,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                       alt="Image Alt text 1"
                       class="emotion-27"
                       height="1152"
-                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                      sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg 660w"
                       width="2048"
@@ -2294,7 +2296,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <a
                   aria-labelledby="promo-1"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayInlineBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -2343,7 +2345,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                       class="emotion-27"
                       height="1152"
                       loading="lazy"
-                      sizes="(max-width: 1008px) 33vw, 321px"
+                      sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image2.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image2.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image2.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image2.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image2.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image2.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image2.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image2.jpg 660w"
                       width="2048"
@@ -2364,7 +2366,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <a
                   aria-labelledby="promo-top-stories-1"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayInlineBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -2413,7 +2415,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                       class="emotion-27"
                       height="1152"
                       loading="lazy"
-                      sizes="(max-width: 1008px) 33vw, 321px"
+                      sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image3.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image3.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image3.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image3.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image3.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image3.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image3.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image3.jpg 660w"
                       width="2048"
@@ -2434,7 +2436,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <a
                   aria-labelledby="promo-top-stories-2"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayInlineBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -2483,7 +2485,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                       class="emotion-27"
                       height="1152"
                       loading="lazy"
-                      sizes="(max-width: 1008px) 33vw, 321px"
+                      sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image4.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image4.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image4.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image4.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image4.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image4.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image4.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image4.jpg 660w"
                       width="2048"
@@ -2504,7 +2506,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <a
                   aria-labelledby="promo-top-stories-3"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayInlineBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -2553,7 +2555,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                       class="emotion-27"
                       height="1152"
                       loading="lazy"
-                      sizes="(max-width: 1008px) 33vw, 321px"
+                      sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image5.jpg"
                       srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image5.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image5.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image5.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image5.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image5.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image5.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image5.jpg 660w"
                       width="2048"
@@ -2574,7 +2576,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <a
                   aria-labelledby="promo-top-stories-4"
-                  class="emotion-34 emotion-35"
+                  class="focusIndicatorDisplayInlineBlock emotion-34 emotion-35"
                   href="https://www.bbc.co.uk"
                 >
                   <span
@@ -3030,6 +3032,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -3528,7 +3531,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
             >
               <a
                 aria-labelledby="promo-top-stories-1"
-                class="emotion-24 emotion-25"
+                class="focusIndicatorDisplayInlineBlock emotion-24 emotion-25"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -3567,7 +3570,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
                     class="emotion-35"
                     height="1152"
                     loading="lazy"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                    sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                     src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
                     srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg 660w"
                     width="2048"
@@ -3606,7 +3609,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
                     class="emotion-35"
                     height="1152"
                     loading="lazy"
-                    sizes="(max-width: 1008px) 33vw, 321px"
+                    sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                     src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image2.jpg"
                     srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image2.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image2.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image2.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image2.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image2.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image2.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image2.jpg 660w"
                     width="2048"
@@ -3627,7 +3630,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
             >
               <a
                 aria-labelledby="promo-1"
-                class="emotion-24 emotion-25"
+                class="focusIndicatorDisplayInlineBlock emotion-24 emotion-25"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -3969,6 +3972,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -4102,7 +4106,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
                   alt="Image Alt text 1"
                   class="emotion-21"
                   height="1152"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                  sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
                   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
                   width="2048"
@@ -4123,7 +4127,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
           >
             <a
               aria-labelledby="promo-1"
-              class="emotion-28 emotion-29"
+              class="focusIndicatorDisplayInlineBlock emotion-28 emotion-29"
               href="https://www.bbc.co.uk"
             >
               <span
@@ -4652,6 +4656,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -5100,7 +5105,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                     class="emotion-25"
                     height="1152"
                     loading="lazy"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                    sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
                     src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
                     srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg 660w"
                     width="2048"
@@ -5121,7 +5126,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <a
                 aria-labelledby="promo-1"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -5170,7 +5175,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                     class="emotion-25"
                     height="1152"
                     loading="lazy"
-                    sizes="(max-width: 1008px) 33vw, 321px"
+                    sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                     src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image2.jpg"
                     srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image2.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image2.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image2.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image2.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image2.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image2.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image2.jpg 660w"
                     width="2048"
@@ -5191,7 +5196,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <a
                 aria-labelledby="promo-top-stories-1"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -5240,7 +5245,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                     class="emotion-25"
                     height="1152"
                     loading="lazy"
-                    sizes="(max-width: 1008px) 33vw, 321px"
+                    sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                     src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image3.jpg"
                     srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image3.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image3.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image3.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image3.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image3.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image3.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image3.jpg 660w"
                     width="2048"
@@ -5261,7 +5266,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <a
                 aria-labelledby="promo-top-stories-2"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -5310,7 +5315,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                     class="emotion-25"
                     height="1152"
                     loading="lazy"
-                    sizes="(max-width: 1008px) 33vw, 321px"
+                    sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                     src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image4.jpg"
                     srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image4.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image4.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image4.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image4.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image4.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image4.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image4.jpg 660w"
                     width="2048"
@@ -5331,7 +5336,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <a
                 aria-labelledby="promo-top-stories-3"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk"
               >
                 <span
@@ -5380,7 +5385,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                     class="emotion-25"
                     height="1152"
                     loading="lazy"
-                    sizes="(max-width: 1008px) 33vw, 321px"
+                    sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                     src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image5.jpg"
                     srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image5.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image5.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image5.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image5.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image5.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image5.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image5.jpg 660w"
                     width="2048"
@@ -5401,7 +5406,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <a
                 aria-labelledby="promo-top-stories-4"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk"
               >
                 <span

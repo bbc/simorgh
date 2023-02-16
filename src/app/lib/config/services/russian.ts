@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/latin';
-import brandSVG from '../../chameleonLogos/russian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
 import withContext from '../../../contexts/utils/withContext';
@@ -288,7 +287,6 @@ export const service: DefaultServiceConfig = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
-    brandSVG,
     mostRead: {
       header: 'Самое популярное',
       lastUpdated: 'Последнее обновление:',

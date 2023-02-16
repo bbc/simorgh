@@ -159,7 +159,7 @@ Object {
 
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/scotland"`;
 
-exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC Scotland"`;
 
@@ -254,8 +254,6 @@ Object {
 exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/scotland/articles/czwj5l0n210o"`;
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`AMP Articles SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Articles SEO FB app ID 1`] = `"1609039196070050"`;
 

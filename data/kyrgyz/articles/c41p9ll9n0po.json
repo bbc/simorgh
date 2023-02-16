@@ -27,19 +27,33 @@
                                   "text": "А.Алымбаева: Шайлоо эки айлампада өтүшү мүмкүн, негизги атаандаштар белгилүү",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
               "id": "916468e3",
@@ -69,19 +83,37 @@
                                         "text": "Шайлоо 2020",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
                     "id": "22a14752",
@@ -94,11 +126,16 @@
                       "copyrightHolder": "BBC",
                       "suitableForSyndication": true
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
               "id": "25f27aa6",
@@ -107,7 +144,9 @@
                 "firstPublished": 1605511868817,
                 "lastPublished": 1605511868817
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
               "id": "f0cd8dba",
@@ -125,31 +164,53 @@
                           "type": "fragment",
                           "model": {
                             "text": "Кыргызстанда Шайлоо жана референдум өткөрүү боюнча борбордук комиссия",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "35b93e8e",
                           "type": "fragment",
                           "model": {
                             "text": " ",
-                            "attributes": ["bold", "italic"]
+                            "attributes": [
+                              "bold",
+                              "italic"
+                            ]
                           },
-                          "position": [4, 1, 2]
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
                         },
                         {
                           "id": "18b0010b",
                           "type": "fragment",
                           "model": {
                             "text": " президенттик шайлоого катышуу ниетин билдирген 63 талапкердин документтерин текшере баштады. ",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [4, 1, 3]
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   },
                   {
                     "id": "a635e7e7",
@@ -162,13 +223,22 @@
                           "type": "fragment",
                           "model": {
                             "text": "Би-Би-Си саясат талдоочу Аида Алымбаевага кайрылып, президенттик жарыш, негизги атаандаштар жана шайлоонун тобокелчиликтери тууралуу сурады. ",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [4, 2, 1]
+                          "position": [
+                            4,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 2]
+                    "position": [
+                      4,
+                      2
+                    ]
                   },
                   {
                     "id": "59a36b6b",
@@ -181,9 +251,15 @@
                           "type": "fragment",
                           "model": {
                             "text": "А.Алымбаева: ",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [4, 3, 1]
+                          "position": [
+                            4,
+                            3,
+                            1
+                          ]
                         },
                         {
                           "id": "9104b175",
@@ -192,11 +268,18 @@
                             "text": "2017-жылы өткөн президенттик шайлоого катышам деп 59 адам арыз берген экен. Бул жолу арыз бергендер саны андан болгону төрт кишиге гана көп болду. Бул эмнеден кабар берет? Кыргызстанда шайлоого талапкерлерди каттоонун жол-жобосу болушунча жеңилдетилген. Бул биздин шайлоо системасынын артыкчылыгы. Бирок БШКда талапкерлерди электен өткөрүүнүн экинчи этабы да бар да. Бир миллион сомдук күрөө акы, 30 миң адамдын кол тамгасын чогултуу жана мамлекеттик тилден сынак тапшырууда талапкердин көбү жыдып калат. Мисалы, 2017-жылы 59 адамдан он үчү эле талапкер катары БШК тарабынан катталган. Бул жолу да барып-барып кеминде 15-16 талапкер шайлоо жарышына чыкса керек.  ",
                             "attributes": []
                           },
-                          "position": [4, 3, 2]
+                          "position": [
+                            4,
+                            3,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 3]
+                    "position": [
+                      4,
+                      3
+                    ]
                   },
                   {
                     "id": "484598c0",
@@ -209,9 +292,15 @@
                           "type": "fragment",
                           "model": {
                             "text": " Би-Би-Си:",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [4, 4, 1]
+                          "position": [
+                            4,
+                            4,
+                            1
+                          ]
                         },
                         {
                           "id": "18438656",
@@ -220,17 +309,33 @@
                             "text": " Шайлоонун фавориттери кайсыл саясатчылар болот? ",
                             "attributes": []
                           },
-                          "position": [4, 4, 2]
+                          "position": [
+                            4,
+                            4,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 4]
+                    "position": [
+                      4,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
-            { "id": "3141b2e0", "type": "mpu", "model": {}, "position": [5] },
+            {
+              "id": "3141b2e0",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                5
+              ]
+            },
             {
               "id": "2e7991e6",
               "type": "text",
@@ -247,9 +352,15 @@
                           "type": "fragment",
                           "model": {
                             "text": "А.Алымбаева: ",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "5a87935d",
@@ -258,11 +369,18 @@
                             "text": "Шайлоодо негизги күрөш Садыр Жапаров жана оор салмактагы саясатчы Адахан Мадумаров ортосунда жүрөт окшойт. Бул экөө тең өлкөдөгү улутчул кыймылдардын лидерлери. Экөөнүн тең электораты элеттиктер. ",
                             "attributes": []
                           },
-                          "position": [6, 1, 2]
+                          "position": [
+                            6,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   },
                   {
                     "id": "d8400fbe",
@@ -277,11 +395,18 @@
                             "text": "Бул экөөнө атаандаш күчтөр да чыга алат. Бирок алар блокко биригиши керек болот. Аларды Кыргызстан парламенттик башкаруу нугунда кетишин каалаган электораттын прогрессивдүү бөлүгү колдоп кетмек. Жапарав дагы, Мадумаров дагы президенттик башкарууну жактаган саясатчылардан. Экөөнүн бирөөсү өтсө да, парламенттин ролун болушунча чектегенге аракет кылат. Андыктан Клара Сооронкулова, Элдар Абакиров, Бабур Толбаев, Аймен Касенов, Садык Шер-Нияз, Каныбек Иманалиев өңдүү талапкерлер бириксе бул президенттик жарыштын жетишкендиги болмок. ",
                             "attributes": []
                           },
-                          "position": [6, 2, 1]
+                          "position": [
+                            6,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 2]
+                    "position": [
+                      6,
+                      2
+                    ]
                   },
                   {
                     "id": "33b54d3f",
@@ -296,11 +421,18 @@
                             "text": "Эгерде административдик ресурс колдонулбаса, президенттик шайлоо бир гана айлампа менен чектелбей, эки тур менен өтөт го дейм. Жапаров шайлоодо оңой эле жеңишке жетишет деп ишенимдүү айтууга болбойт. Себеби, ал күчтүү бийлик вертикалын түптөгөнгө үлгүрбөдү.",
                             "attributes": []
                           },
-                          "position": [6, 3, 1]
+                          "position": [
+                            6,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 3]
+                    "position": [
+                      6,
+                      3
+                    ]
                   },
                   {
                     "id": "1a94098a",
@@ -315,15 +447,24 @@
                             "text": " “Форма-2” арызы менен шайлоо жокко чыгарылганы да анын тарапкерлеринин санын кескин кыскартты.",
                             "attributes": []
                           },
-                          "position": [6, 4, 1]
+                          "position": [
+                            6,
+                            4,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 4]
+                    "position": [
+                      6,
+                      4
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
             {
               "id": "f39540ec",
@@ -353,19 +494,37 @@
                                         "text": "Screenshot",
                                         "attributes": []
                                       },
-                                      "position": [7, 1, 1, 1, 1]
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [7, 1, 1, 1]
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [7, 1, 1]
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [7, 1]
+                    "position": [
+                      7,
+                      1
+                    ]
                   },
                   {
                     "id": "8ba91c64",
@@ -378,11 +537,16 @@
                       "copyrightHolder": "Social media",
                       "suitableForSyndication": false
                     },
-                    "position": [7, 2]
+                    "position": [
+                      7,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [7]
+              "position": [
+                7
+              ]
             },
             {
               "id": "4261c16b",
@@ -402,11 +566,18 @@
                             "text": "Дагы бир маанилүү жагдай бул жолку шайлоодо оппозициялык партиялардын талапкерлери болбой жатат. Мисалы, “Ата Мекен”, “Бир Бол” президенттикке өз талапкерлерин жылдырбады. Каныбек Иманалиев, Cадык Шер-Нияз талапкерлигин койду. Бирок алар партия атынан чыгып атабы, түшүнүксүз. Оппозициялык партиялар шайлоо калыс өтөт деп ишенбей жатышабы же баары бир Жапаров жеңет деген ойдо болуп атабы, бул чоң суроо. Шайлоочулар регионалдык мүнөздө артыкчылык берип да добуш берип келет. Бул жааттан алып караганда, Улукбек Кочкоровдун да шансы жогору. Мамлекеттик кызматтарда иштеди, таанымал, саясий жакшы капиталы бар. ",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   },
                   {
                     "id": "6ee0a3d6",
@@ -419,9 +590,15 @@
                           "type": "fragment",
                           "model": {
                             "text": "Би-Би-Си:",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [8, 2, 1]
+                          "position": [
+                            8,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "a08541c7",
@@ -430,11 +607,18 @@
                             "text": " Айрым талдоочулар шайлоого талапкерлигин коюу бул бекер пиар, саясий соодалашуу куралы болуп калды деп мүнөздөп жатат. ",
                             "attributes": []
                           },
-                          "position": [8, 2, 2]
+                          "position": [
+                            8,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 2]
+                    "position": [
+                      8,
+                      2
+                    ]
                   },
                   {
                     "id": "38574584",
@@ -447,9 +631,15 @@
                           "type": "fragment",
                           "model": {
                             "text": "А.Алымбаева:",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [8, 3, 1]
+                          "position": [
+                            8,
+                            3,
+                            1
+                          ]
                         },
                         {
                           "id": "c8310c6c",
@@ -458,15 +648,24 @@
                             "text": " Президенттик жарышка чыгуу бул, албетте, абсолюттук пиар. Алдыда бизде парламенттик, жергиликтүү, Бишкек шаардык кеңешке да шайлоолор келе жатат. Жеңишке жетпесине көздөрү жетип турса деле, катышып жаткандарды көрүп жатабыз. Бирок шайлоодо чектөө деген болбош керек. Алар шайлануу укугун пайдаланып жатышат, чектөөнүн кажети жок.  Бул мыйзам ченемдүү эле көрүнүш. Болгону президенттик жарышта саясий партиялардын да активдүүлүгү күчөсө жакшы болот эле. Шайлоодо идеялардын күрөшү журсө жакшы да, бирок тилекке каршы андай болбой жатат. ",
                             "attributes": []
                           },
-                          "position": [8, 3, 2]
+                          "position": [
+                            8,
+                            3,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 3]
+                    "position": [
+                      8,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
             {
               "id": "76c4bdc6",
@@ -496,19 +695,37 @@
                                         "text": "Аида Алымбаева, эксперт",
                                         "attributes": []
                                       },
-                                      "position": [9, 1, 1, 1, 1]
+                                      "position": [
+                                        9,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [9, 1, 1, 1]
+                                "position": [
+                                  9,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [9, 1, 1]
+                          "position": [
+                            9,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [9, 1]
+                    "position": [
+                      9,
+                      1
+                    ]
                   },
                   {
                     "id": "2f3b3267",
@@ -521,11 +738,16 @@
                       "copyrightHolder": "Social media",
                       "suitableForSyndication": false
                     },
-                    "position": [9, 2]
+                    "position": [
+                      9,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [9]
+              "position": [
+                9
+              ]
             },
             {
               "id": "8f05f4e1",
@@ -543,9 +765,15 @@
                           "type": "fragment",
                           "model": {
                             "text": "Би-Би-Си: ",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [10, 1, 1]
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
                         },
                         {
                           "id": "4cfb2d90",
@@ -554,11 +782,18 @@
                             "text": "Мөөнөтсүз президенттик шайлоонун негизги кандай тобокелчиликтери бар? ",
                             "attributes": []
                           },
-                          "position": [10, 1, 2]
+                          "position": [
+                            10,
+                            1,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 1]
+                    "position": [
+                      10,
+                      1
+                    ]
                   },
                   {
                     "id": "a2bc0548",
@@ -571,9 +806,15 @@
                           "type": "fragment",
                           "model": {
                             "text": "А.Алымбаева:",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [10, 2, 1]
+                          "position": [
+                            10,
+                            2,
+                            1
+                          ]
                         },
                         {
                           "id": "e92d44ad",
@@ -582,15 +823,24 @@
                             "text": " Тобокелчиликтер чоң экенин 6-октябрдан кийинки окуялардан да көрдүк. Эгерде бул жолу шайлоо таза ачык-айкын, калыс өтпөсө, басым жана административдик ресурс колдонулса, добуш сатып алуу аракети болсо ошондой эле каршылык маанай түзүлөт. Жарандар тез эле мобилдешип, митингдер өтүшү мүмкүн. Биздей жаш мамлекетке бул чоң тобокелчилик. Октябрдагы окуяларда криминалдык топтордун катыштыгы тууралуу да талкуулар болду. Бийликтеги вакуумдан пайдаланып ошол эле бийликке келүүнү менчикти бөлүштүрүүнү каалагандар бар. Негизи парламенттик шайлоолор биринчи, андан кийин президенттик шайлоо өтүшү керек эле. Бирок биринчи өлкө башчысы тандалат деген чечим болгондон кийин Жапаров андай тобокелчиликтерге жоопкерчилик алышы керек. Охлократия же сүрмө топтун саясаты бул жолку шайлоодон кийин да орун алышы толук мүмкүн. (EKa)",
                             "attributes": []
                           },
-                          "position": [10, 2, 2]
+                          "position": [
+                            10,
+                            2,
+                            2
+                          ]
                         }
                       ]
                     },
-                    "position": [10, 2]
+                    "position": [
+                      10,
+                      2
+                    ]
                   }
                 ]
               },
-              "position": [10]
+              "position": [
+                10
+              ]
             }
           ]
         }
@@ -598,16 +848,13 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c41p9ll9n0po",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c41p9ll9n0po",
-          "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c41p9ll9n0po"
+          "optimoUrn": "urn:bbc:optimo:asset:c41p9ll9n0po"
         },
         "type": "article",
         "createdBy": "Kyrgyz",
         "language": "ky",
-        "lastUpdated": 1646742780664,
         "firstPublished": 1605511868817,
         "lastPublished": 1605511868817,
-        "timestamp": 1605511868817,
         "options": {},
         "analyticsLabels": {
           "ldp_tags": "Kyrgyzstan~Politics~Kyrgyz+parliamentary+election+2020",
@@ -619,8 +866,6 @@
         "passport": {
           "language": "ky",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-          "locator": "urn:bbc:optimo:asset:c41p9ll9n0po",
-          "availability": "AVAILABLE",
           "taggings": [
             {
               "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
@@ -639,8 +884,6 @@
               "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
             }
           ],
-          "schemaVersion": "1.2.0",
-          "publishedState": "PUBLISHED",
           "predicates": {
             "about": [
               {
@@ -648,8 +891,14 @@
                 "thingLabel": "Кыргызстан",
                 "thingUri": "http://www.bbc.co.uk/things/2465d7e4-05d0-4062-9a12-cb0eb10b24c1#id",
                 "thingId": "2465d7e4-05d0-4062-9a12-cb0eb10b24c1",
-                "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
-                "thingSameAs": ["http://sws.geonames.org/1527747/"],
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Place"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/1527747/"
+                ],
                 "thingEnglishLabel": "Kyrgyzstan",
                 "type": "about"
               },
@@ -665,7 +914,9 @@
                   "core:Theme",
                   "core:Thing"
                 ],
-                "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Politics"
+                ],
                 "thingEnglishLabel": "Politics",
                 "type": "about"
               },
@@ -674,8 +925,14 @@
                 "thingLabel": "Шайлоо 2020",
                 "thingUri": "http://www.bbc.co.uk/things/a11870fd-21ad-4631-8ebb-ceb8d331a762#id",
                 "thingId": "a11870fd-21ad-4631-8ebb-ceb8d331a762",
-                "thingType": ["core:Thing", "core:Event", "tagging:TagConcept"],
-                "thingSameAs": ["http://www.wikidata.org/entity/Q77047144"],
+                "thingType": [
+                  "core:Thing",
+                  "core:Event",
+                  "tagging:TagConcept"
+                ],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q77047144"
+                ],
                 "thingEnglishLabel": "Kyrgyz parliamentary election 2020",
                 "type": "about"
               }
@@ -694,8 +951,14 @@
               "thingLabel": "Кыргызстан",
               "thingUri": "http://www.bbc.co.uk/things/2465d7e4-05d0-4062-9a12-cb0eb10b24c1#id",
               "thingId": "2465d7e4-05d0-4062-9a12-cb0eb10b24c1",
-              "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
-              "thingSameAs": ["http://sws.geonames.org/1527747/"],
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Place"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/1527747/"
+              ],
               "topicName": "Кыргызстан",
               "topicId": "cz74kjpyk07t",
               "curationList": [
@@ -719,7 +982,9 @@
                 "core:Theme",
                 "core:Thing"
               ],
-              "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Politics"
+              ],
               "topicName": "Саясат",
               "topicId": "cdr56kvq041t",
               "curationList": [
@@ -736,8 +1001,14 @@
               "thingLabel": "Шайлоо 2020",
               "thingUri": "http://www.bbc.co.uk/things/a11870fd-21ad-4631-8ebb-ceb8d331a762#id",
               "thingId": "a11870fd-21ad-4631-8ebb-ceb8d331a762",
-              "thingType": ["core:Thing", "core:Event", "tagging:TagConcept"],
-              "thingSameAs": ["http://www.wikidata.org/entity/Q77047144"],
+              "thingType": [
+                "core:Thing",
+                "core:Event",
+                "tagging:TagConcept"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q77047144"
+              ],
               "topicName": "Шайлоо 2020",
               "topicId": "c23pmmvk361t",
               "curationList": [
@@ -752,7 +1023,6 @@
             }
           ]
         },
-        "version": "v1.4.2",
         "blockTypes": [
           "headline",
           "text",
@@ -762,8 +1032,6 @@
           "altText",
           "rawImage"
         ],
-        "suitableForSyndication": true,
-        "readTime": 3,
         "topics": [
           {
             "topicName": "Шайлоо 2020",
@@ -782,7 +1050,11 @@
                 "visualProminence": "NORMAL"
               }
             ],
-            "types": ["core:Thing", "core:Event", "tagging:TagConcept"],
+            "types": [
+              "core:Thing",
+              "core:Event",
+              "tagging:TagConcept"
+            ],
             "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz"
           },
           {
@@ -801,7 +1073,11 @@
                 "visualProminence": "NORMAL"
               }
             ],
-            "types": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "types": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
             "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz"
           },
           {
@@ -820,20 +1096,18 @@
                 "visualProminence": "NORMAL"
               }
             ],
-            "types": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place"
+            ],
             "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz"
           }
         ],
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c41p9ll9n0po",
-          "canonicalUrl": "https://www.bbc.com/kyrgyz/articles/c41p9ll9n0po"
-        },
-        "timestamp": 1605511868817,
-        "suitableForSyndication": true,
-        "language": "ky",
+        "locators": {},
         "headlines": {
           "seoHeadline": "А.Алымбаева: Шайлоо эки айлампада өтүшү мүмкүн, негизги атаандаштар белгилүү",
           "promoHeadline": {
@@ -935,89 +1209,7 @@
             }
           ]
         },
-        "passport": {
-          "language": "ky",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Kyrgyz",
-          "locator": "urn:bbc:optimo:asset:c41p9ll9n0po",
-          "availability": "AVAILABLE",
-          "taggings": [
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-              "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-              "value": "http://www.bbc.co.uk/things/2465d7e4-05d0-4062-9a12-cb0eb10b24c1#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-              "value": "http://www.bbc.co.uk/things/a11870fd-21ad-4631-8ebb-ceb8d331a762#id"
-            },
-            {
-              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
-              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-            }
-          ],
-          "schemaVersion": "1.2.0",
-          "publishedState": "PUBLISHED",
-          "predicates": {
-            "about": [
-              {
-                "value": "http://www.bbc.co.uk/things/2465d7e4-05d0-4062-9a12-cb0eb10b24c1#id",
-                "thingLabel": "Кыргызстан",
-                "thingUri": "http://www.bbc.co.uk/things/2465d7e4-05d0-4062-9a12-cb0eb10b24c1#id",
-                "thingId": "2465d7e4-05d0-4062-9a12-cb0eb10b24c1",
-                "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
-                "thingSameAs": ["http://sws.geonames.org/1527747/"],
-                "thingEnglishLabel": "Kyrgyzstan",
-                "type": "about"
-              },
-              {
-                "value": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-                "thingLabel": "Саясат",
-                "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-                "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-                "thingType": [
-                  "tagging:Genre",
-                  "tagging:TagConcept",
-                  "tagging:AmbiguousTerm",
-                  "core:Theme",
-                  "core:Thing"
-                ],
-                "thingSameAs": ["http://dbpedia.org/resource/Politics"],
-                "thingEnglishLabel": "Politics",
-                "type": "about"
-              },
-              {
-                "value": "http://www.bbc.co.uk/things/a11870fd-21ad-4631-8ebb-ceb8d331a762#id",
-                "thingLabel": "Шайлоо 2020",
-                "thingUri": "http://www.bbc.co.uk/things/a11870fd-21ad-4631-8ebb-ceb8d331a762#id",
-                "thingId": "a11870fd-21ad-4631-8ebb-ceb8d331a762",
-                "thingType": ["core:Thing", "core:Event", "tagging:TagConcept"],
-                "thingSameAs": ["http://www.wikidata.org/entity/Q77047144"],
-                "thingEnglishLabel": "Kyrgyz parliamentary election 2020",
-                "type": "about"
-              }
-            ],
-            "infoClass": [
-              {
-                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
-                "type": "infoClass"
-              }
-            ]
-          }
-        },
-        "id": "urn:bbc:ares::article:c41p9ll9n0po",
-        "type": "optimo"
-      },
-      "relatedContent": {
-        "site": {
-          "subType": "site",
-          "name": "Kyrgyz",
-          "uri": "/kyrgyz",
-          "type": "simple"
-        },
-        "groups": []
+        "passport": {}
       }
     },
     "secondaryData": {
@@ -1114,7 +1306,10 @@
             "originCode": "cpsprodpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "maximum",
           "id": "urn:bbc:ares::asset:kyrgyz/world-63552838",
           "type": "cps"
@@ -1182,7 +1377,10 @@
             "copyrightHolder": "\"James\"",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "prominence": "maximum",
           "id": "urn:bbc:ares::asset:kyrgyz/world-63580052",
           "type": "cps"
@@ -1597,7 +1795,10 @@
                       "thingLabel": "Analysis",
                       "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
                       "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
                       ],
@@ -1831,7 +2032,10 @@
                       "thingLabel": "Explainer",
                       "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
                       "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
-                      "thingType": ["tagging:Format", "tagging:TagConcept"],
+                      "thingType": [
+                        "tagging:Format",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
                       ],
@@ -1868,7 +2072,9 @@
                         "core:Place",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1643084/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1643084/"
+                      ],
                       "thingEnglishLabel": "Indonesia",
                       "type": "about"
                     },
@@ -1921,7 +2127,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/6252001/"
+                      ],
                       "thingEnglishLabel": "United States",
                       "type": "about"
                     },
@@ -2165,7 +2373,9 @@
                         "tagging:TagConcept",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1527747/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1527747/"
+                      ],
                       "thingEnglishLabel": "Kyrgyzstan",
                       "type": "about"
                     },
@@ -2181,7 +2391,9 @@
                         "core:Theme",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Politics"
+                      ],
                       "thingEnglishLabel": "Politics",
                       "type": "about"
                     }
@@ -2260,7 +2472,9 @@
                                         "type": "fragment",
                                         "model": {
                                           "text": "Осмонбек Насыранбеков",
-                                          "attributes": ["bold"]
+                                          "attributes": [
+                                            "bold"
+                                          ]
                                         }
                                       }
                                     ]
@@ -2386,7 +2600,9 @@
                         "tagging:TagConcept",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1527747/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1527747/"
+                      ],
                       "thingEnglishLabel": "Kyrgyzstan",
                       "type": "about"
                     },
@@ -2431,7 +2647,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -2559,7 +2778,9 @@
                         "core:Theme",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Book"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Book"
+                      ],
                       "thingEnglishLabel": "Books",
                       "type": "about"
                     }
@@ -2570,7 +2791,10 @@
                       "thingLabel": "Analysis",
                       "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
                       "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
                       ],
@@ -2703,7 +2927,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -3107,7 +3334,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/6252001/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/6252001/"
+                      ],
                       "thingEnglishLabel": "United States",
                       "type": "about"
                     }
@@ -3617,7 +3846,9 @@
                         "tagging:TagConcept",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1527747/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1527747/"
+                      ],
                       "thingEnglishLabel": "Kyrgyzstan",
                       "type": "about"
                     }
@@ -3847,7 +4078,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/2017370/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/2017370/"
+                      ],
                       "thingEnglishLabel": "Russia",
                       "type": "about"
                     },
@@ -3879,7 +4112,9 @@
                         "core:Theme",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Politics"
+                      ],
                       "thingEnglishLabel": "Politics",
                       "type": "about"
                     },
@@ -3931,7 +4166,9 @@
                         "tagging:TagConcept",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/289688/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/289688/"
+                      ],
                       "thingEnglishLabel": "Qatar",
                       "type": "about"
                     }
@@ -4049,7 +4286,10 @@
                       "thingLabel": "Analysis",
                       "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
                       "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
                       ],
@@ -4070,7 +4310,9 @@
                         "tagging:TagConcept",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1527747/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1527747/"
+                      ],
                       "thingEnglishLabel": "Kyrgyzstan",
                       "type": "about"
                     },
@@ -4084,7 +4326,9 @@
                         "core:Thing",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1522867/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1522867/"
+                      ],
                       "thingEnglishLabel": "Kazakhstan",
                       "type": "about"
                     },
@@ -4098,7 +4342,9 @@
                         "core:Place",
                         "core:Thing"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/298795/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/298795/"
+                      ],
                       "thingEnglishLabel": "Turkey",
                       "type": "about"
                     },
@@ -4112,7 +4358,9 @@
                         "tagging:TagConcept",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1512440/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1512440/"
+                      ],
                       "thingEnglishLabel": "Uzbekistan",
                       "type": "about"
                     }
@@ -4295,7 +4543,10 @@
                       "thingLabel": "Analysis",
                       "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
                       "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
                       ],
@@ -4316,7 +4567,9 @@
                         "tagging:TagConcept",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1527747/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1527747/"
+                      ],
                       "thingEnglishLabel": "Kyrgyzstan",
                       "type": "about"
                     },
@@ -4349,7 +4602,9 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Economy"
+                      ],
                       "thingEnglishLabel": "Economics",
                       "type": "about"
                     }
@@ -4395,7 +4650,12 @@
               "byline": {
                 "name": "Алмазбек Токтомаметов ",
                 "title": "Кыргыз билим берүү академиясынын вице-президенти",
-                "persons": [{ "name": ". .", "function": "BBC News" }]
+                "persons": [
+                  {
+                    "name": ". .",
+                    "function": "BBC News"
+                  }
+                ]
               },
               "passport": {
                 "category": {
@@ -4622,7 +4882,9 @@
                         "tagging:TagConcept",
                         "core:Place"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1527747/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1527747/"
+                      ],
                       "thingEnglishLabel": "Kyrgyzstan",
                       "type": "about"
                     },
@@ -4670,7 +4932,9 @@
                         "core:Place",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": ["http://sws.geonames.org/1220409/"],
+                      "thingSameAs": [
+                        "http://sws.geonames.org/1220409/"
+                      ],
                       "thingEnglishLabel": "Tajikistan",
                       "type": "about"
                     },
@@ -4684,7 +4948,9 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": ["http://dbpedia.org/resource/Military"],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Military"
+                      ],
                       "thingEnglishLabel": "Military",
                       "type": "about"
                     }
@@ -4695,7 +4961,10 @@
                       "thingLabel": "Interview",
                       "thingUri": "http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id",
                       "thingId": "b3c67683-6ada-46da-a329-16fbd4a12c96",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [
                         "http://www.wikidata.org/entity/Q178651",
                         "http://dbpedia.org/resource/Interview"
@@ -4742,7 +5011,10 @@
                 "name": "Клаудиа Хэммонд",
                 "title": "BBC Future",
                 "persons": [
-                  { "name": "Claudia Hammond", "function": "BBC Future" }
+                  {
+                    "name": "Claudia Hammond",
+                    "function": "BBC Future"
+                  }
                 ]
               },
               "passport": {
@@ -4809,7 +5081,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",
@@ -4959,7 +5234,10 @@
                       "thingLabel": "News report",
                       "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                       "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                      "thingType": ["tagging:TagConcept", "tagging:Format"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "tagging:Format"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Report",
                       "thingPreferredLabel": "Report",

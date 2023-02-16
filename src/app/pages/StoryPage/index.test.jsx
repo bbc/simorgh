@@ -831,7 +831,7 @@ describe('Story Page', () => {
           };
 
           const recommendationsEndpoint =
-            'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino';
+            'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab';
 
           fetchMock.mock(
             'http://localhost/some-cps-sty-path.json',
@@ -1028,7 +1028,7 @@ describe('Story Page', () => {
               portugueseMostReadData,
             );
             fetchMock.mock(
-              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino',
+              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab',
               portugueseRecommendationData,
             );
             const { pageData } = await getInitialData({
@@ -1079,7 +1079,7 @@ describe('Story Page', () => {
               portugueseMostReadData,
             );
             fetchMock.mock(
-              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino',
+              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab',
               portugueseRecommendationData,
             );
             const { pageData } = await getInitialData({
@@ -1252,7 +1252,7 @@ describe('Story Page', () => {
               portugueseMostReadData,
             );
             fetchMock.mock(
-              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino',
+              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab',
               portugueseRecommendationData,
             );
             const { pageData } = await getInitialData({
@@ -1312,7 +1312,7 @@ describe('Story Page', () => {
               portugueseMostReadData,
             );
             fetchMock.mock(
-              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino',
+              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab',
               portugueseRecommendationData,
             );
             const { pageData } = await getInitialData({
@@ -1359,7 +1359,7 @@ describe('Story Page', () => {
               portugueseMostReadData,
             );
             fetchMock.mock(
-              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino',
+              'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab',
               portugueseRecommendationData,
             );
             const { pageData } = await getInitialData({
@@ -1562,7 +1562,7 @@ describe('Story Page', () => {
         };
 
         const recommendationsEndpoint =
-          'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino';
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab';
 
         fetchMock.mock(
           'http://localhost/some-cps-sty-path.json',
@@ -1605,7 +1605,7 @@ describe('Story Page', () => {
         };
 
         const recommendationsEndpoint =
-          'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_camino';
+          'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab';
 
         fetchMock.mock(
           'http://localhost/some-cps-sty-path.json',

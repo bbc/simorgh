@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import brandSVG from '../../chameleonLogos/indonesian';
 import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
 import withContext from '../../../contexts/utils/withContext';
@@ -288,7 +287,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Berita Utama',
       featuresAnalysisTitle: 'Majalah',
     },
-    brandSVG,
     mostRead: {
       header: 'Paling banyak dibaca',
       lastUpdated: 'Terakhir diperbarui:',

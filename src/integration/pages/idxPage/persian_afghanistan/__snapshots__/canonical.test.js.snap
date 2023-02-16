@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical persian/afghanistan IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`Canonical persian/afghanistan IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`Canonical persian/afghanistan IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`Canonical persian/afghanistan IDX page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
@@ -247,8 +247,6 @@ exports[`Canonical persian/afghanistan IDX page SEO Canonical link 1`] = `"http:
 
 exports[`Canonical persian/afghanistan IDX page SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`Canonical persian/afghanistan IDX page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical persian/afghanistan IDX page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO Heading level 1 1`] = `"صفحه افغانستان"`;
@@ -344,7 +342,7 @@ exports[`Canonical persian/afghanistan IDX page Story Promo Image should match i
   alt="هبت الله آخوندزاده"
   class="bbc-1uwua2r"
   height="351"
-  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg"
   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 624w"
   style="aspect-ratio:624 / 351"

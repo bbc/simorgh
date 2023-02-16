@@ -30,11 +30,15 @@ import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
 import getAgent from './utilities/getAgent';
+import { getMvtExperiments, getMvtVaryHeaders } from './utilities/mvtHeader';
 import getAssetOrigins from './utilities/getAssetOrigins';
 
 const morgan = require('morgan');
 
 const logger = nodeLogger(__filename);
+
+const NORMAL_CACHE_TTL = 30;
+const EXPERIMENTAL_CACHE_TTL = 45;
 
 logger.debug(
   `Application outputting logs to directory '${process.env.LOG_DIR}'`,
@@ -49,6 +53,12 @@ class LoggerStream {
     logger.info(message.substring(0, message.lastIndexOf('\n')));
   }
 }
+
+const getDefaultMaxAge = req => {
+  return req.originalUrl.indexOf('arabic/') !== -1
+    ? EXPERIMENTAL_CACHE_TTL
+    : NORMAL_CACHE_TTL;
+};
 
 const server = express();
 
@@ -126,9 +136,16 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 }
 
 const injectDefaultCacheHeader = (req, res, next) => {
+  const defaultMaxAge = getDefaultMaxAge(req);
+  const maxAge =
+    req.originalUrl.indexOf('/topics/') !== -1
+      ? defaultMaxAge * 2
+      : defaultMaxAge;
   res.set(
-    'cache-control',
-    `public, stale-if-error=90, stale-while-revalidate=30, max-age=30`,
+    'Cache-Control',
+    `public, stale-if-error=${
+      maxAge * 4
+    }, stale-while-revalidate=${maxAge}, max-age=${maxAge}`,
   );
   next();
 };
@@ -164,12 +181,14 @@ server.get(
     injectResourceHintsHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
+    res.removeHeader('Expect-CT');
     logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
       url,
       headers: removeSensitiveHeaders(headers),
     });
 
     let derivedPageType = 'Unknown';
+    let mvtExperiments = [];
 
     try {
       const {
@@ -204,6 +223,9 @@ server.get(
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
+
+        mvtExperiments = getMvtExperiments(headers, service, derivedPageType);
+        data.mvtExperiments = mvtExperiments;
       } else {
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -214,6 +236,7 @@ server.get(
       }
 
       const bbcOrigin = headers['bbc-origin'];
+
       let result;
       try {
         result = await renderDocument({
@@ -265,6 +288,10 @@ server.get(
           'onion-location',
           `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${urlPath}`,
         );
+
+        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
+
+        if (mvtVaryHeaders) res.set('vary', mvtVaryHeaders);
         res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');

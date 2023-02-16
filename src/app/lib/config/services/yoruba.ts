@@ -4,7 +4,6 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
-import brandSVG from '../../chameleonLogos/yoruba';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/yo';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
@@ -253,7 +252,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Ìròyìn tó ṣe kókó',
       featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
     },
-    brandSVG,
     mostRead: {
       header: 'Èyítí A Ń Kà Jùlọ',
       lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní:',

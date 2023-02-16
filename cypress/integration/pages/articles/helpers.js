@@ -12,13 +12,15 @@ export const getBlockByType = (blocks, blockType) => {
 };
 
 export const getBlockData = (blockType, body) => {
-  const { blocks } = body.content.model;
+  const { blocks } = body.data.article.content.model;
 
   return getBlockByType(blocks, blockType);
 };
 
 export const getAllBlocksDataByType = (blockType, body) => {
-  return body.content.model.blocks.filter(block => block.type === blockType);
+  return body.data.article.content.model.blocks.filter(
+    block => block.type === blockType,
+  );
 };
 
 export const getAllSocialBlocksByProviderName = (socialType, body) => {
@@ -27,7 +29,7 @@ export const getAllSocialBlocksByProviderName = (socialType, body) => {
 };
 
 const getArticleId = body => {
-  const { id } = body.metadata;
+  const { id } = body.data.article.metadata;
   return id.split('article:')[1];
 };
 

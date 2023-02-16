@@ -1,454 +1,724 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:c06p32z9x2mo",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo"
-    },
-    "type": "article",
-    "createdBy": "Cymrufyw",
-    "language": "cy",
-    "lastUpdated": 1571059200691,
-    "firstPublished": 1563022049359,
-    "lastPublished": 1570805332046,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "cy",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Dyma bennawd yr erthygl brawf yma",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Dyma bennawd yr erthygl brawf yma",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Map o Ffrainc yn dangos Paris a Cognac",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Map o Ffrainc yn dangos Paris a Cognac",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "434d/test/2dd9efb0-ec35-11e9-88d6-81aa2ccc6d4c.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Dyma flwch prawf, sy’n cynnwys dolen url i dudalen dywydd y BBC",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Dyma flwch prawf, sy’n cynnwys dolen url i dudalen ",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "dywydd y BBC",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "dywydd y BBC",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Dyma flwch fideo sy’n cynnwys fideo am forgrug",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Dyma flwch fideo sy’n cynnwys fideo am forgrug",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "743a0e6b",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "c05ba695",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "75217fd0",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Dyma bennawd yr erthygl brawf yma",
+                            "blocks": [
+                              {
+                                "id": "f331234f",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Dyma bennawd yr erthygl brawf yma",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "Dyma flwch ar gyfer is-bennawd",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "Dyma flwch ar gyfer is-bennawd",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Pêl-droedwyr ar ôl y gêm",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Pêl-droedwyr ar ôl y gêm",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 2048,
-                  "height": 1152,
-                  "locator": "c761/test/bc387830-ec35-11e9-88d6-81aa2ccc6d4c.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "90e30bc3",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "649d4114",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "1761000f",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "278dddb3",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
+                                  "blocks": [
+                                    {
+                                      "id": "d4358119",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "b640156a",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e98df449",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "e31d8575",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Map o Ffrainc yn dangos Paris a Cognac",
+                                  "blocks": [
+                                    {
+                                      "id": "085dba51",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Map o Ffrainc yn dangos Paris a Cognac",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "bee4430a",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "434d/test/2dd9efb0-ec35-11e9-88d6-81aa2ccc6d4c.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "bce1399e",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1563022049359,
+                "lastPublished": 1570805332046
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "1724bbfb",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "02f3f639",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Dyma flwch prawf, sy’n cynnwys dolen url i dudalen dywydd y BBC",
+                      "blocks": [
+                        {
+                          "id": "1d568cb7",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Dyma flwch prawf, sy’n cynnwys dolen url i dudalen ",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "24c4bee5",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "dywydd y BBC",
+                            "blocks": [
+                              {
+                                "id": "c1f6ef05",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "dywydd y BBC",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "252bde60",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "d1e8866d",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "53517fe9",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "dfb53442",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Dyma flwch fideo sy’n cynnwys fideo am forgrug",
+                                  "blocks": [
+                                    {
+                                      "id": "0ffbdcc5",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Dyma flwch fideo sy’n cynnwys fideo am forgrug",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "29c5f603",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "01f13b77",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "adbe7486",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "7b7a6645",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "83cbb9de",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "3d623b7d",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "5b56b1c6",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "f616690c",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "c8413ee5",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "cc855b09",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "2c96f43a",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "Dyma flwch ar gyfer is-bennawd",
+                            "blocks": [
+                              {
+                                "id": "840af2e0",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Dyma flwch ar gyfer is-bennawd",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "1cb14258",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "480ffe26",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "c88ab8da",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "49f381e9",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Pêl-droedwyr ar ôl y gêm",
+                                  "blocks": [
+                                    {
+                                      "id": "e3cf637d",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Pêl-droedwyr ar ôl y gêm",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "92b267bc",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "c761/test/bc387830-ec35-11e9-88d6-81aa2ccc6d4c.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "b6787a7c",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "fedd83ea",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
+                      "blocks": [
+                        {
+                          "id": "8bdc3ae7",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "cd8fc67b",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
+          ]
         }
-      ]
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:c06p32z9x2mo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo"
+        },
+        "type": "article",
+        "createdBy": "Cymrufyw",
+        "language": "cy",
+        "firstPublished": 1563022049359,
+        "lastPublished": 1570805332046,
+        "options": {},
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c06p32z9x2mo",
+          "producer": "Wales",
+          "page": "cymrufyw.erthyglau.c06p32z9x2mo.page"
+        },
+        "passport": {
+          "language": "cy",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw",
+          "taggings": []
+        },
+        "tags": {},
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "locators": {},
+        "headlines": {
+          "seoHeadline": "Dyma bennawd SEO yr erthygl brawf yma"
+        },
+        "images": {},
+        "passport": {}
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null
     }
   },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "Dyma bennawd SEO yr erthygl brawf yma"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1570805332046,
-    "id": "urn:bbc:ares::article:c06p32z9x2mo",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Cymrufyw",
-      "uri": "/cymrufyw",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

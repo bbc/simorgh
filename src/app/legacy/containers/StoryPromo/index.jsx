@@ -24,7 +24,7 @@ import {
 } from '#lib/utilities/getStoryPromoInfo';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import PromoTimestamp from '#components/Promo/timestamp';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import LinkContents from './LinkContents';
@@ -44,7 +44,13 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
   }
 `;
 
-const StoryPromoImage = ({ isAmp, useLargeImages, imageValues, lazyLoad }) => {
+const StoryPromoImage = ({
+  isAmp,
+  useLargeImages,
+  imageValues,
+  lazyLoad,
+  pageType,
+}) => {
   if (!imageValues) {
     const landscapeRatio = (9 / 16) * 100;
     return <ImagePlaceholder ratio={landscapeRatio} />;
@@ -60,9 +66,12 @@ const StoryPromoImage = ({ isAmp, useLargeImages, imageValues, lazyLoad }) => {
       originalImageWidth: width,
       imageResolutions,
     });
-  const sizes = useLargeImages
-    ? '(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px'
-    : '(max-width: 1008px) 33vw, 321px';
+  let sizes = useLargeImages
+    ? '(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw'
+    : '(min-width: 1020px) 232px, calc(31.86vw - 7px)';
+  if (pageType === STORY_PAGE) {
+    sizes = '(min-width: 1080px) 315px, 29.74vw';
+  }
   const DEFAULT_IMAGE_RES = 660;
   const src = buildIChefURL({
     originCode,
@@ -93,6 +102,7 @@ StoryPromoImage.propTypes = {
   useLargeImages: bool.isRequired,
   lazyLoad: bool,
   imageValues: storyItem.indexImage,
+  pageType: string,
 };
 
 StoryPromoImage.defaultProps = {
@@ -104,6 +114,7 @@ StoryPromoImage.defaultProps = {
     height: '',
     width: '',
   }),
+  pageType: '',
 };
 
 const StoryPromoContainer = ({
@@ -216,6 +227,7 @@ const StoryPromoContainer = ({
           onClick={eventTrackingData ? handleClickTracking : null}
           // Aria-labelledby a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={linkId}
+          className="focusIndicatorDisplayInlineBlock"
         >
           {isLive ? (
             <LiveLabel
@@ -284,6 +296,7 @@ const StoryPromoContainer = ({
           useLargeImages={useLargeImages}
           lazyLoad={lazyLoadImage}
           imageValues={imageValues}
+          pageType={pageType}
         />
       }
       info={Info}

@@ -108,4 +108,11 @@ describe('getBootstrapSrc', () => {
       'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap-legacy.js',
     );
   });
+
+  it('should return test script when on live environment and query string ads-test=true is set', () => {
+    isLive.mockImplementationOnce(() => true);
+    expect(getBootstrapSrc('ads-test=true')).toBe(
+      'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap.js',
+    );
+  });
 });

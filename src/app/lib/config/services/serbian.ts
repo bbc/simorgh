@@ -6,7 +6,6 @@ import {
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
-import brandSVG from '../../chameleonLogos/serbian';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/sr-cyrl';
 import '#psammead/psammead-locales/moment/sr';
@@ -45,7 +44,6 @@ const baseServiceConfig = {
   },
   showAdPlaceholder: false,
   showRelatedTopics: true,
-  brandSVG,
   timezone: 'GMT',
 };
 

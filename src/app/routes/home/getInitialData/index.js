@@ -31,7 +31,6 @@ export default async ({ path: pathname, service, pageType, toggles }) => {
           pageDataPromise,
           service,
           path: pathname,
-          pageType: 'Home',
         })
       : await pageDataPromise;
 

@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import bengali from '../../../components/ThemeProvider/fontScripts/bengali';
-import brandSVG from '../../chameleonLogos/bangla';
 import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
 import '#psammead/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
@@ -70,6 +69,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'বিজ্ঞাপন',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'সবগুলো খবর দেখুন',
       home: 'মূলপাতা',
       currentPage: 'বর্তমান পেজ',
@@ -263,7 +263,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'প্রধান খবর',
       featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
     },
-    brandSVG,
     mostRead: {
       header: 'সর্বাধিক পঠিত',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
@@ -281,7 +280,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'স্থিতিকাল %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

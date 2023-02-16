@@ -52,6 +52,7 @@ const input = {
   previousPath: '/previous-path',
   variant: 'simp',
   showAdsBasedOnLocation: true,
+  mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
 };
 
 const expectedOutput = {
@@ -61,6 +62,7 @@ const expectedOutput = {
   origin: 'origin',
   pageType: input.pageType,
   isAmp: true,
+  isNextJs: false,
   platform: 'amp',
   variant: 'simp',
   timeOnServer: null,
@@ -77,6 +79,7 @@ const expectedOutput = {
   showAdsBasedOnLocation: input.showAdsBasedOnLocation,
   service: 'service',
   pathname: '/current-path',
+  mvtExperiments: input.mvtExperiments,
 };
 
 describe('RequestContext', () => {

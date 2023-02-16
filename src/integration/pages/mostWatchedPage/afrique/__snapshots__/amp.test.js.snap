@@ -192,7 +192,7 @@ Object {
 
 exports[`AMP Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
 
-exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
+exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
 
 exports[`AMP Most Watched Page Header I can see the branding 1`] = `"BBC News, Afrique"`;
 
@@ -369,8 +369,6 @@ Object {
 exports[`AMP Most Watched Page SEO Canonical link 1`] = `"http://localhost:7080/afrique/media/video"`;
 
 exports[`AMP Most Watched Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`AMP Most Watched Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Most Watched Page SEO FB app ID 1`] = `"1609039196070050"`;
 

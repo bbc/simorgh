@@ -196,7 +196,7 @@ Object {
 
 exports[`AMP On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`AMP On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`AMP On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`AMP On Demand Audio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
@@ -378,8 +378,6 @@ Object {
 exports[`AMP On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1"`;
 
 exports[`AMP On Demand Audio Page SEO Dir attribute 1`] = `"rtl"`;
-
-exports[`AMP On Demand Audio Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP On Demand Audio Page SEO FB app ID 1`] = `"1609039196070050"`;
 

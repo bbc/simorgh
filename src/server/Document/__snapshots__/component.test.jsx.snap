@@ -2,7 +2,6 @@
 
 exports[`Document Component should render AMP version correctly 1`] = `
 <html
-  data-reactroot=""
   lang="test"
 >
   <head>
@@ -21,17 +20,17 @@ exports[`Document Component should render AMP version correctly 1`] = `
     >
       Test title
     </title>
+    <link
+      data-react-helmet="true"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
+      rel="canonical"
+    />
     <style
       amp-custom=""
       data-emotion-css="7prgni-StyledLink"
     >
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
-    <link
-      data-react-helmet="true"
-      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
-      rel="canonical"
-    />
     <style
       amp-boilerplate=""
     >
@@ -70,9 +69,7 @@ exports[`Document Component should render AMP version correctly 1`] = `
     <div
       id="root"
     >
-      <h1
-        data-reactroot=""
-      >
+      <h1>
         App!
       </h1>
     </div>
@@ -83,7 +80,6 @@ exports[`Document Component should render AMP version correctly 1`] = `
 exports[`Document Component should render correctly 1`] = `
 <html
   class="no-js"
-  data-reactroot=""
   lang="test"
 >
   <head>
@@ -92,6 +88,38 @@ exports[`Document Component should render correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <title
+      data-react-helmet="true"
+    >
+      Test title
+    </title>
+    <link
+      data-react-helmet="true"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
+      rel="canonical"
+    />
+    <style
+      data-emotion-css="7prgni-StyledLink"
+    >
+      .css-7prgni-StyledLink{display:inline-block;}
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+    >
+      <h1>
+        App!
+      </h1>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"test":"data"}
+    </script>
     <link
       href="modern.main.js"
       rel="modulePreload"
@@ -104,40 +132,6 @@ exports[`Document Component should render correctly 1`] = `
       href="modern.igbo.js"
       rel="modulePreload"
     />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <title
-      data-react-helmet="true"
-    >
-      Test title
-    </title>
-    <style
-      data-emotion-css="7prgni-StyledLink"
-    >
-      .css-7prgni-StyledLink{display:inline-block;}
-    </style>
-    <link
-      data-react-helmet="true"
-      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
-      rel="canonical"
-    />
-  </head>
-  <body>
-    <div
-      id="root"
-    >
-      <h1
-        data-reactroot=""
-      >
-        App!
-      </h1>
-    </div>
-    <script>
-      window.SIMORGH_DATA={"test":"data"}
-    </script>
     <div>
       <!--[if !IE]&gt;&lt;!-->
     </div>

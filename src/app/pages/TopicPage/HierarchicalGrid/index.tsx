@@ -101,7 +101,11 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
                 })}
               >
                 {isMedia ? (
-                  <Promo.A href={promo.link} aria-labelledby={promo.id}>
+                  <Promo.A
+                    href={promo.link}
+                    aria-labelledby={promo.id}
+                    className="focusIndicatorDisplayBlock"
+                  >
                     <span id={promo.id} role="text">
                       <VisuallyHiddenText data-testid="visually-hidden-text">
                         {typeTranslated}
@@ -115,7 +119,12 @@ const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
                     </span>
                   </Promo.A>
                 ) : (
-                  <Promo.A href={promo.link}>{promo.title}</Promo.A>
+                  <Promo.A
+                    href={promo.link}
+                    className="focusIndicatorDisplayBlock"
+                  >
+                    {promo.title}
+                  </Promo.A>
                 )}
               </Promo.Heading>
               <Promo.Body className="promo-paragraph" css={styles.body}>

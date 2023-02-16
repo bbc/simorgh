@@ -135,6 +135,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -284,7 +285,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -319,7 +320,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
       >
         <a
           aria-labelledby="bulletin-TestRadioBulletinpromonews"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -519,6 +520,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -703,7 +705,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
       >
         <a
           aria-labelledby="bulletin-TestTVBulletinpromonews"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -746,13 +748,23 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
             aria-hidden="true"
             class="emotion-22 emotion-23"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </span>
         Lee
@@ -897,6 +909,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1037,7 +1050,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
-  width: 0.8125rem;
+  width: 0.75rem;
   height: 0.75rem;
 }
 
@@ -1072,7 +1085,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
       >
         <a
           aria-labelledby="bulletin-TestRadioBulletinpromonews"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -1266,6 +1279,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1441,7 +1455,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
       >
         <a
           aria-labelledby="bulletin-TestTVBulletinpromonews"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -1478,13 +1492,23 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
             aria-hidden="true"
             class="emotion-20 emotion-21"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </span>
         Lee
@@ -1632,6 +1656,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-10:before {
@@ -1807,7 +1832,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
       >
         <a
           aria-labelledby="bulletin-TestTVBulletinpromonews"
-          class="emotion-10 emotion-11"
+          class="focusIndicatorDisplayBlock emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -1845,13 +1870,23 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
             aria-hidden="true"
             class="emotion-20 emotion-21"
             focusable="false"
-            height="12px"
-            viewBox="0 0 32 32"
-            width="12px"
+            height="12"
+            viewBox="0 0 12 12"
+            width="12"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon
-              points="3,32 29,16 3,0"
-            />
+            <g
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M.5.6h12v12H.5z"
+              />
+              <path
+                d="M2.144.96v11.28l8.712-5.64z"
+                fill="currentColor"
+              />
+            </g>
           </svg>
         </span>
         Watch

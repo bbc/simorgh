@@ -29,6 +29,7 @@ import storyPageRecommendationsData from '#data/mundo/recommendations/index.json
 
 import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import routes from '.';
+import * as fetchPageData from './utils/fetchPageData';
 import {
   act,
   render,
@@ -41,6 +42,10 @@ global.performance.getEntriesByName = jest.fn(() => []);
 
 // mock pages/index.js to return a non async page component
 jest.mock('../pages');
+
+const agent = { ca: 'ca', key: 'key' };
+const getAgent = jest.fn(() => agent);
+const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
 
 beforeEach(() => {
   jest.setTimeout(10000);
@@ -219,24 +224,36 @@ it('should route to and render the onDemand TV Brand page', async () => {
 
 it('should route to and render an article page', async () => {
   const pathname = '/persian/articles/c4vlle3q337o';
-  fetchMock.mock(`http://localhost${pathname}.json`, articlePageJson);
+
+  fetchDataSpy.mockImplementation(() =>
+    Promise.resolve({
+      status: 200,
+      json: articlePageJson,
+    }),
+  );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
     path: pathname,
+    getAgent,
+    service: 'persian',
     pageType,
   });
+
   await renderRouter({
     pathname,
     pageData,
     pageType,
     service: 'persian',
   });
+
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'پهپادی که برایتان قهوه می‌آورد';
 
   expect(
     await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
+
+  fetchDataSpy.mockRestore();
 });
 
 it('should route to and render a Sport Discipline article page', async () => {
@@ -555,13 +572,17 @@ it('should route to and render a 404 error page', async () => {
 
 it('should render a 404 error page if a data fetch responds with a 404', async () => {
   const pathname = '/pidgin/articles/cwl08rd38p6o';
-  fetchMock.mock(`http://localhost${pathname}.json`, 404);
+  const bffFetchSpy = jest.spyOn(fetchPageData, 'default');
+
+  bffFetchSpy.mockRejectedValue({ message: 'Not found', status: 404 });
 
   const { pageType, getInitialData } = getMatchingRoute(pathname);
   const { status, error } = await getInitialData({
     path: pathname,
-    pageType,
+    service: 'pidgin',
+    getAgent,
   });
+
   await renderRouter({
     pathname,
     pageType,

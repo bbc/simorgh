@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import brandSVG from '../../chameleonLogos/afaanoromoo';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
 import '#psammead/psammead-locales/moment/om';
 import withContext from '../../../contexts/utils/withContext';
@@ -268,7 +267,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Isin hin darbiin',
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
     },
-    brandSVG,
     mostRead: {
       header: "Baay'ee kan dubbifame",
       lastUpdated: 'Yeroo dhuma kan haaromfame:',

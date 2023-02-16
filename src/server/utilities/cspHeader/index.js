@@ -25,11 +25,13 @@ const advertisingDirectives = {
     'https://*.googlesyndication.com',
     'https://*.gstatic.com',
     'https://*.imrworldwide.com',
+    'https://cdn.privacy-mgmt.com',
   ],
   frameSrc: [
     'https://*.doubleclick.net',
     'https://edigitalsurvey.com',
     'https://*.googlesyndication.com',
+    'https://cdn.privacy-mgmt.com',
   ],
   imgSrc: [
     'https://*.adsafeprotected.com',
@@ -53,6 +55,7 @@ const advertisingDirectives = {
     'https://bbc.gscontxt.net',
     'https://sb.scorecardresearch.com',
     'https://*.imrworldwide.com',
+    'https://cdn.privacy-mgmt.com',
     ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.googlesyndication.com'],
@@ -250,7 +253,6 @@ const directives = {
       'https://*.xx.fbcdn.net', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
-      'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
@@ -278,7 +280,6 @@ const directives = {
       'https://*.xx.fbcdn.net', // Social Embeds
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
-      'https://client.rum.us-east-1.amazonaws.com', // CloudWatch RUM
       ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",

@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import tamil from '../../../components/ThemeProvider/fontScripts/tamil';
-import brandSVG from '../../chameleonLogos/tamil';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
@@ -69,6 +68,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'விளம்பரம்',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'அனைத்தும் பார்க்க',
       home: 'முகப்பு',
       currentPage: 'தற்போதுள்ள பக்கம்',
@@ -280,7 +280,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'முக்கிய செய்திகள்',
       featuresAnalysisTitle: 'சிறப்புச் செய்திகள்',
     },
-    brandSVG,
     mostRead: {
       header: 'அதிகம் படிக்கப்பட்டது',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
@@ -296,7 +295,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

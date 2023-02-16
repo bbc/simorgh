@@ -368,6 +368,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
   overflow-wrap: anywhere;
 }
 
@@ -451,7 +452,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
                     class="emotion-25"
                     height="562"
                     loading="lazy"
-                    sizes="(max-width: 1008px) 33vw, 321px"
+                    sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
                     src="https://ichef.bbci.co.uk/news/660/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png"
                     srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png 660w"
                     width="999"
@@ -472,7 +473,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
             >
               <a
                 aria-labelledby="promo-news-1"
-                class="emotion-32 emotion-33"
+                class="focusIndicatorDisplayInlineBlock emotion-32 emotion-33"
                 href="https://www.bbc.co.uk/news"
               >
                 <span

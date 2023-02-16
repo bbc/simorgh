@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
-import brandSVG from '../../chameleonLogos/zhongwen';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
 import withContext from '../../../contexts/utils/withContext';
@@ -42,7 +41,6 @@ const baseServiceConfig = {
   recommendations: {
     hasStoryRecommendations: false,
   },
-  brandSVG,
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'BBC 時事一周 Newsweek (Cantonese)',

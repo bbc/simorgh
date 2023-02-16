@@ -1,460 +1,1785 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:cn0exdy1jzvo",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cn0exdy1jzvo",
-      "canonicalUrl": "https://www.bbc.com/burmese/articles/cn0exdy1jzvo"
-    },
-    "type": "article",
-    "createdBy": "Burmese",
-    "language": "my",
-    "lastUpdated": 1575558020204,
-    "firstPublished": 1574852713454,
-    "lastPublished": 1574852713454,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "my",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
-      "passportId": "b812f778-7387-41d5-93f9-d717bbc00a16",
-      "locator": "urn:bbc:optimo:asset:cn0exdy1jzvo",
-      "availability": "AVAILABLE",
-      "taggings": []
-    },
-    "tags": {},
-    "version": "v1.1.3",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 624,
-                  "height": 351,
-                  "locator": "9687/test/e3018350-1104-11ea-acaa-cd607a38aea4.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "ဤသည်မှာ သို့ တစ်ခုပါသောစာသားပိတ်ပင်တားဆီးမှုဖြစ်သည်။",
-                  "blocks": [
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": "ဤသည်မှာ သို့",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "ဤသည်မှာ သို့",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": " တစ်ခုပါသောစာသားပိတ်ပင်တားဆီးမှုဖြစ်သည်။",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01k6msm",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကို",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကို",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01k6msm",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01k6msm",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Five things ants can teach us about management",
-                        "synopses": {
-                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-                        "imageCopyright": "BBC",
-                        "embedding": true,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01k6msp",
-                            "types": ["Original"],
-                            "duration": 191,
-                            "durationISO8601": "PT3M11S",
-                            "warnings": {
-                              "short": "Contains strong language and adult humour.",
-                              "long": "Contains strong language and adult humour."
-                            },
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true,
-                              "world": false
-                            },
-                            "availableFrom": 1540218932000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "BBC"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "e68289a7",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a7d8fdb2",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "28f63b97",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်",
+                            "blocks": [
+                              {
+                                "id": "94bf4da0",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Ants",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Ants",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 800,
-                  "height": 450,
-                  "locator": "ab9e/test/5a90d010-1105-11ea-acaa-cd607a38aea4.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "c5e61818",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "93e4d03a",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "fc978561",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f6e7e155",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
+                                  "blocks": [
+                                    {
+                                      "id": "da364da8",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "5562ab58",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "6547a0d9",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "befc4dc4",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
+                                  "blocks": [
+                                    {
+                                      "id": "29bc96da",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ဤစမ်းသပ်မှုပုံသဏ္,ာန်မူပိုင်ဘီဘီစီမူပိုင်သည်ပြင်သစ်မြေပုံကိုပြသည်။ ပုံသည်ပထမလုပ်ကွက် (၃) ခုတွင်တည်ရှိပြီးဤစာတန်းပါရှိသည်။",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "abf772c2",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "9687/test/e3018350-1104-11ea-acaa-cd607a38aea4.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "e05eb3d7",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1574852713454,
+                "lastPublished": 1574852713454
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "b776ab09",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "c2ad27eb",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ဤသည်မှာ သို့ တစ်ခုပါသောစာသားပိတ်ပင်တားဆီးမှုဖြစ်သည်။",
+                      "blocks": [
+                        {
+                          "id": "4a42646d",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "ဤသည်မှာ သို့",
+                            "blocks": [
+                              {
+                                "id": "e95cf647",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "ဤသည်မှာ သို့",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "88cbb973",
+                          "type": "fragment",
+                          "model": {
+                            "text": " တစ်ခုပါသောစာသားပိတ်ပင်တားဆီးမှုဖြစ်သည်။",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "3e37f054",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01k6msm",
+                "blocks": [
+                  {
+                    "id": "bc3ee102",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "3965bd91",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "18b8ab2b",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကို",
+                                  "blocks": [
+                                    {
+                                      "id": "b646a38c",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကို",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "bbcb65b3",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0e3813b9",
+                          "blockId": "urn:bbc:ares::clip:p01k6msm",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01k6msm",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Five things ants can teach us about management",
+                            "synopses": {
+                              "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01k6msp",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 191,
+                                "durationISO8601": "PT3M11S",
+                                "warnings": {
+                                  "short": "Contains strong language and adult humour.",
+                                  "long": "Contains strong language and adult humour."
+                                },
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1540218932000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "4b4355ea",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "45c04051",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1920,
+                                  "height": 1080,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "69159ccf",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "8bae055d",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "ebef8d90",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Ants",
+                                              "blocks": [
+                                                {
+                                                  "id": "82547f95",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Ants",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "965497c0",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "92e3615b",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "9057761a",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
+                            "blocks": [
+                              {
+                                "id": "549783dd",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "3258ff6f",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8523e9e7",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "19e05b3e",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "cb61af1d",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
+                                  "blocks": [
+                                    {
+                                      "id": "c3fc8b26",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "ဤသည် ပိတ်ပင်တားဆီးမှုဖြစ်ပါတယ်",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "f2ad7ec7",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 800,
+                      "height": 450,
+                      "locator": "ab9e/test/5a90d010-1105-11ea-acaa-cd607a38aea4.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "1865dfb7",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "dc63ee86",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကိုပြုလုပ်ရန်ဤစမ်းသပ်မှုဆောင်းပါးကိုဖန်တီးထားသည်။",
+                      "blocks": [
+                        {
+                          "id": "2cd093cd",
+                          "type": "fragment",
+                          "model": {
+                            "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကိုပြုလုပ်ရန်ဤစမ်းသပ်မှုဆောင်းပါးကိုဖန်တီးထားသည်။",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "feb100fb",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:cn0exdy1jzvo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cn0exdy1jzvo"
+        },
+        "type": "article",
+        "createdBy": "Burmese",
+        "language": "my",
+        "firstPublished": 1574852713454,
+        "lastPublished": 1574852713454,
+        "options": {},
+        "analyticsLabels": {
+          "producer": "Burmese",
+          "page": "burmese.articles.cn0exdy1jzvo.page"
+        },
+        "passport": {
+          "language": "my",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+          "taggings": []
+        },
+        "tags": {},
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "allowAdvertising": true
+      },
+      "promo": {
+        "locators": {},
+        "headlines": {
+          "seoHeadline": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်"
+        },
+        "images": {},
+        "passport": {}
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်"
+          },
+          "locators": {
+            "assetUri": "/burmese/live/burma-23285674",
+            "cpsUrn": "urn:bbc:content:assetUri:burmese/live/burma-23285674",
+            "assetId": "23285674"
+          },
+          "summary": "သက်တော် ၉ဝ ပြည့်သွားတဲ့ ဗြိတိသျှ ဘုရင်မ ဒုတိယ အဲလဇ္ဇဘက်က လန်ဒန်က ပါလီမန်ကို မေလ ၁၈ ရက်နေ့မှာ ဖွင့်လှစ်ပေးခဲ့ပါတယ်။",
+          "timestamp": 1586255436000,
+          "language": "my",
+          "cpsType": "LIV",
+          "indexImage": {
+            "id": "63501500",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "ဥရောပ",
+            "caption": "ဥရောပ",
+            "copyrightHolder": "AFP",
+            "type": "image"
+          },
+          "commentary": {
+            "order": "descending",
+            "assetUUID": "CA253B6EBBF0644F8D46535BD0A6AC99",
+            "channels": {
+              "enhancedmobile": "bbc.cps.asset.23285675_EnhancedMobile",
+              "desktop": "bbc.cps.asset.23285675_HighWeb",
+              "highweb": "bbc.cps.asset.23285675_HighWeb",
+              "mobile": "bbc.cps.asset.23285675_EnhancedMobile"
+            }
+          },
+          "isLive": true,
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "id": "urn:bbc:ares::asset:burmese/live/burma-23285674",
+          "type": "cps"
         },
         {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကိုပြုလုပ်ရန်ဤစမ်းသပ်မှုဆောင်းပါးကိုဖန်တီးထားသည်။",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်တွင်အလိုအလျောက်အဆုံးမှအဆုံးစမ်းသပ်မှုများကိုပြုလုပ်ရန်ဤစမ်းသပ်မှုဆောင်းပါးကိုဖန်တီးထားသည်။",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "headlines": {
+            "headline": "ကြားဖြတ်ရွေးကောက်ပွဲမှာ NLDက ၁၃ ယောက်နဲ့ ကြံ့ခိုင်ဖွံ့ဖြိုးရေးက ၁ဝယောက် ၀င်ပြိုင်မယ်"
+          },
+          "locators": {
+            "assetUri": "/burmese/23211014",
+            "cpsUrn": "urn:bbc:content:assetUri:burmese/23211014",
+            "assetId": "23211014"
+          },
+          "summary": "ကြားဖြတ်ရွေးကောက်ပွဲမှာ NLDက ၁၃ ယောက်နဲ့ ကြံ့ခိုင်ဖွံ့ဖြိုးရေးက ၁ဝယောက် ၀င်ပြိုင်မယ်",
+          "timestamp": 1533614390000,
+          "language": "my",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63685670",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/1DEA/test/_63685670_ab5cce2a-e3d1-4602-b1fc-392696eb4dde.jpg",
+            "path": "/cpsdevpb/1DEA/test/_63685670_ab5cce2a-e3d1-4602-b1fc-392696eb4dde.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "votes",
+            "caption": "ပြီးခဲ့တဲ့ ရွေးကောက်ပွဲတုန်းက မဲပြားများ ရေတွက်နေပုံ",
+            "copyrightHolder": "UEC FACEBOK",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
+            "uri": "/burmese/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:burmese/23211014",
+          "type": "cps"
+        },
+        {
+          "name": "ဗြိတိသျှ ဘုရင်မ ပါလီမန် ဖွင့်လှစ်",
+          "summary": "သက်တော် ၉ဝ ပြည့်သွားတဲ့ ဗြိတိသျှ ဘုရင်မ ဒုတိယ အဲလဇ္ဇဘက်က လန်ဒန်က ပါလီမန်ကို မေလ ၁၈ ရက်နေ့မှာ ဖွင့်လှစ်ပေးခဲ့ပါတယ်။",
+          "indexImage": {
+            "id": "63503483",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/961E/test/_63503483_460e7273-58c7-4435-86b6-b5c92c17337f.jpg",
+            "path": "/cpsdevpb/961E/test/_63503483_460e7273-58c7-4435-86b6-b5c92c17337f.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "မအပမအပအ",
+            "caption": "မပမအပပပ",
+            "copyrightHolder": "နအနမပနမပ",
+            "type": "image"
+          },
+          "uri": "https://www.bbc.com/burmese",
+          "contentType": "Text",
+          "assetTypeCode": "PRO",
+          "timestamp": 1586255003000,
+          "isLive": true,
+          "type": "link"
         }
-      ]
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 39"
+          },
+          "locators": {
+            "assetUri": "/burmese/23065276",
+            "cpsUrn": "urn:bbc:content:assetUri:burmese/23065276",
+            "assetId": "23065276"
+          },
+          "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+          "timestamp": 1470239552000,
+          "language": "my",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63501500",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "ဥရောပ",
+            "caption": "ဥရောပ",
+            "copyrightHolder": "AFP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63501502",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/501E/test/_63501502_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "path": "/cpsdevpb/501E/test/_63501502_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ဥရောပ",
+            "caption": "ဥရောပ",
+            "copyrightHolder": "AFP",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
+            "uri": "/burmese/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:burmese/23065276",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 40"
+          },
+          "locators": {
+            "assetUri": "/burmese/23065277",
+            "cpsUrn": "urn:bbc:content:assetUri:burmese/23065277",
+            "assetId": "23065277"
+          },
+          "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+          "timestamp": 1470239566000,
+          "language": "my",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63501500",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "ဥရောပ",
+            "caption": "ဥရောပ",
+            "copyrightHolder": "AFP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63501502",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/501E/test/_63501502_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "path": "/cpsdevpb/501E/test/_63501502_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ဥရောပ",
+            "caption": "ဥရောပ",
+            "copyrightHolder": "AFP",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
+            "uri": "/burmese/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:burmese/23065277",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 28"
+          },
+          "locators": {
+            "assetUri": "/burmese/23065255",
+            "cpsUrn": "urn:bbc:content:assetUri:burmese/23065255",
+            "assetId": "23065255"
+          },
+          "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+          "timestamp": 1470834595000,
+          "language": "my",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63501500",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "height": 371,
+            "width": 660,
+            "altText": "ဥရောပ",
+            "caption": "ဥရောပ",
+            "copyrightHolder": "AFP",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63501502",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/501E/test/_63501502_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "path": "/cpsdevpb/501E/test/_63501502_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "ဥရောပ",
+            "caption": "ဥရောပ",
+            "copyrightHolder": "AFP",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
+            "uri": "/burmese/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:burmese/23065255",
+          "type": "cps"
+        }
+      ],
+      "mostRead": {
+        "generated": "2022-11-21T22:51:57.475Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:23:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "e8eb8ddf-31b6-524e-a8bc-df45d0bda401",
+            "rank": 1,
+            "count": 9680,
+            "urn": "urn:bbc:curie:asset:e8eb8ddf-31b6-524e-a8bc-df45d0bda401",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 39",
+                "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 39"
+              },
+              "locators": {
+                "assetUri": "/burmese/23065276",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:e8eb8ddf-31b6-524e-a8bc-df45d0bda401",
+                "assetId": "23065276",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23065276",
+                "curie": "http://www.bbc.co.uk/asset/e8eb8ddf-31b6-524e-a8bc-df45d0bda401"
+              },
+              "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+              "timestamp": 1470239552000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63501500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ဥရောပ",
+                "caption": "ဥရောပ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23065276",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "eab9298a-af9f-5441-b808-242208800a81",
+            "rank": 2,
+            "count": 9337,
+            "urn": "urn:bbc:curie:asset:eab9298a-af9f-5441-b808-242208800a81",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 21",
+                "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 21"
+              },
+              "locators": {
+                "assetUri": "/burmese/23065248",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:eab9298a-af9f-5441-b808-242208800a81",
+                "assetId": "23065248",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23065248",
+                "curie": "http://www.bbc.co.uk/asset/eab9298a-af9f-5441-b808-242208800a81"
+              },
+              "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+              "timestamp": 1470238963000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63501500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ဥရောပ",
+                "caption": "ဥရောပ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23065248",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "76ddd0ae-b796-894a-826f-1e2f7873d3b6",
+            "rank": 3,
+            "count": 9132,
+            "urn": "urn:bbc:curie:asset:76ddd0ae-b796-894a-826f-1e2f7873d3b6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 20",
+                "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 20"
+              },
+              "locators": {
+                "assetUri": "/burmese/23065246",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:76ddd0ae-b796-894a-826f-1e2f7873d3b6",
+                "assetId": "23065246",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23065246",
+                "curie": "http://www.bbc.co.uk/asset/76ddd0ae-b796-894a-826f-1e2f7873d3b6"
+              },
+              "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+              "timestamp": 1470238813000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63501500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ဥရောပ",
+                "caption": "ဥရောပ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23065246",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5d95f0eb-af3c-874d-a558-ce877b1e4397",
+            "rank": 4,
+            "count": 9119,
+            "urn": "urn:bbc:curie:asset:5d95f0eb-af3c-874d-a558-ce877b1e4397",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 17",
+                "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 17"
+              },
+              "locators": {
+                "assetUri": "/burmese/23065243",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:5d95f0eb-af3c-874d-a558-ce877b1e4397",
+                "assetId": "23065243",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23065243",
+                "curie": "http://www.bbc.co.uk/asset/5d95f0eb-af3c-874d-a558-ce877b1e4397"
+              },
+              "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+              "timestamp": 1470238324000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63501500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ဥရောပ",
+                "caption": "ဥရောပ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23065243",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cd9caf41-3687-2f47-8bd5-51a4fe139edd",
+            "rank": 5,
+            "count": 8920,
+            "urn": "urn:bbc:curie:asset:cd9caf41-3687-2f47-8bd5-51a4fe139edd",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 38",
+                "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 38"
+              },
+              "locators": {
+                "assetUri": "/burmese/23065275",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23065275",
+                "curie": "http://www.bbc.co.uk/asset/cd9caf41-3687-2f47-8bd5-51a4fe139edd",
+                "assetId": "23065275"
+              },
+              "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+              "timestamp": 1470239531000,
+              "language": "my",
+              "indexImage": {
+                "id": "63501500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ဥရောပ",
+                "caption": "ဥရောပ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23065275",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "967effbe-81ac-5946-af51-161695441325",
+            "rank": 6,
+            "count": 8826,
+            "urn": "urn:bbc:curie:asset:967effbe-81ac-5946-af51-161695441325",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+                "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော"
+              },
+              "locators": {
+                "assetUri": "/burmese/23065211",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:967effbe-81ac-5946-af51-161695441325",
+                "assetId": "23065211",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23065211",
+                "curie": "http://www.bbc.co.uk/asset/967effbe-81ac-5946-af51-161695441325"
+              },
+              "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+              "timestamp": 1470237000000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63501500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ဥရောပ",
+                "caption": "ဥရောပ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23065211",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1f03e74f-cec7-c345-ad41-cb32e637f01b",
+            "rank": 7,
+            "count": 8760,
+            "urn": "urn:bbc:curie:asset:1f03e74f-cec7-c345-ad41-cb32e637f01b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ရိုက်တာ သတင်းထောက်တွေရဲ့ သက်သေအားလုံး ကြားနာ ပြီးစီး",
+                "headline": "ရိုက်တာ သတင်းထောက်တွေရဲ့ သက်သေအားလုံး ကြားနာ ပြီးစီး"
+              },
+              "locators": {
+                "assetUri": "/burmese/23211018",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:1f03e74f-cec7-c345-ad41-cb32e637f01b",
+                "assetId": "23211018",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23211018",
+                "curie": "http://www.bbc.co.uk/asset/1f03e74f-cec7-c345-ad41-cb32e637f01b"
+              },
+              "summary": "ရိုက်တာ သတင်းထောက်တွေရဲ့ သက်သေအားလုံး ကြားနာ ပြီးစီး",
+              "timestamp": 1533616026000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63685691",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/4CCA/test/_63685691_70d58136-837d-4fb7-9634-e7074bac0565.jpg",
+                "path": "/cpsdevpb/4CCA/test/_63685691_70d58136-837d-4fb7-9634-e7074bac0565.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "-",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23211018",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "207b38ad-e7a9-9a41-b2f8-ab08b2e88956",
+            "rank": 8,
+            "count": 8751,
+            "urn": "urn:bbc:curie:asset:207b38ad-e7a9-9a41-b2f8-ab08b2e88956",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ကြားဖြတ်ရွေးကောက်ပွဲမှာ NLDက ၁၃ ယောက်နဲ့ ကြံ့ခိုင်ဖွံ့ဖြိုးရေးက ၁ဝယောက် ၀င်ပြိုင်မယ်",
+                "headline": "ကြားဖြတ်ရွေးကောက်ပွဲမှာ NLDက ၁၃ ယောက်နဲ့ ကြံ့ခိုင်ဖွံ့ဖြိုးရေးက ၁ဝယောက် ၀င်ပြိုင်မယ်"
+              },
+              "locators": {
+                "assetUri": "/burmese/23211014",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:207b38ad-e7a9-9a41-b2f8-ab08b2e88956",
+                "assetId": "23211014",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23211014",
+                "curie": "http://www.bbc.co.uk/asset/207b38ad-e7a9-9a41-b2f8-ab08b2e88956"
+              },
+              "summary": "ကြားဖြတ်ရွေးကောက်ပွဲမှာ NLDက ၁၃ ယောက်နဲ့ ကြံ့ခိုင်ဖွံ့ဖြိုးရေးက ၁ဝယောက် ၀င်ပြိုင်မယ်",
+              "timestamp": 1533614390000,
+              "language": "my",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63685670",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1DEA/test/_63685670_ab5cce2a-e3d1-4602-b1fc-392696eb4dde.jpg",
+                "path": "/cpsdevpb/1DEA/test/_63685670_ab5cce2a-e3d1-4602-b1fc-392696eb4dde.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "votes",
+                "caption": "ပြီးခဲ့တဲ့ ရွေးကောက်ပွဲတုန်းက မဲပြားများ ရေတွက်နေပုံ",
+                "copyrightHolder": "UEC FACEBOK",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23211014",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b51d13b9-9680-4f47-a8f0-b08b4fe72af6",
+            "rank": 9,
+            "count": 8667,
+            "urn": "urn:bbc:curie:asset:b51d13b9-9680-4f47-a8f0-b08b4fe72af6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 6",
+                "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 6"
+              },
+              "locators": {
+                "assetUri": "/burmese/23065217",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23065217",
+                "curie": "http://www.bbc.co.uk/asset/b51d13b9-9680-4f47-a8f0-b08b4fe72af6",
+                "assetId": "23065217"
+              },
+              "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+              "timestamp": 1470237179000,
+              "language": "my",
+              "indexImage": {
+                "id": "63501500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ဥရောပ",
+                "caption": "ဥရောပ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23065217",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "7c507b6a-6c5b-8e4e-9846-f4e0635ca060",
+            "rank": 10,
+            "count": 8621,
+            "urn": "urn:bbc:curie:asset:7c507b6a-6c5b-8e4e-9846-f4e0635ca060",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "The unfinished peace tour",
+                "headline": "The unfinished peace tour"
+              },
+              "locators": {
+                "assetUri": "/burmese/23220394",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:7c507b6a-6c5b-8e4e-9846-f4e0635ca060",
+                "assetId": "23220394",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23220394",
+                "curie": "http://www.bbc.co.uk/asset/7c507b6a-6c5b-8e4e-9846-f4e0635ca060"
+              },
+              "summary": "Myanmar's peace, the theory taught in the West Say the ground, and a practical approach behind the curtain have already experienced the concept and approach to the events also had to had enough experience with the application.",
+              "timestamp": 1540215940000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63693150",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1413/test/_63693150_fc8db9be-84c2-4973-8ede-7dc9743f65e3.jpg",
+                "path": "/cpsdevpb/1413/test/_63693150_fc8db9be-84c2-4973-8ede-7dc9743f65e3.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "aa",
+                "caption": "aa",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23220394",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "5ec3a91c-13fc-b448-9239-b2861504c603",
+            "rank": 11,
+            "count": 8359,
+            "urn": "urn:bbc:curie:asset:5ec3a91c-13fc-b448-9239-b2861504c603",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ရီယို အိုလံပစ်ပွဲတော် ပြီးဆုံးပြီ",
+                "headline": "ရီယို အိုလံပစ်ပွဲတော် ပြီးဆုံးပြီ"
+              },
+              "locators": {
+                "assetUri": "/burmese/world-23068303",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:5ec3a91c-13fc-b448-9239-b2861504c603",
+                "assetId": "23068303",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/world-23068303",
+                "curie": "http://www.bbc.co.uk/asset/5ec3a91c-13fc-b448-9239-b2861504c603"
+              },
+              "summary": "၂၀၁၆ ရီယို အိုလံပစ် ပွဲတော် ရဲ့ ပိတ်ပွဲ အခမ်းအနား ကျင်းပ ခဲ့ပြီ ဖြစ်ပါတယ်။",
+              "timestamp": 1471859744000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63503823",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/803E/test/_63503823_mediaitem63503822.jpg",
+                "path": "/cpsdevpb/803E/test/_63503823_mediaitem63503822.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "cclosing",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/world-23068303",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "43420884-6d71-744c-9b1a-da7398d0b7d1",
+            "rank": 12,
+            "count": 8194,
+            "urn": "urn:bbc:curie:asset:43420884-6d71-744c-9b1a-da7398d0b7d1",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "သမ္မတ ပုဂံသွားကြည့်",
+                "headline": "သမ္မတ ပုဂံသွားကြည့်"
+              },
+              "locators": {
+                "assetUri": "/burmese/burma-23070010",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:43420884-6d71-744c-9b1a-da7398d0b7d1",
+                "assetId": "23070010",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-23070010",
+                "curie": "http://www.bbc.co.uk/asset/43420884-6d71-744c-9b1a-da7398d0b7d1"
+              },
+              "summary": "ငလျင် အပျက်အစီးတွေကို ကြည့်ရှု စစ်ဆေးဖို့ သမ္မတ ဦးထင်ကျော်နဲ့ အဖွဲ့ ပုဂံကို သွားရောက်ခဲ့ပါတယ်။",
+              "timestamp": 1472208324000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63505025",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/CB52/test/_63505025_hi034949127.jpg",
+                "path": "/cpsdevpb/CB52/test/_63505025_hi034949127.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "pagan",
+                "caption": "Pagan hit with 6.8 quake",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/burma-23070010",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d391e0ca-5499-b34f-8a39-47b9e5cdae87",
+            "rank": 13,
+            "count": 7976,
+            "urn": "urn:bbc:curie:asset:d391e0ca-5499-b34f-8a39-47b9e5cdae87",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 35",
+                "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 35"
+              },
+              "locators": {
+                "assetUri": "/burmese/23065272",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d391e0ca-5499-b34f-8a39-47b9e5cdae87",
+                "assetId": "23065272",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23065272",
+                "curie": "http://www.bbc.co.uk/asset/d391e0ca-5499-b34f-8a39-47b9e5cdae87"
+              },
+              "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+              "timestamp": 1470239476000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63501500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ဥရောပ",
+                "caption": "ဥရောပ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23065272",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "32b054d2-7751-a844-87fe-4c8d7f0b6807",
+            "rank": 14,
+            "count": 7922,
+            "urn": "urn:bbc:curie:asset:32b054d2-7751-a844-87fe-4c8d7f0b6807",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "Leslie storm in Portugal",
+                "headline": "Leslie storm in Portugal"
+              },
+              "locators": {
+                "assetUri": "/burmese/23220335",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23220335",
+                "curie": "http://www.bbc.co.uk/asset/32b054d2-7751-a844-87fe-4c8d7f0b6807",
+                "assetId": "23220335"
+              },
+              "summary": "Leslie storm in Portugal",
+              "timestamp": 1539951681000,
+              "language": "my",
+              "id": "urn:bbc:ares::asset:burmese/23220335",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "cc3ee0d5-6cd4-4d40-936f-dd449885c3c6",
+            "rank": 15,
+            "count": 7718,
+            "urn": "urn:bbc:curie:asset:cc3ee0d5-6cd4-4d40-936f-dd449885c3c6",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "အာဏာလွှဲပြောင်းပွဲ အခမ်းအနားနဲ့ သမ္မတသစ်ရဲ့ ညစာစားပွဲ test",
+                "headline": "အာဏာလွှဲပြောင်းပွဲ အခမ်းအနားနဲ့ သမ္မတသစ်ရဲ့ ညစာစားပွဲ test"
+              },
+              "locators": {
+                "assetUri": "/burmese/burma-23069329",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:cc3ee0d5-6cd4-4d40-936f-dd449885c3c6",
+                "assetId": "23069329",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-23069329",
+                "curie": "http://www.bbc.co.uk/asset/cc3ee0d5-6cd4-4d40-936f-dd449885c3c6"
+              },
+              "summary": "ဒေါ်အောင်ဆန်းစုကြည် ဦးဆောင်တဲ့ အစိုးရ အဖွဲ့ကို သမ္မတဟောင်း ဦးသိန်းစိန်က အာဏာလွှဲပြောင်း",
+              "timestamp": 1472051356000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63504548",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/14A3C/test/_63504548_160330142626_new_bur_gov_3_976x549_bbc_nocredit.jpg",
+                "path": "/cpsdevpb/14A3C/test/_63504548_160330142626_new_bur_gov_3_976x549_bbc_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "သမ္မတကြီး ဦးထင်ကျော်နဲ့ သမ္မတ ကတော် ဒေါ်စုစုလွင်တို့ ညစာစားပွဲ ရောက်လာ",
+                "caption": "သမ္မတကြီး ဦးထင်ကျော်နဲ့ သမ္မတ ကတော် ဒေါ်စုစုလွင်တို့ ညစာစားပွဲ ရောက်လာ",
+                "copyrightHolder": "Alamy",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/burma-23069329",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "dc43c191-975b-7949-b811-4dfb960386c8",
+            "rank": 16,
+            "count": 7656,
+            "urn": "urn:bbc:curie:asset:dc43c191-975b-7949-b811-4dfb960386c8",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "အင်ဒို ငလျင် သေဆုံးသူ ၁၀ဝ နီးပါးရှိလာ",
+                "headline": "အင်ဒို ငလျင် သေဆုံးသူ ၁၀ဝ နီးပါးရှိလာ"
+              },
+              "locators": {
+                "assetUri": "/burmese/23211017",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:dc43c191-975b-7949-b811-4dfb960386c8",
+                "assetId": "23211017",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23211017",
+                "curie": "http://www.bbc.co.uk/asset/dc43c191-975b-7949-b811-4dfb960386c8"
+              },
+              "summary": "အင်ဒို ငလျင် သေဆုံးသူ ၁၀ဝ နီးပါးရှိလာ",
+              "timestamp": 1533615345000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63685685",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/E522/test/_63685685_c45b7fac-0143-481a-86df-2bb58b1c8356.jpg",
+                "path": "/cpsdevpb/E522/test/_63685685_c45b7fac-0143-481a-86df-2bb58b1c8356.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "-",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23211017",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "48882609-4886-ba4c-9a64-22b1fad0f9b7",
+            "rank": 17,
+            "count": 7626,
+            "urn": "urn:bbc:curie:asset:48882609-4886-ba4c-9a64-22b1fad0f9b7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "စငုြိက သကငပတည ပနမိ burmese keyboard testing ဉ၌ဉ၍",
+                "headline": "စငုြိက သကငပတည ပနမိ burmese keyboard testing ၌ဉ၌"
+              },
+              "locators": {
+                "assetUri": "/burmese/23067914",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23067914",
+                "curie": "http://www.bbc.co.uk/asset/48882609-4886-ba4c-9a64-22b1fad0f9b7",
+                "assetId": "23067914"
+              },
+              "summary": "သအြ ကအကအ ပမနဘလခ ယာည်ူ ိြျ story summarry CPS",
+              "timestamp": 1471514992000,
+              "language": "my",
+              "indexImage": {
+                "id": "63503388",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1590A/test/_63503388_150915093536_kabul_chicken_street_976x549_bbc.jpg",
+                "path": "/cpsdevpb/1590A/test/_63503388_150915093536_kabul_chicken_street_976x549_bbc.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "အဲဒီ ကနေ နားလည်မှု ရရှိ ခဲ့ရင်၊ NCA မှာ လက်မှတ်ထိုးပြီး ၂၁ ရာစု",
+                "caption": "အဲဒီ ကနေ နားလည်မှု ရရှိ ခဲ့ရင်၊ NCA မှာ လက်မှတ်ထိုးပြီး ၂၁ ရာစု",
+                "copyrightHolder": "BBC Sport",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23067914",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "d066c9c2-6ccd-5d4d-a7ca-83d6d35e0259",
+            "rank": 18,
+            "count": 7612,
+            "urn": "urn:bbc:curie:asset:d066c9c2-6ccd-5d4d-a7ca-83d6d35e0259",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 32",
+                "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 32"
+              },
+              "locators": {
+                "assetUri": "/burmese/23065259",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:d066c9c2-6ccd-5d4d-a7ca-83d6d35e0259",
+                "assetId": "23065259",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23065259",
+                "curie": "http://www.bbc.co.uk/asset/d066c9c2-6ccd-5d4d-a7ca-83d6d35e0259"
+              },
+              "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+              "timestamp": 1470239339000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63501500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ဥရောပ",
+                "caption": "ဥရောပ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23065259",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1fb2a1a5-9256-9f43-80a4-3393050e7725",
+            "rank": 19,
+            "count": 7443,
+            "urn": "urn:bbc:curie:asset:1fb2a1a5-9256-9f43-80a4-3393050e7725",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 37",
+                "headline": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော 37"
+              },
+              "locators": {
+                "assetUri": "/burmese/23065274",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:1fb2a1a5-9256-9f43-80a4-3393050e7725",
+                "assetId": "23065274",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23065274",
+                "curie": "http://www.bbc.co.uk/asset/1fb2a1a5-9256-9f43-80a4-3393050e7725"
+              },
+              "summary": "ဥပဒေ လိုက်နာဖို့ တူရကီကို အီးယူ အရာရှိ ပြော",
+              "timestamp": 1470239517000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63501500",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "path": "/cpsdevpb/01FE/test/_63501500_160803145225_turkey_eu_640x360_afp_nocredit.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "ဥရောပ",
+                "caption": "ဥရောပ",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23065274",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1489c9aa-512c-b844-8eec-6437b7bcfd76",
+            "rank": 20,
+            "count": 7418,
+            "urn": "urn:bbc:curie:asset:1489c9aa-512c-b844-8eec-6437b7bcfd76",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "အီရန်ကို အမေရိကန်က အရေးယူပိတ်ဆို့မှု လုပ်ပြန်ပြီ",
+                "headline": "အီရန်ကို အမေရိကန်က အရေးယူပိတ်ဆို့မှု လုပ်ပြန်ပြီ"
+              },
+              "locators": {
+                "assetUri": "/burmese/23211015",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:1489c9aa-512c-b844-8eec-6437b7bcfd76",
+                "assetId": "23211015",
+                "cpsUrn": "urn:bbc:content:assetUri:burmese/23211015",
+                "curie": "http://www.bbc.co.uk/asset/1489c9aa-512c-b844-8eec-6437b7bcfd76"
+              },
+              "summary": "အီရန်ကို အမေရိကန်က အရေးယူပိတ်ဆို့မှု လုပ်ပြန်ပြီ",
+              "timestamp": 1533614775000,
+              "language": "my",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63685675",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/E13A/test/_63685675_c0d8bfb2-d50c-4746-ab79-f6620b015f3d.jpg",
+                "path": "/cpsdevpb/E13A/test/_63685675_c0d8bfb2-d50c-4746-ab79-f6620b015f3d.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "-",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:burmese/23211015",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "ဒါကဒီစမ်းသပ်မှုဆောင်းပါး၏ခေါင်းစဉ်ဖြစ်သည်"
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cn0exdy1jzvo"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1574852713454,
-    "id": "urn:bbc:ares::article:cn0exdy1jzvo",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Burmese",
-      "uri": "/burmese",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

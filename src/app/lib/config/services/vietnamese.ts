@@ -5,7 +5,6 @@ import {
   C_POSTBOX_30,
 } from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
-import brandSVG from '../../chameleonLogos/vietnamese';
 import '#psammead/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
 import 'moment/locale/vi';
 import withContext from '../../../contexts/utils/withContext';
@@ -70,6 +69,7 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Quảng cáo',
       },
+      recommendationTitle: 'Recommended articles',
       seeAll: 'Xem tất cả',
       home: 'Tin chính',
       currentPage: 'Trang hiện nay',
@@ -262,7 +262,6 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Tin chính',
       featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
     },
-    brandSVG,
     mostRead: {
       header: 'Đọc nhiều nhất',
       lastUpdated: 'Cập nhật gần nhất:',
@@ -278,7 +277,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
