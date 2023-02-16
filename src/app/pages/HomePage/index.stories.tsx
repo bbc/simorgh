@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { withKnobs } from '@storybook/addon-knobs';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -16,7 +17,15 @@ const Component = ({ service, variant }: Props) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <HomePage />
+        <HomePage
+          service={service}
+          variant={variant}
+          pageType={HOME_PAGE}
+          status={200}
+          isAmp={false}
+          pathname="/kyrgyz"
+          pageData={{ status: 200 }}
+        />
       </ServiceContextProvider>
     </ThemeProvider>
   );
