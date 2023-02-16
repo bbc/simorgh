@@ -11,6 +11,9 @@ import {
   topStoriesListRtl,
   topStoriesSingleItemRtl,
 } from './fixture';
+import ThemeProvider from '../../../../components/ThemeProvider';
+import metadata from './metadata.json';
+import md from './README.md';
 
 const BackGround = styled.div`
   width: 100%;
@@ -21,18 +24,26 @@ const BackGround = styled.div`
 
 // eslint-disable-next-line react/prop-types
 const RelatedContentComponent = ({ content, service, script }) => (
-  <ToggleContextProvider>
-    <BackGround>
-      <ServiceContextProvider service={service} script={script}>
-        <TopStoriesSection content={content} />
-      </ServiceContextProvider>
-    </BackGround>
-  </ToggleContextProvider>
+  <ThemeProvider service={service}>
+    <ToggleContextProvider>
+      <BackGround>
+        <ServiceContextProvider service={service} script={script}>
+          <TopStoriesSection content={content} />
+        </ServiceContextProvider>
+      </BackGround>
+    </ToggleContextProvider>
+  </ThemeProvider>
 );
 
 export default {
   title: 'components/OptimoPromos/TopStoriesSections',
-  TopStoriesSection,
+  component: TopStoriesSection,
+  parameters: {
+    metadata,
+    docs: {
+      page: md,
+    },
+  },
   decorators: [withKnobs, withServicesKnob()],
 };
 

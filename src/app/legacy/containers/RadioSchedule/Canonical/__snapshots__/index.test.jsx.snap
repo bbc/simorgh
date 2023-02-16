@@ -588,7 +588,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 
 .emotion-45 {
   color: #6E6E73;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -619,6 +619,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -727,6 +728,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-80:before {
@@ -763,7 +765,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 
 .emotion-86 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1095,7 +1097,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpz"
-                  class="emotion-80 emotion-81"
+                  class="focusIndicatorDisplayBlock emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
                 >
                   <span
@@ -1225,7 +1227,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpx"
-                  class="emotion-80 emotion-81"
+                  class="focusIndicatorDisplayBlock emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
                 >
                   <span
@@ -1355,7 +1357,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpp"
-                  class="emotion-80 emotion-81"
+                  class="focusIndicatorDisplayBlock emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
                 >
                   <span
@@ -2028,7 +2030,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 
 .emotion-45 {
   color: #6E6E73;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2059,6 +2061,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
+  padding-top: 0.5rem;
   padding-bottom: 1rem;
   margin: 0;
 }
@@ -2167,6 +2170,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
+  display: inline-block;
 }
 
 .emotion-80:before {
@@ -2203,7 +2207,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 
 .emotion-86 {
   color: #3F3F42;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2535,7 +2539,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpz"
-                  class="emotion-80 emotion-81"
+                  class="focusIndicatorDisplayBlock emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
                 >
                   <span
@@ -2665,7 +2669,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpx"
-                  class="emotion-80 emotion-81"
+                  class="focusIndicatorDisplayBlock emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
                 >
                   <span
@@ -2795,7 +2799,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               >
                 <a
                   aria-labelledby="scheduleItem-p086pjpp"
-                  class="emotion-80 emotion-81"
+                  class="focusIndicatorDisplayBlock emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
                 >
                   <span

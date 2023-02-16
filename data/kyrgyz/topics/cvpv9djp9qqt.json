@@ -118,11 +118,33 @@
         "summaries": [
           {
             "type": "audio",
+            "duration": "PT2M53S",
+            "title": "Би-Би-Си дүрбүсүндө",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/sounds/play/p0dyxhb4",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}/p0c80xlp.jpg",
+            "description": "Өзбекстандын президенти Мирзиёевдин Кыргызстанга расмий сапары",
+            "imageAlt": "",
+            "id": "p0dyxhb4"
+          },
+          {
+            "type": "audio",
+            "duration": "PT5M55S",
+            "title": "Би-Би-Си дүрбүсүндө",
+            "firstPublished": "",
+            "link": "https://www.bbc.com/sounds/play/p0dypmjt",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}/p0c80xlp.jpg",
+            "description": "\"Азаттык-медиа\": Эрегишти эскалация кылган себептер",
+            "imageAlt": "",
+            "id": "p0dypmjt"
+          },
+          {
+            "type": "audio",
             "duration": "PT1M26S",
             "title": "Би-Би-Си дүрбүсүндө",
             "firstPublished": "",
             "link": "https://www.bbc.com/sounds/play/p0dwx5xq",
-            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}x{height}/p0c80xlp.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}/p0c80xlp.jpg",
             "description": "\"Демографиялык басаңдоо\". Кытайдын калкы 60 жылдан бери биринчи жолу азайды",
             "imageAlt": "",
             "id": "p0dwx5xq"
@@ -133,32 +155,10 @@
             "title": "Би-Би-Си дүрбүсүндө",
             "firstPublished": "",
             "link": "https://www.bbc.com/sounds/play/p0dwnsg1",
-            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}x{height}/p0c80xlp.jpg",
+            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}/p0c80xlp.jpg",
             "description": "Кара-Балтада жети жашар кыздын өлүмү: кызматтык текшерүүлөр башталды",
             "imageAlt": "",
             "id": "p0dwnsg1"
-          },
-          {
-            "type": "audio",
-            "duration": "PT4M49S",
-            "title": "Би-Би-Си дүрбүсүндө",
-            "firstPublished": "",
-            "link": "https://www.bbc.com/sounds/play/p0dwnqrb",
-            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}x{height}/p0c80xlp.jpg",
-            "description": "Накен Касиев:  “Дарыгерлерден кесипкөй каталык кеткен”",
-            "imageAlt": "",
-            "id": "p0dwnqrb"
-          },
-          {
-            "type": "audio",
-            "duration": "PT5M50S",
-            "title": "Би-Би-Си дүрбүсүндө",
-            "firstPublished": "",
-            "link": "https://www.bbc.com/sounds/play/p0dvb45y",
-            "imageUrl": "https://ichef.bbci.co.uk/images/ic/{width}x{height}/p0c80xlp.jpg",
-            "description": "\"Камбар-Ата-1\": Кыргызстан кантип башкарат?",
-            "imageAlt": "",
-            "id": "p0dvb45y"
           }
         ],
         "activePage": 1,
@@ -199,7 +199,7 @@
             "title": "BBC News Russian",
             "firstPublished": "",
             "link": "http://www.bbc.com/russian",
-            "imageUrl": "https://ichef.bbci.co.uk/news/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
             "description": "",
             "imageAlt": "",
             "id": "http%3A%2F%2Fwww.bbc.com%2Frussian"
@@ -209,7 +209,7 @@
             "title": "BBC Azeri",
             "firstPublished": "",
             "link": "http://www.bbc.com/azeri",
-            "imageUrl": "https://ichef.bbci.co.uk/news/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
             "description": "",
             "imageAlt": "",
             "id": "http%3A%2F%2Fwww.bbc.com%2Fazeri"
@@ -219,7 +219,7 @@
             "title": "BBC Uzbek",
             "firstPublished": "",
             "link": "http://www.bbc.com/uzbek",
-            "imageUrl": "https://ichef.bbci.co.uk/news/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
             "description": "",
             "imageAlt": "",
             "id": "http%3A%2F%2Fwww.bbc.com%2Fuzbek"
@@ -229,7 +229,7 @@
             "title": "BBC Turkish",
             "firstPublished": "",
             "link": "http://www.bbc.com/turkce",
-            "imageUrl": "https://ichef.bbci.co.uk/news/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
             "description": "",
             "imageAlt": "",
             "id": "http%3A%2F%2Fwww.bbc.com%2Fturkce"
@@ -248,48 +248,48 @@
         "summaries": [
           {
             "type": "url",
-            "title": "BBC News Russian",
+            "title": "Twitter",
             "firstPublished": "",
-            "link": "http://www.bbc.com/russian",
-            "imageUrl": "https://ichef.bbci.co.uk/news/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "link": "https://www.twitter.com/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/efae/test/79e17d10-a244-11ed-9015-6935ab4fa6ca.png",
             "description": "",
-            "imageAlt": "",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Frussian"
+            "imageAlt": "Twitter",
+            "id": "https%3A%2F%2Fwww.twitter.com"
           },
           {
             "type": "url",
-            "title": "BBC Azeri",
+            "title": "Facebook",
             "firstPublished": "",
-            "link": "http://www.bbc.com/azeri",
-            "imageUrl": "https://ichef.bbci.co.uk/news/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "link": "https://www.facebook.com/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/3da9/test/86350190-a244-11ed-9015-6935ab4fa6ca.png",
             "description": "",
-            "imageAlt": "",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Fazeri"
+            "imageAlt": "Facebook",
+            "id": "https%3A%2F%2Fwww.facebook.com"
           },
           {
             "type": "url",
-            "title": "BBC Uzbek",
+            "title": "Instagram",
             "firstPublished": "",
-            "link": "http://www.bbc.com/uzbek",
-            "imageUrl": "https://ichef.bbci.co.uk/news/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "link": "https://www.instagram.com/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/8aee/test/922de2f0-a244-11ed-9015-6935ab4fa6ca.png",
             "description": "",
-            "imageAlt": "",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Fuzbek"
+            "imageAlt": "Instagram",
+            "id": "https%3A%2F%2Fwww.instagram.com"
           },
           {
             "type": "url",
-            "title": "BBC Turkish",
+            "title": "YouTube",
             "firstPublished": "",
-            "link": "http://www.bbc.com/turkce",
-            "imageUrl": "https://ichef.bbci.co.uk/news/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png",
+            "link": "https://www.youtube.com/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/news/{width}/cpsdevpb/ca26/test/a1a3dd20-a244-11ed-9015-6935ab4fa6ca.png",
             "description": "",
-            "imageAlt": "",
-            "id": "http%3A%2F%2Fwww.bbc.com%2Fturkce"
+            "imageAlt": "YouTube",
+            "id": "https%3A%2F%2Fwww.youtube.com"
           }
         ],
         "activePage": 1,
         "pageCount": 1,
-        "curationId": "urn:bbc:tipo:list:04e600ed-76ff-4c71-be9f-86fac52bf8c0",
+        "curationId": "urn:bbc:tipo:list:2ab06dd1-ba2c-402f-9a40-4da98bb5f750",
         "curationType": "tipo-curation",
         "position": 4,
         "title": "Test links normal",
@@ -315,6 +315,38 @@
         "curationType": "tipo-curation",
         "position": 5,
         "title": "Get all the Premier League January transfer news direct to your phone",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "title": "АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?",
+            "firstPublished": "2016-11-09T03:55:21.000Z",
+            "link": "https://www.bbc.com/kyrgyz/world-23090100",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg",
+            "description": "Шейшембиде Америка кошмо штаттары өлкөнүн жаңы президентин тандап алуу үчүн добуш беришет.",
+            "imageAlt": "Trump",
+            "id": "cd68f2bc-efd5-a043-9500-a3891a13353b"
+          },
+          {
+            "type": "article",
+            "title": "Мирзиёевнинг илк давлат сафари Қозоғистон",
+            "firstPublished": "2017-02-24T12:04:09.000Z",
+            "link": "https://www.bbc.com/kyrgyz/23103378",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1086C/test/_63529676_000141412-1.jpg",
+            "description": "Ўзбекистон президентининг илк давлат сафари билан март ойида Қозоғистонга боради. Бу ҳақида Ўзбекистон ва Қозоғистон ўртасидаги ҳамкорлик бўйича тузилган ҳукуматлараро комиссиянинг Тошкентдаги мажлисида эълон қилинди.",
+            "imageAlt": "Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",
+            "id": "91d192e9-38dd-4f44-882b-c724bb41331f"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:74fcc4e3-cc39-4486-86b2-cbd13ab50802",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "title": "This is a message banner with multiple promos, but you should only see the first one",
         "visualProminence": "NORMAL",
         "visualStyle": "BANNER"
       }

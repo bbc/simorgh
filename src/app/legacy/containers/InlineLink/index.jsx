@@ -28,7 +28,10 @@ const InlineLinkContainer = ({ locator, isExternal, blocks, onClick }) => {
     const path = result[0];
     const hash = locator.split('#')[1] || null;
     return (
-      <InternalInlineLink to={{ pathname: path, hash }}>
+      <InternalInlineLink
+        to={{ pathname: path, hash }}
+        className="focusIndicatorReducedWidth"
+      >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </InternalInlineLink>
     );
@@ -38,6 +41,7 @@ const InlineLinkContainer = ({ locator, isExternal, blocks, onClick }) => {
   return (
     <InlineLink
       href={makeRelativeUrlPath(locator)}
+      className="focusIndicatorReducedWidth"
       aria-label={isExternal ? `${linkText}${externalLinkText}` : null}
       onClick={event => {
         if (onClick) {

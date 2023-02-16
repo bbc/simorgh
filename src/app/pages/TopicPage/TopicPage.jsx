@@ -108,9 +108,12 @@ const TopicPage = ({ pageData }) => {
               <React.Fragment key={`${curationId}-${position}`}>
                 {shouldRenderMessageBanner(visualStyle, visualProminence) ? (
                   <MessageBanner
-                    title={curationTitle}
-                    summaries={summaries}
+                    heading={curationTitle}
                     position={position}
+                    description={summaries[0].description}
+                    link={summaries[0].link}
+                    linkText={summaries[0].title}
+                    image={summaries[0].imageUrl}
                   />
                 ) : (
                   <Curation

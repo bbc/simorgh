@@ -8,6 +8,7 @@ import fixture from '#data/igbo/frontpage';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import BulletinContainer from '.';
 import ampDecorator from '../../../../../.storybook/helpers/ampDecorator';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const bulletinFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
@@ -48,17 +49,19 @@ const audioLiveFixture = liveBulletinFixture('RadioBulletin');
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service, item }) => (
-  <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      isAmp={isAmp}
-      pathname="/pathname"
-      pageType={FRONT_PAGE}
-      service={service}
-    >
-      <BulletinContainer item={item} />
-    </RequestContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service={service}>
+    <ServiceContextProvider service={service}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        isAmp={isAmp}
+        pathname="/pathname"
+        pageType={FRONT_PAGE}
+        service={service}
+      >
+        <BulletinContainer item={item} />
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 export default {

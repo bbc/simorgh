@@ -1,4 +1,4 @@
-const kyrgyzBanner = {
+const kyrgyzMessageBannerOnePromo = {
   summaries: [
     {
       type: 'url',
@@ -23,4 +23,42 @@ const kyrgyzBanner = {
   visualStyle: 'BANNER',
 };
 
-export default kyrgyzBanner;
+const kyrgyzMessageBannerTwoPromos = {
+  summaries: [
+    {
+      type: 'article',
+      title: 'АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?',
+      firstPublished: '2016-11-09T03:55:21.000Z',
+      link: 'https://www.bbc.com/kyrgyz/world-23090100',
+      imageUrl:
+        'https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg',
+      description:
+        'Шейшембиде Америка кошмо штаттары өлкөнүн жаңы президентин тандап алуу үчүн добуш беришет.',
+      imageAlt: 'Trump',
+      id: 'cd68f2bc-efd5-a043-9500-a3891a13353b',
+    },
+    {
+      type: 'article',
+      title: 'Мирзиёевнинг илк давлат сафари Қозоғистон',
+      firstPublished: '2017-02-24T12:04:09.000Z',
+      link: 'https://www.bbc.com/kyrgyz/23103378',
+      imageUrl:
+        'https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/1086C/test/_63529676_000141412-1.jpg',
+      description:
+        'Ўзбекистон президентининг илк давлат сафари билан март ойида Қозоғистонга боради. Бу ҳақида Ўзбекистон ва Қозоғистон ўртасидаги ҳамкорлик бўйича тузилган ҳукуматлараро комиссиянинг Тошкентдаги мажлисида эълон қилинди.',
+      imageAlt: "Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",
+      id: '91d192e9-38dd-4f44-882b-c724bb41331f',
+    },
+  ],
+  activePage: 1,
+  pageCount: 1,
+  curationId: 'urn:bbc:tipo:list:74fcc4e3-cc39-4486-86b2-cbd13ab50802',
+  curationType: 'tipo-curation',
+  position: 6,
+  title:
+    'This is a message banner with multiple promos, but you should only see the first one',
+  visualProminence: 'NORMAL',
+  visualStyle: 'BANNER',
+};
+
+export { kyrgyzMessageBannerOnePromo, kyrgyzMessageBannerTwoPromos };
