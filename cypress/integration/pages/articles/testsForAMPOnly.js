@@ -1,6 +1,6 @@
 import path from 'ramda/src/path';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import { getBlockData, getVideoEmbedUrl } from './helpers';
+import { getBlockData, getVideoEmbedUrl, getMostReadUrl } from './helpers';
 import config from '../../../support/config/services';
 import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
 
@@ -166,6 +166,35 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             });
           });
         });
+
+        it(`Most read list should contain hrefs that match JSON data`, () => {
+          cy.request(mostReadPath).then(({ body: mostReadJson }) => {
+            const mostReadRecords = mostReadJson.totalRecords;
+            cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+              const mostReadIsEnabled = path(['mostRead', 'enabled'], toggles);
+              cy.log(
+                `Most read container toggle enabled? ${mostReadIsEnabled}`,
+              );
+              if (mostReadIsEnabled && mostReadRecords >= 5) {
+                const records = path(['records'], mostReadJson);
+                const ListOfMostReadUrlsInOrder = records.map(record =>
+                  getMostReadUrl(record),
+                );
+                cy.get('[data-e2e="most-read"]').scrollIntoView();
+                cy.get('[data-e2e="most-read"] > amp-list div')
+                  .next()
+                  .within(() => {
+                    cy.get('a').each(($el, index) => {
+                      cy.wrap($el)
+                        .invoke('attr', 'href')
+                        .should('contain', ListOfMostReadUrlsInOrder[index]);
+                    });
+                  });
+              }
+            });
+          });
+        });
+
         it('should not show most read list when data fetch fails', () => {
           cy.intercept(
             {
