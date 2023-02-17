@@ -3,7 +3,18 @@ import isEmpty from 'ramda/src/isEmpty';
 
 export default (
   taggings: { predicate: string; value: string }[],
-  formats: any[],
+  formats: {
+    value: string;
+    thingLabel: string;
+    thingUri: string;
+    thingId: string;
+    thingType: string[];
+    thingSameAs: string[];
+    thingEnglishLabel: string;
+    thingPreferredLabel: string;
+    thingLabelLanguage: string;
+    type: string;
+  }[],
   isTrustProjectParticipant: boolean,
 ) => {
   const supportedPredicate = taggings.filter(
