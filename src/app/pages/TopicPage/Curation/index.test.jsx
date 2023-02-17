@@ -11,7 +11,7 @@ jest.mock('../../../components/ThemeProvider');
 const components = {
   [VISUAL_STYLE.NONE]: {
     [VISUAL_PROMINANCE.NORMAL]: {
-      promos: fixture.data.summaries,
+      promos: fixture.data.curations[0].summaries,
       testId: 'curation-grid-normal',
     },
     [VISUAL_PROMINANCE.HIGH]: {
@@ -44,7 +44,7 @@ describe('Topic Curations', () => {
       <Curation
         visualStyle="something-unsupported"
         visualProminance="what-is-this"
-        promos={fixture.data.summaries}
+        promos={fixture.data.curations[0].summaries}
       />,
     );
     expect(getByTestId('curation-grid-normal')).toBeInTheDocument();
