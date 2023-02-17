@@ -19,7 +19,7 @@ const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 const pageType = 'Fetch Page Data';
 const requestOrigin = 'Jest Test';
 
-jest.mock('#app/lib/utilities/isLocal');
+jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
 
 afterEach(() => {
   jest.clearAllMocks();
@@ -345,15 +345,14 @@ describe('fetchPageData', () => {
     });
 
     it('does not use a cached response on local environment', async () => {
-      isLocal.mockReturnValue(true);
-      isLocal();
+      isLocal.mockReturnValueOnce(true);
 
       await fetchPageData({ path: requestedPathname, pageType, cache });
 
-      expect(loggerMock.info).not.toBeCalledWith(DATA_RESPONSE_FROM_CACHE, {
-        data: expectedUrl,
-        path: requestedPathname,
-      });
+      expect(loggerMock.info).not.toBeCalledWith(
+        DATA_RESPONSE_FROM_CACHE,
+        expect.any(Object),
+      );
     });
 
     it('uses a cached response when not on local environment', async () => {
@@ -367,6 +366,7 @@ describe('fetchPageData', () => {
         {
           data: expectedUrl,
           path: requestedPathname,
+          pageType,
         },
       );
     });
