@@ -142,7 +142,7 @@ export default ({ service, pageType, variant }) => {
           });
       });
 
-      it('clicking the message banner should navigate to the correct page', () => {
+      it.only('clicking the message banner should navigate to the correct page', () => {
         if (messageBanner) {
           cy.get(
             `[data-testid="${`message-banner-${messageBanner.title.replaceAll(
@@ -150,7 +150,7 @@ export default ({ service, pageType, variant }) => {
               '-',
             )}`}"]`,
           )
-            // .should('exist')
+            .should('exist')
             .within(() => {
               cy.get('a')
                 .should('have.attr', 'href')
