@@ -1,10 +1,11 @@
-import React from 'react';
-import { arrayOf, oneOf, shape, string, number } from 'prop-types';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
+import { Curation as CurationProps } from '#models/types/promoData';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
-import { COMPONENT_NAMES, VISUAL_STYLE, VISUAL_PROMINENCE } from './constants';
+import { COMPONENT_NAMES } from './constants';
 import getComponent from './getComponent';
 import MessageBanner from '../MessageBanner';
 
@@ -15,9 +16,7 @@ const {
   NOT_SUPPORTED,
 } = COMPONENT_NAMES;
 
-const { NONE } = VISUAL_STYLE;
-
-const getGridComponent = componentName => {
+const getGridComponent = (componentName: string | null) => {
   switch (componentName) {
     case HIERARCHICAL_CURATION_GRID:
       return HierarchicalGrid;
@@ -28,22 +27,22 @@ const getGridComponent = componentName => {
 };
 
 const Curation = ({
-  visualStyle = NONE,
+  visualStyle,
   visualProminence,
-  promos,
-  title,
-  topStoriesTitle,
-  link,
-  headingLevel,
-  position,
-  curationLength,
-}) => {
+  promos = [],
+  title = '',
+  topStoriesTitle = '',
+  link = '',
+  headingLevel = 2,
+  position = 0,
+  curationLength = 0,
+}: CurationProps) => {
   if (!promos.length) return null;
 
   const componentName = getComponent(visualStyle, visualProminence);
   const GridComponent = getGridComponent(componentName);
 
-  const createID = titleText => {
+  const createID = (titleText: string) => {
     return titleText.replaceAll(' ', '-');
   };
 
@@ -59,7 +58,6 @@ const Curation = ({
       return (
         <MessageBanner
           heading={title}
-          position={position}
           description={promos[0].description}
           link={promos[0].link}
           linkText={promos[0].title}
@@ -83,25 +81,6 @@ const Curation = ({
         <GridComponent promos={promos} headingLevel={headingLevel} />
       );
   }
-};
-
-Curation.propTypes = {
-  visualStyle: oneOf(Object.values(VISUAL_STYLE)).isRequired,
-  visualProminence: oneOf(Object.values(VISUAL_PROMINENCE)).isRequired,
-  promos: arrayOf(shape({})).isRequired,
-  title: string,
-  link: string,
-  headingLevel: number,
-  position: number.isRequired,
-  topStoriesTitle: string,
-  curationLength: number.isRequired,
-};
-
-Curation.defaultProps = {
-  title: '',
-  link: '',
-  headingLevel: 2,
-  topStoriesTitle: '',
 };
 
 export default Curation;

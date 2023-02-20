@@ -1,3 +1,4 @@
+import { VisualStyle, VisualProminence } from '#app/models/types/promoData';
 import { VISUAL_STYLE, VISUAL_PROMINENCE, COMPONENT_NAMES } from './constants';
 
 const { NONE, BANNER } = VISUAL_STYLE;
@@ -9,7 +10,10 @@ const {
   NOT_SUPPORTED,
 } = COMPONENT_NAMES;
 
-export default (visualStyle: string, visualProminence: string) => {
+export default (
+  visualStyle: VisualStyle,
+  visualProminence: VisualProminence,
+) => {
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
     [`${BANNER}_${LOW}`]: NOT_SUPPORTED,

@@ -43,7 +43,7 @@ describe('Topic Curations', () => {
   it('should render the standard grid if a style/prominence is not recognised', () => {
     const { getByTestId } = render(
       <Curation
-        visualStyle="something-unsupported"
+        visualStyle={"something-unsupported"}
         visualProminence="what-is-this"
         promos={fixture.data.curations[0].summaries}
       />,
