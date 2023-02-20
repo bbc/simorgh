@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useDecision } from '@optimizely/react-sdk';
 
+const isClientSide = false;
+
 const useTrueFunction = () => {
   return true;
 };
@@ -28,9 +30,7 @@ const useClientSideOptimizelyVariation = (
   return variation;
 };
 
-const isClientSide = false;
-
-const useOptimizelyVariation = () =>
-  isClientSide ? useClientSideOptimizelyVariation : useTrueFunction;
+const useOptimizelyVariation = (useClientSide = isClientSide) =>
+  useClientSide ? useClientSideOptimizelyVariation : useTrueFunction;
 
 export default useOptimizelyVariation;
