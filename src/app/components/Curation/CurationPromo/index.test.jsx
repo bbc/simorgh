@@ -1,12 +1,9 @@
 import React from 'react';
-import {
-  render,
-  screen,
-} from '../../../../components/react-testing-library-with-providers';
+import { render, screen } from '../../react-testing-library-with-providers';
 
 import TopicPromo from '.';
 
-jest.mock('../../../../components/ThemeProvider');
+jest.mock('../../ThemeProvider');
 
 // eslint-disable-next-line react/prop-types
 const Fixture = ({ lazy, type = 'article', duration }) => (

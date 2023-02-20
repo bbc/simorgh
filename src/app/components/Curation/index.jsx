@@ -2,10 +2,14 @@ import React from 'react';
 import { arrayOf, oneOf, shape, string, number } from 'prop-types';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import CurationGrid from './CurationGrid';
-import HierarchicalGrid from '../HierarchicalGrid';
+import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
-import { COMPONENT_NAMES, VISUAL_STYLE, VISUAL_PROMINENCE } from '../constants';
-import getComponent from '../getComponent';
+import {
+  COMPONENT_NAMES,
+  VISUAL_STYLE,
+  VISUAL_PROMINENCE,
+} from '../../pages/TopicPage/constants';
+import getComponent from '../../pages/TopicPage/getComponent';
 
 const { SIMPLE_CURATION_GRID, HIERARCHICAL_CURATION_GRID } = COMPONENT_NAMES;
 

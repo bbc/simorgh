@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import ThemeProvider from '../../../../components/ThemeProvider';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import ThemeProvider from '../../ThemeProvider';
 import { MEDIA_TYPES } from '#components/Promo';
 import Promo from '.';
 

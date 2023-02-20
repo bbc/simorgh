@@ -17,7 +17,7 @@ import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
 import MessageBanner from '../../components/MessageBanner';
 import { VISUAL_STYLE, COMPONENT_NAMES } from './constants';
-import Curation from './Curation';
+import Curation from '../../components/Curation';
 import getComponent from './getComponent';
 
 const { NONE } = VISUAL_STYLE;

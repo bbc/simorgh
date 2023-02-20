@@ -6,7 +6,7 @@ import path from 'ramda/src/path';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const CurationPromo = ({
   id,

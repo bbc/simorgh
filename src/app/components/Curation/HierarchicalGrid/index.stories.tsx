@@ -3,7 +3,7 @@ import React from 'react';
 import { withKnobs, number } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../ThemeProvider';
 import { Services, Variants } from '../../../models/types/global';
 import HierarchicalGrid from './index';
 import pidginPromos from './fixtures';
