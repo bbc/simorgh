@@ -1,19 +1,21 @@
 import { VISUAL_STYLE, VISUAL_PROMINENCE, COMPONENT_NAMES } from './constants';
 
 const { NONE, BANNER } = VISUAL_STYLE;
-const { NORMAL, HIGH } = VISUAL_PROMINENCE;
-
+const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const {
   SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
-  BILLBOARD,
   MESSAGE_BANNER,
+  NOT_SUPPORTED,
 } = COMPONENT_NAMES;
 
 export default (visualStyle: string, visualProminence: string) => {
   const componentsByVisualStyleAndProminence = {
+    [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
+    [`${BANNER}_${LOW}`]: NOT_SUPPORTED,
     [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
-    [`${BANNER}_${HIGH}`]: BILLBOARD,
+    [`${BANNER}_${HIGH}`]: NOT_SUPPORTED,
+    [`${BANNER}_${MAXIMUM}`]: NOT_SUPPORTED,
     [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
     [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
   };
