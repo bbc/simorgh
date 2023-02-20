@@ -14,21 +14,26 @@ const styles = {
           display: 'inline-block',
           verticalAlign: 'top',
         },
-        'div div:nth-child(2) div': {
-          padding: `${spacings.FULL}rem`,
-          [mq.GROUP_4_MIN_WIDTH]: {
-            padding: '0.75rem',
+        'div div:nth-child(2)': {
+          [mq.GROUP_1_MAX_WIDTH]: {
+            position: 'relative',
           },
-          svg: {
-            margin: 0,
+          div: {
+            padding: `${spacings.FULL}rem`,
             [mq.GROUP_4_MIN_WIDTH]: {
-              width: `${spacings.TRIPLE}rem`,
-              height: `${spacings.TRIPLE}rem`,
+              padding: '0.75rem',
             },
-          },
-          time: {
-            marginLeft: `${spacings.FULL}rem`,
-            padding: '0',
+            svg: {
+              margin: 0,
+              [mq.GROUP_4_MIN_WIDTH]: {
+                width: `${spacings.TRIPLE}rem`,
+                height: `${spacings.TRIPLE}rem`,
+              },
+            },
+            time: {
+              marginLeft: `${spacings.FULL}rem`,
+              padding: '0',
+            },
           },
         },
       },

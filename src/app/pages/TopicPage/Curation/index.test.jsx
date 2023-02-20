@@ -15,7 +15,7 @@ const components = {
   'curation-grid-normal': {
     visualStyle: NONE,
     visualProminence: NORMAL,
-    promos: fixture.data.summaries,
+    promos: fixture.data.curations[0].summaries,
   },
   'hierarchical-grid': {
     visualStyle: NONE,
@@ -44,8 +44,8 @@ describe('Topic Curations', () => {
     const { getByTestId } = render(
       <Curation
         visualStyle="something-unsupported"
-        visualProminence="what-is-this"
-        promos={fixture.data.summaries}
+        visualProminance="what-is-this"
+        promos={fixture.data.curations[0].summaries}
       />,
     );
     expect(getByTestId('curation-grid-normal')).toBeInTheDocument();

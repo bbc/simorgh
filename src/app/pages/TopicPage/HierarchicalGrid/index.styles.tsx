@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 
 const styles = {
   body: ({ spacings, palette, fontSizes }: Theme) =>
@@ -67,6 +68,13 @@ const VerticalPromo = css({
   marginTop: '0.5rem',
   gridColumn: 'span 1',
   gridRow: 'span 2',
+  '.promo-image': {
+    'div div:nth-child(2)': {
+      [GROUP_1_MAX_WIDTH]: {
+        position: 'relative',
+      },
+    },
+  },
   '.promo-paragraph': {
     display: 'none',
   },
@@ -114,6 +122,11 @@ const HorizontalPromo = css({
     width: '33%',
     display: 'inline-block',
     verticalAlign: 'top',
+    'div div:nth-child(2)': {
+      [GROUP_1_MAX_WIDTH]: {
+        position: 'relative',
+      },
+    },
   },
   '.promo-text': {
     width: '67%',
