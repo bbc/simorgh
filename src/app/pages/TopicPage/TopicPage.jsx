@@ -9,22 +9,13 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import Curation from '#app/components/Curation';
 import styles from './index.styles';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
-import MessageBanner from '../../components/MessageBanner';
-import {
-  VISUAL_STYLE,
-  COMPONENT_NAMES,
-} from '../../components/Curation/constants';
-import Curation from '../../components/Curation';
-import getComponent from './getComponent';
-
-const { NONE } = VISUAL_STYLE;
-const { MESSAGE_BANNER, BILLBOARD } = COMPONENT_NAMES;
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations } = useContext(ServiceContext);
@@ -102,43 +93,21 @@ const TopicPage = ({ pageData }) => {
               title: curationTitle,
               link,
               position,
-              visualStyle = NONE,
+              visualStyle,
             }) => {
-              const component = getComponent(visualStyle, visualProminence);
-
               return (
                 <React.Fragment key={`${curationId}-${position}`}>
-                  {(() => {
-                    switch (component) {
-                      case MESSAGE_BANNER:
-                        return (
-                          <MessageBanner
-                            heading={curationTitle}
-                            position={position}
-                            description={summaries[0].description}
-                            link={summaries[0].link}
-                            linkText={summaries[0].title}
-                            image={summaries[0].imageUrl}
-                          />
-                        );
-                      case BILLBOARD:
-                        return null;
-                      default:
-                        return (
-                          <Curation
-                            headingLevel={curationTitle && 3}
-                            visualStyle={visualStyle}
-                            visualProminence={visualProminence}
-                            promos={summaries}
-                            title={curationTitle}
-                            topStoriesTitle={topStoriesTitle}
-                            position={position}
-                            link={link}
-                            curationLength={curations && curations.length}
-                          />
-                        );
-                    }
-                  })()}
+                  <Curation
+                    headingLevel={curationTitle && 3}
+                    visualStyle={visualStyle}
+                    visualProminence={visualProminence}
+                    promos={summaries}
+                    title={curationTitle}
+                    topStoriesTitle={topStoriesTitle}
+                    position={position}
+                    link={link}
+                    curationLength={curations && curations.length}
+                  />
                 </React.Fragment>
               );
             },

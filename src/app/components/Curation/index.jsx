@@ -5,11 +5,13 @@ import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import { COMPONENT_NAMES, VISUAL_STYLE, VISUAL_PROMINENCE } from './constants';
-import getComponent from '../../pages/TopicPage/getComponent';
+import getComponent from './getComponent';
 import MessageBanner from '../MessageBanner';
 
 const { SIMPLE_CURATION_GRID, HIERARCHICAL_CURATION_GRID, MESSAGE_BANNER } =
   COMPONENT_NAMES;
+
+const { NONE } = VISUAL_STYLE;
 
 const getGridComponent = componentName => {
   switch (componentName) {
@@ -22,7 +24,7 @@ const getGridComponent = componentName => {
 };
 
 const Curation = ({
-  visualStyle,
+  visualStyle = NONE,
   visualProminence,
   promos,
   title,
