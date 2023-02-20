@@ -7,6 +7,7 @@ const useOptimizelyVariation = (experimentId, overrideAttributes = {}) => {
     {
       autoUpdate: true,
     },
+
     { overrideAttributes },
   );
 
