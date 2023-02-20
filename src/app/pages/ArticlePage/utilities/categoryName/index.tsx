@@ -2,7 +2,7 @@ import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 
 export default (
-  taggings: { predicate: string; value: string }[],
+  taggings: { predicate: string; value: string }[] = [],
   formats: {
     value: string;
     thingLabel: string;
@@ -14,7 +14,7 @@ export default (
     thingPreferredLabel: string;
     thingLabelLanguage: string;
     type: string;
-  }[],
+  }[] = [],
   isTrustProjectParticipant: boolean,
 ) => {
   const supportedPredicate = taggings.filter(

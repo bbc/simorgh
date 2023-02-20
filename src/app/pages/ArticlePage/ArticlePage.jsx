@@ -153,10 +153,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     ? getAuthorTwitterHandle(blocks)
     : null;
 
-  const {
-    taggings,
-    predicates: { formats },
-  } = path(['metadata', 'passport'], pageData);
+  const taggings = path(['metadata', 'passport', 'taggings'], pageData);
+  const formats = path(
+    ['metadata', 'passport', 'predicates', 'formats'],
+    pageData,
+  );
 
   const componentsToRender = {
     visuallyHiddenHeadline,

@@ -53,6 +53,32 @@ describe('categoryName', () => {
     expect(schemaDotOrgType).toEqual('NewsArticle');
   });
 
+  test.each([[[]], [undefined]])(
+    'should return NewsArticle when taggings are not present',
+    taggings => {
+      const schemaDotOrgType = categoryName(
+        taggings,
+        passportPredicatesFormats,
+        true,
+      );
+
+      expect(schemaDotOrgType).toEqual('NewsArticle');
+    },
+  );
+
+  test.each([[[]], [undefined]])(
+    'should return NewsArticle when predicates formats are not present',
+    predicatesFormats => {
+      const schemaDotOrgType = categoryName(
+        passportTaggings,
+        predicatesFormats,
+        true,
+      );
+
+      expect(schemaDotOrgType).toEqual('NewsArticle');
+    },
+  );
+
   test.each([
     [
       'http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id',
