@@ -8,8 +8,12 @@ import { COMPONENT_NAMES, VISUAL_STYLE, VISUAL_PROMINENCE } from './constants';
 import getComponent from './getComponent';
 import MessageBanner from '../MessageBanner';
 
-const { SIMPLE_CURATION_GRID, HIERARCHICAL_CURATION_GRID, MESSAGE_BANNER } =
-  COMPONENT_NAMES;
+const {
+  SIMPLE_CURATION_GRID,
+  HIERARCHICAL_CURATION_GRID,
+  MESSAGE_BANNER,
+  NOT_SUPPORTED,
+} = COMPONENT_NAMES;
 
 const { NONE } = VISUAL_STYLE;
 
@@ -49,6 +53,8 @@ const Curation = ({
   const SubheadingComponent = isFirstCuration ? VisuallyHiddenText : Subheading;
 
   switch (componentName) {
+    case NOT_SUPPORTED:
+      return null;
     case MESSAGE_BANNER:
       return (
         <MessageBanner
