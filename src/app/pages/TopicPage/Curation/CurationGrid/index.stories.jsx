@@ -11,7 +11,7 @@ const Component = ({ service, variant }) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <CurationGrid promos={fixture.data.summaries} />
+        <CurationGrid promos={fixture.data.curations[0].summaries} />
       </ServiceContextProvider>
     </ThemeProvider>
   );
