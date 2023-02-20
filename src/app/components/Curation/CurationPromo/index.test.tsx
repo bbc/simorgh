@@ -6,12 +6,12 @@ import CurationPromo from '.';
 jest.mock('../../ThemeProvider');
 
 interface FixtureProps {
-  lazy: boolean;
+  lazy?: boolean;
   type?: string;
   duration?: number;
 }
 
-const Fixture = ({ lazy, type = 'article', duration = 0 }: FixtureProps) => (
+const Fixture = ({ lazy, type = 'article', duration }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
     title="Promo title"
