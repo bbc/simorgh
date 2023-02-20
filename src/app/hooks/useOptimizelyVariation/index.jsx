@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useDecision } from '@optimizely/react-sdk';
 
-const isClientSide = true;
+const isClientSide = false;
 
 // ALTHOUGH THIS FUNCTION BREAKS REACT RULES BY USING CONDITIONAL HOOKS,
 // WE CAN SAFELY DO SO SINCE isClientSide IS A CONSTANT AND THEREFORE GUARANTEES THAT
