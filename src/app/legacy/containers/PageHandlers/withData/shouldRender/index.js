@@ -1,13 +1,22 @@
-import { getPassportHome, isValidPassportHome } from '#lib/utilities/passport';
+import {
+  getPassportHome,
+  isValidPassportHome,
+  getCanonicalUrl,
+  matchesCanonicalUrl,
+} from '#lib/utilities/passport';
+import { ARTICLE_PAGE } from '../../../../../routes/utils/pageTypes';
 
 // checks for pageData, 200 status and if home service from article data fits the service locale
 const shouldRender = (
   { pageData, status },
   service,
+  pathName,
+  pageType,
   passportHomesOverride = [],
 ) => {
   let statusCode = status;
   let isCorrectService;
+  let isCanonicalUrlMatch = true;
 
   const hasDataAnd200Status = pageData && status === 200;
   if (hasDataAnd200Status) {
@@ -17,11 +26,17 @@ const shouldRender = (
       service,
       passportHomesOverride,
     );
-    statusCode = !isCorrectService ? 404 : status;
+    if (service === 'sport' && pageType === ARTICLE_PAGE) {
+      const canonicalUrl = getCanonicalUrl(pageData);
+      isCanonicalUrlMatch = matchesCanonicalUrl(canonicalUrl, pathName);
+    }
+    const isUrlValid = isCorrectService && isCanonicalUrlMatch;
+    statusCode = !isUrlValid ? 404 : status;
   }
 
   return {
-    hasData200StatusAndCorrectService: hasDataAnd200Status && isCorrectService,
+    hasData200StatusAndCorrectService:
+      hasDataAnd200Status && isCorrectService && isCanonicalUrlMatch,
     status: statusCode,
     pageData,
   };

@@ -71,25 +71,16 @@ describe('isValidPassportHome', () => {
 
 describe('getCanonicalURL', () => {
   const data = {
-    data: {
-      article: {
-        metadata: {
-          locators: {
-            canonicalUrl:
-              'https://www.bbc.com/sport/judo/articles/cj80n66ddnko',
-          },
-        },
+    metadata: {
+      locators: {
+        canonicalUrl: 'https://www.bbc.com/sport/judo/articles/cj80n66ddnko',
       },
     },
   };
 
   const invalidData = {
-    data: {
-      article: {
-        metadata: {
-          locators: {},
-        },
-      },
+    metadata: {
+      locators: {},
     },
   };
 

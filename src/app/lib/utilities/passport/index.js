@@ -32,7 +32,7 @@ export const isValidPassportHome = (
 export const getCanonicalUrl = pageData => {
   const canonicalUrl = pathOr(
     null,
-    ['data', 'article', 'metadata', 'locators', 'canonicalUrl'],
+    ['metadata', 'locators', 'canonicalUrl'],
     pageData,
   );
   return pageData && canonicalUrl
@@ -41,6 +41,6 @@ export const getCanonicalUrl = pageData => {
 };
 
 export const matchesCanonicalUrl = (canonicalUrl, pathName) => {
-  const strippedPathName = pathName.replace(/(\.|\?).*/g, '');
+  const strippedPathName = pathName ? pathName.replace(/(\.|\?).*/g, '') : null;
   return canonicalUrl === strippedPathName;
 };
