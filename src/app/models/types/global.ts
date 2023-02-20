@@ -18,7 +18,8 @@ export type PageTypes =
   | 'STY'
   | 'PGL'
   | 'CSP'
-  | 'TOPIC';
+  | 'TOPIC'
+  | 'HOME';
 
 export type SerbianService = {
   service: 'serbian';
