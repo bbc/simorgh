@@ -3,10 +3,7 @@ import React from 'react';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '#data/mundo/topics/c1en6xwmpkvt.json';
 import { render } from '../react-testing-library-with-providers';
-import {
-  VISUAL_STYLE,
-  VISUAL_PROMINENCE,
-} from '../../pages/TopicPage/constants';
+import { VISUAL_STYLE, VISUAL_PROMINENCE } from './constants';
 import Curation from '.';
 
 jest.mock('../ThemeProvider');

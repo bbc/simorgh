@@ -1,15 +1,16 @@
-import { VISUAL_PROMINENCE, VISUAL_STYLE, COMPONENT_NAMES } from './constants';
+import { VISUAL_STYLE, VISUAL_PROMINENCE, COMPONENT_NAMES } from './constants';
 
 const { NONE, BANNER } = VISUAL_STYLE;
 const { NORMAL, HIGH } = VISUAL_PROMINENCE;
+
 const {
-  MESSAGE_BANNER,
   SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
   BILLBOARD,
+  MESSAGE_BANNER,
 } = COMPONENT_NAMES;
 
-export default (visualStyle, visualProminence) => {
+export default (visualStyle: string, visualProminence: string) => {
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
     [`${BANNER}_${HIGH}`]: BILLBOARD,

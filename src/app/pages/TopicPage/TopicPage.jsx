@@ -16,7 +16,10 @@ import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from './Pagination';
 import MessageBanner from '../../components/MessageBanner';
-import { VISUAL_STYLE, COMPONENT_NAMES } from './constants';
+import {
+  VISUAL_STYLE,
+  COMPONENT_NAMES,
+} from '../../components/Curation/constants';
 import Curation from '../../components/Curation';
 import getComponent from './getComponent';
 

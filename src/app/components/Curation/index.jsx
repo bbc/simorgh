@@ -4,16 +4,14 @@ import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
-import {
-  COMPONENT_NAMES,
-  VISUAL_STYLE,
-  VISUAL_PROMINENCE,
-} from '../../pages/TopicPage/constants';
+import { COMPONENT_NAMES, VISUAL_STYLE, VISUAL_PROMINENCE } from './constants';
 import getComponent from '../../pages/TopicPage/getComponent';
+import MessageBanner from '../MessageBanner';
 
-const { SIMPLE_CURATION_GRID, HIERARCHICAL_CURATION_GRID } = COMPONENT_NAMES;
+const { SIMPLE_CURATION_GRID, HIERARCHICAL_CURATION_GRID, MESSAGE_BANNER } =
+  COMPONENT_NAMES;
 
-const getComponentToRender = componentName => {
+const getGridComponent = componentName => {
   switch (componentName) {
     case HIERARCHICAL_CURATION_GRID:
       return HierarchicalGrid;
@@ -37,30 +35,46 @@ const Curation = ({
   if (!promos.length) return null;
 
   const componentName = getComponent(visualStyle, visualProminence);
-
-  const Component = getComponentToRender(componentName);
+  const GridComponent = getGridComponent(componentName);
 
   const createID = titleText => {
     return titleText.replaceAll(' ', '-');
   };
 
   const isFirstCuration = position === 0;
-  const SubheadingComponent = isFirstCuration ? VisuallyHiddenText : Subheading;
   const id = createID(title || topStoriesTitle);
 
-  return curationLength > 1 && (title || isFirstCuration) ? (
-    <section aria-labelledby={id} role="region">
-      <SubheadingComponent as="h2" a11yID={id} id={id} link={link}>
-        {title || topStoriesTitle}
-      </SubheadingComponent>
-      <Component
-        promos={promos}
-        headingLevel={isFirstCuration ? 3 : headingLevel}
-      />
-    </section>
-  ) : (
-    <Component promos={promos} headingLevel={headingLevel} />
-  );
+  const SubheadingComponent = isFirstCuration ? VisuallyHiddenText : Subheading;
+
+  switch (componentName) {
+    case MESSAGE_BANNER:
+      return (
+        <MessageBanner
+          heading={title}
+          position={position}
+          description={promos[0].description}
+          link={promos[0].link}
+          linkText={promos[0].title}
+          image={promos[0].imageUrl}
+        />
+      );
+    case SIMPLE_CURATION_GRID:
+    case HIERARCHICAL_CURATION_GRID:
+    default:
+      return curationLength > 1 && (title || isFirstCuration) ? (
+        <section aria-labelledby={id} role="region">
+          <SubheadingComponent as="h2" a11yID={id} id={id} link={link}>
+            {title || topStoriesTitle}
+          </SubheadingComponent>
+          <GridComponent
+            promos={promos}
+            headingLevel={isFirstCuration ? 3 : headingLevel}
+          />
+        </section>
+      ) : (
+        <GridComponent promos={promos} headingLevel={headingLevel} />
+      );
+  }
 };
 
 Curation.propTypes = {
