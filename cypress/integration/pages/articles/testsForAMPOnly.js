@@ -147,7 +147,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             });
           });
         });
-        it(`Most read list should contain hrefs`, () => {
+        it(`Most read list should contain hrefs that are not empty`, () => {
           cy.request(mostReadPath).then(({ body: mostReadJson }) => {
             const mostReadRecords = mostReadJson.totalRecords;
             cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
@@ -160,12 +160,17 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                 cy.get('[data-e2e="most-read"] > amp-list div')
                   .next()
                   .within(() => {
-                    cy.get('a').should('have.attr', 'href');
+                    cy.get('a').each($el => {
+                      cy.wrap($el)
+                        .should('have.attr', 'href')
+                        .should('not.be.empty');
+                    });
                   });
               }
             });
           });
         });
+
         it('should not show most read list when data fetch fails', () => {
           cy.intercept(
             {

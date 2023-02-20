@@ -35,6 +35,11 @@ const rankTranslationScript = (endpoint, service) => {
         if (!item.promo.headlines.shortHeadline) {
           item.promo.headlines.shortHeadline = item.promo.headlines.seoHeadline;
         }
+
+        if(!item.promo.locators.assetUri) {
+          item.promo.locators.assetUri = item.promo.locators.canonicalUrl;
+        }
+
       });
 
       return data;
@@ -98,7 +103,6 @@ const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
             )}
           />
         </Helmet>
-
         <amp-list
           src="amp-script:dataFunctions.getRemoteData"
           items="records"
