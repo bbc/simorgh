@@ -14,7 +14,7 @@ describe('useOptimizelyVariation client side', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, true, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation(isClientSide)('correct_experiment_id'),
+      useOptimizelyVariation('correct_experiment_id', {}, isClientSide),
     );
 
     expect(result.current).toEqual('control');
@@ -24,7 +24,7 @@ describe('useOptimizelyVariation client side', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, false, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation(isClientSide)('correct_experiment_id'),
+      useOptimizelyVariation('correct_experiment_id', {}, isClientSide),
     );
 
     expect(result.current).toEqual(null);
@@ -34,7 +34,7 @@ describe('useOptimizelyVariation client side', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, true, true]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation(isClientSide)('correct_experiment_id'),
+      useOptimizelyVariation('correct_experiment_id', {}, isClientSide),
     );
 
     expect(result.current).toEqual(null);
@@ -44,7 +44,7 @@ describe('useOptimizelyVariation client side', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, true, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation(isClientSide)('wrong_experiment_id'),
+      useOptimizelyVariation('wrong_experiment_id', {}, isClientSide),
     );
 
     expect(result.current).toEqual(null);
@@ -54,7 +54,7 @@ describe('useOptimizelyVariation client side', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: null }, true, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation(isClientSide)(null),
+      useOptimizelyVariation(null, {}, isClientSide),
     );
 
     expect(result.current).toEqual(null);
@@ -73,7 +73,7 @@ describe('useOptimizelyVariation server side', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, true, false]);
 
     const { result } = renderHook(() =>
-      useOptimizelyVariation(isClientSide)('correct_experiment_id'),
+      useOptimizelyVariation('correct_experiment_id', {}, isClientSide),
     );
 
     expect(result.current).toEqual(true);

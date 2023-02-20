@@ -4,10 +4,10 @@ import { renderHook, act, cleanup } from '@testing-library/react-hooks';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import useOptimizelyScrollDepth from '.';
 
-const mockHook = jest.fn();
-jest.mock('#hooks/useOptimizelyVariation', () => () => mockHook);
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn());
 
 const optimizelyMock = {
   onReady: jest.fn(() => Promise.resolve()),
@@ -93,7 +93,7 @@ describe('useOptimizelyScrollDepth', () => {
   });
 
   it('should not call Optimizely track function for users not in an experiment', async () => {
-    mockHook.mockReturnValue(null);
+    useOptimizelyVariation.mockReturnValue(null);
 
     const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,

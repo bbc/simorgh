@@ -6,11 +6,11 @@ import { OptimizelyProvider } from '@optimizely/react-sdk';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
 import OptimizelyArticleCompleteTracking from '.';
 
-const mockHook = jest.fn();
-jest.mock('#hooks/useOptimizelyVariation', () => () => mockHook);
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
@@ -112,7 +112,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is not in view', async () => {
-    mockHook.mockReturnValue('variation_1');
+    useOptimizelyVariation.mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
@@ -136,7 +136,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not send tracking event when element is in view, but not in experiment variation', async () => {
-    mockHook.mockReturnValue(null);
+    useOptimizelyVariation.mockReturnValue(null);
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
@@ -160,7 +160,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should not return intersecting element when on AMP', async () => {
-    mockHook.mockReturnValue('variation_1');
+    useOptimizelyVariation.mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
@@ -176,7 +176,7 @@ describe('Optimizely Page Complete tracking', () => {
   });
 
   it('should send tracking event when element is in view and in experiment variation', async () => {
-    mockHook.mockReturnValue('variation_1');
+    useOptimizelyVariation.mockReturnValue('variation_1');
 
     const { container } = render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
