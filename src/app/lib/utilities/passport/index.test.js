@@ -1,4 +1,4 @@
-import { getPassportHome, isValidPassportHome } from '.';
+import { getCanonicalUrl, getPassportHome, isValidPassportHome } from '.';
 
 describe('getPassportHome', () => {
   const data = {
@@ -61,5 +61,48 @@ describe('isValidPassportHome', () => {
 
   it('should give true for null passportHome with overrides', () => {
     expect(isValidPassportHome(null, 'portuguese', ['brasil'])).toEqual(true);
+  });
+});
+
+describe('getCanonicalURL', () => {
+  const data = {
+    data: {
+      article: {
+        metadata: {
+          locators: {
+            canonicalUrl:
+              'https://www.bbc.com/sport/judo/articles/cj80n66ddnko',
+          },
+        },
+      },
+    },
+  };
+
+  const invalidData = {
+    data: {
+      article: {
+        metadata: {
+          locators: {},
+        },
+      },
+    },
+  };
+
+  it('should return a valid service when a valid canonical object is passed', () => {
+    const canonicalUrl = getCanonicalUrl(data);
+
+    expect(canonicalUrl).toEqual('/sport/judo/articles/cj80n66ddnko');
+  });
+
+  it('should return null when an empty or null object is passed', () => {
+    const canonicalUrl = getCanonicalUrl({});
+
+    expect(canonicalUrl).toEqual(null);
+  });
+
+  it('should return null if home is not in the canonical object', () => {
+    const canonicalUrl = getCanonicalUrl(invalidData);
+
+    expect(canonicalUrl).toEqual(null);
   });
 });

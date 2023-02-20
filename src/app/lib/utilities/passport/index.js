@@ -28,3 +28,14 @@ export const isValidPassportHome = (
 
   return passportHomesOverrideArray.some(matchesPassportHome);
 };
+
+export const getCanonicalUrl = pageData => {
+  const canonicalUrl = pathOr(
+    null,
+    ['data', 'article', 'metadata', 'locators', 'canonicalUrl'],
+    pageData,
+  );
+  return pageData && canonicalUrl
+    ? canonicalUrl.replace(/.*(bbc.com|localhost:\d*)/, '')
+    : null;
+};
