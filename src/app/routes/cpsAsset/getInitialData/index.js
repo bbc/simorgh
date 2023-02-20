@@ -106,7 +106,7 @@ export default async ({
     });
 
     const processedAdditionalData = processMostWatched({
-      data: { ...secondaryColumn },
+      data: secondaryColumn,
       service,
       path: pathname,
       toggles,
