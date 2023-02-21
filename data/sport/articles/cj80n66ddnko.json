@@ -318,7 +318,10 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cj80n66ddnko",
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:cj80n66ddnko" },
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cj80n66ddnko",
+          "canonicalUrl": "https://www.bbc.com/sport/judo/articles/cj80n66ddnko"
+        },
         "type": "article",
         "createdBy": "Sport",
         "language": "en-gb",

@@ -26,6 +26,7 @@ import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
 import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
+import sportArticlePageJson from '#data/sport/articles/cj80n66ddnko.json';
 
 import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import routes from '.';
@@ -258,7 +259,7 @@ it('should route to and render an article page', async () => {
 
 it('should route to and render a Sport Discipline article page', async () => {
   const pathname = '/judo/articles/cj80n66ddnko';
-  fetchMock.mock(`http://localhost${pathname}.json`, articlePageJson);
+  fetchMock.mock(`http://localhost${pathname}.json`, sportArticlePageJson);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({

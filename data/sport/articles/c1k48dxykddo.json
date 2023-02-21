@@ -27,33 +27,19 @@
                                   "text": "Netball World Cup 2019: Northern Ireland earn crucial 67-50 win over Sri Lanka",
                                   "attributes": []
                                 },
-                                "position": [
-                                  1,
-                                  1,
-                                  1,
-                                  1
-                                ]
+                                "position": [1, 1, 1, 1]
                               }
                             ]
                           },
-                          "position": [
-                            1,
-                            1,
-                            1
-                          ]
+                          "position": [1, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      1,
-                      1
-                    ]
+                    "position": [1, 1]
                   }
                 ]
               },
-              "position": [
-                1
-              ]
+              "position": [1]
             },
             {
               "id": "e367d7a7",
@@ -62,9 +48,7 @@
                 "firstPublished": 1563022155629,
                 "lastPublished": 1563022155629
               },
-              "position": [
-                2
-              ]
+              "position": [2]
             },
             {
               "id": "9104e766",
@@ -84,18 +68,11 @@
                             "text": "Northern Ireland regrouped from Friday's heavy opening defeat by Australia to earn a vital 67-50 win over Sri Lanka at the World Cup.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            1,
-                            1
-                          ]
+                          "position": [3, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      1
-                    ]
+                    "position": [3, 1]
                   },
                   {
                     "id": "cc4b33af",
@@ -110,18 +87,11 @@
                             "text": "The win boosts Northern Ireland's hopes of clinching the top-three spot in Group A which would see them progress to the next stage of the competition.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            2,
-                            1
-                          ]
+                          "position": [3, 2, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      2
-                    ]
+                    "position": [3, 2]
                   },
                   {
                     "id": "45daa5ae",
@@ -136,18 +106,11 @@
                             "text": "Emma Magee and half-time substitute Noleen Armstrong both scored heavily for the dominant Northern Irish.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            3,
-                            1
-                          ]
+                          "position": [3, 3, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      3
-                    ]
+                    "position": [3, 3]
                   },
                   {
                     "id": "4bab0c67",
@@ -162,32 +125,21 @@
                             "text": "Northern Ireland led 34-25 at half-time and remained in control.",
                             "attributes": []
                           },
-                          "position": [
-                            3,
-                            4,
-                            1
-                          ]
+                          "position": [3, 4, 1]
                         }
                       ]
                     },
-                    "position": [
-                      3,
-                      4
-                    ]
+                    "position": [3, 4]
                   }
                 ]
               },
-              "position": [
-                3
-              ]
+              "position": [3]
             },
             {
               "id": "d9154f1d",
               "type": "mpu",
               "model": {},
-              "position": [
-                4
-              ]
+              "position": [4]
             },
             {
               "id": "b37892ff",
@@ -207,24 +159,15 @@
                             "text": "Magee hit 18 goals in the first half as Northern Ireland bossed the contest from the off.",
                             "attributes": []
                           },
-                          "position": [
-                            5,
-                            1,
-                            1
-                          ]
+                          "position": [5, 1, 1]
                         }
                       ]
                     },
-                    "position": [
-                      5,
-                      1
-                    ]
+                    "position": [5, 1]
                   }
                 ]
               },
-              "position": [
-                5
-              ]
+              "position": [5]
             }
           ]
         }
@@ -251,12 +194,7 @@
           "taggings": []
         },
         "tags": {},
-        "blockTypes": [
-          "headline",
-          "text",
-          "paragraph",
-          "fragment"
-        ],
+        "blockTypes": ["headline", "text", "paragraph", "fragment"],
         "allowAdvertising": true
       },
       "promo": {
@@ -741,10 +679,7 @@
                       "thingLabel": "League Two",
                       "thingUri": "http://www.bbc.co.uk/things/71d1288c-d1ea-6a4a-bd87-237dbb9e6470#id",
                       "thingId": "71d1288c-d1ea-6a4a-bd87-237dbb9e6470",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Thing"
-                      ],
+                      "thingType": ["tagging:TagConcept", "core:Thing"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "League Two",
                       "type": "about"
@@ -822,10 +757,7 @@
                       "thingLabel": "Rugby Union",
                       "thingUri": "http://www.bbc.co.uk/things/b773195a-9880-4773-88d4-50d36260fe12#id",
                       "thingId": "b773195a-9880-4773-88d4-50d36260fe12",
-                      "thingType": [
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
+                      "thingType": ["core:Thing", "tagging:TagConcept"],
                       "thingSameAs": [
                         "http://dbpedia.org/resource/Rugby_Union"
                       ],
@@ -837,10 +769,7 @@
                       "thingLabel": "Synchronised Swimming",
                       "thingUri": "http://www.bbc.co.uk/things/bd51d530-f0fb-684e-a305-3f15b7e6d4a1#id",
                       "thingId": "bd51d530-f0fb-684e-a305-3f15b7e6d4a1",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Thing"
-                      ],
+                      "thingType": ["tagging:TagConcept", "core:Thing"],
                       "thingSameAs": [
                         "http://dbpedia.org/resource/Synchronized_swimming"
                       ],
@@ -870,13 +799,8 @@
                       "thingLabel": "Water Polo",
                       "thingUri": "http://www.bbc.co.uk/things/e4d61a41-dba2-7849-a725-d8b445ec3cbc#id",
                       "thingId": "e4d61a41-dba2-7849-a725-d8b445ec3cbc",
-                      "thingType": [
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Water_Polo"
-                      ],
+                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingSameAs": ["http://dbpedia.org/resource/Water_Polo"],
                       "thingEnglishLabel": "Water Polo",
                       "type": "about"
                     }
@@ -955,9 +879,7 @@
                 "versions": [
                   {
                     "versionId": "p018cwcy",
-                    "types": [
-                      "Original"
-                    ],
+                    "types": ["Original"],
                     "duration": 141,
                     "durationISO8601": "PT2M21S",
                     "warnings": {
@@ -1021,10 +943,7 @@
                       "thingLabel": "Champions League",
                       "thingUri": "http://www.bbc.co.uk/things/1e5c6e40-0b48-cb44-86ae-be47f66aac8a#id",
                       "thingId": "1e5c6e40-0b48-cb44-86ae-be47f66aac8a",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Thing"
-                      ],
+                      "thingType": ["tagging:TagConcept", "core:Thing"],
                       "thingSameAs": [
                         "http://dbpedia.org/resource/UEFA_Champions_League"
                       ],
@@ -1036,10 +955,7 @@
                       "thingLabel": "Rugby Sevens",
                       "thingUri": "http://www.bbc.co.uk/things/3d556f88-c802-4fcc-9c25-469d2ba7b42a#id",
                       "thingId": "3d556f88-c802-4fcc-9c25-469d2ba7b42a",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Thing"
-                      ],
+                      "thingType": ["tagging:TagConcept", "core:Thing"],
                       "thingSameAs": [
                         "http://dbpedia.org/resource/Rugby_sevens"
                       ],
@@ -1051,10 +967,7 @@
                       "thingLabel": "Scottish Cup",
                       "thingUri": "http://www.bbc.co.uk/things/96b7c068-a153-d640-8a37-5cfa8e1eff57#id",
                       "thingId": "96b7c068-a153-d640-8a37-5cfa8e1eff57",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Thing"
-                      ],
+                      "thingType": ["tagging:TagConcept", "core:Thing"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Scottish Cup",
                       "type": "about"
@@ -1102,10 +1015,7 @@
                       "thingLabel": "Scottish Premiership",
                       "thingUri": "http://www.bbc.co.uk/things/ebca7141-e8ba-0e40-bba9-d0864e29bc1f#id",
                       "thingId": "ebca7141-e8ba-0e40-bba9-d0864e29bc1f",
-                      "thingType": [
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
+                      "thingType": ["core:Thing", "tagging:TagConcept"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Scottish Premiership",
                       "type": "about"
@@ -1115,10 +1025,7 @@
                       "thingLabel": "EFL Cup",
                       "thingUri": "http://www.bbc.co.uk/things/f7eeb725-55f4-3542-89ae-f4a4e8bd3c58#id",
                       "thingId": "f7eeb725-55f4-3542-89ae-f4a4e8bd3c58",
-                      "thingType": [
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
+                      "thingType": ["core:Thing", "tagging:TagConcept"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "EFL Cup",
                       "type": "about"
@@ -1200,9 +1107,7 @@
                 "versions": [
                   {
                     "versionId": "p01b9zdp",
-                    "types": [
-                      "Original"
-                    ],
+                    "types": ["Original"],
                     "duration": 29,
                     "durationISO8601": "PT29S",
                     "warnings": {
@@ -1361,10 +1266,7 @@
                       "thingLabel": "EFL Cup",
                       "thingUri": "http://www.bbc.co.uk/things/f7eeb725-55f4-3542-89ae-f4a4e8bd3c58#id",
                       "thingId": "f7eeb725-55f4-3542-89ae-f4a4e8bd3c58",
-                      "thingType": [
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
+                      "thingType": ["core:Thing", "tagging:TagConcept"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "EFL Cup",
                       "type": "about"
@@ -1387,9 +1289,7 @@
                 "versions": [
                   {
                     "versionId": "p017yfgg",
-                    "types": [
-                      "Original"
-                    ],
+                    "types": ["Original"],
                     "duration": 26,
                     "durationISO8601": "PT26S",
                     "warnings": {},
@@ -1457,10 +1357,7 @@
                       "thingLabel": "League One",
                       "thingUri": "http://www.bbc.co.uk/things/030b5eaf-15db-3e4e-bac9-a7789892f436#id",
                       "thingId": "030b5eaf-15db-3e4e-bac9-a7789892f436",
-                      "thingType": [
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
+                      "thingType": ["core:Thing", "tagging:TagConcept"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "League One",
                       "type": "about"
@@ -1490,10 +1387,7 @@
                       "thingLabel": "Weightlifting",
                       "thingUri": "http://www.bbc.co.uk/things/6b04e406-c181-204b-a2dd-bc20142b9e6a#id",
                       "thingId": "6b04e406-c181-204b-a2dd-bc20142b9e6a",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Thing"
-                      ],
+                      "thingType": ["tagging:TagConcept", "core:Thing"],
                       "thingSameAs": [
                         "http://dbpedia.org/resource/Weightlifting"
                       ],
@@ -1523,13 +1417,8 @@
                       "thingLabel": "Darts",
                       "thingUri": "http://www.bbc.co.uk/things/869e0ec9-af00-4f2b-82b6-b760d69a4492#id",
                       "thingId": "869e0ec9-af00-4f2b-82b6-b760d69a4492",
-                      "thingType": [
-                        "tagging:TagConcept",
-                        "core:Thing"
-                      ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Darts"
-                      ],
+                      "thingType": ["tagging:TagConcept", "core:Thing"],
+                      "thingSameAs": ["http://dbpedia.org/resource/Darts"],
                       "thingEnglishLabel": "Darts",
                       "type": "about"
                     },
@@ -1576,10 +1465,7 @@
                       "thingLabel": "Scottish Premiership",
                       "thingUri": "http://www.bbc.co.uk/things/ebca7141-e8ba-0e40-bba9-d0864e29bc1f#id",
                       "thingId": "ebca7141-e8ba-0e40-bba9-d0864e29bc1f",
-                      "thingType": [
-                        "core:Thing",
-                        "tagging:TagConcept"
-                      ],
+                      "thingType": ["core:Thing", "tagging:TagConcept"],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Scottish Premiership",
                       "type": "about"
