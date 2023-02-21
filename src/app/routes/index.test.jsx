@@ -271,7 +271,8 @@ it('should route to and render a Sport Discipline article page', async () => {
     pageType,
     service: 'sport',
   });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.";
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+    "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.";
 
   expect(
     await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
