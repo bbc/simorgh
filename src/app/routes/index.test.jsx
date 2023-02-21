@@ -90,479 +90,484 @@ const renderRouter = props =>
     );
   });
 
-it('should have correct properties in each route', () => {
-  routes.forEach((route, index) => {
-    expect(route).toEqual(expect.any(Object));
-    expect(route).toHaveProperty('component');
-    expect(route).toHaveProperty('pageType');
+describe('Main page routes', () => {
+  it('should have correct properties in each route', () => {
+    routes.forEach((route, index) => {
+      expect(route).toEqual(expect.any(Object));
+      expect(route).toHaveProperty('component');
+      expect(route).toHaveProperty('pageType');
 
-    // Last route should be catchall (no path specified) error page
-    if (index === routes.length - 1) {
-      expect(route.pageType).toEqual(ERROR_PAGE);
-      expect(route).not.toHaveProperty('path');
-    } else {
-      expect(route).toHaveProperty('path');
-    }
-  });
-});
-
-it('should route to and render live radio page', async () => {
-  const pathname = '/korean/bbc_korean_radio/liveradio';
-  fetchMock.mock(
-    `http://localhost${pathname}.json?renderer_env=live`,
-    liveRadioPageJson,
-  );
-
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    pageType,
-    toggles: {
-      liveRadioSchedule: { enabled: true },
-    },
+      // Last route should be catchall (no path specified) error page
+      if (index === routes.length - 1) {
+        expect(route.pageType).toEqual(ERROR_PAGE);
+        expect(route).not.toHaveProperty('path');
+      } else {
+        expect(route).toHaveProperty('path');
+      }
+    });
   });
 
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'korean',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC 코리아 라디오';
+  it('should route to and render live radio page', async () => {
+    const pathname = '/korean/bbc_korean_radio/liveradio';
+    fetchMock.mock(
+      `http://localhost${pathname}.json?renderer_env=live`,
+      liveRadioPageJson,
+    );
 
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      pageType,
+      toggles: {
+        liveRadioSchedule: { enabled: true },
+      },
+    });
 
-it('should route to and render the podcast page', async () => {
-  const pathname = '/arabic/podcasts/p02pc9qc';
-  fetchMock.mock(
-    `http://localhost${pathname}.json?renderer_env=live`,
-    podcastPageJson,
-  );
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'korean',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC 코리아 라디오';
 
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    pageType,
-    toggles: {
-      recentAudioEpisodes: { enabled: false, value: 4 },
-    },
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'arabic',
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
   });
 
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Xtra';
+  it('should route to and render the podcast page', async () => {
+    const pathname = '/arabic/podcasts/p02pc9qc';
+    fetchMock.mock(
+      `http://localhost${pathname}.json?renderer_env=live`,
+      podcastPageJson,
+    );
 
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      pageType,
+      toggles: {
+        recentAudioEpisodes: { enabled: false, value: 4 },
+      },
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'arabic',
+    });
 
-it('should route to and render the onDemand Radio page', async () => {
-  const pathname = '/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
-  fetchMock.mock(
-    `http://localhost${pathname}.json?renderer_env=live`,
-    onDemandRadioPageJson,
-  );
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Xtra';
 
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    pageType,
-    toggles: {
-      recentAudioEpisodes: { enabled: false, value: 4 },
-    },
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'indonesia',
-  });
-
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Dunia Pagi Ini';
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
-
-it('should route to and render the onDemand TV Brand page', async () => {
-  const pathname = '/indonesia/bbc_indonesian_tv/tv_programmes/w13xttn4';
-  fetchMock.mock(
-    `http://localhost${pathname}.json?renderer_env=live`,
-    onDemandTvPageJson,
-  );
-
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    pageType,
-    toggles: {
-      recentVideoEpisodes: { enabled: false, value: 4 },
-    },
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'pashto',
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
   });
 
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'نړۍ دا وخت';
+  it('should route to and render the onDemand Radio page', async () => {
+    const pathname = '/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
+    fetchMock.mock(
+      `http://localhost${pathname}.json?renderer_env=live`,
+      onDemandRadioPageJson,
+    );
 
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      pageType,
+      toggles: {
+        recentAudioEpisodes: { enabled: false, value: 4 },
+      },
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'indonesia',
+    });
 
-it('should route to and render a front page', async () => {
-  const pathname = '/pidgin';
-  fetchMock.mock(`http://localhost${pathname}.json`, frontPageJson);
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Dunia Pagi Ini';
 
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    service: 'pidgin',
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
   });
 
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'pidgin',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Yarn Me Tori';
+  it('should route to and render the onDemand TV Brand page', async () => {
+    const pathname = '/indonesia/bbc_indonesian_tv/tv_programmes/w13xttn4';
+    fetchMock.mock(
+      `http://localhost${pathname}.json?renderer_env=live`,
+      onDemandTvPageJson,
+    );
 
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      pageType,
+      toggles: {
+        recentVideoEpisodes: { enabled: false, value: 4 },
+      },
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'pashto',
+    });
 
-it('should route to and render a most watched page', async () => {
-  process.env.SIMORGH_APP_ENV = 'local';
-  const pathname = '/pidgin/media/video';
-  fetchMock.mock('http://localhost/pidgin/mostwatched.json', mostWatchedData);
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'نړۍ دا وخت';
 
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    service: 'pidgin',
-    pageType,
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'pidgin',
-  });
-  const EXPECTED_TITLE_RENDERED_IN_DOCUMENT = 'De one we dem don look';
-
-  expect(
-    await screen.findByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
-
-it('should route to and render a media asset page', async () => {
-  process.env.SIMORGH_APP_ENV = 'local';
-  const pathname = '/yoruba/media-23256797';
-  fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
-  fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
-
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    service: 'yoruba',
-    pageType,
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'yoruba',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
-
-it('should route to and render a media asset page', async () => {
-  const pathname = '/yoruba/media-23256797';
-  fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
-  fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
-
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    service: 'yoruba',
-    pageType,
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'yoruba',
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
   });
 
-  // TODO: use headline text when double headline bug is fixed https://github.com/bbc/simorgh/issues/5688
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
+  it('should route to and render a front page', async () => {
+    const pathname = '/pidgin';
+    fetchMock.mock(`http://localhost${pathname}.json`, frontPageJson);
 
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      service: 'pidgin',
+    });
 
-it('should route to and render a legacy media asset page', async () => {
-  process.env.SIMORGH_APP_ENV = 'local';
-  const pathname = '/azeri/multimedia/2012/09/120919_georgia_prison_video';
-  fetchMock.mock(`http://localhost${pathname}.json`, legacyMediaAssetPage);
-  fetchMock.mock('http://localhost/azeri/mostwatched.json', mostWatchedData);
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'pidgin',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Yarn Me Tori';
 
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    service: 'azeri',
-    pageType,
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'azeri',
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
   });
 
-  // TODO: use headline text when double headline bug is fixed https://github.com/bbc/simorgh/issues/5688
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.';
+  it('should route to and render a most watched page', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
+    const pathname = '/pidgin/media/video';
+    fetchMock.mock('http://localhost/pidgin/mostwatched.json', mostWatchedData);
 
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      service: 'pidgin',
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'pidgin',
+    });
+    const EXPECTED_TITLE_RENDERED_IN_DOCUMENT = 'De one we dem don look';
 
-it('should route to and render a photo gallery page', async () => {
-  const pathname = '/indonesia/indonesia-41635759';
-  fetchMock.mock(`http://localhost${pathname}.json`, photoGalleryPageJson);
-
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    pageType,
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'indonesia',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'Anies Baswedan, dari mantan menteri menjadi gubernur DKI Jakarta';
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
-
-it('should route to and render a story page', async () => {
-  const pathname = '/mundo/noticias-internacional-51266689';
-  fetchMock.mock(`http://localhost${pathname}.json`, storyPageJson);
-  fetchMock.mock(`http://localhost/mundo/mostread.json`, storyPageMostReadData);
-  fetchMock.mock(
-    `http://localhost${pathname}/recommendations.json`,
-    storyPageRecommendationsData,
-  );
-
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    service: 'mundo',
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'mundo',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea';
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
-
-it('should route to and render an index page', async () => {
-  const pathname = '/ukrainian/ukraine_in_russian';
-  fetchMock.mock(`http://localhost${pathname}.json`, indexPageJson);
-
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    service: 'ukrainian',
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'ukrainian',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.';
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
-
-// skipping this test until FIX pages are fully featured with correct metadata and Chartbeat
-it.skip('should route to and render a feature index page', async () => {
-  const pathname = '/afrique/48465371';
-  fetchMock.mock(`http://localhost${pathname}.json`, featureIndexPageJson);
-
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    pageType,
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'afrique',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'CAN 2019 : le Sénégal qualifié pour les huitièmes de finale';
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
-
-it('should route to and render a 500 error page', async () => {
-  const pathname = '/igbo/500';
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { errorCode } = await getInitialData({
-    path: pathname,
-    pageType,
-  });
-  await renderRouter({
-    pathname,
-    pageType,
-    errorCode,
-    service: 'igbo',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
-
-it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
-  const pathname = '/afrique';
-  fetchMock.mock(`http://localhost${pathname}.json`, 500);
-
-  const { pageType, getInitialData } = getMatchingRoute(pathname);
-  const { status, error } = await getInitialData({
-    path: pathname,
-    pageType,
-  });
-  await renderRouter({
-    pathname,
-    pageType: FRONT_PAGE,
-    service: 'afrique',
-    error: {
-      message: error,
-    },
-    status,
-    errorCode: 500,
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
-
-it('should route to and render a 404 error page', async () => {
-  const pathname = '/igbo/404';
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { errorCode } = await getInitialData({
-    path: pathname,
-    pageType,
-  });
-  await renderRouter({
-    pathname,
-    pageType,
-    errorCode,
-    service: 'igbo',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
-
-it('should render a 404 error page if a data fetch responds with a 404', async () => {
-  const pathname = '/pidgin/articles/cwl08rd38p6o';
-  const bffFetchSpy = jest.spyOn(fetchPageData, 'default');
-
-  bffFetchSpy.mockRejectedValue({ message: 'Not found', status: 404 });
-
-  const { pageType, getInitialData } = getMatchingRoute(pathname);
-  const { status, error } = await getInitialData({
-    path: pathname,
-    service: 'pidgin',
-    getAgent,
+    expect(
+      await screen.findByText(EXPECTED_TITLE_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
   });
 
-  await renderRouter({
-    pathname,
-    pageType,
-    status,
-    error: {
-      message: error,
-    },
-    errorCode: 404,
-    service: 'pidgin',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
+  it('should route to and render a media asset page', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
+    const pathname = '/yoruba/media-23256797';
+    fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
+    fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
 
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-});
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      service: 'yoruba',
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'yoruba',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+      'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
 
-it('should fallback to and render a 404 error page if no route match is found', async () => {
-  const pathname = '/a/path/that/does/not/exist';
-  const { pageType, getInitialData } =
-    getMatchingRoute(pathname) || routes[routes.length - 1];
-  const { errorCode } = await getInitialData({
-    path: pathname,
-    pageType,
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
   });
-  await renderRouter({
-    pathname,
-    pageType,
-    errorCode,
-    service: 'pidgin',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
 
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
+  it('should route to and render a media asset page', async () => {
+    const pathname = '/yoruba/media-23256797';
+    fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
+    fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
+
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      service: 'yoruba',
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'yoruba',
+    });
+
+    // TODO: use headline text when double headline bug is fixed https://github.com/bbc/simorgh/issues/5688
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+      'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
+
+  it('should route to and render a legacy media asset page', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
+    const pathname = '/azeri/multimedia/2012/09/120919_georgia_prison_video';
+    fetchMock.mock(`http://localhost${pathname}.json`, legacyMediaAssetPage);
+    fetchMock.mock('http://localhost/azeri/mostwatched.json', mostWatchedData);
+
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      service: 'azeri',
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'azeri',
+    });
+
+    // TODO: use headline text when double headline bug is fixed https://github.com/bbc/simorgh/issues/5688
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+      'Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
+
+  it('should route to and render a photo gallery page', async () => {
+    const pathname = '/indonesia/indonesia-41635759';
+    fetchMock.mock(`http://localhost${pathname}.json`, photoGalleryPageJson);
+
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'indonesia',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+      'Anies Baswedan, dari mantan menteri menjadi gubernur DKI Jakarta';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
+
+  it('should route to and render a story page', async () => {
+    const pathname = '/mundo/noticias-internacional-51266689';
+    fetchMock.mock(`http://localhost${pathname}.json`, storyPageJson);
+    fetchMock.mock(
+      `http://localhost/mundo/mostread.json`,
+      storyPageMostReadData,
+    );
+    fetchMock.mock(
+      `http://localhost${pathname}/recommendations.json`,
+      storyPageRecommendationsData,
+    );
+
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      service: 'mundo',
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'mundo',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+      'Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
+
+  it('should route to and render an index page', async () => {
+    const pathname = '/ukrainian/ukraine_in_russian';
+    fetchMock.mock(`http://localhost${pathname}.json`, indexPageJson);
+
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      service: 'ukrainian',
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'ukrainian',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+      'Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
+
+  // skipping this test until FIX pages are fully featured with correct metadata and Chartbeat
+  it.skip('should route to and render a feature index page', async () => {
+    const pathname = '/afrique/48465371';
+    fetchMock.mock(`http://localhost${pathname}.json`, featureIndexPageJson);
+
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'afrique',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+      'CAN 2019 : le Sénégal qualifié pour les huitièmes de finale';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
+
+  it('should route to and render a 500 error page', async () => {
+    const pathname = '/igbo/500';
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { errorCode } = await getInitialData({
+      path: pathname,
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageType,
+      errorCode,
+      service: 'igbo',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
+
+  it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
+    const pathname = '/afrique';
+    fetchMock.mock(`http://localhost${pathname}.json`, 500);
+
+    const { pageType, getInitialData } = getMatchingRoute(pathname);
+    const { status, error } = await getInitialData({
+      path: pathname,
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageType: FRONT_PAGE,
+      service: 'afrique',
+      error: {
+        message: error,
+      },
+      status,
+      errorCode: 500,
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
+
+  it('should route to and render a 404 error page', async () => {
+    const pathname = '/igbo/404';
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { errorCode } = await getInitialData({
+      path: pathname,
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageType,
+      errorCode,
+      service: 'igbo',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
+
+  it('should render a 404 error page if a data fetch responds with a 404', async () => {
+    const pathname = '/pidgin/articles/cwl08rd38p6o';
+    const bffFetchSpy = jest.spyOn(fetchPageData, 'default');
+
+    bffFetchSpy.mockRejectedValue({ message: 'Not found', status: 404 });
+
+    const { pageType, getInitialData } = getMatchingRoute(pathname);
+    const { status, error } = await getInitialData({
+      path: pathname,
+      service: 'pidgin',
+      getAgent,
+    });
+
+    await renderRouter({
+      pathname,
+      pageType,
+      status,
+      error: {
+        message: error,
+      },
+      errorCode: 404,
+      service: 'pidgin',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
+
+  it('should fallback to and render a 404 error page if no route match is found', async () => {
+    const pathname = '/a/path/that/does/not/exist';
+    const { pageType, getInitialData } =
+      getMatchingRoute(pathname) || routes[routes.length - 1];
+    const { errorCode } = await getInitialData({
+      path: pathname,
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageType,
+      errorCode,
+      service: 'pidgin',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
+
+    expect(
+      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).toBeInTheDocument();
+  });
 });
 
 describe('Article page routes', () => {
