@@ -14,7 +14,7 @@ import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import { articleDataPropTypes } from '#models/propTypes/article';
 
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
-import CpsVaried from '#containers/CpsVaried';
+import CpsVariedRecommendation from '#containers/CpsVaried';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import { Secondary, gridColumnsSecondary } from './ArticlePageGrid';
 
@@ -36,7 +36,7 @@ const SecondaryColumn = ({ pageData }) => {
     <Secondary>
       {topStoriesContent && (
         <ResponsiveComponentWrapper data-testid="top-stories">
-          {CpsVaried({
+          {CpsVariedRecommendation({
             experimentID: 'test_2',
             pageData,
             renderFunction: () => (

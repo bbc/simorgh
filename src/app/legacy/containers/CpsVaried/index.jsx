@@ -7,7 +7,11 @@ const optimizelyMappings = {
   hybrid_recs: 'datalabHybridRecommendations',
 };
 
-const CpsVaried = ({ pageData, renderFunction, experimentID }) => {
+const CpsVariedRecommendation = ({
+  pageData,
+  renderFunction,
+  experimentID,
+}) => {
   let unirecsHybridRecommendationData = null;
   const variation = useOptimizelyMvtVariation(experimentID);
 
@@ -21,4 +25,4 @@ const CpsVaried = ({ pageData, renderFunction, experimentID }) => {
   return renderFunction(unirecsHybridRecommendationData);
 };
 
-export default CpsVaried;
+export default CpsVariedRecommendation;
