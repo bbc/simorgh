@@ -4,7 +4,7 @@ import AmpGeo from '#components/AmpGeo';
 import isLive from '#lib/utilities/isLive';
 import Banner from './Banner/index.amp';
 
-const ampConsentData = !isLive()
+const ampConsentData = isLive()
   ? {
       consents: {
         'user-consent': {
