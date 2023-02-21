@@ -1,6 +1,10 @@
 import path from 'ramda/src/path';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import { getBlockData, getVideoEmbedUrl } from './helpers';
+import {
+  getBlockData,
+  getVideoEmbedUrl,
+  fetchArticlePageData,
+} from './helpers';
 import config from '../../../support/config/services';
 import { serviceNumerals } from '../../../../src/app/legacy/containers/MostRead/Canonical/Rank';
 
@@ -22,35 +26,10 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 }) => {
   let articlesData;
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
-    before(() => {
-      const env = Cypress.env('APP_ENV');
-      if (env !== 'local') {
-        const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
-        let appendVariant = '';
-
-        // eslint-disable-next-line prefer-destructuring
-        const articleId =
-          Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
-
-        if (scriptSwitchServices.includes(service)) {
-          appendVariant = `&variant=${variant}`;
-        }
-        const bffUrl = `https://web-cdn.${
-          env === 'live' ? '' : `${env}.`
-        }api.bbci.co.uk/fd/simorgh-bff?pageType=article&id=${articleId}&service=${service}${appendVariant}`;
-
-        cy.log(bffUrl);
-        cy.request({
-          url: bffUrl,
-          headers: { 'ctx-service-env': env },
-        }).then(({ body }) => {
-          articlesData = body;
-        });
-      } else {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          articlesData = body;
-        });
-      }
+    before(async () => {
+      articlesData = await fetchArticlePageData(service, variant).then(
+        ({ body }) => body,
+      );
     });
     it('should contain an amp-img', () => {
       if (serviceHasFigure(service)) {
@@ -147,7 +126,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             });
           });
         });
-        it(`Most read list should contain hrefs`, () => {
+        it(`Most read list should contain hrefs that are not empty`, () => {
           cy.request(mostReadPath).then(({ body: mostReadJson }) => {
             const mostReadRecords = mostReadJson.totalRecords;
             cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
@@ -160,12 +139,17 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                 cy.get('[data-e2e="most-read"] > amp-list div')
                   .next()
                   .within(() => {
-                    cy.get('a').should('have.attr', 'href');
+                    cy.get('a').each($el => {
+                      cy.wrap($el)
+                        .should('have.attr', 'href')
+                        .should('not.be.empty');
+                    });
                   });
               }
             });
           });
         });
+
         it('should not show most read list when data fetch fails', () => {
           cy.intercept(
             {

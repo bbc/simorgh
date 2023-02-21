@@ -18,7 +18,7 @@ const Component = ({ service, variant }) => {
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
         <Wrapper>
-          <Promo {...fixture.data.summaries[0]} />
+          <Promo {...fixture.data.curations[0].summaries[0]} />
         </Wrapper>
       </ServiceContextProvider>
     </ThemeProvider>
