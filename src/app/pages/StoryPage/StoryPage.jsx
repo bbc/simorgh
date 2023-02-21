@@ -41,7 +41,6 @@ import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
-import CpsVaried from '#containers/CpsVaried';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
