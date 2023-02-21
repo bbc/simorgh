@@ -46,7 +46,6 @@ jest.mock('../pages');
 
 const agent = { ca: 'ca', key: 'key' };
 const getAgent = jest.fn(() => agent);
-const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
 
 beforeEach(() => {
   jest.setTimeout(10000);
@@ -221,73 +220,6 @@ it('should route to and render the onDemand TV Brand page', async () => {
   expect(
     await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
-});
-
-it('should route to and render an article page', async () => {
-  const pathname = '/persian/articles/c4vlle3q337o';
-
-  fetchDataSpy.mockImplementation(() =>
-    Promise.resolve({
-      status: 200,
-      json: articlePageJson,
-    }),
-  );
-
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    getAgent,
-    service: 'persian',
-    pageType,
-  });
-
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'persian',
-  });
-
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'پهپادی که برایتان قهوه می‌آورد';
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-
-  fetchDataSpy.mockRestore();
-});
-
-it('should route to and render a Sport Discipline article page', async () => {
-  const pathname = '/sport/judo/articles/cj80n66ddnko';
-
-  fetchDataSpy.mockImplementation(() =>
-    Promise.resolve({
-      status: 200,
-      json: sportArticlePageJson,
-    }),
-  );
-
-  const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({
-    path: pathname,
-    getAgent,
-    service: 'sport',
-    pageType,
-  });
-  await renderRouter({
-    pathname,
-    pageData,
-    pageType,
-    service: 'sport',
-  });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.";
-
-  expect(
-    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-  ).toBeInTheDocument();
-
-  fetchDataSpy.mockRestore();
 });
 
 it('should route to and render a front page', async () => {
@@ -631,4 +563,70 @@ it('should fallback to and render a 404 error page if no route match is found', 
   expect(
     await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
+});
+
+describe('Article page routes', () => {
+  const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+  it('should route to and render an article page', async () => {
+    const pathname = '/persian/articles/c4vlle3q337o';
+
+    fetchDataSpy.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: articlePageJson,
+      }),
+    );
+
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      getAgent,
+      service: 'persian',
+      pageType,
+    });
+
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'persian',
+    });
+
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'پهپادی که برایتان قهوه می‌آورد';
+
+    expect(
+      screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).resolves.toBeInTheDocument();
+  });
+
+  it('should route to and render a Sport Discipline article page', async () => {
+    const pathname = '/sport/judo/articles/cj80n66ddnko';
+
+    fetchDataSpy.mockImplementation(() =>
+      Promise.resolve({
+        status: 200,
+        json: sportArticlePageJson,
+      }),
+    );
+
+    const { getInitialData, pageType } = getMatchingRoute(pathname);
+    const { pageData } = await getInitialData({
+      path: pathname,
+      getAgent,
+      service: 'sport',
+      pageType,
+    });
+    await renderRouter({
+      pathname,
+      pageData,
+      pageType,
+      service: 'sport',
+    });
+    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+      "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.";
+
+    expect(
+      screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+    ).resolves.toBeInTheDocument();
+  });
 });
