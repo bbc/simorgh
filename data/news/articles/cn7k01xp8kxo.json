@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "388e7742",
+              "id": "6274ab43",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "96376bf5",
+                    "id": "462d3202",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4f87f71d",
+                          "id": "0d276c34",
                           "type": "paragraph",
                           "model": {
                             "text": "This is the headline of this test article",
                             "blocks": [
                               {
-                                "id": "388c1314",
+                                "id": "1f82d1bc",
                                 "type": "fragment",
                                 "model": {
                                   "text": "This is the headline of this test article",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "a722057e",
+              "id": "53d64738",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "f03b2100",
+                    "id": "b69b9100",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "dd227dbe",
+                          "id": "712c260c",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "81d98bce",
+                                "id": "90e4d92f",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
                                   "blocks": [
                                     {
-                                      "id": "3554086a",
+                                      "id": "5dd2659b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "1659f08c",
+                    "id": "6c9f629e",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a5559976",
+                          "id": "93d081ed",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1ec3b351",
+                                "id": "dcd02242",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Map of France showing Paris and Cognac",
                                   "blocks": [
                                     {
-                                      "id": "0f07df55",
+                                      "id": "58177ced",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Map of France showing Paris and Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "2100dddd",
+                    "id": "448326c9",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "cae12eed",
+              "id": "e5a0298c",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1565868211077,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "f57fb8ea",
+              "id": "75720820",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "73c4abaf",
+                    "id": "a125dc21",
                     "type": "paragraph",
                     "model": {
                       "text": "This is a text block, which contains a url link to the BBC Weather homepage.",
                       "blocks": [
                         {
-                          "id": "9fe58e74",
+                          "id": "e5cc9689",
                           "type": "fragment",
                           "model": {
                             "text": "This is a text block, which contains a url link to ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "b087a37c",
+                          "id": "085e56a6",
                           "type": "urlLink",
                           "model": {
                             "text": "the BBC Weather homepage",
                             "blocks": [
                               {
-                                "id": "1ca510e3",
+                                "id": "1d3cbc1b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "the BBC Weather homepage",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "e4c0f022",
+                          "id": "be4b87f9",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "bc9939b1",
+              "id": "f9375973",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "70061e4a",
+                    "id": "94e73d5b",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f80a2e4d",
+                          "id": "6316b4ec",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d4e8d79e",
+                                "id": "7ff7f416",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a video block containing a video about ants",
                                   "blocks": [
                                     {
-                                      "id": "2a75a215",
+                                      "id": "b57083b8",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This is a video block containing a video about ants",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "ca369ba4",
+                    "id": "8306520b",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7943aa85",
+                          "id": "c6fc2651",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -395,12 +395,12 @@
                           ]
                         },
                         {
-                          "id": "dfa073f6",
+                          "id": "213afb4d",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "9fde0f5a",
+                                "id": "249b4995",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -417,23 +417,23 @@
                                 ]
                               },
                               {
-                                "id": "afa3db76",
+                                "id": "01055d5f",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "503209bc",
+                                      "id": "bd9f593b",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "a873ea33",
+                                            "id": "d5a7fc1b",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "a43e6b5e",
+                                                  "id": "bf2ab125",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -501,23 +501,23 @@
               ]
             },
             {
-              "id": "65b48da3",
+              "id": "b4c35f4f",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "660953ce",
+                    "id": "f6a34829",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cb78d2f1",
+                          "id": "fec4c74d",
                           "type": "paragraph",
                           "model": {
                             "text": "This is a subheadline block",
                             "blocks": [
                               {
-                                "id": "ca400927",
+                                "id": "d49c0b6c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "This is a subheadline block",
@@ -552,28 +552,28 @@
               ]
             },
             {
-              "id": "f21a979f",
+              "id": "85144e53",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "4b05bed5",
+                    "id": "a8c8e808",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8e7c71ab",
+                          "id": "4fc00123",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0f2c4bcb",
+                                "id": "607d4f79",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Footballers after a match",
                                   "blocks": [
                                     {
-                                      "id": "36211737",
+                                      "id": "cb14aaa7",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Footballers after a match",
@@ -612,7 +612,7 @@
                     ]
                   },
                   {
-                    "id": "177d9f4d",
+                    "id": "52792134",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -633,18 +633,18 @@
               ]
             },
             {
-              "id": "5acc5f4d",
+              "id": "b85cec7c",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "2adcac31",
+                    "id": "497c0112",
                     "type": "paragraph",
                     "model": {
                       "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
                       "blocks": [
                         {
-                          "id": "174d9231",
+                          "id": "2d71100e",
                           "type": "fragment",
                           "model": {
                             "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
@@ -664,19 +664,19 @@
                     ]
                   },
                   {
-                    "id": "b48c8e99",
+                    "id": "23d98d26",
                     "type": "paragraph",
                     "model": {
                       "text": "This is a link to the Welsh version of this test article",
                       "blocks": [
                         {
-                          "id": "9d7659c1",
+                          "id": "5c646338",
                           "type": "urlLink",
                           "model": {
                             "text": "This is a link to the Welsh version of this test article",
                             "blocks": [
                               {
-                                "id": "dc97981a",
+                                "id": "b0343386",
                                 "type": "fragment",
                                 "model": {
                                   "text": "This is a link to the Welsh version of this test article",
@@ -713,11 +713,21 @@
               ]
             },
             {
-              "id": "0792b52e",
+              "id": "40403e3d",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "344338b0",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -726,14 +736,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cn7k01xp8kxo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cn7k01xp8kxo"
+          "optimoUrn": "urn:bbc:optimo:asset:cn7k01xp8kxo",
+          "canonicalUrl": "https://www.bbc.com/news/articles/cn7k01xp8kxo"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
         "firstPublished": 1565868211077,
         "lastPublished": 1565868211077,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cn7k01xp8kxo",
           "producer": "News",
@@ -744,7 +754,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -763,7 +772,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "This is the SEO headline of this test article",
           "promoHeadline": {
@@ -892,8 +900,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -933,6 +940,7 @@
             "altText": "Liz Truss outside Number 10",
             "copyrightHolder": "Lisa White",
             "originCode": "cpsdevpb",
+            "allowSyndication": false,
             "type": "image"
           },
           "options": {
@@ -976,6 +984,7 @@
             "caption": "Angela Lansbury",
             "copyrightHolder": "BBC",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -994,16 +1003,17 @@
           "type": "cps"
         },
         {
-          "name": "How Spain looked on as dozens were crushed to death at its border",
+          "name": "15 homes, three survivors - how the quake wiped out one Turkish apartment block",
           "indexImage": {
-            "id": "63957134",
+            "id": "63977455",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/A8A7/test/_63957134_camera-super_promo_new_safe_zone.jpg",
-            "path": "/cpsdevpb/A8A7/test/_63957134_camera-super_promo_new_safe_zone.jpg",
+            "href": "http://b.files.bbci.co.uk/D8B5/test/_63977455_mediaitem128597908.jpg",
+            "path": "/cpsdevpb/D8B5/test/_63977455_mediaitem128597908.jpg",
             "height": 549,
             "width": 976,
-            "altText": "CCTV cam",
+            "altText": "Ceyda",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.bbc.co.uk/news/uk-61593081",
@@ -1015,102 +1025,6 @@
         }
       ],
       "features": [
-        {
-          "headlines": {
-            "headline": "Angela Lansbury: from stage to Cabot Cove"
-          },
-          "locators": {
-            "assetUri": "/news/23384748",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:00d18665-46b6-42fa-87c4-9b382029f73b",
-            "assetId": "23384748",
-            "cpsUrn": "urn:bbc:content:assetUri:news/23384748",
-            "curie": "http://www.bbc.co.uk/asset/00d18665-46b6-42fa-87c4-9b382029f73b"
-          },
-          "summary": "Test",
-          "timestamp": 1643303379000,
-          "language": "en-gb",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63902259",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "path": "/cpsdevpb/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "height": 562,
-            "width": 1000,
-            "altText": "ange",
-            "caption": "ange",
-            "copyrightHolder": "Ange",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63902263",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "path": "/cpsdevpb/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Ange",
-            "caption": "Ange",
-            "copyrightHolder": "ANge",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false,
-            "hasShortForm": true
-          },
-          "section": {
-            "subType": "IDX",
-            "name": "Home",
-            "uri": "/news/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:news/23384748",
-          "type": "cps"
-        },
-        {
-          "name": "When Mr Blobby got to Christmas number one",
-          "summary": "a test video link promo",
-          "indexImage": {
-            "id": "63942309",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/160D4/test/_63942309_hi001100397.jpg",
-            "path": "/cpsdevpb/160D4/test/_63942309_hi001100397.jpg",
-            "height": 1152,
-            "width": 2048,
-            "altText": "Mr Blobby",
-            "caption": "Mr Blobby",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.co.uk/iplayer/episode/b03srsjl",
-          "contentType": "Video",
-          "assetTypeCode": "PRO",
-          "timestamp": 1662997270000,
-          "type": "link"
-        },
-        {
-          "name": "Florence Pugh on her primary school nativity...",
-          "summary": "90s all the way",
-          "indexImage": {
-            "id": "63958321",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/3061/test/_63958321_p0dd2wvy.jpg",
-            "path": "/cpsdevpb/3061/test/_63958321_p0dd2wvy.jpg",
-            "height": 360,
-            "width": 640,
-            "altText": "florence pugh",
-            "caption": "florence pugh",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.co.uk/sounds/play/m001dmln",
-          "contentType": "Audio",
-          "assetTypeCode": "PRO",
-          "timestamp": 1668169266000,
-          "type": "link"
-        },
         {
           "headlines": {
             "headline": "Wales pip Scotland in World Cup thriller"
@@ -1137,6 +1051,7 @@
             "caption": "Bevan kicks wales to win",
             "copyrightHolder": "Huw Evans picture agency",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -1160,31 +1075,67 @@
           "type": "cps"
         },
         {
+          "name": "When Mr Blobby got to Christmas number one",
+          "summary": "a test video link promo",
+          "indexImage": {
+            "id": "63942309",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/160D4/test/_63942309_hi001100397.jpg",
+            "path": "/cpsdevpb/160D4/test/_63942309_hi001100397.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "Mr Blobby",
+            "caption": "Mr Blobby",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/iplayer/episode/b03srsjl",
+          "contentType": "Video",
+          "assetTypeCode": "PRO",
+          "timestamp": 1662997270000,
+          "type": "link"
+        },
+        {
           "headlines": {
-            "headline": "Lego Titanic sunk"
+            "headline": "Angela Lansbury: from stage to Cabot Cove"
           },
           "locators": {
-            "assetUri": "/news/business-23481281",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:06cb5998-373d-41ea-b249-6aec87d3329b",
-            "assetId": "23481281",
-            "cpsUrn": "urn:bbc:content:assetUri:news/business-23481281",
-            "curie": "http://www.bbc.co.uk/asset/06cb5998-373d-41ea-b249-6aec87d3329b"
+            "assetUri": "/news/23384748",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:00d18665-46b6-42fa-87c4-9b382029f73b",
+            "assetId": "23384748",
+            "cpsUrn": "urn:bbc:content:assetUri:news/23384748",
+            "curie": "http://www.bbc.co.uk/asset/00d18665-46b6-42fa-87c4-9b382029f73b"
           },
-          "summary": "Lego are perhaps sunk",
-          "timestamp": 1643736926000,
+          "summary": "Test",
+          "timestamp": 1643303379000,
           "language": "en-gb",
           "cpsType": "STY",
           "indexImage": {
-            "id": "63969899",
+            "id": "63902259",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/18638/test/_63969899_r.jpg",
-            "path": "/cpsdevpb/18638/test/_63969899_r.jpg",
-            "height": 546,
-            "width": 970,
-            "altText": "The Lego Titanic",
-            "caption": "titanic",
-            "copyrightHolder": "BBC",
+            "href": "http://b.files.bbci.co.uk/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "path": "/cpsdevpb/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "height": 562,
+            "width": 1000,
+            "altText": "ange",
+            "caption": "ange",
+            "copyrightHolder": "Ange",
             "originCode": "cpsdevpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63902263",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "path": "/cpsdevpb/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ange",
+            "caption": "Ange",
+            "copyrightHolder": "ANge",
+            "allowSyndication": false,
             "type": "image"
           },
           "options": {
@@ -1194,11 +1145,11 @@
           },
           "section": {
             "subType": "IDX",
-            "name": "Business",
-            "uri": "/news/business",
+            "name": "Home",
+            "uri": "/news/front_page",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:news/business-23481281",
+          "id": "urn:bbc:ares::asset:news/23384748",
           "type": "cps"
         },
         {
@@ -1214,6 +1165,7 @@
             "altText": "spice girls",
             "caption": "spice girls",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.test.bbc.co.uk/sounds/play/m001bjpb",
@@ -1221,6 +1173,61 @@
           "assetTypeCode": "PRO",
           "timestamp": 1662998543000,
           "type": "link"
+        },
+        {
+          "headlines": {
+            "headline": "Taylor Swift's success"
+          },
+          "locators": {
+            "assetUri": "/news/live/23479940",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:bde9ec0e-a4ca-4802-99c0-5513e67914c7",
+            "assetId": "23479940",
+            "cpsUrn": "urn:bbc:content:assetUri:news/live/23479940",
+            "curie": "http://www.bbc.co.uk/asset/bde9ec0e-a4ca-4802-99c0-5513e67914c7"
+          },
+          "summary": "this is live",
+          "timestamp": 1643273171000,
+          "language": "en-gb",
+          "cpsType": "LIV",
+          "indexImage": {
+            "id": "63902238",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14514/test/_63902238_4815.jpg",
+            "path": "/cpsdevpb/14514/test/_63902238_4815.jpg",
+            "height": 394,
+            "width": 700,
+            "altText": "Taylor",
+            "caption": "Taylor",
+            "copyrightHolder": "Taylor Swift",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63902240",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/107C/test/_63902240_4815.jpg",
+            "path": "/cpsdevpb/107C/test/_63902240_4815.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "tay",
+            "caption": "taylor",
+            "copyrightHolder": "Taylor",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Home",
+            "uri": "/news/front_page",
+            "type": "simple"
+          },
+          "liveStatus": "AUTO",
+          "id": "urn:bbc:ares::asset:news/live/23479940",
+          "type": "cps"
         },
         {
           "name": "Snoods at the ready as ice grips Cardiff",
@@ -1235,6 +1242,7 @@
             "altText": "weatherman",
             "caption": "bbc",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "http://www.bbc.co.uk/weather/weather_watcher/",
@@ -1242,6 +1250,28 @@
           "contentType": "Video",
           "assetTypeCode": "PRO",
           "timestamp": 1663062828000,
+          "type": "link"
+        },
+        {
+          "name": "Florence Pugh on her primary school nativity...",
+          "summary": "90s all the way",
+          "indexImage": {
+            "id": "63958321",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3061/test/_63958321_p0dd2wvy.jpg",
+            "path": "/cpsdevpb/3061/test/_63958321_p0dd2wvy.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "florence pugh",
+            "caption": "florence pugh",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/sounds/play/m001dmln",
+          "contentType": "Audio",
+          "assetTypeCode": "PRO",
+          "timestamp": 1668169266000,
           "type": "link"
         },
         {
@@ -1257,6 +1287,7 @@
             "altText": "newsround",
             "caption": "newsround",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.test.bbc.co.uk/bitesize/subjects/zf48q6f",
@@ -1267,46 +1298,67 @@
         },
         {
           "headlines": {
-            "headline": "Taylor Swift makes history as she takes over entire US top 10"
+            "headline": "Test MAP C7",
+            "overtyped": "An audio link here"
           },
           "locators": {
-            "assetUri": "/news/entertainment-arts-23536303",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:db1029c2-e76d-4a03-83c3-139588cec64e",
-            "assetId": "23536303",
-            "cpsUrn": "urn:bbc:content:assetUri:news/entertainment-arts-23536303",
-            "curie": "http://www.bbc.co.uk/asset/db1029c2-e76d-4a03-83c3-139588cec64e"
+            "assetUri": "/news/av/entertainment-arts-23520613",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:4ae96ddf-024d-4984-b696-deb7beaff4aa",
+            "assetId": "23520613",
+            "cpsUrn": "urn:bbc:content:assetUri:news/av/entertainment-arts-23520613",
+            "curie": "http://www.bbc.co.uk/asset/4ae96ddf-024d-4984-b696-deb7beaff4aa"
           },
-          "summary": "Taylor Swift is the music industry",
-          "timestamp": 1667321886000,
+          "summary": "A summary",
+          "timestamp": 1660654442000,
           "language": "en-gb",
-          "byline": {
-            "name": "By Sian Prescott",
-            "title": "BBC News",
-            "persons": [
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01g2pxw",
+            "subType": "episode",
+            "format": "audio",
+            "title": "Test MAP C7",
+            "synopses": {
+              "short": "Test MAP C7"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01g2py6.jpg",
+            "embedding": true,
+            "advertising": false,
+            "caption": "Test MAP C7",
+            "versions": [
               {
-                "name": "Sian Prescott",
-                "function": "BBC News"
+                "versionId": "p01g2pxh",
+                "types": [
+                  "Podcast"
+                ],
+                "duration": 174,
+                "durationISO8601": "PT2M54S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": false
+                },
+                "availableFrom": 1516795320000
               }
-            ]
+            ],
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "cpsType": "STY",
           "indexImage": {
-            "id": "63957242",
+            "id": "63958326",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/5ED3/test/_63957242_hi059116421.jpg",
-            "path": "/cpsdevpb/5ED3/test/_63957242_hi059116421.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "TAYLOR THE SWIFT",
-            "caption": "Taylor",
+            "href": "http://b.files.bbci.co.uk/F3B1/test/_63958326_p01g2py6.jpg",
+            "path": "/cpsdevpb/F3B1/test/_63958326_p01g2py6.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "asdfadsf",
+            "caption": "sdfsdf",
             "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
             "isBreakingNews": false,
-            "isFactCheck": false,
-            "hasShortForm": true
+            "isFactCheck": false
           },
           "section": {
             "subType": "IDX",
@@ -1314,12 +1366,12 @@
             "uri": "/news/entertainment_and_arts",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:news/entertainment-arts-23536303",
+          "id": "urn:bbc:ares::asset:news/av/entertainment-arts-23520613",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:23:56.994Z",
+        "generated": "2023-02-18T03:08:59.186Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -2205,5 +2257,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "6083",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"06f86a889715f7815bf36035ab3a06b6bfc3e330\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 765
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/news",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "10867",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"0dc762dfbc616e599d7d1bcb23b36d5ebd9c5359\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 745
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/news/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "1976fa4bc2fa7902a83ab38fa16976a54510c8bd",
+            "last-modified": "Fri, 02 Sep 2022 09:45:21 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "f64cb262-6964-429a-8a73-f361421a490c",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1357
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cn7k01xp8kxo",
+          "timeout": 4000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cn7k01xp8kxo",
+      "service": "news",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

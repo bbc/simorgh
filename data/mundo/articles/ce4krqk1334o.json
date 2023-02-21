@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "9db12a59",
+              "id": "eed58d93",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "09f7e2ef",
+                    "id": "108dff27",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c471fcc7",
+                          "id": "3e8cadac",
                           "type": "paragraph",
                           "model": {
                             "text": "Article with anchors",
                             "blocks": [
                               {
-                                "id": "18a831a3",
+                                "id": "f9ca488c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Article with anchors",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "f1112e50",
+              "id": "3b266f43",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1620147687728,
@@ -67,24 +67,24 @@
               ]
             },
             {
-              "id": "110a3816",
+              "id": "43bdf3fc",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "a5fc20df",
+                    "id": "c12c089a",
                     "type": "paragraph",
                     "model": {
                       "text": "Anchor 1",
                       "blocks": [
                         {
-                          "id": "69b4d3c8",
+                          "id": "7b761b5c",
                           "type": "urlLink",
                           "model": {
                             "text": "Anchor 1",
                             "blocks": [
                               {
-                                "id": "383ad719",
+                                "id": "b80f25fb",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Anchor 1",
@@ -117,19 +117,19 @@
                     ]
                   },
                   {
-                    "id": "8b56993b",
+                    "id": "77565f16",
                     "type": "paragraph",
                     "model": {
                       "text": "Anchor 2",
                       "blocks": [
                         {
-                          "id": "be39b761",
+                          "id": "a6fd44d1",
                           "type": "urlLink",
                           "model": {
                             "text": "Anchor 2",
                             "blocks": [
                               {
-                                "id": "08381964",
+                                "id": "58b886ac",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Anchor 2",
@@ -160,19 +160,19 @@
                     ]
                   },
                   {
-                    "id": "593b9f15",
+                    "id": "6ea8e317",
                     "type": "paragraph",
                     "model": {
                       "text": "Anchor 3",
                       "blocks": [
                         {
-                          "id": "df3579fd",
+                          "id": "bb4fa820",
                           "type": "urlLink",
                           "model": {
                             "text": "Anchor 3",
                             "blocks": [
                               {
-                                "id": "d9356b9e",
+                                "id": "04f3f4fb",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Anchor 3",
@@ -209,23 +209,23 @@
               ]
             },
             {
-              "id": "f0a45acc",
+              "id": "e205bd19",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "c9cf6ccc",
+                    "id": "14d349c4",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3308841d",
+                          "id": "32a267c6",
                           "type": "paragraph",
                           "model": {
                             "text": "Anchor 1",
                             "blocks": [
                               {
-                                "id": "742f128c",
+                                "id": "458c354d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Anchor 1",
@@ -260,18 +260,18 @@
               ]
             },
             {
-              "id": "57b38ccc",
+              "id": "0fb9c6d8",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "e7da4eb2",
+                    "id": "dde7a0b8",
                     "type": "paragraph",
                     "model": {
                       "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
                       "blocks": [
                         {
-                          "id": "9443fc7f",
+                          "id": "9569575f",
                           "type": "fragment",
                           "model": {
                             "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
@@ -297,7 +297,7 @@
               ]
             },
             {
-              "id": "00f4ce94",
+              "id": "c1bf254c",
               "type": "mpu",
               "model": {},
               "position": [
@@ -305,18 +305,18 @@
               ]
             },
             {
-              "id": "17438609",
+              "id": "e25f1a49",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "c8b05c1b",
+                    "id": "8f74cf21",
                     "type": "paragraph",
                     "model": {
                       "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
                       "blocks": [
                         {
-                          "id": "a30fa89c",
+                          "id": "e6154fba",
                           "type": "fragment",
                           "model": {
                             "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
@@ -342,30 +342,40 @@
               ]
             },
             {
-              "id": "4081da38",
+              "id": "462a0ca1",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "c27b5dc8",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "891e14a6",
+                    "id": "c373cf2a",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d10888c9",
+                          "id": "4f2b2c07",
                           "type": "paragraph",
                           "model": {
                             "text": "Anchor 2",
                             "blocks": [
                               {
-                                "id": "cd1a0a25",
+                                "id": "5d56324d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Anchor 2",
                                   "attributes": []
                                 },
                                 "position": [
-                                  8,
+                                  9,
                                   1,
                                   1,
                                   1
@@ -374,43 +384,6 @@
                             ]
                           },
                           "position": [
-                            8,
-                            1,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      8,
-                      1
-                    ]
-                  }
-                ]
-              },
-              "position": [
-                8
-              ]
-            },
-            {
-              "id": "56236b8d",
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "2895c941",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
-                      "blocks": [
-                        {
-                          "id": "022d3671",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
-                            "attributes": []
-                          },
-                          "position": [
                             9,
                             1,
                             1
@@ -421,32 +394,6 @@
                     "position": [
                       9,
                       1
-                    ]
-                  },
-                  {
-                    "id": "7d8d20f4",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
-                      "blocks": [
-                        {
-                          "id": "639e041a",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
-                            "attributes": []
-                          },
-                          "position": [
-                            9,
-                            2,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      9,
-                      2
                     ]
                   }
                 ]
@@ -456,36 +403,22 @@
               ]
             },
             {
-              "id": "e628fa55",
-              "type": "subheadline",
+              "id": "07bb6b56",
+              "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "2302de3e",
-                    "type": "text",
+                    "id": "90818471",
+                    "type": "paragraph",
                     "model": {
+                      "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
                       "blocks": [
                         {
-                          "id": "366a6f2f",
-                          "type": "paragraph",
+                          "id": "68260b74",
+                          "type": "fragment",
                           "model": {
-                            "text": "Anchor 3",
-                            "blocks": [
-                              {
-                                "id": "62ae88ff",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Anchor 3",
-                                  "attributes": []
-                                },
-                                "position": [
-                                  10,
-                                  1,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
+                            "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
+                            "attributes": []
                           },
                           "position": [
                             10,
@@ -499,6 +432,32 @@
                       10,
                       1
                     ]
+                  },
+                  {
+                    "id": "853a4dae",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
+                      "blocks": [
+                        {
+                          "id": "503cf4ac",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
+                            "attributes": []
+                          },
+                          "position": [
+                            10,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      2
+                    ]
                   }
                 ]
               },
@@ -507,22 +466,36 @@
               ]
             },
             {
-              "id": "cad65fb0",
-              "type": "text",
+              "id": "d8c193ba",
+              "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "652fcd69",
-                    "type": "paragraph",
+                    "id": "d13dcb46",
+                    "type": "text",
                     "model": {
-                      "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
                       "blocks": [
                         {
-                          "id": "7637ba0e",
-                          "type": "fragment",
+                          "id": "ee6c43f9",
+                          "type": "paragraph",
                           "model": {
-                            "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
-                            "attributes": []
+                            "text": "Anchor 3",
+                            "blocks": [
+                              {
+                                "id": "0802f29c",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Anchor 3",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  11,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
                           "position": [
                             11,
@@ -536,22 +509,59 @@
                       11,
                       1
                     ]
+                  }
+                ]
+              },
+              "position": [
+                11
+              ]
+            },
+            {
+              "id": "2e03ae3b",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a715157c",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
+                      "blocks": [
+                        {
+                          "id": "b39f7aca",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
+                            "attributes": []
+                          },
+                          "position": [
+                            12,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      12,
+                      1
+                    ]
                   },
                   {
-                    "id": "fd74fd61",
+                    "id": "d7570b9e",
                     "type": "paragraph",
                     "model": {
                       "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
                       "blocks": [
                         {
-                          "id": "03834104",
+                          "id": "1d1b742b",
                           "type": "fragment",
                           "model": {
                             "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
                             "attributes": []
                           },
                           "position": [
-                            11,
+                            12,
                             2,
                             1
                           ]
@@ -559,31 +569,31 @@
                       ]
                     },
                     "position": [
-                      11,
+                      12,
                       2
                     ]
                   },
                   {
-                    "id": "f5e12b10",
+                    "id": "72937a80",
                     "type": "paragraph",
                     "model": {
                       "text": "Back to top",
                       "blocks": [
                         {
-                          "id": "990e5615",
+                          "id": "f4abcf0f",
                           "type": "urlLink",
                           "model": {
                             "text": "Back to top",
                             "blocks": [
                               {
-                                "id": "c1c7cc1d",
+                                "id": "f0379cae",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Back to top",
                                   "attributes": []
                                 },
                                 "position": [
-                                  11,
+                                  12,
                                   3,
                                   1,
                                   1
@@ -594,7 +604,7 @@
                             "isExternal": false
                           },
                           "position": [
-                            11,
+                            12,
                             3,
                             1
                           ]
@@ -602,14 +612,14 @@
                       ]
                     },
                     "position": [
-                      11,
+                      12,
                       3
                     ]
                   }
                 ]
               },
               "position": [
-                11
+                12
               ]
             }
           ]
@@ -618,14 +628,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:ce4krqk1334o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:ce4krqk1334o"
+          "optimoUrn": "urn:bbc:optimo:asset:ce4krqk1334o",
+          "canonicalUrl": "https://www.bbc.com/mundo/articles/ce4krqk1334o"
         },
         "type": "article",
         "createdBy": "Mundo",
         "language": "es",
         "firstPublished": 1620147687728,
         "lastPublished": 1620147687728,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:ce4krqk1334o",
           "producer": "Mundo",
@@ -636,7 +646,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -648,7 +657,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Article with anchors",
           "promoHeadline": {
@@ -678,7 +686,6 @@
             ]
           }
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -704,8 +711,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -949,7 +955,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-12-14T15:43:57.691Z",
+        "generated": "2023-02-18T02:58:56.86Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1852,5 +1858,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "2064",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"4db73debc821388fdecf56009ff46812846a53ae\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 650
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/mundo/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "a3f638dd3923b5adc8fe3afc75c146c8c0a4e3cd",
+            "last-modified": "Wed, 23 Feb 2022 19:16:23 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "3d2a3744-f14f-4f4d-9e69-dadce9ebd554",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 682
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/ce4krqk1334o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "5861",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"e5a89c21e53b5cfea1ea19f92d1a15f6112bfe24\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 704
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/mundo",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "ce4krqk1334o",
+      "service": "mundo",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

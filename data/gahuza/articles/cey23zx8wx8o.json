@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "c87d9066",
+              "id": "6461650b",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "b5b7debb",
+                    "id": "4875263c",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8a7505c4",
+                          "id": "f512a4d0",
                           "type": "paragraph",
                           "model": {
                             "text": "Mwaramukanye amahoro mwese muteze amatwi\n\n",
                             "blocks": [
                               {
-                                "id": "74e84d05",
+                                "id": "7e576747",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Mwaramukanye amahoro mwese muteze amatwi\n\n",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "18f31918",
+              "id": "2a11d9f0",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "371edc1e",
+                    "id": "ceb7f08a",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e1cd4872",
+                          "id": "296ab341",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6428b3bd",
+                                "id": "5f81abbd",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza.",
                                   "blocks": [
                                     {
-                                      "id": "9d967baa",
+                                      "id": "6c4d9bb9",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "29519e7f",
+                    "id": "094f14cb",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d1593e50",
+                          "id": "2b810799",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "08d0c213",
+                                "id": "22878644",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Ibyo ni byo tugiye kuganiraho muri iki kiganiro",
                                   "blocks": [
                                     {
-                                      "id": "829cefd1",
+                                      "id": "7ee7e09d",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Ibyo ni byo tugiye kuganiraho muri iki kiganiro",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "4a1396e9",
+                    "id": "84d951f3",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "87719708",
+              "id": "a24581da",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936358638,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "bbdc6f89",
+              "id": "4c7054ee",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "78064db4",
+                    "id": "9ef27056",
                     "type": "paragraph",
                     "model": {
                       "text": "Iki kiganiro mwagiteguriwe kandi murakigezwaho umuyobozi w'ishami rya BBC.",
                       "blocks": [
                         {
-                          "id": "6e0118a5",
+                          "id": "2689f216",
                           "type": "fragment",
                           "model": {
                             "text": "Iki kiganiro mwagiteguriwe kandi murakigezwaho ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "475c669d",
+                          "id": "80ac66e6",
                           "type": "urlLink",
                           "model": {
                             "text": "umuyobozi w'ishami rya BBC",
                             "blocks": [
                               {
-                                "id": "4baf45f8",
+                                "id": "6e647c89",
                                 "type": "fragment",
                                 "model": {
                                   "text": "umuyobozi w'ishami rya BBC",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "be38dfb5",
+                          "id": "9b81534a",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "bead2b2b",
+              "id": "facd0681",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "f67f12b8",
+                    "id": "78f267e7",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "21230ee4",
+                          "id": "5ad629e6",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "aa0592d3",
+                                "id": "57fc973d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Kumenya aho ivuye se aho iri ubu n'aho igana ho hifashe.",
                                   "blocks": [
                                     {
-                                      "id": "da668092",
+                                      "id": "9feb5e3a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Kumenya aho ivuye se aho iri ubu n'aho igana ho hifashe.",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "1ed95bd0",
+                    "id": "de641746",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "76940577",
+                          "id": "6c75841f",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -395,12 +395,12 @@
                           ]
                         },
                         {
-                          "id": "caa864f0",
+                          "id": "84f54e50",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "caab9b91",
+                                "id": "b3d4294e",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -417,23 +417,23 @@
                                 ]
                               },
                               {
-                                "id": "990e3157",
+                                "id": "c8c7667e",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "fa5d00d0",
+                                      "id": "0c8ff2b0",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "eeda9b84",
+                                            "id": "c52d636c",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "23071619",
+                                                  "id": "4a1edf01",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -501,23 +501,23 @@
               ]
             },
             {
-              "id": "ef4d22b4",
+              "id": "981d846b",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "7c6f6503",
+                    "id": "0c131cd4",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4021e32a",
+                          "id": "36aa251d",
                           "type": "paragraph",
                           "model": {
                             "text": "Abarundi bari mu mishyikirano y'amahoro\n\n",
                             "blocks": [
                               {
-                                "id": "eabba997",
+                                "id": "c3be9da7",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Abarundi bari mu mishyikirano y'amahoro\n\n",
@@ -552,28 +552,28 @@
               ]
             },
             {
-              "id": "236c254f",
+              "id": "2d7ab69f",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "f11afe0e",
+                    "id": "cd684b83",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6ee9c7da",
+                          "id": "1a94a51e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "82990c94",
+                                "id": "513e5f61",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Footballers after a match",
                                   "blocks": [
                                     {
-                                      "id": "8ef93bd6",
+                                      "id": "071fdc50",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Footballers after a match",
@@ -612,7 +612,7 @@
                     ]
                   },
                   {
-                    "id": "06c5d1a8",
+                    "id": "2e4e1dca",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -633,18 +633,18 @@
               ]
             },
             {
-              "id": "a5355174",
+              "id": "b886738d",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "121b66e8",
+                    "id": "f5678c5d",
                     "type": "paragraph",
                     "model": {
                       "text": "Izina Gahuzamiryango ninaho ryavuye, kwari uguhuza imiryango babisabwe n'uwari umuyobozi w'ishami.\n\n\n\n.",
                       "blocks": [
                         {
-                          "id": "a79b1dda",
+                          "id": "3adb5f37",
                           "type": "fragment",
                           "model": {
                             "text": "Izina Gahuzamiryango ninaho ryavuye, kwari uguhuza imiryango babisabwe n'uwari umuyobozi w'ishami.\n\n\n\n.",
@@ -670,11 +670,21 @@
               ]
             },
             {
-              "id": "43e8bf87",
+              "id": "01871178",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "2b3a942c",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -683,14 +693,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cey23zx8wx8o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o"
+          "optimoUrn": "urn:bbc:optimo:asset:cey23zx8wx8o",
+          "canonicalUrl": "https://www.bbc.com/gahuza/articles/cey23zx8wx8o"
         },
         "type": "article",
         "createdBy": "Gahuza",
         "language": "rw",
         "firstPublished": 1562936358638,
         "lastPublished": 1562936358638,
-        "options": {},
         "analyticsLabels": {
           "producer": "Gahuza",
           "page": "gahuza.articles.cey23zx8wx8o.page"
@@ -700,7 +710,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -718,12 +727,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza."
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1091,7 +1097,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:52:58.212Z",
+        "generated": "2023-02-17T21:22:56.595Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,
@@ -1889,5 +1895,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:37 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "14d45252a8c99b0381dafdca806b544da13aaa0d",
+            "last-modified": "Fri, 28 Aug 2020 07:27:08 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "19cfd2c6-db1b-40b4-8f13-1152cedcd08c",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 787
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cey23zx8wx8o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:37 GMT",
+            "content-type": "application/json",
+            "content-length": "2264",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"eab08c8f81c3fa4158372bf1a43f5e7ea4a00c02\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 789
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/gahuza/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:37 GMT",
+            "content-type": "application/json",
+            "content-length": "5335",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"47e4805ffcfa5f568fabdd0eca79a62094f3dcf7\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 788
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/gahuza",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cey23zx8wx8o",
+      "service": "gahuza",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

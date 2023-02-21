@@ -5,26 +5,26 @@
         "model": {
           "blocks": [
             {
-              "id": "4aff003a",
+              "id": "83c27563",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "42ee16be",
+                    "id": "8307f6b9",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "02490150",
+                          "id": "eab460f3",
                           "type": "paragraph",
                           "model": {
-                            "text": "Test Links page",
+                            "text": "Test: Twitter Embeds",
                             "blocks": [
                               {
-                                "id": "eaa1364d",
+                                "id": "00392a6c",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "Test Links page",
+                                  "text": "Test: Twitter Embeds",
                                   "attributes": []
                                 },
                                 "position": [
@@ -56,33 +56,43 @@
               ]
             },
             {
-              "id": "64388c43",
+              "id": "e330c3d6",
               "type": "timestamp",
               "model": {
-                "firstPublished": 1637670147913,
-                "lastPublished": 1638873511565
+                "firstPublished": 1615541541153,
+                "lastPublished": 1624961950398
               },
               "position": [
                 2
               ]
             },
             {
-              "id": "42979518",
-              "type": "text",
+              "id": "eec0e8f7",
+              "type": "social",
               "model": {
+                "source": "https://twitter.com/bbcnewspidgin/status/1401130492313866243?s=20",
                 "blocks": [
                   {
-                    "id": "f11aeb7c",
-                    "type": "paragraph",
+                    "id": "a1e3de8d",
+                    "type": "renditions",
                     "model": {
-                      "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                      "locator": "urn:bbc:optimo:social:4621c57f-e31f-4bda-8222-dd0f83c00438",
                       "blocks": [
                         {
-                          "id": "d12ace44",
-                          "type": "fragment",
+                          "id": "80a060ff",
+                          "type": "aresOEmbed",
                           "model": {
-                            "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                            "attributes": []
+                            "oembed": {
+                              "version": "1.0",
+                              "author_name": "BBC Pidgin",
+                              "author_url": "https://twitter.com/bbcnewspidgin",
+                              "provider_name": "Twitter",
+                              "provider_url": "https://twitter.com",
+                              "url": "https://twitter.com/bbcnewspidgin/status/1401130492313866243",
+                              "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Logan Paul vs Mayweather: Date, time and how to watch di fight.<br><br>Wen dis Youtuber &amp; Former professional boxer jam dis weekend, wetin you think say go happun?<br><br>Read more here: <a href=\"https://t.co/mLHxByELjA\">https://t.co/mLHxByELjA</a> <a href=\"https://t.co/lp7GmXfGTF\">pic.twitter.com/lp7GmXfGTF</a></p>&mdash; BBC Pidgin (@bbcnewspidgin) <a href=\"https://twitter.com/bbcnewspidgin/status/1401130492313866243?ref_src=twsrc%5Etfw\">June 5, 2021</a></blockquote>\n",
+                              "width": 550,
+                              "indexOfType": 0
+                            }
                           },
                           "position": [
                             3,
@@ -104,42 +114,27 @@
               ]
             },
             {
-              "id": "1f8fd587",
-              "type": "links",
+              "id": "bc96110d",
+              "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "76cffbdc",
-                    "type": "title",
+                    "id": "454ff7b7",
+                    "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5628e845",
-                          "type": "text",
+                          "id": "8355dc3f",
+                          "type": "paragraph",
                           "model": {
+                            "text": "This is a test page using twitter embeds",
                             "blocks": [
                               {
-                                "id": "96535ada",
-                                "type": "paragraph",
+                                "id": "9d6da5c3",
+                                "type": "fragment",
                                 "model": {
-                                  "text": "Show all links (no images)",
-                                  "blocks": [
-                                    {
-                                      "id": "8407cb83",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Show all links (no images)",
-                                        "attributes": []
-                                      },
-                                      "position": [
-                                        4,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
+                                  "text": "This is a test page using twitter embeds",
+                                  "attributes": []
                                 },
                                 "position": [
                                   4,
@@ -162,351 +157,40 @@
                       4,
                       1
                     ]
-                  },
-                  {
-                    "id": "2e3e4a0e",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fpidgin",
-                      "blocks": [
-                        {
-                          "id": "846cbad6",
-                          "type": "image",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "44b0bc86",
-                                "type": "altText",
-                                "model": {
-                                  "blocks": [
-                                    {
-                                      "id": "0318f457",
-                                      "type": "text",
-                                      "model": {
-                                        "blocks": [
-                                          {
-                                            "id": "2a165c8b",
-                                            "type": "paragraph",
-                                            "model": {
-                                              "text": "Image to ignore",
-                                              "blocks": [
-                                                {
-                                                  "id": "f142a6a8",
-                                                  "type": "fragment",
-                                                  "model": {
-                                                    "text": "Image to ignore",
-                                                    "attributes": []
-                                                  },
-                                                  "position": [
-                                                    4,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            "position": [
-                                              4,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ]
-                                      },
-                                      "position": [
-                                        4,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  4,
-                                  2,
-                                  1,
-                                  1
-                                ]
-                              },
-                              {
-                                "id": "5e6f8691",
-                                "type": "rawImage",
-                                "model": {
-                                  "width": 976,
-                                  "height": 549,
-                                  "locator": "37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg",
-                                  "imageType": "background",
-                                  "originCode": "cpsdevpb",
-                                  "copyrightHolder": "BBC"
-                                },
-                                "position": [
-                                  4,
-                                  2,
-                                  1,
-                                  2
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            4,
-                            2,
-                            1
-                          ]
-                        },
-                        {
-                          "id": "b99642e9",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "232bde5a",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Show headline",
-                                  "blocks": [
-                                    {
-                                      "id": "95a72349",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Show headline",
-                                        "locator": "https://www.bbc.co.uk/pidgin",
-                                        "blocks": [
-                                          {
-                                            "id": "4276fddb",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Show headline",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              4,
-                                              2,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        4,
-                                        2,
-                                        2,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  4,
-                                  2,
-                                  2,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            4,
-                            2,
-                            2
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      4,
-                      2
-                    ]
-                  },
-                  {
-                    "id": "6c748657",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
-                      "blocks": [
-                        {
-                          "id": "04aad281",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "af932687",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Link with Headline",
-                                  "blocks": [
-                                    {
-                                      "id": "35b7a17d",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Link with Headline",
-                                        "locator": "https://www.bbc.com/mundo",
-                                        "blocks": [
-                                          {
-                                            "id": "ee2e9ba5",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Link with Headline",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              4,
-                                              3,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        4,
-                                        3,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  4,
-                                  3,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            4,
-                            3,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      4,
-                      3
-                    ]
-                  },
-                  {
-                    "id": "b1b85edd",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
-                      "blocks": [
-                        {
-                          "id": "3d73a851",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "94cb58a6",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "https://www.bbc.com/brasil",
-                                  "blocks": [
-                                    {
-                                      "id": "db041a8f",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "https://www.bbc.com/brasil",
-                                        "locator": "https://www.bbc.com/brasil",
-                                        "blocks": [
-                                          {
-                                            "id": "1662ce75",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "https://www.bbc.com/brasil",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              4,
-                                              4,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        4,
-                                        4,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  4,
-                                  4,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            4,
-                            4,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      4,
-                      4
-                    ]
                   }
                 ]
               },
               "position": [
                 4
-              ],
-              "blockGroupType": "edOjLinks",
-              "blockGroupIndex": 1
+              ]
             },
             {
-              "id": "290f5360",
-              "type": "text",
+              "id": "631f2fef",
+              "type": "social",
               "model": {
+                "source": "https://twitter.com/bbcnewspidgin/status/1401185471951261699?s=20",
                 "blocks": [
                   {
-                    "id": "187b605b",
-                    "type": "paragraph",
+                    "id": "d50769fa",
+                    "type": "renditions",
                     "model": {
-                      "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                      "locator": "urn:bbc:optimo:social:97d321f5-2b50-4f8d-b6ef-b9a44947f15d",
                       "blocks": [
                         {
-                          "id": "c60930aa",
-                          "type": "fragment",
+                          "id": "5596e2cc",
+                          "type": "aresOEmbed",
                           "model": {
-                            "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                            "attributes": []
+                            "oembed": {
+                              "version": "1.0",
+                              "author_name": "BBC Pidgin",
+                              "author_url": "https://twitter.com/bbcnewspidgin",
+                              "provider_name": "Twitter",
+                              "provider_url": "https://twitter.com",
+                              "url": "https://twitter.com/bbcnewspidgin/status/1401185471951261699",
+                              "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Overnight raid for Solhan, Burkina Faso don kill plenty pipo.<a href=\"https://t.co/4T8XPASDcm\">https://t.co/4T8XPASDcm</a></p>&mdash; BBC Pidgin (@bbcnewspidgin) <a href=\"https://twitter.com/bbcnewspidgin/status/1401185471951261699?ref_src=twsrc%5Etfw\">June 5, 2021</a></blockquote>\n",
+                              "width": 550,
+                              "indexOfType": 1
+                            }
                           },
                           "position": [
                             5,
@@ -528,51 +212,32 @@
               ]
             },
             {
-              "id": "b916405b",
-              "type": "links",
+              "id": "3811648c",
+              "type": "social",
               "model": {
+                "source": "https://twitter.com/bbcnewspidgin/status/1401130492313866243?s=20",
                 "blocks": [
                   {
-                    "id": "32c0c49f",
-                    "type": "title",
+                    "id": "97774d6c",
+                    "type": "renditions",
                     "model": {
+                      "locator": "urn:bbc:optimo:social:b6995c74-868a-4d6c-9572-ee831c12863a",
                       "blocks": [
                         {
-                          "id": "fa37201a",
-                          "type": "text",
+                          "id": "4e2ec8da",
+                          "type": "aresOEmbed",
                           "model": {
-                            "blocks": [
-                              {
-                                "id": "e1c722ce",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Single link",
-                                  "blocks": [
-                                    {
-                                      "id": "48a58201",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Single link",
-                                        "attributes": []
-                                      },
-                                      "position": [
-                                        6,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  6,
-                                  1,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
+                            "oembed": {
+                              "version": "1.0",
+                              "author_name": "BBC Pidgin",
+                              "author_url": "https://twitter.com/bbcnewspidgin",
+                              "provider_name": "Twitter",
+                              "provider_url": "https://twitter.com",
+                              "url": "https://twitter.com/bbcnewspidgin/status/1401130492313866243",
+                              "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Logan Paul vs Mayweather: Date, time and how to watch di fight.<br><br>Wen dis Youtuber &amp; Former professional boxer jam dis weekend, wetin you think say go happun?<br><br>Read more here: <a href=\"https://t.co/mLHxByELjA\">https://t.co/mLHxByELjA</a> <a href=\"https://t.co/lp7GmXfGTF\">pic.twitter.com/lp7GmXfGTF</a></p>&mdash; BBC Pidgin (@bbcnewspidgin) <a href=\"https://twitter.com/bbcnewspidgin/status/1401130492313866243?ref_src=twsrc%5Etfw\">June 5, 2021</a></blockquote>\n",
+                              "width": 550,
+                              "indexOfType": 2
+                            }
                           },
                           "position": [
                             6,
@@ -586,107 +251,40 @@
                       6,
                       1
                     ]
-                  },
-                  {
-                    "id": "1a19361e",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fpidgin",
-                      "blocks": [
-                        {
-                          "id": "e2f300d2",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "88041b6e",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Single link",
-                                  "blocks": [
-                                    {
-                                      "id": "811d1630",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Single link",
-                                        "locator": "https://www.bbc.com/pidgin",
-                                        "blocks": [
-                                          {
-                                            "id": "fd689f48",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Single link",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              6,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        6,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  6,
-                                  2,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            6,
-                            2,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      6,
-                      2
-                    ]
                   }
                 ]
               },
               "position": [
                 6
-              ],
-              "blockGroupType": "edOjLinks",
-              "blockGroupIndex": 2
+              ]
             },
             {
-              "id": "86331970",
-              "type": "text",
+              "id": "5d775893",
+              "type": "social",
               "model": {
+                "source": "https://twitter.com/BBCBreaking/status/1408514959072501765?s=20",
                 "blocks": [
                   {
-                    "id": "e7108778",
-                    "type": "paragraph",
+                    "id": "85faa8e8",
+                    "type": "renditions",
                     "model": {
-                      "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                      "locator": "urn:bbc:optimo:social:47ef8d59-22da-4d43-bb02-73ec785ef9b6",
                       "blocks": [
                         {
-                          "id": "e7c161a5",
-                          "type": "fragment",
+                          "id": "6bae311c",
+                          "type": "aresOEmbed",
                           "model": {
-                            "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                            "attributes": []
+                            "oembed": {
+                              "version": "1.0",
+                              "author_name": "BBC Breaking News",
+                              "author_url": "https://twitter.com/BBCBreaking",
+                              "provider_name": "Twitter",
+                              "provider_url": "https://twitter.com",
+                              "url": "https://twitter.com/BBCBreaking/status/1408514959072501765",
+                              "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">A US judge jails former police officer Derek Chauvin for 22-and-a-half years for the murder of George Floyd on a Minneapolis street <a href=\"https://t.co/fMd2tGM2i2\">https://t.co/fMd2tGM2i2</a></p>&mdash; BBC Breaking News (@BBCBreaking) <a href=\"https://twitter.com/BBCBreaking/status/1408514959072501765?ref_src=twsrc%5Etfw\">June 25, 2021</a></blockquote>\n",
+                              "width": 550,
+                              "indexOfType": 3
+                            }
                           },
                           "position": [
                             7,
@@ -708,51 +306,22 @@
               ]
             },
             {
-              "id": "1cfd72ed",
-              "type": "links",
+              "id": "dbc102bd",
+              "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "73e183f3",
-                    "type": "title",
+                    "id": "fd42dbaa",
+                    "type": "paragraph",
                     "model": {
+                      "text": "Did you know? We can now embed tweets in Optimo pages? Pretty cool, huh? ",
                       "blocks": [
                         {
-                          "id": "597edd2e",
-                          "type": "text",
+                          "id": "b156caf5",
+                          "type": "fragment",
                           "model": {
-                            "blocks": [
-                              {
-                                "id": "750a8f5a",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Long headline ",
-                                  "blocks": [
-                                    {
-                                      "id": "802babe5",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Long headline ",
-                                        "attributes": []
-                                      },
-                                      "position": [
-                                        8,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  8,
-                                  1,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
+                            "text": "Did you know? We can now embed tweets in Optimo pages? Pretty cool, huh? ",
+                            "attributes": []
                           },
                           "position": [
                             8,
@@ -766,107 +335,40 @@
                       8,
                       1
                     ]
-                  },
-                  {
-                    "id": "6fb603a0",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fyoruba",
-                      "blocks": [
-                        {
-                          "id": "4eef40a0",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "bbcb82da",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
-                                  "blocks": [
-                                    {
-                                      "id": "dac79bf3",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
-                                        "locator": "https://www.bbc.co.uk/yoruba",
-                                        "blocks": [
-                                          {
-                                            "id": "b6968f81",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              8,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        8,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  8,
-                                  2,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            8,
-                            2,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      8,
-                      2
-                    ]
                   }
                 ]
               },
               "position": [
                 8
-              ],
-              "blockGroupType": "edOjLinks",
-              "blockGroupIndex": 3
+              ]
             },
             {
-              "id": "758518a5",
-              "type": "text",
+              "id": "052563cb",
+              "type": "social",
               "model": {
+                "source": "https://twitter.com/PunHubOnline/status/1354085055589711873?s=20",
                 "blocks": [
                   {
-                    "id": "dced64d3",
-                    "type": "paragraph",
+                    "id": "1c1e8e76",
+                    "type": "renditions",
                     "model": {
-                      "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                      "locator": "urn:bbc:optimo:social:5e8ea6ba-a29a-4503-b05d-c0d15cf3f4ea",
                       "blocks": [
                         {
-                          "id": "68d3f1b3",
-                          "type": "fragment",
+                          "id": "6aee6f59",
+                          "type": "aresOEmbed",
                           "model": {
-                            "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                            "attributes": []
+                            "oembed": {
+                              "version": "1.0",
+                              "author_name": "PunHub",
+                              "author_url": "https://twitter.com/PunHubOnline",
+                              "provider_name": "Twitter",
+                              "provider_url": "https://twitter.com",
+                              "url": "https://twitter.com/PunHubOnline/status/1354085055589711873",
+                              "html": "<blockquote class=\"twitter-tweet\"><p lang=\"und\" dir=\"ltr\"><a href=\"https://t.co/xd36NQPDDo\">pic.twitter.com/xd36NQPDDo</a></p>&mdash; PunHub (@PunHubOnline) <a href=\"https://twitter.com/PunHubOnline/status/1354085055589711873?ref_src=twsrc%5Etfw\">January 26, 2021</a></blockquote>\n",
+                              "width": 550,
+                              "indexOfType": 4
+                            }
                           },
                           "position": [
                             9,
@@ -888,59 +390,125 @@
               ]
             },
             {
-              "id": "9c794317",
-              "type": "mpu",
-              "model": {},
+              "id": "4e217d39",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "a653f291",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "I've embedded a tweet! It wasn't what I was expecting... I thought it was going to be this guy: https://twitter.com/punhubonline/status/1354085055589711873?s=21",
+                      "blocks": [
+                        {
+                          "id": "0a941a16",
+                          "type": "fragment",
+                          "model": {
+                            "text": "I've embedded a tweet! It wasn't what I was expecting... I thought it was going to be this guy: ",
+                            "attributes": []
+                          },
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "a1531a18",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "https://twitter.com/punhubonline/status/1354085055589711873?s=21",
+                            "blocks": [
+                              {
+                                "id": "89b634f1",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "https://twitter.com/punhubonline/status/1354085055589711873?s=21",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  10,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://twitter.com/punhubonline/status/1354085055589711873?s=21",
+                            "isExternal": true
+                          },
+                          "position": [
+                            10,
+                            1,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "abdfc040",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "I really hope publishing this won't break anything....  ",
+                      "blocks": [
+                        {
+                          "id": "65874a21",
+                          "type": "fragment",
+                          "model": {
+                            "text": "I really hope publishing this won't break anything....  ",
+                            "attributes": []
+                          },
+                          "position": [
+                            10,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      2
+                    ]
+                  }
+                ]
+              },
               "position": [
                 10
               ]
             },
             {
-              "id": "ee0240d5",
-              "type": "links",
+              "id": "3981bfdb",
+              "type": "social",
               "model": {
+                "source": "https://twitter.com/PunHubOnline/status/1382720301444833284?s=20",
                 "blocks": [
                   {
-                    "id": "09977b78",
-                    "type": "title",
+                    "id": "06554ee5",
+                    "type": "renditions",
                     "model": {
+                      "locator": "urn:bbc:optimo:social:82dfc7f6-1d53-4271-a400-801f787ff25e",
                       "blocks": [
                         {
-                          "id": "25cff4b9",
-                          "type": "text",
+                          "id": "f82fc215",
+                          "type": "aresOEmbed",
                           "model": {
-                            "blocks": [
-                              {
-                                "id": "9f256182",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Only show 3 links",
-                                  "blocks": [
-                                    {
-                                      "id": "deca314e",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Only show 3 links",
-                                        "attributes": []
-                                      },
-                                      "position": [
-                                        11,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  11,
-                                  1,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
+                            "oembed": {
+                              "version": "1.0",
+                              "author_name": "PunHub",
+                              "author_url": "https://twitter.com/PunHubOnline",
+                              "provider_name": "Twitter",
+                              "provider_url": "https://twitter.com",
+                              "url": "https://twitter.com/PunHubOnline/status/1382720301444833284",
+                              "html": "<blockquote class=\"twitter-tweet\"><p lang=\"und\" dir=\"ltr\"><a href=\"https://t.co/2zidvoJ58f\">pic.twitter.com/2zidvoJ58f</a></p>&mdash; PunHub (@PunHubOnline) <a href=\"https://twitter.com/PunHubOnline/status/1382720301444833284?ref_src=twsrc%5Etfw\">April 15, 2021</a></blockquote>\n",
+                              "width": 550,
+                              "indexOfType": 5
+                            }
                           },
                           "position": [
                             11,
@@ -954,407 +522,40 @@
                       11,
                       1
                     ]
-                  },
-                  {
-                    "id": "0ec615de",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fpidgin",
-                      "blocks": [
-                        {
-                          "id": "4b71725b",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "f49dfc8c",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Link 1",
-                                  "blocks": [
-                                    {
-                                      "id": "07d10473",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Link 1",
-                                        "locator": "https://www.bbc.com/pidgin",
-                                        "blocks": [
-                                          {
-                                            "id": "7c824800",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Link 1",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              11,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        11,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  11,
-                                  2,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            11,
-                            2,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      11,
-                      2
-                    ]
-                  },
-                  {
-                    "id": "9e8f67ba",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
-                      "blocks": [
-                        {
-                          "id": "4ffca880",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "bfa98302",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Link 2",
-                                  "blocks": [
-                                    {
-                                      "id": "2de7b705",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Link 2",
-                                        "locator": "https://www.bbc.com/mundo",
-                                        "blocks": [
-                                          {
-                                            "id": "cdf333d1",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Link 2",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              11,
-                                              3,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        11,
-                                        3,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  11,
-                                  3,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            11,
-                            3,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      11,
-                      3
-                    ]
-                  },
-                  {
-                    "id": "811c620b",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fyoruba",
-                      "blocks": [
-                        {
-                          "id": "d7b0f886",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "73280426",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Link 3",
-                                  "blocks": [
-                                    {
-                                      "id": "5aaa6a56",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Link 3",
-                                        "locator": "https://www.bbc.com/yoruba",
-                                        "blocks": [
-                                          {
-                                            "id": "70f6d8e4",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Link 3",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              11,
-                                              4,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        11,
-                                        4,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  11,
-                                  4,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            11,
-                            4,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      11,
-                      4
-                    ]
-                  },
-                  {
-                    "id": "db96d591",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
-                      "blocks": [
-                        {
-                          "id": "8f0d4ffa",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "fa03650b",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Link 4 (not shown)",
-                                  "blocks": [
-                                    {
-                                      "id": "c93cd2af",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Link 4 (not shown)",
-                                        "locator": "https://www.bbc.com/brasil",
-                                        "blocks": [
-                                          {
-                                            "id": "1c907d25",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Link 4 (not shown)",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              11,
-                                              5,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        11,
-                                        5,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  11,
-                                  5,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            11,
-                            5,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      11,
-                      5
-                    ]
-                  },
-                  {
-                    "id": "6a5d2012",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Farabic",
-                      "blocks": [
-                        {
-                          "id": "c55a7b41",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "d22b2b3f",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Link 5 (not shown)",
-                                  "blocks": [
-                                    {
-                                      "id": "c8b1c245",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Link 5 (not shown)",
-                                        "locator": "https://www.bbc.com/arabic",
-                                        "blocks": [
-                                          {
-                                            "id": "f063286d",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Link 5 (not shown)",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              11,
-                                              6,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        11,
-                                        6,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  11,
-                                  6,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            11,
-                            6,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      11,
-                      6
-                    ]
                   }
                 ]
               },
               "position": [
                 11
-              ],
-              "blockGroupType": "edOjLinks",
-              "blockGroupIndex": 4
+              ]
             },
             {
-              "id": "da5651a9",
-              "type": "text",
+              "id": "ec84b301",
+              "type": "social",
               "model": {
+                "source": "https://twitter.com/PunHubOnline/status/1379819411570356228?s=20",
                 "blocks": [
                   {
-                    "id": "4d4a6dc9",
-                    "type": "paragraph",
+                    "id": "88e5229e",
+                    "type": "renditions",
                     "model": {
-                      "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                      "locator": "urn:bbc:optimo:social:71aa905e-56dc-4048-8cb7-07ba4ef04fba",
                       "blocks": [
                         {
-                          "id": "92265586",
-                          "type": "fragment",
+                          "id": "27d0e279",
+                          "type": "aresOEmbed",
                           "model": {
-                            "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                            "attributes": []
+                            "oembed": {
+                              "version": "1.0",
+                              "author_name": "PunHub",
+                              "author_url": "https://twitter.com/PunHubOnline",
+                              "provider_name": "Twitter",
+                              "provider_url": "https://twitter.com",
+                              "url": "https://twitter.com/PunHubOnline/status/1379819411570356228",
+                              "html": "<blockquote class=\"twitter-tweet\"><p lang=\"und\" dir=\"ltr\"><a href=\"https://t.co/QXqBWEpRrF\">pic.twitter.com/QXqBWEpRrF</a></p>&mdash; PunHub (@PunHubOnline) <a href=\"https://twitter.com/PunHubOnline/status/1379819411570356228?ref_src=twsrc%5Etfw\">April 7, 2021</a></blockquote>\n",
+                              "width": 550,
+                              "indexOfType": 6
+                            }
                           },
                           "position": [
                             12,
@@ -1376,442 +577,98 @@
               ]
             },
             {
-              "id": "fbc2b102",
-              "type": "relatedContent",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "8892d010",
-                    "type": "title",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "d2da6723",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "9cdd8cc1",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Related content block",
-                                  "blocks": [
-                                    {
-                                      "id": "2c18fb3b",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Related content block",
-                                        "attributes": []
-                                      },
-                                      "position": [
-                                        13,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  13,
-                                  1,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            13,
-                            1,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      13,
-                      1
-                    ]
-                  },
-                  {
-                    "id": "e915ee15",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:cps:curie:asset:b5c53243-a695-e059-e040-850a02846523",
-                      "blocks": [
-                        {
-                          "id": "9d3d4fe4",
-                          "type": "image",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "e488ffdc",
-                                "type": "altText",
-                                "model": {
-                                  "blocks": [
-                                    {
-                                      "id": "67216a74",
-                                      "type": "text",
-                                      "model": {
-                                        "blocks": [
-                                          {
-                                            "id": "602f51ae",
-                                            "type": "paragraph",
-                                            "model": {
-                                              "text": "BBC Test Image",
-                                              "blocks": [
-                                                {
-                                                  "id": "7412841f",
-                                                  "type": "fragment",
-                                                  "model": {
-                                                    "text": "BBC Test Image",
-                                                    "attributes": []
-                                                  },
-                                                  "position": [
-                                                    13,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            "position": [
-                                              13,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ]
-                                      },
-                                      "position": [
-                                        13,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  13,
-                                  2,
-                                  1,
-                                  1
-                                ]
-                              },
-                              {
-                                "id": "cc18ce94",
-                                "type": "rawImage",
-                                "model": {
-                                  "width": 640,
-                                  "height": 562,
-                                  "locator": "72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png",
-                                  "imageType": "background",
-                                  "originCode": "cpsdevpb",
-                                  "copyrightHolder": "BBC"
-                                },
-                                "position": [
-                                  13,
-                                  2,
-                                  1,
-                                  2
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            13,
-                            2,
-                            1
-                          ]
-                        },
-                        {
-                          "id": "11db37ab",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "7e8de7e0",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "News homepage",
-                                  "blocks": [
-                                    {
-                                      "id": "44cd99ea",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "News homepage",
-                                        "locator": "https://www.bbc.co.uk/news",
-                                        "blocks": [
-                                          {
-                                            "id": "c41e29a6",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "News homepage",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              13,
-                                              2,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        13,
-                                        2,
-                                        2,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  13,
-                                  2,
-                                  2,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            13,
-                            2,
-                            2
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      13,
-                      2
-                    ]
-                  },
-                  {
-                    "id": "9c5d7a4c",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fmundo",
-                      "blocks": [
-                        {
-                          "id": "0dbf2f2e",
-                          "type": "image",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "cf02e721",
-                                "type": "altText",
-                                "model": {
-                                  "blocks": [
-                                    {
-                                      "id": "62b64978",
-                                      "type": "text",
-                                      "model": {
-                                        "blocks": [
-                                          {
-                                            "id": "e7880bec",
-                                            "type": "paragraph",
-                                            "model": {
-                                              "text": "Breaking News image",
-                                              "blocks": [
-                                                {
-                                                  "id": "1e31c673",
-                                                  "type": "fragment",
-                                                  "model": {
-                                                    "text": "Breaking News image",
-                                                    "attributes": []
-                                                  },
-                                                  "position": [
-                                                    13,
-                                                    3,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            "position": [
-                                              13,
-                                              3,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ]
-                                      },
-                                      "position": [
-                                        13,
-                                        3,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  13,
-                                  3,
-                                  1,
-                                  1
-                                ]
-                              },
-                              {
-                                "id": "7e36fe1b",
-                                "type": "rawImage",
-                                "model": {
-                                  "width": 976,
-                                  "height": 549,
-                                  "locator": "33e9/test/5efe5660-5431-11ec-b75b-9f9fe566903d.jpg",
-                                  "imageType": "background",
-                                  "originCode": "cpsdevpb",
-                                  "copyrightHolder": "BBC"
-                                },
-                                "position": [
-                                  13,
-                                  3,
-                                  1,
-                                  2
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            13,
-                            3,
-                            1
-                          ]
-                        },
-                        {
-                          "id": "53b03fe8",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "ab13ea75",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Mundo homepage",
-                                  "blocks": [
-                                    {
-                                      "id": "e5255246",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "Mundo homepage",
-                                        "locator": "https://www.bbc.co.uk/mundo",
-                                        "blocks": [
-                                          {
-                                            "id": "95edc411",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "Mundo homepage",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              13,
-                                              3,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        13,
-                                        3,
-                                        2,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  13,
-                                  3,
-                                  2,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            13,
-                            3,
-                            2
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      13,
-                      3
-                    ]
-                  }
-                ]
-              },
+              "id": "80c2b9a3",
+              "type": "mpu",
+              "model": {},
               "position": [
                 13
+              ]
+            },
+            {
+              "id": "888257d7",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                14
               ]
             }
           ]
         }
       },
       "metadata": {
-        "id": "urn:bbc:ares::article:crrrkxz2k0ko",
+        "id": "urn:bbc:ares::article:c1x0rq3r97ko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:crrrkxz2k0ko"
+          "optimoUrn": "urn:bbc:optimo:asset:c1x0rq3r97ko",
+          "canonicalUrl": "https://www.bbc.com/news/articles/c1x0rq3r97ko"
         },
         "type": "article",
-        "createdBy": "Pidgin",
-        "language": "pcm",
-        "firstPublished": 1637670147913,
-        "lastPublished": 1638873511565,
-        "options": {},
+        "createdBy": "Amharic",
+        "language": "az",
+        "firstPublished": 1615541541153,
+        "lastPublished": 1624961950398,
         "analyticsLabels": {
-          "contentId": "urn:bbc:optimo:asset:crrrkxz2k0ko",
-          "producer": "Pidgin",
-          "page": "pidgin.articles.crrrkxz2k0ko.page"
+          "ldp_tags": "Test",
+          "page": "news.articles.c1x0rq3r97ko.page",
+          "nations_producer": "wales",
+          "ldp_ids": "197abe43-0e22-43cb-8aea-84f319aa55de",
+          "contentId": "urn:bbc:optimo:asset:c1x0rq3r97ko",
+          "contributors": "BBC Wales News~BBC News Nations & Regions~BBC News",
+          "producer": "News"
         },
         "passport": {
-          "language": "pcm",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+          "language": "en-gb",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
           "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+              "value": "http://www.bbc.co.uk/things/46800094-77e1-4787-8050-1c6ec8d47838#id"
+            },
             {
               "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
               "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
             },
             {
-              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-              "value": "http://www.bbc.co.uk/things/e5edf40d-b1e6-48f5-be62-8fe6d7fe857a#id"
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/197abe43-0e22-43cb-8aea-84f319aa55de#id"
             }
           ],
           "predicates": {
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/197abe43-0e22-43cb-8aea-84f319aa55de#id",
+                "thingLabel": "Test",
+                "thingUri": "http://www.bbc.co.uk/things/197abe43-0e22-43cb-8aea-84f319aa55de#id",
+                "thingId": "197abe43-0e22-43cb-8aea-84f319aa55de",
+                "thingType": [
+                  "core:Organisation",
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:Agent",
+                  "tagging:AmbiguousTerm"
+                ],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Test",
+                "type": "about"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "contributor": [
+              {
+                "value": "http://www.bbc.co.uk/things/46800094-77e1-4787-8050-1c6ec8d47838#id",
+                "type": "contributor"
+              }
+            ],
             "infoClass": [
               {
                 "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
@@ -1820,27 +677,43 @@
             ]
           }
         },
-        "tags": {},
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Test",
+              "thingUri": "http://www.bbc.co.uk/things/197abe43-0e22-43cb-8aea-84f319aa55de#id",
+              "thingId": "197abe43-0e22-43cb-8aea-84f319aa55de",
+              "thingType": [
+                "core:Organisation",
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:Agent",
+                "tagging:AmbiguousTerm"
+              ],
+              "thingSameAs": [],
+              "thingEnglishLabel": "Test",
+              "thingLabelLanguage": "en-gb",
+              "thingPreferredLabel": "Test"
+            }
+          ]
+        },
         "blockTypes": [
           "headline",
           "text",
           "paragraph",
           "fragment",
-          "links",
-          "title",
-          "link",
-          "image",
-          "altText",
-          "rawImage",
-          "urlLink"
+          "social",
+          "renditions",
+          "subheadline",
+          "urlLink",
+          "aresOEmbed"
         ],
         "consumableAsSFV": false,
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
-          "seoHeadline": "Test Links page",
+          "seoHeadline": "Test twitter",
           "promoHeadline": {
             "blocks": [
               {
@@ -1850,12 +723,12 @@
                     {
                       "type": "paragraph",
                       "model": {
-                        "text": "Test Links page",
+                        "text": "Test: Twitter Embeds",
                         "blocks": [
                           {
                             "type": "fragment",
                             "model": {
-                              "text": "Test Links page",
+                              "text": "Test: Twitter Embeds",
                               "attributes": []
                             }
                           }
@@ -1863,52 +736,6 @@
                       }
                     }
                   ]
-                }
-              }
-            ]
-          }
-        },
-        "images": {
-          "defaultPromoImage": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Image to ignore",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Image to ignore",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 976,
-                  "height": 549,
-                  "locator": "37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg",
-                  "imageType": "background",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
                 }
               }
             ]
@@ -1923,12 +750,12 @@
                   {
                     "type": "paragraph",
                     "model": {
-                      "text": "",
+                      "text": "Fanny is a good girl according to We Rate Dogs",
                       "blocks": [
                         {
                           "type": "fragment",
                           "model": {
-                            "text": "",
+                            "text": "Fanny is a good girl according to We Rate Dogs",
                             "attributes": []
                           }
                         }
@@ -1939,8 +766,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -2426,7 +1252,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:04:58.371Z",
+        "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,
@@ -3265,5 +2091,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3855",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 573
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/pidgin/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "5291",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"07cdea8e48e1b276f9938e0a7f146d12cbe7171f\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 652
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/pidgin",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "f8946f829518eaf04bc67ffe1f0b1a85b5a45aaf",
+            "last-modified": "Thu, 11 Aug 2022 11:00:55 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "9c13432a-f75f-47c7-b416-61726ffca38e",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1397
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c1x0rq3r97ko",
+          "timeout": 4000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c1x0rq3r97ko",
+      "service": "pidgin",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

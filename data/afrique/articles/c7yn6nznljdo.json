@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "addb543e",
+              "id": "017da0d5",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "5f02c5d2",
+                    "id": "67fb691d",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cd697689",
+                          "id": "3ee177a3",
                           "type": "paragraph",
                           "model": {
                             "text": "Glasgow Police Raid Gun Shop, Find Weapons",
                             "blocks": [
                               {
-                                "id": "db9777ba",
+                                "id": "bf6378aa",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Glasgow Police Raid Gun Shop, Find Weapons",
@@ -56,35 +56,35 @@
               ]
             },
             {
-              "id": "21b7aea4",
+              "id": "24048179",
               "type": "group",
               "model": {
                 "intentType": "overview",
                 "relationshipType": "optional",
                 "blocks": [
                   {
-                    "id": "2bda9a65",
+                    "id": "5b80ab01",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b51189fc",
+                          "id": "eb07cc61",
                           "type": "unorderedList",
                           "model": {
                             "blocks": [
                               {
-                                "id": "03eb2c7c",
+                                "id": "1b4d6911",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "4900d19e",
+                                      "id": "1498482e",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                                         "blocks": [
                                           {
-                                            "id": "4264a85f",
+                                            "id": "044e35a7",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -119,18 +119,18 @@
                                 ]
                               },
                               {
-                                "id": "2d4b664c",
+                                "id": "0429bde7",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "e47fb0cc",
+                                      "id": "da5c64e5",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "Sed venenatis ultrices lacus convallis dictum.",
                                         "blocks": [
                                           {
-                                            "id": "389c6196",
+                                            "id": "4a3c83b1",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Sed venenatis ultrices lacus convallis dictum.",
@@ -165,18 +165,18 @@
                                 ]
                               },
                               {
-                                "id": "35a908df",
+                                "id": "2db300d5",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "9e615bb3",
+                                      "id": "761e394f",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "This text is bold, this is italic and this is bold italic.",
                                         "blocks": [
                                           {
-                                            "id": "ddc254ad",
+                                            "id": "5b099708",
                                             "type": "fragment",
                                             "model": {
                                               "text": "This text is ",
@@ -192,7 +192,7 @@
                                             ]
                                           },
                                           {
-                                            "id": "3b983169",
+                                            "id": "a848702b",
                                             "type": "fragment",
                                             "model": {
                                               "text": "bold, ",
@@ -210,7 +210,7 @@
                                             ]
                                           },
                                           {
-                                            "id": "eb25aa57",
+                                            "id": "69ee8171",
                                             "type": "fragment",
                                             "model": {
                                               "text": "this is",
@@ -226,7 +226,7 @@
                                             ]
                                           },
                                           {
-                                            "id": "9e473ac5",
+                                            "id": "ad36cd1b",
                                             "type": "fragment",
                                             "model": {
                                               "text": " italic ",
@@ -244,7 +244,7 @@
                                             ]
                                           },
                                           {
-                                            "id": "a5f77165",
+                                            "id": "bb3e37b9",
                                             "type": "fragment",
                                             "model": {
                                               "text": "and this is ",
@@ -260,7 +260,7 @@
                                             ]
                                           },
                                           {
-                                            "id": "de772ce9",
+                                            "id": "ab267a53",
                                             "type": "fragment",
                                             "model": {
                                               "text": "bold italic.",
@@ -298,18 +298,18 @@
                                 ]
                               },
                               {
-                                "id": "4ed0585a",
+                                "id": "67b70532",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "865aeb21",
+                                      "id": "44df6f6b",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "We can have links here which can also be bold italic.",
                                         "blocks": [
                                           {
-                                            "id": "098d805d",
+                                            "id": "b5b645f4",
                                             "type": "fragment",
                                             "model": {
                                               "text": "We can have",
@@ -325,7 +325,7 @@
                                             ]
                                           },
                                           {
-                                            "id": "a68b5e55",
+                                            "id": "8c7cd185",
                                             "type": "fragment",
                                             "model": {
                                               "text": " ",
@@ -344,13 +344,13 @@
                                             ]
                                           },
                                           {
-                                            "id": "2fa6675a",
+                                            "id": "9b63df6e",
                                             "type": "urlLink",
                                             "model": {
                                               "text": "links",
                                               "blocks": [
                                                 {
-                                                  "id": "e696c611",
+                                                  "id": "fb2d846a",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "links",
@@ -380,7 +380,7 @@
                                             ]
                                           },
                                           {
-                                            "id": "04537085",
+                                            "id": "6dc9345f",
                                             "type": "fragment",
                                             "model": {
                                               "text": " here which can also be ",
@@ -396,13 +396,13 @@
                                             ]
                                           },
                                           {
-                                            "id": "7926d391",
+                                            "id": "1fcc2d6a",
                                             "type": "urlLink",
                                             "model": {
                                               "text": "bold italic",
                                               "blocks": [
                                                 {
-                                                  "id": "1d853e8d",
+                                                  "id": "2b601bc2",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "bold italic",
@@ -435,7 +435,7 @@
                                             ]
                                           },
                                           {
-                                            "id": "adcb9979",
+                                            "id": "c6debf24",
                                             "type": "fragment",
                                             "model": {
                                               "text": ".",
@@ -491,7 +491,7 @@
               ]
             },
             {
-              "id": "56477cf4",
+              "id": "9fd640ce",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1627470119562,
@@ -502,18 +502,18 @@
               ]
             },
             {
-              "id": "6be099ba",
+              "id": "eeb0f057",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "a688d9f8",
+                    "id": "301321db",
                     "type": "paragraph",
                     "model": {
                       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis  ultrices lacus convallis dictum. In tellus diam, vehicula non ornare id,  hendrerit et urna. Fusce vel metus accumsan, consectetur augue ut,  facilisis augue. Maecenas ut interdum orci, in faucibus nisl.",
                       "blocks": [
                         {
-                          "id": "e54a7e7c",
+                          "id": "23b3c86f",
                           "type": "fragment",
                           "model": {
                             "text": "Lorem ipsum ",
@@ -526,7 +526,7 @@
                           ]
                         },
                         {
-                          "id": "5860f8e1",
+                          "id": "56980d5b",
                           "type": "fragment",
                           "model": {
                             "text": "dolor",
@@ -541,7 +541,7 @@
                           ]
                         },
                         {
-                          "id": "c65d7ab5",
+                          "id": "f1e4b169",
                           "type": "fragment",
                           "model": {
                             "text": " sit amet, ",
@@ -554,7 +554,7 @@
                           ]
                         },
                         {
-                          "id": "e209c88c",
+                          "id": "830edb6b",
                           "type": "fragment",
                           "model": {
                             "text": "consectetur",
@@ -570,7 +570,7 @@
                           ]
                         },
                         {
-                          "id": "b4434fdc",
+                          "id": "a2c6523c",
                           "type": "fragment",
                           "model": {
                             "text": " adipiscing ",
@@ -583,7 +583,7 @@
                           ]
                         },
                         {
-                          "id": "8468fe0a",
+                          "id": "fe26cd12",
                           "type": "fragment",
                           "model": {
                             "text": "elit",
@@ -598,7 +598,7 @@
                           ]
                         },
                         {
-                          "id": "dd8f02da",
+                          "id": "a98e00ae",
                           "type": "fragment",
                           "model": {
                             "text": ". Sed venenatis  ultrices lacus convallis dictum. In tellus diam, vehicula non ornare id,  hendrerit et urna. Fusce vel metus accumsan, consectetur augue ut,  facilisis augue. Maecenas ut interdum orci, in faucibus nisl.",
@@ -618,13 +618,13 @@
                     ]
                   },
                   {
-                    "id": "081b6d99",
+                    "id": "ab4f5554",
                     "type": "paragraph",
                     "model": {
                       "text": "Donec eget  ex cursus est tincidunt laoreet ac vitae nulla. Suspendisse ullamcorper  id dolor non aliquam. Aenean ipsum lorem, laoreet venenatis pretium eu,  tincidunt id mauris. Aliquam faucibus tellus eget erat auctor, vitae  rutrum risus porttitor. ",
                       "blocks": [
                         {
-                          "id": "7c69042f",
+                          "id": "57edccf3",
                           "type": "fragment",
                           "model": {
                             "text": "Donec eget  ex cursus est tincidunt laoreet ac vitae nulla. Suspendisse ullamcorper  id dolor non aliquam. Aenean ipsum lorem, laoreet venenatis pretium eu,  tincidunt id mauris. Aliquam faucibus tellus eget erat auctor, vitae  rutrum risus porttitor. ",
@@ -650,28 +650,28 @@
               ]
             },
             {
-              "id": "2c4f7015",
+              "id": "f9c3c98d",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "a3ee561b",
+                    "id": "8bf3ce9b",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "87392bf1",
+                          "id": "a28238c9",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "dce7013f",
+                                "id": "08900ebe",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a caption ",
                                   "blocks": [
                                     {
-                                      "id": "f5c6d292",
+                                      "id": "7a5c703b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This is a caption ",
@@ -710,23 +710,23 @@
                     ]
                   },
                   {
-                    "id": "1fc9cb0b",
+                    "id": "f27c3698",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cfb56d37",
+                          "id": "e7517324",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8ddd0c6c",
+                                "id": "bfa8d7f7",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Picture of Guns",
                                   "blocks": [
                                     {
-                                      "id": "ba15c4ef",
+                                      "id": "e5d0a08c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Picture of Guns",
@@ -765,7 +765,7 @@
                     ]
                   },
                   {
-                    "id": "d7b11b79",
+                    "id": "612b2c9b",
                     "type": "rawImage",
                     "model": {
                       "width": 750,
@@ -787,18 +787,18 @@
               ]
             },
             {
-              "id": "f34af4e9",
+              "id": "45a8f23a",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "84bb0f90",
+                    "id": "0dac8898",
                     "type": "paragraph",
                     "model": {
                       "text": "Praesent vel sem nisi. Etiam elementum libero mollis felis scelerisque  consectetur. Cras in porttitor orci.",
                       "blocks": [
                         {
-                          "id": "4ce6568c",
+                          "id": "042baff6",
                           "type": "fragment",
                           "model": {
                             "text": "Praesent vel sem nisi. Etiam elementum libero mollis felis scelerisque  consectetur. Cras in porttitor orci.",
@@ -818,13 +818,13 @@
                     ]
                   },
                   {
-                    "id": "13f3fa4f",
+                    "id": "0f76c3ce",
                     "type": "paragraph",
                     "model": {
                       "text": "Pellentesque tempor eros venenatis  est tincidunt, vitae pretium lacus tempor. Donec lobortis vulputate  mattis. Sed sit amet dui vitae nibh egestas bibendum. Mauris congue urna  at condimentum congue.",
                       "blocks": [
                         {
-                          "id": "9422c9a6",
+                          "id": "826b7077",
                           "type": "fragment",
                           "model": {
                             "text": "Pellentesque tempor eros venenatis  est tincidunt, vitae pretium lacus tempor. Donec lobortis vulputate  mattis. Sed sit amet dui vitae nibh egestas bibendum. Mauris congue urna  at condimentum congue.",
@@ -850,7 +850,7 @@
               ]
             },
             {
-              "id": "c9d0346c",
+              "id": "af8c4e94",
               "type": "mpu",
               "model": {},
               "position": [
@@ -858,18 +858,18 @@
               ]
             },
             {
-              "id": "913c1cda",
+              "id": "b12bcc1b",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "05d69d73",
+                    "id": "0699611c",
                     "type": "paragraph",
                     "model": {
                       "text": "Nulla gravida pulvinar purus, sit amet faucibus  libero rutrum at. Phasellus porttitor quam leo. Curabitur a hendrerit  arcu, quis euismod ligula. Pellentesque non sagittis ante. Morbi magna  tellus, tincidunt non porta id, tempus eu nisi. Cras luctus quis urna  sed pellentesque.",
                       "blocks": [
                         {
-                          "id": "cc8ae9bc",
+                          "id": "0f725c44",
                           "type": "fragment",
                           "model": {
                             "text": "Nulla gravida pulvinar purus, sit amet faucibus  libero rutrum at. Phasellus porttitor quam leo. Curabitur a hendrerit  arcu, quis euismod ligula. Pellentesque non sagittis ante. Morbi magna  tellus, tincidunt non porta id, tempus eu nisi. Cras luctus quis urna  sed pellentesque.",
@@ -887,32 +887,6 @@
                       8,
                       1
                     ]
-                  },
-                  {
-                    "id": "8879457b",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Duis eget egestas augue, non vestibulum risus. ",
-                      "blocks": [
-                        {
-                          "id": "40ef611c",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Duis eget egestas augue, non vestibulum risus. ",
-                            "attributes": []
-                          },
-                          "position": [
-                            8,
-                            2,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      8,
-                      2
-                    ]
                   }
                 ]
               },
@@ -921,36 +895,83 @@
               ]
             },
             {
-              "id": "3090cb6f",
+              "id": "1332a094",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "b72904f7",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "af7fded7",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Duis eget egestas augue, non vestibulum risus. ",
+                      "blocks": [
+                        {
+                          "id": "17fe8a81",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Duis eget egestas augue, non vestibulum risus. ",
+                            "attributes": []
+                          },
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                10
+              ]
+            },
+            {
+              "id": "28fc562b",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01t1jmm",
                 "blocks": [
                   {
-                    "id": "a4dcf7a2",
+                    "id": "9e74439f",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "51ada646",
+                          "id": "a83e9076",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "798c22cf",
+                                "id": "6df16e6e",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Running Horses",
                                   "blocks": [
                                     {
-                                      "id": "0726697b",
+                                      "id": "f7ee757a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Running Horses",
                                         "attributes": []
                                       },
                                       "position": [
-                                        9,
+                                        11,
                                         1,
                                         1,
                                         1,
@@ -960,7 +981,7 @@
                                   ]
                                 },
                                 "position": [
-                                  9,
+                                  11,
                                   1,
                                   1,
                                   1
@@ -969,7 +990,7 @@
                             ]
                           },
                           "position": [
-                            9,
+                            11,
                             1,
                             1
                           ]
@@ -977,17 +998,17 @@
                       ]
                     },
                     "position": [
-                      9,
+                      11,
                       1
                     ]
                   },
                   {
-                    "id": "e9290042",
+                    "id": "46eaa3ec",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "82e4e362",
+                          "id": "9210b518",
                           "blockId": "urn:bbc:ares::clip:p01t1jmm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -1023,18 +1044,18 @@
                             "smpKind": "programme"
                           },
                           "position": [
-                            9,
+                            11,
                             2,
                             1
                           ]
                         },
                         {
-                          "id": "c56b18bd",
+                          "id": "95e67231",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8f4ff145",
+                                "id": "1a193d23",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1280,
@@ -1043,37 +1064,37 @@
                                   "originCode": "mpv"
                                 },
                                 "position": [
-                                  9,
+                                  11,
                                   2,
                                   2,
                                   1
                                 ]
                               },
                               {
-                                "id": "e2fb0610",
+                                "id": "0efdbd09",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "a652425a",
+                                      "id": "c2878834",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "83ec2e8c",
+                                            "id": "6c4561ef",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Keyframe #2",
                                               "blocks": [
                                                 {
-                                                  "id": "c25dc05d",
+                                                  "id": "3b2dab51",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Keyframe #2",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    9,
+                                                    11,
                                                     2,
                                                     2,
                                                     2,
@@ -1085,7 +1106,7 @@
                                               ]
                                             },
                                             "position": [
-                                              9,
+                                              11,
                                               2,
                                               2,
                                               2,
@@ -1096,7 +1117,7 @@
                                         ]
                                       },
                                       "position": [
-                                        9,
+                                        11,
                                         2,
                                         2,
                                         2,
@@ -1106,7 +1127,7 @@
                                   ]
                                 },
                                 "position": [
-                                  9,
+                                  11,
                                   2,
                                   2,
                                   2
@@ -1115,7 +1136,7 @@
                             ]
                           },
                           "position": [
-                            9,
+                            11,
                             2,
                             2
                           ]
@@ -1123,46 +1144,46 @@
                       ]
                     },
                     "position": [
-                      9,
+                      11,
                       2
                     ]
                   }
                 ]
               },
               "position": [
-                9
+                11
               ]
             },
             {
-              "id": "4c7079fb",
+              "id": "0c621f24",
               "type": "relatedContent",
               "model": {
                 "blocks": [
                   {
-                    "id": "7cde642e",
+                    "id": "f207182a",
                     "type": "title",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7994857c",
+                          "id": "ad2da8d4",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f0b55916",
+                                "id": "36199639",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is my title",
                                   "blocks": [
                                     {
-                                      "id": "2843a9b2",
+                                      "id": "81c51fb5",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This is my title",
                                         "attributes": []
                                       },
                                       "position": [
-                                        10,
+                                        12,
                                         1,
                                         1,
                                         1,
@@ -1172,7 +1193,7 @@
                                   ]
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   1,
                                   1,
                                   1
@@ -1181,7 +1202,7 @@
                             ]
                           },
                           "position": [
-                            10,
+                            12,
                             1,
                             1
                           ]
@@ -1189,46 +1210,46 @@
                       ]
                     },
                     "position": [
-                      10,
+                      12,
                       1
                     ]
                   },
                   {
-                    "id": "8b89f1c8",
+                    "id": "8a8508ec",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com",
                       "blocks": [
                         {
-                          "id": "1de6ecb5",
+                          "id": "1c185929",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "7be16e23",
+                                "id": "94dd3161",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "b9c8779e",
+                                      "id": "da35133c",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "769f0688",
+                                            "id": "0a688584",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Dog",
                                               "blocks": [
                                                 {
-                                                  "id": "b9b7ce0c",
+                                                  "id": "398db10e",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Dog",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10,
+                                                    12,
                                                     2,
                                                     1,
                                                     1,
@@ -1240,7 +1261,7 @@
                                               ]
                                             },
                                             "position": [
-                                              10,
+                                              12,
                                               2,
                                               1,
                                               1,
@@ -1251,7 +1272,7 @@
                                         ]
                                       },
                                       "position": [
-                                        10,
+                                        12,
                                         2,
                                         1,
                                         1,
@@ -1261,14 +1282,14 @@
                                   ]
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   2,
                                   1,
                                   1
                                 ]
                               },
                               {
-                                "id": "28f6cb3c",
+                                "id": "dd78fd3b",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1200,
@@ -1279,7 +1300,7 @@
                                   "copyrightHolder": "Getty Images"
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   2,
                                   1,
                                   2
@@ -1288,38 +1309,38 @@
                             ]
                           },
                           "position": [
-                            10,
+                            12,
                             2,
                             1
                           ]
                         },
                         {
-                          "id": "0754ebb6",
+                          "id": "c56fe15c",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f340b46a",
+                                "id": "8f6dd925",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a Dog",
                                   "blocks": [
                                     {
-                                      "id": "2647b473",
+                                      "id": "ca28e083",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "This is a Dog",
                                         "locator": "https://www.bbc.com",
                                         "blocks": [
                                           {
-                                            "id": "635a2ba2",
+                                            "id": "5980c56f",
                                             "type": "fragment",
                                             "model": {
                                               "text": "This is a Dog",
                                               "attributes": []
                                             },
                                             "position": [
-                                              10,
+                                              12,
                                               2,
                                               2,
                                               1,
@@ -1331,7 +1352,7 @@
                                         "isExternal": false
                                       },
                                       "position": [
-                                        10,
+                                        12,
                                         2,
                                         2,
                                         1,
@@ -1341,7 +1362,7 @@
                                   ]
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   2,
                                   2,
                                   1
@@ -1350,7 +1371,7 @@
                             ]
                           },
                           "position": [
-                            10,
+                            12,
                             2,
                             2
                           ]
@@ -1358,46 +1379,46 @@
                       ]
                     },
                     "position": [
-                      10,
+                      12,
                       2
                     ]
                   },
                   {
-                    "id": "45c2bb03",
+                    "id": "cdb59121",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com",
                       "blocks": [
                         {
-                          "id": "60f59a13",
+                          "id": "ce1dd4c9",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4b29cd9e",
+                                "id": "b85a84d7",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "e991ba9b",
+                                      "id": "5cdc5fcf",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "906030c4",
+                                            "id": "73912363",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Not a dog",
                                               "blocks": [
                                                 {
-                                                  "id": "cf6df9a9",
+                                                  "id": "66425c99",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Not a dog",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10,
+                                                    12,
                                                     3,
                                                     1,
                                                     1,
@@ -1409,7 +1430,7 @@
                                               ]
                                             },
                                             "position": [
-                                              10,
+                                              12,
                                               3,
                                               1,
                                               1,
@@ -1420,7 +1441,7 @@
                                         ]
                                       },
                                       "position": [
-                                        10,
+                                        12,
                                         3,
                                         1,
                                         1,
@@ -1430,14 +1451,14 @@
                                   ]
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   3,
                                   1,
                                   1
                                 ]
                               },
                               {
-                                "id": "a811610c",
+                                "id": "079bbf32",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 976,
@@ -1448,7 +1469,7 @@
                                   "copyrightHolder": "NASA"
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   3,
                                   1,
                                   2
@@ -1457,38 +1478,38 @@
                             ]
                           },
                           "position": [
-                            10,
+                            12,
                             3,
                             1
                           ]
                         },
                         {
-                          "id": "76833d3d",
+                          "id": "a441984a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ceb55b6f",
+                                "id": "150a4d22",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is not",
                                   "blocks": [
                                     {
-                                      "id": "cd02b290",
+                                      "id": "84678609",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "This is not",
                                         "locator": "https://www.bbc.com",
                                         "blocks": [
                                           {
-                                            "id": "367304e8",
+                                            "id": "88788b5f",
                                             "type": "fragment",
                                             "model": {
                                               "text": "This is not",
                                               "attributes": []
                                             },
                                             "position": [
-                                              10,
+                                              12,
                                               3,
                                               2,
                                               1,
@@ -1500,7 +1521,7 @@
                                         "isExternal": false
                                       },
                                       "position": [
-                                        10,
+                                        12,
                                         3,
                                         2,
                                         1,
@@ -1510,7 +1531,7 @@
                                   ]
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   3,
                                   2,
                                   1
@@ -1519,7 +1540,7 @@
                             ]
                           },
                           "position": [
-                            10,
+                            12,
                             3,
                             2
                           ]
@@ -1527,46 +1548,46 @@
                       ]
                     },
                     "position": [
-                      10,
+                      12,
                       3
                     ]
                   },
                   {
-                    "id": "8d5b75f9",
+                    "id": "71bd8bc2",
                     "type": "link",
                     "model": {
                       "locator": "urn:bbc:optimo:asset:cr8r6ller1vo",
                       "blocks": [
                         {
-                          "id": "e401a459",
+                          "id": "962236d6",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "64d03c15",
+                                "id": "40812ed6",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "3f55d960",
+                                      "id": "4198d08c",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "074d1cd2",
+                                            "id": "625d7fd8",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "ggdf",
                                               "blocks": [
                                                 {
-                                                  "id": "71049196",
+                                                  "id": "7879f1a8",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "ggdf",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    10,
+                                                    12,
                                                     4,
                                                     1,
                                                     1,
@@ -1578,7 +1599,7 @@
                                               ]
                                             },
                                             "position": [
-                                              10,
+                                              12,
                                               4,
                                               1,
                                               1,
@@ -1589,7 +1610,7 @@
                                         ]
                                       },
                                       "position": [
-                                        10,
+                                        12,
                                         4,
                                         1,
                                         1,
@@ -1599,14 +1620,14 @@
                                   ]
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   4,
                                   1,
                                   1
                                 ]
                               },
                               {
-                                "id": "3298a59d",
+                                "id": "4c4d7b68",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 230,
@@ -1617,7 +1638,7 @@
                                   "copyrightHolder": "AFP"
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   4,
                                   1,
                                   2
@@ -1626,38 +1647,38 @@
                             ]
                           },
                           "position": [
-                            10,
+                            12,
                             4,
                             1
                           ]
                         },
                         {
-                          "id": "946fda9f",
+                          "id": "9743f641",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "32b97f63",
+                                "id": "46ef87b1",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Another Optimo Article",
                                   "blocks": [
                                     {
-                                      "id": "0a72ba9c",
+                                      "id": "46b4b53f",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "Another Optimo Article",
                                         "locator": "https://www.test.bbc.com/afrique/articles/cr8r6ller1vo",
                                         "blocks": [
                                           {
-                                            "id": "32227786",
+                                            "id": "eab8cc5c",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Another Optimo Article",
                                               "attributes": []
                                             },
                                             "position": [
-                                              10,
+                                              12,
                                               4,
                                               2,
                                               1,
@@ -1669,7 +1690,7 @@
                                         "isExternal": false
                                       },
                                       "position": [
-                                        10,
+                                        12,
                                         4,
                                         2,
                                         1,
@@ -1679,7 +1700,7 @@
                                   ]
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   4,
                                   2,
                                   1
@@ -1688,24 +1709,24 @@
                             ]
                           },
                           "position": [
-                            10,
+                            12,
                             4,
                             2
                           ]
                         },
                         {
-                          "id": "09d22881",
+                          "id": "c546b8a5",
                           "type": "aresLink",
                           "model": {
                             "blocks": [
                               {
-                                "id": "32ddf415",
+                                "id": "ca960bd6",
                                 "type": "optimoLinkMetadata",
                                 "model": {
                                   "timestamp": 1656938572862
                                 },
                                 "position": [
-                                  10,
+                                  12,
                                   4,
                                   3,
                                   1
@@ -1714,7 +1735,7 @@
                             ]
                           },
                           "position": [
-                            10,
+                            12,
                             4,
                             3
                           ]
@@ -1722,14 +1743,14 @@
                       ]
                     },
                     "position": [
-                      10,
+                      12,
                       4
                     ]
                   }
                 ]
               },
               "position": [
-                10
+                12
               ]
             }
           ]
@@ -1738,22 +1759,22 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c7yn6nznljdo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c7yn6nznljdo"
+          "optimoUrn": "urn:bbc:optimo:asset:c7yn6nznljdo",
+          "canonicalUrl": "https://www.bbc.com/afrique/articles/c7yn6nznljdo"
         },
         "type": "article",
-        "createdBy": "Afrique",
+        "createdBy": "Afaanoromoo",
         "language": "fr",
         "firstPublished": 1627470119562,
         "lastPublished": 1627470119562,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c7yn6nznljdo",
-          "producer": "Afrique",
+          "producer": "Afaan Oromoo",
           "page": "afrique.articles.c7yn6nznljdo.page"
         },
         "passport": {
           "language": "fr",
-          "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/AfaanOromoo",
           "taggings": [
             {
               "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
@@ -1868,7 +1889,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -1893,7 +1913,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Gist Test Article",
           "promoHeadline": {
@@ -2023,8 +2042,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -2487,7 +2505,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:47:57.652Z",
+        "generated": "2023-02-18T03:02:56.634Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T10:53:00Z",
         "totalRecords": 20,
@@ -3245,5 +3263,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:35 GMT",
+            "content-type": "application/json",
+            "content-length": "1400",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"7a7ad8e8b09d6ff1c55d4bc4dd688598abdac3a6\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:09 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1416
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/afrique/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:35 GMT",
+            "content-type": "application/json",
+            "content-length": "4351",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"8fc4095f5702faa876b26c33ba226d7d8b0e56ec\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1427
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/afrique",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:35 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "be57ba42efbbca95fd9b01fb10b755e9b5b75453",
+            "last-modified": "Thu, 07 Jul 2022 13:53:41 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "ef51ed5c-2492-4847-978c-39b244ce47ae",
+            "expires": "Tue, 21 Feb 2023 11:17:07 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1465
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c7yn6nznljdo",
+          "timeout": 4000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c7yn6nznljdo",
+      "service": "afrique",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "a5c1d14a",
+              "id": "9c47e545",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "8938e230",
+                    "id": "6178b61a",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0daa3d33",
+                          "id": "ee390cb6",
                           "type": "paragraph",
                           "model": {
                             "text": "دا د دې ازمونې مقالې سرلیک دی",
                             "blocks": [
                               {
-                                "id": "d22b2e38",
+                                "id": "564b17de",
                                 "type": "fragment",
                                 "model": {
                                   "text": "دا د دې ازمونې مقالې سرلیک دی",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "900e06fa",
+              "id": "72c086cc",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "71831c58",
+                    "id": "cb84af15",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a3fe0084",
+                          "id": "e63c43b5",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ad5224d4",
+                                "id": "8e0056cb",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
                                   "blocks": [
                                     {
-                                      "id": "4ad16653",
+                                      "id": "9c67fd40",
                                       "type": "fragment",
                                       "model": {
                                         "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "0f2ee67c",
+                    "id": "0eff2847",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8310c18c",
+                          "id": "3b2251a3",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b4caba4e",
+                                "id": "167c03c8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\r\n",
                                   "blocks": [
                                     {
-                                      "id": "54f4d3a7",
+                                      "id": "bd2e5fbd",
                                       "type": "fragment",
                                       "model": {
                                         "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\r\n",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "f9d2a657",
+                    "id": "6b4089b0",
                     "type": "rawImage",
                     "model": {
                       "width": 976,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "9f9c27d1",
+              "id": "234a3b31",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1570186271460,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "4609c0ae",
+              "id": "d012bd3e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "f97542da",
+                    "id": "86a792df",
                     "type": "paragraph",
                     "model": {
                       "text": "دا د متن بلاک دی ، کوم چې د بی بی سی ویدر کور پاpageې ته یو آر ایل لینک لري.",
                       "blocks": [
                         {
-                          "id": "1558e93a",
+                          "id": "0b4676f7",
                           "type": "fragment",
                           "model": {
                             "text": "دا د متن بلاک دی ، کوم چې د بی بی سی ویدر کور پاpageې ته یو",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "b6c47988",
+                          "id": "ba50f059",
                           "type": "urlLink",
                           "model": {
                             "text": " آر ایل لینک لري",
                             "blocks": [
                               {
-                                "id": "b30219ea",
+                                "id": "67f5aa1c",
                                 "type": "fragment",
                                 "model": {
                                   "text": " آر ایل لینک لري",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "59af678c",
+                          "id": "c39e7fdb",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "98fd6294",
+              "id": "c84d95a7",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01kf9q4",
                 "blocks": [
                   {
-                    "id": "97abd5ad",
+                    "id": "e604c04c",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d94761b0",
+                          "id": "03c7baeb",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "69fe2399",
+                                "id": "3a567eb0",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
                                   "blocks": [
                                     {
-                                      "id": "bb3c47f8",
+                                      "id": "8f13e4b0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "2144e9e6",
+                    "id": "4ae1ddd4",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "878463f1",
+                          "id": "b0587cf7",
                           "blockId": "urn:bbc:ares::clip:p01kf9q4",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -392,12 +392,12 @@
                           ]
                         },
                         {
-                          "id": "4e16320a",
+                          "id": "ec274f76",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "338daf11",
+                                "id": "60e321f6",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9s0.jpg",
@@ -411,23 +411,23 @@
                                 ]
                               },
                               {
-                                "id": "fa0872fa",
+                                "id": "74ca1e30",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "7029bc5c",
+                                      "id": "06885e21",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "7d6cfdb4",
+                                            "id": "5e64b2fe",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Keyframe #3",
                                               "blocks": [
                                                 {
-                                                  "id": "519329ad",
+                                                  "id": "c7f24a9a",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Keyframe #3",
@@ -495,23 +495,23 @@
               ]
             },
             {
-              "id": "52d7367b",
+              "id": "2cea6f91",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "f0789fac",
+                    "id": "6f3df7b9",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e01867c9",
+                          "id": "e29f68fd",
                           "type": "paragraph",
                           "model": {
                             "text": "دا د فرعي سرلیک بلاک دی",
                             "blocks": [
                               {
-                                "id": "a141e1ee",
+                                "id": "54dad1b0",
                                 "type": "fragment",
                                 "model": {
                                   "text": "دا د فرعي سرلیک بلاک دی",
@@ -546,28 +546,28 @@
               ]
             },
             {
-              "id": "922196d7",
+              "id": "3e40f958",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "8d540f24",
+                    "id": "39ad3ada",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a9e47f5c",
+                          "id": "ff4a3ecd",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f23129b6",
+                                "id": "3d817e1a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "دا د فرعي سرلیک بلاک دی\r",
                                   "blocks": [
                                     {
-                                      "id": "da377aa6",
+                                      "id": "df49102e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "دا د فرعي سرلیک بلاک دی\r",
@@ -606,7 +606,7 @@
                     ]
                   },
                   {
-                    "id": "6640d871",
+                    "id": "72d9f12f",
                     "type": "rawImage",
                     "model": {
                       "width": 976,
@@ -627,18 +627,18 @@
               ]
             },
             {
-              "id": "659a2328",
+              "id": "657f49d4",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b41a7a14",
+                    "id": "57ebac7f",
                     "type": "paragraph",
                     "model": {
                       "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
                       "blocks": [
                         {
-                          "id": "f8079142",
+                          "id": "75d20289",
                           "type": "fragment",
                           "model": {
                             "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
@@ -664,11 +664,21 @@
               ]
             },
             {
-              "id": "fb894b64",
+              "id": "11e68675",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "17ff7180",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -677,14 +687,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cyjmdl92z3ro",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cyjmdl92z3ro"
+          "optimoUrn": "urn:bbc:optimo:asset:cyjmdl92z3ro",
+          "canonicalUrl": "https://www.bbc.com/pashto/articles/cyjmdl92z3ro"
         },
         "type": "article",
         "createdBy": "Pashto",
         "language": "ps",
         "firstPublished": 1570186271460,
         "lastPublished": 1570186271460,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cyjmdl92z3ro",
           "producer": "Pashto",
@@ -695,7 +705,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -714,12 +723,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري."
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -985,7 +991,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:01:00.074Z",
+        "generated": "2023-02-17T21:15:57.088Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:23:00Z",
         "totalRecords": 20,
@@ -1732,5 +1738,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "06f84521723ec19566130f8a2b614f718582ef1d",
+            "last-modified": "Fri, 02 Sep 2022 11:10:02 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "43924a9d-8bb0-44ed-ade8-55369517dfb8",
+            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 767
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cyjmdl92z3ro",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "1193",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"6a9b8d6bb881671e199269fb68ce9e494e7a4acd\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1199
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/pashto/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3962",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"5b23b54be78c2b783d20a3e6001c23cf20b0a4e4\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 1430
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/pashto",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cyjmdl92z3ro",
+      "service": "pashto",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "320ef303",
+              "id": "811d8cdd",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ececeeb6",
+                    "id": "ddb7a9c8",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2eb49efa",
+                          "id": "cdc22c20",
                           "type": "paragraph",
                           "model": {
                             "text": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን",
                             "blocks": [
                               {
-                                "id": "c4327132",
+                                "id": "2c85a216",
                                 "type": "fragment",
                                 "model": {
                                   "text": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "9cf34af4",
+              "id": "4c6ed91e",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "9289ef21",
+                    "id": "34c1a860",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c769522a",
+                          "id": "7b168737",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "5cfc71a3",
+                                "id": "38fbb765",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
                                   "blocks": [
                                     {
-                                      "id": "44706703",
+                                      "id": "34fb3b63",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "a4af639f",
+                    "id": "dbdd626f",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8ee5e897",
+                          "id": "57f92b19",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "dd5b5b86",
+                                "id": "4ecf0080",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
                                   "blocks": [
                                     {
-                                      "id": "f5d35b28",
+                                      "id": "8adf0e2b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "c0c7c071",
+                    "id": "4c219f8c",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "fa5169a7",
+              "id": "1b835bad",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1574853904923,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "95646e8b",
+              "id": "20bef3ab",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "57916bf8",
+                    "id": "f2c53cde",
                     "type": "paragraph",
                     "model": {
                       "text": "ንእትህቡና ሓበሬታ፡ ቢቢስን ካልኦት ዝደጋገፉና ወሃብቲ ኣገልግሎትን: ብሕግን ፖሊስን ዕቃበ ውልቃዊ ሓበሬታ ኢና ንሕዞ።",
                       "blocks": [
                         {
-                          "id": "0dbc3aff",
+                          "id": "2d8a92a7",
                           "type": "fragment",
                           "model": {
                             "text": "ንእትህቡና ሓበሬታ፡ ቢቢስን ካልኦት ዝደጋገፉና ወሃብቲ ኣገልግሎትን: ብሕግን ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "48d1a34d",
+                          "id": "1a96cdd6",
                           "type": "urlLink",
                           "model": {
                             "text": "ፖሊስን ዕቃበ ውልቃዊ ",
                             "blocks": [
                               {
-                                "id": "24b898c2",
+                                "id": "acb87bbe",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ፖሊስን ዕቃበ ውልቃዊ ",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "1eb8074a",
+                          "id": "72b802c4",
                           "type": "fragment",
                           "model": {
                             "text": "ሓበሬታ ኢና ንሕዞ።",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "3ecd8982",
+              "id": "bdab7e61",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "1dabe049",
+                    "id": "887a4355",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "18cff350",
+                          "id": "d189b75b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "da96baf5",
+                                "id": "7966504f",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
                                   "blocks": [
                                     {
-                                      "id": "29263ed2",
+                                      "id": "fcfd2861",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "50da3784",
+                    "id": "8f7dcbcf",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "dd16b726",
+                          "id": "06d65144",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -395,12 +395,12 @@
                           ]
                         },
                         {
-                          "id": "76244907",
+                          "id": "2df5697a",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "5623106a",
+                                "id": "1a62e6d1",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -417,23 +417,23 @@
                                 ]
                               },
                               {
-                                "id": "1a515e42",
+                                "id": "70f4cc76",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "0cdd2a70",
+                                      "id": "b5e3f918",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "62f70d24",
+                                            "id": "96b23a04",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "139d2126",
+                                                  "id": "70bcb280",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -501,23 +501,23 @@
               ]
             },
             {
-              "id": "7c050902",
+              "id": "74642331",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "9eec076f",
+                    "id": "603b0e79",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5c7687e6",
+                          "id": "6e54afb0",
                           "type": "paragraph",
                           "model": {
                             "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
                             "blocks": [
                               {
-                                "id": "6193fc04",
+                                "id": "20fac6f0",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
@@ -552,28 +552,28 @@
               ]
             },
             {
-              "id": "930d521b",
+              "id": "c42a57b5",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "de10f69a",
+                    "id": "c459bac7",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "84b150c6",
+                          "id": "3e16e18f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "cfbf6276",
+                                "id": "aa3165d9",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
                                   "blocks": [
                                     {
-                                      "id": "47369308",
+                                      "id": "4180ba6f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ንዝያዳ መብርሂ ክንምለሰኩም ንኽእል ንኸውን",
@@ -612,7 +612,7 @@
                     ]
                   },
                   {
-                    "id": "f0bf34a7",
+                    "id": "4c6e14bf",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -633,18 +633,18 @@
               ]
             },
             {
-              "id": "fbc47516",
+              "id": "2cfcd342",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5f6bb278",
+                    "id": "62ccce0e",
                     "type": "paragraph",
                     "model": {
                       "text": "ቢቢሲ፡ ንውልቃዊ ሐበሬታ ተኸታተልቱን ሰዓብቱን፡ ብኸመይ ከምዝዕቅቦ ኢልኩም ክትውከሱን ተወሳኺ ሐበሬታን ክትረኽቡ ትኽእሉ።",
                       "blocks": [
                         {
-                          "id": "d9d22968",
+                          "id": "f3add326",
                           "type": "fragment",
                           "model": {
                             "text": "ቢቢሲ፡ ንውልቃዊ ሐበሬታ ተኸታተልቱን ሰዓብቱን፡ ብኸመይ ከምዝዕቅቦ ኢልኩም ክትውከሱን ተወሳኺ ሐበሬታን ክትረኽቡ ትኽእሉ።",
@@ -670,11 +670,21 @@
               ]
             },
             {
-              "id": "9181e692",
+              "id": "ba55b99c",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "5330607c",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -683,14 +693,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:ck62z3rjwdeo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:ck62z3rjwdeo"
+          "optimoUrn": "urn:bbc:optimo:asset:ck62z3rjwdeo",
+          "canonicalUrl": "https://www.bbc.com/tigrinya/articles/ck62z3rjwdeo"
         },
         "type": "article",
         "createdBy": "Tigrinya",
         "language": "ti",
         "firstPublished": 1574853904923,
         "lastPublished": 1574853904923,
-        "options": {},
         "analyticsLabels": {
           "producer": "Tigrinya",
           "page": "tigrinya.articles.ck62z3rjwdeo.page"
@@ -700,7 +710,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Tigrinya",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -718,12 +727,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1221,7 +1227,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:05:56.95Z",
+        "generated": "2023-02-18T03:05:56.866Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,
@@ -1950,5 +1956,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "0c83fadf9f2ef6fe62d5c2efea55021e6c44294a",
+            "last-modified": "Fri, 28 Aug 2020 07:27:36 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "51097601-024c-479e-8220-3b6e6ff22938",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 757
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/ck62z3rjwdeo",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "6421",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"744e1e6b2cfedd85bebfc49cc3da85e9467946ce\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 969
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/tigrinya",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "4589",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"463a19f2188fefc4ee7a5447b6eae0012cfcb5f8\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1375
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/tigrinya/front_page",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "ck62z3rjwdeo",
+      "service": "tigrinya",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

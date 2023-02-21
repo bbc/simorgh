@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "ee23ef6a",
+              "id": "35f18d32",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "48713713",
+                    "id": "71eb3d71",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e866a6ec",
+                          "id": "253e42e3",
                           "type": "paragraph",
                           "model": {
                             "text": "Tiraampi yaada 'godaantota miila keessa dha'uu jedhu dhiyeessan'\n\n",
                             "blocks": [
                               {
-                                "id": "4d580fac",
+                                "id": "62a18b22",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Tiraampi yaada 'godaantota miila keessa dha'uu jedhu dhiyeessan'\n\n",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "41b059e9",
+              "id": "4439cb94",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "99ece444",
+                    "id": "7300eb06",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8060a79a",
+                          "id": "4e66621d",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2b9e2855",
+                                "id": "cf04dc30",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "",
                                   "blocks": [
                                     {
-                                      "id": "dd630b69",
+                                      "id": "1d2c03cc",
                                       "type": "fragment",
                                       "model": {
                                         "text": "",
@@ -101,13 +101,13 @@
                                 ]
                               },
                               {
-                                "id": "fdc0def4",
+                                "id": "e4f924f5",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.",
                                   "blocks": [
                                     {
-                                      "id": "8c59a970",
+                                      "id": "9d3f5b98",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Akka baqqattoonni karaa daangaa kibba gara US hin seenne dhorkuudhaaf yaada Tiraamp dhiyeessan jedhan keessaa dallaa elektiriikaan ijaarame.",
@@ -146,23 +146,23 @@
                     ]
                   },
                   {
-                    "id": "6bafcb04",
+                    "id": "18c37450",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e031134e",
+                          "id": "309594a0",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d9989a23",
+                                "id": "cc117310",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Yaada dhiheenya kana ka'aa jiruuf ",
                                   "blocks": [
                                     {
-                                      "id": "23046726",
+                                      "id": "8281d74e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Yaada dhiheenya kana ka'aa jiruuf ",
@@ -201,7 +201,7 @@
                     ]
                   },
                   {
-                    "id": "5fdb357d",
+                    "id": "c5ea4e59",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -222,7 +222,7 @@
               ]
             },
             {
-              "id": "43c1a8a3",
+              "id": "4c1ad140",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936153914,
@@ -233,24 +233,24 @@
               ]
             },
             {
-              "id": "a155adb2",
+              "id": "825ddb00",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "379360f5",
+                    "id": "9a32582e",
                     "type": "paragraph",
                     "model": {
                       "text": "Inline link Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf yaada yeroo dhiyeessan.",
                       "blocks": [
                         {
-                          "id": "809a0e51",
+                          "id": "0687ef0b",
                           "type": "urlLink",
                           "model": {
                             "text": "Inline link",
                             "blocks": [
                               {
-                                "id": "6c6dad82",
+                                "id": "05079075",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Inline link",
@@ -274,7 +274,7 @@
                           ]
                         },
                         {
-                          "id": "ab940666",
+                          "id": "dfc86f0e",
                           "type": "fragment",
                           "model": {
                             "text": " Kitaaba kana keessa barreeffamni jiru akka jedhutti, pirezedaantichi akka dhuunfaa isaaniitti garee gargaarsaaf ",
@@ -287,13 +287,13 @@
                           ]
                         },
                         {
-                          "id": "eb3f5a4d",
+                          "id": "ce384cb0",
                           "type": "urlLink",
                           "model": {
                             "text": "yaada yeroo dhiyeessan",
                             "blocks": [
                               {
-                                "id": "85e6987a",
+                                "id": "e7a1f3a9",
                                 "type": "fragment",
                                 "model": {
                                   "text": "yaada yeroo dhiyeessan",
@@ -317,7 +317,7 @@
                           ]
                         },
                         {
-                          "id": "41798d79",
+                          "id": "e7e791fd",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -343,29 +343,29 @@
               ]
             },
             {
-              "id": "c2708a38",
+              "id": "1e1bea15",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "bf046cd0",
+                    "id": "831b4ce8",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f39ee154",
+                          "id": "906128ca",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "93c31ca0",
+                                "id": "d158a4d9",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a video block containing a video Daangaarratti maaltu ta'aa jira\n\n",
                                   "blocks": [
                                     {
-                                      "id": "630b5cec",
+                                      "id": "9cdf66f9",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This is a video block containing a video Daangaarratti maaltu ta'aa jira\n\n",
@@ -404,12 +404,12 @@
                     ]
                   },
                   {
-                    "id": "9aa378e5",
+                    "id": "0122e39d",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4df6d205",
+                          "id": "9109c4ca",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -455,12 +455,12 @@
                           ]
                         },
                         {
-                          "id": "49841c6f",
+                          "id": "145d8ac1",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4c477e95",
+                                "id": "25549972",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -477,23 +477,23 @@
                                 ]
                               },
                               {
-                                "id": "c1a9fc69",
+                                "id": "f390bf03",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "c28f1adf",
+                                      "id": "e8c08c4f",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "df239350",
+                                            "id": "b219ab58",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "4df89d25",
+                                                  "id": "872fb6cf",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -561,23 +561,23 @@
               ]
             },
             {
-              "id": "1d429ed6",
+              "id": "53a2e569",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "e367161c",
+                    "id": "31b7c5b3",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0ba2d7c1",
+                          "id": "002bdadc",
                           "type": "paragraph",
                           "model": {
                             "text": "Waliigalteen sun waltumsuuf\n\n",
                             "blocks": [
                               {
-                                "id": "3ed8edfd",
+                                "id": "faa2c683",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Waliigalteen sun waltumsuuf\n\n",
@@ -612,28 +612,28 @@
               ]
             },
             {
-              "id": "56a97cf1",
+              "id": "e017d979",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "92b083f6",
+                    "id": "693a142d",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "686e68c4",
+                          "id": "fff381d7",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ab1d4204",
+                                "id": "52fe29e4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Footballers after a match",
                                   "blocks": [
                                     {
-                                      "id": "6483610d",
+                                      "id": "72179474",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Footballers after a match",
@@ -672,7 +672,7 @@
                     ]
                   },
                   {
-                    "id": "3432cd7a",
+                    "id": "c39bcf88",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -693,18 +693,18 @@
               ]
             },
             {
-              "id": "0d62191a",
+              "id": "690d2f05",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "66e254fd",
+                    "id": "4267fa1a",
                     "type": "paragraph",
                     "model": {
                       "text": "Haa ta'u malee, seeraan ala daangaa US ce'uun erga bara as akka walii galaati hir'achaa dhufus.\n\n",
                       "blocks": [
                         {
-                          "id": "62f6ace1",
+                          "id": "6042c96a",
                           "type": "fragment",
                           "model": {
                             "text": "Haa ta'u malee, seeraan ala daangaa US ce'uun erga bara as akka walii galaati hir'achaa dhufus.\n\n",
@@ -730,11 +730,21 @@
               ]
             },
             {
-              "id": "bdf50e6a",
+              "id": "ab4dc8b0",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "205f7af0",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -743,14 +753,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c4g19kgl85ko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko"
+          "optimoUrn": "urn:bbc:optimo:asset:c4g19kgl85ko",
+          "canonicalUrl": "https://www.bbc.com/afaanoromoo/articles/c4g19kgl85ko"
         },
         "type": "article",
         "createdBy": "Afaanoromoo",
         "language": "om",
         "firstPublished": 1562936153914,
         "lastPublished": 1569857685157,
-        "options": {},
         "analyticsLabels": {
           "producer": "Afaan Oromoo",
           "page": "afaanoromoo.articles.c4g19kgl85ko.page"
@@ -760,7 +770,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/AfaanOromoo",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -778,7 +787,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Namoonni godaanan kunneen hedduun isaanii biyya isaaniirraa miidhaa fi hiyyummaa warra baqatanii karaa.",
           "promoHeadline": {
@@ -922,8 +930,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1453,7 +1460,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:06:59.878Z",
+        "generated": "2023-02-18T03:06:57.663Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,
@@ -2208,5 +2215,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "e3ff51f5620ec902c15549e44a2a28b4387a7944",
+            "last-modified": "Mon, 26 Apr 2021 12:48:52 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "1bd94804-ec69-45c5-a148-ba9c31cf6673",
+            "expires": "Tue, 21 Feb 2023 11:17:06 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 444
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c4g19kgl85ko",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "4116",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"2c9f9dbc2985c8eed2a945fa041785a0c6b117b9\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1460
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/afaanoromoo/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "5924",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"e046ba7e305edad7f7fff7e701495a0e87c08b16\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1476
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/afaanoromoo",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c4g19kgl85ko",
+      "service": "afaanoromoo",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

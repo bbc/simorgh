@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "2409f4ae",
+              "id": "ec44bd40",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "56c1fcce",
+                    "id": "a86cbf2e",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e60b948a",
+                          "id": "f9508fef",
                           "type": "paragraph",
                           "model": {
                             "text": "C'est le titre de cet article de test",
                             "blocks": [
                               {
-                                "id": "4146aa2f",
+                                "id": "19788503",
                                 "type": "fragment",
                                 "model": {
                                   "text": "C'est le titre de cet article de test",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "d3153a22",
+              "id": "359e02a1",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "fdfba903",
+                    "id": "2902eeea",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "aa39598f",
+                          "id": "bcb21aa7",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e297cdb6",
+                                "id": "1cfa00d2",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Cette image test, sous copyright BBC, montre une carte de la France. L'image est dans les trois premiers blocs et porte cette légende.",
                                   "blocks": [
                                     {
-                                      "id": "ded7825c",
+                                      "id": "f36d4e77",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Cette image test, sous copyright BBC, montre une carte de la France. L'image est dans les trois premiers blocs et porte cette légende.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "d4fbe1c7",
+                    "id": "9d3f67bf",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "da208dc1",
+                          "id": "ededa053",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c3afcb53",
+                                "id": "7bdfa52a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Carte de France montrant Paris et Cognac",
                                   "blocks": [
                                     {
-                                      "id": "0affefa8",
+                                      "id": "fcbf21b0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Carte de France montrant Paris et Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "29b20771",
+                    "id": "4138dbb8",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "6d3f4e5f",
+              "id": "759eacfd",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936294950,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "f3cfedee",
+              "id": "5d6b43c1",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5ca29bad",
+                    "id": "e19bebe6",
                     "type": "paragraph",
                     "model": {
                       "text": "Ceci est un bloc de texte contenant un lien URL vers la page d'accueil BBC Weather.",
                       "blocks": [
                         {
-                          "id": "4b403b76",
+                          "id": "39a99782",
                           "type": "fragment",
                           "model": {
                             "text": "Ceci est un bloc de texte contenant un lien URL vers ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "b063ced9",
+                          "id": "ae8ae971",
                           "type": "urlLink",
                           "model": {
                             "text": "la page d'accueil BBC Weather",
                             "blocks": [
                               {
-                                "id": "de27b443",
+                                "id": "25357bcf",
                                 "type": "fragment",
                                 "model": {
                                   "text": "la page d'accueil BBC Weather",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "2a0c7a02",
+                          "id": "90a38fde",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "4ee93f7d",
+              "id": "d8ad6326",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "f1eaf5dd",
+                    "id": "97b92a5f",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "227679cb",
+                          "id": "5ab55dc6",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c647e564",
+                                "id": "6896db7c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Ceci est un bloc vidéo contenant une vidéo sur les fourmis",
                                   "blocks": [
                                     {
-                                      "id": "0b95db54",
+                                      "id": "4a34b555",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Ceci est un bloc vidéo contenant une vidéo sur les fourmis",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "0d89615c",
+                    "id": "a9ae1907",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ed5adfb5",
+                          "id": "2ae96b7f",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -395,12 +395,12 @@
                           ]
                         },
                         {
-                          "id": "612f53f1",
+                          "id": "0d451a24",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "982f204a",
+                                "id": "be1b7800",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -417,23 +417,23 @@
                                 ]
                               },
                               {
-                                "id": "a8784e72",
+                                "id": "d5fdb3d0",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "f10505de",
+                                      "id": "92cf8abc",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "de43ea5d",
+                                            "id": "987ad44e",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "dff01c90",
+                                                  "id": "6d3bf93e",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -501,23 +501,23 @@
               ]
             },
             {
-              "id": "ecd2e59c",
+              "id": "3ea07362",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "df308163",
+                    "id": "c78e73c2",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0c2ffba6",
+                          "id": "778cb227",
                           "type": "paragraph",
                           "model": {
                             "text": "Ceci est un bloc de sous-titre",
                             "blocks": [
                               {
-                                "id": "0321a03d",
+                                "id": "5ddbb4d0",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Ceci est un bloc de sous-titre",
@@ -552,28 +552,28 @@
               ]
             },
             {
-              "id": "205ac732",
+              "id": "1e8b4a7a",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "88212158",
+                    "id": "d58bb007",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b20e7976",
+                          "id": "d988d090",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ea09cf67",
+                                "id": "98f42451",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Footballeurs après un match",
                                   "blocks": [
                                     {
-                                      "id": "8330c9a9",
+                                      "id": "a9713c0e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Footballeurs après un match",
@@ -612,7 +612,7 @@
                     ]
                   },
                   {
-                    "id": "922c7636",
+                    "id": "38fcd604",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -633,18 +633,18 @@
               ]
             },
             {
-              "id": "bfb239d2",
+              "id": "f61b9e8e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "19dbff3a",
+                    "id": "986fbc1d",
                     "type": "paragraph",
                     "model": {
                       "text": "Cet article de test a été créé afin que nous puissions exécuter des tests automatisés de bout en bout sur notre site Web.",
                       "blocks": [
                         {
-                          "id": "66bde8b8",
+                          "id": "4804fa10",
                           "type": "fragment",
                           "model": {
                             "text": "Cet article de test a été créé afin que nous puissions exécuter des tests automatisés de bout en bout sur notre site Web.",
@@ -670,7 +670,7 @@
               ]
             },
             {
-              "id": "5ad70028",
+              "id": "30478f28",
               "type": "mpu",
               "model": {},
               "position": [
@@ -678,235 +678,10 @@
               ]
             },
             {
-              "id": "4c7079fb",
-              "type": "relatedContent",
+              "id": "d81c96d2",
+              "type": "wsoj",
               "model": {
-                "blocks": [
-                  {
-                    "id": "7cde642e",
-                    "type": "title",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "7994857c",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "f0b55916",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "This is my title",
-                                  "blocks": [
-                                    {
-                                      "id": "2843a9b2",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "This is my title",
-                                        "attributes": []
-                                      },
-                                      "position": [
-                                        10,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  10,
-                                  1,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            10,
-                            1,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      10,
-                      1
-                    ]
-                  },
-                  {
-                    "id": "8b89f1c8",
-                    "type": "link",
-                    "model": {
-                      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com",
-                      "blocks": [
-                        {
-                          "id": "1de6ecb5",
-                          "type": "image",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "7be16e23",
-                                "type": "altText",
-                                "model": {
-                                  "blocks": [
-                                    {
-                                      "id": "b9c8779e",
-                                      "type": "text",
-                                      "model": {
-                                        "blocks": [
-                                          {
-                                            "id": "769f0688",
-                                            "type": "paragraph",
-                                            "model": {
-                                              "text": "Dog",
-                                              "blocks": [
-                                                {
-                                                  "id": "b9b7ce0c",
-                                                  "type": "fragment",
-                                                  "model": {
-                                                    "text": "Dog",
-                                                    "attributes": []
-                                                  },
-                                                  "position": [
-                                                    10,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1,
-                                                    1
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            "position": [
-                                              10,
-                                              2,
-                                              1,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ]
-                                      },
-                                      "position": [
-                                        10,
-                                        2,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  10,
-                                  2,
-                                  1,
-                                  1
-                                ]
-                              },
-                              {
-                                "id": "28f6cb3c",
-                                "type": "rawImage",
-                                "model": {
-                                  "width": 1200,
-                                  "height": 602,
-                                  "locator": "b498/test/67b83de0-7284-11ec-9534-9f1d59fb8b32.jpg",
-                                  "imageType": "background",
-                                  "originCode": "cpsdevpb",
-                                  "copyrightHolder": "Getty Images"
-                                },
-                                "position": [
-                                  10,
-                                  2,
-                                  1,
-                                  2
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            10,
-                            2,
-                            1
-                          ]
-                        },
-                        {
-                          "id": "0754ebb6",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "f340b46a",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "This is a Dog",
-                                  "blocks": [
-                                    {
-                                      "id": "2647b473",
-                                      "type": "urlLink",
-                                      "model": {
-                                        "text": "This is a Dog",
-                                        "locator": "https://www.bbc.com",
-                                        "blocks": [
-                                          {
-                                            "id": "635a2ba2",
-                                            "type": "fragment",
-                                            "model": {
-                                              "text": "This is a Dog",
-                                              "attributes": []
-                                            },
-                                            "position": [
-                                              10,
-                                              2,
-                                              2,
-                                              1,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ],
-                                        "isExternal": false
-                                      },
-                                      "position": [
-                                        10,
-                                        2,
-                                        2,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  10,
-                                  2,
-                                  2,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            10,
-                            2,
-                            2
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      10,
-                      2
-                    ]
-                  }
-                ]
+                "type": "recommendations"
               },
               "position": [
                 10
@@ -918,14 +693,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cz216x22106o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o"
+          "optimoUrn": "urn:bbc:optimo:asset:cz216x22106o",
+          "canonicalUrl": "https://www.bbc.com/afrique/articles/cz216x22106o"
         },
         "type": "article",
         "createdBy": "Afrique",
         "language": "fr",
         "firstPublished": 1562936294950,
         "lastPublished": 1569595708548,
-        "options": {},
         "analyticsLabels": {
           "producer": "Afrique",
           "page": "afrique.articles.cz216x22106o.page"
@@ -935,7 +710,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -953,12 +727,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "CAN 2019 : Le Nigéria file en demi-finales au détriment de l'Afrique du Sud"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1421,7 +1192,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:47:57.652Z",
+        "generated": "2023-02-18T03:02:56.634Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T10:53:00Z",
         "totalRecords": 20,
@@ -2179,5 +1950,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:35 GMT",
+            "content-type": "application/json",
+            "content-length": "1400",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"7a7ad8e8b09d6ff1c55d4bc4dd688598abdac3a6\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:09 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 1898
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/afrique/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:35 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "0fe768530a22c547f23cec59df29ea36e2cc9243",
+            "last-modified": "Fri, 25 Sep 2020 09:15:13 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "32495f97-488a-4f8d-89a0-49d2cb807671",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 2042
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cz216x22106o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:35 GMT",
+            "content-type": "application/json",
+            "content-length": "4351",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"8fc4095f5702faa876b26c33ba226d7d8b0e56ec\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1946
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/afrique",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cz216x22106o",
+      "service": "afrique",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

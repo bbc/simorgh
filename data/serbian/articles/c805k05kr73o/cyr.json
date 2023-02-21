@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "675bc511",
+              "id": "2efb702e",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "c549904f",
+                    "id": "f372502e",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "19ac541f",
+                          "id": "1cb468bc",
                           "type": "paragraph",
                           "model": {
                             "text": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
                             "blocks": [
                               {
-                                "id": "4a932eea",
+                                "id": "75f90a1b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "e84abe65",
+              "id": "ffde844d",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562943337219,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "ed2a92fa",
+              "id": "77c671b7",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "44342fad",
+                    "id": "16994ceb",
                     "type": "paragraph",
                     "model": {
                       "text": "U dalekoj galaksiji, na jugu Srbije, u Nišu, sila se probudila.",
                       "blocks": [
                         {
-                          "id": "e0d01762",
+                          "id": "e430a888",
                           "type": "fragment",
                           "model": {
                             "text": "U dalekoj galaksiji, na jugu Srbije, u Nišu, sila se probudila.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "61b68f08",
+                    "id": "9cb14a3e",
                     "type": "paragraph",
                     "model": {
                       "text": "Iako ih prema aktuelnim dešavanjima u serijalu Ratovi zvezda gotovo i nema, džedaji se već nekoliko godina uspešno okupljaju u Nišu.",
                       "blocks": [
                         {
-                          "id": "2aeaee96",
+                          "id": "6c1c3ca2",
                           "type": "fragment",
                           "model": {
                             "text": "Iako ih prema aktuelnim dešavanjima u serijalu ",
@@ -117,7 +117,7 @@
                           ]
                         },
                         {
-                          "id": "43217e45",
+                          "id": "2fa9cab0",
                           "type": "fragment",
                           "model": {
                             "text": "Ratovi zvezda",
@@ -132,7 +132,7 @@
                           ]
                         },
                         {
-                          "id": "693e9a1a",
+                          "id": "6222888e",
                           "type": "fragment",
                           "model": {
                             "text": " gotovo i nema, džedaji se već nekoliko godina uspešno okupljaju u Nišu.",
@@ -152,13 +152,13 @@
                     ]
                   },
                   {
-                    "id": "eafdc9cf",
+                    "id": "a7fe4b87",
                     "type": "paragraph",
                     "model": {
                       "text": "Sa više od sto članova, niški Džedajski pokret možda ne održava mir u svemiru, ali pokušava da živote nekih Nišlija učini boljim.",
                       "blocks": [
                         {
-                          "id": "b68e5fce",
+                          "id": "8e1c8208",
                           "type": "fragment",
                           "model": {
                             "text": "Sa više od sto članova, niški Džedajski pokret možda ne održava mir u svemiru, ali pokušava da živote nekih Nišlija učini boljim.",
@@ -178,13 +178,13 @@
                     ]
                   },
                   {
-                    "id": "603dbd7f",
+                    "id": "a25652ac",
                     "type": "paragraph",
                     "model": {
                       "text": "Pored popkulturnih konvencija na kojima okupljaju fanove Ratova zvezda, niški džedaji organizuju i humanitarne akcije.",
                       "blocks": [
                         {
-                          "id": "14e73c04",
+                          "id": "931fe7b8",
                           "type": "fragment",
                           "model": {
                             "text": "Pored popkulturnih konvencija na kojima okupljaju fanove ",
@@ -197,7 +197,7 @@
                           ]
                         },
                         {
-                          "id": "55de7677",
+                          "id": "a49d2b48",
                           "type": "fragment",
                           "model": {
                             "text": "Ratova zvezda",
@@ -212,7 +212,7 @@
                           ]
                         },
                         {
-                          "id": "d48b68f7",
+                          "id": "d8136588",
                           "type": "fragment",
                           "model": {
                             "text": ", niški džedaji organizuju i humanitarne akcije.",
@@ -238,7 +238,7 @@
               ]
             },
             {
-              "id": "0a3f629e",
+              "id": "1203fce8",
               "type": "mpu",
               "model": {},
               "position": [
@@ -246,18 +246,18 @@
               ]
             },
             {
-              "id": "ac7aa295",
+              "id": "4c9da3fc",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "c6056812",
+                    "id": "939afd88",
                     "type": "paragraph",
                     "model": {
                       "text": "A ovog leta su rešili da odu korak dalje i organizuju kamp namenjen deci bez roditelja.",
                       "blocks": [
                         {
-                          "id": "776a2c8b",
+                          "id": "73d11e98",
                           "type": "fragment",
                           "model": {
                             "text": "A ovog leta su rešili da odu korak dalje i organizuju kamp namenjen deci bez roditelja.",
@@ -275,37 +275,58 @@
                       5,
                       1
                     ]
-                  },
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "367165bf",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "409ce39b",
+              "type": "text",
+              "model": {
+                "blocks": [
                   {
-                    "id": "0aa3f03c",
+                    "id": "69a06ff5",
                     "type": "paragraph",
                     "model": {
                       "text": "Kamp, koji će biti održan na Vlasinskom jezeru, nosiće naziv „Sila prati hrabre\".",
                       "blocks": [
                         {
-                          "id": "e38bb194",
+                          "id": "be4a6e09",
                           "type": "fragment",
                           "model": {
                             "text": "Kamp, koji će biti održan na Vlasinskom jezeru, nosiće naziv „Sila prati hrabre\".",
                             "attributes": []
                           },
                           "position": [
-                            5,
-                            2,
+                            7,
+                            1,
                             1
                           ]
                         }
                       ]
                     },
                     "position": [
-                      5,
-                      2
+                      7,
+                      1
                     ]
                   }
                 ]
               },
               "position": [
-                5
+                7
               ]
             }
           ]
@@ -321,7 +342,6 @@
         "language": "sr-latn",
         "firstPublished": 1562943337219,
         "lastPublished": 1562943337219,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c805k05kr73o",
           "producer": "Serbian"
@@ -331,7 +351,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Serbian",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -341,12 +360,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Ratovi zvezda: Niški džedaji pomažu decu bez roditelja"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -799,7 +815,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:07:00.245Z",
+        "generated": "2023-02-18T03:06:57.984Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,
@@ -1611,5 +1627,119 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "2943",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"0b5602470aba8475c3d34f2ce770b0ed5e404dee\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 414
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/serbian_cyr",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "bf56638ab715cbf6dea394dfc1607bded16ea697",
+            "last-modified": "Wed, 23 Feb 2022 14:59:30 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "05b16582-2493-4ff0-a339-8be96be82a43",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 766
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c805k05kr73o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "2490",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"039a589ac0b94cb144a79766ad17f2b21333b55d\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 993
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/serbian/cyr/front_page",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c805k05kr73o",
+      "service": "serbian",
+      "pageType": "article",
+      "variant": "cyr"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

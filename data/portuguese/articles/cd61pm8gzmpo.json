@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "16124683",
+              "id": "4824086c",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "cbdc17f1",
+                    "id": "215f2894",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e5f80ee3",
+                          "id": "cfa918a6",
                           "type": "paragraph",
                           "model": {
                             "text": "Este é o título deste artigo de teste",
                             "blocks": [
                               {
-                                "id": "cfc47dc8",
+                                "id": "473aeba6",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Este é o título deste artigo de teste",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "97784d25",
+              "id": "cf3fc87a",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "1db26e04",
+                    "id": "4d86cabb",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1482b0f5",
+                          "id": "c13de505",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "69f4d563",
+                                "id": "5e588be7",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.",
                                   "blocks": [
                                     {
-                                      "id": "ccfa7edd",
+                                      "id": "8e8df3da",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "6f05b25e",
+                    "id": "94affc1d",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5cb36b0b",
+                          "id": "1982c4ae",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "7eb16e35",
+                                "id": "25bbe3b1",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.\r",
                                   "blocks": [
                                     {
-                                      "id": "608c26ff",
+                                      "id": "e3cb44e6",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Esta imagem de teste, com direitos autorais da BBC, mostra um mapa da França. A imagem está nos três primeiros blocos e tem esta legenda.\r",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "55dab92e",
+                    "id": "85003527",
                     "type": "rawImage",
                     "model": {
                       "width": 976,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "15dcd0f4",
+              "id": "3d7e6c13",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1570187186382,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "78968f69",
+              "id": "531788fc",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "1521ba84",
+                    "id": "384cbdc6",
                     "type": "paragraph",
                     "model": {
                       "text": "Este é um bloco de texto, que contém um link de URL para a página inicial do BBC Weather.",
                       "blocks": [
                         {
-                          "id": "b8d90820",
+                          "id": "15a2654a",
                           "type": "fragment",
                           "model": {
                             "text": "Este é um bloco de texto, que contém um link de URL para a página inicial do ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "e2dd9898",
+                          "id": "cad50c2c",
                           "type": "urlLink",
                           "model": {
                             "text": "BBC Weather",
                             "blocks": [
                               {
-                                "id": "03569d73",
+                                "id": "7dcacb98",
                                 "type": "fragment",
                                 "model": {
                                   "text": "BBC Weather",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "cd243fc9",
+                          "id": "ebd31788",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "f4406f58",
+              "id": "82cccd35",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01jv2zy",
                 "blocks": [
                   {
-                    "id": "ed3d4e1a",
+                    "id": "24b48141",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5b8c2c7d",
+                          "id": "9adc352a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "7c77d562",
+                                "id": "4bc24cb4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Indonésios Mark Eid al-Adha em meio a terremotos na região de Lombok",
                                   "blocks": [
                                     {
-                                      "id": "2b045c50",
+                                      "id": "e0f7e6da",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Indonésios Mark Eid al-Adha em meio a terremotos na região de Lombok",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "7cba5d35",
+                    "id": "0e4ee417",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3bc29897",
+                          "id": "6cbb5b45",
                           "blockId": "urn:bbc:ares::clip:p01jv2zy",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -393,12 +393,12 @@
                           ]
                         },
                         {
-                          "id": "f9fb5b73",
+                          "id": "6221865a",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0ccf9db5",
+                                "id": "89f0c50a",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01jv35f.jpg",
@@ -413,23 +413,23 @@
                                 ]
                               },
                               {
-                                "id": "65d180a4",
+                                "id": "54981592",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "fe42984b",
+                                      "id": "4d15f632",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "bedba027",
+                                            "id": "c0c9c387",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "pakistani girl with green eyes",
                                               "blocks": [
                                                 {
-                                                  "id": "36d0a4b6",
+                                                  "id": "ff180403",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "pakistani girl with green eyes",
@@ -497,23 +497,23 @@
               ]
             },
             {
-              "id": "87d8d54d",
+              "id": "7c155689",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "9a44bfca",
+                    "id": "1ac721b0",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cc7a16ed",
+                          "id": "73f4c9ed",
                           "type": "paragraph",
                           "model": {
                             "text": "Este é um bloco de subtítulo",
                             "blocks": [
                               {
-                                "id": "f33264d7",
+                                "id": "e2ff6329",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Este é um bloco de subtítulo",
@@ -548,28 +548,28 @@
               ]
             },
             {
-              "id": "4f8271b8",
+              "id": "ecbf06c6",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "0f2cbddd",
+                    "id": "f73b6fe9",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e8717ac1",
+                          "id": "6843d2dc",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c1fc2a0e",
+                                "id": "eb70ee5b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Este é um bloco de subtítulo\r",
                                   "blocks": [
                                     {
-                                      "id": "58b6e1d5",
+                                      "id": "62299e87",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Este é um bloco de subtítulo\r",
@@ -608,7 +608,7 @@
                     ]
                   },
                   {
-                    "id": "9fa28f95",
+                    "id": "be6c06c3",
                     "type": "rawImage",
                     "model": {
                       "width": 976,
@@ -629,18 +629,18 @@
               ]
             },
             {
-              "id": "6786bb77",
+              "id": "1d6d7670",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "10e44760",
+                    "id": "0cbf27ae",
                     "type": "paragraph",
                     "model": {
                       "text": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados em nosso site.",
                       "blocks": [
                         {
-                          "id": "559020da",
+                          "id": "1e499537",
                           "type": "fragment",
                           "model": {
                             "text": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados em nosso site.",
@@ -666,11 +666,21 @@
               ]
             },
             {
-              "id": "e532e2bb",
+              "id": "da148d2f",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "098d1dc3",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -679,14 +689,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cd61pm8gzmpo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cd61pm8gzmpo"
+          "optimoUrn": "urn:bbc:optimo:asset:cd61pm8gzmpo",
+          "canonicalUrl": "https://www.bbc.com/portuguese/articles/cd61pm8gzmpo"
         },
         "type": "article",
         "createdBy": "Brasil",
         "language": "pt-br",
         "firstPublished": 1570187186382,
         "lastPublished": 1570187186382,
-        "options": {},
         "analyticsLabels": {
           "producer": "Brasil",
           "page": "portuguese.articles.cd61pm8gzmpo.page"
@@ -696,7 +706,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -714,12 +723,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Este artigo de teste foi criado para que possamos executar testes de ponta a ponta automatizados"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1118,7 +1124,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:02:58.212Z",
+        "generated": "2023-02-18T03:02:57.347Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1888,5 +1894,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "0661f4144faa3e8a05b2195184db42568ba9226d",
+            "last-modified": "Fri, 28 Aug 2020 07:27:25 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "9da04683-3710-4570-8a28-2df3c8bfc8a2",
+            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 770
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cd61pm8gzmpo",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "2505",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"de257871233ea258f2f8c969e77de5858aed3225\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 1117
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/portuguese/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
+            "content-type": "application/json",
+            "content-length": "4279",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"189e6acb4a40084c68e09efdc7a6c903129ce040\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1514
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/portuguese",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cd61pm8gzmpo",
+      "service": "portuguese",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

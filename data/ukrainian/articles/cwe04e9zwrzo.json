@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "bba0d23e",
+              "id": "0eae7439",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "fc822859",
+                    "id": "b0d0d3ea",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "583977c9",
+                          "id": "07f2cd56",
                           "type": "paragraph",
                           "model": {
                             "text": "Українка пробилася у фінал юніорського Вімблдону",
                             "blocks": [
                               {
-                                "id": "a928a871",
+                                "id": "fcd19148",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Українка пробилася у фінал юніорського Вімблдону",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "41590804",
+              "id": "b8fca0f1",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941967871,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "af3f22f9",
+              "id": "f2b0f5a4",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "41085c13",
+                    "id": "b9db16ce",
                     "type": "paragraph",
                     "model": {
                       "text": "Українська тенісистка Дарія Снігур вийшла у фінал юніорського Вімблдону.",
                       "blocks": [
                         {
-                          "id": "97d1ff76",
+                          "id": "204bc051",
                           "type": "fragment",
                           "model": {
                             "text": "Українська тенісистка Дарія Снігур вийшла у фінал юніорського Вімблдону.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "c92da83c",
+                    "id": "31f0340f",
                     "type": "paragraph",
                     "model": {
                       "text": "У півфіналі 17-річна українка здолала Емму Наварро зі США.",
                       "blocks": [
                         {
-                          "id": "689c15d2",
+                          "id": "251c5509",
                           "type": "fragment",
                           "model": {
                             "text": "У півфіналі 17-річна українка здолала Емму Наварро зі США.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "47044030",
+                    "id": "9084a2bb",
                     "type": "paragraph",
                     "model": {
                       "text": "На це їй знадобилося 45 хвилин. Поєдинок завершився з рахунком 6:3, 6:0.",
                       "blocks": [
                         {
-                          "id": "2d7f2416",
+                          "id": "0b116925",
                           "type": "fragment",
                           "model": {
                             "text": "На це їй знадобилося 45 хвилин. Поєдинок завершився з рахунком 6:3, 6:0.",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "9bf1e2b3",
+                    "id": "6a76396a",
                     "type": "paragraph",
                     "model": {
                       "text": "У чвертьфіналі українка здолала 16-річну Поліну Кудерметову з Росії з рахунком 6:2, 6:4.",
                       "blocks": [
                         {
-                          "id": "dbb4627d",
+                          "id": "4a426baf",
                           "type": "fragment",
                           "model": {
                             "text": "У чвертьфіналі українка здолала 16-річну Поліну Кудерметову з Росії з рахунком 6:2, 6:4.",
@@ -182,11 +182,21 @@
               ]
             },
             {
-              "id": "c1f125b6",
+              "id": "b0dcf4d5",
               "type": "mpu",
               "model": {},
               "position": [
                 4
+              ]
+            },
+            {
+              "id": "95f429d8",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
               ]
             }
           ]
@@ -195,14 +205,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cwe04e9zwrzo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwe04e9zwrzo"
+          "optimoUrn": "urn:bbc:optimo:asset:cwe04e9zwrzo",
+          "canonicalUrl": "https://www.bbc.com/ukrainian/articles/cwe04e9zwrzo"
         },
         "type": "article",
         "createdBy": "Ukrainian",
         "language": "uk",
         "firstPublished": 1562941967871,
         "lastPublished": 1562941967871,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cwe04e9zwrzo",
           "producer": "Ukrainian",
@@ -213,7 +223,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -223,12 +232,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Українка пробилася у фінал юніорського Вімблдону"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -501,7 +507,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:10:57.732Z",
+        "generated": "2023-02-18T03:10:58.107Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1276,5 +1282,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "2154",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"957d21c2c8195dfda821439fff31e0295456b6c5\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 811
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/ukrainian/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3395",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"5e7c7f8bebb2d6261d088de332d0b95e66a3cc2b\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 754
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/ukrainian",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "d420eb599326ac24b54c1a3629fc548b76fce351",
+            "last-modified": "Wed, 23 Feb 2022 15:00:18 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "79a84b6f-ebff-4add-89ab-0e0ea17d5671",
+            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1244
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cwe04e9zwrzo",
+          "timeout": 4000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cwe04e9zwrzo",
+      "service": "ukrainian",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

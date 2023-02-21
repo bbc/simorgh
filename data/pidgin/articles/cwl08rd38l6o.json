@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "5952725c",
+              "id": "f4bd417d",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "5004bbb4",
+                    "id": "24a47086",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "fc48b56f",
+                          "id": "28adaf40",
                           "type": "paragraph",
                           "model": {
                             "text": "This is the headline of this test article",
                             "blocks": [
                               {
-                                "id": "e1829ab2",
+                                "id": "ddcfed37",
                                 "type": "fragment",
                                 "model": {
                                   "text": "This is the headline of this test article",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "87b30542",
+              "id": "b2d92cba",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "2f94818b",
+                    "id": "8cf6789e",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ca2e8806",
+                          "id": "fa1a0ed5",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d062f7a6",
+                                "id": "489716ad",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This test image, copyright BBC, shows a map of France. The image is in the first three blocks and has this caption.",
                                   "blocks": [
                                     {
-                                      "id": "d0c1bf71",
+                                      "id": "2d9288d0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This test image, copyright BBC, shows a map of France. The image is in the first three blocks and has this caption.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "0d61713d",
+                    "id": "f91242de",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ab413162",
+                          "id": "eb3136c3",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "58a8aaf9",
+                                "id": "9605ba93",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Map of France showing Paris and Cognac",
                                   "blocks": [
                                     {
-                                      "id": "5ed67a75",
+                                      "id": "b5a6653b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Map of France showing Paris and Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "da324e5f",
+                    "id": "9302fb88",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "a40e475d",
+              "id": "4b159e29",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936404940,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "74bc6185",
+              "id": "624bb8fc",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5708956b",
+                    "id": "bb7c2011",
                     "type": "paragraph",
                     "model": {
                       "text": "This is a text block, which contains a url link to the BBC Weather homepage.",
                       "blocks": [
                         {
-                          "id": "219295af",
+                          "id": "c506688a",
                           "type": "fragment",
                           "model": {
                             "text": "This is a text block, which contains a url link to ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "38dcbef4",
+                          "id": "d09fd409",
                           "type": "urlLink",
                           "model": {
                             "text": "the BBC Weather homepage",
                             "blocks": [
                               {
-                                "id": "e67fcd65",
+                                "id": "82140266",
                                 "type": "fragment",
                                 "model": {
                                   "text": "the BBC Weather homepage",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "7bf4163c",
+                          "id": "1aba36a4",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "13e01921",
+              "id": "4be87c2e",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "f6e2f6ad",
+                    "id": "a711c142",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "45a4e3b0",
+                          "id": "6d70f065",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "64f50c3a",
+                                "id": "b24a7bf5",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a video block containing a video about ants",
                                   "blocks": [
                                     {
-                                      "id": "9a414613",
+                                      "id": "d6118d6c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This is a video block containing a video about ants",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "1751859c",
+                    "id": "90ea4dc2",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "56188666",
+                          "id": "2beeff21",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -395,12 +395,12 @@
                           ]
                         },
                         {
-                          "id": "13e63a37",
+                          "id": "7ceb2769",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ee474cf2",
+                                "id": "b9f48238",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -417,23 +417,23 @@
                                 ]
                               },
                               {
-                                "id": "06422cd7",
+                                "id": "2d212c0e",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "59127145",
+                                      "id": "b4b679a4",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "11822c24",
+                                            "id": "d288f03f",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "194544f3",
+                                                  "id": "580dc6b6",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -501,23 +501,23 @@
               ]
             },
             {
-              "id": "20013fc3",
+              "id": "7a53888e",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "2c0c4815",
+                    "id": "498eef7e",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f53b5f8f",
+                          "id": "9792b909",
                           "type": "paragraph",
                           "model": {
                             "text": "This is a subheadline block",
                             "blocks": [
                               {
-                                "id": "8b8cc34d",
+                                "id": "bde4bd97",
                                 "type": "fragment",
                                 "model": {
                                   "text": "This is a subheadline block",
@@ -552,28 +552,28 @@
               ]
             },
             {
-              "id": "7d6305dc",
+              "id": "51c82b64",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "6058d15b",
+                    "id": "ba76cd68",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "108a4fff",
+                          "id": "c90e8666",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d3577275",
+                                "id": "d34594cd",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Footballers after a match",
                                   "blocks": [
                                     {
-                                      "id": "3e5f9a7e",
+                                      "id": "08961c72",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Footballers after a match",
@@ -612,7 +612,7 @@
                     ]
                   },
                   {
-                    "id": "006ef22d",
+                    "id": "1285f14b",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -633,18 +633,18 @@
               ]
             },
             {
-              "id": "19e3a73e",
+              "id": "21cd8865",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "df9385ab",
+                    "id": "3a7d9676",
                     "type": "paragraph",
                     "model": {
                       "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
                       "blocks": [
                         {
-                          "id": "b3e329e6",
+                          "id": "e0e6dc7e",
                           "type": "fragment",
                           "model": {
                             "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
@@ -670,20 +670,20 @@
               ]
             },
             {
-              "id": "0f1a9f09",
+              "id": "1bbb4651",
               "type": "social",
               "model": {
                 "source": "https://www.youtube.com/watch?v=C0_O8l-jKEc",
                 "providerName": "YouTube",
                 "blocks": [
                   {
-                    "id": "1164c88e",
+                    "id": "beaf12da",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:3b37c6d7-e168-417d-94c4-6664f8d10e3d",
                       "blocks": [
                         {
-                          "id": "81f940ac",
+                          "id": "3978c848",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -721,20 +721,20 @@
               ]
             },
             {
-              "id": "1c33ae49",
+              "id": "524b5aa6",
               "type": "social",
               "model": {
                 "source": "https://www.instagram.com/p/CgZPKqgtGT2/?utm_source=ig_embed&ig_rid=3ec99de9-7fd7-4919-aa66-ca757aec0f81",
                 "providerName": "Instagram",
                 "blocks": [
                   {
-                    "id": "8047534c",
+                    "id": "779627f5",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:d5df5d3f-20db-4076-8051-696d35033190",
                       "blocks": [
                         {
-                          "id": "e854abb5",
+                          "id": "4ff8fdc2",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -769,20 +769,20 @@
               ]
             },
             {
-              "id": "fe459ce2",
+              "id": "89a8b3ac",
               "type": "social",
               "model": {
                 "source": "https://www.tiktok.com/@bbcnewspidgin_/video/7064905157804363014?is_from_webapp=1&sender_device=pc&web_id=7154361047111992837",
                 "providerName": "TikTok",
                 "blocks": [
                   {
-                    "id": "2d5ffaa4",
+                    "id": "dc442f1f",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:95258ff1-f386-4ac4-8b9d-9521875a3b3e",
                       "blocks": [
                         {
-                          "id": "6c3e6e38",
+                          "id": "5da82756",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -818,20 +818,20 @@
               ]
             },
             {
-              "id": "b4984665",
+              "id": "9e4b2cdd",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/Reuters/status/1585802723382927360",
                 "providerName": "Twitter",
                 "blocks": [
                   {
-                    "id": "07710efb",
+                    "id": "59c5949d",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:f3ca4ca4-2fa9-41a3-823a-0662442a6297",
                       "blocks": [
                         {
-                          "id": "96e3b6e2",
+                          "id": "79d3fdd2",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -865,20 +865,20 @@
               ]
             },
             {
-              "id": "30819265",
+              "id": "b2d51134",
               "type": "social",
               "model": {
                 "source": "https://www.facebook.com/TheBritishMonarchy/posts/pfbid0tH3yJ419oquikRnckLKSLkyccvsHW1Qid61o4KRmS4kfzD1aS34TLU1SJjEiZqWfl",
                 "providerName": "Facebook",
                 "blocks": [
                   {
-                    "id": "b936ef1a",
+                    "id": "18df9edb",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:bd0a23a5-1105-40a9-a949-e7d78a38a412",
                       "blocks": [
                         {
-                          "id": "ef328d73",
+                          "id": "bed41eb9",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -911,11 +911,21 @@
               ]
             },
             {
-              "id": "14f1743d",
+              "id": "beb29aff",
               "type": "mpu",
               "model": {},
               "position": [
                 14
+              ]
+            },
+            {
+              "id": "157df37b",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                15
               ]
             }
           ]
@@ -924,14 +934,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cwl08rd38l6o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o"
+          "optimoUrn": "urn:bbc:optimo:asset:cwl08rd38l6o",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/cwl08rd38l6o"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
         "firstPublished": 1562936404940,
         "lastPublished": 1665673819230,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cwl08rd38l6o",
           "producer": "Pidgin",
@@ -942,7 +952,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -966,7 +975,6 @@
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "This is the SEO headline of this test article",
           "promoHeadline": {
@@ -1095,8 +1103,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1582,7 +1589,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:04:58.371Z",
+        "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,
@@ -2421,5 +2428,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "5291",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"07cdea8e48e1b276f9938e0a7f146d12cbe7171f\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 860
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/pidgin",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3855",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 987
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/pidgin/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "a3c65155e36f7b1c9e25b81d72780bb9984f8b7c",
+            "last-modified": "Wed, 02 Nov 2022 17:30:26 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "a7a93916-bb46-49c6-bdd4-a8a284a5d556",
+            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1201
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cwl08rd38l6o",
+          "timeout": 4000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cwl08rd38l6o",
+      "service": "pidgin",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "c504957e",
+              "id": "534b5207",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "c91008df",
+                    "id": "15e9dabc",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "93751e9a",
+                          "id": "44b5fea1",
                           "type": "paragraph",
                           "model": {
                             "text": "یہ اس ٹیسٹ مضمون کی سرخی ہے۔",
                             "blocks": [
                               {
-                                "id": "c2e5a296",
+                                "id": "6422b1ea",
                                 "type": "fragment",
                                 "model": {
                                   "text": "یہ اس ٹیسٹ مضمون کی سرخی ہے۔",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "6d990544",
+              "id": "8549bcf6",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "8c45b16b",
+                    "id": "6bc4ca49",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1f4129fd",
+                          "id": "6e413126",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d98cbfb6",
+                                "id": "c5295ab8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
                                   "blocks": [
                                     {
-                                      "id": "c5397b75",
+                                      "id": "59b9b633",
                                       "type": "fragment",
                                       "model": {
                                         "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "58f70d12",
+                    "id": "739cab5a",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ee72189f",
+                          "id": "a9c6a7a6",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "680ba9c5",
+                                "id": "8126527a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔\r",
                                   "blocks": [
                                     {
-                                      "id": "06b69a74",
+                                      "id": "36b96513",
                                       "type": "fragment",
                                       "model": {
                                         "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔\r",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "68124263",
+                    "id": "2bcfc4a8",
                     "type": "rawImage",
                     "model": {
                       "width": 976,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "50afd11c",
+              "id": "b64f94c9",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1570185893338,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "572eaba7",
+              "id": "62ee7714",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b22414ee",
+                    "id": "2ac097e6",
                     "type": "paragraph",
                     "model": {
                       "text": "یہ ایک ٹیکسٹ بلاک ہے ، جس میں بی بی سی ویدر ہوم پیج پر یو آر ایل لنک ہے۔",
                       "blocks": [
                         {
-                          "id": "a9b8d852",
+                          "id": "7630b59d",
                           "type": "fragment",
                           "model": {
                             "text": "یہ ایک ٹیکسٹ بلاک ہے ، جس میں بی بی سی ویدر ہوم پیج پر یو",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "c35e482e",
+                          "id": "6bc0052d",
                           "type": "urlLink",
                           "model": {
                             "text": " آر ایل لنک ہے",
                             "blocks": [
                               {
-                                "id": "2e1e5d7d",
+                                "id": "3ab0689a",
                                 "type": "fragment",
                                 "model": {
                                   "text": " آر ایل لنک ہے",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "84c1359b",
+                          "id": "fa60f456",
                           "type": "fragment",
                           "model": {
                             "text": "۔",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "cc84c9a5",
+              "id": "7865db40",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01kf9q4",
                 "blocks": [
                   {
-                    "id": "48aa027f",
+                    "id": "cd002c5d",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d39c506d",
+                          "id": "177dff1e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2193454c",
+                                "id": "4037f43b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
                                   "blocks": [
                                     {
-                                      "id": "4700704f",
+                                      "id": "99fe3e5a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "کاپی رائٹ بی بی سی کی اس آزمائشی تصویر میں فرانس کا نقشہ دکھایا گیا ہے۔ شبیہہ پہلے تین بلاکس میں ہے اور اس کی سرخی ہے۔",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "4b6b10d7",
+                    "id": "9879094f",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e2eaef06",
+                          "id": "b11c37e1",
                           "blockId": "urn:bbc:ares::clip:p01kf9q4",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -392,12 +392,12 @@
                           ]
                         },
                         {
-                          "id": "f983d80b",
+                          "id": "af0d8054",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d70552ca",
+                                "id": "c1028382",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9s0.jpg",
@@ -411,23 +411,23 @@
                                 ]
                               },
                               {
-                                "id": "3844de74",
+                                "id": "3b171b9b",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "29f8ee9c",
+                                      "id": "da4634a5",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "c5a48810",
+                                            "id": "a5f96294",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Keyframe #3",
                                               "blocks": [
                                                 {
-                                                  "id": "95bbc085",
+                                                  "id": "7b50031a",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Keyframe #3",
@@ -495,23 +495,23 @@
               ]
             },
             {
-              "id": "dc0d0450",
+              "id": "6d3c08e1",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "75c249e3",
+                    "id": "e35b3634",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c45a5a99",
+                          "id": "0b2184d3",
                           "type": "paragraph",
                           "model": {
                             "text": "یہ سب ہیڈ لائن بلاک ہے۔",
                             "blocks": [
                               {
-                                "id": "894aaa21",
+                                "id": "fe6a343d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "یہ سب ہیڈ لائن بلاک ہے۔",
@@ -546,28 +546,28 @@
               ]
             },
             {
-              "id": "1f727a0e",
+              "id": "73c37969",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "8fde9ea6",
+                    "id": "a55b2331",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f8044f93",
+                          "id": "24284b16",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "472093d4",
+                                "id": "c7ecbd17",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "یہ سب ہیڈ لائن بلاک ہے۔\r",
                                   "blocks": [
                                     {
-                                      "id": "266d845c",
+                                      "id": "b4d40271",
                                       "type": "fragment",
                                       "model": {
                                         "text": "یہ سب ہیڈ لائن بلاک ہے۔\r",
@@ -606,7 +606,7 @@
                     ]
                   },
                   {
-                    "id": "2865ffd2",
+                    "id": "8e8e3fa1",
                     "type": "rawImage",
                     "model": {
                       "width": 976,
@@ -627,18 +627,18 @@
               ]
             },
             {
-              "id": "9123b834",
+              "id": "8e8aea62",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "639dbcaf",
+                    "id": "662d17d0",
                     "type": "paragraph",
                     "model": {
                       "text": "یہ ٹیسٹ مضمون تیار کیا گیا ہے تاکہ ہم اپنی ویب سائٹ پر خود کار طریقے سے آخر سے آخر تک کے ٹیسٹ چلاسکیں۔",
                       "blocks": [
                         {
-                          "id": "3c9b1ac8",
+                          "id": "80ea9709",
                           "type": "fragment",
                           "model": {
                             "text": "یہ ٹیسٹ مضمون تیار کیا گیا ہے تاکہ ہم اپنی ویب سائٹ پر خود کار طریقے سے آخر سے آخر تک کے ٹیسٹ چلاسکیں۔",
@@ -664,11 +664,21 @@
               ]
             },
             {
-              "id": "db2135c9",
+              "id": "776eb1d4",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "0ef25931",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -677,14 +687,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cwgq7rzv172o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwgq7rzv172o"
+          "optimoUrn": "urn:bbc:optimo:asset:cwgq7rzv172o",
+          "canonicalUrl": "https://www.bbc.com/urdu/articles/cwgq7rzv172o"
         },
         "type": "article",
         "createdBy": "Urdu",
         "language": "ur",
         "firstPublished": 1570185893338,
         "lastPublished": 1570185893338,
-        "options": {},
         "analyticsLabels": {
           "producer": "Urdu",
           "page": "urdu.articles.cwgq7rzv172o.page"
@@ -694,7 +704,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Urdu",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -712,12 +721,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "یہ اس ٹیسٹ مضمون کی سرخی ہے۔"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1212,7 +1218,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:56:58.219Z",
+        "generated": "2023-02-17T16:26:56.694Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -2021,5 +2027,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3922",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"d36daad8e8d4b92246cab7b6b902eb0348fb1caf\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 903
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/urdu",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "1552",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"27393140b19bf3682dd8efc1a9f3a57fead7c9a1\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1146
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/urdu/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "ea6465c01fd88904dd89713b71277d8c5b4013ed",
+            "last-modified": "Fri, 28 Aug 2020 07:27:39 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "a10c4445-6976-40f7-838b-d830a3534494",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1181
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cwgq7rzv172o",
+          "timeout": 4000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cwgq7rzv172o",
+      "service": "urdu",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

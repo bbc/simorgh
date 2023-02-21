@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "257fcaa2",
+              "id": "401a444e",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "bdacd27c",
+                    "id": "8ec0916e",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5cf06fac",
+                          "id": "b25a4671",
                           "type": "paragraph",
                           "model": {
                             "text": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典",
                             "blocks": [
                               {
-                                "id": "b034d71b",
+                                "id": "540c5e4c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "635af9ad",
+              "id": "a3b73c43",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562943152251,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "1b757ab3",
+              "id": "cc15521e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "1632552d",
+                    "id": "4e5ba503",
                     "type": "paragraph",
                     "model": {
                       "text": "这一次，电影里不会再有唱段，也不会再有会说话的龙，故事里的反派也不再是匈奴的军队，而变成了一个女巫……但是，不管怎样，《花木兰》终于要重登上银幕了。",
                       "blocks": [
                         {
-                          "id": "ed997443",
+                          "id": "f430b4f0",
                           "type": "fragment",
                           "model": {
                             "text": "这一次，电影里不会再有唱段，也不会再有会说话的龙，故事里的反派也不再是匈奴的军队，而变成了一个女巫……但是，不管怎样，《花木兰》终于要重登上银幕了。",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "a1c84071",
+                    "id": "14e70fc8",
                     "type": "paragraph",
                     "model": {
                       "text": "本周，迪士尼（Disney）发布了真人版电影的初版预告片，宣告这部1998年经典动画的重制作品即将问世。中国古代女子女扮男装代父从军上战场的传奇故事，将再次与观众见面。",
                       "blocks": [
                         {
-                          "id": "859ce8b8",
+                          "id": "ae1bccfb",
                           "type": "fragment",
                           "model": {
                             "text": "本周，迪士尼（Disney）发布了真人版电影的初版预告片，宣告这部1998年经典动画的重制作品即将问世。中国古代女子女扮男装代父从军上战场的传奇故事，将再次与观众见面。",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "c3f17c64",
+                    "id": "48da6201",
                     "type": "paragraph",
                     "model": {
                       "text": "迪士尼在21世纪已经重拍过一系列来自该公司1990年代的经典作品，包括《灰姑娘》、《美女与野兽》和《阿拉丁》等。",
                       "blocks": [
                         {
-                          "id": "be1ccc9c",
+                          "id": "2f6302e5",
                           "type": "fragment",
                           "model": {
                             "text": "迪士尼在21世纪已经重拍过一系列来自该公司1990年代的经典作品，包括《灰姑娘》、《美女与野兽》和《阿拉丁》等。",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "bfad3bb7",
+                    "id": "405eb8ba",
                     "type": "paragraph",
                     "model": {
                       "text": "20多年前，动画版的《花木兰》却在故事发源地中国遭遇惨败；这一次，迪士尼想尽了一切办法要以新版的女英雄传奇征服中国观众。",
                       "blocks": [
                         {
-                          "id": "d2f25a8f",
+                          "id": "34aa53bb",
                           "type": "fragment",
                           "model": {
                             "text": "20多年前，动画版的《花木兰》却在故事发源地中国遭遇惨败；这一次，迪士尼想尽了一切办法要以新版的女英雄传奇征服中国观众。",
@@ -182,11 +182,21 @@
               ]
             },
             {
-              "id": "145d569a",
+              "id": "90725137",
               "type": "mpu",
               "model": {},
               "position": [
                 4
+              ]
+            },
+            {
+              "id": "6051b226",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
               ]
             }
           ]
@@ -202,7 +212,6 @@
         "language": "zh-hans",
         "firstPublished": 1562943152251,
         "lastPublished": 1562943152251,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3xd4x9prgyo",
           "producer": "Chinese"
@@ -212,7 +221,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -222,12 +230,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -496,7 +501,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:59:56.774Z",
+        "generated": "2023-02-17T21:14:57.34Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1306,5 +1311,119 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "a6a25e702fca4bc85f0d0b58be7b3a11aca34ca3",
+            "last-modified": "Wed, 23 Feb 2022 14:59:30 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "1bba83af-c129-41bb-bea1-5d93ded44023",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1195
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c3xd4x9prgyo",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "2275",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"6b409872c7b1813035ca65d077f12848fd53fac6\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1243
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/zhongwen/simp/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3994",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"05742fee012f2fc4c82f168aba0f0f5e8bf0a297\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1366
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/zhongwen_simp",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c3xd4x9prgyo",
+      "service": "zhongwen",
+      "pageType": "article",
+      "variant": "simp"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

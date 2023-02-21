@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "d7b278b1",
+              "id": "57bef129",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "3db48d39",
+                    "id": "e324268f",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "dbb9939c",
+                          "id": "1c0a10ee",
                           "type": "paragraph",
                           "model": {
                             "text": "Ini adalah judul artikel tes ini",
                             "blocks": [
                               {
-                                "id": "a08cad25",
+                                "id": "9f42a071",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Ini adalah judul artikel tes ini",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "d6d445b2",
+              "id": "f8d3c002",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "5ec8bd25",
+                    "id": "b7a39a32",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b2b57d53",
+                          "id": "4b7d7511",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b7e991a3",
+                                "id": "58c5de0d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Gambar uji ini, hak cipta BBC, menunjukkan peta Prancis. Gambar berada di tiga blok pertama dan memiliki teks ini.",
                                   "blocks": [
                                     {
-                                      "id": "75c4b4b6",
+                                      "id": "ba36cebe",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Gambar uji ini, hak cipta BBC, menunjukkan peta Prancis. Gambar berada di tiga blok pertama dan memiliki teks ini.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "a98a412c",
+                    "id": "e25c1030",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5595243a",
+                          "id": "fe40ba90",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "90174865",
+                                "id": "494e14dd",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Peta Prancis menunjukkan Paris dan Cognac",
                                   "blocks": [
                                     {
-                                      "id": "8d4e4936",
+                                      "id": "74a1ae83",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Peta Prancis menunjukkan Paris dan Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "f6b5e8c6",
+                    "id": "69d11cd7",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "9aacec16",
+              "id": "92eb72f3",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941587903,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "2573f226",
+              "id": "9e50774b",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "4e028946",
+                    "id": "b86e3a75",
                     "type": "paragraph",
                     "model": {
                       "text": "Ini adalah blok teks, yang berisi tautan url ke beranda BBC Weather.",
                       "blocks": [
                         {
-                          "id": "8f001497",
+                          "id": "ed7facb3",
                           "type": "fragment",
                           "model": {
                             "text": "Ini adalah blok teks, yang berisi tautan url ke ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "e4e87304",
+                          "id": "d16d9171",
                           "type": "urlLink",
                           "model": {
                             "text": "beranda BBC Weather.",
                             "blocks": [
                               {
-                                "id": "782b3ba7",
+                                "id": "53811350",
                                 "type": "fragment",
                                 "model": {
                                   "text": "beranda BBC Weather.",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "8ce92654",
+              "id": "8227342f",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "c5d0e005",
+                    "id": "37903c55",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8f779eab",
+                          "id": "1992f7bb",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "714d9305",
+                                "id": "d49e28e7",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Ini adalah blok video yang berisi video tentang semut",
                                   "blocks": [
                                     {
-                                      "id": "188d180b",
+                                      "id": "bd619eb5",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Ini adalah blok video yang berisi video tentang semut",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "d76f09aa",
+                    "id": "1d56da47",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8a51e820",
+                          "id": "48d9823b",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -382,12 +382,12 @@
                           ]
                         },
                         {
-                          "id": "880ecb35",
+                          "id": "3900b268",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d4d13288",
+                                "id": "fac0ed16",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -404,23 +404,23 @@
                                 ]
                               },
                               {
-                                "id": "2da9770d",
+                                "id": "231b0c8f",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "1d74c100",
+                                      "id": "60f90f55",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "dc4acf2b",
+                                            "id": "f96b2b90",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "3cc5baa2",
+                                                  "id": "ae123f60",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -488,23 +488,23 @@
               ]
             },
             {
-              "id": "9d37b063",
+              "id": "c976854b",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "f795977b",
+                    "id": "2531783e",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c7983d55",
+                          "id": "bb3a0472",
                           "type": "paragraph",
                           "model": {
                             "text": "Ini adalah blok subjudul",
                             "blocks": [
                               {
-                                "id": "9d95499c",
+                                "id": "bbfd6b25",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Ini adalah blok subjudul",
@@ -539,28 +539,28 @@
               ]
             },
             {
-              "id": "618d9e44",
+              "id": "89deca25",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "224c3313",
+                    "id": "fb3fac33",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "43f2bb16",
+                          "id": "f2c31ea8",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "85ceac24",
+                                "id": "9d11b1d4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "\rPesepakbola setelah pertandingan",
                                   "blocks": [
                                     {
-                                      "id": "a2cd5cae",
+                                      "id": "1e5e8a11",
                                       "type": "fragment",
                                       "model": {
                                         "text": "\rPesepakbola setelah pertandingan",
@@ -599,7 +599,7 @@
                     ]
                   },
                   {
-                    "id": "03fc0ef7",
+                    "id": "1764fba3",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -620,18 +620,18 @@
               ]
             },
             {
-              "id": "8f676ecb",
+              "id": "c8e13a30",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5e2ec2d6",
+                    "id": "44ed9968",
                     "type": "paragraph",
                     "model": {
                       "text": "Artikel pengujian ini telah dibuat sehingga kami dapat menjalankan tes end-to-end otomatis di situs web kami.",
                       "blocks": [
                         {
-                          "id": "e19bcf66",
+                          "id": "0875ca44",
                           "type": "fragment",
                           "model": {
                             "text": "Artikel pengujian ini telah dibuat sehingga kami dapat menjalankan tes end-to-end otomatis di situs web kami.",
@@ -657,11 +657,21 @@
               ]
             },
             {
-              "id": "d0ccd3d7",
+              "id": "a782cd7d",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "d773704c",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -670,14 +680,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c0q2zq8pzvzo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo"
+          "optimoUrn": "urn:bbc:optimo:asset:c0q2zq8pzvzo",
+          "canonicalUrl": "https://www.bbc.com/indonesia/articles/c0q2zq8pzvzo"
         },
         "type": "article",
         "createdBy": "Indonesia",
         "language": "id",
         "firstPublished": 1562941587903,
         "lastPublished": 1562941587903,
-        "options": {},
         "analyticsLabels": {
           "producer": "Indonesian",
           "page": "indonesia.articles.c0q2zq8pzvzo.page"
@@ -687,7 +697,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -705,12 +714,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Ini adalah judul SEO dari artikel tes ini"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1055,7 +1061,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:55:57.138Z",
+        "generated": "2023-02-17T16:26:00.25Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1886,5 +1892,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3063",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"3dff1339f16f00e8d3aa309f64655dfcc4db795b\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:11 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 865
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/indonesia",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "f1bdf63f2e156507be13527445a93f1a7576f58e",
+            "last-modified": "Fri, 28 Aug 2020 07:27:13 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "4c79862e-c527-4be7-afd2-4646ba949365",
+            "expires": "Tue, 21 Feb 2023 11:17:06 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 992
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c0q2zq8pzvzo",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "1518",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"259d9a2d1cd3d42f61db1fefe9c293136cbf549f\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1180
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/indonesia/front_page",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c0q2zq8pzvzo",
+      "service": "indonesia",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

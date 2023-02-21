@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "cbe4d7ef",
+              "id": "9b7f6c43",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ab3054be",
+                    "id": "6017a659",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0aa8c78e",
+                          "id": "dfe269a7",
                           "type": "paragraph",
                           "model": {
                             "text": "Đây là tiêu đề của bài viết thử nghiệm này",
                             "blocks": [
                               {
-                                "id": "17710e46",
+                                "id": "a9745dc4",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Đây là tiêu đề của bài viết thử nghiệm này",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "bfe0091e",
+              "id": "7a50ed38",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "38a3794b",
+                    "id": "a84a4705",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c384c9b6",
+                          "id": "e9c9ebc8",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0b56db50",
+                                "id": "4aa8b08a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Hình ảnh thử nghiệm này, bản quyền BBC, cho thấy một bản đồ của Pháp. Hình ảnh nằm trong ba khối đầu tiên và có chú thích này.",
                                   "blocks": [
                                     {
-                                      "id": "2e6b7ade",
+                                      "id": "82ffffbb",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Hình ảnh thử nghiệm này, bản quyền BBC, cho thấy một bản đồ của Pháp. Hình ảnh nằm trong ba khối đầu tiên và có chú thích này.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "b86536bb",
+                    "id": "71727de4",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "17bfdcc6",
+                          "id": "7351221b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b96a655b",
+                                "id": "b9347eba",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "\rBản đồ Pháp hiển thị Paris và Cognac",
                                   "blocks": [
                                     {
-                                      "id": "ef724692",
+                                      "id": "7365b00c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "\rBản đồ Pháp hiển thị Paris và Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "0a12a592",
+                    "id": "048adc8d",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "b81ac773",
+              "id": "a99a316f",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936950490,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "b017d487",
+              "id": "1cc6e368",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "034afb8e",
+                    "id": "30c0d326",
                     "type": "paragraph",
                     "model": {
                       "text": "Đây là một khối văn bản, chứa liên kết url đến trang chủ BBC Weather.",
                       "blocks": [
                         {
-                          "id": "b7a924dc",
+                          "id": "d6764227",
                           "type": "fragment",
                           "model": {
                             "text": "Đây là một khối văn bản, chứa liên kết url đến ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "3f4b0dbe",
+                          "id": "245c0ffe",
                           "type": "urlLink",
                           "model": {
                             "text": "trang chủ BBC Weather.",
                             "blocks": [
                               {
-                                "id": "45ad6193",
+                                "id": "f47a5292",
                                 "type": "fragment",
                                 "model": {
                                   "text": "trang chủ BBC Weather.",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "49fbcd00",
+              "id": "040d273b",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "d054d76f",
+                    "id": "b9c80942",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "bf9ed36a",
+                          "id": "5f7806be",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "fe1ca749",
+                                "id": "09298362",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Đây là một khối video chứa video về kiến",
                                   "blocks": [
                                     {
-                                      "id": "7f93d129",
+                                      "id": "f85b7712",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Đây là một khối video chứa video về kiến",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "ca9469e1",
+                    "id": "331b1d41",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2345d2fa",
+                          "id": "0d0769d1",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -382,12 +382,12 @@
                           ]
                         },
                         {
-                          "id": "10d646d5",
+                          "id": "2ae39d09",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "9d08a531",
+                                "id": "db7a9a58",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -404,23 +404,23 @@
                                 ]
                               },
                               {
-                                "id": "18fc9fb1",
+                                "id": "7d4aec4a",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "833762fa",
+                                      "id": "b92fac7f",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "d4c9b33d",
+                                            "id": "7c663205",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "f9c7781d",
+                                                  "id": "1914ad9d",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -488,23 +488,23 @@
               ]
             },
             {
-              "id": "335f5340",
+              "id": "db77d86b",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "e48fb739",
+                    "id": "ea8a9765",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "90e14e97",
+                          "id": "539ee354",
                           "type": "paragraph",
                           "model": {
                             "text": "Đây là một khối tiêu đề phụ",
                             "blocks": [
                               {
-                                "id": "e7e05361",
+                                "id": "894897b6",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Đây là một khối tiêu đề phụ",
@@ -539,28 +539,28 @@
               ]
             },
             {
-              "id": "2ef34aa3",
+              "id": "822205f4",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "b6285192",
+                    "id": "80dd5b3b",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d60bc814",
+                          "id": "bd4f2f8c",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "218e0fe6",
+                                "id": "2a9c1b6f",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Cầu thủ bóng đá sau một trận đấu",
                                   "blocks": [
                                     {
-                                      "id": "c10ebfc9",
+                                      "id": "88f44a6b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Cầu thủ bóng đá sau một trận đấu",
@@ -599,7 +599,7 @@
                     ]
                   },
                   {
-                    "id": "8653d597",
+                    "id": "8e0f313c",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -620,18 +620,18 @@
               ]
             },
             {
-              "id": "8ce764ea",
+              "id": "86a1a0d6",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "c9ba2375",
+                    "id": "54670d27",
                     "type": "paragraph",
                     "model": {
                       "text": "Bài viết thử nghiệm này đã được tạo để chúng tôi có thể chạy thử nghiệm đầu cuối tự động trên trang web của chúng tôi.",
                       "blocks": [
                         {
-                          "id": "93aff252",
+                          "id": "297bd5ab",
                           "type": "fragment",
                           "model": {
                             "text": "Bài viết thử nghiệm này đã được tạo để chúng tôi có thể chạy thử nghiệm đầu cuối tự động trên trang web của chúng tôi.",
@@ -657,11 +657,21 @@
               ]
             },
             {
-              "id": "a4d99402",
+              "id": "644522af",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "ca76739f",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -670,14 +680,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c3y59g5zm19o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3y59g5zm19o"
+          "optimoUrn": "urn:bbc:optimo:asset:c3y59g5zm19o",
+          "canonicalUrl": "https://www.bbc.com/vietnamese/articles/c3y59g5zm19o"
         },
         "type": "article",
         "createdBy": "Vietnamese",
         "language": "vi",
         "firstPublished": 1562936950490,
         "lastPublished": 1562936950490,
-        "options": {},
         "analyticsLabels": {
           "producer": "Vietnamese",
           "page": "vietnamese.articles.c3y59g5zm19o.page"
@@ -687,7 +697,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Vietnamese",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -705,12 +714,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Đây là tiêu đề SEO của bài viết thử nghiệm này"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1054,7 +1060,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:58:57.861Z",
+        "generated": "2023-02-17T16:43:58.212Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1246,8 +1252,8 @@
             "urn": "urn:bbc:curie:asset:d771b6ae-22a4-c14b-bb1b-3d20f05b5606",
             "promo": {
               "headlines": {
-                "shortHeadline": "LS Đài tới Berlin nhận giải nhân quyền",
-                "headline": "LS Đài tới Berlin nhận giải nhân quyền"
+                "shortHeadline": "LS Đài tới Berlin nhận giải nhân quyền",
+                "headline": "LS Đài tới Berlin nhận giải nhân quyền"
               },
               "locators": {
                 "assetUri": "/vietnamese/23204109",
@@ -1554,8 +1560,8 @@
             "urn": "urn:bbc:curie:asset:7c6c27e7-2592-b047-b3ef-edbd8686f6f4",
             "promo": {
               "headlines": {
-                "shortHeadline": "Việt Nam chặn luật sư Trịnh Xuân Thanh",
-                "headline": "Việt Nam chặn luật sư Trịnh Xuân Thanh"
+                "shortHeadline": "Việt Nam chặn luật sư Trịnh Xuân Thanh",
+                "headline": "Việt Nam chặn luật sư Trịnh Xuân Thanh"
               },
               "locators": {
                 "assetUri": "/vietnamese/23177674",
@@ -1817,5 +1823,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "bb58bee1ad898f153a5224657c3b6ebdf123abc0",
+            "last-modified": "Fri, 28 Aug 2020 07:27:40 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "10a3c661-2a9c-429b-b0bd-30b22641c090",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 474
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c3y59g5zm19o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "1560",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"02e378dc3ae665cfe0b2f51c16baac7a7a644056\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1110
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/vietnamese/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3452",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"b24b5edfde7acac08e3a57543f10cb5c0d46e209\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:14 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1403
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/vietnamese",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c3y59g5zm19o",
+      "service": "vietnamese",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

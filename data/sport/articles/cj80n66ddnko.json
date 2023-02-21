@@ -5,123 +5,173 @@
         "model": {
           "blocks": [
             {
-              "id": "52db9129",
+              "id": "2100e86e",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "0d642bc2",
+                    "id": "c9a2a69c",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cc00b241",
+                          "id": "d0925aac",
                           "type": "paragraph",
                           "model": {
                             "text": "GB’s Renshall wins gold in Baku",
                             "blocks": [
                               {
-                                "id": "9ab2a036",
+                                "id": "48d25f2a",
                                 "type": "fragment",
                                 "model": {
                                   "text": "GB’s Renshall wins gold in Baku",
                                   "attributes": []
                                 },
-                                "position": [1, 1, 1, 1]
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [1, 1, 1]
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [1, 1]
+                    "position": [
+                      1,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [1]
+              "position": [
+                1
+              ]
             },
             {
-              "id": "b2c2a219",
+              "id": "06adf504",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "0488935e",
+                    "id": "c6cc9180",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "678344f2",
+                          "id": "83c4006d",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "df36c51f",
+                                "id": "6e0234be",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
                                   "blocks": [
                                     {
-                                      "id": "0e448a57",
+                                      "id": "b7ddc1a6",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
                                         "attributes": []
                                       },
-                                      "position": [2, 1, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 1, 1, 1]
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 1, 1]
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 1]
+                    "position": [
+                      2,
+                      1
+                    ]
                   },
                   {
-                    "id": "b01facd1",
+                    "id": "f9ffc016",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "43387d9f",
+                          "id": "fbd24cb0",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b8459d61",
+                                "id": "a6baad83",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "British judoka Lucy Renshall with her silver medal in October",
                                   "blocks": [
                                     {
-                                      "id": "a8acca5b",
+                                      "id": "e174db2c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "British judoka Lucy Renshall with her silver medal in October",
                                         "attributes": []
                                       },
-                                      "position": [2, 2, 1, 1, 1]
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
                                     }
                                   ]
                                 },
-                                "position": [2, 2, 1, 1]
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
                               }
                             ]
                           },
-                          "position": [2, 2, 1]
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [2, 2]
+                    "position": [
+                      2,
+                      2
+                    ]
                   },
                   {
-                    "id": "66db879b",
+                    "id": "ad658258",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -131,64 +181,82 @@
                       "copyrightHolder": "Getty Images",
                       "suitableForSyndication": true
                     },
-                    "position": [2, 3]
+                    "position": [
+                      2,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [2]
+              "position": [
+                2
+              ]
             },
             {
-              "id": "a5cdeab0",
+              "id": "1cd73dc4",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1661165030455,
                 "lastPublished": 1661165030455
               },
-              "position": [3]
+              "position": [
+                3
+              ]
             },
             {
-              "id": "e7a0fee8",
+              "id": "728f85ed",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "8a92d3ac",
+                    "id": "4e50183e",
                     "type": "paragraph",
                     "model": {
                       "text": "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.",
                       "blocks": [
                         {
-                          "id": "61450e6f",
+                          "id": "b692004c",
                           "type": "fragment",
                           "model": {
                             "text": "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.",
-                            "attributes": ["bold"]
+                            "attributes": [
+                              "bold"
+                            ]
                           },
-                          "position": [4, 1, 1]
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [4, 1]
+                    "position": [
+                      4,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [4]
+              "position": [
+                4
+              ]
             },
             {
-              "id": "a949f714",
+              "id": "218f2439",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/BBCSport/status/1567048705102041091",
                 "providerName": "Twitter",
                 "blocks": [
                   {
-                    "id": "48928f54",
+                    "id": "0905db19",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:4a6cec66-038e-442d-bdd5-404bfcc20290",
                       "blocks": [
                         {
-                          "id": "83f4b9ea",
+                          "id": "05d02e34",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -202,123 +270,178 @@
                               "width": 550
                             }
                           },
-                          "position": [5, 1, 1]
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [5, 1]
+                    "position": [
+                      5,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [5]
+              "position": [
+                5
+              ]
             },
             {
-              "id": "9b474bca",
+              "id": "e2603c4f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "4fe24163",
+                    "id": "ab7aef0f",
                     "type": "paragraph",
                     "model": {
                       "text": "Renshall held Bold down for 20 seconds to win the -63kg fight and earn her second Grand Slam gold of the year.",
                       "blocks": [
                         {
-                          "id": "61a1fdc8",
+                          "id": "90502fdc",
                           "type": "fragment",
                           "model": {
                             "text": "Renshall held Bold down for 20 seconds to win the -63kg fight and earn her second Grand Slam gold of the year.",
                             "attributes": []
                           },
-                          "position": [6, 1, 1]
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 1]
+                    "position": [
+                      6,
+                      1
+                    ]
                   },
                   {
-                    "id": "b0f6675e",
+                    "id": "9c70de00",
                     "type": "paragraph",
                     "model": {
                       "text": "The 25-year-old, who received a bye in the opening round, beat Australia's Katharina Haecker in the semi-final.",
                       "blocks": [
                         {
-                          "id": "a2a8c267",
+                          "id": "a92195fc",
                           "type": "fragment",
                           "model": {
                             "text": "The 25-year-old, who received a bye in the opening round, beat Australia's Katharina Haecker in the semi-final.",
                             "attributes": []
                           },
-                          "position": [6, 2, 1]
+                          "position": [
+                            6,
+                            2,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 2]
+                    "position": [
+                      6,
+                      2
+                    ]
                   },
                   {
-                    "id": "6788d1c4",
+                    "id": "520edc08",
                     "type": "paragraph",
                     "model": {
                       "text": "Team-mate Kelly Petersen-Pollard, 22, picked up her first Grand Slam medal, beating Germany's Julie Hoelterhoff to win bronze in the -70kg division.",
                       "blocks": [
                         {
-                          "id": "809aadf2",
+                          "id": "82680c0f",
                           "type": "fragment",
                           "model": {
                             "text": "Team-mate Kelly Petersen-Pollard, 22, picked up her first Grand Slam medal, beating Germany's Julie Hoelterhoff to win bronze in the -70kg division.",
                             "attributes": []
                           },
-                          "position": [6, 3, 1]
+                          "position": [
+                            6,
+                            3,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [6, 3]
+                    "position": [
+                      6,
+                      3
+                    ]
                   }
                 ]
               },
-              "position": [6]
+              "position": [
+                6
+              ]
             },
-            { "id": "6e837989", "type": "mpu", "model": {}, "position": [7] },
             {
-              "id": "8cf62fae",
+              "id": "8402c0cb",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "204edb06",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "37fb0fd3",
+                    "id": "7ac88c5d",
                     "type": "paragraph",
                     "model": {
                       "text": "On Friday, 2020 Olympic bronze medallist Chelsie Giles won silver in the women's -52kg category.",
                       "blocks": [
                         {
-                          "id": "9c50e4f5",
+                          "id": "b0475b57",
                           "type": "fragment",
                           "model": {
                             "text": "On Friday, 2020 Olympic bronze medallist Chelsie Giles won silver in the women's -52kg category.",
                             "attributes": []
                           },
-                          "position": [8, 1, 1]
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
                         }
                       ]
                     },
-                    "position": [8, 1]
+                    "position": [
+                      8,
+                      1
+                    ]
                   }
                 ]
               },
-              "position": [8]
+              "position": [
+                8
+              ]
             },
             {
-              "id": "cbb091a2",
+              "id": "99f56be9",
               "type": "wsoj",
-              "model": { "type": "recommendations" },
-              "position": [9]
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                9
+              ]
             }
           ]
         }
       },
       "metadata": {
         "id": "urn:bbc:ares::article:cj80n66ddnko",
-        "locators": { "optimoUrn": "urn:bbc:optimo:asset:cj80n66ddnko" },
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cj80n66ddnko",
+          "canonicalUrl": "https://www.bbc.com/sport/judo/articles/cj80n66ddnko"
+        },
         "type": "article",
         "createdBy": "Sport",
         "language": "en-gb",
@@ -389,7 +512,10 @@
                 "thingLabel": "Report",
                 "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
                 "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
-                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingType": [
+                  "tagging:TagConcept",
+                  "tagging:Format"
+                ],
                 "thingSameAs": [],
                 "thingEnglishLabel": "Report",
                 "thingPreferredLabel": "Report",
@@ -425,8 +551,14 @@
                 "thingLabel": "Baku",
                 "thingUri": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id",
                 "thingId": "99f3bbff-ff87-4cc4-a43f-67c60fc9d76e",
-                "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
-                "thingSameAs": ["http://sws.geonames.org/587084/"],
+                "thingType": [
+                  "tagging:TagConcept",
+                  "core:Place",
+                  "core:Thing"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/587084/"
+                ],
                 "thingEnglishLabel": "Baku",
                 "type": "about"
               }
@@ -455,8 +587,14 @@
               "thingLabel": "Baku",
               "thingUri": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id",
               "thingId": "99f3bbff-ff87-4cc4-a43f-67c60fc9d76e",
-              "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
-              "thingSameAs": ["http://sws.geonames.org/587084/"],
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Place",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/587084/"
+              ],
               "thingEnglishLabel": "Baku",
               "thingLabelLanguage": "en-gb",
               "thingPreferredLabel": "Baku"
@@ -615,7 +753,9 @@
     "secondaryData": {
       "topStories": [
         {
-          "headlines": { "headline": "Ramsey replaced as Wales captain" },
+          "headlines": {
+            "headline": "Ramsey replaced as Wales captain"
+          },
           "locators": {
             "assetUri": "/sport/archery/23260387",
             "cpsUrn": "urn:bbc:content:assetUri:sport/archery/23260387",
@@ -628,7 +768,12 @@
           "byline": {
             "name": "By Tom Rostance",
             "title": "BBC Sport ",
-            "persons": [{ "name": "Tom Rostance", "function": "BBC Sport" }]
+            "persons": [
+              {
+                "name": "Tom Rostance",
+                "function": "BBC Sport"
+              }
+            ]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -643,7 +788,10 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Archery",
@@ -655,7 +803,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Olympic rings launched on Thames" },
+          "headlines": {
+            "headline": "Olympic rings launched on Thames"
+          },
           "locators": {
             "assetUri": "/news/uk-england-london-17189296",
             "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-london-17189296",
@@ -689,7 +839,10 @@
             "copyrightHolder": "PA",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "London",
@@ -706,7 +859,9 @@
           "type": "cps"
         },
         {
-          "headlines": { "headline": "Grand Final 'just reward' for Wolves!" },
+          "headlines": {
+            "headline": "Grand Final 'just reward' for Wolves!"
+          },
           "locators": {
             "assetUri": "/sport/av/rugby-league/19801995",
             "cpsUrn": "urn:bbc:content:assetUri:sport/av/rugby-league/19801995",
@@ -762,7 +917,10 @@
             "copyrightHolder": "Paul Thomas",
             "type": "image"
           },
-          "options": { "isBreakingNews": false, "isFactCheck": false },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
           "section": {
             "subType": "IDX",
             "name": "Rugby League",
@@ -1065,7 +1223,10 @@
                       "thingLabel": "League Two",
                       "thingUri": "http://www.bbc.co.uk/things/71d1288c-d1ea-6a4a-bd87-237dbb9e6470#id",
                       "thingId": "71d1288c-d1ea-6a4a-bd87-237dbb9e6470",
-                      "thingType": ["tagging:TagConcept", "core:Thing"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "League Two",
                       "type": "about"
@@ -1143,7 +1304,10 @@
                       "thingLabel": "Rugby Union",
                       "thingUri": "http://www.bbc.co.uk/things/b773195a-9880-4773-88d4-50d36260fe12#id",
                       "thingId": "b773195a-9880-4773-88d4-50d36260fe12",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [
                         "http://dbpedia.org/resource/Rugby_Union"
                       ],
@@ -1155,7 +1319,10 @@
                       "thingLabel": "Synchronised Swimming",
                       "thingUri": "http://www.bbc.co.uk/things/bd51d530-f0fb-684e-a305-3f15b7e6d4a1#id",
                       "thingId": "bd51d530-f0fb-684e-a305-3f15b7e6d4a1",
-                      "thingType": ["tagging:TagConcept", "core:Thing"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
                       "thingSameAs": [
                         "http://dbpedia.org/resource/Synchronized_swimming"
                       ],
@@ -1185,8 +1352,13 @@
                       "thingLabel": "Water Polo",
                       "thingUri": "http://www.bbc.co.uk/things/e4d61a41-dba2-7849-a725-d8b445ec3cbc#id",
                       "thingId": "e4d61a41-dba2-7849-a725-d8b445ec3cbc",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
-                      "thingSameAs": ["http://dbpedia.org/resource/Water_Polo"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Water_Polo"
+                      ],
                       "thingEnglishLabel": "Water Polo",
                       "type": "about"
                     }
@@ -1265,14 +1437,19 @@
                 "versions": [
                   {
                     "versionId": "p018cwcy",
-                    "types": ["Original"],
+                    "types": [
+                      "Original"
+                    ],
                     "duration": 141,
                     "durationISO8601": "PT2M21S",
                     "warnings": {
                       "short": "Contains explicit sexual content and disturbing scenes.",
                       "long": "Contains explicit sexual scenes and scenes which some viewers may find disturbing."
                     },
-                    "availableTerritories": { "uk": true, "nonUk": false },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": false
+                    },
                     "availableFrom": 1487158810000
                   }
                 ],
@@ -1326,7 +1503,10 @@
                       "thingLabel": "Champions League",
                       "thingUri": "http://www.bbc.co.uk/things/1e5c6e40-0b48-cb44-86ae-be47f66aac8a#id",
                       "thingId": "1e5c6e40-0b48-cb44-86ae-be47f66aac8a",
-                      "thingType": ["tagging:TagConcept", "core:Thing"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
                       "thingSameAs": [
                         "http://dbpedia.org/resource/UEFA_Champions_League"
                       ],
@@ -1338,7 +1518,10 @@
                       "thingLabel": "Rugby Sevens",
                       "thingUri": "http://www.bbc.co.uk/things/3d556f88-c802-4fcc-9c25-469d2ba7b42a#id",
                       "thingId": "3d556f88-c802-4fcc-9c25-469d2ba7b42a",
-                      "thingType": ["tagging:TagConcept", "core:Thing"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
                       "thingSameAs": [
                         "http://dbpedia.org/resource/Rugby_sevens"
                       ],
@@ -1350,7 +1533,10 @@
                       "thingLabel": "Scottish Cup",
                       "thingUri": "http://www.bbc.co.uk/things/96b7c068-a153-d640-8a37-5cfa8e1eff57#id",
                       "thingId": "96b7c068-a153-d640-8a37-5cfa8e1eff57",
-                      "thingType": ["tagging:TagConcept", "core:Thing"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Scottish Cup",
                       "type": "about"
@@ -1398,7 +1584,10 @@
                       "thingLabel": "Scottish Premiership",
                       "thingUri": "http://www.bbc.co.uk/things/ebca7141-e8ba-0e40-bba9-d0864e29bc1f#id",
                       "thingId": "ebca7141-e8ba-0e40-bba9-d0864e29bc1f",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Scottish Premiership",
                       "type": "about"
@@ -1408,7 +1597,10 @@
                       "thingLabel": "EFL Cup",
                       "thingUri": "http://www.bbc.co.uk/things/f7eeb725-55f4-3542-89ae-f4a4e8bd3c58#id",
                       "thingId": "f7eeb725-55f4-3542-89ae-f4a4e8bd3c58",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "EFL Cup",
                       "type": "about"
@@ -1490,14 +1682,19 @@
                 "versions": [
                   {
                     "versionId": "p01b9zdp",
-                    "types": ["Original"],
+                    "types": [
+                      "Original"
+                    ],
                     "duration": 29,
                     "durationISO8601": "PT29S",
                     "warnings": {
                       "short": "Contains adult humour.",
                       "long": "Contains adult humour."
                     },
-                    "availableTerritories": { "uk": true, "nonUk": true },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
                     "availableFrom": 1495704394000
                   }
                 ],
@@ -1646,7 +1843,10 @@
                       "thingLabel": "EFL Cup",
                       "thingUri": "http://www.bbc.co.uk/things/f7eeb725-55f4-3542-89ae-f4a4e8bd3c58#id",
                       "thingId": "f7eeb725-55f4-3542-89ae-f4a4e8bd3c58",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "EFL Cup",
                       "type": "about"
@@ -1659,7 +1859,9 @@
                 "subType": "clip",
                 "format": "video",
                 "title": "Update default vs football image",
-                "synopses": { "short": "media clip testing" },
+                "synopses": {
+                  "short": "media clip testing"
+                },
                 "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p017yfgc.jpg",
                 "embedding": false,
                 "advertising": true,
@@ -1667,11 +1869,16 @@
                 "versions": [
                   {
                     "versionId": "p017yfgg",
-                    "types": ["Original"],
+                    "types": [
+                      "Original"
+                    ],
                     "duration": 26,
                     "durationISO8601": "PT26S",
                     "warnings": {},
-                    "availableTerritories": { "uk": true, "nonUk": true },
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
                     "availableFrom": 1485262600000
                   }
                 ],
@@ -1732,7 +1939,10 @@
                       "thingLabel": "League One",
                       "thingUri": "http://www.bbc.co.uk/things/030b5eaf-15db-3e4e-bac9-a7789892f436#id",
                       "thingId": "030b5eaf-15db-3e4e-bac9-a7789892f436",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "League One",
                       "type": "about"
@@ -1762,7 +1972,10 @@
                       "thingLabel": "Weightlifting",
                       "thingUri": "http://www.bbc.co.uk/things/6b04e406-c181-204b-a2dd-bc20142b9e6a#id",
                       "thingId": "6b04e406-c181-204b-a2dd-bc20142b9e6a",
-                      "thingType": ["tagging:TagConcept", "core:Thing"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
                       "thingSameAs": [
                         "http://dbpedia.org/resource/Weightlifting"
                       ],
@@ -1792,8 +2005,13 @@
                       "thingLabel": "Darts",
                       "thingUri": "http://www.bbc.co.uk/things/869e0ec9-af00-4f2b-82b6-b760d69a4492#id",
                       "thingId": "869e0ec9-af00-4f2b-82b6-b760d69a4492",
-                      "thingType": ["tagging:TagConcept", "core:Thing"],
-                      "thingSameAs": ["http://dbpedia.org/resource/Darts"],
+                      "thingType": [
+                        "tagging:TagConcept",
+                        "core:Thing"
+                      ],
+                      "thingSameAs": [
+                        "http://dbpedia.org/resource/Darts"
+                      ],
                       "thingEnglishLabel": "Darts",
                       "type": "about"
                     },
@@ -1840,7 +2058,10 @@
                       "thingLabel": "Scottish Premiership",
                       "thingUri": "http://www.bbc.co.uk/things/ebca7141-e8ba-0e40-bba9-d0864e29bc1f#id",
                       "thingId": "ebca7141-e8ba-0e40-bba9-d0864e29bc1f",
-                      "thingType": ["core:Thing", "tagging:TagConcept"],
+                      "thingType": [
+                        "core:Thing",
+                        "tagging:TagConcept"
+                      ],
                       "thingSameAs": [],
                       "thingEnglishLabel": "Scottish Premiership",
                       "type": "about"
@@ -2412,5 +2633,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "1752",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"c1dd669afd26f51274377ba9634cdee1de73b3aa\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1049
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/sport/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "8437",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"5a291b8e3d6495c083804b320450291c299f9d60\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1064
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/sport",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "650098cc38c8ab099bf91f44da931d1fe69f842d",
+            "last-modified": "Tue, 06 Sep 2022 08:56:07 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "b45edca6-3995-48fc-b609-6acddee2f8c5",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1113
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cj80n66ddnko",
+          "timeout": 4000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cj80n66ddnko",
+      "service": "sport",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

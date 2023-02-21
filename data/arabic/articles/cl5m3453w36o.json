@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "06eac617",
+              "id": "3c8bf814",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "7b193fe5",
+                    "id": "900ea0d9",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ad9b452e",
+                          "id": "89389bfe",
                           "type": "paragraph",
                           "model": {
                             "text": "Test: Gist فيروس كورونا: كيف تعمل جوازات سفر كوفيد حول العالم؟\n",
                             "blocks": [
                               {
-                                "id": "4971bf63",
+                                "id": "1b2e573f",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Test: Gist فيروس كورونا: كيف تعمل جوازات سفر كوفيد حول العالم؟\n",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "abe5e4a0",
+              "id": "c36eb37a",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "f39ce0f4",
+                    "id": "f41d2ab3",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4debed46",
+                          "id": "1e84b942",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "78f4e280",
+                                "id": "22f6911e",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "More on this story",
                                   "blocks": [
                                     {
-                                      "id": "f7ed676e",
+                                      "id": "829feb4e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "More on this story",
@@ -116,7 +116,7 @@
                     ]
                   },
                   {
-                    "id": "ccd9db65",
+                    "id": "7a90915a",
                     "type": "rawImage",
                     "model": {
                       "width": 1952,
@@ -138,35 +138,35 @@
               ]
             },
             {
-              "id": "529ba60f",
+              "id": "cb679c63",
               "type": "group",
               "model": {
                 "intentType": "overview",
                 "relationshipType": "optional",
                 "blocks": [
                   {
-                    "id": "5290015d",
+                    "id": "22d0197c",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6ae663c5",
+                          "id": "16ae7e61",
                           "type": "unorderedList",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b9420198",
+                                "id": "611cb8e7",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "8be6193e",
+                                      "id": "fc493953",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "فيروس كورونا: كيف تعمل جوازات سفر كوفيد حول العالم؟",
                                         "blocks": [
                                           {
-                                            "id": "12102d0b",
+                                            "id": "0f786c9c",
                                             "type": "fragment",
                                             "model": {
                                               "text": "فيروس كورونا: كيف تعمل جوازات سفر كوفيد حول العالم؟",
@@ -201,18 +201,18 @@
                                 ]
                               },
                               {
-                                "id": "5656649b",
+                                "id": "1e11455f",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "1e7cfb66",
+                                      "id": "e2a44769",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "منه إصدارات ورقية.",
                                         "blocks": [
                                           {
-                                            "id": "9c8b988c",
+                                            "id": "94067d2c",
                                             "type": "fragment",
                                             "model": {
                                               "text": "منه إصدارات ورقية.",
@@ -247,18 +247,18 @@
                                 ]
                               },
                               {
-                                "id": "0072a9f7",
+                                "id": "5f7c59fa",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "711dde7d",
+                                      "id": "bbd52dc0",
                                       "type": "paragraph",
                                       "model": {
                                         "text": " كيف تعمل جواز",
                                         "blocks": [
                                           {
-                                            "id": "452370a3",
+                                            "id": "f12dff05",
                                             "type": "fragment",
                                             "model": {
                                               "text": " كيف تعمل جواز",
@@ -293,18 +293,18 @@
                                 ]
                               },
                               {
-                                "id": "4926944f",
+                                "id": "b3ff1293",
                                 "type": "listItem",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "c4a001c7",
+                                      "id": "934a53cf",
                                       "type": "paragraph",
                                       "model": {
                                         "text": " كيف تعمل جوفيروس كورونا: كيف تعمل جوازات سفر كوفيد حول العالم؟\n",
                                         "blocks": [
                                           {
-                                            "id": "6302c111",
+                                            "id": "26c742a2",
                                             "type": "fragment",
                                             "model": {
                                               "text": " كيف تعمل جوفيروس كورونا: كيف تعمل جوازات سفر كوفيد حول العالم؟\n",
@@ -360,7 +360,7 @@
               ]
             },
             {
-              "id": "9cc421e1",
+              "id": "6496d664",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1628007802945,
@@ -371,7 +371,7 @@
               ]
             },
             {
-              "id": "8df2367c",
+              "id": "4e6ea0fd",
               "type": "text",
               "model": {
                 "blocks": []
@@ -381,18 +381,18 @@
               ]
             },
             {
-              "id": "9e6e9a70",
+              "id": "4a2f5dc5",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0a958347",
+                    "id": "37327d64",
                     "type": "paragraph",
                     "model": {
                       "text": "واستطاعت بعض الدول بالفعل تثبيت إصداراتها الخاصة من جواز سفر كوفيد، الذي يسمح لمواطنيها بالمشاركة في أنشطة على نطاق واسع، بيد أنه مع تراخي بعض الدول في مجال التطعيمات، قد يساور البعض القلق من التخلف عن الركب.\n",
                       "blocks": [
                         {
-                          "id": "a2fb0142",
+                          "id": "ca6bd857",
                           "type": "fragment",
                           "model": {
                             "text": "واستطاعت بعض الدول بالفعل تثبيت إصداراتها الخاصة من جواز سفر كوفيد، الذي يسمح لمواطنيها بالمشاركة في أنشطة على نطاق واسع، بيد أنه مع تراخي بعض الدول في مجال التطعيمات، قد يساور البعض القلق من التخلف عن الركب.\n",
@@ -412,13 +412,13 @@
                     ]
                   },
                   {
-                    "id": "9073f430",
+                    "id": "0df7bade",
                     "type": "paragraph",
                     "model": {
                       "text": "واستطاعت بعض الدول بالفعل تثبيت إصداراتها الخاصة من جواز سفر كوفيد، الذي يسمح لمواطنيها بالمشاركة في أنشطة على نطاق واسع، بيد أنه مع تراخي بعض الدول في مجال التطعيمات، قد يساور البعض القلق من التخلف عن الركب.\n",
                       "blocks": [
                         {
-                          "id": "326ef20a",
+                          "id": "843c0d6f",
                           "type": "fragment",
                           "model": {
                             "text": "واستطاعت بعض الدول بالفعل تثبيت إصداراتها الخاصة من جواز سفر كوفيد، الذي يسمح لمواطنيها بالمشاركة في أنشطة على نطاق واسع، بيد أنه مع تراخي بعض الدول في مجال التطعيمات، قد يساور البعض القلق من التخلف عن الركب.\n",
@@ -438,13 +438,13 @@
                     ]
                   },
                   {
-                    "id": "3057d0a2",
+                    "id": "ee99f385",
                     "type": "paragraph",
                     "model": {
                       "text": "واستطاعت بعض الدول بالفعل تثبيت إصداراتها الخاصة من جواز سفر كوفيد، الذي يسمح لمواطنيها بالمشاركة في أنشطة على نطاق واسع، بيد أنه مع تراخي بعض الدول في مجال التطعيمات، قد يساور البعض القلق من التخلف عن الركب.\nواستطاعت بعض الدول بالفعل تثبيت إصداراتها الخاصة من جواز سفر كوفيد، الذي يسمح لمواطنيها بالمشاركة في أنشطة على نطاق واسع، بيد أنه مع تراخي بعض الدول في مجال التطعيمات، قد يساور البعض القلق من التخلف عن الركب.\n",
                       "blocks": [
                         {
-                          "id": "eb941eae",
+                          "id": "e4d8dbac",
                           "type": "fragment",
                           "model": {
                             "text": "واستطاعت بعض الدول بالفعل تثبيت إصداراتها الخاصة من جواز سفر كوفيد، الذي يسمح لمواطنيها بالمشاركة في أنشطة على نطاق واسع، بيد أنه مع تراخي بعض الدول في مجال التطعيمات، قد يساور البعض القلق من التخلف عن الركب.\nواستطاعت بعض الدول بالفعل تثبيت إصداراتها الخاصة من جواز سفر كوفيد، الذي يسمح لمواطنيها بالمشاركة في أنشطة على نطاق واسع، بيد أنه مع تراخي بعض الدول في مجال التطعيمات، قد يساور البعض القلق من التخلف عن الركب.\n",
@@ -470,11 +470,21 @@
               ]
             },
             {
-              "id": "de2f84a9",
+              "id": "a208289b",
               "type": "mpu",
               "model": {},
               "position": [
                 7
+              ]
+            },
+            {
+              "id": "82ccd9c9",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                8
               ]
             }
           ]
@@ -483,14 +493,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cl5m3453w36o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cl5m3453w36o"
+          "optimoUrn": "urn:bbc:optimo:asset:cl5m3453w36o",
+          "canonicalUrl": "https://www.bbc.com/arabic/articles/cl5m3453w36o"
         },
         "type": "article",
         "createdBy": "Arabic",
         "language": "ar",
         "firstPublished": 1628007802945,
         "lastPublished": 1628007802945,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cl5m3453w36o",
           "producer": "Arabic",
@@ -514,7 +524,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -530,7 +539,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Test: Gist فيروس كورونا: كيف تعمل جوازات سفر كوفيد حول العالم؟\n",
           "promoHeadline": {
@@ -631,8 +639,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -921,7 +928,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:48:57.266Z",
+        "generated": "2023-02-18T03:03:56.594Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1707,5 +1714,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "63eba4c22bc34d1b4ca416ed1412617d479d6963",
+            "last-modified": "Thu, 24 Feb 2022 01:37:22 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "cd1aeef5-867d-47d8-b821-43620aceb17f",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 800
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cl5m3453w36o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "1732",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"438edc80e4108719c87f114812d035fdfad4b03d\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 827
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/arabic/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "4555",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"1d47b1ed7cdf66db7f467d71bdcb82ddefd82a6b\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 830
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/arabic",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cl5m3453w36o",
+      "service": "arabic",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

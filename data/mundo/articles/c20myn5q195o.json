@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "3f129c64",
+              "id": "b07fd629",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "fe93c47e",
+                    "id": "d97f47e6",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0073061e",
+                          "id": "bfb1b30f",
                           "type": "paragraph",
                           "model": {
                             "text": "Mundo Twitter Test ",
                             "blocks": [
                               {
-                                "id": "f095d266",
+                                "id": "c9a72d1e",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Mundo Twitter Test ",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "9497aa7e",
+              "id": "bef35d26",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1624964861434,
@@ -67,23 +67,23 @@
               ]
             },
             {
-              "id": "eb8eadc4",
+              "id": "59c31549",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "d1a565ce",
+                    "id": "287f9c12",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4fe06a10",
+                          "id": "ddaeda88",
                           "type": "paragraph",
                           "model": {
                             "text": "Hola Mundo!",
                             "blocks": [
                               {
-                                "id": "9d8772d1",
+                                "id": "9bdbae9d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Hola Mundo!",
@@ -118,19 +118,19 @@
               ]
             },
             {
-              "id": "18a3bb55",
+              "id": "89c73632",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/bbcnewspidgin/status/1401130492313866243?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1401130492313866243%7Ctwgr%5E%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fd-3388070347389922232.ampproject.net%2F2106120107000%2Fframe.html",
                 "blocks": [
                   {
-                    "id": "de3f8cc7",
+                    "id": "d3e7cf14",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:619df6aa-8abf-4e4d-baf1-189b0106f2fa",
                       "blocks": [
                         {
-                          "id": "1b220144",
+                          "id": "56581b65",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -165,18 +165,18 @@
               ]
             },
             {
-              "id": "c07e0ece",
+              "id": "406a4d79",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "100fe97d",
+                    "id": "a21f7828",
                     "type": "paragraph",
                     "model": {
                       "text": "Comes estas? ",
                       "blocks": [
                         {
-                          "id": "2b7ebf3b",
+                          "id": "aa3c596b",
                           "type": "fragment",
                           "model": {
                             "text": "Comes estas? ",
@@ -202,19 +202,19 @@
               ]
             },
             {
-              "id": "c4e577b0",
+              "id": "04f2a8ea",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/EgbuchulamPrin2/status/1401151603386851328?s=20",
                 "blocks": [
                   {
-                    "id": "87fa6cbd",
+                    "id": "16b2e603",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:93510861-c60f-47e9-897d-da5d4be64d16",
                       "blocks": [
                         {
-                          "id": "60c177c9",
+                          "id": "5224fd83",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -249,18 +249,18 @@
               ]
             },
             {
-              "id": "4510cd4d",
+              "id": "c9f16713",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0cc2c0aa",
+                    "id": "5b149dcc",
                     "type": "paragraph",
                     "model": {
                       "text": "Noticias del mundo ",
                       "blocks": [
                         {
-                          "id": "0b03506d",
+                          "id": "1a37ac05",
                           "type": "fragment",
                           "model": {
                             "text": "Noticias del mundo ",
@@ -286,19 +286,19 @@
               ]
             },
             {
-              "id": "37651a9c",
+              "id": "30948d07",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/PunHubOnline/status/1382720301444833284?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1382720301444833284%7Ctwgr%5E%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fd-3388070347389922232.ampproject.net%2F2106120107000%2Fframe.html",
                 "blocks": [
                   {
-                    "id": "68e20987",
+                    "id": "acf229c4",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:e4f0c406-8f3e-421d-87a9-0e3c7f77604f",
                       "blocks": [
                         {
-                          "id": "43069758",
+                          "id": "01f283db",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -333,11 +333,21 @@
               ]
             },
             {
-              "id": "620db851",
+              "id": "08c3856f",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "efa523ac",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -346,14 +356,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c20myn5q195o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c20myn5q195o"
+          "optimoUrn": "urn:bbc:optimo:asset:c20myn5q195o",
+          "canonicalUrl": "https://www.bbc.com/mundo/articles/c20myn5q195o"
         },
         "type": "article",
         "createdBy": "Mundo",
         "language": "es",
         "firstPublished": 1624964861434,
         "lastPublished": 1624964861434,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c20myn5q195o",
           "producer": "Mundo",
@@ -377,7 +387,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -391,7 +400,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Mundo Twitter Test ",
           "promoHeadline": {
@@ -421,7 +429,6 @@
             ]
           }
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -447,8 +454,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -692,7 +698,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-12-14T15:13:57.166Z",
+        "generated": "2023-02-18T02:58:56.86Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1595,5 +1601,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "9fb98008b8f99221e74d218879aad0863b82409c",
+            "last-modified": "Wed, 23 Feb 2022 19:55:25 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "b2677763-2e4d-4457-9621-9c20fcb5cc2c",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 729
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c20myn5q195o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "2064",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"4db73debc821388fdecf56009ff46812846a53ae\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1176
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/mundo/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "5861",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"e5a89c21e53b5cfea1ea19f92d1a15f6112bfe24\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1410
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/mundo",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c20myn5q195o",
+      "service": "mundo",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

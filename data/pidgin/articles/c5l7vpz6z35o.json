@@ -5,7 +5,7 @@
         "model": {
           "blocks": [
             {
-              "id": "f4c38bed",
+              "id": "f687d299",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1634052972272,
@@ -16,18 +16,18 @@
               ]
             },
             {
-              "id": "446d2e34",
+              "id": "715b1730",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "f359757d",
+                    "id": "00a5db7a",
                     "type": "paragraph",
                     "model": {
                       "text": "test",
                       "blocks": [
                         {
-                          "id": "0f4005f6",
+                          "id": "c8ffacc6",
                           "type": "fragment",
                           "model": {
                             "text": "test",
@@ -53,11 +53,21 @@
               ]
             },
             {
-              "id": "0c0f945f",
+              "id": "435f61fb",
               "type": "mpu",
               "model": {},
               "position": [
                 3
+              ]
+            },
+            {
+              "id": "9bc07df3",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                4
               ]
             }
           ]
@@ -66,14 +76,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c5l7vpz6z35o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c5l7vpz6z35o"
+          "optimoUrn": "urn:bbc:optimo:asset:c5l7vpz6z35o",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/c5l7vpz6z35o"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
         "firstPublished": 1634052972272,
         "lastPublished": 1634052972272,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c5l7vpz6z35o",
           "producer": "Pidgin",
@@ -97,7 +107,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "text",
           "paragraph",
@@ -106,11 +115,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Test"
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -136,8 +143,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -623,7 +629,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:04:58.371Z",
+        "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,
@@ -1462,5 +1468,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3855",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 466
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/pidgin/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "c574590a04ec3583e07630c0b010ef08b90113f5",
+            "last-modified": "Thu, 24 Feb 2022 01:39:47 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "ee551e42-55dd-4781-a2d5-99cab50e98e2",
+            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1337
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c5l7vpz6z35o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "5291",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"07cdea8e48e1b276f9938e0a7f146d12cbe7171f\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 1482
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/pidgin",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c5l7vpz6z35o",
+      "service": "pidgin",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

@@ -5,26 +5,26 @@
         "model": {
           "blocks": [
             {
-              "id": "810369aa",
+              "id": "73fe5df5",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "4b12ffce",
+                    "id": "9fb2fbeb",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "38c6d8e5",
+                          "id": "e6f7a648",
                           "type": "paragraph",
                           "model": {
-                            "text": "Seo an ceann-naidheachd don artaigil deuchainn",
+                            "text": "SEO an ceann-naidheachd don artaigil deuchainn",
                             "blocks": [
                               {
-                                "id": "945c71a2",
+                                "id": "d497d033",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "Seo an ceann-naidheachd don artaigil deuchainn",
+                                  "text": "SEO an ceann-naidheachd don artaigil deuchainn",
                                   "attributes": []
                                 },
                                 "position": [
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "cc861ff4",
+              "id": "159d102a",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "6aeb778a",
+                    "id": "99d21c21",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6adcdb36",
+                          "id": "c40fd769",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1af74b66",
+                                "id": "8d1a67fa",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.",
                                   "blocks": [
                                     {
-                                      "id": "5ecbcd89",
+                                      "id": "706defde",
                                       "type": "fragment",
                                       "model": {
                                         "text": "‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "65ceb74e",
+                    "id": "b1907c28",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "49fdb571",
+                          "id": "419cf663",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1eb09745",
+                                "id": "c1b86991",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Mapa na Frainge a’ sealltainn Paris agus Cognac",
                                   "blocks": [
                                     {
-                                      "id": "6165dc32",
+                                      "id": "8316cd84",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Mapa na Frainge a’ sealltainn Paris agus Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "3a35bf4c",
+                    "id": "b590e533",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,55 +192,185 @@
               ]
             },
             {
-              "id": "a4ea7b97",
-              "type": "timestamp",
+              "id": "8e9be1c8",
+              "type": "group",
               "model": {
-                "firstPublished": 1563022114054,
-                "lastPublished": 1570805527001
+                "intentType": "overview",
+                "relationshipType": "optional",
+                "blocks": [
+                  {
+                    "id": "83ea547f",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "cb92fcf0",
+                          "type": "unorderedList",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b9e6a878",
+                                "type": "listItem",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "89d64762",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "còraichean glèidhte aig a’ BhBC",
+                                        "blocks": [
+                                          {
+                                            "id": "294e778d",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "còraichean glèidhte aig a’ BhBC",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              3,
+                                              1,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        3,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  3,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "6be10c2f",
+                                "type": "listItem",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "345183d8",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "an toiseach leis an",
+                                        "blocks": [
+                                          {
+                                            "id": "9be86512",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "an toiseach leis an",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              3,
+                                              1,
+                                              1,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        3,
+                                        1,
+                                        1,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  3,
+                                  1,
+                                  1,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      1
+                    ]
+                  }
+                ]
               },
               "position": [
                 3
               ]
             },
             {
-              "id": "c4b7927a",
+              "id": "f23fe355",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1563022114054,
+                "lastPublished": 1676382874438
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "ff51ccb0",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "087c9171",
+                    "id": "70949e73",
                     "type": "paragraph",
                     "model": {
                       "text": "‘S e bloc teacsa a tha seo, anns a bheil url do làraich Aimisire a’ BhBC",
                       "blocks": [
                         {
-                          "id": "62a0fc5d",
+                          "id": "9a8fa330",
                           "type": "fragment",
                           "model": {
                             "text": "‘S e bloc teacsa a tha seo, anns a bheil url do làraich ",
                             "attributes": []
                           },
                           "position": [
-                            4,
+                            5,
                             1,
                             1
                           ]
                         },
                         {
-                          "id": "2fa14c25",
+                          "id": "9370c5f2",
                           "type": "urlLink",
                           "model": {
                             "text": "Aimisire a’ BhBC",
                             "blocks": [
                               {
-                                "id": "0f582764",
+                                "id": "7411de1b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Aimisire a’ BhBC",
                                   "attributes": []
                                 },
                                 "position": [
-                                  4,
+                                  5,
                                   1,
                                   2,
                                   1
@@ -251,7 +381,7 @@
                             "isExternal": false
                           },
                           "position": [
-                            4,
+                            5,
                             1,
                             2
                           ]
@@ -259,47 +389,47 @@
                       ]
                     },
                     "position": [
-                      4,
+                      5,
                       1
                     ]
                   }
                 ]
               },
               "position": [
-                4
+                5
               ]
             },
             {
-              "id": "35021e81",
+              "id": "bc18e909",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "be376bfe",
+                    "id": "2c3d8ccf",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8c5e1c02",
+                          "id": "b71e0147",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e6b40e0b",
+                                "id": "8ffbb7f7",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "‘S e bloc bhidio a tha seo anns a bheil bhidio mu sheangan",
                                   "blocks": [
                                     {
-                                      "id": "1d2c30ce",
+                                      "id": "f32281f4",
                                       "type": "fragment",
                                       "model": {
                                         "text": "‘S e bloc bhidio a tha seo anns a bheil bhidio mu sheangan",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
+                                        6,
                                         1,
                                         1,
                                         1,
@@ -309,7 +439,7 @@
                                   ]
                                 },
                                 "position": [
-                                  5,
+                                  6,
                                   1,
                                   1,
                                   1
@@ -318,7 +448,7 @@
                             ]
                           },
                           "position": [
-                            5,
+                            6,
                             1,
                             1
                           ]
@@ -326,17 +456,17 @@
                       ]
                     },
                     "position": [
-                      5,
+                      6,
                       1
                     ]
                   },
                   {
-                    "id": "508ab011",
+                    "id": "e6b4fd25",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a637d4f9",
+                          "id": "d995928b",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -376,18 +506,18 @@
                             "smpKind": "programme"
                           },
                           "position": [
-                            5,
+                            6,
                             2,
                             1
                           ]
                         },
                         {
-                          "id": "50d1269a",
+                          "id": "d7051480",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ea7e5a3d",
+                                "id": "0fa547b1",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -397,37 +527,37 @@
                                   "copyrightHolder": "BBC"
                                 },
                                 "position": [
-                                  5,
+                                  6,
                                   2,
                                   2,
                                   1
                                 ]
                               },
                               {
-                                "id": "ca1728a5",
+                                "id": "0b962d2a",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "ed69b4ca",
+                                      "id": "80b4e42e",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "012b9e6c",
+                                            "id": "c2588785",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "18e0e5b4",
+                                                  "id": "86e0edbc",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5,
+                                                    6,
                                                     2,
                                                     2,
                                                     2,
@@ -439,7 +569,7 @@
                                               ]
                                             },
                                             "position": [
-                                              5,
+                                              6,
                                               2,
                                               2,
                                               2,
@@ -450,7 +580,7 @@
                                         ]
                                       },
                                       "position": [
-                                        5,
+                                        6,
                                         2,
                                         2,
                                         2,
@@ -460,7 +590,7 @@
                                   ]
                                 },
                                 "position": [
-                                  5,
+                                  6,
                                   2,
                                   2,
                                   2
@@ -469,7 +599,7 @@
                             ]
                           },
                           "position": [
-                            5,
+                            6,
                             2,
                             2
                           ]
@@ -477,59 +607,8 @@
                       ]
                     },
                     "position": [
-                      5,
-                      2
-                    ]
-                  }
-                ]
-              },
-              "position": [
-                5
-              ]
-            },
-            {
-              "id": "01c434e8",
-              "type": "subheadline",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "842ac74c",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "6f3ba346",
-                          "type": "paragraph",
-                          "model": {
-                            "text": "'S e bloc fo-cheann-naidheachd a tha seo",
-                            "blocks": [
-                              {
-                                "id": "95227a73",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "'S e bloc fo-cheann-naidheachd a tha seo",
-                                  "attributes": []
-                                },
-                                "position": [
-                                  6,
-                                  1,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
                       6,
-                      1
+                      2
                     ]
                   }
                 ]
@@ -539,42 +618,27 @@
               ]
             },
             {
-              "id": "8083157d",
-              "type": "image",
+              "id": "216de765",
+              "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "99d1762b",
-                    "type": "altText",
+                    "id": "05083f27",
+                    "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "dafae54d",
-                          "type": "text",
+                          "id": "470b3c94",
+                          "type": "paragraph",
                           "model": {
+                            "text": "'S e bloc fo-cheann-naidheachd a tha seo",
                             "blocks": [
                               {
-                                "id": "d0020199",
-                                "type": "paragraph",
+                                "id": "fae6dcf6",
+                                "type": "fragment",
                                 "model": {
-                                  "text": "Cluicheadairean bhuill-coise às dèidh gheama",
-                                  "blocks": [
-                                    {
-                                      "id": "5e1b00a5",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Cluicheadairean bhuill-coise às dèidh gheama",
-                                        "attributes": []
-                                      },
-                                      "position": [
-                                        7,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
+                                  "text": "'S e bloc fo-cheann-naidheachd a tha seo",
+                                  "attributes": []
                                 },
                                 "position": [
                                   7,
@@ -597,21 +661,6 @@
                       7,
                       1
                     ]
-                  },
-                  {
-                    "id": "06886f45",
-                    "type": "rawImage",
-                    "model": {
-                      "width": 2048,
-                      "height": 1152,
-                      "locator": "46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg",
-                      "originCode": "cpsdevpb",
-                      "copyrightHolder": "Getty Images"
-                    },
-                    "position": [
-                      7,
-                      2
-                    ]
                   }
                 ]
               },
@@ -620,22 +669,51 @@
               ]
             },
             {
-              "id": "41cbd9bb",
-              "type": "text",
+              "id": "0346c3d3",
+              "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "a3ff1afb",
-                    "type": "paragraph",
+                    "id": "4b2ecb23",
+                    "type": "altText",
                     "model": {
-                      "text": "Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich",
                       "blocks": [
                         {
-                          "id": "3c9d0f2b",
-                          "type": "fragment",
+                          "id": "d5f48f52",
+                          "type": "text",
                           "model": {
-                            "text": "Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich",
-                            "attributes": []
+                            "blocks": [
+                              {
+                                "id": "77bfa673",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Cluicheadairean bhuill-coise às dèidh gheama",
+                                  "blocks": [
+                                    {
+                                      "id": "007c91e4",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Cluicheadairean bhuill-coise às dèidh gheama",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        8,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  8,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
                           "position": [
                             8,
@@ -649,6 +727,21 @@
                       8,
                       1
                     ]
+                  },
+                  {
+                    "id": "83c34749",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      8,
+                      2
+                    ]
                   }
                 ]
               },
@@ -657,11 +750,369 @@
               ]
             },
             {
-              "id": "8fe2b3c3",
+              "id": "64d015a0",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "7dad7df0",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich",
+                      "blocks": [
+                        {
+                          "id": "87c7afec",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich",
+                            "attributes": []
+                          },
+                          "position": [
+                            9,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      9,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "fbd78474",
+              "type": "relatedContent",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "24cf63c0",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:3a277559-03ed-41a0-b3fe-b88204e3acfb",
+                      "blocks": [
+                        {
+                          "id": "76dd0d05",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2bf30372",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Prìomh Sgeulachdan",
+                                  "blocks": [
+                                    {
+                                      "id": "be7ffc40",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Prìomh Sgeulachdan",
+                                        "locator": "https://www.bbc.co.uk/naidheachdan/64637365",
+                                        "blocks": [
+                                          {
+                                            "id": "f1063c84",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Prìomh Sgeulachdan",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              10,
+                                              1,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [
+                                        10,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  10,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "2e09799a",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:17cc88c6-3883-439a-8531-0f708c19ac64",
+                      "blocks": [
+                        {
+                          "id": "79fed61f",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "68b676c9",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Briathran air cairt puist",
+                                  "blocks": [
+                                    {
+                                      "id": "3c348b85",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Briathran air cairt puist",
+                                        "locator": "https://www.bbc.co.uk/naidheachdan/64635095",
+                                        "blocks": [
+                                          {
+                                            "id": "e27cf216",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Briathran air cairt puist",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              10,
+                                              2,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [
+                                        10,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  10,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            10,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "e7740051",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:7755561a-f13e-4cc4-b942-0587e1cd366f",
+                      "blocks": [
+                        {
+                          "id": "f63a29c3",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "d5c6a2c6",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Faighneachd do chuid",
+                                  "blocks": [
+                                    {
+                                      "id": "e5e882dc",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Faighneachd do chuid",
+                                        "locator": "https://www.bbc.co.uk/naidheachdan/64536187",
+                                        "blocks": [
+                                          {
+                                            "id": "b8f2a862",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Faighneachd do chuid",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              10,
+                                              3,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [
+                                        10,
+                                        3,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  10,
+                                  3,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            10,
+                            3,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      3
+                    ]
+                  },
+                  {
+                    "id": "137b2aa9",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:3b64bccf-17e4-423d-a4b1-9cdb10b4343a",
+                      "blocks": [
+                        {
+                          "id": "1628243f",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "ee849c55",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Bha e air a' bhàta",
+                                  "blocks": [
+                                    {
+                                      "id": "230c46f1",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Bha e air a' bhàta",
+                                        "locator": "https://www.bbc.co.uk/naidheachdan/64504248",
+                                        "blocks": [
+                                          {
+                                            "id": "dde4ef9b",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Bha e air a' bhàta",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              10,
+                                              4,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [
+                                        10,
+                                        4,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  10,
+                                  4,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            10,
+                            4,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      4
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                10
+              ]
+            },
+            {
+              "id": "3450d613",
               "type": "mpu",
               "model": {},
               "position": [
-                9
+                11
+              ]
+            },
+            {
+              "id": "0dbfdc3f",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                12
               ]
             }
           ]
@@ -670,14 +1121,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c18q7nedn2ko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c18q7nedn2ko"
+          "optimoUrn": "urn:bbc:optimo:asset:c18q7nedn2ko",
+          "canonicalUrl": "https://www.bbc.com/naidheachdan/sgeulachdan/c18q7nedn2ko"
         },
         "type": "article",
         "createdBy": "Naidheachdan",
         "language": "gd",
         "firstPublished": 1563022114054,
-        "lastPublished": 1570805527001,
-        "options": {},
+        "lastPublished": 1676382874438,
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c18q7nedn2ko",
           "producer": "Scotland",
@@ -688,7 +1139,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Naidheachdan",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -698,20 +1148,151 @@
           "caption",
           "altText",
           "rawImage",
+          "group",
+          "unorderedList",
+          "listItem",
           "urlLink",
           "video",
           "subheadline",
+          "links",
+          "link",
           "aresMedia"
         ],
-        "allowAdvertising": true
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {},
         "headlines": {
-          "seoHeadline": "Seo an ceann-naidheachd SEO ‘son an artaigil seo"
+          "seoHeadline": "Seo an ceann-naidheachd SEO ‘son an artaigil seo",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "SEO an ceann-naidheachd don artaigil deuchainn",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "SEO an ceann-naidheachd don artaigil deuchainn",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         },
-        "images": {},
-        "passport": {}
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mapa na Frainge a’ sealltainn Paris agus Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mapa na Frainge a’ sealltainn Paris agus Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       }
     },
     "secondaryData": {
@@ -1345,5 +1926,124 @@
       "mostRead": null
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3894",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"25707d367c3227a438f0423410d211c3e3f934ca\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 908
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/naidheachdan/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "56",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 404,
+          "responseTime": 1146
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/naidheachdan",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "d7429d03125c72629a03236b32a5c2060a65016c",
+            "last-modified": "Thu, 16 Feb 2023 12:17:15 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "4be12f9a-ea69-4c97-ba17-7ac9db0b424e",
+            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1369
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c18q7nedn2ko",
+          "timeout": 4000
+        }
+      }
+    ],
+    "tenantLogs": [
+      {
+        "timestamp": 1676978258912,
+        "message": "Most Read - Onward Journey API returned 404 for service 'naidheachdan'",
+        "code": "most-read-onward-journeys-404"
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c18q7nedn2ko",
+      "service": "naidheachdan",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

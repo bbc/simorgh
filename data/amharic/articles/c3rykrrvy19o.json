@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "f410f84a",
+              "id": "43423bd0",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "98ab3f73",
+                    "id": "7eac4288",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "99045b80",
+                          "id": "e69c003c",
                           "type": "paragraph",
                           "model": {
                             "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
                             "blocks": [
                               {
-                                "id": "319b04d1",
+                                "id": "ea472e84",
                                 "type": "fragment",
                                 "model": {
                                   "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "f27d8b15",
+              "id": "de048634",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942682443,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "c3fb1f86",
+              "id": "6ac93f0f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "ba1d21c8",
+                    "id": "e1bcef04",
                     "type": "paragraph",
                     "model": {
                       "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
                       "blocks": [
                         {
-                          "id": "721d67a1",
+                          "id": "94067813",
                           "type": "fragment",
                           "model": {
                             "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "c527854e",
+                    "id": "320d7474",
                     "type": "paragraph",
                     "model": {
                       "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
                       "blocks": [
                         {
-                          "id": "68362049",
+                          "id": "42dbcd68",
                           "type": "fragment",
                           "model": {
                             "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "2fe69409",
+                    "id": "a137f3b7",
                     "type": "paragraph",
                     "model": {
                       "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
                       "blocks": [
                         {
-                          "id": "ed53c676",
+                          "id": "1df6d5f5",
                           "type": "fragment",
                           "model": {
                             "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "4cfadde2",
+                    "id": "fbeb12a7",
                     "type": "paragraph",
                     "model": {
                       "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
                       "blocks": [
                         {
-                          "id": "ab5f562c",
+                          "id": "8fda4332",
                           "type": "fragment",
                           "model": {
                             "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
@@ -182,7 +182,7 @@
               ]
             },
             {
-              "id": "7d2a53ac",
+              "id": "f0dffce0",
               "type": "mpu",
               "model": {},
               "position": [
@@ -190,18 +190,18 @@
               ]
             },
             {
-              "id": "ff3a092c",
+              "id": "613896e4",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5cae092d",
+                    "id": "250828f6",
                     "type": "paragraph",
                     "model": {
                       "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
                       "blocks": [
                         {
-                          "id": "4a517e26",
+                          "id": "386a7dd7",
                           "type": "fragment",
                           "model": {
                             "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
@@ -225,6 +225,16 @@
               "position": [
                 5
               ]
+            },
+            {
+              "id": "40dd6a95",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
             }
           ]
         }
@@ -232,14 +242,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c3rykrrvy19o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o"
+          "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o",
+          "canonicalUrl": "https://www.bbc.com/amharic/articles/c3rykrrvy19o"
         },
         "type": "article",
         "createdBy": "Amharic",
         "language": "am",
         "firstPublished": 1562942682443,
         "lastPublished": 1562942682443,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3rykrrvy19o",
           "producer": "Amharic",
@@ -250,7 +260,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -260,12 +269,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -802,7 +808,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:48:57.076Z",
+        "generated": "2023-02-17T18:04:00.615Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 19,
@@ -1449,5 +1455,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "9f36b153608f1bf3aa20315b43fcd7cd05a1c030",
+            "last-modified": "Wed, 23 Feb 2022 15:00:18 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "02a1d2e5-a69d-4033-878b-5a40445204de",
+            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1065
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c3rykrrvy19o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "5728",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"8a4a698980c8487de9722c03422e5b563764edf6\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1248
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/amharic",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "4318",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"3cbd445547f27534c3636d67d87c385141ecedf5\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1560
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/amharic/front_page",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c3rykrrvy19o",
+      "service": "amharic",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

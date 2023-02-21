@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "7b30b3c7",
+              "id": "343cb12a",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "e169c1be",
+                    "id": "802aebb4",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d8f2a100",
+                          "id": "28472f5c",
                           "type": "paragraph",
                           "model": {
                             "text": "የዚህ የሙከራ ጽሑፍ ርዕስ ይህ ነው",
                             "blocks": [
                               {
-                                "id": "694d4c68",
+                                "id": "9bb8e1bd",
                                 "type": "fragment",
                                 "model": {
                                   "text": "የዚህ የሙከራ ጽሑፍ ርዕስ ይህ ነው",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "fd778117",
+              "id": "ca2a7285",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "55cf3b9f",
+                    "id": "2e86bd9f",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "74738396",
+                          "id": "4d44eed7",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6f53bac8",
+                                "id": "db2708f0",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ይህ የሙከራ ምስል የቅጂ መብት ቢቢሲ የፈረንሳይን ካርታ ያሳያል ፡፡ ምስሉ በመጀመሪያዎቹ ሦስት ብሎኮች ውስጥ የሚገኝ ሲሆን ይህ መግለጫ ጽሑፍ አለው ፡፡",
                                   "blocks": [
                                     {
-                                      "id": "b0f7f2da",
+                                      "id": "975d0229",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ይህ የሙከራ ምስል የቅጂ መብት ቢቢሲ የፈረንሳይን ካርታ ያሳያል ፡፡ ምስሉ በመጀመሪያዎቹ ሦስት ብሎኮች ውስጥ የሚገኝ ሲሆን ይህ መግለጫ ጽሑፍ አለው ፡፡",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "0fc3a564",
+                    "id": "ca4180e7",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "725dbd77",
+                          "id": "a8c49958",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "98b98e66",
+                                "id": "9468f1c7",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ይህ የሙከራ ምስል የቅጂ መብት ቢቢሲ የፈረንሳይን ካርታ ያሳያል ፡፡ ምስሉ በመጀመሪያዎቹ ሦስት ብሎኮች ውስጥ የሚገኝ ሲሆን ይህ መግለጫ ጽሑፍ አለው ፡፡",
                                   "blocks": [
                                     {
-                                      "id": "52d0edf6",
+                                      "id": "a8028a3d",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ይህ የሙከራ ምስል የቅጂ መብት ቢቢሲ የፈረንሳይን ካርታ ያሳያል ፡፡ ምስሉ በመጀመሪያዎቹ ሦስት ብሎኮች ውስጥ የሚገኝ ሲሆን ይህ መግለጫ ጽሑፍ አለው ፡፡",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "b995e99c",
+                    "id": "aec164a5",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "7da7a79a",
+              "id": "93c8a211",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1574854374815,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "948fdc90",
+              "id": "6627b0d1",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "71886da4",
+                    "id": "773136d0",
                     "type": "paragraph",
                     "model": {
                       "text": "ይህ ለቢቢሲ የአየር ሁኔታ መነሻ ገጽ የዩ.አር.ኤል አገናኝ የያዘ የጽሑፍ ማገጃ ነው።",
                       "blocks": [
                         {
-                          "id": "1d431b93",
+                          "id": "35debc32",
                           "type": "fragment",
                           "model": {
                             "text": "ይህ ለቢቢሲ የአየር ሁኔታ መነሻ ገጽ የዩ.አር.ኤል አገናኝ ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "5615a0b2",
+                          "id": "ad1c43c5",
                           "type": "urlLink",
                           "model": {
                             "text": "የያዘ የጽሑፍ ማገጃ ነው።",
                             "blocks": [
                               {
-                                "id": "d95137c1",
+                                "id": "458fcb58",
                                 "type": "fragment",
                                 "model": {
                                   "text": "የያዘ የጽሑፍ ማገጃ ነው።",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "c9dcfb0f",
+              "id": "60bdf1d8",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "dabc9b15",
+                    "id": "b977870f",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d0c4a8ca",
+                          "id": "c5221ec2",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "284d3028",
+                                "id": "29bf4dbf",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ይህ ንዑስ ርዕስ ነው",
                                   "blocks": [
                                     {
-                                      "id": "47086a44",
+                                      "id": "17946223",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ይህ ንዑስ ርዕስ ነው",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "900104a5",
+                    "id": "8b35d0d5",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4dd1859e",
+                          "id": "d09603bb",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -382,12 +382,12 @@
                           ]
                         },
                         {
-                          "id": "93861a12",
+                          "id": "fd76a7c6",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "83c40818",
+                                "id": "180fff4e",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -404,23 +404,23 @@
                                 ]
                               },
                               {
-                                "id": "d159456a",
+                                "id": "124edbdf",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "84a0a7d7",
+                                      "id": "1eb5898e",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "0577f6bd",
+                                            "id": "3fec246c",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "724b6985",
+                                                  "id": "adc8c918",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -488,23 +488,23 @@
               ]
             },
             {
-              "id": "ef9c977c",
+              "id": "e8ab8793",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "debaa8e9",
+                    "id": "458d8b2f",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e70c6a46",
+                          "id": "899a3a50",
                           "type": "paragraph",
                           "model": {
                             "text": "ይህ ንዑስ ርዕስ ነው",
                             "blocks": [
                               {
-                                "id": "7bedd86f",
+                                "id": "a5378416",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ይህ ንዑስ ርዕስ ነው",
@@ -539,28 +539,28 @@
               ]
             },
             {
-              "id": "8f89bdf8",
+              "id": "8f5c3771",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "6da87009",
+                    "id": "8ab7ecc6",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "42ce8fd2",
+                          "id": "c5ffdce9",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "39c4bef5",
+                                "id": "1a1984fe",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ይህ ንዑስ ርዕስ ነው",
                                   "blocks": [
                                     {
-                                      "id": "10ac49f9",
+                                      "id": "eca70fdb",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ይህ ንዑስ ርዕስ ነው",
@@ -599,7 +599,7 @@
                     ]
                   },
                   {
-                    "id": "684af303",
+                    "id": "6b7f12a8",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -620,18 +620,18 @@
               ]
             },
             {
-              "id": "dcc4ddb1",
+              "id": "daa5aafd",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "a359acaa",
+                    "id": "eb62438e",
                     "type": "paragraph",
                     "model": {
                       "text": "ይህ የሙከራ ጽሑፍ በራስ-ሰር የመጨረሻ-መጨረሻ-ሙከራዎችን በእኛ ድር ጣቢያ ላይ ማካሄድ እንድንችል ተፈጥሯል።",
                       "blocks": [
                         {
-                          "id": "c64ad69b",
+                          "id": "c2b1e1cd",
                           "type": "fragment",
                           "model": {
                             "text": "ይህ የሙከራ ጽሑፍ በራስ-ሰር የመጨረሻ-መጨረሻ-ሙከራዎችን በእኛ ድር ጣቢያ ላይ ማካሄድ እንድንችል ተፈጥሯል።",
@@ -657,11 +657,21 @@
               ]
             },
             {
-              "id": "185ac690",
+              "id": "1aebf5ad",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "d7ab7b5a",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -670,14 +680,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:czqverekrldo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:czqverekrldo"
+          "optimoUrn": "urn:bbc:optimo:asset:czqverekrldo",
+          "canonicalUrl": "https://www.bbc.com/amharic/articles/czqverekrldo"
         },
         "type": "article",
         "createdBy": "Amharic",
         "language": "am",
         "firstPublished": 1574854374815,
         "lastPublished": 1574854374815,
-        "options": {},
         "analyticsLabels": {
           "producer": "Amharic",
           "page": "amharic.articles.czqverekrldo.page"
@@ -687,7 +697,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -705,12 +714,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "የዚህ የሙከራ ጽሑፍ ርዕስ ይህ ነው"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1247,7 +1253,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:48:57.076Z",
+        "generated": "2023-02-17T18:04:00.615Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 19,
@@ -1894,5 +1900,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "5728",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"8a4a698980c8487de9722c03422e5b563764edf6\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 740
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/amharic",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "4318",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"3cbd445547f27534c3636d67d87c385141ecedf5\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:11 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 824
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/amharic/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "2cc16f58f2fa402b6854ec11e5a6f6029999c893",
+            "last-modified": "Fri, 28 Aug 2020 07:27:01 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "256f4e9e-8cc7-4672-8870-a2274c4948f2",
+            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1453
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/czqverekrldo",
+          "timeout": 4000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "czqverekrldo",
+      "service": "amharic",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

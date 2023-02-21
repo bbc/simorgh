@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "307085e1",
+              "id": "13cf8606",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "54ecd00b",
+                    "id": "a290f815",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f2aeea24",
+                          "id": "49bb9e87",
                           "type": "paragraph",
                           "model": {
                             "text": "Выйти из тени. В Харькове открыли первое инклюзивное модельное агентство",
                             "blocks": [
                               {
-                                "id": "27742109",
+                                "id": "4a6849e7",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Выйти из тени. В Харькове открыли первое инклюзивное модельное агентство",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "331e04f0",
+              "id": "9d9a37a9",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1563021905825,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "ebe69c47",
+              "id": "da7fd145",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "72074faa",
+                    "id": "b8f5b0e7",
                     "type": "paragraph",
                     "model": {
                       "text": "Открытое агентство - единственное в Украине - намерено готовить и поддерживать профессионалов модельного бизнеса. Обучение бесплатное, а впоследствии обещают контракты с известными европейскими домами моды.",
                       "blocks": [
                         {
-                          "id": "208f2aa7",
+                          "id": "14882929",
                           "type": "fragment",
                           "model": {
                             "text": "Открытое агентство - единственное в Украине - намерено готовить и поддерживать профессионалов модельного бизнеса. Обучение бесплатное, а впоследствии обещают контракты с известными европейскими домами моды.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "68f3ba0e",
+                    "id": "b09d771c",
                     "type": "paragraph",
                     "model": {
                       "text": "На первый кастинг зарегистрировалось около трех десятков участников. Претенденты - из Харькова и области. Преимущественно женщины, но есть и мужчины. Никаких ограничений.",
                       "blocks": [
                         {
-                          "id": "30173fde",
+                          "id": "51b393f7",
                           "type": "fragment",
                           "model": {
                             "text": "На первый кастинг зарегистрировалось около трех десятков участников. Претенденты - из Харькова и области. Преимущественно женщины, но есть и мужчины. Никаких ограничений.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "a91a0bb4",
+                    "id": "de95b269",
                     "type": "paragraph",
                     "model": {
                       "text": "\"Мода - это такое достаточно элитарное и закрытое направление. И люди с инвалидностью в моде - это другой ракурс отношения, это попытка продемонстрировать, что они также могут быть красивыми, эстетичными и могут нести красоту в мир. Это основная наша идея\", - подчеркивает автор проекта инклюзивного модельного агентства и председатель общественной организации \"Креавита\" Елена Шингарева.",
                       "blocks": [
                         {
-                          "id": "01f15c36",
+                          "id": "925e8fd8",
                           "type": "fragment",
                           "model": {
                             "text": "\"Мода - это такое достаточно элитарное и закрытое направление. И люди с инвалидностью в моде - это другой ракурс отношения, это попытка продемонстрировать, что они также могут быть красивыми, эстетичными и могут нести красоту в мир. Это основная наша идея\", - подчеркивает автор проекта инклюзивного модельного агентства и председатель общественной организации \"Креавита\" Елена Шингарева.",
@@ -156,11 +156,21 @@
               ]
             },
             {
-              "id": "9432d75b",
+              "id": "31113cb9",
               "type": "mpu",
               "model": {},
               "position": [
                 4
+              ]
+            },
+            {
+              "id": "98ea6105",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
               ]
             }
           ]
@@ -169,14 +179,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c0glz45kqz6o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c0glz45kqz6o"
+          "optimoUrn": "urn:bbc:optimo:asset:c0glz45kqz6o",
+          "canonicalUrl": "https://www.bbc.com/ukrainian/articles/c0glz45kqz6o"
         },
         "type": "article",
         "createdBy": "Ukrainian",
         "language": "ru",
         "firstPublished": 1563021905825,
         "lastPublished": 1563021905825,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c0glz45kqz6o",
           "producer": "Ukrainian",
@@ -187,7 +197,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -197,12 +206,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Выйти из тени. В Харькове открыли первое инклюзивное модельное агентство"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -475,7 +481,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:10:57.732Z",
+        "generated": "2023-02-18T03:10:58.107Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1250,5 +1256,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "e976d04d72118ec75a0d0d5ce0819b1dbf49114b",
+            "last-modified": "Wed, 23 Feb 2022 15:00:19 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "c4e32200-e17c-47e1-abe6-96ed09f3fcf7",
+            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 599
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c0glz45kqz6o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "3395",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"5e7c7f8bebb2d6261d088de332d0b95e66a3cc2b\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 988
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/ukrainian",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "2154",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"957d21c2c8195dfda821439fff31e0295456b6c5\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1273
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/ukrainian/front_page",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "c0glz45kqz6o",
+      "service": "ukrainian",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }

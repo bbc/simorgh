@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "48dc69a1",
+              "id": "f64db69b",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "b3381607",
+                    "id": "f2b421cd",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5bd96aba",
+                          "id": "ccb2c304",
                           "type": "paragraph",
                           "model": {
                             "text": "இந்த சோதனைக் கட்டுரையின் தலைப்பு இது",
                             "blocks": [
                               {
-                                "id": "e1535037",
+                                "id": "effe2f9c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "இந்த சோதனைக் கட்டுரையின் தலைப்பு இது",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "bc1be78a",
+              "id": "5be6652a",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "ecd32ad0",
+                    "id": "8ac6024d",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "48f211f6",
+                          "id": "8bdc2b59",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ad6088ee",
+                                "id": "b2408fa0",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "இந்த சோதனை படம், பதிப்புரிமை பிபிசி, பிரான்சின் வரைபடத்தைக் காட்டுகிறது. படம் முதல் மூன்று தொகுதிகளில் உள்ளது மற்றும் இந்த தலைப்பைக் கொண்டுள்ளது.",
                                   "blocks": [
                                     {
-                                      "id": "d6ba2986",
+                                      "id": "a6915384",
                                       "type": "fragment",
                                       "model": {
                                         "text": "இந்த சோதனை படம், பதிப்புரிமை பிபிசி, பிரான்சின் வரைபடத்தைக் காட்டுகிறது. படம் முதல் மூன்று தொகுதிகளில் உள்ளது மற்றும் இந்த தலைப்பைக் கொண்டுள்ளது.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "5295983a",
+                    "id": "8fff7eb8",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "bd3b70cc",
+                          "id": "ede873f2",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "663e4144",
+                                "id": "05ff4f25",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "இந்த சோதனை படம், பதிப்புரிமை பிபிசி, பிரான்சின் வரைபடத்தைக் காட்டுகிறது. படம் முதல் மூன்று தொகுதிகளில் உள்ளது மற்றும் இந்த தலைப்பைக் கொண்டுள்ளது.",
                                   "blocks": [
                                     {
-                                      "id": "f6970850",
+                                      "id": "ea9055a8",
                                       "type": "fragment",
                                       "model": {
                                         "text": "இந்த சோதனை படம், பதிப்புரிமை பிபிசி, பிரான்சின் வரைபடத்தைக் காட்டுகிறது. படம் முதல் மூன்று தொகுதிகளில் உள்ளது மற்றும் இந்த தலைப்பைக் கொண்டுள்ளது.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "9f6038d8",
+                    "id": "09a4c819",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "9dcd6c93",
+              "id": "277e165f",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942569172,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "296c804e",
+              "id": "fec2c668",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "89ff8305",
+                    "id": "82b26382",
                     "type": "paragraph",
                     "model": {
                       "text": "இது ஒரு உரைத் தொகுதி, இது பிபிசி வானிலை முகப்புப்பக்கத்திற்கான url இணைப்பைக் கொண்டுள்ளது.",
                       "blocks": [
                         {
-                          "id": "cc9f3908",
+                          "id": "f1965eb5",
                           "type": "fragment",
                           "model": {
                             "text": "இது ஒரு உரைத் தொகுதி, இது பிபிசி வானிலை முகப்புப்பக்கத்திற்கான url இணைப்பைக் ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "0dc310e7",
+                          "id": "afbdb251",
                           "type": "urlLink",
                           "model": {
                             "text": "கொண்டுள்ளது.",
                             "blocks": [
                               {
-                                "id": "c552e861",
+                                "id": "ac25ab2a",
                                 "type": "fragment",
                                 "model": {
                                   "text": "கொண்டுள்ளது.",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "6748092f",
+              "id": "134673b3",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01djw2m",
                 "blocks": [
                   {
-                    "id": "fbcdb019",
+                    "id": "2b1e426c",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8fd1deff",
+                          "id": "34ac068a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a66cc172",
+                                "id": "5d8c6c15",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "சீன சூப்பர்ஹைவே பயனர்கள் புதிய சந்திப்பால் வியப்படைகிறார்கள்",
                                   "blocks": [
                                     {
-                                      "id": "d08cf2fd",
+                                      "id": "4edce33a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "சீன சூப்பர்ஹைவே பயனர்கள் புதிய சந்திப்பால் வியப்படைகிறார்கள்",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "b842869e",
+                    "id": "e4fb2c16",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "89ee78ad",
+                          "id": "2b6dd1e0",
                           "blockId": "urn:bbc:ares::clip:p01djw2m",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -381,12 +381,12 @@
                           ]
                         },
                         {
-                          "id": "62679f36",
+                          "id": "cb63004f",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b28a8ed6",
+                                "id": "924481e9",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
@@ -421,23 +421,23 @@
               ]
             },
             {
-              "id": "b1f6a6b4",
+              "id": "24927904",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "3b0eca2a",
+                    "id": "81b91463",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ad6483a6",
+                          "id": "81547514",
                           "type": "paragraph",
                           "model": {
                             "text": "இது ஒரு துணை தலைப்பு",
                             "blocks": [
                               {
-                                "id": "08749267",
+                                "id": "55572748",
                                 "type": "fragment",
                                 "model": {
                                   "text": "இது ஒரு துணை தலைப்பு",
@@ -472,28 +472,28 @@
               ]
             },
             {
-              "id": "b8eb8c0a",
+              "id": "595186c9",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "0eb1b5e8",
+                    "id": "466213c5",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "559f37f4",
+                          "id": "93b6a2c3",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "aadd4afd",
+                                "id": "5402a6e4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "இது ஒரு துணை தலைப்பு",
                                   "blocks": [
                                     {
-                                      "id": "0b90f997",
+                                      "id": "846bbff6",
                                       "type": "fragment",
                                       "model": {
                                         "text": "இது ஒரு துணை தலைப்பு",
@@ -532,7 +532,7 @@
                     ]
                   },
                   {
-                    "id": "4dd39de1",
+                    "id": "aabfc124",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -553,18 +553,18 @@
               ]
             },
             {
-              "id": "8a1b518c",
+              "id": "57718d57",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "a4db5be0",
+                    "id": "0ee8de90",
                     "type": "paragraph",
                     "model": {
                       "text": "இந்த சோதனைக் கட்டுரை உருவாக்கப்பட்டது, இதன் மூலம் எங்கள் வலைத்தளத்தில் சோதனைகளை இயக்க முடியும்.",
                       "blocks": [
                         {
-                          "id": "4d822743",
+                          "id": "6b6e815f",
                           "type": "fragment",
                           "model": {
                             "text": "இந்த சோதனைக் கட்டுரை உருவாக்கப்பட்டது, இதன் மூலம் எங்கள் வலைத்தளத்தில் சோதனைகளை இயக்க முடியும்.",
@@ -590,11 +590,21 @@
               ]
             },
             {
-              "id": "e950a06f",
+              "id": "3402baf5",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "5d75b37c",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -603,14 +613,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cwl08ll3me8o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwl08ll3me8o"
+          "optimoUrn": "urn:bbc:optimo:asset:cwl08ll3me8o",
+          "canonicalUrl": "https://www.bbc.com/tamil/articles/cwl08ll3me8o"
         },
         "type": "article",
         "createdBy": "Tamil",
         "language": "ta",
         "firstPublished": 1562942569172,
         "lastPublished": 1562942569172,
-        "options": {},
         "analyticsLabels": {
           "producer": "Tamil",
           "page": "tamil.articles.cwl08ll3me8o.page"
@@ -620,7 +630,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -638,12 +647,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "‘தல’ தோனி மற்றும் இறுதி ஓவர்கள் - என்றும் மாறாத காதல் கதை"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1189,7 +1195,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:07:57.55Z",
+        "generated": "2023-02-17T16:37:56.812Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:23:00Z",
         "totalRecords": 20,
@@ -1923,5 +1929,118 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8"
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "moduleEnvironment": "local",
+        "apiPort": 3210,
+        "manifestFound": false,
+        "moduleVersion": "1.0.0",
+        "moduleName": "stub-fabl-module",
+        "personalisedRequest": "false",
+        "environment": "local",
+        "runtimeVersion": "4.4.1",
+        "nodeJSVersion": "v16.17.1",
+        "standardLibraryVersion": "4.3.0"
+      },
+      "systemContext": {
+        "debug": "1",
+        "sandboxEnabled": false,
+        "pers-env": "test",
+        "service-env": "test",
+        "call-stack": "simorgh-bff"
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "a95e0ac528fbe0fc72f01d3b749896be260f5c1b",
+            "last-modified": "Fri, 28 Aug 2020 07:27:33 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "47473b37-dea2-4a1c-a412-695a712a73b4",
+            "expires": "Tue, 21 Feb 2023 11:17:07 GMT",
+            "content-encoding": "gzip",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1581
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/cwl08ll3me8o",
+          "timeout": 4000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
+            "content-type": "application/json",
+            "content-length": "2735",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"4973d1397fd1a21b9effbf26db1bb989c3926306\"",
+            "cache-control": "no-transform,max-age=120",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1579
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/onward-journeys/tamil/front_page",
+          "timeout": 2000
+        }
+      },
+      {
+        "response": {
+          "headers": {
+            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
+            "content-type": "application/json",
+            "content-length": "2657",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "content-encoding": "gzip",
+            "etag": "\"939225b181c676ef2de92352569dc745f8a5f8a7\"",
+            "cache-control": "no-transform,max-age=5",
+            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
+            "content-language": "en-GB",
+            "access-control-allow-origin": "*",
+            "x-proxy-cache": "MISS"
+          },
+          "responseCode": 200,
+          "responseTime": 1581
+        },
+        "request": {
+          "service": "onward-journeys",
+          "path": "/most/read/tamil",
+          "timeout": 2000
+        }
+      }
+    ],
+    "privateContext": {},
+    "params": {
+      "id": "cwl08ll3me8o",
+      "service": "tamil",
+      "pageType": "article"
+    },
+    "sandboxViolations": [],
+    "nonFatalErrors": [
+      {}
+    ]
+  }
 }
