@@ -1,32 +1,27 @@
 import React from 'react';
 import { arrayOf, oneOf, shape, string, number } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from '../HierarchicalGrid';
 import Subheading from './Subhead';
+import { COMPONENT_NAMES, VISUAL_STYLE, VISUAL_PROMINENCE } from '../constants';
+import getComponent from '../getComponent';
 
-export const VISUAL_STYLE = {
-  NONE: 'NONE',
-  BANNER: 'BANNER',
-};
+const { SIMPLE_CURATION_GRID, HIERARCHICAL_CURATION_GRID } = COMPONENT_NAMES;
 
-export const VISUAL_PROMINANCE = {
-  NORMAL: 'NORMAL',
-  HIGH: 'HIGH',
-};
-
-// Maps a visual style and prominance to a component that renders that curation
-const components = {
-  [VISUAL_STYLE.NONE]: {
-    [VISUAL_PROMINANCE.NORMAL]: CurationGrid,
-    [VISUAL_PROMINANCE.HIGH]: HierarchicalGrid,
-  },
+const getComponentToRender = componentName => {
+  switch (componentName) {
+    case HIERARCHICAL_CURATION_GRID:
+      return HierarchicalGrid;
+    case SIMPLE_CURATION_GRID:
+    default:
+      return CurationGrid;
+  }
 };
 
 const Curation = ({
-  visualStyle = VISUAL_STYLE.NONE,
-  visualProminance,
+  visualStyle,
+  visualProminence,
   promos,
   title,
   topStoriesTitle,
@@ -35,13 +30,11 @@ const Curation = ({
   position,
   curationLength,
 }) => {
-  if (visualStyle === VISUAL_STYLE.BANNER) return null;
   if (!promos.length) return null;
-  const Component = pathOr(
-    CurationGrid,
-    [visualStyle, visualProminance],
-    components,
-  );
+
+  const componentName = getComponent(visualStyle, visualProminence);
+
+  const Component = getComponentToRender(componentName);
 
   const createID = titleText => {
     return titleText.replaceAll(' ', '-');
@@ -68,7 +61,7 @@ const Curation = ({
 
 Curation.propTypes = {
   visualStyle: oneOf(Object.values(VISUAL_STYLE)).isRequired,
-  visualProminance: oneOf(Object.values(VISUAL_PROMINANCE)).isRequired,
+  visualProminence: oneOf(Object.values(VISUAL_PROMINENCE)).isRequired,
   promos: arrayOf(shape({})).isRequired,
   title: string,
   link: string,
