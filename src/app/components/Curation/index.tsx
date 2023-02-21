@@ -33,6 +33,10 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
+const createID = (titleText: string) => {
+  return titleText.replaceAll(' ', '-');
+};
+
 const Curation = ({
   visualStyle = NONE,
   visualProminence = NORMAL,
@@ -48,10 +52,6 @@ const Curation = ({
 
   const componentName = getComponent(visualStyle, visualProminence);
   const GridComponent = getGridComponent(componentName);
-
-  const createID = (titleText: string) => {
-    return titleText.replaceAll(' ', '-');
-  };
 
   const isFirstCuration = position === 0;
   const id = createID(title || topStoriesTitle);
