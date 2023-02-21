@@ -6,7 +6,6 @@ import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
 import CpsRecommendations from '#containers/CpsRecommendations';
-import CpsVaried from '#containers/CpsVaried';
 
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -183,14 +182,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props =>
-      CpsVaried({
-        experimentID: null,
-        pageData,
-        renderFunction: data => (
-          <CpsRecommendations {...props} items={data ?? recommendationsData} />
-        ),
-      }),
+    wsoj: props => (
+      <CpsRecommendations {...props} items={recommendationsData} />
+    ),
   };
 
   const visuallyHiddenBlock = {

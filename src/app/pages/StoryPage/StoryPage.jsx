@@ -197,14 +197,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props =>
-      CpsVaried({
-        experimentID: null,
-        pageData,
-        renderFunction: data => (
-          <CpsRecommendations {...props} items={data ?? recommendationsData} />
-        ),
-      }),
+    wsoj: props => (
+      <CpsRecommendations {...props} items={recommendationsData} />
+    ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
@@ -368,16 +363,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           {topStoriesInitialData && (
             <ResponsiveComponentWrapper>
-              {CpsVaried({
-                experimentID: 'test_2',
-                pageData,
-                renderFunction: () => (
-                  <TopStories
-                    content={topStoriesInitialData}
-                    parentColumns={gridColsSecondary}
-                  />
-                ),
-              })}
+              <TopStories
+                content={topStoriesInitialData}
+                parentColumns={gridColsSecondary}
+              />
             </ResponsiveComponentWrapper>
           )}
           {featuresInitialData && (
