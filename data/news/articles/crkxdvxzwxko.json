@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "99851298",
+              "id": "56d3d3fb",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "5e2ac516",
+                    "id": "40be9df2",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "effc79cc",
+                          "id": "55225e9f",
                           "type": "paragraph",
                           "model": {
                             "text": "This is a headline block - it contains italics, words en Francais, and an italic word in Cymraeg",
                             "blocks": [
                               {
-                                "id": "2c9de25f",
+                                "id": "1e2d3829",
                                 "type": "fragment",
                                 "model": {
                                   "text": "This is a headline block - it contains ",
@@ -35,7 +35,7 @@
                                 ]
                               },
                               {
-                                "id": "3849b734",
+                                "id": "7b30dbe7",
                                 "type": "fragment",
                                 "model": {
                                   "text": "italics",
@@ -51,7 +51,7 @@
                                 ]
                               },
                               {
-                                "id": "646bcb68",
+                                "id": "9d6b3d70",
                                 "type": "fragment",
                                 "model": {
                                   "text": ", words ",
@@ -65,13 +65,13 @@
                                 ]
                               },
                               {
-                                "id": "6c3fe81f",
+                                "id": "4eb19793",
                                 "type": "inline",
                                 "model": {
                                   "text": "en Francais",
                                   "blocks": [
                                     {
-                                      "id": "f7266993",
+                                      "id": "6ba3ec46",
                                       "type": "fragment",
                                       "model": {
                                         "text": "en Francais",
@@ -96,7 +96,7 @@
                                 ]
                               },
                               {
-                                "id": "4a53e104",
+                                "id": "3b4f57c6",
                                 "type": "fragment",
                                 "model": {
                                   "text": ", and an italic word in ",
@@ -110,13 +110,13 @@
                                 ]
                               },
                               {
-                                "id": "9b95805a",
+                                "id": "5e50097e",
                                 "type": "inline",
                                 "model": {
                                   "text": "Cymraeg",
                                   "blocks": [
                                     {
-                                      "id": "47ff44aa",
+                                      "id": "996644b4",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Cymraeg",
@@ -164,7 +164,7 @@
               ]
             },
             {
-              "id": "f4575c97",
+              "id": "84e4218d",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1602253260663,
@@ -175,23 +175,23 @@
               ]
             },
             {
-              "id": "37a345d2",
+              "id": "3b9e7f22",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "89e17eb5",
+                    "id": "81485ee1",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7bcb5e25",
+                          "id": "7c7c7c0c",
                           "type": "paragraph",
                           "model": {
                             "text": "This is a subheadline block - it is very similar to the headline block and can also contain italics, words en Francais, and an italic word in Cymraeg",
                             "blocks": [
                               {
-                                "id": "a77ab77c",
+                                "id": "b39172be",
                                 "type": "fragment",
                                 "model": {
                                   "text": "This is a subheadline block - it is very similar to the headline block and can also contain ",
@@ -205,7 +205,7 @@
                                 ]
                               },
                               {
-                                "id": "462d69db",
+                                "id": "c23c3d98",
                                 "type": "fragment",
                                 "model": {
                                   "text": "italics",
@@ -221,7 +221,7 @@
                                 ]
                               },
                               {
-                                "id": "b72ca952",
+                                "id": "044b4b95",
                                 "type": "fragment",
                                 "model": {
                                   "text": ", words ",
@@ -235,13 +235,13 @@
                                 ]
                               },
                               {
-                                "id": "3d0810ec",
+                                "id": "67383c01",
                                 "type": "inline",
                                 "model": {
                                   "text": "en Francais",
                                   "blocks": [
                                     {
-                                      "id": "6b29e649",
+                                      "id": "8bb2f20d",
                                       "type": "fragment",
                                       "model": {
                                         "text": "en Francais",
@@ -266,7 +266,7 @@
                                 ]
                               },
                               {
-                                "id": "5f6ff9d9",
+                                "id": "c178448f",
                                 "type": "fragment",
                                 "model": {
                                   "text": ", and an italic word in ",
@@ -280,13 +280,13 @@
                                 ]
                               },
                               {
-                                "id": "aef331e0",
+                                "id": "b4e95826",
                                 "type": "inline",
                                 "model": {
                                   "text": "Cymraeg",
                                   "blocks": [
                                     {
-                                      "id": "ae944693",
+                                      "id": "da0ed902",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Cymraeg",
@@ -334,18 +334,18 @@
               ]
             },
             {
-              "id": "de387120",
+              "id": "e9cfd6ad",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5f0768f4",
+                    "id": "b638f08d",
                     "type": "paragraph",
                     "model": {
                       "text": "This is a text block.",
                       "blocks": [
                         {
-                          "id": "07be3d07",
+                          "id": "525c1c06",
                           "type": "fragment",
                           "model": {
                             "text": "This is a text block.",
@@ -365,13 +365,13 @@
                     ]
                   },
                   {
-                    "id": "c78d88ac",
+                    "id": "1c046548",
                     "type": "paragraph",
                     "model": {
                       "text": "This is a second paragraph inside the same text block.",
                       "blocks": [
                         {
-                          "id": "9a493445",
+                          "id": "09e9f015",
                           "type": "fragment",
                           "model": {
                             "text": "This is a second paragraph inside the same text block.",
@@ -391,13 +391,13 @@
                     ]
                   },
                   {
-                    "id": "6bd75ce1",
+                    "id": "1600fb07",
                     "type": "paragraph",
                     "model": {
                       "text": "This third paragraph has fragments which are bold, italic, and both at the same time.",
                       "blocks": [
                         {
-                          "id": "50865f26",
+                          "id": "11adf983",
                           "type": "fragment",
                           "model": {
                             "text": "This third paragraph has fragments which are ",
@@ -410,7 +410,7 @@
                           ]
                         },
                         {
-                          "id": "3f4b0f68",
+                          "id": "9bd4ae24",
                           "type": "fragment",
                           "model": {
                             "text": "bold",
@@ -425,7 +425,7 @@
                           ]
                         },
                         {
-                          "id": "45bf4035",
+                          "id": "30c1da74",
                           "type": "fragment",
                           "model": {
                             "text": ", ",
@@ -438,7 +438,7 @@
                           ]
                         },
                         {
-                          "id": "1d59e10f",
+                          "id": "c740c6f0",
                           "type": "fragment",
                           "model": {
                             "text": "italic",
@@ -453,7 +453,7 @@
                           ]
                         },
                         {
-                          "id": "52d07116",
+                          "id": "1d34e57e",
                           "type": "fragment",
                           "model": {
                             "text": ", and ",
@@ -466,7 +466,7 @@
                           ]
                         },
                         {
-                          "id": "eeab89fe",
+                          "id": "4020411d",
                           "type": "fragment",
                           "model": {
                             "text": "both",
@@ -482,7 +482,7 @@
                           ]
                         },
                         {
-                          "id": "5ecc2acb",
+                          "id": "795ba48e",
                           "type": "fragment",
                           "model": {
                             "text": " at the same time.",
@@ -502,13 +502,13 @@
                     ]
                   },
                   {
-                    "id": "b9ad0df5",
+                    "id": "10162e94",
                     "type": "paragraph",
                     "model": {
                       "text": "This fourth paragraph contains a hyperlink to BBC Weather.",
                       "blocks": [
                         {
-                          "id": "89bec64e",
+                          "id": "938b4f4f",
                           "type": "fragment",
                           "model": {
                             "text": "This fourth paragraph contains a hyperlink to ",
@@ -521,13 +521,13 @@
                           ]
                         },
                         {
-                          "id": "91e78dea",
+                          "id": "eb744ab7",
                           "type": "urlLink",
                           "model": {
                             "text": "BBC Weather",
                             "blocks": [
                               {
-                                "id": "b3054a76",
+                                "id": "cc51ed25",
                                 "type": "fragment",
                                 "model": {
                                   "text": "BBC Weather",
@@ -551,7 +551,7 @@
                           ]
                         },
                         {
-                          "id": "1c0a9c35",
+                          "id": "a624767c",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -571,13 +571,13 @@
                     ]
                   },
                   {
-                    "id": "1f400146",
+                    "id": "122a6fa2",
                     "type": "paragraph",
                     "model": {
                       "text": "This fifth paragraph contains a hyperlink with words in bold and italic and both.",
                       "blocks": [
                         {
-                          "id": "13e1f953",
+                          "id": "72754ca2",
                           "type": "fragment",
                           "model": {
                             "text": "This fifth paragraph contains a ",
@@ -590,13 +590,13 @@
                           ]
                         },
                         {
-                          "id": "9dc54eff",
+                          "id": "5d20dfc7",
                           "type": "urlLink",
                           "model": {
                             "text": "hyperlink with words in bold and italic and both",
                             "blocks": [
                               {
-                                "id": "01210a84",
+                                "id": "871718a9",
                                 "type": "fragment",
                                 "model": {
                                   "text": "hyperlink with words in ",
@@ -610,7 +610,7 @@
                                 ]
                               },
                               {
-                                "id": "e591f79d",
+                                "id": "3973e6b1",
                                 "type": "fragment",
                                 "model": {
                                   "text": "bold",
@@ -626,7 +626,7 @@
                                 ]
                               },
                               {
-                                "id": "ec0eaf61",
+                                "id": "37f41fa7",
                                 "type": "fragment",
                                 "model": {
                                   "text": " and ",
@@ -640,7 +640,7 @@
                                 ]
                               },
                               {
-                                "id": "2d263626",
+                                "id": "a4d7a392",
                                 "type": "fragment",
                                 "model": {
                                   "text": "italic ",
@@ -656,7 +656,7 @@
                                 ]
                               },
                               {
-                                "id": "2b2a1ac6",
+                                "id": "729b82ef",
                                 "type": "fragment",
                                 "model": {
                                   "text": "and",
@@ -670,7 +670,7 @@
                                 ]
                               },
                               {
-                                "id": "b4915bc8",
+                                "id": "eada1cd7",
                                 "type": "fragment",
                                 "model": {
                                   "text": " ",
@@ -686,7 +686,7 @@
                                 ]
                               },
                               {
-                                "id": "484632e0",
+                                "id": "cb4fbb28",
                                 "type": "fragment",
                                 "model": {
                                   "text": "both",
@@ -713,7 +713,7 @@
                           ]
                         },
                         {
-                          "id": "04e649a4",
+                          "id": "91bec9f4",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -731,42 +731,63 @@
                       4,
                       5
                     ]
-                  },
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "9311d70f",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "49e9153d",
+              "type": "text",
+              "model": {
+                "blocks": [
                   {
-                    "id": "8c3afd20",
+                    "id": "e51af3e6",
                     "type": "paragraph",
                     "model": {
                       "text": "This sixth paragraph contains a word in a right-to-left language: \n202Bچهار\n202C",
                       "blocks": [
                         {
-                          "id": "ddbf4b92",
+                          "id": "b8e40555",
                           "type": "fragment",
                           "model": {
                             "text": "This sixth paragraph contains a word in a right-to-left language: ",
                             "attributes": []
                           },
                           "position": [
-                            4,
                             6,
+                            1,
                             1
                           ]
                         },
                         {
-                          "id": "74976a03",
+                          "id": "1b88996e",
                           "type": "inline",
                           "model": {
                             "text": "چهار",
                             "blocks": [
                               {
-                                "id": "1beabcd8",
+                                "id": "08c1ccb5",
                                 "type": "fragment",
                                 "model": {
                                   "text": "چهار",
                                   "attributes": []
                                 },
                                 "position": [
-                                  4,
                                   6,
+                                  1,
                                   2,
                                   1
                                 ]
@@ -775,59 +796,59 @@
                             "language": "fa"
                           },
                           "position": [
-                            4,
                             6,
+                            1,
                             2
                           ]
                         }
                       ]
                     },
                     "position": [
-                      4,
-                      6
+                      6,
+                      1
                     ]
                   },
                   {
-                    "id": "41bf8703",
+                    "id": "3a07ff32",
                     "type": "paragraph",
                     "model": {
                       "text": "This seventh paragraph contains a phrase in another language that contains bold and italics: Un café et un café au lait, s’il vous plaît",
                       "blocks": [
                         {
-                          "id": "41b1e956",
+                          "id": "a54b7531",
                           "type": "fragment",
                           "model": {
                             "text": "This seventh paragraph contains a phrase in another language that contains bold and italics: ",
                             "attributes": []
                           },
                           "position": [
-                            4,
-                            7,
+                            6,
+                            2,
                             1
                           ]
                         },
                         {
-                          "id": "12017e5c",
+                          "id": "e667bd9a",
                           "type": "inline",
                           "model": {
                             "text": "Un café et un café au lait, s’il vous plaît",
                             "blocks": [
                               {
-                                "id": "ea4e5456",
+                                "id": "775dc943",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Un ",
                                   "attributes": []
                                 },
                                 "position": [
-                                  4,
-                                  7,
+                                  6,
+                                  2,
                                   2,
                                   1
                                 ]
                               },
                               {
-                                "id": "983aa3a5",
+                                "id": "27e44e65",
                                 "type": "fragment",
                                 "model": {
                                   "text": "café",
@@ -836,28 +857,28 @@
                                   ]
                                 },
                                 "position": [
-                                  4,
-                                  7,
+                                  6,
+                                  2,
                                   2,
                                   2
                                 ]
                               },
                               {
-                                "id": "1d9e4416",
+                                "id": "c0e5ad86",
                                 "type": "fragment",
                                 "model": {
                                   "text": " et un ",
                                   "attributes": []
                                 },
                                 "position": [
-                                  4,
-                                  7,
+                                  6,
+                                  2,
                                   2,
                                   3
                                 ]
                               },
                               {
-                                "id": "5f439d13",
+                                "id": "6d28ac51",
                                 "type": "fragment",
                                 "model": {
                                   "text": "café au lait",
@@ -866,28 +887,28 @@
                                   ]
                                 },
                                 "position": [
-                                  4,
-                                  7,
+                                  6,
+                                  2,
                                   2,
                                   4
                                 ]
                               },
                               {
-                                "id": "129c7c89",
+                                "id": "462a813b",
                                 "type": "fragment",
                                 "model": {
                                   "text": ", ",
                                   "attributes": []
                                 },
                                 "position": [
-                                  4,
-                                  7,
+                                  6,
+                                  2,
                                   2,
                                   5
                                 ]
                               },
                               {
-                                "id": "fcccb34c",
+                                "id": "d0b860cd",
                                 "type": "fragment",
                                 "model": {
                                   "text": "s’il vous plaît",
@@ -897,8 +918,8 @@
                                   ]
                                 },
                                 "position": [
-                                  4,
-                                  7,
+                                  6,
+                                  2,
                                   2,
                                   6
                                 ]
@@ -907,70 +928,70 @@
                             "language": "fr"
                           },
                           "position": [
-                            4,
-                            7,
+                            6,
+                            2,
                             2
                           ]
                         }
                       ]
                     },
                     "position": [
-                      4,
-                      7
+                      6,
+                      2
                     ]
                   },
                   {
-                    "id": "bcecbab3",
+                    "id": "6f74c7b8",
                     "type": "paragraph",
                     "model": {
                       "text": "Text blocks can also contain lists, which come in two types:",
                       "blocks": [
                         {
-                          "id": "9c39a39b",
+                          "id": "acef9807",
                           "type": "fragment",
                           "model": {
                             "text": "Text blocks can also contain lists, which come in two types:",
                             "attributes": []
                           },
                           "position": [
-                            4,
-                            8,
+                            6,
+                            3,
                             1
                           ]
                         }
                       ]
                     },
                     "position": [
-                      4,
-                      8
+                      6,
+                      3
                     ]
                   },
                   {
-                    "id": "828435f0",
+                    "id": "497444f6",
                     "type": "unorderedList",
                     "model": {
                       "blocks": [
                         {
-                          "id": "29924ab9",
+                          "id": "9e8e6663",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2a136525",
+                                "id": "e206e3e0",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Unordered lists, like this one",
                                   "blocks": [
                                     {
-                                      "id": "883b5c0a",
+                                      "id": "eee7517c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Unordered lists, like this one",
                                         "attributes": []
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         1,
                                         1,
                                         1
@@ -979,28 +1000,28 @@
                                   ]
                                 },
                                 "position": [
+                                  6,
                                   4,
-                                  9,
                                   1,
                                   1
                                 ]
                               },
                               {
-                                "id": "9b43abfb",
+                                "id": "86019a5c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "What does this do?",
                                   "blocks": [
                                     {
-                                      "id": "ad40a687",
+                                      "id": "27a9199e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "What does this do?",
                                         "attributes": []
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         1,
                                         2,
                                         1
@@ -1009,8 +1030,8 @@
                                   ]
                                 },
                                 "position": [
+                                  6,
                                   4,
-                                  9,
                                   1,
                                   2
                                 ]
@@ -1018,32 +1039,32 @@
                             ]
                           },
                           "position": [
+                            6,
                             4,
-                            9,
                             1
                           ]
                         },
                         {
-                          "id": "c2f75f26",
+                          "id": "e4a35c04",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4f8e1d20",
+                                "id": "24a60351",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "And ordered lists, like the one below",
                                   "blocks": [
                                     {
-                                      "id": "27014b7a",
+                                      "id": "5f4b8e94",
                                       "type": "fragment",
                                       "model": {
                                         "text": "And ordered lists, like the one below",
                                         "attributes": []
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         2,
                                         1,
                                         1
@@ -1052,8 +1073,8 @@
                                   ]
                                 },
                                 "position": [
+                                  6,
                                   4,
-                                  9,
                                   2,
                                   1
                                 ]
@@ -1061,39 +1082,39 @@
                             ]
                           },
                           "position": [
+                            6,
                             4,
-                            9,
                             2
                           ]
                         },
                         {
-                          "id": "a27ce6d7",
+                          "id": "7fe56351",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "430145ba",
+                                "id": "5eb8a712",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "These list items can again contain bold, italics, and both",
                                   "blocks": [
                                     {
-                                      "id": "d8d7fe43",
+                                      "id": "9de6f26b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "These list items can again contain ",
                                         "attributes": []
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         3,
                                         1,
                                         1
                                       ]
                                     },
                                     {
-                                      "id": "21e28e66",
+                                      "id": "4ca5df0a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "bold",
@@ -1102,30 +1123,30 @@
                                         ]
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         3,
                                         1,
                                         2
                                       ]
                                     },
                                     {
-                                      "id": "9baace03",
+                                      "id": "3a17f5ff",
                                       "type": "fragment",
                                       "model": {
                                         "text": ", ",
                                         "attributes": []
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         3,
                                         1,
                                         3
                                       ]
                                     },
                                     {
-                                      "id": "5bd7a58a",
+                                      "id": "8ac2caad",
                                       "type": "fragment",
                                       "model": {
                                         "text": "italics",
@@ -1134,30 +1155,30 @@
                                         ]
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         3,
                                         1,
                                         4
                                       ]
                                     },
                                     {
-                                      "id": "01466dc6",
+                                      "id": "aa5f448f",
                                       "type": "fragment",
                                       "model": {
                                         "text": ", and ",
                                         "attributes": []
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         3,
                                         1,
                                         5
                                       ]
                                     },
                                     {
-                                      "id": "34d75081",
+                                      "id": "b0b50a64",
                                       "type": "fragment",
                                       "model": {
                                         "text": "both",
@@ -1167,8 +1188,8 @@
                                         ]
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         3,
                                         1,
                                         6
@@ -1177,8 +1198,8 @@
                                   ]
                                 },
                                 "position": [
+                                  6,
                                   4,
-                                  9,
                                   3,
                                   1
                                 ]
@@ -1186,53 +1207,53 @@
                             ]
                           },
                           "position": [
+                            6,
                             4,
-                            9,
                             3
                           ]
                         },
                         {
-                          "id": "ad7a90d9",
+                          "id": "3ebc5463",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1a845059",
+                                "id": "bf0c05a5",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "And all the combinations of hyperlinks as above",
                                   "blocks": [
                                     {
-                                      "id": "f04f9444",
+                                      "id": "42bef552",
                                       "type": "fragment",
                                       "model": {
                                         "text": "And all the combinations of ",
                                         "attributes": []
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         4,
                                         1,
                                         1
                                       ]
                                     },
                                     {
-                                      "id": "658c1fa5",
+                                      "id": "f35bc2fd",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "hyperlinks",
                                         "blocks": [
                                           {
-                                            "id": "ff26b4bd",
+                                            "id": "e0163ed9",
                                             "type": "fragment",
                                             "model": {
                                               "text": "hyperlinks",
                                               "attributes": []
                                             },
                                             "position": [
+                                              6,
                                               4,
-                                              9,
                                               4,
                                               1,
                                               2,
@@ -1244,23 +1265,23 @@
                                         "isExternal": false
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         4,
                                         1,
                                         2
                                       ]
                                     },
                                     {
-                                      "id": "6204802b",
+                                      "id": "87f18b07",
                                       "type": "fragment",
                                       "model": {
                                         "text": " as above",
                                         "attributes": []
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         4,
                                         1,
                                         3
@@ -1269,8 +1290,8 @@
                                   ]
                                 },
                                 "position": [
+                                  6,
                                   4,
-                                  9,
                                   4,
                                   1
                                 ]
@@ -1278,53 +1299,53 @@
                             ]
                           },
                           "position": [
+                            6,
                             4,
-                            9,
                             4
                           ]
                         },
                         {
-                          "id": "899f5867",
+                          "id": "5229820f",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "23944484",
+                                "id": "ceac3f7a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "And words in languages like हिन्दी",
                                   "blocks": [
                                     {
-                                      "id": "6e5346d5",
+                                      "id": "d587f1a0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "And words in languages like ",
                                         "attributes": []
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         5,
                                         1,
                                         1
                                       ]
                                     },
                                     {
-                                      "id": "d9347f3f",
+                                      "id": "ea45ca61",
                                       "type": "inline",
                                       "model": {
                                         "text": "हिन्दी",
                                         "blocks": [
                                           {
-                                            "id": "5eb19c07",
+                                            "id": "f2da8088",
                                             "type": "fragment",
                                             "model": {
                                               "text": "हिन्दी",
                                               "attributes": []
                                             },
                                             "position": [
+                                              6,
                                               4,
-                                              9,
                                               5,
                                               1,
                                               2,
@@ -1335,8 +1356,8 @@
                                         "language": "hi"
                                       },
                                       "position": [
+                                        6,
                                         4,
-                                        9,
                                         5,
                                         1,
                                         2
@@ -1345,8 +1366,8 @@
                                   ]
                                 },
                                 "position": [
+                                  6,
                                   4,
-                                  9,
                                   5,
                                   1
                                 ]
@@ -1354,70 +1375,70 @@
                             ]
                           },
                           "position": [
+                            6,
                             4,
-                            9,
                             5
                           ]
                         }
                       ]
                     },
                     "position": [
-                      4,
-                      9
+                      6,
+                      4
                     ]
                   },
                   {
-                    "id": "2af3309e",
+                    "id": "3b85f782",
                     "type": "paragraph",
                     "model": {
                       "text": "And, as mentioned, ordered:",
                       "blocks": [
                         {
-                          "id": "9e5a61aa",
+                          "id": "404f707f",
                           "type": "fragment",
                           "model": {
                             "text": "And, as mentioned, ordered:",
                             "attributes": []
                           },
                           "position": [
-                            4,
-                            10,
+                            6,
+                            5,
                             1
                           ]
                         }
                       ]
                     },
                     "position": [
-                      4,
-                      10
+                      6,
+                      5
                     ]
                   },
                   {
-                    "id": "b527bf77",
+                    "id": "92d010ce",
                     "type": "orderedList",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a4d93ccb",
+                          "id": "cd0ff68f",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1adf7f66",
+                                "id": "61f985a7",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "One",
                                   "blocks": [
                                     {
-                                      "id": "10175b93",
+                                      "id": "44a0fe72",
                                       "type": "fragment",
                                       "model": {
                                         "text": "One",
                                         "attributes": []
                                       },
                                       "position": [
-                                        4,
-                                        11,
+                                        6,
+                                        6,
                                         1,
                                         1,
                                         1
@@ -1426,8 +1447,8 @@
                                   ]
                                 },
                                 "position": [
-                                  4,
-                                  11,
+                                  6,
+                                  6,
                                   1,
                                   1
                                 ]
@@ -1435,32 +1456,32 @@
                             ]
                           },
                           "position": [
-                            4,
-                            11,
+                            6,
+                            6,
                             1
                           ]
                         },
                         {
-                          "id": "6cd85c1c",
+                          "id": "752f98cf",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "65e89a66",
+                                "id": "52cac692",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Two",
                                   "blocks": [
                                     {
-                                      "id": "b53cce30",
+                                      "id": "e6d0bec4",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Two",
                                         "attributes": []
                                       },
                                       "position": [
-                                        4,
-                                        11,
+                                        6,
+                                        6,
                                         2,
                                         1,
                                         1
@@ -1469,8 +1490,8 @@
                                   ]
                                 },
                                 "position": [
-                                  4,
-                                  11,
+                                  6,
+                                  6,
                                   2,
                                   1
                                 ]
@@ -1478,32 +1499,32 @@
                             ]
                           },
                           "position": [
-                            4,
-                            11,
+                            6,
+                            6,
                             2
                           ]
                         },
                         {
-                          "id": "62b4c156",
+                          "id": "515698f6",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "249865fa",
+                                "id": "78dc6e79",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Three",
                                   "blocks": [
                                     {
-                                      "id": "056443cc",
+                                      "id": "235f9b2a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Three",
                                         "attributes": []
                                       },
                                       "position": [
-                                        4,
-                                        11,
+                                        6,
+                                        6,
                                         3,
                                         1,
                                         1
@@ -1512,8 +1533,8 @@
                                   ]
                                 },
                                 "position": [
-                                  4,
-                                  11,
+                                  6,
+                                  6,
                                   3,
                                   1
                                 ]
@@ -1521,38 +1542,38 @@
                             ]
                           },
                           "position": [
-                            4,
-                            11,
+                            6,
+                            6,
                             3
                           ]
                         },
                         {
-                          "id": "80e3e32b",
+                          "id": "2c3a6b87",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d14f73f6",
+                                "id": "d2ac0d8c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Pedwar",
                                   "blocks": [
                                     {
-                                      "id": "96c54e55",
+                                      "id": "ded33315",
                                       "type": "inline",
                                       "model": {
                                         "text": "Pedwar",
                                         "blocks": [
                                           {
-                                            "id": "b43ac189",
+                                            "id": "40eaeda1",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Pedwar",
                                               "attributes": []
                                             },
                                             "position": [
-                                              4,
-                                              11,
+                                              6,
+                                              6,
                                               4,
                                               1,
                                               1,
@@ -1563,8 +1584,8 @@
                                         "language": "cy"
                                       },
                                       "position": [
-                                        4,
-                                        11,
+                                        6,
+                                        6,
                                         4,
                                         1,
                                         1
@@ -1573,8 +1594,8 @@
                                   ]
                                 },
                                 "position": [
-                                  4,
-                                  11,
+                                  6,
+                                  6,
                                   4,
                                   1
                                 ]
@@ -1582,59 +1603,59 @@
                             ]
                           },
                           "position": [
-                            4,
-                            11,
+                            6,
+                            6,
                             4
                           ]
                         }
                       ]
                     },
                     "position": [
-                      4,
-                      11
+                      6,
+                      6
                     ]
                   },
                   {
-                    "id": "9f548dac",
+                    "id": "6cfc1ece",
                     "type": "paragraph",
                     "model": {
                       "text": "Did we do hyperlinks in another language? Like खूप दिवसात भेटलो नाही",
                       "blocks": [
                         {
-                          "id": "0bb8aca4",
+                          "id": "da9d3d8e",
                           "type": "fragment",
                           "model": {
                             "text": "Did we do hyperlinks in another language? Like ",
                             "attributes": []
                           },
                           "position": [
-                            4,
-                            12,
+                            6,
+                            7,
                             1
                           ]
                         },
                         {
-                          "id": "a58c12c9",
+                          "id": "9eb89440",
                           "type": "inline",
                           "model": {
                             "text": "खूप दिवसात भेटलो नाही",
                             "blocks": [
                               {
-                                "id": "2fa97a63",
+                                "id": "26f0d748",
                                 "type": "urlLink",
                                 "model": {
                                   "text": "खूप दिवसात भेटलो नाही",
                                   "blocks": [
                                     {
-                                      "id": "6af67674",
+                                      "id": "de3ab050",
                                       "type": "fragment",
                                       "model": {
                                         "text": "खूप दिवसात भेटलो नाही",
                                         "attributes": []
                                       },
                                       "position": [
-                                        4,
-                                        12,
+                                        6,
+                                        7,
                                         2,
                                         1,
                                         1
@@ -1645,8 +1666,8 @@
                                   "isExternal": false
                                 },
                                 "position": [
-                                  4,
-                                  12,
+                                  6,
+                                  7,
                                   2,
                                   1
                                 ]
@@ -1655,54 +1676,54 @@
                             "language": "mr"
                           },
                           "position": [
-                            4,
-                            12,
+                            6,
+                            7,
                             2
                           ]
                         }
                       ]
                     },
                     "position": [
-                      4,
-                      12
+                      6,
+                      7
                     ]
                   }
                 ]
               },
               "position": [
-                4
+                6
               ]
             },
             {
-              "id": "18e2969e",
+              "id": "5c82362f",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "33120b71",
+                    "id": "ac04d16a",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "61b0e654",
+                          "id": "fe201181",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e51f51f7",
+                                "id": "ca076dda",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Image captions are intended to add context, not to describe what appears in the image.",
                                   "blocks": [
                                     {
-                                      "id": "8c3eb5bf",
+                                      "id": "d1c12530",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Image captions are intended to add context, not to describe what appears in the image.",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         1,
@@ -1712,27 +1733,27 @@
                                   ]
                                 },
                                 "position": [
-                                  5,
+                                  7,
                                   1,
                                   1,
                                   1
                                 ]
                               },
                               {
-                                "id": "44d5520e",
+                                "id": "ece0530c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They are made up of Paragraph blocks which can do all the usual things: bold, italics, both, hyperlinks, and words in português.",
                                   "blocks": [
                                     {
-                                      "id": "3964aced",
+                                      "id": "07a4f332",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They are made up of Paragraph blocks which can do all the usual things: ",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1740,7 +1761,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "2b09686d",
+                                      "id": "773f9c90",
                                       "type": "fragment",
                                       "model": {
                                         "text": "bold",
@@ -1749,7 +1770,7 @@
                                         ]
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1757,14 +1778,14 @@
                                       ]
                                     },
                                     {
-                                      "id": "3fa08f43",
+                                      "id": "8cda0feb",
                                       "type": "fragment",
                                       "model": {
                                         "text": ", ",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1772,7 +1793,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "fe4252b8",
+                                      "id": "756cca46",
                                       "type": "fragment",
                                       "model": {
                                         "text": "italics",
@@ -1781,7 +1802,7 @@
                                         ]
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1789,14 +1810,14 @@
                                       ]
                                     },
                                     {
-                                      "id": "8a49ae0d",
+                                      "id": "058f237a",
                                       "type": "fragment",
                                       "model": {
                                         "text": ", ",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1804,7 +1825,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "c15ca4ca",
+                                      "id": "878599b3",
                                       "type": "fragment",
                                       "model": {
                                         "text": "both",
@@ -1814,7 +1835,7 @@
                                         ]
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1822,14 +1843,14 @@
                                       ]
                                     },
                                     {
-                                      "id": "0206f5e5",
+                                      "id": "82b8f954",
                                       "type": "fragment",
                                       "model": {
                                         "text": ", ",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1837,20 +1858,20 @@
                                       ]
                                     },
                                     {
-                                      "id": "41ade61c",
+                                      "id": "aceccdb9",
                                       "type": "urlLink",
                                       "model": {
                                         "text": "hyperlinks",
                                         "blocks": [
                                           {
-                                            "id": "df6d25c6",
+                                            "id": "0769f4fd",
                                             "type": "fragment",
                                             "model": {
                                               "text": "hyperlinks",
                                               "attributes": []
                                             },
                                             "position": [
-                                              5,
+                                              7,
                                               1,
                                               1,
                                               2,
@@ -1863,7 +1884,7 @@
                                         "isExternal": false
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1871,14 +1892,14 @@
                                       ]
                                     },
                                     {
-                                      "id": "26002510",
+                                      "id": "4122a73c",
                                       "type": "fragment",
                                       "model": {
                                         "text": ", and words in ",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1886,20 +1907,20 @@
                                       ]
                                     },
                                     {
-                                      "id": "249658ad",
+                                      "id": "054f358f",
                                       "type": "inline",
                                       "model": {
                                         "text": "português",
                                         "blocks": [
                                           {
-                                            "id": "c6fa356e",
+                                            "id": "56050f89",
                                             "type": "fragment",
                                             "model": {
                                               "text": "português",
                                               "attributes": []
                                             },
                                             "position": [
-                                              5,
+                                              7,
                                               1,
                                               1,
                                               2,
@@ -1911,7 +1932,7 @@
                                         "language": "pt-br"
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1919,14 +1940,14 @@
                                       ]
                                     },
                                     {
-                                      "id": "2aaaba74",
+                                      "id": "c04d7c96",
                                       "type": "fragment",
                                       "model": {
                                         "text": ".",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         1,
                                         1,
                                         2,
@@ -1936,7 +1957,7 @@
                                   ]
                                 },
                                 "position": [
-                                  5,
+                                  7,
                                   1,
                                   1,
                                   2
@@ -1945,7 +1966,7 @@
                             ]
                           },
                           "position": [
-                            5,
+                            7,
                             1,
                             1
                           ]
@@ -1953,35 +1974,35 @@
                       ]
                     },
                     "position": [
-                      5,
+                      7,
                       1
                     ]
                   },
                   {
-                    "id": "c1e1e088",
+                    "id": "66673db9",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "330bcd55",
+                          "id": "882de482",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "cb85c288",
+                                "id": "b01e704d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "The alt text is intended to describe the image sufficiently that a user who cannot see the image can understand what the image is intended to convey",
                                   "blocks": [
                                     {
-                                      "id": "2192e9ca",
+                                      "id": "c39978ce",
                                       "type": "fragment",
                                       "model": {
                                         "text": "The alt text is intended to describe the image sufficiently that a user who cannot see the image can understand what the image is intended to convey",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
+                                        7,
                                         2,
                                         1,
                                         1,
@@ -1991,7 +2012,7 @@
                                   ]
                                 },
                                 "position": [
-                                  5,
+                                  7,
                                   2,
                                   1,
                                   1
@@ -2000,7 +2021,7 @@
                             ]
                           },
                           "position": [
-                            5,
+                            7,
                             2,
                             1
                           ]
@@ -2008,12 +2029,12 @@
                       ]
                     },
                     "position": [
-                      5,
+                      7,
                       2
                     ]
                   },
                   {
-                    "id": "48702807",
+                    "id": "bf5cb258",
                     "type": "rawImage",
                     "model": {
                       "width": 1360,
@@ -2024,47 +2045,47 @@
                       "suitableForSyndication": false
                     },
                     "position": [
-                      5,
+                      7,
                       3
                     ]
                   }
                 ]
               },
               "position": [
-                5
+                7
               ]
             },
             {
-              "id": "6c63a66c",
+              "id": "06e2f8f1",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "8b50efb6",
+                    "id": "fa96d591",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9f7846a8",
+                          "id": "2b82a27b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "30c082fa",
+                                "id": "9f789fab",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Media has an optional Caption block which follows the same rules as for Image Captions.",
                                   "blocks": [
                                     {
-                                      "id": "92319d6d",
+                                      "id": "a6612e35",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Media has an optional Caption block which follows the same rules as for Image Captions.",
                                         "attributes": []
                                       },
                                       "position": [
-                                        6,
+                                        8,
                                         1,
                                         1,
                                         1,
@@ -2074,7 +2095,7 @@
                                   ]
                                 },
                                 "position": [
-                                  6,
+                                  8,
                                   1,
                                   1,
                                   1
@@ -2083,7 +2104,7 @@
                             ]
                           },
                           "position": [
-                            6,
+                            8,
                             1,
                             1
                           ]
@@ -2091,17 +2112,17 @@
                       ]
                     },
                     "position": [
-                      6,
+                      8,
                       1
                     ]
                   },
                   {
-                    "id": "35c0d2b9",
+                    "id": "1a390f64",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f72caad8",
+                          "id": "53a5d76a",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -2141,18 +2162,18 @@
                             "smpKind": "programme"
                           },
                           "position": [
-                            6,
+                            8,
                             2,
                             1
                           ]
                         },
                         {
-                          "id": "29860ce3",
+                          "id": "0408d0e8",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8734f3f1",
+                                "id": "8fbbc5ed",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -2162,37 +2183,37 @@
                                   "copyrightHolder": "BBC"
                                 },
                                 "position": [
-                                  6,
+                                  8,
                                   2,
                                   2,
                                   1
                                 ]
                               },
                               {
-                                "id": "2e6cd1b6",
+                                "id": "8932d482",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "daf27a95",
+                                      "id": "f8ab2e61",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "11e82bbd",
+                                            "id": "27baf0b0",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "f90da141",
+                                                  "id": "c401f75a",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    6,
+                                                    8,
                                                     2,
                                                     2,
                                                     2,
@@ -2204,7 +2225,7 @@
                                               ]
                                             },
                                             "position": [
-                                              6,
+                                              8,
                                               2,
                                               2,
                                               2,
@@ -2215,7 +2236,7 @@
                                         ]
                                       },
                                       "position": [
-                                        6,
+                                        8,
                                         2,
                                         2,
                                         2,
@@ -2225,7 +2246,7 @@
                                   ]
                                 },
                                 "position": [
-                                  6,
+                                  8,
                                   2,
                                   2,
                                   2
@@ -2234,7 +2255,7 @@
                             ]
                           },
                           "position": [
-                            6,
+                            8,
                             2,
                             2
                           ]
@@ -2242,14 +2263,14 @@
                       ]
                     },
                     "position": [
-                      6,
+                      8,
                       2
                     ]
                   }
                 ]
               },
               "position": [
-                6
+                8
               ]
             }
           ]
@@ -2258,14 +2279,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:crkxdvxzwxko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:crkxdvxzwxko"
+          "optimoUrn": "urn:bbc:optimo:asset:crkxdvxzwxko",
+          "canonicalUrl": "https://www.bbc.com/news/articles/crkxdvxzwxko"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
         "firstPublished": 1602253260663,
         "lastPublished": 1602253260663,
-        "options": {},
         "analyticsLabels": {
           "producer": "News",
           "page": "news.articles.crkxdvxzwxko.page"
@@ -2288,7 +2309,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -2310,7 +2330,6 @@
         "allowAdvertising": false
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "This is the headline block - it contains italics, a word en Francais, and ",
           "promoHeadline": {
@@ -2607,8 +2626,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -2648,6 +2666,7 @@
             "altText": "Liz Truss outside Number 10",
             "copyrightHolder": "Lisa White",
             "originCode": "cpsdevpb",
+            "allowSyndication": false,
             "type": "image"
           },
           "options": {
@@ -2691,6 +2710,7 @@
             "caption": "Angela Lansbury",
             "copyrightHolder": "BBC",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -2709,16 +2729,17 @@
           "type": "cps"
         },
         {
-          "name": "How Spain looked on as dozens were crushed to death at its border",
+          "name": "15 homes, three survivors - how the quake wiped out one Turkish apartment block",
           "indexImage": {
-            "id": "63957134",
+            "id": "63977455",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/A8A7/test/_63957134_camera-super_promo_new_safe_zone.jpg",
-            "path": "/cpsdevpb/A8A7/test/_63957134_camera-super_promo_new_safe_zone.jpg",
+            "href": "http://b.files.bbci.co.uk/D8B5/test/_63977455_mediaitem128597908.jpg",
+            "path": "/cpsdevpb/D8B5/test/_63977455_mediaitem128597908.jpg",
             "height": 549,
             "width": 976,
-            "altText": "CCTV cam",
+            "altText": "Ceyda",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.bbc.co.uk/news/uk-61593081",
@@ -2730,102 +2751,6 @@
         }
       ],
       "features": [
-        {
-          "headlines": {
-            "headline": "Angela Lansbury: from stage to Cabot Cove"
-          },
-          "locators": {
-            "assetUri": "/news/23384748",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:00d18665-46b6-42fa-87c4-9b382029f73b",
-            "assetId": "23384748",
-            "cpsUrn": "urn:bbc:content:assetUri:news/23384748",
-            "curie": "http://www.bbc.co.uk/asset/00d18665-46b6-42fa-87c4-9b382029f73b"
-          },
-          "summary": "Test",
-          "timestamp": 1643303379000,
-          "language": "en-gb",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63902259",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "path": "/cpsdevpb/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "height": 562,
-            "width": 1000,
-            "altText": "ange",
-            "caption": "ange",
-            "copyrightHolder": "Ange",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63902263",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "path": "/cpsdevpb/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Ange",
-            "caption": "Ange",
-            "copyrightHolder": "ANge",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false,
-            "hasShortForm": true
-          },
-          "section": {
-            "subType": "IDX",
-            "name": "Home",
-            "uri": "/news/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:news/23384748",
-          "type": "cps"
-        },
-        {
-          "name": "When Mr Blobby got to Christmas number one",
-          "summary": "a test video link promo",
-          "indexImage": {
-            "id": "63942309",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/160D4/test/_63942309_hi001100397.jpg",
-            "path": "/cpsdevpb/160D4/test/_63942309_hi001100397.jpg",
-            "height": 1152,
-            "width": 2048,
-            "altText": "Mr Blobby",
-            "caption": "Mr Blobby",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.co.uk/iplayer/episode/b03srsjl",
-          "contentType": "Video",
-          "assetTypeCode": "PRO",
-          "timestamp": 1662997270000,
-          "type": "link"
-        },
-        {
-          "name": "Florence Pugh on her primary school nativity...",
-          "summary": "90s all the way",
-          "indexImage": {
-            "id": "63958321",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/3061/test/_63958321_p0dd2wvy.jpg",
-            "path": "/cpsdevpb/3061/test/_63958321_p0dd2wvy.jpg",
-            "height": 360,
-            "width": 640,
-            "altText": "florence pugh",
-            "caption": "florence pugh",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.co.uk/sounds/play/m001dmln",
-          "contentType": "Audio",
-          "assetTypeCode": "PRO",
-          "timestamp": 1668169266000,
-          "type": "link"
-        },
         {
           "headlines": {
             "headline": "Wales pip Scotland in World Cup thriller"
@@ -2852,6 +2777,7 @@
             "caption": "Bevan kicks wales to win",
             "copyrightHolder": "Huw Evans picture agency",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -2875,31 +2801,67 @@
           "type": "cps"
         },
         {
+          "name": "When Mr Blobby got to Christmas number one",
+          "summary": "a test video link promo",
+          "indexImage": {
+            "id": "63942309",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/160D4/test/_63942309_hi001100397.jpg",
+            "path": "/cpsdevpb/160D4/test/_63942309_hi001100397.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "Mr Blobby",
+            "caption": "Mr Blobby",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/iplayer/episode/b03srsjl",
+          "contentType": "Video",
+          "assetTypeCode": "PRO",
+          "timestamp": 1662997270000,
+          "type": "link"
+        },
+        {
           "headlines": {
-            "headline": "Lego Titanic sunk"
+            "headline": "Angela Lansbury: from stage to Cabot Cove"
           },
           "locators": {
-            "assetUri": "/news/business-23481281",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:06cb5998-373d-41ea-b249-6aec87d3329b",
-            "assetId": "23481281",
-            "cpsUrn": "urn:bbc:content:assetUri:news/business-23481281",
-            "curie": "http://www.bbc.co.uk/asset/06cb5998-373d-41ea-b249-6aec87d3329b"
+            "assetUri": "/news/23384748",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:00d18665-46b6-42fa-87c4-9b382029f73b",
+            "assetId": "23384748",
+            "cpsUrn": "urn:bbc:content:assetUri:news/23384748",
+            "curie": "http://www.bbc.co.uk/asset/00d18665-46b6-42fa-87c4-9b382029f73b"
           },
-          "summary": "Lego are perhaps sunk",
-          "timestamp": 1643736926000,
+          "summary": "Test",
+          "timestamp": 1643303379000,
           "language": "en-gb",
           "cpsType": "STY",
           "indexImage": {
-            "id": "63969899",
+            "id": "63902259",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/18638/test/_63969899_r.jpg",
-            "path": "/cpsdevpb/18638/test/_63969899_r.jpg",
-            "height": 546,
-            "width": 970,
-            "altText": "The Lego Titanic",
-            "caption": "titanic",
-            "copyrightHolder": "BBC",
+            "href": "http://b.files.bbci.co.uk/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "path": "/cpsdevpb/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "height": 562,
+            "width": 1000,
+            "altText": "ange",
+            "caption": "ange",
+            "copyrightHolder": "Ange",
             "originCode": "cpsdevpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63902263",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "path": "/cpsdevpb/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ange",
+            "caption": "Ange",
+            "copyrightHolder": "ANge",
+            "allowSyndication": false,
             "type": "image"
           },
           "options": {
@@ -2909,11 +2871,11 @@
           },
           "section": {
             "subType": "IDX",
-            "name": "Business",
-            "uri": "/news/business",
+            "name": "Home",
+            "uri": "/news/front_page",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:news/business-23481281",
+          "id": "urn:bbc:ares::asset:news/23384748",
           "type": "cps"
         },
         {
@@ -2929,6 +2891,7 @@
             "altText": "spice girls",
             "caption": "spice girls",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.test.bbc.co.uk/sounds/play/m001bjpb",
@@ -2936,6 +2899,61 @@
           "assetTypeCode": "PRO",
           "timestamp": 1662998543000,
           "type": "link"
+        },
+        {
+          "headlines": {
+            "headline": "Taylor Swift's success"
+          },
+          "locators": {
+            "assetUri": "/news/live/23479940",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:bde9ec0e-a4ca-4802-99c0-5513e67914c7",
+            "assetId": "23479940",
+            "cpsUrn": "urn:bbc:content:assetUri:news/live/23479940",
+            "curie": "http://www.bbc.co.uk/asset/bde9ec0e-a4ca-4802-99c0-5513e67914c7"
+          },
+          "summary": "this is live",
+          "timestamp": 1643273171000,
+          "language": "en-gb",
+          "cpsType": "LIV",
+          "indexImage": {
+            "id": "63902238",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14514/test/_63902238_4815.jpg",
+            "path": "/cpsdevpb/14514/test/_63902238_4815.jpg",
+            "height": 394,
+            "width": 700,
+            "altText": "Taylor",
+            "caption": "Taylor",
+            "copyrightHolder": "Taylor Swift",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63902240",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/107C/test/_63902240_4815.jpg",
+            "path": "/cpsdevpb/107C/test/_63902240_4815.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "tay",
+            "caption": "taylor",
+            "copyrightHolder": "Taylor",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Home",
+            "uri": "/news/front_page",
+            "type": "simple"
+          },
+          "liveStatus": "AUTO",
+          "id": "urn:bbc:ares::asset:news/live/23479940",
+          "type": "cps"
         },
         {
           "name": "Snoods at the ready as ice grips Cardiff",
@@ -2950,6 +2968,7 @@
             "altText": "weatherman",
             "caption": "bbc",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "http://www.bbc.co.uk/weather/weather_watcher/",
@@ -2957,6 +2976,28 @@
           "contentType": "Video",
           "assetTypeCode": "PRO",
           "timestamp": 1663062828000,
+          "type": "link"
+        },
+        {
+          "name": "Florence Pugh on her primary school nativity...",
+          "summary": "90s all the way",
+          "indexImage": {
+            "id": "63958321",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3061/test/_63958321_p0dd2wvy.jpg",
+            "path": "/cpsdevpb/3061/test/_63958321_p0dd2wvy.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "florence pugh",
+            "caption": "florence pugh",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/sounds/play/m001dmln",
+          "contentType": "Audio",
+          "assetTypeCode": "PRO",
+          "timestamp": 1668169266000,
           "type": "link"
         },
         {
@@ -2972,6 +3013,7 @@
             "altText": "newsround",
             "caption": "newsround",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.test.bbc.co.uk/bitesize/subjects/zf48q6f",
@@ -2982,46 +3024,67 @@
         },
         {
           "headlines": {
-            "headline": "Taylor Swift makes history as she takes over entire US top 10"
+            "headline": "Test MAP C7",
+            "overtyped": "An audio link here"
           },
           "locators": {
-            "assetUri": "/news/entertainment-arts-23536303",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:db1029c2-e76d-4a03-83c3-139588cec64e",
-            "assetId": "23536303",
-            "cpsUrn": "urn:bbc:content:assetUri:news/entertainment-arts-23536303",
-            "curie": "http://www.bbc.co.uk/asset/db1029c2-e76d-4a03-83c3-139588cec64e"
+            "assetUri": "/news/av/entertainment-arts-23520613",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:4ae96ddf-024d-4984-b696-deb7beaff4aa",
+            "assetId": "23520613",
+            "cpsUrn": "urn:bbc:content:assetUri:news/av/entertainment-arts-23520613",
+            "curie": "http://www.bbc.co.uk/asset/4ae96ddf-024d-4984-b696-deb7beaff4aa"
           },
-          "summary": "Taylor Swift is the music industry",
-          "timestamp": 1667321886000,
+          "summary": "A summary",
+          "timestamp": 1660654442000,
           "language": "en-gb",
-          "byline": {
-            "name": "By Sian Prescott",
-            "title": "BBC News",
-            "persons": [
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01g2pxw",
+            "subType": "episode",
+            "format": "audio",
+            "title": "Test MAP C7",
+            "synopses": {
+              "short": "Test MAP C7"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01g2py6.jpg",
+            "embedding": true,
+            "advertising": false,
+            "caption": "Test MAP C7",
+            "versions": [
               {
-                "name": "Sian Prescott",
-                "function": "BBC News"
+                "versionId": "p01g2pxh",
+                "types": [
+                  "Podcast"
+                ],
+                "duration": 174,
+                "durationISO8601": "PT2M54S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": false
+                },
+                "availableFrom": 1516795320000
               }
-            ]
+            ],
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "cpsType": "STY",
           "indexImage": {
-            "id": "63957242",
+            "id": "63958326",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/5ED3/test/_63957242_hi059116421.jpg",
-            "path": "/cpsdevpb/5ED3/test/_63957242_hi059116421.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "TAYLOR THE SWIFT",
-            "caption": "Taylor",
+            "href": "http://b.files.bbci.co.uk/F3B1/test/_63958326_p01g2py6.jpg",
+            "path": "/cpsdevpb/F3B1/test/_63958326_p01g2py6.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "asdfadsf",
+            "caption": "sdfsdf",
             "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
             "isBreakingNews": false,
-            "isFactCheck": false,
-            "hasShortForm": true
+            "isFactCheck": false
           },
           "section": {
             "subType": "IDX",
@@ -3029,12 +3092,12 @@
             "uri": "/news/entertainment_and_arts",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:news/entertainment-arts-23536303",
+          "id": "urn:bbc:ares::asset:news/av/entertainment-arts-23520613",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:23:56.994Z",
+        "generated": "2023-02-18T03:08:59.186Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

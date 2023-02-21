@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "b4ce3d86",
+              "id": "ddac82fe",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "06954b4f",
+                    "id": "95586b6d",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "661b9ac2",
+                          "id": "adb26af7",
                           "type": "paragraph",
                           "model": {
                             "text": "اختبار القائمة العربية للخدمة العالمية",
                             "blocks": [
                               {
-                                "id": "9340b24b",
+                                "id": "96d5d28a",
                                 "type": "fragment",
                                 "model": {
                                   "text": "اختبار القائمة العربية للخدمة العالمية",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "15279b37",
+              "id": "5be37813",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1626435198031,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "5d268f46",
+              "id": "462bd535",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "cc119cc5",
+                    "id": "901fa301",
                     "type": "paragraph",
                     "model": {
                       "text": "ابدأ قائمة لم يتم فرزها",
                       "blocks": [
                         {
-                          "id": "7d289745",
+                          "id": "11ac6792",
                           "type": "fragment",
                           "model": {
                             "text": "ابدأ قائمة لم يتم فرزها",
@@ -98,23 +98,23 @@
                     ]
                   },
                   {
-                    "id": "8d6fc875",
+                    "id": "73814d57",
                     "type": "unorderedList",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8956142e",
+                          "id": "c73333a7",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ab53d4df",
+                                "id": "ff3a0a50",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 1 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "f37e9288",
+                                      "id": "3430672b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 1 را لیست کنید",
@@ -146,18 +146,18 @@
                           ]
                         },
                         {
-                          "id": "d07a8221",
+                          "id": "0a890261",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6938c8d2",
+                                "id": "e8df88bf",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 2 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "b3381abb",
+                                      "id": "2f003f5e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 2 را لیست کنید",
@@ -189,18 +189,18 @@
                           ]
                         },
                         {
-                          "id": "6b18165e",
+                          "id": "93b970db",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "36d990eb",
+                                "id": "846559e0",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 3 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "b69f34e5",
+                                      "id": "60baf8bd",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 3 را لیست کنید",
@@ -239,13 +239,13 @@
                     ]
                   },
                   {
-                    "id": "fea9b0e7",
+                    "id": "6622347a",
                     "type": "paragraph",
                     "model": {
                       "text": "إنهاء قائمة لم يتم فرزها",
                       "blocks": [
                         {
-                          "id": "602bdf86",
+                          "id": "19a3c51a",
                           "type": "fragment",
                           "model": {
                             "text": "إنهاء قائمة لم يتم فرزها",
@@ -265,13 +265,13 @@
                     ]
                   },
                   {
-                    "id": "3e2faab6",
+                    "id": "ae415c7e",
                     "type": "paragraph",
                     "model": {
                       "text": "\nبدء القائمة المصنفة",
                       "blocks": [
                         {
-                          "id": "71e6e39e",
+                          "id": "6e8981da",
                           "type": "fragment",
                           "model": {
                             "text": "\nبدء القائمة المصنفة",
@@ -297,7 +297,7 @@
               ]
             },
             {
-              "id": "8c4d26cd",
+              "id": "bd033d93",
               "type": "mpu",
               "model": {},
               "position": [
@@ -305,28 +305,28 @@
               ]
             },
             {
-              "id": "67a128f2",
+              "id": "ec7e7739",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "8d58dc79",
+                    "id": "17c8461d",
                     "type": "orderedList",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cbd0fc22",
+                          "id": "1b3175db",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "679a1b8e",
+                                "id": "c073de24",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 1 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "f6575bd1",
+                                      "id": "97a89d0e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 1 را لیست کنید",
@@ -358,18 +358,18 @@
                           ]
                         },
                         {
-                          "id": "e4befbcf",
+                          "id": "40f1011f",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "7c4b7fa3",
+                                "id": "6888438b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 2 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "5231262b",
+                                      "id": "b7af5dde",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 2 را لیست کنید",
@@ -401,18 +401,18 @@
                           ]
                         },
                         {
-                          "id": "1fb272c9",
+                          "id": "73b42380",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "cb210e76",
+                                "id": "e9db902d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 3 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "5278ad30",
+                                      "id": "9f71f709",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 3 را لیست کنید",
@@ -449,37 +449,58 @@
                       5,
                       1
                     ]
-                  },
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "ebd23cab",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "09e4f95f",
+              "type": "text",
+              "model": {
+                "blocks": [
                   {
-                    "id": "c9f854aa",
+                    "id": "afd5b541",
                     "type": "paragraph",
                     "model": {
                       "text": "إنهاء القائمة المصنفةه",
                       "blocks": [
                         {
-                          "id": "002e4212",
+                          "id": "b365d77e",
                           "type": "fragment",
                           "model": {
                             "text": "إنهاء القائمة المصنفةه",
                             "attributes": []
                           },
                           "position": [
-                            5,
-                            2,
+                            7,
+                            1,
                             1
                           ]
                         }
                       ]
                     },
                     "position": [
-                      5,
-                      2
+                      7,
+                      1
                     ]
                   }
                 ]
               },
               "position": [
-                5
+                7
               ]
             }
           ]
@@ -488,14 +509,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cm41q1925n0o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cm41q1925n0o"
+          "optimoUrn": "urn:bbc:optimo:asset:cm41q1925n0o",
+          "canonicalUrl": "https://www.bbc.com/arabic/articles/cm41q1925n0o"
         },
         "type": "article",
         "createdBy": "Arabic",
         "language": "ar",
         "firstPublished": 1626435198031,
         "lastPublished": 1626435198031,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cm41q1925n0o",
           "producer": "Arabic",
@@ -519,7 +540,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -532,7 +552,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "آزمون لیست WS - فارسی",
           "promoHeadline": {
@@ -562,7 +581,6 @@
             ]
           }
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -588,8 +606,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -878,7 +895,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:48:57.266Z",
+        "generated": "2023-02-18T03:03:56.594Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

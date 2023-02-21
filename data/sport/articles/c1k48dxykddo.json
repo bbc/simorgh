@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "a12db5ac",
+              "id": "3a57a37c",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "b0f7bd0b",
+                    "id": "84c1697f",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cab147c6",
+                          "id": "caf0126f",
                           "type": "paragraph",
                           "model": {
                             "text": "Netball World Cup 2019: Northern Ireland earn crucial 67-50 win over Sri Lanka",
                             "blocks": [
                               {
-                                "id": "586d0945",
+                                "id": "137b2751",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Netball World Cup 2019: Northern Ireland earn crucial 67-50 win over Sri Lanka",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "e367d7a7",
+              "id": "54ba6552",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1563022155629,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "9104e766",
+              "id": "79839046",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "24b03504",
+                    "id": "962c1ed7",
                     "type": "paragraph",
                     "model": {
                       "text": "Northern Ireland regrouped from Friday's heavy opening defeat by Australia to earn a vital 67-50 win over Sri Lanka at the World Cup.",
                       "blocks": [
                         {
-                          "id": "58c726cb",
+                          "id": "f9e155d5",
                           "type": "fragment",
                           "model": {
                             "text": "Northern Ireland regrouped from Friday's heavy opening defeat by Australia to earn a vital 67-50 win over Sri Lanka at the World Cup.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "cc4b33af",
+                    "id": "af7f9323",
                     "type": "paragraph",
                     "model": {
                       "text": "The win boosts Northern Ireland's hopes of clinching the top-three spot in Group A which would see them progress to the next stage of the competition.",
                       "blocks": [
                         {
-                          "id": "4db17b49",
+                          "id": "715d8457",
                           "type": "fragment",
                           "model": {
                             "text": "The win boosts Northern Ireland's hopes of clinching the top-three spot in Group A which would see them progress to the next stage of the competition.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "45daa5ae",
+                    "id": "99f2702b",
                     "type": "paragraph",
                     "model": {
                       "text": "Emma Magee and half-time substitute Noleen Armstrong both scored heavily for the dominant Northern Irish.",
                       "blocks": [
                         {
-                          "id": "8bd8c535",
+                          "id": "d59563fc",
                           "type": "fragment",
                           "model": {
                             "text": "Emma Magee and half-time substitute Noleen Armstrong both scored heavily for the dominant Northern Irish.",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "4bab0c67",
+                    "id": "a8afd9a1",
                     "type": "paragraph",
                     "model": {
                       "text": "Northern Ireland led 34-25 at half-time and remained in control.",
                       "blocks": [
                         {
-                          "id": "79c67619",
+                          "id": "cb2223a1",
                           "type": "fragment",
                           "model": {
                             "text": "Northern Ireland led 34-25 at half-time and remained in control.",
@@ -182,7 +182,7 @@
               ]
             },
             {
-              "id": "d9154f1d",
+              "id": "5e649c35",
               "type": "mpu",
               "model": {},
               "position": [
@@ -190,18 +190,18 @@
               ]
             },
             {
-              "id": "b37892ff",
+              "id": "317422ff",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "1033b578",
+                    "id": "447a3531",
                     "type": "paragraph",
                     "model": {
                       "text": "Magee hit 18 goals in the first half as Northern Ireland bossed the contest from the off.",
                       "blocks": [
                         {
-                          "id": "639856db",
+                          "id": "09f3f1fe",
                           "type": "fragment",
                           "model": {
                             "text": "Magee hit 18 goals in the first half as Northern Ireland bossed the contest from the off.",
@@ -225,6 +225,16 @@
               "position": [
                 5
               ]
+            },
+            {
+              "id": "17fbcca3",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
             }
           ]
         }
@@ -232,14 +242,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c1k48dxykddo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c1k48dxykddo"
+          "optimoUrn": "urn:bbc:optimo:asset:c1k48dxykddo",
+          "canonicalUrl": "https://www.bbc.com/sport/articles/c1k48dxykddo"
         },
         "type": "article",
         "createdBy": "Sport",
         "language": "en-gb",
         "firstPublished": 1563022155629,
         "lastPublished": 1563022155629,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c1k48dxykddo",
           "producer": "Sport",
@@ -250,7 +260,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Sport",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -260,12 +269,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Netball World Cup 2019: Northern Ireland earn crucial 67-50 win over Sri Lanka"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {

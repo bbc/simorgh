@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "2a85c029",
+              "id": "a12e609f",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "c1c2a35b",
+                    "id": "3498f72c",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a60a7646",
+                          "id": "dee2c240",
                           "type": "paragraph",
                           "model": {
                             "text": "এটি এই পরীক্ষার নিবন্ধটির শিরোনাম",
                             "blocks": [
                               {
-                                "id": "b4d5b3c6",
+                                "id": "851a2e15",
                                 "type": "fragment",
                                 "model": {
                                   "text": "এটি এই পরীক্ষার নিবন্ধটির শিরোনাম",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "d5c45493",
+              "id": "cc80ce2e",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "698c7d14",
+                    "id": "d52ef2df",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4d47c912",
+                          "id": "2831b278",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "3c121a1d",
+                                "id": "afddf4b3",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।\n",
                                   "blocks": [
                                     {
-                                      "id": "0f4bac89",
+                                      "id": "2712dd01",
                                       "type": "fragment",
                                       "model": {
                                         "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।\n",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "9bae2093",
+                    "id": "6939d8ad",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2416c46a",
+                          "id": "f88b7ac1",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a7547a48",
+                                "id": "34e7196d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।",
                                   "blocks": [
                                     {
-                                      "id": "d543a8e5",
+                                      "id": "ea2e75c1",
                                       "type": "fragment",
                                       "model": {
                                         "text": "এই পরীক্ষার চিত্র, কপিরাইট বিবিসি, ফ্রান্সের মানচিত্র দেখায়। চিত্রটি প্রথম তিনটি ব্লকের মধ্যে রয়েছে এবং এতে ক্যাপশন রয়েছে।",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "e1bee75d",
+                    "id": "2acd4781",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "14412ac1",
+              "id": "851bb6b9",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942411695,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "3f891c5d",
+              "id": "17e4a1b7",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "98dfcc08",
+                    "id": "92b03de2",
                     "type": "paragraph",
                     "model": {
                       "text": "এটি একটি পাঠ্য ব্লক, এতে বিবিসি আবহাওয়ার হোমপেজে একটি ইউআরএল লিঙ্ক রয়েছে।",
                       "blocks": [
                         {
-                          "id": "e199827c",
+                          "id": "41c7d45d",
                           "type": "fragment",
                           "model": {
                             "text": "এটি একটি পাঠ্য ব্লক, এতে বিবিসি আবহাওয়ার হোমপেজে একটি ইউআরএল ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "f1d06b00",
+                          "id": "54b3440b",
                           "type": "urlLink",
                           "model": {
                             "text": "লিঙ্ক রয়েছে।",
                             "blocks": [
                               {
-                                "id": "059c61b4",
+                                "id": "e2637ad1",
                                 "type": "fragment",
                                 "model": {
                                   "text": "লিঙ্ক রয়েছে।",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "7366ff1b",
+              "id": "a3f9d93b",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p019qd7g",
                 "blocks": [
                   {
-                    "id": "781ab84a",
+                    "id": "2879f6cc",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0d935c43",
+                          "id": "41952b08",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0af73ab1",
+                                "id": "6f418934",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "এটি একটি ভিডিওযুক্ত একটি ভিডিও ব্লক",
                                   "blocks": [
                                     {
-                                      "id": "953ba222",
+                                      "id": "27c4bdb1",
                                       "type": "fragment",
                                       "model": {
                                         "text": "এটি একটি ভিডিওযুক্ত একটি ভিডিও ব্লক",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "75134c73",
+                    "id": "103748e9",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "38a6ba32",
+                          "id": "98f4cc48",
                           "blockId": "urn:bbc:ares::clip:p019qd7g",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -378,12 +378,12 @@
                           ]
                         },
                         {
-                          "id": "fe368b2a",
+                          "id": "890b192d",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0f8947a2",
+                                "id": "c6c5d1d4",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
@@ -418,23 +418,23 @@
               ]
             },
             {
-              "id": "1fdf90bd",
+              "id": "27348d22",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ec0ba12e",
+                    "id": "6c48c13b",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b24e59d0",
+                          "id": "45979807",
                           "type": "paragraph",
                           "model": {
                             "text": "\rএটি একটি সাবহেডলাইন ব্লক",
                             "blocks": [
                               {
-                                "id": "8e35d1b4",
+                                "id": "5db5fcff",
                                 "type": "fragment",
                                 "model": {
                                   "text": "\rএটি একটি সাবহেডলাইন ব্লক",
@@ -469,28 +469,28 @@
               ]
             },
             {
-              "id": "18a3f4f8",
+              "id": "1e51554d",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "504b1cfa",
+                    "id": "d05fa65e",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "04ef5908",
+                          "id": "fc43edb8",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a8694739",
+                                "id": "6606cf5b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "\rএটি একটি সাবহেডলাইন ব্লক",
                                   "blocks": [
                                     {
-                                      "id": "f7be9009",
+                                      "id": "37dffbb0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "\rএটি একটি সাবহেডলাইন ব্লক",
@@ -529,7 +529,7 @@
                     ]
                   },
                   {
-                    "id": "ffebece0",
+                    "id": "37c867af",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -550,18 +550,18 @@
               ]
             },
             {
-              "id": "821a4913",
+              "id": "b6ce1065",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "e090aace",
+                    "id": "52c64998",
                     "type": "paragraph",
                     "model": {
                       "text": "এই পরীক্ষার নিবন্ধটি তৈরি করা হয়েছে যাতে আমরা আমাদের ওয়েবসাইটে পরীক্ষা চালাতে পারি।",
                       "blocks": [
                         {
-                          "id": "0e500b95",
+                          "id": "71540f34",
                           "type": "fragment",
                           "model": {
                             "text": "এই পরীক্ষার নিবন্ধটি তৈরি করা হয়েছে যাতে আমরা আমাদের ওয়েবসাইটে পরীক্ষা চালাতে পারি।",
@@ -587,11 +587,21 @@
               ]
             },
             {
-              "id": "a77b0a72",
+              "id": "e39d4e62",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "775d8e9c",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -600,14 +610,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c6p3yp5zzmeo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c6p3yp5zzmeo"
+          "optimoUrn": "urn:bbc:optimo:asset:c6p3yp5zzmeo",
+          "canonicalUrl": "https://www.bbc.com/bengali/articles/c6p3yp5zzmeo"
         },
         "type": "article",
         "createdBy": "Bengali",
         "language": "bn",
         "firstPublished": 1562942411695,
         "lastPublished": 1562942411695,
-        "options": {},
         "analyticsLabels": {
           "producer": "Bengali",
           "page": "bengali.articles.c6p3yp5zzmeo.page"
@@ -617,7 +627,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Bengali",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -635,12 +644,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "ক্রিকেট বিশ্বকাপ ২০১৯: ম্যান অফ দা টুর্নামেন্টের দৌড়ে এগিয়ে কারা?"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1013,7 +1019,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:50:56.555Z",
+        "generated": "2023-02-17T16:35:57.256Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:23:00Z",
         "totalRecords": 20,

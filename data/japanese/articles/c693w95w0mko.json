@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "e3c03623",
+              "id": "8ad947a4",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "d3406a22",
+                    "id": "b7d5b305",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "803b57bd",
+                          "id": "3267a285",
                           "type": "paragraph",
                           "model": {
                             "text": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産",
                             "blocks": [
                               {
-                                "id": "d04dc529",
+                                "id": "d90443e4",
                                 "type": "fragment",
                                 "model": {
                                   "text": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "f178e08c",
+              "id": "d1bb6cb7",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562943050727,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "0244d436",
+              "id": "a33a592f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "44481051",
+                    "id": "a4bc9094",
                     "type": "paragraph",
                     "model": {
                       "text": "ユネスコ（国連教育科学文化機関）は毎年、人類にとって「顕著な普遍的価値」を持つ場所を世界遺産として発表している。",
                       "blocks": [
                         {
-                          "id": "386cc8a9",
+                          "id": "3d729c4a",
                           "type": "fragment",
                           "model": {
                             "text": "ユネスコ（国連教育科学文化機関）は毎年、人類にとって「顕著な普遍的価値」を持つ場所を世界遺産として発表している。",
@@ -100,13 +100,13 @@
                     ]
                   },
                   {
-                    "id": "96ccdded",
+                    "id": "489597b8",
                     "type": "paragraph",
                     "model": {
                       "text": "10日までアゼルバイジャンの首都バクーで行われていた第43回世界遺産委員会では、新たに29カ所が世界遺産に登録された。",
                       "blocks": [
                         {
-                          "id": "587b4043",
+                          "id": "c1f7c031",
                           "type": "fragment",
                           "model": {
                             "text": "10日までアゼルバイジャンの首都バクーで行われていた第43回世界遺産委員会では、新たに29カ所が世界遺産に登録された。",
@@ -126,13 +126,13 @@
                     ]
                   },
                   {
-                    "id": "26ccc194",
+                    "id": "6dceffdd",
                     "type": "paragraph",
                     "model": {
                       "text": "その中からいくつかの場所を写真で紹介する。",
                       "blocks": [
                         {
-                          "id": "f80884aa",
+                          "id": "f715cde0",
                           "type": "fragment",
                           "model": {
                             "text": "その中からいくつかの場所を写真で紹介する。",
@@ -158,11 +158,21 @@
               ]
             },
             {
-              "id": "0f1e0887",
+              "id": "46bfea03",
               "type": "mpu",
               "model": {},
               "position": [
                 4
+              ]
+            },
+            {
+              "id": "f37878c3",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
               ]
             }
           ]
@@ -171,14 +181,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c693w95w0mko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c693w95w0mko"
+          "optimoUrn": "urn:bbc:optimo:asset:c693w95w0mko",
+          "canonicalUrl": "https://www.bbc.com/japanese/articles/c693w95w0mko"
         },
         "type": "article",
         "createdBy": "Japanese",
         "language": "ja",
         "firstPublished": 1562943050727,
         "lastPublished": 1562943050727,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c693w95w0mko",
           "producer": "Japanese",
@@ -189,7 +199,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -199,12 +208,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -215,8 +221,10 @@
           },
           "locators": {
             "assetUri": "/japanese/23003065",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:28575ae8-9c47-b34d-ba24-2b357f05c226",
+            "assetId": "23003065",
             "cpsUrn": "urn:bbc:content:assetUri:japanese/23003065",
-            "assetId": "23003065"
+            "curie": "http://www.bbc.co.uk/asset/28575ae8-9c47-b34d-ba24-2b357f05c226"
           },
           "summary": "タイ・バンコク中心部で17日夜に起きた爆発事件で、警察が防犯カメラに映った男性を主要容疑者として捜査していることが明らかになった",
           "timestamp": 1569397424000,
@@ -256,8 +264,10 @@
           },
           "locators": {
             "assetUri": "/japanese/23002306",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:7a5e649c-8fc2-9f46-9823-4d3e22dce7ae",
+            "assetId": "23002306",
             "cpsUrn": "urn:bbc:content:assetUri:japanese/23002306",
-            "assetId": "23002306"
+            "curie": "http://www.bbc.co.uk/asset/7a5e649c-8fc2-9f46-9823-4d3e22dce7ae"
           },
           "summary": "欧州委員会は11日、ギリシャが債権団との金融支援策に「原則として」合意したと明らかにした。ギリシャ政府は今後、議会承認を求めていく。",
           "timestamp": 1439345119000,
@@ -278,7 +288,8 @@
           },
           "options": {
             "isBreakingNews": false,
-            "isFactCheck": false
+            "isFactCheck": false,
+            "hasShortForm": true
           },
           "section": {
             "subType": "IDX",
@@ -296,8 +307,10 @@
           },
           "locators": {
             "assetUri": "/news/magazine-19712847",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:ff819582-928b-374d-9f99-f9a33e6fdded",
+            "assetId": "19712847",
             "cpsUrn": "urn:bbc:content:assetUri:news/magazine-19712847",
-            "assetId": "19712847"
+            "curie": "http://www.bbc.co.uk/asset/ff819582-928b-374d-9f99-f9a33e6fdded"
           },
           "summary": "Instead of waiting in line for their turn, Americans are finding themselves in a new kind of queue - where people who can pay get higher priority.",
           "timestamp": 1349307898000,
@@ -362,8 +375,10 @@
           },
           "locators": {
             "assetUri": "/japanese/23002307",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:dcc1bd03-a09b-3f48-afb9-065970f11af9",
+            "assetId": "23002307",
             "cpsUrn": "urn:bbc:content:assetUri:japanese/23002307",
-            "assetId": "23002307"
+            "curie": "http://www.bbc.co.uk/asset/dcc1bd03-a09b-3f48-afb9-065970f11af9"
           },
           "summary": "中国の中央銀行、中国人民銀行は12日、人民元レートの基準値を前日に続けて切り下げ、1ドル＝6.3306 元と発表した。前日比1.6％の切り下げ。11日には前日比2％近く切り下げ、世界各地の市場を揺るがした。",
           "timestamp": 1439351723000,
@@ -384,7 +399,8 @@
           },
           "options": {
             "isBreakingNews": false,
-            "isFactCheck": false
+            "isFactCheck": false,
+            "hasShortForm": true
           },
           "section": {
             "subType": "IDX",
@@ -402,8 +418,10 @@
           },
           "locators": {
             "assetUri": "/news/magazine-19804286",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:153c6d20-2954-d844-b586-bbbc4cee285c",
+            "assetId": "19804286",
             "cpsUrn": "urn:bbc:content:assetUri:news/magazine-19804286",
-            "assetId": "19804286"
+            "curie": "http://www.bbc.co.uk/asset/153c6d20-2954-d844-b586-bbbc4cee285c"
           },
           "summary": "For two gay men, the photograph showed them at their happiest, but for an anti-gay marriage political group, the image represented the wrong kind of family values.",
           "timestamp": 1349343672000,
@@ -469,8 +487,10 @@
           },
           "locators": {
             "assetUri": "/news/world-asia-india-19714959",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:e6b5139b-fd4f-944f-b206-8edec74b816b",
+            "assetId": "19714959",
             "cpsUrn": "urn:bbc:content:assetUri:news/world-asia-india-19714959",
-            "assetId": "19714959"
+            "curie": "http://www.bbc.co.uk/asset/e6b5139b-fd4f-944f-b206-8edec74b816b"
           },
           "summary": "An eyewitness account of life under the constant buzzing of drones in tribal north-west Pakistan.",
           "timestamp": 1349307768000,
@@ -535,8 +555,10 @@
           },
           "locators": {
             "assetUri": "/news/business-19210539",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:dc6b3c79-c4ea-fe4d-bf74-8c64cac7448c",
+            "assetId": "19210539",
             "cpsUrn": "urn:bbc:content:assetUri:news/business-19210539",
-            "assetId": "19210539"
+            "curie": "http://www.bbc.co.uk/asset/dc6b3c79-c4ea-fe4d-bf74-8c64cac7448c"
           },
           "summary": "More than 40 countries around the world have upgraded their mobile networks to handle high-speed 4G - and more must do the same, writes Olaf Swantee.",
           "timestamp": 1345761934000,
@@ -596,7 +618,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:56:57.925Z",
+        "generated": "2023-02-18T02:56:56.714Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 18,
@@ -808,13 +830,18 @@
               },
               "locators": {
                 "assetUri": "/japanese/23003043",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:eae591ac-480e-7a44-9c66-1e6940fb8067",
+                "assetId": "23003043",
                 "cpsUrn": "urn:bbc:content:assetUri:japanese/23003043",
-                "curie": "http://www.bbc.co.uk/asset/eae591ac-480e-7a44-9c66-1e6940fb8067",
-                "assetId": "23003043"
+                "curie": "http://www.bbc.co.uk/asset/eae591ac-480e-7a44-9c66-1e6940fb8067"
               },
               "summary": "タイのプラユット暫定首相は18日、バンコク中心部の爆弾事件についてタイにとって「過去最悪の攻撃」と述べた。",
               "timestamp": 1439882732000,
               "language": "ja",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese",
+                "taggings": []
+              },
               "indexImage": {
                 "id": "63465597",
                 "subType": "index",
