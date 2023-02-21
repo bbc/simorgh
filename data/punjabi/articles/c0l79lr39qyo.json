@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "5948b06d",
+              "id": "eb521028",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "0b7624ba",
+                    "id": "257df185",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2881adac",
+                          "id": "3b184cd4",
                           "type": "paragraph",
                           "model": {
                             "text": "ਇਹ ਇਸ ਪਰੀਖਿਆ ਲੇਖ ਦਾ ਸਿਰਲੇਖ ਹੈ",
                             "blocks": [
                               {
-                                "id": "3123a6fe",
+                                "id": "83f9751b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ਇਹ ਇਸ ਪਰੀਖਿਆ ਲੇਖ ਦਾ ਸਿਰਲੇਖ ਹੈ",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "352810b2",
+              "id": "1a1c1c36",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "75dc16b5",
+                    "id": "57bc8275",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "43d10ae3",
+                          "id": "3546ff0f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "bf0b95df",
+                                "id": "72742bc9",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
                                   "blocks": [
                                     {
-                                      "id": "71670a25",
+                                      "id": "4824d260",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "d89cf29e",
+                    "id": "51025f22",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4294fc35",
+                          "id": "350ffba0",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "85173193",
+                                "id": "7594692b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "\rਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
                                   "blocks": [
                                     {
-                                      "id": "a03c16e0",
+                                      "id": "77be4dc5",
                                       "type": "fragment",
                                       "model": {
                                         "text": "\rਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "6b382fd9",
+                    "id": "1d3cf575",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "e4ab1ae0",
+              "id": "e4660a61",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942877468,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "1647ab5d",
+              "id": "8b522e93",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b866dfce",
+                    "id": "ed3d5ea0",
                     "type": "paragraph",
                     "model": {
                       "text": "ਇਹ ਇੱਕ ਟੈਕਸਟ ਬਲਾਕ ਹੈ, ਜਿਸ ਵਿੱਚ ਬੀਬੀਸੀ ਮੌਸਮ ਦੇ ਮੁੱਖ ਪੰਨੇ ਦਾ url ਲਿੰਕ ਹੈ.",
                       "blocks": [
                         {
-                          "id": "0f92e7e7",
+                          "id": "4e1094ed",
                           "type": "fragment",
                           "model": {
                             "text": "ਇਹ ਇੱਕ ਟੈਕਸਟ ਬਲਾਕ ਹੈ, ਜਿਸ ਵਿੱਚ ਬੀਬੀਸੀ ਮੌਸਮ ਦੇ ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "0bc6831e",
+                          "id": "9cfdc3a4",
                           "type": "urlLink",
                           "model": {
                             "text": "ਮੁੱਖ ਪੰਨੇ ਦਾ url ਲਿੰਕ ਹੈ.",
                             "blocks": [
                               {
-                                "id": "5580ca5b",
+                                "id": "fc9454c0",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ਮੁੱਖ ਪੰਨੇ ਦਾ url ਲਿੰਕ ਹੈ.",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "c0a627bd",
+              "id": "888979f8",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01djw2m",
                 "blocks": [
                   {
-                    "id": "69442cb7",
+                    "id": "a583481f",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a463c05c",
+                          "id": "c5b48ea7",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e3a01fef",
+                                "id": "76d5b3c4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ਚੀਨੀ ਸੁਪਰਹਾਈਵੇ ਯੂਜ਼ਰ ਨਵੇਂ ਜੰਕਸ਼ਨ ਤੋਂ ਹੈਰਾਨ ਹਨ",
                                   "blocks": [
                                     {
-                                      "id": "540b05ac",
+                                      "id": "feb55fa3",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ਚੀਨੀ ਸੁਪਰਹਾਈਵੇ ਯੂਜ਼ਰ ਨਵੇਂ ਜੰਕਸ਼ਨ ਤੋਂ ਹੈਰਾਨ ਹਨ",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "af975e51",
+                    "id": "faab9da0",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b9facfab",
+                          "id": "ce4a928b",
                           "blockId": "urn:bbc:ares::clip:p01djw2m",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -381,12 +381,12 @@
                           ]
                         },
                         {
-                          "id": "3faf63c3",
+                          "id": "541d19bf",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6d734fba",
+                                "id": "eab23979",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
@@ -421,23 +421,23 @@
               ]
             },
             {
-              "id": "8845b55b",
+              "id": "cecb740f",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "618ebc2c",
+                    "id": "67435789",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "631db273",
+                          "id": "ae3eafdd",
                           "type": "paragraph",
                           "model": {
                             "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
                             "blocks": [
                               {
-                                "id": "5d8c3c54",
+                                "id": "d99cfce3",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
@@ -472,28 +472,28 @@
               ]
             },
             {
-              "id": "141b84c8",
+              "id": "11296711",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "a330a87f",
+                    "id": "dc70539e",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "35c9eafa",
+                          "id": "01f3cc18",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "aed10e9e",
+                                "id": "2a00b81c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
                                   "blocks": [
                                     {
-                                      "id": "81d561b2",
+                                      "id": "50c9fedd",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
@@ -532,7 +532,7 @@
                     ]
                   },
                   {
-                    "id": "e74b9571",
+                    "id": "aba2ae83",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -553,18 +553,18 @@
               ]
             },
             {
-              "id": "5e405be9",
+              "id": "7466a021",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "525cd8dc",
+                    "id": "9221cd68",
                     "type": "paragraph",
                     "model": {
                       "text": "ਇਹ ਟੈਸਟ ਲੇਖ ਬਣਾਇਆ ਗਿਆ ਹੈ ਤਾਂ ਜੋ ਅਸੀਂ ਆਪਣੀ ਵੈਬਸਾਈਟ ਤੇ ਟੈਸਟ ਚਲਾ ਸਕੀਏ.",
                       "blocks": [
                         {
-                          "id": "2d2f2e89",
+                          "id": "cf147e65",
                           "type": "fragment",
                           "model": {
                             "text": "ਇਹ ਟੈਸਟ ਲੇਖ ਬਣਾਇਆ ਗਿਆ ਹੈ ਤਾਂ ਜੋ ਅਸੀਂ ਆਪਣੀ ਵੈਬਸਾਈਟ ਤੇ ਟੈਸਟ ਚਲਾ ਸਕੀਏ.",
@@ -590,7 +590,7 @@
               ]
             },
             {
-              "id": "d84d05c0",
+              "id": "f4b21f27",
               "type": "mpu",
               "model": {},
               "position": [
@@ -598,7 +598,7 @@
               ]
             },
             {
-              "id": "51eee443",
+              "id": "a4273abe",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1733,118 +1733,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "a89957de8fc367719fa9a29c3d6cb1e7163d17ea",
-            "last-modified": "Fri, 28 Aug 2020 07:27:26 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "14c34c5d-bc3b-4266-9b3b-93aa6250f4e7",
-            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1056
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c0l79lr39qyo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "2321",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"51753adc5050410702d11d3f6ebf15970952eff4\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1182
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/punjabi",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json",
-            "content-length": "1174",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"647603a6ff58bc2825842ddab930600599dcf107\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:11 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1381
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/punjabi/front_page",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c0l79lr39qyo",
-      "service": "punjabi",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

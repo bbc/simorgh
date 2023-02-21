@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "04ab1e67",
+              "id": "3a550391",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "09c9080a",
+                    "id": "54323140",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "baa6d6ae",
+                          "id": "909619b8",
                           "type": "paragraph",
                           "model": {
                             "text": "Multiple Facebook Post Embed Test",
                             "blocks": [
                               {
-                                "id": "7e959f91",
+                                "id": "ae8d8681",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Multiple Facebook Post Embed Test",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "77b3445f",
+              "id": "1558d901",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1666706395827,
@@ -67,23 +67,23 @@
               ]
             },
             {
-              "id": "497380e5",
+              "id": "731feb3f",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "9c2dcf46",
+                    "id": "4206fb03",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "172a3d60",
+                          "id": "e308b4aa",
                           "type": "paragraph",
                           "model": {
                             "text": "First Test",
                             "blocks": [
                               {
-                                "id": "4ac4f857",
+                                "id": "655028e7",
                                 "type": "fragment",
                                 "model": {
                                   "text": "First Test",
@@ -118,20 +118,20 @@
               ]
             },
             {
-              "id": "4ccc2f15",
+              "id": "dcc646f9",
               "type": "social",
               "model": {
                 "source": "https://www.facebook.com/10downingstreet/posts/pfbid02EQPqk1y8kffBd1cdrPFmzs4RrVnw52Fkd9ufCsz11akAymrbHq1Ug6huD88nGjoml",
                 "providerName": "Facebook",
                 "blocks": [
                   {
-                    "id": "6e5efb9c",
+                    "id": "89e85918",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:8cd62b89-8458-44b3-b1ca-6059c6873246",
                       "blocks": [
                         {
-                          "id": "963fd501",
+                          "id": "3745f3d7",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -165,23 +165,23 @@
               ]
             },
             {
-              "id": "3e80f66d",
+              "id": "48eac782",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "b3b387b5",
+                    "id": "9f5f8a01",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6f2ee0e8",
+                          "id": "36d5e0b4",
                           "type": "paragraph",
                           "model": {
                             "text": "Second Test",
                             "blocks": [
                               {
-                                "id": "d3202cb3",
+                                "id": "0a160628",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Second Test",
@@ -216,20 +216,20 @@
               ]
             },
             {
-              "id": "cc0de770",
+              "id": "1a3d4457",
               "type": "social",
               "model": {
                 "source": "https://www.facebook.com/10downingstreet/posts/pfbid0MCXxKS4pqCmDK7QxtRTCG7XmY6eByLu41yf3ipE6gMN8LJRtaSWreLmUH9ZBUoMdl",
                 "providerName": "Facebook",
                 "blocks": [
                   {
-                    "id": "476406da",
+                    "id": "2de13742",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:ac8c3828-9f4f-4821-b693-f40316fe9cce",
                       "blocks": [
                         {
-                          "id": "ea4282c7",
+                          "id": "b91820e0",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -263,23 +263,23 @@
               ]
             },
             {
-              "id": "354e2779",
+              "id": "c35ad44c",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "83570a60",
+                    "id": "3b8a1543",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a2f65d47",
+                          "id": "2894f4bd",
                           "type": "paragraph",
                           "model": {
                             "text": "Third Test",
                             "blocks": [
                               {
-                                "id": "cfb47b58",
+                                "id": "a17d6ab2",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Third Test",
@@ -314,20 +314,20 @@
               ]
             },
             {
-              "id": "1f6bfd71",
+              "id": "f2404edf",
               "type": "social",
               "model": {
                 "source": "https://www.youtube.com/watch?v=b_nZICOtzfI",
                 "providerName": "YouTube",
                 "blocks": [
                   {
-                    "id": "738fc57e",
+                    "id": "9d266cee",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:72503997-9ab6-4a02-856e-cc2f7cfded59",
                       "blocks": [
                         {
-                          "id": "08659f6c",
+                          "id": "60827dfd",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -365,23 +365,23 @@
               ]
             },
             {
-              "id": "8e0e0846",
+              "id": "f3bb2d40",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "346980bc",
+                    "id": "a6e1ad7c",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e1748d5e",
+                          "id": "857606b9",
                           "type": "paragraph",
                           "model": {
                             "text": "Fourth Test",
                             "blocks": [
                               {
-                                "id": "c6af64b2",
+                                "id": "80b3e339",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Fourth Test",
@@ -416,20 +416,20 @@
               ]
             },
             {
-              "id": "45966de8",
+              "id": "d70044c6",
               "type": "social",
               "model": {
                 "source": "https://www.tiktok.com/@cuppymusic/video/7086167423639997701",
                 "providerName": "TikTok",
                 "blocks": [
                   {
-                    "id": "78482c3b",
+                    "id": "a610d3e6",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:5af67a78-54ec-4711-817d-15aaf393e900",
                       "blocks": [
                         {
-                          "id": "0bb37727",
+                          "id": "1f6580a9",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -465,23 +465,23 @@
               ]
             },
             {
-              "id": "d5809054",
+              "id": "2e186a06",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "70c4f2f5",
+                    "id": "f3a0a125",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b9213df0",
+                          "id": "008a94ff",
                           "type": "paragraph",
                           "model": {
                             "text": "Fifth Test",
                             "blocks": [
                               {
-                                "id": "f72e5dfe",
+                                "id": "82dc553d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Fifth Test",
@@ -516,20 +516,20 @@
               ]
             },
             {
-              "id": "33d15ff0",
+              "id": "de69a85c",
               "type": "social",
               "model": {
                 "source": "https://www.instagram.com/p/CiK2qRqtmjA/?utm_source=ig_web_copy_link",
                 "providerName": "Instagram",
                 "blocks": [
                   {
-                    "id": "c14e8c83",
+                    "id": "2535f85e",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:74bf1d97-a4f1-43ea-8467-47c1e25826cb",
                       "blocks": [
                         {
-                          "id": "2e7d9ab5",
+                          "id": "a2908667",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -564,7 +564,7 @@
               ]
             },
             {
-              "id": "eec9e481",
+              "id": "e621b17d",
               "type": "mpu",
               "model": {},
               "position": [
@@ -572,7 +572,7 @@
               ]
             },
             {
-              "id": "d995dacd",
+              "id": "831a9395",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -2012,118 +2012,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "f5701b5a56d0766e90f467334acec4c9f4a5cd8e",
-            "last-modified": "Tue, 25 Oct 2022 14:40:00 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "a5f89cf1-dbce-496b-a8f8-1cb6034991f0",
-            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 396
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c8pd7gx243po",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3855",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 784
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/pidgin/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json",
-            "content-length": "5291",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"07cdea8e48e1b276f9938e0a7f146d12cbe7171f\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "HIT"
-          },
-          "responseCode": 200,
-          "responseTime": 1531
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/pidgin",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c8pd7gx243po",
-      "service": "pidgin",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

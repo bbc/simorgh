@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "ceff1e38",
+              "id": "9076bb64",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "0d4b73ef",
+                    "id": "287c8fec",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b5c007b8",
+                          "id": "64430127",
                           "type": "paragraph",
                           "model": {
                             "text": "اختبار القائمة العربية للخدمة العالمية",
                             "blocks": [
                               {
-                                "id": "8b36e6a6",
+                                "id": "16405bbb",
                                 "type": "fragment",
                                 "model": {
                                   "text": "اختبار القائمة العربية للخدمة العالمية",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "e8a70251",
+              "id": "5d79d239",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1626435198031,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "48ed8657",
+              "id": "8faa58d2",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "4b3a1bc9",
+                    "id": "17551d10",
                     "type": "paragraph",
                     "model": {
                       "text": "ابدأ قائمة لم يتم فرزها",
                       "blocks": [
                         {
-                          "id": "3115f15a",
+                          "id": "2a6fb747",
                           "type": "fragment",
                           "model": {
                             "text": "ابدأ قائمة لم يتم فرزها",
@@ -98,23 +98,23 @@
                     ]
                   },
                   {
-                    "id": "3d5bea49",
+                    "id": "9ddc7005",
                     "type": "unorderedList",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0dad0f57",
+                          "id": "46a6cf05",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d3e45c2c",
+                                "id": "71637a1d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 1 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "52bde769",
+                                      "id": "f0decaff",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 1 را لیست کنید",
@@ -146,18 +146,18 @@
                           ]
                         },
                         {
-                          "id": "edd2a29c",
+                          "id": "2f3d67d4",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8b519197",
+                                "id": "80292d2b",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 2 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "17084222",
+                                      "id": "2e03894d",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 2 را لیست کنید",
@@ -189,18 +189,18 @@
                           ]
                         },
                         {
-                          "id": "d126b526",
+                          "id": "de34de63",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "746d44b9",
+                                "id": "e8d151c8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 3 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "4a19e08b",
+                                      "id": "f2321b26",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 3 را لیست کنید",
@@ -239,13 +239,13 @@
                     ]
                   },
                   {
-                    "id": "2be460dd",
+                    "id": "8078efb8",
                     "type": "paragraph",
                     "model": {
                       "text": "إنهاء قائمة لم يتم فرزها",
                       "blocks": [
                         {
-                          "id": "3d0ad7bd",
+                          "id": "da7c564b",
                           "type": "fragment",
                           "model": {
                             "text": "إنهاء قائمة لم يتم فرزها",
@@ -265,13 +265,13 @@
                     ]
                   },
                   {
-                    "id": "43753309",
+                    "id": "455802bc",
                     "type": "paragraph",
                     "model": {
                       "text": "\nبدء القائمة المصنفة",
                       "blocks": [
                         {
-                          "id": "6d780819",
+                          "id": "541525c1",
                           "type": "fragment",
                           "model": {
                             "text": "\nبدء القائمة المصنفة",
@@ -297,7 +297,7 @@
               ]
             },
             {
-              "id": "c0a0166d",
+              "id": "6139890e",
               "type": "mpu",
               "model": {},
               "position": [
@@ -305,28 +305,28 @@
               ]
             },
             {
-              "id": "df039be5",
+              "id": "5ae7e24d",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5a5bde11",
+                    "id": "869cd906",
                     "type": "orderedList",
                     "model": {
                       "blocks": [
                         {
-                          "id": "826e9d32",
+                          "id": "4c1bc7a2",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "203dceb1",
+                                "id": "495bc05a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 1 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "e40059d9",
+                                      "id": "28d40019",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 1 را لیست کنید",
@@ -358,18 +358,18 @@
                           ]
                         },
                         {
-                          "id": "d9c297c4",
+                          "id": "b222a745",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "bcb0b938",
+                                "id": "632e1b85",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 2 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "60f926ab",
+                                      "id": "bc51ef34",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 2 را لیست کنید",
@@ -401,18 +401,18 @@
                           ]
                         },
                         {
-                          "id": "85e53351",
+                          "id": "1e557e73",
                           "type": "listItem",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1acc8baa",
+                                "id": "1bbca497",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "مورد 3 را لیست کنید",
                                   "blocks": [
                                     {
-                                      "id": "66a0e2b6",
+                                      "id": "aaf3c5b5",
                                       "type": "fragment",
                                       "model": {
                                         "text": "مورد 3 را لیست کنید",
@@ -457,7 +457,7 @@
               ]
             },
             {
-              "id": "33d247c5",
+              "id": "e29e3ed3",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -467,18 +467,18 @@
               ]
             },
             {
-              "id": "caed73d5",
+              "id": "fd69a42f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "1a7cce5b",
+                    "id": "e8f25d26",
                     "type": "paragraph",
                     "model": {
                       "text": "إنهاء القائمة المصنفةه",
                       "blocks": [
                         {
-                          "id": "6c9846f5",
+                          "id": "d1f59907",
                           "type": "fragment",
                           "model": {
                             "text": "إنهاء القائمة المصنفةه",
@@ -1681,118 +1681,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "d32810aaf0a2e8a56e3102141291ef891190713f",
-            "last-modified": "Wed, 23 Feb 2022 20:23:04 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "a4e8b765-cc88-40a6-aa72-5d4f4af95b27",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 405
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cm41q1925n0o",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1732",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"438edc80e4108719c87f114812d035fdfad4b03d\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 944
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/arabic/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "4555",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"1d47b1ed7cdf66db7f467d71bdcb82ddefd82a6b\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1441
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/arabic",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cm41q1925n0o",
-      "service": "arabic",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

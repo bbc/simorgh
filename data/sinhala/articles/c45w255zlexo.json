@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "6e7e2e4d",
+              "id": "2901bf72",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "578ded54",
+                    "id": "fdf20dcf",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7e29ae6f",
+                          "id": "b202e7ac",
                           "type": "paragraph",
                           "model": {
                             "text": "මෙම පරීක්ෂණ ලිපියේ සිරස්තලය මෙයයි",
                             "blocks": [
                               {
-                                "id": "da0ed81a",
+                                "id": "b8c7f9ef",
                                 "type": "fragment",
                                 "model": {
                                   "text": "මෙම පරීක්ෂණ ලිපියේ සිරස්තලය මෙයයි",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "5b4ab487",
+              "id": "f3786507",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "ad191ff1",
+                    "id": "5e66b197",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6f29f59f",
+                          "id": "62c7b53a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "16793acf",
+                                "id": "fbfaa732",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
                                   "blocks": [
                                     {
-                                      "id": "6499ae24",
+                                      "id": "c6ba0d52",
                                       "type": "fragment",
                                       "model": {
                                         "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "f8264cf3",
+                    "id": "3b70cf7d",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e48fa13a",
+                          "id": "a1d0e657",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b9426620",
+                                "id": "de7bd5e8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
                                   "blocks": [
                                     {
-                                      "id": "22edbf16",
+                                      "id": "dbf49b5e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "මෙම පරීක්ෂණ රූපය, ප්‍රකාශන හිමිකම් බීබීසී, ප්‍රංශයේ සිතියමක් පෙන්වයි. රූපය පළමු කොටස් තුනෙහි ඇති අතර මෙම ශීර්ෂ පා ය ඇත.\r",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "38450b89",
+                    "id": "155069b0",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "d4cfcc4d",
+              "id": "157ad7dd",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942502450,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "dbc97fb8",
+              "id": "2c65267a",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "44ee3056",
+                    "id": "8c8a49ac",
                     "type": "paragraph",
                     "model": {
                       "text": "මෙය පෙළ වාරණයක් වන අතර එය බීබීසී කාලගුණ මුල් පිටුවට සබැඳියක් අඩංගු වේ.",
                       "blocks": [
                         {
-                          "id": "fcb76b25",
+                          "id": "8f6f1d25",
                           "type": "fragment",
                           "model": {
                             "text": "මෙය පෙළ වාරණයක් වන අතර එය බීබීසී කාලගුණ මුල් පිටුවට ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "faa6360f",
+                          "id": "926452c0",
                           "type": "urlLink",
                           "model": {
                             "text": "සබැඳියක් අඩංගු වේ",
                             "blocks": [
                               {
-                                "id": "5b6b9e67",
+                                "id": "e647f5db",
                                 "type": "fragment",
                                 "model": {
                                   "text": "සබැඳියක් අඩංගු වේ",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "52c021b5",
+                          "id": "9c99a719",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "d6061d76",
+              "id": "9e2b3b8b",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01djw2m",
                 "blocks": [
                   {
-                    "id": "560fb6ba",
+                    "id": "8cf27f54",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "997ca458",
+                          "id": "0c9a50de",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "42e7ae32",
+                                "id": "edb0b407",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "චීන සුපිරි අධිවේගී මාර්ග භාවිතා කරන්නන් නව මංසන්ධියෙන් මවිතයට පත් වේ",
                                   "blocks": [
                                     {
-                                      "id": "cebe61e8",
+                                      "id": "f6ad36b6",
                                       "type": "fragment",
                                       "model": {
                                         "text": "චීන සුපිරි අධිවේගී මාර්ග භාවිතා කරන්නන් නව මංසන්ධියෙන් මවිතයට පත් වේ",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "8c7b8bee",
+                    "id": "8a70524f",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "49b60c54",
+                          "id": "9659b529",
                           "blockId": "urn:bbc:ares::clip:p01djw2m",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -394,12 +394,12 @@
                           ]
                         },
                         {
-                          "id": "da6a8f95",
+                          "id": "30f7fc04",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "af943650",
+                                "id": "f1722443",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
@@ -434,23 +434,23 @@
               ]
             },
             {
-              "id": "c7c6300a",
+              "id": "9b453c69",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "65fc25ec",
+                    "id": "785f7a60",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c7aaed86",
+                          "id": "9f3e1e4a",
                           "type": "paragraph",
                           "model": {
                             "text": "මෙය උප සිරස්තලයකි",
                             "blocks": [
                               {
-                                "id": "b4d2d7eb",
+                                "id": "f0e773b3",
                                 "type": "fragment",
                                 "model": {
                                   "text": "මෙය උප සිරස්තලයකි",
@@ -485,28 +485,28 @@
               ]
             },
             {
-              "id": "b14d9fdb",
+              "id": "5273d39e",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "ffeb148d",
+                    "id": "47534cfe",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c3dcface",
+                          "id": "27bee89b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c1052d21",
+                                "id": "9da4838c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "මෙය උප සිරස්තලයකි",
                                   "blocks": [
                                     {
-                                      "id": "f32d6eac",
+                                      "id": "fb47bd49",
                                       "type": "fragment",
                                       "model": {
                                         "text": "මෙය උප සිරස්තලයකි",
@@ -545,7 +545,7 @@
                     ]
                   },
                   {
-                    "id": "7252d92a",
+                    "id": "da2e62e6",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -566,18 +566,18 @@
               ]
             },
             {
-              "id": "fe4c27c9",
+              "id": "20f0f253",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "ff2f3fd6",
+                    "id": "7c7d05d0",
                     "type": "paragraph",
                     "model": {
                       "text": "අපගේ වෙබ් අඩවියේ පරීක්ෂණ ක්‍රියාත්මක කිරීමට හැකිවන පරිදි මෙම පරීක්ෂණ ලිපිය නිර්මාණය කර ඇත.\r",
                       "blocks": [
                         {
-                          "id": "68f52b7f",
+                          "id": "4b38fa77",
                           "type": "fragment",
                           "model": {
                             "text": "අපගේ වෙබ් අඩවියේ පරීක්ෂණ ක්‍රියාත්මක කිරීමට හැකිවන පරිදි මෙම පරීක්ෂණ ලිපිය නිර්මාණය කර ඇත.\r",
@@ -603,7 +603,7 @@
               ]
             },
             {
-              "id": "4ba001e5",
+              "id": "4c9bacfb",
               "type": "mpu",
               "model": {},
               "position": [
@@ -611,7 +611,7 @@
               ]
             },
             {
-              "id": "5c1dfc31",
+              "id": "7d1335dc",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1667,118 +1667,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "b8baf00577d64d1abb028c048fe903c9140840ce",
-            "last-modified": "Fri, 28 Aug 2020 07:27:29 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "414099b8-2d95-4a97-9064-e514b3dafe16",
-            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 318
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c45w255zlexo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "5249",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"31d96a303f8d6311bfdd7d196da47ae1cf53ec5f\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:14 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 915
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/sinhala",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json",
-            "content-length": "1444",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"c8aec051a914ac878d2835a5fa430ed985d7a961\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1339
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/sinhala/front_page",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c45w255zlexo",
-      "service": "sinhala",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "aaabfc18",
+              "id": "4fc52fd9",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "13125d50",
+                    "id": "af095420",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7a59d334",
+                          "id": "2c3c0ff0",
                           "type": "paragraph",
                           "model": {
                             "text": "यह इस परीक्षण लेख का शीर्षक है",
                             "blocks": [
                               {
-                                "id": "ba225a62",
+                                "id": "d778f01c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "यह इस परीक्षण लेख का शीर्षक है",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "bcf092aa",
+              "id": "82f44441",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "1b2959fc",
+                    "id": "0e693cd6",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1ccedae0",
+                          "id": "5783d657",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ca39a54a",
+                                "id": "9c369d83",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "यह परीक्षण छवि, कॉपीराइट बीबीसी, फ्रांस का नक्शा दिखाता है। छवि पहले तीन ब्लॉकों में है और इसका शीर्षक है।",
                                   "blocks": [
                                     {
-                                      "id": "7aa05c47",
+                                      "id": "fcd72431",
                                       "type": "fragment",
                                       "model": {
                                         "text": "यह परीक्षण छवि, कॉपीराइट बीबीसी, फ्रांस का नक्शा दिखाता है। छवि पहले तीन ब्लॉकों में है और इसका शीर्षक है।",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "190a3558",
+                    "id": "d91fffc6",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5a28b3f9",
+                          "id": "1ce41bef",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "43cc59ea",
+                                "id": "10d73aac",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "यह परीक्षण छवि, कॉपीराइट बीबीसी, फ्रांस का नक्शा दिखाता है। छवि पहले तीन ब्लॉकों में है और इसका शीर्षक है।",
                                   "blocks": [
                                     {
-                                      "id": "f1b4f0ef",
+                                      "id": "3d07b701",
                                       "type": "fragment",
                                       "model": {
                                         "text": "यह परीक्षण छवि, कॉपीराइट बीबीसी, फ्रांस का नक्शा दिखाता है। छवि पहले तीन ब्लॉकों में है और इसका शीर्षक है।",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "13b8ba6a",
+                    "id": "a76ca97b",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "10325d50",
+              "id": "f0d9c969",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942209748,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "ea3b63ab",
+              "id": "2e06d2c3",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b8710c48",
+                    "id": "4e58b51e",
                     "type": "paragraph",
                     "model": {
                       "text": "यह एक टेक्स्ट ब्लॉक है, जिसमें बीबीसी वेदर होमपेज के लिए एक यूआरएल लिंक है।",
                       "blocks": [
                         {
-                          "id": "964bbae4",
+                          "id": "aa3433e2",
                           "type": "fragment",
                           "model": {
                             "text": "यह एक टेक्स्ट ब्लॉक है, जिसमें बीबीसी वेदर होमपेज के लिए एक ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "4fc689d5",
+                          "id": "b8c9a9c3",
                           "type": "urlLink",
                           "model": {
                             "text": "यूआरएल लिंक है।",
                             "blocks": [
                               {
-                                "id": "9e930b7a",
+                                "id": "a3cd4c0f",
                                 "type": "fragment",
                                 "model": {
                                   "text": "यूआरएल लिंक है।",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "293ba52d",
+              "id": "c7a9b787",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p019qd7g",
                 "blocks": [
                   {
-                    "id": "43dd50b8",
+                    "id": "f976e067",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "932f40af",
+                          "id": "34e96c94",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2bab7263",
+                                "id": "c2e8ef39",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "यह एक वीडियो ब्लॉक है जिसमें एक परीक्षण फ़ाइल है",
                                   "blocks": [
                                     {
-                                      "id": "b9d7ee1e",
+                                      "id": "aa076362",
                                       "type": "fragment",
                                       "model": {
                                         "text": "यह एक वीडियो ब्लॉक है जिसमें एक परीक्षण फ़ाइल है",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "586f00ef",
+                    "id": "73e22b86",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2b1ea4cc",
+                          "id": "2fd0817a",
                           "blockId": "urn:bbc:ares::clip:p019qd7g",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -378,12 +378,12 @@
                           ]
                         },
                         {
-                          "id": "5c82b1a0",
+                          "id": "d1a4850b",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2d4714c7",
+                                "id": "914a5611",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
@@ -418,23 +418,23 @@
               ]
             },
             {
-              "id": "422f5a24",
+              "id": "227b33cf",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "36293792",
+                    "id": "034c0631",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "67e64b3b",
+                          "id": "e9180de6",
                           "type": "paragraph",
                           "model": {
                             "text": "यह एक सबहेडलाइन ब्लॉक है\r",
                             "blocks": [
                               {
-                                "id": "d8b36f2f",
+                                "id": "590e68fe",
                                 "type": "fragment",
                                 "model": {
                                   "text": "यह एक सबहेडलाइन ब्लॉक है\r",
@@ -469,28 +469,28 @@
               ]
             },
             {
-              "id": "7d76e7b2",
+              "id": "e8f74b3c",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "16d514d6",
+                    "id": "6604da96",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1191177f",
+                          "id": "5359ff7f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1d91dd67",
+                                "id": "cd992d81",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "यह एक सबहेडलाइन ब्लॉक है\r",
                                   "blocks": [
                                     {
-                                      "id": "f5df7a44",
+                                      "id": "e9b6f9a5",
                                       "type": "fragment",
                                       "model": {
                                         "text": "यह एक सबहेडलाइन ब्लॉक है\r",
@@ -529,7 +529,7 @@
                     ]
                   },
                   {
-                    "id": "304c64f8",
+                    "id": "0169e625",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -550,18 +550,18 @@
               ]
             },
             {
-              "id": "494ddfd4",
+              "id": "afd89598",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "301dbf71",
+                    "id": "2ea06cd1",
                     "type": "paragraph",
                     "model": {
                       "text": "यह परीक्षण लेख बनाया गया है ताकि हम अपनी वेबसाइट पर परीक्षण चला सकें।.",
                       "blocks": [
                         {
-                          "id": "bb6a1dc8",
+                          "id": "c2aa4740",
                           "type": "fragment",
                           "model": {
                             "text": "यह परीक्षण लेख बनाया गया है ताकि हम अपनी वेबसाइट पर परीक्षण चला सकें।.",
@@ -587,7 +587,7 @@
               ]
             },
             {
-              "id": "5cffa5b5",
+              "id": "54e098da",
               "type": "mpu",
               "model": {},
               "position": [
@@ -595,7 +595,7 @@
               ]
             },
             {
-              "id": "41fb00ce",
+              "id": "88f330ec",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1940,118 +1940,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "4633",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"6594fdfbed35b8d8589ce0a0793988fbc1ec3d8e\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 520
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/hindi",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1258",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"bbcf5feb427a2bbfb7f913cedc268263876989a4\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:11 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 894
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/hindi/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "bc0b8b38c5578d878158b0aa6ae73541349c4415",
-            "last-modified": "Fri, 28 Aug 2020 07:27:11 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "436a1dec-9088-47cc-a1c3-f6fb3fadf774",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1079
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c0469479x9xo",
-          "timeout": 4000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c0469479x9xo",
-      "service": "hindi",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

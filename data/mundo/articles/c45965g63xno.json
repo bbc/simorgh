@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "ba12b3a5",
+              "id": "cf052f44",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "46b3eb92",
+                    "id": "c30ffa14",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a272b23c",
+                          "id": "416a71bd",
                           "type": "paragraph",
                           "model": {
                             "text": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas",
                             "blocks": [
                               {
-                                "id": "7c0a6971",
+                                "id": "ea7ea9fd",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Islam en México: los indígenas chamulas que viven en Chiapas con tradiciones musulmanas",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "ce583bd3",
+              "id": "4549acc4",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941654757,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "764d379e",
+              "id": "cd113a48",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "85d53636",
+                    "id": "33bb193e",
                     "type": "paragraph",
                     "model": {
                       "text": "El islam llegó en San Cristobal de las Casas en la década de los 90 de la mano de unos españoles que querían unirse a la lucha zapatista.",
                       "blocks": [
                         {
-                          "id": "bc5adc79",
+                          "id": "5c689a44",
                           "type": "fragment",
                           "model": {
                             "text": "El islam llegó en San Cristobal de las Casas en la década de los 90 de la mano de unos españoles que querían unirse a la lucha zapatista.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "3ae03a3a",
+                    "id": "700f773c",
                     "type": "paragraph",
                     "model": {
                       "text": "Su mensaje se asentó entre los chamulas y fue pasando entre las familias a lo largo de los años.",
                       "blocks": [
                         {
-                          "id": "904f6b69",
+                          "id": "729da297",
                           "type": "fragment",
                           "model": {
                             "text": "Su mensaje se asentó entre los chamulas y fue pasando entre las familias a lo largo de los años.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "6689b20e",
+                    "id": "7a1dc1ee",
                     "type": "paragraph",
                     "model": {
                       "text": "Hoy hay al menos 300 personas que profesan su fe en Alá, ayunan durante el Ramadán y se niegan a beber alcohol.",
                       "blocks": [
                         {
-                          "id": "e30a9f43",
+                          "id": "ba05183b",
                           "type": "fragment",
                           "model": {
                             "text": "Hoy hay al menos 300 personas que profesan su fe en Alá, ayunan durante el Ramadán y se niegan a beber alcohol.",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "d5e6a4ad",
+                    "id": "36c7b211",
                     "type": "paragraph",
                     "model": {
                       "text": "Ana Gabriela Rojas, corresponsal de BBC Mundo, estuvo en esa comunidad para conocer su historia.",
                       "blocks": [
                         {
-                          "id": "dbdaeb88",
+                          "id": "e45de882",
                           "type": "fragment",
                           "model": {
                             "text": "Ana Gabriela Rojas, corresponsal de BBC Mundo, estuvo en esa comunidad para conocer su historia.",
@@ -182,7 +182,7 @@
               ]
             },
             {
-              "id": "6e309ef0",
+              "id": "55f95229",
               "type": "mpu",
               "model": {},
               "position": [
@@ -190,7 +190,7 @@
               ]
             },
             {
-              "id": "953b587f",
+              "id": "6044554c",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1381,118 +1381,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "ae12452dbfd8fdbaae36908b63063974d253b9d9",
-            "last-modified": "Tue, 08 Mar 2022 10:53:51 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "e4d8bd18-b0f5-4e1f-9fb2-b834d16c2e9b",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 947
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c45965g63xno",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "2064",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"4db73debc821388fdecf56009ff46812846a53ae\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "HIT"
-          },
-          "responseCode": 200,
-          "responseTime": 1236
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/mundo/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "5861",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"e5a89c21e53b5cfea1ea19f92d1a15f6112bfe24\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1442
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/mundo",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c45965g63xno",
-      "service": "mundo",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

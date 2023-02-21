@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "c69b3221",
+              "id": "578b766f",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "d489476d",
+                    "id": "ad72df7a",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "09409d25",
+                          "id": "d6efc892",
                           "type": "paragraph",
                           "model": {
                             "text": "Hii ndio kichwa cha habari cha makala haya ya majaribio",
                             "blocks": [
                               {
-                                "id": "ad24070f",
+                                "id": "1442664b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Hii ndio kichwa cha habari cha makala haya ya majaribio",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "9d8e14d7",
+              "id": "2e0fda95",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "941abc08",
+                    "id": "0d9af096",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9ec1b0be",
+                          "id": "6175b6d9",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "78c80797",
+                                "id": "1f0fe0cd",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Picha ya jaribio, hakimiliki ya BBC, inaonyesha ramani ya Ufaransa. Picha iko kwenye vitalu vitatu vya kwanza na ina maelezo haya.",
                                   "blocks": [
                                     {
-                                      "id": "4ad0d956",
+                                      "id": "e12f7afc",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Picha ya jaribio, hakimiliki ya BBC, inaonyesha ramani ya Ufaransa. Picha iko kwenye vitalu vitatu vya kwanza na ina maelezo haya.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "3521eef8",
+                    "id": "7c2baedc",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3685f021",
+                          "id": "5e34e75d",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "558c5411",
+                                "id": "130c01d2",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Ramani ya Ufaransa inayoonyesha Paris na Cognac",
                                   "blocks": [
                                     {
-                                      "id": "a2da938e",
+                                      "id": "9c792048",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Ramani ya Ufaransa inayoonyesha Paris na Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "45108cc0",
+                    "id": "07f68965",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "68f95aa4",
+              "id": "bf38014a",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936569893,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "2aed1e4e",
+              "id": "619e1533",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "7f9e7b3f",
+                    "id": "2dc46597",
                     "type": "paragraph",
                     "model": {
                       "text": "Hiki ni kizuizi cha maandishi, ambayo yana kiunga cha url kwa ukurasa wa nyumbani wa BBC Weather.",
                       "blocks": [
                         {
-                          "id": "b2b3f8c8",
+                          "id": "1753cf8c",
                           "type": "fragment",
                           "model": {
                             "text": "Hiki ni kizuizi cha maandishi, ambayo yana kiunga cha url kwa ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "18fc7703",
+                          "id": "eb549136",
                           "type": "urlLink",
                           "model": {
                             "text": "ukurasa wa nyumbani wa BBC Weather.",
                             "blocks": [
                               {
-                                "id": "985d1c09",
+                                "id": "07e92579",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ukurasa wa nyumbani wa BBC Weather.",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "e77f597b",
+              "id": "21031b98",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "fcc2d1b9",
+                    "id": "9f480bbb",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "009330ad",
+                          "id": "2970d736",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f23e7038",
+                                "id": "977e1a21",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Hii ni kizuizi cha video kilicho na video kuhusu mchwa",
                                   "blocks": [
                                     {
-                                      "id": "36459155",
+                                      "id": "b3903ef0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Hii ni kizuizi cha video kilicho na video kuhusu mchwa",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "f8b9ff30",
+                    "id": "b3a26abe",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ca4268a7",
+                          "id": "f3564e35",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -382,12 +382,12 @@
                           ]
                         },
                         {
-                          "id": "b69994d2",
+                          "id": "80cfea76",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "eba5d9e8",
+                                "id": "5ac102a2",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -404,23 +404,23 @@
                                 ]
                               },
                               {
-                                "id": "a805f83b",
+                                "id": "06f403c2",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "64460e04",
+                                      "id": "01c860d9",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "e4bbdec6",
+                                            "id": "ea0bb850",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "f0f003a0",
+                                                  "id": "5a072453",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -488,23 +488,23 @@
               ]
             },
             {
-              "id": "26ec03ce",
+              "id": "a8691245",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "cc17d96e",
+                    "id": "6d0eea02",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "eeda234e",
+                          "id": "917c546c",
                           "type": "paragraph",
                           "model": {
                             "text": "Hii ni kifungu cha kichwa cha chini",
                             "blocks": [
                               {
-                                "id": "da93ea09",
+                                "id": "5a796188",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Hii ni kifungu cha kichwa cha chini",
@@ -539,28 +539,28 @@
               ]
             },
             {
-              "id": "093ffaad",
+              "id": "bd05c7fd",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "5ff1df48",
+                    "id": "5ccafd39",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a1c0bf83",
+                          "id": "113a933e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "57709488",
+                                "id": "431249a5",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Wadau wa mpira wa miguu baada ya mechi",
                                   "blocks": [
                                     {
-                                      "id": "99d46181",
+                                      "id": "175bcc03",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Wadau wa mpira wa miguu baada ya mechi",
@@ -599,7 +599,7 @@
                     ]
                   },
                   {
-                    "id": "e4e2a1a8",
+                    "id": "2b3e8a6c",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -620,18 +620,18 @@
               ]
             },
             {
-              "id": "726f4199",
+              "id": "628c071e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "ffe29cac",
+                    "id": "9410ce7d",
                     "type": "paragraph",
                     "model": {
                       "text": "Nakala hii ya majaribio imeundwa ili tuweze kuendesha vipimo vya kujiendesha kwa-mwisho kwenye wavuti yetu.",
                       "blocks": [
                         {
-                          "id": "7f5088c7",
+                          "id": "dfa1ba29",
                           "type": "fragment",
                           "model": {
                             "text": "Nakala hii ya majaribio imeundwa ili tuweze kuendesha vipimo vya kujiendesha kwa-mwisho kwenye wavuti yetu.",
@@ -657,7 +657,7 @@
               ]
             },
             {
-              "id": "3a7ba22a",
+              "id": "4d769129",
               "type": "mpu",
               "model": {},
               "position": [
@@ -665,7 +665,7 @@
               ]
             },
             {
-              "id": "f1a5cee5",
+              "id": "b2a9fe70",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1889,118 +1889,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "a7dddda345b7b2ae31c5cd96cfb7b8968a080f86",
-            "last-modified": "Fri, 28 Aug 2020 07:27:31 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "65b9ed54-53a6-4278-b104-18ccf471cfbd",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 808
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/czjqge2jwn2o",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1533",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"991ce07063f66278cd13136e3357eb5ed53e9130\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1177
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/swahili/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "4734",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"47870280f34cc05882a608ef7fc519fc642387f4\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:14 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1399
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/swahili",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "czjqge2jwn2o",
-      "service": "swahili",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

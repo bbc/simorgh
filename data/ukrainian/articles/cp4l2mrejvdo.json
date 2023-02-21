@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "70a6dc0c",
+              "id": "2a5245ba",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "1806ca22",
+                    "id": "95d8afad",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7534aa6c",
+                          "id": "22c93639",
                           "type": "paragraph",
                           "model": {
                             "text": "Це заголовок цієї тестової статті",
                             "blocks": [
                               {
-                                "id": "5c973d21",
+                                "id": "642c788a",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Це заголовок цієї тестової статті",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "1231a96b",
+              "id": "0f4e580a",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "1ddde095",
+                    "id": "3bee9edb",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1528ba59",
+                          "id": "5adac67d",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1e4d54ca",
+                                "id": "dbf9d804",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Це тестове зображення, авторське право BBC, показує карту Франції. Зображення знаходиться в перших трьох блоках і має цей підпис.",
                                   "blocks": [
                                     {
-                                      "id": "ceea4307",
+                                      "id": "1f13c6c2",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Це тестове зображення, авторське право BBC, показує карту Франції. Зображення знаходиться в перших трьох блоках і має цей підпис.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "374be9f3",
+                    "id": "3a56c729",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ef4ef7e8",
+                          "id": "14631de7",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "db3f046b",
+                                "id": "ec11e66a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Це тестове зображення, авторське право BBC, показує карту Франції. Зображення знаходиться в перших трьох блоках і має цей підпис.",
                                   "blocks": [
                                     {
-                                      "id": "c3a3b7f9",
+                                      "id": "a11be377",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Це тестове зображення, авторське право BBC, показує карту Франції. Зображення знаходиться в перших трьох блоках і має цей підпис.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "490d5d87",
+                    "id": "c7f946a7",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "269715e5",
+              "id": "ca83582f",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1578478069451,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "b6370bc8",
+              "id": "3867464a",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "902df2f6",
+                    "id": "91ef472a",
                     "type": "paragraph",
                     "model": {
                       "text": "Це текстовий блок, який містить посилання URL на головну сторінку BBC Weather.",
                       "blocks": [
                         {
-                          "id": "5e4515f0",
+                          "id": "e22d81db",
                           "type": "fragment",
                           "model": {
                             "text": "Це текстовий блок, який містить посилання URL на головну сторінку ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "9d5c029b",
+                          "id": "8beec917",
                           "type": "urlLink",
                           "model": {
                             "text": "BBC Weather",
                             "blocks": [
                               {
-                                "id": "61ae0913",
+                                "id": "f2e87a2c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "BBC Weather",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "b5e98973",
+                          "id": "45633455",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "6b7fba9e",
+              "id": "a90c9a92",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01plpzw",
                 "blocks": [
                   {
-                    "id": "75cbcb43",
+                    "id": "c5a83703",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "70151a67",
+                          "id": "e885c45e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ac4800e4",
+                                "id": "779b675f",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Це підзаголовок",
                                   "blocks": [
                                     {
-                                      "id": "81307366",
+                                      "id": "72f407fb",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Це підзаголовок",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "129b8344",
+                    "id": "5b470bda",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0ce8e5c2",
+                          "id": "135e52be",
                           "blockId": "urn:bbc:ares::clip:p01plpzw",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -393,12 +393,12 @@
                           ]
                         },
                         {
-                          "id": "327422af",
+                          "id": "3af17577",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b9d2c8fa",
+                                "id": "ebf1b376",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 976,
@@ -414,23 +414,23 @@
                                 ]
                               },
                               {
-                                "id": "a38bce02",
+                                "id": "352908ee",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "bc03653b",
+                                      "id": "1d9e36a1",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "1a10a386",
+                                            "id": "4be7138d",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "World Service Thumbnail",
                                               "blocks": [
                                                 {
-                                                  "id": "bdb076fc",
+                                                  "id": "1df7fbdf",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "World Service Thumbnail",
@@ -498,23 +498,23 @@
               ]
             },
             {
-              "id": "9521f7ac",
+              "id": "ed63df35",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "4f73798f",
+                    "id": "167b8782",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e5750865",
+                          "id": "4b83cebd",
                           "type": "paragraph",
                           "model": {
                             "text": "Це підзаголовок",
                             "blocks": [
                               {
-                                "id": "8695e834",
+                                "id": "bd59e5e3",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Це підзаголовок",
@@ -549,28 +549,28 @@
               ]
             },
             {
-              "id": "9b5235c4",
+              "id": "e10f5364",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "4c459c9c",
+                    "id": "973e2d4d",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c6b558d1",
+                          "id": "8e888785",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "852b58ee",
+                                "id": "d6541fdc",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Це підзаголовок",
                                   "blocks": [
                                     {
-                                      "id": "95590ec2",
+                                      "id": "d1a82bc9",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Це підзаголовок",
@@ -609,7 +609,7 @@
                     ]
                   },
                   {
-                    "id": "eb1c2558",
+                    "id": "2ba73134",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -630,18 +630,18 @@
               ]
             },
             {
-              "id": "6be09856",
+              "id": "ace8b93f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "8e831ba9",
+                    "id": "b94d25c0",
                     "type": "paragraph",
                     "model": {
                       "text": "Ця тестова стаття створена для того, щоб ми могли запускати автоматизовані тестові тести на нашому веб-сайті.",
                       "blocks": [
                         {
-                          "id": "a4be14e8",
+                          "id": "b2039a3e",
                           "type": "fragment",
                           "model": {
                             "text": "Ця тестова стаття створена для того, щоб ми могли запускати автоматизовані тестові тести на нашому веб-сайті.",
@@ -667,7 +667,7 @@
               ]
             },
             {
-              "id": "b9f41907",
+              "id": "6ca6955e",
               "type": "mpu",
               "model": {},
               "position": [
@@ -675,7 +675,7 @@
               ]
             },
             {
-              "id": "d66cdfaf",
+              "id": "0b51e4c9",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1829,118 +1829,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "4c35548d8067eb4447844d7348547899e0871047",
-            "last-modified": "Fri, 25 Sep 2020 09:15:59 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "2b0dbd77-7e05-4c2f-b1c5-9c4d73e1a550",
-            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 806
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cp4l2mrejvdo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "2154",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"957d21c2c8195dfda821439fff31e0295456b6c5\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1247
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/ukrainian/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3395",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5e7c7f8bebb2d6261d088de332d0b95e66a3cc2b\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1365
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/ukrainian",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cp4l2mrejvdo",
-      "service": "ukrainian",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "2100e86e",
+              "id": "d0222e96",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "c9a2a69c",
+                    "id": "4db71b46",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d0925aac",
+                          "id": "e35437a8",
                           "type": "paragraph",
                           "model": {
                             "text": "GB’s Renshall wins gold in Baku",
                             "blocks": [
                               {
-                                "id": "48d25f2a",
+                                "id": "f7b4ccb3",
                                 "type": "fragment",
                                 "model": {
                                   "text": "GB’s Renshall wins gold in Baku",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "06adf504",
+              "id": "8ad8f435",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "c6cc9180",
+                    "id": "33d9c3d6",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "83c4006d",
+                          "id": "5b470fb3",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6e0234be",
+                                "id": "e5b3267e",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
                                   "blocks": [
                                     {
-                                      "id": "b7ddc1a6",
+                                      "id": "b881786d",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "f9ffc016",
+                    "id": "ed068492",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "fbd24cb0",
+                          "id": "57cbb328",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a6baad83",
+                                "id": "619e2cf4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "British judoka Lucy Renshall with her silver medal in October",
                                   "blocks": [
                                     {
-                                      "id": "e174db2c",
+                                      "id": "42bbaf0c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "British judoka Lucy Renshall with her silver medal in October",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "ad658258",
+                    "id": "e1eb55e3",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -193,7 +193,7 @@
               ]
             },
             {
-              "id": "1cd73dc4",
+              "id": "86bcc857",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1661165030455,
@@ -204,18 +204,18 @@
               ]
             },
             {
-              "id": "728f85ed",
+              "id": "4acc722b",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "4e50183e",
+                    "id": "d1cf89e7",
                     "type": "paragraph",
                     "model": {
                       "text": "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.",
                       "blocks": [
                         {
-                          "id": "b692004c",
+                          "id": "56184fb4",
                           "type": "fragment",
                           "model": {
                             "text": "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.",
@@ -243,20 +243,20 @@
               ]
             },
             {
-              "id": "218f2439",
+              "id": "b31ab695",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/BBCSport/status/1567048705102041091",
                 "providerName": "Twitter",
                 "blocks": [
                   {
-                    "id": "0905db19",
+                    "id": "371c2a1c",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:4a6cec66-038e-442d-bdd5-404bfcc20290",
                       "blocks": [
                         {
-                          "id": "05d02e34",
+                          "id": "af1cf261",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -290,18 +290,18 @@
               ]
             },
             {
-              "id": "e2603c4f",
+              "id": "1008820a",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "ab7aef0f",
+                    "id": "a83f22bf",
                     "type": "paragraph",
                     "model": {
                       "text": "Renshall held Bold down for 20 seconds to win the -63kg fight and earn her second Grand Slam gold of the year.",
                       "blocks": [
                         {
-                          "id": "90502fdc",
+                          "id": "add871b6",
                           "type": "fragment",
                           "model": {
                             "text": "Renshall held Bold down for 20 seconds to win the -63kg fight and earn her second Grand Slam gold of the year.",
@@ -321,13 +321,13 @@
                     ]
                   },
                   {
-                    "id": "9c70de00",
+                    "id": "4e978fa6",
                     "type": "paragraph",
                     "model": {
                       "text": "The 25-year-old, who received a bye in the opening round, beat Australia's Katharina Haecker in the semi-final.",
                       "blocks": [
                         {
-                          "id": "a92195fc",
+                          "id": "b953c98b",
                           "type": "fragment",
                           "model": {
                             "text": "The 25-year-old, who received a bye in the opening round, beat Australia's Katharina Haecker in the semi-final.",
@@ -347,13 +347,13 @@
                     ]
                   },
                   {
-                    "id": "520edc08",
+                    "id": "69366db5",
                     "type": "paragraph",
                     "model": {
                       "text": "Team-mate Kelly Petersen-Pollard, 22, picked up her first Grand Slam medal, beating Germany's Julie Hoelterhoff to win bronze in the -70kg division.",
                       "blocks": [
                         {
-                          "id": "82680c0f",
+                          "id": "814f8130",
                           "type": "fragment",
                           "model": {
                             "text": "Team-mate Kelly Petersen-Pollard, 22, picked up her first Grand Slam medal, beating Germany's Julie Hoelterhoff to win bronze in the -70kg division.",
@@ -379,7 +379,7 @@
               ]
             },
             {
-              "id": "8402c0cb",
+              "id": "0667b450",
               "type": "mpu",
               "model": {},
               "position": [
@@ -387,18 +387,18 @@
               ]
             },
             {
-              "id": "204edb06",
+              "id": "b9ab9cb8",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "7ac88c5d",
+                    "id": "b7990341",
                     "type": "paragraph",
                     "model": {
                       "text": "On Friday, 2020 Olympic bronze medallist Chelsie Giles won silver in the women's -52kg category.",
                       "blocks": [
                         {
-                          "id": "b0475b57",
+                          "id": "92519a5a",
                           "type": "fragment",
                           "model": {
                             "text": "On Friday, 2020 Olympic bronze medallist Chelsie Giles won silver in the women's -52kg category.",
@@ -424,7 +424,7 @@
               ]
             },
             {
-              "id": "99f56be9",
+              "id": "cb3f3f79",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -2633,118 +2633,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1752",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"c1dd669afd26f51274377ba9634cdee1de73b3aa\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1049
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/sport/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "8437",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5a291b8e3d6495c083804b320450291c299f9d60\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1064
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/sport",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "650098cc38c8ab099bf91f44da931d1fe69f842d",
-            "last-modified": "Tue, 06 Sep 2022 08:56:07 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "b45edca6-3995-48fc-b609-6acddee2f8c5",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1113
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cj80n66ddnko",
-          "timeout": 4000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cj80n66ddnko",
-      "service": "sport",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

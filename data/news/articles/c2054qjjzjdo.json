@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "5e3b8f8d",
+              "id": "5ebeb465",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "6e386abf",
+                    "id": "2ee5c518",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0fbba820",
+                          "id": "15a72c96",
                           "type": "paragraph",
                           "model": {
                             "text": "Test in-line blocks",
                             "blocks": [
                               {
-                                "id": "cc143799",
+                                "id": "7ec2771b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Test in-line blocks",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "1006054f",
+              "id": "bf586d63",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1574263957594,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "b952547d",
+              "id": "b300ddc3",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "29374a24",
+                    "id": "dfd8d9d7",
                     "type": "paragraph",
                     "model": {
                       "text": "Lots of text in one language followed by text texte dans une autre langue. That's called an inline block.",
                       "blocks": [
                         {
-                          "id": "d9db467b",
+                          "id": "6884707c",
                           "type": "fragment",
                           "model": {
                             "text": "Lots of text in one language followed by text ",
@@ -91,13 +91,13 @@
                           ]
                         },
                         {
-                          "id": "f95ab1c6",
+                          "id": "77581e1d",
                           "type": "inline",
                           "model": {
                             "text": "texte dans une autre langue",
                             "blocks": [
                               {
-                                "id": "27a59b98",
+                                "id": "119d4d7d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "texte dans une autre langue",
@@ -120,7 +120,7 @@
                           ]
                         },
                         {
-                          "id": "4616f00e",
+                          "id": "f74137a3",
                           "type": "fragment",
                           "model": {
                             "text": ". That's called an inline block.",
@@ -140,13 +140,13 @@
                     ]
                   },
                   {
-                    "id": "02f1f911",
+                    "id": "1e6e3608",
                     "type": "paragraph",
                     "model": {
                       "text": "And look, here's another inline block: \n202Bچرا می‌توانید به بی‌بی‌سی اطمینان کنید؟\n202C This time, the inline block was in Arabic.\n\n",
                       "blocks": [
                         {
-                          "id": "e832f484",
+                          "id": "bfc9e607",
                           "type": "fragment",
                           "model": {
                             "text": "And look, here's another inline block: ",
@@ -159,13 +159,13 @@
                           ]
                         },
                         {
-                          "id": "d65f2d8b",
+                          "id": "2ba2cd76",
                           "type": "inline",
                           "model": {
                             "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
                             "blocks": [
                               {
-                                "id": "ca113bee",
+                                "id": "695f67e4",
                                 "type": "fragment",
                                 "model": {
                                   "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
@@ -188,7 +188,7 @@
                           ]
                         },
                         {
-                          "id": "ede1edbc",
+                          "id": "bcce21b1",
                           "type": "fragment",
                           "model": {
                             "text": " This time, the inline block was in Arabic.\n\n",
@@ -208,13 +208,13 @@
                     ]
                   },
                   {
-                    "id": "6eec2925",
+                    "id": "e70686e1",
                     "type": "paragraph",
                     "model": {
                       "text": "\n\n",
                       "blocks": [
                         {
-                          "id": "698b8c78",
+                          "id": "f9edc688",
                           "type": "fragment",
                           "model": {
                             "text": "\n\n",
@@ -240,28 +240,28 @@
               ]
             },
             {
-              "id": "7a5e1258",
+              "id": "e2e18fb3",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "d4e8336c",
+                    "id": "d67523cf",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "aea77d46",
+                          "id": "63f36ea6",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "3055ae10",
+                                "id": "ce59b4d5",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This image caption has an inline block: \n202Bهذا هو كتلة مضمنة\n202C. See, what a lovely inline block.\n",
                                   "blocks": [
                                     {
-                                      "id": "b3d2c842",
+                                      "id": "a65b714a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This image caption has an inline block: ",
@@ -276,13 +276,13 @@
                                       ]
                                     },
                                     {
-                                      "id": "9f387c4d",
+                                      "id": "c7fee86c",
                                       "type": "inline",
                                       "model": {
                                         "text": "هذا هو كتلة مضمنة",
                                         "blocks": [
                                           {
-                                            "id": "5529e2f6",
+                                            "id": "d4b69e7e",
                                             "type": "fragment",
                                             "model": {
                                               "text": "هذا هو كتلة مضمنة",
@@ -309,7 +309,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "4131c7a8",
+                                      "id": "51b7fde9",
                                       "type": "fragment",
                                       "model": {
                                         "text": ". See, what a lovely inline block.\n",
@@ -348,23 +348,23 @@
                     ]
                   },
                   {
-                    "id": "5c814fb6",
+                    "id": "aac456ec",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "67f6becf",
+                          "id": "60e4c695",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "73127b19",
+                                "id": "c10f8059",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Europe",
                                   "blocks": [
                                     {
-                                      "id": "2a3dc6eb",
+                                      "id": "b3e825e6",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Europe",
@@ -403,7 +403,7 @@
                     ]
                   },
                   {
-                    "id": "a365b248",
+                    "id": "a191e866",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -424,29 +424,29 @@
               ]
             },
             {
-              "id": "438c596d",
+              "id": "f4865b81",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "27b471af",
+                    "id": "616280c0",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "62b65428",
+                          "id": "fa406371",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "9b50ccbc",
+                                "id": "8b00bfce",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a media block caption. It also has an inline block: \n202Bهذا هو كتلة مضمنة\n202C. See, what a lovely inline block.",
                                   "blocks": [
                                     {
-                                      "id": "f26a4b00",
+                                      "id": "3898ce28",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This is a media block caption. It also has an inline block: ",
@@ -461,13 +461,13 @@
                                       ]
                                     },
                                     {
-                                      "id": "72b007a8",
+                                      "id": "9821192d",
                                       "type": "inline",
                                       "model": {
                                         "text": "هذا هو كتلة مضمنة",
                                         "blocks": [
                                           {
-                                            "id": "d1424204",
+                                            "id": "27846e8e",
                                             "type": "fragment",
                                             "model": {
                                               "text": "هذا هو كتلة مضمنة",
@@ -494,7 +494,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "c8f8565e",
+                                      "id": "9a0a40b9",
                                       "type": "fragment",
                                       "model": {
                                         "text": ". See, what a lovely inline block.",
@@ -533,12 +533,12 @@
                     ]
                   },
                   {
-                    "id": "c31a73c8",
+                    "id": "87c98f8e",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a16628b1",
+                          "id": "3827011f",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -584,12 +584,12 @@
                           ]
                         },
                         {
-                          "id": "787883a9",
+                          "id": "ff418499",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "44f4ffc7",
+                                "id": "4999f194",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -606,23 +606,23 @@
                                 ]
                               },
                               {
-                                "id": "83024994",
+                                "id": "d4598a87",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "543b5331",
+                                      "id": "28c649d6",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "6a4d4783",
+                                            "id": "cd111bd3",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "5e357284",
+                                                  "id": "b729fc1d",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -690,28 +690,28 @@
               ]
             },
             {
-              "id": "af96478c",
+              "id": "00b6d0ce",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "9aebbcc9",
+                    "id": "c5aa435b",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "25415bd9",
+                          "id": "2649c90e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "03ac19a8",
+                                "id": "59ffe7c2",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Oh my gosh! Another image caption with an bloc en ligne. In French this time.",
                                   "blocks": [
                                     {
-                                      "id": "9b2e8567",
+                                      "id": "46ec4b3c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Oh my gosh! Another image caption with an ",
@@ -726,13 +726,13 @@
                                       ]
                                     },
                                     {
-                                      "id": "3e0f31ff",
+                                      "id": "e343a4d1",
                                       "type": "inline",
                                       "model": {
                                         "text": "bloc en ligne",
                                         "blocks": [
                                           {
-                                            "id": "3d15679d",
+                                            "id": "67d10394",
                                             "type": "fragment",
                                             "model": {
                                               "text": "bloc en ligne",
@@ -759,7 +759,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "a37cb609",
+                                      "id": "d84cf9f0",
                                       "type": "fragment",
                                       "model": {
                                         "text": ". In French this time.",
@@ -798,23 +798,23 @@
                     ]
                   },
                   {
-                    "id": "268d3fc8",
+                    "id": "0a8fbc93",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5c8d0e3e",
+                          "id": "ccf17a9b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "57d03d19",
+                                "id": "c62be4c0",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Map",
                                   "blocks": [
                                     {
-                                      "id": "64a48610",
+                                      "id": "a1bb0e67",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Map",
@@ -853,7 +853,7 @@
                     ]
                   },
                   {
-                    "id": "e6a12c4a",
+                    "id": "0eccd566",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -874,7 +874,7 @@
               ]
             },
             {
-              "id": "3c03b5e3",
+              "id": "7060d870",
               "type": "mpu",
               "model": {},
               "position": [
@@ -882,7 +882,7 @@
               ]
             },
             {
-              "id": "02ea3243",
+              "id": "11d209e9",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -2290,118 +2290,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "10867",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"0dc762dfbc616e599d7d1bcb23b36d5ebd9c5359\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:11 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "HIT"
-          },
-          "responseCode": 200,
-          "responseTime": 585
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/news/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "6083",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"06f86a889715f7815bf36035ab3a06b6bfc3e330\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1224
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/news",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "03255a0530841970636aea2e0075be86b6bf4f08",
-            "last-modified": "Thu, 24 Feb 2022 00:17:10 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "b6c9c33e-5d19-42a8-9473-d687125a3249",
-            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1239
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c2054qjjzjdo",
-          "timeout": 4000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c2054qjjzjdo",
-      "service": "news",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

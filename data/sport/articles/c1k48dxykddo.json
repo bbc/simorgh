@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "674282d7",
+              "id": "4b42a7b3",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "1fc55f06",
+                    "id": "7479d5e3",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d6a305f7",
+                          "id": "f479ba29",
                           "type": "paragraph",
                           "model": {
                             "text": "Netball World Cup 2019: Northern Ireland earn crucial 67-50 win over Sri Lanka",
                             "blocks": [
                               {
-                                "id": "9af5fd8f",
+                                "id": "7d9ecc44",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Netball World Cup 2019: Northern Ireland earn crucial 67-50 win over Sri Lanka",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "b042b90f",
+              "id": "86a799da",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1563022155629,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "bfa785bd",
+              "id": "ff3c3f9e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "1245650b",
+                    "id": "b061fae8",
                     "type": "paragraph",
                     "model": {
                       "text": "Northern Ireland regrouped from Friday's heavy opening defeat by Australia to earn a vital 67-50 win over Sri Lanka at the World Cup.",
                       "blocks": [
                         {
-                          "id": "4d1b4cb0",
+                          "id": "de2639b3",
                           "type": "fragment",
                           "model": {
                             "text": "Northern Ireland regrouped from Friday's heavy opening defeat by Australia to earn a vital 67-50 win over Sri Lanka at the World Cup.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "3f4cc557",
+                    "id": "4e2a3ed9",
                     "type": "paragraph",
                     "model": {
                       "text": "The win boosts Northern Ireland's hopes of clinching the top-three spot in Group A which would see them progress to the next stage of the competition.",
                       "blocks": [
                         {
-                          "id": "d935fb43",
+                          "id": "a220b2f8",
                           "type": "fragment",
                           "model": {
                             "text": "The win boosts Northern Ireland's hopes of clinching the top-three spot in Group A which would see them progress to the next stage of the competition.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "36667006",
+                    "id": "793506e1",
                     "type": "paragraph",
                     "model": {
                       "text": "Emma Magee and half-time substitute Noleen Armstrong both scored heavily for the dominant Northern Irish.",
                       "blocks": [
                         {
-                          "id": "50a9d2db",
+                          "id": "5c310d8e",
                           "type": "fragment",
                           "model": {
                             "text": "Emma Magee and half-time substitute Noleen Armstrong both scored heavily for the dominant Northern Irish.",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "24b964bf",
+                    "id": "045bc9e6",
                     "type": "paragraph",
                     "model": {
                       "text": "Northern Ireland led 34-25 at half-time and remained in control.",
                       "blocks": [
                         {
-                          "id": "b1ff004d",
+                          "id": "1864569f",
                           "type": "fragment",
                           "model": {
                             "text": "Northern Ireland led 34-25 at half-time and remained in control.",
@@ -182,7 +182,7 @@
               ]
             },
             {
-              "id": "cdd7d45a",
+              "id": "e130778b",
               "type": "mpu",
               "model": {},
               "position": [
@@ -190,18 +190,18 @@
               ]
             },
             {
-              "id": "3ff9b3d6",
+              "id": "bdc69b03",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "c3730a3f",
+                    "id": "f93bb543",
                     "type": "paragraph",
                     "model": {
                       "text": "Magee hit 18 goals in the first half as Northern Ireland bossed the contest from the off.",
                       "blocks": [
                         {
-                          "id": "d57047d1",
+                          "id": "58c84d9c",
                           "type": "fragment",
                           "model": {
                             "text": "Magee hit 18 goals in the first half as Northern Ireland bossed the contest from the off.",
@@ -227,7 +227,7 @@
               ]
             },
             {
-              "id": "900112ad",
+              "id": "8c55c626",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -2157,118 +2157,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "d5c0ecf01df96130682091700be6f0895b6dfef0",
-            "last-modified": "Wed, 23 Feb 2022 15:03:05 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "bf4ff2ee-8f3a-4341-ad8c-5e89c68dafac",
-            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 657
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c1k48dxykddo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "8437",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5a291b8e3d6495c083804b320450291c299f9d60\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 655
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/sport",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1752",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"c1dd669afd26f51274377ba9634cdee1de73b3aa\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 864
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/sport/front_page",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c1k48dxykddo",
-      "service": "sport",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "6c14d3c8",
+              "id": "a47c5288",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "44f04bc8",
+                    "id": "20f862e0",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4050584b",
+                          "id": "cb343659",
                           "type": "paragraph",
                           "model": {
                             "text": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産",
                             "blocks": [
                               {
-                                "id": "09f4d0df",
+                                "id": "a40814b2",
                                 "type": "fragment",
                                 "model": {
                                   "text": "【写真で見る】日本の古墳群も　今年新たに決まった世界遺産",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "6aea9b77",
+              "id": "2e549f72",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562943050727,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "3e9086b8",
+              "id": "fd8040ca",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "2ab6f906",
+                    "id": "e5e24d84",
                     "type": "paragraph",
                     "model": {
                       "text": "ユネスコ（国連教育科学文化機関）は毎年、人類にとって「顕著な普遍的価値」を持つ場所を世界遺産として発表している。",
                       "blocks": [
                         {
-                          "id": "1d704d1f",
+                          "id": "96888aca",
                           "type": "fragment",
                           "model": {
                             "text": "ユネスコ（国連教育科学文化機関）は毎年、人類にとって「顕著な普遍的価値」を持つ場所を世界遺産として発表している。",
@@ -100,13 +100,13 @@
                     ]
                   },
                   {
-                    "id": "1731f71d",
+                    "id": "546490f6",
                     "type": "paragraph",
                     "model": {
                       "text": "10日までアゼルバイジャンの首都バクーで行われていた第43回世界遺産委員会では、新たに29カ所が世界遺産に登録された。",
                       "blocks": [
                         {
-                          "id": "84acbb11",
+                          "id": "5c2b18fe",
                           "type": "fragment",
                           "model": {
                             "text": "10日までアゼルバイジャンの首都バクーで行われていた第43回世界遺産委員会では、新たに29カ所が世界遺産に登録された。",
@@ -126,13 +126,13 @@
                     ]
                   },
                   {
-                    "id": "7d8b7b6e",
+                    "id": "6ff7aba7",
                     "type": "paragraph",
                     "model": {
                       "text": "その中からいくつかの場所を写真で紹介する。",
                       "blocks": [
                         {
-                          "id": "6f4c37e8",
+                          "id": "78039315",
                           "type": "fragment",
                           "model": {
                             "text": "その中からいくつかの場所を写真で紹介する。",
@@ -158,7 +158,7 @@
               ]
             },
             {
-              "id": "909fc8de",
+              "id": "a8a15e3c",
               "type": "mpu",
               "model": {},
               "position": [
@@ -166,7 +166,7 @@
               ]
             },
             {
-              "id": "e714abb8",
+              "id": "b0da1bf4",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1330,118 +1330,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3181",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"681bdd9aa4b02dae425e271af01ff07ff32b21f3\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 585
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/japanese/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "ca4a1d74d4c2d535c467590769dadb34333991f7",
-            "last-modified": "Wed, 23 Feb 2022 15:00:19 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "3f19348e-06df-4d24-b179-c7e048f3828e",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 942
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c693w95w0mko",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "6439",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"767501fc68f1bc6f7fbe5804d57881adb7a596a4\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1212
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/japanese",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c693w95w0mko",
-      "service": "japanese",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

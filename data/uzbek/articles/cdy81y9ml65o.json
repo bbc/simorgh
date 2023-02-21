@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "1a003865",
+              "id": "20ddac29",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "28066ef4",
+                    "id": "b8968118",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4f2be084",
+                          "id": "82619fd8",
                           "type": "paragraph",
                           "model": {
                             "text": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda",
                             "blocks": [
                               {
-                                "id": "f78c125c",
+                                "id": "c15df4ed",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Dunyoda misli koʻrilmagan tajriba: Oʻzbekiston Orol dengizi tubini oʻrmonga aylantirmoqda",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "ddc601cc",
+              "id": "63f9ff53",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942148973,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "eda09d63",
+              "id": "3476ff67",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "168bc357",
+                    "id": "f78c546d",
                     "type": "paragraph",
                     "model": {
                       "text": "Orol dengizining qurishi insoniyat tarixidagi dunyoning eng yirik ekologik fojialaridan biri boʻldi. Sahroga aylangan dengiz tubidagi tuzlar, qum-chang va zaharli oʻgʻitlar insonlarhayoti va tabiatni xavf ostiga qoʻygan.",
                       "blocks": [
                         {
-                          "id": "61184b3f",
+                          "id": "94587af7",
                           "type": "fragment",
                           "model": {
                             "text": "Orol dengizining qurishi insoniyat tarixidagi dunyoning eng yirik ekologik fojialaridan biri boʻldi. Sahroga aylangan dengiz tubidagi tuzlar, qum-chang va zaharli oʻgʻitlar insonlarhayoti va tabiatni xavf ostiga qoʻygan.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "70d67bbd",
+                    "id": "b7535fb3",
                     "type": "paragraph",
                     "model": {
                       "text": "Ammo bugun Oʻzbekiston dunyoda misli koʻrilmagan tajribaga qoʻl urmoqda: dengiz oʻrnidagi sahroni oʻrmonga aylantirmoqchi.",
                       "blocks": [
                         {
-                          "id": "028eb043",
+                          "id": "f8f605e0",
                           "type": "fragment",
                           "model": {
                             "text": "Ammo bugun Oʻzbekiston dunyoda misli koʻrilmagan tajribaga qoʻl urmoqda: dengiz oʻrnidagi sahroni oʻrmonga aylantirmoqchi.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "ef9bac9d",
+                    "id": "a89a0326",
                     "type": "paragraph",
                     "model": {
                       "text": "Bu Qoraqalpogʻistonda hayotni asrab qola oladimi?",
                       "blocks": [
                         {
-                          "id": "27347674",
+                          "id": "c0f1d361",
                           "type": "fragment",
                           "model": {
                             "text": "Bu Qoraqalpogʻistonda hayotni asrab qola oladimi?",
@@ -156,7 +156,7 @@
               ]
             },
             {
-              "id": "ad8b0df1",
+              "id": "e766e6cf",
               "type": "mpu",
               "model": {},
               "position": [
@@ -164,7 +164,7 @@
               ]
             },
             {
-              "id": "7b5dd4e6",
+              "id": "3499c233",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1188,118 +1188,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1220",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"1b5a58f2a669d7ea07b2375f248c9e54d4da4540\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 469
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/uzbek/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "65bad9b45807a7a3fd900b0deeae12b7736b6945",
-            "last-modified": "Tue, 29 Nov 2022 16:42:09 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "a12c24cd-1df4-4f38-aaed-ff37178fb135",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 474
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cdy81y9ml65o",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "4682",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"38bc79a39c352802b18b748f8d40d6c91587f7f5\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 762
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/uzbek",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cdy81y9ml65o",
-      "service": "uzbek",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

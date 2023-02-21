@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "fa9eb7ee",
+              "id": "a099a7d3",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "90b4eed6",
+                    "id": "3401c28c",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0e8ca3e1",
+                          "id": "8ecb7f56",
                           "type": "paragraph",
                           "model": {
                             "text": "Single Facebook Post Embed Test",
                             "blocks": [
                               {
-                                "id": "90eaf69f",
+                                "id": "5837fdf2",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Single Facebook Post Embed Test",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "ffc2d67a",
+              "id": "33d59908",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1666699140200,
@@ -67,23 +67,23 @@
               ]
             },
             {
-              "id": "c1aada92",
+              "id": "f2f015f5",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "aacfbf4d",
+                    "id": "4d3bcdf7",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2f37b961",
+                          "id": "356e4cef",
                           "type": "paragraph",
                           "model": {
                             "text": "Test 1",
                             "blocks": [
                               {
-                                "id": "aad7c387",
+                                "id": "f1072c3e",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Test 1",
@@ -118,20 +118,20 @@
               ]
             },
             {
-              "id": "24bb239a",
+              "id": "630082b1",
               "type": "social",
               "model": {
                 "source": "https://www.facebook.com/bbcindia/posts/pfbid02zp1HojdwRNEunRHZBw2RNnVoboMJ7puujkA5Xx7JYLRvSrRcAgV4sDgXqRQjgPTHl",
                 "providerName": "Facebook",
                 "blocks": [
                   {
-                    "id": "e7d4ab10",
+                    "id": "ea6b0699",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:afaf7622-09c9-48a7-9a75-2293a39c25c2",
                       "blocks": [
                         {
-                          "id": "12fa6850",
+                          "id": "dbbaeee5",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -164,7 +164,7 @@
               ]
             },
             {
-              "id": "b0a59736",
+              "id": "e79824a6",
               "type": "mpu",
               "model": {},
               "position": [
@@ -172,7 +172,7 @@
               ]
             },
             {
-              "id": "0b414bfe",
+              "id": "f357e226",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1611,118 +1611,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3855",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1160
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/pidgin/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "422526f347f9651f13b93818d1b46a815da66837",
-            "last-modified": "Tue, 25 Oct 2022 11:59:04 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "14e2e074-245e-4149-a7ca-a0cacdb0f4e1",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1204
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/crd2mn2lyqqo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json",
-            "content-length": "5291",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"07cdea8e48e1b276f9938e0a7f146d12cbe7171f\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1502
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/pidgin",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "crd2mn2lyqqo",
-      "service": "pidgin",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

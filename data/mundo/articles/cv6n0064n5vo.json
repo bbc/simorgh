@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "8c6d033d",
+              "id": "c2aff6be",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ea0a4865",
+                    "id": "45b5d656",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b308e36d",
+                          "id": "a20c8471",
                           "type": "paragraph",
                           "model": {
                             "text": "Test story for WS social",
                             "blocks": [
                               {
-                                "id": "c4dba81a",
+                                "id": "60ea58a2",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Test story for WS social",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "f80f7e90",
+              "id": "0d31d5f1",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1618842525611,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "0f7ecc37",
+              "id": "48e70624",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "873621db",
+                    "id": "644ae600",
                     "type": "paragraph",
                     "model": {
                       "text": "This story has a Twitter social embed block below this text block.",
                       "blocks": [
                         {
-                          "id": "9825f1c9",
+                          "id": "123bbdb7",
                           "type": "fragment",
                           "model": {
                             "text": "This story has a Twitter social embed block below this text block.",
@@ -104,19 +104,19 @@
               ]
             },
             {
-              "id": "ceb87a08",
+              "id": "22c7983a",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/BBCNews/status/1384138850478346243?s=20",
                 "blocks": [
                   {
-                    "id": "8b36d252",
+                    "id": "8a38673a",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:2777c9b9-b3d3-4d53-b36c-be749aa528c9",
                       "blocks": [
                         {
-                          "id": "f01c1381",
+                          "id": "b5ffec2c",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -150,7 +150,7 @@
               ]
             },
             {
-              "id": "a8165700",
+              "id": "1f640821",
               "type": "mpu",
               "model": {},
               "position": [
@@ -158,7 +158,7 @@
               ]
             },
             {
-              "id": "3a50eb9e",
+              "id": "561214b6",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1404,118 +1404,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:36 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "2c50d483fe8062ff7c27cfdc72e1f1a1584c993b",
-            "last-modified": "Wed, 23 Feb 2022 17:46:35 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "ea78c305-e062-4331-9bb5-6754c5bb326e",
-            "expires": "Tue, 21 Feb 2023 11:17:07 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 260
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cv6n0064n5vo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:36 GMT",
-            "content-type": "application/json",
-            "content-length": "2064",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"4db73debc821388fdecf56009ff46812846a53ae\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 265
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/mundo/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:36 GMT",
-            "content-type": "application/json",
-            "content-length": "5861",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"e5a89c21e53b5cfea1ea19f92d1a15f6112bfe24\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:40 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 253
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/mundo",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cv6n0064n5vo",
-      "service": "mundo",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

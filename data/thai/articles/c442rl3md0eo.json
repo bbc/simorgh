@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "dafdbfc6",
+              "id": "42fc27c9",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "2ca0a7f0",
+                    "id": "1606d417",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "92bcd77e",
+                          "id": "ca680059",
                           "type": "paragraph",
                           "model": {
                             "text": "นี่คือหัวข้อข่าวของบทความทดสอบนี้",
                             "blocks": [
                               {
-                                "id": "f6dcb3fd",
+                                "id": "abeaa37b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "นี่คือหัวข้อข่าวของบทความทดสอบนี้",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "8809bada",
+              "id": "ca9215f4",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "53d2d9ce",
+                    "id": "04e861c1",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3f790f0a",
+                          "id": "952478e2",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "5d9279d8",
+                                "id": "83298eeb",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ภาพทดสอบลิขสิทธิ์บีบีซีนี้แสดงแผนที่ของฝรั่งเศส รูปภาพอยู่ในสามบล็อกแรกและมีคำบรรยายภาพนี้",
                                   "blocks": [
                                     {
-                                      "id": "445b86e6",
+                                      "id": "3501f409",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ภาพทดสอบลิขสิทธิ์บีบีซีนี้แสดงแผนที่ของฝรั่งเศส รูปภาพอยู่ในสามบล็อกแรกและมีคำบรรยายภาพนี้",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "59c7f4d2",
+                    "id": "89d655c1",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "38e86d4e",
+                          "id": "fd1360f4",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "33fcdc64",
+                                "id": "df0f0365",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ภาพทดสอบลิขสิทธิ์บีบีซีนี้แสดงแผนที่ของฝรั่งเศส รูปภาพอยู่ในสามบล็อกแรกและมีคำบรรยายภาพนี้",
                                   "blocks": [
                                     {
-                                      "id": "c301394d",
+                                      "id": "7975f26b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ภาพทดสอบลิขสิทธิ์บีบีซีนี้แสดงแผนที่ของฝรั่งเศส รูปภาพอยู่ในสามบล็อกแรกและมีคำบรรยายภาพนี้",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "d3720ee4",
+                    "id": "0292e4fd",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "17a0c4a4",
+              "id": "6a6cac21",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1574853287993,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "d8b08b02",
+              "id": "afa45d94",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "05b7650e",
+                    "id": "985efc4c",
                     "type": "paragraph",
                     "model": {
                       "text": "นี่คือบล็อกข้อความซึ่งมีลิงก์ ไปยังหน้าแรกของ ",
                       "blocks": [
                         {
-                          "id": "d05d763a",
+                          "id": "c51e8911",
                           "type": "fragment",
                           "model": {
                             "text": "นี่คือบล็อกข้อความซึ่งมีลิงก์ ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "1af1f03b",
+                          "id": "57716650",
                           "type": "urlLink",
                           "model": {
                             "text": "ไปยังหน้าแรกของ ",
                             "blocks": [
                               {
-                                "id": "a4f6cd17",
+                                "id": "ef63fba8",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ไปยังหน้าแรกของ ",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "c687abe4",
+              "id": "462e5e25",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "c7b7a017",
+                    "id": "0501dac9",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0cd1da90",
+                          "id": "76d32bcf",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c3774251",
+                                "id": "e4a1a118",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "นี่คือหัวข้อข่าวของบทความทดสอบนี้",
                                   "blocks": [
                                     {
-                                      "id": "a9301e6f",
+                                      "id": "c2124012",
                                       "type": "fragment",
                                       "model": {
                                         "text": "นี่คือหัวข้อข่าวของบทความทดสอบนี้",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "a238bd21",
+                    "id": "d922fef7",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e544900c",
+                          "id": "bdd93017",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -382,12 +382,12 @@
                           ]
                         },
                         {
-                          "id": "192d5926",
+                          "id": "7b1b6f33",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "404ab65d",
+                                "id": "af3fa9c4",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -404,23 +404,23 @@
                                 ]
                               },
                               {
-                                "id": "96c24aca",
+                                "id": "7444aa48",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "1cb8db0d",
+                                      "id": "0b5235de",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "cb137790",
+                                            "id": "3d1cb2d9",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "5418993e",
+                                                  "id": "ff46b938",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -488,23 +488,23 @@
               ]
             },
             {
-              "id": "6d83e2df",
+              "id": "e5ccba51",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "5cf34a2c",
+                    "id": "e51cd19b",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "519dc621",
+                          "id": "ed1a9271",
                           "type": "paragraph",
                           "model": {
                             "text": "นี่คือบล็อกหัวข้อย่อย",
                             "blocks": [
                               {
-                                "id": "d17464c0",
+                                "id": "c16d89b2",
                                 "type": "fragment",
                                 "model": {
                                   "text": "นี่คือบล็อกหัวข้อย่อย",
@@ -539,28 +539,28 @@
               ]
             },
             {
-              "id": "c1dc60ea",
+              "id": "61379013",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "e8c577ab",
+                    "id": "bf586c64",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a7a8ae99",
+                          "id": "055657db",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8c82394d",
+                                "id": "3da2c242",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "นี่คือบล็อกหัวข้อย่อย",
                                   "blocks": [
                                     {
-                                      "id": "373082b5",
+                                      "id": "eb51cdd5",
                                       "type": "fragment",
                                       "model": {
                                         "text": "นี่คือบล็อกหัวข้อย่อย",
@@ -599,7 +599,7 @@
                     ]
                   },
                   {
-                    "id": "27f7ed07",
+                    "id": "4840e773",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -620,18 +620,18 @@
               ]
             },
             {
-              "id": "07b83677",
+              "id": "b5f9612b",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "16e61fa4",
+                    "id": "c5927fe8",
                     "type": "paragraph",
                     "model": {
                       "text": "บทความทดสอบนี้ถูกสร้างขึ้นเพื่อให้เราสามารถเรียกใช้การทดสอบแบบครบวงจรอัตโนมัติบนเว็บไซต์ของเรา",
                       "blocks": [
                         {
-                          "id": "40f7076e",
+                          "id": "edc5d4df",
                           "type": "fragment",
                           "model": {
                             "text": "บทความทดสอบนี้ถูกสร้างขึ้นเพื่อให้เราสามารถเรียกใช้การทดสอบแบบครบวงจรอัตโนมัติบนเว็บไซต์ของเรา",
@@ -657,7 +657,7 @@
               ]
             },
             {
-              "id": "8b953be5",
+              "id": "dadbacc1",
               "type": "mpu",
               "model": {},
               "position": [
@@ -665,7 +665,7 @@
               ]
             },
             {
-              "id": "9f7be882",
+              "id": "d26fc41a",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1978,118 +1978,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "62db564393cb6b21fece16530b34105380fde5fc",
-            "last-modified": "Fri, 02 Sep 2022 09:47:27 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "8869c533-fdfd-4fef-9b3f-f04b5b6d5db4",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 811
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c442rl3md0eo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "2914",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"cb85c7ed7ec324267a3f03172932f9f93b308bbd\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1188
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/thai/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "5278",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"07e2e6c433b50b3e2533e49095f86aa5ade1970d\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1210
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/thai",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c442rl3md0eo",
-      "service": "thai",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

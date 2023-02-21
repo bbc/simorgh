@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "e1c36b16",
+              "id": "2773adcc",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "5c95a313",
+                    "id": "95b4182b",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1c692681",
+                          "id": "f17d3b3a",
                           "type": "paragraph",
                           "model": {
                             "text": "Бул сыноо макалада сөздүү кабарында",
                             "blocks": [
                               {
-                                "id": "b6f26aa0",
+                                "id": "1e394de7",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Бул сыноо макалада сөздүү кабарында",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "0ee7f230",
+              "id": "3783ede7",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "47eea30d",
+                    "id": "574562ca",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "94eff4ff",
+                          "id": "ce2c5152",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "124615e2",
+                                "id": "75fdaa74",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
                                   "blocks": [
                                     {
-                                      "id": "25991e6d",
+                                      "id": "e5f259cf",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "0040696d",
+                    "id": "663a59d2",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6771396e",
+                          "id": "d08a4d05",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6fe94a91",
+                                "id": "e001b43f",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
                                   "blocks": [
                                     {
-                                      "id": "c54a3775",
+                                      "id": "8eb0b548",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Бул сынак сүрөтүнүн, укук Би-Би-Си, France картасын көрсөтүп турат. Сүрөт алгачкы үч блоктон турат жана бул жазууну бар.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "b8753187",
+                    "id": "edcc8b4e",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "436bb5e9",
+              "id": "a79c34fe",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941862686,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "c140f62d",
+              "id": "34d3f1ac",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "30fd34a3",
+                    "id": "f19c4eeb",
                     "type": "paragraph",
                     "model": {
                       "text": "Бул Би-Би-Си ырайы башкы бир нускага шилтемени камтыган текст бөлүгү болуп саналат.",
                       "blocks": [
                         {
-                          "id": "f2020aee",
+                          "id": "f81952b6",
                           "type": "fragment",
                           "model": {
                             "text": "Бул ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "3808535d",
+                          "id": "de23a39d",
                           "type": "urlLink",
                           "model": {
                             "text": "Би-Би-Си ырайы башкы",
                             "blocks": [
                               {
-                                "id": "9b0a0e2e",
+                                "id": "0fe05adf",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Би-Би-Си ырайы башкы",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "a5ca4418",
+                          "id": "486a5f74",
                           "type": "fragment",
                           "model": {
                             "text": " бир нускага шилтемени камтыган текст бөлүгү болуп саналат.",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "4e33f7e9",
+              "id": "f0a391a0",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p019dx64",
                 "blocks": [
                   {
-                    "id": "7a7451f8",
+                    "id": "dad232ad",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a4fe2f9d",
+                          "id": "262f10f0",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "065673cf",
+                                "id": "92a313e4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк",
                                   "blocks": [
                                     {
-                                      "id": "57501eb8",
+                                      "id": "a74c5415",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Египет салуулар: зомбулук Каир тыныгуу менен копт сөөк",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "264f6566",
+                    "id": "eafb8c25",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6ffb2a2f",
+                          "id": "f78aa11b",
                           "blockId": "urn:bbc:ares::clip:p019dx64",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -393,12 +393,12 @@
                           ]
                         },
                         {
-                          "id": "f4ff45ac",
+                          "id": "c16e77c0",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "bc0b1aaf",
+                                "id": "48bbf64b",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
@@ -433,23 +433,23 @@
               ]
             },
             {
-              "id": "d5e94f20",
+              "id": "12d7a5e2",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "96fc47b6",
+                    "id": "dbd99456",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6a3477db",
+                          "id": "ab2a3b67",
                           "type": "paragraph",
                           "model": {
                             "text": "Бул subheadline болуп саналат",
                             "blocks": [
                               {
-                                "id": "2708e34e",
+                                "id": "d798d295",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Бул subheadline болуп саналат",
@@ -484,28 +484,28 @@
               ]
             },
             {
-              "id": "761cc1ea",
+              "id": "66a035d5",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "5c91c0ad",
+                    "id": "935ffd05",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3a630bc5",
+                          "id": "6ca9922c",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "bd949195",
+                                "id": "8306bad4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Бул subheadline болуп саналат",
                                   "blocks": [
                                     {
-                                      "id": "b162db12",
+                                      "id": "0096df5f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Бул subheadline болуп саналат",
@@ -544,7 +544,7 @@
                     ]
                   },
                   {
-                    "id": "c5e6e609",
+                    "id": "0775f9d8",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -565,18 +565,18 @@
               ]
             },
             {
-              "id": "ba7d4f56",
+              "id": "dec0249f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0599dc67",
+                    "id": "f9b26440",
                     "type": "paragraph",
                     "model": {
                       "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган.",
                       "blocks": [
                         {
-                          "id": "dafc0c4e",
+                          "id": "e84f0f14",
                           "type": "fragment",
                           "model": {
                             "text": "Бул сыноо макалада айтылгандай, биз сайтында сыноолорду алышы үчүн жаратылган.",
@@ -602,7 +602,7 @@
               ]
             },
             {
-              "id": "1ce4ee3f",
+              "id": "c85d08b5",
               "type": "mpu",
               "model": {},
               "position": [
@@ -610,7 +610,7 @@
               ]
             },
             {
-              "id": "3e236945",
+              "id": "05ddbb08",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -2291,118 +2291,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "4715",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"a72bce99064d7c0feb0fae2c7f886dd3966bfea3\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:41 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1224
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/kyrgyz",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1745",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"bf8b851a3797c9ba34eeaea7b61aee621f276140\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:41 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1260
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/kyrgyz/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "cc2173b63dbd3dbf724694a27421979ed1933ac6",
-            "last-modified": "Fri, 28 Aug 2020 07:27:16 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "78598f5d-651a-40a1-ba49-00cf9b327aba",
-            "expires": "Tue, 21 Feb 2023 11:17:07 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1419
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c3xd4xg3rm9o",
-          "timeout": 4000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c3xd4xg3rm9o",
-      "service": "kyrgyz",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "a0c31b31",
+              "id": "4fb9da58",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "5eb86ed7",
+                    "id": "33b9e3ed",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c39c2c2c",
+                          "id": "30ad8a2b",
                           "type": "paragraph",
                           "model": {
                             "text": "جام جهانی فوتبال زنان؛ تفاوت دستمزد با مردان چقدر است؟",
                             "blocks": [
                               {
-                                "id": "5d89b1f7",
+                                "id": "cc52cd53",
                                 "type": "fragment",
                                 "model": {
                                   "text": "جام جهانی ",
@@ -35,7 +35,7 @@
                                 ]
                               },
                               {
-                                "id": "f506a280",
+                                "id": "5f1ed445",
                                 "type": "fragment",
                                 "model": {
                                   "text": "فوتبال",
@@ -51,7 +51,7 @@
                                 ]
                               },
                               {
-                                "id": "0206c275",
+                                "id": "8b1a8912",
                                 "type": "fragment",
                                 "model": {
                                   "text": " زنان؛ تفاوت دستمزد با مردان چقدر است؟",
@@ -86,7 +86,7 @@
               ]
             },
             {
-              "id": "c1b1242a",
+              "id": "c5ff99f0",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1560347946274,
@@ -97,18 +97,18 @@
               ]
             },
             {
-              "id": "7c2b7b80",
+              "id": "d2a1b184",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "bb3409fb",
+                    "id": "74214e98",
                     "type": "paragraph",
                     "model": {
                       "text": "جام جهانی فوتبال زنان  - \n202AFIFA Women's World Cup\n202C - به سرعت محبوب می‌شود و پیشبینی شده است که تعداد بیننده‌های جام جهانی ۲۰۱۹ فرانسه به یک میلیارد نفر برسد.",
                       "blocks": [
                         {
-                          "id": "99a7a1e2",
+                          "id": "afc68d12",
                           "type": "fragment",
                           "model": {
                             "text": "جام جهانی فوتبال زنان  - ",
@@ -121,13 +121,13 @@
                           ]
                         },
                         {
-                          "id": "b0c1e35e",
+                          "id": "2270ca31",
                           "type": "inline",
                           "model": {
                             "text": "FIFA Women's World Cup",
                             "blocks": [
                               {
-                                "id": "072543b2",
+                                "id": "53606915",
                                 "type": "fragment",
                                 "model": {
                                   "text": "FIFA Women's World Cup",
@@ -150,7 +150,7 @@
                           ]
                         },
                         {
-                          "id": "82f7f816",
+                          "id": "d117c83f",
                           "type": "fragment",
                           "model": {
                             "text": " - به سرعت محبوب می‌شود و پیشبینی شده است که تعداد بیننده‌های جام جهانی ۲۰۱۹ فرانسه به یک میلیارد نفر برسد.",
@@ -170,13 +170,13 @@
                     ]
                   },
                   {
-                    "id": "402db727",
+                    "id": "8fc705c9",
                     "type": "paragraph",
                     "model": {
                       "text": "اما بازیکنان حاضر در این رقابت از حقوقی که می‌گیرند و میزان جایزه‌ها در مقایسه با فوتبال مردان ناراضی هستند.",
                       "blocks": [
                         {
-                          "id": "4b3e9360",
+                          "id": "e0e70997",
                           "type": "fragment",
                           "model": {
                             "text": "اما بازیکنان حاضر در این رقابت از ",
@@ -189,7 +189,7 @@
                           ]
                         },
                         {
-                          "id": "7569aa0e",
+                          "id": "90295786",
                           "type": "fragment",
                           "model": {
                             "text": "حقوقی",
@@ -204,7 +204,7 @@
                           ]
                         },
                         {
-                          "id": "01c3a31a",
+                          "id": "4685bc17",
                           "type": "fragment",
                           "model": {
                             "text": " که می‌گیرند و میزان ",
@@ -217,7 +217,7 @@
                           ]
                         },
                         {
-                          "id": "c6f04e6e",
+                          "id": "2e42d18a",
                           "type": "fragment",
                           "model": {
                             "text": "جایزه‌ها",
@@ -232,7 +232,7 @@
                           ]
                         },
                         {
-                          "id": "58c8f730",
+                          "id": "68f486e3",
                           "type": "fragment",
                           "model": {
                             "text": " در مقایسه با فوتبال مردان ناراضی هستند.",
@@ -252,19 +252,19 @@
                     ]
                   },
                   {
-                    "id": "65c7d21a",
+                    "id": "c05d9741",
                     "type": "paragraph",
                     "model": {
                       "text": "\n202AEnglish paragraph to be added here when functionality promoted to Optimo test\n202C",
                       "blocks": [
                         {
-                          "id": "6f46df34",
+                          "id": "52472f89",
                           "type": "inline",
                           "model": {
                             "text": "English paragraph to be added here when functionality promoted to Optimo test",
                             "blocks": [
                               {
-                                "id": "27f6f0c1",
+                                "id": "bfb287fe",
                                 "type": "fragment",
                                 "model": {
                                   "text": "English paragraph to be added here when functionality promoted to Optimo test",
@@ -294,13 +294,13 @@
                     ]
                   },
                   {
-                    "id": "a329df96",
+                    "id": "762fc52d",
                     "type": "paragraph",
                     "model": {
                       "text": "هوپ سولو، فوتبالیست آمریکایی که سابقه قهرمانی در جام جهانی را نیز دارد، معقتد است تفاوت جایزه مادی بین زنان و مردان نشانه‌ای از نهادینه شدن \"برتر پنداری مردان\" در فیفا است.",
                       "blocks": [
                         {
-                          "id": "47c30c37",
+                          "id": "4421d83d",
                           "type": "fragment",
                           "model": {
                             "text": "هوپ سولو، فوتبالیست آمریکایی که سابقه قهرمانی در جام جهانی را نیز دارد، معقتد است تفاوت جایزه مادی بین زنان و مردان نشانه‌ای از نهادینه شدن \"برتر پنداری مردان\" در فیفا است.",
@@ -326,7 +326,7 @@
               ]
             },
             {
-              "id": "d9b78d41",
+              "id": "9263f48e",
               "type": "mpu",
               "model": {},
               "position": [
@@ -334,18 +334,18 @@
               ]
             },
             {
-              "id": "8a9ff9f6",
+              "id": "c8a6722e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "02b52c85",
+                    "id": "d984b5de",
                     "type": "paragraph",
                     "model": {
                       "text": "این مطلب نگاهی دارد به آمار و ارقام فوتبال زنان و جایزه‌هایی که بازیکنان می‌توانند بگیرند.",
                       "blocks": [
                         {
-                          "id": "3b970aa3",
+                          "id": "2314909a",
                           "type": "fragment",
                           "model": {
                             "text": "این مطلب نگاهی دارد به آمار و ارقام فوتبال زنان و جایزه‌هایی که بازیکنان می‌توانند بگیرند.",
@@ -371,7 +371,7 @@
               ]
             },
             {
-              "id": "2b1258ff",
+              "id": "63444797",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -381,29 +381,29 @@
               ]
             },
             {
-              "id": "9fefbd44",
+              "id": "6f388116",
               "type": "audio",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01m7d07",
                 "blocks": [
                   {
-                    "id": "d881d17a",
+                    "id": "c661fc2d",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "88570e81",
+                          "id": "d3643cb0",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c626259f",
+                                "id": "45e9c8ef",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "تیم ملی فوتبال زنان آمریکا قهرمانی در جام جهانی ۲۰۱۵ را جشن گرفته است",
                                   "blocks": [
                                     {
-                                      "id": "32e560f7",
+                                      "id": "f72f4047",
                                       "type": "fragment",
                                       "model": {
                                         "text": "تیم ملی فوتبال زنان آمریکا قهرمانی در جام ",
@@ -418,7 +418,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "a5e4a9dd",
+                                      "id": "9c6725e9",
                                       "type": "fragment",
                                       "model": {
                                         "text": "جهانی",
@@ -435,7 +435,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "2b28f9f6",
+                                      "id": "32decfc2",
                                       "type": "fragment",
                                       "model": {
                                         "text": " ۲۰۱۵ را جشن گرفته است",
@@ -474,12 +474,12 @@
                     ]
                   },
                   {
-                    "id": "5bc55084",
+                    "id": "f9c6b695",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3224ef46",
+                          "id": "69192128",
                           "blockId": "urn:bbc:ares::clip:p01m7d07",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -525,12 +525,12 @@
                           ]
                         },
                         {
-                          "id": "19569218",
+                          "id": "01805a0b",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "82fd53fd",
+                                "id": "5ba6ac52",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 2048,
@@ -547,23 +547,23 @@
                                 ]
                               },
                               {
-                                "id": "848db80c",
+                                "id": "f49a4d45",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "6aad3533",
+                                      "id": "feb6698b",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "6436e422",
+                                            "id": "80eca34b",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "England star Fran Kirby",
                                               "blocks": [
                                                 {
-                                                  "id": "dda454b7",
+                                                  "id": "63bee78d",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "England star Fran Kirby",
@@ -631,29 +631,29 @@
               ]
             },
             {
-              "id": "736a76e8",
+              "id": "04594a20",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01mt125",
                 "blocks": [
                   {
-                    "id": "4a6cae4c",
+                    "id": "9c2146cb",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2ad772ef",
+                          "id": "7e754c3b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ae98cc5b",
+                                "id": "72788bf7",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "به دلیل مشکلات مربوط به برابری جنسیتی آدا هگربرگ برنده توپ طلای ۲۰۱۷ برای نروژ در جام جهانی بازی نمی‌کند",
                                   "blocks": [
                                     {
-                                      "id": "de646ee8",
+                                      "id": "093d250c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "به دلیل مشکلات مربوط به برابری جنسیتی آدا هگربرگ برنده توپ طلای ۲۰۱۷ برای نروژ در جام جهانی بازی نمی‌کند",
@@ -692,12 +692,12 @@
                     ]
                   },
                   {
-                    "id": "493b0b58",
+                    "id": "d5f52392",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f9842b1c",
+                          "id": "6c6efe40",
                           "blockId": "urn:bbc:ares::clip:p01mt125",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -741,12 +741,12 @@
                           ]
                         },
                         {
-                          "id": "db616971",
+                          "id": "9802871c",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "dc2c736a",
+                                "id": "0cac9295",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1280,
@@ -763,23 +763,23 @@
                                 ]
                               },
                               {
-                                "id": "616b2fd3",
+                                "id": "255756f8",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "3b4fd992",
+                                      "id": "e5282857",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "ff84f367",
+                                            "id": "a704353d",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Robin",
                                               "blocks": [
                                                 {
-                                                  "id": "c298cd25",
+                                                  "id": "b750728c",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Robin",
@@ -847,23 +847,23 @@
               ]
             },
             {
-              "id": "8ed49d09",
+              "id": "e8098d80",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "20ceb7e2",
+                    "id": "f4da0bd0",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8cdd039b",
+                          "id": "6438b133",
                           "type": "paragraph",
                           "model": {
                             "text": "بازیکنان تمام مبلغ جایزه را می‌گیرند؟",
                             "blocks": [
                               {
-                                "id": "32dd6e64",
+                                "id": "30adfc8c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "بازیکنان تمام مبلغ ",
@@ -877,7 +877,7 @@
                                 ]
                               },
                               {
-                                "id": "b3ae0ef8",
+                                "id": "dc24c59e",
                                 "type": "fragment",
                                 "model": {
                                   "text": "جایزه",
@@ -893,7 +893,7 @@
                                 ]
                               },
                               {
-                                "id": "27fa04e8",
+                                "id": "f936ffc4",
                                 "type": "fragment",
                                 "model": {
                                   "text": " را می‌گیرند؟",
@@ -928,24 +928,24 @@
               ]
             },
             {
-              "id": "269ffead",
+              "id": "8bd3787b",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "8cffc1da",
+                    "id": "8f35ae9f",
                     "type": "paragraph",
                     "model": {
                       "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
                       "blocks": [
                         {
-                          "id": "5e455a95",
+                          "id": "1851202f",
                           "type": "urlLink",
                           "model": {
                             "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
                             "blocks": [
                               {
-                                "id": "ce40fd42",
+                                "id": "ad3312a6",
                                 "type": "fragment",
                                 "model": {
                                   "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
@@ -976,13 +976,13 @@
                     ]
                   },
                   {
-                    "id": "32fb3496",
+                    "id": "b0090da2",
                     "type": "paragraph",
                     "model": {
                       "text": "کل جایزه‌ای که فیفا به تیم‌های حاضر در جام جهانی زنان می‌دهد ۳۰ میلیون دلار است. این در حالی است که کل جایزه‌ای که پارسال فیفا به تیم‌های حاضر در جام جهانی مردان داد ۴۰۰ میلیون دلار بود؛ بیش از ده برابر.",
                       "blocks": [
                         {
-                          "id": "a1ccb625",
+                          "id": "f4d7f2c7",
                           "type": "fragment",
                           "model": {
                             "text": "کل جایزه‌ای که فیفا به تیم‌های حاضر در جام جهانی زنان می‌دهد ۳۰ میلیون دلار است. این در حالی است که کل جایزه‌ای که پارسال فیفا به تیم‌های حاضر در جام جهانی مردان داد ۴۰۰ میلیون دلار بود؛ بیش از ده برابر.",
@@ -1002,19 +1002,19 @@
                     ]
                   },
                   {
-                    "id": "92687a11",
+                    "id": "5fca805f",
                     "type": "paragraph",
                     "model": {
                       "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
                       "blocks": [
                         {
-                          "id": "c034b6e2",
+                          "id": "cf011fcb",
                           "type": "urlLink",
                           "model": {
                             "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
                             "blocks": [
                               {
-                                "id": "2ff7371b",
+                                "id": "c865f1ff",
                                 "type": "fragment",
                                 "model": {
                                   "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
@@ -1051,28 +1051,28 @@
               ]
             },
             {
-              "id": "13853475",
+              "id": "a74832ba",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "8fa67411",
+                    "id": "0a49b880",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "30ca913d",
+                          "id": "7d26d67e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c583aafd",
+                                "id": "672fa7b2",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "جیل الیس",
                                   "blocks": [
                                     {
-                                      "id": "803d316c",
+                                      "id": "25f17c5d",
                                       "type": "fragment",
                                       "model": {
                                         "text": "جیل الیس",
@@ -1111,7 +1111,7 @@
                     ]
                   },
                   {
-                    "id": "8c213e15",
+                    "id": "1036e5fd",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -2133,118 +2133,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "18a815160379e16b084c0d755b147c1afc209c56",
-            "last-modified": "Tue, 29 Nov 2022 16:18:17 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "4273349f-e91a-473d-abff-8bde6628dc19",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 859
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c19v65z3lg5o",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "5636",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"e9bff52c4ed6ee34181bb7c214d1528b64cbe4ee\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1203
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/persian",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json",
-            "content-length": "1975",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5d61a7eba177c74b33f6669c99a3cd2961ecdf17\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1348
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/persian/front_page",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c19v65z3lg5o",
-      "service": "persian",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

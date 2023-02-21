@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "6da8422e",
+              "id": "3dd4da44",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "190568e2",
+                    "id": "6ca9f031",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "51086b13",
+                          "id": "29838d53",
                           "type": "paragraph",
                           "model": {
                             "text": "Это заголовок этой тестовой статьи",
                             "blocks": [
                               {
-                                "id": "68b53d0d",
+                                "id": "0de01c21",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Это заголовок этой тестовой статьи",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "de8e8b08",
+              "id": "7859c65b",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "6f62b6d2",
+                    "id": "e32a2d33",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c7023338",
+                          "id": "abed87df",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "132738e6",
+                                "id": "701d9d7d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
                                   "blocks": [
                                     {
-                                      "id": "d8b86e8d",
+                                      "id": "3c5f8681",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "0caeb4ae",
+                    "id": "e0364bf7",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b1a3a3e3",
+                          "id": "3e3e1f6e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e8333992",
+                                "id": "3522d289",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
                                   "blocks": [
                                     {
-                                      "id": "5e785ad6",
+                                      "id": "21f6c3a7",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Это тестовое изображение, авторское право BBC, показывает карту Франции. Изображение находится в первых трех блоках и имеет эту подпись.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "9c6ca50d",
+                    "id": "270e3099",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "a9d378da",
+              "id": "85b1a45b",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941784981,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "351e219d",
+              "id": "14dd31ad",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "c9175a83",
+                    "id": "ec1650f4",
                     "type": "paragraph",
                     "model": {
                       "text": "Это текстовый блок, который содержит URL-ссылку на домашнюю страницу BBC Weather.",
                       "blocks": [
                         {
-                          "id": "20503660",
+                          "id": "a9ae0cf8",
                           "type": "fragment",
                           "model": {
                             "text": "Это текстовый блок, который содержит URL-ссылку на домашнюю страницу ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "5dc02ec3",
+                          "id": "ceafbc37",
                           "type": "urlLink",
                           "model": {
                             "text": "BBC Weather",
                             "blocks": [
                               {
-                                "id": "b2bbc219",
+                                "id": "1caaef5d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "BBC Weather",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "8393bdf5",
+                          "id": "9b50a925",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "47cb7965",
+              "id": "5fdb698f",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p019dx64",
                 "blocks": [
                   {
-                    "id": "ef35be6c",
+                    "id": "197e46d5",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7c8d6d9a",
+                          "id": "00b6239b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c99ac127",
+                                "id": "a4480bac",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Египет нападает: коптские похороны в Каире перерастают в насилие",
                                   "blocks": [
                                     {
-                                      "id": "70d6c370",
+                                      "id": "3250c417",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Египет нападает: коптские похороны в Каире перерастают в насилие",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "d9425dc3",
+                    "id": "18a85e41",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1c57968e",
+                          "id": "c61f3eb5",
                           "blockId": "urn:bbc:ares::clip:p019dx64",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -393,12 +393,12 @@
                           ]
                         },
                         {
-                          "id": "a1497f21",
+                          "id": "f339f7ac",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "813342ac",
+                                "id": "9579e2fd",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019dxfg.jpg",
@@ -433,23 +433,23 @@
               ]
             },
             {
-              "id": "1700b0d6",
+              "id": "a8d110df",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "7295460f",
+                    "id": "75938dad",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "580ac076",
+                          "id": "88387390",
                           "type": "paragraph",
                           "model": {
                             "text": "Это подзаголовок",
                             "blocks": [
                               {
-                                "id": "8b415717",
+                                "id": "c2ccde6a",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Это подзаголовок",
@@ -484,28 +484,28 @@
               ]
             },
             {
-              "id": "f49acd81",
+              "id": "9e55d1d4",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "0aaa2b8e",
+                    "id": "712b60d5",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "90437e92",
+                          "id": "59dace28",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4b9d7ebb",
+                                "id": "97d0c6b7",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Это подзаголовок",
                                   "blocks": [
                                     {
-                                      "id": "fae95f80",
+                                      "id": "11ba02e1",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Это подзаголовок",
@@ -544,7 +544,7 @@
                     ]
                   },
                   {
-                    "id": "b7ca8c4c",
+                    "id": "831310bc",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -565,18 +565,18 @@
               ]
             },
             {
-              "id": "a7066a0c",
+              "id": "d6680ff9",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "3164159d",
+                    "id": "3fea956c",
                     "type": "paragraph",
                     "model": {
                       "text": "Эта тестовая статья была создана для того, чтобы мы могли запускать тесты на нашем сайте.",
                       "blocks": [
                         {
-                          "id": "ad71ae38",
+                          "id": "7e6d89df",
                           "type": "fragment",
                           "model": {
                             "text": "Эта тестовая статья была создана для того, чтобы мы могли запускать тесты на нашем сайте.",
@@ -602,7 +602,7 @@
               ]
             },
             {
-              "id": "970f14bf",
+              "id": "117aac79",
               "type": "mpu",
               "model": {},
               "position": [
@@ -610,7 +610,7 @@
               ]
             },
             {
-              "id": "d76d92a4",
+              "id": "2a09b5ec",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -2074,118 +2074,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "cdef5964a567dc851423266555235278e3633651",
-            "last-modified": "Fri, 28 Aug 2020 07:27:28 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "c5794b07-0041-4eec-98b2-5ad78b847094",
-            "expires": "Tue, 21 Feb 2023 11:17:07 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1120
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/ck7pz7re3zgo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "2832",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"8f0769e2b9f825003d9c43dbaffc0806f20bf78b\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1396
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/russian",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "2895",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"3d04cf91d83c1a6c4dd895e99b75079d83f7153f\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1405
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/russian/front_page",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "ck7pz7re3zgo",
-      "service": "russian",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

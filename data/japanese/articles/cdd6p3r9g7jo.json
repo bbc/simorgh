@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "667f0d07",
+              "id": "72ca0f98",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "10f3703d",
+                    "id": "2866a9c1",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "87c814b3",
+                          "id": "867ad902",
                           "type": "paragraph",
                           "model": {
                             "text": "これは、このテスト記事の見出しです",
                             "blocks": [
                               {
-                                "id": "4af73855",
+                                "id": "c0b67ede",
                                 "type": "fragment",
                                 "model": {
                                   "text": "これは、このテスト記事の見出しです",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "3f58a02a",
+              "id": "b718fc54",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "7051ad89",
+                    "id": "b02ab7a8",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d45c1cf3",
+                          "id": "20a95846",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f12bae57",
+                                "id": "66741004",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "このテスト画像、著作権は、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
                                   "blocks": [
                                     {
-                                      "id": "2d3a6d5e",
+                                      "id": "bdb526c8",
                                       "type": "fragment",
                                       "model": {
                                         "text": "このテスト画像、著作権は、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "035c138b",
+                    "id": "6b3abdeb",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "46fbb781",
+                          "id": "280702b9",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "5d6dc9be",
+                                "id": "3d7a48db",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "このテスト画像、著作権BBCは、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
                                   "blocks": [
                                     {
-                                      "id": "b2022768",
+                                      "id": "d591f930",
                                       "type": "fragment",
                                       "model": {
                                         "text": "このテスト画像、著作権BBCは、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "6246073a",
+                    "id": "e991ec12",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "1c07e1a6",
+              "id": "d915bac4",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1574854693250,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "67f873c3",
+              "id": "c7989680",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "8d64ddf4",
+                    "id": "d3daa35b",
                     "type": "paragraph",
                     "model": {
                       "text": "これはテキストブロックで、ホームページへのリンクが含まれています。",
                       "blocks": [
                         {
-                          "id": "ce4e89f4",
+                          "id": "683e3b13",
                           "type": "fragment",
                           "model": {
                             "text": "これはテキストブロックで、ホームページへのリンク",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "9e455837",
+                          "id": "1a6efa62",
                           "type": "urlLink",
                           "model": {
                             "text": "が含まれています",
                             "blocks": [
                               {
-                                "id": "a8c979ad",
+                                "id": "e460fc7c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "が含まれています",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "9b7d0d02",
+                          "id": "44d75823",
                           "type": "fragment",
                           "model": {
                             "text": "。",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "06bd71fc",
+              "id": "92c9e552",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "9df07f26",
+                    "id": "23377ef7",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8cff5a2a",
+                          "id": "d6c78b8f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "336685d8",
+                                "id": "7d7c3e30",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "これはテキストブロックで、ホームページへのリ",
                                   "blocks": [
                                     {
-                                      "id": "f7a2a12e",
+                                      "id": "4e7a8ba3",
                                       "type": "fragment",
                                       "model": {
                                         "text": "これはテキストブロックで、ホームページへのリ",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "4f4e05fe",
+                    "id": "0cb38131",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2b405964",
+                          "id": "be2341e7",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -395,12 +395,12 @@
                           ]
                         },
                         {
-                          "id": "428caa21",
+                          "id": "804601f8",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d55f48e4",
+                                "id": "cf125e92",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -417,23 +417,23 @@
                                 ]
                               },
                               {
-                                "id": "86e2ada1",
+                                "id": "11051da5",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "17666a4f",
+                                      "id": "d5696470",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "f3c18bd9",
+                                            "id": "249acf34",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "230a7aea",
+                                                  "id": "27d61a06",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -501,23 +501,23 @@
               ]
             },
             {
-              "id": "fc5f2a4c",
+              "id": "bdbb8345",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "0912a5b6",
+                    "id": "406ee2b6",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b38e9124",
+                          "id": "7e7f20b4",
                           "type": "paragraph",
                           "model": {
                             "text": "これはサブヘッドラインブロックです",
                             "blocks": [
                               {
-                                "id": "b094e823",
+                                "id": "9471303d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "これはサブヘッドラインブロックです",
@@ -552,28 +552,28 @@
               ]
             },
             {
-              "id": "69d0df3e",
+              "id": "9c431f7f",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "78e3aa4b",
+                    "id": "b7a10cdb",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "afaaaaed",
+                          "id": "ed43309d",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "5794b685",
+                                "id": "5f4dc0ff",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "これはサブヘッドラインブロックです",
                                   "blocks": [
                                     {
-                                      "id": "1f8c2029",
+                                      "id": "2a090419",
                                       "type": "fragment",
                                       "model": {
                                         "text": "これはサブヘッドラインブロックです",
@@ -612,7 +612,7 @@
                     ]
                   },
                   {
-                    "id": "29b4b014",
+                    "id": "a85760f4",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -633,18 +633,18 @@
               ]
             },
             {
-              "id": "4128e566",
+              "id": "1cf31e6f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "3e728a2a",
+                    "id": "6f24d4ec",
                     "type": "paragraph",
                     "model": {
                       "text": "このテスト記事は、ウェブサイトで自動化されたエンドツーエンドのテストを実行できるように作成されています。  ",
                       "blocks": [
                         {
-                          "id": "89de84c1",
+                          "id": "ad7e6bfb",
                           "type": "fragment",
                           "model": {
                             "text": "このテスト記事は、ウェブサイトで自動化されたエンドツーエンドのテストを実行できるように作成されています。  ",
@@ -670,7 +670,7 @@
               ]
             },
             {
-              "id": "4a47ecf0",
+              "id": "0a930975",
               "type": "text",
               "model": {
                 "blocks": []
@@ -680,7 +680,7 @@
               ]
             },
             {
-              "id": "5e248fe0",
+              "id": "de31f7b2",
               "type": "mpu",
               "model": {},
               "position": [
@@ -688,7 +688,7 @@
               ]
             },
             {
-              "id": "532b9e54",
+              "id": "7cd18936",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1859,118 +1859,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3181",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"681bdd9aa4b02dae425e271af01ff07ff32b21f3\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 825
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/japanese/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "7829dddddff6a626269c740123aae0377cbb0554",
-            "last-modified": "Fri, 25 Sep 2020 09:15:19 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "bc9174fb-e9d2-430c-8726-94ca5cbec538",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1240
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cdd6p3r9g7jo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "6439",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"767501fc68f1bc6f7fbe5804d57881adb7a596a4\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1532
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/japanese",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cdd6p3r9g7jo",
-      "service": "japanese",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

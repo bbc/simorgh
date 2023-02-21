@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "880dbbef",
+              "id": "669e5635",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "a8aacbc9",
+                    "id": "f314327d",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "26e33a75",
+                          "id": "7bfb79e2",
                           "type": "paragraph",
                           "model": {
                             "text": "Social Test multiple (Simorgh Instas)",
                             "blocks": [
                               {
-                                "id": "0366aeea",
+                                "id": "b17a35a0",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Social Test multiple (Simorgh Instas)",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "7300f3e1",
+              "id": "46142d41",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1658757788461,
@@ -67,23 +67,23 @@
               ]
             },
             {
-              "id": "0ddb6390",
+              "id": "51156963",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "0580af02",
+                    "id": "06557abe",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d87af1bf",
+                          "id": "0ffb292a",
                           "type": "paragraph",
                           "model": {
                             "text": "Social Test 1 - Multiple Instagram",
                             "blocks": [
                               {
-                                "id": "3f0a19d0",
+                                "id": "6c298956",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Social Test 1 - Multiple Instagram",
@@ -118,18 +118,18 @@
               ]
             },
             {
-              "id": "370cfc57",
+              "id": "433e487e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "75079867",
+                    "id": "6ce9e5eb",
                     "type": "paragraph",
                     "model": {
                       "text": "1st embed below",
                       "blocks": [
                         {
-                          "id": "633b6775",
+                          "id": "16f3b43b",
                           "type": "fragment",
                           "model": {
                             "text": "1st embed below",
@@ -155,19 +155,19 @@
               ]
             },
             {
-              "id": "57a1e894",
+              "id": "70788b21",
               "type": "social",
               "model": {
                 "source": "https://www.instagram.com/p/CgUZ1BaoXlI/",
                 "blocks": [
                   {
-                    "id": "c797d54f",
+                    "id": "bf4b00dd",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:d6c3ecd1-e998-439e-ad0c-cd5735f607ce",
                       "blocks": [
                         {
-                          "id": "0eb349e4",
+                          "id": "088e115b",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "548d6e86",
+              "id": "86459eed",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "6e18e868",
+                    "id": "29cbdbd6",
                     "type": "paragraph",
                     "model": {
                       "text": "2nd embed below",
                       "blocks": [
                         {
-                          "id": "7b13cbbb",
+                          "id": "501647a5",
                           "type": "fragment",
                           "model": {
                             "text": "2nd embed below",
@@ -240,19 +240,19 @@
               ]
             },
             {
-              "id": "fea41d0e",
+              "id": "0b7796fe",
               "type": "social",
               "model": {
                 "source": "https://www.instagram.com/p/CgRLy5PKeRf/",
                 "blocks": [
                   {
-                    "id": "a9ae4110",
+                    "id": "2409d0fb",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:4e33301b-dc47-4240-9da4-5bb54e62e2ba",
                       "blocks": [
                         {
-                          "id": "d087cb54",
+                          "id": "49da6c8a",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -288,18 +288,18 @@
               ]
             },
             {
-              "id": "b7ff264f",
+              "id": "8b5c1e0f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "07c59284",
+                    "id": "f499ed76",
                     "type": "paragraph",
                     "model": {
                       "text": "3rd embed below",
                       "blocks": [
                         {
-                          "id": "353ae315",
+                          "id": "7932910c",
                           "type": "fragment",
                           "model": {
                             "text": "3rd embed below",
@@ -325,19 +325,19 @@
               ]
             },
             {
-              "id": "d2b0bc03",
+              "id": "fff4b821",
               "type": "social",
               "model": {
                 "source": "https://www.instagram.com/p/CgOrn7XqII5/",
                 "blocks": [
                   {
-                    "id": "33a36ec8",
+                    "id": "98ce7c6e",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:2658b809-2d15-46a3-8c0c-ce8815943553",
                       "blocks": [
                         {
-                          "id": "c1fd17aa",
+                          "id": "9367e5e3",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -373,7 +373,7 @@
               ]
             },
             {
-              "id": "5a46d7d9",
+              "id": "096fb058",
               "type": "mpu",
               "model": {},
               "position": [
@@ -381,7 +381,7 @@
               ]
             },
             {
-              "id": "2fc5e857",
+              "id": "4d44c4e8",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1820,118 +1820,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3855",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "HIT"
-          },
-          "responseCode": 200,
-          "responseTime": 1150
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/pidgin/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "5291",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"07cdea8e48e1b276f9938e0a7f146d12cbe7171f\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1172
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/pidgin",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "82366022391c0370b41ceecd4dca4823c8b41d45",
-            "last-modified": "Wed, 27 Jul 2022 11:20:31 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "31b2f398-827f-4ac0-9430-039e7b68b39a",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1372
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/crjrrv61e5po",
-          "timeout": 4000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "crjrrv61e5po",
-      "service": "pidgin",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "29bb671c",
+              "id": "d948b76b",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "e7bd86d3",
+                    "id": "bd3e331d",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "26989715",
+                          "id": "530ef763",
                           "type": "paragraph",
                           "model": {
                             "text": "پهپادی که برایتان قهوه می‌آورد",
                             "blocks": [
                               {
-                                "id": "875a118e",
+                                "id": "891e1df4",
                                 "type": "fragment",
                                 "model": {
                                   "text": "پهپادی که برایتان قهوه می‌آورد",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "5cd716fc",
+              "id": "cf608a04",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "af355549",
+                    "id": "9fb5d12e",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5288242a",
+                          "id": "455c980e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c54f494b",
+                                "id": "cb73bd8a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "قهوه",
                                   "blocks": [
                                     {
-                                      "id": "02c87460",
+                                      "id": "97aab705",
                                       "type": "fragment",
                                       "model": {
                                         "text": "قهوه",
@@ -116,7 +116,7 @@
                     ]
                   },
                   {
-                    "id": "dd342661",
+                    "id": "77fe6527",
                     "type": "rawImage",
                     "model": {
                       "width": 640,
@@ -137,7 +137,7 @@
               ]
             },
             {
-              "id": "b8c7fa85",
+              "id": "bc462829",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1559050964996,
@@ -148,18 +148,18 @@
               ]
             },
             {
-              "id": "e9f40aef",
+              "id": "2b5caf04",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "a7deb657",
+                    "id": "c71334a3",
                     "type": "paragraph",
                     "model": {
                       "text": "شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.",
                       "blocks": [
                         {
-                          "id": "833fc6b9",
+                          "id": "05297ada",
                           "type": "fragment",
                           "model": {
                             "text": "شاید خیلی طول نکشد که زمانی برسد که وقتی خسته هستید و مثلا هوس فنجان قهوه‌ای را کردید، پهپادی را ببینید که با قهوه سراغتان می‌آید.",
@@ -179,13 +179,13 @@
                     ]
                   },
                   {
-                    "id": "d76d82fc",
+                    "id": "d44434fb",
                     "type": "paragraph",
                     "model": {
                       "text": "شرکت آی‌بی‌ام چنین طرحی را ثبت اختراع (پتنت) کرده است.",
                       "blocks": [
                         {
-                          "id": "5efb04a1",
+                          "id": "964248eb",
                           "type": "fragment",
                           "model": {
                             "text": "شرکت آی‌بی‌ام چنین طرحی را ثبت اختراع (پتنت) کرده است.",
@@ -205,13 +205,13 @@
                     ]
                   },
                   {
-                    "id": "388a3b1a",
+                    "id": "818e3b5a",
                     "type": "paragraph",
                     "model": {
                       "text": "طبق طرحی که آی‌بی‌ام ثبت کرده، این پهپاد می‌تواند \"احساس نیاز\" کارمندان ادارات را درک کرده و برایشان قهوه ببرد.",
                       "blocks": [
                         {
-                          "id": "bbe17728",
+                          "id": "91d5bfbe",
                           "type": "fragment",
                           "model": {
                             "text": "طبق طرحی که آی‌بی‌ام ثبت کرده، این پهپاد می‌تواند \"احساس نیاز\" کارمندان ادارات را درک کرده و برایشان قهوه ببرد.",
@@ -231,13 +231,13 @@
                     ]
                   },
                   {
-                    "id": "00273040",
+                    "id": "a2f3229e",
                     "type": "paragraph",
                     "model": {
                       "text": "شرکت‌های بزرگی مانند آی‌بی‌ام به طور مرتب طرح‌هایی از این دست را ثبت می‌کنند حتی اگر قصد و نیتی برای ساخت و عرضه آن در آینده نزدیک نداشته باشند.",
                       "blocks": [
                         {
-                          "id": "4fc2d8da",
+                          "id": "ecbdeb7e",
                           "type": "fragment",
                           "model": {
                             "text": "شرکت‌های بزرگی مانند آی‌بی‌ام به طور مرتب طرح‌هایی از این دست را ثبت می‌کنند حتی اگر قصد و نیتی برای ساخت و عرضه آن در آینده نزدیک نداشته باشند.",
@@ -263,7 +263,7 @@
               ]
             },
             {
-              "id": "f5850457",
+              "id": "2feb0620",
               "type": "mpu",
               "model": {},
               "position": [
@@ -271,18 +271,18 @@
               ]
             },
             {
-              "id": "af764eab",
+              "id": "fdb7a0ff",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "19e2841d",
+                    "id": "775011c4",
                     "type": "paragraph",
                     "model": {
                       "text": "آی‌بی‌ام نگفته است که آیا قصد ساخت و عرضه پهپاد قهوه‌ پخش‌کن را دارد یا نه.",
                       "blocks": [
                         {
-                          "id": "fedd1c5e",
+                          "id": "0f2ce957",
                           "type": "fragment",
                           "model": {
                             "text": "آی‌بی‌ام نگفته است که آیا قصد ساخت و عرضه پهپاد قهوه‌ پخش‌کن را دارد یا نه.",
@@ -308,7 +308,7 @@
               ]
             },
             {
-              "id": "a7a13141",
+              "id": "99bd1794",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -318,28 +318,28 @@
               ]
             },
             {
-              "id": "d63fc6eb",
+              "id": "503f49da",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "b316f8b3",
+                    "id": "81ad6669",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7588cd8c",
+                          "id": "b1749e0b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "38fdf16c",
+                                "id": "715a789d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "پهپاد قهوه‌ پخش‌کن",
                                   "blocks": [
                                     {
-                                      "id": "d37a1001",
+                                      "id": "e2bc1de9",
                                       "type": "fragment",
                                       "model": {
                                         "text": "پهپاد قهوه‌ پخش‌کن",
@@ -378,7 +378,7 @@
                     ]
                   },
                   {
-                    "id": "9d128710",
+                    "id": "b79413f9",
                     "type": "rawImage",
                     "model": {
                       "width": 640,
@@ -399,18 +399,18 @@
               ]
             },
             {
-              "id": "2417de73",
+              "id": "4a2bfcfa",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "4f9c640f",
+                    "id": "53617421",
                     "type": "paragraph",
                     "model": {
                       "text": "این طرح توسط آی‌بی‌ام در آمریکا پتنت شده و شامل چندین نوع پهپاد برای توزیع قهوه است. در یک طرح، پهپاد، قهوه را مستقیما به فنجان فرد می‌ریزد.",
                       "blocks": [
                         {
-                          "id": "213b3b7a",
+                          "id": "f18ce0c1",
                           "type": "fragment",
                           "model": {
                             "text": "این طرح توسط آی‌بی‌ام در آمریکا پتنت شده و شامل چندین نوع پهپاد برای توزیع قهوه است. در یک طرح، پهپاد، قهوه را مستقیما به فنجان فرد می‌ریزد.",
@@ -430,13 +430,13 @@
                     ]
                   },
                   {
-                    "id": "5a680509",
+                    "id": "cb6e64f2",
                     "type": "paragraph",
                     "model": {
                       "text": "در یک گزینه دیگر، نوشیدنی‌های داغ در بسته‌های در بسته فرستاده می‌شوند تا از ریختن آنها جلوگیری شود.",
                       "blocks": [
                         {
-                          "id": "d88a5eeb",
+                          "id": "9d3be0e0",
                           "type": "fragment",
                           "model": {
                             "text": "در یک گزینه دیگر، نوشیدنی‌های داغ در بسته‌های در بسته فرستاده می‌شوند تا از ریختن آنها جلوگیری شود.",
@@ -456,13 +456,13 @@
                     ]
                   },
                   {
-                    "id": "e2c8dcf1",
+                    "id": "1c45a0d2",
                     "type": "paragraph",
                     "model": {
                       "text": "آی‌بی‌ام خاطرنشان کرده که این پهپادها مجهز به فناوری خواهند بود که فشار خون آدم‌ها، حالت چهره و اتساع مردمک را تشخیص می‌دهند و می‌توانند تشخیص بدهند آدم‌ها خواب‌آلود هستند یا نه.",
                       "blocks": [
                         {
-                          "id": "0306b6a3",
+                          "id": "8437e2f5",
                           "type": "fragment",
                           "model": {
                             "text": "آی‌بی‌ام خاطرنشان کرده که این پهپادها مجهز به فناوری خواهند بود که فشار خون آدم‌ها، حالت چهره و اتساع مردمک را تشخیص می‌دهند و می‌توانند تشخیص بدهند آدم‌ها خواب‌آلود هستند یا نه.",
@@ -488,28 +488,28 @@
               ]
             },
             {
-              "id": "d0aeac08",
+              "id": "7bf1068e",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "b87c9fd5",
+                    "id": "b0cb35d8",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6ca76b24",
+                          "id": "f399c506",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c953ee11",
+                                "id": "d69be2e4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند ",
                                   "blocks": [
                                     {
-                                      "id": "008451e1",
+                                      "id": "d7259e06",
                                       "type": "fragment",
                                       "model": {
                                         "text": "نوشیدنی‌ها داغ در بسته‌های سربسته توزیع می‌شوند ",
@@ -548,23 +548,23 @@
                     ]
                   },
                   {
-                    "id": "c7eb081f",
+                    "id": "77017638",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1eed1053",
+                          "id": "7124ce71",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "575fc97d",
+                                "id": "802853b2",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "پهپاد قهوه‌ پخش‌کن",
                                   "blocks": [
                                     {
-                                      "id": "511c1145",
+                                      "id": "419d164b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "پهپاد قهوه‌ پخش‌کن",
@@ -603,7 +603,7 @@
                     ]
                   },
                   {
-                    "id": "485f6e39",
+                    "id": "4d022b3a",
                     "type": "rawImage",
                     "model": {
                       "width": 640,
@@ -624,18 +624,18 @@
               ]
             },
             {
-              "id": "b7ad5038",
+              "id": "1176e839",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0d03946b",
+                    "id": "51afd41e",
                     "type": "paragraph",
                     "model": {
                       "text": "البته، کارمندان اداره می‌توانند با حرکت دست هم از پهپادها یک فنجان قهوه بخواهند.",
                       "blocks": [
                         {
-                          "id": "ce8d022f",
+                          "id": "22f02566",
                           "type": "fragment",
                           "model": {
                             "text": "البته، کارمندان اداره می‌توانند با حرکت دست هم از پهپادها یک فنجان قهوه بخواهند.",
@@ -655,13 +655,13 @@
                     ]
                   },
                   {
-                    "id": "4242f1b5",
+                    "id": "2a4bbe54",
                     "type": "paragraph",
                     "model": {
                       "text": "شرکت آی‌بی‌ام زمانی سردمدار تولید کامپیوتر در جهان بود.",
                       "blocks": [
                         {
-                          "id": "eca31c49",
+                          "id": "994b5778",
                           "type": "fragment",
                           "model": {
                             "text": "شرکت آی‌بی‌ام زمانی سردمدار تولید کامپیوتر در جهان بود.",
@@ -681,13 +681,13 @@
                     ]
                   },
                   {
-                    "id": "2a93e5fa",
+                    "id": "be5cb749",
                     "type": "paragraph",
                     "model": {
                       "text": "اما در سال‌های اخیر این شرکت در زمینه تولید نرم‌افزار و هوش مصنوعی فعال شده است",
                       "blocks": [
                         {
-                          "id": "60f57115",
+                          "id": "ba2db3ca",
                           "type": "fragment",
                           "model": {
                             "text": "اما در سال‌های اخیر این شرکت در زمینه تولید نرم‌افزار و هوش مصنوعی فعال شده است",
@@ -1705,118 +1705,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "eb7a3c4a90db808ed838ed3b74db3c4b0dc0f844",
-            "last-modified": "Tue, 08 Mar 2022 10:53:51 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "bcb42379-f68f-4b01-97d1-f0236e8c8bf4",
-            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 351
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c4vlle3q337o",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1975",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5d61a7eba177c74b33f6669c99a3cd2961ecdf17\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1063
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/persian/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "5636",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"e9bff52c4ed6ee34181bb7c214d1528b64cbe4ee\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1442
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/persian",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c4vlle3q337o",
-      "service": "persian",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

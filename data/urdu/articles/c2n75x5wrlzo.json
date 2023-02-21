@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "c308cee0",
+              "id": "9562d5c6",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "4468ebbe",
+                    "id": "def40d4d",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "16f39b6c",
+                          "id": "1511ac13",
                           "type": "paragraph",
                           "model": {
                             "text": "فرانس میں ڈائنوسار کی دو میٹر لمبی ران کی ہڈی برآمد",
                             "blocks": [
                               {
-                                "id": "f266132a",
+                                "id": "822e2077",
                                 "type": "fragment",
                                 "model": {
                                   "text": "فرانس میں ڈائنوسار کی دو میٹر لمبی ران کی ہڈی برآمد",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "8e56ec37",
+              "id": "9236e765",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "dda73ccc",
+                    "id": "630c0759",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "a3937315",
+                          "id": "fe9c965a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0ee53d24",
+                                "id": "adc0396c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ملنے والی ہڈی کی لمبائی دو میٹر، لگ بھگ 6.6 فٹ، ہے",
                                   "blocks": [
                                     {
-                                      "id": "b10b99b1",
+                                      "id": "a7d9dc65",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ملنے والی ہڈی کی لمبائی دو میٹر، لگ بھگ 6.6 فٹ، ہے",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "c714125a",
+                    "id": "22fecfa4",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "badd340e",
+                          "id": "69e97567",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "7c86b85d",
+                                "id": "0eb9c814",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ڈائنو",
                                   "blocks": [
                                     {
-                                      "id": "85c7fcfe",
+                                      "id": "a103c7c1",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ڈائنو",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "2b2c299a",
+                    "id": "8c8bb588",
                     "type": "rawImage",
                     "model": {
                       "width": 660,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "ff5a2836",
+              "id": "109fc37b",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1564562399734,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "8efa8f48",
+              "id": "3a8afadc",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "199733ff",
+                    "id": "08a463aa",
                     "type": "paragraph",
                     "model": {
                       "text": "فرانس میں سائنسدانوں کو کھدائی کے دوران ایک مقام سے بڑے سائز کی ڈائنوسار کی ران کی ہڈی ملی ہے۔",
                       "blocks": [
                         {
-                          "id": "5b9d9bcd",
+                          "id": "b3347fdb",
                           "type": "fragment",
                           "model": {
                             "text": "فرانس میں سائنسدانوں کو کھدائی کے دوران ایک مقام سے بڑے سائز کی ڈائنوسار کی ران کی ہڈی ملی ہے۔",
@@ -234,13 +234,13 @@
                     ]
                   },
                   {
-                    "id": "dba3a3a7",
+                    "id": "96d10f2a",
                     "type": "paragraph",
                     "model": {
                       "text": "کھدائی کا یہ مقام جنوب مشرقی فرانس میں واقع ہے اور گذشتہ ایک دہائی سے یہاں سے جانوروں اور نباتات کی باقیات نکلنے کا سلسلہ جاری ہے۔",
                       "blocks": [
                         {
-                          "id": "a92596e8",
+                          "id": "63a48b74",
                           "type": "fragment",
                           "model": {
                             "text": "کھدائی کا یہ مقام جنوب مشرقی فرانس میں واقع ہے اور گذشتہ ایک دہائی سے یہاں سے جانوروں اور نباتات کی باقیات نکلنے کا سلسلہ جاری ہے۔",
@@ -260,13 +260,13 @@
                     ]
                   },
                   {
-                    "id": "280a1d02",
+                    "id": "8677202c",
                     "type": "paragraph",
                     "model": {
                       "text": "ملنے والی ہڈی کی لمبائی دو میٹر، لگ بھگ 6.6 فٹ، ہے۔ یہ خیال کیا جا رہا کہ یہ ہڈی اس نسل سے تعلق رکھنے والے ڈائنوسار کی ہے جو پودے کھاتے تھے۔ پودے کھانے والے ڈائنوسارز کی دم اور گردن دوسری نسل کے ڈائنوسارز سے لمبی ہوتی تھی۔",
                       "blocks": [
                         {
-                          "id": "17bdd8e9",
+                          "id": "3b4ccd6b",
                           "type": "fragment",
                           "model": {
                             "text": "ملنے والی ہڈی کی لمبائی دو میٹر، لگ بھگ 6.6 فٹ، ہے۔ یہ خیال کیا جا رہا کہ یہ ہڈی اس نسل سے تعلق رکھنے والے ڈائنوسار کی ہے جو پودے کھاتے تھے۔ پودے کھانے والے ڈائنوسارز کی دم اور گردن دوسری نسل کے ڈائنوسارز سے لمبی ہوتی تھی۔",
@@ -292,18 +292,18 @@
               ]
             },
             {
-              "id": "bc7b7a58",
+              "id": "3ea7e63a",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "4c09b50d",
+                    "id": "a91d950e",
                     "type": "paragraph",
                     "model": {
                       "text": "ودے کھانے والے ڈائنوسارز کے بارے میں کہا جاتا ہے کہ وہ روئے زمین پر پائے جانے والے سب جانورں سے زیادہ عظیم الجثہ تھے۔",
                       "blocks": [
                         {
-                          "id": "5d0f041a",
+                          "id": "3044b1b1",
                           "type": "fragment",
                           "model": {
                             "text": "ودے کھانے والے ڈائنوسارز کے بارے میں کہا جاتا ہے کہ وہ روئے زمین پر پائے جانے والے سب جانورں سے زیادہ عظیم الجثہ تھے۔",
@@ -329,7 +329,7 @@
               ]
             },
             {
-              "id": "b91330be",
+              "id": "94b6bc2e",
               "type": "mpu",
               "model": {},
               "position": [
@@ -337,18 +337,18 @@
               ]
             },
             {
-              "id": "749cdfff",
+              "id": "91e6e107",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "710c9c5f",
+                    "id": "3cb77a90",
                     "type": "paragraph",
                     "model": {
                       "text": "سائنسدانوں کا کہنا ہے کہ وہ اس ہڈی کے اتنی محفوظ حالت میں ہونے پر حیرت زدہ ہیں۔ پیرس میں واقع نیشنل ہسٹری میوزیم سے تعلق رکھنے والے رونان آلائن نے ایک مقامی اخبار کو بتایا کہ 'ہم  ہڈی کے جوڑوں، عضلات، رگوں اور زخموں کے نشانات تک کو دیکھ سکتے ہیں۔'",
                       "blocks": [
                         {
-                          "id": "a4010f07",
+                          "id": "1d50b787",
                           "type": "fragment",
                           "model": {
                             "text": "سائنسدانوں کا کہنا ہے کہ وہ اس ہڈی کے اتنی محفوظ حالت میں ہونے پر حیرت زدہ ہیں۔ پیرس میں واقع نیشنل ہسٹری میوزیم سے تعلق رکھنے والے رونان آلائن نے ایک مقامی اخبار کو بتایا کہ 'ہم  ہڈی کے جوڑوں، عضلات، رگوں اور زخموں کے نشانات تک کو دیکھ سکتے ہیں۔'",
@@ -374,7 +374,7 @@
               ]
             },
             {
-              "id": "e64526b8",
+              "id": "11f3786c",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -384,18 +384,18 @@
               ]
             },
             {
-              "id": "2c9976ab",
+              "id": "824217fe",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "afe11b70",
+                    "id": "8f3296ad",
                     "type": "paragraph",
                     "model": {
                       "text": "'بڑی ہڈیوں کے ساتھ ایسا شاذ و نادر ہی ہوتا ہے۔ کیونکہ بڑی ہڈیوں میں خود سے ٹوٹ جانے کی صلاحیت زیادہ ہوتی ہے۔' ",
                       "blocks": [
                         {
-                          "id": "4b0ca929",
+                          "id": "6e8a0fbf",
                           "type": "fragment",
                           "model": {
                             "text": "'بڑی ہڈیوں کے ساتھ ایسا شاذ و نادر ہی ہوتا ہے۔ کیونکہ بڑی ہڈیوں میں خود سے ٹوٹ جانے کی صلاحیت زیادہ ہوتی ہے۔' ",
@@ -415,13 +415,13 @@
                     ]
                   },
                   {
-                    "id": "cd54f5e3",
+                    "id": "bbd5f23b",
                     "type": "paragraph",
                     "model": {
                       "text": "ڈائنو سار کتنا بڑا تھا؟",
                       "blocks": [
                         {
-                          "id": "a3a7bb6a",
+                          "id": "5768216a",
                           "type": "fragment",
                           "model": {
                             "text": "ڈائنو سار کتنا بڑا تھا؟",
@@ -441,13 +441,13 @@
                     ]
                   },
                   {
-                    "id": "6a7b713b",
+                    "id": "e85ae738",
                     "type": "paragraph",
                     "model": {
                       "text": "رونان آلائن نے روئٹرز نیوز ایجنسی کو بتایا کہ یہ ہڈی جس نسل کے ڈائنوسار کی خیال کی جا رہی ہے وہ 14 کروڑ سال پہلے روئے زمین پر گھومتے پھرتے تھے اور ان کا وزن لگ بھگ 40 سے 50 ٹن تک ہوتا تھا۔",
                       "blocks": [
                         {
-                          "id": "67c5d5ab",
+                          "id": "5e7767b7",
                           "type": "fragment",
                           "model": {
                             "text": "رونان آلائن نے روئٹرز نیوز ایجنسی کو بتایا کہ یہ ہڈی جس نسل کے ڈائنوسار کی خیال کی جا رہی ہے وہ 14 کروڑ سال پہلے روئے زمین پر گھومتے پھرتے تھے اور ان کا وزن لگ بھگ 40 سے 50 ٹن تک ہوتا تھا۔",
@@ -473,28 +473,28 @@
               ]
             },
             {
-              "id": "54e8857d",
+              "id": "a2cdca24",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "6abc82cc",
+                    "id": "c5310eab",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "394ff771",
+                          "id": "4dcb7b86",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "59c44919",
+                                "id": "f944147f",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ڈائنو",
                                   "blocks": [
                                     {
-                                      "id": "ae0852b1",
+                                      "id": "c41d595f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ڈائنو",
@@ -533,7 +533,7 @@
                     ]
                   },
                   {
-                    "id": "3daa44f6",
+                    "id": "e47e8088",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -554,18 +554,18 @@
               ]
             },
             {
-              "id": "dae1974e",
+              "id": "f2a60d3c",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5b5035ca",
+                    "id": "cfdc5d82",
                     "type": "paragraph",
                     "model": {
                       "text": "مقامی اخبار کے مطابق سنہ 2010 میں اسی نسل کے ڈائنوسار کی 2.2 میٹر لمبی ہڈی کھدائی کے اسی مقام سے دریافت ہوئی تھی۔ اس ہڈی کا وزن 500 کلو تھا۔",
                       "blocks": [
                         {
-                          "id": "77592d59",
+                          "id": "b7d32145",
                           "type": "fragment",
                           "model": {
                             "text": "مقامی اخبار کے مطابق سنہ 2010 میں اسی نسل کے ڈائنوسار کی 2.2 میٹر لمبی ہڈی کھدائی کے اسی مقام سے دریافت ہوئی تھی۔ اس ہڈی کا وزن 500 کلو تھا۔",
@@ -585,13 +585,13 @@
                     ]
                   },
                   {
-                    "id": "638fb1fc",
+                    "id": "2b90170b",
                     "type": "paragraph",
                     "model": {
                       "text": " نئی ملنے والی ہڈی کے وزن کے بارے میں خیال ہے کہ یہ بھی تقریباً 500 کلو گرام تک ہو گا۔ ہڈی ابھی مکمل طور پر زمین سے نکالی نہیں جا سکی ہے اور اس کام میں ایک ہفتے کا وقت اور کرین کی مدد درکار ہو گی۔",
                       "blocks": [
                         {
-                          "id": "ed425156",
+                          "id": "f08036de",
                           "type": "fragment",
                           "model": {
                             "text": " نئی ملنے والی ہڈی کے وزن کے بارے میں خیال ہے کہ یہ بھی تقریباً 500 کلو گرام تک ہو گا۔ ہڈی ابھی مکمل طور پر زمین سے نکالی نہیں جا سکی ہے اور اس کام میں ایک ہفتے کا وقت اور کرین کی مدد درکار ہو گی۔",
@@ -617,23 +617,23 @@
               ]
             },
             {
-              "id": "5579a201",
+              "id": "ee08ca47",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "cb40895d",
+                    "id": "93d0d561",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d6153186",
+                          "id": "61e805d1",
                           "type": "paragraph",
                           "model": {
                             "text": "کھدائی کے مقام سے اور کیا ملا؟",
                             "blocks": [
                               {
-                                "id": "1503569c",
+                                "id": "7a1448c2",
                                 "type": "fragment",
                                 "model": {
                                   "text": "کھدائی کے مقام سے اور کیا ملا؟",
@@ -668,18 +668,18 @@
               ]
             },
             {
-              "id": "3e90659b",
+              "id": "1da8f998",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "2074f6ca",
+                    "id": "fed8995c",
                     "type": "paragraph",
                     "model": {
                       "text": "فرانس میں کوگنیک نامی قصبے کے قریب کھدائی کے مقام پر 70 سائنسدان اس موسم گرما میں کام کر رہے ہیں۔",
                       "blocks": [
                         {
-                          "id": "1d478e00",
+                          "id": "f4e8ffd5",
                           "type": "fragment",
                           "model": {
                             "text": "فرانس میں کوگنیک نامی قصبے کے قریب کھدائی کے مقام پر 70 سائنسدان اس موسم گرما میں کام کر رہے ہیں۔",
@@ -705,28 +705,28 @@
               ]
             },
             {
-              "id": "d2e88119",
+              "id": "7f76634c",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "79a8e2fc",
+                    "id": "e908c0f8",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "19fb684a",
+                          "id": "d8a83774",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "597b518b",
+                                "id": "92941061",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "سنہ 2010 سے اب تک کھدائی کے اس مقام سے 40 اقسام کے جانوروں اور نباتات کی 7500 باقیات مل چکی ہیں",
                                   "blocks": [
                                     {
-                                      "id": "632f6abf",
+                                      "id": "f5aef5f3",
                                       "type": "fragment",
                                       "model": {
                                         "text": "سنہ 2010 سے اب تک کھدائی کے اس مقام سے 40 اقسام کے جانوروں اور نباتات کی 7500 باقیات مل چکی ہیں",
@@ -765,23 +765,23 @@
                     ]
                   },
                   {
-                    "id": "11b6e03d",
+                    "id": "10af5410",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "89b78e4b",
+                          "id": "3a8259c1",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d35df006",
+                                "id": "2d4aab7e",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ڈائنو",
                                   "blocks": [
                                     {
-                                      "id": "43a6d497",
+                                      "id": "efb833c9",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ڈائنو",
@@ -820,7 +820,7 @@
                     ]
                   },
                   {
-                    "id": "8c13d41b",
+                    "id": "00214285",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -841,18 +841,18 @@
               ]
             },
             {
-              "id": "d12c3707",
+              "id": "392329fe",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "c7c5c776",
+                    "id": "e48fb424",
                     "type": "paragraph",
                     "model": {
                       "text": "سنہ 2010 سے اب تک کھدائی کے اس مقام سے 40 اقسام کے جانوروں اور نباتات کی 7500 باقیات مل چکی ہیں۔ اور اسی وجہ سے کھدائی کا یہ مقام یورپ بھر میں اہمیت اختیار کر چکا ہے۔ ",
                       "blocks": [
                         {
-                          "id": "1f9d9591",
+                          "id": "141c5076",
                           "type": "fragment",
                           "model": {
                             "text": "سنہ 2010 سے اب تک کھدائی کے اس مقام سے 40 اقسام کے جانوروں اور نباتات کی 7500 باقیات مل چکی ہیں۔ اور اسی وجہ سے کھدائی کا یہ مقام یورپ بھر میں اہمیت اختیار کر چکا ہے۔ ",
@@ -872,13 +872,13 @@
                     ]
                   },
                   {
-                    "id": "352696c4",
+                    "id": "5968d7ad",
                     "type": "paragraph",
                     "model": {
                       "text": "فرانسیسی اخبار کے مطابق اس مقام سے ڈائنوسار کے دو مختلف نسلوں کی ہڈیاں برآمد ہو ئی ہیں۔",
                       "blocks": [
                         {
-                          "id": "2a3d5bc0",
+                          "id": "b48a8875",
                           "type": "fragment",
                           "model": {
                             "text": "فرانسیسی اخبار کے مطابق اس مقام سے ڈائنوسار کے دو مختلف نسلوں کی ہڈیاں برآمد ہو ئی ہیں۔",
@@ -2250,118 +2250,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "e53381bc5a29af66a8269f20ec2248b34b020aec",
-            "last-modified": "Tue, 29 Nov 2022 16:40:31 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "10526828-1b33-48bd-99a8-171e6c605004",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 804
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c2n75x5wrlzo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1552",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"27393140b19bf3682dd8efc1a9f3a57fead7c9a1\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 827
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/urdu/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3922",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"d36daad8e8d4b92246cab7b6b902eb0348fb1caf\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 899
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/urdu",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c2n75x5wrlzo",
-      "service": "urdu",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

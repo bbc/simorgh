@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "ab312992",
+              "id": "247ca1cc",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "78861f7d",
+                    "id": "7829e67f",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "97ae0e7b",
+                          "id": "d4b162a9",
                           "type": "paragraph",
                           "model": {
                             "text": "AV test article ",
                             "blocks": [
                               {
-                                "id": "b61183bb",
+                                "id": "bb42744c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "AV test article ",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "2790d26c",
+              "id": "a09ed04a",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1571146595887,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "0c9378b6",
+              "id": "2588e010",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "9b620a10",
+                    "id": "3eae6bef",
                     "type": "paragraph",
                     "model": {
                       "text": "Text block before a media block",
                       "blocks": [
                         {
-                          "id": "2c6f8b0b",
+                          "id": "ac102f58",
                           "type": "fragment",
                           "model": {
                             "text": "Text block before a media block",
@@ -104,29 +104,29 @@
               ]
             },
             {
-              "id": "a7781b2e",
+              "id": "618a5b97",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "bdc3359e",
+                    "id": "296699f1",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4f6db186",
+                          "id": "18385eea",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f86e5c4a",
+                                "id": "acb95841",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                   "blocks": [
                                     {
-                                      "id": "78899a42",
+                                      "id": "114d485d",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
@@ -165,12 +165,12 @@
                     ]
                   },
                   {
-                    "id": "9685d1ad",
+                    "id": "ccd99149",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9abefac1",
+                          "id": "e01333b6",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -216,12 +216,12 @@
                           ]
                         },
                         {
-                          "id": "dd878166",
+                          "id": "9f381aaa",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "31826704",
+                                "id": "eb2561fd",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -238,23 +238,23 @@
                                 ]
                               },
                               {
-                                "id": "bc739f7a",
+                                "id": "e4bd2053",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "7ba57f1c",
+                                      "id": "371e3624",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "0f513c1c",
+                                            "id": "a643b79a",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "22f8385d",
+                                                  "id": "8a08cc95",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -322,18 +322,18 @@
               ]
             },
             {
-              "id": "6aeb2630",
+              "id": "ed28b11a",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "90bb2510",
+                    "id": "a0a90eed",
                     "type": "paragraph",
                     "model": {
                       "text": "Text block after an media block.",
                       "blocks": [
                         {
-                          "id": "50f3fc55",
+                          "id": "f2e7c2b6",
                           "type": "fragment",
                           "model": {
                             "text": "Text block after an media block.",
@@ -359,29 +359,29 @@
               ]
             },
             {
-              "id": "f7a265ae",
+              "id": "1cb1d74d",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "8de2bf03",
+                    "id": "17180226",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "251a6437",
+                          "id": "8d6e8c1e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d6446ae6",
+                                "id": "87e720f1",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                   "blocks": [
                                     {
-                                      "id": "5557e29d",
+                                      "id": "e1dec114",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
@@ -420,12 +420,12 @@
                     ]
                   },
                   {
-                    "id": "0a4d0475",
+                    "id": "8dc91500",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3d33b61b",
+                          "id": "89ac3e58",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -471,12 +471,12 @@
                           ]
                         },
                         {
-                          "id": "7856abef",
+                          "id": "afd86035",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "eb3eed00",
+                                "id": "d4b67f90",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -493,23 +493,23 @@
                                 ]
                               },
                               {
-                                "id": "d3168c92",
+                                "id": "b2633cf9",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "74e33abf",
+                                      "id": "de04537b",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "a34afd4e",
+                                            "id": "288e407e",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "d324aa5a",
+                                                  "id": "b9a13445",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -577,28 +577,28 @@
               ]
             },
             {
-              "id": "0627486b",
+              "id": "00e3669d",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "058901c2",
+                    "id": "976510ae",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4f2c3720",
+                          "id": "2dd8d06b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "3dd2d68a",
+                                "id": "61d7d68c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Image block after a media block",
                                   "blocks": [
                                     {
-                                      "id": "c7e3faa7",
+                                      "id": "f8ade4a5",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Image block after a media block",
@@ -637,23 +637,23 @@
                     ]
                   },
                   {
-                    "id": "8a87d048",
+                    "id": "77c7145b",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "76c60f54",
+                          "id": "d3c1b2a2",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "742f4187",
+                                "id": "e09cedcc",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Image after an AV block",
                                   "blocks": [
                                     {
-                                      "id": "b81990ff",
+                                      "id": "34760710",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Image after an AV block",
@@ -692,7 +692,7 @@
                     ]
                   },
                   {
-                    "id": "e93c4c49",
+                    "id": "9ab0a9e4",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -713,29 +713,29 @@
               ]
             },
             {
-              "id": "26d3c447",
+              "id": "c858b61c",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "d64d07a8",
+                    "id": "e83ae8a1",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "30e0d06d",
+                          "id": "aa62aee2",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6791f3d0",
+                                "id": "0770c2b6",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                   "blocks": [
                                     {
-                                      "id": "3d635b2e",
+                                      "id": "0d8c6438",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
@@ -774,12 +774,12 @@
                     ]
                   },
                   {
-                    "id": "696ad900",
+                    "id": "7088746b",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9d6dc6b8",
+                          "id": "6d0e5018",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -825,12 +825,12 @@
                           ]
                         },
                         {
-                          "id": "14b4e2a7",
+                          "id": "ff777572",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d7e2c0ea",
+                                "id": "fe7f869b",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -847,23 +847,23 @@
                                 ]
                               },
                               {
-                                "id": "76c13e06",
+                                "id": "6f46d1d9",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "968b0bc4",
+                                      "id": "035c8799",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "95823675",
+                                            "id": "13dd652c",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "4622d698",
+                                                  "id": "d0c7e060",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -931,23 +931,23 @@
               ]
             },
             {
-              "id": "3bfc3921",
+              "id": "bd97a3c5",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "6c1f7824",
+                    "id": "e48fdb2b",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0c00776e",
+                          "id": "75348988",
                           "type": "paragraph",
                           "model": {
                             "text": "Subheadline block after a media block",
                             "blocks": [
                               {
-                                "id": "eca981da",
+                                "id": "cdcb3ad6",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Subheadline block after a media block",
@@ -982,29 +982,29 @@
               ]
             },
             {
-              "id": "1b5f5f4c",
+              "id": "3b3329da",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "d0284a40",
+                    "id": "3dbc83fa",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e2d9f734",
+                          "id": "45d41ee6",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "fba0e898",
+                                "id": "d4d852b5",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                   "blocks": [
                                     {
-                                      "id": "3df8a659",
+                                      "id": "c42c73af",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
@@ -1043,12 +1043,12 @@
                     ]
                   },
                   {
-                    "id": "e4279633",
+                    "id": "f5b0a5c8",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "da4c56b4",
+                          "id": "d0bd55f6",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -1094,12 +1094,12 @@
                           ]
                         },
                         {
-                          "id": "f8568c36",
+                          "id": "8b754db3",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c5e496b2",
+                                "id": "1f476a8a",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -1116,23 +1116,23 @@
                                 ]
                               },
                               {
-                                "id": "cd7e3ba7",
+                                "id": "5d9f56ec",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "05055b8b",
+                                      "id": "183dd50d",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "3480fb17",
+                                            "id": "316e4600",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "22de9f37",
+                                                  "id": "3a3e022c",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -1200,29 +1200,29 @@
               ]
             },
             {
-              "id": "31686161",
+              "id": "87080c6d",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "7da18a5e",
+                    "id": "024a1d9d",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cd41e6c2",
+                          "id": "90bd6792",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f63fcf30",
+                                "id": "370f24e9",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                   "blocks": [
                                     {
-                                      "id": "5d4e216e",
+                                      "id": "551a5745",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
@@ -1261,12 +1261,12 @@
                     ]
                   },
                   {
-                    "id": "cafa4f08",
+                    "id": "fe1cc9f7",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4d173b57",
+                          "id": "32bea5f0",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -1312,12 +1312,12 @@
                           ]
                         },
                         {
-                          "id": "b9d04568",
+                          "id": "74038f46",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "47cb67a1",
+                                "id": "edcfdf91",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -1334,23 +1334,23 @@
                                 ]
                               },
                               {
-                                "id": "85f75ed9",
+                                "id": "b32cb740",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "3a833b90",
+                                      "id": "e68e2624",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "c09e6c43",
+                                            "id": "483df5e2",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "7252c6c4",
+                                                  "id": "a73f41ad",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -1418,18 +1418,18 @@
               ]
             },
             {
-              "id": "3896e396",
+              "id": "e08a26ee",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "f8abcfc6",
+                    "id": "95df5d8a",
                     "type": "paragraph",
                     "model": {
                       "text": "Above is two media blocks one after the other.",
                       "blocks": [
                         {
-                          "id": "235da874",
+                          "id": "ccfc87bd",
                           "type": "fragment",
                           "model": {
                             "text": "Above is two media blocks one after the other.",
@@ -1455,7 +1455,7 @@
               ]
             },
             {
-              "id": "3fbf4b0c",
+              "id": "ebecaca3",
               "type": "mpu",
               "model": {},
               "position": [
@@ -1463,7 +1463,7 @@
               ]
             },
             {
-              "id": "85b60bce",
+              "id": "d38dc688",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -2871,118 +2871,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "8f504b09e2f887e7bff839fcdf662b13b46075ec",
-            "last-modified": "Thu, 24 Feb 2022 00:17:09 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "3ab6d56e-2934-446a-8d0d-3daf4f9c9f6b",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1272
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cjn0qpz3jjvo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "10867",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"0dc762dfbc616e599d7d1bcb23b36d5ebd9c5359\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1475
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/news/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json",
-            "content-length": "6083",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"06f86a889715f7815bf36035ab3a06b6bfc3e330\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1545
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/news",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cjn0qpz3jjvo",
-      "service": "news",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

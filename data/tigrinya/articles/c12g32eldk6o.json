@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "bf3dbad7",
+              "id": "e536bc83",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "30b54c72",
+                    "id": "7d95a415",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "bf630379",
+                          "id": "f74c8b1e",
                           "type": "paragraph",
                           "model": {
                             "text": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\"",
                             "blocks": [
                               {
-                                "id": "f8f6a1b1",
+                                "id": "6f6e813d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "መቐለ 70 እንደርታ፡ \"እንታይ ክፍጠር ይኸውን? ብዝብሉ ስግኣታት ተወጢርና ዛዚምናዮ\"",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "217a8f8d",
+              "id": "4a40e14c",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942994618,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "f6bbee45",
+              "id": "1d70c609",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "035810a2",
+                    "id": "c119ee29",
                     "type": "paragraph",
                     "model": {
                       "text": "ሙሁራት፡ \"ናይ ፍልጠት ከተማ\" [city of Knowledge] ፣ ዘየምቲ \"ዓይኒ ትግራይ\"፣ ነጋዶ \"ሞተር ቑጠባ\"፣ መናእሰይ ድማ፡ \"ከተማ ፍቕሪ\" ኢሎም ይጽውዑዋ።",
                       "blocks": [
                         {
-                          "id": "351f25c9",
+                          "id": "965b3032",
                           "type": "fragment",
                           "model": {
                             "text": "ሙሁራት፡ \"ናይ ፍልጠት ከተማ\" [city of Knowledge] ፣ ዘየምቲ \"ዓይኒ ትግራይ\"፣ ነጋዶ \"ሞተር ቑጠባ\"፣ መናእሰይ ድማ፡ \"ከተማ ፍቕሪ\" ኢሎም ይጽውዑዋ።",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "f51ba24d",
+                    "id": "c012ef71",
                     "type": "paragraph",
                     "model": {
                       "text": "እዛ ከተማ፡ ካብ ሰዓታት ድሕሪ ቐትሪ ዝሓለፈ ሰንበት ጀሚሩ ብዝነበረ ፍሉይ ስምዒት ዓወት፣ ደስታ ዘሰነፎ ዕጹው ጉሮሮ ከዚመላ ዘውግሐ፣ ሓጎስ ሓሊፉወን ዝሕንዝሕ ንብዓተን ዘውረዳ አዒንቲ፡ ኮታስ ሕውስው ዝበሉን ንምግላጾም ዝኸብዱን ስምዒታት ክተአንግድ ዘምሰየትን ዝሓደረትን ከተማ መቐለ'ያ።",
                       "blocks": [
                         {
-                          "id": "2c96f6ab",
+                          "id": "8ad0a019",
                           "type": "fragment",
                           "model": {
                             "text": "እዛ ከተማ፡ ካብ ሰዓታት ድሕሪ ቐትሪ ዝሓለፈ ሰንበት ጀሚሩ ብዝነበረ ፍሉይ ስምዒት ዓወት፣ ደስታ ዘሰነፎ ዕጹው ጉሮሮ ከዚመላ ዘውግሐ፣ ሓጎስ ሓሊፉወን ዝሕንዝሕ ንብዓተን ዘውረዳ አዒንቲ፡ ኮታስ ሕውስው ዝበሉን ንምግላጾም ዝኸብዱን ስምዒታት ክተአንግድ ዘምሰየትን ዝሓደረትን ከተማ መቐለ'ያ።",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "629bb18b",
+                    "id": "da8cd6d3",
                     "type": "paragraph",
                     "model": {
                       "text": "ቅድሚ እዛ ናይ ትማሊ ዝነበራ ሰናብቲ፡ ብሓዘንን ቁጥዐን ተኸቢባ ብትዝታ ተሸሚማ ዝነበረት ከተማ፡ ገና ኣርብዓ መዓልቲ ከይመልኣ ሓዘና ዝድብስ ኣጋጣሚ ክፍጠር'ዩ ኢሉ ዝገመተ ኣይነበረነን እንተተብሃለ ምግናን ኣይክኸውንን።",
                       "blocks": [
                         {
-                          "id": "af25925e",
+                          "id": "85f2f86f",
                           "type": "fragment",
                           "model": {
                             "text": "ቅድሚ እዛ ናይ ትማሊ ዝነበራ ሰናብቲ፡ ብሓዘንን ቁጥዐን ተኸቢባ ብትዝታ ተሸሚማ ዝነበረት ከተማ፡ ገና ኣርብዓ መዓልቲ ከይመልኣ ሓዘና ዝድብስ ኣጋጣሚ ክፍጠር'ዩ ኢሉ ዝገመተ ኣይነበረነን እንተተብሃለ ምግናን ኣይክኸውንን።",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "ec9c78d6",
+                    "id": "5dfc453e",
                     "type": "paragraph",
                     "model": {
                       "text": "ኣርማ ብሄራዊ ስምዒት ህዝቢ እታ ከተማን፡ ቅመም ወግዒ መናእሰይን ፖለቲከኛታትን ኮይኑ ዝሓገየ ብስም እታ ከተማ ዝተሰመየ ጋንታ ኩዕሶ እግሪ መቐለ 70 እንደርታ ድማ፡ ደባሲት እቲ ሃንደበታዊ ሓዘን'ዩ።",
                       "blocks": [
                         {
-                          "id": "7f2bd0ac",
+                          "id": "46f4de37",
                           "type": "fragment",
                           "model": {
                             "text": "ኣርማ ብሄራዊ ስምዒት ህዝቢ እታ ከተማን፡ ቅመም ወግዒ መናእሰይን ፖለቲከኛታትን ኮይኑ ዝሓገየ ብስም እታ ከተማ ዝተሰመየ ጋንታ ኩዕሶ እግሪ መቐለ 70 እንደርታ ድማ፡ ደባሲት እቲ ሃንደበታዊ ሓዘን'ዩ።",
@@ -182,7 +182,7 @@
               ]
             },
             {
-              "id": "7beaa722",
+              "id": "6d4b6d5c",
               "type": "mpu",
               "model": {},
               "position": [
@@ -190,18 +190,18 @@
               ]
             },
             {
-              "id": "1d500cdd",
+              "id": "ab65d9e0",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "3949fc8b",
+                    "id": "89f3cb53",
                     "type": "paragraph",
                     "model": {
                       "text": "ሰንበት 30 ሰነ 2011 [ብኣቆጻጽራ ኢትዮጵያ]፡ ኣብ ሰዓታት ድሕሪ ቐትሪ፡ ልዕሊ 60 ሽሕ ዝግመት ህዝቢ፡ 'ካልእ ቦታ የብልካን!' ዝተብሃለ ይመስል ኣብ ስታድየም ትግራይ ዓሪዱ።",
                       "blocks": [
                         {
-                          "id": "708a0f08",
+                          "id": "c3fb5fb2",
                           "type": "fragment",
                           "model": {
                             "text": "ሰንበት 30 ሰነ 2011 [ብኣቆጻጽራ ኢትዮጵያ]፡ ኣብ ሰዓታት ድሕሪ ቐትሪ፡ ልዕሊ 60 ሽሕ ዝግመት ህዝቢ፡ 'ካልእ ቦታ የብልካን!' ዝተብሃለ ይመስል ኣብ ስታድየም ትግራይ ዓሪዱ።",
@@ -227,7 +227,7 @@
               ]
             },
             {
-              "id": "4bf0abca",
+              "id": "31dc8a6f",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1498,118 +1498,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "6421",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"744e1e6b2cfedd85bebfc49cc3da85e9467946ce\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 479
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/tigrinya",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "c3e4e3a394dd035ab6168ca141a4277068cdd006",
-            "last-modified": "Wed, 23 Feb 2022 15:00:18 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "99d7573a-a305-49dd-b003-639d0baa4a39",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1437
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c12g32eldk6o",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "4589",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"463a19f2188fefc4ee7a5447b6eae0012cfcb5f8\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1458
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/tigrinya/front_page",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c12g32eldk6o",
-      "service": "tigrinya",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

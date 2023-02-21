@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "3c538ec6",
+              "id": "27e20f98",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ea2290a3",
+                    "id": "e7b8b3c2",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "11823060",
+                          "id": "f044e7f4",
                           "type": "paragraph",
                           "model": {
                             "text": "Homófonos: O que são e qual a sua relevância em inglês?",
                             "blocks": [
                               {
-                                "id": "8166afcc",
+                                "id": "0daf9acb",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Homófonos: O que são e qual a sua relevância em inglês?",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "4887add1",
+              "id": "747c34b9",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941526269,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "49d252d9",
+              "id": "f2228acc",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "a875240d",
+                    "id": "79c1a5b0",
                     "type": "paragraph",
                     "model": {
                       "text": "Quem já tentou aprender outro idioma sabe que a tarefa não é nada fácil.",
                       "blocks": [
                         {
-                          "id": "a6a791d6",
+                          "id": "da7e6129",
                           "type": "fragment",
                           "model": {
                             "text": "Quem já tentou aprender outro idioma sabe que a tarefa não é nada fácil.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "957b019a",
+                    "id": "2fa6d069",
                     "type": "paragraph",
                     "model": {
                       "text": "Para incorporar as nuances da língua estrangeira, o aluno tem que se desligar das regras de seu próprio idioma, evitando cair nas inúmeras armadilhas que cada língua apresenta, como por exemplo os falsos cognatos - aquelas palavras que por similaridade gráfica, fonética, ou ambas, com vocábulos de seu próprio idioma, sugerem ser algo que na verdade não são.",
                       "blocks": [
                         {
-                          "id": "1bfdc50d",
+                          "id": "5bdd0202",
                           "type": "fragment",
                           "model": {
                             "text": "Para incorporar as nuances da língua estrangeira, o aluno tem que se desligar das regras de seu próprio idioma, evitando cair nas inúmeras armadilhas que cada língua apresenta, como por exemplo os falsos cognatos - aquelas palavras que por similaridade gráfica, fonética, ou ambas, com vocábulos de seu próprio idioma, sugerem ser algo que na verdade não são.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "5f5d3d79",
+                    "id": "4a508592",
                     "type": "paragraph",
                     "model": {
                       "text": "Um bom exemplo é a palavra inglesa actually que quer dizer realmente em português e não atualmente como a grafia sugere.",
                       "blocks": [
                         {
-                          "id": "9fd9a63e",
+                          "id": "a6df6d33",
                           "type": "fragment",
                           "model": {
                             "text": "Um bom exemplo é a palavra inglesa ",
@@ -143,7 +143,7 @@
                           ]
                         },
                         {
-                          "id": "626980a1",
+                          "id": "68c9b175",
                           "type": "fragment",
                           "model": {
                             "text": "actually",
@@ -158,7 +158,7 @@
                           ]
                         },
                         {
-                          "id": "48c96b7d",
+                          "id": "108d79d3",
                           "type": "fragment",
                           "model": {
                             "text": " que quer dizer ",
@@ -171,7 +171,7 @@
                           ]
                         },
                         {
-                          "id": "73b0e674",
+                          "id": "26f21f84",
                           "type": "fragment",
                           "model": {
                             "text": "realmente",
@@ -186,7 +186,7 @@
                           ]
                         },
                         {
-                          "id": "bf28e0d0",
+                          "id": "6b7b8c75",
                           "type": "fragment",
                           "model": {
                             "text": " em português e não ",
@@ -199,7 +199,7 @@
                           ]
                         },
                         {
-                          "id": "46d6756c",
+                          "id": "dd6e7173",
                           "type": "fragment",
                           "model": {
                             "text": "atualmente",
@@ -214,7 +214,7 @@
                           ]
                         },
                         {
-                          "id": "7d6d3c92",
+                          "id": "6dc7f1b4",
                           "type": "fragment",
                           "model": {
                             "text": " como a grafia sugere.",
@@ -234,13 +234,13 @@
                     ]
                   },
                   {
-                    "id": "60e94bee",
+                    "id": "dea692cf",
                     "type": "paragraph",
                     "model": {
                       "text": "Nessa linha de grande dificuldade linguística estão os homófonos, palavras pronunciadas da mesma forma, porém com sentido e grafia diferentes - são um dos grandes obstáculos a quem tenta aprender uma nova língua.",
                       "blocks": [
                         {
-                          "id": "4eae166a",
+                          "id": "ce273b7b",
                           "type": "fragment",
                           "model": {
                             "text": "Nessa linha de grande dificuldade linguística estão os homófonos, palavras pronunciadas da mesma forma, porém com sentido e grafia diferentes - são um dos grandes obstáculos a quem tenta aprender uma nova língua.",
@@ -266,7 +266,7 @@
               ]
             },
             {
-              "id": "d21e2492",
+              "id": "8ae49b4f",
               "type": "mpu",
               "model": {},
               "position": [
@@ -274,7 +274,7 @@
               ]
             },
             {
-              "id": "9131da67",
+              "id": "a6e52b1d",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1490,118 +1490,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "97fec1915ec7b954b884737c0ca2c63b208f178d",
-            "last-modified": "Tue, 29 Nov 2022 16:27:15 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "8e745e1f-5b50-46cb-aec5-9b9034c1d1b3",
-            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1277
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cerj3rk9mmyo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "2505",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"de257871233ea258f2f8c969e77de5858aed3225\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:19:38 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1410
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/portuguese/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "4279",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"189e6acb4a40084c68e09efdc7a6c903129ce040\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:14 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1429
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/portuguese",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cerj3rk9mmyo",
-      "service": "portuguese",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

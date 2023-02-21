@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "5bea727d",
+              "id": "3a63a1d9",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "34ccbfca",
+                    "id": "e32f78e1",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f27970ad",
+                          "id": "6adfbdb3",
                           "type": "paragraph",
                           "model": {
                             "text": "English with Persian Block",
                             "blocks": [
                               {
-                                "id": "ca015531",
+                                "id": "d840cbba",
                                 "type": "fragment",
                                 "model": {
                                   "text": "English with Persian Block",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "1f37c531",
+              "id": "0d0e281d",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562930939502,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "aa4f2a17",
+              "id": "22b63880",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "d1229134",
+                    "id": "28fa5f58",
                     "type": "paragraph",
                     "model": {
                       "text": "I am a text block written in English. Below this is a block with the language 'Farsi' containing text 'روباه چه میگوید'. ",
                       "blocks": [
                         {
-                          "id": "02f3336c",
+                          "id": "7e1cee8b",
                           "type": "fragment",
                           "model": {
                             "text": "I am a text block written in English. Below this is a block with the language 'Farsi' containing text 'روباه چه میگوید'. ",
@@ -98,19 +98,19 @@
                     ]
                   },
                   {
-                    "id": "b379ce1b",
+                    "id": "327e0fea",
                     "type": "paragraph",
                     "model": {
                       "text": "\n202Bروباه چه میگوید\n202C",
                       "blocks": [
                         {
-                          "id": "f2c52a04",
+                          "id": "511fa1ef",
                           "type": "inline",
                           "model": {
                             "text": "روباه چه میگوید",
                             "blocks": [
                               {
-                                "id": "e3123eaf",
+                                "id": "ce2a0a12",
                                 "type": "fragment",
                                 "model": {
                                   "text": "روباه چه میگوید",
@@ -140,13 +140,13 @@
                     ]
                   },
                   {
-                    "id": "556bf5d8",
+                    "id": "bb2162fb",
                     "type": "paragraph",
                     "model": {
                       "text": "Below is a link in language 'Farsi' with the title 'چیسربرگر'",
                       "blocks": [
                         {
-                          "id": "ea9996d0",
+                          "id": "c52b382a",
                           "type": "fragment",
                           "model": {
                             "text": "Below is a link in language 'Farsi' with the title 'چیسربرگر'",
@@ -166,25 +166,25 @@
                     ]
                   },
                   {
-                    "id": "5a417da6",
+                    "id": "41e2c0d6",
                     "type": "paragraph",
                     "model": {
                       "text": "\n202Bچیسربرگر\n202C",
                       "blocks": [
                         {
-                          "id": "f1f2f94d",
+                          "id": "e251718e",
                           "type": "inline",
                           "model": {
                             "text": "چیسربرگر",
                             "blocks": [
                               {
-                                "id": "248e15dc",
+                                "id": "7885a878",
                                 "type": "urlLink",
                                 "model": {
                                   "text": "چیسربرگر",
                                   "blocks": [
                                     {
-                                      "id": "1ba887c3",
+                                      "id": "fe7e344e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "چیسربرگر",
@@ -232,7 +232,7 @@
               ]
             },
             {
-              "id": "f938643a",
+              "id": "6211a98e",
               "type": "mpu",
               "model": {},
               "position": [
@@ -240,18 +240,18 @@
               ]
             },
             {
-              "id": "bc6c4f08",
+              "id": "dfb5d3d1",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "2dd58448",
+                    "id": "57c968a4",
                     "type": "paragraph",
                     "model": {
                       "text": "🤷",
                       "blocks": [
                         {
-                          "id": "49ce9765",
+                          "id": "b377331b",
                           "type": "fragment",
                           "model": {
                             "text": "🤷",
@@ -277,7 +277,7 @@
               ]
             },
             {
-              "id": "e29ad9d1",
+              "id": "bb79a684",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1680,118 +1680,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "daa3aade39db9296fbac8fa1997fd4a22a92efc4",
-            "last-modified": "Thu, 24 Feb 2022 00:17:10 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "e5afd31a-78be-48a7-bdac-db6f6fb40aaf",
-            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 520
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cv7yn5n25rno",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "6083",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"06f86a889715f7815bf36035ab3a06b6bfc3e330\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1447
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/news",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "10867",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"0dc762dfbc616e599d7d1bcb23b36d5ebd9c5359\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1546
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/news/front_page",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cv7yn5n25rno",
-      "service": "news",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

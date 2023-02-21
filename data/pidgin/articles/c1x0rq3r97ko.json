@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "83c27563",
+              "id": "53223d17",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "8307f6b9",
+                    "id": "ddbd7668",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "eab460f3",
+                          "id": "f9b7b32b",
                           "type": "paragraph",
                           "model": {
                             "text": "Test: Twitter Embeds",
                             "blocks": [
                               {
-                                "id": "00392a6c",
+                                "id": "af49e08d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Test: Twitter Embeds",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "e330c3d6",
+              "id": "91cf8d5f",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1615541541153,
@@ -67,19 +67,19 @@
               ]
             },
             {
-              "id": "eec0e8f7",
+              "id": "2ce72b0e",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/bbcnewspidgin/status/1401130492313866243?s=20",
                 "blocks": [
                   {
-                    "id": "a1e3de8d",
+                    "id": "50a59b4a",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:4621c57f-e31f-4bda-8222-dd0f83c00438",
                       "blocks": [
                         {
-                          "id": "80a060ff",
+                          "id": "b62b4e7d",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -114,23 +114,23 @@
               ]
             },
             {
-              "id": "bc96110d",
+              "id": "5f27af2f",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "454ff7b7",
+                    "id": "140c24bd",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8355dc3f",
+                          "id": "657cb49f",
                           "type": "paragraph",
                           "model": {
                             "text": "This is a test page using twitter embeds",
                             "blocks": [
                               {
-                                "id": "9d6da5c3",
+                                "id": "4726b358",
                                 "type": "fragment",
                                 "model": {
                                   "text": "This is a test page using twitter embeds",
@@ -165,19 +165,19 @@
               ]
             },
             {
-              "id": "631f2fef",
+              "id": "5059ac1c",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/bbcnewspidgin/status/1401185471951261699?s=20",
                 "blocks": [
                   {
-                    "id": "d50769fa",
+                    "id": "ba4190c9",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:97d321f5-2b50-4f8d-b6ef-b9a44947f15d",
                       "blocks": [
                         {
-                          "id": "5596e2cc",
+                          "id": "7cfddb11",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -212,19 +212,19 @@
               ]
             },
             {
-              "id": "3811648c",
+              "id": "763a13d8",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/bbcnewspidgin/status/1401130492313866243?s=20",
                 "blocks": [
                   {
-                    "id": "97774d6c",
+                    "id": "bac5d30f",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:b6995c74-868a-4d6c-9572-ee831c12863a",
                       "blocks": [
                         {
-                          "id": "4e2ec8da",
+                          "id": "fbc4f2d6",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -259,19 +259,19 @@
               ]
             },
             {
-              "id": "5d775893",
+              "id": "a0f97c81",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/BBCBreaking/status/1408514959072501765?s=20",
                 "blocks": [
                   {
-                    "id": "85faa8e8",
+                    "id": "7314a917",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:47ef8d59-22da-4d43-bb02-73ec785ef9b6",
                       "blocks": [
                         {
-                          "id": "6bae311c",
+                          "id": "20a050dc",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -306,18 +306,18 @@
               ]
             },
             {
-              "id": "dbc102bd",
+              "id": "f7975204",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "fd42dbaa",
+                    "id": "d7b14f43",
                     "type": "paragraph",
                     "model": {
                       "text": "Did you know? We can now embed tweets in Optimo pages? Pretty cool, huh? ",
                       "blocks": [
                         {
-                          "id": "b156caf5",
+                          "id": "5ff24ecc",
                           "type": "fragment",
                           "model": {
                             "text": "Did you know? We can now embed tweets in Optimo pages? Pretty cool, huh? ",
@@ -343,19 +343,19 @@
               ]
             },
             {
-              "id": "052563cb",
+              "id": "7b26d7f9",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/PunHubOnline/status/1354085055589711873?s=20",
                 "blocks": [
                   {
-                    "id": "1c1e8e76",
+                    "id": "20f8be86",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:5e8ea6ba-a29a-4503-b05d-c0d15cf3f4ea",
                       "blocks": [
                         {
-                          "id": "6aee6f59",
+                          "id": "3f5832c0",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -390,18 +390,18 @@
               ]
             },
             {
-              "id": "4e217d39",
+              "id": "cd7784bb",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "a653f291",
+                    "id": "8515bb18",
                     "type": "paragraph",
                     "model": {
                       "text": "I've embedded a tweet! It wasn't what I was expecting... I thought it was going to be this guy: https://twitter.com/punhubonline/status/1354085055589711873?s=21",
                       "blocks": [
                         {
-                          "id": "0a941a16",
+                          "id": "0b8fe9f0",
                           "type": "fragment",
                           "model": {
                             "text": "I've embedded a tweet! It wasn't what I was expecting... I thought it was going to be this guy: ",
@@ -414,13 +414,13 @@
                           ]
                         },
                         {
-                          "id": "a1531a18",
+                          "id": "6fee2a8b",
                           "type": "urlLink",
                           "model": {
                             "text": "https://twitter.com/punhubonline/status/1354085055589711873?s=21",
                             "blocks": [
                               {
-                                "id": "89b634f1",
+                                "id": "0988a69f",
                                 "type": "fragment",
                                 "model": {
                                   "text": "https://twitter.com/punhubonline/status/1354085055589711873?s=21",
@@ -451,13 +451,13 @@
                     ]
                   },
                   {
-                    "id": "abdfc040",
+                    "id": "82678c7a",
                     "type": "paragraph",
                     "model": {
                       "text": "I really hope publishing this won't break anything....  ",
                       "blocks": [
                         {
-                          "id": "65874a21",
+                          "id": "98ca564a",
                           "type": "fragment",
                           "model": {
                             "text": "I really hope publishing this won't break anything....  ",
@@ -483,19 +483,19 @@
               ]
             },
             {
-              "id": "3981bfdb",
+              "id": "6fc81560",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/PunHubOnline/status/1382720301444833284?s=20",
                 "blocks": [
                   {
-                    "id": "06554ee5",
+                    "id": "89392f77",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:82dfc7f6-1d53-4271-a400-801f787ff25e",
                       "blocks": [
                         {
-                          "id": "f82fc215",
+                          "id": "c0ea38f6",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -530,19 +530,19 @@
               ]
             },
             {
-              "id": "ec84b301",
+              "id": "51fbf719",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/PunHubOnline/status/1379819411570356228?s=20",
                 "blocks": [
                   {
-                    "id": "88e5229e",
+                    "id": "ef2a9bbe",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:71aa905e-56dc-4048-8cb7-07ba4ef04fba",
                       "blocks": [
                         {
-                          "id": "27d0e279",
+                          "id": "3baa9832",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -577,7 +577,7 @@
               ]
             },
             {
-              "id": "80c2b9a3",
+              "id": "dce0a08d",
               "type": "mpu",
               "model": {},
               "position": [
@@ -585,7 +585,7 @@
               ]
             },
             {
-              "id": "888257d7",
+              "id": "f930e245",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -2091,118 +2091,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3855",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 573
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/pidgin/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "5291",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"07cdea8e48e1b276f9938e0a7f146d12cbe7171f\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 652
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/pidgin",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "f8946f829518eaf04bc67ffe1f0b1a85b5a45aaf",
-            "last-modified": "Thu, 11 Aug 2022 11:00:55 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "9c13432a-f75f-47c7-b416-61726ffca38e",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1397
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c1x0rq3r97ko",
-          "timeout": 4000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c1x0rq3r97ko",
-      "service": "pidgin",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

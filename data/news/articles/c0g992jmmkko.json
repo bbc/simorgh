@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "15d4d0e1",
+              "id": "84da9ab6",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "a2e3583e",
+                    "id": "a762a613",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f444ddc6",
+                          "id": "3a2e0773",
                           "type": "paragraph",
                           "model": {
                             "text": "Royal wedding flowers given to Hackney hospice",
                             "blocks": [
                               {
-                                "id": "e8a1104f",
+                                "id": "a6200950",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Royal wedding flowers given to Hackney hospice",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "ed200eb2",
+              "id": "ac99caca",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "25f8e567",
+                    "id": "7b01c338",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c9d7a1b7",
+                          "id": "02d0ca09",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e1eaaab8",
+                                "id": "2ba96718",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Former embroider Pauline Clayton described the gift as \"lovely\"",
                                   "blocks": [
                                     {
-                                      "id": "fd948cb9",
+                                      "id": "dad65833",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Former embroider Pauline Clayton described the gift as \"lovely\"",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "8eff21d3",
+                    "id": "2faa3d60",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9b3320a0",
+                          "id": "713f4748",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "be0cf06a",
+                                "id": "786b964c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Pauline Clayton",
                                   "blocks": [
                                     {
-                                      "id": "d3ddcfed",
+                                      "id": "37d7a9ab",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Pauline Clayton",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "d3b4407b",
+                    "id": "b2e1a19a",
                     "type": "rawImage",
                     "model": {
                       "width": 640,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "05ca643e",
+              "id": "0153532e",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1559050699412,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "1ad23522",
+              "id": "1c6e0603",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5956d61f",
+                    "id": "c0c50a77",
                     "type": "paragraph",
                     "model": {
                       "text": "Patients at an east London hospice were \"thrilled\" to be handed bouquets of flowers from the royal wedding of Prince Harry and Meghan Markle.",
                       "blocks": [
                         {
-                          "id": "46fecb0c",
+                          "id": "9acf2d6c",
                           "type": "fragment",
                           "model": {
                             "text": "Patients at an east London hospice were \"thrilled\" to be handed bouquets of flowers from the royal wedding of Prince Harry and Meghan Markle.",
@@ -234,13 +234,13 @@
                     ]
                   },
                   {
-                    "id": "b7a0fa79",
+                    "id": "97ad3d12",
                     "type": "paragraph",
                     "model": {
                       "text": "The flowers, which had adorned St George's Chapel at Windsor Castle, were delivered to St Joseph's Hospice in Hackney on Sunday.",
                       "blocks": [
                         {
-                          "id": "13d0b3bf",
+                          "id": "cbb4dae1",
                           "type": "fragment",
                           "model": {
                             "text": "The flowers, which had adorned St George's Chapel at Windsor Castle, were delivered to St Joseph's Hospice in Hackney on Sunday.",
@@ -260,13 +260,13 @@
                     ]
                   },
                   {
-                    "id": "1edbb0b6",
+                    "id": "6733b5e6",
                     "type": "paragraph",
                     "model": {
                       "text": "Designed by Philippa Craddock, the flowers were hand-tied into bouquets for the hospice residents.",
                       "blocks": [
                         {
-                          "id": "76723fcb",
+                          "id": "52219b7a",
                           "type": "fragment",
                           "model": {
                             "text": "Designed by Philippa Craddock, the flowers were hand-tied into bouquets for the hospice residents.",
@@ -286,13 +286,13 @@
                     ]
                   },
                   {
-                    "id": "41e01f71",
+                    "id": "cef607c5",
                     "type": "paragraph",
                     "model": {
                       "text": "Meghan's own bouquet was placed on the tomb of the unknown warrior at Westminster Abbey, following royal tradition.",
                       "blocks": [
                         {
-                          "id": "85199616",
+                          "id": "a5b16370",
                           "type": "fragment",
                           "model": {
                             "text": "Meghan's own bouquet was ",
@@ -305,13 +305,13 @@
                           ]
                         },
                         {
-                          "id": "6c9ef309",
+                          "id": "f4033c81",
                           "type": "urlLink",
                           "model": {
                             "text": "placed on the tomb of the unknown warrior",
                             "blocks": [
                               {
-                                "id": "0fff2d98",
+                                "id": "3a21ce2f",
                                 "type": "fragment",
                                 "model": {
                                   "text": "placed on the tomb of the unknown warrior",
@@ -335,7 +335,7 @@
                           ]
                         },
                         {
-                          "id": "8cead659",
+                          "id": "c15c8366",
                           "type": "fragment",
                           "model": {
                             "text": " at Westminster Abbey, following royal tradition.",
@@ -361,7 +361,7 @@
               ]
             },
             {
-              "id": "6484627b",
+              "id": "23fb6192",
               "type": "mpu",
               "model": {},
               "position": [
@@ -369,18 +369,18 @@
               ]
             },
             {
-              "id": "b45c0a8a",
+              "id": "d673b612",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "15512263",
+                    "id": "c7a5d50a",
                     "type": "paragraph",
                     "model": {
                       "text": "\"We are so honoured to receive this wonderful gift,\" the hospice said.",
                       "blocks": [
                         {
-                          "id": "4a5ef49f",
+                          "id": "e9d7c27e",
                           "type": "fragment",
                           "model": {
                             "text": "\"We are so honoured to receive this wonderful gift,\" the hospice said.",
@@ -406,7 +406,7 @@
               ]
             },
             {
-              "id": "36594e65",
+              "id": "ffbb41e6",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -416,18 +416,18 @@
               ]
             },
             {
-              "id": "dced61b1",
+              "id": "11dcc2a1",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "700b5ff7",
+                    "id": "d3f24e15",
                     "type": "paragraph",
                     "model": {
                       "text": "Respite patient Pauline Clayton, 89, was especially pleased with the gift. At the age of 19 she worked for royal dressmaker Norman Hartnell and helped to embroider the 15ft (4.5m) Botticelli-inspired train of Queen Elizabeth II's wedding dress.",
                       "blocks": [
                         {
-                          "id": "e1733c90",
+                          "id": "4ead90f6",
                           "type": "fragment",
                           "model": {
                             "text": "Respite patient Pauline Clayton, 89, was especially pleased with the gift. At the age of 19 she worked for royal dressmaker Norman Hartnell and helped to embroider the 15ft (4.5m) Botticelli-inspired train of Queen Elizabeth II's wedding dress.",
@@ -453,28 +453,28 @@
               ]
             },
             {
-              "id": "aa018ef0",
+              "id": "c47f1eb1",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "59a5b63e",
+                    "id": "6fb5da02",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5d36c674",
+                          "id": "64aac6af",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "86316feb",
+                                "id": "883ea7b1",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "The flowers had adorned the chapel at Windsor Castle",
                                   "blocks": [
                                     {
-                                      "id": "ce2fef0e",
+                                      "id": "592d9b52",
                                       "type": "fragment",
                                       "model": {
                                         "text": "The flowers had adorned the chapel at Windsor Castle",
@@ -513,23 +513,23 @@
                     ]
                   },
                   {
-                    "id": "3720c689",
+                    "id": "7d1e3c52",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9f2e0492",
+                          "id": "dee883a5",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f3f94498",
+                                "id": "2a42f348",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Royal wedding",
                                   "blocks": [
                                     {
-                                      "id": "b9d2f347",
+                                      "id": "7fbbb853",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Royal wedding",
@@ -568,7 +568,7 @@
                     ]
                   },
                   {
-                    "id": "c6fc5f0c",
+                    "id": "e68b4ae7",
                     "type": "rawImage",
                     "model": {
                       "width": 640,
@@ -589,28 +589,28 @@
               ]
             },
             {
-              "id": "5f38d966",
+              "id": "1280891f",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "c5437067",
+                    "id": "341d02bf",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "35e2c3c4",
+                          "id": "7a95d0cb",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ee047222",
+                                "id": "0d939f98",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Philippa Craddock directed a team to create the wedding displays",
                                   "blocks": [
                                     {
-                                      "id": "5a98f31e",
+                                      "id": "ef3df24e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Philippa Craddock directed a team to create the wedding displays",
@@ -649,23 +649,23 @@
                     ]
                   },
                   {
-                    "id": "40bba93e",
+                    "id": "e7a9277f",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3e44a3d3",
+                          "id": "e6ccbe90",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c3a094b4",
+                                "id": "7180d07c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Flowers adorning the chapel at Windsor Castle",
                                   "blocks": [
                                     {
-                                      "id": "4b0f47dd",
+                                      "id": "ce42d1e7",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Flowers adorning the chapel at Windsor Castle",
@@ -704,7 +704,7 @@
                     ]
                   },
                   {
-                    "id": "1096b695",
+                    "id": "ead83b94",
                     "type": "rawImage",
                     "model": {
                       "width": 640,
@@ -725,18 +725,18 @@
               ]
             },
             {
-              "id": "4d8e9c06",
+              "id": "2349ac3e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "6a06121e",
+                    "id": "4ed38e01",
                     "type": "paragraph",
                     "model": {
                       "text": "\"We were on rationing then so we weren't allowed to sew on any embellishments so the train was embroidered,\" she said.",
                       "blocks": [
                         {
-                          "id": "c76ddd0b",
+                          "id": "c0241832",
                           "type": "fragment",
                           "model": {
                             "text": "\"We were on rationing then so we weren't allowed to sew on any embellishments so the train was embroidered,\" she said.",
@@ -756,13 +756,13 @@
                     ]
                   },
                   {
-                    "id": "c2a712d0",
+                    "id": "374ff69e",
                     "type": "paragraph",
                     "model": {
                       "text": "\"There were four of us girls working on it and we earned 49 and a half hours overtime doing that.\"",
                       "blocks": [
                         {
-                          "id": "b83b7308",
+                          "id": "b0cd9659",
                           "type": "fragment",
                           "model": {
                             "text": "\"There were four of us girls working on it and we earned 49 and a half hours overtime doing that.\"",
@@ -788,28 +788,28 @@
               ]
             },
             {
-              "id": "1c2474b4",
+              "id": "39119692",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "cdad1406",
+                    "id": "076cc7c6",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "41197465",
+                          "id": "973dabfd",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "138f72d0",
+                                "id": "2d4e63bd",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Pauline Clayton helped to embroider the train of Queen Elizabeth II's wedding dress",
                                   "blocks": [
                                     {
-                                      "id": "76dbb3a6",
+                                      "id": "9581fc0e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Pauline Clayton helped to embroider the train of Queen Elizabeth II's wedding dress",
@@ -848,23 +848,23 @@
                     ]
                   },
                   {
-                    "id": "23ef2a6f",
+                    "id": "04b7790a",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d336051a",
+                          "id": "918c1210",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a4bb64eb",
+                                "id": "01f318ea",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "The Queen and Prince Philip pose for an official photograph on their wedding day.",
                                   "blocks": [
                                     {
-                                      "id": "ea5ed09b",
+                                      "id": "315cf5f1",
                                       "type": "fragment",
                                       "model": {
                                         "text": "The Queen and Prince Philip pose for an official photograph on their wedding day.",
@@ -903,7 +903,7 @@
                     ]
                   },
                   {
-                    "id": "7d9d82eb",
+                    "id": "70acc755",
                     "type": "rawImage",
                     "model": {
                       "width": 640,
@@ -924,18 +924,18 @@
               ]
             },
             {
-              "id": "2b07b0fd",
+              "id": "002dcf83",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "a09153ea",
+                    "id": "0472a9c3",
                     "type": "paragraph",
                     "model": {
                       "text": "\"I really liked working for the Queen Mother and I helped to make many of her dresses during my 20-year career with Norman Hartnell.",
                       "blocks": [
                         {
-                          "id": "7dfa4e89",
+                          "id": "4977cebf",
                           "type": "fragment",
                           "model": {
                             "text": "\"I really liked working for the Queen Mother and I helped to make many of her dresses during my 20-year career with Norman Hartnell.",
@@ -955,13 +955,13 @@
                     ]
                   },
                   {
-                    "id": "635013c8",
+                    "id": "44500743",
                     "type": "paragraph",
                     "model": {
                       "text": "\"With my royal connections it's such a lovely coincidence to be at St Joseph's and receive these wedding flowers.",
                       "blocks": [
                         {
-                          "id": "c592eace",
+                          "id": "f5324762",
                           "type": "fragment",
                           "model": {
                             "text": "\"With my royal connections it's such a lovely coincidence to be at St Joseph's and receive these wedding flowers.",
@@ -981,13 +981,13 @@
                     ]
                   },
                   {
-                    "id": "23881a44",
+                    "id": "214a925c",
                     "type": "paragraph",
                     "model": {
                       "text": "\"They are beautiful and very special.\"",
                       "blocks": [
                         {
-                          "id": "3e6c8f43",
+                          "id": "e5e0d8f5",
                           "type": "fragment",
                           "model": {
                             "text": "\"They are beautiful and very special.\"",
@@ -1013,28 +1013,28 @@
               ]
             },
             {
-              "id": "87f7a87a",
+              "id": "47a0fe4f",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "8cef8b13",
+                    "id": "ae1210fc",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "bf15f8b6",
+                          "id": "d2550e86",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "213cd7a5",
+                                "id": "727eafdd",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "The floral displays in St George's Chapel were created using locally sourced foliage",
                                   "blocks": [
                                     {
-                                      "id": "ce40dead",
+                                      "id": "df755710",
                                       "type": "fragment",
                                       "model": {
                                         "text": "The floral displays in St George's Chapel were created using locally sourced foliage",
@@ -1073,23 +1073,23 @@
                     ]
                   },
                   {
-                    "id": "bb0428db",
+                    "id": "eebdf96d",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2d249b11",
+                          "id": "e5aa29b1",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "56642b83",
+                                "id": "3b859b9f",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "St George's Chapel, Windsor",
                                   "blocks": [
                                     {
-                                      "id": "660ff65b",
+                                      "id": "70e34e9b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "St George's Chapel, Windsor",
@@ -1128,7 +1128,7 @@
                     ]
                   },
                   {
-                    "id": "97fe391a",
+                    "id": "270a8e01",
                     "type": "rawImage",
                     "model": {
                       "width": 640,
@@ -1149,18 +1149,18 @@
               ]
             },
             {
-              "id": "9de20c86",
+              "id": "96420e88",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "98824b69",
+                    "id": "d1d827c3",
                     "type": "paragraph",
                     "model": {
                       "text": "Nigel Harding, chief executive of the hospice, said: \"The flowers are simply stunning and our patients were both surprised and delighted to receive them.",
                       "blocks": [
                         {
-                          "id": "5e5c0cad",
+                          "id": "e0fb046f",
                           "type": "fragment",
                           "model": {
                             "text": "Nigel Harding, chief executive of the hospice, said: \"The flowers are simply stunning and our patients were both surprised and delighted to receive them.",
@@ -1180,13 +1180,13 @@
                     ]
                   },
                   {
-                    "id": "1a3ce79d",
+                    "id": "bd840780",
                     "type": "paragraph",
                     "model": {
                       "text": "\"A huge thank you to Philippa Craddock and her team - and of course to the Royal bride and groom.\"",
                       "blocks": [
                         {
-                          "id": "3fc868e0",
+                          "id": "1cf0591c",
                           "type": "fragment",
                           "model": {
                             "text": "\"A huge thank you to Philippa Craddock and her team - and of course to the Royal bride and groom.\"",
@@ -1206,13 +1206,13 @@
                     ]
                   },
                   {
-                    "id": "a30827f0",
+                    "id": "504c7559",
                     "type": "paragraph",
                     "model": {
                       "text": "Flowers from gardens and parklands of The Crown Estate and Windsor Great Park were used to make the bouquets, and included branches of beech, birch and hornbeam as well as foxgloves and peonies.",
                       "blocks": [
                         {
-                          "id": "12b043c8",
+                          "id": "59dbc680",
                           "type": "fragment",
                           "model": {
                             "text": "Flowers from gardens and parklands of The Crown Estate and Windsor Great Park were used to make the bouquets, and included branches of beech, birch and hornbeam as well as foxgloves and peonies.",
@@ -2804,118 +2804,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "74d7c76803590362e4b9c7aa9dd695fc56c68abf",
-            "last-modified": "Fri, 28 Aug 2020 07:21:57 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "6b25927c-d108-4261-abfa-2c573d34367c",
-            "expires": "Tue, 21 Feb 2023 11:17:09 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1276
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c0g992jmmkko",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "6083",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"06f86a889715f7815bf36035ab3a06b6bfc3e330\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1409
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/news",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "10867",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"0dc762dfbc616e599d7d1bcb23b36d5ebd9c5359\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1502
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/news/front_page",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c0g992jmmkko",
-      "service": "news",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

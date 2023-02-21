@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "1547527e",
+              "id": "4cf9606c",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "62d27f76",
+                    "id": "d201ba97",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e3d40798",
+                          "id": "8537e28d",
                           "type": "paragraph",
                           "model": {
                             "text": "BBC Genel Müdürü Tony Hall: Dünya 1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya",
                             "blocks": [
                               {
-                                "id": "721f0e71",
+                                "id": "610d0e03",
                                 "type": "fragment",
                                 "model": {
                                   "text": "BBC Genel Müdürü Tony Hall: Dünya 1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "a245a603",
+              "id": "64b90cd9",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941712069,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "72cb564e",
+              "id": "20d760db",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "042a6780",
+                    "id": "5f2abc62",
                     "type": "paragraph",
                     "model": {
                       "text": "BBC Genel Müdürü Tony Hall, Londra'daki Küresel Medya Özgürlüğü Konferansı'nda yaptığı konuşmada, dünyanın \"1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya oduğunu\" söyledi.",
                       "blocks": [
                         {
-                          "id": "f4cfe3fe",
+                          "id": "398b2394",
                           "type": "fragment",
                           "model": {
                             "text": "BBC Genel Müdürü Tony Hall, Londra'daki Küresel Medya Özgürlüğü Konferansı'nda yaptığı konuşmada, dünyanın \"1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya oduğunu\" söyledi.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "d8715d09",
+                    "id": "e71ff505",
                     "type": "paragraph",
                     "model": {
                       "text": "Tony Hall, \"Hakikate saldırı, demokrasiye saldırıdır\" dedi.",
                       "blocks": [
                         {
-                          "id": "83f66f50",
+                          "id": "ca6201a8",
                           "type": "fragment",
                           "model": {
                             "text": "Tony Hall, \"Hakikate saldırı, demokrasiye saldırıdır\" dedi.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "30021871",
+                    "id": "f5ae1715",
                     "type": "paragraph",
                     "model": {
                       "text": "Hall, sahte haberlerin yayılmasını, 2. Dünya Savaşı'na giden süreçte Nazilerin başvurduğu propaganda yöntemlerine benzetti, \"Haberde doğruluğa inanan herkes durumu tersine çevirmek için birlikte çalışmalı\" diye konuştu.",
                       "blocks": [
                         {
-                          "id": "22277168",
+                          "id": "87c41f6f",
                           "type": "fragment",
                           "model": {
                             "text": "Hall, sahte haberlerin yayılmasını, 2. Dünya Savaşı'na giden süreçte Nazilerin başvurduğu propaganda yöntemlerine benzetti, \"Haberde doğruluğa inanan herkes durumu tersine çevirmek için birlikte çalışmalı\" diye konuştu.",
@@ -156,7 +156,7 @@
               ]
             },
             {
-              "id": "1042198b",
+              "id": "c1ff451b",
               "type": "mpu",
               "model": {},
               "position": [
@@ -164,7 +164,7 @@
               ]
             },
             {
-              "id": "4a764a7b",
+              "id": "447d7da3",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1169,118 +1169,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "672c4ac0f9aa1728579f24a339c821e9b2e17fa7",
-            "last-modified": "Tue, 29 Nov 2022 16:39:03 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "12a27b90-1499-4746-be4e-d69bb8dd1a8a",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1202
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cr2d32lwww2o",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1054",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"6b8f6f91460b7f3068913e290f1de7db9335c38f\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1237
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/turkce/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3650",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"e66d3091afcebedf126a44ca3306756297b0925d\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1383
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/turkce",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cr2d32lwww2o",
-      "service": "turkce",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

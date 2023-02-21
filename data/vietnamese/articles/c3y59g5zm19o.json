@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "9b7f6c43",
+              "id": "2edbca1c",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "6017a659",
+                    "id": "54208e8d",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "dfe269a7",
+                          "id": "fc927673",
                           "type": "paragraph",
                           "model": {
                             "text": "Đây là tiêu đề của bài viết thử nghiệm này",
                             "blocks": [
                               {
-                                "id": "a9745dc4",
+                                "id": "a5bca111",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Đây là tiêu đề của bài viết thử nghiệm này",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "7a50ed38",
+              "id": "2cdd000f",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "a84a4705",
+                    "id": "98b42595",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e9c9ebc8",
+                          "id": "0452a39f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4aa8b08a",
+                                "id": "80befb03",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Hình ảnh thử nghiệm này, bản quyền BBC, cho thấy một bản đồ của Pháp. Hình ảnh nằm trong ba khối đầu tiên và có chú thích này.",
                                   "blocks": [
                                     {
-                                      "id": "82ffffbb",
+                                      "id": "3b320fec",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Hình ảnh thử nghiệm này, bản quyền BBC, cho thấy một bản đồ của Pháp. Hình ảnh nằm trong ba khối đầu tiên và có chú thích này.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "71727de4",
+                    "id": "8a6d726c",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7351221b",
+                          "id": "a2ee6084",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b9347eba",
+                                "id": "b80d9562",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "\rBản đồ Pháp hiển thị Paris và Cognac",
                                   "blocks": [
                                     {
-                                      "id": "7365b00c",
+                                      "id": "c8065ed6",
                                       "type": "fragment",
                                       "model": {
                                         "text": "\rBản đồ Pháp hiển thị Paris và Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "048adc8d",
+                    "id": "a62186cb",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "a99a316f",
+              "id": "9a23bbc8",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936950490,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "1cc6e368",
+              "id": "d1940d91",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "30c0d326",
+                    "id": "fcf308c1",
                     "type": "paragraph",
                     "model": {
                       "text": "Đây là một khối văn bản, chứa liên kết url đến trang chủ BBC Weather.",
                       "blocks": [
                         {
-                          "id": "d6764227",
+                          "id": "18d960ab",
                           "type": "fragment",
                           "model": {
                             "text": "Đây là một khối văn bản, chứa liên kết url đến ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "245c0ffe",
+                          "id": "74037e47",
                           "type": "urlLink",
                           "model": {
                             "text": "trang chủ BBC Weather.",
                             "blocks": [
                               {
-                                "id": "f47a5292",
+                                "id": "ff6444db",
                                 "type": "fragment",
                                 "model": {
                                   "text": "trang chủ BBC Weather.",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "040d273b",
+              "id": "6f0ac2d1",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "b9c80942",
+                    "id": "b4af3222",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5f7806be",
+                          "id": "2156ea51",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "09298362",
+                                "id": "2f720fdc",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Đây là một khối video chứa video về kiến",
                                   "blocks": [
                                     {
-                                      "id": "f85b7712",
+                                      "id": "20f0e4ac",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Đây là một khối video chứa video về kiến",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "331b1d41",
+                    "id": "9a6d8564",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0d0769d1",
+                          "id": "6601ca13",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -382,12 +382,12 @@
                           ]
                         },
                         {
-                          "id": "2ae39d09",
+                          "id": "b47a1c85",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "db7a9a58",
+                                "id": "9bf380a1",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -404,23 +404,23 @@
                                 ]
                               },
                               {
-                                "id": "7d4aec4a",
+                                "id": "e4f917c4",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "b92fac7f",
+                                      "id": "16985399",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "7c663205",
+                                            "id": "4f050b9c",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "1914ad9d",
+                                                  "id": "26e68a94",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -488,23 +488,23 @@
               ]
             },
             {
-              "id": "db77d86b",
+              "id": "e8418223",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ea8a9765",
+                    "id": "1e76fcc8",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "539ee354",
+                          "id": "41cc26d3",
                           "type": "paragraph",
                           "model": {
                             "text": "Đây là một khối tiêu đề phụ",
                             "blocks": [
                               {
-                                "id": "894897b6",
+                                "id": "e118a51c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Đây là một khối tiêu đề phụ",
@@ -539,28 +539,28 @@
               ]
             },
             {
-              "id": "822205f4",
+              "id": "5ce14620",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "80dd5b3b",
+                    "id": "befc12b8",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "bd4f2f8c",
+                          "id": "66ba3d5e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2a9c1b6f",
+                                "id": "6347d5b9",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Cầu thủ bóng đá sau một trận đấu",
                                   "blocks": [
                                     {
-                                      "id": "88f44a6b",
+                                      "id": "e9d57341",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Cầu thủ bóng đá sau một trận đấu",
@@ -599,7 +599,7 @@
                     ]
                   },
                   {
-                    "id": "8e0f313c",
+                    "id": "77745271",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -620,18 +620,18 @@
               ]
             },
             {
-              "id": "86a1a0d6",
+              "id": "4e138955",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "54670d27",
+                    "id": "7b30a34f",
                     "type": "paragraph",
                     "model": {
                       "text": "Bài viết thử nghiệm này đã được tạo để chúng tôi có thể chạy thử nghiệm đầu cuối tự động trên trang web của chúng tôi.",
                       "blocks": [
                         {
-                          "id": "297bd5ab",
+                          "id": "8ef6c1e0",
                           "type": "fragment",
                           "model": {
                             "text": "Bài viết thử nghiệm này đã được tạo để chúng tôi có thể chạy thử nghiệm đầu cuối tự động trên trang web của chúng tôi.",
@@ -657,7 +657,7 @@
               ]
             },
             {
-              "id": "644522af",
+              "id": "3c96ffed",
               "type": "mpu",
               "model": {},
               "position": [
@@ -665,7 +665,7 @@
               ]
             },
             {
-              "id": "ca76739f",
+              "id": "f15fdae6",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1823,118 +1823,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "bb58bee1ad898f153a5224657c3b6ebdf123abc0",
-            "last-modified": "Fri, 28 Aug 2020 07:27:40 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "10a3c661-2a9c-429b-b0bd-30b22641c090",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 474
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c3y59g5zm19o",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1560",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"02e378dc3ae665cfe0b2f51c16baac7a7a644056\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:12 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1110
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/vietnamese/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3452",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"b24b5edfde7acac08e3a57543f10cb5c0d46e209\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:14 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1403
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/vietnamese",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c3y59g5zm19o",
-      "service": "vietnamese",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

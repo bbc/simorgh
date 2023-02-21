@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "cc040680",
+              "id": "ecb37afe",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "10bd056e",
+                    "id": "c25f03b9",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e63a1e2a",
+                          "id": "3c7843ee",
                           "type": "paragraph",
                           "model": {
                             "text": "อวกาศ : หลุมดำมวลยิ่งยวดไม่จำเป็นต้องเกิดจากซูเปอร์โนวาเสมอไป",
                             "blocks": [
                               {
-                                "id": "eb7c772a",
+                                "id": "eb2610cd",
                                 "type": "fragment",
                                 "model": {
                                   "text": "อวกาศ : หลุมดำมวลยิ่งยวดไม่จำเป็นต้องเกิดจากซูเปอร์โนวาเสมอไป",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "74c1a729",
+              "id": "463b9908",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942948180,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "e1e4ca00",
+              "id": "a7ec4cdd",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "df157099",
+                    "id": "f25c6ca8",
                     "type": "paragraph",
                     "model": {
                       "text": "ปริศนาที่มีมานานของวงการฟิสิกส์ดาราศาสตร์ ซึ่งว่าด้วยกำเนิดของหลุมดำมวลยิ่งยวดอายุเก่าแก่ที่ก่อตัวหลังยุคแรกเริ่มของจักรวาลไม่นานนั้น เพิ่งได้รับคำอธิบายที่ให้ความกระจ่างเพิ่มขึ้นในอีกขั้นหนึ่งแล้ว",
                       "blocks": [
                         {
-                          "id": "3aed7f1f",
+                          "id": "793a50a8",
                           "type": "fragment",
                           "model": {
                             "text": "ปริศนาที่มีมานานของวงการฟิสิกส์ดาราศาสตร์ ซึ่งว่าด้วยกำเนิดของหลุมดำมวลยิ่งยวดอายุเก่าแก่ที่ก่อตัวหลังยุคแรกเริ่มของจักรวาลไม่นานนั้น เพิ่งได้รับคำอธิบายที่ให้ความกระจ่างเพิ่มขึ้นในอีกขั้นหนึ่งแล้ว",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "b81f7cef",
+                    "id": "71e5a920",
                     "type": "paragraph",
                     "model": {
                       "text": "ศาสตราจารย์ศานตนุ ภสุ และศาสตราจารย์อาร์ปัน ดาส จากมหาวิทยาลัยเวสเทิร์นของสหรัฐฯ ตีพิมพ์รายงานที่อธิบายถึงปรากฎการณ์ดังกล่าวลงในวารสาร The Astrophysical Journal Letters โดยชี้ว่าหลุมดำชนิดนี้เกิดและโตขึ้นอย่างรวดเร็วเหลือเชื่อด้วยเงื่อนไขพิเศษ คือไม่ได้ผ่านขั้นตอนการระเบิดของดาวฤกษ์หรือซูเปอร์โนวา (Supernova) ในแบบเดียวกับหลุมดำโดยทั่วไป",
                       "blocks": [
                         {
-                          "id": "0932eb1c",
+                          "id": "425679ba",
                           "type": "fragment",
                           "model": {
                             "text": "ศาสตราจารย์ศานตนุ ภสุ และศาสตราจารย์อาร์ปัน ดาส จากมหาวิทยาลัยเวสเทิร์นของสหรัฐฯ ตีพิมพ์รายงานที่อธิบายถึงปรากฎการณ์ดังกล่าวลงในวารสาร ",
@@ -117,13 +117,13 @@
                           ]
                         },
                         {
-                          "id": "cbb70c15",
+                          "id": "a7473012",
                           "type": "inline",
                           "model": {
                             "text": "The Astrophysical Journal Letters",
                             "blocks": [
                               {
-                                "id": "c6f83af1",
+                                "id": "afba5c30",
                                 "type": "fragment",
                                 "model": {
                                   "text": "The Astrophysical Journal Letters",
@@ -146,7 +146,7 @@
                           ]
                         },
                         {
-                          "id": "7d9d194a",
+                          "id": "686b6ee5",
                           "type": "fragment",
                           "model": {
                             "text": " โดยชี้ว่าหลุมดำชนิดนี้เกิดและโตขึ้นอย่างรวดเร็วเหลือเชื่อด้วยเงื่อนไขพิเศษ คือไม่ได้ผ่านขั้นตอนการระเบิดของดาวฤกษ์หรือซูเปอร์โนวา (",
@@ -159,13 +159,13 @@
                           ]
                         },
                         {
-                          "id": "a18d9017",
+                          "id": "5a7ca250",
                           "type": "inline",
                           "model": {
                             "text": "Supernova",
                             "blocks": [
                               {
-                                "id": "9aed72dc",
+                                "id": "fd0e4401",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Supernova",
@@ -188,7 +188,7 @@
                           ]
                         },
                         {
-                          "id": "eae672b1",
+                          "id": "ddcd78f9",
                           "type": "fragment",
                           "model": {
                             "text": ") ในแบบเดียวกับหลุมดำโดยทั่วไป",
@@ -214,7 +214,7 @@
               ]
             },
             {
-              "id": "60e21aef",
+              "id": "da173b17",
               "type": "mpu",
               "model": {},
               "position": [
@@ -222,7 +222,7 @@
               ]
             },
             {
-              "id": "6695a88b",
+              "id": "dd6869f5",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1527,118 +1527,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "9c0f44b833f39958006cd267f94e910d9983510d",
-            "last-modified": "Wed, 23 Feb 2022 15:00:18 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "19991b64-ba3b-44c2-a722-cf7ff2c4b72a",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 802
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c3qxeqm7ldjo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "5278",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"07e2e6c433b50b3e2533e49095f86aa5ade1970d\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1137
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/thai",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "2914",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"cb85c7ed7ec324267a3f03172932f9f93b308bbd\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1415
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/thai/front_page",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c3qxeqm7ldjo",
-      "service": "thai",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

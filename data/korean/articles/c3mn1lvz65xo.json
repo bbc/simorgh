@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "4cd62c52",
+              "id": "35e31777",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "d877cb2f",
+                    "id": "35e8fefa",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3ada4466",
+                          "id": "a06cb626",
                           "type": "paragraph",
                           "model": {
                             "text": "이것이이 테스트 기사의 헤드 라인입니다.",
                             "blocks": [
                               {
-                                "id": "094674d8",
+                                "id": "cdee0ba3",
                                 "type": "fragment",
                                 "model": {
                                   "text": "이것이이 테스트 기사의 헤드 라인입니다.",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "f51a86a2",
+              "id": "9e068b04",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "71d0a346",
+                    "id": "57999504",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d13e420c",
+                          "id": "33ee6dfa",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "2f33aa25",
+                                "id": "11ee9792",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "이 테스트 이미지 인 저작권 는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.",
                                   "blocks": [
                                     {
-                                      "id": "0fb43c04",
+                                      "id": "5c8837bf",
                                       "type": "fragment",
                                       "model": {
                                         "text": "이 테스트 이미지 인 저작권 는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "d893510a",
+                    "id": "756d43fb",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0b6e84b1",
+                          "id": "d21b0e6d",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ca9c0d32",
+                                "id": "ab025108",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "이 테스트 이미지 인 저작권 BBC는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.",
                                   "blocks": [
                                     {
-                                      "id": "9553647a",
+                                      "id": "077cdcd1",
                                       "type": "fragment",
                                       "model": {
                                         "text": "이 테스트 이미지 인 저작권 BBC는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "ee9b46bd",
+                    "id": "58073ffd",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "9bd14ba8",
+              "id": "727e2a78",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1574855147209,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "b0188fcb",
+              "id": "a4f30948",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "83a7122e",
+                    "id": "eaaa4602",
                     "type": "paragraph",
                     "model": {
                       "text": "이것은 홈페이지에 대한 링크를 포함하는 텍스트 블록입니다.",
                       "blocks": [
                         {
-                          "id": "dbeb4273",
+                          "id": "65ed9aee",
                           "type": "fragment",
                           "model": {
                             "text": "이것은 ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "3fb0b82f",
+                          "id": "9e14ce25",
                           "type": "urlLink",
                           "model": {
                             "text": "홈페이지에 대한",
                             "blocks": [
                               {
-                                "id": "9c30233d",
+                                "id": "52ef4a4e",
                                 "type": "fragment",
                                 "model": {
                                   "text": "홈페이지에 대한",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "b9426b39",
+                          "id": "c0784924",
                           "type": "fragment",
                           "model": {
                             "text": " 링크를 포함하는 텍스트 블록입니다.",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "ddde5540",
+              "id": "66fa2560",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "e439a7ae",
+                    "id": "c72eea59",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "644595c0",
+                          "id": "04b501a5",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4fb1833b",
+                                "id": "4a6eb0c3",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "이것은 크를 포함하는 텍스트 블록입니다.",
                                   "blocks": [
                                     {
-                                      "id": "8735bf7c",
+                                      "id": "2af95711",
                                       "type": "fragment",
                                       "model": {
                                         "text": "이것은 크를 포함하는 텍스트 블록입니다.",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "47acfbd6",
+                    "id": "d731e357",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "15ac642d",
+                          "id": "72210719",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -395,12 +395,12 @@
                           ]
                         },
                         {
-                          "id": "9a653319",
+                          "id": "55574504",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "3d59810f",
+                                "id": "472d0e00",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -417,23 +417,23 @@
                                 ]
                               },
                               {
-                                "id": "db2f5c0a",
+                                "id": "5bc7e0bb",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "d3d437ea",
+                                      "id": "984b2541",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "a65d182b",
+                                            "id": "fa3917cd",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "3da1f22b",
+                                                  "id": "8895b35a",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -501,23 +501,23 @@
               ]
             },
             {
-              "id": "dddb12a6",
+              "id": "213cd596",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "405725b5",
+                    "id": "0956332f",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ece875f2",
+                          "id": "8758250a",
                           "type": "paragraph",
                           "model": {
                             "text": "이것은 소제목입니다",
                             "blocks": [
                               {
-                                "id": "f25b9dad",
+                                "id": "10aaa4f8",
                                 "type": "fragment",
                                 "model": {
                                   "text": "이것은 소제목입니다",
@@ -552,28 +552,28 @@
               ]
             },
             {
-              "id": "fe7d570d",
+              "id": "8627fb9d",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "ce175484",
+                    "id": "f15086ee",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1f7c40fc",
+                          "id": "ebaf3dd7",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "3b4bd63b",
+                                "id": "9af9ff47",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "이것은 소제목입니다",
                                   "blocks": [
                                     {
-                                      "id": "8bee456b",
+                                      "id": "18ff2189",
                                       "type": "fragment",
                                       "model": {
                                         "text": "이것은 소제목입니다",
@@ -612,7 +612,7 @@
                     ]
                   },
                   {
-                    "id": "c3e189c2",
+                    "id": "92d927a8",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -633,18 +633,18 @@
               ]
             },
             {
-              "id": "05bcc1ad",
+              "id": "e4f738e9",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5bb7133d",
+                    "id": "452c164e",
                     "type": "paragraph",
                     "model": {
                       "text": "이 테스트 기사는 웹 사이트에서 자동화 된 엔드 투 엔드 테스트를 실행할 수 있도록 작성되었습니다.",
                       "blocks": [
                         {
-                          "id": "a7ca1aba",
+                          "id": "b82eb745",
                           "type": "fragment",
                           "model": {
                             "text": "이 테스트 기사는 웹 사이트에서 자동화 된 엔드 투 엔드 테스트를 실행할 수 있도록 작성되었습니다.",
@@ -670,7 +670,7 @@
               ]
             },
             {
-              "id": "bcdfd2aa",
+              "id": "f58637e7",
               "type": "mpu",
               "model": {},
               "position": [
@@ -678,7 +678,7 @@
               ]
             },
             {
-              "id": "d6895967",
+              "id": "f8c339c5",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1990,118 +1990,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3018",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"ac6609f27a5672ddcb0cb16316b67012a4db2f9b\"",
-            "cache-control": "no-transform,max-age=120",
-            "expires": "Tue, 21 Feb 2023 11:16:11 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 466
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/korean/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3891",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"44cb7b677cbcd8c4b1d7c1813c76b63182409ac4\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:16:13 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 587
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/korean",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "19a71088bf515461e526142d0451a51a9e8be361",
-            "last-modified": "Fri, 28 Aug 2020 07:27:17 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "ff26abcb-3781-45ac-8174-ad88f5198ef1",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 848
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c3mn1lvz65xo",
-          "timeout": 4000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c3mn1lvz65xo",
-      "service": "korean",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

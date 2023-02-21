@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "cd524351",
+              "id": "67a4aa2e",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "06215052",
+                    "id": "582f3e64",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "747cec2b",
+                          "id": "297b912d",
                           "type": "paragraph",
                           "model": {
                             "text": "Single Byline (all)",
                             "blocks": [
                               {
-                                "id": "f414294f",
+                                "id": "1dd2d717",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Single Byline (all)",
@@ -56,33 +56,33 @@
               ]
             },
             {
-              "id": "cfa4eae7",
+              "id": "9e276690",
               "type": "byline",
               "model": {
                 "blocks": [
                   {
-                    "id": "a5fee7eb",
+                    "id": "ab38725e",
                     "type": "contributor",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b451d9da",
+                          "id": "9ac2a47b",
                           "type": "name",
                           "model": {
                             "blocks": [
                               {
-                                "id": "743afd70",
+                                "id": "c49b49c2",
                                 "type": "text",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "064c5472",
+                                      "id": "1e9ebc6c",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "Single Byline (all values)",
                                         "blocks": [
                                           {
-                                            "id": "4010da17",
+                                            "id": "a1571038",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Single Byline (all values)",
@@ -125,23 +125,23 @@
                           ]
                         },
                         {
-                          "id": "accfecf8",
+                          "id": "ad2d7056",
                           "type": "role",
                           "model": {
                             "blocks": [
                               {
-                                "id": "515b3137",
+                                "id": "fa7bc620",
                                 "type": "text",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "73b8bcda",
+                                      "id": "dcc1ff4b",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "Role Test value",
                                         "blocks": [
                                           {
-                                            "id": "333d5007",
+                                            "id": "f27dd657",
                                             "type": "fragment",
                                             "model": {
                                               "text": "Role Test value",
@@ -184,30 +184,30 @@
                           ]
                         },
                         {
-                          "id": "d50e2258",
+                          "id": "ad886dad",
                           "type": "link",
                           "model": {
                             "blocks": [
                               {
-                                "id": "83ae221a",
+                                "id": "e4294eae",
                                 "type": "text",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "3165a54e",
+                                      "id": "b04059f1",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "handle",
                                         "blocks": [
                                           {
-                                            "id": "627209e9",
+                                            "id": "8d7d340e",
                                             "type": "urlLink",
                                             "model": {
                                               "text": "handle",
                                               "locator": "https://twitter.com/handle",
                                               "blocks": [
                                                 {
-                                                  "id": "6a05b275",
+                                                  "id": "a73fcd0f",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "handle",
@@ -263,23 +263,23 @@
                           ]
                         },
                         {
-                          "id": "cb9f19ef",
+                          "id": "34daebfb",
                           "type": "location",
                           "model": {
                             "blocks": [
                               {
-                                "id": "005845ea",
+                                "id": "a9147965",
                                 "type": "text",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "c0b40a0d",
+                                      "id": "3848b194",
                                       "type": "paragraph",
                                       "model": {
                                         "text": "London",
                                         "blocks": [
                                           {
-                                            "id": "ca38bd6a",
+                                            "id": "462f3d07",
                                             "type": "fragment",
                                             "model": {
                                               "text": "London",
@@ -335,7 +335,7 @@
               ]
             },
             {
-              "id": "dca3f956",
+              "id": "bd2c7df7",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1657276403250,
@@ -346,18 +346,18 @@
               ]
             },
             {
-              "id": "89dfa3d0",
+              "id": "782d0895",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "f0042c9a",
+                    "id": "874aba06",
                     "type": "paragraph",
                     "model": {
                       "text": "Byline with all values set ",
                       "blocks": [
                         {
-                          "id": "708406b2",
+                          "id": "2fb22ac3",
                           "type": "fragment",
                           "model": {
                             "text": "Byline with all values set ",
@@ -383,7 +383,7 @@
               ]
             },
             {
-              "id": "8700c934",
+              "id": "780c1211",
               "type": "mpu",
               "model": {},
               "position": [
@@ -391,7 +391,7 @@
               ]
             },
             {
-              "id": "81f3c9ee",
+              "id": "6d43f37d",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1833,118 +1833,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3855",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 907
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/pidgin/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "c14677e3254aa251c73af272121ff8d2337e2470",
-            "last-modified": "Thu, 13 Oct 2022 15:24:51 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "ac7818b9-4de3-4717-87c0-abdd7d6e8506",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1596
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/c1j5mz19jdko",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json",
-            "content-length": "5291",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"07cdea8e48e1b276f9938e0a7f146d12cbe7171f\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1595
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/pidgin",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "c1j5mz19jdko",
-      "service": "pidgin",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

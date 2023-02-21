@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "595dedaf",
+              "id": "bd6883bb",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "6d4e8e8a",
+                    "id": "15653f62",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0807f630",
+                          "id": "97e59483",
                           "type": "paragraph",
                           "model": {
                             "text": "Ўзбекистон: «Энергетик таъмли ичимлик» нима ўзи?",
                             "blocks": [
                               {
-                                "id": "ffb28229",
+                                "id": "5ed86d9b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Ўзбекистон: «Энергетик таъмли ичимлик» нима ўзи?",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "cf3e4c61",
+              "id": "d6e5101f",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942064846,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "b0e42271",
+              "id": "b008dfaf",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "13fcb3a4",
+                    "id": "b616afce",
                     "type": "paragraph",
                     "model": {
                       "text": "Ўтган йилнинг декабрь ойида «Озиқ-овқат маҳсулотининг сифати ва хавфсизлиги тўғрисида»ги қонунга киритилган ўзгартиришда тобора оммалашаётган «энергетик ичимликлар» тушунчасига илк бор изоҳ берилди.",
                       "blocks": [
                         {
-                          "id": "931c6aa3",
+                          "id": "d063a276",
                           "type": "fragment",
                           "model": {
                             "text": "Ўтган йилнинг декабрь ойида «Озиқ-овқат маҳсулотининг сифати ва хавфсизлиги тўғрисида»ги қонунга киритилган ўзгартиришда тобора оммалашаётган «энергетик ичимликлар» тушунчасига илк бор изоҳ берилди.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "3bbe7a17",
+                    "id": "65c6a932",
                     "type": "paragraph",
                     "model": {
                       "text": "\"Энергетик ичимликлар - таркибида 150 мг/л.дан ортиқ миқдорда кофеин ва (ёки) инсон организмига тонусни ўзгартирувчи таъсир кўрсатиш учун етарли миқдордаги бошқа компонентлар мавжуд бўлган ичимликлар\" дейилади қонунда.",
                       "blocks": [
                         {
-                          "id": "374ec6bd",
+                          "id": "d9ec25d3",
                           "type": "fragment",
                           "model": {
                             "text": "\"Энергетик ичимликлар - таркибида 150 мг/л.дан ортиқ миқдорда кофеин ва (ёки) инсон организмига тонусни ўзгартирувчи таъсир кўрсатиш учун етарли миқдордаги бошқа компонентлар мавжуд бўлган ичимликлар\" дейилади қонунда.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "0361808b",
+                    "id": "5dc2337b",
                     "type": "paragraph",
                     "model": {
                       "text": "Аммо одамлар энергетик ичимликлар аслида нима эканидан қанчалик хабардор? Уларнинг салбий ёки ижобий таъсирлари тўғрисида нималар маълум?",
                       "blocks": [
                         {
-                          "id": "a49094ef",
+                          "id": "95b8b64a",
                           "type": "fragment",
                           "model": {
                             "text": "Аммо одамлар энергетик ичимликлар аслида нима эканидан қанчалик хабардор? Уларнинг салбий ёки ижобий таъсирлари тўғрисида нималар маълум?",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "c7c960df",
+                    "id": "e6614ca0",
                     "type": "paragraph",
                     "model": {
                       "text": "Ҳозирда энергетик ичимликларнинг саломатликка таъсири борасида турли бир-бирига зид қарашлар мавжуд.",
                       "blocks": [
                         {
-                          "id": "53ef7a1f",
+                          "id": "396e3ef0",
                           "type": "fragment",
                           "model": {
                             "text": "Ҳозирда энергетик ичимликларнинг саломатликка таъсири борасида турли бир-бирига зид қарашлар мавжуд.",
@@ -182,7 +182,7 @@
               ]
             },
             {
-              "id": "8e419053",
+              "id": "9b18ad7f",
               "type": "mpu",
               "model": {},
               "position": [
@@ -190,7 +190,7 @@
               ]
             },
             {
-              "id": "6328daf0",
+              "id": "94b193a8",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1214,118 +1214,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "1220",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"1b5a58f2a669d7ea07b2375f248c9e54d4da4540\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 767
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/uzbek/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "cfb3e8a48ec194e7918753bf1fa50c53861ffcd9",
-            "last-modified": "Tue, 29 Nov 2022 16:42:31 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "f67dc90f-56f4-46de-a938-d0526095bf07",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 780
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cxj3rjxm6r0o",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:39 GMT",
-            "content-type": "application/json",
-            "content-length": "4682",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"38bc79a39c352802b18b748f8d40d6c91587f7f5\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1495
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/uzbek",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cxj3rjxm6r0o",
-      "service": "uzbek",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }

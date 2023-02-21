@@ -5,29 +5,29 @@
         "model": {
           "blocks": [
             {
-              "id": "66a40855",
+              "id": "329185a4",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01sk2dc",
                 "blocks": [
                   {
-                    "id": "d3582393",
+                    "id": "a465a1e9",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "599cc4e4",
+                          "id": "972ab197",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b6262fe7",
+                                "id": "a2cc6e4c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "test",
                                   "blocks": [
                                     {
-                                      "id": "fce9756d",
+                                      "id": "df0e9b26",
                                       "type": "fragment",
                                       "model": {
                                         "text": "test",
@@ -66,12 +66,12 @@
                     ]
                   },
                   {
-                    "id": "e5d64c1c",
+                    "id": "3104f5c0",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "65594314",
+                          "id": "4380ab48",
                           "blockId": "urn:bbc:ares::clip:p01sk2dc",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -113,12 +113,12 @@
                           ]
                         },
                         {
-                          "id": "65cf781b",
+                          "id": "38d8b6e2",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0abe761b",
+                                "id": "8e55d2e0",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 976,
@@ -134,23 +134,23 @@
                                 ]
                               },
                               {
-                                "id": "aa96ef7f",
+                                "id": "626fa2d5",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "e056c746",
+                                      "id": "53b50367",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "e49bf7c9",
+                                            "id": "70ccf37f",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "World Service Thumbnail",
                                               "blocks": [
                                                 {
-                                                  "id": "7cf06237",
+                                                  "id": "c2ce8172",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "World Service Thumbnail",
@@ -218,23 +218,23 @@
               ]
             },
             {
-              "id": "d91e9a35",
+              "id": "b2e11d34",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "1636e2e6",
+                    "id": "3aa6b90e",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5d26fc99",
+                          "id": "15f722ea",
                           "type": "paragraph",
                           "model": {
                             "text": "Test: Skip to Content",
                             "blocks": [
                               {
-                                "id": "61bc98fa",
+                                "id": "13ee9875",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Test: Skip to Content",
@@ -269,28 +269,28 @@
               ]
             },
             {
-              "id": "03ce5d5e",
+              "id": "e4e9c8b5",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "f7b9d656",
+                    "id": "179df9f1",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e24cc09c",
+                          "id": "48e923f3",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b43e5524",
+                                "id": "0e146de8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Test Image",
                                   "blocks": [
                                     {
-                                      "id": "3a05c88a",
+                                      "id": "8275e1d2",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Test Image",
@@ -329,23 +329,23 @@
                     ]
                   },
                   {
-                    "id": "b0dd7c03",
+                    "id": "8399552e",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "40a2c373",
+                          "id": "b3be1e87",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e60f2681",
+                                "id": "e9034aaa",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Woman with sign",
                                   "blocks": [
                                     {
-                                      "id": "54fade67",
+                                      "id": "641bae3f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Woman with sign",
@@ -384,7 +384,7 @@
                     ]
                   },
                   {
-                    "id": "31af75f1",
+                    "id": "e45747bd",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -406,7 +406,7 @@
               ]
             },
             {
-              "id": "51898eb6",
+              "id": "23ea8e01",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1629274175607,
@@ -417,18 +417,18 @@
               ]
             },
             {
-              "id": "3266018f",
+              "id": "dd5f6b6f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0c08b7a1",
+                    "id": "cd3eb134",
                     "type": "paragraph",
                     "model": {
                       "text": "Test text",
                       "blocks": [
                         {
-                          "id": "8b7bf50c",
+                          "id": "4f00ddab",
                           "type": "fragment",
                           "model": {
                             "text": "Test text",
@@ -454,7 +454,7 @@
               ]
             },
             {
-              "id": "4ba55be5",
+              "id": "8b7e577a",
               "type": "mpu",
               "model": {},
               "position": [
@@ -462,7 +462,7 @@
               ]
             },
             {
-              "id": "70224138",
+              "id": "87a15953",
               "type": "wsoj",
               "model": {
                 "type": "recommendations"
@@ -1977,118 +1977,5 @@
       }
     }
   },
-  "contentType": "application/json; charset=utf-8",
-  "debug": {
-    "context": {
-      "runtimeContext": {
-        "moduleEnvironment": "local",
-        "apiPort": 3210,
-        "manifestFound": false,
-        "moduleVersion": "1.0.0",
-        "moduleName": "stub-fabl-module",
-        "personalisedRequest": "false",
-        "environment": "local",
-        "runtimeVersion": "4.4.1",
-        "nodeJSVersion": "v16.17.1",
-        "standardLibraryVersion": "4.3.0"
-      },
-      "systemContext": {
-        "debug": "1",
-        "sandboxEnabled": false,
-        "pers-env": "test",
-        "service-env": "test",
-        "call-stack": "simorgh-bff"
-      }
-    },
-    "serviceRequests": [
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "3855",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"5ebf720a35894be71f0bdbd9cc52eb6fdaa348e8\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 901
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/onward-journeys/pidgin/front_page",
-          "timeout": 2000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json;charset=utf-8",
-            "transfer-encoding": "chunked",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "etag": "a5e2b513a7beef4bf059ac902e250998a7eb4c5d",
-            "last-modified": "Wed, 23 Feb 2022 21:07:36 GMT",
-            "cache-control": "no-transform,max-age=60",
-            "x-ares-tracking-id": "cb1ef75e-e687-4048-9283-8cb83b5059b4",
-            "expires": "Tue, 21 Feb 2023 11:17:08 GMT",
-            "content-encoding": "gzip",
-            "x-proxy-cache": "MISS"
-          },
-          "responseCode": 200,
-          "responseTime": 1245
-        },
-        "request": {
-          "service": "ares",
-          "path": "/article/cq16zlmz9ddo",
-          "timeout": 4000
-        }
-      },
-      {
-        "response": {
-          "headers": {
-            "date": "Tue, 21 Feb 2023 11:17:38 GMT",
-            "content-type": "application/json",
-            "content-length": "5291",
-            "connection": "keep-alive",
-            "personalised": "false",
-            "vary": "accept-encoding, ctx-service-env",
-            "content-encoding": "gzip",
-            "etag": "\"07cdea8e48e1b276f9938e0a7f146d12cbe7171f\"",
-            "cache-control": "no-transform,max-age=5",
-            "expires": "Tue, 21 Feb 2023 11:17:43 GMT",
-            "content-language": "en-GB",
-            "access-control-allow-origin": "*",
-            "x-proxy-cache": "EXPIRED"
-          },
-          "responseCode": 200,
-          "responseTime": 1446
-        },
-        "request": {
-          "service": "onward-journeys",
-          "path": "/most/read/pidgin",
-          "timeout": 2000
-        }
-      }
-    ],
-    "privateContext": {},
-    "params": {
-      "id": "cq16zlmz9ddo",
-      "service": "pidgin",
-      "pageType": "article"
-    },
-    "sandboxViolations": [],
-    "nonFatalErrors": [
-      {}
-    ]
-  }
+  "contentType": "application/json; charset=utf-8"
 }
