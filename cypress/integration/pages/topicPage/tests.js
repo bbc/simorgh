@@ -9,7 +9,7 @@ export default ({ service, pageType, variant }) => {
   const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
   let otherVariant;
   describe(`Tests for ${service} ${pageType}`, () => {
-    before(() => {
+    beforeEach(() => {
       cy.log(Cypress.env('currentPath'));
       cy.log(service);
       const env = Cypress.env('APP_ENV');
