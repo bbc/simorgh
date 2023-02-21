@@ -30,7 +30,7 @@ const AmpIframe = ({ children, className, width, height, src }) => (
     width={width}
     height={height}
     layout="responsive"
-    sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-forms"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-forms allow-modals allow-popups allow-presentation allow-storage-access-by-user-activation"
     resizable=""
     src={src}
   >
