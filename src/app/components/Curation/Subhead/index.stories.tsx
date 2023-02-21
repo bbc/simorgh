@@ -34,7 +34,7 @@ const WithLink = ({ service, variant }: StorybookProps) => {
 };
 
 export default {
-  title: 'Curations/Subheading',
+  title: 'New Components/Curation/Subheading',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },

@@ -18,7 +18,7 @@ const Component = ({ service, variant }: StorybookProps) => {
 };
 
 export default {
-  title: 'Curations/Grid - Normal',
+  title: 'New Components/Curation/Grid - Normal',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },

@@ -48,7 +48,7 @@ const WithMediaIndicator = ({ service, variant }: StorybookProps) => {
 };
 
 export default {
-  title: 'Curations/Promo - Normal',
+  title: 'New Components/Curation/Promo - Normal',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },

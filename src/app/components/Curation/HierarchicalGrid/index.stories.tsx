@@ -25,7 +25,7 @@ const Component = ({ service, variant }: StorybookProps) => {
 };
 
 export default {
-  title: 'Curations/Grid - Hierarchical',
+  title: 'New Components/Curation/Grid - Hierarchical',
   Component,
   decorators: [withKnobs, withServicesKnob()],
 };
