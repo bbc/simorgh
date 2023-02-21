@@ -76,7 +76,7 @@ Object {
 
 exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
@@ -237,8 +237,6 @@ exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:
 
 exports[`Canonical Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`Canonical Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
@@ -330,7 +328,7 @@ exports[`Canonical Media Asset Page SEO OG url 1`] = `"http://localhost:7080/ara
 
 exports[`Canonical Media Asset Page SEO Page title 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها - BBC News عربي"`;
 
-exports[`Canonical Media Asset Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Media Asset Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Media Asset Page SEO Twitter card 1`] = `"summary_large_image"`;
 

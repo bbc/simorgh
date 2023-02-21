@@ -1,13 +1,17 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
   articleDataPersian,
   articleDataPidgin,
+  articleDataPidginWithAds,
+  articleDataPidginWithByline,
+  sampleRecommendations,
 } from '#pages/ArticlePage/fixtureData';
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
@@ -18,11 +22,11 @@ import {
   singleTextBlock,
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
+import ThemeProvider from '../../components/ThemeProvider';
 
-// temporary: will be removed with https://github.com/bbc/simorgh/issues/836
-const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
-articleDataNewsNoHeadline.content.model.blocks.shift();
+jest.mock('../../components/ThemeProvider');
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -34,23 +38,56 @@ jest.mock('#containers/OptimizelyPageViewTracking', () => {
   return OptimizelyPageViewTracking;
 });
 
-// eslint-disable-next-line react/prop-types
-const Context = ({ service, children }) => (
-  <ToggleContextProvider>
-    <ServiceContextProvider service={service}>
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        pathname="/pathname"
-        service={service}
-        statusCode={200}
+const recommendationSettings = {
+  hasStoryRecommendations: true,
+  skipLink: {
+    text: 'Skip recommendations and continue reading',
+    endTextVisuallyHidden: 'End of recommendations',
+  },
+};
+
+const Context = ({
+  service = 'pidgin',
+  children,
+  adsToggledOn = false,
+  mostReadToggledOn = true,
+  showAdsBasedOnLocation = false,
+} = {}) => (
+  <BrowserRouter>
+    <ThemeProvider service={service} variant="default">
+      <ToggleContextProvider
+        toggles={{
+          mostRead: {
+            enabled: mostReadToggledOn,
+          },
+          ads: {
+            enabled: adsToggledOn,
+          },
+          cpsRecommendations: {
+            enabled: true,
+          },
+        }}
       >
-        {children}
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  </ToggleContextProvider>
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
+          pageType={ARTICLE_PAGE}
+          pathname="/pathname"
+          service={service}
+          statusCode={200}
+          showAdsBasedOnLocation={showAdsBasedOnLocation}
+        >
+          <ServiceContextProvider
+            service={service}
+            recommendations={recommendationSettings}
+          >
+            {children}
+          </ServiceContextProvider>
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ThemeProvider>
+  </BrowserRouter>
 );
 
 beforeEach(() => {
@@ -81,6 +118,39 @@ it('should use headline for meta description if summary does not exist', async (
     ).toEqual('Article Headline for SEO');
   });
 });
+
+it('should use the twitter handle where present in the byline block', async () => {
+  render(
+    <Context service="pidgin">
+      <ArticlePage pageData={articleDataPidginWithByline} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@mary_harper');
+  });
+});
+
+it('should use the default twitter handle where a byline block is missing in the content blocks', async () => {
+  render(
+    <Context service="persian">
+      <ArticlePage pageData={articleDataPersian} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="twitter:creator"]')
+        .getAttribute('content'),
+    ).toEqual('@bbcpersian');
+  });
+});
+
 describe('ArticleMetadata get branded image', () => {
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
@@ -207,10 +277,11 @@ it('should render a rtl article (persian) with most read correctly', async () =>
     </Context>,
   );
 
-  await waitFor(() => container.querySelector('#Most-Read'));
-  const mostReadSection = container.querySelector('#Most-Read');
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).not.toBeNull();
+  });
 
-  expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
 
@@ -223,10 +294,11 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
     </Context>,
   );
 
-  await waitFor(() => container.querySelector('#Most-Read'));
-  const mostReadSection = container.querySelector('#Most-Read');
+  await waitFor(() => {
+    const mostReadSection = container.querySelector('#Most-Read');
+    expect(mostReadSection).not.toBeNull();
+  });
 
-  expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
 
@@ -319,4 +391,46 @@ it('should render the top stories and features when passed', async () => {
 
   expect(getByTestId('top-stories')).toBeInTheDocument();
   expect(getByTestId('features')).toBeInTheDocument();
+});
+
+it('should show ads when enabled', async () => {
+  [
+    [true, true],
+    [true, false],
+    [false, true],
+    [false, false],
+  ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
+    const { container } = render(
+      <Context
+        service="pidgin"
+        adsToggledOn={adsToggledOn}
+        showAdsBasedOnLocation={showAdsBasedOnLocation}
+      >
+        <ArticlePage pageData={articleDataPidginWithAds} />
+      </Context>,
+    );
+
+    const shouldShowAds = adsToggledOn && showAdsBasedOnLocation;
+    const adElement = container.querySelector('[data-e2e="advertisement"]');
+    if (shouldShowAds) {
+      expect(adElement).toBeInTheDocument();
+    } else {
+      expect(adElement).not.toBeInTheDocument();
+    }
+  });
+});
+
+it('should render WSOJ recommendations when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    recommendations: sampleRecommendations,
+  };
+
+  const { getByText } = render(
+    <Context service="turkce">
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
 });

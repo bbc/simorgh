@@ -196,7 +196,7 @@ Object {
 
 exports[`AMP On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
 
-exports[`AMP On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
+exports[`AMP On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
 
 exports[`AMP On Demand Audio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
@@ -358,8 +358,6 @@ exports[`AMP On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:70
 
 exports[`AMP On Demand Audio Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`AMP On Demand Audio Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`AMP On Demand Audio Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP On Demand Audio Page SEO Heading level 1 1`] = `"Dunia Pagi Ini, 27 April 2020"`;
@@ -433,7 +431,7 @@ exports[`AMP On Demand Audio Page SEO OG url 1`] = `"http://localhost:7080/indon
 
 exports[`AMP On Demand Audio Page SEO Page title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
 
-exports[`AMP On Demand Audio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP On Demand Audio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP On Demand Audio Page SEO Twitter card 1`] = `"summary_large_image"`;
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import { bool, node, oneOf, string, number } from 'prop-types';
 import * as pageTypes from '#app/routes/utils/pageTypes';
+import mvtExperimentPropType from '#models/propTypes/mvtExperiment';
+import variantPropType from '#models/propTypes/variants';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
-import variantPropType from '../../models/propTypes/variants';
 
 export const RequestContext = React.createContext({});
 
@@ -15,6 +16,7 @@ export const RequestContextProvider = ({
   bbcOrigin,
   id,
   isAmp,
+  isNextJs,
   pageType,
   service,
   statusCode,
@@ -23,6 +25,7 @@ export const RequestContextProvider = ({
   variant,
   timeOnServer,
   showAdsBasedOnLocation,
+  mvtExperiments,
 }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
@@ -45,6 +48,7 @@ export const RequestContextProvider = ({
     origin,
     pageType,
     isAmp,
+    isNextJs,
     platform,
     statsDestination,
     statsPageIdentifier,
@@ -56,6 +60,7 @@ export const RequestContextProvider = ({
     service,
     pathname,
     ...getMetaUrls(origin, pathname),
+    mvtExperiments,
   };
 
   return (
@@ -68,6 +73,7 @@ RequestContextProvider.propTypes = {
   children: node.isRequired,
   id: string,
   isAmp: bool.isRequired,
+  isNextJs: bool,
   pageType: oneOf(Object.values(pageTypes)).isRequired,
   service: string.isRequired,
   statusCode: number,
@@ -76,6 +82,7 @@ RequestContextProvider.propTypes = {
   variant: variantPropType,
   timeOnServer: number,
   showAdsBasedOnLocation: bool,
+  mvtExperiments: mvtExperimentPropType,
 };
 
 RequestContextProvider.defaultProps = {
@@ -86,4 +93,6 @@ RequestContextProvider.defaultProps = {
   variant: null,
   timeOnServer: null,
   showAdsBasedOnLocation: false,
+  mvtExperiments: null,
+  isNextJs: false,
 };

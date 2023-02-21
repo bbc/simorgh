@@ -4,9 +4,9 @@ import React, { useContext } from 'react';
 import { render, screen } from '@testing-library/react';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { ServiceContextProvider } from '../ServiceContext';
 import { EventTrackingContextProvider, EventTrackingContext } from '.';
 import fixtureData from './fixtureData.json';
 

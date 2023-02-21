@@ -6,14 +6,12 @@ import {
   AMP_JS,
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
-} from '#legacy/psammead-assets/src/amp-boilerplate';
+} from '#psammead/psammead-assets/src/amp-boilerplate';
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
-import ResourceHints from '#app/components/ResourceHints';
-import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
+import IfAboveIE9 from '#components/IfAboveIE9Comment';
 
 const Document = ({
-  assetOrigins,
   app,
   data,
   helmet,
@@ -49,10 +47,10 @@ const Document = ({
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
         {meta}
-        {!isAmp && links}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <ResourceHints assetOrigins={assetOrigins} />
         {title}
+        {helmetLinkTags}
+        {headScript}
         {isAmp ? (
           <style
             amp-custom=""
@@ -69,8 +67,6 @@ const Document = ({
             }}
           />
         )}
-        {helmetLinkTags}
-        {headScript}
         {isAmp && (
           <>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>
@@ -97,6 +93,7 @@ const Document = ({
             }}
           />
         )}
+        {!isAmp && links}
         {scriptsAllowed && scriptTags}
         {scriptsAllowed && (
           <script

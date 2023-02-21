@@ -1,0 +1,1485 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgramCard should render correctly for live 1`] = `
+.emotion-0 {
+  padding-top: 0.5rem;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 0.0625rem solid transparent;
+  height: 100%;
+}
+
+.emotion-2 {
+  padding: 0 0.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-4 {
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #222222;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-6 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+}
+
+.emotion-6:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-6:hover,
+.emotion-6:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:visited {
+  color: #6E6E73;
+}
+
+.emotion-6:hover .emotion-15 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:focus .emotion-15 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-10 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.emotion-14 {
+  color: #3F3F42;
+  padding: 0.5rem 0 0 0;
+  display: inline-block;
+  width: 100%;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-18 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-20 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background-color: #B80000;
+  outline: 0.0625rem solid transparent;
+  color: #FFFFFF;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-20 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-20 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-20 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+.emotion-22>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-22>svg {
+    fill: canvasText;
+  }
+}
+
+.emotion-24 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-26 {
+  padding-left: 0.5rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <h3
+        class="emotion-4 emotion-5"
+      >
+        <a
+          aria-labelledby="scheduleItem-1"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          href="/news/articles/cn7k01xp8kxo"
+        >
+          <span
+            id="scheduleItem-1"
+            role="text"
+          >
+            <span
+              class="emotion-8 emotion-9"
+            >
+              Listen Live, 
+            </span>
+            <span
+              role="text"
+            >
+              <span
+                aria-hidden="true"
+                class="emotion-10 emotion-11"
+                dir="ltr"
+              >
+                LIVE 
+              </span>
+            </span>
+            Could a computer ever create better art than a human?
+            <span
+              class="emotion-8 emotion-9"
+            >
+              , 14:54, 
+            </span>
+            <span
+              class="emotion-14 emotion-15"
+            >
+              27 August 2019
+            </span>
+            <span
+              class="emotion-8 emotion-9"
+            >
+              , Duration 30,00 
+            </span>
+          </span>
+        </a>
+      </h3>
+      <p
+        class="emotion-18 emotion-19"
+      >
+        The critic, author, poet and TV host was known for his witty commentary on international television.
+      </p>
+    </div>
+    <div
+      class="emotion-20 emotion-21"
+    >
+      <span
+        class="emotion-22 emotion-23"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-24 emotion-25"
+          focusable="false"
+          height="12px"
+          viewBox="0 0 13 12"
+          width="13px"
+        >
+          <path
+            d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+          />
+          <path
+            d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+          />
+        </svg>
+      </span>
+      <time
+        class="emotion-26 emotion-27"
+        datetime="PT30M"
+        dir="ltr"
+      >
+        <span
+          aria-hidden="true"
+        >
+          30:00
+        </span>
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ProgramCard should render correctly for next 1`] = `
+.emotion-0 {
+  padding-top: 0.5rem;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 0.0625rem solid transparent;
+  height: 100%;
+}
+
+.emotion-2 {
+  padding: 0 0.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-4 {
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #6E6E73;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-6 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-8 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #11708C;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-12 {
+  color: #6E6E73;
+  padding: 0.5rem 0 0 0;
+  display: inline-block;
+  width: 100%;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-16 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-18 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background-color: #FFFFFF;
+  outline: 0.0625rem solid transparent;
+  color: #11708C;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-18 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+.emotion-20>svg {
+  color: #11708C;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-20>svg {
+    fill: canvasText;
+  }
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-24 {
+  padding-left: 0.5rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <h3
+        class="emotion-4 emotion-5"
+      >
+        <span
+          id="scheduleItem-1"
+          role="text"
+        >
+          <span
+            class="emotion-6 emotion-7"
+          >
+            Listen Next, 
+          </span>
+          <span
+            aria-hidden="true"
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            NEXT 
+          </span>
+          Could a computer ever create better art than a human?
+          <span
+            class="emotion-6 emotion-7"
+          >
+            , 14:54, 
+          </span>
+          <span
+            class="emotion-12 emotion-13"
+          >
+            27 August 2019
+          </span>
+          <span
+            class="emotion-6 emotion-7"
+          >
+            , Duration 30,00 
+          </span>
+        </span>
+      </h3>
+      <p
+        class="emotion-16 emotion-17"
+      >
+        The critic, author, poet and TV host was known for his witty commentary on international television.
+      </p>
+    </div>
+    <div
+      class="emotion-18 emotion-19"
+    >
+      <span
+        class="emotion-20 emotion-21"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-22 emotion-23"
+          focusable="false"
+          height="12px"
+          viewBox="0 0 13 12"
+          width="13px"
+        >
+          <path
+            d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+          />
+          <path
+            d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+          />
+        </svg>
+      </span>
+      <time
+        class="emotion-24 emotion-25"
+        datetime="PT30M"
+        dir="ltr"
+      >
+        <span
+          aria-hidden="true"
+        >
+          30:00
+        </span>
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ProgramCard should render correctly for onDemand 1`] = `
+.emotion-0 {
+  padding-top: 0.5rem;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 0.0625rem solid transparent;
+  height: 100%;
+}
+
+.emotion-2 {
+  padding: 0 0.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-4 {
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #222222;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-6 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+}
+
+.emotion-6:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-6:hover,
+.emotion-6:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:visited {
+  color: #6E6E73;
+}
+
+.emotion-6:hover .emotion-13 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:focus .emotion-13 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-12 {
+  color: #3F3F42;
+  padding: 0.5rem 0 0 0;
+  display: inline-block;
+  width: 100%;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-16 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-18 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background-color: #222222;
+  outline: 0.0625rem solid transparent;
+  color: #FFFFFF;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-18 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+.emotion-20>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-20>svg {
+    fill: canvasText;
+  }
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-24 {
+  padding-left: 0.5rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <h3
+        class="emotion-4 emotion-5"
+      >
+        <a
+          aria-labelledby="scheduleItem-1"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          href="/news/articles/cn7k01xp8kxo"
+        >
+          <span
+            id="scheduleItem-1"
+            role="text"
+          >
+            <span
+              class="emotion-8 emotion-9"
+            >
+              Listen, 
+            </span>
+            Could a computer ever create better art than a human?
+            <span
+              class="emotion-8 emotion-9"
+            >
+              , 14:54, 
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              27 August 2019
+            </span>
+            <span
+              class="emotion-8 emotion-9"
+            >
+              , Duration 30,00 
+            </span>
+          </span>
+        </a>
+      </h3>
+      <p
+        class="emotion-16 emotion-17"
+      >
+        The critic, author, poet and TV host was known for his witty commentary on international television.
+      </p>
+    </div>
+    <div
+      class="emotion-18 emotion-19"
+    >
+      <span
+        class="emotion-20 emotion-21"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-22 emotion-23"
+          focusable="false"
+          height="12px"
+          viewBox="0 0 13 12"
+          width="13px"
+        >
+          <path
+            d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+          />
+          <path
+            d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+          />
+        </svg>
+      </span>
+      <time
+        class="emotion-24 emotion-25"
+        datetime="PT30M"
+        dir="ltr"
+      >
+        <span
+          aria-hidden="true"
+        >
+          30:00
+        </span>
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ProgramCard should render correctly in RTL 1`] = `
+.emotion-0 {
+  padding-top: 0.5rem;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 0.0625rem solid transparent;
+  height: 100%;
+}
+
+.emotion-2 {
+  padding: 0 0.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-4 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  color: #222222;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-6 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+}
+
+.emotion-6:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-6:hover,
+.emotion-6:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:visited {
+  color: #6E6E73;
+}
+
+.emotion-6:hover .emotion-13 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:focus .emotion-13 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-12 {
+  color: #3F3F42;
+  padding: 0.5rem 0 0 0;
+  display: inline-block;
+  width: 100%;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-16 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #6E6E73;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-18 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  padding: 0.5rem;
+  background-color: #222222;
+  outline: 0.0625rem solid transparent;
+  color: #FFFFFF;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-18 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+.emotion-20>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-20>svg {
+    fill: canvasText;
+  }
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-24 {
+  padding-right: 0.5rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <h3
+        class="emotion-4 emotion-5"
+      >
+        <a
+          aria-labelledby="scheduleItem-1"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          href="/arabic/articles/c1er5mjnznzo"
+        >
+          <span
+            id="scheduleItem-1"
+            role="text"
+          >
+            <span
+              class="emotion-8 emotion-9"
+            >
+              استمع, 
+            </span>
+            لماذا يخجل البعض من اسم قريته في مصر؟
+            <span
+              class="emotion-8 emotion-9"
+            >
+              , 13:54, 
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              27 أغسطس/ آب 2019
+            </span>
+            <span
+              class="emotion-8 emotion-9"
+            >
+              , المدة الزمنية 30،00 
+            </span>
+          </span>
+        </a>
+      </h3>
+      <p
+        class="emotion-16 emotion-17"
+      >
+        هناك وقائع عدة تتسم بالسخرية والجدل والتنمر، ضد أهل القرية الذين أصابهم الغضب والسخط مما دفعهم إلى تقديم طلب لتغيير اسم قريتهم.
+      </p>
+    </div>
+    <div
+      class="emotion-18 emotion-19"
+    >
+      <span
+        class="emotion-20 emotion-21"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-22 emotion-23"
+          focusable="false"
+          height="12px"
+          viewBox="0 0 13 12"
+          width="13px"
+        >
+          <path
+            d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+          />
+          <path
+            d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+          />
+        </svg>
+      </span>
+      <time
+        class="emotion-24 emotion-25"
+        datetime="PT30M"
+        dir="rtl"
+      >
+        <span
+          aria-hidden="true"
+        >
+          30:00
+        </span>
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ProgramCard should render correctly without summary 1`] = `
+.emotion-0 {
+  padding-top: 0.5rem;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 0.0625rem solid transparent;
+  height: 100%;
+}
+
+.emotion-2 {
+  padding: 0 0.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-4 {
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #222222;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-6 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+}
+
+.emotion-6:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-6:hover,
+.emotion-6:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:visited {
+  color: #6E6E73;
+}
+
+.emotion-6:hover .emotion-15 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:focus .emotion-15 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-10 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.emotion-14 {
+  color: #3F3F42;
+  padding: 0.5rem 0 0 0;
+  display: inline-block;
+  width: 100%;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-18 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background-color: #B80000;
+  outline: 0.0625rem solid transparent;
+  color: #FFFFFF;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-18 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+.emotion-20>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-20>svg {
+    fill: canvasText;
+  }
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-24 {
+  padding-left: 0.5rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <h3
+        class="emotion-4 emotion-5"
+      >
+        <a
+          aria-labelledby="scheduleItem-1"
+          class="focusIndicatorDisplayBlock emotion-6 emotion-7"
+          href="/news/articles/cn7k01xp8kxo"
+        >
+          <span
+            id="scheduleItem-1"
+            role="text"
+          >
+            <span
+              class="emotion-8 emotion-9"
+            >
+              Listen Live, 
+            </span>
+            <span
+              role="text"
+            >
+              <span
+                aria-hidden="true"
+                class="emotion-10 emotion-11"
+                dir="ltr"
+              >
+                LIVE 
+              </span>
+            </span>
+            Could a computer ever create better art than a human?
+            <span
+              class="emotion-8 emotion-9"
+            >
+              , 14:54, 
+            </span>
+            <span
+              class="emotion-14 emotion-15"
+            >
+              27 August 2019
+            </span>
+            <span
+              class="emotion-8 emotion-9"
+            >
+              , Duration 30,00 
+            </span>
+          </span>
+        </a>
+      </h3>
+    </div>
+    <div
+      class="emotion-18 emotion-19"
+    >
+      <span
+        class="emotion-20 emotion-21"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-22 emotion-23"
+          focusable="false"
+          height="12px"
+          viewBox="0 0 13 12"
+          width="13px"
+        >
+          <path
+            d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+          />
+          <path
+            d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+          />
+        </svg>
+      </span>
+      <time
+        class="emotion-24 emotion-25"
+        datetime="PT30M"
+        dir="ltr"
+      >
+        <span
+          aria-hidden="true"
+        >
+          30:00
+        </span>
+      </time>
+    </div>
+  </div>
+</div>
+`;

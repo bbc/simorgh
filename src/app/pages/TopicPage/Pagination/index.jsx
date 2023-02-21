@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { number, string } from 'prop-types';
-import VisuallyHiddenText from '#legacy/psammead-visually-hidden-text/src';
+import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   getSansRegular,
   getSansBold,
-} from '#legacy/psammead-styles/src/font-styles';
+} from '#psammead/psammead-styles/src/font-styles';
 
 import {
-  C_PHILIPPINE_GREY,
+  C_GREY_5,
   C_GREY_10,
   C_GREY_6,
   C_POSTBOX,
-} from '#legacy/psammead-styles/src/colours';
+} from '#psammead/psammead-styles/src/colours';
 
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -21,11 +21,11 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
-import { ServiceContext } from '#contexts/ServiceContext';
+} from '#psammead/gel-foundations/src/breakpoints';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import buildBlocks, { TYPE, VISIBILITY } from './buildBlocks';
-import { Ellipsis, LeftChevron, RightChevron } from './icons';
+import { Ellipsis, LeftChevron, RightChevron } from '../../../components/icons';
 
 const visibilityToMediaQuery = visibility =>
   ({
@@ -96,7 +96,7 @@ const Block = styled.li`
 `;
 
 const EllipsisBlock = styled(Block)`
-  color: ${C_PHILIPPINE_GREY};
+  color: ${C_GREY_5};
   svg {
     @media screen and (forced-colors: active) {
       fill: canvasText;
@@ -136,6 +136,7 @@ const A = styled.a`
 const LinkComponent = ({ children, pageNumber, isActive, ...rest }) => (
   <A
     href={`?page=${pageNumber}`}
+    className="focusIndicatorOutlineBlack"
     {...(isActive && { isActive: true, 'aria-current': 'page' })}
     {...rest}
   >

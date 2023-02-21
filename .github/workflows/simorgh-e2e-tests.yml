@@ -15,6 +15,9 @@ permissions:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
     env:
       CI: true
       LOG_LEVEL: 'error'
@@ -24,9 +27,15 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
       - name: Run Simorgh E2Es
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v3
         with:
           build: yarn build
           start: yarn start

@@ -26,19 +26,33 @@ const podcastExternalLinks = {
 const getRssLink = brandPid => ({
   linkUrl: `https://podcasts.files.bbci.co.uk/${brandPid}.rss`,
   linkText: 'RSS',
+  linkType: 'rss',
+});
+
+// Burmese podcast experiment - remove hardcoded linkText when rolling out to other services
+const getDownloadLink = versionId => ({
+  linkUrl: `https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/${versionId}.mp3`,
+  linkText: 'ဒေါင်းလုပ်လုပ် ရယူရန်',
+  linkType: 'download',
 });
 
 export const getPodcastExternalLinks = async (
   service,
   brandPid,
   variant = 'default',
+  versionId,
 ) => {
   try {
     const linkData = await podcastExternalLinks[service]();
     if (!linkData) return [];
     if (!brandPid) return [];
-
+    let downloadLink = [];
     const links = pathOr([], ['default', variant, brandPid], linkData);
+    // Burmese podcast experiment
+    if (service === 'burmese' && brandPid === 'p02pc9lh') {
+      downloadLink = getDownloadLink(versionId);
+      return [...links, getRssLink(brandPid), downloadLink];
+    }
     return [...links, getRssLink(brandPid)];
   } catch (err) {
     logger.warn(PODCAST_SERVICE_MISSING, {

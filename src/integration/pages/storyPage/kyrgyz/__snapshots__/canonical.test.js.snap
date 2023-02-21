@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
-exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
@@ -120,9 +120,11 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөт
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="social media"
-  class="eehpdyc0 bbc-rb7xa0 e11uq3260"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="351"
+  sizes="(min-width: 1008px) 645px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 624w"
   width="624"
 />
 `;
@@ -205,8 +207,6 @@ exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/k
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Story Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Story Page SEO Heading level 1 1`] = `"Test STY for social embeds"`;
@@ -286,7 +286,7 @@ exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7080/kyrgyz/23
 
 exports[`Canonical Story Page SEO Page title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
 
-exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 

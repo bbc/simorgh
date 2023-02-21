@@ -203,7 +203,7 @@ Object {
 
 exports[`AMP Korean Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
 
-exports[`AMP Korean Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
+exports[`AMP Korean Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
 exports[`AMP Korean Live Radio Page Header I can see the branding 1`] = `"BBC News, 코리아"`;
 
@@ -217,7 +217,7 @@ Object {
 exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "비디오",
-  "url": "/korean/media/video",
+  "url": "/korean/topics/cnwng7v0e54t",
 }
 `;
 
@@ -315,8 +315,6 @@ exports[`AMP Korean Live Radio Page SEO Canonical link 1`] = `"http://localhost:
 
 exports[`AMP Korean Live Radio Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`AMP Korean Live Radio Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`AMP Korean Live Radio Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Korean Live Radio Page SEO Heading level 1 1`] = `"BBC 코리아 라디오"`;
@@ -369,7 +367,7 @@ exports[`AMP Korean Live Radio Page SEO OG url 1`] = `"http://localhost:7080/kor
 
 exports[`AMP Korean Live Radio Page SEO Page title 1`] = `"BBC 코리아 라디오 - BBC News 코리아"`;
 
-exports[`AMP Korean Live Radio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Korean Live Radio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Korean Live Radio Page SEO Twitter card 1`] = `"summary_large_image"`;
 

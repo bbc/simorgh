@@ -1,11 +1,13 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable import/extensions */
 import { statSync, readdirSync } from 'fs';
 import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
+import cypressServiceConfigs from '../../cypress/support/config/services.js';
+import { pages } from './pages.js';
 
 // need fake Cypress in global scope to require service configs:
 global.Cypress = { env: () => ({}) };
 const bundleType = process.env.bundleType || 'modern';
-import cypressServiceConfigs from '../../cypress/support/config/services.js';
-import { pages } from './pages.js';
 
 const services = Object.keys(cypressServiceConfigs);
 
@@ -94,7 +96,7 @@ const getPageBundleData = () => {
   });
 };
 
-const getServiceBundleData = () =>
+const getServiceConfigBundleData = () =>
   services
     .map(service => {
       const bundlesData = getBundlesData(
@@ -114,7 +116,31 @@ const getServiceBundleData = () =>
       ),
     }));
 
+const getServiceThemeBundleData = () =>
+  services
+    .map(service => {
+      const bundlesData = getBundlesData(
+        jsFiles.filter(file =>
+          file.startsWith(`${bundleType}.themes-${service}`),
+        ),
+      );
+
+      return { serviceName: service, bundles: bundlesData };
+    })
+    .filter(({ bundles }) => bundles.length)
+    .map(({ serviceName, bundles }) => ({
+      serviceName,
+      bundles,
+      totalSize: bundles.reduce((acc, { size }) => acc + size, 0),
+      totalSizeInBytes: bundles.reduce(
+        (acc, { sizeInBytes }) => acc + sizeInBytes,
+        0,
+      ),
+    }));
+
 const _getPageBundleData = getPageBundleData;
 export { _getPageBundleData as getPageBundleData };
-const _getServiceBundleData = getServiceBundleData;
-export { _getServiceBundleData as getServiceBundleData };
+const _getServiceConfigBundleData = getServiceConfigBundleData;
+export { _getServiceConfigBundleData as getServiceConfigBundleData };
+const _getServiceThemeBundleData = getServiceThemeBundleData;
+export { _getServiceThemeBundleData as getServiceThemeBundleData };

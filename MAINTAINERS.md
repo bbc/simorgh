@@ -1,16 +1,15 @@
-* @chris-hinds
+* @amoore108
 * @andrewscfc
-* @simonsinclair
-* @chewu
-* @HarveyPeachey
-* @FK78
-* @ryanmccombe
-* @jroebu14
-* @rebeccamcginn
-* @RichardPK
-* @pharingee
-* @HarryVerhoef
+* @archibalderson
+* @DarioR01
 * @emilysaffron
+* @HarveyPeachey
+* @karinathomasbbc
+* @Lily0u
+* @louisearchibald
 * @Louis-Matsika
+* @mfonofm
+* @paruchurisilpa
+* @pvaliani
 
 Due to the size of this repository, maintainers may change over time.

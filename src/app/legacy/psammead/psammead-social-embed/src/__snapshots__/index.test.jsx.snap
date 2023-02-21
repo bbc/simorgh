@@ -1,0 +1,2210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AmpSocialEmbed should render a notice when the provider is unsupported 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  border: 0.0625rem solid #AEAEB5;
+  border-radius: 0.5rem;
+  color: #3F3F42;
+  padding: 1rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-4 p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.emotion-4 a,
+.emotion-4 small {
+  display: block;
+}
+
+.emotion-4 a {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 a:visited {
+  color: #6E6E73;
+}
+
+.emotion-4 a:hover,
+.emotion-4 a:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4 small {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.emotion-6 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <a
+      class="focusIndicatorRemove emotion-2 emotion-3"
+      href="#skip-unknown-content"
+    >
+      <span>
+        Skip unknown content
+      </span>
+    </a>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <p
+        data-testid="social-embed-fallback-title"
+      >
+        Sorry but we're having trouble displaying this content
+      </p>
+      <a
+        href="embed-url"
+      >
+        View content on unknown
+      </a>
+      <small>
+        Warning: BBC is not responsible for third party content
+      </small>
+    </div>
+    <p
+      class="emotion-6 emotion-7"
+      id="skip-unknown-content"
+      tabindex="-1"
+    >
+      End of unknown content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
+}
+
+.emotion-5 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) {
+  .emotion-5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-6 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-6 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-6 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-6 a:hover,
+.emotion-6 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-7 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-7:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+.emotion-8 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <a
+      class="focusIndicatorRemove emotion-2 emotion-3"
+      href="#skip-facebook-content"
+    >
+      <span>
+        Skip Facebook content
+      </span>
+    </a>
+    <div
+      class="emotion-4"
+      data-testid="consentBanner"
+      id="consentBanner-568952960644257"
+    >
+      <strong
+        class="emotion-5"
+        data-testid="banner-heading"
+      >
+        Allow Facebook content?
+      </strong>
+      <p
+        class="emotion-6"
+        data-testid="banner-body"
+      >
+        This article contains content provided by Facebook.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Facebook 
+        <a
+          aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://www.facebook.com/privacy/policies/cookies"
+        >
+          cookie policy
+        </a>
+         and 
+        <a
+          aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://www.facebook.com/privacy/policy/"
+        >
+          privacy policy
+        </a>
+         before accepting. To view this content choose 'accept and continue'.
+      </p>
+      <button
+        class="emotion-7"
+        data-testid="banner-button"
+        on="tap:consentBanner-568952960644257.hide,embed-568952960644257.show"
+        type="button"
+      >
+        Accept and continue
+      </button>
+    </div>
+    <div
+      hidden=""
+      id="embed-568952960644257"
+    >
+      <amp-facebook
+        data-embed-as="post"
+        height="1"
+        layout="responsive"
+        width="1"
+      />
+    </div>
+    <p
+      class="emotion-8 emotion-9"
+      id="skip-facebook-content"
+      tabindex="-1"
+    >
+      End of Facebook content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
+}
+
+.emotion-5 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) {
+  .emotion-5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-6 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-6 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-6 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-6 a:hover,
+.emotion-6 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-7 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-7:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+.emotion-8 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <a
+      class="focusIndicatorRemove emotion-2 emotion-3"
+      href="#skip-instagram-content"
+    >
+      <span>
+        Skip Instagram content
+      </span>
+    </a>
+    <div
+      class="emotion-4"
+      data-testid="consentBanner"
+      id="consentBanner-B8FPf4ZphHi"
+    >
+      <strong
+        class="emotion-5"
+        data-testid="banner-heading"
+      >
+        Allow Instagram content?
+      </strong>
+      <p
+        class="emotion-6"
+        data-testid="banner-body"
+      >
+        This article contains content provided by Instagram.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Instagram 
+        <a
+          aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://privacycenter.instagram.com/policies/cookies/"
+        >
+          cookie policy
+        </a>
+         and 
+        <a
+          aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://privacycenter.instagram.com/policy"
+        >
+          privacy policy
+        </a>
+         before accepting. To view this content choose 'accept and continue'.
+      </p>
+      <button
+        class="emotion-7"
+        data-testid="banner-button"
+        on="tap:consentBanner-B8FPf4ZphHi.hide,embed-B8FPf4ZphHi.show"
+        type="button"
+      >
+        Accept and continue
+      </button>
+    </div>
+    <div
+      hidden=""
+      id="embed-B8FPf4ZphHi"
+    >
+      <amp-instagram
+        data-captioned="true"
+        data-shortcode="B8FPf4ZphHi"
+        height="1"
+        layout="responsive"
+        width="1"
+      />
+    </div>
+    <p
+      class="emotion-8 emotion-9"
+      id="skip-instagram-content"
+      tabindex="-1"
+    >
+      End of Instagram content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
+}
+
+.emotion-5 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) {
+  .emotion-5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-6 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-6 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-6 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-6 a:hover,
+.emotion-6 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-7 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-7:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+.emotion-8 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <a
+      class="focusIndicatorRemove emotion-2 emotion-3"
+      href="#skip-twitter-content"
+    >
+      <span>
+        Skip Twitter content
+      </span>
+    </a>
+    <div
+      class="emotion-4"
+      data-testid="consentBanner"
+      id="consentBanner-1237210910835392512"
+    >
+      <strong
+        class="emotion-5"
+        data-testid="banner-heading"
+      >
+        Allow Twitter content?
+      </strong>
+      <p
+        class="emotion-6"
+        data-testid="banner-body"
+      >
+        This article contains content provided by Twitter.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Twitter 
+        <a
+          aria-label="cookie policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://help.twitter.com/en/rules-and-policies/twitter-cookies"
+        >
+          cookie policy
+        </a>
+         and 
+        <a
+          aria-label="privacy policy, external"
+          class="focusIndicatorReducedWidth"
+          href="https://twitter.com/en/privacy"
+        >
+          privacy policy
+        </a>
+         before accepting. To view this content choose 'accept and continue'.
+      </p>
+      <button
+        class="emotion-7"
+        data-testid="banner-button"
+        on="tap:consentBanner-1237210910835392512.hide,embed-1237210910835392512.show"
+        type="button"
+      >
+        Accept and continue
+      </button>
+    </div>
+    <div
+      hidden=""
+      id="embed-1237210910835392512"
+    >
+      <amp-twitter
+        data-tweetid="1237210910835392512"
+        height="9"
+        layout="responsive"
+        width="16"
+      />
+    </div>
+    <p
+      class="emotion-8 emotion-9"
+      id="skip-twitter-content"
+      tabindex="-1"
+    >
+      End of Twitter content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.emotion-6 {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border: 0.0625rem solid #8A8C8E;
+}
+
+.emotion-7 {
+  color: #141414;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) {
+  .emotion-7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-8 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-8 a {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #141414;
+}
+
+.emotion-8 a:visited {
+  color: #545658;
+  border-bottom: 0.0625rem solid #545658;
+}
+
+.emotion-8 a:hover,
+.emotion-8 a:focus {
+  color: #B80000;
+  border-bottom: 0.125rem solid #B80000;
+}
+
+.emotion-9 {
+  color: #141414;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 0.0625rem solid #8A8C8E;
+  border-radius: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) {
+  .emotion-9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-9:hover,
+.emotion-9:focus {
+  background-color: #B80000;
+  color: #FFFFFF;
+  border: 0.0625rem solid #B80000;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-9:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+.emotion-10 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #545658;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-10>span {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <a
+      class="focusIndicatorRemove emotion-2 emotion-3"
+      href="#skip-youtube-content"
+    >
+      <span>
+        Skip YouTube content
+      </span>
+    </a>
+    <figure
+      class="emotion-4 emotion-5"
+    >
+      <div
+        class="emotion-6"
+        data-testid="consentBanner"
+        id="consentBanner-chiWVxreqhU"
+      >
+        <strong
+          class="emotion-7"
+          data-testid="banner-heading"
+        >
+          Allow Google YouTube content?
+        </strong>
+        <p
+          class="emotion-8"
+          data-testid="banner-body"
+        >
+          This article contains content provided by Google YouTube.  We ask for your permission before anything is loaded, as they may be using cookies and other technologies.  You may want to read Google YouTube 
+          <a
+            aria-label="cookie policy, external"
+            class="focusIndicatorReducedWidth"
+            href="https://policies.google.com/technologies/cookies"
+          >
+            cookie policy
+          </a>
+           and 
+          <a
+            aria-label="privacy policy, external"
+            class="focusIndicatorReducedWidth"
+            href="https://policies.google.com/privacy"
+          >
+            privacy policy
+          </a>
+           before accepting. To view this content choose 'accept and continue'.
+        </p>
+        <button
+          class="emotion-9"
+          data-testid="banner-button"
+          on="tap:consentBanner-chiWVxreqhU.hide,embed-chiWVxreqhU.show"
+          type="button"
+        >
+          Accept and continue
+        </button>
+      </div>
+      <div
+        hidden=""
+        id="embed-chiWVxreqhU"
+      >
+        <amp-youtube
+          data-videoid="chiWVxreqhU"
+          height="9"
+          layout="responsive"
+          width="16"
+        />
+      </div>
+      <figcaption
+        class="emotion-10 emotion-11"
+      >
+        undefined
+      </figcaption>
+    </figure>
+    <p
+      class="emotion-12 emotion-13"
+      id="skip-youtube-content"
+      tabindex="-1"
+    >
+      End of YouTube content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AmpSocialEmbed should render null when no social embed ID is provided 1`] = `<div />`;
+
+exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 .instagram-media {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+  min-width: auto!important;
+}
+
+.emotion-6 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  <a
+    class="focusIndicatorRemove emotion-2 emotion-3"
+    href="#skip-instagram-content"
+  >
+    <span>
+      Skip Instagram content
+    </span>
+  </a>
+  <div
+    class="emotion-4 emotion-5"
+  >
+    <blockquote
+      class="instagram-media"
+      data-instgrm-captioned=""
+      data-instgrm-permalink="https://www.instagram.com/p/B8FPf4ZphHi/?utm_source=ig_embed&utm_campaign=loading"
+      data-instgrm-version="12"
+      style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"
+    >
+      <div
+        style="padding:16px;"
+      >
+         
+        <a
+          href="https://www.instagram.com/p/B8FPf4ZphHi/?utm_source=ig_embed&utm_campaign=loading"
+          style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+          target="_blank"
+        >
+           
+          <div
+            style=" display: flex; flex-direction: row; align-items: center;"
+          >
+             
+            <div
+              style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"
+            />
+             
+            <div
+              style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"
+            >
+               
+              <div
+                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"
+              />
+               
+              <div
+                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"
+              />
+            </div>
+          </div>
+          <div
+            style="padding: 19% 0;"
+          />
+           
+          <div
+            style="display:block; height:50px; margin:0 auto 12px; width:50px;"
+          >
+            <svg
+              height="50px"
+              version="1.1"
+              viewBox="0 0 60 60"
+              width="50px"
+              xmlns="https://www.w3.org/2000/svg"
+              xmlns:xlink="https://www.w3.org/1999/xlink"
+            >
+              <g
+                fill="none"
+                fill-rule="evenodd"
+                stroke="none"
+                stroke-width="1"
+              >
+                <g
+                  fill="#000000"
+                  transform="translate(-511.000000, -20.000000)"
+                >
+                  <g>
+                    <path
+                      d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div
+            style="padding-top: 8px;"
+          >
+             
+            <div
+              style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"
+            >
+               View this post on Instagram
+            </div>
+          </div>
+          <div
+            style="padding: 12.5% 0;"
+          />
+           
+          <div
+            style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"
+          >
+            <div>
+               
+              <div
+                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"
+              />
+               
+              <div
+                style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"
+              />
+               
+              <div
+                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"
+              />
+            </div>
+            <div
+              style="margin-left: 8px;"
+            >
+               
+              <div
+                style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"
+              />
+               
+              <div
+                style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"
+              />
+            </div>
+            <div
+              style="margin-left: auto;"
+            >
+               
+              <div
+                style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"
+              />
+               
+              <div
+                style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"
+              />
+               
+              <div
+                style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"
+              />
+            </div>
+          </div>
+        </a>
+         
+        <p
+          style=" margin:8px 0 0 0; padding:0 4px;"
+        >
+           
+          <a
+            href="https://www.instagram.com/p/B8FPf4ZphHi/?utm_source=ig_embed&utm_campaign=loading"
+            style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;"
+            target="_blank"
+          >
+            1917 was the big winner at the Bafta Film Awards, winning seven prizes in total, including best film, best British film, best director and best cinematography. Joker star Joaquin Phoenix was named best actor, while Renee Zellweger was recognised for her portrayal of Judy Garland. Tap the link in our bio to read more about all of the winners at the 2020 Bafta Film Awards. #Baftas #film #awards #BBCNews
+          </a>
+        </p>
+         
+        <p
+          style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"
+        >
+          A post shared by 
+          <a
+            href="https://www.instagram.com/bbcnews/?utm_source=ig_embed&utm_campaign=loading"
+            style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;"
+            target="_blank"
+          >
+             BBC News
+          </a>
+           (@bbcnews) on 
+          <time
+            datetime="2020-02-02T22:51:31+00:00"
+            style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;"
+          >
+            Feb 2, 2020 at 2:51pm PST
+          </time>
+        </p>
+      </div>
+    </blockquote>
+  </div>
+  <p
+    class="emotion-6 emotion-7"
+    id="skip-instagram-content"
+    tabindex="-1"
+  >
+    End of Instagram content
+  </p>
+</div>
+`;
+
+exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 .twitter-tweet {
+  margin-top: 0!important;
+  margin-bottom: 10rem!important;
+}
+
+.emotion-4 .twitter-tweet-rendered {
+  margin-bottom: 0!important;
+}
+
+.emotion-6 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  <a
+    class="focusIndicatorRemove emotion-2 emotion-3"
+    href="#skip-twitter-content"
+  >
+    <span>
+      Skip Twitter content
+    </span>
+  </a>
+  <div
+    class="emotion-4 emotion-5"
+  >
+    <blockquote
+      class="twitter-tweet"
+    >
+      <p
+        dir="ltr"
+        lang="en"
+      >
+        Australia: Due to the recommendations of local, state, federal and international government authorities, including the Center for Disease Control, to reduce potential health risks in response to the current global health crisis, we are no longer traveling to Aus for the show.
+      </p>
+      — Miley Ray Cyrus (@MileyCyrus) 
+      <a
+        href="https://twitter.com/MileyCyrus/status/1237210910835392512?ref_src=twsrc%5Etfw"
+      >
+        March 10, 2020
+      </a>
+    </blockquote>
+    
+
+  </div>
+  <p
+    class="emotion-6 emotion-7"
+    id="skip-twitter-content"
+    tabindex="-1"
+  >
+    End of Twitter content
+  </p>
+</div>
+`;
+
+exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  margin: 0;
+  background-color: transparent;
+}
+
+.emotion-6 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6>iframe {
+  border: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.emotion-8 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #545658;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-8>span {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-10 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  <a
+    class="focusIndicatorRemove emotion-2 emotion-3"
+    href="#skip-youtube-content"
+  >
+    <span>
+      Skip YouTube content
+    </span>
+  </a>
+  <figure
+    class="emotion-4 emotion-5"
+  >
+    <div
+      class="emotion-6 emotion-7"
+    >
+      <iframe
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen=""
+        frameborder="0"
+        height="270"
+        src="https://www.youtube.com/embed/chiWVxreqhU?feature=oembed"
+        width="480"
+      />
+    </div>
+    <figcaption
+      class="emotion-8 emotion-9"
+    >
+      <span>
+        Video caption, 
+      </span>
+      undefined
+    </figcaption>
+  </figure>
+  <p
+    class="emotion-10 emotion-11"
+    id="skip-youtube-content"
+    tabindex="-1"
+  >
+    End of YouTube content
+  </p>
+</div>
+`;
+
+exports[`CanonicalSocialEmbed should render a notice when the provider is unsupported 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  border: 0.0625rem solid #AEAEB5;
+  border-radius: 0.5rem;
+  color: #3F3F42;
+  padding: 1rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-4 p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.emotion-4 a,
+.emotion-4 small {
+  display: block;
+}
+
+.emotion-4 a {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 a:visited {
+  color: #6E6E73;
+}
+
+.emotion-4 a:hover,
+.emotion-4 a:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4 small {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.emotion-6 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <a
+      class="focusIndicatorRemove emotion-2 emotion-3"
+      href="#skip-unknown-content"
+    >
+      <span>
+        Skip unknown content
+      </span>
+    </a>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <p
+        data-testid="social-embed-fallback-title"
+      >
+        Sorry but we're having trouble displaying this content
+      </p>
+      <a
+        aria-label="View content on unknown, external"
+        href="embed-url"
+      >
+        View content on unknown
+      </a>
+      <small>
+        Warning: BBC is not responsible for third party content
+      </small>
+    </div>
+    <p
+      class="emotion-6 emotion-7"
+      id="skip-unknown-content"
+      tabindex="-1"
+    >
+      End of unknown content
+    </p>
+  </div>
+</div>
+`;
+
+exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed response 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-2 span {
+  color: #222222;
+}
+
+.emotion-2:hover span,
+.emotion-2:focus span {
+  color: #B80000;
+  border-bottom: 2px solid #B80000;
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  border: 0.0625rem solid #AEAEB5;
+  border-radius: 0.5rem;
+  color: #3F3F42;
+  padding: 1rem;
+}
+
+@media (min-width: 20rem) {
+  .emotion-4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-4 p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.emotion-4 a,
+.emotion-4 small {
+  display: block;
+}
+
+.emotion-4 a {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 a:visited {
+  color: #6E6E73;
+}
+
+.emotion-4 a:hover,
+.emotion-4 a:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4 small {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.emotion-6 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <a
+      class="focusIndicatorRemove emotion-2 emotion-3"
+      href="#skip-twitter-content"
+    >
+      <span>
+        Skip Twitter content
+      </span>
+    </a>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <p
+        data-testid="social-embed-fallback-title"
+      >
+        Sorry but we're having trouble displaying this content
+      </p>
+      <a
+        aria-label="View content on Twitter, external"
+        href="embed-url"
+      >
+        View content on Twitter
+      </a>
+      <small>
+        Warning: BBC is not responsible for third party content
+      </small>
+    </div>
+    <p
+      class="emotion-6 emotion-7"
+      id="skip-twitter-content"
+      tabindex="-1"
+    >
+      End of Twitter content
+    </p>
+  </div>
+</div>
+`;

@@ -13,20 +13,12 @@ jest.mock('../serviceConfigs', () => ({
   },
 }));
 
-const testCookieOrigins = [
-  'https://www.test.bbc.com/cookieoven',
-  'https://www.test.bbc.co.uk/cookieoven',
+const analyticsOrigins = [
+  'https://ping.chartbeat.net',
+  'https://dataplane.rum.eu-west-1.amazonaws.com',
 ];
 
-const liveCookieOrigins = [
-  'https://www.bbc.com/cookieoven',
-  'https://www.bbc.co.uk/cookieoven',
-];
-
-const fontOrigins = [
-  'https://gel.files.bbci.co.uk',
-  'https://ws-downloads.files.bbci.co.uk',
-];
+const fontOrigins = ['https://ws-downloads.files.bbci.co.uk'];
 
 describe('getAssetOrigins', () => {
   beforeEach(() => {
@@ -39,10 +31,10 @@ describe('getAssetOrigins', () => {
     process.env.SIMORGH_APP_ENV = 'test';
 
     expect(getAssetOrigins('foobar')).toEqual([
-      ...testCookieOrigins,
       'https://ichef.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
+      ...analyticsOrigins,
     ]);
   });
 
@@ -50,10 +42,10 @@ describe('getAssetOrigins', () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
     expect(getAssetOrigins('foobar')).toEqual([
-      ...liveCookieOrigins,
       'https://ichef.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
+      ...analyticsOrigins,
     ]);
   });
 
@@ -61,10 +53,10 @@ describe('getAssetOrigins', () => {
     process.env.SIMORGH_APP_ENV = 'test';
 
     expect(getAssetOrigins('news')).toEqual([
-      ...testCookieOrigins,
       'https://ichef.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
+      ...analyticsOrigins,
       ...fontOrigins,
     ]);
   });
@@ -73,10 +65,10 @@ describe('getAssetOrigins', () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
     expect(getAssetOrigins('news')).toEqual([
-      ...liveCookieOrigins,
       'https://ichef.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
+      ...analyticsOrigins,
       ...fontOrigins,
     ]);
   });

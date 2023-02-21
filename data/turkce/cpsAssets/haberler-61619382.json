@@ -1,0 +1,1079 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:turkce/haberler-61619382",
+    "locators": {
+      "assetUri": "/turkce/haberler-61619382",
+      "curieCpsUrn": "urn:bbc:cps:curie:asset:57843600-3112-4324-86af-dc87df8b425a",
+      "assetId": "61619382",
+      "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-61619382",
+      "curie": "http://www.bbc.co.uk/asset/57843600-3112-4324-86af-dc87df8b425a"
+    },
+    "type": "STY",
+    "createdBy": "turkish-v6",
+    "language": "tr",
+    "lastUpdated": 1656576792386,
+    "firstPublished": 1653754782000,
+    "lastPublished": 1653754782000,
+    "timestamp": 1653754782000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "hasShortForm": false,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Monkeypox~Coronavirus+pandemic~Social+media",
+      "cps_asset_id": "61619382",
+      "ldp_ids": "09802911-b171-4092-90b3-a60914832b34~5fe79b8d-56e5-4aff-8b05-21f9ad731912~ea2c5d34-4279-4e06-b69a-e699321d7f9f",
+      "contentId": "urn:bbc:cps:curie:asset:57843600-3112-4324-86af-dc87df8b425a",
+      "counterName": "turkce.other_news.story.61619382.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+        "categoryName": "Fact Check"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "WS - Educate me"
+        },
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "tr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+      "locator": "urn:bbc:cps:curie:asset:57843600-3112-4324-86af-dc87df8b425a",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/06c730cd-79e2-4c05-9b16-b40e5bd53952#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/2c43504d-379c-44d1-b9a5-59b7759344b6#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/09802911-b171-4092-90b3-a60914832b34#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+          "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "contributor": [
+          {
+            "value": "http://www.bbc.co.uk/things/06c730cd-79e2-4c05-9b16-b40e5bd53952#id",
+            "type": "contributor"
+          }
+        ],
+        "assetType": [
+          {
+            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+            "type": "assetType"
+          }
+        ],
+        "primaryMediaType": [
+          {
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+            "type": "primaryMediaType"
+          }
+        ],
+        "motivation": [
+          {
+            "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id",
+            "type": "motivation"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id",
+            "type": "motivation"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/2c43504d-379c-44d1-b9a5-59b7759344b6#id",
+            "thingLabel": "Fact check",
+            "thingUri": "http://www.bbc.co.uk/things/2c43504d-379c-44d1-b9a5-59b7759344b6#id",
+            "thingId": "2c43504d-379c-44d1-b9a5-59b7759344b6",
+            "thingType": ["tagging:Format", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+              "http://www.wikidata.org/entity/Q920093",
+              "http://dbpedia.org/resource/Fact_checking"
+            ],
+            "thingEnglishLabel": "Fact check",
+            "thingPreferredLabel": "Fact check",
+            "thingLabelLanguage": "tr",
+            "type": "formats"
+          }
+        ],
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/09802911-b171-4092-90b3-a60914832b34#id",
+            "thingLabel": "Maymun çiçeği virüsü",
+            "thingUri": "http://www.bbc.co.uk/things/09802911-b171-4092-90b3-a60914832b34#id",
+            "thingId": "09802911-b171-4092-90b3-a60914832b34",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q382370",
+              "http://dbpedia.org/resource/Monkeypox"
+            ],
+            "thingEnglishLabel": "Monkeypox",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingLabel": "Koronavirüs",
+            "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/COVID-19_pandemic",
+              "http://www.wikidata.org/entity/Q81068910"
+            ],
+            "thingEnglishLabel": "Coronavirus pandemic",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+            "thingLabel": "Sosyal medya",
+            "thingUri": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+            "thingId": "ea2c5d34-4279-4e06-b69a-e699321d7f9f",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Social_media",
+              "http://www.wikidata.org/entity/Q202833"
+            ],
+            "thingEnglishLabel": "Social media",
+            "type": "about"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Maymun çiçeği virüsü",
+          "thingUri": "http://www.bbc.co.uk/things/09802911-b171-4092-90b3-a60914832b34#id",
+          "thingId": "09802911-b171-4092-90b3-a60914832b34",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q382370",
+            "http://dbpedia.org/resource/Monkeypox"
+          ],
+          "topicName": "Maymun çiçeği virüsü",
+          "topicId": "cnrl7jy449yt",
+          "curationList": [
+            {
+              "curationId": "641b7094-e17d-4d38-908b-4a6c2bac84ab",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Monkeypox",
+          "thingLabelLanguage": "tr",
+          "thingPreferredLabel": "Monkeypox"
+        },
+        {
+          "thingLabel": "Koronavirüs",
+          "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+          "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/COVID-19_pandemic",
+            "http://www.wikidata.org/entity/Q81068910"
+          ],
+          "topicName": "Koronavirüs",
+          "topicId": "ck0r47pk362t",
+          "curationList": [
+            {
+              "curationId": "f14e26df-8c88-4f64-a46c-baee7bfa4099",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Coronavirus pandemic",
+          "thingLabelLanguage": "tr",
+          "thingPreferredLabel": "Coronavirus pandemic"
+        },
+        {
+          "thingLabel": "Sosyal medya",
+          "thingUri": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+          "thingId": "ea2c5d34-4279-4e06-b69a-e699321d7f9f",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Social_media",
+            "http://www.wikidata.org/entity/Q202833"
+          ],
+          "topicName": "Sosyal medya",
+          "topicId": "cwr9jq90w8gt",
+          "curationList": [
+            {
+              "curationId": "099dfb1a-58ff-43d4-8156-9056a122a21b",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Social media",
+          "thingLabelLanguage": "tr",
+          "thingPreferredLabel": "Social media"
+        }
+      ]
+    },
+    "version": "v1.4.4",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "crosshead",
+      "social_embed",
+      "list",
+      "comment"
+    ],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "TURKISH", "producerId": "92" },
+    "readTime": 3,
+    "siteUri": "/turkce",
+    "topics": [
+      {
+        "topicName": "Koronavirüs",
+        "topicId": "ck0r47pk362t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "f14e26df-8c88-4f64-a46c-baee7bfa4099",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Event"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce"
+      },
+      {
+        "topicName": "Maymun çiçeği virüsü",
+        "topicId": "cnrl7jy449yt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/09802911-b171-4092-90b3-a60914832b34#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "641b7094-e17d-4d38-908b-4a6c2bac84ab",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce"
+      },
+      {
+        "topicName": "Sosyal medya",
+        "topicId": "cwr9jq90w8gt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "099dfb1a-58ff-43d4-8156-9056a122a21b",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "124941361",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/3FBA/production/_124941361_345e1830-ce4d-4565-8610-5bc937a13158.jpg",
+        "path": "/cpsprodpb/3FBA/production/_124941361_345e1830-ce4d-4565-8610-5bc937a13158.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "bir maymun çiçeği meme'i",
+        "caption": "Maymun çiçeği ile ilgili bazıları esprili birçok görsel sosyal medya platformlarında dolaşıma sokuldu",
+        "copyrightHolder": "Facebook/ An0maly/ NTI",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Maymun çiçeği virüsü vakalarının Avrupa'da görülmeye başlamasıyla birlikte, Covid-19 pandemisinden aşina olduğumuz bazı yalan iddialar da yeniden internette ve sosyal medya platformlarında dolaşıma sokulmaya başlandı. ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Maymun çiçeği yeni kapanmalara neden olacak mı? ",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Özellikle TikTok'ta, maymun çiçeği virüsü nedeniyle yeni seyahat kısıtlamalarının gelebileceği iddiaları yoğunlukla paylaşılıyor. Hatta bir hesap, takipçilerine &quot;maymun çiçeği kapanmaları ve zorbalığına hazır olun&quot; çağrıları yapıyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Bazı görsellerde ise İngiltere hükümetinin Covid-19 salgını sırasında yaptığı basın açıklamalarının görüntüleri kopyalanarak, hükümetin koronavirüsle ilgili kullandığı sloganlar maymun çiçeği virüsü için tekrarlanıyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "124948632",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/5C84/production/_124948632_untitled2.png",
+        "path": "/cpsprodpb/5C84/production/_124948632_untitled2.png",
+        "height": 760,
+        "width": 976,
+        "altText": "bir tweet",
+        "caption": "Bazı görsellerde Covid-19 döneminde kullanılan \"Evde kalın, hayat kurtarın\" sloganları yer alıyor",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Yeni bir virüs salgını ile ilgili endişeler anlaşılabilir olsa da, bilim insanları bu virüsün Covid gibi olmadığını ve bu virüsün bulaşının sınırlı olacağını söylüyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Maymun çiçeği virüsü, Covid'den çok daha zor bulaşıyor ve bu hastalığa karşı hali hazırda aşı ve tedavi yöntemleri mevcut. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Vakalar, hastaların virüsü ancak semptomlar ortaya çıktıktan sonra bulaştırabildiğini gösteriyor, bu da virüsü tespit etmeyi ve durdurmayı kolaylaştırıyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Oxford Üniversitesi'ndeki Pandemi Bilimleri Merkezi'nden Prof. Peter Horby, &quot;Bu yüzden kapanmalar ya da toplumsal aşılama bu virüse karşı atılacak adımlar arasında yer almıyor&quot; diyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://www.instagram.com/p/CeWO3HcIE9w/",
+        "source": "instagram",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "author_name": "bbcturkce",
+            "provider_name": "Instagram",
+            "provider_url": "https://www.instagram.com/",
+            "thumbnail_url": "https://scontent.cdninstagram.com/v/t51.2885-15/285419806_401059631932344_5053611324241292449_n.jpg?stp=dst-jpg_e35_p640x640_sh0.08&_nc_ht=scontent.cdninstagram.com&_nc_cat=100&_nc_ohc=xUbOCOBKOOwAX8QKbRf&edm=AMO9-JQAAAAA&ccb=7-5&oh=00_AT9DHKyQLCt6HEF94Qbfkl1FDTiDq3IEGYEXmOpkv0hAmg&oe=629C02A8&_nc_sid=b9f2ee",
+            "thumbnail_width": 640,
+            "thumbnail_height": 1137,
+            "html": "<blockquote class=\"instagram-media\" data-instgrm-captioned data-instgrm-permalink=\"https://www.instagram.com/reel/CeWO3HcIE9w/?utm_source=ig_embed&amp;utm_campaign=loading\" data-instgrm-version=\"14\" style=\" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\"><div style=\"padding:16px;\"> <a href=\"https://www.instagram.com/reel/CeWO3HcIE9w/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;\" target=\"_blank\"> <div style=\" display: flex; flex-direction: row; align-items: center;\"> <div style=\"background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;\"></div> <div style=\"display: flex; flex-direction: column; flex-grow: 1; justify-content: center;\"> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;\"></div> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;\"></div></div></div><div style=\"padding: 19% 0;\"></div> <div style=\"display:block; height:50px; margin:0 auto 12px; width:50px;\"><svg width=\"50px\" height=\"50px\" viewBox=\"0 0 60 60\" version=\"1.1\" xmlns=\"https://www.w3.org/2000/svg\" xmlns:xlink=\"https://www.w3.org/1999/xlink\"><g stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\"><g transform=\"translate(-511.000000, -20.000000)\" fill=\"#000000\"><g><path d=\"M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631\"></path></g></g></g></svg></div><div style=\"padding-top: 8px;\"> <div style=\" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;\">View this post on Instagram</div></div><div style=\"padding: 12.5% 0;\"></div> <div style=\"display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;\"><div> <div style=\"background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);\"></div> <div style=\"background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;\"></div> <div style=\"background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);\"></div></div><div style=\"margin-left: 8px;\"> <div style=\" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;\"></div> <div style=\" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)\"></div></div><div style=\"margin-left: auto;\"> <div style=\" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);\"></div> <div style=\" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);\"></div> <div style=\" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);\"></div></div></div> <div style=\"display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;\"> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;\"></div> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;\"></div></div></a><p style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;\"><a href=\"https://www.instagram.com/reel/CeWO3HcIE9w/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;\" target=\"_blank\">A post shared by BBC NEWS TÜRKÇE (@bbcturkce)</a></p></div></blockquote>",
+            "width": 658
+          },
+          "fallback_image": {
+            "fallback_image_width": 599,
+            "fallback_image_height": 1091,
+            "alt_text": "Instagram post by bbcturkce: A post shared by BBC NEWS TÜRKÇE (@bbcturkce)"
+          }
+        },
+        "id": "CeWO3HcIE9w",
+        "type": "social_embed"
+      },
+      {
+        "text": "Ancak virüsü kapmış kişiler ve yakınlarına karantina ve aşılama uygulanıyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Dünya Sağlık Örgütü (WHO) adına konuşan Dr Rosamund Lewis, toplu aşılamaya gerek olmadığını söyledi. WHO ayrıca olası seyahat yasaklarına da karşı olduğunu belirtti. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>turkce/haberler-dunya-61606347</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "WHO: Maymun çiçeği virüsü vakaları artabilir",
+                  "headline": "Maymun çiçeği virüsü: Dünya Sağlık Örgütü 'Vakalar artabilir ancak endişeye kapılmamak gerek' diyor",
+                  "overtyped": "WHO: Maymun çiçeği virüsü vakaları artabilir"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/turkce/haberler-dunya-61606347"
+                },
+                "summary": "Kuruluşun Salgın Hastalıklar Birimi Başkanı Dr. Sylvie Briand bununla birlikte doğru önlemlerle salgının kontrol altına alınabileceğini, halkın endişeye kapılmaması gerektiğini vurguladı.",
+                "timestamp": 1653657439000,
+                "language": "tr",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:turkce/haberler-dunya-61606347",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>turkce/haberler-dunya-61506053</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Maymun çiçeği virüsü: Belirtileri neler, nasıl bulaşıyor, hastalığın tedavisi var mı?",
+                  "headline": "Maymun çiçeği virüsü nedir, nasıl bulaşır, hastalığın tedavisi var mı?",
+                  "overtyped": "Maymun çiçeği virüsü: Belirtileri neler, nasıl bulaşıyor, hastalığın tedavisi var mı?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/turkce/haberler-dunya-61506053"
+                },
+                "summary": "Sağlık Bakanı Fahrettin Koca Türkiye'de ilk maymun çiçeği virüsünün tespit edildiğini açıkladı. Dünya Sağlık Örgütü (WHO) verilerine göre, Haziran sonu itibarıyla 49 ülkede en az 4.700 vakaya rastlandı.",
+                "timestamp": 1656576784000,
+                "language": "tr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:turkce/haberler-dunya-61506053",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Laboratuvarda üretildiğine dair bir kanıt yok",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Çin, ABD, Rusya ve Ukrayna'da bazı sosyal sosyal medya hesapları ve hatta bazı haber kaynakları, virüsün laboratuvarda üretildiği ve biyolojik silah olarak kullanılabileceği iddialarını ortaya attı. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ancak bir virüsün çıkış noktası, virüsün DNA dizilimine bakarak tespit edilebiliyor. Genetik bilimci Fatima Tokhmafshan, bunu bir posta kolisinin barkodunu okuyarak, izlediği yolları takip etmeye benzetiyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Virüsün genetik dizilimi bizi hastalığın yaygın olarak görüldüğü Batı Afrika'daki virüse götürüyor, bu da &quot;virüsün laboratuvarda üretilmediğini gösteriyor&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "124834290",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/241B/production/_124834290_capture.png",
+        "path": "/cpsprodpb/241B/production/_124834290_capture.png",
+        "height": 549,
+        "width": 976,
+        "altText": "Maymun çiçeği yaralarının farklı evreleri",
+        "caption": "Maymun çiçeği yaralarının farklı evreleri",
+        "copyrightHolder": "UKHSA",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "2018 ve 2021'de İngiltere'de, 2021'de de ABD'de maymun çiçeği vakaları görülmüştü ve bunların hepsi seyahat ya da hayvan ticareti kaynaklıydı. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Prof. Horby &quot;Şu anda gördüğümüz vakaların da aynı şekilde olmuş olması çok makul ve şu ana kadarki en olası senaryo bu&quot; diyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "İngiltere'de son salgında ortaya çıkan ilk vaka, Nijerya'ya gitmiş olan bir kişide tespit edilmişti. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Yani Prof. Horby, maymun çiçeği virüsünün bir laboratuvardan çıkmış olduğu iddialarına karşı &quot;Kesinlikle, buna dayanak oluşturabilecek tek bir kanıt bile yok&quot; diyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>turkce/haberler-dunya-61540660</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Maymun çiçeği virüsü: Endişelenmeli miyiz yoksa görmezden mi gelmeliyiz?",
+                  "headline": "Maymun çiçeği virüsü: Endişelenmeli miyiz yoksa görmezden mi gelmeliyiz?",
+                  "overtyped": "Maymun çiçeği virüsü: Endişelenmeli miyiz yoksa görmezden mi gelmeliyiz? "
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/turkce/haberler-dunya-61540660"
+                },
+                "summary": "BBC Sağlık ve Bilim muhabiri James Gallagher, İngiltere'deki uzmanlara maymun çiçeği virüsü ile ilgili merak edilen soruyu sordu: Gerçekten ne oluyor? Endişe etmemizi gerektiren bir durum var mı yoksa Covid'i henüz geride bırakıyorken fazla mı endişeleniyoruz?",
+                "timestamp": 1653216359000,
+                "language": "tr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:turkce/haberler-dunya-61540660",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "\"Planlı salgın\" iddiaları",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "İnternette dolaşan başka bir iddia da salgının planlanmış olduğu - ve tabii ki yine işaret edilen isimler, Covid'de olduğu gibi Bill Gates ve Anthony Fauci gibi isimler. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Bu dayanaksız iddia özellikle Rus medyasında, Çin sosyal medya uygulaması Weibo'da ve Instagram'da dolaşıyor. Ayrıca Facebook'ta aynı iddiayı Rumence, Almanca, İngilizce, Arapça, Fransızca, Slovakça, Macarca ve Pencap kaynaklarda bulmak da mümkün. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "İddialar, ABD merkezli bir biyogüvenlik kuruluşu olan Nuclear Threat Initiative (NTI) tarafından hazırlanmış olan bir belgeyi işaret ediyor.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "2021'de MTI bir çalıştay düzenleyerek, dünya liderlerini yeni bir olası salgına hazırlıklı olmaya davet etmişti. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Katılımcılara üzerinde çalışmaları için kurmaca bir senaryo verildi. Bu senaryoda &quot;Maymun çiçeği virüsünün alışılmadık ve ölümcül bir varyantının tüm dünyayı sardığı&quot; varsayılıyordu.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "NTI ise bu virüsün oluşturduğu risk hakkında çok detayı bilgilerin zaten var olması ve dünyadaki vakaların artış gösteriyor olması nedeniyle, çalıştay senaryosu için bu virüsü seçmişti. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Salgınlar hayatın bir gerçeği ve bu gibi kuruluşların, hükümetlerin bunun gibi tahminlerde bulunup hazırlık çalışmaları yapmasında şüphelenecek bir durum yok. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>turkce/haberler-dunya-61517717</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Belçika'da maymun çiçeği virüsünün fetiş festivalinde yayıldığı açıklandı",
+                  "headline": "Maymun çiçeği virüsü: Belçika'daki virüsün fetiş festivalinde yayıldığı açıklandı",
+                  "overtyped": "Belçika'da maymun çiçeği virüsünün fetiş festivalinde yayıldığı açıklandı"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/turkce/haberler-dunya-61517717"
+                },
+                "summary": "Belçika'da maymun çiçeği virüsüne yakalananların sayısı üçe yükseldi. Vakaların tamamının da, 2 hafta önce ülkenin ikinci büyük kenti Anvers'te (Antwerp) düzenlenen \"Darklands\" adlı fetiş festivali ile bağlantılı olduğu bildirildi.",
+                "timestamp": 1653074765000,
+                "language": "tr",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:turkce/haberler-dunya-61517717",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>turkce/haberler-dunya-61535975</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "WHO: Maymun çiçeği vaka sayısı Afrika dışında 29 ülkede 1000'i aştı",
+                  "headline": "Maymun çiçeği virüsü: Dünya Sağlık Örgütü virüs hakkında merak edilen soruları yanıtladı, vakaların artacağı uyarısı yaptı",
+                  "overtyped": "WHO maymun çiçeği virüsü hakkında merak edilen soruları yanıtladı, vakaların artacağı uyarısı yaptı "
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/turkce/haberler-dunya-61535975"
+                },
+                "summary": "Dünya Sağlık Örgütü (WHO), Afrika dışında 29 ülkede kendilerine bildirilen maymun çiçeği vakası sayısının 1.000'i aştığını açıkladı. WHO, virüse dair en çok merak edilen soruları ve yanıtlarını da paylaştı.",
+                "timestamp": 1654712244000,
+                "language": "tr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:turkce/haberler-dunya-61535975",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Maymun çiçeğinin Covid aşılarıyla bağlantısı yok ",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Bu iddialar iki ayrı koldan ilerliyor. Bazıları AstraZeneca aşılarında şempanzelerde bulunan bir virüsün kullanıldığına işaret ediyor. Aşıda kullanılan adenovirüs, modifiye edilmiş, üremesi ve yayılması mümkün olmayan bir virüs.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "124948764",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/B6C0/production/_124948764_untitled3.png",
+        "path": "/cpsprodpb/B6C0/production/_124948764_untitled3.png",
+        "height": 430,
+        "width": 976,
+        "altText": "Tweette \"Milyonlarca kişi genetiğiyle oynanmış şempanze virüsüyle aşılandıktan sonra yeni bir salgının ortaya çıkması kimi şaşırtır ki?\" yazıyor",
+        "caption": "Tweette \"Milyonlarca kişi genetiğiyle oynanmış şempanze virüsüyle aşılandıktan sonra yeni bir salgının ortaya çıkması kimi şaşırtır ki?\" yazıyor",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Bunun gibi sosyal medya paylaşımları, şempanze virüsü içeren aşılarla maymun çiçeği salgını arasında bağ olduğunu iddia ediyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ancak maymun çiçeği virüsü, AstraZeneca aşısında bulunan adenovirüsten tamamen farklı bir tür ve bu virüsün maymunlarda değil, çoğunlukla kemirgenlerde bulunduğu tahmin ediliyor. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Buna benzer bir diğer iddia da Covid aşılarının bağışıklık sistemini baskıladığı ve insanları başka enfeksiyonlara karşı daha kırılgan yaptığı yönünde. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ancak bu iddianın da hiçbir dayanağı bulunmuyor. Aşılar bağışıklık sistemini baskılamak yerine uyarır ve belli bir virüsü hedefleyerek bağışıklık sistemini daha etkili hale getirir. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Çok az sayıda insan ise, aşılara karşı doğuştan gelen otoimmün reaksiyon gösterebiliyor. Bu durumda vücut kendine saldırmaya başlıyor. Ancak aşıların bağışıklık sistemini baskıladığı ya da bizi diğer hastalıklara karşı zayıflattığı iddialarına dair hiçbir kanıt yok. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "location": "",
+        "name": "",
+        "paragraph": {
+          "text": "Do not delete - DigiHub tracker for [61610402]",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        "type": "comment"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Maymun çiçeği virüsü: İnternette dolaşan yanlış iddialar",
+      "headline": "Maymun çiçeği virüsü: İnternette dolaşan yanlış iddialar"
+    },
+    "locators": {
+      "assetUri": "/turkce/haberler-61619382",
+      "curieCpsUrn": "urn:bbc:cps:curie:asset:57843600-3112-4324-86af-dc87df8b425a",
+      "assetId": "61619382",
+      "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-61619382",
+      "curie": "http://www.bbc.co.uk/asset/57843600-3112-4324-86af-dc87df8b425a"
+    },
+    "summary": "Koronavirüs salgını sırasında tanık olduğumuz \"kopyala yapıştır\" komplo teorilerinin benzerleri, maymun çiçeği virüsü ile birlikte yeniden internette dolaşıma sokuldu. Bu yalanlardan bazılarını derledik ve neden yalan olduklarını açıkladık...",
+    "timestamp": 1653754782000,
+    "language": "tr",
+    "byline": {
+      "name": "Rachel Schraer",
+      "title": "Sağlık ve dezenformasyon muhabiri ",
+      "persons": [
+        {
+          "name": "Rachel Schraer",
+          "function": "Health and disinformation reporter"
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+        "categoryName": "Fact Check"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "WS - Educate me"
+        },
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "tr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
+      "locator": "urn:bbc:cps:curie:asset:57843600-3112-4324-86af-dc87df8b425a",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/06c730cd-79e2-4c05-9b16-b40e5bd53952#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/2c43504d-379c-44d1-b9a5-59b7759344b6#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/09802911-b171-4092-90b3-a60914832b34#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+          "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "contributor": [
+          {
+            "value": "http://www.bbc.co.uk/things/06c730cd-79e2-4c05-9b16-b40e5bd53952#id",
+            "type": "contributor"
+          }
+        ],
+        "assetType": [
+          {
+            "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+            "type": "assetType"
+          }
+        ],
+        "primaryMediaType": [
+          {
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+            "type": "primaryMediaType"
+          }
+        ],
+        "motivation": [
+          {
+            "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id",
+            "type": "motivation"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id",
+            "type": "motivation"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/2c43504d-379c-44d1-b9a5-59b7759344b6#id",
+            "thingLabel": "Fact check",
+            "thingUri": "http://www.bbc.co.uk/things/2c43504d-379c-44d1-b9a5-59b7759344b6#id",
+            "thingId": "2c43504d-379c-44d1-b9a5-59b7759344b6",
+            "thingType": ["tagging:Format", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+              "http://www.wikidata.org/entity/Q920093",
+              "http://dbpedia.org/resource/Fact_checking"
+            ],
+            "thingEnglishLabel": "Fact check",
+            "thingPreferredLabel": "Fact check",
+            "thingLabelLanguage": "tr",
+            "type": "formats"
+          }
+        ],
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/09802911-b171-4092-90b3-a60914832b34#id",
+            "thingLabel": "Maymun çiçeği virüsü",
+            "thingUri": "http://www.bbc.co.uk/things/09802911-b171-4092-90b3-a60914832b34#id",
+            "thingId": "09802911-b171-4092-90b3-a60914832b34",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q382370",
+              "http://dbpedia.org/resource/Monkeypox"
+            ],
+            "thingEnglishLabel": "Monkeypox",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingLabel": "Koronavirüs",
+            "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/COVID-19_pandemic",
+              "http://www.wikidata.org/entity/Q81068910"
+            ],
+            "thingEnglishLabel": "Coronavirus pandemic",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+            "thingLabel": "Sosyal medya",
+            "thingUri": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+            "thingId": "ea2c5d34-4279-4e06-b69a-e699321d7f9f",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Social_media",
+              "http://www.wikidata.org/entity/Q202833"
+            ],
+            "thingEnglishLabel": "Social media",
+            "type": "about"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "124941359",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/17452/production/_124941359_281730988_372430761582685_6407269707458074647_n.jpg",
+      "path": "/cpsprodpb/17452/production/_124941359_281730988_372430761582685_6407269707458074647_n.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "a meme showing a newsreader and monkey reading \"oops\"",
+      "copyrightHolder": "Facebook/ An0maly",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:turkce/haberler-61619382",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Haberler",
+      "uri": "/turkce/haberler",
+      "urlIdentifier": "/turkce/haberler",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Turkce",
+      "uri": "/turkce",
+      "urlIdentifier": "/turkce",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "WHO: Maymun çiçeği virüsü vakaları artabilir",
+              "headline": "Maymun çiçeği virüsü: Dünya Sağlık Örgütü 'Vakalar artabilir ancak endişeye kapılmamak gerek' diyor"
+            },
+            "locators": {
+              "assetUri": "/turkce/haberler-dunya-61606347",
+              "cpsUrn": "urn:bbc:content:assetUri:/turkce/haberler-dunya-61606347"
+            },
+            "summary": "Kuruluşun Salgın Hastalıklar Birimi Başkanı Dr. Sylvie Briand bununla birlikte doğru önlemlerle salgının kontrol altına alınabileceğini, halkın endişeye kapılmaması gerektiğini vurguladı.",
+            "timestamp": 1653657439000,
+            "language": "tr",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "124944717",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11840/production/_124944717_76264ba0-949f-4869-b407-1c2496b3dbad.jpg",
+              "path": "/cpsprodpb/11840/production/_124944717_76264ba0-949f-4869-b407-1c2496b3dbad.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "virüs",
+              "copyrightHolder": "SCIENCE PHOTO LIBRARY",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:turkce/haberler-dunya-61606347",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Maymun çiçeği virüsü: Belirtileri neler, nasıl bulaşıyor, hastalığın tedavisi var mı?",
+              "headline": "Maymun çiçeği virüsü nedir, nasıl bulaşır, hastalığın tedavisi var mı?"
+            },
+            "locators": {
+              "assetUri": "/turkce/haberler-dunya-61506053",
+              "cpsUrn": "urn:bbc:content:assetUri:/turkce/haberler-dunya-61506053"
+            },
+            "summary": "Sağlık Bakanı Fahrettin Koca Türkiye'de ilk maymun çiçeği virüsünün tespit edildiğini açıkladı. Dünya Sağlık Örgütü (WHO) verilerine göre, Haziran sonu itibarıyla 49 ülkede en az 4.700 vakaya rastlandı.",
+            "timestamp": 1656576784000,
+            "language": "tr",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "103585163",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8D3E/production/_103585163_monkeypox-getty.jpg",
+              "path": "/cpsprodpb/8D3E/production/_103585163_monkeypox-getty.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Maymun çiçeği belirtileri arasında yüzde başlayan ve vücuda yayılan döküntü de var",
+              "caption": "Liberya'da maymun çiçeği olan 4 yaşındaki bir kız çocuğunun elleri ve bacakları",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:turkce/haberler-dunya-61506053",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Maymun çiçeği virüsü: Endişelenmeli miyiz yoksa görmezden mi gelmeliyiz?",
+              "headline": "Maymun çiçeği virüsü: Endişelenmeli miyiz yoksa görmezden mi gelmeliyiz?"
+            },
+            "locators": {
+              "assetUri": "/turkce/haberler-dunya-61540660",
+              "cpsUrn": "urn:bbc:content:assetUri:/turkce/haberler-dunya-61540660"
+            },
+            "summary": "BBC Sağlık ve Bilim muhabiri James Gallagher, İngiltere'deki uzmanlara maymun çiçeği virüsü ile ilgili merak edilen soruyu sordu: Gerçekten ne oluyor? Endişe etmemizi gerektiren bir durum var mı yoksa Covid'i henüz geride bırakıyorken fazla mı endişeleniyoruz?",
+            "timestamp": 1653216359000,
+            "language": "tr",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "124852399",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/183FD/production/_124852399_hi067948842-1.jpg",
+              "path": "/cpsprodpb/183FD/production/_124852399_hi067948842-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Monkeypox virus particle, TEM: Monkeypox virus particle, coloured transmission electron micrograph (TEM)",
+              "copyrightHolder": "Science Photo Library",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:turkce/haberler-dunya-61540660",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "WHO: Maymun çiçeği vaka sayısı Afrika dışında 29 ülkede 1000'i aştı",
+              "headline": "Maymun çiçeği virüsü: Dünya Sağlık Örgütü virüs hakkında merak edilen soruları yanıtladı, vakaların artacağı uyarısı yaptı"
+            },
+            "locators": {
+              "assetUri": "/turkce/haberler-dunya-61535975",
+              "cpsUrn": "urn:bbc:content:assetUri:/turkce/haberler-dunya-61535975"
+            },
+            "summary": "Dünya Sağlık Örgütü (WHO), Afrika dışında 29 ülkede kendilerine bildirilen maymun çiçeği vakası sayısının 1.000'i aştığını açıkladı. WHO, virüse dair en çok merak edilen soruları ve yanıtlarını da paylaştı.",
+            "timestamp": 1654712244000,
+            "language": "tr",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "124839123",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7DC1/production/_124839123_40880d22-f704-47a6-9eca-ced6f576c5d3.jpg",
+              "path": "/cpsprodpb/7DC1/production/_124839123_40880d22-f704-47a6-9eca-ced6f576c5d3.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Arms and torso of a patient with skin lesions due to monkeypox. File photo",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:turkce/haberler-dunya-61535975",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

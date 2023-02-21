@@ -203,7 +203,7 @@ Object {
 
 exports[`AMP Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`AMP Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`AMP Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`AMP Photo Gallery Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -217,88 +217,67 @@ Object {
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "América Latina",
-  "url": "/mundo/america_latina",
+  "url": "/mundo/topics/c7zp57yyz25t",
 }
 `;
 
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Internacional",
-  "url": "/mundo/internacional",
+  "url": "/mundo/topics/c2lej05epw5t",
 }
 `;
 
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 4`] = `
-Object {
-  "text": "Medio ambiente",
-  "url": "/mundo/noticias-58984987",
-}
-`;
-
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "Coronavirus",
-  "url": "/mundo/topics/c67q9nnn8z7t",
-}
-`;
-
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 8`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 9`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 10`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 11`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 12`] = `
-Object {
-  "text": "Video",
-  "url": "/mundo/media/video",
-}
-`;
-
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 13`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 14`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",
@@ -311,23 +290,13 @@ exports[`AMP Photo Gallery Page Image should match snapshot 1`] = `
 <amp-img
   alt="Tenista de 1904"
   attribution="Getty Images"
+  fallback=""
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 549w"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
   width="549"
->
-  <amp-img
-    alt="Tenista de 1904"
-    attribution="Getty Images"
-    fallback=""
-    height="549"
-    layout="responsive"
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
-    srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
-    width="549"
-  />
-</amp-img>
+/>
 `;
 
 exports[`AMP Photo Gallery Page Main heading should match text 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
@@ -405,8 +374,6 @@ Object {
 exports[`AMP Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/deportes-36935058"`;
 
 exports[`AMP Photo Gallery Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`AMP Photo Gallery Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Photo Gallery Page SEO FB app ID 1`] = `"1609039196070050"`;
 
@@ -511,7 +478,7 @@ exports[`AMP Photo Gallery Page SEO OG url 1`] = `"http://localhost:7080/mundo/d
 
 exports[`AMP Photo Gallery Page SEO Page title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
 
-exports[`AMP Photo Gallery Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Photo Gallery Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Photo Gallery Page SEO Twitter card 1`] = `"summary_large_image"`;
 

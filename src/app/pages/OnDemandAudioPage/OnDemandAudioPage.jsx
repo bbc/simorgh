@@ -3,15 +3,15 @@ import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func, node } from 'prop-types';
-import { GEL_SPACING_TRPL } from '#legacy/gel-foundations/src/spacings';
+import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid } from '#components/Grid';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
@@ -27,10 +27,10 @@ import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ATIAnalytics from '#containers/ATIAnalytics';
+import MetadataContainer from '#containers/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
-import ATIAnalytics from '../../containers/ATIAnalytics';
-import MetadataContainer from '../../containers/Metadata';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 

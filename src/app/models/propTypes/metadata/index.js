@@ -33,7 +33,7 @@ export const optimoMetadataPropTypes = {
   created: number,
   firstPublished: number.isRequired,
   lastPublished: number.isRequired,
-  lastUpdated: number.isRequired,
+  lastUpdated: number,
   locators: shape({
     optimoUrn: string.isRequired,
   }),

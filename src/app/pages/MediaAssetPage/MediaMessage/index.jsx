@@ -6,18 +6,18 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-} from '#legacy/gel-foundations/src/spacings';
+} from '#psammead/gel-foundations/src/spacings';
 
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 
 import { MediaMessage } from '#components/MediaPlayer';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { GridItemLarge } from '#app/components/Grid';
+import { GridItemLarge } from '#components/Grid';
 import nodeLogger from '#lib/logger.node';
 import { NO_TRANSLATION_FOUND } from '#lib/logger.const';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const logger = nodeLogger(__filename);
 

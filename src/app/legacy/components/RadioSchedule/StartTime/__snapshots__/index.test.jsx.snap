@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StartTime should render LTR correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 0.25rem;
+}
+
+.emotion-2>svg {
+  color: #5A5A5A;
+  margin: 0;
+  overflow: visible;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    padding-right: 0.25rem;
+    fill: canvasText;
+  }
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.725rem;
+  height: 0.725rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+.emotion-6>time {
+  color: #5A5A5A;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6>time {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6>time {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-6::after {
+  content: '';
+  border-top: 0.0625rem solid #AEAEB5;
+  top: 1rem;
+  margin-left: 0.625rem;
+  width: 100%;
+}
+
+.emotion-8 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <span
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <svg
+        aria-hidden="true"
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="13"
+        viewBox="0 0 13 13"
+        width="13"
+      >
+        <path
+          d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+        />
+        <path
+          d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+        />
+      </svg>
+    </span>
+    <span
+      aria-hidden="true"
+      class="emotion-6 emotion-7"
+      dir="ltr"
+    >
+      <time
+        class="emotion-8 emotion-9"
+        datetime="2019-08-27"
+      >
+        14:54
+      </time>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`StartTime should render RTL correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0.25rem;
+}
+
+.emotion-2>svg {
+  color: #5A5A5A;
+  margin: 0;
+  overflow: visible;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-2>svg {
+    padding-left: 0.25rem;
+    fill: canvasText;
+  }
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.725rem;
+  height: 0.725rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+.emotion-6>time {
+  color: #5A5A5A;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6>time {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6>time {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-6::after {
+  content: '';
+  border-top: 0.0625rem solid #AEAEB5;
+  top: 1.0625rem;
+  margin-right: 0.625rem;
+  width: 100%;
+}
+
+.emotion-8 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #545658;
+  display: block;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <span
+      class="emotion-2 emotion-3"
+      dir="rtl"
+    >
+      <svg
+        aria-hidden="true"
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="13"
+        viewBox="0 0 13 13"
+        width="13"
+      >
+        <path
+          d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+        />
+        <path
+          d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+        />
+      </svg>
+    </span>
+    <span
+      aria-hidden="true"
+      class="emotion-6 emotion-7"
+      dir="rtl"
+    >
+      <time
+        class="emotion-8 emotion-9"
+        datetime="2019-08-27"
+      >
+        ۱۳:۵۴
+      </time>
+    </span>
+  </div>
+</div>
+`;

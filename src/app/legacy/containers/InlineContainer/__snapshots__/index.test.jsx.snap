@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineContainer should render correctly 1`] = `
+.emotion-0 {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.emotion-2 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+<div>
+  <span
+    class="emotion-0 emotion-1"
+    lang="fa"
+  >
+    <a
+      aria-label="چیسربرگر"
+      class="focusIndicatorReducedWidth emotion-2 emotion-3"
+      href="https://google.com"
+    >
+      چیسربرگر
+    </a>
+  </span>
+</div>
+`;

@@ -818,7 +818,23 @@ export default () => ({
         smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/arabic/topics/cwr9j7nv58nt'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/arabic/topics/cwr9j7nv58nt'],
+            enabled: true,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: true,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2708,8 +2724,11 @@ export default () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/igbo/articles/ckjn8jnrn75o'],
-            enabled: false,
+            paths: [
+              '/igbo/articles/ckjn8jnrn75o',
+              '/igbo/articles/c0jgdy9d841o',
+            ],
+            enabled: true,
           },
           test: {
             paths: ['/igbo/articles/cr1lw620ygjo'],
@@ -3672,7 +3691,23 @@ export default () => ({
         },
         smoke: false,
       },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: ['/kyrgyz/topics/cvpv9djp9qqt?renderer_env=test'],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4164,7 +4199,7 @@ export default () => ({
         environments: {
           live: {
             paths: ['/mundo/noticias-54274735'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/23263889'],
@@ -5388,7 +5423,7 @@ export default () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         environments: {
@@ -5448,7 +5483,7 @@ export default () => ({
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         environments: {
@@ -6507,12 +6542,12 @@ export default () => ({
       topicPage: {
         environments: {
           live: {
-            paths: ['/serbian/lat/new_topics/c06g871g3knt'],
-            enabled: false,
+            paths: ['/serbian/lat/topics/c1gd303q6y6t'],
+            enabled: true,
           },
           test: {
-            paths: ['/serbian/lat/new_topics/c06g871g3knt'],
-            enabled: false,
+            paths: ['/serbian/lat/topics/c1gd303q6y6t'],
+            enabled: true,
           },
           local: {
             paths: [''],
@@ -8584,7 +8619,7 @@ export default () => ({
               '/ukchina/simp/52970385', // CPS video
               '/ukchina/simp/elt/2015/08/150908_are_326_barrel_of_laughs_audio', // TC2 audio
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -8933,7 +8968,23 @@ export default () => ({
       errorPage404: { environments: undefined, smoke: false },
       onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
-      topicPage: { environments: undefined, smoke: false },
+      topicPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/topics/c61k92vrqz6t'], // ukrainian in russian
+            enabled: true,
+          },
+          test: {
+            paths: ['/ukrainian/topics/c61k92vrqz6t'], // ukrainian in russian
+            enabled: true,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: { environments: undefined, smoke: false },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },

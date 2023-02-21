@@ -13,18 +13,25 @@ const getArticleBlocks = view(articleBlocksLens);
 const oEmbedLens = lensPath(
   pathToBlocks.concat(firstItem, pathToBlocks, firstItem, [model, 'oembed']),
 );
+const socialLens = lensPath([model]);
 const getOembed = view(oEmbedLens);
 const getOembedProp = property => pipe(getOembed, prop(property));
+
+const getSocial = view(socialLens);
+const getSocialProp = property => pipe(getSocial, prop(property));
+
 const getEmbedUrl = getOembedProp('url');
 const getEmbedProvider = getOembedProp('provider_name');
 const getEmbedIndexOfType = getOembedProp('indexOfType');
+const getSource = getSocialProp('source');
 const matchesEmbedProvider = provider =>
   pipe(getEmbedProvider, equals(provider));
 const enrichBlocks = (accumulator, block, index, blocks) => {
   const embedUrl = getEmbedUrl(block);
   const embedProvider = getEmbedProvider(block);
+  const source = getSource(block);
 
-  if (embedUrl && embedProvider) {
+  if ((embedUrl || source) && embedProvider) {
     const accumulatedBlocksByProvider = accumulator.filter(
       matchesEmbedProvider(embedProvider),
     );

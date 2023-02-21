@@ -9,7 +9,7 @@ BBC World Service News websites are rendered using Simorgh, a ReactJS based Sing
 
 Simorgh provides a fast and accessible web experience used by millions of people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.md)). It is regularly maintained and well documented, and we welcome open source contributors.
 
-Simorgh is primarily maintained by BBC News Web Engineering teams. It delivers highly trusted news to readers all over the world, currently in ([41 languages](https://www.bbc.com/ws/languages)). We support a wide range of devices and care deeply about scale, performance, and accessibility. We work in agile, flexible teams, and have an exciting roadmap for future development.
+Simorgh is primarily maintained by the BBC News Web Engineering teams. It delivers highly trusted news to readers all over the world, currently in ([41 languages](https://www.bbc.com/ws/languages)). We support a wide range of devices and care deeply about scale, performance, and accessibility. We work in agile, flexible teams, and have an exciting roadmap for future development.
 
 We use an open source component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain.
 
@@ -18,7 +18,7 @@ We use an open source component library called [Psammead](https://github.com/bbc
 Please familiarise yourself with our:
 
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
-- [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
+- [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/README.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
 - [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.md)
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
@@ -237,10 +237,17 @@ Services with variants can't be accessed using the format above, instead the var
 
 Topic pages use internal BBC APIs that are not publicly accessible. This can cause the following warnings to appear when developing locally:
 
-envConfig/secret.env: No such file or directory
-You will not have access to topics
+```
+No BFF_PATH set as environment variable, you will not have access to topics
+```
 
 Internal developers who need to work on topic pages locally should contact the team for access.
+
+### Recommendations
+
+Recommendations in story pages also use internal BBC data labs API's. It requires adding the key/value pair in `envConfig/secret.env` file for them to appear locally.
+
+Internal developers who need to work on article pages locally should contact the team for access.
 
 ### Other page types
 

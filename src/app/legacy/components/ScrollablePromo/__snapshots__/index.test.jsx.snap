@@ -1,0 +1,791 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 1rem;
+  color: #3F3F42;
+}
+
+@media (min-width: 0rem) {
+  .emotion-2 {
+    margin-right: 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    margin-right: 0;
+  }
+}
+
+.emotion-4 {
+  list-style: none;
+  padding-right: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.emotion-4::-webkit-scrollbar {
+  display: none;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+@media (min-width: 0rem) {
+  .emotion-6 {
+    margin-right: 0.5rem;
+  }
+
+  .emotion-6:first-child {
+    margin-right: 0.5rem;
+  }
+
+  .emotion-6:last-child {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-6 {
+    margin-right: 1rem;
+  }
+
+  .emotion-6:first-child {
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-6 {
+    margin-right: 1rem;
+  }
+
+  .emotion-6:first-child {
+    margin-right: 0;
+  }
+}
+
+.emotion-8 {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 0rem) {
+  .emotion-8 {
+    width: 14.8125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    width: 11.125rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-8 {
+    width: 12.6875rem;
+  }
+}
+
+.emotion-10 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  width: 100%;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  color: #202224;
+}
+
+.emotion-10:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-10:hover,
+.emotion-10:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10:visited {
+  color: #6E6E73;
+}
+
+.emotion-10:hover,
+.emotion-10:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10:visited {
+  color: #545658;
+}
+
+<div>
+  <section
+    aria-labelledby="Show-all-links-no-images"
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    role="region"
+  >
+    <strong
+      class="emotion-2 emotion-3"
+      data-testid="eoj-recommendations-heading"
+      id="Show-all-links-no-images"
+    >
+      Show all links (no images)
+    </strong>
+    <ul
+      class="emotion-4 emotion-5"
+      role="list"
+    >
+      <li
+        class="emotion-6 emotion-7"
+      >
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <a
+            class="emotion-10 emotion-11"
+            href="https://www.bbc.co.uk/pidgin"
+          >
+            Show headline
+          </a>
+        </div>
+      </li>
+      <li
+        class="emotion-6 emotion-7"
+      >
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <a
+            class="emotion-10 emotion-11"
+            href="https://www.bbc.com/mundo"
+          >
+            Link with Headline
+          </a>
+        </div>
+      </li>
+      <li
+        class="emotion-6 emotion-7"
+      >
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <a
+            class="emotion-10 emotion-11"
+            href="https://www.bbc.com/brasil"
+          >
+            Brasil homepage
+          </a>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+`;
+
+exports[`ScrollablePromo it should match a11y snapshot for list with no title 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    margin-right: 0;
+  }
+}
+
+.emotion-4 {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 0rem) {
+  .emotion-4 {
+    width: 14.8125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    width: 11.125rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-4 {
+    width: 12.6875rem;
+  }
+}
+
+.emotion-6 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  width: 100%;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  color: #202224;
+}
+
+.emotion-6:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-6:hover,
+.emotion-6:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:visited {
+  color: #6E6E73;
+}
+
+.emotion-6:hover,
+.emotion-6:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:visited {
+  color: #545658;
+}
+
+<div>
+  <section
+    aria-label="Related Content"
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <a
+          class="emotion-6 emotion-7"
+          href="https://www.bbc.com/pidgin"
+        >
+          Single link
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 1rem;
+  color: #3F3F42;
+}
+
+@media (min-width: 0rem) {
+  .emotion-2 {
+    margin-right: 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    margin-right: 0;
+  }
+}
+
+.emotion-4 {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-4 {
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-4 {
+    margin-right: 0;
+  }
+}
+
+.emotion-6 {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 0rem) {
+  .emotion-6 {
+    width: 14.8125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    width: 11.125rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-6 {
+    width: 12.6875rem;
+  }
+}
+
+.emotion-8 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  display: inline-block;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  width: 100%;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  color: #202224;
+}
+
+.emotion-8:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8:visited {
+  color: #6E6E73;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8:visited {
+  color: #545658;
+}
+
+<div>
+  <section
+    aria-labelledby="Single-link"
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    role="region"
+  >
+    <strong
+      class="emotion-2 emotion-3"
+      data-testid="eoj-recommendations-heading"
+      id="Single-link"
+    >
+      Single link
+    </strong>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <div
+        class="emotion-6 emotion-7"
+      >
+        <a
+          class="emotion-8 emotion-9"
+          href="https://www.bbc.com/pidgin"
+        >
+          Single link
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+`;

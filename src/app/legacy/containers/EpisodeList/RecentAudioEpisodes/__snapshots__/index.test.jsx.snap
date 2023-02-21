@@ -1,0 +1,854 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
+.emotion-0 {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.emotion-3 {
+  position: relative;
+  z-index: 0;
+  color: #141414;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-3 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-5 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-11 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-11 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-13 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-15 {
+  padding: 1rem 0;
+  line-height: 0;
+}
+
+.emotion-15:first-child {
+  padding-top: 0;
+}
+
+.emotion-15:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-15:not(:last-child) {
+  border-bottom: 1px #BABABA solid;
+}
+
+.emotion-17 {
+  position: relative;
+  padding-left: 4rem;
+}
+
+.emotion-19 {
+  display: block;
+  line-height: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-19:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  overflow: hidden;
+  z-index: 1;
+}
+
+.emotion-19 .rounded-play-button__ring,
+.emotion-19 .rounded-play-button__triangle {
+  color: #000;
+}
+
+.emotion-19:focus [class*='--hover'],
+.emotion-19:hover [class*='--hover'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-19:focus .rounded-play-button__ring,
+.emotion-19:hover .rounded-play-button__ring,
+.emotion-19:focus .rounded-play-button__inner,
+.emotion-19:hover .rounded-play-button__inner {
+  fill: currentColor;
+  color: #B80000;
+}
+
+.emotion-19:focus .rounded-play-button__triangle,
+.emotion-19:hover .rounded-play-button__triangle {
+  fill: transparent;
+}
+
+.emotion-19:visited [class*='--visited'] {
+  color: #6E6E73;
+}
+
+.emotion-21 {
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+}
+
+.emotion-23 {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.emotion-25 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-27 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  display: inline-block;
+  width: 100%;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-31 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  display: inline-block;
+  width: 100%;
+  margin: 0.25rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-31 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-31 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-37 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-37 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-37 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-39 {
+  display: inline;
+}
+
+.emotion-43 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  border-left: 0.0625rem solid #AEAEB5;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-43 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-43 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-43 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-43 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+<div>
+  <aside
+    aria-labelledby="recent-episodes"
+    class="emotion-0 emotion-1"
+    role="complementary"
+  >
+    <div
+      class="emotion-2 emotion-3 emotion-4"
+    >
+      <h2
+        class="emotion-5 emotion-6"
+      >
+        <span
+          class="emotion-7 emotion-8"
+        >
+          <span
+            class="emotion-9 emotion-10"
+          >
+            <span
+              class="emotion-11 emotion-12"
+              dir="ltr"
+              id="recent-episodes"
+            >
+              Siaran sebelumnya
+            </span>
+          </span>
+        </span>
+      </h2>
+    </div>
+    <ul
+      class="emotion-13 emotion-14"
+      data-e2e="recent-episodes-list"
+      role="list"
+    >
+      <li
+        class="emotion-15 emotion-16"
+        data-e2e="recent-episodes-list-item"
+      >
+        <div
+          class="emotion-17 emotion-18"
+          dir="ltr"
+        >
+          <a
+            aria-labelledby="episodeLinkIndex-0"
+            class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
+            href="/indonesia/bbc_indonesian_radio/w172xnm8j4tz686"
+          >
+            <div
+              aria-hidden="true"
+              class="emotion-21 emotion-22"
+              dir="ltr"
+            >
+              <div
+                aria-hidden="true"
+                class="emotion-23 emotion-24"
+              >
+                
+      
+                <svg
+                  class="rounded-play-button"
+                  focusable="false"
+                  viewBox="0 0 40 40"
+                  width="2.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  
+        
+                  <path
+                    class="rounded-play-button__inner"
+                    d="M20,0C8.971,0,0,8.972,0,20c0,11.028,8.972,20,20,20c11.029,0,20.002-8.972,20.002-20C40.002,8.972,31.028,0,20,0z
+        M15.799,26.939V13.078l11.264,6.93L15.799,26.939z"
+                    fill="transparent"
+                  />
+                  
+        
+                  <path
+                    class="rounded-play-button__ring"
+                    d="M20,40C8.971,40,0,31.028,0,20C0,8.972,8.971,0,20,0c11.029,0,20.002,8.972,20.002,20C40.002,31.028,31.028,40,20,40z
+        M20,1.765C9.945,1.765,1.764,9.945,1.764,20S9.945,38.234,20,38.234c10.056,0,18.237-8.18,18.237-18.234S30.056,1.765,20,1.765z"
+                    fill="currentColor"
+                  />
+                  
+        
+                  <polygon
+                    class="rounded-play-button__triangle"
+                    fill="currentColor"
+                    points="15.799,26.939 27.062,20.008 15.799,13.078 "
+                  />
+                  
+      
+                </svg>
+                
+      
+              </div>
+            </div>
+            <span
+              id="episodeLinkIndex-0"
+              role="text"
+            >
+              <span
+                class="emotion-25 emotion-26"
+              >
+                Audio, 
+              </span>
+              <span
+                class="episode-list__title--hover episode-list__title--visited emotion-27 emotion-28"
+                dir="ltr"
+              >
+                Dunia Pagi Ini
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                , 
+              </span>
+              <span
+                class="episode-list__description--hover episode-list__description--visited emotion-31 emotion-32"
+                dir="ltr"
+              >
+                BBC Indonesia, Kamis 18 Februari 2021
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                , 
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                 Durasi 15,30 
+              </span>
+              <span
+                class="emotion-37 emotion-38"
+                dir="ltr"
+              >
+                <span
+                  aria-hidden="true"
+                >
+                   Durasi 15:30
+                </span>
+              </span>
+              <div
+                class="emotion-39 emotion-40"
+              >
+                <time
+                  class="emotion-38 emotion-42 emotion-43 emotion-44"
+                  datetime="2020-11-17"
+                >
+                  17 November 2020
+                </time>
+              </div>
+            </span>
+          </a>
+        </div>
+      </li>
+      <li
+        class="emotion-15 emotion-16"
+        data-e2e="recent-episodes-list-item"
+      >
+        <div
+          class="emotion-17 emotion-18"
+          dir="ltr"
+        >
+          <a
+            aria-labelledby="episodeLinkIndex-1"
+            class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
+            href="/indonesia/bbc_indonesian_radio/w172xnm84wjrkv2"
+          >
+            <div
+              aria-hidden="true"
+              class="emotion-21 emotion-22"
+              dir="ltr"
+            >
+              <div
+                aria-hidden="true"
+                class="emotion-23 emotion-24"
+              >
+                
+      
+                <svg
+                  class="rounded-play-button"
+                  focusable="false"
+                  viewBox="0 0 40 40"
+                  width="2.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  
+        
+                  <path
+                    class="rounded-play-button__inner"
+                    d="M20,0C8.971,0,0,8.972,0,20c0,11.028,8.972,20,20,20c11.029,0,20.002-8.972,20.002-20C40.002,8.972,31.028,0,20,0z
+        M15.799,26.939V13.078l11.264,6.93L15.799,26.939z"
+                    fill="transparent"
+                  />
+                  
+        
+                  <path
+                    class="rounded-play-button__ring"
+                    d="M20,40C8.971,40,0,31.028,0,20C0,8.972,8.971,0,20,0c11.029,0,20.002,8.972,20.002,20C40.002,31.028,31.028,40,20,40z
+        M20,1.765C9.945,1.765,1.764,9.945,1.764,20S9.945,38.234,20,38.234c10.056,0,18.237-8.18,18.237-18.234S30.056,1.765,20,1.765z"
+                    fill="currentColor"
+                  />
+                  
+        
+                  <polygon
+                    class="rounded-play-button__triangle"
+                    fill="currentColor"
+                    points="15.799,26.939 27.062,20.008 15.799,13.078 "
+                  />
+                  
+      
+                </svg>
+                
+      
+              </div>
+            </div>
+            <span
+              id="episodeLinkIndex-1"
+              role="text"
+            >
+              <span
+                class="emotion-25 emotion-26"
+              >
+                Audio, 
+              </span>
+              <span
+                class="episode-list__title--hover episode-list__title--visited emotion-27 emotion-28"
+                dir="ltr"
+              >
+                Dunia Pagi Ini
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                , 
+              </span>
+              <span
+                class="episode-list__description--hover episode-list__description--visited emotion-31 emotion-32"
+                dir="ltr"
+              >
+                16 November 2020
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                , 
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                 Durasi 15,30 
+              </span>
+              <span
+                class="emotion-37 emotion-38"
+                dir="ltr"
+              >
+                <span
+                  aria-hidden="true"
+                >
+                   Durasi 15:30
+                </span>
+              </span>
+            </span>
+          </a>
+        </div>
+      </li>
+      <li
+        class="emotion-15 emotion-16"
+        data-e2e="recent-episodes-list-item"
+      >
+        <div
+          class="emotion-17 emotion-18"
+          dir="ltr"
+        >
+          <a
+            aria-labelledby="episodeLinkIndex-2"
+            class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
+            href="/indonesia/bbc_indonesian_radio/w172xnm84wjrg2y"
+          >
+            <div
+              aria-hidden="true"
+              class="emotion-21 emotion-22"
+              dir="ltr"
+            >
+              <div
+                aria-hidden="true"
+                class="emotion-23 emotion-24"
+              >
+                
+      
+                <svg
+                  class="rounded-play-button"
+                  focusable="false"
+                  viewBox="0 0 40 40"
+                  width="2.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  
+        
+                  <path
+                    class="rounded-play-button__inner"
+                    d="M20,0C8.971,0,0,8.972,0,20c0,11.028,8.972,20,20,20c11.029,0,20.002-8.972,20.002-20C40.002,8.972,31.028,0,20,0z
+        M15.799,26.939V13.078l11.264,6.93L15.799,26.939z"
+                    fill="transparent"
+                  />
+                  
+        
+                  <path
+                    class="rounded-play-button__ring"
+                    d="M20,40C8.971,40,0,31.028,0,20C0,8.972,8.971,0,20,0c11.029,0,20.002,8.972,20.002,20C40.002,31.028,31.028,40,20,40z
+        M20,1.765C9.945,1.765,1.764,9.945,1.764,20S9.945,38.234,20,38.234c10.056,0,18.237-8.18,18.237-18.234S30.056,1.765,20,1.765z"
+                    fill="currentColor"
+                  />
+                  
+        
+                  <polygon
+                    class="rounded-play-button__triangle"
+                    fill="currentColor"
+                    points="15.799,26.939 27.062,20.008 15.799,13.078 "
+                  />
+                  
+      
+                </svg>
+                
+      
+              </div>
+            </div>
+            <span
+              id="episodeLinkIndex-2"
+              role="text"
+            >
+              <span
+                class="emotion-25 emotion-26"
+              >
+                Audio, 
+              </span>
+              <span
+                class="episode-list__title--hover episode-list__title--visited emotion-27 emotion-28"
+                dir="ltr"
+              >
+                Dunia Pagi Ini
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                , 
+              </span>
+              <span
+                class="episode-list__description--hover episode-list__description--visited emotion-31 emotion-32"
+                dir="ltr"
+              >
+                16 November 2020
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                , 
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                 Durasi 15,30 
+              </span>
+              <span
+                class="emotion-37 emotion-38"
+                dir="ltr"
+              >
+                <span
+                  aria-hidden="true"
+                >
+                   Durasi 15:30
+                </span>
+              </span>
+            </span>
+          </a>
+        </div>
+      </li>
+      <li
+        class="emotion-15 emotion-16"
+        data-e2e="recent-episodes-list-item"
+      >
+        <div
+          class="emotion-17 emotion-18"
+          dir="ltr"
+        >
+          <a
+            aria-labelledby="episodeLinkIndex-3"
+            class="focusIndicatorDisplayBlock focusIndicatorInvert emotion-19 emotion-20"
+            href="/indonesia/bbc_indonesian_radio/w172xnm84wjgw3s"
+          >
+            <div
+              aria-hidden="true"
+              class="emotion-21 emotion-22"
+              dir="ltr"
+            >
+              <div
+                aria-hidden="true"
+                class="emotion-23 emotion-24"
+              >
+                
+      
+                <svg
+                  class="rounded-play-button"
+                  focusable="false"
+                  viewBox="0 0 40 40"
+                  width="2.5rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  
+        
+                  <path
+                    class="rounded-play-button__inner"
+                    d="M20,0C8.971,0,0,8.972,0,20c0,11.028,8.972,20,20,20c11.029,0,20.002-8.972,20.002-20C40.002,8.972,31.028,0,20,0z
+        M15.799,26.939V13.078l11.264,6.93L15.799,26.939z"
+                    fill="transparent"
+                  />
+                  
+        
+                  <path
+                    class="rounded-play-button__ring"
+                    d="M20,40C8.971,40,0,31.028,0,20C0,8.972,8.971,0,20,0c11.029,0,20.002,8.972,20.002,20C40.002,31.028,31.028,40,20,40z
+        M20,1.765C9.945,1.765,1.764,9.945,1.764,20S9.945,38.234,20,38.234c10.056,0,18.237-8.18,18.237-18.234S30.056,1.765,20,1.765z"
+                    fill="currentColor"
+                  />
+                  
+        
+                  <polygon
+                    class="rounded-play-button__triangle"
+                    fill="currentColor"
+                    points="15.799,26.939 27.062,20.008 15.799,13.078 "
+                  />
+                  
+      
+                </svg>
+                
+      
+              </div>
+            </div>
+            <span
+              id="episodeLinkIndex-3"
+              role="text"
+            >
+              <span
+                class="emotion-25 emotion-26"
+              >
+                Audio, 
+              </span>
+              <span
+                class="episode-list__title--hover episode-list__title--visited emotion-27 emotion-28"
+                dir="ltr"
+              >
+                Dunia Pagi Ini
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                , 
+              </span>
+              <span
+                class="episode-list__description--hover episode-list__description--visited emotion-31 emotion-32"
+                dir="ltr"
+              >
+                Wednesday Evening
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                , 
+              </span>
+              <span
+                class="emotion-25 emotion-26"
+              >
+                 Durasi 15,30 
+              </span>
+              <span
+                class="emotion-37 emotion-38"
+                dir="ltr"
+              >
+                <span
+                  aria-hidden="true"
+                >
+                   Durasi 15:30
+                </span>
+              </span>
+              <div
+                class="emotion-39 emotion-40"
+              >
+                <time
+                  class="emotion-38 emotion-42 emotion-43 emotion-44"
+                  datetime="2020-11-13"
+                >
+                  13 November 2020
+                </time>
+              </div>
+            </span>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </aside>
+</div>
+`;

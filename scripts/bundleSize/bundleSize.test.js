@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import ora from 'ora';
 import chalk from 'chalk';
 import { readdirSync, statSync } from 'fs';

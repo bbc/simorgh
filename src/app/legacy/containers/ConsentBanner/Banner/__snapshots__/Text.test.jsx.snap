@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Consent Banner Text should correctly render banner text in the UK 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    margin-top: 1.5rem;
+  }
+}
+
+<div>
+  <p
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    Just some text
+  </p>
+</div>
+`;
+
+exports[`Consent Banner Text should correctly render banner text outside the UK 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    margin-top: 1.5rem;
+  }
+}
+
+<div>
+  <p
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    Just some international text
+  </p>
+</div>
+`;
+
+exports[`Consent Banner Text should correctly render banner text with a link in the UK 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    margin-top: 1.5rem;
+  }
+}
+
+<div>
+  <p
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    Some text 
+    <a
+      class="focusIndicatorReducedWidth"
+      href="https://www.bbc.co.uk"
+    >
+      with a link
+    </a>
+     followed by text.
+  </p>
+</div>
+`;
+
+exports[`Consent Banner Text should correctly render banner text with a link outside the UK 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    margin-top: 1.5rem;
+  }
+}
+
+<div>
+  <p
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    Some international text
+    <a
+      class="focusIndicatorReducedWidth"
+      href="https://www.bbc.com"
+    >
+      with an international link
+    </a>
+     followed by international text.
+  </p>
+</div>
+`;

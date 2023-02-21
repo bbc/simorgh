@@ -76,7 +76,7 @@ Object {
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -90,88 +90,67 @@ Object {
 exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "América Latina",
-  "url": "/mundo/america_latina",
+  "url": "/mundo/topics/c7zp57yyz25t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Internacional",
-  "url": "/mundo/internacional",
+  "url": "/mundo/topics/c2lej05epw5t",
 }
 `;
 
 exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
-Object {
-  "text": "Medio ambiente",
-  "url": "/mundo/noticias-58984987",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "Coronavirus",
-  "url": "/mundo/topics/c67q9nnn8z7t",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 12`] = `
-Object {
-  "text": "Video",
-  "url": "/mundo/media/video",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 13`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 14`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",
@@ -183,9 +162,11 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Pie de fot
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="A person holding a union jack umbrella in front of Big Ben"
-  class="eehpdyc0 bbc-rb7xa0 e11uq3260"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="549"
+  sizes="(min-width: 1008px) 645px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
   width="976"
 />
 `;
@@ -267,8 +248,6 @@ Object {
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`Canonical Story Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
@@ -390,7 +369,7 @@ exports[`Canonical Story Page SEO OG url 1`] = `"http://localhost:7080/mundo/not
 
 exports[`Canonical Story Page SEO Page title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
-exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 

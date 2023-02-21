@@ -196,7 +196,7 @@ Object {
 
 exports[`AMP Sinhala Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/sinhala"`;
 
-exports[`AMP Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
+exports[`AMP Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
 
 exports[`AMP Sinhala Live Radio Page Header I can see the branding 1`] = `"BBC News, සිංහල"`;
 
@@ -308,8 +308,6 @@ exports[`AMP Sinhala Live Radio Page SEO Canonical link 1`] = `"http://localhost
 
 exports[`AMP Sinhala Live Radio Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`AMP Sinhala Live Radio Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`AMP Sinhala Live Radio Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Sinhala Live Radio Page SEO Heading level 1 1`] = `"බීබීසී සිංහල සංදේශය"`;
@@ -362,7 +360,7 @@ exports[`AMP Sinhala Live Radio Page SEO OG url 1`] = `"http://localhost:7080/si
 
 exports[`AMP Sinhala Live Radio Page SEO Page title 1`] = `"බීබීසී සිංහල සංදේශය - BBC News සිංහල"`;
 
-exports[`AMP Sinhala Live Radio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Sinhala Live Radio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Sinhala Live Radio Page SEO Twitter card 1`] = `"summary_large_image"`;
 

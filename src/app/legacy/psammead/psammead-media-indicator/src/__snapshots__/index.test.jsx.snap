@@ -1,0 +1,481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaIndicator should render audio indicator correctly 1`] = `
+.emotion-0 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+<div>
+  <div
+    aria-hidden="true"
+    class="emotion-0 emotion-1"
+    data-e2e="media-indicator"
+    dir="ltr"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="12px"
+        viewBox="0 0 13 12"
+        width="13px"
+      >
+        <path
+          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+        />
+        <path
+          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MediaIndicator should render photogallery correctly 1`] = `
+.emotion-0 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
+}
+
+<div>
+  <div
+    aria-hidden="true"
+    class="emotion-0 emotion-1"
+    data-e2e="media-indicator"
+    dir="ltr"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="13px"
+        viewBox="0 0 32 26"
+        width="16px"
+      >
+        <path
+          d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+        />
+        <circle
+          cx="20"
+          cy="14.02"
+          r="5.5"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MediaIndicator should render video by default 1`] = `
+.emotion-0 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: block;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+<div>
+  <div
+    aria-hidden="true"
+    class="emotion-0 emotion-1"
+    data-e2e="media-indicator"
+    dir="ltr"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MediaIndicator should render video indicator correctly 1`] = `
+.emotion-0 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+<div>
+  <div
+    aria-hidden="true"
+    class="emotion-0 emotion-1"
+    data-e2e="media-indicator"
+    dir="ltr"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MediaIndicator should render video indicator correctly when inline 1`] = `
+.emotion-0 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+<div>
+  <div
+    aria-hidden="true"
+    class="emotion-0 emotion-1"
+    data-e2e="media-indicator"
+    dir="ltr"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MediaIndicator should render video indicator correctly when inline on RTL 1`] = `
+.emotion-0 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-4 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+<div>
+  <div
+    aria-hidden="true"
+    class="emotion-0 emotion-1"
+    data-e2e="media-indicator"
+    dir="rtl"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <svg
+        aria-hidden="true"
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <path
+            d="M.5.6h12v12H.5z"
+          />
+          <path
+            d="M2.144.96v11.28l8.712-5.64z"
+            fill="currentColor"
+          />
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+`;

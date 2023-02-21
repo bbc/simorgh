@@ -204,13 +204,17 @@ export const getAtUserId = () => {
 
   const val = path(['val'], cookie) || uuid();
 
-  Cookie.set(cookieName, JSON.stringify({ val }), { expires, path: '/' });
+  Cookie.set(cookieName, JSON.stringify({ val }), {
+    expires,
+    path: '/',
+    secure: true,
+  });
 
   return val;
 };
 
 export const sanitise = initialString =>
-  initialString ? initialString.trim().replace(/\s/g, '+') : null;
+  initialString ? initialString.trim().replace(/\s/g, '%20') : null;
 
 const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
 
@@ -273,7 +277,7 @@ export const getThingAttributes = (attribute, articleData) => {
 
     things.forEach(thing => {
       if (thing[attribute]) {
-        attributes.push(thing[attribute].trim().replace(/\s/g, '+'));
+        attributes.push(thing[attribute].trim().replace(/\s/g, '%20'));
       }
     });
 

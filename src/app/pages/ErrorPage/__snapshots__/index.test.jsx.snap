@@ -231,7 +231,7 @@ exports[`ErrorPage should correctly render for 404 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
   padding-top: 0.2rem;
@@ -319,12 +319,11 @@ exports[`ErrorPage should correctly render for 404 1`] = `
       >
         Alternatively, please visit the 
         <a
-          class="emotion-19 emotion-20"
+          class="focusIndicatorReducedWidth emotion-19 emotion-20"
           href="https://www.bbc.com/news"
         >
           BBC News homepage.
         </a>
-        
       </p>
     </div>
   </main>
@@ -562,7 +561,7 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
   padding-top: 0.2rem;
@@ -650,7 +649,7 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
       >
         برای یافتن اطلاعات مورد نظر به صفحه اصلی 
         <a
-          class="emotion-19 emotion-20"
+          class="focusIndicatorReducedWidth emotion-19 emotion-20"
           href="https://www.bbc.com/persian"
         >
           BBC News فارسی
@@ -893,7 +892,7 @@ exports[`ErrorPage should correctly render for 500 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
   padding-top: 0.2rem;
@@ -976,12 +975,11 @@ exports[`ErrorPage should correctly render for 500 1`] = `
       >
         Alternatively, please visit the 
         <a
-          class="emotion-17 emotion-18"
+          class="focusIndicatorReducedWidth emotion-17 emotion-18"
           href="https://www.bbc.com/news"
         >
           BBC News homepage.
         </a>
-        
       </p>
     </div>
   </main>
@@ -1219,7 +1217,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
   padding-top: 0.2rem;
@@ -1302,7 +1300,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
       >
         برای یافتن اطلاعات مورد نظر به صفحه اصلی 
         <a
-          class="emotion-17 emotion-18"
+          class="focusIndicatorReducedWidth emotion-17 emotion-18"
           href="https://www.bbc.com/persian"
         >
           BBC News فارسی
@@ -1545,7 +1543,7 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
+  color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
   padding-top: 0.2rem;
@@ -1628,12 +1626,11 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
       >
         Alternatively, please visit the 
         <a
-          class="emotion-17 emotion-18"
+          class="focusIndicatorReducedWidth emotion-17 emotion-18"
           href="https://www.bbc.com/news"
         >
           BBC News homepage.
         </a>
-        
       </p>
     </div>
   </main>

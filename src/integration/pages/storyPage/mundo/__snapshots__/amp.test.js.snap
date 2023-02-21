@@ -203,7 +203,7 @@ Object {
 
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -217,88 +217,67 @@ Object {
 exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "América Latina",
-  "url": "/mundo/america_latina",
+  "url": "/mundo/topics/c7zp57yyz25t",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Internacional",
-  "url": "/mundo/internacional",
+  "url": "/mundo/topics/c2lej05epw5t",
 }
 `;
 
 exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
-Object {
-  "text": "Medio ambiente",
-  "url": "/mundo/noticias-58984987",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "Coronavirus",
-  "url": "/mundo/topics/c67q9nnn8z7t",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 9`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 10`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 11`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 12`] = `
-Object {
-  "text": "Video",
-  "url": "/mundo/media/video",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 13`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 14`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",
@@ -312,24 +291,13 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
   alt="A person holding a union jack umbrella in front of Big Ben"
   attribution="Getty Images"
   data-hero="true"
+  fallback=""
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 800w"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
   width="976"
->
-  <amp-img
-    alt="A person holding a union jack umbrella in front of Big Ben"
-    attribution="Getty Images"
-    data-hero="true"
-    fallback=""
-    height="549"
-    layout="responsive"
-    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
-    srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
-    width="976"
-  />
-</amp-img>
+/>
 `;
 
 exports[`AMP Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
@@ -407,8 +375,6 @@ Object {
 exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
 exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`AMP Story Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
@@ -530,7 +496,7 @@ exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7080/mundo/noticias-
 
 exports[`AMP Story Page SEO Page title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
-exports[`AMP Story Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 

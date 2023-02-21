@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
 
-exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
+exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
 
 exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News, Afrique"`;
 
@@ -233,8 +233,6 @@ exports[`Canonical Feature Index page SEO Canonical link 1`] = `"http://localhos
 
 exports[`Canonical Feature Index page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Feature Index page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Feature Index page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Feature Index page SEO Heading level 1 1`] = `"Tout savoir sur la CAN 2019"`;
@@ -299,7 +297,7 @@ exports[`Canonical Feature Index page SEO OG url 1`] = `"http://localhost:7080/a
 
 exports[`Canonical Feature Index page SEO Page title 1`] = `"Tout savoir sur la CAN 2019 - BBC News Afrique"`;
 
-exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Feature Index page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -322,9 +320,12 @@ exports[`Canonical Feature Index page Story Promo Headline should match text 1`]
 exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
 <img
   alt="CAN 2019 : le Sénégal en huitième de finale"
-  class="eehpdyc0 bbc-rb7xa0 e11uq3260"
+  class="bbc-1uwua2r"
   height="549"
+  sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/4826/production/_107707481_equipesenegal.jpg 660w"
+  style="aspect-ratio:976 / 549"
   width="976"
 />
 `;

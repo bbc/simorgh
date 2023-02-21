@@ -1,0 +1,800 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConsentBanner should correctly render for ltr service 1`] = `
+.emotion-0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  border-top: solid 0.0625rem transparent;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
+.emotion-2 {
+  max-width: 37.4375rem;
+  margin: 0 auto;
+}
+
+.emotion-2 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-2 a:focus,
+.emotion-2 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-2 a:hover,
+.emotion-2 a:focus {
+  border-bottom: solid 0.125rem transparent;
+}
+
+.emotion-4 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-6 li+li {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .emotion-6 li+li {
+    margin-top: 0;
+  }
+}
+
+.emotion-8 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.emotion-8 button {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 button {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 button {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-8 button:focus,
+.emotion-8 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-8 button:hover,
+.emotion-8 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+@media (min-width: 25rem) {
+  .emotion-8 {
+    width: 17.3125rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    id="banner-id"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <h2
+        class="emotion-4 emotion-5"
+        dir="ltr"
+        tabindex="-1"
+      >
+        We've updated our Privacy and Cookies Policy
+      </h2>
+      <p>
+        Hello
+      </p>
+      <ul
+        class="emotion-6 emotion-7"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="emotion-8 emotion-9"
+          dir="ltr"
+        >
+          <button
+            type="button"
+          >
+            Accept
+          </button>
+        </li>
+        <li
+          class="emotion-8 emotion-9"
+          dir="ltr"
+        >
+          <span>
+            <a
+              href="https://foobar.com"
+            >
+              Reject
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ConsentBanner should correctly render for rtl service 1`] = `
+.emotion-0 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  border-top: solid 0.0625rem transparent;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
+.emotion-2 {
+  max-width: 37.4375rem;
+  margin: 0 auto;
+}
+
+.emotion-2 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-2 a:focus,
+.emotion-2 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-2 a:hover,
+.emotion-2 a:focus {
+  border-bottom: solid 0.125rem transparent;
+}
+
+.emotion-4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-6 {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-6 li+li {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .emotion-6 li+li {
+    margin-top: 0;
+  }
+}
+
+.emotion-8 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.emotion-8 button {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 button {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 button {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-8 button:focus,
+.emotion-8 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-8 button:hover,
+.emotion-8 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+@media (min-width: 25rem) {
+  .emotion-8 {
+    width: 17.3125rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    dir="rtl"
+    id="banner-id"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="rtl"
+    >
+      <h2
+        class="emotion-4 emotion-5"
+        dir="rtl"
+        tabindex="-1"
+      >
+        عنوان
+      </h2>
+      <p>
+        مرحبا
+      </p>
+      <ul
+        class="emotion-6 emotion-7"
+        dir="rtl"
+        role="list"
+      >
+        <li
+          class="emotion-8 emotion-9"
+          dir="rtl"
+        >
+          <button
+            type="button"
+          >
+            قبول
+          </button>
+        </li>
+        <li
+          class="emotion-8 emotion-9"
+          dir="rtl"
+        >
+          <span>
+            <a
+              href="https://foobar.com"
+            >
+              رفض
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ConsentBanner with hidden attribute on wrapper should correctly render 1`] = `
+.emotion-0 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  border-top: solid 0.0625rem transparent;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
+.emotion-2 {
+  max-width: 37.4375rem;
+  margin: 0 auto;
+}
+
+.emotion-2 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-2 a:focus,
+.emotion-2 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-2 a:hover,
+.emotion-2 a:focus {
+  border-bottom: solid 0.125rem transparent;
+}
+
+.emotion-4 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-6 li+li {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .emotion-6 li+li {
+    margin-top: 0;
+  }
+}
+
+.emotion-8 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.emotion-8 button {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 button {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 button {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-8 button:focus,
+.emotion-8 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-8 button:hover,
+.emotion-8 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8 button:focus-visible {
+  outline: 0.1875rem solid #000000;
+}
+
+@media (min-width: 25rem) {
+  .emotion-8 {
+    width: 17.3125rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    hidden=""
+    id="banner-id"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <h2
+        class="emotion-4 emotion-5"
+        dir="ltr"
+        tabindex="-1"
+      >
+        We've updated our Privacy and Cookies Policy
+      </h2>
+      <p>
+        Hello
+      </p>
+      <ul
+        class="emotion-6 emotion-7"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="emotion-8 emotion-9"
+          dir="ltr"
+        >
+          <button
+            type="button"
+          >
+            Accept
+          </button>
+        </li>
+        <li
+          class="emotion-8 emotion-9"
+          dir="ltr"
+        >
+          <span>
+            <a
+              href="https://foobar.com"
+            >
+              Reject
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ConsentBannerText should correctly render 1`] = `
+.emotion-0 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    margin-top: 1.5rem;
+  }
+}
+
+<div>
+  <p
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    We have made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+  </p>
+</div>
+`;

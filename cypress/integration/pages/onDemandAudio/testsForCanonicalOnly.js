@@ -4,7 +4,7 @@ import { overrideRendererOnTest } from '../../../support/helpers/onDemandRadioTv
 import {
   isScheduleDataComplete,
   getIsProgramValid,
-} from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
+} from '../../../../src/app/legacy/containers/RadioSchedule/utilities/evaluateScheduleData';
 
 export default ({ service, pageType, variant }) => {
   describe('Chartbeat', () => {

@@ -1,459 +1,1736 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::article:cyjmdl92z3ro",
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cyjmdl92z3ro",
-      "canonicalUrl": "https://www.bbc.com/pashto/articles/cyjmdl92z3ro"
-    },
-    "type": "article",
-    "createdBy": "Pashto",
-    "language": "ps",
-    "lastUpdated": 1570520789432,
-    "firstPublished": 1570186271460,
-    "lastPublished": 1570186271460,
-    "options": {},
-    "analyticsLabels": {},
-    "passport": {
-      "language": "ps",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto"
-    },
-    "tags": {},
-    "version": "v1.1.2",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment",
-      "image",
-      "caption",
-      "altText",
-      "rawImage",
-      "urlLink",
-      "video",
-      "subheadline"
-    ]
-  },
-  "content": {
-    "model": {
-      "blocks": [
-        {
-          "type": "headline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "دا د دې ازمونې مقالې سرلیک دی",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "دا د دې ازمونې مقالې سرلیک دی",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\r\n",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\r\n",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 976,
-                  "height": 549,
-                  "locator": "8a9e/test/55ffb340-e694-11e9-88d6-81aa2ccc6d4c.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "BBC"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "دا د متن بلاک دی ، کوم چې د بی بی سی ویدر کور پاpageې ته یو آر ایل لینک لري.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "دا د متن بلاک دی ، کوم چې د بی بی سی ویدر کور پاpageې ته یو",
-                        "attributes": []
-                      }
-                    },
-                    {
-                      "type": "urlLink",
-                      "model": {
-                        "text": " آر ایل لینک لري",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": " آر ایل لینک لري",
-                              "attributes": []
-                            }
-                          }
-                        ],
-                        "locator": "https://www.bbc.co.uk/weather",
-                        "isExternal": false
-                      }
-                    },
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": ".",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "video",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01kf9q4",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01kf9q4",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01kf9q4",
-                        "subType": "clip",
-                        "format": "audio_video",
-                        "title": "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù",
-                        "synopses": {
-                          "short": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù"
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kf9s0.jpg",
-                        "embedding": true,
-                        "advertising": true,
-                        "caption": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù Ù…Ø«Ø´Ø³Ø« Ù‡Ù„Ø±Ø®Ù‚Ø«",
-                        "versions": [
-                          {
-                            "versionId": "p01kf9q6",
-                            "types": ["Original"],
-                            "duration": 16,
-                            "durationISO8601": "PT16S",
-                            "warnings": {},
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1542034822000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        }
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 1920,
-                              "height": 1080,
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9s0.jpg",
-                              "originCode": "mpv",
-                              "copyrightHolder": "Ariana TV"
-                            }
+  "data": {
+    "article": {
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "a5c1d14a",
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8938e230",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "0daa3d33",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "دا د دې ازمونې مقالې سرلیک دی",
+                            "blocks": [
+                              {
+                                "id": "d22b2e38",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "دا د دې ازمونې مقالې سرلیک دی",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  1,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Keyframe #3",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Keyframe #3",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "subheadline",
-          "model": {
-            "blocks": [
-              {
-                "type": "text",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "paragraph",
-                      "model": {
-                        "text": "دا د فرعي سرلیک بلاک دی",
-                        "blocks": [
-                          {
-                            "type": "fragment",
-                            "model": {
-                              "text": "دا د فرعي سرلیک بلاک دی",
-                              "attributes": []
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "model": {
-            "blocks": [
-              {
-                "type": "altText",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "دا د فرعي سرلیک بلاک دی\r",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "دا د فرعي سرلیک بلاک دی\r",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
+                          "position": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      1,
+                      1
+                    ]
+                  }
+                ]
               },
-              {
-                "type": "rawImage",
-                "model": {
-                  "width": 976,
-                  "height": 549,
-                  "locator": "6c55/test/bcd2ca30-e694-11e9-88d6-81aa2ccc6d4c.jpg",
-                  "originCode": "cpsdevpb",
-                  "copyrightHolder": "Getty Images"
-                }
-              }
-            ]
-          }
+              "position": [
+                1
+              ]
+            },
+            {
+              "id": "900e06fa",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "71831c58",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "a3fe0084",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "ad5224d4",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
+                                  "blocks": [
+                                    {
+                                      "id": "4ad16653",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "0f2ee67c",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "8310c18c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b4caba4e",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\r\n",
+                                  "blocks": [
+                                    {
+                                      "id": "54f4d3a7",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.\r\n",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "f9d2a657",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 976,
+                      "height": 549,
+                      "locator": "8a9e/test/55ffb340-e694-11e9-88d6-81aa2ccc6d4c.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [
+                      2,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
+              "id": "9f9c27d1",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1570186271460,
+                "lastPublished": 1570186271460
+              },
+              "position": [
+                3
+              ]
+            },
+            {
+              "id": "4609c0ae",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f97542da",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "دا د متن بلاک دی ، کوم چې د بی بی سی ویدر کور پاpageې ته یو آر ایل لینک لري.",
+                      "blocks": [
+                        {
+                          "id": "1558e93a",
+                          "type": "fragment",
+                          "model": {
+                            "text": "دا د متن بلاک دی ، کوم چې د بی بی سی ویدر کور پاpageې ته یو",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "b6c47988",
+                          "type": "urlLink",
+                          "model": {
+                            "text": " آر ایل لینک لري",
+                            "blocks": [
+                              {
+                                "id": "b30219ea",
+                                "type": "fragment",
+                                "model": {
+                                  "text": " آر ایل لینک لري",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  4,
+                                  1,
+                                  2,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "https://www.bbc.co.uk/weather",
+                            "isExternal": false
+                          },
+                          "position": [
+                            4,
+                            1,
+                            2
+                          ]
+                        },
+                        {
+                          "id": "59af678c",
+                          "type": "fragment",
+                          "model": {
+                            "text": ".",
+                            "attributes": []
+                          },
+                          "position": [
+                            4,
+                            1,
+                            3
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      4,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "98fd6294",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01kf9q4",
+                "blocks": [
+                  {
+                    "id": "97abd5ad",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "d94761b0",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "69fe2399",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
+                                  "blocks": [
+                                    {
+                                      "id": "bb3c47f8",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري.",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        5,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "2144e9e6",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "878463f1",
+                          "blockId": "urn:bbc:ares::clip:p01kf9q4",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01kf9q4",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù",
+                            "synopses": {
+                              "short": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù"
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kf9s0.jpg",
+                            "embedding": true,
+                            "advertising": true,
+                            "caption": "ÙØ«Ø³Ù Ø´Ø³Ø³Ø«Ù Ù…Ø«Ø´Ø³Ø« Ù‡Ù„Ø±Ø®Ù‚Ø«",
+                            "versions": [
+                              {
+                                "versionId": "p01kf9q6",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 16,
+                                "durationISO8601": "PT16S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1542034822000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            5,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "4e16320a",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "338daf11",
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9s0.jpg",
+                                  "originCode": "mpv"
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "fa0872fa",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "7029bc5c",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "7d6cfdb4",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Keyframe #3",
+                                              "blocks": [
+                                                {
+                                                  "id": "519329ad",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Keyframe #3",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    5,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              5,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        5,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  5,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            5,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      5,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                5
+              ]
+            },
+            {
+              "id": "52d7367b",
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f0789fac",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e01867c9",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "دا د فرعي سرلیک بلاک دی",
+                            "blocks": [
+                              {
+                                "id": "a141e1ee",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "دا د فرعي سرلیک بلاک دی",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  6,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            6,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      6,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "922196d7",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "8d540f24",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "a9e47f5c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f23129b6",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "دا د فرعي سرلیک بلاک دی\r",
+                                  "blocks": [
+                                    {
+                                      "id": "da377aa6",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "دا د فرعي سرلیک بلاک دی\r",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        7,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  7,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            7,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      7,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "6640d871",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 976,
+                      "height": 549,
+                      "locator": "6c55/test/bcd2ca30-e694-11e9-88d6-81aa2ccc6d4c.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      7,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                7
+              ]
+            },
+            {
+              "id": "659a2328",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "b41a7a14",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
+                      "blocks": [
+                        {
+                          "id": "f8079142",
+                          "type": "fragment",
+                          "model": {
+                            "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
+                            "attributes": []
+                          },
+                          "position": [
+                            8,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                8
+              ]
+            },
+            {
+              "id": "fb894b64",
+              "type": "mpu",
+              "model": {},
+              "position": [
+                9
+              ]
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "id": "urn:bbc:ares::article:cyjmdl92z3ro",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cyjmdl92z3ro"
+        },
+        "type": "article",
+        "createdBy": "Pashto",
+        "language": "ps",
+        "firstPublished": 1570186271460,
+        "lastPublished": 1570186271460,
+        "options": {},
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:cyjmdl92z3ro",
+          "producer": "Pashto",
+          "page": "pashto.articles.cyjmdl92z3ro.page"
+        },
+        "passport": {
+          "language": "ps",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
+          "taggings": []
+        },
+        "tags": {},
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "urlLink",
+          "video",
+          "subheadline",
+          "aresMedia"
+        ],
+        "consumableAsSFV": false,
+        "allowAdvertising": true
+      },
+      "promo": {
+        "locators": {},
+        "headlines": {
+          "seoHeadline": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري."
+        },
+        "images": {},
+        "passport": {}
+      }
+    },
+    "secondaryData": {
+      "topStories": [
+        {
+          "headlines": {
+            "headline": "الولايات المتحدة تسعى لتجميد أصول زعيم كوريا الشمالية"
+          },
+          "locators": {
+            "assetUri": "/arabic/23151862",
+            "cpsUrn": "urn:bbc:content:assetUri:arabic/23151862",
+            "assetId": "23151862"
+          },
+          "summary": "صاغت الولايات المتحدة مشروع قرار جديدا في الأمم المتحدة، ردا على أحدث التجارب النووية لكوريا الشمالية، والتي من المقرر أن يناقشها أعضاء مجلس الأمن الدولي التابع للمنظمة الدولية.",
+          "timestamp": 1504782633000,
+          "language": "ar",
+          "passport": {
+            "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+            },
+            "taggings": []
+          },
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63590751",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3D5D/test/_63590751_000097641-1.jpg",
+            "path": "/cpsdevpb/3D5D/test/_63590751_000097641-1.jpg",
+            "height": 549,
+            "width": 976,
+            "altText": "عبم كةرؤي",
+            "caption": "علم كورؤي",
+            "copyrightHolder": "BBC",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "prominence": "standard",
+          "section": {
+            "subType": "IDX",
+            "name": "الرئيسية",
+            "uri": "/arabic/front_page",
+            "type": "simple"
+          },
+          "site": {
+            "subType": "site",
+            "name": "BBC Arabic",
+            "uri": "/arabic",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:arabic/23151862",
+          "type": "cps"
+        }
+      ],
+      "features": [
+        {
+          "headlines": {
+            "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 27"
+          },
+          "locators": {
+            "assetUri": "/pashto/23076667",
+            "cpsUrn": "urn:bbc:content:assetUri:pashto/23076667",
+            "assetId": "23076667"
+          },
+          "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+          "timestamp": 1474535636000,
+          "language": "ps",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63510299",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+            "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+            "height": 490,
+            "width": 872,
+            "altText": "مرستندویه",
+            "caption": "مرستندویه",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63510301",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/283D/test/_63510301_160919042836_paralympic_976x549_gettyimages.jpg",
+            "path": "/cpsdevpb/283D/test/_63510301_160919042836_paralympic_976x549_gettyimages.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "مرستندویه",
+            "caption": "مرستندویه",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "کور پاڼه",
+            "uri": "/pashto/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:pashto/23076667",
+          "type": "cps"
         },
         {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": "دا د ازموینې مقاله رامینځته شوې ترڅو موږ وکولی شو په خپله ویب پا کې د اتومات پای څخه تر پایه ازموینې پرمخ یوسو.",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+          "headlines": {
+            "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 28"
+          },
+          "locators": {
+            "assetUri": "/pashto/23076668",
+            "cpsUrn": "urn:bbc:content:assetUri:pashto/23076668",
+            "assetId": "23076668"
+          },
+          "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+          "timestamp": 1474535677000,
+          "language": "ps",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63510299",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+            "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+            "height": 490,
+            "width": 872,
+            "altText": "مرستندویه",
+            "caption": "مرستندویه",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63510301",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/283D/test/_63510301_160919042836_paralympic_976x549_gettyimages.jpg",
+            "path": "/cpsdevpb/283D/test/_63510301_160919042836_paralympic_976x549_gettyimages.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "مرستندویه",
+            "caption": "مرستندویه",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "کور پاڼه",
+            "uri": "/pashto/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:pashto/23076668",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 29"
+          },
+          "locators": {
+            "assetUri": "/pashto/23076669",
+            "cpsUrn": "urn:bbc:content:assetUri:pashto/23076669",
+            "assetId": "23076669"
+          },
+          "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+          "timestamp": 1474535689000,
+          "language": "ps",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63510299",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+            "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+            "height": 490,
+            "width": 872,
+            "altText": "مرستندویه",
+            "caption": "مرستندویه",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63510301",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/283D/test/_63510301_160919042836_paralympic_976x549_gettyimages.jpg",
+            "path": "/cpsdevpb/283D/test/_63510301_160919042836_paralympic_976x549_gettyimages.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "مرستندویه",
+            "caption": "مرستندویه",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "کور پاڼه",
+            "uri": "/pashto/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:pashto/23076669",
+          "type": "cps"
+        },
+        {
+          "headlines": {
+            "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 11"
+          },
+          "locators": {
+            "assetUri": "/pashto/23076406",
+            "cpsUrn": "urn:bbc:content:assetUri:pashto/23076406",
+            "assetId": "23076406"
+          },
+          "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+          "timestamp": 1474459946000,
+          "language": "ps",
+          "cpsType": "STY",
+          "indexImage": {
+            "id": "63510299",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+            "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+            "height": 490,
+            "width": 872,
+            "altText": "مرستندویه",
+            "caption": "مرستندویه",
+            "copyrightHolder": "Getty Images",
+            "originCode": "cpsdevpb",
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63510301",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/283D/test/_63510301_160919042836_paralympic_976x549_gettyimages.jpg",
+            "path": "/cpsdevpb/283D/test/_63510301_160919042836_paralympic_976x549_gettyimages.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "مرستندویه",
+            "caption": "مرستندویه",
+            "copyrightHolder": "Getty Images",
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "کور پاڼه",
+            "uri": "/pashto/front_page",
+            "type": "simple"
+          },
+          "id": "urn:bbc:ares::asset:pashto/23076406",
+          "type": "cps"
         }
-      ]
+      ],
+      "mostRead": {
+        "generated": "2022-11-21T23:01:00.074Z",
+        "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
+        "firstRecordTimeStamp": "2021-05-04T11:23:00Z",
+        "totalRecords": 20,
+        "records": [
+          {
+            "id": "d8905aa1-b0a8-c047-a7d0-5e410751f27c",
+            "rank": 1,
+            "count": 9954,
+            "urn": "urn:bbc:curie:asset:d8905aa1-b0a8-c047-a7d0-5e410751f27c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 13",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 13"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076408",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076408",
+                "curie": "http://www.bbc.co.uk/asset/d8905aa1-b0a8-c047-a7d0-5e410751f27c",
+                "assetId": "23076408"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474468509000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076408",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "c8ad92d1-c66f-014e-928f-e45a94d00959",
+            "rank": 2,
+            "count": 9866,
+            "urn": "urn:bbc:curie:asset:c8ad92d1-c66f-014e-928f-e45a94d00959",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 18",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 18"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076638",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076638",
+                "curie": "http://www.bbc.co.uk/asset/c8ad92d1-c66f-014e-928f-e45a94d00959",
+                "assetId": "23076638"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474535205000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076638",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "55e272e5-e163-8244-92dd-6572b3c9a752",
+            "rank": 3,
+            "count": 9794,
+            "urn": "urn:bbc:curie:asset:55e272e5-e163-8244-92dd-6572b3c9a752",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 15",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 15"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076635",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076635",
+                "curie": "http://www.bbc.co.uk/asset/55e272e5-e163-8244-92dd-6572b3c9a752",
+                "assetId": "23076635"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474534755000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076635",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "becc0e61-fdfb-724c-9d4e-155f52cfb2bf",
+            "rank": 4,
+            "count": 9634,
+            "urn": "urn:bbc:curie:asset:becc0e61-fdfb-724c-9d4e-155f52cfb2bf",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "۹ کلنې نجلۍ څنګه ماشومانو ته کتابتون جوړ کړ؟",
+                "headline": "۹ کلنې نجلۍ څنګه ماشومانو ته کتابتون جوړ کړ؟"
+              },
+              "locators": {
+                "assetUri": "/pashto/world-23078914",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/world-23078914",
+                "curie": "http://www.bbc.co.uk/asset/becc0e61-fdfb-724c-9d4e-155f52cfb2bf",
+                "assetId": "23078914"
+              },
+              "summary": "د هند د مدهیه پردېش ایالت په مرکز بهوپال کې د یوې بې وزله کورنۍ نهه کلنه نجلۍ مسکان د خپلې سیمې د ماشومانو لپاره د یوه کتابتون د سمبالښت چارې پر غاړه لري.",
+              "timestamp": 1569406681000,
+              "language": "ps",
+              "byline": {
+                "name": "هدایت الله  همیم",
+                "title": "بي بي سي پښتو",
+                "persons": [
+                  {
+                    "name": "هدایت الله همیم",
+                    "function": "بي بي سي پښتو",
+                    "thumbnail": "http://b.files.bbci.co.uk/13AED/test/_63512608_14355788_10210444517611888_3693005824819756939_n.jpg",
+                    "twitterName": "Hamimwardak"
+                  }
+                ]
+              },
+              "indexImage": {
+                "id": "63512606",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/ECCD/test/_63512606_160927062011_muskan_bhopal_library_india_640x360_sniazi.jpg",
+                "path": "/cpsdevpb/ECCD/test/_63512606_160927062011_muskan_bhopal_library_india_640x360_sniazi.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "مسکان",
+                "caption": "مسکان دا مهال په خپل کتابتون کې تر ۴۰۰ پورې کتابونه لري.",
+                "copyrightHolder": "AFP",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/world-23078914",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "a0b98909-2ea7-2948-86e8-831d12d94397",
+            "rank": 5,
+            "count": 9420,
+            "urn": "urn:bbc:curie:asset:a0b98909-2ea7-2948-86e8-831d12d94397",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "کډوال،‌ له هغو افغانانو سره به څه کېږي چې پاکستاني ښځو او نارینه وو سره یې ودونه کړي",
+                "headline": "کډوال،‌ له هغو افغانانو سره به څه کېږي چې پاکستاني ښځو او نارینه وو سره یې ودونه کړي"
+              },
+              "locators": {
+                "assetUri": "/pashto/pokhtonkhwa-23076614",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:a0b98909-2ea7-2948-86e8-831d12d94397",
+                "assetId": "23076614",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/pokhtonkhwa-23076614",
+                "curie": "http://www.bbc.co.uk/asset/a0b98909-2ea7-2948-86e8-831d12d94397"
+              },
+              "summary": "د افغان کډوالو د هستوګنې په اړه د پاکستان لخوا اعلان شوې وروستۍ نېټې هغو افغانانو او پاکستانیانو ترمنځ د کورنیو اړیکو پرې کېدو اندېښنې راولاړې کړې دي چې سره خپلوۍ لري.",
+              "timestamp": 1474475328000,
+              "language": "ps",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Pashto",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510421",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3071/test/_63510421_160801092531_cn_rio2016_preps_01_640x360_bbcchinese_nocredit.jpg",
+                "path": "/cpsdevpb/3071/test/_63510421_160801092531_cn_rio2016_preps_01_640x360_bbcchinese_nocredit.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "تېره اونۍ پاکستاني مېرمنو د یوه اعتراضي لاریون په ترڅ کې د پاکستان له حکومت نه وغوښتل چې ددوی بچيانو او مېړونو ته ددې هېواد تابعیت ورکړي.",
+                "caption": "تېره اونۍ پاکستاني مېرمنو د یوه اعتراضي لاریون په ترڅ کې د پاکستان له حکومت نه وغوښتل چې ددوی بچيانو او مېړونو ته ددې هېواد تابعیت ورکړي.",
+                "copyrightHolder": "Reuters",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/pokhtonkhwa-23076614",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0577460d-1244-ca47-a998-63a2bd5546ba",
+            "rank": 6,
+            "count": 9173,
+            "urn": "urn:bbc:curie:asset:0577460d-1244-ca47-a998-63a2bd5546ba",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 1",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 1"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076395",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076395",
+                "curie": "http://www.bbc.co.uk/asset/0577460d-1244-ca47-a998-63a2bd5546ba",
+                "assetId": "23076395"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474459743000,
+              "language": "ps",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076395",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "f2765a24-d916-3b4a-96ce-f5d315c39d3f",
+            "rank": 7,
+            "count": 8924,
+            "urn": "urn:bbc:curie:asset:f2765a24-d916-3b4a-96ce-f5d315c39d3f",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 36",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 36"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076695",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076695",
+                "curie": "http://www.bbc.co.uk/asset/f2765a24-d916-3b4a-96ce-f5d315c39d3f",
+                "assetId": "23076695"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474537242000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076695",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "43477c56-43e6-f146-b7a5-cbbe888a9ba4",
+            "rank": 8,
+            "count": 8874,
+            "urn": "urn:bbc:curie:asset:43477c56-43e6-f146-b7a5-cbbe888a9ba4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 34",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 34"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076674",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076674",
+                "curie": "http://www.bbc.co.uk/asset/43477c56-43e6-f146-b7a5-cbbe888a9ba4",
+                "assetId": "23076674"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474535774000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076674",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "12cc7acc-1353-de46-85fc-d44a82d5056c",
+            "rank": 9,
+            "count": 8750,
+            "urn": "urn:bbc:curie:asset:12cc7acc-1353-de46-85fc-d44a82d5056c",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 42",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 37"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076702",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076702",
+                "curie": "http://www.bbc.co.uk/asset/12cc7acc-1353-de46-85fc-d44a82d5056c",
+                "assetId": "23076702"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474537331000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076702",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6247a6a4-07ba-b04b-8de5-dc0cc6367704",
+            "rank": 10,
+            "count": 8650,
+            "urn": "urn:bbc:curie:asset:6247a6a4-07ba-b04b-8de5-dc0cc6367704",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 43",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 37"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076703",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076703",
+                "curie": "http://www.bbc.co.uk/asset/6247a6a4-07ba-b04b-8de5-dc0cc6367704",
+                "assetId": "23076703"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474537341000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076703",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "760da594-0b1a-214e-b858-d1e9baf5b20d",
+            "rank": 11,
+            "count": 8520,
+            "urn": "urn:bbc:curie:asset:760da594-0b1a-214e-b858-d1e9baf5b20d",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 38",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 37"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076698",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076698",
+                "curie": "http://www.bbc.co.uk/asset/760da594-0b1a-214e-b858-d1e9baf5b20d",
+                "assetId": "23076698"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474537278000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076698",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "46cf9f6e-5d5d-2549-ba68-2ae908c56dc9",
+            "rank": 12,
+            "count": 8021,
+            "urn": "urn:bbc:curie:asset:46cf9f6e-5d5d-2549-ba68-2ae908c56dc9",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 33",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 33"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076673",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076673",
+                "curie": "http://www.bbc.co.uk/asset/46cf9f6e-5d5d-2549-ba68-2ae908c56dc9",
+                "assetId": "23076673"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474535762000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076673",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "201ef039-5758-4f44-92a4-74bcc5c72381",
+            "rank": 13,
+            "count": 8020,
+            "urn": "urn:bbc:curie:asset:201ef039-5758-4f44-92a4-74bcc5c72381",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "محكمة بحرينية \"تأمر بإعادة محاكمة\" الشيخ علي سلمان رئيس updated جمعية الوفاق",
+                "headline": "محكمة بحرينية \"تأمر بإعادة محاكمة\" الشيخ علي سلمان رئيس updated جمعية الوفاق"
+              },
+              "locators": {
+                "assetUri": "/pashto/23083378",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23083378",
+                "curie": "http://www.bbc.co.uk/asset/201ef039-5758-4f44-92a4-74bcc5c72381",
+                "assetId": "23083378"
+              },
+              "summary": "نقضت محكمة في البحرين حكما بسجن رجل الدين الشيعي في البحرين، علي سلمان، تسع سنوات، لإدانته بالتحريض على الكراهية، والدعوة إلى تغيير النظام بالقوة، بحسب ما أفاد به موقع صحيفة الوسط البحرينية.",
+              "timestamp": 1484588051000,
+              "language": "ps",
+              "id": "urn:bbc:ares::asset:pashto/23083378",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "0ea2278b-4c29-8c47-ac20-c69fbdf447e7",
+            "rank": 14,
+            "count": 7963,
+            "urn": "urn:bbc:curie:asset:0ea2278b-4c29-8c47-ac20-c69fbdf447e7",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 40",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 37"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076700",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076700",
+                "curie": "http://www.bbc.co.uk/asset/0ea2278b-4c29-8c47-ac20-c69fbdf447e7",
+                "assetId": "23076700"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474537309000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076700",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "6d065041-099c-f045-93ee-9ec7a972ff55",
+            "rank": 15,
+            "count": 7797,
+            "urn": "urn:bbc:curie:asset:6d065041-099c-f045-93ee-9ec7a972ff55",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "کابل کې ځانمرګی برید",
+                "headline": "کابل کې د خونړي ځانمرګي برید مخنیوی وشو"
+              },
+              "locators": {
+                "assetUri": "/pashto/23077972",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23077972",
+                "curie": "http://www.bbc.co.uk/asset/6d065041-099c-f045-93ee-9ec7a972ff55",
+                "assetId": "23077972"
+              },
+              "summary": "د کابل پولیسو رسنیو ته په یوه استول شوې خبرپاڼه کې ویلي، له چاودېدونکو توکو یو ډک موټر یې نیولی او ځانمرګی برید کوونکی یې هدف ته له رسېدو وړاندې وژلی دی.",
+              "timestamp": 1474888764000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63511970",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/1EE7/test/_63511970_148a6cc8-9c7d-4fe7-8d6d-be9647b954e9.jpg",
+                "path": "/cpsdevpb/1EE7/test/_63511970_148a6cc8-9c7d-4fe7-8d6d-be9647b954e9.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "بېړنۍ غونډه",
+                "caption": "افغانستان",
+                "copyrightHolder": "رر",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23077972",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "9afd3015-a484-6e4e-8703-836764820757",
+            "rank": 16,
+            "count": 7632,
+            "urn": "urn:bbc:curie:asset:9afd3015-a484-6e4e-8703-836764820757",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "الولايات المتحدة تسعى لتجميد أصول زعيم كوريا الشمالية",
+                "headline": "الولايات المتحدة تسعى لتجميد أصول زعيم كوريا الشمالية"
+              },
+              "locators": {
+                "assetUri": "/arabic/23151862",
+                "cpsUrn": "urn:bbc:content:assetUri:arabic/23151862",
+                "curie": "http://www.bbc.co.uk/asset/9afd3015-a484-6e4e-8703-836764820757",
+                "assetId": "23151862"
+              },
+              "summary": "صاغت الولايات المتحدة مشروع قرار جديدا في الأمم المتحدة، ردا على أحدث التجارب النووية لكوريا الشمالية، والتي من المقرر أن يناقشها أعضاء مجلس الأمن الدولي التابع للمنظمة الدولية.",
+              "timestamp": 1504782633000,
+              "language": "ar",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63590751",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/3D5D/test/_63590751_000097641-1.jpg",
+                "path": "/cpsdevpb/3D5D/test/_63590751_000097641-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "عبم كةرؤي",
+                "caption": "علم كورؤي",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/23151862",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "acb31960-3719-824a-b6ef-fd814a249e7b",
+            "rank": 17,
+            "count": 7325,
+            "urn": "urn:bbc:curie:asset:acb31960-3719-824a-b6ef-fd814a249e7b",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 26",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 26"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076666",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076666",
+                "curie": "http://www.bbc.co.uk/asset/acb31960-3719-824a-b6ef-fd814a249e7b",
+                "assetId": "23076666"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474535625000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076666",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "b44de7b9-3e81-b249-bdb8-4e75a894a53e",
+            "rank": 18,
+            "count": 7311,
+            "urn": "urn:bbc:curie:asset:b44de7b9-3e81-b249-bdb8-4e75a894a53e",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 21",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 21"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076641",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076641",
+                "curie": "http://www.bbc.co.uk/asset/b44de7b9-3e81-b249-bdb8-4e75a894a53e",
+                "assetId": "23076641"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474535366000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076641",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "1a96b05b-9533-7b46-8a68-30b68530d7aa",
+            "rank": 19,
+            "count": 7226,
+            "urn": "urn:bbc:curie:asset:1a96b05b-9533-7b46-8a68-30b68530d7aa",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 14",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 14"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076634",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076634",
+                "curie": "http://www.bbc.co.uk/asset/1a96b05b-9533-7b46-8a68-30b68530d7aa",
+                "assetId": "23076634"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474534716000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076634",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "ba07c61b-27d3-364f-8af1-5708915f5ef4",
+            "rank": 20,
+            "count": 7003,
+            "urn": "urn:bbc:curie:asset:ba07c61b-27d3-364f-8af1-5708915f5ef4",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 32",
+                "headline": "د هرات وسله وال برید کې شپږ کسان وژل شوي 32"
+              },
+              "locators": {
+                "assetUri": "/pashto/23076672",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/23076672",
+                "curie": "http://www.bbc.co.uk/asset/ba07c61b-27d3-364f-8af1-5708915f5ef4",
+                "assetId": "23076672"
+              },
+              "summary": "د هرات وسله وال برید کې شپږ کسان وژل شوي",
+              "timestamp": 1474535745000,
+              "language": "ps",
+              "indexImage": {
+                "id": "63510299",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "path": "/cpsdevpb/18381/test/_63510299_160919042836_paralympic_976x549_gettyimages.jpg",
+                "height": 490,
+                "width": 872,
+                "altText": "مرستندویه",
+                "caption": "مرستندویه",
+                "copyrightHolder": "Getty Images",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pashto/23076672",
+              "type": "cps"
+            }
+          }
+        ]
+      }
     }
   },
-  "promo": {
-    "headlines": {
-      "seoHeadline": "د دې ازموینې عکس ، د کاپي حق بی بی سی ، د فرانسې نقشه ښیې. عکس په لومړي دریو بلاکونو کې دی او دا سرلیک لري."
-    },
-    "locators": {
-      "optimoUrn": "urn:bbc:optimo:asset:cyjmdl92z3ro"
-    },
-    "summary": {
-      "blocks": [
-        {
-          "model": {
-            "blocks": [
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "attributes": [],
-                        "text": ""
-                      },
-                      "type": "fragment"
-                    }
-                  ],
-                  "text": ""
-                },
-                "type": "paragraph"
-              }
-            ]
-          },
-          "type": "text"
-        }
-      ]
-    },
-    "timestamp": 1570186271460,
-    "id": "urn:bbc:ares::article:cyjmdl92z3ro",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "site": {
-      "subType": "site",
-      "name": "Pashto",
-      "uri": "/pashto",
-      "type": "simple"
-    },
-    "groups": []
-  }
+  "contentType": "application/json; charset=utf-8"
 }

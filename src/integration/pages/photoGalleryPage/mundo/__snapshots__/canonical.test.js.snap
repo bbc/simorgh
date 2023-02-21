@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -83,88 +83,67 @@ Object {
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "América Latina",
-  "url": "/mundo/america_latina",
+  "url": "/mundo/topics/c7zp57yyz25t",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 3`] = `
 Object {
   "text": "Internacional",
-  "url": "/mundo/internacional",
+  "url": "/mundo/topics/c2lej05epw5t",
 }
 `;
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
-Object {
-  "text": "Medio ambiente",
-  "url": "/mundo/noticias-58984987",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "Coronavirus",
-  "url": "/mundo/topics/c67q9nnn8z7t",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Economía",
   "url": "/mundo/topics/c06gq9v4xp3t",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Ciencia",
   "url": "/mundo/topics/ckdxnw959n7t",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Salud",
   "url": "/mundo/topics/cpzd498zkxgt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Cultura",
   "url": "/mundo/topics/c2dwq9zyv4yt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Tecnología",
   "url": "/mundo/topics/cyx5krnw38vt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 12`] = `
-Object {
-  "text": "Video",
-  "url": "/mundo/media/video",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 13`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 14`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "BBC Extra",
   "url": "/mundo/noticias-48908206",
@@ -176,9 +155,11 @@ exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pi
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="Tenista de 1904"
-  class="eehpdyc0 bbc-rb7xa0 e11uq3260"
+  class="e3vrtyk0 bbc-rb7xa0 e1mo64ex0"
   height="549"
+  sizes="(min-width: 600px) 80vw, (min-width: 1008px) 632px, 95vw"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
   width="549"
 />
 `;
@@ -258,8 +239,6 @@ Object {
 exports[`Canonical Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/deportes-36935058"`;
 
 exports[`Canonical Photo Gallery Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`Canonical Photo Gallery Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Photo Gallery Page SEO FB app ID 1`] = `"1609039196070050"`;
 
@@ -364,7 +343,7 @@ exports[`Canonical Photo Gallery Page SEO OG url 1`] = `"http://localhost:7080/m
 
 exports[`Canonical Photo Gallery Page SEO Page title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
 
-exports[`Canonical Photo Gallery Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Photo Gallery Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Photo Gallery Page SEO Twitter card 1`] = `"summary_large_image"`;
 

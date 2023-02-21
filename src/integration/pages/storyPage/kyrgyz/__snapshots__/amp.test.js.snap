@@ -203,7 +203,7 @@ Object {
 
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
-exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
@@ -256,24 +256,13 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
   alt="social media"
   attribution=""
   data-hero="true"
+  fallback=""
   height="351"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg.webp 624w"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 624w"
   width="624"
->
-  <amp-img
-    alt="social media"
-    attribution=""
-    data-hero="true"
-    fallback=""
-    height="351"
-    layout="responsive"
-    src="https://ichef.bbci.co.uk/news/640/cpsdevpb/11D53/test/_63734037_socialmedia.jpg"
-    srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/11D53/test/_63734037_socialmedia.jpg 624w"
-    width="624"
-  />
-</amp-img>
+/>
 `;
 
 exports[`AMP Story Page Main heading should match text 1`] = `"Test STY for social embeds"`;
@@ -351,8 +340,6 @@ Object {
 exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
 
 exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
-
-exports[`AMP Story Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Story Page SEO FB app ID 1`] = `"1609039196070050"`;
 
@@ -433,7 +420,7 @@ exports[`AMP Story Page SEO OG url 1`] = `"http://localhost:7080/kyrgyz/23292889
 
 exports[`AMP Story Page SEO Page title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
 
-exports[`AMP Story Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`AMP Story Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`AMP Story Page SEO Twitter card 1`] = `"summary_large_image"`;
 

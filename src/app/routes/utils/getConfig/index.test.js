@@ -1,6 +1,6 @@
 import loggerMock from '#testHelpers/loggerMock';
-import { service as pidginConfig } from '#lib/config/services/pidgin';
-import { service as serbianConfig } from '#lib/config/services/serbian';
+import { service as pidginConfig } from '../../../lib/config/services/pidgin';
+import { service as serbianConfig } from '../../../lib/config/services/serbian';
 import getConfig from '.';
 
 describe('getConfig', () => {

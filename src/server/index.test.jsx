@@ -3,17 +3,20 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 import defaultToggles from '#lib/config/toggles';
 import loggerMock from '#testHelpers/loggerMock';
-import { ROUTING_INFORMATION } from '#lib/logger.const';
+import {
+  ROUTING_INFORMATION,
+  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+  SERVER_SIDE_REQUEST_FAILED,
+} from '#lib/logger.const';
 import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import Document from './Document/component';
 import routes from '../app/routes';
-import getAssetOrigins from './utilities/getAssetOrigins';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
+import { getMvtVaryHeaders } from './utilities/mvtHeader';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -21,6 +24,7 @@ dotenv.config({ path: './envConfig/local.env' });
 const path = require('path');
 const express = require('express');
 const server = require('./index').default;
+const getToggles = require('../app/lib/utilities/getToggles/withCache').default;
 
 const sendFileSpy = jest.spyOn(express.response, 'sendFile');
 
@@ -93,6 +97,7 @@ const mockRouteProps = ({
 };
 
 jest.mock('./utilities/customMetrics');
+jest.mock('./utilities/mvtHeader');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
@@ -105,8 +110,6 @@ const testRenderedData =
   async () => {
     const { text, status } = await makeRequest(url);
 
-    const assetOrigins = getAssetOrigins(service);
-
     expect(status).toBe(200);
 
     expect(reactDomServer.renderToString).toHaveBeenCalled();
@@ -118,11 +121,9 @@ const testRenderedData =
           ids: [],
           html: '<h1>Mock app</h1>',
         }}
-        assetOrigins={assetOrigins}
         data={successDataResponse}
         helmet={{ head: 'tags' }}
         isAmp={isAmp}
-        service={service}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
         links="__mock_link_elements__"
@@ -257,7 +258,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(serviceURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -360,7 +361,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -469,7 +470,7 @@ const testAssetPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -570,7 +571,7 @@ const testMediaPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -672,7 +673,7 @@ const testTvPages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -774,7 +775,7 @@ const testOnDemandTvEpisodePages = ({
       it('should respond with a 500', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
-        expect(text).toEqual('Error!');
+        expect(text).toEqual('Internal server error');
       });
 
       assertNon200ResponseCustomMetrics({
@@ -811,6 +812,13 @@ describe('Server', () => {
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
+
+    it('should serve the sw.js with cache control information', async () => {
+      const { header } = await makeRequest('/pidgin/sw.js');
+      expect(header['cache-control']).toBe(
+        'public, stale-if-error=6000, stale-while-revalidate=300, max-age=300',
+      );
+    });
   });
 
   describe('Manifest json', () => {
@@ -826,6 +834,7 @@ describe('Server', () => {
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
+
     it('should serve a response cache control of 7 days', async () => {
       const { header } = await makeRequest('/news/articles/manifest.json');
       expect(header['cache-control']).toBe('public, max-age=604800');
@@ -934,7 +943,7 @@ describe('Server', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest('/news/articles/c0g992jmmkko.json');
         expect(body).toEqual(
-          expect.objectContaining({ content: expect.any(Object) }),
+          expect.objectContaining({ data: expect.any(Object) }),
         );
       });
 
@@ -1300,8 +1309,6 @@ describe('Server', () => {
       it('should respond with rendered data', async () => {
         const { text, status } = await makeRequest(`/${service}/foobar`);
 
-        const assetOrigins = getAssetOrigins(service);
-
         expect(status).toBe(404);
 
         expect(reactDomServer.renderToString).toHaveBeenCalled();
@@ -1313,11 +1320,9 @@ describe('Server', () => {
               ids: [],
               html: '<h1>Mock app</h1>',
             }}
-            assetOrigins={assetOrigins}
             data={dataResponse}
             helmet={{ head: 'tags' }}
             isAmp={isAmp}
-            service={service}
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
             links="__mock_link_elements__"
@@ -1377,35 +1382,66 @@ describe('Server HTTP Headers - Status Endpoint', () => {
   it(`should have X-XSS-Protection set to '1; mode=block' `, () => {
     validateHttpHeader(statusRequest.headers, 'x-xss-protection', '0');
   });
-
-  describe("should set 'x-clacks-overhead' header", () => {
-    it('should send the message on', async () => {
-      validateHttpHeader(
-        statusRequest.headers,
-        'x-clacks-overhead',
-        'GNU Terry Pratchett',
-      );
-    });
-
-    it('should not log the message', async () => {
-      global.console.log = jest.fn();
-
-      await makeRequest('/status');
-
-      expect(global.console.log).not.toHaveBeenCalledWith(
-        'GNU Terry Pratchett',
-      );
-    });
-  });
 });
 
 describe('Server HTTP Headers - Page Endpoints', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  const successDataResponse = {
+    isAmp: false,
+    data: { some: 'data' },
+    service: 'someService',
+    status: 200,
+  };
+
   it(`should set a cache-control header`, async () => {
     const { header } = await makeRequest('/mundo');
 
     expect(header['cache-control']).toBe(
-      'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
+      'public, stale-if-error=120, stale-while-revalidate=30, max-age=30',
     );
+  });
+
+  it(`should set a Referrer-Policy header`, async () => {
+    const { header } = await makeRequest('/mundo');
+
+    expect(header['referrer-policy']).toBe('no-referrer-when-downgrade');
+  });
+
+  it(`should add mvt experiment header names to vary if they are enabled`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    const { header } = await makeRequest('/mundo/c0000000001o');
+
+    expect(header.vary).toBe('mvt-simorgh_dark_mode, Accept-Encoding');
+  });
+
+  it(`should not add mvt experiment header names to vary if they are not enabled`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+    });
+    getMvtVaryHeaders.mockReturnValue('');
+
+    const { header } = await makeRequest('/mundo/articles/c0000000001o');
+
+    expect(header.vary).toBe('Accept-Encoding');
+  });
+
+  it(`should not add mvt experiment header names to vary if on AMP`, async () => {
+    mockRouteProps({
+      dataResponse: successDataResponse,
+      isAmp: true,
+    });
+    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+
+    const { header } = await makeRequest('/mundo/articles/c0000000001o');
+
+    expect(header.vary).toBe('Accept-Encoding');
   });
 });
 
@@ -1455,5 +1491,134 @@ describe('Routing Information Logging', () => {
       status: 200,
       pageType: 'Page Type from Data',
     });
+  });
+});
+
+describe('Exclusion of sensitive HTTP headers from logs', () => {
+  const SAFE_HEADER = 'x-safe-header';
+  const SENSITIVE_HEADER = 'x-sensitive-header';
+  const act = () =>
+    request(server)
+      .get('/pidgin')
+      .set(SAFE_HEADER, 'test')
+      .set(SENSITIVE_HEADER, 'test');
+
+  const assertHeaderWasLogged = (logger, logCategory, header) => {
+    expect(logger).toHaveBeenCalledWith(
+      logCategory,
+      expect.objectContaining({
+        headers: expect.objectContaining({
+          [header]: 'test',
+        }),
+      }),
+    );
+  };
+
+  const assertHeaderWasNotLogged = (logger, logCategory, header) => {
+    expect(logger).toHaveBeenCalledWith(
+      logCategory,
+      expect.objectContaining({
+        headers: expect.not.objectContaining({
+          [header]: 'test',
+        }),
+      }),
+    );
+  };
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    process.env.SENSITIVE_HTTP_HEADERS = 'x-sensitive-header,x-another-one';
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+    delete process.env.SENSITIVE_HTTP_HEADERS;
+  });
+
+  it(`when the environment variable isn't set`, async () => {
+    delete process.env.SENSITIVE_HTTP_HEADERS;
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+  });
+
+  it(`when simorgh responds successfully`, async () => {
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+  });
+
+  it(`when simorgh fails due to a getInitialData error`, async () => {
+    mockRouteProps({
+      dataResponse: Error('Oh no'),
+    });
+
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+    assertHeaderWasLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SENSITIVE_HEADER,
+    );
+  });
+
+  it(`when simorgh fails due to a renderDocument error`, async () => {
+    renderDocument.default.mockImplementation(() => Error('Oh no'));
+
+    await act();
+
+    assertHeaderWasLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.info,
+      SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+      SENSITIVE_HEADER,
+    );
+    assertHeaderWasLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SAFE_HEADER,
+    );
+    assertHeaderWasNotLogged(
+      loggerMock.error,
+      SERVER_SIDE_REQUEST_FAILED,
+      SENSITIVE_HEADER,
+    );
   });
 });

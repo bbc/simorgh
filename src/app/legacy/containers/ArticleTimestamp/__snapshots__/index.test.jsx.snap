@@ -1,0 +1,800 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleTimestamp should render a 'created' Timestamp correctly 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-1 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-1 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
+      grid-column-start: 1;
+    }
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      max-height: 0;
+      padding-top: 0.25rem;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.emotion-3 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-3:last-child {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1 emotion-2"
+    dir="ltr"
+  >
+    <time
+      class="emotion-3 emotion-4"
+      datetime="2018-07-07"
+    >
+      7 July 2018
+    </time>
+  </div>
+</div>
+`;
+
+exports[`ArticleTimestamp should render both a 'created' and an 'updated' Timestamp correctly 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-1 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-1 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
+      grid-column-start: 1;
+    }
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      max-height: 0;
+      padding-top: 0.25rem;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.emotion-3 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-3:last-child {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1 emotion-2"
+    dir="ltr"
+  >
+    <time
+      class="emotion-3 emotion-4"
+      datetime="2018-07-07"
+    >
+      7 July 2018
+    </time>
+    <div>
+      <time
+        class="emotion-3 emotion-4"
+        datetime="2019-03-15"
+      >
+        Updated 15 March 2019
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ArticleTimestamp should render with a prefix 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-1 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-1 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
+      grid-column-start: 1;
+    }
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      max-height: 0;
+      padding-top: 0.25rem;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.emotion-3 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-3:last-child {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1 emotion-2"
+    dir="ltr"
+  >
+    <time
+      class="emotion-3 emotion-4"
+      datetime="2018-07-07"
+    >
+      7 julio 2018
+    </time>
+    <div>
+      <time
+        class="emotion-3 emotion-4"
+        datetime="2019-03-15"
+      >
+        Actualizado 15 marzo 2019
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ArticleTimestamp should render with a suffix 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-1 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-1 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
+      grid-column-start: 1;
+    }
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      max-height: 0;
+      padding-top: 0.25rem;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.emotion-3 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #545658;
+  display: block;
+  font-family: Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-3:last-child {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1 emotion-2"
+    dir="ltr"
+  >
+    <time
+      class="emotion-3 emotion-4"
+      datetime="2018-07-07"
+    >
+      ७ जुलाई २०१८
+    </time>
+    <div>
+      <time
+        class="emotion-3 emotion-4"
+        datetime="2019-03-15"
+      >
+        १५ मार्च २०१९ अद्यावधिक
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ArticleTimestamp should render with no suffix or prefix 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-1 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-1 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-1 {
+    margin-left: 0%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-1 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
+      grid-column-start: 1;
+    }
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      max-height: 0;
+      padding-top: 0.25rem;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.emotion-3 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-3:last-child {
+  padding-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1 emotion-2"
+    dir="ltr"
+  >
+    <time
+      class="emotion-3 emotion-4"
+      datetime="2018-07-07"
+    >
+      7 julio 2018
+    </time>
+  </div>
+</div>
+`;

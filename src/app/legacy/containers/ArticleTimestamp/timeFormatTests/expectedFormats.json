@@ -1,0 +1,504 @@
+{
+  "afaanoromoo": {
+    "default": {
+      "one minute ago": "Daqiiqaa 1 dura",
+      "five minutes ago": "Daqiiqaa 5 dura",
+      "one hour ago": "Sa'aatii tokko dura",
+      "five hours ago": "Sa'aatii 5 dura",
+      "exact date": "10 Onkololeessa 2018",
+      "exact date and time with timezone": "12 Adooleessa 2019, 15:55 EAT"
+    }
+  },
+  "afrique": {
+    "default": {
+      "one minute ago": "il y a une minute",
+      "five minutes ago": "il y a 5 minutes",
+      "one hour ago": "il y a une heure",
+      "five hours ago": "il y a 5 heures",
+      "exact date": "10 octobre 2018",
+      "exact date and time with timezone": "12 juillet 2019, 12:55 GMT"
+    }
+  },
+  "amharic": {
+    "default": {
+      "one minute ago": "ከ 1 ደቂቃ በፊት",
+      "five minutes ago": "ከ 5 ደቂቃዎች በፊት",
+      "one hour ago": "ከ 1 ሰአት በፊት",
+      "five hours ago": "ከ 5 ሰአት በፊት",
+      "exact date": "10 ጥቅምት 2018",
+      "exact date and time with timezone": "12 ሀምሌ 2019, 15:55 EAT"
+    }
+  },
+  "arabic": {
+    "default": {
+      "one minute ago": "قبل دقيقة واحدة",
+      "five minutes ago": "قبل 5 دقيقة",
+      "one hour ago": "قبل ساعة واحدة",
+      "five hours ago": "قبل 5 ساعة",
+      "exact date": "10 أكتوبر/ تشرين الأول 2018",
+      "exact date and time with timezone": "12 يوليو/ تموز 2019، 12:55 GMT"
+    }
+  },
+  "archive": {
+    "default": {
+      "one minute ago": "1 minute ago",
+      "five minutes ago": "5 minutes ago",
+      "one hour ago": "1 hour ago",
+      "five hours ago": "5 hours ago",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 BST"
+    }
+  },
+  "azeri": {
+    "default": {
+      "one minute ago": "bir dəqiqə əvvəl",
+      "five minutes ago": "5 dəqiqə əvvəl",
+      "one hour ago": "bir saat əvvəl",
+      "five hours ago": "5 saat əvvəl",
+      "exact date": "10 Oktyabr 2018",
+      "exact date and time with timezone": "12 Iyul 2019, 16:55 +04"
+    }
+  },
+  "bengali": {
+    "default": {
+      "one minute ago": "এক মিনিট আগে",
+      "five minutes ago": "৫ মিনিট আগে",
+      "one hour ago": "এক ঘন্টা আগে",
+      "five hours ago": "৫ ঘন্টা আগে",
+      "exact date": "১০ অক্টোবর ২০১৮",
+      "exact date and time with timezone": "১২ জুলাই ২০১৯, ১৮:৫৫ +০৬"
+    }
+  },
+  "burmese": {
+    "default": {
+      "one minute ago": "လွန်ခဲ့သော တစ်မိနစ် က",
+      "five minutes ago": "လွန်ခဲ့သော ၅ မိနစ် က",
+      "one hour ago": "လွန်ခဲ့သော တစ်နာရီ က",
+      "five hours ago": "လွန်ခဲ့သော ၅ နာရီ က",
+      "exact date": "၁၀ အောက်တိုဘာ ၂၀၁၈",
+      "exact date and time with timezone": "၁၂ ဇူလိုင် ၂၀၁၉, ၁၂:၅၅ GMT"
+    }
+  },
+  "cymrufyw": {
+    "default": {
+      "one minute ago": "munud yn ôl",
+      "five minutes ago": "5 munud yn ôl",
+      "one hour ago": "awr yn ôl",
+      "five hours ago": "5 awr yn ôl",
+      "exact date": "10 Hydref 2018",
+      "exact date and time with timezone": "12 Gorffennaf 2019, 13:55 BST"
+    }
+  },
+  "gahuza": {
+    "default": {
+      "one minute ago": "Haciye umunota 1",
+      "five minutes ago": "Iminota 5 iraheze",
+      "one hour ago": "Haciye isaha 1",
+      "five hours ago": "Haciye amasaha 5",
+      "exact date": "10 Ukw'icumi 2018",
+      "exact date and time with timezone": "12 Ukw'indwi 2019, 12:55 GMT"
+    }
+  },
+  "gujarati": {
+    "default": {
+      "one minute ago": "એક મિનિટ પહેલા",
+      "five minutes ago": "5 મિનિટ પહેલા",
+      "one hour ago": "એક કલાક પહેલા",
+      "five hours ago": "5 કલાક પહેલા",
+      "exact date": "10 ઑક્ટોબર 2018",
+      "exact date and time with timezone": "12 જુલાઈ 2019, 18:25 IST"
+    }
+  },
+  "hausa": {
+    "default": {
+      "one minute ago": "Minti 1 da ta wuce",
+      "five minutes ago": "Mintuna 5 da suka wuce",
+      "one hour ago": "Sa'a 1 da ta wuce",
+      "five hours ago": "Sa'o'i 5 da suka wuce",
+      "exact date": "10 Oktoba 2018",
+      "exact date and time with timezone": "12 Yuli 2019, 12:55 GMT"
+    }
+  },
+  "hindi": {
+    "default": {
+      "one minute ago": "एक मिनट पहले",
+      "five minutes ago": "5 मिनट पहले",
+      "one hour ago": "एक घंटा पहले",
+      "five hours ago": "5 घंटे पहले",
+      "exact date": "10 अक्टूबर 2018",
+      "exact date and time with timezone": "12 जुलाई 2019, 18:25 IST"
+    }
+  },
+  "igbo": {
+    "default": {
+      "one minute ago": "otu nkeji gara aga",
+      "five minutes ago": "nkeji 5 gara aga",
+      "one hour ago": "otu elekere gara aga",
+      "five hours ago": "elekere 5 gara aga",
+      "exact date": "10 Ọktọba 2018",
+      "exact date and time with timezone": "12 Julaị 2019, 13:55 WAT"
+    }
+  },
+  "indonesia": {
+    "default": {
+      "one minute ago": "semenit yang lalu",
+      "five minutes ago": "5 menit yang lalu",
+      "one hour ago": "sejam yang lalu",
+      "five hours ago": "5 jam yang lalu",
+      "exact date": "10 Oktober 2018",
+      "exact date and time with timezone": "12 Juli 2019, 19:55 WIB"
+    }
+  },
+  "japanese": {
+    "default": {
+      "one minute ago": "1分前",
+      "five minutes ago": "5分前",
+      "one hour ago": "1時間前",
+      "five hours ago": "5時間前",
+      "exact date": "2018年10月11日",
+      "exact date and time with timezone": "2019年7月12日 21:55"
+    }
+  },
+  "korean": {
+    "default": {
+      "one minute ago": "1분 전",
+      "five minutes ago": "5분 전",
+      "one hour ago": "한 시간 전",
+      "five hours ago": "5시간 전",
+      "exact date": "2018년 10월 11일",
+      "exact date and time with timezone": "2019년 7월 12일 오후 9:55"
+    }
+  },
+  "kyrgyz": {
+    "default": {
+      "one minute ago": "1 мүнөт мурда",
+      "five minutes ago": "5 мүнөт мурда",
+      "one hour ago": "1 саат мурда",
+      "five hours ago": "5 саат мурда",
+      "exact date": "10 октябрь 2018",
+      "exact date and time with timezone": "12 июль 2019, 12:55 GMT"
+    }
+  },
+  "marathi": {
+    "default": {
+      "one minute ago": "1 मिनिटापूर्वी",
+      "five minutes ago": "5 मिनिटांपूर्वी",
+      "one hour ago": "1 तासापूर्वी",
+      "five hours ago": "5 तासांपूर्वी",
+      "exact date": "10 ऑक्टोबर 2018",
+      "exact date and time with timezone": "12 जुलै 2019, 18:25 IST"
+    }
+  },
+  "mundo": {
+    "default": {
+      "one minute ago": "1 minuto",
+      "five minutes ago": "5 minutos",
+      "one hour ago": "1 hora",
+      "five hours ago": "5 horas",
+      "exact date": "10 octubre 2018",
+      "exact date and time with timezone": "12 julio 2019, 12:55 GMT"
+    }
+  },
+  "naidheachdan": {
+    "default": {
+      "one minute ago": "bho chionn mionaid",
+      "five minutes ago": "bho chionn 5 mionaidean",
+      "one hour ago": "bho chionn uair",
+      "five hours ago": "bho chionn 5 uairean",
+      "exact date": "10 An Dàmhair 2018",
+      "exact date and time with timezone": "12 An t-Iuchar 2019, 13:55 BST"
+    }
+  },
+  "nepali": {
+    "default": {
+      "one minute ago": "१ मिनेट पहिले",
+      "five minutes ago": "५ मिनेट पहिले",
+      "one hour ago": "१ घण्टा पहिले",
+      "five hours ago": "५ घण्टा पहिले",
+      "exact date": "१० अक्टोबर २०१८",
+      "exact date and time with timezone": "१२ जुलाई २०१९, १८:४० +०५४५"
+    }
+  },
+  "news": {
+    "default": {
+      "one minute ago": "1 minute ago",
+      "five minutes ago": "5 minutes ago",
+      "one hour ago": "1 hour ago",
+      "five hours ago": "5 hours ago",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 BST"
+    }
+  },
+  "pashto": {
+    "default": {
+      "one minute ago": "۱ دقیقه وړاندې",
+      "five minutes ago": "۵ دقیقې وړاندې",
+      "one hour ago": "۱ ساعت وړاندې",
+      "five hours ago": "۵ ساعتونه وړاندې",
+      "exact date": "۱۰ اکتوبر ۲۰۱۸",
+      "exact date and time with timezone": "۱۲ جولای ۲۰۱۹، ۱۲:۵۵ GMT"
+    }
+  },
+  "persian": {
+    "default": {
+      "one minute ago": "یک دقیقه پیش",
+      "five minutes ago": "۵ دقیقه پیش",
+      "one hour ago": "یک ساعت پیش",
+      "five hours ago": "۵ ساعت پیش",
+      "exact date": "۱۰ اکتبر ۲۰۱۸",
+      "exact date and time with timezone": "۱۲ ژوئیه ۲۰۱۹، ۱۲:۵۵ GMT"
+    }
+  },
+  "pidgin": {
+    "default": {
+      "one minute ago": "one minute wey don pass",
+      "five minutes ago": "5 minutes wey don pass",
+      "one hour ago": "one hour wey don pass",
+      "five hours ago": "5 hours wey don pass",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 WAT"
+    }
+  },
+  "portuguese": {
+    "default": {
+      "one minute ago": "Há 1 minuto",
+      "five minutes ago": "Há 5 minutos",
+      "one hour ago": "Há 1 hora",
+      "five hours ago": "Há 5 horas",
+      "exact date": "10 outubro 2018",
+      "exact date and time with timezone": "12 julho 2019, 09:55 -03"
+    }
+  },
+  "punjabi": {
+    "default": {
+      "one minute ago": "ਇਕ ਮਿੰਟ ਪਹਿਲਾਂ",
+      "five minutes ago": "5 ਮਿੰਟ ਪਹਿਲਾਂ",
+      "one hour ago": "ਇੱਕ ਘੰਟਾ ਪਹਿਲਾਂ",
+      "five hours ago": "5 ਘੰਟੇ ਪਹਿਲਾਂ",
+      "exact date": "10 ਅਕਤੂਬਰ 2018",
+      "exact date and time with timezone": "12 ਜੁਲਾਈ 2019, 18:25 IST"
+    }
+  },
+  "russian": {
+    "default": {
+      "one minute ago": "минуту назад",
+      "five minutes ago": "5 минут назад",
+      "one hour ago": "час назад",
+      "five hours ago": "5 часов назад",
+      "exact date": "10 октября 2018",
+      "exact date and time with timezone": "12 июля 2019, 12:55 GMT"
+    }
+  },
+  "scotland": {
+    "default": {
+      "one minute ago": "1 minute ago",
+      "five minutes ago": "5 minutes ago",
+      "one hour ago": "1 hour ago",
+      "five hours ago": "5 hours ago",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 BST"
+    }
+  },
+  "sport": {
+    "default": {
+      "one minute ago": "1 minute ago",
+      "five minutes ago": "5 minutes ago",
+      "one hour ago": "1 hour ago",
+      "five hours ago": "5 hours ago",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 BST"
+    }
+  },
+  "serbian": {
+    "lat": {
+      "one minute ago": "Pre 1 minuta",
+      "five minutes ago": "Pre 5 minuta",
+      "one hour ago": "Pre 1 sata",
+      "five hours ago": "Pre 5 sati",
+      "exact date": "10 oktobar 2018",
+      "exact date and time with timezone": "12 jul 2019, 12:55 GMT"
+    },
+    "cyr": {
+      "one minute ago": "Пре 1 минута",
+      "five minutes ago": "Пре 5 минута",
+      "one hour ago": "Пре 1 сата",
+      "five hours ago": "Пре 5 сати",
+      "exact date": "10 октобар 2018",
+      "exact date and time with timezone": "12 јул 2019, 12:55 GMT"
+    }
+  },
+  "sinhala": {
+    "default": {
+      "one minute ago": "මිනිත්තු 1 පෙර",
+      "five minutes ago": "මිනිත්තු 5 පෙර",
+      "one hour ago": "පැයකට පෙර",
+      "five hours ago": "පැය 5 කට පෙර",
+      "exact date": "10 ඔක්තෝබර් 2018",
+      "exact date and time with timezone": "12 ජූලි 2019, 12:55 GMT"
+    }
+  },
+  "somali": {
+    "default": {
+      "one minute ago": "Daqiiqad ka hor",
+      "five minutes ago": "5 Daqiiqadood ka hor",
+      "one hour ago": "Saacad ka hor",
+      "five hours ago": "5 Saacadood ka hor",
+      "exact date": "10 Oktoobar 2018",
+      "exact date and time with timezone": "12 Luulyo 2019, 15:55 EAT"
+    }
+  },
+  "swahili": {
+    "default": {
+      "one minute ago": "Dakika 1 iliyopita",
+      "five minutes ago": "Dakika 5 zilizopita",
+      "one hour ago": "Saa 1 iliyopita",
+      "five hours ago": "Saa 5 zilizopita",
+      "exact date": "10 Oktoba 2018",
+      "exact date and time with timezone": "12 Julai 2019, 15:55 EAT"
+    }
+  },
+  "tamil": {
+    "default": {
+      "one minute ago": "ஒரு நிமிடத்துக்கு முன்னர்",
+      "five minutes ago": "5 நிமிடங்களுக்கு முன்னர்",
+      "one hour ago": "ஒரு மணி நேரத்துக்கு முன்னர்",
+      "five hours ago": "5 மணி நேரங்களுக்கு முன்னர்",
+      "exact date": "10 அக்டோபர் 2018",
+      "exact date and time with timezone": "12 ஜூலை 2019, 12:55 GMT"
+    }
+  },
+  "telugu": {
+    "default": {
+      "one minute ago": "ఒక నిమిషం క్రితం",
+      "five minutes ago": "5 నిమిషాలు క్రితం",
+      "one hour ago": "ఒక గంట క్రితం",
+      "five hours ago": "5 గంటలు క్రితం",
+      "exact date": "10 అక్టోబర్ 2018",
+      "exact date and time with timezone": "12 జులై 2019, 18:25 IST"
+    }
+  },
+  "thai": {
+    "default": {
+      "one minute ago": "เมื่อ 1 นาทีที่ผ่านมา",
+      "five minutes ago": "เมื่อ 5 นาทีที่ผ่านมา",
+      "one hour ago": "เมื่อ 1 ชั่วโมงที่แล้ว",
+      "five hours ago": "เมื่อ 5 ชั่วโมงที่แล้ว",
+      "exact date": "10 ตุลาคม 2018",
+      "exact date and time with timezone": "12 กรกฎาคม 2019, 19:55 +07"
+    }
+  },
+  "tigrinya": {
+    "default": {
+      "one minute ago": "ቅድሚ ደቒቕ",
+      "five minutes ago": "ቅድሚ 5 ደቓይቕ",
+      "one hour ago": "ቅድሚ ሓደ ሰዓት",
+      "five hours ago": "ቅድሚ 5 ሰዓታት",
+      "exact date": "10 ጥቅምቲ 2018",
+      "exact date and time with timezone": "12 ሓምለ 2019, 15:55 EAT"
+    }
+  },
+  "turkce": {
+    "default": {
+      "one minute ago": "bir dakika önce",
+      "five minutes ago": "5 dakika önce",
+      "one hour ago": "bir saat önce",
+      "five hours ago": "5 saat önce",
+      "exact date": "10 Ekim 2018",
+      "exact date and time with timezone": "12 Temmuz 2019, 15:55 +03"
+    }
+  },
+  "ukchina": {
+    "simp": {
+      "one minute ago": "1 分钟前",
+      "five minutes ago": "5 分钟前",
+      "one hour ago": "1 小时前",
+      "five hours ago": "5 小时前",
+      "exact date": "2018年10月10日",
+      "exact date and time with timezone": "2019年7月12日下午12点55分"
+    },
+    "trad": {
+      "one minute ago": "1 分钟前",
+      "five minutes ago": "5 分钟前",
+      "one hour ago": "1 小时前",
+      "five hours ago": "5 小时前",
+      "exact date": "2018年10月10日",
+      "exact date and time with timezone": "2019年7月12日下午12点55分"
+    }
+  },
+  "ukrainian": {
+    "default": {
+      "one minute ago": "1 хвилину тому",
+      "five minutes ago": "5 хвилин(и) тому",
+      "one hour ago": "1 година тому",
+      "five hours ago": "5 годин(и) тому",
+      "exact date": "10 жовтня 2018",
+      "exact date and time with timezone": "12 липня 2019, 12:55 GMT"
+    },
+    "ru-UA": {
+      "one minute ago": "минуту назад",
+      "five minutes ago": "5 минут назад",
+      "one hour ago": "час назад",
+      "five hours ago": "5 часов назад",
+      "exact date": "10 октября 2018",
+      "exact date and time with timezone": "12 июля 2019, 12:55 GMT"
+    }
+  },
+  "urdu": {
+    "default": {
+      "one minute ago": "ایک منٹ قبل",
+      "five minutes ago": "5 منٹ قبل",
+      "one hour ago": "ایک گھنٹہ قبل",
+      "five hours ago": "5 گھنٹے قبل",
+      "exact date": "10 اکتوبر 2018",
+      "exact date and time with timezone": "12 جولائی 2019، 17:55 PKT"
+    }
+  },
+  "uzbek": {
+    "default": {
+      "one minute ago": "1 дақиқа аввал",
+      "five minutes ago": "5 дақиқалар аввал",
+      "one hour ago": "1 cоат аввал",
+      "five hours ago": "5 соатлар аввал",
+      "exact date": "10 октябр 2018",
+      "exact date and time with timezone": "12 июл 2019, 12:55 GMT"
+    }
+  },
+  "vietnamese": {
+    "default": {
+      "one minute ago": "một phút trước",
+      "five minutes ago": "5 phút trước",
+      "one hour ago": "một giờ trước",
+      "five hours ago": "5 giờ trước",
+      "exact date": "10 tháng 10 2018",
+      "exact date and time with timezone": "12 tháng 7 2019, 19:55 +07"
+    }
+  },
+  "yoruba": {
+    "default": {
+      "one minute ago": "ìṣẹ́jú kan sẹ́yìn",
+      "five minutes ago": "ìṣẹ́jú 5 sẹ́yìn",
+      "one hour ago": "wákàtí kan sẹ́yìn",
+      "five hours ago": "wákàtí 5 sẹ́yìn",
+      "exact date": "10 Ọ̀wàrà 2018",
+      "exact date and time with timezone": "12 Agẹmo 2019, 13:55 WAT"
+    }
+  },
+  "zhongwen": {
+    "simp": {
+      "one minute ago": "1 分钟前",
+      "five minutes ago": "5 分钟前",
+      "one hour ago": "1 小时前",
+      "five hours ago": "5 小时前",
+      "exact date": "2018年10月10日",
+      "exact date and time with timezone": "2019年7月12日下午12点55分"
+    },
+    "trad": {
+      "one minute ago": "1 分钟前",
+      "five minutes ago": "5 分钟前",
+      "one hour ago": "1 小时前",
+      "five hours ago": "5 小时前",
+      "exact date": "2018年10月10日",
+      "exact date and time with timezone": "2019年7月12日下午12点55分"
+    }
+  }
+}

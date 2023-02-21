@@ -2,11 +2,10 @@ import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
-import last from 'ramda/src/last';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-import isLive from '#lib/utilities/isLive';
+import CpsRecommendations from '#containers/CpsRecommendations';
 
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -15,7 +14,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_MARGIN_BELOW_400PX,
@@ -24,13 +23,12 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-} from '#legacy/gel-foundations/src/spacings';
-import { C_GREY_2, C_WHITE } from '#legacy/psammead-styles/src/colours';
+} from '#psammead/gel-foundations/src/spacings';
+import { C_GREY_2, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
@@ -48,7 +46,6 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
-
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 
@@ -67,7 +64,11 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
-import ArticleRelatedContent from '#containers/ArticleRelatedContent';
+import bylineExtractor from './utilities/bylineExtractor';
+import Byline from './Byline';
+import getAuthorTwitterHandle from './getAuthorTwitterHandle';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
@@ -120,35 +121,15 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
+  const recommendationsData = path(['recommendations'], pageData);
 
-  /* TODO: Remove `isLive` and replace with `allowAdvertisng` or similar when available in Ares */
-  const isAdsEnabled = [!isLive(), adsEnabled, showAdsBasedOnLocation].every(
-    Boolean,
-  );
+  const isAdsEnabled = [
+    path(['metadata', 'allowAdvertising'], pageData),
+    adsEnabled,
+    showAdsBasedOnLocation,
+  ].every(Boolean);
 
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
-
-  const componentsToRender = {
-    visuallyHiddenHeadline,
-    headline: headings,
-    subheadline: headings,
-    audio: articleMediaPlayer,
-    video: articleMediaPlayer,
-    text,
-    image: props => (
-      <Image
-        {...props}
-        sizes="(min-width: 1008px) 760px, 100vw"
-        shouldPreload={preloadLeadImageToggle}
-      />
-    ),
-    timestamp: props => <Timestamp {...props} popOut={false} />,
-    social: SocialEmbedContainer,
-    group: gist,
-    links: props => <ScrollablePromo {...props} />,
-    mpu: props =>
-      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-  };
 
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -158,6 +139,53 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
+
+  const bylineBlock = blocks.find(block => block.type === 'byline');
+  const bylineContribBlocks = pathOr([], ['model', 'blocks'], bylineBlock);
+
+  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+
+  const hasByline = !!bylineLinkedData;
+
+  const articleAuthorTwitterHandle = hasByline
+    ? getAuthorTwitterHandle(blocks)
+    : null;
+
+  const componentsToRender = {
+    visuallyHiddenHeadline,
+    headline: headings,
+    subheadline: headings,
+    audio: articleMediaPlayer,
+    video: articleMediaPlayer,
+    text,
+    byline: props =>
+      hasByline ? (
+        <Byline {...props}>
+          <Timestamp
+            firstPublished={new Date(firstPublished).getTime()}
+            lastPublished={new Date(lastPublished).getTime()}
+            popOut={false}
+          />
+        </Byline>
+      ) : null,
+    image: props => (
+      <Image
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+      />
+    ),
+    timestamp: props =>
+      hasByline ? null : <Timestamp {...props} popOut={false} />,
+    social: SocialEmbedContainer,
+    group: gist,
+    links: props => <ScrollablePromo {...props} />,
+    mpu: props =>
+      isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
+    wsoj: props => (
+      <CpsRecommendations {...props} items={recommendationsData} />
+    ),
+  };
 
   const visuallyHiddenBlock = {
     id: null,
@@ -207,6 +235,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         articleId={getArticleId(pageData)}
         title={headline}
         author={articleAuthor}
+        twitterHandle={articleAuthorTwitterHandle}
         firstPublished={firstPublished}
         lastPublished={lastPublished}
         section={getArticleSection(pageData)}
@@ -219,6 +248,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData
         showAuthor
+        bylineLinkedData={bylineLinkedData}
         type="Article"
         seoTitle={headline}
         headline={headline}
@@ -247,7 +277,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               tagBackgroundColour={C_WHITE}
             />
           )}
-          <ArticleRelatedContent content={last(blocks)} />
+          <RelatedContentSection content={blocks} />
         </Primary>
         <SecondaryColumn pageData={pageData} />
       </ArticlePageGrid>

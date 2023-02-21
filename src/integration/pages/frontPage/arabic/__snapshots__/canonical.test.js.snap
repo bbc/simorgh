@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
@@ -228,8 +228,6 @@ exports[`Canonical Front Page SEO Canonical link 1`] = `"http://localhost:7080/a
 
 exports[`Canonical Front Page SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`Canonical Front Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Front Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, عربي - الرئيسية"`;
@@ -294,7 +292,7 @@ exports[`Canonical Front Page SEO OG url 1`] = `"http://localhost:7080/arabic"`;
 
 exports[`Canonical Front Page SEO Page title 1`] = `"الرئيسية - BBC News عربي"`;
 
-exports[`Canonical Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Front Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Front Page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -365,9 +363,10 @@ exports[`Story Promo Headline should match text 1`] = `"المجلس العسك�
 exports[`Story Promo Image should match image 1`] = `
 <img
   alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
-  class="eehpdyc0 bbc-rb7xa0 e11uq3260"
+  class="bbc-1uwua2r"
   height="549"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
+  style="aspect-ratio:976 / 549"
   width="976"
 />
 `;

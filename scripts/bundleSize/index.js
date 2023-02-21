@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+/* eslint-disable import/extensions */
 /* eslint-disable no-console */
 
 import ora from 'ora';
@@ -7,18 +8,37 @@ import Table from 'cli-table';
 import sortByBundlesTotalAscending from './sortByBundlesTotalAscending.js';
 import getAverageBundleSize from './getAverageBundleSize.js';
 import createConsoleError from './createConsoleError.js';
-import { getPageBundleData, getServiceBundleData } from './getBundleData.js';
+import {
+  getPageBundleData,
+  getServiceConfigBundleData,
+  getServiceThemeBundleData,
+} from './getBundleData.js';
 import { MIN_SIZE, MAX_SIZE } from './bundleSizeConfig.js';
 
 const bundleType = process.env.bundleType || 'modern';
-const serviceBundleData = sortByBundlesTotalAscending(getServiceBundleData());
-const serviceBundlesTotals = serviceBundleData.map(
+const serviceConfigBundleData = sortByBundlesTotalAscending(
+  getServiceConfigBundleData(),
+);
+const serviceThemeBundleData = sortByBundlesTotalAscending(
+  getServiceThemeBundleData(),
+);
+const serviceConfigBundlesTotals = serviceConfigBundleData.map(
   ({ totalSize }) => totalSize,
 );
+const serviceThemeBundlesTotals = serviceThemeBundleData.map(
+  ({ totalSize }) => totalSize,
+);
+const smallestServiceConfigBundleSize = Math.min(...serviceConfigBundlesTotals);
+const largestServiceConfigBundleSize = Math.max(...serviceConfigBundlesTotals);
+const averageServiceConfigBundleSize = getAverageBundleSize(
+  serviceConfigBundlesTotals,
+);
 
-const smallestServiceBundleSize = Math.min(...serviceBundlesTotals);
-const largestServiceBundleSize = Math.max(...serviceBundlesTotals);
-const averageServiceBundleSize = getAverageBundleSize(serviceBundlesTotals);
+const smallestServiceThemeBundleSize = Math.min(...serviceThemeBundlesTotals);
+const largestServiceThemeBundleSize = Math.max(...serviceThemeBundlesTotals);
+const averageServiceThemeBundleSize = getAverageBundleSize(
+  serviceThemeBundlesTotals,
+);
 
 const pageBundleData = sortByBundlesTotalAscending(getPageBundleData());
 
@@ -28,13 +48,21 @@ const largestPageBundleSize = Math.max(...pageBundlesTotals);
 const averagePageBundleSize = getAverageBundleSize(pageBundlesTotals);
 
 const largestPagePlusServiceBundleSize =
-  largestServiceBundleSize + largestPageBundleSize;
+  largestServiceConfigBundleSize +
+  largestServiceThemeBundleSize +
+  largestPageBundleSize;
 const smallestPagePlusServiceBundleSize =
-  smallestServiceBundleSize + smallestPageBundleSize;
+  smallestServiceConfigBundleSize +
+  smallestServiceThemeBundleSize +
+  smallestPageBundleSize;
 
 const removeBundleTypePrefix = name => name.replace(`${bundleType}.`, '');
 
-const serviceBundlesTable = new Table({
+const serviceConfigBundlesTable = new Table({
+  head: ['Service name', 'bundles', 'Total size (Bytes)', 'Total size (kB)'],
+});
+
+const serviceThemeBundlesTable = new Table({
   head: ['Service name', 'bundles', 'Total size (Bytes)', 'Total size (kB)'],
 });
 
@@ -83,12 +111,26 @@ pageBundleData.forEach(
   },
 );
 
-serviceBundleData.forEach(
+serviceConfigBundleData.forEach(
   ({ serviceName, bundles, totalSizeInBytes, totalSize }) => {
     const getFileInfo = ({ name, size }) =>
       `${removeBundleTypePrefix(name)} (${size}kB)`;
 
-    serviceBundlesTable.push([
+    serviceConfigBundlesTable.push([
+      serviceName,
+      bundles.map(getFileInfo).join('\n'),
+      totalSizeInBytes,
+      totalSize,
+    ]);
+  },
+);
+
+serviceThemeBundleData.forEach(
+  ({ serviceName, bundles, totalSizeInBytes, totalSize }) => {
+    const getFileInfo = ({ name, size }) =>
+      `${removeBundleTypePrefix(name)} (${size}kB)`;
+
+    serviceThemeBundlesTable.push([
       serviceName,
       bundles.map(getFileInfo).join('\n'),
       totalSizeInBytes,
@@ -106,9 +148,15 @@ pageSummaryTable.push(
 
 const serviceSummaryTable = new Table();
 serviceSummaryTable.push(
-  { 'Smallest total bundle size (kB)': smallestServiceBundleSize },
-  { 'Largest total bundle size (kB)': largestServiceBundleSize },
-  { 'Average total bundle size (kB)': averageServiceBundleSize },
+  { 'Smallest total bundle size (kB)': smallestServiceConfigBundleSize },
+  { 'Largest total bundle size (kB)': largestServiceConfigBundleSize },
+  { 'Average total bundle size (kB)': averageServiceConfigBundleSize },
+);
+const serviceThemeSummaryTable = new Table();
+serviceThemeSummaryTable.push(
+  { 'Smallest total bundle size (kB)': smallestServiceThemeBundleSize },
+  { 'Largest total bundle size (kB)': largestServiceThemeBundleSize },
+  { 'Average total bundle size (kB)': averageServiceThemeBundleSize },
 );
 
 const servicePageSummaryTable = new Table();
@@ -131,13 +179,27 @@ const spinner = ora({
 spinner.start();
 console.log(chalk.bold('\n\nResults'));
 
-console.log(chalk.bold(`\n${styledBundleTypeTitle} service bundle sizes\n`));
-console.log(serviceBundlesTable.toString());
-
 console.log(
-  chalk.bold(`\n\n${styledBundleTypeTitle} service bundle sizes summary\n`),
+  chalk.bold(`\n${styledBundleTypeTitle} service config bundle sizes\n`),
+);
+console.log(serviceConfigBundlesTable.toString());
+console.log(
+  chalk.bold(
+    `\n\n${styledBundleTypeTitle} service config bundle sizes summary\n`,
+  ),
 );
 console.log(serviceSummaryTable.toString());
+
+console.log(
+  chalk.bold(`\n${styledBundleTypeTitle} service theme bundle sizes\n`),
+);
+console.log(serviceThemeBundlesTable.toString());
+console.log(
+  chalk.bold(
+    `\n\n${styledBundleTypeTitle} service theme bundle sizes summary\n`,
+  ),
+);
+console.log(serviceThemeSummaryTable.toString());
 
 console.log(
   chalk.bold(`\n\n${styledBundleTypeTitle} page type bundle sizes\n`),
@@ -154,7 +216,7 @@ console.log(pageSummaryTable.toString());
 
 console.log(
   chalk.bold(
-    `\n\n${styledBundleTypeTitle} service + page bundle sizes summary\n`,
+    `\n\n${styledBundleTypeTitle} service config & theme + page bundle sizes summary\n`,
   ),
 );
 console.log(servicePageSummaryTable.toString());
@@ -162,7 +224,7 @@ console.log(servicePageSummaryTable.toString());
 const errors = [];
 
 if (smallestPagePlusServiceBundleSize < MIN_SIZE) {
-  const service = serviceBundleData[0].serviceName;
+  const service = serviceConfigBundleData[0].serviceName;
   const pageType = pageBundleData[0].pageName;
   errors.push(
     createConsoleError({
@@ -175,7 +237,8 @@ if (smallestPagePlusServiceBundleSize < MIN_SIZE) {
 }
 
 if (largestPagePlusServiceBundleSize > MAX_SIZE) {
-  const service = serviceBundleData[serviceBundleData.length - 1].serviceName;
+  const service =
+    serviceConfigBundleData[serviceConfigBundleData.length - 1].serviceName;
   const pageType = pageBundleData[pageBundleData.length - 1].pageName;
   errors.push(
     createConsoleError({

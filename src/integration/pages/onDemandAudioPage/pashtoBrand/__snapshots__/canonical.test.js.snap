@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
@@ -252,8 +252,6 @@ exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://localh
 
 exports[`Canonical On Demand Audio Page SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`Canonical On Demand Audio Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical On Demand Audio Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical On Demand Audio Page SEO Heading level 1 1`] = `"وروستي خبرونه, ۱۸ می ۲۰۲۰"`;
@@ -327,7 +325,7 @@ exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://localhost:7080
 
 exports[`Canonical On Demand Audio Page SEO Page title 1`] = `"وروستي خبرونه - BBC News پښتو"`;
 
-exports[`Canonical On Demand Audio Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical On Demand Audio Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical On Demand Audio Page SEO Twitter card 1`] = `"summary_large_image"`;
 

@@ -1,9 +1,8 @@
 # useToggle Hook
 
-## Feature Toggles
+### Feature Toggles
 
-Feature toggles are designed to be global (i.e not service specific) and are dependant on the application environment.
-Feature toggles can be found in `src/app/lib/config/toggles`
+A description of how feature toggles work can be found in the toggles readme [here](https://github.com/bbc/simorgh/blob/latest/src/app/lib/README.md)
 
 ### Using the useToggle Hook
 
@@ -21,7 +20,7 @@ export default Component;
 
 ### Testing
 
-When writing unit tests for components that use the `useToggle` hook, you should wrap the component in a ToggleContextProvider. Then pass to it a stub for the toggles as shown below in `defaultToggles`. This will ensure that the component's unit test is not impacted by changes in the actual toggle values.
+When writing unit tests for components that use the `useToggle` hook, you should wrap the component in a `ToggleContextProvider`. Then pass to it a stub for the toggles as shown below in `defaultToggles`. This will ensure that the component's unit test is not impacted by changes in the actual toggle values.
 
 ```
 const toggles = {

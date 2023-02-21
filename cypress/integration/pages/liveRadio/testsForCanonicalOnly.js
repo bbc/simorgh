@@ -6,7 +6,7 @@ import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
 import {
   isScheduleDataComplete,
   getIsProgramValid,
-} from '../../../../src/app/containers/RadioSchedule/utilities/evaluateScheduleData';
+} from '../../../../src/app/legacy/containers/RadioSchedule/utilities/evaluateScheduleData';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
 // For testing important features that differ between services, e.g. Timestamps.

@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
 
-exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+exports[`Canonical Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`Canonical Feature Index page Header I can see the branding 1`] = `"BBC News, اردو"`;
 
@@ -205,8 +205,6 @@ exports[`Canonical Feature Index page SEO Canonical link 1`] = `"http://localhos
 
 exports[`Canonical Feature Index page SEO Dir attribute 1`] = `"rtl"`;
 
-exports[`Canonical Feature Index page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Feature Index page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Feature Index page SEO Heading level 1 1`] = `"کورونا وائرس: تحقیق، تشخیص اور احتیاط"`;
@@ -271,7 +269,7 @@ exports[`Canonical Feature Index page SEO OG url 1`] = `"http://localhost:7080/u
 
 exports[`Canonical Feature Index page SEO Page title 1`] = `"کورونا وائرس: تحقیق، تشخیص اور احتیاط - BBC News اردو"`;
 
-exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Feature Index page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Feature Index page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -300,9 +298,12 @@ exports[`Canonical Feature Index page Story Promo Headline should match text 1`]
 exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
 <img
   alt="بل گیٹس"
-  class="eehpdyc0 bbc-rb7xa0 e11uq3260"
+  class="bbc-1uwua2r"
   height="576"
+  sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/B04F/production/_112753154_bill.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/B04F/production/_112753154_bill.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/B04F/production/_112753154_bill.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/B04F/production/_112753154_bill.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/B04F/production/_112753154_bill.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B04F/production/_112753154_bill.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg 660w"
+  style="aspect-ratio:1024 / 576"
   width="1024"
 />
 `;

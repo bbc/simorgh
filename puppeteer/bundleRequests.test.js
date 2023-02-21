@@ -79,7 +79,7 @@ describe('Js bundle requests', () => {
                 .forEach(url => {
                   expect(url).toMatch(
                     new RegExp(
-                      `(\\/static\\/js\\/(?:comscore\\/)?(modern.)?(main|framework|commons|shared|${serviceRegex}|frosted_promo|.+Page).+?.js)|(\\/static\\/.+?-lib.+?.js)|${config[service].name}\\/(articles\\/)?sw\\.js`,
+                      `(\\/static\\/js\\/(?:comscore\\/)?(modern.)?(main|framework|commons|shared|${serviceRegex}|frosted_promo|themes|.+Page).+?.js)|(\\/static\\/.+?-lib.+?.js)|${config[service].name}\\/(articles\\/)?sw\\.js`,
                       'g',
                     ),
                   );

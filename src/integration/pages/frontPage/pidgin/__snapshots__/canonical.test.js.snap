@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2023 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
@@ -207,8 +207,6 @@ exports[`Canonical Front Page SEO Canonical link 1`] = `"http://localhost:7080/p
 
 exports[`Canonical Front Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`Canonical Front Page SEO FB admins 1`] = `"100004154058350"`;
-
 exports[`Canonical Front Page SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, Pidgin - Home"`;
@@ -273,7 +271,7 @@ exports[`Canonical Front Page SEO OG url 1`] = `"http://localhost:7080/pidgin"`;
 
 exports[`Canonical Front Page SEO Page title 1`] = `"Domot - BBC News Pidgin"`;
 
-exports[`Canonical Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Front Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
 exports[`Canonical Front Page SEO Twitter card 1`] = `"summary_large_image"`;
 
@@ -310,9 +308,10 @@ exports[`Story Promo Headline should match text 1`] = `"As E Dey Happen Senators
 exports[`Story Promo Image should match image 1`] = `
 <img
   alt="Senator Ahmad Lawan and Ali Ndume"
-  class="eehpdyc0 bbc-rb7xa0 e11uq3260"
+  class="bbc-1uwua2r"
   height="549"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+  style="aspect-ratio:976 / 549"
   width="976"
 />
 `;

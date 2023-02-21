@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 
 import { EPISODE_STATUS } from '..';
 import ErrorMessage from '.';

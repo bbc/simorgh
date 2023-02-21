@@ -11,3 +11,5 @@ export const STORY_PAGE = 'STY';
 export const PHOTO_GALLERY_PAGE = 'PGL';
 export const CORRESPONDENT_STORY_PAGE = 'CSP';
 export const TOPIC_PAGE = 'TOPIC';
+export const LIVE_PAGE = 'LIVE';
+export const HOME_PAGE = 'HOME';

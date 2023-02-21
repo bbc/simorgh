@@ -2,7 +2,6 @@ import React, { createContext, useContext } from 'react';
 import { node } from 'prop-types';
 
 import { pageDataPropType } from '#models/propTypes/data';
-import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { buildATIEventTrackingParams } from '#containers/ATIAnalytics/params';
 import useToggle from '#hooks/useToggle';
@@ -19,7 +18,9 @@ import {
   PHOTO_GALLERY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   TOPIC_PAGE,
+  LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { ServiceContext } from '../ServiceContext';
 
 export const EventTrackingContext = createContext({});
 
@@ -37,6 +38,7 @@ const getCampaignID = pageType => {
     [PHOTO_GALLERY_PAGE]: 'article-photo-gallery',
     [CORRESPONDENT_STORY_PAGE]: 'article-csp',
     [TOPIC_PAGE]: 'topic-page',
+    [LIVE_PAGE]: 'live-page',
   }[pageType];
 
   if (!campaignID) {
@@ -56,7 +58,8 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
   const serviceContext = useContext(ServiceContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
-  if (!eventTrackingIsEnabled || !pageData) {
+  // TODO: Enable event tracking for NextJS pages
+  if (!eventTrackingIsEnabled || !pageData || requestContext.isNextJs) {
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}

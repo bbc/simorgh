@@ -1,0 +1,827 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gist should render the gist with multiple list items 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  color: #545658;
+  border-top: 0.25rem solid #B80000;
+  background-color: #FFFFFF;
+  padding: 1.5rem 1.5rem 0 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+
+.emotion-4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  display: inline-block;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-8 {
+  margin-bottom: 1.5rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-8 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-8 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-8 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-8 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-8 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-8 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-8 ul {
+  padding: 0;
+}
+
+.emotion-8 li {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 li {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 li {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-8 li:last-child {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    padding-left: 1rem;
+  }
+
+  .emotion-8 li:last-child {
+    padding-bottom: 2rem;
+  }
+}
+
+.emotion-10 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-10>li {
+  position: relative;
+}
+
+.emotion-10>li::before {
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #545658;
+  background-color: #545658;
+  border-radius: 0;
+  left: -1rem;
+}
+
+.emotion-12 {
+  margin-bottom: 1rem;
+}
+
+.emotion-16 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.emotion-20 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-20:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.emotion-20:focus,
+.emotion-20:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+<div>
+  <div
+    aria-labelledby="gist-title"
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <strong
+        class="emotion-4 emotion-5"
+        id="gist-title"
+      >
+        At a glance
+      </strong>
+      <div
+        class="emotion-6 emotion-7 emotion-8 emotion-1"
+        dir="ltr"
+      >
+        <ul
+          class="emotion-10 emotion-11"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="emotion-12 emotion-13"
+            role="listitem"
+          >
+            Here is a summary of the article
+          </li>
+          <li
+            class="emotion-12 emotion-13"
+            role="listitem"
+          >
+            This component supports 
+            <b>
+              bold,
+            </b>
+             
+            <i
+              class="emotion-16 emotion-17"
+            >
+              italic,
+            </i>
+             
+            <i
+              class="emotion-16 emotion-17"
+            >
+              <b>
+                bold-italic, 
+              </b>
+            </i>
+            <a
+              aria-label="links,, external"
+              class="focusIndicatorReducedWidth emotion-20 emotion-21"
+              href="https://www.google.com"
+            >
+              links,
+            </a>
+             
+            <a
+              aria-label="and bold-italic-links,, external"
+              class="focusIndicatorReducedWidth emotion-20 emotion-21"
+              href="https://www.google.com"
+            >
+              <i
+                class="emotion-16 emotion-17"
+              >
+                <b>
+                  and bold-italic-links,
+                </b>
+              </i>
+            </a>
+          </li>
+          <li
+            class="emotion-12 emotion-13"
+            role="listitem"
+          >
+            It can be as long as editorial desires
+          </li>
+          <li
+            class="emotion-12 emotion-13"
+            role="listitem"
+          >
+            It does not support nested lists
+          </li>
+          <li
+            class="emotion-12 emotion-13"
+            role="listitem"
+          >
+            If a sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Gist should render the gist with one list item 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  color: #545658;
+  border-top: 0.25rem solid #B80000;
+  background-color: #FFFFFF;
+  padding: 1.5rem 1.5rem 0 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+
+.emotion-4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  display: inline-block;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-8 {
+  margin-bottom: 1.5rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-8 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-8 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-8 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-8 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-8 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-8 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-8 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-8 ul {
+  padding: 0;
+}
+
+.emotion-8 li {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 li {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 li {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-8 li:last-child {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    padding-left: 1rem;
+  }
+
+  .emotion-8 li:last-child {
+    padding-bottom: 2rem;
+  }
+}
+
+.emotion-10 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-10>li {
+  position: relative;
+}
+
+.emotion-10>li::before {
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #545658;
+  background-color: #545658;
+  border-radius: 0;
+  left: -1rem;
+}
+
+.emotion-12 {
+  margin-bottom: 1rem;
+}
+
+<div>
+  <div
+    aria-labelledby="gist-title"
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    role="region"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <strong
+        class="emotion-4 emotion-5"
+        id="gist-title"
+      >
+        At a glance
+      </strong>
+      <div
+        class="emotion-6 emotion-7 emotion-8 emotion-1"
+        dir="ltr"
+      >
+        <ul
+          class="emotion-10 emotion-11"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="emotion-12 emotion-13"
+            role="listitem"
+          >
+            Level 1
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

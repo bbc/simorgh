@@ -121,6 +121,7 @@ const runTestsForPage = ({
             service,
             pageType,
             variant: config[service].variant,
+            isAmp: true,
           };
 
           // Enables overriding of the smoke test values in the config/settings.js file

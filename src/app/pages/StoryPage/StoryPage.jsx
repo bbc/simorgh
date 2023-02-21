@@ -6,16 +6,16 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING,
-} from '#legacy/gel-foundations/src/spacings';
-import SectionLabel from '#legacy/psammead-section-label/src';
+} from '#psammead/gel-foundations/src/spacings';
+import SectionLabel from '#psammead/psammead-section-label/src';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '#legacy/gel-foundations/src/breakpoints';
+} from '#psammead/gel-foundations/src/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
-import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
+import Grid, { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -49,13 +49,15 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import Include from '#containers/Include';
-import { ServiceContext } from '#contexts/ServiceContext';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
@@ -197,11 +199,49 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
-      <CpsRecommendations
-        {...props}
-        parentColumns={gridColsMain}
-        items={recommendationsData}
-      />
+      // 004_brasil_recommendations_experiment
+      <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
+        {variation => {
+          if (variation === 'control' || !variation) {
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={recommendationsData}
+              />
+            );
+          }
+          if (variation === 'content_recs') {
+            const unirecsContentRecommendationData = path(
+              ['datalabContentRecommendations'],
+              pageData,
+            );
+
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={unirecsContentRecommendationData}
+              />
+            );
+          }
+          if (variation === 'hybrid_recs') {
+            const unirecsHybridRecommendationData = path(
+              ['datalabHybridRecommendations'],
+              pageData,
+            );
+            return (
+              <CpsRecommendations
+                {...props}
+                parentColumns={gridColsMain}
+                items={unirecsHybridRecommendationData}
+              />
+            );
+          }
+
+          return null;
+        }}
+      </OptimizelyExperiment>
     ),
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />

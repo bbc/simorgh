@@ -9,13 +9,77 @@ import getMostWatchedEndpoint from '#lib/utilities/getUrlHelpers/getMostWatchedU
 import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
 import getRecommendationsUrl from '#lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
+import getAgent from '#server/utilities/getAgent/index';
+import nodeLogger from '#lib/logger.node';
+import { DATA_FETCH_ERROR } from '#lib/logger.const';
 import getAssetType from './getAssetType';
 import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
 import hasMostRead from './hasMostRead';
 import fetchPageData from '../../utils/fetchPageData';
+import withCache from '../../utils/fetchPageData/withCache';
 
 const noop = () => {};
+const logger = nodeLogger(__filename);
+
+// 004_brasil_recommendations_experiment
+const getRecommendations = (service, assetUri) => {
+  if (service !== 'portuguese') {
+    return [
+      {
+        name: 'recommendations',
+        attachAgent: true,
+        path: getRecommendationsUrl({
+          assetUri,
+          engine: 'unirecs_datalab',
+        }),
+        assetUri,
+        api: 'recommendations',
+        apiContext: 'secondary_data',
+      },
+    ];
+  }
+
+  return [
+    {
+      name: 'recommendations',
+      attachAgent: true,
+      path: getRecommendationsUrl({
+        assetUri,
+        engine: 'unirecs_datalab',
+      }),
+      assetUri,
+      api: 'recommendations',
+      apiContext: 'secondary_data',
+    },
+    {
+      name: 'datalabContentRecommendations',
+      attachAgent: true,
+      engine: 'unirecs_datalab_content',
+      path: getRecommendationsUrl({
+        assetUri,
+        engine: 'unirecs_datalab',
+        engineVariant: 'content',
+      }),
+      assetUri,
+      api: 'datalab_content',
+      apiContext: 'secondary_data',
+    },
+    {
+      name: 'datalabHybridRecommendations',
+      attachAgent: true,
+      engine: 'unirecs_datalab_hybrid',
+      path: getRecommendationsUrl({
+        assetUri,
+        engine: 'unirecs_datalab',
+        engineVariant: 'hybrid',
+      }),
+      assetUri,
+      api: 'datalab_hybrid',
+      apiContext: 'secondary_data',
+    },
+  ];
+};
 
 const pageTypeUrls = async (
   assetType,
@@ -48,15 +112,10 @@ const pageTypeUrls = async (
           api: 'secondary_column',
           apiContext: 'secondary_data',
         },
-        (await hasRecommendations(service, variant, pageData))
-          ? {
-              name: 'recommendations',
-              path: getRecommendationsUrl({ assetUri, variant }),
-              assetUri,
-              api: 'recommendations',
-              apiContext: 'secondary_data',
-            }
-          : null,
+        // 004_brasil_recommendations_experiment
+        ...((await hasRecommendations(service, variant, pageData))
+          ? getRecommendations(service, assetUri)
+          : []),
       ].filter(i => i);
     case MEDIA_ASSET_PAGE:
       return [
@@ -75,16 +134,48 @@ const pageTypeUrls = async (
 
 const validateResponse = ({ status, json }, name) => {
   if (status === 200 && !isEmpty(json)) {
+    // 004_brasil_recommendations_experiment
     return { [name]: json };
   }
 
   return null;
 };
 
-const fetchUrl = ({ name, path, ...loggerArgs }) =>
-  fetchPageData({ path, timeout: SECONDARY_DATA_TIMEOUT, ...loggerArgs })
-    .then(response => validateResponse(response, name))
-    .catch(noop);
+const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
+  // 004_brasil_recommendations_experiment
+  try {
+    const agent = attachAgent ? await getAgent() : null;
+
+    if (name.toLowerCase().includes('recommendations')) {
+      return fetchPageData({
+        path,
+        timeout: SECONDARY_DATA_TIMEOUT,
+        agent,
+        cache: null,
+        ...loggerArgs,
+      })
+        .then(response => validateResponse(response, name))
+        .catch(noop);
+    }
+
+    return withCache({
+      path,
+      timeout: SECONDARY_DATA_TIMEOUT,
+      agent,
+      ...loggerArgs,
+    })
+      .then(response => validateResponse(response, name))
+      .catch(noop);
+  } catch (error) {
+    logger.error(DATA_FETCH_ERROR, {
+      data: path,
+      path,
+      ...loggerArgs,
+    });
+
+    return null;
+  }
+};
 
 const getAdditionalPageData = async ({ pageData, service, variant, env }) => {
   const assetType = getAssetType(pageData);
@@ -100,6 +191,7 @@ const getAdditionalPageData = async ({ pageData, service, variant, env }) => {
   );
 
   if (urlsToFetch) {
+    // 004_brasil_recommendations_experiment
     return Promise.all(urlsToFetch.map(fetchUrl)).then(results =>
       Object.assign({}, ...results),
     );

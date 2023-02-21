@@ -1,0 +1,253 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares::article:crd2mn2lyqqo",
+      "locators": {
+        "optimoUrn": "urn:bbc:optimo:asset:crd2mn2lyqqo",
+        "canonicalUrl": "https://www.bbc.com/pidgin/articles/crd2mn2lyqqo"
+      },
+      "type": "article",
+      "createdBy": "Pidgin",
+      "language": "pcm",
+      "lastUpdated": 1666699144284,
+      "firstPublished": 1666699140200,
+      "lastPublished": 1666699140200,
+      "timestamp": 1666699140200,
+      "options": {},
+      "analyticsLabels": {
+        "contentId": "urn:bbc:optimo:asset:crd2mn2lyqqo",
+        "producer": "Pidgin",
+        "page": "pidgin.articles.crd2mn2lyqqo.page"
+      },
+      "passport": {
+        "language": "pcm",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+        "locator": "urn:bbc:optimo:asset:crd2mn2lyqqo",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+          }
+        ],
+        "schemaVersion": "1.4.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "infoClass": [
+            {
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+              "type": "infoClass"
+            }
+          ]
+        }
+      },
+      "tags": {},
+      "version": "v1.4.8",
+      "blockTypes": [
+        "headline",
+        "text",
+        "paragraph",
+        "fragment",
+        "social",
+        "renditions",
+        "aresOEmbed"
+      ],
+      "suitableForSyndication": true,
+      "readTime": 1,
+      "consumableAsSFV": false,
+      "allowAdvertising": true,
+      "consumableOnlyOnRedButton": false
+    },
+    "content": {
+      "model": {
+        "blocks": [
+          {
+            "type": "headline",
+            "model": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Single Facebook Post Embed Test",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Single Facebook Post Embed Test",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "headline",
+            "model": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Test 1",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Test 1",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "social",
+            "model": {
+              "source": "https://www.facebook.com/bbcindia/posts/pfbid02zp1HojdwRNEunRHZBw2RNnVoboMJ7puujkA5Xx7JYLRvSrRcAgV4sDgXqRQjgPTHl",
+              "providerName": "Facebook",
+              "blocks": [
+                {
+                  "type": "renditions",
+                  "model": {
+                    "locator": "urn:bbc:optimo:social:afaf7622-09c9-48a7-9a75-2293a39c25c2",
+                    "blocks": [
+                      {
+                        "type": "aresOEmbed",
+                        "model": {
+                          "oembed": {
+                            "version": "1.0",
+                            "author_name": "BBC News India",
+                            "author_url": "https://www.facebook.com/151955124848859",
+                            "provider_name": "Facebook",
+                            "provider_url": "https://www.facebook.com",
+                            "html": "<div class=\"fb-post\" data-href=\"https://www.facebook.com/bbcindia/posts/pfbid02zp1HojdwRNEunRHZBw2RNnVoboMJ7puujkA5Xx7JYLRvSrRcAgV4sDgXqRQjgPTHl\" data-width=\"552\"><blockquote cite=\"https://graph.facebook.com/151955124848859/posts/5915874601790187/\" class=\"fb-xfbml-parse-ignore\"><p>The US actor and comedian Leslie Jordan has died aged 67, his agent has confirmed.</p>Posted by <a href=\"https://www.facebook.com/151955124848859\">BBC News India</a> on&nbsp;<a href=\"https://graph.facebook.com/151955124848859/posts/5915874601790187/\">Tuesday, October 25, 2022</a></blockquote></div>",
+                            "width": 552
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "promo": {
+      "locators": {
+        "optimoUrn": "urn:bbc:optimo:asset:crd2mn2lyqqo",
+        "canonicalUrl": "https://www.bbc.com/pidgin/articles/crd2mn2lyqqo"
+      },
+      "timestamp": 1666699140200,
+      "suitableForSyndication": true,
+      "language": "pcm",
+      "headlines": {
+        "seoHeadline": "Single Facebook Embed Test",
+        "promoHeadline": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Single Facebook Post Embed Test",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Single Facebook Post Embed Test",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "images": {},
+      "summary": {
+        "blocks": [
+          {
+            "type": "text",
+            "model": {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "model": {
+                    "text": "",
+                    "blocks": [
+                      {
+                        "type": "fragment",
+                        "model": {
+                          "text": "",
+                          "attributes": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "passport": {
+        "language": "pcm",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+        "locator": "urn:bbc:optimo:asset:crd2mn2lyqqo",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+          }
+        ],
+        "schemaVersion": "1.4.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "infoClass": [
+            {
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+              "type": "infoClass"
+            }
+          ]
+        }
+      },
+      "id": "urn:bbc:ares::article:crd2mn2lyqqo",
+      "type": "optimo"
+    },
+    "relatedContent": {
+      "site": {
+        "subType": "site",
+        "name": "Pidgin",
+        "uri": "/pidgin",
+        "type": "simple"
+      },
+      "groups": []
+    }
+  }

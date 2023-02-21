@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Navigation snapshots should correctly render Canonical navigation 1`] = `
+.emotion-0 {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-0 .e11sm0on2::after {
+  left: 0;
+}
+
+.emotion-2 {
+  position: relative;
+  max-width: 63.4rem;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-6 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.emotion-6:hover,
+.emotion-6:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.emotion-6:hover::after,
+.emotion-6:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #000000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-6 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+.emotion-6 svg {
+  vertical-align: middle;
+}
+
+.emotion-8 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-8 {
+    fill: linkText;
+  }
+}
+
+.emotion-10 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-12 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-12::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-12:focus-visible {
+    outline: none;
+  }
+
+  .emotion-12:focus-visible:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .emotion-12:focus-visible:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-12:focus-visible:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-14 {
+  background-color: #FFFFFF;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  visibility: hidden;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emotion-14 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+<div>
+  <nav
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    role="navigation"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <button
+          aria-expanded="false"
+          class="focusIndicatorRemove emotion-6 emotion-7"
+          dir="ltr"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="emotion-8 emotion-9"
+            focusable="false"
+            height="2.75rem"
+            viewBox="0 0 44 44"
+            width="2.75rem"
+          >
+            <path
+              d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+            />
+          </svg>
+          <span
+            class="emotion-10 emotion-11"
+          >
+            menu
+          </span>
+        </button>
+        <div
+          class="emotion-12 emotion-13"
+          data-e2e="scrollable-nav"
+          dir="ltr"
+        >
+          <ul
+            data-testid="scrollable-list"
+          >
+            <li>
+              List Items
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="emotion-14 emotion-15"
+        data-e2e="dropdown-nav"
+        height="0"
+      >
+        <ul
+          data-testid="dropdown"
+        >
+          <li>
+            Dropdown Items
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
