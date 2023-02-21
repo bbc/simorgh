@@ -12,10 +12,7 @@ import {
   mundoMultipleCurations,
   amharicOnlyTitle,
 } from './fixtures';
-import {
-  VISUAL_PROMINENCE,
-  VISUAL_STYLE,
-} from '../../components/Curation/constants';
+import { VISUAL_PROMINENCE, VISUAL_STYLE } from '#models/types/promoData';
 
 jest.mock('../../components/ThemeProvider');
 jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
