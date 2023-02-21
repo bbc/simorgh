@@ -1,5 +1,6 @@
+import { VISUAL_STYLE, VISUAL_PROMINENCE } from '#models/types/promoData';
 import getComponent from './getComponent';
-import { VISUAL_PROMINENCE, VISUAL_STYLE, COMPONENT_NAMES } from './constants';
+import { COMPONENT_NAMES } from './constants';
 
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const { NONE, BANNER } = VISUAL_STYLE;

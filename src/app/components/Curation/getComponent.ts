@@ -1,12 +1,17 @@
-import { VisualStyle, VisualProminence } from '#app/models/types/promoData';
-import { VISUAL_STYLE, VISUAL_PROMINENCE, COMPONENT_NAMES } from './constants';
+import {
+  VisualStyle,
+  VisualProminence,
+  VISUAL_STYLE,
+  VISUAL_PROMINENCE,
+} from '#app/models/types/promoData';
+import { COMPONENT_NAMES } from './constants';
 
 const { NONE, BANNER } = VISUAL_STYLE;
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const {
+  MESSAGE_BANNER,
   SIMPLE_CURATION_GRID,
   HIERARCHICAL_CURATION_GRID,
-  MESSAGE_BANNER,
   NOT_SUPPORTED,
 } = COMPONENT_NAMES;
 

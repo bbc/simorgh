@@ -9,20 +9,26 @@ export interface Summary {
   firstPublished?: string | number;
 }
 
-export type VisualStyle =
-  | 'NONE'
-  | 'BANNER'
-  | 'COLLECTION'
-  | 'LINKS'
-  | 'FEED'
-  | 'RANKED';
+export const VISUAL_STYLE = {
+  NONE: 'NONE',
+  BANNER: 'BANNER',
+  COLLECTION: 'COLLECTION',
+  LINKS: 'LINKS',
+  FEED: 'FEED',
+  RANKED: 'RANKED',
+} as const;
 
-export type VisualProminence =
-  | 'MAXIMUM'
-  | 'HIGH'
-  | 'NORMAL'
-  | 'LOW'
-  | 'MINIMUM';
+export const VISUAL_PROMINENCE = {
+  MINIMUM: 'MINIMUM',
+  LOW: 'LOW',
+  NORMAL: 'NORMAL',
+  HIGH: 'HIGH',
+  MAXIMUM: 'MAXIMUM',
+} as const;
+
+export type VisualStyle = keyof typeof VISUAL_STYLE;
+
+export type VisualProminence = keyof typeof VISUAL_PROMINENCE;
 
 export interface Curation {
   visualStyle: VisualStyle;

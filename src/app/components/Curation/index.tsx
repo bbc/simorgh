@@ -1,11 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
-import { Curation as CurationProps } from '#models/types/promoData';
+import {
+  Curation as CurationProps,
+  VISUAL_STYLE,
+  VISUAL_PROMINENCE,
+} from '#models/types/promoData';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
-import { VISUAL_STYLE, VISUAL_PROMINENCE, COMPONENT_NAMES } from './constants';
+import { COMPONENT_NAMES } from './constants';
 import getComponent from './getComponent';
 import MessageBanner from '../MessageBanner';
 
