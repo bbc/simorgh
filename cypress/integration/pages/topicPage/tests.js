@@ -55,7 +55,6 @@ export default ({ service, pageType, variant }) => {
               curation.visualStyle === 'BANNER',
           );
         });
-        cy.log(`Message Banner: ${JSON.stringify(messageBanner, null, 2)}`);
         cy.log(`topic id ${topicId}`);
       }
     });
@@ -141,15 +140,16 @@ export default ({ service, pageType, variant }) => {
               });
           });
       });
-
-      it.only('clicking the message banner should navigate to the correct page', () => {
+      it('clicking the message banner should navigate to the correct page', () => {
         if (messageBanner) {
+          cy.go('back');
           cy.get(
             `[data-testid="${`message-banner-${messageBanner.title.replaceAll(
               ' ',
               '-',
             )}`}"]`,
           )
+            .scrollIntoView()
             .should('exist')
             .within(() => {
               cy.get('a')
@@ -165,7 +165,6 @@ export default ({ service, pageType, variant }) => {
         }
       });
     });
-
     describe(`Pagination`, () => {
       it('should show pagination if there is more than one page', () => {
         // First return to the topics page. Last test has page on article
@@ -220,7 +219,7 @@ export default ({ service, pageType, variant }) => {
       it('Next button navigates to next page (3)', () => {
         if (pageCount > 2) {
           cy.get('[id="pagination-next-page"]').click();
-          cy.url().should('include', `? page = 3`);
+          cy.url().should('include', `?page=3`);
           cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No next button when on page 2 of 2');
@@ -229,7 +228,7 @@ export default ({ service, pageType, variant }) => {
       it('Last page number button navigates to last page', () => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > ul > li').last().click();
-          cy.url().should('include', `? page = ${pageCount}`);
+          cy.url().should('include', `?page=${pageCount}`);
           cy.get('[data-testid="curation-grid-normal"]');
         } else {
           cy.log('No pagination as there is only one page');
@@ -238,9 +237,9 @@ export default ({ service, pageType, variant }) => {
       it('Previous page button navigates to previous page (second to last)', () => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > span > a').click();
-          cy.url().should('include', `? page = ${pageCount - 1} `);
+          cy.url().should('include', `?page=${pageCount - 1}`);
           cy.get('[data-testid="topic-pagination"] > ul > li').first().click();
-          cy.url().should('include', `? page = 1`);
+          cy.url().should('include', `?page=1`);
           cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No pagination as there is only one page');
@@ -249,7 +248,7 @@ export default ({ service, pageType, variant }) => {
       it('Page 1 button navigates to page 1', () => {
         if (pageCount > 1) {
           cy.get('[data-testid="topic-pagination"] > ul > li').first().click();
-          cy.url().should('include', `? page = 1`);
+          cy.url().should('include', `?page=1`);
           cy.get('[data-testid="topic-promos"] li');
         } else {
           cy.log('No pagination as there is only one page');
@@ -278,7 +277,7 @@ export default ({ service, pageType, variant }) => {
     describe(`Script switch`, () => {
       it('Pages with 2 scripts should have a script switch button with correct other variant', () => {
         if (scriptSwitchServices.includes(service)) {
-          cy.get(`[data - variant= "${otherVariant}"]`).should('be.visible');
+          cy.get(`[data-variant="${otherVariant}"]`).should('be.visible');
         } else {
           cy.log('Not a script switch service');
         }
@@ -287,14 +286,14 @@ export default ({ service, pageType, variant }) => {
       it('Script switch button switches the script', () => {
         if (scriptSwitchServices.includes(service)) {
           // clicks script switch
-          cy.get(`[data - variant= "${otherVariant}"]`).click();
+          cy.get(`[data-variant="${otherVariant}"]`).click();
           // URL contains correct variant after click
           cy.url().should('contain', otherVariant);
           // URL contains the correct topic ID
           cy.url().should('contain', variantTopicId);
 
           // clicks script switch
-          cy.get(`[data - variant= "${variant}"]`).click();
+          cy.get(`[data-variant="${variant}"]`).click();
           // URL contains correct variant after click
           cy.url().should('contain', variant);
           // URL contains the correct topic ID
