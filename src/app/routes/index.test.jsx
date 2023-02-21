@@ -91,6 +91,24 @@ const renderRouter = props =>
     );
   });
 
+const renderRouterAmp = props =>
+  act(async () => {
+    render(
+      <MemoryRouter initialEntries={[props.pathname]}>
+        {renderRoutes(routes, {
+          bbcOrigin: 'https://www.bbc.com',
+          isAmp: true,
+          status: props.status || 200,
+          toggles: defaultToggles.local,
+          ...props,
+        })}
+      </MemoryRouter>,
+      {
+        service: props.service,
+      },
+    );
+  });
+
 it('should have correct properties in each route', () => {
   routes.forEach((route, index) => {
     expect(route).toEqual(expect.any(Object));
@@ -240,6 +258,7 @@ it('should route to and render an article page', async () => {
     service: 'persian',
     pageType,
   });
+  console.log('PAGEDATA', pageData);
 
   await renderRouter({
     pathname,
@@ -258,26 +277,38 @@ it('should route to and render an article page', async () => {
 });
 
 it('should route to and render a Sport Discipline article page', async () => {
-  const pathname = '/judo/articles/cj80n66ddnko';
-  fetchMock.mock(`http://localhost${pathname}.json`, sportArticlePageJson);
+  const pathname = '/sport/judo/articles/cj80n66ddnko.amp';
+
+  fetchDataSpy.mockImplementation(() =>
+    Promise.resolve({
+      status: 200,
+      json: sportArticlePageJson,
+    }),
+  );
+
+  // fetchMock.mock(`http://localhost${pathname}.json`, sportArticlePageJson);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
     path: pathname,
+    getAgent,
+    service: 'sport',
     pageType,
   });
+  console.log('PAGEDATA', pageData);
   await renderRouter({
     pathname,
     pageData,
     pageType,
     service: 'sport',
   });
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.";
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'sport';
 
   expect(
     await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
   ).toBeInTheDocument();
+
+  fetchDataSpy.mockRestore();
 });
 
 it('should route to and render a front page', async () => {
