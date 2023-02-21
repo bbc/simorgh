@@ -1,3 +1,5 @@
+import { fetchArticlePageData } from '../articles/helpers';
+
 export default ({ service, pageType, variant }) => {
   let topicId;
   let variantTopicId;
@@ -99,29 +101,33 @@ export default ({ service, pageType, variant }) => {
                 cy.get('a').click();
                 cy.url()
                   .should('eq', $href)
-                  .then(url => {
+                  .then(async url => {
                     // Check the page navigated to has the short headline that was on the topic item
-                    cy.request(`${url}.json`).then(({ body }) => {
-                      if (body.metadata.locators.cpsUrn) {
-                        cy.log('cps article');
-                        const { shortHeadline } = body.promo.headlines;
-                        expect(shortHeadline).to.equal(firstItemHeadline);
-                      }
-                      if (body.promo.locators.optimoUrn) {
-                        cy.log('optimo article');
-                        cy.window().then(win => {
-                          const jsonData = win.SIMORGH_DATA.pageData;
-                          const headline =
-                            jsonData.promo.headlines.promoHeadline.blocks[0]
-                              .model.blocks[0].model.text;
-                          cy.log(
-                            jsonData.promo.headlines.promoHeadline.blocks[0]
-                              .model.blocks[0].model.text,
-                          );
-                          expect(headline).to.equal(firstItemHeadline);
-                        });
-                      }
-                    });
+                    const articleBody = await fetchArticlePageData(
+                      service,
+                      variant,
+                      url,
+                    ).then(({ body }) => body);
+
+                    if (articleBody.metadata.locators.cpsUrn) {
+                      cy.log('cps article');
+                      const { shortHeadline } = articleBody.promo.headlines;
+                      expect(shortHeadline).to.equal(firstItemHeadline);
+                    }
+                    if (articleBody.promo.locators.optimoUrn) {
+                      cy.log('optimo article');
+                      cy.window().then(win => {
+                        const jsonData = win.SIMORGH_DATA.pageData;
+                        const headline =
+                          jsonData.promo.headlines.promoHeadline.blocks[0].model
+                            .blocks[0].model.text;
+                        cy.log(
+                          jsonData.promo.headlines.promoHeadline.blocks[0].model
+                            .blocks[0].model.text,
+                        );
+                        expect(headline).to.equal(firstItemHeadline);
+                      });
+                    }
                   });
               });
           });
