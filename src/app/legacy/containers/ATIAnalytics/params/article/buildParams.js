@@ -42,6 +42,7 @@ export const buildArticleATIParams = (
     previousPath,
     origin,
     nationsProducer: getNationsProducer(articleData),
+    categoryName: getThingAttributes('thingEnglishLabel', articleData),
   };
 };
 

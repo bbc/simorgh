@@ -12,7 +12,7 @@ import {
   mundoMultipleCurations,
   amharicOnlyTitle,
 } from './fixtures';
-import { VISUAL_PROMINANCE, VISUAL_STYLE } from './Curation';
+import { VISUAL_PROMINENCE, VISUAL_STYLE } from './constants';
 
 jest.mock('../../components/ThemeProvider');
 jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
@@ -168,7 +168,7 @@ describe('Topic Page', () => {
       const messageBannerCuration =
         kyrgyzTopicWithMessageBanners.curations.find(
           ({ visualStyle, visualProminence }) =>
-            visualProminence === VISUAL_PROMINANCE.NORMAL &&
+            visualProminence === VISUAL_PROMINENCE.NORMAL &&
             visualStyle === VISUAL_STYLE.BANNER,
         );
 
@@ -205,7 +205,7 @@ describe('Topic Page', () => {
       const highProminenceBanner = kyrgyzTopicWithMessageBanners.curations.find(
         curation =>
           curation.visualStyle === VISUAL_STYLE.BANNER &&
-          curation.visualProminence === VISUAL_PROMINANCE.HIGH,
+          curation.visualProminence === VISUAL_PROMINENCE.HIGH,
       );
       expect(
         queryByRole('region', { name: highProminenceBanner.title }),
@@ -227,7 +227,7 @@ describe('Topic Page', () => {
       const messageBannerCuration =
         kyrgyzTopicWithMessageBanners.curations.find(
           ({ visualStyle, visualProminence, summaries }) =>
-            visualProminence === VISUAL_PROMINANCE.NORMAL &&
+            visualProminence === VISUAL_PROMINENCE.NORMAL &&
             visualStyle === VISUAL_STYLE.BANNER &&
             summaries.length > 1,
         );
