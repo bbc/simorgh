@@ -5,18 +5,33 @@ export interface Summary {
   description?: string;
   title: string;
   id?: string;
-  type?: string;
+  type: string;
   firstPublished?: string | number;
 }
 
+export type VisualStyle =
+  | 'NONE'
+  | 'BANNER'
+  | 'COLLECTION'
+  | 'LINKS'
+  | 'FEED'
+  | 'RANKED';
+
+export type VisualProminence =
+  | 'MAXIMUM'
+  | 'HIGH'
+  | 'NORMAL'
+  | 'LOW'
+  | 'MINIMUM';
+
 export interface Curation {
-  visualStyle: string;
-  visualProminence: string;
+  visualStyle: VisualStyle;
+  visualProminence: VisualProminence;
   promos: Summary[];
-  title: string;
-  link: string;
-  headingLevel: number;
-  position: number;
-  topStoriesTitle: string;
-  curationLength: number;
+  title?: string;
+  link?: string;
+  headingLevel?: number;
+  position?: number;
+  topStoriesTitle?: string;
+  curationLength?: number;
 }

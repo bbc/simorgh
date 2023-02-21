@@ -6,7 +6,7 @@ import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import { Promo as PromoProps } from '../types';
+import { Promo as CurationPromoProps } from '../types';
 
 const CurationPromo = ({
   id,
@@ -19,7 +19,7 @@ const CurationPromo = ({
   type,
   duration: mediaDuration,
   headingLevel = 2,
-}: PromoProps) => {
+}: CurationPromoProps) => {
   const { translations } = useContext(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);

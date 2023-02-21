@@ -5,7 +5,7 @@ import { Curation as CurationProps } from '#models/types/promoData';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
-import { COMPONENT_NAMES } from './constants';
+import { VISUAL_STYLE, VISUAL_PROMINENCE, COMPONENT_NAMES } from './constants';
 import getComponent from './getComponent';
 import MessageBanner from '../MessageBanner';
 
@@ -15,6 +15,9 @@ const {
   MESSAGE_BANNER,
   NOT_SUPPORTED,
 } = COMPONENT_NAMES;
+
+const { NONE } = VISUAL_STYLE;
+const { NORMAL } = VISUAL_PROMINENCE;
 
 const getGridComponent = (componentName: string | null) => {
   switch (componentName) {
@@ -27,8 +30,8 @@ const getGridComponent = (componentName: string | null) => {
 };
 
 const Curation = ({
-  visualStyle,
-  visualProminence,
+  visualStyle = NONE,
+  visualProminence = NORMAL,
   promos = [],
   title = '',
   topStoriesTitle = '',

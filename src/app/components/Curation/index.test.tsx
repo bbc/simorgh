@@ -39,15 +39,4 @@ describe('Topic Curations', () => {
       expect(getByTestId(testId)).toBeInTheDocument();
     },
   );
-
-  it('should render the standard grid if a style/prominence is not recognised', () => {
-    const { getByTestId } = render(
-      <Curation
-        visualStyle={"something-unsupported"}
-        visualProminence="what-is-this"
-        promos={fixture.data.curations[0].summaries}
-      />,
-    );
-    expect(getByTestId('curation-grid-normal')).toBeInTheDocument();
-  });
 });
