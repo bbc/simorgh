@@ -4,23 +4,23 @@ import AmpGeo from '#components/AmpGeo';
 import Banner from './Banner/index.amp';
 
 const ampConsentData = {
-  "checkConsentHref": "https://cdn.privacy-mgmt.com/wrapper/tcfv2/v1/amp-v2?authId=CLIENT_ID",
-  "consentRequired": "remote",
-  "consentInstanceId": "sourcepoint",
-  "postPromptUI": "consent-ui",
-  "promptUISrc": "https://cdn.privacy-mgmt.com/amp/unified/index.html?authId=CLIENT_ID&source_url=SOURCE_URL",
-  "cookies": {
-  "enabled": true,
-  "AMP-CONSENT": { "value": "LINKER_PARAM(authId, _a)" }
+  checkConsentHref: 'https://cdn.privacy-mgmt.com/wrapper/tcfv2/v1/amp-v2?authId=CLIENT_ID',
+  consentRequired: 'remote',
+  consentInstanceId: 'sourcepoint',
+  postPromptUI: 'consent-ui',
+  promptUISrc: 'https://cdn.privacy-mgmt.com/amp/unified/index.html?authId=CLIENT_ID&source_url=SOURCE_URL',
+  cookies: {
+  enabled: true,
+  'AMP-CONSENT': { value: 'LINKER_PARAM(authId, _a)' }
 },
-  "clientConfig": {
-  "accountId": "1786",
-  "propertyHref": "https://www.bbc.com",
-  "stageCampaign": false,
-    "pmTab": "purposes",
-    "privacyManagerId": "648235",
-    "initialHeight": 80
-}
+  clientConfig: {
+  accountId: 1786,
+  propertyHref: 'https://www.bbc.com',
+  stageCampaign: false,
+  pmTab: 'purposes',
+  privacyManagerId: 648235,
+  initialHeight: 80
+  }
 };
 
 // const ampConsentData = {
