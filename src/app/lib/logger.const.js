@@ -87,6 +87,9 @@ const logCodes = {
 
   // Recommendations
   RECOMMENDATIONS_MISSING_DATA: 'recommendations_missing_data',
+
+  // Logging
+  ATI_LOGGING_ERROR: 'ati_logging_error',
 };
 
 module.exports = logCodes;
