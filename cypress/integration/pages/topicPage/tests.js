@@ -93,33 +93,28 @@ export default ({ service, pageType, variant }) => {
             cy.get('a')
               .should('have.attr', 'href')
               .then($href => {
-                cy.log($href);
-
-                // Clicks the first item, then checks the page navigates to has the expected url
                 cy.get('a').click();
                 cy.url()
                   .should('eq', $href)
-                  .then(url => {
-                    // Check the page navigated to has the short headline that was on the topic item
-                    cy.request(`${url}.json`).then(({ body }) => {
-                      if (body.metadata.locators.cpsUrn) {
+                  .then(() => {
+                    cy.window().then(win => {
+                      const jsonData = win.SIMORGH_DATA.pageData;
+
+                      if (jsonData.metadata.locators.cpsUrn) {
                         cy.log('cps article');
-                        const { shortHeadline } = body.promo.headlines;
+                        const { shortHeadline } = jsonData.promo.headlines;
                         expect(shortHeadline).to.equal(firstItemHeadline);
                       }
-                      if (body.promo.locators.optimoUrn) {
+                      if (jsonData.metadata.locators.optimoUrn) {
                         cy.log('optimo article');
-                        cy.window().then(win => {
-                          const jsonData = win.SIMORGH_DATA.pageData;
-                          const headline =
-                            jsonData.promo.headlines.promoHeadline.blocks[0]
-                              .model.blocks[0].model.text;
-                          cy.log(
-                            jsonData.promo.headlines.promoHeadline.blocks[0]
-                              .model.blocks[0].model.text,
-                          );
-                          expect(headline).to.equal(firstItemHeadline);
-                        });
+                        const headline =
+                          jsonData.promo.headlines.promoHeadline.blocks[0].model
+                            .blocks[0].model.text;
+                        cy.log(
+                          jsonData.promo.headlines.promoHeadline.blocks[0].model
+                            .blocks[0].model.text,
+                        );
+                        expect(headline).to.equal(firstItemHeadline);
                       }
                     });
                   });
