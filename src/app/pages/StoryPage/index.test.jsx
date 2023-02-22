@@ -249,7 +249,8 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
-jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
+const mockHook = jest.fn();
+jest.mock('#hooks/useOptimizelyVariation', () => () => mockHook);
 
 const pageType = 'cpsAsset';
 
