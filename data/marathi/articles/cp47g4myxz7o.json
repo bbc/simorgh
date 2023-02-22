@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "73e9066e",
+              "id": "2ee029f7",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "82ccbb90",
+                    "id": "b2326fbc",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "151fec1d",
+                          "id": "019ddd51",
                           "type": "paragraph",
                           "model": {
                             "text": "ही या चाचणी लेखाची मथळा आहे",
                             "blocks": [
                               {
-                                "id": "9f94889f",
+                                "id": "06006aa7",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ही या चाचणी लेखाची मथळा आहे",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "c3aa5d01",
+              "id": "9ba606c5",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "3153b71e",
+                    "id": "e44aa951",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c9ddb35a",
+                          "id": "a872169b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "05df0824",
+                                "id": "17302a2d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ही चाचणी प्रतिमा, बीबीसी कॉपीराइट, फ्रान्सचा नकाशा दर्शविते. प्रतिमा पहिल्या तीन ब्लॉक्समध्ये आहे आणि त्यास हे मथळा आहे.",
                                   "blocks": [
                                     {
-                                      "id": "b279ac19",
+                                      "id": "16dcb818",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ही चाचणी प्रतिमा, बीबीसी कॉपीराइट, फ्रान्सचा नकाशा दर्शविते. प्रतिमा पहिल्या तीन ब्लॉक्समध्ये आहे आणि त्यास हे मथळा आहे.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "283527ba",
+                    "id": "474a2218",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "eed1b3c8",
+                          "id": "21feff30",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8dae5a0d",
+                                "id": "199006ba",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "\rही चाचणी प्रतिमा, बीबीसी कॉपीराइट, फ्रान्सचा नकाशा दर्शविते. प्रतिमा पहिल्या तीन ब्लॉक्समध्ये आहे आणि त्यास हे मथळा आहे.",
                                   "blocks": [
                                     {
-                                      "id": "3375d6e0",
+                                      "id": "92872145",
                                       "type": "fragment",
                                       "model": {
                                         "text": "\rही चाचणी प्रतिमा, बीबीसी कॉपीराइट, फ्रान्सचा नकाशा दर्शविते. प्रतिमा पहिल्या तीन ब्लॉक्समध्ये आहे आणि त्यास हे मथळा आहे.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "dab0fa91",
+                    "id": "0ace7c1d",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "89b7c270",
+              "id": "bbb12751",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942287715,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "5d9dceae",
+              "id": "c896c29f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "3e6eafa1",
+                    "id": "0d7de450",
                     "type": "paragraph",
                     "model": {
                       "text": "हा मजकूर ब्लॉक आहे, ज्यात बीबीसी हवामान मुख्यपृष्ठाचा दुवा आहे.",
                       "blocks": [
                         {
-                          "id": "50e38d1c",
+                          "id": "a1f7b342",
                           "type": "fragment",
                           "model": {
                             "text": "हा मजकूर ब्लॉक आहे, ज्यात बीबीसी हवामान",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "e48917f1",
+                          "id": "41df1832",
                           "type": "urlLink",
                           "model": {
                             "text": " मुख्यपृष्ठाचा दुवा आहे",
                             "blocks": [
                               {
-                                "id": "c9c1de4d",
+                                "id": "7dae0eb7",
                                 "type": "fragment",
                                 "model": {
                                   "text": " मुख्यपृष्ठाचा दुवा आहे",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "5be9f57b",
+                          "id": "c263da94",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "e208ea47",
+              "id": "b94d9b17",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p019qd7g",
                 "blocks": [
                   {
-                    "id": "e5ab34f7",
+                    "id": "28d9c1c0",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d62526d8",
+                          "id": "73272b80",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a20b7b69",
+                                "id": "d6d5c1c8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "हा एक व्हिडिओ ब्लॉक आहे ज्यामध्ये फाईल आहे",
                                   "blocks": [
                                     {
-                                      "id": "3e60c01e",
+                                      "id": "e03f624e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "हा एक व्हिडिओ ब्लॉक आहे ज्यामध्ये फाईल आहे",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "9dd4ea79",
+                    "id": "702452f6",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6a1ff85e",
+                          "id": "143e1088",
                           "blockId": "urn:bbc:ares::clip:p019qd7g",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -391,12 +391,12 @@
                           ]
                         },
                         {
-                          "id": "6be4cfce",
+                          "id": "251e721e",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "49b50e11",
+                                "id": "0b348177",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p019qd93.jpg",
@@ -431,23 +431,23 @@
               ]
             },
             {
-              "id": "edcd74df",
+              "id": "a7fcf685",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "c0fb1c8c",
+                    "id": "62b112cf",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f90e1ddd",
+                          "id": "c5778841",
                           "type": "paragraph",
                           "model": {
                             "text": "ही एक उपशीर्षक आहे\r",
                             "blocks": [
                               {
-                                "id": "c771f61e",
+                                "id": "8f212003",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ही एक उपशीर्षक आहे\r",
@@ -482,28 +482,28 @@
               ]
             },
             {
-              "id": "d7b61dfe",
+              "id": "248a52da",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "7ebb8438",
+                    "id": "e23a56c4",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3518ef9b",
+                          "id": "78c04f3e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "16771d4d",
+                                "id": "3fa89133",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ही एक उपशीर्षक आहे\r",
                                   "blocks": [
                                     {
-                                      "id": "29be858d",
+                                      "id": "7ad4dfa9",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ही एक उपशीर्षक आहे\r",
@@ -542,7 +542,7 @@
                     ]
                   },
                   {
-                    "id": "91bb8624",
+                    "id": "1e889b83",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -563,18 +563,18 @@
               ]
             },
             {
-              "id": "360088eb",
+              "id": "7719b116",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "adf17bf6",
+                    "id": "80050f41",
                     "type": "paragraph",
                     "model": {
                       "text": "हा चाचणी लेख तयार केला गेला आहे जेणेकरून आम्ही आमच्या वेबसाइटवर चाचण्या करू शकू.",
                       "blocks": [
                         {
-                          "id": "ebe46422",
+                          "id": "5cb1ca67",
                           "type": "fragment",
                           "model": {
                             "text": "हा चाचणी लेख तयार केला गेला आहे जेणेकरून आम्ही आमच्या वेबसाइटवर चाचण्या करू शकू.",
@@ -600,11 +600,21 @@
               ]
             },
             {
-              "id": "2cd2a200",
+              "id": "328ed4ab",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "290f3ece",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -613,14 +623,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cp47g4myxz7o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cp47g4myxz7o"
+          "optimoUrn": "urn:bbc:optimo:asset:cp47g4myxz7o",
+          "canonicalUrl": "https://www.bbc.com/marathi/articles/cp47g4myxz7o"
         },
         "type": "article",
         "createdBy": "Marathi",
         "language": "mr",
         "firstPublished": 1562942287715,
         "lastPublished": 1562942287715,
-        "options": {},
         "analyticsLabels": {
           "producer": "Marathi",
           "page": "marathi.articles.cp47g4myxz7o.page"
@@ -630,7 +640,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -648,12 +657,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1091,7 +1097,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:53:56.697Z",
+        "generated": "2023-02-17T18:08:59.036Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

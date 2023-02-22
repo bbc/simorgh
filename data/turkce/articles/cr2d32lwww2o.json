@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "2d678da2",
+              "id": "22b77b52",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "683bb790",
+                    "id": "3d4414c5",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2097486f",
+                          "id": "37da0bac",
                           "type": "paragraph",
                           "model": {
                             "text": "BBC Genel Müdürü Tony Hall: Dünya 1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya",
                             "blocks": [
                               {
-                                "id": "61fa624a",
+                                "id": "14400782",
                                 "type": "fragment",
                                 "model": {
                                   "text": "BBC Genel Müdürü Tony Hall: Dünya 1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "c6c7e40b",
+              "id": "24c76001",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941712069,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "a547be5c",
+              "id": "e14dac96",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "cab52cdf",
+                    "id": "a5e21a1a",
                     "type": "paragraph",
                     "model": {
                       "text": "BBC Genel Müdürü Tony Hall, Londra'daki Küresel Medya Özgürlüğü Konferansı'nda yaptığı konuşmada, dünyanın \"1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya oduğunu\" söyledi.",
                       "blocks": [
                         {
-                          "id": "efa9cd49",
+                          "id": "ae9db426",
                           "type": "fragment",
                           "model": {
                             "text": "BBC Genel Müdürü Tony Hall, Londra'daki Küresel Medya Özgürlüğü Konferansı'nda yaptığı konuşmada, dünyanın \"1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya oduğunu\" söyledi.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "db86fb66",
+                    "id": "71b4da79",
                     "type": "paragraph",
                     "model": {
                       "text": "Tony Hall, \"Hakikate saldırı, demokrasiye saldırıdır\" dedi.",
                       "blocks": [
                         {
-                          "id": "012cbbf7",
+                          "id": "65e886ff",
                           "type": "fragment",
                           "model": {
                             "text": "Tony Hall, \"Hakikate saldırı, demokrasiye saldırıdır\" dedi.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "e97e39b5",
+                    "id": "676d2f61",
                     "type": "paragraph",
                     "model": {
                       "text": "Hall, sahte haberlerin yayılmasını, 2. Dünya Savaşı'na giden süreçte Nazilerin başvurduğu propaganda yöntemlerine benzetti, \"Haberde doğruluğa inanan herkes durumu tersine çevirmek için birlikte çalışmalı\" diye konuştu.",
                       "blocks": [
                         {
-                          "id": "959e5dd2",
+                          "id": "bb927b1d",
                           "type": "fragment",
                           "model": {
                             "text": "Hall, sahte haberlerin yayılmasını, 2. Dünya Savaşı'na giden süreçte Nazilerin başvurduğu propaganda yöntemlerine benzetti, \"Haberde doğruluğa inanan herkes durumu tersine çevirmek için birlikte çalışmalı\" diye konuştu.",
@@ -156,11 +156,21 @@
               ]
             },
             {
-              "id": "5728ffc8",
+              "id": "8450a9b6",
               "type": "mpu",
               "model": {},
               "position": [
                 4
+              ]
+            },
+            {
+              "id": "9bdda0a4",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
               ]
             }
           ]
@@ -169,14 +179,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cr2d32lwww2o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cr2d32lwww2o"
+          "optimoUrn": "urn:bbc:optimo:asset:cr2d32lwww2o",
+          "canonicalUrl": "https://www.bbc.com/turkce/articles/cr2d32lwww2o"
         },
         "type": "article",
         "createdBy": "Turkce",
         "language": "tr",
         "firstPublished": 1562941712069,
         "lastPublished": 1562941712069,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cr2d32lwww2o",
           "producer": "Turkish",
@@ -187,7 +197,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -200,12 +209,9 @@
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "BBC Genel Müdürü Tony Hall: Dünya 1930'lardan bu yana hakikate yönelik en büyük saldırıyla karşı karşıya"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -398,7 +404,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:09:57.154Z",
+        "generated": "2023-02-17T16:24:56.741Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
