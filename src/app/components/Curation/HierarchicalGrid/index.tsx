@@ -12,7 +12,7 @@ import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { CurationGridProps } from '../types';
 
-const getStyles = (promoCount: number, i: number, mq: any) => {
+const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
     [mq.GROUP_1_MAX_WIDTH]: {
       ...SMALL[promoCount - 1][i],
