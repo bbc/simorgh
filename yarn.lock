@@ -4045,28 +4045,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@loadable/component@npm:5.15.2":
-  version: 5.15.2
-  resolution: "@loadable/component@npm:5.15.2"
+"@loadable/component@npm:5.15.3":
+  version: 5.15.3
+  resolution: "@loadable/component@npm:5.15.3"
   dependencies:
     "@babel/runtime": ^7.7.7
     hoist-non-react-statics: ^3.3.1
     react-is: ^16.12.0
   peerDependencies:
-    react: ">=16.3.0"
-  checksum: dd027f3f9fb684613506fe48dcb656367a13731c139134fb71c2bc1734df4218fdb64e5ca80fa2575fdf52e1be0e0a2ec770f0ca77275706e66d1074d0835401
+    react: ^16.3.0 || ^17.0.0 || ^18.0.0
+  checksum: 78ac341465f2310db30381bc75e8bf73a33f99af849a6a2d87eb3842da0ba1df265e08045dc4f3fee1d194522a43a030baa91740045b64aad002f159ccce64bf
   languageName: node
   linkType: hard
 
-"@loadable/server@npm:5.15.2":
-  version: 5.15.2
-  resolution: "@loadable/server@npm:5.15.2"
+"@loadable/server@npm:5.15.3":
+  version: 5.15.3
+  resolution: "@loadable/server@npm:5.15.3"
   dependencies:
     lodash: ^4.17.15
   peerDependencies:
     "@loadable/component": ^5.0.1
-    react: ">=16.3.0"
-  checksum: 9f7188b4d79717dd058ed9064fcf8454f236dc2165280203110d34e8a7f63cbe8ba9ab77a337174108a150b05715b64b0131295a28b2866b320514299f35db29
+    react: ^16.3.0 || ^17.0.0 || ^18.0.0
+  checksum: 86b239296d6da5101867724418e182360069310b950a6bad5f269ebbbb96d96b60cf72b9c35f28298b2020d8c31b2fde907523de1baf367269dc980b7b6e1d8c
   languageName: node
   linkType: hard
 
@@ -20154,8 +20154,8 @@ __metadata:
     "@emotion/styled": 11.10.6
     "@juggle/resize-observer": 2.4.0
     "@loadable/babel-plugin": 5.13.2
-    "@loadable/component": 5.15.2
-    "@loadable/server": 5.15.2
+    "@loadable/component": 5.15.3
+    "@loadable/server": 5.15.3
     "@loadable/webpack-plugin": 5.15.2
     "@optimizely/react-sdk": 2.8.1
     "@storybook/addon-a11y": 6.5.13
