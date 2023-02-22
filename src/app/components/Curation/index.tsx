@@ -9,7 +9,7 @@ import {
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
-import getComponent, { COMPONENT_NAMES } from './getComponent';
+import getComponentName, { COMPONENT_NAMES } from './getComponentName';
 import MessageBanner from '../MessageBanner';
 
 const {
@@ -49,7 +49,7 @@ const Curation = ({
 }: CurationProps) => {
   if (!promos.length) return null;
 
-  const componentName = getComponent(visualStyle, visualProminence);
+  const componentName = getComponentName(visualStyle, visualProminence);
   const GridComponent = getGridComponent(componentName);
 
   const isFirstCuration = position === 0;
