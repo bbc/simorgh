@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 import loggerMock from '#testHelpers/loggerMock';
+import { ATI_LOGGING_ERROR } from '#app/lib/logger.const';
 
 let fetchResponse;
 let isOnClient;
@@ -54,7 +55,9 @@ describe('sendBeacon', () => {
 
       await sendBeacon('https://foobar.com');
 
-      expect(loggerMock.error).toHaveBeenCalledWith(error);
+      expect(loggerMock.error).toHaveBeenCalledWith(ATI_LOGGING_ERROR, {
+        error,
+      });
     });
   });
 });
