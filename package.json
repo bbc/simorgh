@@ -185,7 +185,7 @@
     "crypto": "1.0.1",
     "cypress": "9.6.0",
     "cypress-axe": "0.14.0",
-    "cypress-multi-reporters": "1.6.1",
+    "cypress-multi-reporters": "1.6.2",
     "cypress-terminal-report": "3.5.2",
     "depcheck": "1.4.3",
     "eslint": "7.32.0",
