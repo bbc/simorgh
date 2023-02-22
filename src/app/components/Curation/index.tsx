@@ -9,8 +9,7 @@ import {
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
-import { COMPONENT_NAMES } from './constants';
-import getComponent from './getComponent';
+import getComponent, { COMPONENT_NAMES } from './getComponent';
 import MessageBanner from '../MessageBanner';
 
 const {

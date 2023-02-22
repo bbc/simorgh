@@ -4,7 +4,13 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/promoData';
-import { COMPONENT_NAMES } from './constants';
+
+export const COMPONENT_NAMES = {
+  MESSAGE_BANNER: 'message-banner',
+  SIMPLE_CURATION_GRID: 'simple-curation-grid',
+  HIERARCHICAL_CURATION_GRID: 'hierarchical-curation-grid',
+  NOT_SUPPORTED: 'not-supported',
+} as const;
 
 const { NONE, BANNER } = VISUAL_STYLE;
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
