@@ -146,7 +146,10 @@ const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   try {
     const agent = attachAgent ? await getAgent() : null;
 
-    if (name.toLowerCase().includes('recommendations')) {
+    if (
+      path.indexOf('/hausa/') !== -1 ||
+      name.toLowerCase().includes('recommendations')
+    ) {
       return fetchPageData({
         path,
         timeout: SECONDARY_DATA_TIMEOUT,

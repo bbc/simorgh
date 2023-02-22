@@ -3905,14 +3905,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/marathi/podcasts/p09431p4', // Podcast Brand
-              '/marathi/podcasts/p09431p4/p09kx7q9', // Podcast Episode
+              '/marathi/podcasts/p09431p4/p0f1vp21', // Podcast Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/marathi/podcasts/p09431p4', // Podcast Brand
-              '/marathi/podcasts/p09431p4/p09kx7q9', // Podcast Episode
+              '/marathi/podcasts/p09431p4/p0f1vp21', // Podcast Episode
             ],
             enabled: true,
           },
