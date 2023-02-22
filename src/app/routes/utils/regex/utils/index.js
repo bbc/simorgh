@@ -11,12 +11,13 @@ const tvMasterBrandRegex = 'bbc_[a-z]+_tv';
 const errorCodeRegex = '404|500';
 const idxRegex = 'persian/afghanistan|ukrainian/ukraine_in_russian';
 const brandEpisodeRegex = 'tv|tv_programmes';
+const disciplineRegex = '/[a-z0-9-_]{1,}';
 
 const getServiceRegex = services => services.join('|');
 
 export const getArticleRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})?:discipline(${disciplineRegex})?/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
 export const getArticleSwRegex = services => {
