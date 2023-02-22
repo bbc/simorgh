@@ -9,7 +9,7 @@
     "./cypress/**/*.*"
   ],
   "resolutions": {
-    "@babel/runtime": "7.19.4",
+    "@babel/runtime": "7.21.0",
     "@emotion/serialize": "1.1.0",
     "@emotion/sheet": "1.2.0",
     "@emotion/utils": "1.2.0",
