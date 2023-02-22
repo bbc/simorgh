@@ -339,8 +339,20 @@ export const service: DefaultServiceConfig = {
         url: '/swahili/topics/ckdxndddjkxt',
       },
       {
+        title: 'Makala',
+        url: '/swahili/topics/c6z8lg838klt',
+      },
+      {
+        title: 'Afya',
+        url: '/swahili/topics/cvjp2jj60v3t',
+      },
+      {
+        title: 'Burudani',
+        url: '/swahili/topics/c2dwqddr7y3t',
+      },
+      {
         title: 'Video',
-        url: '/swahili/media/video',
+        url: '/swahili/topics/cz40xlzvj6kt',
       },
       {
         title: 'Vipindi vya Redio',

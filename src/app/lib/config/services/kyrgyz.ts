@@ -340,16 +340,16 @@ export const service: DefaultServiceConfig = {
         url: '/kyrgyz/topics/ck2l9z012nkt',
       },
       {
-        title: 'Видео',
-        url: '/kyrgyz/media/video',
-      },
-      {
-        title: 'Маданият/Илим',
-        url: '/kyrgyz/topics/czp8pjrkgp0t',
+        title: 'САПАР',
+        url: '/kyrgyz/topics/c6z8lg83w7mt',
       },
       {
         title: 'Журнал',
-        url: '/kyrgyz/magazine-54071664',
+        url: '/kyrgyz/topics/czp8pjrkgp0t',
+      },
+      {
+        title: 'Подкасттар',
+        url: '/kyrgyz/podcasts/p0c80v81',
       },
     ],
   },
