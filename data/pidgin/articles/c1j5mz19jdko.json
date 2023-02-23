@@ -56,6 +56,87 @@
               ]
             },
             {
+              "id": "b264e8e9",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f6720e42",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "4fe228df",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "f235c0df",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "قهوه",
+                                  "blocks": [
+                                    {
+                                      "id": "2906fea8",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "قهوه",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        2,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  2,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            2,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      2,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "7d8f63b9",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 640,
+                      "height": 360,
+                      "locator": "1e4e/test/60a1cf00-814e-11e9-b0be-cb6d2b512d8b.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      2,
+                      2
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                2
+              ]
+            },
+            {
               "id": "3064af08",
               "type": "byline",
               "model": {
