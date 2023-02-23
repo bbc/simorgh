@@ -69,6 +69,7 @@ export default async ({
     const id = getId(pageType)(pathname);
 
     if (!id) throw handleError('Article ID is invalid', 500);
+    const isCaf = pathname.includes('renderer_env=caf');
 
     let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
       id,
@@ -76,7 +77,7 @@ export default async ({
       ...(variant && {
         variant,
       }),
-      pageType,
+      pageType: !isCaf ? 'cpsAsset' : 'article',
     });
 
     const optHeaders = { 'ctx-service-env': env };
