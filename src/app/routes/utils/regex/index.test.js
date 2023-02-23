@@ -8,6 +8,10 @@ import {
   frontPageDataPath,
   frontPageManifestPath,
   frontPageSwPath,
+  homePagePath,
+  homePageDataPath,
+  homePageManifestPath,
+  homePageSwPath,
   cpsAssetPagePath,
   cpsAssetPageDataPath,
   podcastEpisodePath,
@@ -139,6 +143,47 @@ describe('frontPageDataPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPageDataPath);
 });
 
+describe('homePagePath', () => {
+  const validRoutes = [
+    '/news',
+    '/persian',
+    '/news.amp',
+    '/persian.amp',
+    '/news/simp',
+    '/persian/trad',
+    '/news/lat.amp',
+    '/persian/cyr.amp',
+  ];
+  shouldMatchValidRoutes(validRoutes, homePagePath);
+
+  const invalidRoutes = [
+    '/news/home',
+    '/persian/c5jje4ejkqvo.amp',
+    '/iplayer',
+    '/news/foobar',
+    '/news/foobar.amp',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, homePagePath);
+});
+
+describe('homePageDataPath', () => {
+  const validRoutes = [
+    '/news.json',
+    '/persian.json',
+    '/news/cyr.json',
+    '/persian/trad.json',
+  ];
+  shouldMatchValidRoutes(validRoutes, homePageDataPath);
+
+  const invalidRoutes = [
+    '/news/data.json',
+    '/iplayer.json',
+    '/news/foobar.json',
+    '/persian/.json',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, homePageDataPath);
+});
+
 describe('articleSwPath', () => {
   const validRoutes = [
     '/news/articles/sw.js',
@@ -194,6 +239,30 @@ describe('frontPageManifestPath', () => {
     '/news/trad/sw.js',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, frontPageManifestPath);
+});
+
+describe('homePageSwPath', () => {
+  const validRoutes = ['/news/sw.js', '/persian/sw.js'];
+  shouldMatchValidRoutes(validRoutes, homePageSwPath);
+
+  const invalidRoutes = [
+    '/news/articles/sw.js',
+    '/persian/sw',
+    '/persian/simp/sw.js',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, homePageSwPath);
+});
+
+describe('homePageManifestPath', () => {
+  const validRoutes = ['/news/manifest.json', '/persian/manifest.json'];
+  shouldMatchValidRoutes(validRoutes, homePageManifestPath);
+
+  const invalidRoutes = [
+    '/foobar/manifest.json',
+    '/foobar/manifest',
+    '/news/trad/sw.js',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, homePageManifestPath);
 });
 
 describe('onDemandRadioPath', () => {

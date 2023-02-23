@@ -4,6 +4,7 @@ import {
   getArticleSwRegex,
   getArticleManifestRegex,
   getFrontPageRegex,
+  getHomePageRegex,
   getSwRegex,
   getManifestRegex,
   getCpsAssetRegex,
@@ -38,6 +39,12 @@ export const frontPageDataPath = `${frontPagePath}.json`;
 
 export const frontPageSwPath = getSwRegex(allServices);
 export const frontPageManifestPath = getManifestRegex(allServices);
+
+export const homePagePath = getHomePageRegex(allServices);
+export const homePageDataPath = `${homePagePath}.json`;
+
+export const homePageSwPath = getSwRegex(allServices);
+export const homePageManifestPath = getManifestRegex(allServices);
 
 export const cpsAssetPagePath = getCpsAssetRegex(allServices);
 export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;

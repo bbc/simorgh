@@ -34,6 +34,11 @@ export const getFrontPageRegex = services => {
   return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
 };
 
+export const getHomePageRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+};
+
 export const getSwRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/sw.js`;
