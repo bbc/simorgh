@@ -1,3 +1,6 @@
+// test helpers
+import fetchMock from 'fetch-mock';
+
 // component to test
 
 // mock data
@@ -14,7 +17,10 @@ describe('getInitialData', () => {
 
   it('should return essential data for a page to render', async () => {
     process.env.SIMORGH_APP_ENV = 'local';
-    fetch.mockResponse(JSON.stringify(mapJson));
+    fetchMock.mock(
+      'http://localhost/mock-map-path.json',
+      JSON.stringify(mapJson),
+    );
 
     const { pageData } = await getInitialData({
       path: 'mock-map-path',

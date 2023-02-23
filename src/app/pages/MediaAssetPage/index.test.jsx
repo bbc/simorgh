@@ -125,15 +125,11 @@ const pageType = 'cpsAsset';
 fetchMock.config.overwriteRoutes = true;
 
 const mockInitialData = ({ service, assetId, pageData, mostWatched }) => {
-  fetch.mockResponse(
-    JSON.stringify({
-      ...pageData,
-      secondaryData: {
-        mostWatched: mostWatched || mostWatchedData,
-      },
-    }),
+  fetchMock.mock(`http://localhost/${assetId}.json`, pageData);
+  fetchMock.mock(
+    `http://localhost/${service}/mostwatched.json`,
+    mostWatched || mostWatchedData,
   );
-
   return getInitialData({
     path: assetId,
     service,
@@ -361,7 +357,7 @@ it('should not show the iframe when available is false', async () => {
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
     assetId: 'uzbek/a-media-asset',
     service: 'uzbek',
-    pageData: uzbekDataExpiredLivestream,
+    pageData: JSON.stringify(uzbekDataExpiredLivestream),
   });
 
   render(createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'));
@@ -379,7 +375,7 @@ it('should show the media message when available is false', async () => {
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
     assetId: 'uzbek/a-media-asset',
     service: 'uzbek',
-    pageData: uzbekDataExpiredLivestream,
+    pageData: JSON.stringify(uzbekDataExpiredLivestream),
   });
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
@@ -407,7 +403,7 @@ it('should show the media message when there is no media block', async () => {
   const { pageData: pageDataWithExpiredLiveStream } = await mockInitialData({
     assetId: 'uzbek/a-media-asset',
     service: 'uzbek',
-    pageData: uzbekDataWithNoMediaType,
+    pageData: JSON.stringify(uzbekDataWithNoMediaType),
   });
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),

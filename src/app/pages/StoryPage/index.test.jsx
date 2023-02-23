@@ -255,6 +255,7 @@ jest.mock('#hooks/useOptimizelyVariation', () => () => mockHook);
 const pageType = 'cpsAsset';
 
 describe('Story Page', () => {
+  const appEnv = process.env.SIMORGH_APP_ENV;
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
     process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';
@@ -274,21 +275,21 @@ describe('Story Page', () => {
 
   afterEach(() => {
     fetchMock.restore();
-
     delete process.env.SIMORGH_ICHEF_BASE_URL;
     delete process.env.RECOMMENDATIONS_ENDPOINT;
+    process.env.SIMORGH_APP_ENV = appEnv;
   });
 
   describe('snapshots', () => {
     it('should match snapshot for STY', async () => {
-      fetch.mockResponse(
-        JSON.stringify({
-          ...pidginPageData,
-          secondaryData: {
-            ...pidginSecondaryColumnData,
-            mostRead: pidginMostReadData,
-          },
-        }),
+      fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+      fetchMock.mock(
+        'http://localhost/pidgin/mostread.json',
+        pidginMostReadData,
+      );
+      fetchMock.mock(
+        'http://localhost/pidgin/sty-secondary-column.json',
+        pidginSecondaryColumnData,
       );
 
       const { pageData } = await getInitialData({
@@ -306,14 +307,11 @@ describe('Story Page', () => {
   });
 
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
-    fetch.mockResponse(
-      JSON.stringify({
-        ...igboPageData,
-        secondaryData: {
-          ...igboSecondaryColumnData,
-          mostRead: igboMostReadData,
-        },
-      }),
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', igboPageData);
+    fetchMock.mock('http://localhost/igbo/mostread.json', igboMostReadData);
+    fetchMock.mock(
+      'http://localhost/igbo/sty-secondary-column.json',
+      igboSecondaryColumnData,
     );
 
     const { pageData } = await getInitialData({
@@ -327,14 +325,11 @@ describe('Story Page', () => {
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
-    fetch.mockResponse(
-      JSON.stringify({
-        ...igboPageData,
-        secondaryData: {
-          ...igboSecondaryColumnData,
-          mostRead: igboMostReadData,
-        },
-      }),
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', igboPageData);
+    fetchMock.mock('http://localhost/igbo/mostread.json', igboMostReadData);
+    fetchMock.mock(
+      'http://localhost/igbo/sty-secondary-column.json',
+      igboSecondaryColumnData,
     );
 
     const { pageData } = await getInitialData({
@@ -358,14 +353,9 @@ describe('Story Page', () => {
   });
 
   it('should render correctly when the secondary column data is not available', async () => {
-    fetch.mockResponse(
-      JSON.stringify({
-        ...pidginPageData,
-        secondaryData: {
-          mostRead: pidginMostReadData,
-        },
-      }),
-    );
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock('http://localhost/pidgin/sty-secondary-column.json', {});
 
     const { pageData } = await getInitialData({
       path: '/some-cps-sty-path',
@@ -379,14 +369,17 @@ describe('Story Page', () => {
   });
 
   it('should render secondary column with lang attribute of `serviceLang` when a language override is present', async () => {
-    fetch.mockResponse(
-      JSON.stringify({
-        ...ukrainianInRussianPageData,
-        secondaryData: {
-          ...ukrainianSecondaryColumnData,
-          mostRead: ukrainianMostReadData,
-        },
-      }),
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      ukrainianInRussianPageData,
+    );
+    fetchMock.mock(
+      'http://localhost/ukrainian/sty-secondary-column.json',
+      ukrainianSecondaryColumnData,
+    );
+    fetchMock.mock(
+      'http://localhost/ukrainian/mostread.json',
+      ukrainianMostReadData,
     );
 
     const { pageData } = await getInitialData({
@@ -419,14 +412,14 @@ describe('Story Page', () => {
         },
       };
 
-      fetch.mockResponse(
-        JSON.stringify({
-          ...pidginPageData,
-          secondaryData: {
-            ...pidginSecondaryColumnData,
-            mostRead: pidginMostReadData,
-          },
-        }),
+      fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+      fetchMock.mock(
+        'http://localhost/pidgin/mostread.json',
+        pidginMostReadData,
+      );
+      fetchMock.mock(
+        'http://localhost/pidgin/sty-secondary-column.json',
+        pidginSecondaryColumnData,
       );
 
       const { pageData } = await getInitialData({
@@ -460,14 +453,14 @@ describe('Story Page', () => {
     const pidginPageDataDisallowAdvertising = deepClone(pidginPageData);
     pidginPageDataDisallowAdvertising.metadata.options.allowAdvertising = false;
 
-    fetch.mockResponse(
-      JSON.stringify({
-        ...pidginPageDataDisallowAdvertising,
-        secondaryData: {
-          ...pidginSecondaryColumnData,
-          mostRead: pidginMostReadData,
-        },
-      }),
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      pidginPageDataDisallowAdvertising,
+    );
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
     );
 
     const { pageData } = await getInitialData({
@@ -498,14 +491,11 @@ describe('Story Page', () => {
       },
     };
 
-    fetch.mockResponse(
-      JSON.stringify({
-        ...pidginPageData,
-        secondaryData: {
-          ...pidginSecondaryColumnData,
-          mostRead: pidginMostReadData,
-        },
-      }),
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
     );
 
     const { pageData } = await getInitialData({
@@ -536,14 +526,11 @@ describe('Story Page', () => {
       },
     };
 
-    fetch.mockResponse(
-      JSON.stringify({
-        ...pidginPageData,
-        secondaryData: {
-          ...pidginSecondaryColumnData,
-          mostRead: pidginMostReadData,
-        },
-      }),
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
     );
 
     const { pageData } = await getInitialData({
@@ -569,6 +556,7 @@ describe('Story Page', () => {
   });
 
   it(`should configure canonical ad bootstrap with campaign where 'adCampaignKeyword' is in metadata`, async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       ads: {
         enabled: true,
@@ -578,14 +566,14 @@ describe('Story Page', () => {
     const pidginPageDataAdCampaign = deepClone(pidginPageData);
     pidginPageDataAdCampaign.metadata.adCampaignKeyword = 'royalwedding';
 
-    fetch.mockResponse(
-      JSON.stringify({
-        ...pidginPageDataAdCampaign,
-        secondaryData: {
-          ...pidginSecondaryColumnData,
-          mostRead: pidginMostReadData,
-        },
-      }),
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      pidginPageDataAdCampaign,
+    );
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
     );
 
     const { pageData } = await getInitialData({
@@ -609,20 +597,18 @@ describe('Story Page', () => {
   });
 
   it('should configure canonical ad bootstrap where campaign is not in metadata', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       ads: {
         enabled: true,
       },
     };
 
-    fetch.mockResponse(
-      JSON.stringify({
-        ...pidginPageData,
-        secondaryData: {
-          ...pidginSecondaryColumnData,
-          mostRead: pidginMostReadData,
-        },
-      }),
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
     );
 
     const { pageData } = await getInitialData({
@@ -646,6 +632,7 @@ describe('Story Page', () => {
   });
 
   it('should not render canonical ad bootstrap on amp', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
     const observers = new Map();
     const observerSpy = jest
       .spyOn(global, 'IntersectionObserver')
@@ -674,14 +661,11 @@ describe('Story Page', () => {
       },
     };
 
-    fetch.mockResponse(
-      JSON.stringify({
-        ...pidginPageData,
-        secondaryData: {
-          ...pidginSecondaryColumnData,
-          mostRead: pidginMostReadData,
-        },
-      }),
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock(
+      'http://localhost/pidgin/sty-secondary-column.json',
+      pidginSecondaryColumnData,
     );
 
     const { pageData } = await getInitialData({
@@ -710,20 +694,24 @@ describe('Story Page', () => {
   });
 
   it('should render the inline podcast promo component on russian pages with a paragraph of 940 characters and after 8th paragraph', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       podcastPromo: {
         enabled: true,
       },
     };
 
-    fetch.mockResponse(
-      JSON.stringify({
-        ...russianPageDataWithInlinePromo,
-        secondaryData: {
-          ...russianSecondaryColumnData,
-          mostRead: russianMostReadData,
-        },
-      }),
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      russianPageDataWithInlinePromo,
+    );
+    fetchMock.mock(
+      'http://localhost/russian/mostread.json',
+      russianMostReadData,
+    );
+    fetchMock.mock(
+      'http://localhost/russian/sty-secondary-column.json',
+      russianSecondaryColumnData,
     );
 
     const { pageData } = await getInitialData({
@@ -751,20 +739,24 @@ describe('Story Page', () => {
   });
 
   it('should not render the inline podcast promo component on russian pages with paragraphs of less than 940 characters', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       podcastPromo: {
         enabled: true,
       },
     };
 
-    fetch.mockResponse(
-      JSON.stringify({
-        ...russianPageDataWithoutInlinePromo,
-        secondaryData: {
-          ...russianSecondaryColumnData,
-          mostRead: russianMostReadData,
-        },
-      }),
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      russianPageDataWithoutInlinePromo,
+    );
+    fetchMock.mock(
+      'http://localhost/russian/mostread.json',
+      russianMostReadData,
+    );
+    fetchMock.mock(
+      'http://localhost/russian/sty-secondary-column.json',
+      russianSecondaryColumnData,
     );
 
     const { pageData } = await getInitialData({

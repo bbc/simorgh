@@ -5,6 +5,7 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -24,11 +25,10 @@ import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import processMostWatched from '../../utils/processMostWatched';
+import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
-
-import bffFetch from '../../article/getInitialData';
 
 export const only =
   (pageTypes, transformer) =>
@@ -86,7 +86,6 @@ const transformJson = async (json, pathname, toggles) => {
 };
 
 export default async ({
-  getAgent,
   path: pathname,
   service,
   variant,
@@ -94,19 +93,25 @@ export default async ({
   toggles,
 }) => {
   try {
-    const {
-      status,
-      pageData: { secondaryColumn, recommendations, ...article },
-    } = await bffFetch({
-      getAgent,
+    const env = pathname.includes('renderer_env=live')
+      ? 'live'
+      : process.env.SIMORGH_APP_ENV;
+    const { json, status } = await fetchPageData({
       path: pathname,
+      pageType,
+      api: 'asset',
+      apiContext: 'primary_data',
+    });
+
+    const additionalPageData = await getAdditionalPageData({
+      pageData: json,
       service,
       variant,
-      pageType: 'cpsAsset',
+      env,
     });
 
     const processedAdditionalData = processMostWatched({
-      data: secondaryColumn,
+      data: additionalPageData,
       service,
       path: pathname,
       toggles,
@@ -116,14 +121,8 @@ export default async ({
     return {
       status,
       pageData: {
-        ...(await transformJson(article, pathname, toggles)),
-        secondaryColumn: {
-          topStories: processedAdditionalData.topStories,
-          features: processedAdditionalData.features,
-        },
-        mostRead: processedAdditionalData.mostRead,
-        mostWatched: processedAdditionalData.mostWatched,
-        recommendations,
+        ...(await transformJson(json, pathname, toggles)),
+        ...processedAdditionalData,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {

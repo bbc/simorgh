@@ -11,7 +11,7 @@ const toggles = {
   liveRadioSchedule: { enabled: true },
 };
 
-const pageTypesToSkip = [ERROR_PAGE, TOPIC_PAGE, ARTICLE_PAGE, 'cpsAsset'];
+const pageTypesToSkip = [ERROR_PAGE, TOPIC_PAGE, ARTICLE_PAGE];
 
 routes
   .filter(route => !pageTypesToSkip.includes(route.pageType))
