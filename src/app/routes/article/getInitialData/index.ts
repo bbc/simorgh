@@ -49,7 +49,6 @@ const handleError = (message: string, status: number) => {
 type Props = {
   getAgent: () => Promise<Agent>;
   service: Services;
-  pageType: string;
   path: string;
   pageType: 'article' | 'cpsAsset';
   variant?: Variants;
