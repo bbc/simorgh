@@ -158,6 +158,13 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     audio: articleMediaPlayer,
     video: articleMediaPlayer,
     text,
+    image: props => (
+      <Image
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+      />
+    ),
     byline: props =>
       hasByline ? (
         <Byline {...props}>
@@ -168,13 +175,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
           />
         </Byline>
       ) : null,
-    image: props => (
-      <Image
-        {...props}
-        sizes="(min-width: 1008px) 760px, 100vw"
-        shouldPreload={preloadLeadImageToggle}
-      />
-    ),
     timestamp: props =>
       hasByline ? null : <Timestamp {...props} popOut={false} />,
     social: SocialEmbedContainer,
