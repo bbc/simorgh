@@ -17,7 +17,6 @@ import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
 import hasMostRead from './hasMostRead';
 import fetchPageData from '../../utils/fetchPageData';
-import withCache from '../../utils/fetchPageData/withCache';
 
 const noop = () => {};
 const logger = nodeLogger(__filename);
@@ -146,19 +145,7 @@ const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   try {
     const agent = attachAgent ? await getAgent() : null;
 
-    if (name.toLowerCase().includes('recommendations')) {
-      return fetchPageData({
-        path,
-        timeout: SECONDARY_DATA_TIMEOUT,
-        agent,
-        cache: null,
-        ...loggerArgs,
-      })
-        .then(response => validateResponse(response, name))
-        .catch(noop);
-    }
-
-    return withCache({
+    return fetchPageData({
       path,
       timeout: SECONDARY_DATA_TIMEOUT,
       agent,
