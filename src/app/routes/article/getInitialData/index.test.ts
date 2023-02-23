@@ -46,6 +46,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -68,6 +69,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -94,6 +96,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -134,6 +137,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(getRecommendationsSpy).toBeCalledWith({
@@ -166,6 +170,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o?renderer_env=test',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -192,6 +197,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o?renderer_env=live',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
@@ -212,6 +218,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -234,6 +241,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -257,6 +265,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/somethingelse',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
@@ -287,6 +296,7 @@ describe('Articles - BFF Fetching', () => {
       path: '/kyrgyz/articles/c0000000000o',
       getAgent,
       service: 'kyrgyz',
+      pageType: 'article',
     });
 
     expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
