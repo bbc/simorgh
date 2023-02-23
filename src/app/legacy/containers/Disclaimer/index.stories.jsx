@@ -77,7 +77,7 @@ const Component = ({ service }) => {
 };
 
 export default {
-  title: 'Containers/Disclaimer',
+  title: 'Containers/Disclaimer/Disclaimer',
   Component,
   decorators: [withKnobs, withServicesKnob({ defaultService: 'russian' })],
   parameters: { chromatic: { disable: true } },
