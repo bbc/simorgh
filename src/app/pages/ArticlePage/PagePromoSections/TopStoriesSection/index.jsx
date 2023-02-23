@@ -15,6 +15,7 @@ import {
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 import generatePromoId from '../generatePromoId';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
   const contentType = pathOr('', ['contentType'], item);
@@ -45,10 +46,11 @@ const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
 
 const TopStoriesSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
-
+  const { optimizely } = useContext(OptimizelyContext);
   const eventTrackingData = {
     block: {
       componentName: 'top-stories',
+      optimizely,
     },
   };
   const eventTrackingDataSend = path(['block'], eventTrackingData);
