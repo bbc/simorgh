@@ -17,6 +17,7 @@ const shouldRender = (
   let statusCode = status;
   let isCorrectService;
   let isCanonicalUrlMatch = true;
+  let isUrlValid = false;
 
   const hasDataAnd200Status = pageData && status === 200;
   if (hasDataAnd200Status) {
@@ -30,13 +31,12 @@ const shouldRender = (
       const canonicalUrl = getCanonicalUrl(pageData);
       isCanonicalUrlMatch = matchesCanonicalUrl(canonicalUrl, pathName);
     }
-    const isUrlValid = isCorrectService && isCanonicalUrlMatch;
+    isUrlValid = isCorrectService && isCanonicalUrlMatch;
     statusCode = !isUrlValid ? 404 : status;
   }
 
   return {
-    hasData200StatusAndCorrectService:
-      hasDataAnd200Status && isCorrectService && isCanonicalUrlMatch,
+    hasData200StatusAndCorrectService: hasDataAnd200Status && isUrlValid,
     status: statusCode,
     pageData,
   };
