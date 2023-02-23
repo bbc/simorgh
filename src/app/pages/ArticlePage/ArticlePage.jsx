@@ -40,6 +40,7 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
+import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
 import MostReadContainer from '#containers/MostRead';
@@ -285,6 +286,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         wrapper={MostReadWrapper}
       />
       <OptimizelyPageViewTracking />
+      <OptimizelyArticleCompleteTracking />
     </Wrapper>
   );
 };
