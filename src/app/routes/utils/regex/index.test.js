@@ -9,7 +9,6 @@ import {
   frontPageManifestPath,
   frontPageSwPath,
   homePagePath,
-  homePageDataPath,
   homePageManifestPath,
   homePageSwPath,
   cpsAssetPagePath,
@@ -145,43 +144,24 @@ describe('frontPageDataPath', () => {
 
 describe('homePagePath', () => {
   const validRoutes = [
-    '/news',
-    '/persian',
-    '/news.amp',
-    '/persian.amp',
-    '/news/simp',
-    '/persian/trad',
-    '/news/lat.amp',
-    '/persian/cyr.amp',
+    '/news/tipohome',
+    '/persian/tipohome',
+    '/news/tipohome.amp',
+    '/persian/tipohome.amp',
+    '/news/simp/tipohome',
+    '/persian/trad/tipohome',
+    '/news/lat/tipohome.amp',
+    '/persian/cyr/tipohome.amp',
   ];
   shouldMatchValidRoutes(validRoutes, homePagePath);
 
   const invalidRoutes = [
-    '/news/home',
-    '/persian/c5jje4ejkqvo.amp',
-    '/iplayer',
-    '/news/foobar',
-    '/news/foobar.amp',
+    '/news/tipohome/simp',
+    '/news/tipohome/simp.amp',
+    '/tipohome/persian',
+    '/tipohome/persian.amp',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, homePagePath);
-});
-
-describe('homePageDataPath', () => {
-  const validRoutes = [
-    '/news.json',
-    '/persian.json',
-    '/news/cyr.json',
-    '/persian/trad.json',
-  ];
-  shouldMatchValidRoutes(validRoutes, homePageDataPath);
-
-  const invalidRoutes = [
-    '/news/data.json',
-    '/iplayer.json',
-    '/news/foobar.json',
-    '/persian/.json',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, homePageDataPath);
 });
 
 describe('articleSwPath', () => {
@@ -242,19 +222,22 @@ describe('frontPageManifestPath', () => {
 });
 
 describe('homePageSwPath', () => {
-  const validRoutes = ['/news/sw.js', '/persian/sw.js'];
+  const validRoutes = ['/news/tipohome/sw.js', '/persian/tipohome/sw.js'];
   shouldMatchValidRoutes(validRoutes, homePageSwPath);
 
   const invalidRoutes = [
-    '/news/articles/sw.js',
-    '/persian/sw',
-    '/persian/simp/sw.js',
+    '/news/articles/tipohome/sw.js',
+    '/persian/tipohome/sw',
+    '/persian/simp/tipohome/sw.js',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, homePageSwPath);
 });
 
 describe('homePageManifestPath', () => {
-  const validRoutes = ['/news/manifest.json', '/persian/manifest.json'];
+  const validRoutes = [
+    '/news/tipohome/manifest.json',
+    '/persian/tipohome/manifest.json',
+  ];
   shouldMatchValidRoutes(validRoutes, homePageManifestPath);
 
   const invalidRoutes = [

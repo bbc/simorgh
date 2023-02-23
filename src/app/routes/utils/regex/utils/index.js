@@ -36,7 +36,7 @@ export const getFrontPageRegex = services => {
 
 export const getHomePageRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex}):variant(${variantRegex})?:amp(${ampRegex})?`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/tipohome:amp(${ampRegex})?`;
 };
 
 export const getSwRegex = services => {
@@ -51,12 +51,12 @@ export const getManifestRegex = services => {
 
 export const getHomePageSwRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/sw.js`;
+  return `/:service(${serviceRegex})/tipohome/sw.js`;
 };
 
 export const getHomePageManifestRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/manifest.json`;
+  return `/:service(${serviceRegex})/tipohome/manifest.json`;
 };
 
 export const getCpsAssetRegex = services => {
