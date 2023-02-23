@@ -74,13 +74,13 @@
                                 "id": "f235c0df",
                                 "type": "paragraph",
                                 "model": {
-                                  "text": "قهوه",
+                                  "text": "Coffee",
                                   "blocks": [
                                     {
                                       "id": "2906fea8",
                                       "type": "fragment",
                                       "model": {
-                                        "text": "قهوه",
+                                        "text": "Coffee",
                                         "attributes": []
                                       },
                                       "position": [
