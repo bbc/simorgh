@@ -17,7 +17,7 @@ const HealthFactorsComponent = ({ metadataFixture }) => (
 );
 
 export default {
-  title: 'components/HealthFactors',
+  title: 'components/HealthFactors/HealthFactorsComponent',
   component: HealthFactorsComponent,
   parameters: {
     metadata,
