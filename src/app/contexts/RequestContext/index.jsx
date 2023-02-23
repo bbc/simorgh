@@ -1,8 +1,8 @@
 import React from 'react';
 import { bool, node, oneOf, string, number } from 'prop-types';
-import * as pageTypes from '#app/routes/utils/pageTypes';
-import mvtExperimentPropType from '#models/propTypes/mvtExperiment';
-import variantPropType from '#models/propTypes/variants';
+import * as pageTypes from '../../routes/utils/pageTypes';
+import mvtExperimentPropType from '../../models/propTypes/mvtExperiment';
+import variantPropType from '../../models/propTypes/variants';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
