@@ -16,6 +16,7 @@ module.exports = {
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
+    './SidebarLabel/**/*.stories.@(t|j)sx',
   ],
   addons: [
     '@storybook/addon-knobs',
@@ -23,6 +24,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
     '@storybook/addon-controls',
+    './SidebarLabel/preset.cjs',
     {
       name: '@storybook/addon-docs',
       options: {

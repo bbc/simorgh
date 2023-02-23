@@ -22,7 +22,7 @@ const Component = ({ service, variant }) => {
 };
 
 export default {
-  title: 'Containers/Brand',
+  title: 'Containers/Brand/Brand',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },

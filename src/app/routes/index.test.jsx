@@ -273,8 +273,13 @@ describe('Main page routes', () => {
   it('should route to and render a media asset page', async () => {
     process.env.SIMORGH_APP_ENV = 'local';
     const pathname = '/yoruba/media-23256797';
-    fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
-    fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
+
+    fetch.mockResponse(
+      JSON.stringify({
+        ...mediaAssetPageJson,
+        secondaryData: { mostWatched: mostWatchedData },
+      }),
+    );
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
     const { pageData } = await getInitialData({
@@ -288,33 +293,6 @@ describe('Main page routes', () => {
       pageType,
       service: 'yoruba',
     });
-    const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-      'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
-
-    expect(
-      await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-    ).toBeInTheDocument();
-  });
-
-  it('should route to and render a media asset page', async () => {
-    const pathname = '/yoruba/media-23256797';
-    fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
-    fetchMock.mock('http://localhost/yoruba/mostwatched.json', mostWatchedData);
-
-    const { getInitialData, pageType } = getMatchingRoute(pathname);
-    const { pageData } = await getInitialData({
-      path: pathname,
-      service: 'yoruba',
-      pageType,
-    });
-    await renderRouter({
-      pathname,
-      pageData,
-      pageType,
-      service: 'yoruba',
-    });
-
-    // TODO: use headline text when double headline bug is fixed https://github.com/bbc/simorgh/issues/5688
     const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
       'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
 
@@ -326,8 +304,13 @@ describe('Main page routes', () => {
   it('should route to and render a legacy media asset page', async () => {
     process.env.SIMORGH_APP_ENV = 'local';
     const pathname = '/azeri/multimedia/2012/09/120919_georgia_prison_video';
-    fetchMock.mock(`http://localhost${pathname}.json`, legacyMediaAssetPage);
-    fetchMock.mock('http://localhost/azeri/mostwatched.json', mostWatchedData);
+
+    fetch.mockResponse(
+      JSON.stringify({
+        ...legacyMediaAssetPage,
+        secondaryData: { mostWatched: mostWatchedData },
+      }),
+    );
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
     const { pageData } = await getInitialData({
@@ -353,7 +336,14 @@ describe('Main page routes', () => {
 
   it('should route to and render a photo gallery page', async () => {
     const pathname = '/indonesia/indonesia-41635759';
-    fetchMock.mock(`http://localhost${pathname}.json`, photoGalleryPageJson);
+
+    fetch.mockResponse(
+      JSON.stringify({
+        ...photoGalleryPageJson,
+        secondaryData: null,
+        recommendations: storyPageRecommendationsData,
+      }),
+    );
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
     const { pageData } = await getInitialData({
@@ -376,21 +366,21 @@ describe('Main page routes', () => {
 
   it('should route to and render a story page', async () => {
     const pathname = '/mundo/noticias-internacional-51266689';
-    fetchMock.mock(`http://localhost${pathname}.json`, storyPageJson);
-    fetchMock.mock(
-      `http://localhost/mundo/mostread.json`,
-      storyPageMostReadData,
-    );
-    fetchMock.mock(
-      `http://localhost${pathname}/recommendations.json`,
-      storyPageRecommendationsData,
+    fetch.mockResponse(
+      JSON.stringify({
+        ...storyPageJson,
+        secondaryData: { mostRead: storyPageMostReadData },
+        recommendations: storyPageRecommendationsData,
+      }),
     );
 
     const { getInitialData, pageType } = getMatchingRoute(pathname);
     const { pageData } = await getInitialData({
       path: pathname,
       service: 'mundo',
+      pageType: 'cpsAsset',
     });
+
     await renderRouter({
       pathname,
       pageData,
