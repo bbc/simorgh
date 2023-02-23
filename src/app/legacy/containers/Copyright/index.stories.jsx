@@ -23,7 +23,7 @@ const Component = ({ service, variant }) => {
 };
 
 export default {
-  title: 'Containers/Copyright',
+  title: 'Containers/Copyright/Copyright',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },
