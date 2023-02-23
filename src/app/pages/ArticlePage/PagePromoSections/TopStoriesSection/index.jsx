@@ -6,6 +6,7 @@ import path from 'ramda/src/path';
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
   StyledSectionLabel,
@@ -15,7 +16,6 @@ import {
 } from './index.styles';
 import TopStoriesItem from './TopStoriesItem';
 import generatePromoId from '../generatePromoId';
-import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
   const contentType = pathOr('', ['contentType'], item);
