@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = ({ resolvePath, START_DEV_SERVER }) => {
   const serverConfig = {
     target: 'node', // compile for server environment
-    entry: START_DEV_SERVER ? ['webpack/hot/poll?100', './src'] : ['./src'],
+    entry: START_DEV_SERVER ? ['webpack/hot/poll?100', './src/app.local.js'] : ['./src/app.local.js'],
     devtool: false,
     output: {
       path: resolvePath('build'),
