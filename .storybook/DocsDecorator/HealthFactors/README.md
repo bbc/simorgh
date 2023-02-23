@@ -125,17 +125,24 @@ The main use of this component is to wrap the ComponentHealth with the ThemeProv
 
 Furthermore, this component will process and pass the metadata and the children to the HealthFactors component which will finally display the component health for your story.
 
-Lastly, this file controls to which storybook folders the ComponentHealth should be applied:
+Lastly, this file controls to which storybook folders the ComponentHealth should be applied by using the isExcempt function found in .storybook/helpers/healthFactors:
 
 ```javascript
-const kind = path(['kind'], context) as string;
+export const isExempt = context => {
+  const EXEMPTED = ['docs', 'coding standards', 'new components'];
+
+  const kind = path(['kind'], context) as string;
+  if (!kind) return false;
+
   const lowerCaseKind = kind.toLowerCase();
-  const isComponentDoc =
-    lowerCaseKind.includes('components/') ||
-    lowerCaseKind.includes('containers/') ||
-    lowerCaseKind.includes('new components/') ||
-    lowerCaseKind.includes('pages/') ||
-    lowerCaseKind.includes('topic/');
+
+  const regexPatter = RegExp(
+    EXEMPTED.map(folderName => `^${folderName}/.*`).join('|'),
+    'g',
+  );
+
+  return regexPatter.test(lowerCaseKind);
+};
 ```
 
 This is done for every story contained in the blobs described in '.storybook/main.js'.

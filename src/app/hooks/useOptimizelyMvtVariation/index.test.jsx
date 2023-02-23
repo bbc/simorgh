@@ -40,6 +40,18 @@ describe('useOptimizelyMvtVariation custom hook', () => {
     expect(result).toEqual(null);
   });
 
+  it('should return null if given experiment is not in array', () => {
+    const mockMvtExperiments = [
+      {
+        experimentName: 'foo',
+        variation: 'control',
+        enabled: true,
+      },
+    ];
+    const result = renderUseOptimizelyMvtVariation(mockMvtExperiments, 'bar');
+    expect(result).toEqual(null);
+  });
+
   it('should return a variation when the experiment is enabled', () => {
     const mockMvtExperiments = [
       {

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { useContext } from 'react';
 import { jsx } from '@emotion/react';
+import isLive from '#lib/utilities/isLive';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 import Image from '../Image';
@@ -27,10 +28,19 @@ const MessageBanner = ({
   const { dir } = useContext(ServiceContext);
   const isRtl = dir === 'rtl';
 
+  if (isLive()) {
+    return null;
+  }
+
   const id = `message-banner-${heading.replaceAll(' ', '-')}`;
 
   return (
-    <section css={styles.container} role="region" aria-labelledby={id}>
+    <section
+      css={styles.container}
+      role="region"
+      aria-labelledby={id}
+      data-testid={id}
+    >
       <div css={styles.card}>
         <div css={styles.textWrap}>
           <Heading level={2} size="paragon" css={styles.heading} id={id}>
