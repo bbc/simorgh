@@ -49,6 +49,16 @@ export const getManifestRegex = services => {
   return `/:service(${serviceRegex})/manifest.json`;
 };
 
+export const getHomePageSwRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/sw.js`;
+};
+
+export const getHomePageManifestRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/manifest.json`;
+};
+
 export const getCpsAssetRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${assetUriRegex}):amp(${ampRegex})?`;

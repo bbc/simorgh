@@ -14,7 +14,11 @@ exports[`regex utils snapshots should create expected regex from getErrorPageReg
 
 exports[`regex utils snapshots should create expected regex from getFrontPageRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
 
+exports[`regex utils snapshots should create expected regex from getHomePageManifestRegex 1`] = `"/:service(news|persian|igbo)/manifest.json"`;
+
 exports[`regex utils snapshots should create expected regex from getHomePageRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
+
+exports[`regex utils snapshots should create expected regex from getHomePageSwRegex 1`] = `"/:service(news|persian|igbo)/sw.js"`;
 
 exports[`regex utils snapshots should create expected regex from getIdxPageRegex 1`] = `"/:idx(persian/afghanistan|ukrainian/ukraine_in_russian):amp(.amp)?"`;
 
