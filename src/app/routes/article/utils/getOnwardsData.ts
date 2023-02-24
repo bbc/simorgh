@@ -72,7 +72,7 @@ const fetchUrl =
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore - Ignore fetchPageData argument types
       return fetchPageData({
-        urlPath,
+        path: urlPath,
         timeout: SECONDARY_DATA_TIMEOUT,
         agent,
         ...loggerArgs,
