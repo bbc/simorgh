@@ -76,6 +76,7 @@ describe('Event Tracking', () => {
   it('should implement 3 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
     const expected = {
       componentName: 'top-stories',
+      optimizely: null,
       preventNavigation: true,
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
@@ -106,6 +107,7 @@ describe('Event Tracking', () => {
   it('should implement 1 BLOCK level view tracker', () => {
     const expected = {
       componentName: 'top-stories',
+      optimizely: null,
     };
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 

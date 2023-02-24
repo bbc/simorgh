@@ -35,6 +35,8 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
 import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
+import { OptimizelyExperiment } from '@optimizely/react-sdk';
+import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
@@ -55,8 +57,6 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
-import { OptimizelyExperiment } from '@optimizely/react-sdk';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
@@ -199,7 +199,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
-      // 004_brasil_recommendations_experiment
+      // 005_brasil_recommendations_experiment
       <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
         {variation => {
           let unirecsHybridRecommendationData = null;
@@ -340,7 +340,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <NielsenAnalytics />
-      <OptimizelyPageViewTracking />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
@@ -360,6 +359,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
             <OptimizelyArticleCompleteTracking />
+            <OptimizelyPageViewTracking />
           </main>
 
           {showRelatedTopics && topics && (

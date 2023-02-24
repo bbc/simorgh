@@ -60,7 +60,7 @@ const Component = ({ service }) => (
 moment.locale('en-GB'); // needed for Time Machine date string
 
 export default {
-  title: 'Containers/Radio Schedule',
+  title: 'Containers/Radio Schedule/Radio Schedule',
   Component,
   parameters: { chromatic: { disable: true } },
   decorators: [

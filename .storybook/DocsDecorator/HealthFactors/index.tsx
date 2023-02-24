@@ -1,5 +1,4 @@
 import React from 'react';
-import count from 'ramda/src/count';
 import path from 'ramda/src/path';
 import moment from 'moment';
 import Text from '../../../src/app/components/Text';
@@ -7,6 +6,7 @@ import { Recommend, Warning, Activity } from './Icons/icons';
 import SingleDoc from './SingleDoc';
 import styles from './index.styles';
 import HealthFactorsMetadata from '../types';
+import { getActionCount } from '../../helpers/healthFactors';
 
 const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
   const uxAccessibility = path(['uxAccessibilityDoc'], metadata);
@@ -35,10 +35,7 @@ const HealthFactors = ({ metadata }: { metadata?: HealthFactorsMetadata }) => {
     'Three actions outstanding',
   ];
 
-  const actionCount = count(
-    action => typeof action === 'undefined' || !getDone(action),
-    [uxAccessibility, uxSwarm, acceptanceCriteria],
-  );
+  const actionCount = getActionCount(metadata);
 
   const headline = metadata
     ? actionTitles[actionCount]
