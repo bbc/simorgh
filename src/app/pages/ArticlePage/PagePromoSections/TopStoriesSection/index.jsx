@@ -6,6 +6,7 @@ import path from 'ramda/src/path';
 import { C_GREY_2 } from '#psammead/psammead-styles/src/colours';
 import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import {
   StyledSectionLabel,
@@ -45,10 +46,11 @@ const renderTopStoriesList = (item, index, eventTrackingData, viewRef) => {
 
 const TopStoriesSection = ({ content }) => {
   const { translations, script, service } = useContext(ServiceContext);
-
+  const { optimizely } = useContext(OptimizelyContext);
   const eventTrackingData = {
     block: {
       componentName: 'top-stories',
+      optimizely,
     },
   };
   const eventTrackingDataSend = path(['block'], eventTrackingData);
