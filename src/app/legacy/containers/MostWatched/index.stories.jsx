@@ -38,7 +38,7 @@ const Component = ({ service }) => {
 };
 
 export default {
-  title: 'Containers/Most Watched',
+  title: 'Containers/Most Watched/Most Watched',
   Component,
   parameters: { chromatic: { disable: true } },
   decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
