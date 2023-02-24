@@ -9,7 +9,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
     devtool: false,
     output: {
       path: resolvePath('build'),
-      filename: 'server.js',
+      filename: 'index.js',
     },
     optimization: {
       minimize: false,
@@ -42,10 +42,14 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
   };
 
   if (START_DEV_SERVER) {
+    /**
+     * Fix for start-server-webpack-plugin for migration from webpack 4 to 5
+     * See https://github.com/ericclemmons/start-server-webpack-plugin/issues/40
+     */
     const StartServerPlugin = require('start-server-nestjs-webpack-plugin');
     serverConfig.plugins = [
       new webpack.HotModuleReplacementPlugin(),
-      new StartServerPlugin('server.js'), // only start the server if we've run `yarn dev`
+      new StartServerPlugin('index.js'), // only start the server if we've run `yarn dev`
     ];
   }
 

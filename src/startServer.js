@@ -4,8 +4,10 @@ import os from 'os';
 import {
   CLUSTER_PROCESS_START,
   CLUSTER_PROCESS_EXIT,
-  SERVER_LISTEN_ERROR,
+  // SERVER_LISTEN_ERROR,
 } from '#lib/logger.const';
+
+const serverlessExpress = require('@vendia/serverless-express');
 
 // dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
 const dotenv = require('dotenv');
@@ -16,39 +18,39 @@ if (DOT_ENV_CONFIG.error) {
 }
 
 // now `process.env.*` variables are set run the rest of the app
-const http = require('http');
+// const http = require('http');
 const nodeLogger = require('#lib/logger.node');
 const app = require('./server').default;
 
 const logger = nodeLogger(__filename);
-const port = process.env.PORT || 7080;
+// const port = process.env.PORT || 7080;
 
 const startApplicationInstance = () => {
-  const server = http.createServer(app);
+  return serverlessExpress({ app });
   // see https://github.com/bbc/simorgh-infrastructure/issues/1367#issuecomment-819314701
-  server.keepAliveTimeout = Number(process.env.SERVER_KEEP_ALIVE_TIMEOUT);
-  server.headersTimeout = Number(process.env.SERVER_HEADERS_TIMEOUT);
+  // server.keepAliveTimeout = Number(process.env.SERVER_KEEP_ALIVE_TIMEOUT);
+  // server.headersTimeout = Number(process.env.SERVER_HEADERS_TIMEOUT);
 
-  let currentApp = app;
-  server.listen(port, error => {
-    if (error) {
-      logger.error(SERVER_LISTEN_ERROR, {
-        error,
-      });
-    }
-  });
+  // let currentApp = app;
+  // server.listen(port, error => {
+  //   if (error) {
+  //     logger.error(SERVER_LISTEN_ERROR, {
+  //       error,
+  //     });
+  //   }
+  // });
 
-  if (module.hot) {
-    logger.info('✅  Server-side Hot Module Replacement enabled');
+  // if (module.hot) {
+  //   logger.info('✅  Server-side Hot Module Replacement enabled');
 
-    module.hot.accept('./server', () => {
-      logger.info('🔁  Hot Module Replacement reloading `./server`...');
-      server.removeListener('request', currentApp);
-      const newApp = require('./server').default; // eslint-disable-line global-require
-      server.on('request', newApp);
-      currentApp = newApp;
-    });
-  }
+  //   module.hot.accept('./server', () => {
+  //     logger.info('🔁  Hot Module Replacement reloading `./server`...');
+  //     server.removeListener('request', currentApp);
+  //     const newApp = require('./server').default; // eslint-disable-line global-require
+  //     server.on('request', newApp);
+  //     currentApp = newApp;
+  //   });
+  // }
 };
 
 const processOnline = worker =>

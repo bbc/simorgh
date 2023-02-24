@@ -1,0 +1,30 @@
+service: simorgh-serverless
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+custom:
+  webpack:
+    webpackConfig: "webpack.config.js"
+    packager: "yarn"
+    includeModules: true
+  serverless-offline:
+    useChildProcesses: true
+    httpPort: 7080
+
+package:
+  individually: true
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+functions:
+  simorgh-serverless-app:
+    handler: build/index.handler
+    events:
+      - httpApi:
+          path: "/{proxy+}"
+          method: "*"

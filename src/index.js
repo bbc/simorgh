@@ -1,3 +1,3 @@
 const server = require('./startServer');
 
-server.startCluster();
+export const handler = server.startCluster();
