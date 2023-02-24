@@ -52,6 +52,7 @@ type Props = {
   path: string;
   pageType: 'article' | 'cpsAsset';
   variant?: Variants;
+  isCaf?: boolean;
 };
 
 export default async ({
@@ -60,6 +61,7 @@ export default async ({
   pageType,
   path: pathname,
   variant,
+  isCaf,
 }: Props) => {
   try {
     const env = getEnvironment(pathname);
@@ -69,7 +71,6 @@ export default async ({
     const id = getId(pageType)(pathname);
 
     if (!id) throw handleError('Article ID is invalid', 500);
-    const isCaf = pathname.includes('renderer_env=caf');
 
     let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
       id,
@@ -77,7 +78,8 @@ export default async ({
       ...(variant && {
         variant,
       }),
-      pageType: !isCaf ? 'cpsAsset' : 'article',
+      pageType,
+      isCaf,
     });
 
     const optHeaders = { 'ctx-service-env': env };

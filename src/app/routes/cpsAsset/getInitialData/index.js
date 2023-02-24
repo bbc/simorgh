@@ -109,6 +109,8 @@ export default async ({
     const { service: derivedService, path: derivedPath } =
       getDerivedServiceAndPath(service, pathname);
 
+    const isCaf = pathname.includes('renderer_env=caf');
+
     const {
       status,
       pageData: { secondaryColumn, recommendations, ...article },
@@ -118,6 +120,7 @@ export default async ({
       service: derivedService,
       variant,
       pageType: 'cpsAsset',
+      isCaf,
     });
 
     const processedAdditionalData = processMostWatched({
@@ -129,9 +132,10 @@ export default async ({
     });
 
     return {
+      isCaf,
       status,
       pageData: {
-        ...(await transformJson(article, pathname, toggles)),
+        ...(!isCaf ? await transformJson(article, pathname, toggles) : article),
         secondaryColumn: {
           topStories: processedAdditionalData.topStories,
           features: processedAdditionalData.features,
