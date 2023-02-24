@@ -51,6 +51,11 @@ jest.mock('#containers/OptimizelyPageViewTracking', () => {
   return OptimizelyPageViewTracking;
 });
 
+jest.mock('#containers/OptimizelyArticleCompleteTracking', () => {
+  const OptimizelyArticleCompleteTracking = () => null;
+  return OptimizelyArticleCompleteTracking;
+});
+
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
