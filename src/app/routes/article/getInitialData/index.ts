@@ -79,7 +79,9 @@ export default async ({
         variant,
       }),
       pageType,
-      isCaf,
+      ...(isCaf && {
+        isCaf,
+      }),
     });
 
     const optHeaders = { 'ctx-service-env': env };

@@ -225,10 +225,11 @@ describe('Articles - BFF Fetching', () => {
       getAgent,
       service: 'mundo',
       pageType: 'cpsAsset',
+      isCaf: true,
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=%2Fmundo%2Fnoticias-internacional-64382459&service=mundo&pageType=cpsAsset',
+      path: 'https://mock-bff-path/?id=%2Fmundo%2Fnoticias-internacional-64382459&service=mundo&pageType=cpsAsset&isCaf=true',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',
