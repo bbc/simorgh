@@ -1,5 +1,5 @@
 import { Agent } from 'https';
-import * as getAdditionalPageData from '../../cpsAsset/utils/getAdditionalPageData';
+import * as getOnwardsPageData from '../utils/getOnwardsData';
 import * as fetchPageData from '../../utils/fetchPageData';
 import nodeLogger from '../../../../testHelpers/loggerMock';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -14,7 +14,9 @@ const bffArticleJson = {
   data: {
     article: {
       content: {},
-      metadata: {},
+      metadata: {
+        allowAdvertising: true,
+      },
       promo: {},
       relatedContent: {},
     },
@@ -111,26 +113,15 @@ describe('Articles - BFF Fetching', () => {
   it('should request WSOJ data.', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
-    const recommendData = [{ type: 'TEST_RECOMMEND_DATA' }];
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
-    const getAdditionalPageDataSpy = jest.spyOn(
-      getAdditionalPageData,
-      'default',
-    );
+    const getOnwardsPageDataSpy = jest.spyOn(getOnwardsPageData, 'default');
 
-    fetchDataSpy
-      .mockReturnValueOnce(
-        Promise.resolve({
-          status: 200,
-          json: JSON.stringify(bffArticleJson),
-        }),
-      )
-      .mockReturnValueOnce(
-        Promise.resolve({
-          status: 200,
-          json: JSON.stringify(recommendData),
-        }),
-      );
+    fetchDataSpy.mockReturnValueOnce(
+      Promise.resolve({
+        status: 200,
+        json: bffArticleJson,
+      }),
+    );
 
     await getInitialData({
       path: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
@@ -139,11 +130,11 @@ describe('Articles - BFF Fetching', () => {
       pageType: 'article',
     });
 
-    expect(getAdditionalPageDataSpy).toBeCalledWith({
-      env: 'live',
-      path: '/kyrgyz/articles/c0000000000o',
-      pageData: JSON.stringify(bffArticleJson),
+    expect(getOnwardsPageDataSpy).toBeCalledWith({
+      pathname: '/kyrgyz/articles/c0000000000o.amp?renderer_env=live',
       service: 'kyrgyz',
+      isAdvertising: true,
+      agent,
       variant: undefined,
     });
   });

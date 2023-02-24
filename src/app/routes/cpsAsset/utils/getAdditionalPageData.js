@@ -18,55 +18,10 @@ import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
 import hasMostRead from './hasMostRead';
 import fetchPageData from '../../utils/fetchPageData';
+import mappings from '../../article/utils/mappings';
 
 const noop = () => {};
 const logger = nodeLogger(__filename);
-
-const mappings = [
-  { name: 'recommendations', api: 'recommendations' },
-  {
-    name: 'datalabContentRecommendations',
-    engine: 'unirecs_datalab_content',
-    engineVariant: 'content',
-    api: 'datalab_content',
-  },
-  {
-    name: 'datalabHybridRecommendations',
-    engine: 'unirecs_datalab_hybrid',
-    engineVariant: 'hybrid',
-    api: 'datalab_hybrid',
-  },
-  {
-    name: 'datalabHybridRecommendationsV1x1',
-    engine: 'unirecs_datalab_hybrid',
-    engineVariant: 'hybrid-v1x1',
-    api: 'datalab_hybrid',
-  },
-  {
-    name: 'datalabHybridRecommendationsV1x2',
-    engine: 'unirecs_datalab_hybrid',
-    engineVariant: 'hybrid-v1x2',
-    api: 'datalab_hybrid',
-  },
-  {
-    name: 'datalabHybridRecommendationsV1x3',
-    engine: 'unirecs_datalab_hybrid',
-    engineVariant: 'hybrid-v1x3',
-    api: 'datalab_hybrid',
-  },
-  {
-    name: 'datalabHybridRecommendationsV1x4',
-    engine: 'unirecs_datalab_hybrid',
-    engineVariant: 'hybrid-v1x4',
-    api: 'datalab_hybrid',
-  },
-  {
-    name: 'datalabHybridRecommendationsV1x5',
-    engine: 'unirecs_datalab_hybrid',
-    engineVariant: 'hybrid-v1x5',
-    api: 'datalab_hybrid',
-  },
-];
 
 // 004_brasil_recommendations_experiment
 const getRecommendations = (service, assetUri) => {
