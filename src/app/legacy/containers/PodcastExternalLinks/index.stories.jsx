@@ -52,7 +52,7 @@ const Component = ({ service, variant }) => (
 );
 
 export default {
-  title: 'Containers/Podcast External Links',
+  title: 'Containers/Podcast External Links/Podcast External Links',
   Component,
   parameters: { chromatic: { disable: true } },
   decorators: [withKnobs, withServicesKnob()],

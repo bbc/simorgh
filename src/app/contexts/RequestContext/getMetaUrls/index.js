@@ -1,4 +1,4 @@
-import { AMP_REGEX, TLD_REGEX } from '#app/lib/regex.const';
+import { AMP_REGEX, TLD_REGEX } from '../../../lib/regex.const';
 
 const getAmpUrl = url => `${url}.amp`;
 
