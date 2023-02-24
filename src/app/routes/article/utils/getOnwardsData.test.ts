@@ -14,7 +14,7 @@ describe('WSOJ data', () => {
     jest.clearAllMocks();
   });
 
-  it('should return recommendations data only for non Portuguese services', async () => {
+  it('should return only recommendations data for non Portuguese services', async () => {
     const expectedOutput = {
       recommendations: recommendationsJson,
     };

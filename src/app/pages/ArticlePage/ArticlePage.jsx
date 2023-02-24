@@ -5,7 +5,6 @@ import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-import CpsRecommendations from '#containers/CpsRecommendations';
 
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -65,8 +64,6 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
-import { OptimizelyExperiment } from '@optimizely/react-sdk';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import bylineExtractor from './utilities/bylineExtractor';
 import Byline from './Byline';
 import getAuthorTwitterHandle from './getAuthorTwitterHandle';
@@ -76,6 +73,7 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 import SecondaryColumn from './SecondaryColumn';
 
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
+import OptimizelyRecommendation from './utilities/OptimizelyRecommendations';
 
 const Wrapper = styled.div`
   background-color: ${C_GREY_2};
@@ -124,7 +122,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
-  const recommendationsData = path(['recommendations'], pageData);
 
   const isAdsEnabled = [
     path(['metadata', 'allowAdvertising'], pageData),
@@ -185,27 +182,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => (
-      // 004_brasil_recommendations_experiment
-      <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
-        {variation => {
-          let unirecsHybridRecommendationData = null;
-          if (variation && variation !== 'control') {
-            unirecsHybridRecommendationData = path(
-              [OPTIMIZELY_CONFIG.variationMappings[variation]],
-              pageData,
-            );
-          }
-
-          return (
-            <CpsRecommendations
-              {...props}
-              items={unirecsHybridRecommendationData ?? recommendationsData}
-            />
-          );
-        }}
-      </OptimizelyExperiment>
-    ),
+    wsoj: props => <OptimizelyRecommendation pageData {...props} />,
   };
 
   const visuallyHiddenBlock = {
