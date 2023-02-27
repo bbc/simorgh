@@ -57,10 +57,6 @@ const validateResponse = (
   return null;
 };
 
-
-
-
-
 const fetchUrl =
   (agent: Agent) =>
   async ({
