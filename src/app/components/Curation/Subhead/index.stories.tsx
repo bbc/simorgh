@@ -1,20 +1,15 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import { withServicesKnob } from '../../../../legacy/psammead/psammead-storybook-helpers/src';
+import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
 
-import services from '../../../../../server/utilities/serviceConfigs';
-import { Services, Variants } from '../../../../models/types/global';
-import ThemeProvider from '../../../../components/ThemeProvider';
+import services from '../../../../server/utilities/serviceConfigs';
+import ThemeProvider from '../../ThemeProvider';
 
 import Subheading from '.';
+import { StorybookProps } from '../types';
 
-interface Props {
-  service: Services;
-  variant: Variants;
-}
-
-const Component = ({ service, variant }: Props) => {
+const Component = ({ service, variant }: StorybookProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -26,7 +21,7 @@ const Component = ({ service, variant }: Props) => {
   );
 };
 
-const WithLink = ({ service, variant }: Props) => {
+const WithLink = ({ service, variant }: StorybookProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -39,7 +34,7 @@ const WithLink = ({ service, variant }: Props) => {
 };
 
 export default {
-  title: 'Topic/Curations/Subheading',
+  title: 'New Components/Curation/Subheading',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },

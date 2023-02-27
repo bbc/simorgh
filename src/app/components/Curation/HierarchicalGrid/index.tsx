@@ -6,31 +6,13 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
 import formatDuration from '../../../lib/utilities/formatDuration';
-
 import Promo from '../../../legacy/components/Promo';
 import { DESKTOP, TABLET, MOBILE, SMALL } from './dataStructures';
 import { styles } from './index.styles';
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import { CurationGridProps } from '../types';
 
-type Promo = {
-  title: string;
-  description?: string;
-  type: string;
-  id: string;
-  link?: string;
-  firstPublished?: string | number;
-  duration?: string | number;
-  imageUrl?: string;
-  imageAlt?: string;
-  mediaType?: 'audio' | 'video' | 'photogallery';
-};
-
-type Promos = {
-  headingLevel: number;
-  promos: Promo[];
-};
-
-const getStyles = (promoCount: number, i: number, mq: any) => {
+const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
   return css({
     [mq.GROUP_1_MAX_WIDTH]: {
       ...SMALL[promoCount - 1][i],
@@ -47,7 +29,7 @@ const getStyles = (promoCount: number, i: number, mq: any) => {
   });
 };
 
-const HiearchicalGrid = ({ promos, headingLevel }: Promos) => {
+const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
   const { translations } = useContext(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);
