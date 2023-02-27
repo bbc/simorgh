@@ -57,6 +57,10 @@ const validateResponse = (
   return null;
 };
 
+
+
+
+
 const fetchUrl =
   (agent: Agent) =>
   async ({
@@ -101,7 +105,7 @@ const getOnwardsPageData = async ({
   isAdvertising: boolean;
   agent: Agent | null;
 }) => {
-  const recommendationsAllowed = hasArticleRecommendations(
+  const recommendationsAllowed = await hasArticleRecommendations(
     service,
     isAdvertising,
     variant,

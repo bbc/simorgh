@@ -127,11 +127,17 @@ export default async ({
       data: { article, secondaryData },
     } = json;
 
-    const isAdvertising = pathOr(
-      false,
-      ['metadata', 'allowAdvertising'],
-      article,
-    );
+    let isAdvertising = false;
+    if (pageType === 'cpsAsset') {
+      isAdvertising = pathOr(
+        false,
+        ['metadata', 'options', 'allowAdvertising'],
+        article,
+      );
+    } else {
+      isAdvertising = pathOr(false, ['metadata', 'allowAdvertising'], article);
+    }
+
     const wsojData = await getOnwardsPageData({
       pathname,
       service,
