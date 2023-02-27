@@ -49,6 +49,7 @@ import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import Include from '#containers/Include';
 
 import {
   getArticleId,
@@ -159,6 +160,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     audio: articleMediaPlayer,
     video: articleMediaPlayer,
     text,
+    include: props => <Include {...props} />,
     byline: props =>
       hasByline ? (
         <Byline {...props}>
