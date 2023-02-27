@@ -2,6 +2,7 @@ exports.pages = [
   'ArticlePage',
   'ErrorPage',
   'FrontPage',
+  'HomePage',
   'IdxPage',
   'MostReadPage',
   'LiveRadioPage',

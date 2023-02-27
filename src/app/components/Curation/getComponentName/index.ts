@@ -1,4 +1,16 @@
-import { VISUAL_PROMINENCE, VISUAL_STYLE, COMPONENT_NAMES } from './constants';
+import {
+  VisualStyle,
+  VisualProminence,
+  VISUAL_STYLE,
+  VISUAL_PROMINENCE,
+} from '#app/models/types/promoData';
+
+export const COMPONENT_NAMES = {
+  MESSAGE_BANNER: 'message-banner',
+  SIMPLE_CURATION_GRID: 'simple-curation-grid',
+  HIERARCHICAL_CURATION_GRID: 'hierarchical-curation-grid',
+  NOT_SUPPORTED: 'not-supported',
+} as const;
 
 const { NONE, BANNER } = VISUAL_STYLE;
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
@@ -9,7 +21,10 @@ const {
   NOT_SUPPORTED,
 } = COMPONENT_NAMES;
 
-export default (visualStyle, visualProminence) => {
+export default (
+  visualStyle: VisualStyle,
+  visualProminence: VisualProminence,
+) => {
   const componentsByVisualStyleAndProminence = {
     [`${BANNER}_${MINIMUM}`]: NOT_SUPPORTED,
     [`${BANNER}_${LOW}`]: NOT_SUPPORTED,

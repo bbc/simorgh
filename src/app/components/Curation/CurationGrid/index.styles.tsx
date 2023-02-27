@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
 const styles = {
   list: css({
@@ -6,7 +6,7 @@ const styles = {
     padding: 0,
     margin: 0,
   }),
-  item: ({ spacings, mq, palette }) =>
+  item: ({ spacings, mq, palette }: Theme) =>
     css({
       '.promo-image': {
         [mq.GROUP_2_MAX_WIDTH]: {

@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
 import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
+import { VISUAL_PROMINENCE, VISUAL_STYLE } from '#models/types/promoData';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
 import {
@@ -12,7 +13,6 @@ import {
   mundoMultipleCurations,
   amharicOnlyTitle,
 } from './fixtures';
-import { VISUAL_PROMINENCE, VISUAL_STYLE } from './constants';
 
 jest.mock('../../components/ThemeProvider');
 jest.mock('../../legacy/containers/ChartbeatAnalytics', () => {
