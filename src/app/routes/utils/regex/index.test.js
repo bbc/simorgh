@@ -241,9 +241,9 @@ describe('homePageManifestPath', () => {
   shouldMatchValidRoutes(validRoutes, homePageManifestPath);
 
   const invalidRoutes = [
-    '/news/articles/tipohome/sw.js',
-    '/hausa/tipohome/sw',
-    '/hausa/simp/tipohome/sw.js',
+    '/news/articles/tipohome/manifest.json',
+    '/hausa/tipohome/manifest',
+    '/hausa/simp/tipohome/manifest.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, homePageManifestPath);
 });
