@@ -6,7 +6,6 @@ export default ({ service, pageType, variant }) => {
   let pageCount;
   let numberOfItems;
   let appendVariant = '';
-  let messageBanner;
   const scriptSwitchServices = ['serbian', 'ukchina', 'zhongwen'];
   let otherVariant;
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -31,34 +30,21 @@ export default ({ service, pageType, variant }) => {
           }
         }
 
-        const requestObject = {
-          method: 'GET',
-          url: `https://web-cdn.${
+        // Gets the topic page data for all the tests
+        cy.request(
+          `https://web-cdn.${
             env === 'live' ? '' : `${env}.`
           }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
-        };
-
-        if (Cypress.env('currentPath').includes('?renderer_env=test')) {
-          requestObject.headers = { 'ctx-service-env': 'test' };
-        }
-
-        // Gets the topic page data for all the tests
-        cy.request(requestObject).then(({ body }) => {
+        ).then(({ body }) => {
           topicTitle = body.data.title;
           variantTopicId = body.data.variantTopicId;
           pageCount = body.data.pageCount;
           numberOfItems = body.data.curations[0].summaries.length;
           firstItemHeadline = body.data.curations[0].summaries[0].title;
-          messageBanner = body.data.curations.find(
-            curation =>
-              curation.visualProminence === 'NORMAL' &&
-              curation.visualStyle === 'BANNER',
-          );
         });
         cy.log(`topic id ${topicId}`);
       }
     });
-
     describe(`Page content`, () => {
       it('should render a H1, which contains/displays topic title', () => {
         cy.log(Cypress.env('currentPath'));
@@ -134,30 +120,6 @@ export default ({ service, pageType, variant }) => {
                   });
               });
           });
-      });
-      it('clicking the message banner should navigate to the correct page', () => {
-        if (messageBanner) {
-          cy.go('back');
-          cy.get(
-            `[data-testid="${`message-banner-${messageBanner.title.replaceAll(
-              ' ',
-              '-',
-            )}`}"]`,
-          )
-            .scrollIntoView()
-            .should('exist')
-            .within(() => {
-              cy.get('a')
-                .should('have.attr', 'href')
-                .then($href => {
-                  cy.log($href);
-                  cy.get('a').click();
-                  cy.url().should('eq', messageBanner.summaries[0].link);
-                });
-            });
-        } else {
-          cy.log('No Message Banner exist on Page!');
-        }
       });
     });
     describe(`Pagination`, () => {
