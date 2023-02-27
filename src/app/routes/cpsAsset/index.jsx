@@ -11,6 +11,7 @@ import {
 import getInitialData from './getInitialData';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
+  ARTICLE_PAGE,
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
@@ -18,6 +19,12 @@ import {
   ERROR_PAGE,
   CORRESPONDENT_STORY_PAGE,
 } from '../utils/pageTypes';
+
+const getPageType = props => {
+  const isCaf = path(['isCaf'], props);
+
+  return isCaf ? ARTICLE_PAGE : 'cpsAsset';
+};
 
 // CPS Asset Mapping to PageType
 const CpsAsset = props => {
@@ -44,5 +51,5 @@ export default {
   exact: true,
   component: CpsAsset,
   getInitialData,
-  pageType: 'cpsAsset',
+  pageType: getPageType,
 };

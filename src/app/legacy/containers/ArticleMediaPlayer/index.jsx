@@ -12,6 +12,14 @@ const pageTypeMap = {
   STY: 'cps',
 };
 
+const getCpsAssetUri = assetUri => {
+  if (assetUri.includes('newyddion')) {
+    return assetUri.replace('newyddion', 'cymrufyw');
+  }
+
+  return assetUri;
+};
+
 const ArticleMediaPlayerContainer = ({ blocks }) => {
   const { id, pathname, pageType } = useContext(RequestContext);
 
@@ -19,7 +27,7 @@ const ArticleMediaPlayerContainer = ({ blocks }) => {
     <GridItemMediumNoMargin>
       <MediaPlayerContainer
         blocks={blocks}
-        assetId={id || pathname.substr(1)}
+        assetId={id || getCpsAssetUri(pathname.substr(1))}
         assetType={pageTypeMap[pageType]}
         showPlaceholder
       />
