@@ -35,7 +35,8 @@ export const optimoMetadataPropTypes = {
   lastPublished: number.isRequired,
   lastUpdated: number,
   locators: shape({
-    optimoUrn: string.isRequired,
+    optimoUrn: string,
+    cpsUrn: string,
   }),
   passport: shape({
     language: string.isRequired,

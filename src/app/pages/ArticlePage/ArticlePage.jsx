@@ -218,7 +218,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const MostReadWrapper = ({ children }) => (
     <ArticlePageMostReadSection>
-      <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
+      <MostReadSectionLabel mobileDivider={!!(showRelatedTopics && topics)} />
       {children}
     </ArticlePageMostReadSection>
   );
