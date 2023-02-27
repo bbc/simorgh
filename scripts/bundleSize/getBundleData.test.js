@@ -6,6 +6,7 @@ jest.mock('fs', () => ({
   readdirSync: () => [
     'modern.ArticlePage-31ecd969.31473c35.js',
     'modern.FrontPage-31ecd969.bbf7a07e.js',
+    'modern.HomePage-31ecd969.0d59dc5c.js',
     'modern.IdxPage-31ecd969.68b77555.js',
     'modern.LiveRadioPage-31ecd969.64772a90.js',
     'modern.MediaAssetPage-88a3c260.b7ec8c9c.js',
