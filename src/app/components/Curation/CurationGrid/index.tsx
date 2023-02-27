@@ -1,9 +1,10 @@
-import React from 'react';
-import { arrayOf, shape, number } from 'prop-types';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import styles from './index.styles';
 import CurationPromo from '../CurationPromo';
+import { CurationGridProps } from '../types';
 
-const CurationGrid = ({ promos, headingLevel }) => {
+const CurationGrid = ({ promos, headingLevel }: CurationGridProps) => {
   const hasMultiplePromos = promos.length > 1;
   const firstPromo = promos[0];
 
@@ -35,16 +36,6 @@ const CurationGrid = ({ promos, headingLevel }) => {
       )}
     </div>
   );
-};
-
-CurationGrid.propTypes = {
-  promos: arrayOf(shape({})),
-  headingLevel: number,
-};
-
-CurationGrid.defaultProps = {
-  promos: [],
-  headingLevel: 2,
 };
 
 export default CurationGrid;

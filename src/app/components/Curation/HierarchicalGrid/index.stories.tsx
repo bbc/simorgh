@@ -3,17 +3,12 @@ import React from 'react';
 import { withKnobs, number } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
-import ThemeProvider from '../../../components/ThemeProvider';
-import { Services, Variants } from '../../../models/types/global';
+import ThemeProvider from '../../ThemeProvider';
 import HierarchicalGrid from './index';
 import pidginPromos from './fixtures';
+import { StorybookProps } from '../types';
 
-interface Props {
-  service: Services;
-  variant: Variants;
-}
-
-const Component = ({ service, variant }: Props) => {
+const Component = ({ service, variant }: StorybookProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
@@ -30,7 +25,7 @@ const Component = ({ service, variant }: Props) => {
 };
 
 export default {
-  title: 'Topic/HierarchicalGrid',
+  title: 'New Components/Curation/Grid - Hierarchical',
   Component,
   decorators: [withKnobs, withServicesKnob()],
 };
