@@ -160,7 +160,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     audio: articleMediaPlayer,
     video: articleMediaPlayer,
     text,
-    include: props => <Include {...props} />,
+    include: Include,
     byline: props =>
       hasByline ? (
         <Byline {...props}>
