@@ -1,5 +1,5 @@
-import getComponent from './getComponent';
-import { VISUAL_PROMINENCE, VISUAL_STYLE, COMPONENT_NAMES } from './constants';
+import { VISUAL_STYLE, VISUAL_PROMINENCE } from '#models/types/promoData';
+import getComponentName, { COMPONENT_NAMES } from '.';
 
 const { MINIMUM, LOW, NORMAL, HIGH, MAXIMUM } = VISUAL_PROMINENCE;
 const { NONE, BANNER } = VISUAL_STYLE;
@@ -10,7 +10,7 @@ const {
   NOT_SUPPORTED,
 } = COMPONENT_NAMES;
 
-describe('getComponent', () => {
+describe('getComponentName', () => {
   it.each`
     visualStyle     | visualProminence     | expected
     ${BANNER}       | ${MINIMUM}           | ${NOT_SUPPORTED}
@@ -22,9 +22,9 @@ describe('getComponent', () => {
     ${NONE}         | ${HIGH}              | ${HIERARCHICAL_CURATION_GRID}
     ${'fake-style'} | ${'fake-prominence'} | ${null}
   `(
-    'should render $expected when visual style is $visualStyle and visual prominence is $visualProminence',
+    'should return $expected when visual style is $visualStyle and visual prominence is $visualProminence',
     ({ visualStyle, visualProminence, expected }) => {
-      expect(getComponent(visualStyle, visualProminence)).toBe(expected);
+      expect(getComponentName(visualStyle, visualProminence)).toBe(expected);
     },
   );
 });

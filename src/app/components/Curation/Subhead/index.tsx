@@ -2,9 +2,9 @@ import React, { Fragment, PropsWithChildren, useContext } from 'react';
 
 import H2 from './index.styled';
 
-import { LeftChevron, RightChevron } from '../../../../components/icons';
+import { LeftChevron, RightChevron } from '../../icons';
 
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 interface Props {
   link?: string;
