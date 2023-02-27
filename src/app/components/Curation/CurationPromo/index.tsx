@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
-import { bool, string, number, oneOfType } from 'prop-types';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import Promo from '#components/Promo';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { ServiceContext } from '../../../contexts/ServiceContext';
+import { Promo as CurationPromoProps } from '../types';
 
 const CurationPromo = ({
   id,
@@ -18,8 +18,8 @@ const CurationPromo = ({
   link,
   type,
   duration: mediaDuration,
-  headingLevel,
-}) => {
+  headingLevel = 2,
+}: CurationPromoProps) => {
   const { translations } = useContext(ServiceContext);
 
   const audioTranslation = path(['media', 'audio'], translations);
@@ -73,27 +73,6 @@ const CurationPromo = ({
       <Promo.Timestamp>{firstPublished}</Promo.Timestamp>
     </Promo>
   );
-};
-
-CurationPromo.propTypes = {
-  id: string.isRequired,
-  title: string.isRequired,
-  // epoch time or ISO8601 timestamp
-  firstPublished: oneOfType([number, string]).isRequired,
-  imageUrl: string.isRequired,
-  imageAlt: string.isRequired,
-  lazy: bool,
-  link: string.isRequired,
-  type: string,
-  duration: number,
-  headingLevel: number,
-};
-
-CurationPromo.defaultProps = {
-  lazy: false,
-  type: null,
-  duration: null,
-  headingLevel: 2,
 };
 
 export default CurationPromo;

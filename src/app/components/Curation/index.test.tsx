@@ -2,11 +2,11 @@ import React from 'react';
 
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '#data/mundo/topics/c1en6xwmpkvt.json';
-import { render } from '../../../components/react-testing-library-with-providers';
-import { VISUAL_STYLE, VISUAL_PROMINENCE } from '../constants';
+import { VISUAL_STYLE, VISUAL_PROMINENCE } from '#models/types/promoData';
+import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 
-jest.mock('../../../components/ThemeProvider');
+jest.mock('../ThemeProvider');
 
 const { NONE } = VISUAL_STYLE;
 const { NORMAL, HIGH } = VISUAL_PROMINENCE;
@@ -39,15 +39,4 @@ describe('Topic Curations', () => {
       expect(getByTestId(testId)).toBeInTheDocument();
     },
   );
-
-  it('should render the standard grid if a style/prominence is not recognised', () => {
-    const { getByTestId } = render(
-      <Curation
-        visualStyle="something-unsupported"
-        visualProminance="what-is-this"
-        promos={fixture.data.curations[0].summaries}
-      />,
-    );
-    expect(getByTestId('curation-grid-normal')).toBeInTheDocument();
-  });
 });

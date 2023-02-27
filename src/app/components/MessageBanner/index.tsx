@@ -12,10 +12,10 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface MessageBannerProps {
   heading: string;
-  description: string;
-  link: string;
+  description?: string;
+  link?: string;
   linkText: string;
-  image: string;
+  image?: string;
 }
 
 const MessageBanner = ({
