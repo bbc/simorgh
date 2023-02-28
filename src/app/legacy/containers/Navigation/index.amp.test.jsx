@@ -26,10 +26,10 @@ const navigation = (
       script={latin}
       service="news"
       dir="ltr"
-      brandBackgroundColour={C_POSTBOX}
-      brandForegroundColour={C_GHOST}
-      brandHighlightColour={C_WHITE}
-      brandBorderColour={C_POSTBOX_30}
+      // brandBackgroundColour={C_POSTBOX}
+      // brandForegroundColour={C_GHOST}
+      // brandHighlightColour={C_WHITE}
+      // brandBorderColour={C_POSTBOX_30}
     />
   </ThemeProvider>
 );
