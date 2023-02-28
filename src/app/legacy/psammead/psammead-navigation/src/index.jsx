@@ -80,19 +80,19 @@ const StyledLink = styled.a`
   &:hover::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
-      props.theme.palette.BRAND_HIGHLIGHT};
+      props.theme.palette.POSTBOX};
     ${({ currentLink }) =>
       currentLink &&
       `
         border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${props =>
-        props.theme.palette.BRAND_HIGHLIGHT};
+        props.theme.palette.POSTBOX};
       `}
   }
 
   &:focus::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
-      props.theme.palette.BRAND_HIGHLIGHT};
+      props.theme.palette.POSTBOX};
     top: 0;
     border: ${focusIndicatorThickness} solid ${BLACK};
   }
@@ -101,7 +101,7 @@ const StyledLink = styled.a`
   &:focus-visible::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
-      props.theme.palette.BRAND_HIGHLIGHT};
+      props.theme.palette.POSTBOX};
     top: 0;
     border: ${focusIndicatorThickness} solid ${BLACK};
   }
@@ -128,8 +128,7 @@ const StyledListItem = styled.li`
       position: absolute;
       bottom: -1px;
       width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-      border-bottom: 0.0625rem solid
-        ${props => props.theme.palette.BRAND_BORDER};
+      border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
       z-index: -1;
     }
   }
@@ -139,7 +138,7 @@ const StyledSpan = styled.span`
   &::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
-      props.theme.palette.BRAND_HIGHLIGHT};
+      props.theme.palette.POSTBOX};
   }
 `;
 
@@ -206,7 +205,7 @@ export const NavigationLi = ({
       role="listitem"
       // brandForegroundColour={brandForegroundColour}
       // brandHighlightColour={brandHighlightColour}
-      brandBorderColour={C_GREY_3}
+      // brandBorderColour={C_GREY_3}
     >
       {active && currentPageText ? (
         <StyledLink
@@ -215,7 +214,7 @@ export const NavigationLi = ({
           service={service}
           currentLink
           // brandForegroundColour={brandForegroundColour}
-          brandHighlightColour={C_POSTBOX}
+          // brandHighlightColour={C_POSTBOX}
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
           className="focusIndicatorRemove"
@@ -225,7 +224,7 @@ export const NavigationLi = ({
             linkId={link}
             script={script}
             currentPageText={currentPageText}
-            brandHighlightColour={C_POSTBOX}
+            // brandHighlightColour={C_POSTBOX}
           >
             {link}
           </CurrentLink>
@@ -236,7 +235,7 @@ export const NavigationLi = ({
           script={script}
           service={service}
           // brandForegroundColour={brandForegroundColour}
-          brandHighlightColour={C_POSTBOX}
+          // brandHighlightColour={C_POSTBOX}
           className="focusIndicatorRemove"
           {...props}
         >
