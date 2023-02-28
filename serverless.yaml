@@ -3,7 +3,7 @@ useDotenv: true
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs16.x
 
 custom:
   webpack:
@@ -23,7 +23,7 @@ plugins:
 
 functions:
   simorgh-serverless-app:
-    handler: build/index.handler
+    handler: src/index.handler
     events:
       - httpApi:
           path: "/{proxy+}"
