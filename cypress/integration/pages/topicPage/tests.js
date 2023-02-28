@@ -35,7 +35,7 @@ export default ({ service, pageType, variant }) => {
           method: 'GET',
           url: `https://web-cdn.${
             env === 'live' ? '' : `${env}.`
-            }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
+          }api.bbci.co.uk/fd/simorgh-bff?page=1&id=${topicId}&service=${service}${appendVariant}`,
         };
 
         if (Cypress.env('currentPath').includes('?renderer_env=test')) {
