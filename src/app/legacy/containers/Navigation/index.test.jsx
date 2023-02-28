@@ -6,108 +6,121 @@ import { render } from '../../../components/react-testing-library-with-providers
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { service as newsConfig } from '../../../lib/config/services/news';
 import Navigation from './index';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 describe('Navigation Container', () => {
   shouldMatchSnapshot(
     'should correctly render amp navigation',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/news"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
+    <ThemeProvider service="news">
+      <ServiceContextProvider service="news">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp
+          pageType={ARTICLE_PAGE}
+          service="news"
+          statusCode={200}
+          pathname="/news"
+        >
+          <Navigation />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>,
   );
 
   shouldMatchSnapshot(
     'should correctly render canonical navigation',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/news"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
+    <ThemeProvider service="news">
+      <ServiceContextProvider service="news">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
+          pageType={ARTICLE_PAGE}
+          service="news"
+          statusCode={200}
+          pathname="/news"
+        >
+          <Navigation />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>,
   );
 
   shouldMatchSnapshot(
     'should correctly render amp navigation on non-home navigation page',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/uk"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
+    <ThemeProvider service="news">
+      <ServiceContextProvider service="news">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp
+          pageType={ARTICLE_PAGE}
+          service="news"
+          statusCode={200}
+          pathname="/uk"
+        >
+          <Navigation />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>,
   );
 
   shouldMatchSnapshot(
     'should correctly render canonical navigation on non-home navigation page',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/uk"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
+    <ThemeProvider service="news">
+      <ServiceContextProvider service="news">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
+          pageType={ARTICLE_PAGE}
+          service="news"
+          statusCode={200}
+          pathname="/uk"
+        >
+          <Navigation />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>,
   );
 
   shouldMatchSnapshot(
     'should correctly render amp navigation on non-navigation page',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/not-a-navigation-page"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
+    <ThemeProvider service="news">
+      <ServiceContextProvider service="news">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp
+          pageType={ARTICLE_PAGE}
+          service="news"
+          statusCode={200}
+          pathname="/not-a-navigation-page"
+        >
+          <Navigation />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>,
   );
 
   shouldMatchSnapshot(
     'should correctly render canonical navigation on non-navigation page',
-    <ServiceContextProvider service="news">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        service="news"
-        statusCode={200}
-        pathname="/not-a-navigation-page"
-      >
-        <Navigation />
-      </RequestContextProvider>
-    </ServiceContextProvider>,
+    <ThemeProvider service="news">
+      <ServiceContextProvider service="news">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
+          pageType={ARTICLE_PAGE}
+          service="news"
+          statusCode={200}
+          pathname="/not-a-navigation-page"
+        >
+          <Navigation />
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </ThemeProvider>,
   );
 
   it('should render navigation links in the correct format', () => {

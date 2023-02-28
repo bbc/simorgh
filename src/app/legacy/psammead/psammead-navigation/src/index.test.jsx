@@ -1,10 +1,11 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { render } from '@testing-library/react';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ScrollableNavigation } from './ScrollableNavigation';
 import Navigation, { NavigationUl, NavigationLi } from './index';
 import igboNavData from '../testHelpers/igbo';
+import ThemeProvider from '../../../../components/ThemeProvider';
 
 const navigationUlComponent = (
   <NavigationUl>
@@ -21,9 +22,6 @@ const navigationUlComponent = (
           currentPageText="Current page"
           service="news"
           data-navigation="test_navigation"
-          brandForegroundColour="#FDFDFD"
-          brandHighlightColour="#FFFFFF"
-          brandBorderColour="#EAB3B3"
         >
           {title}
         </NavigationLi>
@@ -33,16 +31,11 @@ const navigationUlComponent = (
 );
 
 const NavigationExample = (
-  <Navigation
-    script={latin}
-    service="news"
-    brandBackgroundColour="#B80000"
-    brandForegroundColour="#FDFDFD"
-    brandBorderColour="#EAB3B3"
-    brandHighlightColour="#FFFFFF"
-  >
-    {navigationUlComponent}
-  </Navigation>
+  <ThemeProvider service="news">
+    <Navigation script={latin} service="news">
+      {navigationUlComponent}
+    </Navigation>
+  </ThemeProvider>
 );
 
 describe('Navigation', () => {
@@ -50,47 +43,34 @@ describe('Navigation', () => {
 
   shouldMatchSnapshot(
     'should render correctly when isOpen is true',
-    <Navigation
-      script={latin}
-      service="news"
-      isOpen
-      brandBackgroundColour="#B80000"
-      brandForegroundColour="#FDFDFD"
-      brandBorderColour="#EAB3B3"
-      brandHighlightColour="#FFFFFF"
-    >
-      {navigationUlComponent}
-    </Navigation>,
+    <ThemeProvider service="news">
+      <Navigation script={latin} service="news" isOpen>
+        {navigationUlComponent}
+      </Navigation>
+    </ThemeProvider>,
   );
 
   shouldMatchSnapshot(
     'should render correctly when ampOpenClass prop is provided',
-    <Navigation
-      script={latin}
-      skipLinkText="Wụga n’ọdịnaya"
-      service="news"
-      ampOpenClass="is-open"
-      brandBackgroundColour="#B80000"
-      brandForegroundColour="#FDFDFD"
-      brandBorderColour="#EAB3B3"
-      brandHighlightColour="#FFFFFF"
-    >
-      {navigationUlComponent}
-    </Navigation>,
+    <ThemeProvider service="news">
+      <Navigation
+        script={latin}
+        skipLinkText="Wụga n’ọdịnaya"
+        service="news"
+        ampOpenClass="is-open"
+      >
+        {navigationUlComponent}
+      </Navigation>
+    </ThemeProvider>,
   );
 });
 
 describe('Scrollable Navigation', () => {
   shouldMatchSnapshot(
     'should render correctly',
-    <ScrollableNavigation
-      brandBackgroundColour="#B80000"
-      brandForegroundColour="#FDFDFD"
-      brandBorderColour="#EAB3B3"
-      brandHighlightColour="#FFFFFF"
-    >
-      {NavigationExample}
-    </ScrollableNavigation>,
+    <ThemeProvider service="news">
+      <ScrollableNavigation>{NavigationExample}</ScrollableNavigation>
+    </ThemeProvider>,
   );
 });
 
@@ -105,9 +85,6 @@ describe('Assertions', () => {
         service="news"
         active
         data-navigation="test_navigation"
-        brandForegroundColour="#FDFDFD"
-        brandHighlightColour="#FFFFFF"
-        brandBorderColour="#EAB3B3"
       >
         Testing exta props
       </NavigationLi>,
