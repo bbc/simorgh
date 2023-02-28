@@ -1,10 +1,4 @@
 import React from 'react';
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_POSTBOX_30,
-  C_GHOST,
-} from '#psammead/psammead-styles/src/colours';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import AmpNavigation from './index.amp';
@@ -26,10 +20,6 @@ const navigation = (
       script={latin}
       service="news"
       dir="ltr"
-      // brandBackgroundColour={C_POSTBOX}
-      // brandForegroundColour={C_GHOST}
-      // brandHighlightColour={C_WHITE}
-      // brandBorderColour={C_POSTBOX_30}
     />
   </ThemeProvider>
 );
