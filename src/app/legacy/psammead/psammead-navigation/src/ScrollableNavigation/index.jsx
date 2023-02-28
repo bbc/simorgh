@@ -77,14 +77,14 @@ export const ScrollableNavigation = ({
   children,
   dir,
   brandBackgroundColour,
-  brandHighlightColour,
+  // brandHighlightColour,
   ...props
 }) => (
   <StyledScrollableNav
     data-e2e="scrollable-nav"
     dir={dir}
     brandBackgroundColour={C_WHITE}
-    brandHighlightColour={brandHighlightColour}
+    // brandHighlightColour={brandHighlightColour}
     {...props}
   >
     {children}
@@ -95,7 +95,7 @@ ScrollableNavigation.propTypes = {
   children: node.isRequired,
   dir: oneOf(['ltr', 'rtl']),
   brandBackgroundColour: string.isRequired,
-  brandHighlightColour: string.isRequired,
+  // brandHighlightColour: string.isRequired,
 };
 
 ScrollableNavigation.defaultProps = {

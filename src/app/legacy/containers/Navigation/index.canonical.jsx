@@ -22,10 +22,10 @@ const CanonicalNavigationContainer = ({
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
-  brandBackgroundColour,
-  brandForegroundColour,
-  brandHighlightColour,
-  brandBorderColour,
+  // brandBackgroundColour,
+  // brandForegroundColour,
+  // brandHighlightColour,
+  // brandBorderColour,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,10 +41,10 @@ const CanonicalNavigationContainer = ({
       service={service}
       dir={dir}
       isOpen={isOpen}
-      brandBackgroundColour={brandBackgroundColour}
-      brandForegroundColour={brandForegroundColour}
-      brandHighlightColour={brandHighlightColour}
-      brandBorderColour={brandBorderColour}
+      // brandBackgroundColour={brandBackgroundColour}
+      // brandForegroundColour={brandForegroundColour}
+      // brandHighlightColour={brandHighlightColour}
+      // brandBorderColour={brandBorderColour}
     >
       <ScrollableWrapper>
         <CanonicalMenuButton
@@ -57,10 +57,10 @@ const CanonicalNavigationContainer = ({
         {!isOpen && (
           <ScrollableNavigation
             dir={dir}
-            brandBackgroundColour={brandBackgroundColour}
-            brandForegroundColour={brandForegroundColour}
-            brandHighlightColour={brandHighlightColour}
-            brandBorderColour={brandBorderColour}
+            // brandBackgroundColour={brandBackgroundColour}
+            // brandForegroundColour={brandForegroundColour}
+            // brandHighlightColour={brandHighlightColour}
+            // brandBorderColour={brandBorderColour}
           >
             {scrollableListItems}
           </ScrollableNavigation>
@@ -78,10 +78,10 @@ CanonicalNavigationContainer.propTypes = {
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
   menuAnnouncedText: string.isRequired,
-  brandBackgroundColour: string.isRequired,
-  brandForegroundColour: string.isRequired,
-  brandHighlightColour: string.isRequired,
-  brandBorderColour: string.isRequired,
+  // brandBackgroundColour: string.isRequired,
+  // brandForegroundColour: string.isRequired,
+  // brandHighlightColour: string.isRequired,
+  // brandBorderColour: string.isRequired,
 };
 
 export default CanonicalNavigationContainer;

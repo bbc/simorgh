@@ -32,10 +32,10 @@ const AmpNavigationContainer = ({
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
-  brandBackgroundColour,
-  brandForegroundColour,
-  brandHighlightColour,
-  brandBorderColour,
+  // brandBackgroundColour,
+  // brandForegroundColour,
+  // brandHighlightColour,
+  // brandBorderColour,
 }) => (
   <Navigation
     script={script}
@@ -43,10 +43,10 @@ const AmpNavigationContainer = ({
     dir={dir}
     id={NAVIGATION_ID}
     ampOpenClass={OPEN_CLASS_NAME}
-    brandBackgroundColour={brandBackgroundColour}
-    brandForegroundColour={brandForegroundColour}
-    brandHighlightColour={brandHighlightColour}
-    brandBorderColour={brandBorderColour}
+    // brandBackgroundColour={brandBackgroundColour}
+    // brandForegroundColour={brandForegroundColour}
+    // brandHighlightColour={brandHighlightColour}
+    // brandBorderColour={brandBorderColour}
   >
     <AmpMenuButton
       announcedText={menuAnnouncedText}
@@ -66,10 +66,10 @@ const AmpNavigationContainer = ({
     <StyledAmpScrollableNavigation
       dir={dir}
       id={SCROLLABLE_ID}
-      brandBackgroundColour={brandBackgroundColour}
-      brandForegroundColour={brandForegroundColour}
-      brandHighlightColour={brandHighlightColour}
-      brandBorderColour={brandBorderColour}
+      // brandBackgroundColour={brandBackgroundColour}
+      // brandForegroundColour={brandForegroundColour}
+      // brandHighlightColour={brandHighlightColour}
+      // brandBorderColour={brandBorderColour}
     >
       {scrollableListItems}
     </StyledAmpScrollableNavigation>
@@ -83,10 +83,10 @@ AmpNavigationContainer.propTypes = {
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
   menuAnnouncedText: string.isRequired,
-  brandBackgroundColour: string.isRequired,
-  brandForegroundColour: string.isRequired,
-  brandHighlightColour: string.isRequired,
-  brandBorderColour: string.isRequired,
+  // brandBackgroundColour: string.isRequired,
+  // brandForegroundColour: string.isRequired,
+  // brandHighlightColour: string.isRequired,
+  // brandBorderColour: string.isRequired,
 };
 
 export default AmpNavigationContainer;

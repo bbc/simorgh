@@ -17,9 +17,9 @@ const renderListItems = (
   service,
   dir,
   activeIndex,
-  brandForegroundColour,
-  brandHighlightColour,
-  brandBorderColour,
+  // brandForegroundColour,
+  // brandHighlightColour,
+  // brandBorderColour,
 ) =>
   navigation.map((item, index) => {
     const { title, url } = item;
@@ -34,9 +34,9 @@ const renderListItems = (
         currentPageText={currentPage}
         service={service}
         dir={dir}
-        brandForegroundColour={brandForegroundColour}
-        brandHighlightColour={brandHighlightColour}
-        brandBorderColour={brandBorderColour}
+        // brandForegroundColour={brandForegroundColour}
+        // brandHighlightColour={brandHighlightColour}
+        // brandBorderColour={brandBorderColour}
       >
         {title}
       </Li>
@@ -49,12 +49,12 @@ const NavigationContainer = () => {
   const { script, translations, navigation, service, dir, theming } =
     useContext(ServiceContext);
 
-  const {
-    brandBackgroundColour,
-    brandForegroundColour,
-    brandHighlightColour,
-    brandBorderColour,
-  } = theming;
+  // const {
+  //   brandBackgroundColour,
+  //   brandForegroundColour,
+  //   brandHighlightColour,
+  //   brandBorderColour,
+  // } = theming;
 
   const { canonicalLink, origin } = useContext(RequestContext);
   const { currentPage, navMenuText } = translations;
@@ -77,9 +77,9 @@ const NavigationContainer = () => {
         service,
         dir,
         activeIndex,
-        brandForegroundColour,
-        brandHighlightColour,
-        brandBorderColour,
+        // brandForegroundColour,
+        // brandHighlightColour,
+        // brandBorderColour,
       )}
     </NavigationUl>
   );
@@ -108,10 +108,10 @@ const NavigationContainer = () => {
       dir={dir}
       script={script}
       service={service}
-      brandBackgroundColour={brandBackgroundColour}
-      brandForegroundColour={brandForegroundColour}
-      brandHighlightColour={brandHighlightColour}
-      brandBorderColour={brandBorderColour}
+      // brandBackgroundColour={brandBackgroundColour}
+      // brandForegroundColour={brandForegroundColour}
+      // brandHighlightColour={brandHighlightColour}
+      // brandBorderColour={brandBorderColour}
     />
   );
 };
