@@ -40,86 +40,90 @@ const HiearchicalGrid = ({ promos, headingLevel }: CurationGridProps) => {
 
   const promoItems = promos.slice(0, 12);
   return (
-    <ul role="list" css={styles.list} data-testid="hierarchical-grid">
-      {promoItems.map((promo, i) => {
-        const duration = moment.duration(promo.duration, 'seconds');
-        const separator = ',';
-        const formattedDuration = formatDuration({ duration, separator });
-        const durationString = `${durationTranslation}, ${formattedDuration}`;
+    <div data-testid="hierarchical-grid">
+      <ul role="list" css={styles.list} data-testid="topic-promos">
+        {promoItems.map((promo, i) => {
+          const duration = moment.duration(promo.duration, 'seconds');
+          const separator = ',';
+          const formattedDuration = formatDuration({ duration, separator });
+          const durationString = `${durationTranslation}, ${formattedDuration}`;
 
-        const useLargeImages = i === 0 && promoItems.length >= 3;
-        const showDuration =
-          promo.duration && ['video', 'audio'].includes(promo.type);
-        const isMedia = ['video', 'audio', 'photogallery'].includes(promo.type);
-        const typeTranslated =
-          (promo.type === 'audio' && `${audioTranslation}, `) ||
-          (promo.type === 'video' && `${videoTranslation}, `) ||
-          (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
+          const useLargeImages = i === 0 && promoItems.length >= 3;
+          const showDuration =
+            promo.duration && ['video', 'audio'].includes(promo.type);
+          const isMedia = ['video', 'audio', 'photogallery'].includes(
+            promo.type,
+          );
+          const typeTranslated =
+            (promo.type === 'audio' && `${audioTranslation}, `) ||
+            (promo.type === 'video' && `${videoTranslation}, `) ||
+            (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-        return (
-          <li
-            key={promo.id}
-            css={({ mq }: Theme) => [
-              styles.item,
-              getStyles(promoItems.length, i, mq),
-            ]}
-          >
-            <Promo>
-              <Promo.Image
-                useLargeImages={useLargeImages}
-                src={promo.imageUrl || ''}
-                alt={promo.imageAlt}
-                loading="lazy"
-              >
-                <Promo.MediaIcon type={promo.type}>
-                  {showDuration ? promo.duration : ''}
-                </Promo.MediaIcon>
-              </Promo.Image>
-              <Promo.Heading
-                as={`h${headingLevel}`}
-                css={(theme: Theme) => ({
-                  color: theme.palette.GREY_10,
-                  ...(i === 0 && theme.fontSizes.paragon),
-                })}
-              >
-                {isMedia ? (
-                  <Promo.A
-                    href={promo.link}
-                    aria-labelledby={promo.id}
-                    className="focusIndicatorDisplayBlock"
-                  >
-                    <span id={promo.id} role="text">
-                      <VisuallyHiddenText data-testid="visually-hidden-text">
-                        {typeTranslated}
-                      </VisuallyHiddenText>
-                      {promo.title}
-                      {showDuration && (
-                        <VisuallyHiddenText>
-                          {durationString}
+          return (
+            <li
+              key={promo.id}
+              css={({ mq }: Theme) => [
+                styles.item,
+                getStyles(promoItems.length, i, mq),
+              ]}
+            >
+              <Promo>
+                <Promo.Image
+                  useLargeImages={useLargeImages}
+                  src={promo.imageUrl || ''}
+                  alt={promo.imageAlt}
+                  loading="lazy"
+                >
+                  <Promo.MediaIcon type={promo.type}>
+                    {showDuration ? promo.duration : ''}
+                  </Promo.MediaIcon>
+                </Promo.Image>
+                <Promo.Heading
+                  as={`h${headingLevel}`}
+                  css={(theme: Theme) => ({
+                    color: theme.palette.GREY_10,
+                    ...(i === 0 && theme.fontSizes.paragon),
+                  })}
+                >
+                  {isMedia ? (
+                    <Promo.A
+                      href={promo.link}
+                      aria-labelledby={promo.id}
+                      className="focusIndicatorDisplayBlock"
+                    >
+                      <span id={promo.id} role="text">
+                        <VisuallyHiddenText data-testid="visually-hidden-text">
+                          {typeTranslated}
                         </VisuallyHiddenText>
-                      )}
-                    </span>
-                  </Promo.A>
-                ) : (
-                  <Promo.A
-                    href={promo.link}
-                    className="focusIndicatorDisplayBlock"
-                  >
-                    {promo.title}
-                  </Promo.A>
-                )}
-              </Promo.Heading>
-              <Promo.Body className="promo-paragraph" css={styles.body}>
-                {promo.description}
-              </Promo.Body>
-              <Promo.Timestamp className="promo-timestamp">
-                {promo.firstPublished}
-              </Promo.Timestamp>
-            </Promo>
-          </li>
-        );
-      })}
-    </ul>
+                        {promo.title}
+                        {showDuration && (
+                          <VisuallyHiddenText>
+                            {durationString}
+                          </VisuallyHiddenText>
+                        )}
+                      </span>
+                    </Promo.A>
+                  ) : (
+                    <Promo.A
+                      href={promo.link}
+                      className="focusIndicatorDisplayBlock"
+                    >
+                      {promo.title}
+                    </Promo.A>
+                  )}
+                </Promo.Heading>
+                <Promo.Body className="promo-paragraph" css={styles.body}>
+                  {promo.description}
+                </Promo.Body>
+                <Promo.Timestamp className="promo-timestamp">
+                  {promo.firstPublished}
+                </Promo.Timestamp>
+              </Promo>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 
