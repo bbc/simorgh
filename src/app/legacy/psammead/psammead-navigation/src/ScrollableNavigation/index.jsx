@@ -43,6 +43,7 @@ const StyledScrollableNav = styled.div`
 
   &:focus-visible {
     outline: none;
+  }
 
   // Change default focus indicator on Firefox to be inline with new focus indicator styling.
   &:focus-visible::after {
