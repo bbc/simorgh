@@ -1,11 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_POSTBOX_30,
-  C_GHOST,
-} from '#psammead/psammead-styles/src/colours';
+import { fireEvent } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import CanonicalNavigation from './index.canonical';
@@ -15,20 +9,20 @@ import {
   dropdownListItems,
   scrollableListItems,
 } from './testHelpers';
+import { render } from '../../../components/react-testing-library-with-providers';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const navigation = (
-  <CanonicalNavigation
-    scrollableListItems={scrollableListItems}
-    dropdownListItems={dropdownListItems}
-    menuAnnouncedText="menu"
-    script={latin}
-    service="news"
-    dir="ltr"
-    brandBackgroundColour={C_POSTBOX}
-    brandForegroundColour={C_GHOST}
-    brandHighlightColour={C_WHITE}
-    brandBorderColour={C_POSTBOX_30}
-  />
+  <ThemeProvider service="news">
+    <CanonicalNavigation
+      scrollableListItems={scrollableListItems}
+      dropdownListItems={dropdownListItems}
+      menuAnnouncedText="menu"
+      script={latin}
+      service="news"
+      dir="ltr"
+    />
+  </ThemeProvider>
 );
 
 describe('Canonical Navigation', () => {

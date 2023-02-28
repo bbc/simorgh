@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import {
   C_POSTBOX,
   C_WHITE,
@@ -15,20 +14,24 @@ import {
   dropdownListItems,
   scrollableListItems,
 } from './testHelpers';
+import { render } from '../../../components/react-testing-library-with-providers';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const navigation = (
-  <AmpNavigation
-    scrollableListItems={scrollableListItems}
-    dropdownListItems={dropdownListItems}
-    menuAnnouncedText="menu"
-    script={latin}
-    service="news"
-    dir="ltr"
-    brandBackgroundColour={C_POSTBOX}
-    brandForegroundColour={C_GHOST}
-    brandHighlightColour={C_WHITE}
-    brandBorderColour={C_POSTBOX_30}
-  />
+  <ThemeProvider service="news">
+    <AmpNavigation
+      scrollableListItems={scrollableListItems}
+      dropdownListItems={dropdownListItems}
+      menuAnnouncedText="menu"
+      script={latin}
+      service="news"
+      dir="ltr"
+      brandBackgroundColour={C_POSTBOX}
+      brandForegroundColour={C_GHOST}
+      brandHighlightColour={C_WHITE}
+      brandBorderColour={C_POSTBOX_30}
+    />
+  </ThemeProvider>
 );
 
 describe('AMP Navigation', () => {
