@@ -68,8 +68,8 @@ const StyledScrollableNav = styled.div`
     pointer-events: none;
     background: linear-gradient(
       ${({ dir }) => (dir === 'ltr' ? 'to right' : 'to left')},
-      ${({ brandBackgroundColour }) => hexToRGB(brandBackgroundColour, 0)} 0%,
-      ${({ brandBackgroundColour }) => hexToRGB(brandBackgroundColour, 1)} 100%
+      ${props => hexToRGB(props.theme.palette.WHITE, 0)} 0%,
+      ${props => hexToRGB(props.theme.palette.WHITE, 1)} 100%
     );
   }
 `;
@@ -77,14 +77,14 @@ const StyledScrollableNav = styled.div`
 export const ScrollableNavigation = ({
   children,
   dir,
-  brandBackgroundColour,
+  // brandBackgroundColour,
   // brandHighlightColour,
   ...props
 }) => (
   <StyledScrollableNav
     data-e2e="scrollable-nav"
     dir={dir}
-    brandBackgroundColour={C_WHITE}
+    // brandBackgroundColour={C_WHITE}
     // brandHighlightColour={brandHighlightColour}
     {...props}
   >
@@ -95,7 +95,7 @@ export const ScrollableNavigation = ({
 ScrollableNavigation.propTypes = {
   children: node.isRequired,
   dir: oneOf(['ltr', 'rtl']),
-  brandBackgroundColour: string.isRequired,
+  // brandBackgroundColour: string.isRequired,
   // brandHighlightColour: string.isRequired,
 };
 
