@@ -3699,8 +3699,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/kyrgyz/topics/cvpv9djp9qqt?renderer_env=test'],
-            enabled: false, // cannot use the above path as it fails on test that check the number of items on topic-promos. This is because
-            // this page does not follow the layout of the usual topic page and so fails to find the correct number of topic promo on page
+            enabled: true,
           },
           local: {
             paths: [],
