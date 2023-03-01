@@ -19,7 +19,7 @@ interface Props {
   variant: Variants;
 }
 interface ComponentProps extends Props {
-  fixture: any;
+  fixture: object[];
 }
 
 const Component = ({
