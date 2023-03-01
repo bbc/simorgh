@@ -1,0 +1,4867 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
+.emotion-0 {
+  background-color: #F6F6F6;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-3 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      padding: 0 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      padding: 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-3 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 {
+    max-width: 63rem;
+  }
+}
+
+.emotion-6 {
+  padding-bottom: 2rem;
+  max-width: 100%;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-6 {
+    width: calc(66.66666666666667%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-6 {
+    width: calc(66.66666666666667%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+}
+
+.emotion-8 {
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-10 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-10 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-10 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-10 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-10 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-10 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-12 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #141414;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-12:focus {
+  outline: none;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-14 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-14 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-14 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-14 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-14 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-14 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-16 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #141414;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-16 {
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-18 {
+    margin: 0 0.5rem 0 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-18 {
+    margin: 0 1rem 0 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-18 {
+    margin: 0 1rem 0 1rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-18 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem 1.5rem;
+    max-width: 80rem;
+  }
+}
+
+.emotion-21 {
+  position: relative;
+  z-index: 0;
+  color: #141414;
+  margin-top: 2rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-21 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-21 {
+    margin-bottom: 1rem;
+  }
+}
+
+.emotion-23 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-29 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #F6F6F6;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-29 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    padding-right: 1rem;
+  }
+}
+
+.emotion-32 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(10, auto);
+}
+
+@supports (display: grid) {
+  .emotion-32 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(20, 1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-32 {
+    grid-template-rows: repeat(
+          5,
+          auto
+        );
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-32 {
+    grid-auto-flow: row;
+  }
+}
+
+.emotion-35 {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-35 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-35 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-35 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-35 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-35 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-35 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-35 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-end: span 3;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
+    }
+  }
+}
+
+.emotion-37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-39 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-39 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-39 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-39 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-39 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-39 {
+      min-width: 2rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-39 {
+    min-width: 2rem;
+  }
+}
+
+.emotion-41 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-41 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-41 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+.emotion-43 {
+  padding-top: 0.375rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-43 {
+    padding-right: 0;
+  }
+}
+
+.emotion-45 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-45 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-45 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-45:hover,
+.emotion-45:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-45:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+@media (min-width: 25rem) {
+  .emotion-45 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-45 {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-45 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+.emotion-47 {
+  padding-top: 0.5rem;
+}
+
+.emotion-49 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #545658;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-49 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-49 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-56 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-56 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-56 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-56 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-56 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-56 {
+      min-width: 2rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-56 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-107 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-107 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-107 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-107 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-107 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-107 {
+      min-width: 2rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-107 {
+    min-width: 4rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-124 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-124 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-124 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-124 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-124 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-124 {
+      min-width: 4rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-124 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-141 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-141 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-141 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-141 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-141 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-141 {
+      min-width: 4rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-141 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-192 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-192 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-192 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-192 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-192 {
+    min-width: 4rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-192 {
+      min-width: 4rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-192 {
+    min-width: 4rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <noscript />
+    <div>
+      chartbeat
+    </div>
+    <div
+      class="emotion-2 emotion-3 emotion-4"
+      dir="ltr"
+    >
+      <div
+        class="emotion-5 emotion-6 emotion-4"
+        dir="ltr"
+      >
+        <main
+          class="emotion-8 emotion-9"
+          role="main"
+        >
+          <div
+            class="emotion-10 emotion-4"
+            dir="ltr"
+          >
+            <h1
+              class="emotion-12 emotion-13"
+              id="content"
+              tabindex="-1"
+            >
+              Article Headline in Pidgin
+            </h1>
+          </div>
+          <div
+            class="emotion-14 emotion-4"
+            dir="ltr"
+          >
+            <p
+              class="emotion-16 emotion-17"
+              dir="ltr"
+            >
+              A paragraph in Pidgin.
+            </p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <section
+      aria-labelledby="Most-Read"
+      class=" emotion-18 emotion-19"
+      data-e2e="most-read"
+      role="region"
+    >
+      <div
+        class="emotion-20 emotion-21 emotion-22"
+      >
+        <h2
+          class="emotion-23 emotion-24"
+        >
+          <span
+            class="emotion-25 emotion-26"
+          >
+            <span
+              class="emotion-27 emotion-28"
+            >
+              <span
+                class="emotion-29 emotion-30"
+                dir="ltr"
+                id="Most-Read"
+              >
+                De one we dem de read well well
+              </span>
+            </span>
+          </span>
+        </h2>
+      </div>
+      <ol
+        class="emotion-31 emotion-32 emotion-4"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-39 emotion-40"
+              dir="ltr"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                1
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="ltr"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/pidgin/tori-46729879"
+              >
+                Public Holidays wey go happun for 2019
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-05-21"
+                >
+                  De one we dem update for: 21st May 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-56 emotion-40"
+              dir="ltr"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                2
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="ltr"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/pidgin/tori-50304653"
+              >
+                Liberia banks don run out of money
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-05"
+                >
+                  De one we dem update for: 5th November 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-39 emotion-40"
+              dir="ltr"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                3
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="ltr"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/pidgin/tori-50298882"
+              >
+                Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-05"
+                >
+                  De one we dem update for: 5th November 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-56 emotion-40"
+              dir="ltr"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                4
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="ltr"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/pidgin/tori-50315150"
+              >
+                Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  De one we dem update for: 6th November 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-107 emotion-40"
+              dir="ltr"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                5
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="ltr"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/pidgin/tori-50315157"
+              >
+                How Balogun market fire kill Policeman for Lagos
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  De one we dem update for: 6th November 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-124 emotion-40"
+              dir="ltr"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                6
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="ltr"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/pidgin/tori-50093818"
+              >
+                Labour, FG finally agree minimum wage salary adjustment
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-10-18"
+                >
+                  De one we dem update for: 18th October 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-141 emotion-40"
+              dir="ltr"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                7
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="ltr"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/pidgin/tori-50187218"
+              >
+                Naira Marley na 'Bad Influence'?
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-10-25"
+                >
+                  De one we dem update for: 25th October 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-124 emotion-40"
+              dir="ltr"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                8
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="ltr"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/pidgin/tori-48347911"
+              >
+                Tins you suppose know about Naira Marley
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-05-23"
+                >
+                  De one we dem update for: 23rd May 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-141 emotion-40"
+              dir="ltr"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                9
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="ltr"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/pidgin/sport-50312710"
+              >
+                Golden Eaglets crash out of Fifa U17 World Cup
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  De one we dem update for: 6th November 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-192 emotion-40"
+              dir="ltr"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                10
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="ltr"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/pidgin/tori-42945173"
+              >
+                Tiger nut drink fit wake up your sex drive - Nutritionist
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-05-21"
+                >
+                  De one we dem update for: 21st May 2019
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <div
+      aria-hidden="true"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a news article correctly 1`] = `
+.emotion-0 {
+  background-color: #F6F6F6;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-3 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      padding: 0 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      padding: 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-3 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 {
+    max-width: 63rem;
+  }
+}
+
+.emotion-6 {
+  padding-bottom: 2rem;
+  max-width: 100%;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-6 {
+    width: calc(66.66666666666667%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-6 {
+    width: calc(66.66666666666667%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+}
+
+.emotion-8 {
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-10 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-10 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-10 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-10 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-10 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-10 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-12 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #141414;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-12:focus {
+  outline: none;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-14 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-14 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-14 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-14 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-14 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-14 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-16 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #141414;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-16 {
+    padding-right: 2.5rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <noscript />
+    <div>
+      chartbeat
+    </div>
+    <div
+      class="emotion-2 emotion-3 emotion-4"
+      dir="ltr"
+    >
+      <div
+        class="emotion-5 emotion-6 emotion-4"
+        dir="ltr"
+      >
+        <main
+          class="emotion-8 emotion-9"
+          role="main"
+        >
+          <div
+            class="emotion-10 emotion-4"
+            dir="ltr"
+          >
+            <h1
+              class="emotion-12 emotion-13"
+              id="content"
+              tabindex="-1"
+            >
+              Article Headline
+            </h1>
+          </div>
+          <div
+            class="emotion-14 emotion-4"
+            dir="ltr"
+          >
+            <p
+              class="emotion-16 emotion-17"
+              dir="ltr"
+            >
+              A paragraph.
+            </p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a news article with headline in the middle correctly 1`] = `
+.emotion-0 {
+  background-color: #F6F6F6;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-3 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      padding: 0 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      padding: 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-3 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 {
+    max-width: 63rem;
+  }
+}
+
+.emotion-6 {
+  padding-bottom: 2rem;
+  max-width: 100%;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-6 {
+    width: calc(66.66666666666667%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-6 {
+    width: calc(66.66666666666667%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+}
+
+.emotion-8 {
+  padding-bottom: 1.5rem;
+}
+
+.emotion-10 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-12 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-12 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-12 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-12 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-12 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-12 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #141414;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-14 {
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-16 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-16 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-16 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-16 {
+    margin-left: 16.666666666666668%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-16 {
+    margin-left: 33.333333333333336%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-16 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-16 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-16 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-16 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-16 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-16 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-16 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-18 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #141414;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-18:focus {
+  outline: none;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <noscript />
+    <div>
+      chartbeat
+    </div>
+    <div
+      class="emotion-2 emotion-3 emotion-4"
+      dir="ltr"
+    >
+      <div
+        class="emotion-5 emotion-6 emotion-4"
+        dir="ltr"
+      >
+        <main
+          class="emotion-8 emotion-9"
+          role="main"
+        >
+          <h1
+            class="emotion-10 emotion-11"
+            id="content"
+            tabindex="-1"
+          >
+            SEO Headline
+          </h1>
+          <div
+            class="emotion-12 emotion-4"
+            dir="ltr"
+          >
+            <p
+              class="emotion-14 emotion-15"
+              dir="ltr"
+            >
+              Paragraph above headline
+            </p>
+          </div>
+          <div
+            class="emotion-16 emotion-4"
+            dir="ltr"
+          >
+            <strong
+              class="emotion-18 emotion-19"
+            >
+              Article Headline
+            </strong>
+          </div>
+          <div
+            class="emotion-12 emotion-4"
+            dir="ltr"
+          >
+            <p
+              class="emotion-14 emotion-15"
+              dir="ltr"
+            >
+              Paragraph below headline
+            </p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a news article without headline correctly 1`] = `
+.emotion-0 {
+  background-color: #F6F6F6;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-3 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      padding: 0 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      padding: 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-3 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 {
+    max-width: 63rem;
+  }
+}
+
+.emotion-6 {
+  padding-bottom: 2rem;
+  max-width: 100%;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-6 {
+    width: calc(66.66666666666667%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-6 {
+    width: calc(66.66666666666667%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+}
+
+.emotion-8 {
+  padding-bottom: 1.5rem;
+}
+
+.emotion-10 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-12 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-12 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-12 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-12 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-12 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-12 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #141414;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-14 {
+    padding-right: 2.5rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <noscript />
+    <div>
+      chartbeat
+    </div>
+    <div
+      class="emotion-2 emotion-3 emotion-4"
+      dir="ltr"
+    >
+      <div
+        class="emotion-5 emotion-6 emotion-4"
+        dir="ltr"
+      >
+        <main
+          class="emotion-8 emotion-9"
+          role="main"
+        >
+          <h1
+            class="emotion-10 emotion-11"
+            id="content"
+            tabindex="-1"
+          >
+            Article Headline
+          </h1>
+          <div
+            class="emotion-12 emotion-4"
+            dir="ltr"
+          >
+            <p
+              class="emotion-14 emotion-15"
+              dir="ltr"
+            >
+              Paragraph 1
+            </p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render a rtl article (persian) with most read correctly 1`] = `
+.emotion-0 {
+  background-color: #F6F6F6;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-3 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-3 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      padding: 0 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      padding: 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-3 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 {
+    max-width: 63rem;
+  }
+}
+
+.emotion-6 {
+  padding-bottom: 2rem;
+  max-width: 100%;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-6 {
+    width: calc(66.66666666666667%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-6 {
+    width: calc(66.66666666666667%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-6 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-6 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+    }
+  }
+}
+
+.emotion-8 {
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-10 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-10 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-10 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-10 {
+    margin-right: 16.666666666666668%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-10 {
+    margin-right: 33.333333333333336%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-10 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-10 {
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-end: span 12;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-12 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #141414;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    font-size: 2.5rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    padding: 2.5rem 0;
+  }
+}
+
+.emotion-12:focus {
+  outline: none;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-14 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-14 {
+    padding: 0 0.5rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-14 {
+    padding: 0 1rem;
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-14 {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-14 {
+    margin-right: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-14 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-14 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-16 {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #141414;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-16 {
+    padding-left: 2.5rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-18 {
+    margin: 0 0.5rem 0 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-18 {
+    margin: 0 1rem 0 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-18 {
+    margin: 0 1rem 0 1rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-18 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem 1.5rem;
+    max-width: 80rem;
+  }
+}
+
+.emotion-21 {
+  position: relative;
+  z-index: 0;
+  color: #141414;
+  margin-top: 2rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-21 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-21 {
+    margin-bottom: 1rem;
+  }
+}
+
+.emotion-23 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-29 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #F6F6F6;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-29 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    padding-left: 1rem;
+  }
+}
+
+.emotion-32 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(10, auto);
+}
+
+@supports (display: grid) {
+  .emotion-32 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(20, 1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-32 {
+    grid-template-rows: repeat(
+          5,
+          auto
+        );
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-32 {
+    grid-auto-flow: row;
+  }
+}
+
+.emotion-35 {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-35 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-35 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-35 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-35 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-35 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-35 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-35 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-end: span 3;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-end: span 4;
+    }
+  }
+}
+
+.emotion-37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-39 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-39 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-39 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-39 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-39 {
+    min-width: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-39 {
+      min-width: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-39 {
+    min-width: 1.5rem;
+  }
+}
+
+.emotion-41 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-41 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-41 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+.emotion-43 {
+  padding-top: 0.375rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-43 {
+    padding-left: 0;
+  }
+}
+
+.emotion-45 {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-45 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-45 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-45:hover,
+.emotion-45:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-45:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+@media (min-width: 25rem) {
+  .emotion-45 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-45 {
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-45 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+.emotion-47 {
+  padding-top: 0.5rem;
+}
+
+.emotion-49 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #545658;
+  display: block;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-49 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-49 {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-56 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-56 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-56 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-56 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-56 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-56 {
+      min-width: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-56 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-107 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-107 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-107 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-107 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-107 {
+    min-width: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-107 {
+      min-width: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-107 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-124 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-124 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-124 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-124 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-124 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-124 {
+      min-width: 2rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-124 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-141 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-141 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-141 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-141 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-141 {
+    min-width: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-141 {
+      min-width: 2rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-141 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-192 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-192 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-192 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-192 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-192 {
+    min-width: 2rem;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  @media (min-width: 37.5rem) {
+    .emotion-192 {
+      min-width: 2rem;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-192 {
+    min-width: 2rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <noscript />
+    <div>
+      chartbeat
+    </div>
+    <div
+      class="emotion-2 emotion-3 emotion-4"
+      dir="rtl"
+    >
+      <div
+        class="emotion-5 emotion-6 emotion-4"
+        dir="rtl"
+      >
+        <main
+          class="emotion-8 emotion-9"
+          role="main"
+        >
+          <div
+            class="emotion-10 emotion-4"
+            dir="rtl"
+          >
+            <h1
+              class="emotion-12 emotion-13"
+              id="content"
+              tabindex="-1"
+            >
+              سرصفحه مقاله
+            </h1>
+          </div>
+          <div
+            class="emotion-14 emotion-4"
+            dir="rtl"
+          >
+            <p
+              class="emotion-16 emotion-17"
+              dir="rtl"
+            >
+              یک پاراگراف.
+            </p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <section
+      aria-labelledby="Most-Read"
+      class=" emotion-18 emotion-19"
+      data-e2e="most-read"
+      role="region"
+    >
+      <div
+        class="emotion-20 emotion-21 emotion-22"
+      >
+        <h2
+          class="emotion-23 emotion-24"
+        >
+          <span
+            class="emotion-25 emotion-26"
+          >
+            <span
+              class="emotion-27 emotion-28"
+            >
+              <span
+                class="emotion-29 emotion-30"
+                dir="rtl"
+                id="Most-Read"
+              >
+                پربیننده‌ترین‌ها
+              </span>
+            </span>
+          </span>
+        </h2>
+      </div>
+      <ol
+        class="emotion-31 emotion-32 emotion-4"
+        dir="rtl"
+        role="list"
+      >
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-39 emotion-40"
+              dir="rtl"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                ۱
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="rtl"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/persian/world-50317704"
+              >
+                توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-56 emotion-40"
+              dir="rtl"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                ۲
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="rtl"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/persian/iran-50319870"
+              >
+                فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-39 emotion-40"
+              dir="rtl"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                ۳
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="rtl"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/persian/world-50320610"
+              >
+                ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-56 emotion-40"
+              dir="rtl"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                ۴
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="rtl"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/persian/world-50316456"
+              >
+                غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-107 emotion-40"
+              dir="rtl"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                ۵
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="rtl"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/persian/magazine-50249226"
+              >
+                دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-124 emotion-40"
+              dir="rtl"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                ۶
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="rtl"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/persian/world-50317700"
+              >
+                انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-141 emotion-40"
+              dir="rtl"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                ۷
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="rtl"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/persian/sport-50322486"
+              >
+                عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-124 emotion-40"
+              dir="rtl"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                ۸
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="rtl"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/persian/iran-features-50310665"
+              >
+                آیا تهران بازی هسته ای را به هم می‌زند؟
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-141 emotion-40"
+              dir="rtl"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                ۹
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="rtl"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/persian/world-50316450"
+              >
+                آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emotion-34 emotion-35 emotion-4"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-37 emotion-38"
+          >
+            <div
+              class="emotion-192 emotion-40"
+              dir="rtl"
+            >
+              <span
+                class="emotion-41 emotion-42"
+              >
+                ۱۰
+              </span>
+            </div>
+            <div
+              class="emotion-43 emotion-44"
+              dir="rtl"
+            >
+              <a
+                class="focusIndicatorDisplayTableCell emotion-45 emotion-46"
+                href="/persian/sport-50318030"
+              >
+                فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
+              </a>
+              <div
+                class="emotion-47 emotion-48"
+              >
+                <time
+                  class="emotion-49 emotion-50"
+                  datetime="2019-11-06"
+                >
+                  به روز شده در ۶ نوامبر ۲۰۱۹
+                </time>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <div
+      aria-hidden="true"
+    />
+  </div>
+</div>
+`;

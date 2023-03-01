@@ -1,20 +1,26 @@
 import React from 'react';
-import path from 'ramda/src/path';
-import { ArticlePage, ErrorPage } from '#pages';
+import pathOr from 'ramda/src/pathOr';
+import { ArticlePage, ErrorPage, MediaArticlePage } from '#pages';
 import { articlePath } from '#app/routes/utils/regex';
 import {
   ARTICLE_PAGE,
-  ZONED_ARTICLE_PAGE,
+  MEDIA_ARTICLE_PAGE,
   ERROR_PAGE,
 } from '#app/routes/utils/pageTypes';
 import getInitialData from './getInitialData';
 
 const ArticleVariation = props => {
-  const type = path(['pageData', 'metadata', 'type'], props);
+  const consumable = pathOr(
+    false,
+    ['pageData', 'metadata', 'consumableAsSFV'],
+    props,
+  );
+
+  const type = consumable ? MEDIA_ARTICLE_PAGE : ARTICLE_PAGE;
 
   const PageType = {
     [ARTICLE_PAGE]: ArticlePage,
-    [ZONED_ARTICLE_PAGE]: ArticlePage,
+    [MEDIA_ARTICLE_PAGE]: MediaArticlePage,
   }[type];
 
   return PageType ? (
