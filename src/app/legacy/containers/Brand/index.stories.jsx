@@ -15,10 +15,7 @@ const Component = ({ service, variant }) => {
   return (
     <ThemeProvider service={service}>
       <ServiceContextProvider service={service}>
-        <BrandContainer
-          backgroundColour={configVariant.theming.brandBackgroundColour}
-          logoColour={configVariant.theming.brandLogoColour}
-        />
+        <BrandContainer />
       </ServiceContextProvider>
     </ThemeProvider>
   );
