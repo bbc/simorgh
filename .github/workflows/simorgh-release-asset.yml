@@ -24,7 +24,6 @@ jobs:
 
       - name: Get New Release TagName
         id: newReleaseTagName
-        if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
         run: |
           NEW_RELEASE_TAG_NAME = $(curl \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -37,7 +36,6 @@ jobs:
 
       - name: Get New Release Commit Message
         id: newReleaseMessage
-        if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
         run: |
           NEW_RELEASE_MESSSAGE = $(curl \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -48,7 +46,6 @@ jobs:
           | jq -r '.commit.message') >> $GITHUB_OUTPUT
 
       - name: Publish 
-        if: github.event.pull_request.head.repo.full_name == 'bbc/simorgh' # Only run when not on a fork
         run: |
           curl \
           -X POST \
