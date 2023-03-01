@@ -3,7 +3,33 @@ import hasPath from 'ramda/src/hasPath';
 import getOriginCode from '../../../../../lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '../../../../../lib/utilities/imageSrcHelpers/locator';
 
-const extractPromoData = ({ promo }: { promo: any }) => {
+type Promo = {
+  headlines: {
+    headline: string;
+  };
+  locators: {
+    assetUri: string;
+  };
+  indexImage: {
+    width: number;
+    height: number;
+    altText: string;
+    copyrightHolder: string;
+    originCode: string;
+    locator: string;
+  };
+  images: {
+    defaultPromoImage: {
+      blocks: [
+        {
+          type: string;
+        },
+      ];
+    };
+  };
+};
+
+const extractPromoData = ({ promo }: { promo: Promo }) => {
   if (!promo) return null;
 
   if (hasPath(['indexImage'], promo)) {
@@ -23,10 +49,10 @@ const extractPromoData = ({ promo }: { promo: any }) => {
     };
   }
 
-  const optimoImageBlocks = path<any[]>(
-    ['images', 'defaultPromoImage', 'blocks'],
-    promo,
-  );
+  const optimoImageBlocks = path<
+    Promo['images']['defaultPromoImage']['blocks']
+  >(['images', 'defaultPromoImage', 'blocks'], promo);
+
   const optimoImage = optimoImageBlocks?.find(
     block => block.type === 'rawImage',
   );
