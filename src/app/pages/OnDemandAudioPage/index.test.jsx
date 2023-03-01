@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
-import { render, act, waitFor } from '@testing-library/react';
+import { act, waitFor } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
@@ -15,6 +15,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import { render } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import koreanPageWithScheduleData from './fixtureData/korean.json';
 import _OnDemandAudioPage from './OnDemandAudioPage';
