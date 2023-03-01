@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
@@ -10,28 +10,32 @@ import {
 import getAuthorTwitterHandle from '#app/pages/ArticlePage/getAuthorTwitterHandle';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import ArticleMetadata from './index';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
-  <ServiceContextProvider service={service}>
-    <ToggleContextProvider>
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        pathname="/pathname"
-        service={service}
-        statusCode={200}
-      >
-        {children}
-      </RequestContextProvider>
-    </ToggleContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service={service}>
+    <ServiceContextProvider service={service}>
+      <ToggleContextProvider>
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
+          pageType={ARTICLE_PAGE}
+          pathname="/pathname"
+          service={service}
+          statusCode={200}
+        >
+          {children}
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 const propsForNewsInternational = {
