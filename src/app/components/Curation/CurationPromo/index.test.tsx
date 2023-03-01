@@ -1,16 +1,18 @@
 import React from 'react';
-import {
-  render,
-  screen,
-} from '../../../../components/react-testing-library-with-providers';
+import { render, screen } from '../../react-testing-library-with-providers';
 
-import TopicPromo from '.';
+import CurationPromo from '.';
 
-jest.mock('../../../../components/ThemeProvider');
+jest.mock('../../ThemeProvider');
 
-// eslint-disable-next-line react/prop-types
-const Fixture = ({ lazy, type = 'article', duration }) => (
-  <TopicPromo
+interface FixtureProps {
+  lazy?: boolean;
+  type?: string;
+  duration?: number;
+}
+
+const Fixture = ({ lazy, type = 'article', duration }: FixtureProps) => (
+  <CurationPromo
     lazy={lazy}
     title="Promo title"
     firstPublished="2022-03-30T07:37:18.253Z"
@@ -22,7 +24,7 @@ const Fixture = ({ lazy, type = 'article', duration }) => (
   />
 );
 
-describe('Topic Curations Promo', () => {
+describe('Curation Promo', () => {
   it('should use formatted duration when a valid duration is provided', () => {
     const container = render(
       <Fixture lazy={false} duration={123} type="video" />,

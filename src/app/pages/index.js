@@ -3,6 +3,7 @@ import loadable from '@loadable/component';
 export const ArticlePage = loadable(() => import('./ArticlePage'));
 export const ErrorPage = loadable(() => import('./ErrorPage'));
 export const FrontPage = loadable(() => import('./FrontPage'));
+export const HomePage = loadable(() => import('./HomePage'));
 export const MediaAssetPage = loadable(() => import('./MediaAssetPage'));
 export const MostReadPage = loadable(() => import('./MostReadPage'));
 export const MostWatchedPage = loadable(() => import('./MostWatchedPage'));
