@@ -26,5 +26,5 @@ export const PADAUK = 'Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif';
 export const REITH_SANS = 'ReithSans, Helvetica, Arial, sans-serif';
 export const REITH_SERIF = 'ReithSerif, Helvetica, Arial, sans-serif;';
 export const REITH_QALAM =
-  '"BBC Reith Qalam", Arial, Verdana, Geneva, Helvetica, sans-serif';
+  '"Times New Roman", "BBC Reith Qalam", Arial, Verdana, Geneva, Helvetica, sans-serif';
 export const TAHOMA = 'Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif';
