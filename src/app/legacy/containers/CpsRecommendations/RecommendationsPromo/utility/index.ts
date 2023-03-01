@@ -1,35 +1,10 @@
 import path from 'ramda/src/path';
 import hasPath from 'ramda/src/hasPath';
+import { RecommendationsPromo } from '../../../../../models/types/recommendations';
 import getOriginCode from '../../../../../lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '../../../../../lib/utilities/imageSrcHelpers/locator';
 
-type Promo = {
-  headlines: {
-    headline: string;
-  };
-  locators: {
-    assetUri: string;
-  };
-  indexImage: {
-    width: number;
-    height: number;
-    altText: string;
-    copyrightHolder: string;
-    originCode: string;
-    locator: string;
-  };
-  images: {
-    defaultPromoImage: {
-      blocks: [
-        {
-          type: string;
-        },
-      ];
-    };
-  };
-};
-
-const extractPromoData = ({ promo }: { promo: Promo }) => {
+const extractPromoData = ({ promo }: { promo: RecommendationsPromo }) => {
   if (!promo) return null;
 
   if (hasPath(['indexImage'], promo)) {
@@ -50,7 +25,7 @@ const extractPromoData = ({ promo }: { promo: Promo }) => {
   }
 
   const optimoImageBlocks = path<
-    Promo['images']['defaultPromoImage']['blocks']
+    RecommendationsPromo['images']['defaultPromoImage']['blocks']
   >(['images', 'defaultPromoImage', 'blocks'], promo);
 
   const optimoImage = optimoImageBlocks?.find(
