@@ -92,6 +92,7 @@
     "@optimizely/react-sdk": "2.8.1",
     "@testing-library/user-event": "14.4.3",
     "aws-embedded-metrics": "2.0.6",
+    "aws-xray-sdk": "^3.4.1",
     "compression": "1.7.4",
     "core-js": "3.22.2",
     "dotenv": "16.0.3",

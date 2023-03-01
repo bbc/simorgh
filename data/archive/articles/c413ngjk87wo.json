@@ -1,0 +1,815 @@
+{
+    "data": {
+        "article": {
+            "content": {
+                "model": {
+                    "blocks": [
+                        {
+                            "id": "142f60d5",
+                            "type": "headline",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "ecda5e5e",
+                                        "type": "text",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "d9fecf6e",
+                                                    "type": "paragraph",
+                                                    "model": {
+                                                        "text": "This is the headline of this test article",
+                                                        "blocks": [
+                                                            {
+                                                                "id": "16281e37",
+                                                                "type": "fragment",
+                                                                "model": {
+                                                                    "text": "This is the headline of this test article",
+                                                                    "attributes": []
+                                                                },
+                                                                "position": [
+                                                                    1,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        1,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                1
+                            ]
+                        },
+                        {
+                            "id": "e9d9f46d",
+                            "type": "image",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "d9ea3dd8",
+                                        "type": "caption",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "e2ea0e2d",
+                                                    "type": "text",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "id": "32b4040e",
+                                                                "type": "paragraph",
+                                                                "model": {
+                                                                    "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
+                                                                    "blocks": [
+                                                                        {
+                                                                            "id": "32ef8862",
+                                                                            "type": "fragment",
+                                                                            "model": {
+                                                                                "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
+                                                                                "attributes": []
+                                                                            },
+                                                                            "position": [
+                                                                                2,
+                                                                                1,
+                                                                                1,
+                                                                                1,
+                                                                                1
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "position": [
+                                                                    2,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        2,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            2,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "id": "f5d67937",
+                                        "type": "altText",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "0a12605e",
+                                                    "type": "text",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "id": "c7817011",
+                                                                "type": "paragraph",
+                                                                "model": {
+                                                                    "text": "Map of France showing Paris and Cognac",
+                                                                    "blocks": [
+                                                                        {
+                                                                            "id": "8a2021c4",
+                                                                            "type": "fragment",
+                                                                            "model": {
+                                                                                "text": "Map of France showing Paris and Cognac",
+                                                                                "attributes": []
+                                                                            },
+                                                                            "position": [
+                                                                                2,
+                                                                                2,
+                                                                                1,
+                                                                                1,
+                                                                                1
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "position": [
+                                                                    2,
+                                                                    2,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        2,
+                                                        2,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    {
+                                        "id": "33dc53a5",
+                                        "type": "rawImage",
+                                        "model": {
+                                            "width": 624,
+                                            "height": 351,
+                                            "locator": "83a2/live/bc29c5d0-3d00-11ea-8467-7f1fe712809c.jpg",
+                                            "originCode": "cpsprodpb",
+                                            "copyrightHolder": "BBC"
+                                        },
+                                        "position": [
+                                            2,
+                                            3
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                2
+                            ]
+                        },
+                        {
+                            "id": "88bc9262",
+                            "type": "timestamp",
+                            "model": {
+                                "firstPublished": 1579688599135,
+                                "lastPublished": 1579688599135
+                            },
+                            "position": [
+                                3
+                            ]
+                        },
+                        {
+                            "id": "985ded07",
+                            "type": "text",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "266fc49b",
+                                        "type": "paragraph",
+                                        "model": {
+                                            "text": "This is a text block, which contains a url link to the BBC Weather homepage.",
+                                            "blocks": [
+                                                {
+                                                    "id": "8a31a1cf",
+                                                    "type": "fragment",
+                                                    "model": {
+                                                        "text": "This is a text block, which contains a url link to ",
+                                                        "attributes": []
+                                                    },
+                                                    "position": [
+                                                        4,
+                                                        1,
+                                                        1
+                                                    ]
+                                                },
+                                                {
+                                                    "id": "a3270e84",
+                                                    "type": "urlLink",
+                                                    "model": {
+                                                        "text": "the BBC Weather homepage",
+                                                        "blocks": [
+                                                            {
+                                                                "id": "9cdf168a",
+                                                                "type": "fragment",
+                                                                "model": {
+                                                                    "text": "the BBC Weather homepage",
+                                                                    "attributes": []
+                                                                },
+                                                                "position": [
+                                                                    4,
+                                                                    1,
+                                                                    2,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "locator": "https://www.bbc.co.uk/weather",
+                                                        "isExternal": false
+                                                    },
+                                                    "position": [
+                                                        4,
+                                                        1,
+                                                        2
+                                                    ]
+                                                },
+                                                {
+                                                    "id": "d915a82b",
+                                                    "type": "fragment",
+                                                    "model": {
+                                                        "text": ".",
+                                                        "attributes": []
+                                                    },
+                                                    "position": [
+                                                        4,
+                                                        1,
+                                                        3
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            4,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                4
+                            ]
+                        },
+                        {
+                            "id": "21bd0b03",
+                            "type": "video",
+                            "model": {
+                                "locator": "urn:bbc:pips:pid:p06p040r",
+                                "blocks": [
+                                    {
+                                        "id": "d6fb5a30",
+                                        "type": "caption",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "fe6ead3a",
+                                                    "type": "text",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "id": "3d96d9d5",
+                                                                "type": "paragraph",
+                                                                "model": {
+                                                                    "text": "This is a video block containing a video about ants",
+                                                                    "blocks": [
+                                                                        {
+                                                                            "id": "13a411ac",
+                                                                            "type": "fragment",
+                                                                            "model": {
+                                                                                "text": "This is a video block containing a video about ants",
+                                                                                "attributes": []
+                                                                            },
+                                                                            "position": [
+                                                                                5,
+                                                                                1,
+                                                                                1,
+                                                                                1,
+                                                                                1
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "position": [
+                                                                    5,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        5,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            5,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "id": "660163dc",
+                                        "type": "aresMedia",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "0f1daed0",
+                                                    "blockId": "urn:bbc:ares::clip:p06p040r",
+                                                    "type": "aresMediaMetadata",
+                                                    "model": {
+                                                        "id": "p06p040r",
+                                                        "subType": "clip",
+                                                        "format": "audio_video",
+                                                        "title": "Five things ants can teach us about management",
+                                                        "synopses": {
+                                                            "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                                                        },
+                                                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06p0qzv.jpg",
+                                                        "imageCopyright": "BBC",
+                                                        "embedding": true,
+                                                        "advertising": false,
+                                                        "versions": [
+                                                            {
+                                                                "versionId": "p06p040v",
+                                                                "types": [
+                                                                    "Original"
+                                                                ],
+                                                                "duration": 191,
+                                                                "durationISO8601": "PT3M11S",
+                                                                "warnings": {},
+                                                                "availableTerritories": {
+                                                                    "uk": true,
+                                                                    "nonUk": true
+                                                                },
+                                                                "availableFrom": 1539703557000
+                                                            }
+                                                        ],
+                                                        "syndication": {
+                                                            "destinations": []
+                                                        },
+                                                        "smpKind": "programme"
+                                                    },
+                                                    "position": [
+                                                        5,
+                                                        2,
+                                                        1
+                                                    ]
+                                                },
+                                                {
+                                                    "id": "d52cb2d2",
+                                                    "type": "image",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "id": "32c2be95",
+                                                                "type": "rawImage",
+                                                                "model": {
+                                                                    "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p06p0qzv.jpg",
+                                                                    "originCode": "mpv",
+                                                                    "copyrightHolder": "BBC"
+                                                                },
+                                                                "position": [
+                                                                    5,
+                                                                    2,
+                                                                    2,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        5,
+                                                        2,
+                                                        2
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            5,
+                                            2
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                5
+                            ]
+                        },
+                        {
+                            "id": "9af86edb",
+                            "type": "subheadline",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "70da552a",
+                                        "type": "text",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "5a820a99",
+                                                    "type": "paragraph",
+                                                    "model": {
+                                                        "text": "This is a subheadline block",
+                                                        "blocks": [
+                                                            {
+                                                                "id": "d68b5b46",
+                                                                "type": "fragment",
+                                                                "model": {
+                                                                    "text": "This is a subheadline block",
+                                                                    "attributes": []
+                                                                },
+                                                                "position": [
+                                                                    6,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        6,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            6,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                6
+                            ]
+                        },
+                        {
+                            "id": "0412c785",
+                            "type": "image",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "03688662",
+                                        "type": "altText",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "f791658d",
+                                                    "type": "text",
+                                                    "model": {
+                                                        "blocks": [
+                                                            {
+                                                                "id": "122701d5",
+                                                                "type": "paragraph",
+                                                                "model": {
+                                                                    "text": "Footballers after a match",
+                                                                    "blocks": [
+                                                                        {
+                                                                            "id": "510130c0",
+                                                                            "type": "fragment",
+                                                                            "model": {
+                                                                                "text": "Footballers after a match",
+                                                                                "attributes": []
+                                                                            },
+                                                                            "position": [
+                                                                                7,
+                                                                                1,
+                                                                                1,
+                                                                                1,
+                                                                                1
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "position": [
+                                                                    7,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        7,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            7,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "id": "ae5eed65",
+                                        "type": "rawImage",
+                                        "model": {
+                                            "width": 2048,
+                                            "height": 1152,
+                                            "locator": "ea57/live/0a4e0b90-3d01-11ea-8467-7f1fe712809c.jpg",
+                                            "originCode": "cpsprodpb",
+                                            "copyrightHolder": "Getty Images"
+                                        },
+                                        "position": [
+                                            7,
+                                            2
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                7
+                            ]
+                        },
+                        {
+                            "id": "fe8e573f",
+                            "type": "text",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "144aea7e",
+                                        "type": "paragraph",
+                                        "model": {
+                                            "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
+                                            "blocks": [
+                                                {
+                                                    "id": "000db46d",
+                                                    "type": "fragment",
+                                                    "model": {
+                                                        "text": "This test article has been created so that we can run automated end-to-end tests on our website.",
+                                                        "attributes": []
+                                                    },
+                                                    "position": [
+                                                        8,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            8,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                8
+                            ]
+                        },
+                        {
+                            "id": "5bf8791a",
+                            "type": "wsoj",
+                            "model": {
+                                "type": "recommendations"
+                            },
+                            "position": [
+                                9
+                            ]
+                        }
+                    ]
+                }
+            },
+            "metadata": {
+                "id": "urn:bbc:ares::article:c413ngjk87wo",
+                "locators": {
+                    "optimoUrn": "urn:bbc:optimo:asset:c413ngjk87wo"
+                },
+                "type": "article",
+                "createdBy": "Archive",
+                "language": "en-gb",
+                "firstPublished": 1579688599135,
+                "lastPublished": 1579688599135,
+                "analyticsLabels": {
+                    "contentId": "urn:bbc:optimo:asset:c413ngjk87wo",
+                    "producer": "BBC",
+                    "page": "archive.articles.c413ngjk87wo.page"
+                },
+                "passport": {
+                    "language": "en-gb",
+                    "home": "http://www.bbc.co.uk/ontologies/passport/home/Archive",
+                    "taggings": [
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+                            "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id"
+                        }
+                    ],
+                    "predicates": {
+                        "infoClass": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                                "type": "infoClass"
+                            }
+                        ],
+                        "editorialSensitivity": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id",
+                                "type": "editorialSensitivity"
+                            }
+                        ]
+                    }
+                },
+                "blockTypes": [
+                    "headline",
+                    "text",
+                    "paragraph",
+                    "fragment",
+                    "image",
+                    "caption",
+                    "altText",
+                    "rawImage",
+                    "urlLink",
+                    "video",
+                    "subheadline",
+                    "aresMedia"
+                ],
+                "allowAdvertising": false
+            },
+            "promo": {
+                "headlines": {
+                    "seoHeadline": "This is the SEO headline of this test article",
+                    "promoHeadline": {
+                        "blocks": [
+                            {
+                                "type": "text",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "paragraph",
+                                            "model": {
+                                                "text": "This is the headline of this test article",
+                                                "blocks": [
+                                                    {
+                                                        "type": "fragment",
+                                                        "model": {
+                                                            "text": "This is the headline of this test article",
+                                                            "attributes": []
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "caption",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Map of France showing Paris and Cognac",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Map of France showing Paris and Cognac",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 624,
+                                    "height": 351,
+                                    "locator": "83a2/live/bc29c5d0-3d00-11ea-8467-7f1fe712809c.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "BBC"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "summary": {
+                    "blocks": [
+                        {
+                            "type": "text",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "type": "paragraph",
+                                        "model": {
+                                            "text": "",
+                                            "blocks": [
+                                                {
+                                                    "type": "fragment",
+                                                    "model": {
+                                                        "text": "",
+                                                        "attributes": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "secondaryData": {
+            "topStories": null,
+            "features": null,
+            "mostRead": null
+        }
+    },
+    "contentType": "application/json; charset=utf-8"
+}

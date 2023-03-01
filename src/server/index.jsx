@@ -2,6 +2,7 @@ import express from 'express';
 import compression from 'compression';
 import ramdaPath from 'ramda/src/path';
 import omit from 'ramda/src/omit';
+import AWSXRay from 'aws-xray-sdk';
 // not part of react-helmet
 import helmet from 'helmet';
 import routes from '#app/routes';
@@ -89,6 +90,7 @@ server
     }),
   )
   .use(logResponseTime)
+  .use(AWSXRay.express.openSegment('simorgh'))
   .get('/status', (req, res) => {
     try {
       res.status(200).send('Ok');
@@ -315,5 +317,7 @@ server.get(
     }
   },
 );
+
+server.use(AWSXRay.express.closeSegment());
 
 export default server;

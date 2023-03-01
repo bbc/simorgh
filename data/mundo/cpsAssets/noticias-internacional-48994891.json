@@ -1,0 +1,817 @@
+{
+    "metadata": {
+        "id": "urn:bbc:ares::asset:mundo/noticias-internacional-48994891",
+        "locators": {
+            "assetUri": "/mundo/noticias-internacional-48994891",
+            "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-48994891",
+            "curie": "http://www.bbc.co.uk/asset/21cce0ff-34c2-0c4b-ba1f-a115462680b8",
+            "assetId": "48994891"
+        },
+        "type": "STY",
+        "createdBy": "mundo-v6",
+        "language": "es",
+        "lastUpdated": 1653038334747,
+        "firstPublished": 1563340510000,
+        "lastPublished": 1563340510000,
+        "timestamp": 1563340510000,
+        "options": {
+            "isIgorSeoTagsEnabled": false,
+            "includeComments": false,
+            "allowRightHandSide": true,
+            "isFactCheck": false,
+            "allowDateStamp": true,
+            "suitableForSyndication": true,
+            "hasNewsTracker": false,
+            "allowRelatedStoriesBox": true,
+            "isKeyContent": false,
+            "allowHeadline": true,
+            "allowAdvertising": true,
+            "hasContentWarning": false,
+            "isBreakingNews": false,
+            "allowPrintingSharingLinks": true
+        },
+        "analyticsLabels": {
+            "cps_asset_type": "sty",
+            "counterName": "mundo.world.story.48994891.page",
+            "cps_asset_id": "48994891",
+            "contentId": "urn:bbc:cps:curie:asset:21cce0ff-34c2-0c4b-ba1f-a115462680b8"
+        },
+        "passport": {
+            "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+            },
+            "campaigns": [
+                {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                }
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "taggings": []
+        },
+        "tags": {},
+        "version": "v1.4.3",
+        "blockTypes": [
+            "image",
+            "paragraph",
+            "list",
+            "social_embed"
+        ],
+        "includeComments": false,
+        "atiAnalytics": {
+            "producerName": "MUNDO",
+            "producerId": "62"
+        },
+        "readTime": 7,
+        "siteUri": "/mundo"
+    },
+    "content": {
+        "blocks": [
+            {
+                "id": "107889420",
+                "subType": "body",
+                "href": "http://c.files.bbci.co.uk/09C2/production/_107889420_gettyimages-1139355937.jpg",
+                "path": "/cpsprodpb/09C2/production/_107889420_gettyimages-1139355937.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Kim Jong-un",
+                "copyrightHolder": "Getty Images",
+                "positionHint": "full-width",
+                "originCode": "cpsprodpb",
+                "type": "image"
+            },
+            {
+                "text": "Ocupa numerosos titulares en la prensa internacional y, sin embargo, ni siquiera se sabe con exactitud la fecha de su cumpleaÃ±os.",
+                "role": "introduction",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Kim Jong-un es uno de los personajes mÃ¡s enigmÃ¡ticos del mundo.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Desde que asumiÃ³ el liderazgo de Corea del Norte, tras la muerte de su padre, Kim Jong-il, contados detalles sobre su vida se han ido conociendo.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Ahora, la periodista Anna Fifield analiza en su nuevo libro, <bold><italic>The Great Successor: The Divinely Perfect Destiny of Brilliant Comrade Kim Jong-un</italic></bold> (&quot;El gran heredero: el destino divinamente perfecto del brillante camarada Kim Jong-un, en traducciÃ³n libre), examina la vida del joven lÃ­der norcoreano, centrÃ¡ndose en gran medida en su niÃ±ez y adolescencia.",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "En BBC Mundo hablamos con Fifield, jefa de la oficina del periÃ³dico <italic>The Washington Post</italic> en PekÃ­n, sobre este relato mÃ¡s Ã­ntimo sobre la figura de Kim Jong-un: sus aficiones, su vida en Suiza, la relaciÃ³n con su madre...",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "numbered": false,
+                "items": [
+                    {
+                        "text": "<link><caption>5 cosas de la vida privada del lÃ­der de Corea del Norte, Kim Jong-un, que quizÃ¡ no sabÃ­as</caption><url href=\"https://www.bbc.com/mundo/noticias-internacional-43379891\" platform=\"highweb\"/></link>",
+                        "markupType": "candy_xml",
+                        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/noticias-internacional-43379891",
+                        "type": "listItem"
+                    },
+                    {
+                        "text": "<link><caption>Â¿QuiÃ©n es la esposa de Kim Jong-un? La misteriosa porrista (o cantante) que se convirtiÃ³ en la primera dama de Corea del Norte</caption><url href=\"https://www.bbc.com/mundo/noticias-internacional-41808113\" platform=\"highweb\"/></link>",
+                        "markupType": "candy_xml",
+                        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/noticias-internacional-41808113",
+                        "type": "listItem"
+                    }
+                ],
+                "type": "list"
+            },
+            {
+                "id": "102788085",
+                "subType": "body",
+                "href": "http://c.files.bbci.co.uk/E2E8/production/_102788085_464x2_line.jpg",
+                "path": "/cpsprodpb/E2E8/production/_102788085_464x2_line.jpg",
+                "height": 2,
+                "width": 464,
+                "altText": "Rayita",
+                "copyrightHolder": "BBC",
+                "positionHint": "body-width",
+                "originCode": "cpsprodpb",
+                "type": "image"
+            },
+            {
+                "text": "<bold>Â¿CÃ³mo describirÃ­as la infancia y adolescencia de Kim Jong</bold><bold>-u</bold><bold>n?</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "La describirÃ­a como muy anormal y muy solitaria. Ã‰l no iba a la escuela, no tenÃ­a amigos. Ni siquiera conocÃ­a a los hermanos de las otras familias de su padre. Estaba en un complejo junto con su hermano y hermana de padre y madre. Y estaban realmente los tres solos. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "AsÃ­ que tuvo muy poco contacto con el mundo exterior o con la vida normal en su propio paÃ­s cuando estaba creciendo.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "<bold>Al mismo tiempo en tu libro describes una vida llena de lujosâ€¦</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "SÃ­, es cierto. Cuando era niÃ±o tenÃ­a ropa importada, comida importada. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "VivÃ­a en un increÃ­ble complejo donde tenÃ­a piscinas y un coche que fue modificado para que pudiera manejar cuando era niÃ±o. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Y todos los juguetes que pudiera desear. AsÃ­ que sÃ­, ha vivido una vida de completo lujo, mientras que la norma en el paÃ­s en ese momento era la privaciÃ³n completa.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "numbered": false,
+                "items": [
+                    {
+                        "text": "<link><caption>El privilegiado mundo paralelo de los hijos de la Ã©lite en Corea del Norte</caption><url href=\"https://www.bbc.com/mundo/video_fotos/2016/05/160503_video_corea_norte_elite_cambios_lp\" platform=\"highweb\"/></link>",
+                        "markupType": "candy_xml",
+                        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/video_fotos/2016/05/160503_video_corea_norte_elite_cambios_lp",
+                        "type": "listItem"
+                    }
+                ],
+                "type": "list"
+            },
+            {
+                "text": "<bold>Â¿Eso lo hacÃ­a sentir un niÃ±o especial?</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "Bueno, no exactamente, porque Ã©l no conocÃ­a nada mÃ¡s, solo todo ese lujo.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Pero lo que le hizo sentir especial fue que en su octavo cumpleaÃ±os se anunciÃ³ a los principales lÃ­deres del rÃ©gimen que Ã©l serÃ­a el sucesor de su padre y que algÃºn dÃ­a asumirÃ­a el liderazgo del rÃ©gimen. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "AsÃ­ que le dieron un pequeÃ±o uniforme de general y cantaron una canciÃ³n sobre cÃ³mo seguirÃ­a los pasos de su padre.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "id": "107889050",
+                "subType": "body",
+                "href": "http://c.files.bbci.co.uk/13EA/production/_107889050_uniforme.jpg",
+                "path": "/cpsprodpb/13EA/production/_107889050_uniforme.jpg",
+                "height": 622,
+                "width": 624,
+                "altText": "Kim Jong-un de niÃ±o con uniforme militar.",
+                "caption": "Cuando cumpliÃ³ 8 aÃ±os, a Kim Jong-un lo vistieron con uniforme militar.",
+                "copyrightHolder": "Reuters",
+                "positionHint": "full-width",
+                "originCode": "cpsprodpb",
+                "type": "image"
+            },
+            {
+                "text": "Sus tÃ­os me dijeron que a partir de ese momento fue imposible que se pareciera a un niÃ±o normal. Tuvo a generales y mandamases del Partido Comunista inclinÃ¡ndose ante Ã©l desde que tenÃ­a 8 aÃ±os.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "numbered": false,
+                "items": [
+                    {
+                        "text": "<link><caption>La tÃ­a del mÃ¡ximo lÃ­der de Corea del Norte que tiene una tintorerÃ­a en EE.UU. y vive el sueÃ±o americano</caption><url href=\"https://www.bbc.com/mundo/noticias/2016/05/160529_corea_norte_tia_kim_jong_un_asilo_estados_unidos_ab\" platform=\"highweb\"/></link>",
+                        "markupType": "candy_xml",
+                        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/noticias/2016/05/160529_corea_norte_tia_kim_jong_un_asilo_estados_unidos_ab",
+                        "type": "listItem"
+                    }
+                ],
+                "type": "list"
+            },
+            {
+                "text": "<bold>Entre los 12 y los 15 aÃ±os, Kim Jong</bold><bold>-u</bold><bold>n se fue a estudiar a Suiza. Â¿CÃ³mo era su comportamiento allÃ­?</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "Aunque aquÃ­ (Corea del Norte) estaba en un ambiente relativamente normal e iba a la escuela con otros niÃ±os y trataba de adaptarse, claramente tuvo dificultades cuando estuvo allÃ­, tanto en la escuela de inglÃ©s a la que asistiÃ³ primero y luego en la escuela alemana a la que fue transferido despuÃ©s de dos aÃ±os. AsÃ­ que tenÃ­a dificultades para comunicarse. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "No tenÃ­a una mentalidad muy acadÃ©mica. QuerÃ­a jugar al baloncesto o jugar videojuegos en casa, no querÃ­a estar haciendo sus tareas.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "AsÃ­ que fue difÃ­cil. Creo que tuvo dificultades para encajar, tuvo dificultades para comunicarse con los otros estudiantes. AsÃ­ que no fue una experiencia particularmente feliz para Ã©l.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "<bold>Â¿Y cÃ³mo influyÃ³ esa experiencia en su posterior rÃ©gimen?</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "Bueno, es imposible decirlo. Quiero decir que sabemos tan poco acerca de Kim Jong-un que la tendencia es captar estas pequeÃ±as anÃ©cdotas de su infancia y tratar de extrapolarlas y ver cÃ³mo se convirtiÃ³ en el tirano que es hoy.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "id": "107889055",
+                "subType": "body",
+                "href": "http://c.files.bbci.co.uk/D73A/production/_107889055_gettyimages-136084673.jpg",
+                "path": "/cpsprodpb/D73A/production/_107889055_gettyimages-136084673.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "La escuela alemana en Berna, Suiza, en la que estudiÃ³ Kim Jong-un.",
+                "caption": "La escuela alemana en Berna, Suiza, en la que estudiÃ³ Kim Jong-un.",
+                "copyrightHolder": "Getty Images",
+                "positionHint": "full-width",
+                "originCode": "cpsprodpb",
+                "type": "image"
+            },
+            {
+                "text": "Pero es imposible psicoanalizar a alguien con este tipo de distancia y decir algo como que le escupiÃ³ a otros niÃ±os cuando estaba en la escuela y por eso su tÃ­o muriÃ³, o su hermano muriÃ³... ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "No podemos decir esto, todo lo que podemos decir es que tuvo una infancia muy anormal, lo que hace imposible que pudiera crecer de otra manera que no sea la forma en que lo hizo.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "<bold>Se esperarÃ­a que con una educaciÃ³n en Suiza, quizÃ¡ pudiera </bold><bold>emprender </bold><bold>algunas reformas mÃ¡s aperturistas en su rÃ©gimen. Sin embargo, fue capaz de</bold><bold> ordenar la</bold><bold> ejecu</bold><bold>ciÃ³n</bold><bold>de</bold><bold> su propio tÃ­oâ€¦</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "De hecho, creo que pasÃ³ exactamente lo contrario. Creo que fue por el hecho de vivir en Suiza y viajar por Europa y ver cÃ³mo era el mundo exterior, que se dio cuenta de que si no fuera por el culto a la personalidad de su familia y su extraÃ±o sistema totalitario, Ã©l no serÃ­a nadie, no serÃ­a especial. No serÃ­a obedecido, ni alabado, ni vivirÃ­a esta vida de lujo.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Ã‰l simplemente serÃ­a otra persona comÃºn que tendrÃ­a que hacer sus tareas y obtener buenas calificaciones para poder avanzar. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "AsÃ­ que creo que probablemente regresÃ³ a Corea del Norte con un pensamiento muy lejano a ser un reformista o sobre la necesidad de emprender la apertura de Corea del Norte para que se pareciera mÃ¡s a Europa. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Probablemente regresÃ³ con la opiniÃ³n contraria: que necesitaba mantener el sistema intacto para que Ã©l y su familia pudieran continuar disfrutando de esta vida tan privilegiada.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "id": "107889257",
+                "subType": "body",
+                "href": "http://c.files.bbci.co.uk/12622/production/_107889257_generales.png",
+                "path": "/cpsprodpb/12622/production/_107889257_generales.png",
+                "height": 549,
+                "width": 976,
+                "altText": "Kim Jong-un, rodeado de militares.",
+                "caption": "Kim Jong-un ha tenido a los generales de su paÃ­s inclinÃ¡ndose ante Ã©l desde que tenÃ­a 8 aÃ±os, dice Anna Fifield.",
+                "copyrightHolder": "AFP",
+                "positionHint": "full-width",
+                "originCode": "cpsprodpb",
+                "type": "image"
+            },
+            {
+                "text": "<bold>Â¿CÃ³mo era la relaciÃ³n con sus padres? Â¿TenÃ­a algÃºn familiar que fuera especial para Ã©l?</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "TenÃ­a una relaciÃ³n muy estrecha con su madre. Aunque era la primera dama de facto de Corea del Norte y tenÃ­a muchos compromisos oficiales, estaba muy pendiente de sus hijos, revisaba sus tareas y los visitaba mientras ellos estaban en Suiza.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Ella estaba muy involucrada, pero tambiÃ©n su hermana, quien era la principal persona que les cuidaba allÃ­. Ella actuaba como la madre de los niÃ±os en ese momento, asÃ­ que estuvieron muy unidos.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "numbered": false,
+                "items": [
+                    {
+                        "text": "<link><caption>QuiÃ©n es Kim Yo-jong, la joven hermana de Kim Jong-un que acaba de ser promovida a un poderoso cargo en Corea del Norte</caption><url href=\"https://www.bbc.com/mundo/noticias-internacional-41545169\" platform=\"highweb\"/></link>",
+                        "markupType": "candy_xml",
+                        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/noticias-internacional-41545169",
+                        "type": "listItem"
+                    }
+                ],
+                "type": "list"
+            },
+            {
+                "id": "107889059",
+                "subType": "body",
+                "href": "http://c.files.bbci.co.uk/1737A/production/_107889059_gettyimages-121943280.jpg",
+                "path": "/cpsprodpb/1737A/production/_107889059_gettyimages-121943280.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Kim Jong-il.",
+                "caption": "Kim Jong-il, el padre de Kim Jong-un, falleciÃ³ en 2011.",
+                "copyrightHolder": "Getty Images",
+                "positionHint": "full-width",
+                "originCode": "cpsprodpb",
+                "type": "image"
+            },
+            {
+                "text": "En lo que se refiere a Kim Jong-il, parece que pasaba bastante tiempo en ese complejo familiar mientras Kim Jong-un era pequeÃ±o. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Tanto que parece que Kim Jong-nam, su hijo primogÃ©nito (y hermano paterno de Kim Jong-Un), tenÃ­a mucha envidia y se sentÃ­a infeliz y desatendido por su padre porque Ã©ste pasaba mucho tiempo con esta otra familia.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "<bold>Su madre habÃ­a nacido en JapÃ³n y en tu libro analizas las influencias japonesas en Kim Jong-un, algo extraÃ±o dadas las hostilidades entre ambos paÃ­ses. Â¿Por quÃ© son importantes?</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "Creo que solo muestra las contradicciones en el sistema norcoreano, donde se demoniza a JapÃ³n y se hace de JapÃ³n el enemigo, criticado en los medios estatales prÃ¡cticamente todos los dÃ­as. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Sin embargo, al mismo tiempo, sÃ­, la madre de Kim Jong-un naciÃ³ en JapÃ³n y se criÃ³ allÃ­ durante sus primeros 11 aÃ±os de vida. TenÃ­a un nombre japonÃ©s y hablaba japonÃ©s, como muchos inmigrantes coreanos que se fueron a JapÃ³n durante y despuÃ©s de la guerra. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Y ellos tenÃ­an un chef de sushi japonÃ©s que vivÃ­a en la casa con ellos, asÃ­ que disfrutaron de la comida japonesa. Kim Jong-un fue a JapÃ³n varias veces cuando era niÃ±o. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "AsÃ­ que, como cualquier otra persona en el mundo exterior, conocÃ­a la cultura japonesa y le gusta la cultura del manga. La tecnologÃ­a es genial y tiene el mismo atractivo para los &quot;prÃ­ncipes&quot; de Corea del Norte que para cualquier otra persona.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "id": "107889254",
+                "subType": "body",
+                "href": "http://c.files.bbci.co.uk/B0F2/production/_107889254_gettyimages-951833242.jpg",
+                "path": "/cpsprodpb/B0F2/production/_107889254_gettyimages-951833242.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Kim Jong-un junto a su hermana, Kim Yo-jong, con quien tiene una relaciÃ³n muy prÃ³xima.",
+                "caption": "Kim Jong-un junto a su hermana, Kim Yo-jong, con quien tiene una relaciÃ³n muy prÃ³xima.",
+                "copyrightHolder": "Getty Images",
+                "positionHint": "full-width",
+                "originCode": "cpsprodpb",
+                "type": "image"
+            },
+            {
+                "text": "<bold>Hablas de algunas de sus pasiones, como la tecnologÃ­a. Â¿QuÃ© otras aficiones tiene Kim Jong-un?</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "Creo que el baloncesto es su gran pasatiempo. Estaba obsesionado con el baloncesto en Suiza. SolÃ­a dormir con su pelota en la cama por la noche. Iba a la cancha de baloncesto todos los dÃ­as despuÃ©s de la escuela y en cada oportunidad que tenÃ­a iba a ParÃ­s a ver partidos de la NBA. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Es una obsesiÃ³n que continÃºa hasta el dÃ­a de hoy.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "id": "107889252",
+                "subType": "body",
+                "href": "http://c.files.bbci.co.uk/62D2/production/_107889252_rodman.jpg",
+                "path": "/cpsprodpb/62D2/production/_107889252_rodman.jpg",
+                "height": 650,
+                "width": 976,
+                "altText": "El exjugador de la NBA Dennis Rodman con Kim Jong-un, en una de sus visitas a Corea del Norte.",
+                "caption": "Kim Jong-un es un gran aficionado al baloncesto, y la exestrella de la NBA Dennis Rodman visitÃ³ Corea del Norte en varias ocasiones.",
+                "copyrightHolder": "AFP",
+                "positionHint": "full-width",
+                "originCode": "cpsprodpb",
+                "type": "image"
+            },
+            {
+                "text": "<bold>Â¿QuÃ© fue lo que mÃ¡s te sorprendiÃ³ de la figura de Kim Jong-un mientras estabas investigando para tu libro?</bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "Intentaba entender cÃ³mo puede dormir por la noche.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Sabiendo lo que sabe sobre el mundo exterior, y habiendo crecido en una era diferente a la de su padre, Â¿cÃ³mo se justifica a sÃ­ mismo las cosas tan brutales que tuvo que hacer? Bueno, que eligiÃ³ hacer para mantenerse en el poder. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "AsÃ­ que quise tratar de entender su psicologÃ­a con respecto a esto. Hay un montÃ³n de psicÃ³logos que han tratado de psicoanalizarlo e interpretarlo y entender su conducta.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Una cosa que me sorprendiÃ³ fue que un psicÃ³logo me dijo que hay un efecto quÃ­mico en el cerebro que proviene del poder. De ahÃ­ viene el dicho de que el poder corrompe. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Se basa en la idea de que cuando ejercitas el poder, se desencadena una reacciÃ³n quÃ­mica, una liberaciÃ³n de dopamina en el cerebro que hace que quieras volver a hacerlo. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Y asÃ­ estaba tratando de entender cÃ³mo duerme por la noche y cÃ³mo continÃºa actuando de esta manera.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "numbered": false,
+                "items": [
+                    {
+                        "text": "<link><caption>Las reveladoras imÃ¡genes que muestran cÃ³mo es la vida diaria dentro de Corea del Norte, el paÃ­s mÃ¡s hermÃ©tico del mundo</caption><url href=\"https://www.bbc.com/mundo/noticias-41453353\" platform=\"highweb\"/></link>",
+                        "markupType": "candy_xml",
+                        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/mundo/noticias-41453353",
+                        "type": "listItem"
+                    }
+                ],
+                "type": "list"
+            },
+            {
+                "text": "<bold>Cuando hablas de </bold><bold>la</bold><bold> soledad en su adolescenciaâ€¦ Â¿llegaste a sentir algÃºn tipo de simpatÃ­a, o quizÃ¡ pena, por Ã©l en algÃºn momento? </bold>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "text": "SimpatÃ­a no, pero en cierto modo sÃ­ pena, porque tuvo una educaciÃ³n tan anormal y una forma de vida tan inusual... Y la influencia de eso sobre Ã©l fue tan extraÃ±a... Creo que es casi imposible que Ã©l hubiera salido de otra manera.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Para Ã©l, abandonar este rÃ©gimen creo que hubiera sido extremadamente difÃ­cil. Su hermano mayor lo hizo un poco, pero no del todo. ContinuÃ³ teniendo vÃ­nculos con el rÃ©gimen hasta su muerte. ",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "text": "Creo que muchas de estas familias no pueden soltarse porque sÃ­ de las riquezas que vienen con ello.",
+                "markupType": "plain_text",
+                "type": "paragraph"
+            },
+            {
+                "id": "102788085",
+                "subType": "body",
+                "href": "http://c.files.bbci.co.uk/E2E8/production/_102788085_464x2_line.jpg",
+                "path": "/cpsprodpb/E2E8/production/_102788085_464x2_line.jpg",
+                "height": 2,
+                "width": 464,
+                "altText": "Rayita",
+                "copyrightHolder": "BBC",
+                "positionHint": "body-width",
+                "originCode": "cpsprodpb",
+                "type": "image"
+            },
+            {
+                "text": "<italic>Ahora puedes recibir notificaciones de BBC News Mundo. Descarga la nueva versiÃ³n de nuestra app y actÃ­valas para no perderte nuestro mejor contenido.</italic>",
+                "markupType": "candy_xml",
+                "type": "paragraph"
+            },
+            {
+                "numbered": false,
+                "items": [
+                    {
+                        "text": "<link><caption>Â¿Ya conoces nuestro canal de YouTube? Â¡SuscrÃ­bete!</caption><url href=\"http://vid.io/xqOx\" platform=\"highweb\"/></link>",
+                        "markupType": "candy_xml",
+                        "type": "listItem"
+                    }
+                ],
+                "type": "list"
+            },
+            {
+                "href": "https://www.youtube.com/watch?v=MCmqUp2XTPY&t=112",
+                "source": "youtube",
+                "embed": {
+                    "oembed": {
+                        "version": "1.0",
+                        "title": "Â¡Â¿Acento neutro en espaÃ±ol?! Â¿Existe? Â¿Y quÃ© paÃ­s en AmÃ©rica Latina lo tiene?",
+                        "author_name": "BBC News Mundo",
+                        "author_url": "https://www.youtube.com/user/BBCMundo",
+                        "provider_name": "YouTube",
+                        "provider_url": "https://www.youtube.com/",
+                        "thumbnail_url": "https://i.ytimg.com/vi/MCmqUp2XTPY/hqdefault.jpg",
+                        "thumbnail_width": 480,
+                        "thumbnail_height": 360,
+                        "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube-nocookie.com/embed/MCmqUp2XTPY?start=112&feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                        "width": 480,
+                        "height": 270
+                    },
+                    "fallback_image": {
+                        "fallback_image_width": 500,
+                        "fallback_image_height": 269,
+                        "alt_text": "YouTube post by BBC News Mundo: Â¡Â¿Acento neutro en espaÃ±ol?! Â¿Existe? Â¿Y quÃ© paÃ­s en AmÃ©rica Latina lo tiene?"
+                    }
+                },
+                "id": "MCmqUp2XTPY",
+                "type": "social_embed"
+            },
+            {
+                "href": "https://www.youtube.com/watch?v=3rcExl9PeFo",
+                "source": "youtube",
+                "embed": {
+                    "oembed": {
+                        "version": "1.0",
+                        "title": "El mercado en Venezuela donde las familias compran carne podrida para subsistir",
+                        "author_name": "BBC News Mundo",
+                        "author_url": "https://www.youtube.com/user/BBCMundo",
+                        "provider_name": "YouTube",
+                        "provider_url": "https://www.youtube.com/",
+                        "thumbnail_url": "https://i.ytimg.com/vi/3rcExl9PeFo/hqdefault.jpg",
+                        "thumbnail_width": 480,
+                        "thumbnail_height": 360,
+                        "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube-nocookie.com/embed/3rcExl9PeFo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                        "width": 480,
+                        "height": 270
+                    },
+                    "fallback_image": {
+                        "fallback_image_width": 500,
+                        "fallback_image_height": 269,
+                        "alt_text": "YouTube post by BBC News Mundo: El mercado en Venezuela donde las familias compran carne podrida para subsistir"
+                    }
+                },
+                "id": "3rcExl9PeFo",
+                "type": "social_embed"
+            },
+            {
+                "href": "https://www.youtube.com/watch?v=ZU3QkNT_HGo",
+                "source": "youtube",
+                "embed": {
+                    "oembed": {
+                        "version": "1.0",
+                        "title": "Las ZEDE, el polÃ©mico proyecto de \"ciudades privadas\" de Honduras - Documental BBC",
+                        "author_name": "BBC News Mundo",
+                        "author_url": "https://www.youtube.com/user/BBCMundo",
+                        "provider_name": "YouTube",
+                        "provider_url": "https://www.youtube.com/",
+                        "thumbnail_url": "https://i.ytimg.com/vi/ZU3QkNT_HGo/hqdefault.jpg",
+                        "thumbnail_width": 480,
+                        "thumbnail_height": 360,
+                        "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube-nocookie.com/embed/ZU3QkNT_HGo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                        "width": 480,
+                        "height": 270
+                    },
+                    "fallback_image": {
+                        "fallback_image_width": 500,
+                        "fallback_image_height": 269,
+                        "alt_text": "YouTube post by BBC News Mundo: Las ZEDE, el polÃ©mico proyecto de \"ciudades privadas\" de Honduras - Documental BBC"
+                    }
+                },
+                "id": "ZU3QkNT_HGo",
+                "type": "social_embed"
+            }
+        ]
+    },
+    "promo": {
+        "headlines": {
+            "shortHeadline": "\"Kim Jong-un tuvo una infancia llena de lujos, pero muy anormal y solitaria\"",
+            "headline": "\"El lÃ­der de Corea del Norte, Kim Jong-un, tuvo una infancia llena de lujos, pero muy anormal y solitaria\""
+        },
+        "locators": {
+            "assetUri": "/mundo/noticias-internacional-48994891",
+            "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-internacional-48994891",
+            "curie": "http://www.bbc.co.uk/asset/21cce0ff-34c2-0c4b-ba1f-a115462680b8",
+            "assetId": "48994891"
+        },
+        "summary": "Aunque es uno de los personajes mÃ¡s mediÃ¡ticos, su vida continÃºa rodeada de misterio. En su nuevo libro, la periodista Anna Fifield analiza algunos de los aspectos menos conocidos del joven lÃ­der de Corea del Norte.",
+        "timestamp": 1563340510000,
+        "language": "es",
+        "byline": {
+            "name": "Mar Pichel",
+            "title": "BBC News Mundo",
+            "persons": [
+                {
+                    "name": "Mar Pichel",
+                    "function": "BBC News Mundo"
+                }
+            ]
+        },
+        "passport": {
+            "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+            },
+            "campaigns": [
+                {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                }
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+            "taggings": []
+        },
+        "indexImage": {
+            "id": "107906156",
+            "subType": "index",
+            "href": "http://c.files.bbci.co.uk/FE88/production/_107906156_uniforme.jpg",
+            "path": "/cpsprodpb/FE88/production/_107906156_uniforme.jpg",
+            "height": 351,
+            "width": 624,
+            "altText": "Kim Jong-un de niÃ±o con uniforme militar.",
+            "caption": "Cuando cumpliÃ³ 8 aÃ±os, a Kim Jong-un lo vistieron con uniforme militar.",
+            "copyrightHolder": "Reuters",
+            "originCode": "cpsprodpb",
+            "type": "image"
+        },
+        "id": "urn:bbc:ares::asset:mundo/noticias-internacional-48994891",
+        "type": "cps"
+    },
+    "relatedContent": {
+        "section": {
+            "subType": "index",
+            "name": "Internacional",
+            "uri": "/mundo/internacional",
+            "urlIdentifier": "/mundo/internacional",
+            "type": "simple"
+        },
+        "site": {
+            "subType": "site",
+            "name": "BBC Mundo",
+            "uri": "/mundo",
+            "urlIdentifier": "/mundo",
+            "type": "simple"
+        },
+        "groups": [
+            {
+                "type": "see-alsos",
+                "promos": [
+                    {
+                        "headlines": {
+                            "shortHeadline": "5 cosas de la vida privada del lÃ­der de Corea del Norte que quizÃ¡ no sabÃ­as",
+                            "headline": "5 cosas de la vida privada del lÃ­der de Corea del Norte, Kim Jong-un, que quizÃ¡ no sabÃ­as"
+                        },
+                        "locators": {
+                            "assetUri": "/mundo/noticias-internacional-43379891",
+                            "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-internacional-43379891"
+                        },
+                        "summary": "Si Donald Trump decide finalmente reunirse con Kim Jong-un, se toparÃ¡ con casi un completo desconocido. Poco se sabe del joven lÃ­der norcoreano, pese a que su rostro aparece casi a diario en televisiones de todo el mundo.",
+                        "timestamp": 1524373489000,
+                        "language": "es",
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "100406063",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/8CDC/production/_100406063_hi017693378.jpg",
+                            "path": "/cpsprodpb/8CDC/production/_100406063_hi017693378.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Kim Jong-un.",
+                            "copyrightHolder": "AFP/KCNA VIA KNS\"",
+                            "type": "image"
+                        },
+                        "id": "urn:bbc:ares::asset:mundo/noticias-internacional-43379891",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "shortHeadline": "Â¿QuiÃ©n es la esposa de Kim Jong-un? La misteriosa porrista (o cantante) que se convirtiÃ³ en la primera dama de Corea del Norte",
+                            "headline": "Â¿QuiÃ©n es Ri Sol-ju, la esposa de Kim Jong-un? La misteriosa porrista (o cantante) que se convirtiÃ³ en la primera dama de Corea del Norte"
+                        },
+                        "locators": {
+                            "assetUri": "/mundo/noticias-internacional-41808113",
+                            "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-internacional-41808113"
+                        },
+                        "summary": "La mujer del presidente norcoreano, Kim Jong-un, es un misterio. Su estilo a la hora de vestir y sus gestos con su marido han llevado a que haya sido comparada con la estadounidense Michelle Obama, pero Â¿quÃ© se sabe exactamente de la primera dama del hermÃ©tico paÃ­s?",
+                        "timestamp": 1509426002000,
+                        "language": "es",
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "98544379",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/17C40/production/_98544379_epamujerkim.jpg",
+                            "path": "/cpsprodpb/17C40/production/_98544379_epamujerkim.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Kim Jong Un y su mujer, Ri Sol Ju.",
+                            "caption": "La primera dama no llegarÃ­a a la treintena, segÃºn los analistas.",
+                            "copyrightHolder": "EPA",
+                            "type": "image"
+                        },
+                        "id": "urn:bbc:ares::asset:mundo/noticias-internacional-41808113",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "shortHeadline": "Las reveladoras imÃ¡genes que muestran cÃ³mo es la vida diaria dentro de Corea del Norte, el paÃ­s mÃ¡s hermÃ©tico del mundo",
+                            "headline": "Las reveladoras imÃ¡genes que muestran cÃ³mo es la vida diaria dentro de Corea del Norte, el paÃ­s mÃ¡s hermÃ©tico del mundo"
+                        },
+                        "locators": {
+                            "assetUri": "/mundo/noticias-41453353",
+                            "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-41453353"
+                        },
+                        "summary": "Mientras aumentan las tensiones entre Corea del Norte y Estados Unidos, la vida dentro del hermÃ©tico paÃ­s asiÃ¡tico continÃºa con normalidad, como muestran estas imÃ¡genes tomadas por un equipo de NK News, un sitio web estadounidense dedicado a Corea del Norte.",
+                        "timestamp": 1507439101000,
+                        "language": "es",
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "98067485",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/E46C/production/_98067485_img_9856_view.jpg",
+                            "path": "/cpsprodpb/E46C/production/_98067485_img_9856_view.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Young children in a subway carriage",
+                            "copyrightHolder": "NK News",
+                            "type": "image"
+                        },
+                        "id": "urn:bbc:ares::asset:mundo/noticias-41453353",
+                        "type": "cps"
+                    },
+                    {
+                        "headlines": {
+                            "shortHeadline": "El ascenso de Kim Yo-jong: quiÃ©n es la hermana de Kim Jong-un, considerada ya la nÃºmero dos de Corea del Norte",
+                            "headline": "Kim Yo-jong: quiÃ©n es la hermana de Kim Jong-un, considerada ya la nÃºmero dos de Corea del Norte"
+                        },
+                        "locators": {
+                            "assetUri": "/mundo/noticias-internacional-41545169",
+                            "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-internacional-41545169"
+                        },
+                        "summary": "Kim Yo-jong, la hermana menor del lÃ­der norcoreano, se ha convertido en aÃ±os recientes en una de las mujeres mÃ¡s poderosas de Corea del Norte despuÃ©s de ser promovida para ocupar cargos en la direcciÃ³n del paÃ­s. InformaciÃ³n de inteligencia surcoreana sugiere que es la \"nÃºmero dos\".",
+                        "timestamp": 1597946793000,
+                        "language": "es",
+                        "cpsType": "STY",
+                        "indexImage": {
+                            "id": "114039581",
+                            "subType": "index",
+                            "href": "http://c.files.bbci.co.uk/48A1/production/_114039581_061881658-1.jpg",
+                            "path": "/cpsprodpb/48A1/production/_114039581_061881658-1.jpg",
+                            "height": 549,
+                            "width": 976,
+                            "altText": "Kim Yo-Jong en marzo de 2019",
+                            "caption": "Kim Yo-jong es la hermana menor de Kim Jong-un.",
+                            "copyrightHolder": "Reuters",
+                            "type": "image"
+                        },
+                        "id": "urn:bbc:ares::asset:mundo/noticias-internacional-41545169",
+                        "type": "cps"
+                    }
+                ]
+            }
+        ]
+    }
+}
