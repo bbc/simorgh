@@ -67,6 +67,7 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
 import bylineExtractor from './utilities/bylineExtractor';
+import categoryName from './utilities/categoryName';
 import Byline from './Byline';
 import getAuthorTwitterHandle from './getAuthorTwitterHandle';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -120,7 +121,8 @@ const MpuContainer = styled(AdContainer)`
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-  const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
+  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
+    useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
   const recommendationsData = path(['recommendations'], pageData);
@@ -152,6 +154,12 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
     : null;
+
+  const taggings = path(['metadata', 'passport', 'taggings'], pageData);
+  const formats = path(
+    ['metadata', 'passport', 'predicates', 'formats'],
+    pageData,
+  );
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -251,7 +259,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type="Article"
+        type={categoryName(taggings, formats, isTrustProjectParticipant)}
         seoTitle={headline}
         headline={headline}
         datePublished={firstPublished}
