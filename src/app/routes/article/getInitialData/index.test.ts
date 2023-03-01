@@ -73,7 +73,7 @@ describe('Articles - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article',
+      path: 'https://mock-bff-path/?id=%2Fkyrgyz%2Farticles%2Fc0000000000o&service=kyrgyz&pageType=article',
       agent,
       optHeaders: {
         'ctx-service-env': 'test',
@@ -100,7 +100,7 @@ describe('Articles - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article',
+      path: 'https://mock-bff-path/?id=%2Fkyrgyz%2Farticles%2Fc0000000000o&service=kyrgyz&pageType=article',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',
@@ -174,7 +174,7 @@ describe('Articles - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article',
+      path: 'https://mock-bff-path/?id=%2Fkyrgyz%2Farticles%2Fc0000000000o%3Frenderer_env%3Dtest&service=kyrgyz&pageType=article',
       agent,
       optHeaders: {
         'ctx-service-env': 'test',
@@ -201,7 +201,7 @@ describe('Articles - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=c0000000000o&service=kyrgyz&pageType=article',
+      path: 'https://mock-bff-path/?id=%2Fkyrgyz%2Farticles%2Fc0000000000o%3Frenderer_env%3Dlive&service=kyrgyz&pageType=article',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',
@@ -229,7 +229,7 @@ describe('Articles - BFF Fetching', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=%2Fmundo%2Fnoticias-internacional-64382459&service=mundo&pageType=cpsAsset&isCaf=true',
+      path: 'https://mock-bff-path/?id=%2Fmundo%2Fnoticias-internacional-64382459%3Frenderer_env%3Dcaf&service=mundo&pageType=cpsAsset&isCaf=true',
       agent,
       optHeaders: {
         'ctx-service-env': 'live',
@@ -276,30 +276,6 @@ describe('Articles - BFF Fetching', () => {
       pathname: '/kyrgyz/articles/c0000000000o',
       service: 'kyrgyz',
       message: 'Internal server error',
-      status: 500,
-    });
-  });
-
-  it('should throw an error if the article ID is malformed', async () => {
-    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
-    fetchDataSpy.mockImplementation(() =>
-      Promise.resolve({
-        status: 200,
-        json: JSON.stringify(bffArticleJson),
-      }),
-    );
-
-    await getInitialData({
-      path: '/kyrgyz/articles/somethingelse',
-      getAgent,
-      service: 'kyrgyz',
-      pageType: 'article',
-    });
-
-    expect(nodeLogger.error).toHaveBeenCalledWith(BFF_FETCH_ERROR, {
-      pathname: '/kyrgyz/articles/somethingelse',
-      service: 'kyrgyz',
-      message: 'Article ID is invalid',
       status: 500,
     });
   });

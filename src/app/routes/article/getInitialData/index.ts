@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
-import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
 import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData';
@@ -11,13 +10,6 @@ import fetchPageData from '../../utils/fetchPageData';
 import { Services, Variants } from '../../../models/types/global';
 
 const logger = nodeLogger(__filename);
-
-const removeAmp = (path: string) => path.split('.')[0];
-const getOptimoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10}o)/)?.[1];
-const getCpsId = (path: string) => path;
-
-const getId = (pageType: string) =>
-  pipe(getUrlPath, removeAmp, pageType === 'article' ? getOptimoId : getCpsId);
 
 const getEnvironment = (pathname: string) => {
   if (pathname.includes('renderer_env=test')) {
@@ -68,12 +60,9 @@ export default async ({
     const isLocal = !env || env === 'local';
 
     const agent = !isLocal ? await getAgent() : null;
-    const id = getId(pageType)(pathname);
-
-    if (!id) throw handleError('Article ID is invalid', 500);
 
     let fetchUrl = Url(process.env.BFF_PATH as string).set('query', {
-      id,
+      id: pathname,
       service,
       ...(variant && {
         variant,
@@ -87,15 +76,9 @@ export default async ({
     const optHeaders = { 'ctx-service-env': env };
 
     if (isLocal) {
-      if (pageType === 'article') {
-        fetchUrl = Url(
-          `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
-        );
-      }
+      const path = getUrlPath(pathname);
 
-      if (pageType === 'cpsAsset') {
-        fetchUrl = Url(id);
-      }
+      fetchUrl = Url(path);
     }
 
     // @ts-ignore - Ignore fetchPageData argument types
