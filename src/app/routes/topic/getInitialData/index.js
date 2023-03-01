@@ -31,7 +31,10 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       }),
     });
 
-    const fetchUrl = isLocal() ? Url(`/${service}/topics/${id}`) : parsedBffUrl;
+    const variantPath = variant ? `/${variant}` : '';
+    const fetchUrl = isLocal()
+      ? Url(`/${service}${variantPath}/topics/${id}`)
+      : parsedBffUrl;
 
     const optHeaders = isLocal() ? null : { 'ctx-service-env': serviceEnv };
     const { status, json } = await fetchPageData({
