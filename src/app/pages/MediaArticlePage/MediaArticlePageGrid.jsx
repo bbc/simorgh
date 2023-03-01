@@ -21,11 +21,11 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   }
 `;
 
-const ArticlePageGrid = props => (
+const MediaArticlePageGrid = props => (
   <StyledGelPageGrid columns={gridColumns} margins={gridMargins} {...props} />
 );
 
-export default ArticlePageGrid;
+export default MediaArticlePageGrid;
 
 const GridPrimaryColumn = styled(Grid)`
   padding-bottom: ${GEL_SPACING_QUAD};

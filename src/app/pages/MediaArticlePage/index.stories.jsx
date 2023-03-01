@@ -11,9 +11,9 @@ import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo.j
 import articleDataWithSingleRelatedContent from '#data/afrique/articles/cz216x22106o.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
-import ArticlePageComponent from './MediaArticlePage';
+import MediaArticlePageComponent from './MediaArticlePage';
 
-const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
+const PageWithOptimizely = withOptimizelyProvider(MediaArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
 // eslint-disable-next-line react/prop-types
@@ -56,14 +56,14 @@ export default {
   parameters: { layout: 'fullscreen' },
 };
 
-export const ArticlePage = props => (
+export const MediaArticlePage = props => (
   <ComponentWithContext {...props} data={articleData} />
 );
 
-export const ArticlePageWithRelatedContent = props => (
+export const MediaArticlePageWithRelatedContent = props => (
   <ComponentWithContext {...props} data={articleDataWithRelatedContent} />
 );
 
-export const ArticlePageWithSingleRelatedContent = props => (
+export const MediaArticlePageWithSingleRelatedContent = props => (
   <ComponentWithContext {...props} data={articleDataWithSingleRelatedContent} />
 );

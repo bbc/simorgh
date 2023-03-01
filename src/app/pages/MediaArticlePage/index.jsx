@@ -1,9 +1,9 @@
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
-import ArticlePage from './MediaArticlePage';
+import MediaArticlePage from './MediaArticlePage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
-const OptimizelyArticle = withOptimizelyProvider(ArticlePage);
+const OptimizelyMediaArticle = withOptimizelyProvider(MediaArticlePage);
 
 export default applyBasicPageHandlers({
   addVariantHandling: true,
-})(OptimizelyArticle);
+})(OptimizelyMediaArticle);
