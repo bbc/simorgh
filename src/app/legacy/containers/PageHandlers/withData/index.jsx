@@ -8,8 +8,10 @@ import shouldRender from './shouldRender';
 
 const WithData = Component => {
   const DataContainer = ({ pageData, status, ...props }) => {
-    const { service } = props;
-    const { pathname } = props.location;
+    const {
+      service,
+      location: { pathname },
+    } = props;
     const { passportHomes } = useContext(ServiceContext) || {};
     const { pageType } = useContext(RequestContext);
     const { hasData200StatusAndCorrectService, status: statusCode } =
