@@ -85,18 +85,6 @@ const transformJson = async (json, pathname, toggles) => {
   }
 };
 
-const getDerivedServiceAndPath = (service, pathname) => {
-  switch (service) {
-    case 'cymrufyw':
-      return {
-        service: 'newyddion',
-        path: pathname.replace('cymrufyw', 'newyddion'),
-      };
-    default:
-      return { service, path: pathname };
-  }
-};
-
 export default async ({
   getAgent,
   path: pathname,
@@ -106,9 +94,6 @@ export default async ({
   toggles,
 }) => {
   try {
-    const { service: derivedService, path: derivedPath } =
-      getDerivedServiceAndPath(service, pathname);
-
     const isCaf = pathname.includes('renderer_env=caf');
 
     const {
@@ -116,8 +101,8 @@ export default async ({
       pageData: { secondaryColumn, recommendations, ...article },
     } = await bffFetch({
       getAgent,
-      path: derivedPath,
-      service: derivedService,
+      path: pathname,
+      service,
       variant,
       pageType: 'cpsAsset',
       isCaf,
@@ -126,7 +111,7 @@ export default async ({
     const processedAdditionalData = processMostWatched({
       data: secondaryColumn,
       service,
-      path: derivedPath,
+      path: pathname,
       toggles,
       page: pageType,
     });
