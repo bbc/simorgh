@@ -23,6 +23,7 @@ import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import services from '../../../../server/utilities/serviceConfigs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import MetadataContainer from './index';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
@@ -68,33 +69,35 @@ const MetadataWithContext = ({
   hasAmpPage,
   /* eslint-enable react/prop-types */
 }) => (
-  <ServiceContextProvider service={service} pageLang={lang}>
-    <RequestContextProvider
-      bbcOrigin={bbcOrigin}
-      id={id}
-      isAmp={platform === 'amp'}
-      pageType={pageType}
-      pathname={pathname}
-      service={service}
-      statusCode={200}
-    >
-      <MetadataContainer
-        title={title}
-        lang={lang}
-        twitterHandle={twitterHandle}
-        description={description}
-        openGraphType={openGraphType}
-        aboutTags={aboutTags}
-        mentionsTags={mentionsTags}
-        image={image}
-        imageAltText={imageAltText}
-        imageHeight={imageHeight}
-        imageWidth={imageWidth}
-        hasAppleItunesAppBanner={hasAppleItunesAppBanner}
-        hasAmpPage={hasAmpPage}
-      />
-    </RequestContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service={service}>
+    <ServiceContextProvider service={service} pageLang={lang}>
+      <RequestContextProvider
+        bbcOrigin={bbcOrigin}
+        id={id}
+        isAmp={platform === 'amp'}
+        pageType={pageType}
+        pathname={pathname}
+        service={service}
+        statusCode={200}
+      >
+        <MetadataContainer
+          title={title}
+          lang={lang}
+          twitterHandle={twitterHandle}
+          description={description}
+          openGraphType={openGraphType}
+          aboutTags={aboutTags}
+          mentionsTags={mentionsTags}
+          image={image}
+          imageAltText={imageAltText}
+          imageHeight={imageHeight}
+          imageWidth={imageWidth}
+          hasAppleItunesAppBanner={hasAppleItunesAppBanner}
+          hasAmpPage={hasAmpPage}
+        />
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 const CanonicalNewsInternationalOrigin = props => (
