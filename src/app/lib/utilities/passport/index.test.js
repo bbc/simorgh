@@ -70,10 +70,18 @@ describe('isValidPassportHome', () => {
 });
 
 describe('getCanonicalURL', () => {
-  const data = {
+  const dataWithGlobalDomain = {
     metadata: {
       locators: {
         canonicalUrl: 'https://www.bbc.com/sport/judo/articles/cj80n66ddnko',
+      },
+    },
+  };
+
+  const dataWithUkDomain = {
+    metadata: {
+      locators: {
+        canonicalUrl: 'https://www.bbc.co.uk/sport/judo/articles/cj80n66ddnko',
       },
     },
   };
@@ -84,8 +92,14 @@ describe('getCanonicalURL', () => {
     },
   };
 
-  it('should return a valid service when a valid canonical object is passed', () => {
-    const canonicalUrl = getCanonicalUrl(data);
+  it('should return a valid service when a valid canonical object is passed with a global domain', () => {
+    const canonicalUrl = getCanonicalUrl(dataWithGlobalDomain);
+
+    expect(canonicalUrl).toEqual('/sport/judo/articles/cj80n66ddnko');
+  });
+
+  it('should return a valid service when a valid canonical object is passed with a uk domain', () => {
+    const canonicalUrl = getCanonicalUrl(dataWithUkDomain);
 
     expect(canonicalUrl).toEqual('/sport/judo/articles/cj80n66ddnko');
   });

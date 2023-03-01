@@ -36,7 +36,7 @@ export const getCanonicalUrl = pageData => {
     pageData,
   );
   return canonicalUrl
-    ? canonicalUrl.replace(/.*(bbc.com|localhost:\d*)/, '')
+    ? canonicalUrl.replace(/.*(bbc.com|bbc.co.uk|localhost:\d*)/, '')
     : null;
 };
 
