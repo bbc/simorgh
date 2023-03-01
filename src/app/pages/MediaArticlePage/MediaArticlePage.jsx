@@ -76,7 +76,7 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
-import ArticlePageGrid, { Primary } from './ArticlePageGrid';
+import ArticlePageGrid, { Primary } from './MediaArticlePageGrid';
 
 const Wrapper = styled.div`
   background-color: ${C_GREY_2};

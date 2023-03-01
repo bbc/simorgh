@@ -3,9 +3,9 @@ import React from 'react';
 import {
   render,
   screen,
-} from '../../../components/react-testing-library-with-providers';
+} from '../react-testing-library-with-providers';
 import Byline from '.';
-import ArticleTimestamp from '../../../legacy/containers/ArticleTimestamp';
+import ArticleTimestamp from '../../legacy/containers/ArticleTimestamp';
 import {
   bylineWithNoRole,
   bylineWithNoAuthor,
@@ -14,7 +14,7 @@ import {
   bylineWithLinkAndLocation,
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
-} from '../fixtureData';
+} from '../../pages/ArticlePage/fixtureData';
 
 describe('Byline', () => {
   it('Should render Byline correctly when only required data is passed', () => {
