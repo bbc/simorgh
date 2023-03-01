@@ -179,7 +179,6 @@ export default server => {
         'topics',
         id,
       );
-      console.log('topic data path', dataFilePath);
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(cpsAssetPageDataPath, async ({ params }, res, next) => {
