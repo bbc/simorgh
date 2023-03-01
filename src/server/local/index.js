@@ -169,16 +169,17 @@ export default server => {
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(topicDataPath, async ({ params }, res, next) => {
-      const { service, variant, id } = params;
+      const { service, variant = '', id } = params;
 
       const dataFilePath = path.join(
         process.cwd(),
         'data',
         service,
         variant,
+        'topics',
         id,
       );
-
+      console.log('topic data path', dataFilePath);
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(cpsAssetPageDataPath, async ({ params }, res, next) => {
