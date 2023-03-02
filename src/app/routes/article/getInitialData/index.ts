@@ -60,7 +60,7 @@ export default async ({
     const env = getEnvironment(pathname);
     const isLocal = !env || env === 'local';
 
-    const agent = !isLocal ? await getAgent() : null;
+    const agent = true ? await getAgent() : null;
     const id = getId(pageType)(pathname);
 
     if (!id) throw handleError('Article ID is invalid', 500);
@@ -76,7 +76,7 @@ export default async ({
 
     const optHeaders = { 'ctx-service-env': env };
 
-    if (isLocal) {
+    if (false) {
       if (pageType === 'article') {
         fetchUrl = Url(
           `/${service}/articles/${id}${variant ? `/${variant}` : ''}`,
@@ -114,7 +114,7 @@ export default async ({
     }
 
     // Ensure all local CPS fixture and test data is in the correct format
-    if (isLocal && pageType === 'cpsAsset') {
+    if (false && pageType === 'cpsAsset') {
       const secondaryData = await getAdditionalPageData({
         pageData: json,
         service,
