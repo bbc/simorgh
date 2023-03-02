@@ -10,13 +10,6 @@ import fetchMock from 'fetch-mock';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
-// mock data
-import {
-  articleDataNews,
-  sampleRecommendations,
-  samplePageData,
-} from '#pages/ArticlePage/fixtureData';
-
 // 004_brasil_recommendations_experiment
 import userEvent from '@testing-library/user-event';
 import {
@@ -29,6 +22,13 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ThemeProvider from '../../components/ThemeProvider';
 
 import ArticlePageIndex from '.';
+
+// mock data
+import {
+  articleDataNews,
+  hybridV1RecommendationsSample as sampleRecommendations,
+  samplePageData,
+} from '../../components/OptimizelyRecommendations/fixtureData';
 
 // 004_brasil_recommendations_experiment
 import ArticlePage from './ArticlePage';

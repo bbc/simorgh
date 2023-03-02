@@ -35,14 +35,11 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
 import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
-import { OptimizelyExperiment } from '@optimizely/react-sdk';
-import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
-import CpsRecommendations from '#containers/CpsRecommendations';
 import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
@@ -60,6 +57,7 @@ import NielsenAnalytics from '#containers/NielsenAnalytics';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import OptimizelyRecommendation from '../../components/OptimizelyRecommendations';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -198,28 +196,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => (
-      // 005_brasil_recommendations_experiment
-      <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
-        {variation => {
-          let unirecsHybridRecommendationData = null;
-          if (variation && variation !== 'control') {
-            unirecsHybridRecommendationData = path(
-              [OPTIMIZELY_CONFIG.variationMappings[variation]],
-              pageData,
-            );
-          }
-
-          return (
-            <CpsRecommendations
-              {...props}
-              parentColumns={gridColsMain}
-              items={unirecsHybridRecommendationData ?? recommendationsData}
-            />
-          );
-        }}
-      </OptimizelyExperiment>
-    ),
+    wsoj: props => <OptimizelyRecommendation pageData={pageData} {...props} />,
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),

@@ -1,20 +1,35 @@
 import React from 'react';
+import { InferProps } from 'prop-types';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
-import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 
-const OptimizelyRecommendation = ({ pageData, ...props }) => {
-  const recommendationsData = path(['recommendations'], pageData);
+const OptimizelyRecommendation = ({
+  pageData,
+  ...props
+}: {
+  pageData: ArticlePageType;
+}) => {
+  const recommendationsData = pathOr(
+    [] as null[],
+    ['recommendations'],
+    pageData,
+  );
 
   return (
     <OptimizelyExperiment experiment={OPTIMIZELY_CONFIG.experimentId}>
       {variation => {
         let unirecsHybridRecommendationData = null;
         if (variation && variation !== 'control') {
-          unirecsHybridRecommendationData = path(
-            [OPTIMIZELY_CONFIG.variationMappings[variation]],
+          unirecsHybridRecommendationData = pathOr(
+            null,
+            [
+              OPTIMIZELY_CONFIG.variationMappings[
+                variation as keyof typeof OPTIMIZELY_CONFIG.variationMappings
+              ],
+            ],
             pageData,
           );
         }
@@ -33,5 +48,7 @@ const OptimizelyRecommendation = ({ pageData, ...props }) => {
 OptimizelyRecommendation.propTypes = {
   pageData: articleDataPropTypes.isRequired,
 };
+
+export type ArticlePageType = InferProps<typeof articleDataPropTypes>;
 
 export default OptimizelyRecommendation;

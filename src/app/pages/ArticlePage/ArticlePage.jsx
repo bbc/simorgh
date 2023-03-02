@@ -74,7 +74,7 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 import SecondaryColumn from './SecondaryColumn';
 
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
-import OptimizelyRecommendation from './utilities/OptimizelyRecommendations';
+import OptimizelyRecommendation from '../../components/OptimizelyRecommendations';
 
 const Wrapper = styled.div`
   background-color: ${C_GREY_2};
