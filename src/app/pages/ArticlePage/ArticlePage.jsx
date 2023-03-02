@@ -74,7 +74,6 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 import SecondaryColumn from './SecondaryColumn';
 
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
-import OptimizelyRecommendation from '../../components/OptimizelyRecommendations';
 
 const Wrapper = styled.div`
   background-color: ${C_GREY_2};
@@ -190,7 +189,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => <OptimizelyRecommendation pageData={pageData} {...props} />,
+    wsoj: () => <h1>HEllo?</h1>,
   };
 
   const visuallyHiddenBlock = {
