@@ -63,7 +63,6 @@ const ListItemBorder = `
 const StyledLink = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => getSansRegular(service)};
-  // ${({ theme: { palette } }) => `color: ${palette.BRAND_FOREGROUND};`}
   color: ${props => props.theme.palette.BRAND_FOREGROUND};
   color: ${C_GREY_10};
   cursor: pointer;
