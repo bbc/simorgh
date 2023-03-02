@@ -1590,3 +1590,66 @@ export const sampleRecommendations = [
     type: 'optimo',
   },
 ];
+
+export const passportTaggings = [
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/format',
+    value:
+      'http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/audience/motivation',
+    value:
+      'http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/667ecf35-a325-4eed-adf9-80aac7d58eaf#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/bbc/infoClass',
+    value:
+      'http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/df5b7d56-4f82-4fd9-a627-2c5ee1427422#id',
+  },
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/2465d7e4-05d0-4062-9a12-cb0eb10b24c1#id',
+  },
+];
+
+export const passportPredicatesFormats = [
+  {
+    value:
+      'http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id',
+    thingLabel: 'Interview',
+    thingUri:
+      'http://www.bbc.co.uk/things/b3c67683-6ada-46da-a329-16fbd4a12c96#id',
+    thingId: 'b3c67683-6ada-46da-a329-16fbd4a12c96',
+    thingType: ['tagging:TagConcept', 'tagging:Format'],
+    thingSameAs: [
+      'http://www.wikidata.org/entity/Q178651',
+      'http://dbpedia.org/resource/Interview',
+    ],
+    thingEnglishLabel: 'Interview',
+    thingPreferredLabel: 'Interview',
+    thingLabelLanguage: 'ky',
+    type: 'formats',
+  },
+];
