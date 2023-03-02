@@ -1591,7 +1591,6 @@ export const sampleRecommendations = [
   },
 ];
 
-<<<<<<< HEAD
 export const samplePageData = {
   content: {
     model: {
@@ -9443,7 +9442,6 @@ export const samplePageData = {
     },
   ],
 };
-=======
 export const passportTaggings = [
   {
     predicate: 'http://www.bbc.co.uk/ontologies/creativework/format',
@@ -9506,4 +9504,3 @@ export const passportPredicatesFormats = [
     type: 'formats',
   },
 ];
->>>>>>> origin
