@@ -5,7 +5,6 @@ import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   C_WHITE,
   C_EBON,
-  C_GREY_10,
   C_GREY_3,
 } from '#psammead/psammead-styles/src/colours';
 import { BLACK } from '#app/components/ThemeProvider/palette';
@@ -63,8 +62,7 @@ const ListItemBorder = `
 const StyledLink = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => getSansRegular(service)};
-  color: ${props => props.theme.palette.BRAND_FOREGROUND};
-  color: ${C_GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
