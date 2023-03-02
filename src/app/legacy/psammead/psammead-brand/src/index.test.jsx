@@ -1,11 +1,12 @@
 import React, { useRef, useEffect } from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { render } from '@testing-library/react';
 import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import ScriptLink from '#psammead/psammead-script-link/src';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Brand from '.';
 import SkipLink from './SkipLink';
+import ThemeProvider from '../../../../components/ThemeProvider';
 
 const svg = {
   group: (
@@ -23,59 +24,67 @@ const svg = {
 describe('Brand', () => {
   shouldMatchSnapshot(
     'should render correctly with link provided',
-    <Brand
-      product="Default Brand Name"
-      serviceLocalisedName="Service"
-      svgHeight={24}
-      maxWidth={280}
-      minWidth={180}
-      svg={svg}
-      url="https://www.bbc.co.uk/news"
-      backgroundColour={C_POSTBOX}
-      logoColour={C_WHITE}
-    />,
+    <ThemeProvider service="news">
+      <Brand
+        product="Default Brand Name"
+        serviceLocalisedName="Service"
+        svgHeight={24}
+        maxWidth={280}
+        minWidth={180}
+        svg={svg}
+        url="https://www.bbc.co.uk/news"
+        backgroundColour={C_POSTBOX}
+        logoColour={C_WHITE}
+      />
+    </ThemeProvider>,
   );
 
   shouldMatchSnapshot(
     'should render correctly with link not provided',
-    <Brand
-      product="Default Brand Name"
-      serviceLocalisedName="Service"
-      svg={svg}
-      svgHeight={24}
-      maxWidth={280}
-      minWidth={180}
-      backgroundColour={C_POSTBOX}
-      logoColour={C_WHITE}
-    />,
+    <ThemeProvider service="news">
+      <Brand
+        product="Default Brand Name"
+        serviceLocalisedName="Service"
+        svg={svg}
+        svgHeight={24}
+        maxWidth={280}
+        minWidth={180}
+        backgroundColour={C_POSTBOX}
+        logoColour={C_WHITE}
+      />
+    </ThemeProvider>,
   );
 
   shouldMatchSnapshot(
     'should render correctly with no service Localised Name',
-    <Brand
-      product="BBC News"
-      svg={svg}
-      svgHeight={24}
-      maxWidth={280}
-      minWidth={180}
-      backgroundColour={C_POSTBOX}
-      logoColour={C_WHITE}
-    />,
+    <ThemeProvider service="news">
+      <Brand
+        product="BBC News"
+        svg={svg}
+        svgHeight={24}
+        maxWidth={280}
+        minWidth={180}
+        backgroundColour={C_POSTBOX}
+        logoColour={C_WHITE}
+      />
+    </ThemeProvider>,
   );
 
   shouldMatchSnapshot(
     'should render correctly with transparent borders',
-    <Brand
-      product="BBC News"
-      svg={svg}
-      svgHeight={24}
-      maxWidth={280}
-      minWidth={180}
-      borderTop
-      borderBottom
-      backgroundColour={C_POSTBOX}
-      logoColour={C_WHITE}
-    />,
+    <ThemeProvider service="news">
+      <Brand
+        product="BBC News"
+        svg={svg}
+        svgHeight={24}
+        maxWidth={280}
+        minWidth={180}
+        borderTop
+        borderBottom
+        backgroundColour={C_POSTBOX}
+        logoColour={C_WHITE}
+      />
+    </ThemeProvider>,
   );
 
   describe('assertions - visually hidden text', () => {
