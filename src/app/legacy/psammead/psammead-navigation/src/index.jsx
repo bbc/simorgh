@@ -7,7 +7,6 @@ import {
   C_EBON,
   C_GREY_3,
 } from '#psammead/psammead-styles/src/colours';
-import { BLACK } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -90,7 +89,8 @@ const StyledLink = styled.a`
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
       props.theme.palette.POSTBOX};
     top: 0;
-    border: ${focusIndicatorThickness} solid ${BLACK};
+    border: ${focusIndicatorThickness} solid
+      ${props => props.theme.palette.BLACK};
   }
 
   // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
@@ -99,7 +99,8 @@ const StyledLink = styled.a`
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
       props.theme.palette.POSTBOX};
     top: 0;
-    border: ${focusIndicatorThickness} solid ${BLACK};
+    border: ${focusIndicatorThickness} solid
+      ${props => props.theme.palette.BLACK};
   }
 `;
 
