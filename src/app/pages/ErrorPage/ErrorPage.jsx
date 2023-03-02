@@ -2,23 +2,28 @@ import React, { useContext } from 'react';
 import { number, oneOf, string, shape } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import ErrorMain from '#components/ErrorMain';
+import { useTheme } from '@emotion/react';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 /*
  * MVP Metadata for the error
  * This will be refactored out in https://github.com/bbc/simorgh/issues/1350
  */
-const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
+const ErrorMetadata = ({ dir, lang, messaging, brandName }) => {
   const { title } = messaging;
 
   const pageTitle = `${title} - ${brandName}`;
+
+  const {
+    palette: { BRAND_BACKGROUND },
+  } = useTheme();
 
   return (
     <Helmet htmlAttributes={{ lang, dir }}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noindex,nofollow" />
-      <meta name="theme-color" content={themeColor} />
+      <meta name="theme-color" content={BRAND_BACKGROUND} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -34,9 +39,13 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
 };
 
 const ErrorPage = ({ errorCode }) => {
-  const { brandName, dir, lang, script, service, themeColor, translations } =
+  const { brandName, dir, lang, script, service, translations } =
     useContext(ServiceContext);
   const messaging = translations.error[errorCode] || translations.error[500];
+
+  const {
+    palette: { BRAND_BACKGROUND },
+  } = useTheme();
 
   return (
     <>
@@ -45,7 +54,7 @@ const ErrorPage = ({ errorCode }) => {
         dir={dir}
         lang={lang}
         messaging={messaging}
-        themeColor={themeColor}
+        themeColor={BRAND_BACKGROUND}
       />
       <ErrorMain {...messaging} dir={dir} script={script} service={service} />
     </>
@@ -61,7 +70,6 @@ ErrorMetadata.propTypes = {
   lang: string.isRequired,
   messaging: shape({ title: string.isRequired }).isRequired,
   brandName: string.isRequired,
-  themeColor: string.isRequired,
 };
 
 export default ErrorPage;
