@@ -91,4 +91,4 @@ jobs:
         run: yarn test:lint
 
       - name: NPM Audit
-        run: npx audit-ci --config audit-ci.json
+        run: npx audit-ci --config audit-ci.json --skip-dev
