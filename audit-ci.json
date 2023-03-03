@@ -1,4 +1,6 @@
 {
   "low": true,
-  "allowlist": ["GHSA-w573-4hg7-7wgq", "GHSA-hrpp-h998-j3pp"]
+  "allowlist": [
+    "GHSA-hrpp-h998-j3pp"
+  ]
 }
