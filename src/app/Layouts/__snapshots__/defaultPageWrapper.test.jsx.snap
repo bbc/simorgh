@@ -630,7 +630,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;

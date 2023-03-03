@@ -8,6 +8,7 @@ import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { render } from '../../../components/react-testing-library-with-providers';
 import CpsMetadata from './index';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
@@ -19,21 +20,23 @@ const defaultToggles = {
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ service, children, toggles = defaultToggles }) => (
-  <ServiceContextProvider service={service}>
-    <ToggleContextProvider toggles={toggles}>
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType={ARTICLE_PAGE}
-        pathname="/pathname"
-        service={service}
-        statusCode={200}
-      >
-        {children}
-      </RequestContextProvider>
-    </ToggleContextProvider>
-  </ServiceContextProvider>
+  <ThemeProvider service={service}>
+    <ServiceContextProvider service={service}>
+      <ToggleContextProvider toggles={toggles}>
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
+          pageType={ARTICLE_PAGE}
+          pathname="/pathname"
+          service={service}
+          statusCode={200}
+        >
+          {children}
+        </RequestContextProvider>
+      </ToggleContextProvider>
+    </ServiceContextProvider>
+  </ThemeProvider>
 );
 
 const mapProps = {

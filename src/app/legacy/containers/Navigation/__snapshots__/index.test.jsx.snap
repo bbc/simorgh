@@ -281,7 +281,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -357,7 +356,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -1116,7 +1114,6 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -1855,7 +1852,6 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -2522,7 +2518,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -2598,7 +2593,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -3336,7 +3330,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -4049,7 +4042,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
