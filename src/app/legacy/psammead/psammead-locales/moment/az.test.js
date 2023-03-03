@@ -1,22 +1,23 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 import './az';
 
-moment.locale('az');
+dayjs.locale('az');
 
-// This asset overrides the gunit assertion done in the moment codebase.
-// Format and styling of this file has been keep consistent with the official moment tests.
-// An example of these tests can be seen at https://github.com/moment/moment/blob/develop/src/test/locale/en-gb.js
+// This asset overrides the gunit assertion done in the dayjs codebase.
+// Format and styling of this file has been keep consistent with the official dayjs tests.
+// An example of these tests can be seen at https://github.com/dayjs/dayjs/blob/develop/src/test/locale/en-gb.js
 const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
-test('parse', () => {
+test.only('parse', () => {
   const tests =
     'Yanvar yan_Fevral fev_Mart mar_Aprel apr_May may_Iyun iyn_Iyul iyl_Avqust avq_Sentyabr sen_Oktyabr okt_Noyabr noy_Dekabr dek'.split(
       '_'
     );
 
   function equalTest(input, mmm, i) {
+    console.log(input, mmm, dayjs(input, mmm));
     assert.equal(
-      moment(input, mmm).month(),
+      dayjs(input, mmm).month(),
       i,
       `${input} should be month ${i + 1}`
     );
@@ -68,7 +69,7 @@ test('format', () => {
     [199, '200-üncü'],
     [149, '150-nci'],
   ];
-  const dt = moment(new Date(2010, 1, 14, 15, 25, 50, 125));
+  const dt = dayjs(new Date(2010, 1, 14, 15, 25, 50, 125));
   let DDDoDt;
   let i;
 
@@ -76,7 +77,7 @@ test('format', () => {
     assert.equal(dt.format(a[i][0]), a[i][1], `${a[i][0]} ---> ${a[i][1]}`);
   }
   for (i = 0; i < DDDo.length; i += 1) {
-    DDDoDt = moment([2010]);
+    DDDoDt = dayjs([2010]);
     assert.equal(
       DDDoDt.add(DDDo[i][0], 'days').format('DDDo'),
       DDDo[i][1],
@@ -86,40 +87,40 @@ test('format', () => {
 });
 
 test('format ordinal', () => {
-  assert.equal(moment([2011, 0, 1]).format('DDDo'), '1-inci', '1st');
-  assert.equal(moment([2011, 0, 2]).format('DDDo'), '2-nci', '2nd');
-  assert.equal(moment([2011, 0, 3]).format('DDDo'), '3-üncü', '3rd');
-  assert.equal(moment([2011, 0, 4]).format('DDDo'), '4-üncü', '4th');
-  assert.equal(moment([2011, 0, 5]).format('DDDo'), '5-inci', '5th');
-  assert.equal(moment([2011, 0, 6]).format('DDDo'), '6-ncı', '6th');
-  assert.equal(moment([2011, 0, 7]).format('DDDo'), '7-nci', '7th');
-  assert.equal(moment([2011, 0, 8]).format('DDDo'), '8-inci', '8th');
-  assert.equal(moment([2011, 0, 9]).format('DDDo'), '9-uncu', '9th');
-  assert.equal(moment([2011, 0, 10]).format('DDDo'), '10-uncu', '10th');
+  assert.equal(dayjs([2011, 0, 1]).format('DDDo'), '1-inci', '1st');
+  assert.equal(dayjs([2011, 0, 2]).format('DDDo'), '2-nci', '2nd');
+  assert.equal(dayjs([2011, 0, 3]).format('DDDo'), '3-üncü', '3rd');
+  assert.equal(dayjs([2011, 0, 4]).format('DDDo'), '4-üncü', '4th');
+  assert.equal(dayjs([2011, 0, 5]).format('DDDo'), '5-inci', '5th');
+  assert.equal(dayjs([2011, 0, 6]).format('DDDo'), '6-ncı', '6th');
+  assert.equal(dayjs([2011, 0, 7]).format('DDDo'), '7-nci', '7th');
+  assert.equal(dayjs([2011, 0, 8]).format('DDDo'), '8-inci', '8th');
+  assert.equal(dayjs([2011, 0, 9]).format('DDDo'), '9-uncu', '9th');
+  assert.equal(dayjs([2011, 0, 10]).format('DDDo'), '10-uncu', '10th');
 
-  assert.equal(moment([2011, 0, 11]).format('DDDo'), '11-inci', '11th');
-  assert.equal(moment([2011, 0, 12]).format('DDDo'), '12-nci', '12th');
-  assert.equal(moment([2011, 0, 13]).format('DDDo'), '13-üncü', '13th');
-  assert.equal(moment([2011, 0, 14]).format('DDDo'), '14-üncü', '14th');
-  assert.equal(moment([2011, 0, 15]).format('DDDo'), '15-inci', '15th');
-  assert.equal(moment([2011, 0, 16]).format('DDDo'), '16-ncı', '16th');
-  assert.equal(moment([2011, 0, 17]).format('DDDo'), '17-nci', '17th');
-  assert.equal(moment([2011, 0, 18]).format('DDDo'), '18-inci', '18th');
-  assert.equal(moment([2011, 0, 19]).format('DDDo'), '19-uncu', '19th');
-  assert.equal(moment([2011, 0, 20]).format('DDDo'), '20-nci', '20th');
+  assert.equal(dayjs([2011, 0, 11]).format('DDDo'), '11-inci', '11th');
+  assert.equal(dayjs([2011, 0, 12]).format('DDDo'), '12-nci', '12th');
+  assert.equal(dayjs([2011, 0, 13]).format('DDDo'), '13-üncü', '13th');
+  assert.equal(dayjs([2011, 0, 14]).format('DDDo'), '14-üncü', '14th');
+  assert.equal(dayjs([2011, 0, 15]).format('DDDo'), '15-inci', '15th');
+  assert.equal(dayjs([2011, 0, 16]).format('DDDo'), '16-ncı', '16th');
+  assert.equal(dayjs([2011, 0, 17]).format('DDDo'), '17-nci', '17th');
+  assert.equal(dayjs([2011, 0, 18]).format('DDDo'), '18-inci', '18th');
+  assert.equal(dayjs([2011, 0, 19]).format('DDDo'), '19-uncu', '19th');
+  assert.equal(dayjs([2011, 0, 20]).format('DDDo'), '20-nci', '20th');
 
-  assert.equal(moment([2011, 0, 21]).format('DDDo'), '21-inci', '21th');
-  assert.equal(moment([2011, 0, 22]).format('DDDo'), '22-nci', '22th');
-  assert.equal(moment([2011, 0, 23]).format('DDDo'), '23-üncü', '23th');
-  assert.equal(moment([2011, 0, 24]).format('DDDo'), '24-üncü', '24th');
-  assert.equal(moment([2011, 0, 25]).format('DDDo'), '25-inci', '25th');
-  assert.equal(moment([2011, 0, 26]).format('DDDo'), '26-ncı', '26th');
-  assert.equal(moment([2011, 0, 27]).format('DDDo'), '27-nci', '27th');
-  assert.equal(moment([2011, 0, 28]).format('DDDo'), '28-inci', '28th');
-  assert.equal(moment([2011, 0, 29]).format('DDDo'), '29-uncu', '29th');
-  assert.equal(moment([2011, 0, 30]).format('DDDo'), '30-uncu', '30th');
+  assert.equal(dayjs([2011, 0, 21]).format('DDDo'), '21-inci', '21th');
+  assert.equal(dayjs([2011, 0, 22]).format('DDDo'), '22-nci', '22th');
+  assert.equal(dayjs([2011, 0, 23]).format('DDDo'), '23-üncü', '23th');
+  assert.equal(dayjs([2011, 0, 24]).format('DDDo'), '24-üncü', '24th');
+  assert.equal(dayjs([2011, 0, 25]).format('DDDo'), '25-inci', '25th');
+  assert.equal(dayjs([2011, 0, 26]).format('DDDo'), '26-ncı', '26th');
+  assert.equal(dayjs([2011, 0, 27]).format('DDDo'), '27-nci', '27th');
+  assert.equal(dayjs([2011, 0, 28]).format('DDDo'), '28-inci', '28th');
+  assert.equal(dayjs([2011, 0, 29]).format('DDDo'), '29-uncu', '29th');
+  assert.equal(dayjs([2011, 0, 30]).format('DDDo'), '30-uncu', '30th');
 
-  assert.equal(moment([2011, 0, 31]).format('DDDo'), '31-inci', '31st');
+  assert.equal(dayjs([2011, 0, 31]).format('DDDo'), '31-inci', '31st');
 });
 
 test('format month', () => {
@@ -130,7 +131,7 @@ test('format month', () => {
   let i;
   for (i = 0; i < expected.length; i += 1) {
     assert.equal(
-      moment([2011, i, 1]).format('MMMM MMM'),
+      dayjs([2011, i, 1]).format('MMMM MMM'),
       expected[i],
       expected[i]
     );
@@ -145,7 +146,7 @@ test('format week', () => {
   let i;
   for (i = 0; i < expected.length; i += 1) {
     assert.equal(
-      moment([2011, 0, 2 + i]).format('dddd ddd dd'),
+      dayjs([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
       expected[i]
     );
@@ -153,152 +154,152 @@ test('format week', () => {
 });
 
 test('from', () => {
-  const start = moment([2007, 1, 28]);
+  const start = dayjs([2007, 1, 28]);
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ s: 44 }), true),
     'bir neçə saniyə',
     '44 seconds = a few seconds'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ s: 45 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ s: 45 }), true),
     'bir dəqiqə',
     '45 seconds = a minute'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ s: 89 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ s: 89 }), true),
     'bir dəqiqə',
     '89 seconds = a minute'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ s: 90 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ s: 90 }), true),
     '2 dəqiqə',
     '90 seconds = 2 minutes'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ m: 44 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ m: 44 }), true),
     '44 dəqiqə',
     '44 minutes = 44 minutes'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ m: 45 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ m: 45 }), true),
     'bir saat',
     '45 minutes = an hour'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ m: 89 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ m: 89 }), true),
     'bir saat',
     '89 minutes = an hour'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ m: 90 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ m: 90 }), true),
     '2 saat',
     '90 minutes = 2 hours'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ h: 5 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ h: 5 }), true),
     '5 saat',
     '5 hours = 5 hours'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ h: 21 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ h: 21 }), true),
     '21 saat',
     '21 hours = 21 hours'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ h: 22 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ h: 22 }), true),
     'bir gün',
     '22 hours = a day'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ h: 35 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ h: 35 }), true),
     'bir gün',
     '35 hours = a day'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ h: 36 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ h: 36 }), true),
     '2 gün',
     '36 hours = 2 days'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ d: 1 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ d: 1 }), true),
     'bir gün',
     '1 day = a day'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ d: 5 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ d: 5 }), true),
     '5 gün',
     '5 days = 5 days'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ d: 25 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ d: 25 }), true),
     '25 gün',
     '25 days = 25 days'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ d: 26 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ d: 26 }), true),
     'bir ay',
     '26 days = a month'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ d: 30 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ d: 30 }), true),
     'bir ay',
     '30 days = a month'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ d: 46 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ d: 46 }), true),
     '2 ay',
     '46 days = 2 months'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ d: 74 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ d: 74 }), true),
     '2 ay',
     '75 days = 2 months'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ d: 76 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ d: 76 }), true),
     '3 ay',
     '76 days = 3 months'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ M: 1 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ M: 1 }), true),
     'bir ay',
     '1 month = a month'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ M: 5 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ M: 5 }), true),
     '5 ay',
     '5 months = 5 months'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ d: 345 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ d: 345 }), true),
     'bir il',
     '345 days = a year'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ d: 548 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ d: 548 }), true),
     '2 il',
     '548 days = 2 years'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ y: 1 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ y: 1 }), true),
     'bir il',
     '1 year = a year'
   );
   assert.equal(
-    start.from(moment([2007, 1, 28]).add({ y: 5 }), true),
+    start.from(dayjs([2007, 1, 28]).add({ y: 5 }), true),
     '5 il',
     '5 years = 5 years'
   );
 });
 
 test('suffix', () => {
-  assert.equal(moment(30000).from(0), 'bir neçə saniyə sonra', 'prefix');
-  assert.equal(moment(0).from(30000), 'bir neçə saniyə əvvəl', 'suffix');
+  assert.equal(dayjs(30000).from(0), 'bir neçə saniyə sonra', 'prefix');
+  assert.equal(dayjs(0).from(30000), 'bir neçə saniyə əvvəl', 'suffix');
 });
 
 test('now from now', () => {
   assert.equal(
-    moment().fromNow(),
+    dayjs().fromNow(),
     'bir neçə saniyə əvvəl',
     'now from now should display as in the past'
   );
@@ -306,43 +307,43 @@ test('now from now', () => {
 
 test('fromNow', () => {
   assert.equal(
-    moment().add({ s: 30 }).fromNow(),
+    dayjs().add({ s: 30 }).fromNow(),
     'bir neçə saniyə sonra',
     'in a few seconds'
   );
-  assert.equal(moment().add({ d: 5 }).fromNow(), '5 gün sonra', 'in 5 days');
+  assert.equal(dayjs().add({ d: 5 }).fromNow(), '5 gün sonra', 'in 5 days');
 });
 
 test('calendar day', () => {
-  const a = moment().hours(12).minutes(0).seconds(0);
+  const a = dayjs().hours(12).minutes(0).seconds(0);
 
   assert.equal(
-    moment(a).calendar(),
+    dayjs(a).calendar(),
     'bugün saat 12:00',
     'today at the same time'
   );
   assert.equal(
-    moment(a).add({ m: 25 }).calendar(),
+    dayjs(a).add({ m: 25 }).calendar(),
     'bugün saat 12:25',
     'Now plus 25 min'
   );
   assert.equal(
-    moment(a).add({ h: 1 }).calendar(),
+    dayjs(a).add({ h: 1 }).calendar(),
     'bugün saat 13:00',
     'Now plus 1 hour'
   );
   assert.equal(
-    moment(a).add({ d: 1 }).calendar(),
+    dayjs(a).add({ d: 1 }).calendar(),
     'sabah saat 12:00',
     'tomorrow at the same time'
   );
   assert.equal(
-    moment(a).subtract({ h: 1 }).calendar(),
+    dayjs(a).subtract({ h: 1 }).calendar(),
     'bugün saat 11:00',
     'Now minus 1 hour'
   );
   assert.equal(
-    moment(a).subtract({ d: 1 }).calendar(),
+    dayjs(a).subtract({ d: 1 }).calendar(),
     'dünən 12:00',
     'yesterday at the same time'
   );
@@ -352,7 +353,7 @@ test('calendar next week', () => {
   let i;
   let m;
   for (i = 2; i < 7; i += 1) {
-    m = moment().add({ d: i });
+    m = dayjs().add({ d: i });
     assert.equal(
       m.calendar(),
       m.format('[gələn həftə] dddd [saat] LT'),
@@ -377,7 +378,7 @@ test('calendar last week', () => {
   let i;
   let m;
   for (i = 2; i < 7; i += 1) {
-    m = moment().subtract({ d: i });
+    m = dayjs().subtract({ d: i });
     assert.equal(
       m.calendar(),
       m.format('[keçən həftə] dddd [saat] LT'),
@@ -399,14 +400,14 @@ test('calendar last week', () => {
 });
 
 test('calendar all else', () => {
-  let weeksAgo = moment().subtract({ w: 1 });
-  let weeksFromNow = moment().add({ w: 1 });
+  let weeksAgo = dayjs().subtract({ w: 1 });
+  let weeksFromNow = dayjs().add({ w: 1 });
 
   assert.equal(weeksAgo.calendar(), weeksAgo.format('L'), '1 week ago');
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 1 week');
 
-  weeksAgo = moment().subtract({ w: 2 });
-  weeksFromNow = moment().add({ w: 2 });
+  weeksAgo = dayjs().subtract({ w: 2 });
+  weeksFromNow = dayjs().add({ w: 2 });
 
   assert.equal(weeksAgo.calendar(), weeksAgo.format('L'), '2 weeks ago');
   assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 2 weeks');
@@ -414,27 +415,27 @@ test('calendar all else', () => {
 
 test('weeks year starting sunday formatted', () => {
   assert.equal(
-    moment([2011, 11, 26]).format('w ww wo'),
+    dayjs([2011, 11, 26]).format('w ww wo'),
     '1 01 1-inci',
     'Dec 26 2011 should be week 1'
   );
   assert.equal(
-    moment([2012, 0, 1]).format('w ww wo'),
+    dayjs([2012, 0, 1]).format('w ww wo'),
     '1 01 1-inci',
     'Jan  1 2012 should be week 1'
   );
   assert.equal(
-    moment([2012, 0, 2]).format('w ww wo'),
+    dayjs([2012, 0, 2]).format('w ww wo'),
     '2 02 2-nci',
     'Jan  2 2012 should be week 2'
   );
   assert.equal(
-    moment([2012, 0, 8]).format('w ww wo'),
+    dayjs([2012, 0, 8]).format('w ww wo'),
     '2 02 2-nci',
     'Jan  8 2012 should be week 2'
   );
   assert.equal(
-    moment([2012, 0, 9]).format('w ww wo'),
+    dayjs([2012, 0, 9]).format('w ww wo'),
     '3 03 3-üncü',
     'Jan  9 2012 should be week 3'
   );

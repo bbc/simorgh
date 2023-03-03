@@ -1,9 +1,13 @@
-const moment = require('moment');
-require('moment/locale/ar');
+const dayjs = require('dayjs');
+require('dayjs/locale/ar');
 
-// the months have been overridden to maintain arabic dual month names
-// other values in this locale have been left as set upstream
-// see https://github.com/moment/moment/blob/develop/src/locale/ar.js
+const relativeTime = require('dayjs/plugin/relativeTime');
+const objectSupport = require('dayjs/plugin/objectSupport');
+const localizedFormat = require('dayjs/plugin/localizedFormat');
+const updateLocale = require('dayjs/plugin/updateLocale');
+const customParseFormat = require('dayjs/plugin/customParseFormat');
+const preParsePostFormat = require('dayjs/plugin/preParsePostFormat');
+const devHelper = require('dayjs/plugin/devHelper');
 
 const dualMonthNames = [
   'يناير/ كانون الثاني',
@@ -20,7 +24,15 @@ const dualMonthNames = [
   'ديسمبر/ كانون الأول',
 ];
 
-moment.updateLocale('ar', {
+dayjs.extend(relativeTime);
+dayjs.extend(objectSupport);
+dayjs.extend(localizedFormat);
+dayjs.extend(updateLocale);
+dayjs.extend(preParsePostFormat);
+dayjs.extend(customParseFormat);
+dayjs.extend(devHelper);
+
+dayjs.updateLocale('ar', {
   months: dualMonthNames,
   monthsShort: dualMonthNames,
   postformat(string) {
