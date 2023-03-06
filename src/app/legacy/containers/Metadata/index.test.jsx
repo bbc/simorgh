@@ -21,6 +21,7 @@ import { getSummary } from '#lib/utilities/parseAssetData/index';
 import getAuthorTwitterHandle from '#app/pages/ArticlePage/getAuthorTwitterHandle';
 import { render } from '../../../components/react-testing-library-with-providers';
 import services from '../../../../server/utilities/serviceConfigs';
+import { getAuthorTwitterHandle } from '../../../components/Byline/utilities';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import MetadataContainer from './index';
 
