@@ -114,7 +114,6 @@ describe('getAdditionalPageData', () => {
       it('should get recommendations data from unirecs content and unirecs hybrid engine', async () => {
         const expectedOutput = {
           recommendations: recommendationsJson,
-          datalabContentRecommendations: recommendationsJson,
           datalabHybridRecommendations: recommendationsJson,
           datalabHybridRecommendationsV1x1: recommendationsJson,
           datalabHybridRecommendationsV1x2: recommendationsJson,
