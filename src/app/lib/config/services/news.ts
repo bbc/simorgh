@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
@@ -36,7 +30,6 @@ export const service: DefaultServiceConfig = {
     service: 'news',
     serviceName: 'News',
     languageName: 'English',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews',
     twitterSite: '@BBCNews',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
@@ -45,13 +38,6 @@ export const service: DefaultServiceConfig = {
     script: latin,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Home',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {

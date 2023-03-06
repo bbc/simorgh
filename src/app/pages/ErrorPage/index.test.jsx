@@ -1,41 +1,40 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ErrorPage from './ErrorPage';
+import { render } from '../../components/react-testing-library-with-providers';
 
 describe('ErrorPage', () => {
-  shouldMatchSnapshot(
-    'should correctly render for 404',
-    <ServiceContextProvider service="news">
-      <ErrorPage errorCode={404} />
-    </ServiceContextProvider>,
-  );
+  it('should correctly render for 404', () => {
+    const { container } = render(<ErrorPage errorCode={404} />, {
+      service: 'news',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render for 500',
-    <ServiceContextProvider service="news">
-      <ErrorPage errorCode={500} />
-    </ServiceContextProvider>,
-  );
+  it('should correctly render for 500', () => {
+    const { container } = render(<ErrorPage errorCode={500} />, {
+      service: 'news',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render for other status code',
-    <ServiceContextProvider service="news">
-      <ErrorPage errorCode={123} />
-    </ServiceContextProvider>,
-  );
+  it('should correctly render for other status code', () => {
+    const { container } = render(<ErrorPage errorCode={123} />, {
+      service: 'news',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render for 404 for persian',
-    <ServiceContextProvider service="persian">
-      <ErrorPage errorCode={404} />
-    </ServiceContextProvider>,
-  );
+  it('should correctly render for 404 for persian', () => {
+    const { container } = render(<ErrorPage errorCode={404} />, {
+      service: 'persian',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should correctly render for 500 for persian',
-    <ServiceContextProvider service="persian">
-      <ErrorPage errorCode={500} />
-    </ServiceContextProvider>,
-  );
+  it('should correctly render for 500 for persian', async () => {
+    const { container } = render(<ErrorPage errorCode={500} />, {
+      service: 'persian',
+    });
+    expect(container).toMatchSnapshot();
+  });
 });
