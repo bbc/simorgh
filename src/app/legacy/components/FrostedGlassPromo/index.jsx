@@ -67,6 +67,7 @@ const A = styled.a`
   display: inline-block;
   ${({ service }) => service && getSerifRegular(service)}
   text-decoration: none;
+  // maybe colour references that we should update?
   color: ${({ isAmp }) => (isAmp ? 'black' : 'white')};
   font-size: 0.9375rem;
   line-height: 1.33;
