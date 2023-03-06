@@ -205,7 +205,6 @@ describe('get initial data for topic', () => {
   });
 
   it('should request test data when renderer_env is set to test', async () => {
-    process.env.SIMORGH_APP_ENV = 'test';
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
