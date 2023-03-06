@@ -5,6 +5,7 @@ import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
+import CpsRecommendations from '#containers/CpsRecommendations';
 
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -75,14 +76,13 @@ import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
-import ArticlePageGrid, { Primary } from './ArticlePageGrid';
-import OptimizelyRecommendation from '../../components/OptimizelyRecommendations';
+import MediaArticlePageGrid, { Primary } from './MediaArticlePageGrid';
 
 const Wrapper = styled.div`
   background-color: ${C_GREY_2};
 `;
 
-const ArticlePageMostReadSection = styled(MostReadSection)`
+const MediaArticlePageMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_MARGIN_BELOW_400PX} 0 ${GEL_MARGIN_BELOW_400PX};
     padding-bottom: ${GEL_SPACING_TRPL};
@@ -120,12 +120,13 @@ const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
-const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
+const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
     useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
+  const recommendationsData = path(['recommendations'], pageData);
 
   const isAdsEnabled = [
     path(['metadata', 'allowAdvertising'], pageData),
@@ -192,7 +193,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => <OptimizelyRecommendation pageData={pageData} {...props} />,
+    wsoj: props => (
+      <CpsRecommendations {...props} items={recommendationsData} />
+    ),
   };
 
   const visuallyHiddenBlock = {
@@ -222,10 +225,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   );
 
   const MostReadWrapper = ({ children }) => (
-    <ArticlePageMostReadSection>
+    <MediaArticlePageMostReadSection>
       <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
       {children}
-    </ArticlePageMostReadSection>
+    </MediaArticlePageMostReadSection>
   );
 
   MostReadWrapper.propTypes = {
@@ -268,7 +271,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
-      <ArticlePageGrid>
+      <MediaArticlePageGrid>
         <Primary>
           <Main role="main">
             <Blocks
@@ -287,7 +290,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
           <RelatedContentSection content={blocks} />
         </Primary>
         <SecondaryColumn pageData={pageData} />
-      </ArticlePageGrid>
+      </MediaArticlePageGrid>
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}
@@ -298,13 +301,13 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   );
 };
 
-ArticlePage.propTypes = {
+MediaArticlePage.propTypes = {
   pageData: articleDataPropTypes.isRequired,
   mostReadEndpointOverride: string,
 };
 
-ArticlePage.defaultProps = {
+MediaArticlePage.defaultProps = {
   mostReadEndpointOverride: null,
 };
 
-export default ArticlePage;
+export default MediaArticlePage;
