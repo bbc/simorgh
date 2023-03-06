@@ -8,16 +8,16 @@ describe('getEnvironment', () => {
   });
 
   it.each`
-    url                                                | environment | expected
-    ${'http://localhost:7080/mundo'}                   | ${'local'}  | ${'local'}
-    ${'http://localhost:7080/mundo?renderer_env=test'} | ${'local'}  | ${'test'}
-    ${'http://localhost:7080/mundo?renderer_env=live'} | ${'local'}  | ${'live'}
-    ${'https://test.bbc.com/mundo'}                    | ${'test'}   | ${'test'}
-    ${'https://test.bbc.com/mundo?renderer_env=test'}  | ${'test'}   | ${'test'}
-    ${'https://test.bbc.com/mundo?renderer_env=live'}  | ${'test'}   | ${'live'}
-    ${'https://www.bbc.com/mundo'}                     | ${'live'}   | ${'live'}
-    ${'https://www.bbc.com/mundo?renderer_env=test'}   | ${'live'}   | ${'test'}
-    ${'https://www.bbc.com/mundo?renderer_env=live'}   | ${'live'}   | ${'live'}
+    url                           | environment | expected
+    ${'/mundo'}                   | ${'local'}  | ${'local'}
+    ${'/mundo?renderer_env=test'} | ${'local'}  | ${'test'}
+    ${'/mundo?renderer_env=live'} | ${'local'}  | ${'live'}
+    ${'/mundo'}                   | ${'test'}   | ${'test'}
+    ${'/mundo?renderer_env=test'} | ${'test'}   | ${'test'}
+    ${'/mundo?renderer_env=live'} | ${'test'}   | ${'live'}
+    ${'/mundo'}                   | ${'live'}   | ${'live'}
+    ${'/mundo?renderer_env=test'} | ${'live'}   | ${'test'}
+    ${'/mundo?renderer_env=live'} | ${'live'}   | ${'live'}
   `(
     'returns $expected when environment is $environment and url is $url',
     ({ url, environment, expected }) => {
