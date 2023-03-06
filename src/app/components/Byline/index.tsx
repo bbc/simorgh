@@ -4,13 +4,13 @@
 import { jsx } from '@emotion/react';
 import React, { useContext, PropsWithChildren } from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import VisuallyHiddenText from '../../../legacy/psammead/psammead-visually-hidden-text/src';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import VisuallyHiddenText from '../../legacy/psammead/psammead-visually-hidden-text/src';
 import BylineCss from './index.styles';
-import { RightChevron, LeftChevron } from '../../../components/icons';
-import Text from '../../../components/Text';
-import Image from '../../../components/Image';
-import bylineExtractor from '../utilities/bylineExtractor';
+import { RightChevron, LeftChevron } from '../icons';
+import Text from '../Text';
+import Image from '../Image';
+import bylineExtractor from './utilities/bylineExtractor';
 
 type Props = {
   blocks: any;
