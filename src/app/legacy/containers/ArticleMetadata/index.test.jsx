@@ -5,7 +5,7 @@ import {
   articleDataPersian,
   articleDataPidginWithByline,
 } from '#pages/ArticlePage/fixtureData';
-import getAuthorTwitterHandle from '#app/pages/ArticlePage/getAuthorTwitterHandle';
+import { getAuthorTwitterHandle } from '../../../components/Byline/utilities';
 import { render } from '../../../components/react-testing-library-with-providers';
 import ArticleMetadata from './index';
 
