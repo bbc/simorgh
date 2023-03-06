@@ -16,8 +16,8 @@ const getId = pipe(getUrlPath, removeAmp, popId);
 
 export default async ({ getAgent, service, path: pathname, variant, page }) => {
   try {
-    const serviceEnv = getEnvironment(pathname);
-    const isLocal = serviceEnv === 'local';
+    const env = getEnvironment(pathname);
+    const isLocal = !env || env === 'local';
 
     const agent = isLocal ? null : await getAgent();
     const id = getId(pathname);
@@ -40,7 +40,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       ? Url(`/${service}${variantPath}/topics/${id}`)
       : parsedBffUrl;
 
-    const optHeaders = isLocal ? null : { 'ctx-service-env': serviceEnv };
+    const optHeaders = isLocal ? null : { 'ctx-service-env': env };
 
     const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
