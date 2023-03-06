@@ -1,5 +1,5 @@
 export const ARTICLE_PAGE = 'article';
-export const MEDIA_ARTICLE_PAGE = 'mediaArticlePage';
+export const MEDIA_ARTICLE_PAGE = 'mediaArticle';
 export const FRONT_PAGE = 'frontPage';
 export const MEDIA_PAGE = 'media';
 export const MOST_READ_PAGE = 'mostRead';
