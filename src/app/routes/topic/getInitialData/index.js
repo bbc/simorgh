@@ -29,6 +29,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       ...(page && {
         page,
       }),
+      pageType: 'topic',
     });
 
     const variantPath = variant ? `/${variant}` : '';
