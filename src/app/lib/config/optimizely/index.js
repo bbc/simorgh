@@ -3,7 +3,6 @@ export default {
   featureId: '005_brasil_hybrid_recommendations_',
   viewClickAttributeId: 'wsoj',
   variationMappings: {
-    content_recs: 'datalabContentRecommendations',
     hybrid_recs: 'datalabHybridRecommendations',
     variation_1: 'datalabHybridRecommendationsV1x1',
     variation_2: 'datalabHybridRecommendationsV1x2',

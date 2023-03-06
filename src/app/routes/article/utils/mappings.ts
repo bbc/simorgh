@@ -1,12 +1,6 @@
 const mappings = [
   { name: 'recommendations', api: 'recommendations' },
   {
-    name: 'datalabContentRecommendations',
-    engine: 'unirecs_datalab_content',
-    engineVariant: 'content',
-    api: 'datalab_content',
-  },
-  {
     name: 'datalabHybridRecommendations',
     engine: 'unirecs_datalab_hybrid',
     engineVariant: 'hybrid',
