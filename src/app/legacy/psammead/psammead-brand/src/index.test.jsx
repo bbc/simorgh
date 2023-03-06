@@ -1,12 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { C_POSTBOX, C_WHITE } from '#psammead/psammead-styles/src/colours';
 import ScriptLink from '#psammead/psammead-script-link/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import Brand from '.';
 import SkipLink from './SkipLink';
-import ThemeProvider from '../../../../components/ThemeProvider';
 
 const svg = {
   group: (
@@ -22,9 +20,8 @@ const svg = {
 };
 
 describe('Brand', () => {
-  shouldMatchSnapshot(
-    'should render correctly with link provided',
-    <ThemeProvider service="news">
+  it('should render correctly with link provided', () => {
+    const { container } = render(
       <Brand
         product="Default Brand Name"
         serviceLocalisedName="Service"
@@ -35,13 +32,13 @@ describe('Brand', () => {
         url="https://www.bbc.co.uk/news"
         backgroundColour={C_POSTBOX}
         logoColour={C_WHITE}
-      />
-    </ThemeProvider>,
-  );
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with link not provided',
-    <ThemeProvider service="news">
+  it('should render correctly with link not provided', () => {
+    const { container } = render(
       <Brand
         product="Default Brand Name"
         serviceLocalisedName="Service"
@@ -51,13 +48,13 @@ describe('Brand', () => {
         minWidth={180}
         backgroundColour={C_POSTBOX}
         logoColour={C_WHITE}
-      />
-    </ThemeProvider>,
-  );
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with no service Localised Name',
-    <ThemeProvider service="news">
+  it('should render correctly with no service Localised Name', () => {
+    const { container } = render(
       <Brand
         product="BBC News"
         svg={svg}
@@ -66,13 +63,13 @@ describe('Brand', () => {
         minWidth={180}
         backgroundColour={C_POSTBOX}
         logoColour={C_WHITE}
-      />
-    </ThemeProvider>,
-  );
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly with transparent borders',
-    <ThemeProvider service="news">
+  it('should render correctly with transparent borders', () => {
+    const { container } = render(
       <Brand
         product="BBC News"
         svg={svg}
@@ -83,9 +80,10 @@ describe('Brand', () => {
         borderBottom
         backgroundColour={C_POSTBOX}
         logoColour={C_WHITE}
-      />
-    </ThemeProvider>,
-  );
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
   describe('assertions - visually hidden text', () => {
     it('should have role of text when serviceLocalisedName is provided', () => {

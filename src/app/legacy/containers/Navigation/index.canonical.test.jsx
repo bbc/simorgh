@@ -1,6 +1,5 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import CanonicalNavigation from './index.canonical';
 import {
@@ -10,27 +9,24 @@ import {
   scrollableListItems,
 } from './testHelpers';
 import { render } from '../../../components/react-testing-library-with-providers';
-import ThemeProvider from '../../../components/ThemeProvider';
 
 const navigation = (
-  <ThemeProvider service="news">
-    <CanonicalNavigation
-      scrollableListItems={scrollableListItems}
-      dropdownListItems={dropdownListItems}
-      menuAnnouncedText="menu"
-      script={latin}
-      service="news"
-      dir="ltr"
-    />
-  </ThemeProvider>
+  <CanonicalNavigation
+    scrollableListItems={scrollableListItems}
+    dropdownListItems={dropdownListItems}
+    menuAnnouncedText="menu"
+    script={latin}
+    service="news"
+    dir="ltr"
+  />
 );
 
 describe('Canonical Navigation', () => {
   describe('snapshots', () => {
-    shouldMatchSnapshot(
-      'should correctly render Canonical navigation',
-      navigation,
-    );
+    it('should correctly render Canonical navigation', () => {
+      const { container } = render(navigation);
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('assertions', () => {

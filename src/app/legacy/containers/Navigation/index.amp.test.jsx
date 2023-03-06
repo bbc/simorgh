@@ -1,5 +1,4 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import AmpNavigation from './index.amp';
 import {
@@ -9,24 +8,24 @@ import {
   scrollableListItems,
 } from './testHelpers';
 import { render } from '../../../components/react-testing-library-with-providers';
-import ThemeProvider from '../../../components/ThemeProvider';
 
 const navigation = (
-  <ThemeProvider service="news">
-    <AmpNavigation
-      scrollableListItems={scrollableListItems}
-      dropdownListItems={dropdownListItems}
-      menuAnnouncedText="menu"
-      script={latin}
-      service="news"
-      dir="ltr"
-    />
-  </ThemeProvider>
+  <AmpNavigation
+    scrollableListItems={scrollableListItems}
+    dropdownListItems={dropdownListItems}
+    menuAnnouncedText="menu"
+    script={latin}
+    service="news"
+    dir="ltr"
+  />
 );
 
 describe('AMP Navigation', () => {
   describe('Snapshots', () => {
-    shouldMatchSnapshot('should correctly render AMP navigation', navigation);
+    it('should correctly render AMP navigation', () => {
+      const { container } = render(navigation);
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Assertions', () => {

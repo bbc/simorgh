@@ -1,43 +1,10 @@
 import React from 'react';
 import { waitFor } from '@testing-library/react';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { render } from '../../../components/react-testing-library-with-providers';
 import CpsMetadata from './index';
-import ThemeProvider from '../../../components/ThemeProvider';
 
 const getISOStringDate = date => new Date(date).toISOString();
-
-const defaultToggles = {
-  apple_itunes_app: {
-    enabled: false,
-  },
-};
-
-// eslint-disable-next-line react/prop-types
-const Context = ({ service, children, toggles = defaultToggles }) => (
-  <ThemeProvider service={service}>
-    <ServiceContextProvider service={service}>
-      <ToggleContextProvider toggles={toggles}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-        >
-          {children}
-        </RequestContextProvider>
-      </ToggleContextProvider>
-    </ServiceContextProvider>
-  </ThemeProvider>
-);
 
 const mapProps = {
   title: articleDataNews.promo.headlines.seoHeadline,
@@ -63,11 +30,7 @@ describe('CpsMetadata get branded image', () => {
   it('should render the expected metadata tags', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
 
-    render(
-      <Context service="news">
-        <CpsMetadata {...mapProps} />
-      </Context>,
-    );
+    render(<CpsMetadata {...mapProps} />, { service: 'news' });
 
     const expected = [
       {
@@ -118,12 +81,12 @@ describe('CPS metadata', () => {
     delete process.env.SIMORGH_ICHEF_BASE_URL;
   });
 
-  shouldMatchSnapshot(
-    'should match snapshot for News & International',
-    <Context service="news">
-      <CpsMetadata {...mapProps} />
-    </Context>,
-  );
+  it('should match snapshot for News & International', () => {
+    const { container } = render(<CpsMetadata {...mapProps} />, {
+      service: 'news',
+    });
+    expect(container).toMatchSnapshot();
+  });
 
   describe('with apple_itunes_app enabled for service with iTunesAppId (mundo) and hasAppleItunesAppBanner is true', () => {
     const toggles = {
@@ -132,11 +95,15 @@ describe('CPS metadata', () => {
       },
     };
 
-    shouldMatchSnapshot(
-      'should match snapshot',
-      <Context service="mundo" toggles={toggles}>
-        <CpsMetadata {...mapProps} hasAppleItunesAppBanner />
-      </Context>,
-    );
+    it('should match snapshot', () => {
+      const { container } = render(
+        <CpsMetadata {...mapProps} hasAppleItunesAppBanner />,
+        {
+          service: 'mundo',
+          toggles: { toggles },
+        },
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 });

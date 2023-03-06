@@ -1,11 +1,9 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ScrollableNavigation } from './ScrollableNavigation';
 import Navigation, { NavigationUl, NavigationLi } from './index';
 import igboNavData from '../testHelpers/igbo';
-import ThemeProvider from '../../../../components/ThemeProvider';
 
 const navigationUlComponent = (
   <NavigationUl>
@@ -31,28 +29,28 @@ const navigationUlComponent = (
 );
 
 const NavigationExample = (
-  <ThemeProvider service="news">
-    <Navigation script={latin} service="news">
-      {navigationUlComponent}
-    </Navigation>
-  </ThemeProvider>
+  <Navigation script={latin} service="news">
+    {navigationUlComponent}
+  </Navigation>
 );
 
 describe('Navigation', () => {
-  shouldMatchSnapshot('should render correctly', NavigationExample);
+  it('should render correctly', () => {
+    const { container } = render(NavigationExample);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly when isOpen is true',
-    <ThemeProvider service="news">
+  it('should render correctly when isOpen is true', () => {
+    const { container } = render(
       <Navigation script={latin} service="news" isOpen>
         {navigationUlComponent}
-      </Navigation>
-    </ThemeProvider>,
-  );
+      </Navigation>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly when ampOpenClass prop is provided',
-    <ThemeProvider service="news">
+  it('should render correctly when ampOpenClass prop is provided', () => {
+    const { container } = render(
       <Navigation
         script={latin}
         skipLinkText="Wụga n’ọdịnaya"
@@ -60,18 +58,19 @@ describe('Navigation', () => {
         ampOpenClass="is-open"
       >
         {navigationUlComponent}
-      </Navigation>
-    </ThemeProvider>,
-  );
+      </Navigation>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('Scrollable Navigation', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <ThemeProvider service="news">
-      <ScrollableNavigation>{NavigationExample}</ScrollableNavigation>
-    </ThemeProvider>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <ScrollableNavigation>{NavigationExample}</ScrollableNavigation>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('Assertions', () => {
