@@ -3,7 +3,7 @@ import nodeLogger from '#lib/logger.node';
 import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
 import { getUrlPath } from '#lib/utilities/urlParser';
-import isLocal from '#app/lib/utilities/isLocal';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import fetchPageData from '../../utils/fetchPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
@@ -16,8 +16,10 @@ const getId = pipe(getUrlPath, removeAmp, popId);
 
 export default async ({ getAgent, service, path: pathname, variant, page }) => {
   try {
-    const serviceEnv = pathname.includes('renderer_env=test') ? 'test' : 'live';
-    const agent = isLocal() ? null : await getAgent();
+    const serviceEnv = getEnvironment(pathname);
+    const isLocal = serviceEnv === 'local';
+
+    const agent = isLocal ? null : await getAgent();
     const id = getId(pathname);
 
     const parsedBffUrl = Url(process.env.BFF_PATH).set('query', {
@@ -33,11 +35,13 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
     });
 
     const variantPath = variant ? `/${variant}` : '';
-    const fetchUrl = isLocal()
+
+    const fetchUrl = isLocal
       ? Url(`/${service}${variantPath}/topics/${id}`)
       : parsedBffUrl;
 
-    const optHeaders = isLocal() ? null : { 'ctx-service-env': serviceEnv };
+    const optHeaders = isLocal ? null : { 'ctx-service-env': serviceEnv };
+
     const { status, json } = await fetchPageData({
       path: fetchUrl.toString(),
       agent,

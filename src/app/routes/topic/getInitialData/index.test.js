@@ -37,9 +37,17 @@ const optHeaders = { 'ctx-service-env': 'live' };
 describe('get initial data for topic', () => {
   const agent = { ca: 'ca', key: 'key' };
   const getAgent = jest.fn(() => agent);
+  const originalApplicationEnvironment = process.env.SIMORGH_APP_ENV;
+
+  beforeEach(() => {
+    process.env.SIMORGH_APP_ENV = 'live';
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
+    process.env.SIMORGH_APP_ENV = originalApplicationEnvironment;
   });
+
   it('should return the correct topic data', async () => {
     fetch.mockResponse(JSON.stringify(topicJSON));
     const { pageData } = await getInitialData({
@@ -179,11 +187,29 @@ describe('get initial data for topic', () => {
     });
   });
 
-  it('should request test data when renderer_env is set to test', async () => {
+  it('should request local data on local environment', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
     fetch.mockResponse(JSON.stringify(topicJSON));
     const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
     await getInitialData({
-      path: 'pidgin/topics/54321.?renderer_env=test',
+      path: 'pidgin/topics/54321',
+      getAgent,
+      service: 'pidgin',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'http://localhost/pidgin/topics/54321',
+      agent: null,
+      optHeaders: null,
+    });
+  });
+
+  it('should request test data when renderer_env is set to test', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    await getInitialData({
+      path: 'pidgin/topics/54321?renderer_env=test',
       getAgent,
       service: 'pidgin',
     });
@@ -194,6 +220,23 @@ describe('get initial data for topic', () => {
       path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
       agent,
       optHeaders: testHeader,
+    });
+  });
+
+  it('should request live data when renderer_env is set to live', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    fetch.mockResponse(JSON.stringify(topicJSON));
+    const fetchDataSpy = jest.spyOn(fetchPageData, 'default');
+    await getInitialData({
+      path: 'pidgin/topics/54321?renderer_env=live',
+      getAgent,
+      service: 'pidgin',
+    });
+
+    expect(fetchDataSpy).toHaveBeenCalledWith({
+      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
+      agent,
+      optHeaders,
     });
   });
 
