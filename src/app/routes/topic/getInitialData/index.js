@@ -27,6 +27,7 @@ export default async ({ getAgent, service, path: pathname, variant, page }) => {
       ...(page && {
         page,
       }),
+      pageType: 'topic',
     });
     const optHeaders = { 'ctx-service-env': env };
     const { status, json } = await fetchPageData({
