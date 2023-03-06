@@ -6,11 +6,6 @@ const styles = {
     css({
       display: 'block',
       fill: 'currentcolor',
-      [theme.mq.HIGH_CONTRAST]: {
-        svg: {
-          fill: 'VisitedText',
-        },
-      },
     }),
 };
 
