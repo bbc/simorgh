@@ -4,6 +4,7 @@ import pipe from 'ramda/src/pipe';
 import Url from 'url-parse';
 import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -18,17 +19,6 @@ const getCpsId = (path: string) => path;
 
 const getId = (pageType: string) =>
   pipe(getUrlPath, removeAmp, pageType === 'article' ? getOptimoId : getCpsId);
-
-const getEnvironment = (pathname: string) => {
-  if (pathname.includes('renderer_env=test')) {
-    return 'test';
-  }
-  if (pathname.includes('renderer_env=live')) {
-    return 'live';
-  }
-
-  return process.env.SIMORGH_APP_ENV;
-};
 
 interface BFFError extends Error {
   status: number;
