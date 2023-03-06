@@ -65,10 +65,12 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
-import bylineExtractor from './utilities/bylineExtractor';
-import categoryName from './utilities/categoryName';
-import Byline from './Byline';
-import getAuthorTwitterHandle from './getAuthorTwitterHandle';
+import Byline from '../../components/Byline';
+import {
+  bylineExtractor,
+  categoryName,
+  getAuthorTwitterHandle,
+} from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
