@@ -1,6 +1,5 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { render } from '@testing-library/react';
+import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ScrollableNavigation } from './ScrollableNavigation';
 import Navigation, { NavigationUl, NavigationLi } from './index';
@@ -21,9 +20,6 @@ const navigationUlComponent = (
           currentPageText="Current page"
           service="news"
           data-navigation="test_navigation"
-          brandForegroundColour="#FDFDFD"
-          brandHighlightColour="#FFFFFF"
-          brandBorderColour="#EAB3B3"
         >
           {title}
         </NavigationLi>
@@ -33,65 +29,48 @@ const navigationUlComponent = (
 );
 
 const NavigationExample = (
-  <Navigation
-    script={latin}
-    service="news"
-    brandBackgroundColour="#B80000"
-    brandForegroundColour="#FDFDFD"
-    brandBorderColour="#EAB3B3"
-    brandHighlightColour="#FFFFFF"
-  >
+  <Navigation script={latin} service="news">
     {navigationUlComponent}
   </Navigation>
 );
 
 describe('Navigation', () => {
-  shouldMatchSnapshot('should render correctly', NavigationExample);
+  it('should render correctly', () => {
+    const { container } = render(NavigationExample);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly when isOpen is true',
-    <Navigation
-      script={latin}
-      service="news"
-      isOpen
-      brandBackgroundColour="#B80000"
-      brandForegroundColour="#FDFDFD"
-      brandBorderColour="#EAB3B3"
-      brandHighlightColour="#FFFFFF"
-    >
-      {navigationUlComponent}
-    </Navigation>,
-  );
+  it('should render correctly when isOpen is true', () => {
+    const { container } = render(
+      <Navigation script={latin} service="news" isOpen>
+        {navigationUlComponent}
+      </Navigation>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render correctly when ampOpenClass prop is provided',
-    <Navigation
-      script={latin}
-      skipLinkText="Wụga n’ọdịnaya"
-      service="news"
-      ampOpenClass="is-open"
-      brandBackgroundColour="#B80000"
-      brandForegroundColour="#FDFDFD"
-      brandBorderColour="#EAB3B3"
-      brandHighlightColour="#FFFFFF"
-    >
-      {navigationUlComponent}
-    </Navigation>,
-  );
+  it('should render correctly when ampOpenClass prop is provided', () => {
+    const { container } = render(
+      <Navigation
+        script={latin}
+        skipLinkText="Wụga n’ọdịnaya"
+        service="news"
+        ampOpenClass="is-open"
+      >
+        {navigationUlComponent}
+      </Navigation>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('Scrollable Navigation', () => {
-  shouldMatchSnapshot(
-    'should render correctly',
-    <ScrollableNavigation
-      brandBackgroundColour="#B80000"
-      brandForegroundColour="#FDFDFD"
-      brandBorderColour="#EAB3B3"
-      brandHighlightColour="#FFFFFF"
-    >
-      {NavigationExample}
-    </ScrollableNavigation>,
-  );
+  it('should render correctly', () => {
+    const { container } = render(
+      <ScrollableNavigation>{NavigationExample}</ScrollableNavigation>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
 
 describe('Assertions', () => {
@@ -105,9 +84,6 @@ describe('Assertions', () => {
         service="news"
         active
         data-navigation="test_navigation"
-        brandForegroundColour="#FDFDFD"
-        brandHighlightColour="#FFFFFF"
-        brandBorderColour="#EAB3B3"
       >
         Testing exta props
       </NavigationLi>,
