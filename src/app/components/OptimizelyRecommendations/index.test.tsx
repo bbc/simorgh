@@ -14,6 +14,7 @@ import { Services } from '../../models/types/global';
 import OptimizelyRecommendations, { ArticlePageType } from '.';
 import { samplePageData, hybridV1RecommendationsSample } from './fixtureData';
 
+// 005_brasil_recommendations_experiment
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
@@ -32,7 +33,7 @@ jest.mock('@optimizely/react-sdk', () => {
   };
 });
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 jest.mock('#containers/ATIAnalytics/beacon', () => {
   return {
     __esModule: true,

@@ -6,6 +6,7 @@ import { OptimizelyExperiment } from '@optimizely/react-sdk';
 import OPTIMIZELY_CONFIG from '#lib/config/optimizely';
 import pathOr from 'ramda/src/pathOr';
 
+// 005_brasil_recommendations_experiment
 const OptimizelyRecommendation = ({
   pageData,
   ...props

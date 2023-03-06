@@ -10,7 +10,7 @@ import fetchMock from 'fetch-mock';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 import userEvent from '@testing-library/user-event';
 import {
   OptimizelyExperiment,
@@ -30,7 +30,7 @@ import {
   samplePageData,
 } from '../../components/OptimizelyRecommendations/fixtureData';
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 import ArticlePage from './ArticlePage';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
@@ -66,7 +66,7 @@ jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
   return CanonicalAdBootstrapJs;
 });
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 jest.mock('#containers/ATIAnalytics/beacon', () => {
   return {
     __esModule: true,
@@ -75,7 +75,7 @@ jest.mock('#containers/ATIAnalytics/beacon', () => {
   };
 });
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 jest.mock('@optimizely/react-sdk', () => {
   const actualModules = jest.requireActual('@optimizely/react-sdk');
   return {
@@ -85,7 +85,7 @@ jest.mock('@optimizely/react-sdk', () => {
   };
 });
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
@@ -109,7 +109,7 @@ const defaultToggleState = {
   },
 };
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 const PageWithContext = ({
   pageData,
   service,
@@ -237,7 +237,7 @@ describe.skip('Article Page', () => {
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
     process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';
-    // 004_brasil_recommendations_experiment
+    // 005_brasil_recommendations_experiment
     OptimizelyExperiment.mockImplementation(props => {
       const { children } = props;
 
