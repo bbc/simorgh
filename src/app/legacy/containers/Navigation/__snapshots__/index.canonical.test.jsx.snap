@@ -128,7 +128,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     outline: none;
   }
 
-  .emotion-12:focus-visible:focus-visible::after {
+  .emotion-12:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -136,7 +136,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     height: 100%;
   }
 
-  .emotion-12:focus-visible:after {
+  .emotion-12:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -154,7 +154,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   }
 
   @media (min-width: 25rem) {
-    .emotion-12:focus-visible:after {
+    .emotion-12:after {
       width: 6rem;
     }
   }

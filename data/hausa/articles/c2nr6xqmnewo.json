@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "c00f4824",
+              "id": "ae5f40e4",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "90e979a3",
+                    "id": "26a63f35",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0be14406",
+                          "id": "0ecef1dc",
                           "type": "paragraph",
                           "model": {
                             "text": "Wannan shine taken wannan labarin gwajin",
                             "blocks": [
                               {
-                                "id": "5bf40c90",
+                                "id": "3e1eb398",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Wannan shine taken wannan labarin gwajin",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "77d05f5a",
+              "id": "b2b2c224",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "75985fd9",
+                    "id": "6e093566",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "cfb4237f",
+                          "id": "952a2697",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0c30f87f",
+                                "id": "1605dea3",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken.",
                                   "blocks": [
                                     {
-                                      "id": "0c21ef8b",
+                                      "id": "d855d1f5",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "0117eafc",
+                    "id": "99a85fca",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2f914468",
+                          "id": "e2d220b0",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "ca68f3b6",
+                                "id": "98286498",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Taswirar Faransa wanda ke nuna Paris da Cognac",
                                   "blocks": [
                                     {
-                                      "id": "2d5a3e54",
+                                      "id": "0e0d4345",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Taswirar Faransa wanda ke nuna Paris da Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "bf361119",
+                    "id": "5430e009",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "17228253",
+              "id": "109e07cd",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562936829639,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "02fb6e41",
+              "id": "6cc88dcd",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "615f389b",
+                    "id": "8a214a8d",
                     "type": "paragraph",
                     "model": {
                       "text": "Wannan toshiyar rubutu ce, wacce take dauke da hanyar url zuwa shafin yanar gizo na Weather Weather.",
                       "blocks": [
                         {
-                          "id": "db692f29",
+                          "id": "5ba63977",
                           "type": "fragment",
                           "model": {
                             "text": "Wannan toshiyar rubutu ce, wacce take dauke da hanyar url zuwa ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "8b7c2209",
+                          "id": "1653107e",
                           "type": "urlLink",
                           "model": {
                             "text": "shafin yanar gizo na Weather Weather.",
                             "blocks": [
                               {
-                                "id": "2dfa0e8b",
+                                "id": "5d5679d6",
                                 "type": "fragment",
                                 "model": {
                                   "text": "shafin yanar gizo na Weather Weather.",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "eb6fc79f",
+              "id": "142ebeac",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "726101bf",
+                    "id": "0e232cd5",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "10723019",
+                          "id": "1adeb257",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "dec0ea51",
+                                "id": "f2c28cf4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Wannan toshe bidiyon da ke da bidiyo game da tururuwa",
                                   "blocks": [
                                     {
-                                      "id": "82b40a56",
+                                      "id": "51ba0a8a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Wannan toshe bidiyon da ke da bidiyo game da tururuwa",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "7bc1b68c",
+                    "id": "57223068",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7697bbdc",
+                          "id": "ed9f7367",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -382,12 +382,12 @@
                           ]
                         },
                         {
-                          "id": "495c5b7b",
+                          "id": "34099ff3",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "070b80e7",
+                                "id": "c55e2b3f",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -404,23 +404,23 @@
                                 ]
                               },
                               {
-                                "id": "9881225f",
+                                "id": "1c04df33",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "0d40b2ae",
+                                      "id": "de024421",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "d0ec2140",
+                                            "id": "6388ca33",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "c3af95f3",
+                                                  "id": "f76881ac",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -488,23 +488,23 @@
               ]
             },
             {
-              "id": "bf0579c5",
+              "id": "6cb17a9c",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "2614f775",
+                    "id": "e8982d33",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8e1c927d",
+                          "id": "51bad368",
                           "type": "paragraph",
                           "model": {
                             "text": "Wannan tosheken abu ne",
                             "blocks": [
                               {
-                                "id": "f7ee8ea9",
+                                "id": "9629a7f1",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Wannan tosheken abu ne",
@@ -539,28 +539,28 @@
               ]
             },
             {
-              "id": "8b0809be",
+              "id": "05e40d31",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "dc02c1a3",
+                    "id": "d36426b7",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e59b5b23",
+                          "id": "300f036c",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "75f5d19a",
+                                "id": "d3204d25",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "'Yan wasan kwallon kafa bayan wasa",
                                   "blocks": [
                                     {
-                                      "id": "594141f9",
+                                      "id": "15cdab65",
                                       "type": "fragment",
                                       "model": {
                                         "text": "'Yan wasan kwallon kafa bayan wasa",
@@ -599,7 +599,7 @@
                     ]
                   },
                   {
-                    "id": "bec1d56f",
+                    "id": "64ec01c0",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -620,18 +620,18 @@
               ]
             },
             {
-              "id": "5eb50c1b",
+              "id": "efa31894",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "c50cd027",
+                    "id": "aa821bec",
                     "type": "paragraph",
                     "model": {
                       "text": "An ƙirƙiri wannan labarin gwaji ne domin mu iya yin gwajin ƙarshen-kai-ƙarshen-kai akan gidan yanar gizon mu.",
                       "blocks": [
                         {
-                          "id": "debf60f8",
+                          "id": "49f5fa81",
                           "type": "fragment",
                           "model": {
                             "text": "An ƙirƙiri wannan labarin gwaji ne domin mu iya yin gwajin ƙarshen-kai-ƙarshen-kai akan gidan yanar gizon mu.",
@@ -657,11 +657,21 @@
               ]
             },
             {
-              "id": "b32f8805",
+              "id": "3c8f550f",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "1a00c1ac",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -670,14 +680,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c2nr6xqmnewo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c2nr6xqmnewo"
+          "optimoUrn": "urn:bbc:optimo:asset:c2nr6xqmnewo",
+          "canonicalUrl": "https://www.bbc.com/hausa/articles/c2nr6xqmnewo"
         },
         "type": "article",
         "createdBy": "Hausa",
         "language": "ha",
         "firstPublished": 1562936829639,
         "lastPublished": 1562936829639,
-        "options": {},
         "analyticsLabels": {
           "producer": "Hausa",
           "page": "hausa.articles.c2nr6xqmnewo.page"
@@ -687,7 +697,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Hausa",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -705,12 +714,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Wannan shine taken SEO na wannan labarin gwaji"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1203,7 +1209,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:53:56.55Z",
+        "generated": "2023-02-17T16:23:57.122Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
