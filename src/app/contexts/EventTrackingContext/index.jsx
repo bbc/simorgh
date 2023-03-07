@@ -68,7 +68,6 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
     );
   }
 
-  console.log('REQ123', requestContext.pageType);
   const campaignID = getCampaignID(requestContext.pageType);
   const { pageIdentifier, platform, statsDestination } =
     buildATIEventTrackingParams(pageData, requestContext, serviceContext);

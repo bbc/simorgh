@@ -1,8 +1,4 @@
 import * as analyticsUtils from '#lib/analyticsUtils';
-import {
-  MEDIA_ARTICLE_PAGE,
-  ARTICLE_PAGE,
-} from '../../../../../routes/utils/pageTypes';
 import { buildArticleATIParams, buildArticleATIUrl } from './buildParams';
 
 analyticsUtils.getAtUserId = jest.fn();

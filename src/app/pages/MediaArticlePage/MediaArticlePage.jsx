@@ -274,7 +274,6 @@ const MediaArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <MediaArticlePageGrid>
         <Primary>
           <Main role="main">
-            <h1>MY MEDIA PAGE</h1>
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}

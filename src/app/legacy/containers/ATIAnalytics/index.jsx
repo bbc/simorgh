@@ -53,7 +53,6 @@ const ATIAnalytics = ({ data }) => {
       ),
   };
 
-  console.log('REQ123', requestContext);
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
   if (!isValidPageType) {
     return null;
