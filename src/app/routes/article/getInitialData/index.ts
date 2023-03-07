@@ -62,9 +62,7 @@ export default async ({
     const optHeaders = { 'ctx-service-env': env };
 
     if (isLocal) {
-      const path = getUrlPath(pathname);
-
-      fetchUrl = Url(path);
+      fetchUrl = Url(getUrlPath(pathname));
     }
 
     // @ts-ignore - Ignore fetchPageData argument types
