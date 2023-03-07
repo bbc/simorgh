@@ -3,6 +3,7 @@ import { Agent } from 'https';
 import pathOr from 'ramda/src/pathOr';
 import Url from 'url-parse';
 import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import nodeLogger from '../../../lib/logger.node';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
@@ -11,22 +12,6 @@ import { Services, Variants } from '../../../models/types/global';
 import getOnwardsPageData from '../utils/getOnwardsData';
 
 const logger = nodeLogger(__filename);
-
-const getEnvironment = (pathname: string) => {
-  if (pathname.includes('renderer_env=test')) {
-    return 'test';
-  }
-  if (pathname.includes('renderer_env=live')) {
-    return 'live';
-  }
-  if (pathname.includes('renderer_env=caf')) {
-    return process.env.SIMORGH_APP_ENV !== 'local'
-      ? process.env.SIMORGH_APP_ENV
-      : 'live';
-  }
-
-  return process.env.SIMORGH_APP_ENV;
-};
 
 interface BFFError extends Error {
   status: number;
