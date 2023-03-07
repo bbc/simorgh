@@ -10,10 +10,7 @@ import {
   formatUnixTimestamp,
 } from '#psammead/psammead-timestamp-container/src/utilities';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import {
-  C_WHITE,
-  C_MIDNIGHT_BLACK,
-} from '#psammead/psammead-styles/src/colours';
+import { MIDNIGHT_BLACK } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -27,7 +24,7 @@ import EpisodeList from '#containers/EpisodeList';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const StyledSectionLabel = styled(SectionLabel)`
-  color: ${C_WHITE};
+  color: ${props => props.theme.palette.WHITE};
   margin-bottom: 0;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_DBL};
@@ -79,7 +76,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
         script={script}
         service={service}
         dir={dir}
-        backgroundColor={C_MIDNIGHT_BLACK}
+        backgroundColor={MIDNIGHT_BLACK}
         labelId="recent-episodes"
       >
         {recentEpisodesTranslation}

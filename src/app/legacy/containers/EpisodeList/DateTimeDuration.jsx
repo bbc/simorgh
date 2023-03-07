@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { getBrevier } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { C_METAL, C_PEBBLE } from '#psammead/psammead-styles/src/colours';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
+import { PEBBLE } from '../../../components/ThemeProvider/palette';
 
 import { withEpisodeContext } from './helpers';
 
@@ -12,18 +12,21 @@ ${
     ? `  
     padding-left: ${GEL_SPACING};
     margin-left: ${GEL_SPACING};
-    border-left: 0.0625rem solid ${C_PEBBLE};`
+    border-left: 0.0625rem solid ${PEBBLE};`
     : `
     padding-right: ${GEL_SPACING};
     margin-right: ${GEL_SPACING};
-    border-right: 0.0625rem solid ${C_PEBBLE};`
+    border-right: 0.0625rem solid ${PEBBLE};`
 }
 `;
 
 const DateTimeDuration = styled.span`
   ${({ script }) => getBrevier(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${({ darkMode }) => (darkMode ? C_PEBBLE : C_METAL)};
+  color: ${({ darkMode }) =>
+    darkMode
+      ? props => props.theme.palette.PEBBLE
+      : props => props.theme.palette.METAL};
   ${({ hasBorder, dir }) => hasBorder && borderStyling(dir)}
 `;
 
