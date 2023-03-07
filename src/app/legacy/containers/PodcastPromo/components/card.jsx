@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
-import { C_GHOST, C_EBON } from '#psammead/psammead-styles/src/colours';
+import { C_EBON } from '#psammead/psammead-styles/src/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 
 const Card = styled.div`
   position: relative;
-  background-color: ${C_GHOST};
+  background-color: ${props => props.theme.palette.GHOST};
   ${({ inlinePromo }) => (inlinePromo ? 'display: block;' : 'display: flex;')}
   ${({ inlinePromo }) =>
     inlinePromo ? '' : `box-shadow: 0 0 0.3125rem 0.3125rem ${C_EBON}08;`}
