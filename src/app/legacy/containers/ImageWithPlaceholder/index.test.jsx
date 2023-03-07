@@ -1,7 +1,8 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
-import { C_GHOST } from '#psammead/psammead-styles/src/colours';
+import { GHOST } from '../../../components/ThemeProvider/palette';
+import { render } from '../../../components/react-testing-library-with-providers';
 import {
   ImageWithPlaceholder,
   AmpImageWithPlaceholder,
@@ -61,7 +62,7 @@ describe('ImageWithPlaceholder', () => {
 
     await waitFor(() => {
       expect(document.querySelector('amp-img')).toHaveStyle({
-        backgroundColor: `${C_GHOST}`,
+        backgroundColor: `${GHOST}`,
       });
     });
   });
@@ -71,7 +72,7 @@ describe('ImageWithPlaceholder', () => {
 
     await waitFor(() => {
       expect(document.querySelector('amp-img')).not.toHaveStyle({
-        backgroundColor: `${C_GHOST}`,
+        backgroundColor: `${GHOST}`,
       });
     });
   });
