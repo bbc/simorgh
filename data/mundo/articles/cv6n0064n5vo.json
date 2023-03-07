@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "54f4bc7b",
+              "id": "222a8724",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "efb753e5",
+                    "id": "f6461f41",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "67d99319",
+                          "id": "7f9204dc",
                           "type": "paragraph",
                           "model": {
                             "text": "Test story for WS social",
                             "blocks": [
                               {
-                                "id": "348cea00",
+                                "id": "a66f123b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Test story for WS social",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "0544fd65",
+              "id": "1fdb3280",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1618842525611,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "04daed57",
+              "id": "0a9a3235",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "92c4818e",
+                    "id": "7f956155",
                     "type": "paragraph",
                     "model": {
                       "text": "This story has a Twitter social embed block below this text block.",
                       "blocks": [
                         {
-                          "id": "d9ee1f8b",
+                          "id": "cd9bbf47",
                           "type": "fragment",
                           "model": {
                             "text": "This story has a Twitter social embed block below this text block.",
@@ -104,19 +104,19 @@
               ]
             },
             {
-              "id": "9f439d7e",
+              "id": "62bceb65",
               "type": "social",
               "model": {
                 "source": "https://twitter.com/BBCNews/status/1384138850478346243?s=20",
                 "blocks": [
                   {
-                    "id": "1c0bd1be",
+                    "id": "56d4cbd2",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:2777c9b9-b3d3-4d53-b36c-be749aa528c9",
                       "blocks": [
                         {
-                          "id": "b54f394e",
+                          "id": "9e538d37",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -150,11 +150,21 @@
               ]
             },
             {
-              "id": "744b2ac5",
+              "id": "bf60e0f6",
               "type": "mpu",
               "model": {},
               "position": [
                 5
+              ]
+            },
+            {
+              "id": "ce8396cf",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
               ]
             }
           ]
@@ -163,14 +173,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cv6n0064n5vo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cv6n0064n5vo"
+          "optimoUrn": "urn:bbc:optimo:asset:cv6n0064n5vo",
+          "canonicalUrl": "https://www.bbc.com/mundo/articles/cv6n0064n5vo"
         },
         "type": "article",
         "createdBy": "Mundo",
         "language": "es",
         "firstPublished": 1618842525611,
         "lastPublished": 1618842525611,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cv6n0064n5vo",
           "producer": "Mundo",
@@ -181,7 +191,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -194,7 +203,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Test story for WS social",
           "promoHeadline": {
@@ -224,7 +232,6 @@
             ]
           }
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -250,8 +257,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -495,7 +501,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-12-14T15:43:57.691Z",
+        "generated": "2023-02-18T02:58:56.86Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

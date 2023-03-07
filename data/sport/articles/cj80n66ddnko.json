@@ -5,26 +5,26 @@
         "model": {
           "blocks": [
             {
-              "id": "3a57a37c",
+              "id": "52db9129",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "84c1697f",
+                    "id": "0d642bc2",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "caf0126f",
+                          "id": "cc00b241",
                           "type": "paragraph",
                           "model": {
-                            "text": "Netball World Cup 2019: Northern Ireland earn crucial 67-50 win over Sri Lanka",
+                            "text": "GB’s Renshall wins gold in Baku",
                             "blocks": [
                               {
-                                "id": "137b2751",
+                                "id": "9ab2a036",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "Netball World Cup 2019: Northern Ireland earn crucial 67-50 win over Sri Lanka",
+                                  "text": "GB’s Renshall wins gold in Baku",
                                   "attributes": []
                                 },
                                 "position": [1, 1, 1, 1]
@@ -42,122 +42,165 @@
               "position": [1]
             },
             {
-              "id": "54ba6552",
-              "type": "timestamp",
+              "id": "b2c2a219",
+              "type": "image",
               "model": {
-                "firstPublished": 1563022155629,
-                "lastPublished": 1563022155629
+                "blocks": [
+                  {
+                    "id": "0488935e",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "678344f2",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "df36c51f",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
+                                  "blocks": [
+                                    {
+                                      "id": "0e448a57",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "b01facd1",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "43387d9f",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b8459d61",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "British judoka Lucy Renshall with her silver medal in October",
+                                  "blocks": [
+                                    {
+                                      "id": "a8acca5b",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "British judoka Lucy Renshall with her silver medal in October",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  },
+                  {
+                    "id": "66db879b",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 624,
+                      "height": 351,
+                      "locator": "a999/test/27017af0-2206-11ed-8687-87a75c66c4be.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images",
+                      "suitableForSyndication": true
+                    },
+                    "position": [2, 3]
+                  }
+                ]
               },
               "position": [2]
             },
             {
-              "id": "79839046",
-              "type": "text",
+              "id": "a5cdeab0",
+              "type": "timestamp",
               "model": {
-                "blocks": [
-                  {
-                    "id": "962c1ed7",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Northern Ireland regrouped from Friday's heavy opening defeat by Australia to earn a vital 67-50 win over Sri Lanka at the World Cup.",
-                      "blocks": [
-                        {
-                          "id": "f9e155d5",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Northern Ireland regrouped from Friday's heavy opening defeat by Australia to earn a vital 67-50 win over Sri Lanka at the World Cup.",
-                            "attributes": []
-                          },
-                          "position": [3, 1, 1]
-                        }
-                      ]
-                    },
-                    "position": [3, 1]
-                  },
-                  {
-                    "id": "af7f9323",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "The win boosts Northern Ireland's hopes of clinching the top-three spot in Group A which would see them progress to the next stage of the competition.",
-                      "blocks": [
-                        {
-                          "id": "715d8457",
-                          "type": "fragment",
-                          "model": {
-                            "text": "The win boosts Northern Ireland's hopes of clinching the top-three spot in Group A which would see them progress to the next stage of the competition.",
-                            "attributes": []
-                          },
-                          "position": [3, 2, 1]
-                        }
-                      ]
-                    },
-                    "position": [3, 2]
-                  },
-                  {
-                    "id": "99f2702b",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Emma Magee and half-time substitute Noleen Armstrong both scored heavily for the dominant Northern Irish.",
-                      "blocks": [
-                        {
-                          "id": "d59563fc",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Emma Magee and half-time substitute Noleen Armstrong both scored heavily for the dominant Northern Irish.",
-                            "attributes": []
-                          },
-                          "position": [3, 3, 1]
-                        }
-                      ]
-                    },
-                    "position": [3, 3]
-                  },
-                  {
-                    "id": "a8afd9a1",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Northern Ireland led 34-25 at half-time and remained in control.",
-                      "blocks": [
-                        {
-                          "id": "cb2223a1",
-                          "type": "fragment",
-                          "model": {
-                            "text": "Northern Ireland led 34-25 at half-time and remained in control.",
-                            "attributes": []
-                          },
-                          "position": [3, 4, 1]
-                        }
-                      ]
-                    },
-                    "position": [3, 4]
-                  }
-                ]
+                "firstPublished": 1661165030455,
+                "lastPublished": 1661165030455
               },
               "position": [3]
             },
             {
-              "id": "5e649c35",
-              "type": "mpu",
-              "model": {},
-              "position": [4]
-            },
-            {
-              "id": "317422ff",
+              "id": "e7a0fee8",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "447a3531",
+                    "id": "8a92d3ac",
                     "type": "paragraph",
                     "model": {
-                      "text": "Magee hit 18 goals in the first half as Northern Ireland bossed the contest from the off.",
+                      "text": "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.",
                       "blocks": [
                         {
-                          "id": "09f3f1fe",
+                          "id": "61450e6f",
                           "type": "fragment",
                           "model": {
-                            "text": "Magee hit 18 goals in the first half as Northern Ireland bossed the contest from the off.",
-                            "attributes": []
+                            "text": "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.",
+                            "attributes": ["bold"]
+                          },
+                          "position": [4, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [4, 1]
+                  }
+                ]
+              },
+              "position": [4]
+            },
+            {
+              "id": "a949f714",
+              "type": "social",
+              "model": {
+                "source": "https://twitter.com/BBCSport/status/1567048705102041091",
+                "providerName": "Twitter",
+                "blocks": [
+                  {
+                    "id": "48928f54",
+                    "type": "renditions",
+                    "model": {
+                      "locator": "urn:bbc:optimo:social:4a6cec66-038e-442d-bdd5-404bfcc20290",
+                      "blocks": [
+                        {
+                          "id": "83f4b9ea",
+                          "type": "aresOEmbed",
+                          "model": {
+                            "oembed": {
+                              "version": "1.0",
+                              "author_name": "BBC Sport",
+                              "author_url": "https://twitter.com/BBCSport",
+                              "provider_name": "Twitter",
+                              "provider_url": "https://twitter.com",
+                              "url": "https://twitter.com/BBCSport/status/1567048705102041091",
+                              "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Rafa Nadal: &quot;I need to fix things, life, then I don&#39;t know when I&#39;m going to come back.&quot;<br><br>More 🔽 <a href=\"https://twitter.com/hashtag/BBCTennis?src=hash&amp;ref_src=twsrc%5Etfw\">#BBCTennis</a></p>&mdash; BBC Sport (@BBCSport) <a href=\"https://twitter.com/BBCSport/status/1567048705102041091?ref_src=twsrc%5Etfw\">September 6, 2022</a></blockquote>\n",
+                              "width": 550
+                            }
                           },
                           "position": [5, 1, 1]
                         }
@@ -168,47 +211,414 @@
                 ]
               },
               "position": [5]
+            },
+            {
+              "id": "9b474bca",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "4fe24163",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Renshall held Bold down for 20 seconds to win the -63kg fight and earn her second Grand Slam gold of the year.",
+                      "blocks": [
+                        {
+                          "id": "61a1fdc8",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Renshall held Bold down for 20 seconds to win the -63kg fight and earn her second Grand Slam gold of the year.",
+                            "attributes": []
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  },
+                  {
+                    "id": "b0f6675e",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "The 25-year-old, who received a bye in the opening round, beat Australia's Katharina Haecker in the semi-final.",
+                      "blocks": [
+                        {
+                          "id": "a2a8c267",
+                          "type": "fragment",
+                          "model": {
+                            "text": "The 25-year-old, who received a bye in the opening round, beat Australia's Katharina Haecker in the semi-final.",
+                            "attributes": []
+                          },
+                          "position": [6, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 2]
+                  },
+                  {
+                    "id": "6788d1c4",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Team-mate Kelly Petersen-Pollard, 22, picked up her first Grand Slam medal, beating Germany's Julie Hoelterhoff to win bronze in the -70kg division.",
+                      "blocks": [
+                        {
+                          "id": "809aadf2",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Team-mate Kelly Petersen-Pollard, 22, picked up her first Grand Slam medal, beating Germany's Julie Hoelterhoff to win bronze in the -70kg division.",
+                            "attributes": []
+                          },
+                          "position": [6, 3, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 3]
+                  }
+                ]
+              },
+              "position": [6]
+            },
+            { "id": "6e837989", "type": "mpu", "model": {}, "position": [7] },
+            {
+              "id": "8cf62fae",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "37fb0fd3",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "On Friday, 2020 Olympic bronze medallist Chelsie Giles won silver in the women's -52kg category.",
+                      "blocks": [
+                        {
+                          "id": "9c50e4f5",
+                          "type": "fragment",
+                          "model": {
+                            "text": "On Friday, 2020 Olympic bronze medallist Chelsie Giles won silver in the women's -52kg category.",
+                            "attributes": []
+                          },
+                          "position": [8, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [8, 1]
+                  }
+                ]
+              },
+              "position": [8]
+            },
+            {
+              "id": "cbb091a2",
+              "type": "wsoj",
+              "model": { "type": "recommendations" },
+              "position": [9]
             }
           ]
         }
       },
       "metadata": {
-        "id": "urn:bbc:ares::article:c1k48dxykddo",
+        "id": "urn:bbc:ares::article:cj80n66ddnko",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c1k48dxykddo",
-          "canonicalUrl": "https://www.bbc.com/sport/articles/c1k48dxykddo"
+          "optimoUrn": "urn:bbc:optimo:asset:cj80n66ddnko",
+          "canonicalUrl": "https://www.bbc.com/sport/judo/articles/cj80n66ddnko"
         },
         "type": "article",
         "createdBy": "Sport",
         "language": "en-gb",
-        "firstPublished": 1563022155629,
-        "lastPublished": 1563022155629,
+        "firstPublished": 1661165030455,
+        "lastPublished": 1661165030455,
         "analyticsLabels": {
-          "contentId": "urn:bbc:optimo:asset:c1k48dxykddo",
-          "producer": "Sport",
-          "page": "sport.articles.c1k48dxykddo.page"
+          "ldp_tags": "Judo~Baku",
+          "page": "sport.judo.articles.cj80n66ddnko.page",
+          "ldp_ids": "654f550c-0c2d-2341-a8f5-66e3a9ba28ba~99f3bbff-ff87-4cc4-a43f-67c60fc9d76e",
+          "contentId": "urn:bbc:optimo:asset:cj80n66ddnko",
+          "producer": "Sport"
         },
         "passport": {
           "language": "en-gb",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Sport",
-          "taggings": []
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "Report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "en-gb",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id",
+                "thingLabel": "Judo",
+                "thingUri": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id",
+                "thingId": "654f550c-0c2d-2341-a8f5-66e3a9ba28ba",
+                "thingType": [
+                  "core:Thing",
+                  "sport:SportsDiscipline",
+                  "tagging:Genre",
+                  "tagging:AmbiguousTerm",
+                  "tagging:TagConcept"
+                ],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Judo",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id",
+                "thingLabel": "Baku",
+                "thingUri": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id",
+                "thingId": "99f3bbff-ff87-4cc4-a43f-67c60fc9d76e",
+                "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+                "thingSameAs": ["http://sws.geonames.org/587084/"],
+                "thingEnglishLabel": "Baku",
+                "type": "about"
+              }
+            ]
+          }
         },
-        "tags": {},
-        "blockTypes": ["headline", "text", "paragraph", "fragment"],
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Judo",
+              "thingUri": "http://www.bbc.co.uk/things/654f550c-0c2d-2341-a8f5-66e3a9ba28ba#id",
+              "thingId": "654f550c-0c2d-2341-a8f5-66e3a9ba28ba",
+              "thingType": [
+                "core:Thing",
+                "sport:SportsDiscipline",
+                "tagging:Genre",
+                "tagging:AmbiguousTerm",
+                "tagging:TagConcept"
+              ],
+              "thingSameAs": [],
+              "thingEnglishLabel": "Judo",
+              "thingLabelLanguage": "en-gb",
+              "thingPreferredLabel": "Judo"
+            },
+            {
+              "thingLabel": "Baku",
+              "thingUri": "http://www.bbc.co.uk/things/99f3bbff-ff87-4cc4-a43f-67c60fc9d76e#id",
+              "thingId": "99f3bbff-ff87-4cc4-a43f-67c60fc9d76e",
+              "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+              "thingSameAs": ["http://sws.geonames.org/587084/"],
+              "thingEnglishLabel": "Baku",
+              "thingLabelLanguage": "en-gb",
+              "thingPreferredLabel": "Baku"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "image",
+          "caption",
+          "altText",
+          "rawImage",
+          "social",
+          "renditions",
+          "aresOEmbed"
+        ],
+        "consumableAsSFV": false,
         "allowAdvertising": true
       },
       "promo": {
         "headlines": {
-          "seoHeadline": "Netball World Cup 2019: Northern Ireland earn crucial 67-50 win over Sri Lanka"
+          "seoHeadline": "Lucy Renshall: British judoka wins gold at Baku Grand Slam",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "GB’s Renshall wins gold in Baku",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "GB’s Renshall wins gold in Baku",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Lucy Renshall picked up Silver at the Paris Grand Slam in October.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "British judoka Lucy Renshall with her silver medal in October",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "British judoka Lucy Renshall with her silver medal in October",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "a999/test/27017af0-2206-11ed-8687-87a75c66c4be.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "Getty Images",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Great Britain’s Lucy Renshall wins gold at the Baku Grand Slam after defeating Mongolia’s Gankhaich Bold in the final.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Great Britain’s Lucy Renshall wins gold at the Baku Grand Slam after defeating Mongolia’s Gankhaich Bold in the final.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       }
     },
     "secondaryData": {
       "topStories": [
         {
-          "headlines": {
-            "headline": "Ramsey replaced as Wales captain"
-          },
+          "headlines": { "headline": "Ramsey replaced as Wales captain" },
           "locators": {
             "assetUri": "/sport/archery/23260387",
             "cpsUrn": "urn:bbc:content:assetUri:sport/archery/23260387",
@@ -221,12 +631,7 @@
           "byline": {
             "name": "By Tom Rostance",
             "title": "BBC Sport ",
-            "persons": [
-              {
-                "name": "Tom Rostance",
-                "function": "BBC Sport"
-              }
-            ]
+            "persons": [{ "name": "Tom Rostance", "function": "BBC Sport" }]
           },
           "cpsType": "STY",
           "indexImage": {
@@ -241,10 +646,7 @@
             "originCode": "cpsdevpb",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "section": {
             "subType": "IDX",
             "name": "Archery",
@@ -256,9 +658,7 @@
           "type": "cps"
         },
         {
-          "headlines": {
-            "headline": "Olympic rings launched on Thames"
-          },
+          "headlines": { "headline": "Olympic rings launched on Thames" },
           "locators": {
             "assetUri": "/news/uk-england-london-17189296",
             "cpsUrn": "urn:bbc:content:assetUri:news/uk-england-london-17189296",
@@ -292,10 +692,7 @@
             "copyrightHolder": "PA",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "section": {
             "subType": "IDX",
             "name": "London",
@@ -312,9 +709,7 @@
           "type": "cps"
         },
         {
-          "headlines": {
-            "headline": "Grand Final 'just reward' for Wolves!"
-          },
+          "headlines": { "headline": "Grand Final 'just reward' for Wolves!" },
           "locators": {
             "assetUri": "/sport/av/rugby-league/19801995",
             "cpsUrn": "urn:bbc:content:assetUri:sport/av/rugby-league/19801995",
@@ -370,10 +765,7 @@
             "copyrightHolder": "Paul Thomas",
             "type": "image"
           },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false
-          },
+          "options": { "isBreakingNews": false, "isFactCheck": false },
           "section": {
             "subType": "IDX",
             "name": "Rugby League",
@@ -883,10 +1275,7 @@
                       "short": "Contains explicit sexual content and disturbing scenes.",
                       "long": "Contains explicit sexual scenes and scenes which some viewers may find disturbing."
                     },
-                    "availableTerritories": {
-                      "uk": true,
-                      "nonUk": false
-                    },
+                    "availableTerritories": { "uk": true, "nonUk": false },
                     "availableFrom": 1487158810000
                   }
                 ],
@@ -1111,10 +1500,7 @@
                       "short": "Contains adult humour.",
                       "long": "Contains adult humour."
                     },
-                    "availableTerritories": {
-                      "uk": true,
-                      "nonUk": true
-                    },
+                    "availableTerritories": { "uk": true, "nonUk": true },
                     "availableFrom": 1495704394000
                   }
                 ],
@@ -1276,9 +1662,7 @@
                 "subType": "clip",
                 "format": "video",
                 "title": "Update default vs football image",
-                "synopses": {
-                  "short": "media clip testing"
-                },
+                "synopses": { "short": "media clip testing" },
                 "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/clip/p017yfgc.jpg",
                 "embedding": false,
                 "advertising": true,
@@ -1290,10 +1674,7 @@
                     "duration": 26,
                     "durationISO8601": "PT26S",
                     "warnings": {},
-                    "availableTerritories": {
-                      "uk": true,
-                      "nonUk": true
-                    },
+                    "availableTerritories": { "uk": true, "nonUk": true },
                     "availableFrom": 1485262600000
                   }
                 ],

@@ -5,26 +5,26 @@
         "model": {
           "blocks": [
             {
-              "id": "743a0e6b",
+              "id": "cd8dd408",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "c05ba695",
+                    "id": "ad54abaa",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "75217fd0",
+                          "id": "f67e85c1",
                           "type": "paragraph",
                           "model": {
-                            "text": "Dyma bennawd yr erthygl brawf yma",
+                            "text": "DYMA bennawd yr erthygl brawf yma",
                             "blocks": [
                               {
-                                "id": "f331234f",
+                                "id": "8ffb8370",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "Dyma bennawd yr erthygl brawf yma",
+                                  "text": "DYMA bennawd yr erthygl brawf yma",
                                   "attributes": []
                                 },
                                 "position": [
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "90e30bc3",
+              "id": "5f84aad8",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "649d4114",
+                    "id": "e357313f",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1761000f",
+                          "id": "2e32e8b0",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "278dddb3",
+                                "id": "5b931d1c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
                                   "blocks": [
                                     {
-                                      "id": "d4358119",
+                                      "id": "59b209ad",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "b640156a",
+                    "id": "6ffe6216",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e98df449",
+                          "id": "b867ccef",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e31d8575",
+                                "id": "47b6d42d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Map o Ffrainc yn dangos Paris a Cognac",
                                   "blocks": [
                                     {
-                                      "id": "085dba51",
+                                      "id": "88bac301",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Map o Ffrainc yn dangos Paris a Cognac",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "bee4430a",
+                    "id": "aefe4bdc",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,55 +192,185 @@
               ]
             },
             {
-              "id": "bce1399e",
-              "type": "timestamp",
+              "id": "9c8c30a1",
+              "type": "group",
               "model": {
-                "firstPublished": 1563022049359,
-                "lastPublished": 1570805332046
+                "intentType": "overview",
+                "relationshipType": "optional",
+                "blocks": [
+                  {
+                    "id": "a7b0f430",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "e535d3f9",
+                          "type": "unorderedList",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "fd1b3e0f",
+                                "type": "listItem",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "8893dfda",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Mae’r llun prawf hwn, hawlfraint BBC",
+                                        "blocks": [
+                                          {
+                                            "id": "01a8a20e",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Mae’r llun prawf hwn, hawlfraint BBC",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              3,
+                                              1,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        3,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  3,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "a3d8c887",
+                                "type": "listItem",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "217fba43",
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Dyma flwch prawf, sy’n cynnwys dolen url",
+                                        "blocks": [
+                                          {
+                                            "id": "312286b1",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Dyma flwch prawf, sy’n cynnwys dolen url",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              3,
+                                              1,
+                                              1,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        3,
+                                        1,
+                                        1,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  3,
+                                  1,
+                                  1,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            3,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      3,
+                      1
+                    ]
+                  }
+                ]
               },
               "position": [
                 3
               ]
             },
             {
-              "id": "1724bbfb",
+              "id": "dfc1284f",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1563022049359,
+                "lastPublished": 1676382778791
+              },
+              "position": [
+                4
+              ]
+            },
+            {
+              "id": "e7d9ffcd",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "02f3f639",
+                    "id": "9b152c7e",
                     "type": "paragraph",
                     "model": {
                       "text": "Dyma flwch prawf, sy’n cynnwys dolen url i dudalen dywydd y BBC",
                       "blocks": [
                         {
-                          "id": "1d568cb7",
+                          "id": "82280c19",
                           "type": "fragment",
                           "model": {
                             "text": "Dyma flwch prawf, sy’n cynnwys dolen url i dudalen ",
                             "attributes": []
                           },
                           "position": [
-                            4,
+                            5,
                             1,
                             1
                           ]
                         },
                         {
-                          "id": "24c4bee5",
+                          "id": "faa9b0a4",
                           "type": "urlLink",
                           "model": {
                             "text": "dywydd y BBC",
                             "blocks": [
                               {
-                                "id": "c1f6ef05",
+                                "id": "f89bc60e",
                                 "type": "fragment",
                                 "model": {
                                   "text": "dywydd y BBC",
                                   "attributes": []
                                 },
                                 "position": [
-                                  4,
+                                  5,
                                   1,
                                   2,
                                   1
@@ -251,7 +381,7 @@
                             "isExternal": false
                           },
                           "position": [
-                            4,
+                            5,
                             1,
                             2
                           ]
@@ -259,47 +389,47 @@
                       ]
                     },
                     "position": [
-                      4,
+                      5,
                       1
                     ]
                   }
                 ]
               },
               "position": [
-                4
+                5
               ]
             },
             {
-              "id": "252bde60",
+              "id": "9e304e81",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "d1e8866d",
+                    "id": "991f48b6",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "53517fe9",
+                          "id": "d5f4e626",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "dfb53442",
+                                "id": "e88b6eab",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Dyma flwch fideo sy’n cynnwys fideo am forgrug",
                                   "blocks": [
                                     {
-                                      "id": "0ffbdcc5",
+                                      "id": "e564d98e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Dyma flwch fideo sy’n cynnwys fideo am forgrug",
                                         "attributes": []
                                       },
                                       "position": [
-                                        5,
+                                        6,
                                         1,
                                         1,
                                         1,
@@ -309,7 +439,7 @@
                                   ]
                                 },
                                 "position": [
-                                  5,
+                                  6,
                                   1,
                                   1,
                                   1
@@ -318,7 +448,7 @@
                             ]
                           },
                           "position": [
-                            5,
+                            6,
                             1,
                             1
                           ]
@@ -326,17 +456,17 @@
                       ]
                     },
                     "position": [
-                      5,
+                      6,
                       1
                     ]
                   },
                   {
-                    "id": "29c5f603",
+                    "id": "7c7560cd",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "01f13b77",
+                          "id": "fe735af6",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -376,18 +506,18 @@
                             "smpKind": "programme"
                           },
                           "position": [
-                            5,
+                            6,
                             2,
                             1
                           ]
                         },
                         {
-                          "id": "adbe7486",
+                          "id": "59aeba84",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "7b7a6645",
+                                "id": "2721cb0c",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -397,37 +527,37 @@
                                   "copyrightHolder": "BBC"
                                 },
                                 "position": [
-                                  5,
+                                  6,
                                   2,
                                   2,
                                   1
                                 ]
                               },
                               {
-                                "id": "83cbb9de",
+                                "id": "217103e9",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "3d623b7d",
+                                      "id": "3651a5cf",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "5b56b1c6",
+                                            "id": "14ecf30b",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "f616690c",
+                                                  "id": "80412970",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
                                                     "attributes": []
                                                   },
                                                   "position": [
-                                                    5,
+                                                    6,
                                                     2,
                                                     2,
                                                     2,
@@ -439,7 +569,7 @@
                                               ]
                                             },
                                             "position": [
-                                              5,
+                                              6,
                                               2,
                                               2,
                                               2,
@@ -450,7 +580,7 @@
                                         ]
                                       },
                                       "position": [
-                                        5,
+                                        6,
                                         2,
                                         2,
                                         2,
@@ -460,7 +590,7 @@
                                   ]
                                 },
                                 "position": [
-                                  5,
+                                  6,
                                   2,
                                   2,
                                   2
@@ -469,7 +599,7 @@
                             ]
                           },
                           "position": [
-                            5,
+                            6,
                             2,
                             2
                           ]
@@ -477,59 +607,8 @@
                       ]
                     },
                     "position": [
-                      5,
-                      2
-                    ]
-                  }
-                ]
-              },
-              "position": [
-                5
-              ]
-            },
-            {
-              "id": "c8413ee5",
-              "type": "subheadline",
-              "model": {
-                "blocks": [
-                  {
-                    "id": "cc855b09",
-                    "type": "text",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "2c96f43a",
-                          "type": "paragraph",
-                          "model": {
-                            "text": "Dyma flwch ar gyfer is-bennawd",
-                            "blocks": [
-                              {
-                                "id": "840af2e0",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Dyma flwch ar gyfer is-bennawd",
-                                  "attributes": []
-                                },
-                                "position": [
-                                  6,
-                                  1,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            6,
-                            1,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
                       6,
-                      1
+                      2
                     ]
                   }
                 ]
@@ -539,42 +618,27 @@
               ]
             },
             {
-              "id": "1cb14258",
-              "type": "image",
+              "id": "05ded594",
+              "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "480ffe26",
-                    "type": "altText",
+                    "id": "44e64ecd",
+                    "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c88ab8da",
-                          "type": "text",
+                          "id": "cf8ce5dc",
+                          "type": "paragraph",
                           "model": {
+                            "text": "Dyma flwch ar gyfer is-bennawd",
                             "blocks": [
                               {
-                                "id": "49f381e9",
-                                "type": "paragraph",
+                                "id": "9b112daf",
+                                "type": "fragment",
                                 "model": {
-                                  "text": "Pêl-droedwyr ar ôl y gêm",
-                                  "blocks": [
-                                    {
-                                      "id": "e3cf637d",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Pêl-droedwyr ar ôl y gêm",
-                                        "attributes": []
-                                      },
-                                      "position": [
-                                        7,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
+                                  "text": "Dyma flwch ar gyfer is-bennawd",
+                                  "attributes": []
                                 },
                                 "position": [
                                   7,
@@ -597,21 +661,6 @@
                       7,
                       1
                     ]
-                  },
-                  {
-                    "id": "92b267bc",
-                    "type": "rawImage",
-                    "model": {
-                      "width": 2048,
-                      "height": 1152,
-                      "locator": "c761/test/bc387830-ec35-11e9-88d6-81aa2ccc6d4c.jpg",
-                      "originCode": "cpsdevpb",
-                      "copyrightHolder": "Getty Images"
-                    },
-                    "position": [
-                      7,
-                      2
-                    ]
                   }
                 ]
               },
@@ -620,22 +669,51 @@
               ]
             },
             {
-              "id": "b6787a7c",
-              "type": "text",
+              "id": "7eb8eba0",
+              "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "fedd83ea",
-                    "type": "paragraph",
+                    "id": "f5042a96",
+                    "type": "altText",
                     "model": {
-                      "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
                       "blocks": [
                         {
-                          "id": "8bdc3ae7",
-                          "type": "fragment",
+                          "id": "aa57e17e",
+                          "type": "text",
                           "model": {
-                            "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
-                            "attributes": []
+                            "blocks": [
+                              {
+                                "id": "0d8a2915",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Pêl-droedwyr ar ôl y gêm",
+                                  "blocks": [
+                                    {
+                                      "id": "40ebc8c9",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Pêl-droedwyr ar ôl y gêm",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        8,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  8,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
                           },
                           "position": [
                             8,
@@ -649,6 +727,21 @@
                       8,
                       1
                     ]
+                  },
+                  {
+                    "id": "9a49b4e0",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2048,
+                      "height": 1152,
+                      "locator": "c761/test/bc387830-ec35-11e9-88d6-81aa2ccc6d4c.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Getty Images"
+                    },
+                    "position": [
+                      8,
+                      2
+                    ]
                   }
                 ]
               },
@@ -657,11 +750,369 @@
               ]
             },
             {
-              "id": "cd8fc67b",
+              "id": "8418923b",
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "99a124f8",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
+                      "blocks": [
+                        {
+                          "id": "0e65d8a8",
+                          "type": "fragment",
+                          "model": {
+                            "text": "Mae’r erthygl brawf yma wedi ei chreu er mwyn cynnal profion ar y wefan drwyddi draw",
+                            "attributes": []
+                          },
+                          "position": [
+                            9,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      9,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                9
+              ]
+            },
+            {
+              "id": "a96a52d8",
+              "type": "relatedContent",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "f50ee789",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:4d5a3110-3a0d-4927-b9d9-b98aa1360371",
+                      "blocks": [
+                        {
+                          "id": "3f288808",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "abe1c2c6",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Galw am gefnogi mwy o bobl hŷn yn ôl i fyd gwaith",
+                                  "blocks": [
+                                    {
+                                      "id": "fbd23324",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Galw am gefnogi mwy o bobl hŷn yn ôl i fyd gwaith",
+                                        "locator": "https://www.bbc.co.uk/newyddion/64629316",
+                                        "blocks": [
+                                          {
+                                            "id": "b93c5045",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Galw am gefnogi mwy o bobl hŷn yn ôl i fyd gwaith",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              10,
+                                              1,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [
+                                        10,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  10,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            10,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "3bfbc249",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:3146bf46-dfb4-4b1f-bf5c-7773a28a5365",
+                      "blocks": [
+                        {
+                          "id": "8107fb23",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "776f8277",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Mwy o bobl hŷn yn",
+                                  "blocks": [
+                                    {
+                                      "id": "ee3dca03",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Mwy o bobl hŷn yn",
+                                        "locator": "https://www.bbc.co.uk/newyddion/64562953",
+                                        "blocks": [
+                                          {
+                                            "id": "c3b5c9c0",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Mwy o bobl hŷn yn",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              10,
+                                              2,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [
+                                        10,
+                                        2,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  10,
+                                  2,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            10,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "0e4b4823",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:bcff98b7-27e2-458e-bee2-3fd98ffd0ffc",
+                      "blocks": [
+                        {
+                          "id": "4499ad7c",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "4a1270bc",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Daeth PRIME Cymru",
+                                  "blocks": [
+                                    {
+                                      "id": "0a99df08",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Daeth PRIME Cymru",
+                                        "locator": "https://www.bbc.co.uk/cymrufyw/64597494",
+                                        "blocks": [
+                                          {
+                                            "id": "d0e17f30",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Daeth PRIME Cymru",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              10,
+                                              3,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [
+                                        10,
+                                        3,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  10,
+                                  3,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            10,
+                            3,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      3
+                    ]
+                  },
+                  {
+                    "id": "5c9a0020",
+                    "type": "link",
+                    "model": {
+                      "locator": "urn:bbc:cps:curie:asset:ccd8f70c-0e2d-411d-a06e-5f1317541cc0",
+                      "blocks": [
+                        {
+                          "id": "0c3c2cbd",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2030261c",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Economi'r wlad yn tyfu",
+                                  "blocks": [
+                                    {
+                                      "id": "2df7330f",
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "Economi'r wlad yn tyfu",
+                                        "locator": "https://www.bbc.co.uk/cymrufyw/64627667",
+                                        "blocks": [
+                                          {
+                                            "id": "123eccc0",
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Economi'r wlad yn tyfu",
+                                              "attributes": []
+                                            },
+                                            "position": [
+                                              10,
+                                              4,
+                                              1,
+                                              1,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ],
+                                        "isExternal": false
+                                      },
+                                      "position": [
+                                        10,
+                                        4,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  10,
+                                  4,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            10,
+                            4,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      4
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                10
+              ]
+            },
+            {
+              "id": "804033cf",
               "type": "mpu",
               "model": {},
               "position": [
-                9
+                11
+              ]
+            },
+            {
+              "id": "d95a929d",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                12
               ]
             }
           ]
@@ -670,30 +1121,149 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c06p32z9x2mo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo"
+          "optimoUrn": "urn:bbc:optimo:asset:c06p32z9x2mo",
+          "canonicalUrl": "https://www.bbc.com/cymrufyw/erthyglau/c06p32z9x2mo"
         },
         "type": "article",
         "createdBy": "Cymrufyw",
         "language": "cy",
         "firstPublished": 1563022049359,
-        "lastPublished": 1570805332046,
-        "options": {},
+        "lastPublished": 1676382778791,
         "analyticsLabels": {
+          "ldp_tags": "Gwynedd+Council~Tourism",
+          "page": "cymrufyw.erthyglau.c06p32z9x2mo.page",
+          "ldp_ids": "824e2963-2c7c-4071-8a2e-c0ddbd0daf72~ae43b7ed-1477-4bcc-8a84-d6d75919cbbc",
           "contentId": "urn:bbc:optimo:asset:c06p32z9x2mo",
-          "producer": "Wales",
-          "page": "cymrufyw.erthyglau.c06p32z9x2mo.page"
+          "producer": "Wales"
         },
         "passport": {
           "language": "cy",
           "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw",
-          "taggings": []
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/824e2963-2c7c-4071-8a2e-c0ddbd0daf72#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+              "value": "http://www.bbc.co.uk/things/824e2963-2c7c-4071-8a2e-c0ddbd0daf72#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id"
+            }
+          ],
+          "predicates": {
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/824e2963-2c7c-4071-8a2e-c0ddbd0daf72#id",
+                "thingLabel": "Cyngor Gwynedd",
+                "thingUri": "http://www.bbc.co.uk/things/824e2963-2c7c-4071-8a2e-c0ddbd0daf72#id",
+                "thingId": "824e2963-2c7c-4071-8a2e-c0ddbd0daf72",
+                "thingType": [
+                  "core:Organisation",
+                  "tagging:AmbiguousTerm",
+                  "tagging:TagConcept",
+                  "tagging:Agent",
+                  "core:Thing"
+                ],
+                "thingSameAs": [
+                  "http://statistics.data.gov.uk/id/local-authority/00NC"
+                ],
+                "thingEnglishLabel": "Gwynedd Council",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id",
+                "thingLabel": "Twristiaeth ",
+                "thingUri": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id",
+                "thingId": "ae43b7ed-1477-4bcc-8a84-d6d75919cbbc",
+                "thingType": [
+                  "tagging:TagConcept",
+                  "core:Thing",
+                  "core:Theme"
+                ],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q49389",
+                  "http://dbpedia.org/resource/Tourism"
+                ],
+                "thingEnglishLabel": "Tourism",
+                "type": "about"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "contributor": [
+              {
+                "value": "http://www.bbc.co.uk/things/824e2963-2c7c-4071-8a2e-c0ddbd0daf72#id",
+                "type": "contributor"
+              }
+            ]
+          }
         },
-        "tags": {},
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "Cyngor Gwynedd",
+              "thingUri": "http://www.bbc.co.uk/things/824e2963-2c7c-4071-8a2e-c0ddbd0daf72#id",
+              "thingId": "824e2963-2c7c-4071-8a2e-c0ddbd0daf72",
+              "thingType": [
+                "core:Organisation",
+                "tagging:AmbiguousTerm",
+                "tagging:TagConcept",
+                "tagging:Agent",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://statistics.data.gov.uk/id/local-authority/00NC"
+              ],
+              "topicName": "Cyngor Gwynedd",
+              "topicId": "c00eqqqgmqet",
+              "curationList": [
+                {
+                  "curationId": "6fd22b56-bb77-4657-bfa6-d40b29ca5142",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Gwynedd Council",
+              "thingLabelLanguage": "cy",
+              "thingPreferredLabel": "Gwynedd Council"
+            },
+            {
+              "thingLabel": "Twristiaeth ",
+              "thingUri": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id",
+              "thingId": "ae43b7ed-1477-4bcc-8a84-d6d75919cbbc",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Thing",
+                "core:Theme"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q49389",
+                "http://dbpedia.org/resource/Tourism"
+              ],
+              "thingEnglishLabel": "Tourism",
+              "thingLabelLanguage": "cy",
+              "thingPreferredLabel": "Tourism"
+            }
+          ]
+        },
         "blockTypes": [
           "headline",
           "text",
           "paragraph",
           "fragment",
+          "group",
+          "unorderedList",
+          "listItem",
           "image",
           "caption",
           "altText",
@@ -701,17 +1271,172 @@
           "urlLink",
           "video",
           "subheadline",
+          "links",
+          "link",
           "aresMedia"
         ],
-        "allowAdvertising": true
+        "topics": [
+          {
+            "topicName": "Cyngor Gwynedd",
+            "topicId": "c00eqqqgmqet",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/824e2963-2c7c-4071-8a2e-c0ddbd0daf72#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "6fd22b56-bb77-4657-bfa6-d40b29ca5142",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Organisation",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "tagging:Agent",
+              "core:Thing"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw"
+          }
+        ],
+        "consumableAsSFV": false,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {},
         "headlines": {
-          "seoHeadline": "Dyma bennawd SEO yr erthygl brawf yma"
+          "seoHeadline": "Dyma bennawd SEO yr erthygl brawf yma",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "DYMA bennawd yr erthygl brawf yma",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "DYMA bennawd yr erthygl brawf yma",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         },
-        "images": {},
-        "passport": {}
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Map o Ffrainc yn dangos Paris a Cognac",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Map o Ffrainc yn dangos Paris a Cognac",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 624,
+                  "height": 351,
+                  "locator": "434d/test/2dd9efb0-ec35-11e9-88d6-81aa2ccc6d4c.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       }
     },
     "secondaryData": {
