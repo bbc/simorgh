@@ -4,7 +4,7 @@ import { arrayOf, string } from 'prop-types';
 
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { textBlockPropTypes } from '#models/propTypes/text';
-import { SPORT_MIST } from '#app/components/ThemeProvider/palette';
+import { SPORT_MIST } from '../../../../components/ThemeProvider/palette';
 
 import Blocks from '../../Blocks';
 import Text from '../../Text';

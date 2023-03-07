@@ -10,7 +10,6 @@ import {
   formatUnixTimestamp,
 } from '#psammead/psammead-timestamp-container/src/utilities';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import { MIDNIGHT_BLACK } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -21,6 +20,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
+import { MIDNIGHT_BLACK } from '../../../../components/ThemeProvider/palette';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const StyledSectionLabel = styled(SectionLabel)`

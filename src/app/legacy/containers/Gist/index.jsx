@@ -9,11 +9,6 @@ import {
   GEL_SPACING_HLF_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
 import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GREY_6,
-} from '#psammead/psammead-styles/src/colours';
-import {
   getSansRegular,
   getSansBold,
 } from '#psammead/psammead-styles/src/font-styles';
@@ -28,11 +23,12 @@ import Text from '#containers/Text';
 import { GridItemLarge } from '#components/Grid';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import UnorderedList from '../BulletedList';
+import { GREY_6 } from '../../../components/ThemeProvider/palette';
 
 const GistWrapper = styled.div`
-  color: ${C_GREY_6};
-  border-top: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
-  background-color: ${C_WHITE};
+  color: ${props => props.theme.palette.GREY_6};
+  border-top: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.POSTBOX};
+  background-color: ${props => props.theme.palette.WHITE};
   ${({ dir }) =>
     dir === 'ltr'
       ? `padding: ${GEL_SPACING_TRPL} ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_DBL};`
@@ -88,7 +84,7 @@ const componentsToRender = (service, script, dir) => ({
             script={script}
             direction={dir === 'rtl' ? 'right' : 'left'}
             bulletPointShape="square"
-            bulletPointColour={C_GREY_6}
+            bulletPointColour={GREY_6}
           />
         ),
       }}
