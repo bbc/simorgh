@@ -1,13 +1,10 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '#psammead/psammead-test-helpers/src';
+import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { render } from '../../../components/react-testing-library-with-providers';
 import latinDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   ServiceContext,
@@ -61,139 +58,151 @@ describe('Ad Container', () => {
     };
 
     describe('AMP', () => {
-      shouldMatchSnapshot(
-        'should correctly render a leaderboard ad',
-        <ServiceContext.Provider
-          value={{ showAdPlaceholder: false, ...context }}
-        >
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            id="c0000000000o"
-            isAmp
-            pageType={FRONT_PAGE}
-            service="mundo"
-            statusCode={200}
-            pathname="/mundo"
-            showAdsBasedOnLocation
+      it('should correctly render a leaderboard ad', () => {
+        const { container } = render(
+          <ServiceContext.Provider
+            value={{ showAdPlaceholder: false, ...context }}
           >
-            <ToggleContext.Provider value={toggleContextMock}>
-              <AdContainer slotType="leaderboard" />
-            </ToggleContext.Provider>
-          </RequestContextProvider>
-        </ServiceContext.Provider>,
-      );
+            <RequestContextProvider
+              bbcOrigin="https://www.test.bbc.co.uk"
+              id="c0000000000o"
+              isAmp
+              pageType={FRONT_PAGE}
+              service="mundo"
+              statusCode={200}
+              pathname="/mundo"
+              showAdsBasedOnLocation
+            >
+              <ToggleContext.Provider value={toggleContextMock}>
+                <AdContainer slotType="leaderboard" />
+              </ToggleContext.Provider>
+            </RequestContextProvider>
+          </ServiceContext.Provider>,
+        );
+        expect(container).toMatchSnapshot();
+      });
 
-      shouldMatchSnapshot(
-        'should correctly render an mpu ad',
-        <ServiceContext.Provider
-          value={{ showAdPlaceholder: false, ...context }}
-        >
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            id="c0000000000o"
-            isAmp
-            pageType={FRONT_PAGE}
-            service="mundo"
-            statusCode={200}
-            pathname="/mundo"
-            showAdsBasedOnLocation
+      it('should correctly render an mpu ad', () => {
+        const { container } = render(
+          <ServiceContext.Provider
+            value={{ showAdPlaceholder: false, ...context }}
           >
-            <ToggleContext.Provider value={toggleContextMock}>
-              <AdContainer slotType="mpu" />
-            </ToggleContext.Provider>
-          </RequestContextProvider>
-        </ServiceContext.Provider>,
-      );
+            <RequestContextProvider
+              bbcOrigin="https://www.test.bbc.co.uk"
+              id="c0000000000o"
+              isAmp
+              pageType={FRONT_PAGE}
+              service="mundo"
+              statusCode={200}
+              pathname="/mundo"
+              showAdsBasedOnLocation
+            >
+              <ToggleContext.Provider value={toggleContextMock}>
+                <AdContainer slotType="mpu" />
+              </ToggleContext.Provider>
+            </RequestContextProvider>
+          </ServiceContext.Provider>,
+        );
+        expect(container).toMatchSnapshot();
+      });
 
-      shouldMatchSnapshot(
-        'should render a leaderboard ad with placeholder when showAdPlaceholder in service config is true',
-        <ServiceContext.Provider
-          value={{ showAdPlaceholder: true, ...context }}
-        >
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            id="c0000000000o"
-            isAmp
-            pageType={FRONT_PAGE}
-            service="mundo"
-            statusCode={200}
-            pathname="/mundo"
-            showAdsBasedOnLocation
+      it('should render a leaderboard ad with placeholder when showAdPlaceholder in service config is true', () => {
+        const { container } = render(
+          <ServiceContext.Provider
+            value={{ showAdPlaceholder: true, ...context }}
           >
-            <ToggleContext.Provider value={toggleContextMock}>
-              <AdContainer slotType="leaderboard" />
-            </ToggleContext.Provider>
-          </RequestContextProvider>
-        </ServiceContext.Provider>,
-      );
+            <RequestContextProvider
+              bbcOrigin="https://www.test.bbc.co.uk"
+              id="c0000000000o"
+              isAmp
+              pageType={FRONT_PAGE}
+              service="mundo"
+              statusCode={200}
+              pathname="/mundo"
+              showAdsBasedOnLocation
+            >
+              <ToggleContext.Provider value={toggleContextMock}>
+                <AdContainer slotType="leaderboard" />
+              </ToggleContext.Provider>
+            </RequestContextProvider>
+          </ServiceContext.Provider>,
+        );
+        expect(container).toMatchSnapshot();
+      });
 
-      shouldMatchSnapshot(
-        'should render a leaderboard ad without a placeholder when showAdPlaceholder in service config is false',
-        <ServiceContext.Provider
-          value={{ showAdPlaceholder: false, ...context }}
-        >
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            id="c0000000000o"
-            isAmp
-            pageType={FRONT_PAGE}
-            service="mundo"
-            statusCode={200}
-            pathname="/mundo"
-            showAdsBasedOnLocation
+      it('should render a leaderboard ad without a placeholder when showAdPlaceholder in service config is false', () => {
+        const { container } = render(
+          <ServiceContext.Provider
+            value={{ showAdPlaceholder: false, ...context }}
           >
-            <ToggleContext.Provider value={toggleContextMock}>
-              <AdContainer slotType="leaderboard" />
-            </ToggleContext.Provider>
-          </RequestContextProvider>
-        </ServiceContext.Provider>,
-      );
+            <RequestContextProvider
+              bbcOrigin="https://www.test.bbc.co.uk"
+              id="c0000000000o"
+              isAmp
+              pageType={FRONT_PAGE}
+              service="mundo"
+              statusCode={200}
+              pathname="/mundo"
+              showAdsBasedOnLocation
+            >
+              <ToggleContext.Provider value={toggleContextMock}>
+                <AdContainer slotType="leaderboard" />
+              </ToggleContext.Provider>
+            </RequestContextProvider>
+          </ServiceContext.Provider>,
+        );
+        expect(container).toMatchSnapshot();
+      });
     });
 
     describe('Canonical', () => {
-      shouldMatchSnapshot(
-        'should correctly render a leaderboard ad',
-        <ServiceContextProvider service="mundo">
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            id="c0000000000o"
-            isAmp={false}
-            pageType={FRONT_PAGE}
-            service="mundo"
-            statusCode={200}
-            pathname="/mundo"
-            showAdsBasedOnLocation
-          >
-            <ToggleContext.Provider value={toggleContextMock}>
-              <BrowserRouter>
-                <AdContainer slotType="leaderboard" />
-              </BrowserRouter>
-            </ToggleContext.Provider>
-          </RequestContextProvider>
-        </ServiceContextProvider>,
-      );
+      it('should correctly render a leaderboard ad', () => {
+        const { container } = render(
+          <ServiceContextProvider service="mundo">
+            <RequestContextProvider
+              bbcOrigin="https://www.test.bbc.co.uk"
+              id="c0000000000o"
+              isAmp={false}
+              pageType={FRONT_PAGE}
+              service="mundo"
+              statusCode={200}
+              pathname="/mundo"
+              showAdsBasedOnLocation
+            >
+              <ToggleContext.Provider value={toggleContextMock}>
+                <BrowserRouter>
+                  <AdContainer slotType="leaderboard" />
+                </BrowserRouter>
+              </ToggleContext.Provider>
+            </RequestContextProvider>
+          </ServiceContextProvider>,
+        );
+        expect(container).toMatchSnapshot();
+      });
 
-      shouldMatchSnapshot(
-        'should correctly render an mpu ad',
-        <ServiceContextProvider service="mundo">
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            id="c0000000000o"
-            isAmp={false}
-            pageType={FRONT_PAGE}
-            service="mundo"
-            statusCode={200}
-            pathname="/mundo"
-            showAdsBasedOnLocation
-          >
-            <ToggleContext.Provider value={toggleContextMock}>
-              <BrowserRouter>
-                <AdContainer slotType="mpu" />
-              </BrowserRouter>
-            </ToggleContext.Provider>
-          </RequestContextProvider>
-        </ServiceContextProvider>,
-      );
+      it('should correctly render an mpu ad', () => {
+        const { container } = render(
+          <ServiceContextProvider service="mundo">
+            <RequestContextProvider
+              bbcOrigin="https://www.test.bbc.co.uk"
+              id="c0000000000o"
+              isAmp={false}
+              pageType={FRONT_PAGE}
+              service="mundo"
+              statusCode={200}
+              pathname="/mundo"
+              showAdsBasedOnLocation
+            >
+              <ToggleContext.Provider value={toggleContextMock}>
+                <BrowserRouter>
+                  <AdContainer slotType="mpu" />
+                </BrowserRouter>
+              </ToggleContext.Provider>
+            </RequestContextProvider>
+          </ServiceContextProvider>,
+        );
+        expect(container).toMatchSnapshot();
+      });
     });
   });
 
