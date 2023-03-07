@@ -3,6 +3,7 @@ import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import BrandContainer from '.';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => {
@@ -12,17 +13,16 @@ const Component = ({ service, variant }) => {
 
   const configVariant = serviceConfig[variant];
   return (
-    <ServiceContextProvider service={service}>
-      <BrandContainer
-        backgroundColour={configVariant.theming.brandBackgroundColour}
-        logoColour={configVariant.theming.brandLogoColour}
-      />
-    </ServiceContextProvider>
+    <ThemeProvider service={service}>
+      <ServiceContextProvider service={service}>
+        <BrandContainer />
+      </ServiceContextProvider>
+    </ThemeProvider>
   );
 };
 
 export default {
-  title: 'Containers/Brand',
+  title: 'Containers/Brand/Brand',
   Component,
   decorators: [withKnobs, withServicesKnob()],
   parameters: { chromatic: { disable: true } },

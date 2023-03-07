@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "e561cb56",
+              "id": "1a0a76ef",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "66eae865",
+                    "id": "1f7f1c50",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ae92628f",
+                          "id": "28f04ddd",
                           "type": "paragraph",
                           "model": {
                             "text": "다이슨: 싱가포르에서 가장 크고 비싼 펜트하우스 구입한 다이슨 창업주",
                             "blocks": [
                               {
-                                "id": "58bb81d0",
+                                "id": "eb48e1c6",
                                 "type": "fragment",
                                 "model": {
                                   "text": "다이슨: 싱가포르에서 가장 크고 비싼 펜트하우스 구입한 다이슨 창업주",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "eb63286c",
+              "id": "abbf3283",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562943102250,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "cf837095",
+              "id": "073a9098",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "b0d90399",
+                    "id": "c4c0bbf8",
                     "type": "paragraph",
                     "model": {
                       "text": "다이슨 창업주 제임스 다이슨이 싱가포르에서 가장 크고 비싼 펜트하우스로 알려진 아파트를 구입했다.",
                       "blocks": [
                         {
-                          "id": "542a5270",
+                          "id": "8c204aa2",
                           "type": "fragment",
                           "model": {
                             "text": "다이슨 창업주 제임스 다이슨이 싱가포르에서 가장 크고 비싼 펜트하우스로 알려진 아파트를 구입했다.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "6229514e",
+                    "id": "d4f2bdbf",
                     "type": "paragraph",
                     "model": {
                       "text": "진공청소기로 유명한 다이슨이 본사를 영국에서 싱가포르로 옮긴 후 이루어진 부동산 구입이다.",
                       "blocks": [
                         {
-                          "id": "2c206a12",
+                          "id": "b27b57ca",
                           "type": "fragment",
                           "model": {
                             "text": "진공청소기로 유명한 다이슨이 본사를 영국에서 싱가포르로 옮긴 후 이루어진 부동산 구입이다.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "accd7f2e",
+                    "id": "09243b09",
                     "type": "paragraph",
                     "model": {
                       "text": "브렉시트의 지지자로서 영국이 아무런 합의안 없이 유럽연합을 떠나더라도 아무런 차이가 없을 거라고 말했던 다이슨은 회사의 본사 이전으로 위선적이라는 비난을 받았다.",
                       "blocks": [
                         {
-                          "id": "483e1ffa",
+                          "id": "1d849a21",
                           "type": "fragment",
                           "model": {
                             "text": "브렉시트의 지지자로서 영국이 아무런 합의안 없이 유럽연합을 떠나더라도 아무런 차이가 없을 거라고 말했던 다이슨은 회사의 본사 이전으로 위선적이라는 비난을 받았다.",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "4985247a",
+                    "id": "f899eac8",
                     "type": "paragraph",
                     "model": {
                       "text": "문제의 부동산은 싱가포르의 업무 지구 한가운데에 위치해 있으며 총 3층으로 다섯 개의 침실이 있다.",
                       "blocks": [
                         {
-                          "id": "0dcfc476",
+                          "id": "d4530a44",
                           "type": "fragment",
                           "model": {
                             "text": "문제의 부동산은 싱가포르의 업무 지구 한가운데에 위치해 있으며 총 3층으로 다섯 개의 침실이 있다.",
@@ -182,11 +182,21 @@
               ]
             },
             {
-              "id": "6c5cf349",
+              "id": "82d576c6",
               "type": "mpu",
               "model": {},
               "position": [
                 4
+              ]
+            },
+            {
+              "id": "0c92b625",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
               ]
             }
           ]
@@ -195,14 +205,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cpv9kv2yzk6o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cpv9kv2yzk6o"
+          "optimoUrn": "urn:bbc:optimo:asset:cpv9kv2yzk6o",
+          "canonicalUrl": "https://www.bbc.com/korean/articles/cpv9kv2yzk6o"
         },
         "type": "article",
         "createdBy": "Korean",
         "language": "ko",
         "firstPublished": 1562943102250,
         "lastPublished": 1562943102250,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cpv9kv2yzk6o",
           "producer": "Korean",
@@ -213,7 +223,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Korean",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -223,12 +232,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "다이슨: 싱가포르에서 가장 크고 비싼 펜트하우스 구입한 다이슨 창업주"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -734,7 +740,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T18:07:57.06Z",
+        "generated": "2023-02-17T18:07:56.626Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

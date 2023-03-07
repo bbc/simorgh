@@ -5,7 +5,6 @@ import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import useToggle from '#hooks/useToggle';
-import CpsRecommendations from '#containers/CpsRecommendations';
 
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -40,6 +39,7 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import OptimizelyPageViewTracking from '#containers/OptimizelyPageViewTracking';
+import OptimizelyArticleCompleteTracking from '#containers/OptimizelyArticleCompleteTracking';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
 import MostReadContainer from '#containers/MostRead';
@@ -64,15 +64,19 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
-import bylineExtractor from './utilities/bylineExtractor';
-import Byline from './Byline';
-import getAuthorTwitterHandle from './getAuthorTwitterHandle';
+import Byline from '../../components/Byline';
+import {
+  bylineExtractor,
+  categoryName,
+  getAuthorTwitterHandle,
+} from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from './PagePromoSections/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
 
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
+import OptimizelyRecommendation from '../../components/OptimizelyRecommendations';
 
 const Wrapper = styled.div`
   background-color: ${C_GREY_2};
@@ -118,10 +122,10 @@ const MpuContainer = styled(AdContainer)`
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-  const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
+  const { articleAuthor, isTrustProjectParticipant, showRelatedTopics } =
+    useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: adsEnabled } = useToggle('ads');
-  const recommendationsData = path(['recommendations'], pageData);
 
   const isAdsEnabled = [
     path(['metadata', 'allowAdvertising'], pageData),
@@ -150,6 +154,12 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
     : null;
+
+  const taggings = path(['metadata', 'passport', 'taggings'], pageData);
+  const formats = path(
+    ['metadata', 'passport', 'predicates', 'formats'],
+    pageData,
+  );
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -182,9 +192,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     links: props => <ScrollablePromo {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
-    wsoj: props => (
-      <CpsRecommendations {...props} items={recommendationsData} />
-    ),
+    wsoj: props => <OptimizelyRecommendation pageData={pageData} {...props} />,
   };
 
   const visuallyHiddenBlock = {
@@ -248,7 +256,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <LinkedData
         showAuthor
         bylineLinkedData={bylineLinkedData}
-        type="Article"
+        type={categoryName(taggings, formats, isTrustProjectParticipant)}
         seoTitle={headline}
         headline={headline}
         datePublished={firstPublished}
@@ -285,6 +293,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         wrapper={MostReadWrapper}
       />
       <OptimizelyPageViewTracking />
+      <OptimizelyArticleCompleteTracking />
     </Wrapper>
   );
 };

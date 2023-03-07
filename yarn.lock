@@ -3227,16 +3227,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/web-vitals@npm:1.1.1":
-  version: 1.1.1
-  resolution: "@bbc/web-vitals@npm:1.1.1"
+"@bbc/web-vitals@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@bbc/web-vitals@npm:1.2.0"
   dependencies:
     cross-fetch: ^3.1.5
     react-adaptive-hooks: 0.0.8
-    web-vitals: ^2.0.0
+    web-vitals: ^3.0.1
   peerDependencies:
     react: ">=16.9.0"
-  checksum: 10e3a133aa19754bc2fc1be3b27463358d381fad813057736dfd67d1dbce213f4c2b335b4412a9e3592c7f0af5b4f5023f1dc5ab8e05a17b428c8c10cc352399
+  checksum: bcbdfc38ab308729adb1c3d6967c3087c02b656d746bf0a3a9acbad523e134cb0d2d90d05e0c5889a37ec9f717f4929abab7500d615633db0dbd74049be53a8d
   languageName: node
   linkType: hard
 
@@ -15713,6 +15713,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lru-cache@npm:7.7.1":
+  version: 7.7.1
+  resolution: "lru-cache@npm:7.7.1"
+  checksum: f362c5a2cfa8ad6fe557ec43dc1b7a9695cce84a5652a43ff813609f782f5da576631e7dfad41878bf19a7a69438f38375178635ee80de269aa314280ca2f59e
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -15728,13 +15735,6 @@ __metadata:
   dependencies:
     yallist: ^4.0.0
   checksum: f97f499f898f23e4585742138a22f22526254fdba6d75d41a1c2526b3b6cc5747ef59c5612ba7375f42aca4f8461950e925ba08c991ead0651b4918b7c978297
-  languageName: node
-  linkType: hard
-
-"lru-cache@npm:^7.14.1":
-  version: 7.14.1
-  resolution: "lru-cache@npm:7.14.1"
-  checksum: d72c6713c6a6d86836a7a6523b3f1ac6764768cca47ec99341c3e76db06aacd4764620e5e2cda719a36848785a52a70e531822dc2b33fb071fa709683746c104
   languageName: node
   linkType: hard
 
@@ -20159,7 +20159,7 @@ __metadata:
     "@babel/preset-react": 7.18.6
     "@babel/preset-typescript": 7.21.0
     "@babel/runtime": 7.21.0
-    "@bbc/web-vitals": 1.1.1
+    "@bbc/web-vitals": 1.2.0
     "@cypress/webpack-preprocessor": ^5.11.1
     "@emotion/babel-plugin": 11.10.6
     "@emotion/babel-preset-css-prop": 11.10.0
@@ -20256,7 +20256,7 @@ __metadata:
     js-cookie: 3.0.1
     jsdom: 19.0.0
     json5: 2.2.2
-    lru-cache: ^7.14.1
+    lru-cache: 7.7.1
     minimist: 1.2.8
     mkdirp: 1.0.4
     mocha: 9.2.2
@@ -22699,10 +22699,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:^2.0.0":
-  version: 2.1.4
-  resolution: "web-vitals@npm:2.1.4"
-  checksum: 03d3f47dbf55c3dce07beb0ff5de8ddd52e2d0a53a8df5c84e7a16dda93543341d67231fa79b1d9772b091419af4ec0fd395b8bcf451a0e26846e3f76b3d0efc
+"web-vitals@npm:^3.0.1":
+  version: 3.1.1
+  resolution: "web-vitals@npm:3.1.1"
+  checksum: 26d552d7e0bba470e1426bbf55c3c1a701c683bbde4553791a2c7e1bc3a7b7b29bf66ccf67c74872af3aa39e5668728736b90f8b3fee2910c0c566e7eb1b6096
   languageName: node
   linkType: hard
 
