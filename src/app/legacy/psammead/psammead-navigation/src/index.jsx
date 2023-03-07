@@ -5,11 +5,8 @@ import VisuallyHiddenText from '#psammead/psammead-visually-hidden-text/src';
 import {
   C_WHITE,
   C_EBON,
-  C_GREY_10,
   C_GREY_3,
-  C_POSTBOX,
 } from '#psammead/psammead-styles/src/colours';
-import { BLACK } from '#app/components/ThemeProvider/palette';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -64,8 +61,7 @@ const ListItemBorder = `
 const StyledLink = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => getSansRegular(service)};
-  ${({ brandForegroundColour }) => `color: ${brandForegroundColour};`}
-  color: ${C_GREY_10};
+  color: ${props => props.theme.palette.GREY_10};
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
@@ -78,30 +74,33 @@ const StyledLink = styled.a`
 
   &:hover::after {
     ${ListItemBorder}
-    ${({ brandHighlightColour }) =>
-      `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
-    ${({ currentLink, brandHighlightColour }) =>
+    border-bottom: ${GEL_SPACING_HLF} solid ${props =>
+      props.theme.palette.POSTBOX};
+    ${({ currentLink }) =>
       currentLink &&
       `
-        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${brandHighlightColour};
+        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${props =>
+        props.theme.palette.POSTBOX};
       `}
   }
 
   &:focus::after {
     ${ListItemBorder}
-    ${({ brandHighlightColour }) =>
-      `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
+    border-bottom: ${GEL_SPACING_HLF} solid ${props =>
+      props.theme.palette.POSTBOX};
     top: 0;
-    border: ${focusIndicatorThickness} solid ${BLACK};
+    border: ${focusIndicatorThickness} solid
+      ${props => props.theme.palette.BLACK};
   }
 
   // Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed.
   &:focus-visible::after {
     ${ListItemBorder}
-    ${({ brandHighlightColour }) =>
-      `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
+    border-bottom: ${GEL_SPACING_HLF} solid ${props =>
+      props.theme.palette.POSTBOX};
     top: 0;
-    border: ${focusIndicatorThickness} solid ${BLACK};
+    border: ${focusIndicatorThickness} solid
+      ${props => props.theme.palette.BLACK};
   }
 `;
 
@@ -126,8 +125,7 @@ const StyledListItem = styled.li`
       position: absolute;
       bottom: -1px;
       width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-      ${({ brandBorderColour }) =>
-        `border-bottom: 0.0625rem solid ${brandBorderColour};`}
+      border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
       z-index: -1;
     }
   }
@@ -136,24 +134,17 @@ const StyledListItem = styled.li`
 const StyledSpan = styled.span`
   &::after {
     ${ListItemBorder}
-    ${({ brandHighlightColour }) =>
-      `border-bottom: ${GEL_SPACING_HLF} solid ${brandHighlightColour};`}
+    border-bottom: ${GEL_SPACING_HLF} solid ${props =>
+      props.theme.palette.POSTBOX};
   }
 `;
 
-const CurrentLink = ({
-  linkId,
-  children: link,
-  script,
-  currentPageText,
-  brandHighlightColour,
-}) => (
+const CurrentLink = ({ linkId, children: link, script, currentPageText }) => (
   <>
     <StyledSpan
       // eslint-disable-next-line jsx-a11y/aria-role
       role="text"
       script={script}
-      brandHighlightColour={brandHighlightColour}
       // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
       id={`NavigationLinks-${linkId}`}
     >
@@ -168,7 +159,6 @@ CurrentLink.propTypes = {
   children: string.isRequired,
   script: shape(scriptPropType).isRequired,
   currentPageText: string,
-  brandHighlightColour: string.isRequired,
 };
 
 CurrentLink.defaultProps = {
@@ -193,27 +183,16 @@ export const NavigationLi = ({
   active,
   service,
   dir,
-  brandForegroundColour,
-  brandHighlightColour,
-  brandBorderColour,
   ...props
 }) => {
   return (
-    <StyledListItem
-      dir={dir}
-      role="listitem"
-      brandForegroundColour={brandForegroundColour}
-      brandHighlightColour={brandHighlightColour}
-      brandBorderColour={C_GREY_3}
-    >
+    <StyledListItem dir={dir} role="listitem">
       {active && currentPageText ? (
         <StyledLink
           href={url}
           script={script}
           service={service}
           currentLink
-          brandForegroundColour={brandForegroundColour}
-          brandHighlightColour={C_POSTBOX}
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
           className="focusIndicatorRemove"
@@ -223,7 +202,6 @@ export const NavigationLi = ({
             linkId={link}
             script={script}
             currentPageText={currentPageText}
-            brandHighlightColour={C_POSTBOX}
           >
             {link}
           </CurrentLink>
@@ -233,8 +211,6 @@ export const NavigationLi = ({
           href={url}
           script={script}
           service={service}
-          brandForegroundColour={brandForegroundColour}
-          brandHighlightColour={C_POSTBOX}
           className="focusIndicatorRemove"
           {...props}
         >
@@ -253,9 +229,6 @@ NavigationLi.propTypes = {
   currentPageText: string,
   service: string.isRequired,
   dir: oneOf(['ltr', 'rtl']),
-  brandForegroundColour: string.isRequired,
-  brandHighlightColour: string.isRequired,
-  brandBorderColour: string.isRequired,
 };
 
 NavigationLi.defaultProps = {
@@ -299,27 +272,13 @@ const StyledNav = styled.nav`
   }
 `;
 
-const Navigation = ({
-  children,
-  dir,
-  isOpen,
-  ampOpenClass,
-  brandBackgroundColour,
-  brandForegroundColour,
-  brandBorderColour,
-  brandHighlightColour,
-  ...props
-}) => {
+const Navigation = ({ children, dir, isOpen, ampOpenClass, ...props }) => {
   return (
     <StyledNav
       role="navigation"
       dir={dir}
       isOpen={isOpen}
       ampOpenClass={ampOpenClass}
-      brandBackgroundColour={brandBackgroundColour}
-      brandForegroundColour={brandForegroundColour}
-      brandBorderColour={brandBorderColour}
-      brandHighlightColour={brandHighlightColour}
       {...props}
     >
       <NavWrapper>{children}</NavWrapper>
@@ -332,10 +291,6 @@ Navigation.propTypes = {
   dir: oneOf(['ltr', 'rtl']),
   isOpen: bool,
   ampOpenClass: string,
-  brandBackgroundColour: string.isRequired,
-  brandForegroundColour: string.isRequired,
-  brandBorderColour: string.isRequired,
-  brandHighlightColour: string.isRequired,
 };
 
 Navigation.defaultProps = {
