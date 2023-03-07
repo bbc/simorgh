@@ -18,6 +18,9 @@ describe('getEnvironment', () => {
     ${'/mundo'}                   | ${'live'}   | ${'live'}
     ${'/mundo?renderer_env=test'} | ${'live'}   | ${'test'}
     ${'/mundo?renderer_env=live'} | ${'live'}   | ${'live'}
+    ${'/mundo?renderer_env=caf'}  | ${'local'}  | ${'live'}
+    ${'/mundo?renderer_env=caf'}  | ${'test'}   | ${'live'}
+    ${'/mundo?renderer_env=caf'}  | ${'live'}   | ${'live'}
   `(
     'returns $expected when environment is $environment and url is $url',
     ({ url, environment, expected }) => {
