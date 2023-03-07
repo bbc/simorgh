@@ -138,13 +138,18 @@ export default async ({
       isAdvertising = pathOr(false, ['metadata', 'allowAdvertising'], article);
     }
 
-    const wsojData = await getOnwardsPageData({
-      pathname,
-      service,
-      variant,
-      isAdvertising,
-      agent,
-    });
+    let wsojData = [];
+    try {
+      wsojData = await getOnwardsPageData({
+        pathname,
+        service,
+        variant,
+        isAdvertising,
+        agent,
+      });
+    } catch (error) {
+      logger.error('Recommendations JSON malformed', error);
+    }
 
     return {
       status,
