@@ -20,7 +20,7 @@ const ATIAnalytics = ({ data }) => {
   const pageTypeHandlers = {
     article: buildArticleATIUrl,
     mediaArticle: () =>
-      buildArticleATIUrl(data, requestContext, serviceContext, 'media-article'),
+      buildArticleATIUrl(data, requestContext, serviceContext, 'article-sfv'),
     frontPage: buildIndexPageATIUrl,
     media: buildTvRadioATIUrl,
     mostRead: buildMostReadATIUrl,

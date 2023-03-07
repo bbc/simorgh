@@ -107,9 +107,9 @@ describe('buildParams', () => {
       article,
       requestContext,
       serviceContext,
-      'media-article',
+      'article-sfv',
     );
-    expect(result).toEqual({ ...validURLParams, contentType: 'media-article' });
+    expect(result).toEqual({ ...validURLParams, contentType: 'article-sfv' });
   });
 
   describe('buildArticleATIUrl', () => {

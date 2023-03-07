@@ -34,7 +34,7 @@ const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
   mediaArticle: (data, requestContext, serviceContext) =>
-    buildArticleATIUrl(data, requestContext, serviceContext, 'media-article'),
+    buildArticleATIUrl(data, requestContext, serviceContext, 'article-sfv'),
   STY: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
   frontPage: buildIndexPageATIUrl,
@@ -70,12 +70,7 @@ const pageTypeUrlBuilders = {
 const pageTypeParamBuilders = {
   article: buildArticleATIParams,
   mediaArticle: (data, requestContext, serviceContext) =>
-    buildArticleATIParams(
-      data,
-      requestContext,
-      serviceContext,
-      'media-article',
-    ),
+    buildArticleATIParams(data, requestContext, serviceContext, 'article-sfv'),
   frontPage: buildIndexPageATIParams,
   media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,

@@ -28,7 +28,7 @@ export const EventTrackingContext = createContext({});
 const getCampaignID = pageType => {
   const campaignID = {
     [ARTICLE_PAGE]: 'article',
-    [MEDIA_ARTICLE_PAGE]: 'media-article',
+    [MEDIA_ARTICLE_PAGE]: 'article-sfv',
     [FRONT_PAGE]: 'index-home',
     [MEDIA_PAGE]: 'player-episode-tv',
     [MOST_READ_PAGE]: 'list-datadriven-read',
