@@ -1,4 +1,8 @@
 import * as analyticsUtils from '#lib/analyticsUtils';
+import {
+  MEDIA_ARTICLE_PAGE,
+  ARTICLE_PAGE,
+} from '../../../../../routes/utils/pageTypes';
 import { buildArticleATIParams, buildArticleATIUrl } from './buildParams';
 
 analyticsUtils.getAtUserId = jest.fn();
@@ -82,7 +86,7 @@ describe('buildParams', () => {
   });
 
   describe('buildArticleATIParams', () => {
-    it('should return the right object', () => {
+    it('should return the right article object when no pageType is specified', () => {
       const result = buildArticleATIParams(
         article,
         requestContext,
@@ -90,6 +94,26 @@ describe('buildParams', () => {
       );
       expect(result).toEqual(validURLParams);
     });
+  });
+
+  it('should return the right article object when an article pageType is specified', () => {
+    const result = buildArticleATIParams(
+      article,
+      requestContext,
+      serviceContext,
+      'article',
+    );
+    expect(result).toEqual({ ...validURLParams, contentType: 'article' });
+  });
+
+  it('should return the right media-article object when a mediaArticle pageType is specified', () => {
+    const result = buildArticleATIParams(
+      article,
+      requestContext,
+      serviceContext,
+      'media-article',
+    );
+    expect(result).toEqual({ ...validURLParams, contentType: 'media-article' });
   });
 
   describe('buildArticleATIUrl', () => {

@@ -19,6 +19,8 @@ const ATIAnalytics = ({ data }) => {
 
   const pageTypeHandlers = {
     article: buildArticleATIUrl,
+    mediaArticle: () =>
+      buildArticleATIUrl(data, requestContext, serviceContext, 'media-article'),
     frontPage: buildIndexPageATIUrl,
     media: buildTvRadioATIUrl,
     mostRead: buildMostReadATIUrl,
@@ -51,6 +53,7 @@ const ATIAnalytics = ({ data }) => {
       ),
   };
 
+  console.log('REQ123', requestContext);
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
   if (!isValidPageType) {
     return null;
