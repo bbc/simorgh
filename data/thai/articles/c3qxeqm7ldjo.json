@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "65f69104",
+              "id": "e4b4e693",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "7868a9f7",
+                    "id": "faf5c5e6",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ae103ac5",
+                          "id": "98481ccb",
                           "type": "paragraph",
                           "model": {
                             "text": "อวกาศ : หลุมดำมวลยิ่งยวดไม่จำเป็นต้องเกิดจากซูเปอร์โนวาเสมอไป",
                             "blocks": [
                               {
-                                "id": "fb10d6f3",
+                                "id": "b237fe60",
                                 "type": "fragment",
                                 "model": {
                                   "text": "อวกาศ : หลุมดำมวลยิ่งยวดไม่จำเป็นต้องเกิดจากซูเปอร์โนวาเสมอไป",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "825ab24a",
+              "id": "f6125aa8",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942948180,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "6ad94f6a",
+              "id": "80d34e98",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "a07107c4",
+                    "id": "755d070a",
                     "type": "paragraph",
                     "model": {
                       "text": "ปริศนาที่มีมานานของวงการฟิสิกส์ดาราศาสตร์ ซึ่งว่าด้วยกำเนิดของหลุมดำมวลยิ่งยวดอายุเก่าแก่ที่ก่อตัวหลังยุคแรกเริ่มของจักรวาลไม่นานนั้น เพิ่งได้รับคำอธิบายที่ให้ความกระจ่างเพิ่มขึ้นในอีกขั้นหนึ่งแล้ว",
                       "blocks": [
                         {
-                          "id": "f90395c5",
+                          "id": "0473a450",
                           "type": "fragment",
                           "model": {
                             "text": "ปริศนาที่มีมานานของวงการฟิสิกส์ดาราศาสตร์ ซึ่งว่าด้วยกำเนิดของหลุมดำมวลยิ่งยวดอายุเก่าแก่ที่ก่อตัวหลังยุคแรกเริ่มของจักรวาลไม่นานนั้น เพิ่งได้รับคำอธิบายที่ให้ความกระจ่างเพิ่มขึ้นในอีกขั้นหนึ่งแล้ว",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "963e5a0a",
+                    "id": "26373680",
                     "type": "paragraph",
                     "model": {
                       "text": "ศาสตราจารย์ศานตนุ ภสุ และศาสตราจารย์อาร์ปัน ดาส จากมหาวิทยาลัยเวสเทิร์นของสหรัฐฯ ตีพิมพ์รายงานที่อธิบายถึงปรากฎการณ์ดังกล่าวลงในวารสาร The Astrophysical Journal Letters โดยชี้ว่าหลุมดำชนิดนี้เกิดและโตขึ้นอย่างรวดเร็วเหลือเชื่อด้วยเงื่อนไขพิเศษ คือไม่ได้ผ่านขั้นตอนการระเบิดของดาวฤกษ์หรือซูเปอร์โนวา (Supernova) ในแบบเดียวกับหลุมดำโดยทั่วไป",
                       "blocks": [
                         {
-                          "id": "3cb0cd21",
+                          "id": "a7b2e4c2",
                           "type": "fragment",
                           "model": {
                             "text": "ศาสตราจารย์ศานตนุ ภสุ และศาสตราจารย์อาร์ปัน ดาส จากมหาวิทยาลัยเวสเทิร์นของสหรัฐฯ ตีพิมพ์รายงานที่อธิบายถึงปรากฎการณ์ดังกล่าวลงในวารสาร ",
@@ -117,13 +117,13 @@
                           ]
                         },
                         {
-                          "id": "e9f085e0",
+                          "id": "40db8c72",
                           "type": "inline",
                           "model": {
                             "text": "The Astrophysical Journal Letters",
                             "blocks": [
                               {
-                                "id": "754e1ce5",
+                                "id": "00cd04ef",
                                 "type": "fragment",
                                 "model": {
                                   "text": "The Astrophysical Journal Letters",
@@ -146,7 +146,7 @@
                           ]
                         },
                         {
-                          "id": "b3fda0ea",
+                          "id": "e2d7b6e2",
                           "type": "fragment",
                           "model": {
                             "text": " โดยชี้ว่าหลุมดำชนิดนี้เกิดและโตขึ้นอย่างรวดเร็วเหลือเชื่อด้วยเงื่อนไขพิเศษ คือไม่ได้ผ่านขั้นตอนการระเบิดของดาวฤกษ์หรือซูเปอร์โนวา (",
@@ -159,13 +159,13 @@
                           ]
                         },
                         {
-                          "id": "0033a075",
+                          "id": "16345450",
                           "type": "inline",
                           "model": {
                             "text": "Supernova",
                             "blocks": [
                               {
-                                "id": "1810086d",
+                                "id": "4d2ab599",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Supernova",
@@ -188,7 +188,7 @@
                           ]
                         },
                         {
-                          "id": "abbf270a",
+                          "id": "fb3716bc",
                           "type": "fragment",
                           "model": {
                             "text": ") ในแบบเดียวกับหลุมดำโดยทั่วไป",
@@ -214,11 +214,21 @@
               ]
             },
             {
-              "id": "5850296d",
+              "id": "38a44890",
               "type": "mpu",
               "model": {},
               "position": [
                 4
+              ]
+            },
+            {
+              "id": "45f909cd",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
               ]
             }
           ]
@@ -227,14 +237,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c3qxeqm7ldjo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3qxeqm7ldjo"
+          "optimoUrn": "urn:bbc:optimo:asset:c3qxeqm7ldjo",
+          "canonicalUrl": "https://www.bbc.com/thai/articles/c3qxeqm7ldjo"
         },
         "type": "article",
         "createdBy": "Thai",
         "language": "th",
         "firstPublished": 1562942948180,
         "lastPublished": 1562942948180,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3qxeqm7ldjo",
           "producer": "Thai",
@@ -245,7 +255,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -256,12 +265,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "อวกาศ : หลุมดำมวลยิ่งยวดไม่จำเป็นต้องเกิดจากซูเปอร์โนวาเสมอไป"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -730,14 +736,55 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T16:23:57.914Z",
+        "generated": "2023-02-17T16:38:56.931Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
-        "totalRecords": 19,
+        "totalRecords": 20,
         "records": [
           {
-            "id": "16d28429-c91f-3846-9d5b-bfcdfb333e84",
+            "id": "4716cc45-8f90-c54b-a06e-c649bc7933df",
             "rank": 1,
+            "count": 9862,
+            "urn": "urn:bbc:curie:asset:4716cc45-8f90-c54b-a06e-c649bc7933df",
+            "promo": {
+              "headlines": {
+                "shortHeadline": "โฆษกรัฐบาลยืนยัน ครม.อนุมัติซื้อเรือดำน้ำแล้ว - Story with related items",
+                "headline": "โฆษกรัฐบาลยืนยัน ครม.อนุมัติซื้อเรือดำน้ำแล้ว - Story with related items"
+              },
+              "locators": {
+                "assetUri": "/thai/thailand-23118229",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:4716cc45-8f90-c54b-a06e-c649bc7933df",
+                "assetId": "23118229",
+                "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-23118229",
+                "curie": "http://www.bbc.co.uk/asset/4716cc45-8f90-c54b-a06e-c649bc7933df"
+              },
+              "summary": "โฆษกรัฐบาลยืนยัน ครม.อนุมัติซื้อเรือดำน้ำแล้ว - Story with related items",
+              "timestamp": 1493038609000,
+              "language": "th",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
+                "taggings": []
+              },
+              "indexImage": {
+                "id": "63533637",
+                "subType": "index",
+                "href": "http://b.files.bbci.co.uk/11FA1/test/_63533637__95743684_1.jpg",
+                "path": "/cpsdevpb/11FA1/test/_63533637__95743684_1.jpg",
+                "height": 371,
+                "width": 660,
+                "altText": "แก้วกำเนิด",
+                "caption": "แก้วกำเนิด",
+                "copyrightHolder": "BBC",
+                "originCode": "cpsdevpb",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:thai/thailand-23118229",
+              "type": "cps"
+            }
+          },
+          {
+            "id": "16d28429-c91f-3846-9d5b-bfcdfb333e84",
+            "rank": 2,
             "count": 9791,
             "urn": "urn:bbc:curie:asset:16d28429-c91f-3846-9d5b-bfcdfb333e84",
             "promo": {
@@ -772,7 +819,7 @@
           },
           {
             "id": "bf01fa20-289f-2c47-a524-d3a7cc6b2963",
-            "rank": 2,
+            "rank": 3,
             "count": 9630,
             "urn": "urn:bbc:curie:asset:bf01fa20-289f-2c47-a524-d3a7cc6b2963",
             "promo": {
@@ -807,7 +854,7 @@
           },
           {
             "id": "621438be-5c37-524f-80ca-6e6486c35203",
-            "rank": 3,
+            "rank": 4,
             "count": 9377,
             "urn": "urn:bbc:curie:asset:621438be-5c37-524f-80ca-6e6486c35203",
             "promo": {
@@ -843,7 +890,7 @@
           },
           {
             "id": "7585eb55-dfe6-d34d-aad7-54bf7f009eb6",
-            "rank": 4,
+            "rank": 5,
             "count": 8780,
             "urn": "urn:bbc:curie:asset:7585eb55-dfe6-d34d-aad7-54bf7f009eb6",
             "promo": {
@@ -898,7 +945,7 @@
           },
           {
             "id": "13500c39-ddfb-c04f-96d1-662d45484950",
-            "rank": 5,
+            "rank": 6,
             "count": 8558,
             "urn": "urn:bbc:curie:asset:13500c39-ddfb-c04f-96d1-662d45484950",
             "promo": {
@@ -933,7 +980,7 @@
           },
           {
             "id": "4c28b07c-18c7-5a46-8340-d580de3ebbee",
-            "rank": 6,
+            "rank": 7,
             "count": 8374,
             "urn": "urn:bbc:curie:asset:4c28b07c-18c7-5a46-8340-d580de3ebbee",
             "promo": {
@@ -996,7 +1043,7 @@
           },
           {
             "id": "355b9a51-f7f5-4d4f-a90e-45dd06f8f9a0",
-            "rank": 7,
+            "rank": 8,
             "count": 8167,
             "urn": "urn:bbc:curie:asset:355b9a51-f7f5-4d4f-a90e-45dd06f8f9a0",
             "promo": {
@@ -1031,7 +1078,7 @@
           },
           {
             "id": "9cb81a82-af91-c44f-abb9-f3778a7a87ef",
-            "rank": 8,
+            "rank": 9,
             "count": 7959,
             "urn": "urn:bbc:curie:asset:9cb81a82-af91-c44f-abb9-f3778a7a87ef",
             "promo": {
@@ -1066,7 +1113,7 @@
           },
           {
             "id": "669fce90-ccbd-5746-abdc-915f4b1a1880",
-            "rank": 9,
+            "rank": 10,
             "count": 7790,
             "urn": "urn:bbc:curie:asset:669fce90-ccbd-5746-abdc-915f4b1a1880",
             "promo": {
@@ -1113,7 +1160,7 @@
           },
           {
             "id": "80259c6e-6cd7-cc4e-aeaa-25f26167a4dc",
-            "rank": 10,
+            "rank": 11,
             "count": 7306,
             "urn": "urn:bbc:curie:asset:80259c6e-6cd7-cc4e-aeaa-25f26167a4dc",
             "promo": {
@@ -1148,7 +1195,7 @@
           },
           {
             "id": "2b509ed8-5613-8243-b5f1-11cae100752a",
-            "rank": 11,
+            "rank": 12,
             "count": 6719,
             "urn": "urn:bbc:curie:asset:2b509ed8-5613-8243-b5f1-11cae100752a",
             "promo": {
@@ -1185,7 +1232,7 @@
           },
           {
             "id": "25bb37b2-fc69-8c44-b576-8a579ac2717f",
-            "rank": 12,
+            "rank": 13,
             "count": 6491,
             "urn": "urn:bbc:curie:asset:25bb37b2-fc69-8c44-b576-8a579ac2717f",
             "promo": {
@@ -1220,7 +1267,7 @@
           },
           {
             "id": "8e3a7046-8663-614e-8a02-d886aa3a3ca1",
-            "rank": 13,
+            "rank": 14,
             "count": 5860,
             "urn": "urn:bbc:curie:asset:8e3a7046-8663-614e-8a02-d886aa3a3ca1",
             "promo": {
@@ -1257,7 +1304,7 @@
           },
           {
             "id": "fb1438a5-703d-e54b-82fd-b83d3694bfef",
-            "rank": 14,
+            "rank": 15,
             "count": 5412,
             "urn": "urn:bbc:curie:asset:fb1438a5-703d-e54b-82fd-b83d3694bfef",
             "promo": {
@@ -1305,7 +1352,7 @@
           },
           {
             "id": "809d398a-84ef-8a48-8f99-ac1f0c3516c9",
-            "rank": 15,
+            "rank": 16,
             "count": 5405,
             "urn": "urn:bbc:curie:asset:809d398a-84ef-8a48-8f99-ac1f0c3516c9",
             "promo": {
@@ -1328,7 +1375,7 @@
           },
           {
             "id": "5b412b82-3d0e-fc4a-bd7c-b47e353a6950",
-            "rank": 16,
+            "rank": 17,
             "count": 4726,
             "urn": "urn:bbc:curie:asset:5b412b82-3d0e-fc4a-bd7c-b47e353a6950",
             "promo": {
@@ -1371,7 +1418,7 @@
           },
           {
             "id": "e427d605-8ed4-5d40-a0df-9bd83f09ab98",
-            "rank": 17,
+            "rank": 18,
             "count": 4474,
             "urn": "urn:bbc:curie:asset:e427d605-8ed4-5d40-a0df-9bd83f09ab98",
             "promo": {
@@ -1406,7 +1453,7 @@
           },
           {
             "id": "ef95aa5b-a780-0247-94ed-0a08a389d963",
-            "rank": 18,
+            "rank": 19,
             "count": 4442,
             "urn": "urn:bbc:curie:asset:ef95aa5b-a780-0247-94ed-0a08a389d963",
             "promo": {
@@ -1442,7 +1489,7 @@
           },
           {
             "id": "ba2b2459-e0e1-1f44-92c3-e4406485ee71",
-            "rank": 19,
+            "rank": 20,
             "count": 3967,
             "urn": "urn:bbc:curie:asset:ba2b2459-e0e1-1f44-92c3-e4406485ee71",
             "promo": {

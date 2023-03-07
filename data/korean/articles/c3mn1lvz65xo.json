@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "e7edfcba",
+              "id": "fe2815ba",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ef303380",
+                    "id": "ddd698d6",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ae6ea6b3",
+                          "id": "6fd97202",
                           "type": "paragraph",
                           "model": {
                             "text": "이것이이 테스트 기사의 헤드 라인입니다.",
                             "blocks": [
                               {
-                                "id": "593c4bae",
+                                "id": "c4863318",
                                 "type": "fragment",
                                 "model": {
                                   "text": "이것이이 테스트 기사의 헤드 라인입니다.",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "29927604",
+              "id": "7f65ed56",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "7e2e2886",
+                    "id": "5fc800dc",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "afa98ede",
+                          "id": "cdaf1b50",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f3d8dc5a",
+                                "id": "140b4529",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "이 테스트 이미지 인 저작권 는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.",
                                   "blocks": [
                                     {
-                                      "id": "9644341f",
+                                      "id": "6c232a98",
                                       "type": "fragment",
                                       "model": {
                                         "text": "이 테스트 이미지 인 저작권 는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "fd06a5ea",
+                    "id": "803f88ea",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "bf3840b5",
+                          "id": "4e26a544",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "94d77cb7",
+                                "id": "fa4753b1",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "이 테스트 이미지 인 저작권 BBC는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.",
                                   "blocks": [
                                     {
-                                      "id": "41cb418c",
+                                      "id": "06172f7a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "이 테스트 이미지 인 저작권 BBC는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "acd26fd3",
+                    "id": "cc514a3f",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "9209a59d",
+              "id": "925cdea1",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1574855147209,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "b7e9d405",
+              "id": "bce51b2c",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "93e44400",
+                    "id": "25705e20",
                     "type": "paragraph",
                     "model": {
                       "text": "이것은 홈페이지에 대한 링크를 포함하는 텍스트 블록입니다.",
                       "blocks": [
                         {
-                          "id": "2dc0db84",
+                          "id": "f34b7fd2",
                           "type": "fragment",
                           "model": {
                             "text": "이것은 ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "c768f96f",
+                          "id": "a7a74e1f",
                           "type": "urlLink",
                           "model": {
                             "text": "홈페이지에 대한",
                             "blocks": [
                               {
-                                "id": "cff28c30",
+                                "id": "e30f0e40",
                                 "type": "fragment",
                                 "model": {
                                   "text": "홈페이지에 대한",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "fdff227a",
+                          "id": "5ffadbb2",
                           "type": "fragment",
                           "model": {
                             "text": " 링크를 포함하는 텍스트 블록입니다.",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "862435fb",
+              "id": "a935bed2",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "4a725655",
+                    "id": "916f4188",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b27f6df6",
+                          "id": "bc8d0bd8",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f0c6a02c",
+                                "id": "462fae3d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "이것은 크를 포함하는 텍스트 블록입니다.",
                                   "blocks": [
                                     {
-                                      "id": "3bfb2280",
+                                      "id": "ac1c5b34",
                                       "type": "fragment",
                                       "model": {
                                         "text": "이것은 크를 포함하는 텍스트 블록입니다.",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "269d3e36",
+                    "id": "0cb1e3f1",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e4c7f9a0",
+                          "id": "517519f9",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -395,12 +395,12 @@
                           ]
                         },
                         {
-                          "id": "ba2f861a",
+                          "id": "56c69df3",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a1bf3da1",
+                                "id": "7308c918",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -417,23 +417,23 @@
                                 ]
                               },
                               {
-                                "id": "f9924c77",
+                                "id": "ba175a04",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "c11e475e",
+                                      "id": "9295d271",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "2984d02c",
+                                            "id": "fc4498ba",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "51ad7fe9",
+                                                  "id": "4c9b3467",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -501,23 +501,23 @@
               ]
             },
             {
-              "id": "00309664",
+              "id": "fb68f69d",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "2324464d",
+                    "id": "45f800c4",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6df13fd7",
+                          "id": "99200130",
                           "type": "paragraph",
                           "model": {
                             "text": "이것은 소제목입니다",
                             "blocks": [
                               {
-                                "id": "defbd30d",
+                                "id": "5cd63407",
                                 "type": "fragment",
                                 "model": {
                                   "text": "이것은 소제목입니다",
@@ -552,28 +552,28 @@
               ]
             },
             {
-              "id": "d15a48c2",
+              "id": "47a5fbdb",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "f5eda9f1",
+                    "id": "2ed3a6cd",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "42c98b54",
+                          "id": "e94db00b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "85a1c403",
+                                "id": "6da9cbe1",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "이것은 소제목입니다",
                                   "blocks": [
                                     {
-                                      "id": "503a6716",
+                                      "id": "73a81904",
                                       "type": "fragment",
                                       "model": {
                                         "text": "이것은 소제목입니다",
@@ -612,7 +612,7 @@
                     ]
                   },
                   {
-                    "id": "f2379892",
+                    "id": "71807372",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -633,18 +633,18 @@
               ]
             },
             {
-              "id": "5a5d478b",
+              "id": "fe001e80",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "e4ae5b04",
+                    "id": "4ee70e54",
                     "type": "paragraph",
                     "model": {
                       "text": "이 테스트 기사는 웹 사이트에서 자동화 된 엔드 투 엔드 테스트를 실행할 수 있도록 작성되었습니다.",
                       "blocks": [
                         {
-                          "id": "e63e43d0",
+                          "id": "efa14baf",
                           "type": "fragment",
                           "model": {
                             "text": "이 테스트 기사는 웹 사이트에서 자동화 된 엔드 투 엔드 테스트를 실행할 수 있도록 작성되었습니다.",
@@ -670,11 +670,21 @@
               ]
             },
             {
-              "id": "e8ad53cb",
+              "id": "90766087",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "5b35a0ba",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -683,14 +693,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c3mn1lvz65xo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3mn1lvz65xo"
+          "optimoUrn": "urn:bbc:optimo:asset:c3mn1lvz65xo",
+          "canonicalUrl": "https://www.bbc.com/korean/articles/c3mn1lvz65xo"
         },
         "type": "article",
         "createdBy": "Korean",
         "language": "ko",
         "firstPublished": 1574855147209,
         "lastPublished": 1574855147209,
-        "options": {},
         "analyticsLabels": {
           "producer": "Korean",
           "page": "korean.articles.c3mn1lvz65xo.page"
@@ -700,7 +710,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Korean",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -718,12 +727,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "이것이이 테스트 기사의 헤드 라인입니다."
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1229,7 +1235,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T18:07:57.06Z",
+        "generated": "2023-02-17T18:07:56.626Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

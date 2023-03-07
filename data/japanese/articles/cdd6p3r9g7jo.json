@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "58d6ad19",
+              "id": "73786acc",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "8136f389",
+                    "id": "66e926fb",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "81a82ea6",
+                          "id": "b971e540",
                           "type": "paragraph",
                           "model": {
                             "text": "これは、このテスト記事の見出しです",
                             "blocks": [
                               {
-                                "id": "9fbaca2e",
+                                "id": "a4dd9dd8",
                                 "type": "fragment",
                                 "model": {
                                   "text": "これは、このテスト記事の見出しです",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "19e7f993",
+              "id": "fb922b81",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "b114bb14",
+                    "id": "8e642a62",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0deb3493",
+                          "id": "3f19ba25",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "bf3a09d2",
+                                "id": "f1df13cb",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "このテスト画像、著作権は、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
                                   "blocks": [
                                     {
-                                      "id": "eb9b7964",
+                                      "id": "74d70258",
                                       "type": "fragment",
                                       "model": {
                                         "text": "このテスト画像、著作権は、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "a95d3134",
+                    "id": "da2b0bcd",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "703da835",
+                          "id": "4eedcfbe",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "210b0f5a",
+                                "id": "752e0ba6",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "このテスト画像、著作権BBCは、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
                                   "blocks": [
                                     {
-                                      "id": "51b0b37b",
+                                      "id": "7e039cb6",
                                       "type": "fragment",
                                       "model": {
                                         "text": "このテスト画像、著作権BBCは、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "8ad5d876",
+                    "id": "394513c2",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "c742ef2d",
+              "id": "ce51d6f0",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1574854693250,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "e3faffca",
+              "id": "d406602d",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "34843a53",
+                    "id": "4ad5b695",
                     "type": "paragraph",
                     "model": {
                       "text": "これはテキストブロックで、ホームページへのリンクが含まれています。",
                       "blocks": [
                         {
-                          "id": "b5ffac02",
+                          "id": "dacf73d2",
                           "type": "fragment",
                           "model": {
                             "text": "これはテキストブロックで、ホームページへのリンク",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "f31f117d",
+                          "id": "95ad1d73",
                           "type": "urlLink",
                           "model": {
                             "text": "が含まれています",
                             "blocks": [
                               {
-                                "id": "18bdc2f0",
+                                "id": "693e4346",
                                 "type": "fragment",
                                 "model": {
                                   "text": "が含まれています",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "6e772d85",
+                          "id": "437d77dd",
                           "type": "fragment",
                           "model": {
                             "text": "。",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "887155e1",
+              "id": "0986a415",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "a5e127b4",
+                    "id": "0ae51afa",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9779b691",
+                          "id": "ad98aafa",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "80b67896",
+                                "id": "a440609c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "これはテキストブロックで、ホームページへのリ",
                                   "blocks": [
                                     {
-                                      "id": "3282efbf",
+                                      "id": "12278013",
                                       "type": "fragment",
                                       "model": {
                                         "text": "これはテキストブロックで、ホームページへのリ",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "d41c22f1",
+                    "id": "7c3cd80b",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "2eba773f",
+                          "id": "d8129683",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -395,12 +395,12 @@
                           ]
                         },
                         {
-                          "id": "9237d128",
+                          "id": "0d2f39b2",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "51aa9de0",
+                                "id": "9ca27f6b",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -417,23 +417,23 @@
                                 ]
                               },
                               {
-                                "id": "de04a289",
+                                "id": "72129ed8",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "a7f7724a",
+                                      "id": "f9c70033",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "2cae098e",
+                                            "id": "3ccf9419",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "b42739bf",
+                                                  "id": "ceb20eeb",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -501,23 +501,23 @@
               ]
             },
             {
-              "id": "d7419b37",
+              "id": "08de362b",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "2b18b82a",
+                    "id": "ce489374",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6bba71da",
+                          "id": "1d85f195",
                           "type": "paragraph",
                           "model": {
                             "text": "これはサブヘッドラインブロックです",
                             "blocks": [
                               {
-                                "id": "b9585175",
+                                "id": "d2bcb543",
                                 "type": "fragment",
                                 "model": {
                                   "text": "これはサブヘッドラインブロックです",
@@ -552,28 +552,28 @@
               ]
             },
             {
-              "id": "b41d51ba",
+              "id": "f044721e",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "7c9025ca",
+                    "id": "cc031ab0",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "0ccfc006",
+                          "id": "776ea8d3",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b5459f6a",
+                                "id": "5ad3f1f8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "これはサブヘッドラインブロックです",
                                   "blocks": [
                                     {
-                                      "id": "26c53b5f",
+                                      "id": "be09d770",
                                       "type": "fragment",
                                       "model": {
                                         "text": "これはサブヘッドラインブロックです",
@@ -612,7 +612,7 @@
                     ]
                   },
                   {
-                    "id": "53da8d41",
+                    "id": "2ad938e7",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -633,18 +633,18 @@
               ]
             },
             {
-              "id": "dc5c00be",
+              "id": "ff63fa5e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "355ab7be",
+                    "id": "4109bb12",
                     "type": "paragraph",
                     "model": {
                       "text": "このテスト記事は、ウェブサイトで自動化されたエンドツーエンドのテストを実行できるように作成されています。  ",
                       "blocks": [
                         {
-                          "id": "27ff3ec9",
+                          "id": "cf30ff2d",
                           "type": "fragment",
                           "model": {
                             "text": "このテスト記事は、ウェブサイトで自動化されたエンドツーエンドのテストを実行できるように作成されています。  ",
@@ -670,7 +670,7 @@
               ]
             },
             {
-              "id": "513bbef8",
+              "id": "4042341e",
               "type": "text",
               "model": {
                 "blocks": []
@@ -680,11 +680,21 @@
               ]
             },
             {
-              "id": "137020bd",
+              "id": "7923a7cb",
               "type": "mpu",
               "model": {},
               "position": [
                 10
+              ]
+            },
+            {
+              "id": "a4a6eef6",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                11
               ]
             }
           ]
@@ -693,14 +703,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cdd6p3r9g7jo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cdd6p3r9g7jo"
+          "optimoUrn": "urn:bbc:optimo:asset:cdd6p3r9g7jo",
+          "canonicalUrl": "https://www.bbc.com/japanese/articles/cdd6p3r9g7jo"
         },
         "type": "article",
         "createdBy": "Japanese",
         "language": "ja",
         "firstPublished": 1574854693250,
         "lastPublished": 1574854693250,
-        "options": {},
         "analyticsLabels": {
           "producer": "Japanese",
           "page": "japanese.articles.cdd6p3r9g7jo.page"
@@ -710,7 +720,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -728,12 +737,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "これは、このテスト記事の見出しです"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -744,8 +750,10 @@
           },
           "locators": {
             "assetUri": "/japanese/23003065",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:28575ae8-9c47-b34d-ba24-2b357f05c226",
+            "assetId": "23003065",
             "cpsUrn": "urn:bbc:content:assetUri:japanese/23003065",
-            "assetId": "23003065"
+            "curie": "http://www.bbc.co.uk/asset/28575ae8-9c47-b34d-ba24-2b357f05c226"
           },
           "summary": "タイ・バンコク中心部で17日夜に起きた爆発事件で、警察が防犯カメラに映った男性を主要容疑者として捜査していることが明らかになった",
           "timestamp": 1569397424000,
@@ -785,8 +793,10 @@
           },
           "locators": {
             "assetUri": "/japanese/23002306",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:7a5e649c-8fc2-9f46-9823-4d3e22dce7ae",
+            "assetId": "23002306",
             "cpsUrn": "urn:bbc:content:assetUri:japanese/23002306",
-            "assetId": "23002306"
+            "curie": "http://www.bbc.co.uk/asset/7a5e649c-8fc2-9f46-9823-4d3e22dce7ae"
           },
           "summary": "欧州委員会は11日、ギリシャが債権団との金融支援策に「原則として」合意したと明らかにした。ギリシャ政府は今後、議会承認を求めていく。",
           "timestamp": 1439345119000,
@@ -807,7 +817,8 @@
           },
           "options": {
             "isBreakingNews": false,
-            "isFactCheck": false
+            "isFactCheck": false,
+            "hasShortForm": true
           },
           "section": {
             "subType": "IDX",
@@ -825,8 +836,10 @@
           },
           "locators": {
             "assetUri": "/news/magazine-19712847",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:ff819582-928b-374d-9f99-f9a33e6fdded",
+            "assetId": "19712847",
             "cpsUrn": "urn:bbc:content:assetUri:news/magazine-19712847",
-            "assetId": "19712847"
+            "curie": "http://www.bbc.co.uk/asset/ff819582-928b-374d-9f99-f9a33e6fdded"
           },
           "summary": "Instead of waiting in line for their turn, Americans are finding themselves in a new kind of queue - where people who can pay get higher priority.",
           "timestamp": 1349307898000,
@@ -891,8 +904,10 @@
           },
           "locators": {
             "assetUri": "/japanese/23002307",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:dcc1bd03-a09b-3f48-afb9-065970f11af9",
+            "assetId": "23002307",
             "cpsUrn": "urn:bbc:content:assetUri:japanese/23002307",
-            "assetId": "23002307"
+            "curie": "http://www.bbc.co.uk/asset/dcc1bd03-a09b-3f48-afb9-065970f11af9"
           },
           "summary": "中国の中央銀行、中国人民銀行は12日、人民元レートの基準値を前日に続けて切り下げ、1ドル＝6.3306 元と発表した。前日比1.6％の切り下げ。11日には前日比2％近く切り下げ、世界各地の市場を揺るがした。",
           "timestamp": 1439351723000,
@@ -913,7 +928,8 @@
           },
           "options": {
             "isBreakingNews": false,
-            "isFactCheck": false
+            "isFactCheck": false,
+            "hasShortForm": true
           },
           "section": {
             "subType": "IDX",
@@ -931,8 +947,10 @@
           },
           "locators": {
             "assetUri": "/news/magazine-19804286",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:153c6d20-2954-d844-b586-bbbc4cee285c",
+            "assetId": "19804286",
             "cpsUrn": "urn:bbc:content:assetUri:news/magazine-19804286",
-            "assetId": "19804286"
+            "curie": "http://www.bbc.co.uk/asset/153c6d20-2954-d844-b586-bbbc4cee285c"
           },
           "summary": "For two gay men, the photograph showed them at their happiest, but for an anti-gay marriage political group, the image represented the wrong kind of family values.",
           "timestamp": 1349343672000,
@@ -998,8 +1016,10 @@
           },
           "locators": {
             "assetUri": "/news/world-asia-india-19714959",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:e6b5139b-fd4f-944f-b206-8edec74b816b",
+            "assetId": "19714959",
             "cpsUrn": "urn:bbc:content:assetUri:news/world-asia-india-19714959",
-            "assetId": "19714959"
+            "curie": "http://www.bbc.co.uk/asset/e6b5139b-fd4f-944f-b206-8edec74b816b"
           },
           "summary": "An eyewitness account of life under the constant buzzing of drones in tribal north-west Pakistan.",
           "timestamp": 1349307768000,
@@ -1064,8 +1084,10 @@
           },
           "locators": {
             "assetUri": "/news/business-19210539",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:dc6b3c79-c4ea-fe4d-bf74-8c64cac7448c",
+            "assetId": "19210539",
             "cpsUrn": "urn:bbc:content:assetUri:news/business-19210539",
-            "assetId": "19210539"
+            "curie": "http://www.bbc.co.uk/asset/dc6b3c79-c4ea-fe4d-bf74-8c64cac7448c"
           },
           "summary": "More than 40 countries around the world have upgraded their mobile networks to handle high-speed 4G - and more must do the same, writes Olaf Swantee.",
           "timestamp": 1345761934000,
@@ -1125,7 +1147,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:56:57.925Z",
+        "generated": "2023-02-18T02:56:56.714Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 18,
@@ -1337,13 +1359,18 @@
               },
               "locators": {
                 "assetUri": "/japanese/23003043",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:eae591ac-480e-7a44-9c66-1e6940fb8067",
+                "assetId": "23003043",
                 "cpsUrn": "urn:bbc:content:assetUri:japanese/23003043",
-                "curie": "http://www.bbc.co.uk/asset/eae591ac-480e-7a44-9c66-1e6940fb8067",
-                "assetId": "23003043"
+                "curie": "http://www.bbc.co.uk/asset/eae591ac-480e-7a44-9c66-1e6940fb8067"
               },
               "summary": "タイのプラユット暫定首相は18日、バンコク中心部の爆弾事件についてタイにとって「過去最悪の攻撃」と述べた。",
               "timestamp": 1439882732000,
               "language": "ja",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Japanese",
+                "taggings": []
+              },
               "indexImage": {
                 "id": "63465597",
                 "subType": "index",

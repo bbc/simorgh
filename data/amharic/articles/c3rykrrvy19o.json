@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "f410f84a",
+              "id": "1080fcca",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "98ab3f73",
+                    "id": "3a726f1d",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "99045b80",
+                          "id": "64e5bdf8",
                           "type": "paragraph",
                           "model": {
                             "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
                             "blocks": [
                               {
-                                "id": "319b04d1",
+                                "id": "1bae994a",
                                 "type": "fragment",
                                 "model": {
                                   "text": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "f27d8b15",
+              "id": "05c4585e",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942682443,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "c3fb1f86",
+              "id": "6cc4e0eb",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "ba1d21c8",
+                    "id": "11e1781d",
                     "type": "paragraph",
                     "model": {
                       "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
                       "blocks": [
                         {
-                          "id": "721d67a1",
+                          "id": "90d75fad",
                           "type": "fragment",
                           "model": {
                             "text": "ተመራማሪዎች ከዘመናዊ ሰው ጋር ተቀራራቢ የሆነ ዝርያ ከአፍሪካ ውጪ አገኙ።",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "c527854e",
+                    "id": "d028b943",
                     "type": "paragraph",
                     "model": {
                       "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
                       "blocks": [
                         {
-                          "id": "68362049",
+                          "id": "75678af5",
                           "type": "fragment",
                           "model": {
                             "text": "በግሪክ የተገኘው የራስ ቅል አውሮጳ በኒያንደርታሎች በተወረረችበት ወቅት 210 ሺህ ዓመት ያስቆጠረ ነው ተብሏል።",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "2fe69409",
+                    "id": "ab7ce991",
                     "type": "paragraph",
                     "model": {
                       "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
                       "blocks": [
                         {
-                          "id": "ed53c676",
+                          "id": "035d19ee",
                           "type": "fragment",
                           "model": {
                             "text": "ጥናቱ ይፋ እንዳደረገው፤ የሰው ልጅ ከአፍሪካ ወደ አውሮጳ ቅድመ ፍልሰት ስለማድረጉ ታሪክ ምንም አይነት የዘረመል ማስረጃ የለውም ለሚለው ሌላ አስረጅ ሆኖ ቀርቧል።",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "4cfadde2",
+                    "id": "9c15225b",
                     "type": "paragraph",
                     "model": {
                       "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
                       "blocks": [
                         {
-                          "id": "ab5f562c",
+                          "id": "c61f049d",
                           "type": "fragment",
                           "model": {
                             "text": "ይህ ግኝት የታተመው 'ኔቸር' በተሰኘው ጆርናል ላይ ነው።",
@@ -182,7 +182,7 @@
               ]
             },
             {
-              "id": "7d2a53ac",
+              "id": "3292ff3a",
               "type": "mpu",
               "model": {},
               "position": [
@@ -190,18 +190,18 @@
               ]
             },
             {
-              "id": "ff3a092c",
+              "id": "1f6fbfe0",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5cae092d",
+                    "id": "a6cd541a",
                     "type": "paragraph",
                     "model": {
                       "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
                       "blocks": [
                         {
-                          "id": "4a517e26",
+                          "id": "b5c0afe7",
                           "type": "fragment",
                           "model": {
                             "text": "ተመራማሪዎች በ1970ዎቹ በግሪክ አፒዲማ ዋሻ ውስጥ ሁለት ጠቃሚ ቅሪተ አካል አግኝተው ነበር።",
@@ -225,6 +225,16 @@
               "position": [
                 5
               ]
+            },
+            {
+              "id": "289cc4b5",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
             }
           ]
         }
@@ -232,14 +242,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c3rykrrvy19o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o"
+          "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o",
+          "canonicalUrl": "https://www.bbc.com/amharic/articles/c3rykrrvy19o"
         },
         "type": "article",
         "createdBy": "Amharic",
         "language": "am",
         "firstPublished": 1562942682443,
         "lastPublished": 1562942682443,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3rykrrvy19o",
           "producer": "Amharic",
@@ -250,7 +260,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Amharic",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -260,12 +269,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "የቀደመው ዘመናዊ ሰው ከአፍሪካ ውጪ ተገኘ"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -802,7 +808,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:48:57.076Z",
+        "generated": "2023-02-17T18:04:00.615Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 19,
