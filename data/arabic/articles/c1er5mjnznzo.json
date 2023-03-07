@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "cf9778f4",
+              "id": "172a0fa5",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "2b297ac2",
+                    "id": "6127afb2",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5d31d85e",
+                          "id": "a18fe0cb",
                           "type": "paragraph",
                           "model": {
                             "text": "هذا هو عنوان هذا المقال الاختبار",
                             "blocks": [
                               {
-                                "id": "d9230d71",
+                                "id": "1073ee03",
                                 "type": "fragment",
                                 "model": {
                                   "text": "هذا هو عنوان هذا المقال الاختبار",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "653a27ee",
+              "id": "a7327224",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "5b6216e0",
+                    "id": "169cb21a",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6742ddde",
+                          "id": "f47e3355",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f9b58a3d",
+                                "id": "c8113c4e",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.",
                                   "blocks": [
                                     {
-                                      "id": "331292e9",
+                                      "id": "99e115dd",
                                       "type": "fragment",
                                       "model": {
                                         "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "2793eba4",
+                    "id": "ca9e5c8e",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7f327944",
+                          "id": "9fb85dda",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0f00ea6c",
+                                "id": "3311ee98",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.",
                                   "blocks": [
                                     {
-                                      "id": "85bceab0",
+                                      "id": "b8b498bb",
                                       "type": "fragment",
                                       "model": {
                                         "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "9482e9e0",
+                    "id": "3fe88e02",
                     "type": "rawImage",
                     "model": {
                       "width": 976,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "d820871b",
+              "id": "7006d8be",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1570184527836,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "299a60ea",
+              "id": "4763a665",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5fe55070",
+                    "id": "34087729",
                     "type": "paragraph",
                     "model": {
                       "text": "هذا عبارة عن كتلة نصية ، تحتوي على رابط url إلى الصفحة الرئيسية لبي بي سي للطقس.",
                       "blocks": [
                         {
-                          "id": "3332a8e4",
+                          "id": "fa79105c",
                           "type": "fragment",
                           "model": {
                             "text": "هذا عبارة عن كتلة نصية ، تحتوي على رابط url إلى الصفحة ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "7dd02876",
+                          "id": "8b36f124",
                           "type": "urlLink",
                           "model": {
                             "text": "الرئيسية لبي بي سي للطقس",
                             "blocks": [
                               {
-                                "id": "8552dcd7",
+                                "id": "039e000b",
                                 "type": "fragment",
                                 "model": {
                                   "text": "الرئيسية لبي بي سي للطقس",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "7bc8a5a8",
+                          "id": "0ac319fb",
                           "type": "fragment",
                           "model": {
                             "text": ".",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "c813230e",
+              "id": "5265b920",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01kf9p8",
                 "blocks": [
                   {
-                    "id": "ea353e7e",
+                    "id": "47114dea",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5cde0258",
+                          "id": "5761dfaa",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "45c3a416",
+                                "id": "9b2b2988",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.",
                                   "blocks": [
                                     {
-                                      "id": "c0f990f7",
+                                      "id": "0282984e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "تعرض هذه الصورة التجريبية ، حقوق الطبع والنشر لهيئة الإذاعة البريطانية ، خريطة لفرنسا. الصورة في الكتل الثلاثة الأولى وتحتوي على هذا التعليق.",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "29445123",
+                    "id": "8b0a91c5",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3e6b7126",
+                          "id": "843eb952",
                           "blockId": "urn:bbc:ares::clip:p01kf9p8",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -392,12 +392,12 @@
                           ]
                         },
                         {
-                          "id": "9ec00782",
+                          "id": "10d31ea4",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b70807c7",
+                                "id": "24d9948f",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01kf9pn.jpg",
@@ -411,23 +411,23 @@
                                 ]
                               },
                               {
-                                "id": "6d537f25",
+                                "id": "24efc3a0",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "d1c9ecaa",
+                                      "id": "25b78d0c",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "ba55ea74",
+                                            "id": "e0ffb0c8",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
                                               "blocks": [
                                                 {
-                                                  "id": "f42cf607",
+                                                  "id": "6297e618",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ø¦[Â» Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙÙØ«Ø³Ù",
@@ -495,23 +495,23 @@
               ]
             },
             {
-              "id": "8e307222",
+              "id": "02f5be93",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "3b265781",
+                    "id": "19f85854",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ac0f8ff2",
+                          "id": "fefff99b",
                           "type": "paragraph",
                           "model": {
                             "text": "هذا كتلة عنوان فرعي",
                             "blocks": [
                               {
-                                "id": "8ba9ad4c",
+                                "id": "9d3a3d22",
                                 "type": "fragment",
                                 "model": {
                                   "text": "هذا كتلة عنوان فرعي",
@@ -546,28 +546,28 @@
               ]
             },
             {
-              "id": "c9ce9cc8",
+              "id": "d6f0ef18",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "46627408",
+                    "id": "7b511e1b",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7d3f54ed",
+                          "id": "be51f218",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e3a97c5b",
+                                "id": "dfe35d55",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "هذا كتلة عنوان فرعي\r",
                                   "blocks": [
                                     {
-                                      "id": "dd00bbea",
+                                      "id": "b8a7d789",
                                       "type": "fragment",
                                       "model": {
                                         "text": "هذا كتلة عنوان فرعي\r",
@@ -606,7 +606,7 @@
                     ]
                   },
                   {
-                    "id": "c873eb15",
+                    "id": "b441c6eb",
                     "type": "rawImage",
                     "model": {
                       "width": 976,
@@ -627,18 +627,18 @@
               ]
             },
             {
-              "id": "1e3e531e",
+              "id": "e25f873e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "3ff7ff0c",
+                    "id": "fdc4d050",
                     "type": "paragraph",
                     "model": {
                       "text": "تم إنشاء مقالة الاختبار هذه حتى نتمكن من إجراء اختبارات تلقائية شاملة على موقعنا.",
                       "blocks": [
                         {
-                          "id": "918b2b73",
+                          "id": "04533e3f",
                           "type": "fragment",
                           "model": {
                             "text": "تم إنشاء مقالة الاختبار هذه حتى نتمكن من إجراء اختبارات تلقائية شاملة على موقعنا.",
@@ -664,11 +664,21 @@
               ]
             },
             {
-              "id": "1dde7dbf",
+              "id": "d283daf7",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "1bdee9fb",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -677,14 +687,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c1er5mjnznzo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c1er5mjnznzo"
+          "optimoUrn": "urn:bbc:optimo:asset:c1er5mjnznzo",
+          "canonicalUrl": "https://www.bbc.com/arabic/articles/c1er5mjnznzo"
         },
         "type": "article",
         "createdBy": "Arabic",
         "language": "ar",
         "firstPublished": 1570184527836,
         "lastPublished": 1570184527836,
-        "options": {},
         "analyticsLabels": {
           "producer": "Arabic",
           "page": "arabic.articles.c1er5mjnznzo.page"
@@ -694,7 +704,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -712,12 +721,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "هذا هو عنوان هذا المقال الاختبار"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1006,7 +1012,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:48:57.266Z",
+        "generated": "2023-02-18T03:03:56.594Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
