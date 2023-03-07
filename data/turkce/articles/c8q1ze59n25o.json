@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "b6892ad6",
+              "id": "2d051ee1",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "42903b47",
+                    "id": "670c3bc8",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "93cf3803",
+                          "id": "2a58f34e",
                           "type": "paragraph",
                           "model": {
                             "text": "Bu, test makalesinin başlığı",
                             "blocks": [
                               {
-                                "id": "9892ba08",
+                                "id": "9e5ff7f7",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Bu, test makalesinin başlığı",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "3b991adb",
+              "id": "30b07abe",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "ef356267",
+                    "id": "861d30d6",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "15a8b473",
+                          "id": "c5d6e234",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1dc9c5da",
+                                "id": "15bb9e66",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.",
                                   "blocks": [
                                     {
-                                      "id": "7097cb88",
+                                      "id": "c1e5ff4c",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "fb31f1b6",
+                    "id": "97f25dbf",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e4263f8d",
+                          "id": "ff0abc3f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "775b2119",
+                                "id": "a8889e2d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.\r",
                                   "blocks": [
                                     {
-                                      "id": "e7a3a850",
+                                      "id": "2395f292",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip.\r",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "3f6a6bd7",
+                    "id": "b407d57c",
                     "type": "rawImage",
                     "model": {
                       "width": 976,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "260e7436",
+              "id": "1ac08036",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1570188314938,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "0115dcd8",
+              "id": "7aa0e17f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "d1eb3dd6",
+                    "id": "548d1ec9",
                     "type": "paragraph",
                     "model": {
                       "text": "Bu, BBC Weather ana sayfasına bir URL bağlantısı içeren bir metin bloğudur.",
                       "blocks": [
                         {
-                          "id": "c46b5c30",
+                          "id": "b967bc19",
                           "type": "fragment",
                           "model": {
                             "text": "Bu, ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "fed3a6ce",
+                          "id": "01b8d548",
                           "type": "urlLink",
                           "model": {
                             "text": "BBC Weather",
                             "blocks": [
                               {
-                                "id": "e15c1adc",
+                                "id": "30928a7d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "BBC Weather",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "29be5f1c",
+                          "id": "c51d26c6",
                           "type": "fragment",
                           "model": {
                             "text": " ana sayfasına bir URL bağlantısı içeren bir metin bloğudur.",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "d3f36936",
+              "id": "e0dd386a",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01jv2zy",
                 "blocks": [
                   {
-                    "id": "687d094b",
+                    "id": "6f8de4a9",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4571998e",
+                          "id": "f8dae97e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f8ec5313",
+                                "id": "d3012dec",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Indonesians Mark Endonezyalılar Kurban Bayramı'ndaki Lombok Bölgesi'ndeki depremler arasında",
                                   "blocks": [
                                     {
-                                      "id": "2d7c1a81",
+                                      "id": "88b44eb6",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Indonesians Mark Endonezyalılar Kurban Bayramı'ndaki Lombok Bölgesi'ndeki depremler arasında",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "5c5e0b6b",
+                    "id": "16f49306",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b3ae68bf",
+                          "id": "aa1308d6",
                           "blockId": "urn:bbc:ares::clip:p01jv2zy",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -393,12 +393,12 @@
                           ]
                         },
                         {
-                          "id": "2ca006e7",
+                          "id": "e9c48ddf",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "74158852",
+                                "id": "46458129",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01jv35f.jpg",
@@ -413,23 +413,23 @@
                                 ]
                               },
                               {
-                                "id": "afe50bfd",
+                                "id": "27dee31d",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "6f6f2c48",
+                                      "id": "577702c7",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "d5677c9e",
+                                            "id": "a577651b",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "pakistani girl with green eyes",
                                               "blocks": [
                                                 {
-                                                  "id": "d31f3e05",
+                                                  "id": "146d105b",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "pakistani girl with green eyes",
@@ -497,23 +497,23 @@
               ]
             },
             {
-              "id": "2b38e960",
+              "id": "bcadd2f1",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "d887c7c6",
+                    "id": "59d63a90",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6ef95f36",
+                          "id": "e8a1542f",
                           "type": "paragraph",
                           "model": {
                             "text": "Bu bir alt başlık bloğudur",
                             "blocks": [
                               {
-                                "id": "fab392d2",
+                                "id": "2f74f037",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Bu bir alt başlık bloğudur",
@@ -548,28 +548,28 @@
               ]
             },
             {
-              "id": "c4fc81a1",
+              "id": "5e44414c",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "7a79095b",
+                    "id": "158c4e68",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7229c0ca",
+                          "id": "504f5dfc",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "9e5fdf2d",
+                                "id": "64edee63",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Bu bir alt başlık bloğudur",
                                   "blocks": [
                                     {
-                                      "id": "4e6ce484",
+                                      "id": "9e2e2caa",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Bu bir alt başlık bloğudur",
@@ -608,7 +608,7 @@
                     ]
                   },
                   {
-                    "id": "93413d84",
+                    "id": "79a49832",
                     "type": "rawImage",
                     "model": {
                       "width": 976,
@@ -629,18 +629,18 @@
               ]
             },
             {
-              "id": "9402bb15",
+              "id": "cb7012ba",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "535e8627",
+                    "id": "d99df832",
                     "type": "paragraph",
                     "model": {
                       "text": "Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz için hazırlandı.",
                       "blocks": [
                         {
-                          "id": "92891ebf",
+                          "id": "be42ec02",
                           "type": "fragment",
                           "model": {
                             "text": "Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz için hazırlandı.",
@@ -666,11 +666,21 @@
               ]
             },
             {
-              "id": "e42d94e2",
+              "id": "6a5f3566",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "2355acda",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -679,14 +689,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c8q1ze59n25o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c8q1ze59n25o"
+          "optimoUrn": "urn:bbc:optimo:asset:c8q1ze59n25o",
+          "canonicalUrl": "https://www.bbc.com/turkce/articles/c8q1ze59n25o"
         },
         "type": "article",
         "createdBy": "Turkce",
         "language": "tr",
         "firstPublished": 1570188314938,
         "lastPublished": 1570188314938,
-        "options": {},
         "analyticsLabels": {
           "producer": "Turkish",
           "page": "turkce.articles.c8q1ze59n25o.page"
@@ -696,7 +706,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Turkce",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -714,12 +723,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -912,7 +918,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:09:57.154Z",
+        "generated": "2023-02-17T16:24:56.741Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

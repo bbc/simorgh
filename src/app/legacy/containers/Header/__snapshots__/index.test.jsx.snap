@@ -539,7 +539,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
     outline: none;
   }
 
-  .emotion-41:focus-visible:focus-visible::after {
+  .emotion-41:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -547,7 +547,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
     height: 100%;
   }
 
-  .emotion-41:focus-visible:after {
+  .emotion-41:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -565,7 +565,7 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-41:focus-visible:after {
+    .emotion-41:after {
       width: 6rem;
     }
   }
@@ -615,7 +615,6 @@ exports[`Header Snapshots should render correctly for WS frontpage 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -1773,7 +1772,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     outline: none;
   }
 
-  .emotion-41:focus-visible:focus-visible::after {
+  .emotion-41:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -1781,7 +1780,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     height: 100%;
   }
 
-  .emotion-41:focus-visible:after {
+  .emotion-41:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -1799,7 +1798,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-41:focus-visible:after {
+    .emotion-41:after {
       width: 6rem;
     }
   }
@@ -1849,7 +1848,6 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -3007,7 +3005,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     outline: none;
   }
 
-  .emotion-41:focus-visible:focus-visible::after {
+  .emotion-41:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -3015,7 +3013,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     height: 100%;
   }
 
-  .emotion-41:focus-visible:after {
+  .emotion-41:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -3033,7 +3031,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-41:focus-visible:after {
+    .emotion-41:after {
       width: 6rem;
     }
   }
@@ -3083,7 +3081,6 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;

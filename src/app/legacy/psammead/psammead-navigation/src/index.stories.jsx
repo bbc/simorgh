@@ -31,8 +31,6 @@ import arabicNavData from '../testHelpers/arabic';
 
 import notes from '../README.md';
 
-const defaultBrandBackgroundColour = '#B80000';
-
 const navStoriesData = [
   {
     title: 'news',
@@ -86,11 +84,6 @@ const inputs = () => {
   const svgHeightInput = number('desired height svg', svgMaxHeight);
   const borderBottom = boolean('Border Bottom', false);
   const borderTop = boolean('Border Top', false);
-  const backgroundColour = color(
-    'Background colour',
-    `${defaultBrandBackgroundColour}`,
-  );
-  const logoColour = color('Logo colour', `${C_WHITE}`);
 
   return {
     productInput,
@@ -116,8 +109,6 @@ const getBrand = () => {
     svgChoice,
     borderBottom,
     borderTop,
-    backgroundColour,
-    logoColour,
   } = inputs();
 
   return (
@@ -131,8 +122,6 @@ const getBrand = () => {
       url="https://www.bbc.com/news"
       borderBottom={borderBottom}
       borderTop={borderTop}
-      backgroundColour={backgroundColour}
-      logoColour={logoColour}
     />
   );
 };
@@ -144,28 +133,10 @@ const dropdownNavigationStory = (
   isAmp,
   script,
   service,
-  brandBackgroundColour,
-  brandForegroundColour,
-  brandBorderColour,
-  brandHighlightColour,
 ) => (
   <>
-    <Navigation
-      script={script}
-      service={service}
-      dir={dir}
-      brandBackgroundColour={brandBackgroundColour}
-      brandForegroundColour={brandForegroundColour}
-      brandBorderColour={brandBorderColour}
-      brandHighlightColour={brandHighlightColour}
-    >
-      <ScrollableNavigation
-        dir={dir}
-        brandBackgroundColour={brandBackgroundColour}
-        brandForegroundColour={brandForegroundColour}
-        brandBorderColour={brandBorderColour}
-        brandHighlightColour={brandHighlightColour}
-      >
+    <Navigation script={script} service={service} dir={dir}>
+      <ScrollableNavigation dir={dir}>
         <DropdownUl>
           {navData.map((item, index) => {
             const { title, url } = item;
@@ -180,9 +151,6 @@ const dropdownNavigationStory = (
                 currentPageText={currentPageText}
                 service={service}
                 dir={dir}
-                brandForegroundColour={brandForegroundColour}
-                brandHighlightColour={brandHighlightColour}
-                brandBorderColour={brandBorderColour}
               >
                 {title}
               </DropdownLi>
@@ -202,30 +170,12 @@ const navigationStory = (
   isAmp,
   script,
   service,
-  brandBackgroundColour,
-  brandForegroundColour,
-  brandBorderColour,
-  brandHighlightColour,
 ) => (
   <>
     {brand && getBrand()}
 
-    <Navigation
-      script={script}
-      service={service}
-      dir={dir}
-      brandBackgroundColour={brandBackgroundColour}
-      brandForegroundColour={brandForegroundColour}
-      brandBorderColour={brandBorderColour}
-      brandHighlightColour={brandHighlightColour}
-    >
-      <ScrollableNavigation
-        dir={dir}
-        brandBackgroundColour={brandBackgroundColour}
-        brandForegroundColour={brandForegroundColour}
-        brandBorderColour={brandBorderColour}
-        brandHighlightColour={brandHighlightColour}
-      >
+    <Navigation script={script} service={service} dir={dir}>
+      <ScrollableNavigation dir={dir}>
         <NavigationUl>
           {navData.map((item, index) => {
             const { title, url } = item;
@@ -240,9 +190,6 @@ const navigationStory = (
                 currentPageText={currentPageText}
                 service={service}
                 dir={dir}
-                brandForegroundColour={brandForegroundColour}
-                brandHighlightColour={brandHighlightColour}
-                brandBorderColour={brandBorderColour}
               >
                 {title}
               </NavigationLi>
@@ -254,26 +201,10 @@ const navigationStory = (
   </>
 );
 
-const animationStory = (
-  dir,
-  script,
-  service,
-  brandBackgroundColour,
-  brandForegroundColour,
-  brandBorderColour,
-  brandHighlightColour,
-) => {
+const animationStory = (dir, script, service) => {
   const isOpen = boolean('Open', false);
   return (
-    <Navigation
-      script={script}
-      service={service}
-      dir={dir}
-      brandBackgroundColour={brandBackgroundColour}
-      brandForegroundColour={brandForegroundColour}
-      brandBorderColour={brandBorderColour}
-      brandHighlightColour={brandHighlightColour}
-    >
+    <Navigation script={script} service={service} dir={dir}>
       <CanonicalDropdown isOpen={isOpen}>
         <DropdownUl>
           {pidginNavData.map((item, index) => {
@@ -309,14 +240,7 @@ navStoriesData.map(item => {
 
   return canonicalStories.add(
     title,
-    ({
-      script,
-      service,
-      brandBackgroundColour,
-      brandForegroundColour,
-      brandBorderColour,
-      brandHighlightColour,
-    }) =>
+    ({ script, service }) =>
       navigationStory(
         currentPageText,
         data,
@@ -325,10 +249,6 @@ navStoriesData.map(item => {
         isAmp,
         script,
         service,
-        brandBackgroundColour,
-        brandForegroundColour,
-        brandBorderColour,
-        brandHighlightColour,
       ),
     {
       notes,
@@ -361,24 +281,7 @@ canonicalStories.add(
 
 canonicalStories.add(
   'Dropdown animation',
-  ({
-    dir,
-    script,
-    service,
-    brandBackgroundColour,
-    brandForegroundColour,
-    brandBorderColour,
-    brandHighlightColour,
-  }) =>
-    animationStory(
-      dir,
-      script,
-      service,
-      brandBackgroundColour,
-      brandForegroundColour,
-      brandBorderColour,
-      brandHighlightColour,
-    ),
+  ({ dir, script, service }) => animationStory(dir, script, service),
   {
     notes,
   },
@@ -386,14 +289,7 @@ canonicalStories.add(
 
 canonicalStories.add(
   'News with brand',
-  ({
-    script,
-    service,
-    brandBackgroundColour,
-    brandForegroundColour,
-    brandBorderColour,
-    brandHighlightColour,
-  }) =>
+  ({ script, service }) =>
     navigationStory(
       navStoriesData[0].currentPageText,
       newsNavData,
@@ -402,10 +298,6 @@ canonicalStories.add(
       false,
       script,
       service,
-      brandBackgroundColour,
-      brandForegroundColour,
-      brandBorderColour,
-      brandHighlightColour,
     ),
   {
     notes,
@@ -415,14 +307,7 @@ canonicalStories.add(
 
 canonicalStories.add(
   'Dropdown Navigation',
-  ({
-    script,
-    service,
-    brandBackgroundColour,
-    brandForegroundColour,
-    brandBorderColour,
-    brandHighlightColour,
-  }) =>
+  ({ script, service }) =>
     dropdownNavigationStory(
       navStoriesData[0].currentPageText,
       newsNavData,
@@ -430,10 +315,6 @@ canonicalStories.add(
       false,
       script,
       service,
-      brandBackgroundColour,
-      brandForegroundColour,
-      brandBorderColour,
-      brandHighlightColour,
     ),
   {
     notes,
@@ -453,14 +334,7 @@ navStoriesData.map(item => {
 
   return ampStories.add(
     title,
-    ({
-      script,
-      service,
-      brandBackgroundColour,
-      brandForegroundColour,
-      brandBorderColour,
-      brandHighlightColour,
-    }) =>
+    ({ script, service }) =>
       navigationStory(
         currentPageText,
         data,
@@ -469,10 +343,6 @@ navStoriesData.map(item => {
         isAmp,
         script,
         service,
-        brandBackgroundColour,
-        brandForegroundColour,
-        brandBorderColour,
-        brandHighlightColour,
       ),
     {
       notes,

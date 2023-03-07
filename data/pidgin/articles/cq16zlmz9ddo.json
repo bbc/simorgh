@@ -5,29 +5,29 @@
         "model": {
           "blocks": [
             {
-              "id": "08de5217",
+              "id": "5ac615eb",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01sk2dc",
                 "blocks": [
                   {
-                    "id": "3b220e83",
+                    "id": "44e1aa78",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "02390529",
+                          "id": "0270c769",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c7e85f78",
+                                "id": "2ee69045",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "test",
                                   "blocks": [
                                     {
-                                      "id": "8e8852cc",
+                                      "id": "b61b3d7b",
                                       "type": "fragment",
                                       "model": {
                                         "text": "test",
@@ -66,12 +66,12 @@
                     ]
                   },
                   {
-                    "id": "9f7575f9",
+                    "id": "41e37ac0",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "ed84f465",
+                          "id": "ae0e7d6a",
                           "blockId": "urn:bbc:ares::clip:p01sk2dc",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -113,12 +113,12 @@
                           ]
                         },
                         {
-                          "id": "f64c7954",
+                          "id": "53073aca",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e540a3e2",
+                                "id": "e77dc255",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 976,
@@ -134,23 +134,23 @@
                                 ]
                               },
                               {
-                                "id": "d8d0bc6e",
+                                "id": "69d1df1c",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "40e92ee9",
+                                      "id": "6ea7ffbf",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "b7e85a16",
+                                            "id": "e893da79",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "World Service Thumbnail",
                                               "blocks": [
                                                 {
-                                                  "id": "27a6a044",
+                                                  "id": "8cc72fce",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "World Service Thumbnail",
@@ -218,23 +218,23 @@
               ]
             },
             {
-              "id": "3c01af2f",
+              "id": "c0def1d4",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "ed6b15c7",
+                    "id": "b3bffa1c",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4f19706e",
+                          "id": "b6c8376a",
                           "type": "paragraph",
                           "model": {
                             "text": "Test: Skip to Content",
                             "blocks": [
                               {
-                                "id": "4dc4b2fd",
+                                "id": "d0e51174",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Test: Skip to Content",
@@ -269,28 +269,28 @@
               ]
             },
             {
-              "id": "e0110d79",
+              "id": "11c39f08",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "d5580c95",
+                    "id": "01992c45",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "348ea21c",
+                          "id": "d65dc22e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b547a0ac",
+                                "id": "d00d9797",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Test Image",
                                   "blocks": [
                                     {
-                                      "id": "27963d1d",
+                                      "id": "9b8392da",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Test Image",
@@ -329,23 +329,23 @@
                     ]
                   },
                   {
-                    "id": "4d11e53f",
+                    "id": "7694969c",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "44404238",
+                          "id": "e9f8512c",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "b32990ac",
+                                "id": "93ca91f8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Woman with sign",
                                   "blocks": [
                                     {
-                                      "id": "a6429239",
+                                      "id": "910ab4fc",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Woman with sign",
@@ -384,7 +384,7 @@
                     ]
                   },
                   {
-                    "id": "05c27a62",
+                    "id": "5706ee82",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -406,7 +406,7 @@
               ]
             },
             {
-              "id": "5bf18a46",
+              "id": "9efbd190",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1629274175607,
@@ -417,18 +417,18 @@
               ]
             },
             {
-              "id": "0bdad170",
+              "id": "0fa2444d",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "13a3d26f",
+                    "id": "180ad0d9",
                     "type": "paragraph",
                     "model": {
                       "text": "Test text",
                       "blocks": [
                         {
-                          "id": "c2c0ee92",
+                          "id": "e318d8d1",
                           "type": "fragment",
                           "model": {
                             "text": "Test text",
@@ -454,11 +454,21 @@
               ]
             },
             {
-              "id": "d9641de4",
+              "id": "2739c5ca",
               "type": "mpu",
               "model": {},
               "position": [
                 6
+              ]
+            },
+            {
+              "id": "5fb90f92",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                7
               ]
             }
           ]
@@ -467,14 +477,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cq16zlmz9ddo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cq16zlmz9ddo"
+          "optimoUrn": "urn:bbc:optimo:asset:cq16zlmz9ddo",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/cq16zlmz9ddo"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
         "firstPublished": 1629274175607,
         "lastPublished": 1629274330168,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cq16zlmz9ddo",
           "producer": "Pidgin",
@@ -498,7 +508,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "video",
           "caption",
@@ -514,7 +523,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Test: Skip to Content",
           "promoHeadline": {
@@ -644,8 +652,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1131,7 +1138,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:04:58.371Z",
+        "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

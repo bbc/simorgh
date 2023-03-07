@@ -82,7 +82,6 @@ exports[`Navigation should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -119,7 +118,6 @@ exports[`Navigation should render correctly 1`] = `
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
-  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-8:focus::after {
@@ -170,7 +168,6 @@ exports[`Navigation should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -402,7 +399,6 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -439,7 +435,6 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
-  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-8:focus::after {
@@ -490,7 +485,6 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -716,7 +710,6 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -753,7 +746,6 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
-  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-8:focus::after {
@@ -804,7 +796,6 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -967,7 +958,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
     outline: none;
   }
 
-  .emotion-0:focus-visible:focus-visible::after {
+  .emotion-0:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -975,7 +966,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
     height: 100%;
   }
 
-  .emotion-0:focus-visible:after {
+  .emotion-0:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -993,7 +984,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-0:focus-visible:after {
+    .emotion-0:after {
       width: 6rem;
     }
   }
@@ -1080,7 +1071,6 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -1117,7 +1107,6 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   right: 0;
   bottom: 0;
   border-bottom: 0.25rem solid #B80000;
-  border-bottom: 0.3125rem solid #B80000;
 }
 
 .emotion-10:focus::after {
@@ -1168,7 +1157,6 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
