@@ -3,6 +3,7 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ASSET_PAGE,
+  ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import getMostWatchedEndpoint from '#lib/utilities/getUrlHelpers/getMostWatchedUrl';
@@ -17,6 +18,7 @@ import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
 import hasMostRead from './hasMostRead';
 import fetchPageData from '../../utils/fetchPageData';
+import mappings from '../../article/utils/mappings';
 
 const noop = () => {};
 const logger = nodeLogger(__filename);
@@ -39,45 +41,21 @@ const getRecommendations = (service, assetUri) => {
     ];
   }
 
-  return [
-    {
-      name: 'recommendations',
+  return mappings.map(variant => {
+    return {
+      name: variant.name,
       attachAgent: true,
+      ...(variant.engine && { engine: variant.engine }),
       path: getRecommendationsUrl({
         assetUri,
         engine: 'unirecs_datalab',
+        ...(variant.engineVariant && { engineVariant: variant.engineVariant }),
       }),
       assetUri,
-      api: 'recommendations',
+      api: variant.api,
       apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabContentRecommendations',
-      attachAgent: true,
-      engine: 'unirecs_datalab_content',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'content',
-      }),
-      assetUri,
-      api: 'datalab_content',
-      apiContext: 'secondary_data',
-    },
-    {
-      name: 'datalabHybridRecommendations',
-      attachAgent: true,
-      engine: 'unirecs_datalab_hybrid',
-      path: getRecommendationsUrl({
-        assetUri,
-        engine: 'unirecs_datalab',
-        engineVariant: 'hybrid',
-      }),
-      assetUri,
-      api: 'datalab_hybrid',
-      apiContext: 'secondary_data',
-    },
-  ];
+    };
+  });
 };
 
 const pageTypeUrls = async (
@@ -126,6 +104,10 @@ const pageTypeUrls = async (
           apiContext: 'secondary_data',
         },
       ];
+    case ARTICLE_PAGE:
+      return (await hasRecommendations(service, variant, pageData))
+        ? getRecommendations(service, assetUri)
+        : [];
     default:
       return null;
   }
@@ -164,10 +146,15 @@ const fetchUrl = async ({ name, path, attachAgent, ...loggerArgs }) => {
   }
 };
 
-const getAdditionalPageData = async ({ pageData, service, variant, env }) => {
+const getAdditionalPageData = async ({
+  pageData,
+  service,
+  variant,
+  env,
+  path = '',
+}) => {
   const assetType = getAssetType(pageData);
-  const assetUri = getAssetUri(pageData);
-
+  const assetUri = getAssetUri(pageData) ?? path;
   const urlsToFetch = await pageTypeUrls(
     assetType,
     service,

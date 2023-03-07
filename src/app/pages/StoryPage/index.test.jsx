@@ -31,7 +31,7 @@ import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
 import portuguesePageData from '#data/portuguese/cpsAssets/brasil-54196636';
 import portugueseRecommendationData from '#data/portuguese/recommendations/index';
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 import userEvent from '@testing-library/user-event';
 import portugueseMostReadData from '#data/portuguese/mostRead/index';
 import {
@@ -49,7 +49,7 @@ import ThemeProvider from '../../components/ThemeProvider';
 import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import StoryPageIndex from '.';
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 import StoryPage from './StoryPage';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
@@ -85,7 +85,7 @@ jest.mock('#containers/Ad/Canonical/CanonicalAdBootstrapJs', () => {
   return CanonicalAdBootstrapJs;
 });
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 jest.mock('#containers/ATIAnalytics/beacon', () => {
   return {
     __esModule: true,
@@ -94,7 +94,7 @@ jest.mock('#containers/ATIAnalytics/beacon', () => {
   };
 });
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 jest.mock('@optimizely/react-sdk', () => {
   const actualModules = jest.requireActual('@optimizely/react-sdk');
   return {
@@ -104,7 +104,7 @@ jest.mock('@optimizely/react-sdk', () => {
   };
 });
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
@@ -128,7 +128,7 @@ const defaultToggleState = {
   },
 };
 
-// 004_brasil_recommendations_experiment
+// 005_brasil_recommendations_experiment
 const PageWithContext = ({
   pageData,
   service,
@@ -258,7 +258,7 @@ describe('Story Page', () => {
   beforeEach(() => {
     process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
     process.env.RECOMMENDATIONS_ENDPOINT = 'http://mock-recommendations-path';
-    // 004_brasil_recommendations_experiment
+    // 005_brasil_recommendations_experiment
     OptimizelyExperiment.mockImplementation(props => {
       const { children } = props;
 
@@ -793,7 +793,7 @@ describe('Story Page', () => {
   });
 
   describe.skip('Optimizely Experiments', () => {
-    describe('004_brasil_recommendations_experiment', () => {
+    describe('005_brasil_recommendations_experiment', () => {
       beforeEach(() => {
         process.env.RECOMMENDATIONS_ENDPOINT =
           'http://mock-recommendations-path';
@@ -974,6 +974,73 @@ describe('Story Page', () => {
 
           const recommendationsEndpoint =
             'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab&EngineVariant=hybrid';
+
+          fetchMock.mock(
+            'http://localhost/some-cps-sty-path.json',
+            portuguesePageData,
+          );
+
+          fetchMock.mock(recommendationsEndpoint, portugueseRecommendationData);
+
+          const { pageData } = await getInitialData({
+            path: '/some-cps-sty-path',
+            service: 'portuguese',
+            pageType,
+          });
+
+          const { getAllByRole } = render(
+            <Page pageData={pageData} service="portuguese" toggles={toggles} />,
+          );
+
+          const [recommendationsRegions] = getAllByRole('region').filter(
+            item =>
+              item.getAttribute('aria-labelledby') ===
+              'recommendations-heading',
+          );
+
+          const recommendationsItems = within(
+            recommendationsRegions,
+          ).getAllByRole('listitem');
+
+          expect(fetchMock.calls()[1][0]).toBe(recommendationsEndpoint);
+          expect(recommendationsRegions).not.toBeNull();
+          expect(recommendationsItems).toHaveLength(4);
+        });
+      });
+
+      describe('hybrid_recs_v1x1', () => {
+        beforeEach(() => {
+          process.env.RECOMMENDATIONS_ENDPOINT =
+            'http://mock-recommendations-path';
+          OptimizelyExperiment.mockImplementation(props => {
+            const { children } = props;
+
+            const variation = 'variation_1';
+
+            if (children != null && typeof children === 'function') {
+              return <>{children(variation, true, false)}</>;
+            }
+
+            return null;
+          });
+        });
+
+        afterEach(() => {
+          delete process.env.RECOMMENDATIONS_ENDPOINT;
+        });
+
+        it('should fetch and render recommendations from datalab hybrid variant endpoint when variation is hybrid_recs_v1x1 and service is portuguese', async () => {
+          const toggles = {
+            cpsRecommendations: {
+              enabled: true,
+            },
+            eventTracking: {
+              enabled: true,
+            },
+          };
+
+          const recommendationsEndpoint =
+            'http://mock-recommendations-path/recommendations/portuguese/brasil-54196636?Engine=unirecs_datalab&EngineVariant=hybrid-v1x1';
 
           fetchMock.mock(
             'http://localhost/some-cps-sty-path.json',
