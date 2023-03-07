@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Agent } from 'https';
+import pathOr from 'ramda/src/pathOr';
 import Url from 'url-parse';
-import getRecommendationsUrl from '#app/lib/utilities/getUrlHelpers/getRecommendationsUrl';
 import getAdditionalPageData from '#app/routes/cpsAsset/utils/getAdditionalPageData';
 import nodeLogger from '../../../lib/logger.node';
 import { getUrlPath } from '../../../lib/utilities/urlParser';
 import { BFF_FETCH_ERROR } from '../../../lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import { Services, Variants } from '../../../models/types/global';
+import getOnwardsPageData from '../utils/getOnwardsData';
 
 const logger = nodeLogger(__filename);
 
@@ -88,24 +89,6 @@ export default async ({
       ...(!isLocal && { agent, optHeaders }),
     });
 
-    const wsojURL = getRecommendationsUrl({
-      assetUri: pathname.replace(/(\.|\?).*/g, ''),
-      engine: 'unirecs_datalab',
-      engineVariant: '',
-    });
-
-    let wsojData = [];
-    try {
-      // @ts-ignore - Ignore fetchPageData argument types
-      const { json: wsojJson = [] } = await fetchPageData({
-        path: wsojURL,
-        ...{ agent, optHeaders },
-      });
-      wsojData = wsojJson;
-    } catch (error) {
-      logger.error('Recommendations JSON malformed', error);
-    }
-
     // Ensure all local CPS fixture and test data is in the correct format
     if (isLocal && pageType === 'cpsAsset') {
       const secondaryData = await getAdditionalPageData({
@@ -137,12 +120,31 @@ export default async ({
       data: { article, secondaryData },
     } = json;
 
+    let isAdvertising = false;
+    if (pageType === 'cpsAsset') {
+      isAdvertising = pathOr(
+        false,
+        ['metadata', 'options', 'allowAdvertising'],
+        article,
+      );
+    } else {
+      isAdvertising = pathOr(false, ['metadata', 'allowAdvertising'], article);
+    }
+
+    const wsojData = await getOnwardsPageData({
+      pathname,
+      service,
+      variant,
+      isAdvertising,
+      agent,
+    });
+
     return {
       status,
       pageData: {
         ...article,
         secondaryColumn: secondaryData,
-        recommendations: wsojData,
+        ...(wsojData && wsojData),
       },
     };
   } catch ({ message, status }) {

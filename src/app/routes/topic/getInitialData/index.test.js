@@ -108,7 +108,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin',
+      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
       agent,
       optHeaders,
     });
@@ -125,7 +125,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=serbian&variant=cyr',
+      path: 'https://mock-bff-path/?id=54321&service=serbian&variant=cyr&pageType=topic',
       agent,
       optHeaders,
     });
@@ -141,7 +141,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin',
+      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
       agent,
       optHeaders,
     });
@@ -157,7 +157,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin',
+      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
       agent,
       optHeaders,
     });
@@ -173,7 +173,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin',
+      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
       agent,
       optHeaders,
     });
@@ -191,7 +191,7 @@ describe('get initial data for topic', () => {
     const testHeader = { 'ctx-service-env': 'test' };
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin',
+      path: 'https://mock-bff-path/?id=54321&service=pidgin&pageType=topic',
       agent,
       optHeaders: testHeader,
     });
@@ -208,7 +208,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'https://mock-bff-path/?id=54321&service=pidgin&page=20',
+      path: 'https://mock-bff-path/?id=54321&service=pidgin&page=20&pageType=topic',
       agent,
       optHeaders,
     });

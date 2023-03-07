@@ -554,7 +554,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     outline: none;
   }
 
-  .emotion-43:focus-visible:focus-visible::after {
+  .emotion-43:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -562,7 +562,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
     height: 100%;
   }
 
-  .emotion-43:focus-visible:after {
+  .emotion-43:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -580,7 +580,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 
   @media (min-width: 25rem) {
-    .emotion-43:focus-visible:after {
+    .emotion-43:after {
       width: 6rem;
     }
   }
@@ -630,7 +630,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #FDFDFD;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
