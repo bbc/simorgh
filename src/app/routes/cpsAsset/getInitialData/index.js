@@ -5,6 +5,7 @@ import {
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import isLive from '#lib/utilities/isLive';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -94,7 +95,7 @@ export default async ({
   toggles,
 }) => {
   try {
-    const isCaf = pathname.includes('renderer_env=caf');
+    const isCaf = pathname.includes('renderer_env=caf') && !isLive();
 
     const {
       status,
