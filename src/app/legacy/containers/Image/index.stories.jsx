@@ -8,11 +8,14 @@ import {
   portrait,
   square,
 } from './helpers/fixtureData';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 const Component = props => (
-  <GridWrapper>
-    <ImageContainer {...props} />
-  </GridWrapper>
+  <ThemeProvider service="news">
+    <GridWrapper>
+      <ImageContainer {...props} />
+    </GridWrapper>
+  </ThemeProvider>
 );
 
 export default {
