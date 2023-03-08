@@ -20,7 +20,6 @@ import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import { CLOUD_LIGHT } from '../../../components/ThemeProvider/palette';
 import Link from './Link';
 
 const EN_GB_LANG = 'en-GB';
@@ -71,13 +70,14 @@ const StyledListItem = styled.li`
   display: inline-block;
   &:not(:first-of-type) > a > span {
     ${({ dir }) =>
-      dir === 'rtl'
-        ? `
+      props =>
+        dir === 'rtl'
+          ? `
       padding-right: 1rem;
-      border-right: 0.0625rem ${CLOUD_LIGHT} solid;`
-        : `
+      border-right: 0.0625rem ${props.theme.palette.CLOUD_LIGHT} solid;`
+          : `
       padding-left: 1rem;
-      border-left: 0.0625rem ${CLOUD_LIGHT} solid;
+      border-left: 0.0625rem ${props.theme.palette.CLOUD_LIGHT} solid;
       `}
   }
 `;
