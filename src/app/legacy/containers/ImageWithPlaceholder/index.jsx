@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { useTheme } from '@emotion/react';
 import { string, number, bool, node, elementType } from 'prop-types';
 import styled from '@emotion/styled';
 import LazyLoad from 'react-lazyload';
@@ -6,7 +7,6 @@ import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
 import Image, { AmpImg } from '#psammead/psammead-image/src';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
-import { GHOST } from '../../../components/ThemeProvider/palette';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
@@ -66,6 +66,10 @@ const ImageWithPlaceholder = ({
   );
 
   const isImgJpg = imgType === 'jpg' || imgType === 'jpeg';
+
+  const {
+    palette: { GHOST },
+  } = useTheme();
 
   return (
     <>

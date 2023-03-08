@@ -1,6 +1,5 @@
 import React from 'react';
 import { waitFor } from '@testing-library/react';
-import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import { GHOST } from '../../../components/ThemeProvider/palette';
 import { render } from '../../../components/react-testing-library-with-providers';
 import {
@@ -77,15 +76,20 @@ describe('ImageWithPlaceholder', () => {
     });
   });
 
-  shouldMatchSnapshot(
-    'should not provide non-js fallback',
-    <LazyLoadImageWithPlaceholder fallback={false} />,
-  );
+  it('should not provide non-js fallback', () => {
+    const { container } = render(
+      <LazyLoadImageWithPlaceholder fallback={false} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot('should render an image', <ImageWithPlaceholder />);
+  it('should render an image', () => {
+    const { container } = render(<ImageWithPlaceholder />);
+    expect(container).toMatchSnapshot();
+  });
 
-  shouldMatchSnapshot(
-    'should render an AMP image',
-    <AmpImageWithPlaceholder />,
-  );
+  it('should render an AMP image', () => {
+    const { container } = render(<AmpImageWithPlaceholder />);
+    expect(container).toMatchSnapshot();
+  });
 });
