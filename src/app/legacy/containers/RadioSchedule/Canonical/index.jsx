@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
+import { useTheme } from '@emotion/react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
@@ -24,7 +25,6 @@ import RadioSchedule from '#components/RadioSchedule';
 import webLogger from '#lib/logger.web';
 import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import { LUNAR } from '../../../../components/ThemeProvider/palette';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import radioSchedulesShape from '../utilities/radioScheduleShape';
 
@@ -110,6 +110,10 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
 
   const { header, frequenciesPageUrl, frequenciesPageLabel, durationLabel } =
     radioScheduleConfig;
+
+  const {
+    palette: { LUNAR },
+  } = useTheme();
 
   useEffect(() => {
     if (!radioSchedule) {
