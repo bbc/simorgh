@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "257fcaa2",
+              "id": "a3cb51c3",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "bdacd27c",
+                    "id": "21d61f24",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "5cf06fac",
+                          "id": "a0e3ee73",
                           "type": "paragraph",
                           "model": {
                             "text": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典",
                             "blocks": [
                               {
-                                "id": "b034d71b",
+                                "id": "9826ffc8",
                                 "type": "fragment",
                                 "model": {
                                   "text": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "635af9ad",
+              "id": "f491855f",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562943152251,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "1b757ab3",
+              "id": "eb446c4c",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "1632552d",
+                    "id": "58b8c2f4",
                     "type": "paragraph",
                     "model": {
                       "text": "这一次，电影里不会再有唱段，也不会再有会说话的龙，故事里的反派也不再是匈奴的军队，而变成了一个女巫……但是，不管怎样，《花木兰》终于要重登上银幕了。",
                       "blocks": [
                         {
-                          "id": "ed997443",
+                          "id": "4d48e983",
                           "type": "fragment",
                           "model": {
                             "text": "这一次，电影里不会再有唱段，也不会再有会说话的龙，故事里的反派也不再是匈奴的军队，而变成了一个女巫……但是，不管怎样，《花木兰》终于要重登上银幕了。",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "a1c84071",
+                    "id": "8a3aabec",
                     "type": "paragraph",
                     "model": {
                       "text": "本周，迪士尼（Disney）发布了真人版电影的初版预告片，宣告这部1998年经典动画的重制作品即将问世。中国古代女子女扮男装代父从军上战场的传奇故事，将再次与观众见面。",
                       "blocks": [
                         {
-                          "id": "859ce8b8",
+                          "id": "1b111509",
                           "type": "fragment",
                           "model": {
                             "text": "本周，迪士尼（Disney）发布了真人版电影的初版预告片，宣告这部1998年经典动画的重制作品即将问世。中国古代女子女扮男装代父从军上战场的传奇故事，将再次与观众见面。",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "c3f17c64",
+                    "id": "1b933f35",
                     "type": "paragraph",
                     "model": {
                       "text": "迪士尼在21世纪已经重拍过一系列来自该公司1990年代的经典作品，包括《灰姑娘》、《美女与野兽》和《阿拉丁》等。",
                       "blocks": [
                         {
-                          "id": "be1ccc9c",
+                          "id": "78e03721",
                           "type": "fragment",
                           "model": {
                             "text": "迪士尼在21世纪已经重拍过一系列来自该公司1990年代的经典作品，包括《灰姑娘》、《美女与野兽》和《阿拉丁》等。",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "bfad3bb7",
+                    "id": "6b37c842",
                     "type": "paragraph",
                     "model": {
                       "text": "20多年前，动画版的《花木兰》却在故事发源地中国遭遇惨败；这一次，迪士尼想尽了一切办法要以新版的女英雄传奇征服中国观众。",
                       "blocks": [
                         {
-                          "id": "d2f25a8f",
+                          "id": "1997cc10",
                           "type": "fragment",
                           "model": {
                             "text": "20多年前，动画版的《花木兰》却在故事发源地中国遭遇惨败；这一次，迪士尼想尽了一切办法要以新版的女英雄传奇征服中国观众。",
@@ -182,11 +182,21 @@
               ]
             },
             {
-              "id": "145d569a",
+              "id": "a366e0f7",
               "type": "mpu",
               "model": {},
               "position": [
                 4
+              ]
+            },
+            {
+              "id": "c688cbfd",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
               ]
             }
           ]
@@ -202,7 +212,6 @@
         "language": "zh-hans",
         "firstPublished": 1562943152251,
         "lastPublished": 1562943152251,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c3xd4x9prgyo",
           "producer": "Chinese"
@@ -212,7 +221,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -222,12 +230,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -496,7 +501,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T22:59:56.774Z",
+        "generated": "2023-02-17T21:14:57.34Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import burmese from '../../../components/ThemeProvider/fontScripts/burmese';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'burmese',
     serviceName: 'Burmese',
     languageName: 'Burmese',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcburmese',
     twitterSite: '@bbcburmese',
     noBylinesPolicy:
@@ -50,13 +43,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle:
       'ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {
