@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
+import { useTheme } from '@emotion/react';
 import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
@@ -20,7 +21,6 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
-import { MIDNIGHT_BLACK } from '../../../../components/ThemeProvider/palette';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const StyledSectionLabel = styled(SectionLabel)`
@@ -33,7 +33,6 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
-
 const InlineDiv = styled.div`
   display: inline;
 `;
@@ -42,6 +41,10 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const { script, service, dir, timezone, datetimeLocale, translations } =
     useContext(ServiceContext);
   const { isAmp, variant } = useContext(RequestContext);
+
+  const {
+    palette: { MIDNIGHT_BLACK },
+  } = useTheme();
 
   if (!episodes.length) return null;
 
