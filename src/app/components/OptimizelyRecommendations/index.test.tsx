@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import {
@@ -9,6 +8,7 @@ import {
   ReactSDKClient,
 } from '@optimizely/react-sdk';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { render } from '../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { Services } from '../../models/types/global';
 import OptimizelyRecommendations, { ArticlePageType } from '.';
