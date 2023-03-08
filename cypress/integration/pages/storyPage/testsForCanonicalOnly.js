@@ -5,7 +5,10 @@ import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCano
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRunForCanonicalOnly = () => {
-  describe(
+  const skipOnLocal =
+    Cypress.env('APP_ENV') !== 'local' ? describe : describe.skip;
+
+  skipOnLocal(
     `Include initialisation only on Mundo on specific page`,
     {
       retries: 3,
@@ -42,7 +45,7 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
         });
       });
       // TODO: Figure out why this test is so flakey
-      it.skip('Riddle include is visible on the page - only /mundo/23263889', () => {
+      it('Riddle include is visible on the page - only /mundo/23263889', () => {
         cy.window({ timeout: 20000 }).then(win => {
           if (win.location.pathname.includes('/mundo/23263889')) {
             cy.get(`div[class="riddle-target-initialised"] > iframe`)
