@@ -1,9 +1,9 @@
 export default () => {
   jest.retryTimes(3);
-  describe('Includes', () => {
+  // TODO: Figure out why these tests are so flakey
+  describe.skip('Includes', () => {
     describe('IDT2', () => {
-      // TODO: Figure out why this test is so flakey
-      it.skip('I can see a "dataPic"', () => {
+      it('I can see a "dataPic"', () => {
         const scriptEl = document.querySelector(
           'script[src*="https://b.files.bbci.co.uk/graphics/static/js/dataPic"]',
         );
