@@ -119,9 +119,6 @@ export const buildSections = ({
     Podcast: 'Podcasts',
   };
 
-  const primaryMediaType =
-    pageType === MEDIA_ARTICLE_PAGE ? getPrimaryMediaType(taggings) : type;
-
   switch (pageType) {
     case STORY_PAGE:
     case MEDIA_ASSET_PAGE:
@@ -139,10 +136,19 @@ export const buildSections = ({
         ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
         ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
       ].join(', ');
+    case MEDIA_ARTICLE_PAGE:
+      return [
+        serviceCap,
+        ...(pageType
+          ? buildSectionItem(serviceCap, getPrimaryMediaType(taggings))
+          : []),
+        ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
+        ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
+      ].join(', ');
     default:
       return [
         serviceCap,
-        ...(pageType ? buildSectionItem(serviceCap, primaryMediaType) : []),
+        ...(pageType ? buildSectionItem(serviceCap, type) : []),
         ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
         ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
       ].join(', ');
