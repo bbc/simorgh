@@ -17,6 +17,7 @@ import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172xh26
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
 import frontPageJson from '#data/pidgin/frontpage/index.json';
+import homePageJson from '#data/kyrgyz/homePage/index.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/120919_georgia_prison_video.json';
@@ -27,7 +28,7 @@ import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
-import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import { FRONT_PAGE, HOME_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import routes from '.';
 import * as fetchPageData from './utils/fetchPageData';
 import {
@@ -273,6 +274,29 @@ it('should route to and render a front page', async () => {
     service: 'pidgin',
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Yarn Me Tori';
+
+  expect(
+    await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
+  ).toBeInTheDocument();
+});
+
+it('should route to and render a home page', async () => {
+  const pathname = '/kyrgyz/tipohome';
+  fetchMock.mock(`http://localhost${pathname}.json`, homePageJson);
+
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { pageData } = await getInitialData({
+    path: pathname,
+    service: 'kyrgyz',
+  });
+
+  await renderRouter({
+    pathname,
+    pageData,
+    pageType,
+    service: 'kyrgyz',
+  });
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC News Кыргыз Кызматы';
 
   expect(
     await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
