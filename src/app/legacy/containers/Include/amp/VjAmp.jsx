@@ -63,7 +63,7 @@ const StyledAmpIframe = styled(AmpIframe)`
 
     button {
       ${({ service }) => getSansBold(service)}
-      ${GEL_PICA};
+      ${GEL_PICA}
       background-color: ${props => props.theme.palette.EBON};
       border: 0.0625rem solid transparent;
       color: #fff;
