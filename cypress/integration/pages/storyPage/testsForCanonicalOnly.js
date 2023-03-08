@@ -11,6 +11,10 @@ export const testsThatAlwaysRunForCanonicalOnly = () => {
       retries: 3,
     },
     () => {
+      beforeEach(() => {
+        cy.visit(`/mundo/23263889`);
+      });
+
       // This test ensures that inline scripts used in includes execute successfully and
       // progressively enhance the include. These scripts can be supressed by the browser
       // if they are rendered in the browser following clientside render tree modification;
