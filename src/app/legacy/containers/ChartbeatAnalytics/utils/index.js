@@ -1,15 +1,9 @@
 import Cookie from 'js-cookie';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import pipe from 'ramda/src/pipe';
 import find from 'ramda/src/find';
-import T from 'ramda/src/T';
-import cond from 'ramda/src/cond';
 import propSatisfies from 'ramda/src/propSatisfies';
 import includes from 'ramda/src/includes';
-import ifElse from 'ramda/src/ifElse';
-import equals from 'ramda/src/equals';
-import always from 'ramda/src/always';
 import onClient from '#lib/utilities/onClient';
 import { getPromoHeadline } from '#lib/analyticsUtils/article';
 import { getPageTitle } from '#lib/analyticsUtils/indexPage';
@@ -83,23 +77,25 @@ export const getType = (pageType, shorthand = false) => {
 
 const AUDIO_KEY = 'fe1fbc8a-bb44-4bf8-8b12-52e58c6345a4';
 const VIDEO_KEY = 'ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f';
-// TAKES LIST OF TAGGINGS AS INPUT
-// CHECKS IF primaryMediaType IS LISTED IN TAGGINGS LIST,
-// IF IT IS NOT LISTED, THEN WE RETURN 'article-sfv'
-// IF IT IS LISTED, WE RETURN EITHER 'audio' OR 'video' BASED ON IT's VALUE
-// OTHERWISE WE RETURN 'article-svf' AS DEFAULT
-const getPrimaryMediaType = pipe(
-  find(propSatisfies(includes('primaryMediaType'), 'predicate')),
-  ifElse(
-    equals(undefined),
-    always('article-sfv'),
-    cond([
-      [propSatisfies(includes(AUDIO_KEY), 'value'), always('audio')],
-      [propSatisfies(includes(VIDEO_KEY), 'value'), always('video')],
-      [T, always('article-sfv')],
-    ]),
-  ),
-);
+const getPrimaryMediaType = taggings => {
+  const defaultLabel = 'article-sfv';
+  // FIND THE primaryMediaType ELEMENT IN THE LIST OF TAGGINGS
+  const primaryMediaTag = find(
+    propSatisfies(includes('primaryMediaType'), 'predicate'),
+    taggings,
+  );
+
+  if (!primaryMediaTag) {
+    return defaultLabel;
+  }
+
+  const isAudio = propSatisfies(includes(AUDIO_KEY), 'value', primaryMediaTag);
+  const isVideo = propSatisfies(includes(VIDEO_KEY), 'value', primaryMediaTag);
+
+  if (isAudio) return 'audio';
+  if (isVideo) return 'video';
+  return defaultLabel;
+};
 
 export const buildSections = ({
   service,
