@@ -1,18 +1,18 @@
 import React, { PropsWithChildren } from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import Timestamp from '../../../legacy/containers/ArticleTimestamp';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import Timestamp from '../../legacy/containers/ArticleTimestamp';
 import {
   bylineWithNameAndRole,
   bylineWithLink,
   bylineWithLinkAndLocation,
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
-} from '../fixtureData';
+} from '../../pages/ArticlePage/fixtureData';
 import Byline from '.';
-import { withServicesKnob } from '../../../legacy/psammead/psammead-storybook-helpers/src';
-import ThemeProvider from '../../../components/ThemeProvider';
-import { Services, Variants } from '../../../models/types/global';
+import { withServicesKnob } from '../../legacy/psammead/psammead-storybook-helpers/src';
+import ThemeProvider from '../ThemeProvider';
+import { Services, Variants } from '../../models/types/global';
 
 interface Props {
   service: Services;

@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "3e406972",
+              "id": "daaca429",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "fdf45ec2",
+                    "id": "76bb4607",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "152a229e",
+                          "id": "77e7c782",
                           "type": "paragraph",
                           "model": {
                             "text": "جام جهانی فوتبال زنان؛ تفاوت دستمزد با مردان چقدر است؟",
                             "blocks": [
                               {
-                                "id": "00346e3e",
+                                "id": "2d2dd889",
                                 "type": "fragment",
                                 "model": {
                                   "text": "جام جهانی ",
@@ -35,7 +35,7 @@
                                 ]
                               },
                               {
-                                "id": "c382b734",
+                                "id": "b23d6086",
                                 "type": "fragment",
                                 "model": {
                                   "text": "فوتبال",
@@ -51,7 +51,7 @@
                                 ]
                               },
                               {
-                                "id": "3b2929f7",
+                                "id": "650bcace",
                                 "type": "fragment",
                                 "model": {
                                   "text": " زنان؛ تفاوت دستمزد با مردان چقدر است؟",
@@ -86,7 +86,7 @@
               ]
             },
             {
-              "id": "b90412b8",
+              "id": "c5047739",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1560347946274,
@@ -97,18 +97,18 @@
               ]
             },
             {
-              "id": "d54fad78",
+              "id": "389d59e1",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "782be794",
+                    "id": "64828493",
                     "type": "paragraph",
                     "model": {
                       "text": "جام جهانی فوتبال زنان  - \n202AFIFA Women's World Cup\n202C - به سرعت محبوب می‌شود و پیشبینی شده است که تعداد بیننده‌های جام جهانی ۲۰۱۹ فرانسه به یک میلیارد نفر برسد.",
                       "blocks": [
                         {
-                          "id": "8abc93cf",
+                          "id": "38193a85",
                           "type": "fragment",
                           "model": {
                             "text": "جام جهانی فوتبال زنان  - ",
@@ -121,13 +121,13 @@
                           ]
                         },
                         {
-                          "id": "163748b7",
+                          "id": "ffab5064",
                           "type": "inline",
                           "model": {
                             "text": "FIFA Women's World Cup",
                             "blocks": [
                               {
-                                "id": "6f26f731",
+                                "id": "360153f0",
                                 "type": "fragment",
                                 "model": {
                                   "text": "FIFA Women's World Cup",
@@ -150,7 +150,7 @@
                           ]
                         },
                         {
-                          "id": "4cd0f24b",
+                          "id": "f6ba17ee",
                           "type": "fragment",
                           "model": {
                             "text": " - به سرعت محبوب می‌شود و پیشبینی شده است که تعداد بیننده‌های جام جهانی ۲۰۱۹ فرانسه به یک میلیارد نفر برسد.",
@@ -170,13 +170,13 @@
                     ]
                   },
                   {
-                    "id": "cc725eae",
+                    "id": "43049201",
                     "type": "paragraph",
                     "model": {
                       "text": "اما بازیکنان حاضر در این رقابت از حقوقی که می‌گیرند و میزان جایزه‌ها در مقایسه با فوتبال مردان ناراضی هستند.",
                       "blocks": [
                         {
-                          "id": "5f81237a",
+                          "id": "c5530dde",
                           "type": "fragment",
                           "model": {
                             "text": "اما بازیکنان حاضر در این رقابت از ",
@@ -189,7 +189,7 @@
                           ]
                         },
                         {
-                          "id": "3192396a",
+                          "id": "0e47c6cc",
                           "type": "fragment",
                           "model": {
                             "text": "حقوقی",
@@ -204,7 +204,7 @@
                           ]
                         },
                         {
-                          "id": "92d3db79",
+                          "id": "1d5f622a",
                           "type": "fragment",
                           "model": {
                             "text": " که می‌گیرند و میزان ",
@@ -217,7 +217,7 @@
                           ]
                         },
                         {
-                          "id": "8bb737d6",
+                          "id": "d6c26405",
                           "type": "fragment",
                           "model": {
                             "text": "جایزه‌ها",
@@ -232,7 +232,7 @@
                           ]
                         },
                         {
-                          "id": "1f60233f",
+                          "id": "5c6068fd",
                           "type": "fragment",
                           "model": {
                             "text": " در مقایسه با فوتبال مردان ناراضی هستند.",
@@ -252,19 +252,19 @@
                     ]
                   },
                   {
-                    "id": "1dc8d6f2",
+                    "id": "d357362c",
                     "type": "paragraph",
                     "model": {
                       "text": "\n202AEnglish paragraph to be added here when functionality promoted to Optimo test\n202C",
                       "blocks": [
                         {
-                          "id": "ce9f2183",
+                          "id": "6a8d3c07",
                           "type": "inline",
                           "model": {
                             "text": "English paragraph to be added here when functionality promoted to Optimo test",
                             "blocks": [
                               {
-                                "id": "3c9c6061",
+                                "id": "bac4f8e5",
                                 "type": "fragment",
                                 "model": {
                                   "text": "English paragraph to be added here when functionality promoted to Optimo test",
@@ -294,13 +294,13 @@
                     ]
                   },
                   {
-                    "id": "6dbafa00",
+                    "id": "f943e8cb",
                     "type": "paragraph",
                     "model": {
                       "text": "هوپ سولو، فوتبالیست آمریکایی که سابقه قهرمانی در جام جهانی را نیز دارد، معقتد است تفاوت جایزه مادی بین زنان و مردان نشانه‌ای از نهادینه شدن \"برتر پنداری مردان\" در فیفا است.",
                       "blocks": [
                         {
-                          "id": "9c20255f",
+                          "id": "74238cdd",
                           "type": "fragment",
                           "model": {
                             "text": "هوپ سولو، فوتبالیست آمریکایی که سابقه قهرمانی در جام جهانی را نیز دارد، معقتد است تفاوت جایزه مادی بین زنان و مردان نشانه‌ای از نهادینه شدن \"برتر پنداری مردان\" در فیفا است.",
@@ -326,7 +326,7 @@
               ]
             },
             {
-              "id": "30a7b0fc",
+              "id": "d9ad8e26",
               "type": "mpu",
               "model": {},
               "position": [
@@ -334,18 +334,18 @@
               ]
             },
             {
-              "id": "3442b72e",
+              "id": "6f7e6683",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "d7736a23",
+                    "id": "006595df",
                     "type": "paragraph",
                     "model": {
                       "text": "این مطلب نگاهی دارد به آمار و ارقام فوتبال زنان و جایزه‌هایی که بازیکنان می‌توانند بگیرند.",
                       "blocks": [
                         {
-                          "id": "ff59615f",
+                          "id": "916937b2",
                           "type": "fragment",
                           "model": {
                             "text": "این مطلب نگاهی دارد به آمار و ارقام فوتبال زنان و جایزه‌هایی که بازیکنان می‌توانند بگیرند.",
@@ -371,36 +371,46 @@
               ]
             },
             {
-              "id": "801a765a",
+              "id": "36388af1",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                6
+              ]
+            },
+            {
+              "id": "0d852596",
               "type": "audio",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01m7d07",
                 "blocks": [
                   {
-                    "id": "3e7ec07a",
+                    "id": "1ee76a7e",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8865efaa",
+                          "id": "d1f27fe6",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "f844c6d9",
+                                "id": "01ef9ead",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "تیم ملی فوتبال زنان آمریکا قهرمانی در جام جهانی ۲۰۱۵ را جشن گرفته است",
                                   "blocks": [
                                     {
-                                      "id": "033abc04",
+                                      "id": "aefff2b0",
                                       "type": "fragment",
                                       "model": {
                                         "text": "تیم ملی فوتبال زنان آمریکا قهرمانی در جام ",
                                         "attributes": []
                                       },
                                       "position": [
-                                        6,
+                                        7,
                                         1,
                                         1,
                                         1,
@@ -408,7 +418,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "289f88eb",
+                                      "id": "2d81e69a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "جهانی",
@@ -417,7 +427,7 @@
                                         ]
                                       },
                                       "position": [
-                                        6,
+                                        7,
                                         1,
                                         1,
                                         1,
@@ -425,14 +435,14 @@
                                       ]
                                     },
                                     {
-                                      "id": "076654bf",
+                                      "id": "bac9e4c5",
                                       "type": "fragment",
                                       "model": {
                                         "text": " ۲۰۱۵ را جشن گرفته است",
                                         "attributes": []
                                       },
                                       "position": [
-                                        6,
+                                        7,
                                         1,
                                         1,
                                         1,
@@ -442,7 +452,7 @@
                                   ]
                                 },
                                 "position": [
-                                  6,
+                                  7,
                                   1,
                                   1,
                                   1
@@ -451,7 +461,7 @@
                             ]
                           },
                           "position": [
-                            6,
+                            7,
                             1,
                             1
                           ]
@@ -459,17 +469,17 @@
                       ]
                     },
                     "position": [
-                      6,
+                      7,
                       1
                     ]
                   },
                   {
-                    "id": "411358ef",
+                    "id": "7e260986",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "c730661d",
+                          "id": "28d46628",
                           "blockId": "urn:bbc:ares::clip:p01m7d07",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -509,18 +519,18 @@
                             "smpKind": "radioProgramme"
                           },
                           "position": [
-                            6,
+                            7,
                             2,
                             1
                           ]
                         },
                         {
-                          "id": "7c669c9d",
+                          "id": "07618f81",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "786ae338",
+                                "id": "0c4831bf",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 2048,
@@ -530,249 +540,33 @@
                                   "copyrightHolder": "Getty Images"
                                 },
                                 "position": [
-                                  6,
+                                  7,
                                   2,
                                   2,
                                   1
                                 ]
                               },
                               {
-                                "id": "8a35ac73",
+                                "id": "36bd5d0a",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "0d07c8ec",
+                                      "id": "9a649f49",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "4361ee5f",
+                                            "id": "9ef3f5df",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "England star Fran Kirby",
                                               "blocks": [
                                                 {
-                                                  "id": "24956fbc",
+                                                  "id": "a6fda83d",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "England star Fran Kirby",
-                                                    "attributes": []
-                                                  },
-                                                  "position": [
-                                                    6,
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    1,
-                                                    1,
-                                                    1
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            "position": [
-                                              6,
-                                              2,
-                                              2,
-                                              2,
-                                              1,
-                                              1
-                                            ]
-                                          }
-                                        ]
-                                      },
-                                      "position": [
-                                        6,
-                                        2,
-                                        2,
-                                        2,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  6,
-                                  2,
-                                  2,
-                                  2
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            6,
-                            2,
-                            2
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      6,
-                      2
-                    ]
-                  }
-                ]
-              },
-              "position": [
-                6
-              ]
-            },
-            {
-              "id": "900b6866",
-              "type": "video",
-              "model": {
-                "locator": "urn:bbc:pips:pid:p01mt125",
-                "blocks": [
-                  {
-                    "id": "beaed073",
-                    "type": "caption",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "1fe0281f",
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "ed99f63c",
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "به دلیل مشکلات مربوط به برابری جنسیتی آدا هگربرگ برنده توپ طلای ۲۰۱۷ برای نروژ در جام جهانی بازی نمی‌کند",
-                                  "blocks": [
-                                    {
-                                      "id": "ed5e4909",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "به دلیل مشکلات مربوط به برابری جنسیتی آدا هگربرگ برنده توپ طلای ۲۰۱۷ برای نروژ در جام جهانی بازی نمی‌کند",
-                                        "attributes": []
-                                      },
-                                      "position": [
-                                        7,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
-                                },
-                                "position": [
-                                  7,
-                                  1,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ]
-                          },
-                          "position": [
-                            7,
-                            1,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      7,
-                      1
-                    ]
-                  },
-                  {
-                    "id": "75177327",
-                    "type": "aresMedia",
-                    "model": {
-                      "blocks": [
-                        {
-                          "id": "892360f1",
-                          "blockId": "urn:bbc:ares::clip:p01mt125",
-                          "type": "aresMediaMetadata",
-                          "model": {
-                            "id": "p01mt125",
-                            "subType": "clip",
-                            "format": "audio_video",
-                            "title": "Robin",
-                            "synopses": {
-                              "short": "A Robin perches on a branch"
-                            },
-                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt1bp.jpg",
-                            "imageCopyright": "Simon Rollings",
-                            "embedding": true,
-                            "advertising": true,
-                            "caption": "Robins are a popular bird in the UK, as well as a given name",
-                            "versions": [
-                              {
-                                "versionId": "p01mt129",
-                                "types": [
-                                  "Original"
-                                ],
-                                "duration": 10,
-                                "durationISO8601": "PT10S",
-                                "warnings": {},
-                                "availableTerritories": {
-                                  "uk": true,
-                                  "nonUk": true
-                                },
-                                "availableFrom": 1560346976000
-                              }
-                            ],
-                            "syndication": {
-                              "destinations": []
-                            },
-                            "smpKind": "programme"
-                          },
-                          "position": [
-                            7,
-                            2,
-                            1
-                          ]
-                        },
-                        {
-                          "id": "92b38445",
-                          "type": "image",
-                          "model": {
-                            "blocks": [
-                              {
-                                "id": "c0e11920",
-                                "type": "rawImage",
-                                "model": {
-                                  "width": 1280,
-                                  "height": 720,
-                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01mt1bp.jpg",
-                                  "originCode": "mpv",
-                                  "copyrightHolder": "Simon Rollings"
-                                },
-                                "position": [
-                                  7,
-                                  2,
-                                  2,
-                                  1
-                                ]
-                              },
-                              {
-                                "id": "f452870a",
-                                "type": "altText",
-                                "model": {
-                                  "blocks": [
-                                    {
-                                      "id": "706eabc7",
-                                      "type": "text",
-                                      "model": {
-                                        "blocks": [
-                                          {
-                                            "id": "ae572f6a",
-                                            "type": "paragraph",
-                                            "model": {
-                                              "text": "Robin",
-                                              "blocks": [
-                                                {
-                                                  "id": "19dce380",
-                                                  "type": "fragment",
-                                                  "model": {
-                                                    "text": "Robin",
                                                     "attributes": []
                                                   },
                                                   "position": [
@@ -837,63 +631,49 @@
               ]
             },
             {
-              "id": "c821df39",
-              "type": "subheadline",
+              "id": "f5217560",
+              "type": "video",
               "model": {
+                "locator": "urn:bbc:pips:pid:p01mt125",
                 "blocks": [
                   {
-                    "id": "690d34f0",
-                    "type": "text",
+                    "id": "e4576892",
+                    "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e151f9e2",
-                          "type": "paragraph",
+                          "id": "30a019af",
+                          "type": "text",
                           "model": {
-                            "text": "بازیکنان تمام مبلغ جایزه را می‌گیرند؟",
                             "blocks": [
                               {
-                                "id": "ca697535",
-                                "type": "fragment",
+                                "id": "4df0d2f1",
+                                "type": "paragraph",
                                 "model": {
-                                  "text": "بازیکنان تمام مبلغ ",
-                                  "attributes": []
-                                },
-                                "position": [
-                                  8,
-                                  1,
-                                  1,
-                                  1
-                                ]
-                              },
-                              {
-                                "id": "2ef22984",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "جایزه",
-                                  "attributes": [
-                                    "italic"
+                                  "text": "به دلیل مشکلات مربوط به برابری جنسیتی آدا هگربرگ برنده توپ طلای ۲۰۱۷ برای نروژ در جام جهانی بازی نمی‌کند",
+                                  "blocks": [
+                                    {
+                                      "id": "5da9259f",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "به دلیل مشکلات مربوط به برابری جنسیتی آدا هگربرگ برنده توپ طلای ۲۰۱۷ برای نروژ در جام جهانی بازی نمی‌کند",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        8,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
                                   ]
                                 },
                                 "position": [
                                   8,
                                   1,
                                   1,
-                                  2
-                                ]
-                              },
-                              {
-                                "id": "76fedfe3",
-                                "type": "fragment",
-                                "model": {
-                                  "text": " را می‌گیرند؟",
-                                  "attributes": []
-                                },
-                                "position": [
-                                  8,
-                                  1,
-                                  1,
-                                  3
+                                  1
                                 ]
                               }
                             ]
@@ -910,6 +690,155 @@
                       8,
                       1
                     ]
+                  },
+                  {
+                    "id": "e1a24371",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "9f51f2bd",
+                          "blockId": "urn:bbc:ares::clip:p01mt125",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01mt125",
+                            "subType": "clip",
+                            "format": "audio_video",
+                            "title": "Robin",
+                            "synopses": {
+                              "short": "A Robin perches on a branch"
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt1bp.jpg",
+                            "imageCopyright": "Simon Rollings",
+                            "embedding": true,
+                            "advertising": true,
+                            "caption": "Robins are a popular bird in the UK, as well as a given name",
+                            "versions": [
+                              {
+                                "versionId": "p01mt129",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 10,
+                                "durationISO8601": "PT10S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1560346976000
+                              }
+                            ],
+                            "syndication": {
+                              "destinations": []
+                            },
+                            "smpKind": "programme"
+                          },
+                          "position": [
+                            8,
+                            2,
+                            1
+                          ]
+                        },
+                        {
+                          "id": "1cc6a0a9",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "39e38acf",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1280,
+                                  "height": 720,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01mt1bp.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "Simon Rollings"
+                                },
+                                "position": [
+                                  8,
+                                  2,
+                                  2,
+                                  1
+                                ]
+                              },
+                              {
+                                "id": "8443a11d",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "f7f9df4b",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "bab4c306",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Robin",
+                                              "blocks": [
+                                                {
+                                                  "id": "f7df3c3f",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Robin",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    8,
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    1,
+                                                    1,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [
+                                              8,
+                                              2,
+                                              2,
+                                              2,
+                                              1,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "position": [
+                                        8,
+                                        2,
+                                        2,
+                                        2,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  8,
+                                  2,
+                                  2,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            8,
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      8,
+                      2
+                    ]
                   }
                 ]
               },
@@ -918,27 +847,26 @@
               ]
             },
             {
-              "id": "89b223ad",
-              "type": "text",
+              "id": "e9b5c6a8",
+              "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "9642fc14",
-                    "type": "paragraph",
+                    "id": "376b8372",
+                    "type": "text",
                     "model": {
-                      "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
                       "blocks": [
                         {
-                          "id": "c8991fce",
-                          "type": "urlLink",
+                          "id": "ea17cd59",
+                          "type": "paragraph",
                           "model": {
-                            "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
+                            "text": "بازیکنان تمام مبلغ جایزه را می‌گیرند؟",
                             "blocks": [
                               {
-                                "id": "bc2df823",
+                                "id": "94eb4548",
                                 "type": "fragment",
                                 "model": {
-                                  "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
+                                  "text": "بازیکنان تمام مبلغ ",
                                   "attributes": []
                                 },
                                 "position": [
@@ -947,10 +875,38 @@
                                   1,
                                   1
                                 ]
+                              },
+                              {
+                                "id": "7ccfbdb9",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "جایزه",
+                                  "attributes": [
+                                    "italic"
+                                  ]
+                                },
+                                "position": [
+                                  9,
+                                  1,
+                                  1,
+                                  2
+                                ]
+                              },
+                              {
+                                "id": "9933bcb6",
+                                "type": "fragment",
+                                "model": {
+                                  "text": " را می‌گیرند؟",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  9,
+                                  1,
+                                  1,
+                                  3
+                                ]
                               }
-                            ],
-                            "locator": "http://t.me/bbcpersian",
-                            "isExternal": true
+                            ]
                           },
                           "position": [
                             9,
@@ -964,75 +920,6 @@
                       9,
                       1
                     ]
-                  },
-                  {
-                    "id": "d27aee35",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "کل جایزه‌ای که فیفا به تیم‌های حاضر در جام جهانی زنان می‌دهد ۳۰ میلیون دلار است. این در حالی است که کل جایزه‌ای که پارسال فیفا به تیم‌های حاضر در جام جهانی مردان داد ۴۰۰ میلیون دلار بود؛ بیش از ده برابر.",
-                      "blocks": [
-                        {
-                          "id": "3bd343b9",
-                          "type": "fragment",
-                          "model": {
-                            "text": "کل جایزه‌ای که فیفا به تیم‌های حاضر در جام جهانی زنان می‌دهد ۳۰ میلیون دلار است. این در حالی است که کل جایزه‌ای که پارسال فیفا به تیم‌های حاضر در جام جهانی مردان داد ۴۰۰ میلیون دلار بود؛ بیش از ده برابر.",
-                            "attributes": []
-                          },
-                          "position": [
-                            9,
-                            2,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      9,
-                      2
-                    ]
-                  },
-                  {
-                    "id": "d3f07818",
-                    "type": "paragraph",
-                    "model": {
-                      "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
-                      "blocks": [
-                        {
-                          "id": "fb6eeaae",
-                          "type": "urlLink",
-                          "model": {
-                            "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
-                            "blocks": [
-                              {
-                                "id": "c8d64879",
-                                "type": "fragment",
-                                "model": {
-                                  "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
-                                  "attributes": []
-                                },
-                                "position": [
-                                  9,
-                                  3,
-                                  1,
-                                  1
-                                ]
-                              }
-                            ],
-                            "locator": "http://www.bbc.com/persian/sport-48547907",
-                            "isExternal": false
-                          },
-                          "position": [
-                            9,
-                            3,
-                            1
-                          ]
-                        }
-                      ]
-                    },
-                    "position": [
-                      9,
-                      3
-                    ]
                   }
                 ]
               },
@@ -1041,42 +928,28 @@
               ]
             },
             {
-              "id": "e236a748",
-              "type": "image",
+              "id": "29657bea",
+              "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "3e3f1a9f",
-                    "type": "altText",
+                    "id": "b242d53d",
+                    "type": "paragraph",
                     "model": {
+                      "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
                       "blocks": [
                         {
-                          "id": "646951ab",
-                          "type": "text",
+                          "id": "d30c3f89",
+                          "type": "urlLink",
                           "model": {
+                            "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
                             "blocks": [
                               {
-                                "id": "d82f6505",
-                                "type": "paragraph",
+                                "id": "3d80a1bc",
+                                "type": "fragment",
                                 "model": {
-                                  "text": "جیل الیس",
-                                  "blocks": [
-                                    {
-                                      "id": "3e94bbda",
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "جیل الیس",
-                                        "attributes": []
-                                      },
-                                      "position": [
-                                        10,
-                                        1,
-                                        1,
-                                        1,
-                                        1
-                                      ]
-                                    }
-                                  ]
+                                  "text": "خبرهای بیشتر را در کانال تلگرام بی‌بی‌سی فارسی دنبال کنید",
+                                  "attributes": []
                                 },
                                 "position": [
                                   10,
@@ -1085,7 +958,9 @@
                                   1
                                 ]
                               }
-                            ]
+                            ],
+                            "locator": "http://t.me/bbcpersian",
+                            "isExternal": true
                           },
                           "position": [
                             10,
@@ -1101,7 +976,142 @@
                     ]
                   },
                   {
-                    "id": "bd9afd1f",
+                    "id": "9d572158",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "کل جایزه‌ای که فیفا به تیم‌های حاضر در جام جهانی زنان می‌دهد ۳۰ میلیون دلار است. این در حالی است که کل جایزه‌ای که پارسال فیفا به تیم‌های حاضر در جام جهانی مردان داد ۴۰۰ میلیون دلار بود؛ بیش از ده برابر.",
+                      "blocks": [
+                        {
+                          "id": "00cb066e",
+                          "type": "fragment",
+                          "model": {
+                            "text": "کل جایزه‌ای که فیفا به تیم‌های حاضر در جام جهانی زنان می‌دهد ۳۰ میلیون دلار است. این در حالی است که کل جایزه‌ای که پارسال فیفا به تیم‌های حاضر در جام جهانی مردان داد ۴۰۰ میلیون دلار بود؛ بیش از ده برابر.",
+                            "attributes": []
+                          },
+                          "position": [
+                            10,
+                            2,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      2
+                    ]
+                  },
+                  {
+                    "id": "a12bab35",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
+                      "blocks": [
+                        {
+                          "id": "e8b8f027",
+                          "type": "urlLink",
+                          "model": {
+                            "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
+                            "blocks": [
+                              {
+                                "id": "55de314f",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "آنچه باید درباره جام جهانی فوتبال زنان ۲۰۱۹ بدانید",
+                                  "attributes": []
+                                },
+                                "position": [
+                                  10,
+                                  3,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ],
+                            "locator": "http://www.bbc.com/persian/sport-48547907",
+                            "isExternal": false
+                          },
+                          "position": [
+                            10,
+                            3,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      10,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "position": [
+                10
+              ]
+            },
+            {
+              "id": "d6e733e3",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "b1580674",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "a7a723aa",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "2fa3f08a",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "جیل الیس",
+                                  "blocks": [
+                                    {
+                                      "id": "3e2c80cc",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "جیل الیس",
+                                        "attributes": []
+                                      },
+                                      "position": [
+                                        11,
+                                        1,
+                                        1,
+                                        1,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "position": [
+                                  11,
+                                  1,
+                                  1,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "position": [
+                            11,
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "position": [
+                      11,
+                      1
+                    ]
+                  },
+                  {
+                    "id": "0363c398",
                     "type": "rawImage",
                     "model": {
                       "width": 2048,
@@ -1111,14 +1121,14 @@
                       "copyrightHolder": "Getty Images"
                     },
                     "position": [
-                      10,
+                      11,
                       2
                     ]
                   }
                 ]
               },
               "position": [
-                10
+                11
               ]
             }
           ]
@@ -1127,14 +1137,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c19v65z3lg5o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c19v65z3lg5o"
+          "optimoUrn": "urn:bbc:optimo:asset:c19v65z3lg5o",
+          "canonicalUrl": "https://www.bbc.com/persian/articles/c19v65z3lg5o"
         },
         "type": "article",
         "createdBy": "Persian",
         "language": "fa",
         "firstPublished": 1560347946274,
         "lastPublished": 1560347946274,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c19v65z3lg5o",
           "producer": "Persian",
@@ -1145,7 +1155,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -1168,12 +1177,9 @@
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "جام جهانی فوتبال زنان؛ تفاوت دستمزد با مردان چقدر است؟"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1366,7 +1372,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:01:56.697Z",
+        "generated": "2023-02-18T03:01:58.13Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,
@@ -1690,13 +1696,18 @@
               },
               "locators": {
                 "assetUri": "/persian/23104785",
+                "curieCpsUrn": "urn:bbc:cps:curie:asset:4ea86f0c-d0f3-f641-8151-9358ab371f4f",
+                "assetId": "23104785",
                 "cpsUrn": "urn:bbc:content:assetUri:persian/23104785",
-                "curie": "http://www.bbc.co.uk/asset/4ea86f0c-d0f3-f641-8151-9358ab371f4f",
-                "assetId": "23104785"
+                "curie": "http://www.bbc.co.uk/asset/4ea86f0c-d0f3-f641-8151-9358ab371f4f"
               },
               "summary": "معاون اول رییس جمهور در نامه ای خطاب به رییس مجلس خبرگان رهبری تصریح کرد: مخاطب سیاست‌های ابلاغی همه ارکان نظام بودند و در این میان دولت علیرغم سازماندهی ویژه و اهتمام گسترده به موضوع، همواره مورد استیضاح کسانی قرار می‌گیرد که خود نیز بایستی پاسخگوی اقدامات خود باشند و به رهبری بزرگوار و ملت شریف توضیح دهند که در تحقق این سیاست ها چه اقداماتی انجام داده‌اند.",
               "timestamp": 1587636451000,
               "language": "fa",
+              "passport": {
+                "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+                "taggings": []
+              },
               "indexImage": {
                 "id": "63733893",
                 "subType": "index",

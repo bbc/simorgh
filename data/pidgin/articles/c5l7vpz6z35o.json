@@ -5,7 +5,7 @@
         "model": {
           "blocks": [
             {
-              "id": "f4c38bed",
+              "id": "48d3c31d",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1634052972272,
@@ -16,18 +16,18 @@
               ]
             },
             {
-              "id": "446d2e34",
+              "id": "8ffb35a8",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "f359757d",
+                    "id": "311f84a9",
                     "type": "paragraph",
                     "model": {
                       "text": "test",
                       "blocks": [
                         {
-                          "id": "0f4005f6",
+                          "id": "74937d50",
                           "type": "fragment",
                           "model": {
                             "text": "test",
@@ -53,11 +53,21 @@
               ]
             },
             {
-              "id": "0c0f945f",
+              "id": "f1607c2b",
               "type": "mpu",
               "model": {},
               "position": [
                 3
+              ]
+            },
+            {
+              "id": "6cf708f1",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                4
               ]
             }
           ]
@@ -66,14 +76,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c5l7vpz6z35o",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c5l7vpz6z35o"
+          "optimoUrn": "urn:bbc:optimo:asset:c5l7vpz6z35o",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/c5l7vpz6z35o"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
         "firstPublished": 1634052972272,
         "lastPublished": 1634052972272,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c5l7vpz6z35o",
           "producer": "Pidgin",
@@ -97,7 +107,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "text",
           "paragraph",
@@ -106,11 +115,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Test"
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -136,8 +143,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -623,7 +629,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:04:58.371Z",
+        "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

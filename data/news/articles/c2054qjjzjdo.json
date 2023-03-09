@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "feb1efe0",
+              "id": "5f5978a9",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "18bf9a41",
+                    "id": "047f99b0",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "223d8297",
+                          "id": "dd19ac09",
                           "type": "paragraph",
                           "model": {
                             "text": "Test in-line blocks",
                             "blocks": [
                               {
-                                "id": "bde8d392",
+                                "id": "1d59c25e",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Test in-line blocks",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "d0a38c42",
+              "id": "a422eb22",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1574263957594,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "2896c9b9",
+              "id": "cdcf096e",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "903b4dd6",
+                    "id": "bdf1f562",
                     "type": "paragraph",
                     "model": {
                       "text": "Lots of text in one language followed by text texte dans une autre langue. That's called an inline block.",
                       "blocks": [
                         {
-                          "id": "be54fafd",
+                          "id": "de1fccb5",
                           "type": "fragment",
                           "model": {
                             "text": "Lots of text in one language followed by text ",
@@ -91,13 +91,13 @@
                           ]
                         },
                         {
-                          "id": "38b4aaaf",
+                          "id": "f3ee7bcd",
                           "type": "inline",
                           "model": {
                             "text": "texte dans une autre langue",
                             "blocks": [
                               {
-                                "id": "25ae55d8",
+                                "id": "403d4cfc",
                                 "type": "fragment",
                                 "model": {
                                   "text": "texte dans une autre langue",
@@ -120,7 +120,7 @@
                           ]
                         },
                         {
-                          "id": "b5e44cd3",
+                          "id": "fb9bd6cd",
                           "type": "fragment",
                           "model": {
                             "text": ". That's called an inline block.",
@@ -140,13 +140,13 @@
                     ]
                   },
                   {
-                    "id": "0f392f76",
+                    "id": "fbb8377f",
                     "type": "paragraph",
                     "model": {
                       "text": "And look, here's another inline block: \n202Bچرا می‌توانید به بی‌بی‌سی اطمینان کنید؟\n202C This time, the inline block was in Arabic.\n\n",
                       "blocks": [
                         {
-                          "id": "6398a106",
+                          "id": "08864a18",
                           "type": "fragment",
                           "model": {
                             "text": "And look, here's another inline block: ",
@@ -159,13 +159,13 @@
                           ]
                         },
                         {
-                          "id": "28b65e63",
+                          "id": "402d4d31",
                           "type": "inline",
                           "model": {
                             "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
                             "blocks": [
                               {
-                                "id": "83589115",
+                                "id": "9110e53d",
                                 "type": "fragment",
                                 "model": {
                                   "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
@@ -188,7 +188,7 @@
                           ]
                         },
                         {
-                          "id": "af7f24df",
+                          "id": "4937181b",
                           "type": "fragment",
                           "model": {
                             "text": " This time, the inline block was in Arabic.\n\n",
@@ -208,13 +208,13 @@
                     ]
                   },
                   {
-                    "id": "9fce3154",
+                    "id": "25b019e3",
                     "type": "paragraph",
                     "model": {
                       "text": "\n\n",
                       "blocks": [
                         {
-                          "id": "39298aea",
+                          "id": "d253ee24",
                           "type": "fragment",
                           "model": {
                             "text": "\n\n",
@@ -240,28 +240,28 @@
               ]
             },
             {
-              "id": "1ad31b75",
+              "id": "8ac8d73f",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "95d239f8",
+                    "id": "809ff845",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b7c6795e",
+                          "id": "c1f90156",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d0809516",
+                                "id": "d90d6ee3",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This image caption has an inline block: \n202Bهذا هو كتلة مضمنة\n202C. See, what a lovely inline block.\n",
                                   "blocks": [
                                     {
-                                      "id": "7b7303d8",
+                                      "id": "c9a9aced",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This image caption has an inline block: ",
@@ -276,13 +276,13 @@
                                       ]
                                     },
                                     {
-                                      "id": "18504e05",
+                                      "id": "644466c6",
                                       "type": "inline",
                                       "model": {
                                         "text": "هذا هو كتلة مضمنة",
                                         "blocks": [
                                           {
-                                            "id": "ae2c427b",
+                                            "id": "de73d78b",
                                             "type": "fragment",
                                             "model": {
                                               "text": "هذا هو كتلة مضمنة",
@@ -309,7 +309,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "94a03492",
+                                      "id": "e91a0ba5",
                                       "type": "fragment",
                                       "model": {
                                         "text": ". See, what a lovely inline block.\n",
@@ -348,23 +348,23 @@
                     ]
                   },
                   {
-                    "id": "93123d97",
+                    "id": "08e1ddd4",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6abcfe92",
+                          "id": "9b804a9a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "0317fd0b",
+                                "id": "73d8b224",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Europe",
                                   "blocks": [
                                     {
-                                      "id": "cda0f79d",
+                                      "id": "933002d4",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Europe",
@@ -403,7 +403,7 @@
                     ]
                   },
                   {
-                    "id": "78d81a8d",
+                    "id": "9ff5494d",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -424,29 +424,29 @@
               ]
             },
             {
-              "id": "cc09406e",
+              "id": "96e89a4c",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "1a1ef33a",
+                    "id": "1a91f8df",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1a13866e",
+                          "id": "5e70727f",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c91a078a",
+                                "id": "a7d87ea3",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "This is a media block caption. It also has an inline block: \n202Bهذا هو كتلة مضمنة\n202C. See, what a lovely inline block.",
                                   "blocks": [
                                     {
-                                      "id": "80dbb00e",
+                                      "id": "feeb03fa",
                                       "type": "fragment",
                                       "model": {
                                         "text": "This is a media block caption. It also has an inline block: ",
@@ -461,13 +461,13 @@
                                       ]
                                     },
                                     {
-                                      "id": "f0442870",
+                                      "id": "61a241e4",
                                       "type": "inline",
                                       "model": {
                                         "text": "هذا هو كتلة مضمنة",
                                         "blocks": [
                                           {
-                                            "id": "f00c4fef",
+                                            "id": "742789c7",
                                             "type": "fragment",
                                             "model": {
                                               "text": "هذا هو كتلة مضمنة",
@@ -494,7 +494,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "34d2f7c3",
+                                      "id": "52545bc8",
                                       "type": "fragment",
                                       "model": {
                                         "text": ". See, what a lovely inline block.",
@@ -533,12 +533,12 @@
                     ]
                   },
                   {
-                    "id": "0e7cb83e",
+                    "id": "2613ad48",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "74039bff",
+                          "id": "3faa9d20",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -584,12 +584,12 @@
                           ]
                         },
                         {
-                          "id": "6def25d8",
+                          "id": "33c56f42",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "210c9555",
+                                "id": "6c186c78",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -606,23 +606,23 @@
                                 ]
                               },
                               {
-                                "id": "d02ff1ef",
+                                "id": "9ee9456a",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "d25f696a",
+                                      "id": "3d82c353",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "a7a9a509",
+                                            "id": "5c0752be",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "b84e7dd8",
+                                                  "id": "e322149b",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -690,28 +690,28 @@
               ]
             },
             {
-              "id": "f5431964",
+              "id": "6243e4b8",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "5eaa7350",
+                    "id": "55dbf871",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1259fc85",
+                          "id": "65705e95",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "5bf31de5",
+                                "id": "43d95c59",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Oh my gosh! Another image caption with an bloc en ligne. In French this time.",
                                   "blocks": [
                                     {
-                                      "id": "b68ddb8b",
+                                      "id": "a5861850",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Oh my gosh! Another image caption with an ",
@@ -726,13 +726,13 @@
                                       ]
                                     },
                                     {
-                                      "id": "5dbd80fe",
+                                      "id": "2b03dac4",
                                       "type": "inline",
                                       "model": {
                                         "text": "bloc en ligne",
                                         "blocks": [
                                           {
-                                            "id": "ab8a25d8",
+                                            "id": "b91d03a0",
                                             "type": "fragment",
                                             "model": {
                                               "text": "bloc en ligne",
@@ -759,7 +759,7 @@
                                       ]
                                     },
                                     {
-                                      "id": "98a3f08f",
+                                      "id": "577e33dd",
                                       "type": "fragment",
                                       "model": {
                                         "text": ". In French this time.",
@@ -798,23 +798,23 @@
                     ]
                   },
                   {
-                    "id": "e84485bb",
+                    "id": "8c7ee8e6",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "b39dfe6d",
+                          "id": "fba87079",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "460d35ce",
+                                "id": "27f7116a",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Map",
                                   "blocks": [
                                     {
-                                      "id": "da050e10",
+                                      "id": "d0b788f1",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Map",
@@ -853,7 +853,7 @@
                     ]
                   },
                   {
-                    "id": "eb12f3d7",
+                    "id": "650b2b17",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -874,11 +874,21 @@
               ]
             },
             {
-              "id": "d0f9a787",
+              "id": "96c499b4",
               "type": "mpu",
               "model": {},
               "position": [
                 7
+              ]
+            },
+            {
+              "id": "685cf9d1",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                8
               ]
             }
           ]
@@ -887,14 +897,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c2054qjjzjdo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c2054qjjzjdo"
+          "optimoUrn": "urn:bbc:optimo:asset:c2054qjjzjdo",
+          "canonicalUrl": "https://www.bbc.com/news/articles/c2054qjjzjdo"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
         "firstPublished": 1574263957594,
         "lastPublished": 1574263957594,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:c2054qjjzjdo",
           "producer": "News",
@@ -905,7 +915,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -922,12 +931,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Test in-line blocks"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -967,6 +973,7 @@
             "altText": "Liz Truss outside Number 10",
             "copyrightHolder": "Lisa White",
             "originCode": "cpsdevpb",
+            "allowSyndication": false,
             "type": "image"
           },
           "options": {
@@ -1010,6 +1017,7 @@
             "caption": "Angela Lansbury",
             "copyrightHolder": "BBC",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -1028,16 +1036,17 @@
           "type": "cps"
         },
         {
-          "name": "How Spain looked on as dozens were crushed to death at its border",
+          "name": "15 homes, three survivors - how the quake wiped out one Turkish apartment block",
           "indexImage": {
-            "id": "63957134",
+            "id": "63977455",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/A8A7/test/_63957134_camera-super_promo_new_safe_zone.jpg",
-            "path": "/cpsdevpb/A8A7/test/_63957134_camera-super_promo_new_safe_zone.jpg",
+            "href": "http://b.files.bbci.co.uk/D8B5/test/_63977455_mediaitem128597908.jpg",
+            "path": "/cpsdevpb/D8B5/test/_63977455_mediaitem128597908.jpg",
             "height": 549,
             "width": 976,
-            "altText": "CCTV cam",
+            "altText": "Ceyda",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.bbc.co.uk/news/uk-61593081",
@@ -1049,102 +1058,6 @@
         }
       ],
       "features": [
-        {
-          "headlines": {
-            "headline": "Angela Lansbury: from stage to Cabot Cove"
-          },
-          "locators": {
-            "assetUri": "/news/23384748",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:00d18665-46b6-42fa-87c4-9b382029f73b",
-            "assetId": "23384748",
-            "cpsUrn": "urn:bbc:content:assetUri:news/23384748",
-            "curie": "http://www.bbc.co.uk/asset/00d18665-46b6-42fa-87c4-9b382029f73b"
-          },
-          "summary": "Test",
-          "timestamp": 1643303379000,
-          "language": "en-gb",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63902259",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "path": "/cpsdevpb/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "height": 562,
-            "width": 1000,
-            "altText": "ange",
-            "caption": "ange",
-            "copyrightHolder": "Ange",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63902263",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "path": "/cpsdevpb/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Ange",
-            "caption": "Ange",
-            "copyrightHolder": "ANge",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false,
-            "hasShortForm": true
-          },
-          "section": {
-            "subType": "IDX",
-            "name": "Home",
-            "uri": "/news/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:news/23384748",
-          "type": "cps"
-        },
-        {
-          "name": "When Mr Blobby got to Christmas number one",
-          "summary": "a test video link promo",
-          "indexImage": {
-            "id": "63942309",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/160D4/test/_63942309_hi001100397.jpg",
-            "path": "/cpsdevpb/160D4/test/_63942309_hi001100397.jpg",
-            "height": 1152,
-            "width": 2048,
-            "altText": "Mr Blobby",
-            "caption": "Mr Blobby",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.co.uk/iplayer/episode/b03srsjl",
-          "contentType": "Video",
-          "assetTypeCode": "PRO",
-          "timestamp": 1662997270000,
-          "type": "link"
-        },
-        {
-          "name": "Florence Pugh on her primary school nativity...",
-          "summary": "90s all the way",
-          "indexImage": {
-            "id": "63958321",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/3061/test/_63958321_p0dd2wvy.jpg",
-            "path": "/cpsdevpb/3061/test/_63958321_p0dd2wvy.jpg",
-            "height": 360,
-            "width": 640,
-            "altText": "florence pugh",
-            "caption": "florence pugh",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.co.uk/sounds/play/m001dmln",
-          "contentType": "Audio",
-          "assetTypeCode": "PRO",
-          "timestamp": 1668169266000,
-          "type": "link"
-        },
         {
           "headlines": {
             "headline": "Wales pip Scotland in World Cup thriller"
@@ -1171,6 +1084,7 @@
             "caption": "Bevan kicks wales to win",
             "copyrightHolder": "Huw Evans picture agency",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -1194,31 +1108,67 @@
           "type": "cps"
         },
         {
+          "name": "When Mr Blobby got to Christmas number one",
+          "summary": "a test video link promo",
+          "indexImage": {
+            "id": "63942309",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/160D4/test/_63942309_hi001100397.jpg",
+            "path": "/cpsdevpb/160D4/test/_63942309_hi001100397.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "Mr Blobby",
+            "caption": "Mr Blobby",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/iplayer/episode/b03srsjl",
+          "contentType": "Video",
+          "assetTypeCode": "PRO",
+          "timestamp": 1662997270000,
+          "type": "link"
+        },
+        {
           "headlines": {
-            "headline": "Lego Titanic sunk"
+            "headline": "Angela Lansbury: from stage to Cabot Cove"
           },
           "locators": {
-            "assetUri": "/news/business-23481281",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:06cb5998-373d-41ea-b249-6aec87d3329b",
-            "assetId": "23481281",
-            "cpsUrn": "urn:bbc:content:assetUri:news/business-23481281",
-            "curie": "http://www.bbc.co.uk/asset/06cb5998-373d-41ea-b249-6aec87d3329b"
+            "assetUri": "/news/23384748",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:00d18665-46b6-42fa-87c4-9b382029f73b",
+            "assetId": "23384748",
+            "cpsUrn": "urn:bbc:content:assetUri:news/23384748",
+            "curie": "http://www.bbc.co.uk/asset/00d18665-46b6-42fa-87c4-9b382029f73b"
           },
-          "summary": "Lego are perhaps sunk",
-          "timestamp": 1643736926000,
+          "summary": "Test",
+          "timestamp": 1643303379000,
           "language": "en-gb",
           "cpsType": "STY",
           "indexImage": {
-            "id": "63969899",
+            "id": "63902259",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/18638/test/_63969899_r.jpg",
-            "path": "/cpsdevpb/18638/test/_63969899_r.jpg",
-            "height": 546,
-            "width": 970,
-            "altText": "The Lego Titanic",
-            "caption": "titanic",
-            "copyrightHolder": "BBC",
+            "href": "http://b.files.bbci.co.uk/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "path": "/cpsdevpb/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "height": 562,
+            "width": 1000,
+            "altText": "ange",
+            "caption": "ange",
+            "copyrightHolder": "Ange",
             "originCode": "cpsdevpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63902263",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "path": "/cpsdevpb/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ange",
+            "caption": "Ange",
+            "copyrightHolder": "ANge",
+            "allowSyndication": false,
             "type": "image"
           },
           "options": {
@@ -1228,11 +1178,11 @@
           },
           "section": {
             "subType": "IDX",
-            "name": "Business",
-            "uri": "/news/business",
+            "name": "Home",
+            "uri": "/news/front_page",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:news/business-23481281",
+          "id": "urn:bbc:ares::asset:news/23384748",
           "type": "cps"
         },
         {
@@ -1248,6 +1198,7 @@
             "altText": "spice girls",
             "caption": "spice girls",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.test.bbc.co.uk/sounds/play/m001bjpb",
@@ -1255,6 +1206,61 @@
           "assetTypeCode": "PRO",
           "timestamp": 1662998543000,
           "type": "link"
+        },
+        {
+          "headlines": {
+            "headline": "Taylor Swift's success"
+          },
+          "locators": {
+            "assetUri": "/news/live/23479940",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:bde9ec0e-a4ca-4802-99c0-5513e67914c7",
+            "assetId": "23479940",
+            "cpsUrn": "urn:bbc:content:assetUri:news/live/23479940",
+            "curie": "http://www.bbc.co.uk/asset/bde9ec0e-a4ca-4802-99c0-5513e67914c7"
+          },
+          "summary": "this is live",
+          "timestamp": 1643273171000,
+          "language": "en-gb",
+          "cpsType": "LIV",
+          "indexImage": {
+            "id": "63902238",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14514/test/_63902238_4815.jpg",
+            "path": "/cpsdevpb/14514/test/_63902238_4815.jpg",
+            "height": 394,
+            "width": 700,
+            "altText": "Taylor",
+            "caption": "Taylor",
+            "copyrightHolder": "Taylor Swift",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63902240",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/107C/test/_63902240_4815.jpg",
+            "path": "/cpsdevpb/107C/test/_63902240_4815.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "tay",
+            "caption": "taylor",
+            "copyrightHolder": "Taylor",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Home",
+            "uri": "/news/front_page",
+            "type": "simple"
+          },
+          "liveStatus": "AUTO",
+          "id": "urn:bbc:ares::asset:news/live/23479940",
+          "type": "cps"
         },
         {
           "name": "Snoods at the ready as ice grips Cardiff",
@@ -1269,6 +1275,7 @@
             "altText": "weatherman",
             "caption": "bbc",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "http://www.bbc.co.uk/weather/weather_watcher/",
@@ -1276,6 +1283,28 @@
           "contentType": "Video",
           "assetTypeCode": "PRO",
           "timestamp": 1663062828000,
+          "type": "link"
+        },
+        {
+          "name": "Florence Pugh on her primary school nativity...",
+          "summary": "90s all the way",
+          "indexImage": {
+            "id": "63958321",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3061/test/_63958321_p0dd2wvy.jpg",
+            "path": "/cpsdevpb/3061/test/_63958321_p0dd2wvy.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "florence pugh",
+            "caption": "florence pugh",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/sounds/play/m001dmln",
+          "contentType": "Audio",
+          "assetTypeCode": "PRO",
+          "timestamp": 1668169266000,
           "type": "link"
         },
         {
@@ -1291,6 +1320,7 @@
             "altText": "newsround",
             "caption": "newsround",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.test.bbc.co.uk/bitesize/subjects/zf48q6f",
@@ -1301,46 +1331,67 @@
         },
         {
           "headlines": {
-            "headline": "Taylor Swift makes history as she takes over entire US top 10"
+            "headline": "Test MAP C7",
+            "overtyped": "An audio link here"
           },
           "locators": {
-            "assetUri": "/news/entertainment-arts-23536303",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:db1029c2-e76d-4a03-83c3-139588cec64e",
-            "assetId": "23536303",
-            "cpsUrn": "urn:bbc:content:assetUri:news/entertainment-arts-23536303",
-            "curie": "http://www.bbc.co.uk/asset/db1029c2-e76d-4a03-83c3-139588cec64e"
+            "assetUri": "/news/av/entertainment-arts-23520613",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:4ae96ddf-024d-4984-b696-deb7beaff4aa",
+            "assetId": "23520613",
+            "cpsUrn": "urn:bbc:content:assetUri:news/av/entertainment-arts-23520613",
+            "curie": "http://www.bbc.co.uk/asset/4ae96ddf-024d-4984-b696-deb7beaff4aa"
           },
-          "summary": "Taylor Swift is the music industry",
-          "timestamp": 1667321886000,
+          "summary": "A summary",
+          "timestamp": 1660654442000,
           "language": "en-gb",
-          "byline": {
-            "name": "By Sian Prescott",
-            "title": "BBC News",
-            "persons": [
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01g2pxw",
+            "subType": "episode",
+            "format": "audio",
+            "title": "Test MAP C7",
+            "synopses": {
+              "short": "Test MAP C7"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01g2py6.jpg",
+            "embedding": true,
+            "advertising": false,
+            "caption": "Test MAP C7",
+            "versions": [
               {
-                "name": "Sian Prescott",
-                "function": "BBC News"
+                "versionId": "p01g2pxh",
+                "types": [
+                  "Podcast"
+                ],
+                "duration": 174,
+                "durationISO8601": "PT2M54S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": false
+                },
+                "availableFrom": 1516795320000
               }
-            ]
+            ],
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "cpsType": "STY",
           "indexImage": {
-            "id": "63957242",
+            "id": "63958326",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/5ED3/test/_63957242_hi059116421.jpg",
-            "path": "/cpsdevpb/5ED3/test/_63957242_hi059116421.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "TAYLOR THE SWIFT",
-            "caption": "Taylor",
+            "href": "http://b.files.bbci.co.uk/F3B1/test/_63958326_p01g2py6.jpg",
+            "path": "/cpsdevpb/F3B1/test/_63958326_p01g2py6.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "asdfadsf",
+            "caption": "sdfsdf",
             "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
             "isBreakingNews": false,
-            "isFactCheck": false,
-            "hasShortForm": true
+            "isFactCheck": false
           },
           "section": {
             "subType": "IDX",
@@ -1348,12 +1399,12 @@
             "uri": "/news/entertainment_and_arts",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:news/entertainment-arts-23536303",
+          "id": "urn:bbc:ares::asset:news/av/entertainment-arts-23520613",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:23:56.994Z",
+        "generated": "2023-02-18T03:08:59.186Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

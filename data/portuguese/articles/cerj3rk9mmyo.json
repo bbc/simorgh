@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "4f419dfe",
+              "id": "28763d65",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "75171cd6",
+                    "id": "d581255a",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f8f0b45a",
+                          "id": "7837b993",
                           "type": "paragraph",
                           "model": {
                             "text": "Homófonos: O que são e qual a sua relevância em inglês?",
                             "blocks": [
                               {
-                                "id": "fb76331d",
+                                "id": "00b77558",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Homófonos: O que são e qual a sua relevância em inglês?",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "185919ab",
+              "id": "482a9b10",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941526269,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "a50ec162",
+              "id": "0cfd8c21",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "0e4c42bd",
+                    "id": "f44142ee",
                     "type": "paragraph",
                     "model": {
                       "text": "Quem já tentou aprender outro idioma sabe que a tarefa não é nada fácil.",
                       "blocks": [
                         {
-                          "id": "1b1b9b9e",
+                          "id": "e2354d95",
                           "type": "fragment",
                           "model": {
                             "text": "Quem já tentou aprender outro idioma sabe que a tarefa não é nada fácil.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "54a38dc9",
+                    "id": "55da5751",
                     "type": "paragraph",
                     "model": {
                       "text": "Para incorporar as nuances da língua estrangeira, o aluno tem que se desligar das regras de seu próprio idioma, evitando cair nas inúmeras armadilhas que cada língua apresenta, como por exemplo os falsos cognatos - aquelas palavras que por similaridade gráfica, fonética, ou ambas, com vocábulos de seu próprio idioma, sugerem ser algo que na verdade não são.",
                       "blocks": [
                         {
-                          "id": "432b58df",
+                          "id": "c1394b15",
                           "type": "fragment",
                           "model": {
                             "text": "Para incorporar as nuances da língua estrangeira, o aluno tem que se desligar das regras de seu próprio idioma, evitando cair nas inúmeras armadilhas que cada língua apresenta, como por exemplo os falsos cognatos - aquelas palavras que por similaridade gráfica, fonética, ou ambas, com vocábulos de seu próprio idioma, sugerem ser algo que na verdade não são.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "b692999e",
+                    "id": "3de54b71",
                     "type": "paragraph",
                     "model": {
                       "text": "Um bom exemplo é a palavra inglesa actually que quer dizer realmente em português e não atualmente como a grafia sugere.",
                       "blocks": [
                         {
-                          "id": "2931d0af",
+                          "id": "9c53db33",
                           "type": "fragment",
                           "model": {
                             "text": "Um bom exemplo é a palavra inglesa ",
@@ -143,7 +143,7 @@
                           ]
                         },
                         {
-                          "id": "71976155",
+                          "id": "24facddf",
                           "type": "fragment",
                           "model": {
                             "text": "actually",
@@ -158,7 +158,7 @@
                           ]
                         },
                         {
-                          "id": "ea743281",
+                          "id": "e85bad8d",
                           "type": "fragment",
                           "model": {
                             "text": " que quer dizer ",
@@ -171,7 +171,7 @@
                           ]
                         },
                         {
-                          "id": "0dbe1c12",
+                          "id": "629b372c",
                           "type": "fragment",
                           "model": {
                             "text": "realmente",
@@ -186,7 +186,7 @@
                           ]
                         },
                         {
-                          "id": "20eb0539",
+                          "id": "59bd5e6f",
                           "type": "fragment",
                           "model": {
                             "text": " em português e não ",
@@ -199,7 +199,7 @@
                           ]
                         },
                         {
-                          "id": "9baf700c",
+                          "id": "dc24fc9c",
                           "type": "fragment",
                           "model": {
                             "text": "atualmente",
@@ -214,7 +214,7 @@
                           ]
                         },
                         {
-                          "id": "c37d0f76",
+                          "id": "b62b1b48",
                           "type": "fragment",
                           "model": {
                             "text": " como a grafia sugere.",
@@ -234,13 +234,13 @@
                     ]
                   },
                   {
-                    "id": "da69cf1f",
+                    "id": "4b7ca5ca",
                     "type": "paragraph",
                     "model": {
                       "text": "Nessa linha de grande dificuldade linguística estão os homófonos, palavras pronunciadas da mesma forma, porém com sentido e grafia diferentes - são um dos grandes obstáculos a quem tenta aprender uma nova língua.",
                       "blocks": [
                         {
-                          "id": "955733da",
+                          "id": "6793d229",
                           "type": "fragment",
                           "model": {
                             "text": "Nessa linha de grande dificuldade linguística estão os homófonos, palavras pronunciadas da mesma forma, porém com sentido e grafia diferentes - são um dos grandes obstáculos a quem tenta aprender uma nova língua.",
@@ -266,11 +266,21 @@
               ]
             },
             {
-              "id": "98aa779e",
+              "id": "fa68fed9",
               "type": "mpu",
               "model": {},
               "position": [
                 4
+              ]
+            },
+            {
+              "id": "1a015fe7",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
               ]
             }
           ]
@@ -279,14 +289,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cerj3rk9mmyo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cerj3rk9mmyo"
+          "optimoUrn": "urn:bbc:optimo:asset:cerj3rk9mmyo",
+          "canonicalUrl": "https://www.bbc.com/portuguese/articles/cerj3rk9mmyo"
         },
         "type": "article",
         "createdBy": "Brasil",
         "language": "pt-br",
         "firstPublished": 1562941526269,
         "lastPublished": 1562941526269,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cerj3rk9mmyo",
           "producer": "Brasil",
@@ -297,7 +307,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -310,12 +319,9 @@
         "consumableOnlyOnRedButton": false
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Homófonos: O que são e qual a sua relevância em inglês?"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -714,7 +720,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:02:58.212Z",
+        "generated": "2023-02-18T03:02:57.347Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

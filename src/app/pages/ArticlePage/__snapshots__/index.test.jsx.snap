@@ -1695,9 +1695,6 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </li>
       </ol>
     </section>
-    <div
-      aria-hidden="true"
-    />
   </div>
 </div>
 `;
@@ -2217,9 +2214,6 @@ exports[`should render a news article correctly 1`] = `
         </main>
       </div>
     </div>
-    <div
-      aria-hidden="true"
-    />
   </div>
 </div>
 `;
@@ -2766,9 +2760,6 @@ exports[`should render a news article with headline in the middle correctly 1`] 
         </main>
       </div>
     </div>
-    <div
-      aria-hidden="true"
-    />
   </div>
 </div>
 `;
@@ -3157,9 +3148,6 @@ exports[`should render a news article without headline correctly 1`] = `
         </main>
       </div>
     </div>
-    <div
-      aria-hidden="true"
-    />
   </div>
 </div>
 `;
@@ -4859,9 +4847,6 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </li>
       </ol>
     </section>
-    <div
-      aria-hidden="true"
-    />
   </div>
 </div>
 `;

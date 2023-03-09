@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
@@ -28,7 +22,6 @@ const baseServiceConfig = {
   service: 'zhongwen' as Services,
   serviceName: 'News 中文',
   languageName: 'Chinese',
-  themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcchinese',
   twitterSite: '@bbcchinese',
   isTrustProjectParticipant: true,
@@ -54,13 +47,6 @@ const baseServiceConfig = {
       text: '分集',
       href: 'https://www.bbc.com/zhongwen/trad/podcasts/p02pc9xp',
     },
-  },
-  theming: {
-    brandBackgroundColour: `${C_POSTBOX}`,
-    brandLogoColour: `${C_WHITE}`,
-    brandForegroundColour: `${C_GHOST}`,
-    brandHighlightColour: `${C_WHITE}`,
-    brandBorderColour: `${C_POSTBOX_30}`,
   },
   showAdPlaceholder: true,
   showRelatedTopics: true,

@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "815e0a7b",
+              "id": "bcd26eb5",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "1d459bd7",
+                    "id": "35b753fb",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "d4a38168",
+                          "id": "8472788b",
                           "type": "paragraph",
                           "model": {
                             "text": "ਇਹ ਇਸ ਪਰੀਖਿਆ ਲੇਖ ਦਾ ਸਿਰਲੇਖ ਹੈ",
                             "blocks": [
                               {
-                                "id": "225fda16",
+                                "id": "cb952cb3",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ਇਹ ਇਸ ਪਰੀਖਿਆ ਲੇਖ ਦਾ ਸਿਰਲੇਖ ਹੈ",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "af5074da",
+              "id": "166abf47",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "c2a0ba31",
+                    "id": "effa08eb",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8a425d8e",
+                          "id": "d0115614",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "e96f340c",
+                                "id": "80048541",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
                                   "blocks": [
                                     {
-                                      "id": "bbc6d6b3",
+                                      "id": "86115a35",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "fc6723cd",
+                    "id": "02e6137d",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "41bc397a",
+                          "id": "0a68cc65",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "82bd7a1e",
+                                "id": "0c37a3e9",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "\rਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
                                   "blocks": [
                                     {
-                                      "id": "1314d1d8",
+                                      "id": "70fbd63e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "\rਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "80f167e1",
+                    "id": "e8579f96",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "49530e56",
+              "id": "19360ca3",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942877468,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "3f26b89f",
+              "id": "68001a1b",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "41eb7de1",
+                    "id": "c3030169",
                     "type": "paragraph",
                     "model": {
                       "text": "ਇਹ ਇੱਕ ਟੈਕਸਟ ਬਲਾਕ ਹੈ, ਜਿਸ ਵਿੱਚ ਬੀਬੀਸੀ ਮੌਸਮ ਦੇ ਮੁੱਖ ਪੰਨੇ ਦਾ url ਲਿੰਕ ਹੈ.",
                       "blocks": [
                         {
-                          "id": "8c477b9f",
+                          "id": "6720976d",
                           "type": "fragment",
                           "model": {
                             "text": "ਇਹ ਇੱਕ ਟੈਕਸਟ ਬਲਾਕ ਹੈ, ਜਿਸ ਵਿੱਚ ਬੀਬੀਸੀ ਮੌਸਮ ਦੇ ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "51204fda",
+                          "id": "bd1911bf",
                           "type": "urlLink",
                           "model": {
                             "text": "ਮੁੱਖ ਪੰਨੇ ਦਾ url ਲਿੰਕ ਹੈ.",
                             "blocks": [
                               {
-                                "id": "0e7503c5",
+                                "id": "83d99689",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ਮੁੱਖ ਪੰਨੇ ਦਾ url ਲਿੰਕ ਹੈ.",
@@ -270,29 +270,29 @@
               ]
             },
             {
-              "id": "b8465d7a",
+              "id": "ee400deb",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01djw2m",
                 "blocks": [
                   {
-                    "id": "b094d205",
+                    "id": "6520a0f2",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "3240984b",
+                          "id": "5daa5a69",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "88bd2751",
+                                "id": "fa274f00",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ਚੀਨੀ ਸੁਪਰਹਾਈਵੇ ਯੂਜ਼ਰ ਨਵੇਂ ਜੰਕਸ਼ਨ ਤੋਂ ਹੈਰਾਨ ਹਨ",
                                   "blocks": [
                                     {
-                                      "id": "16c56cbd",
+                                      "id": "de59ab5e",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ਚੀਨੀ ਸੁਪਰਹਾਈਵੇ ਯੂਜ਼ਰ ਨਵੇਂ ਜੰਕਸ਼ਨ ਤੋਂ ਹੈਰਾਨ ਹਨ",
@@ -331,12 +331,12 @@
                     ]
                   },
                   {
-                    "id": "d542d39e",
+                    "id": "71c7a51a",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "02973a6e",
+                          "id": "c3c17121",
                           "blockId": "urn:bbc:ares::clip:p01djw2m",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -381,12 +381,12 @@
                           ]
                         },
                         {
-                          "id": "1b27cfaa",
+                          "id": "0d27d2a0",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "706178f7",
+                                "id": "a905959a",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
@@ -421,23 +421,23 @@
               ]
             },
             {
-              "id": "17d297eb",
+              "id": "7d2e3424",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "b1cf52b8",
+                    "id": "24c7694b",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "1db1ff5f",
+                          "id": "8dd5b3c4",
                           "type": "paragraph",
                           "model": {
                             "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
                             "blocks": [
                               {
-                                "id": "11ef9209",
+                                "id": "e5516c58",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
@@ -472,28 +472,28 @@
               ]
             },
             {
-              "id": "612c6f34",
+              "id": "7e1de503",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "b192f49d",
+                    "id": "7b461c99",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "68fe5dff",
+                          "id": "7a77c340",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "6564c1bd",
+                                "id": "1ccea290",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
                                   "blocks": [
                                     {
-                                      "id": "3623ab3c",
+                                      "id": "12bbfb45",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ਇਹ ਇਕ ਉਪ ਸਿਰਲੇਖ ਹੈ",
@@ -532,7 +532,7 @@
                     ]
                   },
                   {
-                    "id": "f3b2a9a2",
+                    "id": "b71946ed",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -553,18 +553,18 @@
               ]
             },
             {
-              "id": "41f90542",
+              "id": "cadb287c",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "01bc6a03",
+                    "id": "330f61da",
                     "type": "paragraph",
                     "model": {
                       "text": "ਇਹ ਟੈਸਟ ਲੇਖ ਬਣਾਇਆ ਗਿਆ ਹੈ ਤਾਂ ਜੋ ਅਸੀਂ ਆਪਣੀ ਵੈਬਸਾਈਟ ਤੇ ਟੈਸਟ ਚਲਾ ਸਕੀਏ.",
                       "blocks": [
                         {
-                          "id": "f6703791",
+                          "id": "72b39a68",
                           "type": "fragment",
                           "model": {
                             "text": "ਇਹ ਟੈਸਟ ਲੇਖ ਬਣਾਇਆ ਗਿਆ ਹੈ ਤਾਂ ਜੋ ਅਸੀਂ ਆਪਣੀ ਵੈਬਸਾਈਟ ਤੇ ਟੈਸਟ ਚਲਾ ਸਕੀਏ.",
@@ -590,11 +590,21 @@
               ]
             },
             {
-              "id": "45b57112",
+              "id": "f41c7eed",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "bbc577cf",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -603,14 +613,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:c0l79lr39qyo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:c0l79lr39qyo"
+          "optimoUrn": "urn:bbc:optimo:asset:c0l79lr39qyo",
+          "canonicalUrl": "https://www.bbc.com/punjabi/articles/c0l79lr39qyo"
         },
         "type": "article",
         "createdBy": "Punjabi",
         "language": "pa",
         "firstPublished": 1562942877468,
         "lastPublished": 1562942877468,
-        "options": {},
         "analyticsLabels": {
           "producer": "Punjabi",
           "page": "punjabi.articles.c0l79lr39qyo.page"
@@ -620,7 +630,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Punjabi",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -638,12 +647,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1018,7 +1024,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T18:10:58.201Z",
+        "generated": "2023-02-17T18:10:57.274Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,
