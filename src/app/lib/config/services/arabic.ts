@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#psammead/psammead-locales/moment/ar';
 import '#psammead/moment-timezone-include/tz/GMT';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'arabic',
     serviceName: 'Arabic',
     languageName: 'Arabic',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCArabic',
     twitterSite: '@BBCArabic',
     noBylinesPolicy:
@@ -50,13 +43,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle: 'الرئيسية',
     iTunesAppId: 558497376,
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -249,6 +235,7 @@ export const service: DefaultServiceConfig = {
         duration: 'المدة',
         recentEpisodes: 'البرامج السابقة',
         podcastExternalLinks: 'هذا البودكاست متاح عبر',
+        download: 'تحميل الحلقة',
       },
       socialEmbed: {
         caption: {

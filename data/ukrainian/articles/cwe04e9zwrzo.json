@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "bba0d23e",
+              "id": "9a0d18be",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "fc822859",
+                    "id": "4afcb8a1",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "583977c9",
+                          "id": "69ee672e",
                           "type": "paragraph",
                           "model": {
                             "text": "Українка пробилася у фінал юніорського Вімблдону",
                             "blocks": [
                               {
-                                "id": "a928a871",
+                                "id": "fb68eb48",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Українка пробилася у фінал юніорського Вімблдону",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "41590804",
+              "id": "45a93a2d",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562941967871,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "af3f22f9",
+              "id": "e8c61f3c",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "41085c13",
+                    "id": "86c4dc4c",
                     "type": "paragraph",
                     "model": {
                       "text": "Українська тенісистка Дарія Снігур вийшла у фінал юніорського Вімблдону.",
                       "blocks": [
                         {
-                          "id": "97d1ff76",
+                          "id": "efcfb0c3",
                           "type": "fragment",
                           "model": {
                             "text": "Українська тенісистка Дарія Снігур вийшла у фінал юніорського Вімблдону.",
@@ -98,13 +98,13 @@
                     ]
                   },
                   {
-                    "id": "c92da83c",
+                    "id": "14e64f76",
                     "type": "paragraph",
                     "model": {
                       "text": "У півфіналі 17-річна українка здолала Емму Наварро зі США.",
                       "blocks": [
                         {
-                          "id": "689c15d2",
+                          "id": "fb9662da",
                           "type": "fragment",
                           "model": {
                             "text": "У півфіналі 17-річна українка здолала Емму Наварро зі США.",
@@ -124,13 +124,13 @@
                     ]
                   },
                   {
-                    "id": "47044030",
+                    "id": "2704f956",
                     "type": "paragraph",
                     "model": {
                       "text": "На це їй знадобилося 45 хвилин. Поєдинок завершився з рахунком 6:3, 6:0.",
                       "blocks": [
                         {
-                          "id": "2d7f2416",
+                          "id": "1e993425",
                           "type": "fragment",
                           "model": {
                             "text": "На це їй знадобилося 45 хвилин. Поєдинок завершився з рахунком 6:3, 6:0.",
@@ -150,13 +150,13 @@
                     ]
                   },
                   {
-                    "id": "9bf1e2b3",
+                    "id": "52e6d31e",
                     "type": "paragraph",
                     "model": {
                       "text": "У чвертьфіналі українка здолала 16-річну Поліну Кудерметову з Росії з рахунком 6:2, 6:4.",
                       "blocks": [
                         {
-                          "id": "dbb4627d",
+                          "id": "285a3c19",
                           "type": "fragment",
                           "model": {
                             "text": "У чвертьфіналі українка здолала 16-річну Поліну Кудерметову з Росії з рахунком 6:2, 6:4.",
@@ -182,11 +182,21 @@
               ]
             },
             {
-              "id": "c1f125b6",
+              "id": "342a74e5",
               "type": "mpu",
               "model": {},
               "position": [
                 4
+              ]
+            },
+            {
+              "id": "5cf5d6ee",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                5
               ]
             }
           ]
@@ -195,14 +205,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cwe04e9zwrzo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cwe04e9zwrzo"
+          "optimoUrn": "urn:bbc:optimo:asset:cwe04e9zwrzo",
+          "canonicalUrl": "https://www.bbc.com/ukrainian/articles/cwe04e9zwrzo"
         },
         "type": "article",
         "createdBy": "Ukrainian",
         "language": "uk",
         "firstPublished": 1562941967871,
         "lastPublished": 1562941967871,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cwe04e9zwrzo",
           "producer": "Ukrainian",
@@ -213,7 +223,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Ukrainian",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -223,12 +232,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Українка пробилася у фінал юніорського Вімблдону"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -501,7 +507,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:10:57.732Z",
+        "generated": "2023-02-18T03:10:58.107Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#psammead/psammead-locales/moment/ps';
 import '#psammead/moment-timezone-include/tz/GMT';
@@ -40,7 +34,6 @@ export const service: DefaultServiceConfig = {
     serviceName: 'Pashto',
     languageName: 'Pashto',
     altCalendar: jalaali,
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpashto',
     twitterSite: '@bbcpashto',
     noBylinesPolicy:
@@ -51,13 +44,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'کور پاڼه',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {

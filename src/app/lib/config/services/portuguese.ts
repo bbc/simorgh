@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
 import '#psammead/psammead-locales/moment/pt-br';
@@ -39,7 +33,6 @@ export const service: DefaultServiceConfig = {
     service: 'portuguese',
     serviceName: 'News Brasil',
     languageName: 'Portuguese',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbrasil',
     twitterSite: '@bbcbrasil',
     noBylinesPolicy:
@@ -52,13 +45,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
     passportHomes: ['brasil'],
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -249,6 +235,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Mais',
         podcastExternalLinks: 'O podcast está disponível em',
+        download: 'Baixar episódio',
       },
       socialEmbed: {
         caption: {

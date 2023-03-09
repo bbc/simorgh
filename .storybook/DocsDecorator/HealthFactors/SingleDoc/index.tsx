@@ -62,13 +62,7 @@ const SingleDoc = ({
         </Text>
       </div>
       <div css={styles.documentationLink}>
-        <Text
-          as="a"
-          href={url}
-          css={styles.link}
-          size="brevier"
-          fontVariant="sansBold"
-        >
+        <Text as="a" href={url} size="brevier" fontVariant="sansBold">
           <span>{urlLabel}</span>
           <span
             aria-hidden
