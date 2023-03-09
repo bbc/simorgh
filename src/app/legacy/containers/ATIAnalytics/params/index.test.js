@@ -7,6 +7,7 @@ import {
   INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
+  MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { buildATIUrl, buildATIEventTrackingParams } from '.';
 
@@ -172,6 +173,17 @@ describe('ATIAnalytics params', () => {
       );
     });
 
+    it('should return the right media article url', () => {
+      const url = buildATIUrl(
+        article,
+        { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
+        serviceContext,
+      );
+      expect(url).toMatchInlineSnapshot(
+        `"s=598285&s2=atiAnalyticsProducerId&p=service.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article-sfv]&x8=[simorgh]&x9=[pageTitle]&x10=[scotland]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&x14=[thing%2520id%25201~thing%2520id%25202]&x17=[thing%2520english%2520label%25201~thing%2520english%2520label%25202]&ref=originhttp://www.example.com"`,
+      );
+    });
+
     it('should return the right frontPage url', () => {
       const url = buildATIUrl(
         frontPage,
@@ -274,6 +286,37 @@ describe('ATIAnalytics params', () => {
         appName: 'atiAnalyticsAppName',
         contentId: 'urn:bbc:optimo:asset:54321',
         contentType: 'article',
+        categoryName: 'thing%20english%20label%201~thing%20english%20label%202',
+        isUK: 'isUK',
+        language: 'language',
+        ldpThingIds: 'thing%20id%201~thing%20id%202',
+        ldpThingLabels:
+          'thing%20english%20label%201~thing%20english%20label%202',
+        origin: 'origin',
+        pageIdentifier: 'service.articles.//www.bbc.co.uk.page',
+        pageTitle: 'pageTitle',
+        libraryVersion: 'simorgh',
+        platform: 'platform',
+        previousPath: 'http://www.example.com',
+        producerId: 'atiAnalyticsProducerId',
+        service: 'service',
+        statsDestination: 'statsDestination',
+        timePublished: analyticsUtils.getPublishedDatetime(),
+        timeUpdated: analyticsUtils.getPublishedDatetime(),
+        nationsProducer: 'scotland',
+      });
+    });
+
+    it('should return the right media article params', () => {
+      const params = buildATIEventTrackingParams(
+        article,
+        { ...requestContext, pageType: MEDIA_ARTICLE_PAGE },
+        serviceContext,
+      );
+      expect(params).toEqual({
+        appName: 'atiAnalyticsAppName',
+        contentId: 'urn:bbc:optimo:asset:54321',
+        contentType: 'article-sfv',
         categoryName: 'thing%20english%20label%201~thing%20english%20label%202',
         isUK: 'isUK',
         language: 'language',
