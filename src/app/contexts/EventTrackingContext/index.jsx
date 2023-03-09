@@ -19,6 +19,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   TOPIC_PAGE,
   LIVE_PAGE,
+  MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../ServiceContext';
 
@@ -27,6 +28,7 @@ export const EventTrackingContext = createContext({});
 const getCampaignID = pageType => {
   const campaignID = {
     [ARTICLE_PAGE]: 'article',
+    [MEDIA_ARTICLE_PAGE]: 'article-sfv',
     [FRONT_PAGE]: 'index-home',
     [MEDIA_PAGE]: 'player-episode-tv',
     [MOST_READ_PAGE]: 'list-datadriven-read',
@@ -40,7 +42,6 @@ const getCampaignID = pageType => {
     [TOPIC_PAGE]: 'topic-page',
     [LIVE_PAGE]: 'live-page',
   }[pageType];
-
   if (!campaignID) {
     // eslint-disable-next-line no-console
     console.error(

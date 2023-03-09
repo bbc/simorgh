@@ -18,6 +18,7 @@ import {
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
+  MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   isNull,
@@ -99,6 +100,50 @@ describe('ATI Analytics Container', () => {
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
           "pageviewParams": "s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)&s2=64&p=news.articles.c0000000001o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Aoptimo%3Ac0000000001o]&x2=[amp]&x3=[news]&x4=[en-gb]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Article%2520Headline%2520for%2520SEO]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Royal%2520Wedding%25202018~Duchess%2520of%2520Sussex]&x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]&x17=[Royal%2520Wedding%25202018~Duchess%2520of%2520Sussex]&ref=\${documentReferrer}",
+        }
+      `);
+    });
+  });
+
+  describe('pageType media article', () => {
+    it('should call CanonicalATIAnalytics when platform is canonical', () => {
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap
+          platform="canonical"
+          pageType={MEDIA_ARTICLE_PAGE}
+          service="news"
+        >
+          <ATIAnalytics data={articleDataNews} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toMatchInlineSnapshot(`
+        Object {
+          "pageviewParams": "s=598286&s2=64&p=news.articles.c0000000001o.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Ac0000000001o]&x2=[responsive]&x3=[news]&x4=[en-gb]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[article-sfv]&x8=[simorgh]&x9=[Article%2520Headline%2520for%2520SEO]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Royal%2520Wedding%25202018~Duchess%2520of%2520Sussex]&x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]&x17=[Royal%2520Wedding%25202018~Duchess%2520of%2520Sussex]",
+        }
+      `);
+    });
+
+    it('should call AmpATIAnalytics when platform is Amp', () => {
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap
+          platform="amp"
+          pageType={MEDIA_ARTICLE_PAGE}
+          service="news"
+        >
+          <ATIAnalytics data={articleDataNews} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
+        Object {
+          "pageviewParams": "s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)&s2=64&p=news.articles.c0000000001o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Aoptimo%3Ac0000000001o]&x2=[amp]&x3=[news]&x4=[en-gb]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-sfv]&x8=[simorgh]&x9=[Article%2520Headline%2520for%2520SEO]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Royal%2520Wedding%25202018~Duchess%2520of%2520Sussex]&x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]&x17=[Royal%2520Wedding%25202018~Duchess%2520of%2520Sussex]&ref=\${documentReferrer}",
         }
       `);
     });
