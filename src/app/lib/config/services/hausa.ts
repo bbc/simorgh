@@ -239,6 +239,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Tsawon lokaci',
         recentEpisodes: 'Kari',
         podcastExternalLinks: 'Za a iya samun wannan Podcast din a',
+        download: 'Sauke shiri',
       },
       socialEmbed: {
         caption: {
