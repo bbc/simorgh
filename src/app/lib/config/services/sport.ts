@@ -1,9 +1,3 @@
-import {
-  C_SPORT_YELLOW,
-  C_MIDNIGHT_BLACK,
-  C_SPORT_YELLOW_30,
-  C_BLACK,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/psammead-locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
@@ -36,20 +30,12 @@ export const service: DefaultServiceConfig = {
     service: 'sport',
     serviceName: 'Sport',
     languageName: 'English',
-    themeColor: `${C_SPORT_YELLOW}`,
     twitterCreator: '@BBCSport',
     twitterSite: '@BBCSport',
     isTrustProjectParticipant: false,
     script: latin,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Home',
-    theming: {
-      brandBackgroundColour: `${C_SPORT_YELLOW}`,
-      brandLogoColour: `${C_BLACK}`,
-      brandForegroundColour: `${C_MIDNIGHT_BLACK}`,
-      brandBorderColour: `${C_SPORT_YELLOW_30}`,
-      brandHighlightColour: `${C_BLACK}`,
-    },
     showAdPlaceholder: false,
     showRelatedTopics: false,
     translations: {

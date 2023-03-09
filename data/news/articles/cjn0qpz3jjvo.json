@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "e0b632be",
+              "id": "dd468eb2",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "079e858a",
+                    "id": "5a28c397",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "68657fd1",
+                          "id": "3b45f28b",
                           "type": "paragraph",
                           "model": {
                             "text": "AV test article ",
                             "blocks": [
                               {
-                                "id": "a51b637c",
+                                "id": "f09eb4f9",
                                 "type": "fragment",
                                 "model": {
                                   "text": "AV test article ",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "ced9a45c",
+              "id": "817c5d79",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1571146595887,
@@ -67,18 +67,18 @@
               ]
             },
             {
-              "id": "16aeacd8",
+              "id": "a6a83843",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "5108b334",
+                    "id": "7cf188ab",
                     "type": "paragraph",
                     "model": {
                       "text": "Text block before a media block",
                       "blocks": [
                         {
-                          "id": "c91d860f",
+                          "id": "2cc8e1a4",
                           "type": "fragment",
                           "model": {
                             "text": "Text block before a media block",
@@ -104,29 +104,29 @@
               ]
             },
             {
-              "id": "96bab837",
+              "id": "82dd9899",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "cc23bf99",
+                    "id": "53702bb5",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "606c8299",
+                          "id": "7c1e1674",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "48e5a92e",
+                                "id": "8efc2b6c",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                   "blocks": [
                                     {
-                                      "id": "2c4665ad",
+                                      "id": "47302cad",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
@@ -165,12 +165,12 @@
                     ]
                   },
                   {
-                    "id": "f879ac37",
+                    "id": "e692fa07",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "223d274a",
+                          "id": "4de3c37b",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -216,12 +216,12 @@
                           ]
                         },
                         {
-                          "id": "71542044",
+                          "id": "fbaa6060",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "1f5afe54",
+                                "id": "4936f5d6",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -238,23 +238,23 @@
                                 ]
                               },
                               {
-                                "id": "d3a0f66a",
+                                "id": "50b5b0cc",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "536b7e5b",
+                                      "id": "cb8a5b38",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "798db9db",
+                                            "id": "2c79ce0d",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "29664f72",
+                                                  "id": "b56549f1",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -322,18 +322,18 @@
               ]
             },
             {
-              "id": "e0fcee0a",
+              "id": "7174602b",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "92af4231",
+                    "id": "14f58a2f",
                     "type": "paragraph",
                     "model": {
                       "text": "Text block after an media block.",
                       "blocks": [
                         {
-                          "id": "9e8a528e",
+                          "id": "840bb901",
                           "type": "fragment",
                           "model": {
                             "text": "Text block after an media block.",
@@ -359,29 +359,29 @@
               ]
             },
             {
-              "id": "80dfed12",
+              "id": "d57c202e",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "b7558f55",
+                    "id": "34db7876",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "62326cff",
+                          "id": "540a152a",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "68803972",
+                                "id": "c1649fe4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                   "blocks": [
                                     {
-                                      "id": "6068b36f",
+                                      "id": "8ec601ad",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
@@ -420,12 +420,12 @@
                     ]
                   },
                   {
-                    "id": "5081b055",
+                    "id": "42c38107",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f68457f0",
+                          "id": "0555e4da",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -471,12 +471,12 @@
                           ]
                         },
                         {
-                          "id": "4966231f",
+                          "id": "4028bf72",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "bb868677",
+                                "id": "f075a2e2",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -493,23 +493,23 @@
                                 ]
                               },
                               {
-                                "id": "011572b6",
+                                "id": "97677b03",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "81d22135",
+                                      "id": "4535e9d5",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "c350b820",
+                                            "id": "0c5162b1",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "f0bafada",
+                                                  "id": "07802221",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -577,28 +577,28 @@
               ]
             },
             {
-              "id": "bfc2e5e9",
+              "id": "2cdb1af0",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "61ca0991",
+                    "id": "8314a3ef",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "6fe6fbaf",
+                          "id": "4229e3f3",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "cd787788",
+                                "id": "9f41cfaa",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Image block after a media block",
                                   "blocks": [
                                     {
-                                      "id": "8f2f59db",
+                                      "id": "ef81d908",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Image block after a media block",
@@ -637,23 +637,23 @@
                     ]
                   },
                   {
-                    "id": "f074db45",
+                    "id": "b31ec44d",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "76972b2a",
+                          "id": "e90967e4",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c9c29816",
+                                "id": "228d51a9",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "Image after an AV block",
                                   "blocks": [
                                     {
-                                      "id": "ef3bdf95",
+                                      "id": "b665d2c7",
                                       "type": "fragment",
                                       "model": {
                                         "text": "Image after an AV block",
@@ -692,7 +692,7 @@
                     ]
                   },
                   {
-                    "id": "d28b4522",
+                    "id": "84b638d0",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -713,29 +713,29 @@
               ]
             },
             {
-              "id": "9806c8f2",
+              "id": "33b259be",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "b3af0311",
+                    "id": "a7ac98f5",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "4f1796fc",
+                          "id": "52edfc3e",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "152e3ae1",
+                                "id": "e86603eb",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                   "blocks": [
                                     {
-                                      "id": "2ef6db93",
+                                      "id": "ddac45f6",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
@@ -774,12 +774,12 @@
                     ]
                   },
                   {
-                    "id": "62e854b0",
+                    "id": "bf0848a1",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "8e31ffb8",
+                          "id": "71d0fee5",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -825,12 +825,12 @@
                           ]
                         },
                         {
-                          "id": "56c9da76",
+                          "id": "afc039b4",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "080a6cae",
+                                "id": "39d928a4",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -847,23 +847,23 @@
                                 ]
                               },
                               {
-                                "id": "f034a806",
+                                "id": "21846cc0",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "72f7d607",
+                                      "id": "c051a388",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "1bde42f2",
+                                            "id": "a35a0eab",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "a04d0316",
+                                                  "id": "e9731f05",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -931,23 +931,23 @@
               ]
             },
             {
-              "id": "0270ddc8",
+              "id": "d36a8640",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "debfac60",
+                    "id": "90a4d2e9",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "92581242",
+                          "id": "e076c8c4",
                           "type": "paragraph",
                           "model": {
                             "text": "Subheadline block after a media block",
                             "blocks": [
                               {
-                                "id": "ad23b4b2",
+                                "id": "c2b4baa2",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Subheadline block after a media block",
@@ -982,29 +982,29 @@
               ]
             },
             {
-              "id": "f485b8a6",
+              "id": "80a716d4",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "fded5084",
+                    "id": "8ed5f3d0",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "9f22c7e3",
+                          "id": "0b09891b",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "4916e78b",
+                                "id": "cd3554e8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                   "blocks": [
                                     {
-                                      "id": "d0a9a750",
+                                      "id": "24450845",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
@@ -1043,12 +1043,12 @@
                     ]
                   },
                   {
-                    "id": "8cf908cb",
+                    "id": "119d21df",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f8f3d4b4",
+                          "id": "d25b2ac5",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -1094,12 +1094,12 @@
                           ]
                         },
                         {
-                          "id": "dcc1e497",
+                          "id": "82e5f0cd",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a81acabf",
+                                "id": "13946487",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -1116,23 +1116,23 @@
                                 ]
                               },
                               {
-                                "id": "6f5339ac",
+                                "id": "9f71886d",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "b09514e8",
+                                      "id": "2d68fe3b",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "5fa8399a",
+                                            "id": "f0bc3d51",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "da3a2612",
+                                                  "id": "3e092362",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -1200,29 +1200,29 @@
               ]
             },
             {
-              "id": "d51bb992",
+              "id": "183899cf",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01k6msm",
                 "blocks": [
                   {
-                    "id": "ebc3e394",
+                    "id": "7e8c6975",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "09171068",
+                          "id": "7aa3114c",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c58d083c",
+                                "id": "2bf3622e",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "They may be tiny, but us humans could learn a thing or two from ants.",
                                   "blocks": [
                                     {
-                                      "id": "e8b9bd01",
+                                      "id": "a822da31",
                                       "type": "fragment",
                                       "model": {
                                         "text": "They may be tiny, but us humans could learn a thing or two from ants.",
@@ -1261,12 +1261,12 @@
                     ]
                   },
                   {
-                    "id": "f5abe70e",
+                    "id": "177525c2",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "26150b6c",
+                          "id": "ccf4e82d",
                           "blockId": "urn:bbc:ares::clip:p01k6msm",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -1312,12 +1312,12 @@
                           ]
                         },
                         {
-                          "id": "bf1021b6",
+                          "id": "534d0e21",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d3566d85",
+                                "id": "e4918d62",
                                 "type": "rawImage",
                                 "model": {
                                   "width": 1920,
@@ -1334,23 +1334,23 @@
                                 ]
                               },
                               {
-                                "id": "dd1999b0",
+                                "id": "1c9e21bc",
                                 "type": "altText",
                                 "model": {
                                   "blocks": [
                                     {
-                                      "id": "8f646261",
+                                      "id": "1f59334b",
                                       "type": "text",
                                       "model": {
                                         "blocks": [
                                           {
-                                            "id": "81c0fdfd",
+                                            "id": "1232fa96",
                                             "type": "paragraph",
                                             "model": {
                                               "text": "Ants",
                                               "blocks": [
                                                 {
-                                                  "id": "1c758cba",
+                                                  "id": "a592267d",
                                                   "type": "fragment",
                                                   "model": {
                                                     "text": "Ants",
@@ -1418,18 +1418,18 @@
               ]
             },
             {
-              "id": "cdbea0ad",
+              "id": "ab6c530f",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "f68bb6ae",
+                    "id": "8255d66d",
                     "type": "paragraph",
                     "model": {
                       "text": "Above is two media blocks one after the other.",
                       "blocks": [
                         {
-                          "id": "79f3837e",
+                          "id": "f7ad6cdc",
                           "type": "fragment",
                           "model": {
                             "text": "Above is two media blocks one after the other.",
@@ -1455,11 +1455,21 @@
               ]
             },
             {
-              "id": "b2d64efe",
+              "id": "8bf155eb",
               "type": "mpu",
               "model": {},
               "position": [
                 13
+              ]
+            },
+            {
+              "id": "2ab985d1",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                14
               ]
             }
           ]
@@ -1468,14 +1478,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cjn0qpz3jjvo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cjn0qpz3jjvo"
+          "optimoUrn": "urn:bbc:optimo:asset:cjn0qpz3jjvo",
+          "canonicalUrl": "https://www.bbc.com/news/articles/cjn0qpz3jjvo"
         },
         "type": "article",
         "createdBy": "News",
         "language": "en-gb",
         "firstPublished": 1571146595887,
         "lastPublished": 1571149356325,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:cjn0qpz3jjvo",
           "producer": "News",
@@ -1486,7 +1496,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -1503,12 +1512,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "AV test article "
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -1548,6 +1554,7 @@
             "altText": "Liz Truss outside Number 10",
             "copyrightHolder": "Lisa White",
             "originCode": "cpsdevpb",
+            "allowSyndication": false,
             "type": "image"
           },
           "options": {
@@ -1591,6 +1598,7 @@
             "caption": "Angela Lansbury",
             "copyrightHolder": "BBC",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -1609,16 +1617,17 @@
           "type": "cps"
         },
         {
-          "name": "How Spain looked on as dozens were crushed to death at its border",
+          "name": "15 homes, three survivors - how the quake wiped out one Turkish apartment block",
           "indexImage": {
-            "id": "63957134",
+            "id": "63977455",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/A8A7/test/_63957134_camera-super_promo_new_safe_zone.jpg",
-            "path": "/cpsdevpb/A8A7/test/_63957134_camera-super_promo_new_safe_zone.jpg",
+            "href": "http://b.files.bbci.co.uk/D8B5/test/_63977455_mediaitem128597908.jpg",
+            "path": "/cpsdevpb/D8B5/test/_63977455_mediaitem128597908.jpg",
             "height": 549,
             "width": 976,
-            "altText": "CCTV cam",
+            "altText": "Ceyda",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.bbc.co.uk/news/uk-61593081",
@@ -1630,102 +1639,6 @@
         }
       ],
       "features": [
-        {
-          "headlines": {
-            "headline": "Angela Lansbury: from stage to Cabot Cove"
-          },
-          "locators": {
-            "assetUri": "/news/23384748",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:00d18665-46b6-42fa-87c4-9b382029f73b",
-            "assetId": "23384748",
-            "cpsUrn": "urn:bbc:content:assetUri:news/23384748",
-            "curie": "http://www.bbc.co.uk/asset/00d18665-46b6-42fa-87c4-9b382029f73b"
-          },
-          "summary": "Test",
-          "timestamp": 1643303379000,
-          "language": "en-gb",
-          "cpsType": "STY",
-          "indexImage": {
-            "id": "63902259",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "path": "/cpsdevpb/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "height": 562,
-            "width": 1000,
-            "altText": "ange",
-            "caption": "ange",
-            "copyrightHolder": "Ange",
-            "originCode": "cpsdevpb",
-            "type": "image"
-          },
-          "imageThumbnail": {
-            "id": "63902263",
-            "subType": "index-thumbnail",
-            "href": "http://b.files.bbci.co.uk/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "path": "/cpsdevpb/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
-            "height": 180,
-            "width": 320,
-            "altText": "Ange",
-            "caption": "Ange",
-            "copyrightHolder": "ANge",
-            "type": "image"
-          },
-          "options": {
-            "isBreakingNews": false,
-            "isFactCheck": false,
-            "hasShortForm": true
-          },
-          "section": {
-            "subType": "IDX",
-            "name": "Home",
-            "uri": "/news/front_page",
-            "type": "simple"
-          },
-          "id": "urn:bbc:ares::asset:news/23384748",
-          "type": "cps"
-        },
-        {
-          "name": "When Mr Blobby got to Christmas number one",
-          "summary": "a test video link promo",
-          "indexImage": {
-            "id": "63942309",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/160D4/test/_63942309_hi001100397.jpg",
-            "path": "/cpsdevpb/160D4/test/_63942309_hi001100397.jpg",
-            "height": 1152,
-            "width": 2048,
-            "altText": "Mr Blobby",
-            "caption": "Mr Blobby",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.co.uk/iplayer/episode/b03srsjl",
-          "contentType": "Video",
-          "assetTypeCode": "PRO",
-          "timestamp": 1662997270000,
-          "type": "link"
-        },
-        {
-          "name": "Florence Pugh on her primary school nativity...",
-          "summary": "90s all the way",
-          "indexImage": {
-            "id": "63958321",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/3061/test/_63958321_p0dd2wvy.jpg",
-            "path": "/cpsdevpb/3061/test/_63958321_p0dd2wvy.jpg",
-            "height": 360,
-            "width": 640,
-            "altText": "florence pugh",
-            "caption": "florence pugh",
-            "copyrightHolder": "BBC",
-            "type": "image"
-          },
-          "uri": "https://www.test.bbc.co.uk/sounds/play/m001dmln",
-          "contentType": "Audio",
-          "assetTypeCode": "PRO",
-          "timestamp": 1668169266000,
-          "type": "link"
-        },
         {
           "headlines": {
             "headline": "Wales pip Scotland in World Cup thriller"
@@ -1752,6 +1665,7 @@
             "caption": "Bevan kicks wales to win",
             "copyrightHolder": "Huw Evans picture agency",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -1775,31 +1689,67 @@
           "type": "cps"
         },
         {
+          "name": "When Mr Blobby got to Christmas number one",
+          "summary": "a test video link promo",
+          "indexImage": {
+            "id": "63942309",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/160D4/test/_63942309_hi001100397.jpg",
+            "path": "/cpsdevpb/160D4/test/_63942309_hi001100397.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "Mr Blobby",
+            "caption": "Mr Blobby",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/iplayer/episode/b03srsjl",
+          "contentType": "Video",
+          "assetTypeCode": "PRO",
+          "timestamp": 1662997270000,
+          "type": "link"
+        },
+        {
           "headlines": {
-            "headline": "Lego Titanic sunk"
+            "headline": "Angela Lansbury: from stage to Cabot Cove"
           },
           "locators": {
-            "assetUri": "/news/business-23481281",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:06cb5998-373d-41ea-b249-6aec87d3329b",
-            "assetId": "23481281",
-            "cpsUrn": "urn:bbc:content:assetUri:news/business-23481281",
-            "curie": "http://www.bbc.co.uk/asset/06cb5998-373d-41ea-b249-6aec87d3329b"
+            "assetUri": "/news/23384748",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:00d18665-46b6-42fa-87c4-9b382029f73b",
+            "assetId": "23384748",
+            "cpsUrn": "urn:bbc:content:assetUri:news/23384748",
+            "curie": "http://www.bbc.co.uk/asset/00d18665-46b6-42fa-87c4-9b382029f73b"
           },
-          "summary": "Lego are perhaps sunk",
-          "timestamp": 1643736926000,
+          "summary": "Test",
+          "timestamp": 1643303379000,
           "language": "en-gb",
           "cpsType": "STY",
           "indexImage": {
-            "id": "63969899",
+            "id": "63902259",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/18638/test/_63969899_r.jpg",
-            "path": "/cpsdevpb/18638/test/_63969899_r.jpg",
-            "height": 546,
-            "width": 970,
-            "altText": "The Lego Titanic",
-            "caption": "titanic",
-            "copyrightHolder": "BBC",
+            "href": "http://b.files.bbci.co.uk/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "path": "/cpsdevpb/173F4/test/_63902259_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "height": 562,
+            "width": 1000,
+            "altText": "ange",
+            "caption": "ange",
+            "copyrightHolder": "Ange",
             "originCode": "cpsdevpb",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63902263",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "path": "/cpsdevpb/8D7C/test/_63902263_the-lead-up-to-jessica-fletchers-final-case-1616009924.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "Ange",
+            "caption": "Ange",
+            "copyrightHolder": "ANge",
+            "allowSyndication": false,
             "type": "image"
           },
           "options": {
@@ -1809,11 +1759,11 @@
           },
           "section": {
             "subType": "IDX",
-            "name": "Business",
-            "uri": "/news/business",
+            "name": "Home",
+            "uri": "/news/front_page",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:news/business-23481281",
+          "id": "urn:bbc:ares::asset:news/23384748",
           "type": "cps"
         },
         {
@@ -1829,6 +1779,7 @@
             "altText": "spice girls",
             "caption": "spice girls",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.test.bbc.co.uk/sounds/play/m001bjpb",
@@ -1836,6 +1787,61 @@
           "assetTypeCode": "PRO",
           "timestamp": 1662998543000,
           "type": "link"
+        },
+        {
+          "headlines": {
+            "headline": "Taylor Swift's success"
+          },
+          "locators": {
+            "assetUri": "/news/live/23479940",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:bde9ec0e-a4ca-4802-99c0-5513e67914c7",
+            "assetId": "23479940",
+            "cpsUrn": "urn:bbc:content:assetUri:news/live/23479940",
+            "curie": "http://www.bbc.co.uk/asset/bde9ec0e-a4ca-4802-99c0-5513e67914c7"
+          },
+          "summary": "this is live",
+          "timestamp": 1643273171000,
+          "language": "en-gb",
+          "cpsType": "LIV",
+          "indexImage": {
+            "id": "63902238",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/14514/test/_63902238_4815.jpg",
+            "path": "/cpsdevpb/14514/test/_63902238_4815.jpg",
+            "height": 394,
+            "width": 700,
+            "altText": "Taylor",
+            "caption": "Taylor",
+            "copyrightHolder": "Taylor Swift",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "imageThumbnail": {
+            "id": "63902240",
+            "subType": "index-thumbnail",
+            "href": "http://b.files.bbci.co.uk/107C/test/_63902240_4815.jpg",
+            "path": "/cpsdevpb/107C/test/_63902240_4815.jpg",
+            "height": 180,
+            "width": 320,
+            "altText": "tay",
+            "caption": "taylor",
+            "copyrightHolder": "Taylor",
+            "allowSyndication": false,
+            "type": "image"
+          },
+          "options": {
+            "isBreakingNews": false,
+            "isFactCheck": false
+          },
+          "section": {
+            "subType": "IDX",
+            "name": "Home",
+            "uri": "/news/front_page",
+            "type": "simple"
+          },
+          "liveStatus": "AUTO",
+          "id": "urn:bbc:ares::asset:news/live/23479940",
+          "type": "cps"
         },
         {
           "name": "Snoods at the ready as ice grips Cardiff",
@@ -1850,6 +1856,7 @@
             "altText": "weatherman",
             "caption": "bbc",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "http://www.bbc.co.uk/weather/weather_watcher/",
@@ -1857,6 +1864,28 @@
           "contentType": "Video",
           "assetTypeCode": "PRO",
           "timestamp": 1663062828000,
+          "type": "link"
+        },
+        {
+          "name": "Florence Pugh on her primary school nativity...",
+          "summary": "90s all the way",
+          "indexImage": {
+            "id": "63958321",
+            "subType": "index",
+            "href": "http://b.files.bbci.co.uk/3061/test/_63958321_p0dd2wvy.jpg",
+            "path": "/cpsdevpb/3061/test/_63958321_p0dd2wvy.jpg",
+            "height": 360,
+            "width": 640,
+            "altText": "florence pugh",
+            "caption": "florence pugh",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true,
+            "type": "image"
+          },
+          "uri": "https://www.test.bbc.co.uk/sounds/play/m001dmln",
+          "contentType": "Audio",
+          "assetTypeCode": "PRO",
+          "timestamp": 1668169266000,
           "type": "link"
         },
         {
@@ -1872,6 +1901,7 @@
             "altText": "newsround",
             "caption": "newsround",
             "copyrightHolder": "BBC",
+            "allowSyndication": true,
             "type": "image"
           },
           "uri": "https://www.test.bbc.co.uk/bitesize/subjects/zf48q6f",
@@ -1882,46 +1912,67 @@
         },
         {
           "headlines": {
-            "headline": "Taylor Swift makes history as she takes over entire US top 10"
+            "headline": "Test MAP C7",
+            "overtyped": "An audio link here"
           },
           "locators": {
-            "assetUri": "/news/entertainment-arts-23536303",
-            "curieCpsUrn": "urn:bbc:cps:curie:asset:db1029c2-e76d-4a03-83c3-139588cec64e",
-            "assetId": "23536303",
-            "cpsUrn": "urn:bbc:content:assetUri:news/entertainment-arts-23536303",
-            "curie": "http://www.bbc.co.uk/asset/db1029c2-e76d-4a03-83c3-139588cec64e"
+            "assetUri": "/news/av/entertainment-arts-23520613",
+            "curieCpsUrn": "urn:bbc:cps:curie:asset:4ae96ddf-024d-4984-b696-deb7beaff4aa",
+            "assetId": "23520613",
+            "cpsUrn": "urn:bbc:content:assetUri:news/av/entertainment-arts-23520613",
+            "curie": "http://www.bbc.co.uk/asset/4ae96ddf-024d-4984-b696-deb7beaff4aa"
           },
-          "summary": "Taylor Swift is the music industry",
-          "timestamp": 1667321886000,
+          "summary": "A summary",
+          "timestamp": 1660654442000,
           "language": "en-gb",
-          "byline": {
-            "name": "By Sian Prescott",
-            "title": "BBC News",
-            "persons": [
+          "cpsType": "MAP",
+          "media": {
+            "id": "p01g2pxw",
+            "subType": "episode",
+            "format": "audio",
+            "title": "Test MAP C7",
+            "synopses": {
+              "short": "Test MAP C7"
+            },
+            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01g2py6.jpg",
+            "embedding": true,
+            "advertising": false,
+            "caption": "Test MAP C7",
+            "versions": [
               {
-                "name": "Sian Prescott",
-                "function": "BBC News"
+                "versionId": "p01g2pxh",
+                "types": [
+                  "Podcast"
+                ],
+                "duration": 174,
+                "durationISO8601": "PT2M54S",
+                "warnings": {},
+                "availableTerritories": {
+                  "uk": true,
+                  "nonUk": false
+                },
+                "availableFrom": 1516795320000
               }
-            ]
+            ],
+            "smpKind": "radioProgramme",
+            "type": "media"
           },
-          "cpsType": "STY",
           "indexImage": {
-            "id": "63957242",
+            "id": "63958326",
             "subType": "index",
-            "href": "http://b.files.bbci.co.uk/5ED3/test/_63957242_hi059116421.jpg",
-            "path": "/cpsdevpb/5ED3/test/_63957242_hi059116421.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "TAYLOR THE SWIFT",
-            "caption": "Taylor",
+            "href": "http://b.files.bbci.co.uk/F3B1/test/_63958326_p01g2py6.jpg",
+            "path": "/cpsdevpb/F3B1/test/_63958326_p01g2py6.jpg",
+            "height": 1152,
+            "width": 2048,
+            "altText": "asdfadsf",
+            "caption": "sdfsdf",
             "copyrightHolder": "BBC",
-            "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
             "isBreakingNews": false,
-            "isFactCheck": false,
-            "hasShortForm": true
+            "isFactCheck": false
           },
           "section": {
             "subType": "IDX",
@@ -1929,12 +1980,12 @@
             "uri": "/news/entertainment_and_arts",
             "type": "simple"
           },
-          "id": "urn:bbc:ares::asset:news/entertainment-arts-23536303",
+          "id": "urn:bbc:ares::asset:news/av/entertainment-arts-23520613",
           "type": "cps"
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:23:56.994Z",
+        "generated": "2023-02-18T03:08:59.186Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T11:38:00Z",
         "totalRecords": 20,

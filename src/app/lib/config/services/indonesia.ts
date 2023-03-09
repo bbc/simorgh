@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
 import 'moment/locale/id';
@@ -38,7 +32,6 @@ export const service: DefaultServiceConfig = {
     service: 'indonesia',
     serviceName: 'Indonesia',
     languageName: 'Indonesian',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcindonesia',
     twitterSite: '@bbcindonesia',
     noBylinesPolicy:
@@ -50,13 +43,6 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Berita',
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
@@ -253,6 +239,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Durasi',
         recentEpisodes: 'Siaran sebelumnya',
         podcastExternalLinks: 'Podcast ini juga tersedia di',
+        download: 'Unduh episode',
       },
       socialEmbed: {
         caption: {

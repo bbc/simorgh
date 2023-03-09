@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "1bcb8057",
+              "id": "64966d9a",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "8df45fed",
+                    "id": "785ff839",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "15095255",
+                          "id": "9e80c79e",
                           "type": "paragraph",
                           "model": {
                             "text": "ఈ పరీక్షా వ్యాసం యొక్క శీర్షిక ఇది",
                             "blocks": [
                               {
-                                "id": "581da3c3",
+                                "id": "cf54084c",
                                 "type": "fragment",
                                 "model": {
                                   "text": "ఈ పరీక్షా వ్యాసం యొక్క శీర్షిక ఇది",
@@ -56,28 +56,28 @@
               ]
             },
             {
-              "id": "10ccc6ea",
+              "id": "3e5e1857",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "74d7aabb",
+                    "id": "95ba7ef7",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "54838811",
+                          "id": "52911053",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "54888c98",
+                                "id": "b5255460",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
                                   "blocks": [
                                     {
-                                      "id": "381d00dc",
+                                      "id": "534eb50f",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
@@ -116,23 +116,23 @@
                     ]
                   },
                   {
-                    "id": "d938682a",
+                    "id": "441613f4",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "28e68ff5",
+                          "id": "87266765",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "8e63e194",
+                                "id": "6274691d",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
                                   "blocks": [
                                     {
-                                      "id": "93444d1b",
+                                      "id": "1913e07a",
                                       "type": "fragment",
                                       "model": {
                                         "text": "ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది.",
@@ -171,7 +171,7 @@
                     ]
                   },
                   {
-                    "id": "c2e60884",
+                    "id": "ad4b7db2",
                     "type": "rawImage",
                     "model": {
                       "width": 624,
@@ -192,7 +192,7 @@
               ]
             },
             {
-              "id": "b70ef555",
+              "id": "395321e4",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1562942618861,
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "66a3d183",
+              "id": "c22a9cc0",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "69bd9379",
+                    "id": "85316f98",
                     "type": "paragraph",
                     "model": {
                       "text": "ఇది టెక్స్ట్ బ్లాక్, ఇది BBC వాతావరణ హోమ్‌పేజీకి లింక్‌ను కలిగి ఉంది.",
                       "blocks": [
                         {
-                          "id": "45ebc924",
+                          "id": "d4ee80e5",
                           "type": "fragment",
                           "model": {
                             "text": "ఇది టెక్స్ట్ బ్లాక్, ఇది ",
@@ -227,13 +227,13 @@
                           ]
                         },
                         {
-                          "id": "8db8b6c1",
+                          "id": "1007049e",
                           "type": "urlLink",
                           "model": {
                             "text": "BBC వాతావరణ",
                             "blocks": [
                               {
-                                "id": "26bf7390",
+                                "id": "2302d2b7",
                                 "type": "fragment",
                                 "model": {
                                   "text": "BBC వాతావరణ",
@@ -257,7 +257,7 @@
                           ]
                         },
                         {
-                          "id": "045034ff",
+                          "id": "460f83c2",
                           "type": "fragment",
                           "model": {
                             "text": " హోమ్‌పేజీకి లింక్‌ను కలిగి ఉంది.",
@@ -283,29 +283,29 @@
               ]
             },
             {
-              "id": "b475c94e",
+              "id": "78d4a3f2",
               "type": "video",
               "model": {
                 "locator": "urn:bbc:pips:pid:p01djw2m",
                 "blocks": [
                   {
-                    "id": "a25168f5",
+                    "id": "d95ac130",
                     "type": "caption",
                     "model": {
                       "blocks": [
                         {
-                          "id": "e2f1ba32",
+                          "id": "88740cbb",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "d3b248b1",
+                                "id": "7cd114f4",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "చైనీస్ సూపర్ హైవే యూజర్లు కొత్త జంక్షన్ చూసి ఆశ్చర్యపోయారు",
                                   "blocks": [
                                     {
-                                      "id": "58c5801a",
+                                      "id": "7ea3ffdc",
                                       "type": "fragment",
                                       "model": {
                                         "text": "చైనీస్ సూపర్ హైవే యూజర్లు కొత్త జంక్షన్ చూసి ఆశ్చర్యపోయారు",
@@ -344,12 +344,12 @@
                     ]
                   },
                   {
-                    "id": "f2ed4840",
+                    "id": "0a9a89e5",
                     "type": "aresMedia",
                     "model": {
                       "blocks": [
                         {
-                          "id": "f1e327c9",
+                          "id": "f7d4314a",
                           "blockId": "urn:bbc:ares::clip:p01djw2m",
                           "type": "aresMediaMetadata",
                           "model": {
@@ -394,12 +394,12 @@
                           ]
                         },
                         {
-                          "id": "9100cd22",
+                          "id": "3e5a5d05",
                           "type": "image",
                           "model": {
                             "blocks": [
                               {
-                                "id": "a0707384",
+                                "id": "d0166b7f",
                                 "type": "rawImage",
                                 "model": {
                                   "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01djw9d.jpg",
@@ -434,23 +434,23 @@
               ]
             },
             {
-              "id": "c42c1044",
+              "id": "5bc032f6",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "0ef85314",
+                    "id": "873a3ef9",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "641b2645",
+                          "id": "fdbff439",
                           "type": "paragraph",
                           "model": {
                             "text": "\rఇది ఉపశీర్షిక",
                             "blocks": [
                               {
-                                "id": "8975b32f",
+                                "id": "a21cb470",
                                 "type": "fragment",
                                 "model": {
                                   "text": "\rఇది ఉపశీర్షిక",
@@ -485,28 +485,28 @@
               ]
             },
             {
-              "id": "0c4312dd",
+              "id": "66c60fd8",
               "type": "image",
               "model": {
                 "blocks": [
                   {
-                    "id": "42e062e5",
+                    "id": "10c9d9a2",
                     "type": "altText",
                     "model": {
                       "blocks": [
                         {
-                          "id": "30eed609",
+                          "id": "1430bedd",
                           "type": "text",
                           "model": {
                             "blocks": [
                               {
-                                "id": "c548f8b1",
+                                "id": "57a234e8",
                                 "type": "paragraph",
                                 "model": {
                                   "text": "\rఇది ఉపశీర్షిక",
                                   "blocks": [
                                     {
-                                      "id": "5ba2f4e3",
+                                      "id": "eb2d37ce",
                                       "type": "fragment",
                                       "model": {
                                         "text": "\rఇది ఉపశీర్షిక",
@@ -545,7 +545,7 @@
                     ]
                   },
                   {
-                    "id": "521ff2a3",
+                    "id": "47c72c0d",
                     "type": "rawImage",
                     "model": {
                       "width": 800,
@@ -566,18 +566,18 @@
               ]
             },
             {
-              "id": "e75748a9",
+              "id": "a604ec09",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "896e758e",
+                    "id": "04ab6a8f",
                     "type": "paragraph",
                     "model": {
                       "text": "ఈ పరీక్షా వ్యాసం సృష్టించబడింది, తద్వారా మేము మా వెబ్‌సైట్‌లో పరీక్షలను అమలు చేయగలము.",
                       "blocks": [
                         {
-                          "id": "5e2815d3",
+                          "id": "35d7ced2",
                           "type": "fragment",
                           "model": {
                             "text": "ఈ పరీక్షా వ్యాసం సృష్టించబడింది, తద్వారా మేము మా వెబ్‌సైట్‌లో పరీక్షలను అమలు చేయగలము.",
@@ -603,11 +603,21 @@
               ]
             },
             {
-              "id": "4dcfea1c",
+              "id": "bd444e61",
               "type": "mpu",
               "model": {},
               "position": [
                 9
+              ]
+            },
+            {
+              "id": "762d5d2a",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                10
               ]
             }
           ]
@@ -616,14 +626,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:cq0y4008d4vo",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:cq0y4008d4vo"
+          "optimoUrn": "urn:bbc:optimo:asset:cq0y4008d4vo",
+          "canonicalUrl": "https://www.bbc.com/telugu/articles/cq0y4008d4vo"
         },
         "type": "article",
         "createdBy": "Telugu",
         "language": "te",
         "firstPublished": 1562942618861,
         "lastPublished": 1562942618861,
-        "options": {},
         "analyticsLabels": {
           "producer": "Telugu",
           "page": "telugu.articles.cq0y4008d4vo.page"
@@ -633,7 +643,6 @@
           "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu",
           "taggings": []
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -651,12 +660,9 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది?"
-        },
-        "images": {},
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -767,6 +773,7 @@
             "altText": "generic_onlineshopping",
             "copyrightHolder": "Getty Images",
             "originCode": "cpsdevpb",
+            "allowSyndication": true,
             "type": "image"
           },
           "options": {
@@ -1199,7 +1206,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T23:09:56.935Z",
+        "generated": "2023-02-17T18:10:00.144Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

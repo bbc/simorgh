@@ -5,23 +5,23 @@
         "model": {
           "blocks": [
             {
-              "id": "b0a4ac5f",
+              "id": "60b0d7d1",
               "type": "headline",
               "model": {
                 "blocks": [
                   {
-                    "id": "0ef5eae3",
+                    "id": "512e8123",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "fb088728",
+                          "id": "b468d084",
                           "type": "paragraph",
                           "model": {
                             "text": "Social Test multiple (Simorgh Instas)",
                             "blocks": [
                               {
-                                "id": "c3a9d98f",
+                                "id": "a58e798a",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Social Test multiple (Simorgh Instas)",
@@ -56,7 +56,7 @@
               ]
             },
             {
-              "id": "5d20e7a1",
+              "id": "7ad4a88c",
               "type": "timestamp",
               "model": {
                 "firstPublished": 1658757788461,
@@ -67,23 +67,23 @@
               ]
             },
             {
-              "id": "aa776b8b",
+              "id": "dfd11fd8",
               "type": "subheadline",
               "model": {
                 "blocks": [
                   {
-                    "id": "e66469b5",
+                    "id": "c29cc0b2",
                     "type": "text",
                     "model": {
                       "blocks": [
                         {
-                          "id": "7e29fbf2",
+                          "id": "e421f651",
                           "type": "paragraph",
                           "model": {
                             "text": "Social Test 1 - Multiple Instagram",
                             "blocks": [
                               {
-                                "id": "efd1518d",
+                                "id": "1ee3b0ab",
                                 "type": "fragment",
                                 "model": {
                                   "text": "Social Test 1 - Multiple Instagram",
@@ -118,18 +118,18 @@
               ]
             },
             {
-              "id": "4534eb62",
+              "id": "df1f60eb",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "90c37a48",
+                    "id": "0be07317",
                     "type": "paragraph",
                     "model": {
                       "text": "1st embed below",
                       "blocks": [
                         {
-                          "id": "0bdd652a",
+                          "id": "2cdce5f8",
                           "type": "fragment",
                           "model": {
                             "text": "1st embed below",
@@ -155,19 +155,19 @@
               ]
             },
             {
-              "id": "0fee7c58",
+              "id": "4cf34de9",
               "type": "social",
               "model": {
                 "source": "https://www.instagram.com/p/CgUZ1BaoXlI/",
                 "blocks": [
                   {
-                    "id": "2f394820",
+                    "id": "764b431d",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:d6c3ecd1-e998-439e-ad0c-cd5735f607ce",
                       "blocks": [
                         {
-                          "id": "0bbdcb67",
+                          "id": "cc92aac8",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -203,18 +203,18 @@
               ]
             },
             {
-              "id": "dfd512f9",
+              "id": "0d1e5aab",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "146809de",
+                    "id": "b19150f3",
                     "type": "paragraph",
                     "model": {
                       "text": "2nd embed below",
                       "blocks": [
                         {
-                          "id": "2f696849",
+                          "id": "01111fe8",
                           "type": "fragment",
                           "model": {
                             "text": "2nd embed below",
@@ -240,19 +240,19 @@
               ]
             },
             {
-              "id": "e41a18a8",
+              "id": "3151ef99",
               "type": "social",
               "model": {
                 "source": "https://www.instagram.com/p/CgRLy5PKeRf/",
                 "blocks": [
                   {
-                    "id": "5df53853",
+                    "id": "6ea87386",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:4e33301b-dc47-4240-9da4-5bb54e62e2ba",
                       "blocks": [
                         {
-                          "id": "e033431e",
+                          "id": "c60d1b90",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -288,18 +288,18 @@
               ]
             },
             {
-              "id": "c8470049",
+              "id": "a2428aaf",
               "type": "text",
               "model": {
                 "blocks": [
                   {
-                    "id": "1eac3fb8",
+                    "id": "3e44ba47",
                     "type": "paragraph",
                     "model": {
                       "text": "3rd embed below",
                       "blocks": [
                         {
-                          "id": "3346b53f",
+                          "id": "ac556ab7",
                           "type": "fragment",
                           "model": {
                             "text": "3rd embed below",
@@ -325,19 +325,19 @@
               ]
             },
             {
-              "id": "162a9315",
+              "id": "01d56f38",
               "type": "social",
               "model": {
                 "source": "https://www.instagram.com/p/CgOrn7XqII5/",
                 "blocks": [
                   {
-                    "id": "c73cec8f",
+                    "id": "c046618f",
                     "type": "renditions",
                     "model": {
                       "locator": "urn:bbc:optimo:social:2658b809-2d15-46a3-8c0c-ce8815943553",
                       "blocks": [
                         {
-                          "id": "b518c713",
+                          "id": "2bf3b2cb",
                           "type": "aresOEmbed",
                           "model": {
                             "oembed": {
@@ -373,11 +373,21 @@
               ]
             },
             {
-              "id": "1ced11cb",
+              "id": "eb0952a2",
               "type": "mpu",
               "model": {},
               "position": [
                 10
+              ]
+            },
+            {
+              "id": "a53e0cbc",
+              "type": "wsoj",
+              "model": {
+                "type": "recommendations"
+              },
+              "position": [
+                11
               ]
             }
           ]
@@ -386,14 +396,14 @@
       "metadata": {
         "id": "urn:bbc:ares::article:crjrrv61e5po",
         "locators": {
-          "optimoUrn": "urn:bbc:optimo:asset:crjrrv61e5po"
+          "optimoUrn": "urn:bbc:optimo:asset:crjrrv61e5po",
+          "canonicalUrl": "https://www.bbc.com/pidgin/articles/crjrrv61e5po"
         },
         "type": "article",
         "createdBy": "Pidgin",
         "language": "pcm",
         "firstPublished": 1658757788461,
         "lastPublished": 1658920829524,
-        "options": {},
         "analyticsLabels": {
           "contentId": "urn:bbc:optimo:asset:crjrrv61e5po",
           "producer": "Pidgin",
@@ -417,7 +427,6 @@
             ]
           }
         },
-        "tags": {},
         "blockTypes": [
           "headline",
           "text",
@@ -432,7 +441,6 @@
         "allowAdvertising": true
       },
       "promo": {
-        "locators": {},
         "headlines": {
           "seoHeadline": "Social Test (Simorgh Instas)",
           "promoHeadline": {
@@ -462,7 +470,6 @@
             ]
           }
         },
-        "images": {},
         "summary": {
           "blocks": [
             {
@@ -488,8 +495,7 @@
               }
             }
           ]
-        },
-        "passport": {}
+        }
       }
     },
     "secondaryData": {
@@ -975,7 +981,7 @@
         }
       ],
       "mostRead": {
-        "generated": "2022-11-21T21:04:58.371Z",
+        "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
         "firstRecordTimeStamp": "2021-05-04T09:53:00Z",
         "totalRecords": 20,

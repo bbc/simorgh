@@ -1,9 +1,3 @@
-import {
-  C_POSTBOX,
-  C_WHITE,
-  C_GHOST,
-  C_POSTBOX_30,
-} from '../../../legacy/psammead/psammead-styles/src/colours';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/ru';
@@ -201,6 +195,7 @@ export const mainTranslations = {
     recentEpisodes: 'Прошлые передачи',
     episodes: 'передачи',
     podcastExternalLinks: 'Этот подкаст доступен на',
+    download: 'Загрузить эпизод',
   },
   socialEmbed: {
     caption: {
@@ -266,7 +261,6 @@ export const service: DefaultServiceConfig = {
     service: 'russian',
     serviceName: 'Russian',
     languageName: 'Russian',
-    themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
     noBylinesPolicy:
@@ -278,13 +272,6 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
     iTunesAppId: 504278066,
-    theming: {
-      brandBackgroundColour: `${C_POSTBOX}`,
-      brandLogoColour: `${C_WHITE}`,
-      brandForegroundColour: `${C_GHOST}`,
-      brandHighlightColour: `${C_WHITE}`,
-      brandBorderColour: `${C_POSTBOX_30}`,
-    },
     showAdPlaceholder: true,
     showRelatedTopics: true,
     mostRead: {

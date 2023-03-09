@@ -4,7 +4,7 @@ exports[`regex utils snapshots should create expected regex from getAfricaEyeTVP
 
 exports[`regex utils snapshots should create expected regex from getArticleManifestRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/manifest.json"`;
 
-exports[`regex utils snapshots should create expected regex from getArticleRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/:id(c[a-zA-Z0-9]{10}o):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
+exports[`regex utils snapshots should create expected regex from getArticleRegex 1`] = `"/:service(news|persian|igbo)?:discipline(/[a-z0-9-_]{1,})?/:local(articles|erthyglau|sgeulachdan)/:id(c[a-zA-Z0-9]{10}o):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
 
 exports[`regex utils snapshots should create expected regex from getArticleSwRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/sw.js"`;
 
