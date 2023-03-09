@@ -201,6 +201,7 @@ export const mainTranslations = {
     recentEpisodes: 'Прошлые передачи',
     episodes: 'передачи',
     podcastExternalLinks: 'Этот подкаст доступен на',
+    download: 'Загрузить эпизод',
   },
   socialEmbed: {
     caption: {

@@ -243,6 +243,7 @@ export const service: DefaultServiceConfig = {
         duration: 'वेळ',
         recentEpisodes: 'ताजे एपिसोड',
         podcastExternalLinks: 'हे पॉडकास्ट तुम्ही इथे ऐकू शकता',
+        download: 'एपिसोड डाऊनलोड करा',
       },
       socialEmbed: {
         caption: {

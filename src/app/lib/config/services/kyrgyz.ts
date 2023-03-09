@@ -235,6 +235,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Узактыгы',
         recentEpisodes: 'Мурдагы берүүлөр',
         podcastExternalLinks: 'Бул подкастты башка платформалардан дагы угуңуз',
+        download: 'Подкастты жүктөп алыңыз',
       },
       socialEmbed: {
         caption: {

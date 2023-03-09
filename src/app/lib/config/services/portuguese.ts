@@ -249,6 +249,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Mais',
         podcastExternalLinks: 'O podcast está disponível em',
+        download: 'Baixar episódio',
       },
       socialEmbed: {
         caption: {

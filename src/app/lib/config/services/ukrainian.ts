@@ -244,6 +244,7 @@ const baseServiceConfig = {
       duration: 'Тривалість',
       recentEpisodes: 'Більше',
       podcastExternalLinks: 'Цей подкаст доступний у',
+      download: 'Завантажити епізод',
     },
     socialEmbed: {
       caption: {

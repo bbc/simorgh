@@ -271,6 +271,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
         podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
+        download: 'دانلود برنامه',
       },
       socialEmbed: {
         caption: {

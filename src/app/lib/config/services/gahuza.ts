@@ -248,6 +248,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Umwanya bimara',
         recentEpisodes: 'Ibiganiro byashise',
         podcastExternalLinks: 'Iyi podcast iraboneka kandi kuri',
+        download: 'Pakurura ikiganiro',
       },
       socialEmbed: {
         caption: {

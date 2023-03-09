@@ -253,6 +253,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Durasi',
         recentEpisodes: 'Siaran sebelumnya',
         podcastExternalLinks: 'Podcast ini juga tersedia di',
+        download: ' 	Unduh episode',
       },
       socialEmbed: {
         caption: {

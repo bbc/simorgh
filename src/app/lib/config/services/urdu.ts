@@ -249,6 +249,7 @@ export const service: DefaultServiceConfig = {
         duration: 'دورانیہ',
         recentEpisodes: 'سابق پروگرام',
         podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
+        download: 'قسط ڈاؤن لوڈ کریں',
       },
       socialEmbed: {
         caption: {

@@ -262,6 +262,7 @@ export const service: DefaultServiceConfig = {
         duration: 'अवधि',
         recentEpisodes: 'प्रसारण का समय',
         podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
+        download: 'एपिसोड डाउनलोड करें',
       },
       socialEmbed: {
         caption: {
